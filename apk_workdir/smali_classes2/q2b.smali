@@ -1,129 +1,61 @@
-.class public final Lq2b;
+.class public abstract Lq2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls2b;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lq2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Luj8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
-
-    sput-object v0, Lq2b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lq2b;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lgpc;->oneme_settings_ringtone_section_bottom_vh:I
 
-    return v0
-.end method
+    sput v0, Lq2b;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget v0, Lgpc;->oneme_settings_ringtone_section_custom_add:I
 
-    const/4 v0, 0x1
+    sput v0, Lq2b;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lgpc;->oneme_settings_ringtone_section_default:I
 
-    return v0
+    sput v0, Lq2b;->c:I
 
-    :cond_0
-    instance-of v1, p1, Lq2b;
+    sget v0, Lgpc;->oneme_settings_ringtone_section_header_vh:I
 
-    const/4 v2, 0x0
+    sput v0, Lq2b;->d:I
 
-    if-nez v1, :cond_1
+    sget v0, Lgpc;->oneme_settings_ringtone_section_item_vh:I
 
-    return v2
+    sput v0, Lq2b;->e:I
 
-    :cond_1
-    check-cast p1, Lq2b;
+    sget v0, Lgpc;->oneme_settings_ringtone_section_system:I
 
-    iget v1, p0, Lq2b;->a:I
+    sput v0, Lq2b;->f:I
 
-    iget p1, p1, Lq2b;->a:I
+    sget v0, Lgpc;->oneme_settings_ringtone_settings_list:I
 
-    if-eq v1, p1, :cond_2
+    sput v0, Lq2b;->g:I
 
-    return v2
+    sget v0, Lgpc;->oneme_settings_ringtone_title:I
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lq2b;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "NegativeIcon(iconRes="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lq2b;->a:I
-
-    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lq2b;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Lq2b;->h:I
 
     return-void
 .end method

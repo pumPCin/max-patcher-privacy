@@ -3,8 +3,6 @@
 
 
 # static fields
-.field public static oneme_chat_complaint_description:I = 0x7f1307c7
+.field public static oneme_folders_picker_snackbar_add_channel_title:I = 0x7f110023
 
-.field public static oneme_chat_complaint_success_snackbar_title:I = 0x7f1307c8
-
-.field public static oneme_chat_complaint_title:I = 0x7f1307c9
+.field public static oneme_folders_picker_snackbar_add_chat_title:I = 0x7f110024

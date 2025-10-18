@@ -1,5 +1,5 @@
 .class Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;
-.super La2h;
+.super Lc3h;
 .source "SourceFile"
 
 
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public onVolumeChanged(Lb2h;)V
+.method public onVolumeChanged(Ld3h;)V
     .locals 1
 
     iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;

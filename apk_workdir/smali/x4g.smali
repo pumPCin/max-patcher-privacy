@@ -1,274 +1,266 @@
 .class public final Lx4g;
-.super Ljava/lang/Object;
+.super Lj2;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public X:Z
 
-.field public b:I
+.field public c:I
 
-.field public c:Z
-
-.field public d:I
-
-.field public e:Z
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public l:Ljava/lang/String;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:Landroid/text/Layout$Alignment;
-
-.field public p:Landroid/text/Layout$Alignment;
-
-.field public q:I
-
-.field public r:Lipf;
-
-.field public s:F
-
-.field public t:Ljava/lang/String;
-
-.field public u:Ljava/lang/String;
+.field public o:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>([Ljava/lang/Object;III)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lj2;-><init>(II)V
 
-    const/4 v0, -0x1
+    iput p4, p0, Lx4g;->c:I
 
-    iput v0, p0, Lx4g;->f:I
+    new-array p4, p4, [Ljava/lang/Object;
 
-    iput v0, p0, Lx4g;->g:I
+    iput-object p4, p0, Lx4g;->o:[Ljava/lang/Object;
 
-    iput v0, p0, Lx4g;->h:I
+    const/4 v0, 0x0
 
-    iput v0, p0, Lx4g;->i:I
+    const/4 v1, 0x1
 
-    iput v0, p0, Lx4g;->j:I
+    if-ne p2, p3, :cond_0
 
-    iput v0, p0, Lx4g;->m:I
+    move p3, v1
 
-    iput v0, p0, Lx4g;->n:I
+    goto :goto_0
 
-    iput v0, p0, Lx4g;->q:I
+    :cond_0
+    move p3, v0
 
-    const v0, 0x7f7fffff    # Float.MAX_VALUE
+    :goto_0
+    iput-boolean p3, p0, Lx4g;->X:Z
 
-    iput v0, p0, Lx4g;->s:F
+    aput-object p1, p4, v0
+
+    sub-int/2addr p2, p3
+
+    invoke-virtual {p0, p2, v1}, Lx4g;->b(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx4g;)V
+.method public final a()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lj2;->a:I
+
+    and-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lx4g;->o:[Ljava/lang/Object;
+
+    iget v2, p0, Lx4g;->c:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget-object v1, v1, v2
+
+    if-eqz v1, :cond_0
+
+    check-cast v1, [Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "null cannot be cast to non-null type kotlin.Array<E of kotlinx.collections.immutable.implementations.immutableList.TrieIterator>"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final b(II)V
     .locals 4
 
-    if-eqz p1, :cond_10
+    iget v0, p0, Lx4g;->c:I
 
-    iget-boolean v0, p0, Lx4g;->c:Z
+    sub-int/2addr v0, p2
 
-    const/4 v1, 0x1
+    mul-int/lit8 v0, v0, 0x5
 
-    if-nez v0, :cond_0
+    :goto_0
+    iget v1, p0, Lx4g;->c:I
 
-    iget-boolean v0, p1, Lx4g;->c:Z
+    if-ge p2, v1, :cond_1
+
+    iget-object v1, p0, Lx4g;->o:[Ljava/lang/Object;
+
+    add-int/lit8 v2, p2, -0x1
+
+    aget-object v2, v1, v2
+
+    if-eqz v2, :cond_0
+
+    check-cast v2, [Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Lnbi;->b(II)I
+
+    move-result v3
+
+    aget-object v2, v2, v3
+
+    aput-object v2, v1, p2
+
+    add-int/lit8 v0, v0, -0x5
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c(I)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lj2;->a:I
+
+    invoke-static {v1, v0}, Lnbi;->b(II)I
+
+    move-result v1
+
+    if-ne v1, p1, :cond_0
+
+    add-int/lit8 v0, v0, 0x5
+
+    goto :goto_0
+
+    :cond_0
+    if-lez v0, :cond_1
+
+    iget p1, p0, Lx4g;->c:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    div-int/lit8 v0, v0, 0x5
+
+    sub-int/2addr p1, v0
+
+    iget v0, p0, Lj2;->a:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    invoke-virtual {p0, v0, p1}, Lx4g;->b(II)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 4
+
+    invoke-virtual {p0}, Lj2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lx4g;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lj2;->a:I
+
+    const/4 v2, 0x1
+
+    add-int/2addr v1, v2
+
+    iput v1, p0, Lj2;->a:I
+
+    iget v3, p0, Lj2;->b:I
+
+    if-ne v1, v3, :cond_0
+
+    iput-boolean v2, p0, Lx4g;->X:Z
+
+    return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lx4g;->c(I)V
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lj2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lj2;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    iget-boolean v0, p0, Lx4g;->X:Z
 
     if-eqz v0, :cond_0
 
-    iget v0, p1, Lx4g;->b:I
+    const/4 v0, 0x0
 
-    iput v0, p0, Lx4g;->b:I
+    iput-boolean v0, p0, Lx4g;->X:Z
 
-    iput-boolean v1, p0, Lx4g;->c:Z
+    invoke-virtual {p0}, Lx4g;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    iget v0, p0, Lx4g;->h:I
+    const/16 v0, 0x1f
 
-    const/4 v2, -0x1
+    invoke-virtual {p0, v0}, Lx4g;->c(I)V
 
-    if-ne v0, v2, :cond_1
+    invoke-virtual {p0}, Lx4g;->a()Ljava/lang/Object;
 
-    iget v0, p1, Lx4g;->h:I
+    move-result-object v0
 
-    iput v0, p0, Lx4g;->h:I
+    return-object v0
 
     :cond_1
-    iget v0, p0, Lx4g;->i:I
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    if-ne v0, v2, :cond_2
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    iget v0, p1, Lx4g;->i:I
-
-    iput v0, p0, Lx4g;->i:I
-
-    :cond_2
-    iget-object v0, p0, Lx4g;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p1, Lx4g;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_3
-
-    iput-object v0, p0, Lx4g;->a:Ljava/lang/String;
-
-    :cond_3
-    iget v0, p0, Lx4g;->f:I
-
-    if-ne v0, v2, :cond_4
-
-    iget v0, p1, Lx4g;->f:I
-
-    iput v0, p0, Lx4g;->f:I
-
-    :cond_4
-    iget v0, p0, Lx4g;->g:I
-
-    if-ne v0, v2, :cond_5
-
-    iget v0, p1, Lx4g;->g:I
-
-    iput v0, p0, Lx4g;->g:I
-
-    :cond_5
-    iget v0, p0, Lx4g;->n:I
-
-    if-ne v0, v2, :cond_6
-
-    iget v0, p1, Lx4g;->n:I
-
-    iput v0, p0, Lx4g;->n:I
-
-    :cond_6
-    iget-object v0, p0, Lx4g;->o:Landroid/text/Layout$Alignment;
-
-    if-nez v0, :cond_7
-
-    iget-object v0, p1, Lx4g;->o:Landroid/text/Layout$Alignment;
-
-    if-eqz v0, :cond_7
-
-    iput-object v0, p0, Lx4g;->o:Landroid/text/Layout$Alignment;
-
-    :cond_7
-    iget-object v0, p0, Lx4g;->p:Landroid/text/Layout$Alignment;
-
-    if-nez v0, :cond_8
-
-    iget-object v0, p1, Lx4g;->p:Landroid/text/Layout$Alignment;
-
-    if-eqz v0, :cond_8
-
-    iput-object v0, p0, Lx4g;->p:Landroid/text/Layout$Alignment;
-
-    :cond_8
-    iget v0, p0, Lx4g;->q:I
-
-    if-ne v0, v2, :cond_9
-
-    iget v0, p1, Lx4g;->q:I
-
-    iput v0, p0, Lx4g;->q:I
-
-    :cond_9
-    iget v0, p0, Lx4g;->j:I
-
-    if-ne v0, v2, :cond_a
-
-    iget v0, p1, Lx4g;->j:I
-
-    iput v0, p0, Lx4g;->j:I
-
-    iget v0, p1, Lx4g;->k:F
-
-    iput v0, p0, Lx4g;->k:F
-
-    :cond_a
-    iget-object v0, p0, Lx4g;->r:Lipf;
-
-    if-nez v0, :cond_b
-
-    iget-object v0, p1, Lx4g;->r:Lipf;
-
-    iput-object v0, p0, Lx4g;->r:Lipf;
-
-    :cond_b
-    iget v0, p0, Lx4g;->s:F
-
-    const v3, 0x7f7fffff    # Float.MAX_VALUE
-
-    cmpl-float v0, v0, v3
-
-    if-nez v0, :cond_c
-
-    iget v0, p1, Lx4g;->s:F
-
-    iput v0, p0, Lx4g;->s:F
-
-    :cond_c
-    iget-object v0, p0, Lx4g;->t:Ljava/lang/String;
-
-    if-nez v0, :cond_d
-
-    iget-object v0, p1, Lx4g;->t:Ljava/lang/String;
-
-    iput-object v0, p0, Lx4g;->t:Ljava/lang/String;
-
-    :cond_d
-    iget-object v0, p0, Lx4g;->u:Ljava/lang/String;
-
-    if-nez v0, :cond_e
-
-    iget-object v0, p1, Lx4g;->u:Ljava/lang/String;
-
-    iput-object v0, p0, Lx4g;->u:Ljava/lang/String;
-
-    :cond_e
-    iget-boolean v0, p0, Lx4g;->e:Z
-
-    if-nez v0, :cond_f
-
-    iget-boolean v0, p1, Lx4g;->e:Z
-
-    if-eqz v0, :cond_f
-
-    iget v0, p1, Lx4g;->d:I
-
-    iput v0, p0, Lx4g;->d:I
-
-    iput-boolean v1, p0, Lx4g;->e:Z
-
-    :cond_f
-    iget v0, p0, Lx4g;->m:I
-
-    if-ne v0, v2, :cond_10
-
-    iget p1, p1, Lx4g;->m:I
-
-    if-eq p1, v2, :cond_10
-
-    iput p1, p0, Lx4g;->m:I
-
-    :cond_10
-    return-void
+    throw v0
 .end method

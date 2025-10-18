@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x1e302f13
+    const v0, 0xfb17dc
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ClearSearch"
+    const-string v0, "AddParticipantsError"
 
     return-object v0
 .end method

@@ -4,375 +4,666 @@
 
 
 # direct methods
-.method public static final a(Lkgd;Lobd;Lna5;I)I
-    .locals 17
+.method public static a(Landroid/os/Parcel;I)Landroid/os/Bundle;
+    .locals 2
 
-    move-object/from16 v0, p1
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    move-object/from16 v1, p2
+    move-result p1
 
-    invoke-static {v1}, Lna5;->Q(Lna5;)Z
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result v2
+    move-result v0
 
-    const/4 v3, 0x1
+    if-nez p1, :cond_0
 
-    if-nez v2, :cond_0
+    const/4 p0, 0x0
 
-    return v3
+    return-object p0
 
     :cond_0
-    invoke-static {v1}, Lna5;->Q(Lna5;)Z
+    invoke-virtual {p0}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
-    move-result v2
+    move-result-object v1
 
-    const-string v4, "Check failed."
+    add-int/2addr v0, p1
 
-    if-eqz v2, :cond_13
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    if-eqz v0, :cond_a
+    return-object v1
+.end method
 
-    iget v2, v0, Lobd;->a:I
+.method public static b(Landroid/os/Parcel;I)[B
+    .locals 2
 
-    iget v5, v0, Lobd;->b:I
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    if-lez v5, :cond_a
+    move-result p1
 
-    if-lez v2, :cond_a
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    invoke-virtual {v1}, Lna5;->i0()V
+    move-result v0
 
-    iget v6, v1, Lna5;->X:I
+    if-nez p1, :cond_0
 
-    if-eqz v6, :cond_a
+    const/4 p0, 0x0
 
-    invoke-virtual {v1}, Lna5;->i0()V
+    return-object p0
 
-    iget v6, v1, Lna5;->Y:I
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->createByteArray()[B
 
-    if-nez v6, :cond_1
+    move-result-object v1
 
-    goto/16 :goto_4
+    add-int/2addr v0, p1
 
-    :cond_1
-    move-object/from16 v6, p0
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    iget v6, v6, Lkgd;->a:I
+    return-object v1
+.end method
 
-    const/4 v7, -0x1
+.method public static c(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-    const/16 v8, 0x10e
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    const/16 v9, 0x5a
+    move-result p1
 
-    const/4 v10, 0x0
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    if-ne v6, v7, :cond_3
+    move-result v0
 
-    invoke-virtual {v1}, Lna5;->i0()V
+    if-nez p1, :cond_0
 
-    iget v6, v1, Lna5;->c:I
+    const/4 p0, 0x0
 
-    if-eqz v6, :cond_4
+    return-object p0
 
-    if-eq v6, v9, :cond_4
+    :cond_0
+    invoke-interface {p2, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    const/16 v7, 0xb4
+    move-result-object p2
 
-    if-eq v6, v7, :cond_4
+    check-cast p2, Landroid/os/Parcelable;
 
-    if-ne v6, v8, :cond_2
+    add-int/2addr v0, p1
 
-    goto :goto_0
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
+    return-object p2
+.end method
 
-    invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public static d(Landroid/os/Parcel;I)Ljava/lang/String;
+    .locals 2
 
-    throw v0
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    :cond_3
-    move v6, v10
+    move-result p1
 
-    :cond_4
-    :goto_0
-    if-eq v6, v9, :cond_5
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    if-ne v6, v8, :cond_6
+    move-result v0
 
-    :cond_5
-    move v10, v3
+    if-nez p1, :cond_0
 
-    :cond_6
-    if-eqz v10, :cond_7
+    const/4 p0, 0x0
 
-    invoke-virtual {v1}, Lna5;->i0()V
+    return-object p0
 
-    iget v4, v1, Lna5;->Y:I
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v1
 
-    :cond_7
-    invoke-virtual {v1}, Lna5;->i0()V
+    add-int/2addr v0, p1
 
-    iget v4, v1, Lna5;->X:I
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    :goto_1
-    if-eqz v10, :cond_8
+    return-object v1
+.end method
 
-    invoke-virtual {v1}, Lna5;->i0()V
+.method public static e(Landroid/os/Parcel;I)[Ljava/lang/String;
+    .locals 2
 
-    iget v6, v1, Lna5;->X:I
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    goto :goto_2
+    move-result p1
 
-    :cond_8
-    invoke-virtual {v1}, Lna5;->i0()V
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    iget v6, v1, Lna5;->Y:I
+    move-result v0
 
-    :goto_2
-    int-to-float v7, v2
+    if-nez p1, :cond_0
 
-    int-to-float v8, v4
+    const/4 p0, 0x0
 
-    div-float/2addr v7, v8
+    return-object p0
 
-    int-to-float v8, v5
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
-    int-to-float v9, v6
+    move-result-object v1
 
-    div-float/2addr v8, v9
+    add-int/2addr v0, p1
 
-    cmpg-float v9, v7, v8
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    if-gez v9, :cond_9
+    return-object v1
+.end method
 
-    move v9, v8
+.method public static f(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+    .locals 1
 
-    goto :goto_3
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    :cond_9
-    move v9, v7
+    move-result p1
 
-    :goto_3
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result-object v10
+    move-result v0
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez p1, :cond_0
 
-    move-result-object v11
+    const/4 p0, 0x0
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object p0
 
-    move-result-object v12
+    :cond_0
+    invoke-virtual {p0, p2}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p2
 
-    move-result-object v13
+    add-int/2addr v0, p1
 
-    invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    move-result-object v14
+    return-object p2
+.end method
 
-    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+.method public static g(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+    .locals 1
 
-    move-result-object v15
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
 
-    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result p1
 
-    move-result-object v16
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    filled-new-array/range {v10 .. v16}, [Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v2
+    if-nez p1, :cond_0
 
-    const-string v4, "DownsampleUtil"
+    const/4 p0, 0x0
 
-    const-string v5, "Downsample - Specified size: %dx%d, image size: %dx%d ratio: %.1f x %.1f, ratio: %.3f"
+    return-object p0
 
-    invoke-static {v4, v5, v2}, Lll5;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    invoke-virtual {p0, p2}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
-    goto :goto_5
+    move-result-object p2
 
-    :cond_a
-    :goto_4
-    const/high16 v9, 0x3f800000    # 1.0f
+    add-int/2addr v0, p1
 
-    :goto_5
-    invoke-virtual {v1}, Lna5;->i0()V
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    iget-object v2, v1, Lna5;->b:Ly87;
+    return-object p2
+.end method
 
-    sget-object v4, Lnk4;->a:Ly87;
+.method public static h(Landroid/os/Parcel;I)V
+    .locals 2
 
-    const v5, 0x3eaaaaab
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
+    move-result v0
 
-    const v8, 0x3f2aaaab
+    if-ne v0, p1, :cond_0
 
-    const/4 v10, 0x2
+    return-void
 
-    if-ne v2, v4, :cond_d
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
 
-    cmpl-float v2, v9, v8
+    const-string v1, "Overread allowed size end="
 
-    if-lez v2, :cond_b
+    invoke-static {p1, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    goto :goto_8
+    move-result-object p1
 
-    :cond_b
-    move v3, v10
-
-    :goto_6
-    mul-int/lit8 v2, v3, 0x2
-
-    int-to-double v10, v2
-
-    div-double v10, v6, v10
-
-    float-to-double v12, v5
-
-    mul-double/2addr v12, v10
-
-    add-double/2addr v12, v10
-
-    float-to-double v10, v9
-
-    cmpg-double v4, v12, v10
-
-    if-gtz v4, :cond_c
-
-    goto :goto_8
-
-    :cond_c
-    move v3, v2
-
-    goto :goto_6
-
-    :cond_d
-    cmpl-float v2, v9, v8
-
-    if-lez v2, :cond_e
-
-    goto :goto_8
-
-    :cond_e
-    :goto_7
-    int-to-double v11, v10
-
-    const-wide/high16 v13, 0x4000000000000000L    # 2.0
-
-    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v13
-
-    sub-double/2addr v13, v11
-
-    div-double v13, v6, v13
-
-    div-double v11, v6, v11
-
-    move v2, v3
-
-    float-to-double v3, v5
-
-    mul-double/2addr v13, v3
-
-    add-double/2addr v13, v11
-
-    float-to-double v3, v9
-
-    cmpg-double v3, v13, v3
-
-    if-gtz v3, :cond_12
-
-    add-int/lit8 v3, v10, -0x1
-
-    :goto_8
-    invoke-virtual {v1}, Lna5;->i0()V
-
-    iget v2, v1, Lna5;->Y:I
-
-    invoke-virtual {v1}, Lna5;->i0()V
-
-    iget v4, v1, Lna5;->X:I
-
-    invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    if-eqz v0, :cond_f
-
-    const/high16 v0, 0x45000000    # 2048.0f
-
-    goto :goto_9
-
-    :cond_f
-    move/from16 v8, p3
-
-    int-to-float v0, v8
-
-    :goto_9
-    div-int v4, v2, v3
-
-    int-to-float v4, v4
-
-    cmpl-float v4, v4, v0
-
-    if-lez v4, :cond_11
-
-    invoke-virtual {v1}, Lna5;->i0()V
-
-    iget-object v4, v1, Lna5;->b:Ly87;
-
-    sget-object v5, Lnk4;->a:Ly87;
-
-    if-ne v4, v5, :cond_10
-
-    mul-int/lit8 v3, v3, 0x2
-
-    goto :goto_9
-
-    :cond_10
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_9
-
-    :cond_11
-    return v3
-
-    :cond_12
-    move/from16 v8, p3
-
-    add-int/lit8 v10, v10, 0x1
-
-    move v3, v2
-
-    goto :goto_7
-
-    :cond_13
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
 
     throw v0
 .end method
 
-.method public static b(Lq57;)V
-    .locals 0
+.method public static i(Landroid/os/Parcel;I)Z
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
 
     if-eqz p0, :cond_0
 
-    :try_start_0
-    invoke-interface {p0}, Lq57;->onDisconnected()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 p0, 0x1
 
-    :catch_0
+    return p0
+
     :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static j(Landroid/os/Parcel;I)B
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+
+    int-to-byte p0, p0
+
+    return p0
+.end method
+
+.method public static k(Landroid/os/Parcel;I)D
+    .locals 1
+
+    const/16 v0, 0x8
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readDouble()D
+
+    move-result-wide p0
+
+    return-wide p0
+.end method
+
+.method public static l(Landroid/os/Parcel;I)F
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readFloat()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static m(Landroid/os/Parcel;I)Ljava/lang/Float;
+    .locals 1
+
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const/4 v0, 0x4
+
+    invoke-static {p0, p1, v0}, Lkyi;->u(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readFloat()F
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n(Landroid/os/Parcel;I)Landroid/os/IBinder;
+    .locals 2
+
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v0
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    return-object v1
+.end method
+
+.method public static o(Landroid/os/Parcel;I)I
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static p(Landroid/os/Parcel;I)J
+    .locals 1
+
+    const/16 v0, 0x8
+
+    invoke-static {p0, p1, v0}, Lkyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide p0
+
+    return-wide p0
+.end method
+
+.method public static q(Landroid/os/Parcel;I)I
+    .locals 2
+
+    const/high16 v0, -0x10000
+
+    and-int v1, p1, v0
+
+    if-eq v1, v0, :cond_0
+
+    shr-int/lit8 p0, p1, 0x10
+
+    int-to-char p0, p0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static r(J)Ljava/lang/String;
+    .locals 11
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p0
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toHours(J)J
+
+    move-result-wide v1
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v4
+
+    sub-long v4, p0, v4
+
+    invoke-virtual {v0, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
+
+    move-result-wide v4
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v6
+
+    sub-long v6, p0, v6
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v9
+
+    sub-long/2addr v6, v9
+
+    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v6
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v9
+
+    sub-long/2addr p0, v9
+
+    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v8
+
+    sub-long/2addr p0, v8
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v8
+
+    sub-long/2addr p0, v8
+
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    filled-new-array {v1, v2, v3, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "%02d:%02d:%02d.%03d"
+
+    invoke-static {v0, p1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static s(Landroid/os/Parcel;I)V
+    .locals 1
+
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+
     return-void
+.end method
+
+.method public static t(Landroid/os/Parcel;)I
+    .locals 5
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lkyi;->q(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    int-to-char v2, v0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v3
+
+    const/16 v4, 0x4f45
+
+    if-ne v2, v4, :cond_1
+
+    add-int/2addr v1, v3
+
+    if-lt v1, v3, :cond_0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataSize()I
+
+    move-result v0
+
+    if-gt v1, v0, :cond_0
+
+    return v1
+
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
+
+    const-string v2, "Size read is invalid start="
+
+    const-string v4, " end="
+
+    invoke-static {v2, v3, v1, v4}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v1, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "Expected object header. Got 0x"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
+
+    throw v1
+.end method
+
+.method public static u(Landroid/os/Parcel;II)V
+    .locals 5
+
+    if-ne p1, p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, " got "
+
+    const-string v3, " (0x"
+
+    const-string v4, "Expected size "
+
+    invoke-static {v4, p2, v2, p1, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string p2, ")"
+
+    invoke-static {p1, v1, p2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
+
+    throw v0
+.end method
+
+.method public static v(Landroid/os/Parcel;II)V
+    .locals 5
+
+    invoke-static {p0, p1}, Lkyi;->q(Landroid/os/Parcel;I)I
+
+    move-result p1
+
+    if-ne p1, p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, " got "
+
+    const-string v3, " (0x"
+
+    const-string v4, "Expected size "
+
+    invoke-static {v4, p2, v2, p1, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string p2, ")"
+
+    invoke-static {p1, v1, p2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
+
+    throw v0
 .end method

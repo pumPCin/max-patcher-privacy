@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract y(Landroid/os/Bundle;)V
+.method public abstract a(Ljava/lang/String;)V
 .end method

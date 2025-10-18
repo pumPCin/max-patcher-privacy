@@ -1,171 +1,288 @@
-.class public final synthetic Lm6c;
-.super Ljava/lang/Object;
+.class public final Lm6c;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ln6c;
+.field public final synthetic Y:Lu6c;
+
+.field public final synthetic Z:Landroid/net/Uri;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln6c;I)V
+.method public constructor <init>(Lu6c;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lm6c;->a:I
+    iput-object p1, p0, Lm6c;->Y:Lu6c;
 
-    iput-object p1, p0, Lm6c;->b:Ln6c;
+    iput-object p2, p0, Lm6c;->Z:Landroid/net/Uri;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lm6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lm6c;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lm6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lm6c;
+
+    iget-object v1, p0, Lm6c;->Y:Lu6c;
+
+    iget-object v2, p0, Lm6c;->Z:Landroid/net/Uri;
+
+    invoke-direct {v0, v1, v2, p2}, Lm6c;-><init>(Lu6c;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lm6c;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    iget v0, p0, Lm6c;->a:I
+    sget-object v0, Lccg;->a:Lccg;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lm6c;->b:Ln6c;
+    iget-object p1, p0, Lm6c;->X:Ljava/lang/Object;
 
-    iget-object v0, v0, Ln6c;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
+    check-cast p1, Lq54;
 
-    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->C0()Lz6c;
+    iget-object v1, p0, Lm6c;->Y:Lu6c;
 
-    move-result-object v0
+    iget-object v2, v1, Lu6c;->v0:Lxe5;
 
-    iget-object v0, v0, Lz6c;->F0:Lde5;
+    iget-object v3, v1, Lu6c;->c:Liu7;
 
-    new-instance v1, Le6c;
+    iget-object v4, v1, Lu6c;->q0:Liu7;
 
-    new-instance v2, Lv04;
+    sget-object v5, Lu6c;->z0:[Ltr7;
 
-    sget v3, Ltya;->L:I
-
-    sget v4, Lvya;->S0:I
-
-    move v5, v4
-
-    new-instance v4, Ljqf;
-
-    invoke-direct {v4, v5}, Ljqf;-><init>(I)V
-
-    sget v5, Luza;->V:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1}, Lu6c;->s()Liv5;
 
     move-result-object v5
 
-    sget v6, Liid;->I1:I
+    iget-object v6, v1, Lu6c;->y0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v6
 
-    sget v7, Luza;->Q:I
+    check-cast v6, Ljava/lang/String;
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v5, v6}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v5
+
+    :try_start_0
+    invoke-virtual {v5}, Ljava/io/File;->exists()Z
+
+    move-result v6
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v6, :cond_0
+
+    iget-object v6, p0, Lm6c;->Z:Landroid/net/Uri;
+
+    if-eqz v6, :cond_0
+
+    :try_start_1
+    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
-    invoke-direct/range {v2 .. v7}, Lv04;-><init>(ILoqf;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    check-cast v7, Landroid/app/Application;
 
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v2
+    move-result-object v7
 
-    invoke-direct {v1, v2}, Le6c;-><init>(Ljava/util/List;)V
+    invoke-virtual {v7, v6}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    move-result-object v6
 
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-static {v5, v6}, Ll1j;->f(Ljava/io/File;Ljava/io/InputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_0
-    iget-object v0, p0, Lm6c;->b:Ln6c;
-
-    iget-object v0, v0, Ln6c;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
-
-    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->C0()Lz6c;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lz6c;->F0:Lde5;
-
-    invoke-virtual {v0}, Lz6c;->t()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
+    :catchall_0
+    move-exception v6
 
     goto :goto_1
 
     :cond_0
-    new-instance v3, Lc6c;
+    :goto_0
+    move-object v7, v0
 
-    invoke-direct {v3, v2}, Lc6c;-><init>(Ljava/lang/String;)V
+    goto :goto_2
 
-    invoke-static {v1, v3}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    :goto_1
+    new-instance v7, Lbed;
 
-    invoke-static {}, Lt83;->b()Z
+    invoke-direct {v7, v6}, Lbed;-><init>(Ljava/lang/Throwable;)V
 
-    move-result v2
+    :goto_2
+    invoke-static {v7}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    if-eqz v2, :cond_2
+    move-result-object v6
 
-    new-instance v2, Lf6c;
+    if-eqz v6, :cond_1
 
-    invoke-virtual {v0}, Lz6c;->s()Lda2;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lda2;->K()Z
+    move-result-object p1
 
-    move-result v0
+    const-string v7, "failed to copy picked image, e:"
+
+    invoke-static {p1, v7, v6}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v1}, Lu6c;->w()V
+
+    :cond_1
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj4e;
+
+    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {p1, v6, v6}, Ln0i;->j(Lj4e;Ljava/lang/String;Ljava/lang/String;)Z
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj4e;
+
+    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1, v3}, Ln0i;->i(Lj4e;Ljava/lang/String;)V
+
+    iget-object p1, v1, Lu6c;->o:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldq5;
+
+    check-cast p1, Ljq5;
+
+    invoke-virtual {p1}, Ljq5;->n()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Li5c;
+
+    invoke-static {v5}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {p1, v1, v3}, Li5c;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v2, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_2
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/Application;
+
+    const-class v3, Lru/ok/messages/views/ActAvatarCrop;
+
+    invoke-direct {p1, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "ru.ok.tamtam.extra.URI"
+
+    invoke-static {v5}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v1, "ru.ok.tamtam.extra.FILE_PATH"
+
+    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "ru.ok.tamtam.extra.SHOW_RECAPTURE"
 
     const/4 v3, 0x1
 
-    if-ne v0, v3, :cond_1
+    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    sget v0, Lvya;->N0:I
+    const-string v1, "ru.ok.tamtam.extra.FOR_CHAT_BACKGROUND"
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :cond_1
-    sget v0, Lvya;->P0:I
+    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    :goto_0
-    new-instance v3, Ljqf;
+    new-instance v1, Lj5c;
 
-    invoke-direct {v3, v0}, Ljqf;-><init>(I)V
+    invoke-direct {v1, p1}, Lj5c;-><init>(Landroid/content/Intent;)V
 
-    sget v0, Liid;->r:I
+    invoke-static {v2, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    invoke-direct {v2, v0, v3}, Lf6c;-><init>(ILjqf;)V
-
-    iget-object v0, v1, Lde5;->b:Leie;
-
-    invoke-virtual {v0, v2}, Leie;->h(Ljava/lang/Object;)Z
-
-    :cond_2
-    :goto_1
-    sget-object v0, Lzag;->a:Lzag;
-
+    :goto_3
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

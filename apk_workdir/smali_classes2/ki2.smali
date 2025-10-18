@@ -1,42 +1,26 @@
 .class public final Lki2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lsi2;
-
-.field public final synthetic Z:J
-
-.field public final synthetic r0:Ljava/lang/String;
-
-.field public final synthetic s0:Lzw4;
-
-.field public final synthetic t0:J
+.field public final synthetic Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lsi2;JLjava/lang/String;Lzw4;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lki2;->Y:Lsi2;
+    iput-object p2, p0, Lki2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iput-wide p2, p0, Lki2;->Z:J
+    const/4 p2, 0x2
 
-    iput-object p4, p0, Lki2;->r0:Ljava/lang/String;
-
-    iput-object p5, p0, Lki2;->s0:Lzw4;
-
-    iput-wide p6, p0, Lki2;->t0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p8}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -46,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lki2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -56,331 +38,184 @@
 
     check-cast p1, Lki2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lki2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
+    .locals 2
 
     new-instance v0, Lki2;
 
-    iget-object v5, p0, Lki2;->s0:Lzw4;
+    iget-object v1, p0, Lki2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iget-wide v6, p0, Lki2;->t0:J
+    invoke-direct {v0, p2, v1}, Lki2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
 
-    iget-object v1, p0, Lki2;->Y:Lsi2;
-
-    iget-wide v2, p0, Lki2;->Z:J
-
-    iget-object v4, p0, Lki2;->r0:Ljava/lang/String;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Lki2;-><init>(Lsi2;JLjava/lang/String;Lzw4;JLkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lki2;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    .locals 3
 
-    move-object/from16 v1, p0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget v0, v1, Lki2;->X:I
+    iget-object p1, p0, Lki2;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x4
+    check-cast p1, Lwx4;
 
-    const/4 v3, 0x3
+    instance-of v0, p1, Lvx4;
 
-    const/4 v4, 0x2
+    iget-object v1, p0, Lki2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    sget-object v5, Lzag;->a:Lzag;
+    if-eqz v0, :cond_1
 
-    const/4 v6, 0x1
+    const/4 v0, 0x0
 
-    iget-object v7, v1, Lki2;->Y:Lsi2;
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
 
-    sget-object v8, Lc54;->a:Lc54;
+    check-cast p1, Lvx4;
 
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lvx4;->a:Landroid/net/Uri;
 
-    if-eq v0, v6, :cond_3
+    iget-object p1, p1, Lvx4;->b:Lqx4;
 
-    if-eq v0, v4, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    if-eq v0, v3, :cond_1
+    move-result v2
 
-    if-ne v0, v2, :cond_0
+    packed-switch v2, :pswitch_data_0
+
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    if-eqz v0, :cond_2
+
+    sget-object p1, Lyi7;->a:Ljava/lang/String;
+
+    const-string p1, "*/*"
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0, p1}, Lyi7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :pswitch_1
+    sget-object v0, Lqx4;->X:Lqx4;
+
+    if-ne p1, v0, :cond_0
+
+    sget p1, Lrsc;->media_share_dialog_download_gif_success:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    sget p1, Lrsc;->media_share_dialog_download_photo_success:I
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
     :goto_0
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+    sget v0, Lpjd;->o:I
 
-    goto/16 :goto_8
-
-    :cond_2
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object v5
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    move-object/from16 v0, p1
+    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->S0(II)V
 
     goto :goto_1
 
-    :cond_4
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+    :pswitch_2
+    if-eqz v0, :cond_2
 
-    iget-object v0, v7, Lsi2;->X:Llt7;
+    sget-object p1, Lyi7;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    const-string p1, "image/*"
 
-    move-result-object v0
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    check-cast v0, Lno9;
+    move-result-object v2
 
-    iput v6, v1, Lki2;->X:I
+    invoke-static {v2, v0, p1}, Lyi7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
 
-    iget-wide v9, v1, Lki2;->Z:J
+    goto :goto_1
 
-    invoke-virtual {v0, v9, v10, v1}, Lno9;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_3
+    sget p1, Lrsc;->media_share_dialog_download_video_success:I
 
-    move-result-object v0
+    sget v0, Lpjd;->o:I
 
-    if-ne v0, v8, :cond_5
+    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->S0(II)V
 
-    goto/16 :goto_7
+    goto :goto_1
 
-    :cond_5
+    :pswitch_4
+    if-eqz v0, :cond_2
+
+    sget-object p1, Lyi7;->a:Ljava/lang/String;
+
+    const-string p1, "video/*"
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0, p1}, Lyi7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_1
+    instance-of v0, p1, Lux4;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Lux4;
+
+    iget p1, p1, Lux4;->a:I
+
+    sget v0, Lpjd;->J:I
+
+    sget-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:[Ltr7;
+
+    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->S0(II)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
+
+    :cond_2
     :goto_1
-    move-object v9, v0
+    iget-object p1, v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lfq4;
 
-    check-cast v9, Loa9;
+    if-eqz p1, :cond_3
 
-    iget-object v15, v1, Lki2;->r0:Ljava/lang/String;
+    invoke-virtual {p1}, Lfq4;->a()V
 
-    const/4 v10, 0x0
+    :cond_3
+    sget-object p1, Lccg;->a:Lccg;
 
-    if-eqz v9, :cond_6
+    return-object p1
 
-    iget-object v0, v9, Loa9;->x0:Lk68;
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    if-eqz v0, :cond_6
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v0, v15}, Lk68;->m(Ljava/lang/String;)Ld20;
+    throw p1
 
-    move-result-object v0
-
-    move-object v11, v0
-
-    goto :goto_2
-
-    :cond_6
-    move-object v11, v10
-
-    :goto_2
-    if-eqz v11, :cond_7
-
-    invoke-virtual {v11}, Ld20;->c()Z
-
-    move-result v0
-
-    if-ne v0, v6, :cond_7
-
-    iput v4, v1, Lki2;->X:I
-
-    iget-object v0, v1, Lki2;->s0:Lzw4;
-
-    invoke-static {v7, v11, v0, v9, v1}, Lsi2;->s(Lsi2;Ld20;Lzw4;Loa9;Lk14;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v8, :cond_d
-
-    goto/16 :goto_7
-
-    :cond_7
-    iget-object v0, v7, Lsi2;->z0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    move-object v4, v10
-
-    new-instance v10, Lji2;
-
-    move-object v13, v11
-
-    iget-wide v11, v1, Lki2;->Z:J
-
-    move-object/from16 v16, v13
-
-    iget-wide v13, v1, Lki2;->t0:J
-
-    iget-object v4, v1, Lki2;->s0:Lzw4;
-
-    move-object/from16 v6, v16
-
-    move-object/from16 v16, v4
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v10 .. v16}, Lji2;-><init>(JJLjava/lang/String;Lzw4;)V
-
-    invoke-virtual {v0, v10}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
-
-    move-result-object v0
-
-    :try_start_0
-    new-instance v10, Landroid/os/StatFs;
-
-    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v10, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v10}, Landroid/os/StatFs;->getBlockSizeLong()J
-
-    move-result-wide v11
-
-    invoke-virtual {v10}, Landroid/os/StatFs;->getAvailableBlocksLong()J
-
-    move-result-wide v13
-
-    mul-long/2addr v11, v13
-
-    const-wide/32 v13, 0x100000
-
-    div-long/2addr v11, v13
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v10, Lvcd;
-
-    invoke-direct {v10, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v10
-
-    :goto_3
-    const-wide/16 v10, -0x1
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    instance-of v11, v0, Lvcd;
-
-    if-eqz v11, :cond_8
-
-    move-object v0, v10
-
-    :cond_8
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v10
-
-    const-wide/16 v12, 0x400
-
-    cmp-long v0, v10, v12
-
-    if-lez v0, :cond_e
-
-    if-eqz v6, :cond_9
-
-    iget-object v10, v6, Ld20;->b:Lr10;
-
-    goto :goto_4
-
-    :cond_9
-    move-object v10, v4
-
-    :goto_4
-    if-eqz v6, :cond_a
-
-    iget-object v0, v6, Ld20;->d:Lc20;
-
-    goto :goto_5
-
-    :cond_a
-    move-object v0, v4
-
-    :goto_5
-    if-eqz v10, :cond_c
-
-    iput v3, v1, Lki2;->X:I
-
-    new-instance v0, Lni2;
-
-    invoke-direct {v0, v10, v7, v4}, Lni2;-><init>(Lr10;Lsi2;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1}, Lcwi;->c(Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v8, :cond_b
-
-    goto :goto_6
-
-    :cond_b
-    move-object v0, v5
-
-    :goto_6
-    if-ne v0, v8, :cond_d
-
-    goto :goto_7
-
-    :cond_c
-    if-eqz v0, :cond_d
-
-    iput v2, v1, Lki2;->X:I
-
-    invoke-static {v7, v15, v0, v9, v1}, Lsi2;->r(Lsi2;Ljava/lang/String;Lc20;Loa9;Lk14;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v8, :cond_d
-
-    :goto_7
-    return-object v8
-
-    :cond_d
-    :goto_8
-    return-object v5
-
-    :cond_e
-    const/4 v2, 0x1
-
-    invoke-virtual {v7, v2}, Lsi2;->v(Z)V
-
-    return-object v5
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

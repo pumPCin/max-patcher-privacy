@@ -1,3 +1,3 @@
 .class public abstract Lli;
-.super Ludi;
+.super Lvei;
 .source "SourceFile"

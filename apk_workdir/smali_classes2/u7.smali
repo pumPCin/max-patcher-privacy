@@ -8,11 +8,11 @@
 
 
 # instance fields
-.field public final a:Lq71;
+.field public final a:Ly71;
 
 .field public final b:Lw7;
 
-.field public final c:Lxnh;
+.field public final c:Lyoh;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -40,16 +40,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Lq71;Lvtf;)V
+.method public constructor <init>(Ly71;Lavf;)V
     .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu7;->a:Lq71;
+    iput-object p1, p0, Lu7;->a:Ly71;
 
     new-instance v8, Lw7;
 
-    new-instance v0, Luk9;
+    new-instance v0, Lvl9;
 
     const/4 v6, 0x0
 
@@ -65,7 +65,7 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Luk9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lvl9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     invoke-direct {v8}, Ljava/lang/Object;-><init>()V
 
@@ -75,9 +75,9 @@
 
     iput-object v8, p0, Lu7;->b:Lw7;
 
-    new-instance v8, Lxnh;
+    new-instance v8, Lyoh;
 
-    new-instance v0, Lng9;
+    new-instance v0, Loh9;
 
     const/16 v7, 0x15
 
@@ -89,11 +89,11 @@
 
     const-string v5, "onAudioCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;)V"
 
-    invoke-direct/range {v0 .. v7}, Lng9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Loh9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-direct {v8, v1, v0}, Lxnh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v8, v1, v0}, Lyoh;-><init>(ILjava/lang/Object;)V
 
-    iput-object v8, p0, Lu7;->c:Lxnh;
+    iput-object v8, p0, Lu7;->c:Lyoh;
 
     return-void
 .end method

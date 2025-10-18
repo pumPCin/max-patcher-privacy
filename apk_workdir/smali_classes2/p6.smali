@@ -116,11 +116,11 @@
 
     iget-object p1, p0, Lp6;->b:Ljava/lang/Object;
 
-    check-cast p1, Ldxc;
+    check-cast p1, Lkyc;
 
-    iget-object p1, p1, Ldxc;->s0:Loh6;
+    iget-object p1, p1, Lkyc;->r0:Lji6;
 
-    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -129,9 +129,9 @@
 
     check-cast p1, Lone/me/chats/forward/ForwardPickerScreen;
 
-    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->y0:Loh6;
+    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->x0:Lji6;
 
-    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -142,7 +142,7 @@
 
     check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Landroidx/viewpager2/widget/ViewPager2;
 
     new-instance v0, Lk3;
 

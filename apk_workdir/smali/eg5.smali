@@ -1,132 +1,323 @@
 .class public final Leg5;
-.super Ljava/lang/Object;
+.super Ldg5;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Enumeration;
+.implements Lyp4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:I
+.field public final a:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    iput p1, p0, Leg5;->a:I
+    invoke-direct {p0}, Lk54;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    invoke-static {p1}, Lkotlinx/coroutines/internal/ConcurrentKt;->removeFutureOnCancel(Ljava/util/concurrent/Executor;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasMoreElements()Z
-    .locals 5
+.method public final close()V
+    .locals 2
 
-    iget v0, p0, Leg5;->a:I
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
 
-    const/4 v1, 0x0
+    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
 
-    const/4 v2, 0x1
+    if-eqz v1, :cond_0
 
-    const/4 v3, 0x4
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Leg5;->b:I
-
-    sget-object v4, Lhg5;->c:[Ltg5;
-
-    if-ge v0, v3, :cond_0
-
-    move v1, v2
-
-    :cond_0
-    return v1
-
-    :pswitch_0
-    iget v0, p0, Leg5;->b:I
-
-    sget-object v4, Lhg5;->c:[Ltg5;
-
-    if-ge v0, v3, :cond_1
-
-    move v1, v2
-
-    :cond_1
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final nextElement()Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Leg5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Leg5;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Leg5;->b:I
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sget-object v1, Lhg5;->d:[[Ltg5;
-
-    iget v2, p0, Leg5;->b:I
-
-    aget-object v1, v1, v2
-
-    array-length v2, v1
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    aget-object v4, v1, v3
-
-    iget-object v5, v4, Ltg5;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v3, v3, 0x1
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
     goto :goto_0
 
     :cond_0
-    iget v1, p0, Leg5;->b:I
+    const/4 v0, 0x0
 
-    add-int/lit8 v1, v1, 0x1
+    :goto_0
+    if-eqz v0, :cond_1
 
-    iput v1, p0, Leg5;->b:I
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Lpyi;->b(Lyp4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final dispatch(Li54;Ljava/lang/Runnable;)V
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v0, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    const-string v2, "The task was rejected"
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    sget-object v0, Lt93;->s0:Lt93;
+
+    invoke-interface {p1, v0}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object v0
+
+    check-cast v0, Ljn7;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, v1}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_0
+    sget-object v0, Lmv4;->c:Lcl4;
+
+    invoke-virtual {v0, p1, p2}, Lcl4;->dispatch(Li54;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Leg5;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Leg5;
+
+    iget-object p1, p1, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final invokeOnTimeout(JLjava/lang/Runnable;Li54;)Lyv4;
+    .locals 4
+
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v0, p3, p1, p2, v1}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    const-string v3, "The task was rejected"
+
+    invoke-direct {v1, v3}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    sget-object v0, Lt93;->s0:Lt93;
+
+    invoke-interface {p4, v0}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object v0
+
+    check-cast v0, Ljn7;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, v1}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    :goto_1
+    if-eqz v2, :cond_2
+
+    new-instance p1, Lxv4;
+
+    invoke-direct {p1, v2}, Lxv4;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
+
+    return-object p1
+
+    :cond_2
+    sget-object v0, Lak4;->q0:Lak4;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lak4;->invokeOnTimeout(JLjava/lang/Runnable;Li54;)Lyv4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n()Ljava/util/concurrent/Executor;
+    .locals 1
+
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
 
     return-object v0
+.end method
 
-    nop
+.method public final scheduleResumeAfterDelay(JLn32;)V
+    .locals 5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lgk6;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v1, p0, v3, p3}, Lgk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Li54;
+
+    move-result-object v3
+
+    :try_start_0
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v0, v1, p1, p2, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    const-string v4, "The task was rejected"
+
+    invoke-direct {v1, v4}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    sget-object v0, Lt93;->s0:Lt93;
+
+    invoke-interface {v3, v0}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object v0
+
+    check-cast v0, Ljn7;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, v1}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    :goto_1
+    if-eqz v2, :cond_2
+
+    new-instance p1, Lc32;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, v2}, Lc32;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p3, p1}, Lhni;->c(Ln32;Ld32;)V
+
+    return-void
+
+    :cond_2
+    sget-object v0, Lak4;->q0:Lak4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lef5;->scheduleResumeAfterDelay(JLn32;)V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Leg5;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

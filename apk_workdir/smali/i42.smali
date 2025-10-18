@@ -1,101 +1,166 @@
-.class public final Li42;
+.class public final synthetic Li42;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvr3;
+
 
 # instance fields
-.field public final a:Ly32;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lv3;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 13
+.method public synthetic constructor <init>(Lv3;I)V
+    .locals 0
+
+    iput p2, p0, Li42;->a:I
+
+    iput-object p1, p0, Li42;->b:Lv3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashSet;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {}, La0a;->c()La0a;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    move-result-object v1
+    iget v0, p0, Li42;->a:I
 
-    new-instance v2, Ljava/util/ArrayList;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    check-cast p1, Lec0;
 
-    invoke-static {}, Li0a;->a()Li0a;
+    invoke-static {}, Laud;->a()V
 
-    move-result-object v3
+    iget-object v0, p0, Li42;->b:Lv3;
 
-    new-instance v4, Ly32;
+    iget-object v0, v0, Lv3;->b:Ljava/lang/Object;
 
-    new-instance v5, Ljava/util/ArrayList;
+    check-cast v0, Luzb;
 
-    invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    if-eqz v0, :cond_3
 
-    invoke-static {v1}, Lq8b;->a(Lck3;)Lq8b;
+    iget v1, v0, Luzb;->a:I
 
-    move-result-object v6
+    iget v2, p1, Lec0;->a:I
 
-    new-instance v9, Ljava/util/ArrayList;
+    if-ne v1, v2, :cond_3
 
-    invoke-direct {v9, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iget-object p1, p1, Lec0;->b:Landroidx/camera/core/ImageCaptureException;
 
-    sget-object v0, Lwjf;->b:Lwjf;
+    iget-object v0, v0, Luzb;->f:Lhcd;
 
-    new-instance v0, Landroid/util/ArrayMap;
+    iget-object v1, v0, Lhcd;->a:Lfc0;
 
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+    invoke-static {}, Laud;->a()V
 
-    iget-object v1, v3, Lwjf;->a:Landroid/util/ArrayMap;
+    iget-boolean v2, v0, Lhcd;->g:Z
 
-    invoke-virtual {v1}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+    if-eqz v2, :cond_0
 
-    move-result-object v2
+    goto :goto_1
 
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    :cond_0
+    invoke-static {}, Laud;->a()V
 
-    move-result-object v2
+    iget v2, v1, Lfc0;->a:I
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    if-lez v2, :cond_1
 
-    move-result v3
+    const/4 v3, 0x1
 
-    if-eqz v3, :cond_0
+    sub-int/2addr v2, v3
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-virtual {v0, v3, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v2, v1, Lfc0;->a:I
 
     goto :goto_0
 
-    :cond_0
-    new-instance v11, Lwjf;
+    :cond_1
+    const/4 v3, 0x0
 
-    invoke-direct {v11, v0}, Lwjf;-><init>(Landroid/util/ArrayMap;)V
+    :goto_0
+    if-nez v3, :cond_2
 
-    const/4 v7, -0x1
+    invoke-static {}, Laud;->a()V
 
-    const/4 v8, 0x0
+    iget-object v2, v1, Lfc0;->b:Ljava/util/concurrent/Executor;
 
-    const/4 v12, 0x0
+    new-instance v4, Ll2e;
 
-    move v10, v8
+    const/16 v5, 0x16
 
-    invoke-direct/range {v4 .. v12}, Ly32;-><init>(Ljava/util/ArrayList;Lq8b;IZLjava/util/ArrayList;ZLwjf;Lpz1;)V
+    invoke-direct {v4, v1, v5, p1}, Ll2e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object v4, p0, Li42;->a:Ly32;
+    invoke-interface {v2, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_2
+    invoke-virtual {v0}, Lhcd;->a()V
+
+    iget-object v2, v0, Lhcd;->e:Lgu1;
+
+    invoke-virtual {v2, p1}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    if-eqz v3, :cond_3
+
+    iget-object p1, v0, Lhcd;->b:Lhlf;
+
+    invoke-virtual {p1, v1}, Lhlf;->d(Lfc0;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :pswitch_0
+    check-cast p1, Luzb;
+
+    iget-object v0, p0, Li42;->b:Lv3;
+
+    invoke-virtual {v0, p1}, Lv3;->h(Luzb;)V
+
+    iget-object v0, v0, Lv3;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ld09;
+
+    iget-object v1, v0, Ld09;->c:Ljava/lang/Object;
+
+    check-cast v1, Luzb;
+
+    if-nez v1, :cond_4
+
+    const/4 v1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v1, 0x0
+
+    :goto_2
+    const-string v2, "Pending request should be null"
+
+    invoke-static {v2, v1}, Ldvi;->f(Ljava/lang/String;Z)V
+
+    iput-object p1, v0, Ld09;->c:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li42;->b:Lv3;
+
+    check-cast p1, Luzb;
+
+    invoke-virtual {v0, p1}, Lv3;->h(Luzb;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

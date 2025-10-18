@@ -1,97 +1,55 @@
 .class public final Lm46;
-.super Ljava/lang/Object;
+.super Lgj0;
 .source "SourceFile"
-
-# interfaces
-.implements Ln46;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final c:Lgj0;
+
+.field public d:Li46;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lm46;->a:Ljava/util/List;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lm46;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lm46;
-
-    iget-object v1, p0, Lm46;->a:Ljava/util/List;
-
-    iget-object p1, p1, Lm46;->a:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lm46;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Lgj0;Lky2;Lulf;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0, p3}, Lgj0;-><init>(Lulf;)V
 
-    const-string v1, "OpenPicker(includes="
+    iput-object p1, p0, Lm46;->c:Lgj0;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p3, Lqta;
 
-    iget-object v1, p0, Lm46;->a:Ljava/util/List;
+    invoke-virtual {p3}, Lqta;->a()Lk54;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ")"
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance p3, Lk46;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-direct {p3, p0, v0}, Lk46;-><init>(Lm46;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v0, v0, p3, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    iget-object p2, p2, Lky2;->d:Lx23;
+
+    new-instance p3, Ll46;
+
+    invoke-direct {p3, p0, v0}, Ll46;-><init>(Lm46;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Lb16;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p2, p3, v1}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    invoke-static {v0, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+
+    return-void
 .end method

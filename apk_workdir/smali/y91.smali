@@ -1,165 +1,99 @@
-.class public final Ly91;
-.super Llff;
+.class public final synthetic Ly91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lba1;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lba1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
     .locals 0
 
-    iput-object p1, p0, Ly91;->Y:Lba1;
+    iput p1, p0, Ly91;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ly91;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Ly91;->b:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p0, Ly91;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ly91;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ly91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Lgr1;
 
-    move-result-object p1
+    iget-boolean v1, p0, Ly91;->b:Z
 
-    check-cast p1, Ly91;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Ly91;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ly91;
-
-    iget-object v1, p0, Ly91;->Y:Lba1;
-
-    invoke-direct {v0, v1, p2}, Ly91;-><init>(Lba1;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Ly91;->X:Z
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Ly91;->X:Z
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Ls95;->a:Ls95;
-
-    goto :goto_1
-
-    :cond_0
-    sget-object p1, Lca1;->X:Lfd5;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {p1, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance v1, Lf2;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, p1}, Lf2;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0, v1}, Lgr1;->w(Lgr1;Z)V
 
     :goto_0
-    invoke-virtual {v1}, Lf2;->hasNext()Z
+    sget-object v0, Lccg;->a:Lccg;
 
-    move-result p1
+    return-object v0
 
-    if-eqz p1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Ly91;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+    check-cast v0, Llz6;
 
-    move-result-object p1
+    sget-object v1, Lo91;->c:Lo91;
 
-    check-cast p1, Lca1;
+    check-cast v0, Ljz6;
 
-    new-instance v2, Lda1;
+    iget-wide v2, v0, Ljz6;->a:J
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Lrdi;->q0()Lag4;
 
-    move-result v3
+    move-result-object v0
 
-    iget v4, p1, Lca1;->a:I
+    const-string v1, ":call-user?opponent_id="
 
-    invoke-direct {v2, v3, v4, p1}, Lda1;-><init>(IILca1;)V
+    const-string v4, "&video_enabled="
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-boolean v5, p0, Ly91;->b:Z
 
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_1
-    iget-object v0, p0, Ly91;->Y:Lba1;
-
-    iget-object v0, v0, Lba1;->Z:Lsze;
-
-    :cond_2
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
+    invoke-static {v2, v3, v1, v4, v5}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    move-object v2, v1
+    const-string v2, "&microphone_enabled=true"
 
-    check-cast v2, Lbw1;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, v2, Lbw1;->b:Z
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    new-instance v2, Lbw1;
+    const/4 v2, 0x0
 
-    invoke-direct {v2, p1, v3}, Lbw1;-><init>(Ljava/util/List;Z)V
+    invoke-virtual {v0, v1, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-virtual {v0, v1, v2}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    goto :goto_0
 
-    move-result v1
+    nop
 
-    if-eqz v1, :cond_2
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

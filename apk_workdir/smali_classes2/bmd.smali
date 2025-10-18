@@ -1,61 +1,59 @@
 .class public final Lbmd;
-.super Lgmd;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbmd;
+# instance fields
+.field public X:Lab7;
+
+.field public Y:Z
+
+.field public Z:Z
+
+.field public o:Lgmd;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lgmd;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgmd;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lbmd;
+    iput-object p1, p0, Lbmd;->r0:Lgmd;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbmd;->a:Lbmd;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lbmd;->q0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lbmd;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lbmd;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lbmd;->s0:I
 
     const/4 p1, 0x0
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v1, p0, Lbmd;->r0:Lgmd;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v1, p1, v0, v0, p0}, Lgmd;->a(Lgmd;Ljava/lang/String;ZZLy14;)Ljava/lang/Comparable;
 
-    const v0, -0x1c165701
+    move-result-object p1
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraPermissionDenied"
-
-    return-object v0
+    return-object p1
 .end method

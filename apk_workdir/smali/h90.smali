@@ -4,173 +4,100 @@
 
 
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:J
+.field public b:I
 
+.field public c:F
 
-# direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
+.field public d:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public e:J
 
-    if-eqz p1, :cond_0
+.field public f:J
 
-    iput p1, p0, Lh90;->a:I
+.field public g:J
 
-    iput-wide p2, p0, Lh90;->b:J
+.field public h:F
 
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null status"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public i:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(J)F
+    .locals 8
 
-    if-ne p1, p0, :cond_0
+    iget-wide v0, p0, Lh90;->e:J
 
-    goto :goto_0
+    cmp-long v2, p1, v0
 
-    :cond_0
-    instance-of v0, p1, Lh90;
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_1
+    if-gez v2, :cond_0
 
-    check-cast p1, Lh90;
-
-    iget v0, p0, Lh90;->a:I
-
-    iget v1, p1, Lh90;->a:I
-
-    invoke-static {v0, v1}, Lwx1;->c(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-wide v0, p0, Lh90;->b:J
-
-    iget-wide v2, p1, Lh90;->b:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 6
-
-    iget v0, p0, Lh90;->a:I
-
-    invoke-static {v0}, Lwx1;->v(I)I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    const/16 v1, 0x20
-
-    iget-wide v2, p0, Lh90;->b:J
-
-    ushr-long v4, v2, v1
-
-    xor-long v1, v4, v2
-
-    long-to-int v1, v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "BackendResponse{status="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lh90;->a:I
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
+    return v3
 
     :cond_0
-    const-string v1, "INVALID_PAYLOAD"
+    iget-wide v4, p0, Lh90;->g:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v2, v4, v6
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    if-ltz v2, :cond_2
+
+    cmp-long v2, p1, v4
+
+    if-gez v2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-string v1, "FATAL_ERROR"
+    sub-long/2addr p1, v4
 
-    goto :goto_0
+    iget v0, p0, Lh90;->h:F
+
+    sub-float v1, v6, v0
+
+    long-to-float p1, p1
+
+    iget p2, p0, Lh90;->i:I
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1, v3, v6}, Li28;->b(FFF)F
+
+    move-result p1
+
+    mul-float/2addr p1, v0
+
+    add-float/2addr p1, v1
+
+    return p1
 
     :cond_2
-    const-string v1, "TRANSIENT_ERROR"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "OK"
-
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sub-long/2addr p1, v0
 
-    const-string v1, ", nextRequestWaitMillis="
+    long-to-float p1, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget p2, p0, Lh90;->a:I
 
-    iget-wide v1, p0, Lh90;->b:J
+    int-to-float p2, p2
 
-    const-string v3, "}"
+    div-float/2addr p1, p2
 
-    invoke-static {v0, v1, v2, v3}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v3, v6}, Li28;->b(FFF)F
 
-    move-result-object v0
+    move-result p1
 
-    return-object v0
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    mul-float/2addr p1, p2
+
+    return p1
 .end method

@@ -99,7 +99,7 @@
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="false" android:enableOnBackInvokedCallback="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:largeHeap="@bool/large_heap" android:name="one.me.android.OneMeApplication" android:requestLegacyExternalStorage="true" android:theme="@style/OneMe.Launch">
         <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <profileable android:enabled="false" android:shell="false"/>
-        <activity android:configChanges="locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light">
+        <activity android:configChanges="locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -229,6 +229,7 @@
                 <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
             </intent-filter>
         </service>
+        <meta-data android:name="ru.ok.tracer.startup.Initializer@ca60b3bb-9ba5-4307-8c3f-5218111e10c5" android:value="ru.ok.tracer.nativebridge.NativeBridgeInitializer"/>
         <meta-data android:name="ru.ok.tracer.startup.Initializer@b7b8ba75-c336-4dee-8e2a-64ef488e0218" android:value="ru.ok.tracer.crash.report.CrashReportInitializer"/>
         <meta-data android:name="ru.ok.tracer.startup.Initializer@06f2fae1-db2b-4f87-bc14-fc15c26da3b9" android:value="ru.ok.tracer.performance.metrics.PerformanceMetricsInitializer"/>
         <provider android:authorities="ru.oneme.app.tracer-startup" android:exported="false" android:name="ru.ok.tracer.startup.InitializationProvider"/>

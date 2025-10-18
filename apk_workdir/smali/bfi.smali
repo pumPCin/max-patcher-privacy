@@ -1,207 +1,128 @@
-.class public abstract Lbfi;
+.class public final Lbfi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lbfi;
+
+.field public static final b:Lbr5;
+
+.field public static final c:Lbr5;
+
+.field public static final d:Lbr5;
+
 
 # direct methods
-.method public static a(I)I
+.method static constructor <clinit>()V
     .locals 4
 
-    const/4 v0, 0x3
+    new-instance v0, Lbfi;
 
-    if-ge p0, v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "expectedSize"
+    sput-object v0, Lbfi;->a:Lbfi;
 
-    invoke-static {p0, v0}, Leti;->a(ILjava/lang/String;)V
+    new-instance v0, Lr8i;
 
-    add-int/lit8 p0, p0, 0x1
+    const/4 v1, 0x1
 
-    return p0
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    :cond_0
-    const/high16 v0, 0x40000000    # 2.0f
+    const-class v1, Lm9i;
 
-    if-ge p0, v0, :cond_1
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    int-to-double v0, p0
+    move-result-object v0
 
-    const-wide/high16 v2, 0x3fe8000000000000L    # 0.75
+    new-instance v2, Lbr5;
 
-    div-double/2addr v0, v2
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    move-result-object v0
 
-    move-result-wide v0
+    const-string v3, "logEventKey"
 
-    double-to-int p0, v0
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    return p0
+    sput-object v2, Lbfi;->b:Lbr5;
 
-    :cond_1
-    const p0, 0x7fffffff
+    new-instance v0, Lr8i;
 
-    return p0
-.end method
+    const/4 v2, 0x2
 
-.method public static final b(II)V
-    .locals 4
+    invoke-direct {v0, v2}, Lr8i;-><init>(I)V
 
-    if-gt p0, p1, :cond_0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "eventCount"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lbfi;->c:Lbr5;
+
+    new-instance v0, Lr8i;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lr8i;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "inferenceDurationStats"
+
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lbfi;->d:Lbr5;
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, ") is greater than size ("
-
-    const-string v2, ")."
-
-    const-string v3, "toIndex ("
-
-    invoke-static {v3, p0, v1, p1, v2}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public static c(Ljava/util/Map;Ljava/lang/Object;)Z
-    .locals 1
 
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    instance-of v0, p1, Ljava/util/Map;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Ljava/util/Map;
-
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p0
-
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static d(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static e(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+    check-cast p1, Lvai;
 
-    move-result v0
+    check-cast p2, Luha;
 
-    const/4 v1, 0x3
+    sget-object v0, Lbfi;->b:Lbr5;
 
-    if-ne v0, v1, :cond_0
+    iget-object v1, p1, Lvai;->a:Lqai;
 
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    move-result-object p0
+    sget-object v0, Lbfi;->c:Lbr5;
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p1, Lvai;->b:Ljava/lang/Integer;
 
-    move-result p0
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    if-eqz p0, :cond_0
+    sget-object v0, Lbfi;->d:Lbr5;
 
-    const/4 p0, 0x1
+    iget-object p1, p1, Lvai;->c:Lvvi;
 
-    return p0
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
-    .locals 2
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

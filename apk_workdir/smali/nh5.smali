@@ -1,70 +1,59 @@
-.class public final synthetic Lnh5;
+.class public final Lnh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw18;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lorb;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:I
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorb;II)V
+.method public constructor <init>(ILjava/lang/String;II)V
     .locals 0
 
-    iput p3, p0, Lnh5;->a:I
-
-    iput-object p1, p0, Lnh5;->b:Lorb;
-
-    iput p2, p0, Lnh5;->c:I
-
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object p2, p0, Lnh5;->b:Ljava/lang/String;
+
+    .line 8
+    iput p1, p0, Lnh5;->a:I
+
+    .line 9
+    iput p3, p0, Lnh5;->c:I
+
+    .line 10
+    iput p4, p0, Lnh5;->d:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lnh5;->a:I
+    .line 2
+    iput-object p1, p0, Lnh5;->b:Ljava/lang/String;
 
-    check-cast p1, Lhsb;
+    .line 3
+    iput p2, p0, Lnh5;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    .line 4
+    iput p3, p0, Lnh5;->c:I
 
-    iget-object v0, p0, Lnh5;->b:Lorb;
+    const/4 p1, -0x1
 
-    iget-boolean v0, v0, Lorb;->l:Z
-
-    iget v1, p0, Lnh5;->c:I
-
-    invoke-interface {p1, v1, v0}, Lhsb;->i(IZ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnh5;->b:Lorb;
-
-    iget-object v0, v0, Lorb;->a:Lnuf;
-
-    iget v0, p0, Lnh5;->c:I
-
-    invoke-interface {p1, v0}, Lhsb;->z(I)V
+    .line 5
+    iput p1, p0, Lnh5;->d:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

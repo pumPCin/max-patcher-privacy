@@ -1,48 +1,21 @@
-.class public final Lgpd;
-.super Lk14;
+.class public abstract Lgpd;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Liv8;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Llj3;
 
 
 # direct methods
-.method public constructor <init>(Liv8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lgpd;->Y:Liv8;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lgpd;->o:Ljava/lang/Object;
+    new-instance v0, Llj3;
 
-    iget p1, p0, Lgpd;->X:I
+    invoke-direct {v0}, Llj3;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Lgpd;->a:Llj3;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lgpd;->X:I
-
-    iget-object p1, p0, Lgpd;->Y:Liv8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Liv8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

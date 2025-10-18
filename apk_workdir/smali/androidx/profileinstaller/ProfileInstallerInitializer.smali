@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lif7;
+.implements Leg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lif7;"
+        "Leg7;"
     }
 .end annotation
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-    new-instance p1, Leh2;
+    new-instance p1, Lnh2;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 

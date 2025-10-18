@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lib7;
+.implements Lfc7;
 .implements Ljava/util/Collection;
-.implements Llq7;
+.implements Lir7;
 
 
 # virtual methods
@@ -100,9 +100,9 @@
 .method public final subList(II)Ljava/util/List;
     .locals 1
 
-    new-instance v0, Lfb7;
+    new-instance v0, Lcc7;
 
-    invoke-direct {v0, p0, p1, p2}, Lfb7;-><init>(Lh3;II)V
+    invoke-direct {v0, p0, p1, p2}, Lcc7;-><init>(Lh3;II)V
 
     return-object v0
 .end method

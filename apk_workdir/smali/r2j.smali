@@ -1,10 +1,8 @@
-.class public abstract Lr2j;
-.super Llth;
+.class public interface abstract Lr2j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls2j;
 
-
-# static fields
-.field public static final synthetic d:I
+# virtual methods
+.method public abstract c()Lpg6;
+.end method

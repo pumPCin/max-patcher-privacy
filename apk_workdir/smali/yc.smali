@@ -285,7 +285,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    iget-object v1, v1, Luc;->o:Ls79;
+    iget-object v1, v1, Luc;->o:Lu89;
 
     if-eqz v1, :cond_f
 

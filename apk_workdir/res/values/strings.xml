@@ -235,7 +235,7 @@
     <string name="call_notification_ongoing_text">Текущий вызов</string>
     <string name="call_notification_screening_text">Фильтрация входящего вызова</string>
     <string name="call_opponent_failed_timout">Нет сети</string>
-    <string name="call_opponent_reject_call">Сейчас не может говорить</string>
+    <string name="call_opponent_reject_call">Не удалось дозвониться</string>
     <string name="call_opponent_unavailable_busy">Занято</string>
     <string name="call_opponent_unavailable_missed">Не удалось дозвониться</string>
     <string name="call_opponent_unavailable_privacy">Принимает звонки только от контактов</string>
@@ -451,7 +451,7 @@
     <string name="chat_screen__search_result_success" formatted="false">%d из %d</string>
     <string name="chat_screen__search_result_up_button_accessibility">Перейти к сообщению выше</string>
     <string name="chat_screen__start_chat_with_bot">Начать</string>
-    <string name="chat_screen_action_copy">Копировать сообщение</string>
+    <string name="chat_screen_action_copy">Скопировать текст</string>
     <string name="chat_screen_action_copy_photo">Скопировать фото</string>
     <string name="chat_screen_action_copy_photo_failed">Не удалось скопировать фото в буфер обмена</string>
     <string name="chat_screen_action_copy_photo_success">Фото скопировано в буфер обмена</string>
@@ -1006,8 +1006,7 @@
 %s"</string>
     <string name="oneme_bottom_sheet_cancel">Отменить</string>
     <string name="oneme_button_stack_more">Ещё</string>
-    <string name="oneme_channel_shortlink_action_share_link_text">"Присоединяйся к каналу по ссылке:
-%s"</string>
+    <string name="oneme_channel_shortlink_action_share_link_text">Присоединяйся к каналу по ссылке: %s</string>
     <string name="oneme_chat_complaint_description">Жалобу увидят только модераторы</string>
     <string name="oneme_chat_complaint_success_snackbar_title">Спасибо, что делаете MAX безопасным</string>
     <string name="oneme_chat_complaint_title">На что хотите пожаловаться?</string>
@@ -1038,8 +1037,8 @@
     <string name="oneme_chat_notifications_disable_1_hour">На 1 час</string>
     <string name="oneme_chat_notifications_disable_4_hour">На 4 часа</string>
     <string name="oneme_chat_notifications_disable_forever">Навсегда</string>
-    <string name="oneme_chat_notifications_off_snackbar_title">Уведомления отключены</string>
-    <string name="oneme_chat_notifications_on_snackbar_title">Уведомления включены</string>
+    <string name="oneme_chat_notifications_off_snackbar_title">Вы отключили уведомления</string>
+    <string name="oneme_chat_notifications_on_snackbar_title">Вы включили уведомления</string>
     <string name="oneme_chat_shortlink_action_share_link_text">"Присоединяйся к чату по ссылке:
 %s"</string>
     <string name="oneme_chat_toolbar_more_action_notifications">Уведомления</string>
@@ -1286,6 +1285,7 @@
     <string name="oneme_profile_edit_change_avatar_success">Фотография успешно изменена</string>
     <string name="oneme_profile_edit_change_avatar_upload_from_camera">Сделать снимок</string>
     <string name="oneme_profile_edit_change_avatar_upload_from_gallery">Загрузить из галереи</string>
+    <string name="oneme_profile_edit_chat_check_link_available">Ссылка свободна</string>
     <string name="oneme_profile_edit_chat_type_private">Приватный</string>
     <string name="oneme_profile_edit_chat_type_public">Публичный</string>
     <string name="oneme_profile_edit_check_link_available">Имя доступно</string>
@@ -1425,7 +1425,7 @@
     <string name="oneme_settings_media_action_video_quality_720">720p</string>
     <string name="oneme_settings_media_action_wifi">Только Wi-Fi</string>
     <string name="oneme_settings_media_animoji">Анимированные emoji</string>
-    <string name="oneme_settings_media_caching">Кэширование</string>
+    <string name="oneme_settings_media_caching">Кеширование</string>
     <string name="oneme_settings_media_gif">GIF</string>
     <string name="oneme_settings_media_gif_play">GIF</string>
     <string name="oneme_settings_media_gif_title">Автозагрузка GIF</string>
@@ -1514,7 +1514,7 @@
     <string name="oneme_settings_ringtone_custom_section_header">Мои рингтоны</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_duration">Файл не должен иметь длительность больше 30 сек</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_format">Этот тип файла не поддерживается</string>
-    <string name="oneme_settings_ringtone_custom_section_wrong_size">Файл не должен весить больше 1 Мб</string>
+    <string name="oneme_settings_ringtone_custom_section_wrong_size">Файл не должен весить больше 1 МБ</string>
     <string name="oneme_settings_ringtone_default_section">Фирменный MAX</string>
     <string name="oneme_settings_ringtone_low_volume_level">Увеличьте громкость звука, чтобы послушать рингтоны</string>
     <string name="oneme_settings_ringtone_system_section">Как в системе</string>
@@ -1787,8 +1787,8 @@
     <string name="presence_unknown_date">был(а) давно</string>
     <string name="profile_add_admins_tab_chat_members">Участники</string>
     <string name="profile_add_admins_toolbar">Добавить администратора</string>
-    <string name="profile_admins_list_item_added_admin_by_other">назначил(а) %s</string>
-    <string name="profile_admins_list_item_added_admin_by_you">назначили вы</string>
+    <string name="profile_admins_list_item_added_admin_by_other">Назначил(а) %s</string>
+    <string name="profile_admins_list_item_added_admin_by_you">Назначили вы</string>
     <string name="profile_block_bottom_sheet_confirm">Заблокировать</string>
     <string name="profile_block_bottom_sheet_description">Вы больше не сможете писать и звонить друг другу</string>
     <string name="profile_block_bottom_sheet_title">Заблокировать %s?</string>
@@ -1920,9 +1920,7 @@
     <string name="profile_edit_shortlink_update_action_success">Вы обновили ссылку</string>
     <string name="profile_edit_shortlink_update_confirmation_description">Предыдущая ссылка перестанет работать</string>
     <string name="profile_edit_shortlink_update_confirmation_title">Хотите обновить ссылку?</string>
-    <string name="profile_invite_channel_copy_link_success">Ссылка на канал скопирована</string>
     <string name="profile_invite_channel_link">Ссылка на канал</string>
-    <string name="profile_invite_chat_copy_link_success">Ссылка на чат скопирована</string>
     <string name="profile_invite_chat_link">Ссылка на чат</string>
     <string name="profile_invite_chat_link_description">Вы можете пригласить любого человека по этой ссылке</string>
     <string name="profile_invite_chat_link_refresh">Обновить</string>
@@ -1932,6 +1930,8 @@
     <string name="profile_invite_chat_link_update_confirmation_title">Вы уверены, что хотите обновить ссылку?</string>
     <string name="profile_invite_configure_type">"Настроить тип
 чата и ссылку"</string>
+    <string name="profile_invite_copy_private_link_success">Вы скопировали ссылку-приглашение</string>
+    <string name="profile_invite_copy_public_link_success">Вы скопировали ссылку</string>
     <string name="profile_invite_create_link_error_confirm">Хорошо</string>
     <string name="profile_invite_create_link_error_no_connection">"Проверьте подключение к сети
 и попробуйте еще раз"</string>
@@ -2010,8 +2010,8 @@
     <string name="profile_notifications_disable_1_hour">На 1 час</string>
     <string name="profile_notifications_disable_4_hour">На 4 часа</string>
     <string name="profile_notifications_disable_forever">Навсегда</string>
-    <string name="profile_notifications_off_snackbar_title">Уведомления отключены</string>
-    <string name="profile_notifications_on_snackbar_title">Уведомления включены</string>
+    <string name="profile_notifications_off_snackbar_title">Вы отключили уведомления</string>
+    <string name="profile_notifications_on_snackbar_title">Вы включили уведомления</string>
     <string name="profile_phone_number_action_copy">Копировать номер</string>
     <string name="profile_phone_number_action_tt_video_call">Видеозвонок через MAX</string>
     <string name="profile_phone_number_action_tt_voice_call">Позвонить через MAX</string>
@@ -2064,6 +2064,7 @@
     <string name="send_static_location">Отправить место</string>
     <string name="service_notifications">сервисные уведомления</string>
     <string name="share">Поделиться</string>
+    <string name="share_bottom_button_copy_link">Скопировать ссылку</string>
     <string name="share_confirm_cancel">Не прерывать</string>
     <string name="share_confirm_close">Прервать</string>
     <string name="share_confirmation_close_title">Прервать отправку?</string>
@@ -2095,7 +2096,7 @@
     <string name="to_save">Сохранить</string>
     <string name="tracer_app_token">t6QnlHov0Gq1UBGYG9GPqZu0EiVMZ922FKvwyAEASa90</string>
     <string name="tracer_environment">playGoogleRelease</string>
-    <string name="tracer_mapping_uuid">276f9820-a92e-11f0-92ec-3f92c76adbc7</string>
+    <string name="tracer_mapping_uuid">aa256da0-ab48-11f0-af7a-3f92c76adbc7</string>
     <string name="trim_video__reset">Сбросить</string>
     <string name="trim_video__trim">Обрезать</string>
     <string name="tt_active_live_location_in_chat">Вы транслируете местоположение в чат \"%s\"</string>
@@ -2295,8 +2296,8 @@
     <string name="web_app_root_error_subtitle">Проверьте подключение и попробуйте снова</string>
     <string name="web_app_root_error_title">Не удалось загрузить</string>
     <string name="web_app_root_max_share_quote_title">Сообщение из мини-приложения</string>
-    <string name="web_app_root_phone_request_dialog_decline">Запретить</string>
-    <string name="web_app_root_phone_request_dialog_title">Веб-приложение запрашивает Ваш номер телефона</string>
+    <string name="web_app_root_phone_request_dialog_decline">Не делиться</string>
+    <string name="web_app_root_phone_request_dialog_title">Поделиться номером телефона?</string>
     <string name="web_app_root_setting_open_webapp">Открыть мини-приложение</string>
     <string name="web_app_root_settings_header_subtitle">Разрешения и функции</string>
     <string name="web_app_root_settings_header_title">Настройки мини-приложений</string>

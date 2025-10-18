@@ -1,184 +1,131 @@
-.class public final synthetic Lulb;
-.super Ljava/lang/Object;
+.class public final Lulb;
+.super Le5a;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:D
 
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final c:D
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
-    .locals 0
+.method public constructor <init>(DD)V
+    .locals 1
 
-    iput p2, p0, Lulb;->a:I
+    sget-object v0, Lccg;->a:Lccg;
 
-    iput-object p1, p0, Lulb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lulb;->b:D
+
+    iput-wide p3, p0, Lulb;->c:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    iget p1, p0, Lulb;->a:I
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lulb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lwq7;
-
-    invoke-virtual {v1}, Lone/me/startconversation/channel/PickSubscribersScreen;->O0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lhmb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lhmb;->c:Lgob;
-
-    check-cast p1, Lklb;
-
-    iget-object v2, v1, Lone/me/startconversation/channel/PickSubscribersScreen;->t0:Lqs;
-
-    sget-object v3, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lwq7;
-
-    const/4 v4, 0x0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [J
-
-    iget-object v2, p1, Lklb;->d:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lt23;
-
-    iget-wide v5, p1, Lklb;->a:J
-
-    check-cast v2, Lu33;
-
-    invoke-virtual {v2, v5, v6}, Lu33;->N(J)Lgzc;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lgzc;->a:Llze;
-
-    invoke-interface {v2}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lda2;
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v3, p1, Lklb;->f:Llt7;
+    instance-of v1, p1, Lulb;
 
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v3
+    if-nez v1, :cond_1
 
-    check-cast v3, Lvo3;
-
-    invoke-interface {v3}, Lvo3;->f()Z
-
-    iget-object v3, p1, Lklb;->k:Lb54;
-
-    if-eqz v3, :cond_1
-
-    iget-object v5, p1, Lklb;->c:Llt7;
-
-    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lqkf;
-
-    check-cast v5, Losa;
-
-    invoke-virtual {v5}, Losa;->b()Lv44;
-
-    move-result-object v5
-
-    new-instance v6, Lhlb;
-
-    invoke-direct {v6, p1, v2, v1, v0}, Lhlb;-><init>(Lklb;Lda2;[JLkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v3, v5, v0, v6, v1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    move-result-object v0
+    return v2
 
     :cond_1
-    iget-object v1, p1, Lklb;->j:Lpzd;
+    check-cast p1, Lulb;
 
-    sget-object v2, Lklb;->l:[Lwq7;
+    iget-wide v3, p0, Lulb;->b:D
 
-    aget-object v2, v2, v4
+    iget-wide v5, p1, Lulb;->b:D
 
-    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
 
-    :goto_0
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lwq7;
-
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lhmb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lhmb;->c:Lgob;
-
-    check-cast p1, Lklb;
-
-    iget-object v1, p1, Lklb;->k:Lb54;
+    move-result v1
 
     if-eqz v1, :cond_2
 
-    new-instance v2, Ljlb;
-
-    invoke-direct {v2, p1, v0}, Ljlb;-><init>(Lklb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v1, v0, v0, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    return v2
 
     :cond_2
-    return-void
+    iget-wide v3, p0, Lulb;->c:D
 
-    nop
+    iget-wide v5, p1, Lulb;->c:D
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lulb;->b:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lulb;->c:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SendLocation(lat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lulb;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lulb;->c:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

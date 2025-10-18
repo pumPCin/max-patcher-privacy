@@ -1,57 +1,41 @@
-.class public final Lv5b;
-.super Landroid/webkit/WebViewClient;
+.class public interface abstract Lv5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lw5b;
-
-.field public final synthetic b:Lx5b;
-
-
-# direct methods
-.method public constructor <init>(Lw5b;Lx5b;)V
-    .locals 0
-
-    iput-object p1, p0, Lv5b;->a:Lw5b;
-
-    iput-object p2, p0, Lv5b;->b:Lx5b;
-
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a()Lzv2;
 .end method
 
+.method public abstract b()Lff0;
+.end method
 
-# virtual methods
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
-    .locals 1
+.method public abstract c()Lj1f;
+.end method
 
-    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+.method public abstract d(I)I
+.end method
 
-    move-result-object p1
+.method public abstract e()Lct6;
+.end method
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+.method public abstract f()Lq4;
+.end method
 
-    move-result-object p1
+.method public abstract g()Lykg;
+.end method
 
-    iget-object p2, p0, Lv5b;->a:Lw5b;
+.method public abstract getIcon()Ld77;
+.end method
 
-    iget-object p2, p2, Lw5b;->a:Lmeh;
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    iget-object p2, p2, Lmeh;->X0:Lde5;
+.method public abstract getText()Leqf;
+.end method
 
-    new-instance v0, Lddh;
+.method public abstract h()Lcc3;
+.end method
 
-    invoke-direct {v0, p1}, Lddh;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv5b;->b:Lx5b;
-
-    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
-
-    const/4 p1, 0x1
-
-    return p1
+.method public abstract i()Lkbf;
 .end method

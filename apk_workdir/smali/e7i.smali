@@ -1,80 +1,109 @@
 .class public final Le7i;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
-
-# interfaces
-.implements Lrga;
 
 
 # static fields
-.field public static final a:Le7i;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Le7i;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final X:Ljava/lang/String;
+
+.field public final a:I
+
+.field public final b:Landroid/os/IBinder;
+
+.field public final c:Landroid/os/IBinder;
+
+.field public final o:Landroid/app/PendingIntent;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Le7i;
+    new-instance v0, Lp0i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x12
 
-    sput-object v0, Le7i;->a:Le7i;
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    new-instance v0, Lsvh;
+    sput-object v0, Le7i;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
+.method public constructor <init>(ILandroid/os/IBinder;Landroid/os/IBinder;Landroid/app/PendingIntent;Ljava/lang/String;)V
+    .locals 0
 
-    const-class v1, Llwh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
+    iput p1, p0, Le7i;->a:I
 
-    move-result-object v0
+    iput-object p2, p0, Le7i;->b:Landroid/os/IBinder;
 
-    const/4 v2, 0x2
+    iput-object p3, p0, Le7i;->c:Landroid/os/IBinder;
 
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
+    iput-object p4, p0, Le7i;->o:Landroid/app/PendingIntent;
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    iput-object p5, p0, Le7i;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/16 v0, 0x4f45
 
-    move-result-object p1
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    throw p1
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget v1, p0, Le7i;->a:I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x2
+
+    iget-object v3, p0, Le7i;->b:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v3}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    const/4 v1, 0x3
+
+    iget-object v3, p0, Le7i;->c:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v3}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget-object v1, p0, Le7i;->o:Landroid/app/PendingIntent;
+
+    invoke-static {p1, v2, v1, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/4 p2, 0x6
+
+    iget-object v1, p0, Le7i;->X:Ljava/lang/String;
+
+    invoke-static {p1, p2, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

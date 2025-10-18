@@ -1,49 +1,99 @@
-.class public abstract Ll3b;
-.super Ljava/lang/Object;
+.class public final Ll3b;
+.super Lo3b;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ll3b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+.field public static final b:Ll3b;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ll3b;
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    invoke-direct {v0, v1, v2}, Lo3b;-><init>(J)V
+
+    sput-object v0, Ll3b;->b:Ll3b;
+
+    new-instance v0, Lvk8;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+
+    sput-object v0, Ll3b;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Lusc;->oneme_stickers_preview_action_favorite_title:I
+    const/4 v0, 0x0
 
-    sput v0, Ll3b;->a:I
+    return v0
+.end method
 
-    sget v0, Lusc;->oneme_stickers_preview_action_forward_title:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sput v0, Ll3b;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Lusc;->oneme_stickers_preview_action_in_favorite_title:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Ll3b;->c:I
+    return v0
 
-    sget v0, Lusc;->oneme_stickers_preview_action_send_title:I
+    :cond_0
+    instance-of p1, p1, Ll3b;
 
-    sput v0, Ll3b;->d:I
+    if-nez p1, :cond_1
 
-    sget v0, Lusc;->oneme_stickers_preview_snackbar_favorite_added:I
+    const/4 p1, 0x0
 
-    sput v0, Ll3b;->e:I
+    return p1
 
-    sget v0, Lusc;->oneme_stickers_preview_snackbar_favorite_removed:I
+    :cond_1
+    return v0
+.end method
 
-    sput v0, Ll3b;->f:I
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x6f5f0da2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Indeterminate"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

@@ -1,13 +1,11 @@
-.class public final Lxw7;
+.class public interface abstract Lxw7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbx7;
 
-# instance fields
-.field public a:I
 
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
+# virtual methods
+.method public abstract d(Lfx7;Lgw7;)V
+.end method

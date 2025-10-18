@@ -1,136 +1,95 @@
-.class public abstract Lvab;
+.class public final Lvab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
+# instance fields
+.field public final a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+.field public b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+    .locals 2
 
-    const-string v0, "PackageManagerHelper"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
+    const-wide/16 v0, 0x1
 
-    move-result-object v0
+    iput-wide v0, p0, Lvab;->b:J
 
-    sput-object v0, Lvab;->a:Ljava/lang/String;
+    iput-object p1, p0, Lvab;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/Class;Z)V
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    const-string v0, "disabled"
+    instance-of v0, p1, Lvab;
 
-    const-string v1, "enabled"
+    const/4 v1, 0x0
 
-    sget-object v2, Lvab;->a:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    new-instance v4, Landroid/content/ComponentName;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v4, p0, v5}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 p0, 0x1
-
-    if-eqz p2, :cond_0
-
-    move v5, p0
-
-    goto :goto_0
+    return v1
 
     :cond_0
-    const/4 v5, 0x2
+    check-cast p1, Lvab;
 
-    :goto_0
-    invoke-virtual {v3, v4, v5, p0}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
+    iget-object v0, p0, Lvab;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-static {}, Lwxh;->f()Lwxh;
+    iget-object v2, p1, Lvab;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    move-result-object p0
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-wide v2, p0, Lvab;->b:J
 
-    move-result-object v4
+    iget-wide v4, p1, Lvab;->b:J
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    cmp-long p1, v2, v4
 
-    const-string v4, " "
+    if-nez p1, :cond_1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x1
 
-    if-eqz p2, :cond_1
-
-    move-object v4, v1
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    move-object v4, v0
+    return v1
+.end method
 
-    :goto_1
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final hashCode()I
+    .locals 4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lvab;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    move-result-object v3
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->hashCode()I
 
-    invoke-virtual {p0, v2, v3}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    return-void
+    const/16 v1, 0x1f
 
-    :catch_0
-    move-exception p0
+    xor-int/2addr v0, v1
 
-    invoke-static {}, Lwxh;->f()Lwxh;
+    shl-int/lit8 v1, v0, 0x5
 
-    move-result-object v3
+    sub-int/2addr v1, v0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lvab;->b:J
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    xor-int/2addr v0, v1
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "could not be "
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p2, :cond_2
-
-    move-object v0, v1
-
-    :cond_2
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v3, v2, p1, p0}, Lwxh;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method

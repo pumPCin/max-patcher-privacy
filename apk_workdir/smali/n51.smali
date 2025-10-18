@@ -1,98 +1,80 @@
-.class public final synthetic Ln51;
+.class public final Ln51;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqf4;
+.implements Lr51;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/String;
+# static fields
+.field public static final a:Ln51;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Ln51;->a:I
+    new-instance v0, Ln51;
 
-    iput-object p1, p0, Ln51;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ln51;->a:Ln51;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Ln51;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    new-instance v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.method public final b()Z
+    .locals 1
 
-    new-instance v2, Lti7;
+    const/4 v0, 0x0
 
-    const/4 v7, 0x0
+    return v0
+.end method
 
-    const/16 v8, 0x1d
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    iget-object v4, p0, Ln51;->b:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    const/4 v5, 0x0
+    return v0
 
-    const/4 v6, 0x0
+    :cond_0
+    instance-of p1, p1, Ln51;
 
-    invoke-direct/range {v2 .. v8}, Lti7;-><init>(Ljava/lang/String;Ljava/lang/String;Lsi7;Ljava/lang/String;Lz5g;I)V
+    if-nez p1, :cond_1
 
-    const/4 v5, 0x2
+    const/4 p1, 0x0
 
-    move-object v4, v2
+    return p1
 
-    const-string v2, "SETTINGS"
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct/range {v1 .. v6}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lti7;ILvh4;)V
+.method public final hashCode()I
+    .locals 1
 
-    return-object v1
+    const v0, 0x588300f
 
-    :pswitch_0
-    new-instance v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
+    return v0
+.end method
 
-    iget-object v1, p0, Ln51;->b:Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v0, v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
-
-    iget-object v1, p0, Ln51;->b:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    iget-object v1, p0, Ln51;->b:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;)V
+    const-string v0, "Active"
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

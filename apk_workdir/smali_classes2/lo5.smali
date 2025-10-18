@@ -1,146 +1,43 @@
 .class public final Llo5;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Loo5;
+.field public final a:Lq0b;
 
 
 # direct methods
-.method public constructor <init>(Loo5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lq0b;)V
     .locals 0
 
-    iput-object p1, p0, Llo5;->Y:Loo5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llo5;->a:Lq0b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Llo5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llo5;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Llo5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Llo5;
-
-    iget-object v0, p0, Llo5;->Y:Loo5;
-
-    invoke-direct {p1, v0, p2}, Llo5;-><init>(Loo5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lhqe;
     .locals 3
 
-    iget v0, p0, Llo5;->X:I
+    iget-object v0, p0, Llo5;->a:Lq0b;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lggd;->n()Ltka;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    new-instance v1, Lvg5;
 
-    :try_start_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/16 v2, 0x1b
 
-    goto :goto_1
+    invoke-direct {v1, v2}, Lvg5;-><init>(I)V
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llo5;->Y:Loo5;
-
-    :try_start_1
-    iput v1, p0, Llo5;->X:I
-
-    iget-object v0, p1, Loo5;->a:Lyed;
-
-    new-instance v1, Lej4;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p1}, Lej4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Ldwi;->b(Lyed;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
-
-    :goto_0
-    const-string v0, "FcmAnalyticsDao"
-
-    const-string v1, "onLogout: clear failed"
-
-    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :goto_2
-    throw p1
 .end method

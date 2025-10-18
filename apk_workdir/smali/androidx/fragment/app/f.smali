@@ -68,7 +68,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p1, Landroidx/fragment/app/a;->u0:Z
+    iput-boolean v0, p1, Landroidx/fragment/app/a;->t0:Z
 
     return-void
 
@@ -166,7 +166,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v1, v1, Landroidx/fragment/app/a;->F0:Lde6;
+    iget-object v1, v1, Landroidx/fragment/app/a;->E0:Lxe6;
 
     iget-object v1, v1, Landroidx/fragment/app/c;->c:Landroidx/fragment/app/f;
 
@@ -338,11 +338,11 @@
 
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-boolean p1, v0, Landroidx/fragment/app/a;->N0:Z
+    iget-boolean p1, v0, Landroidx/fragment/app/a;->M0:Z
 
     if-eqz p1, :cond_2
 
-    iget-boolean p1, v0, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean p1, v0, Landroidx/fragment/app/a;->L0:Z
 
     if-eqz p1, :cond_1
 
@@ -360,7 +360,7 @@
     :goto_0
     const/4 p1, 0x0
 
-    iput-boolean p1, v0, Landroidx/fragment/app/a;->N0:Z
+    iput-boolean p1, v0, Landroidx/fragment/app/a;->M0:Z
 
     :cond_2
     const/4 p1, 0x2
@@ -396,7 +396,7 @@
 
     iget-object v0, p1, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iget-boolean v1, v0, Landroidx/fragment/app/a;->M0:Z
+    iget-boolean v1, v0, Landroidx/fragment/app/a;->L0:Z
 
     if-eqz v1, :cond_0
 

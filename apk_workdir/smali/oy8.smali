@@ -1,142 +1,77 @@
 .class public final Loy8;
-.super Ljava/lang/Object;
+.super Lq7d;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lvz8;
+.field public final D0:Landroid/view/View;
 
-.field public final b:I
+.field public final E0:Landroid/widget/ImageView;
 
-.field public final c:I
+.field public final F0:Landroid/widget/ProgressBar;
 
-.field public final d:Lny8;
+.field public final G0:Landroid/widget/TextView;
 
-.field public final e:Landroid/os/Bundle;
+.field public final H0:F
+
+.field public I0:Lgz8;
+
+.field public final synthetic J0:Lry8;
 
 
 # direct methods
-.method public constructor <init>(Lvz8;IIZLny8;Landroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Lry8;Landroid/view/View;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Loy8;->J0:Lry8;
 
-    iput-object p1, p0, Loy8;->a:Lvz8;
+    invoke-direct {p0, p2}, Lq7d;-><init>(Landroid/view/View;)V
 
-    iput p2, p0, Loy8;->b:I
+    iput-object p2, p0, Loy8;->D0:Landroid/view/View;
 
-    iput p3, p0, Loy8;->c:I
+    sget v0, Lumc;->mr_cast_group_icon:I
 
-    iput-object p5, p0, Loy8;->d:Lny8;
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iput-object p6, p0, Loy8;->e:Landroid/os/Bundle;
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Loy8;->E0:Landroid/widget/ImageView;
+
+    sget v0, Lumc;->mr_cast_group_progress_bar:I
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Loy8;->F0:Landroid/widget/ProgressBar;
+
+    sget v1, Lumc;->mr_cast_group_name:I
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Loy8;->G0:Landroid/widget/TextView;
+
+    iget-object p1, p1, Lry8;->v0:Lty8;
+
+    iget-object p2, p1, Lty8;->w0:Landroid/content/Context;
+
+    invoke-static {p2}, Lnz8;->c(Landroid/content/Context;)F
+
+    move-result p2
+
+    iput p2, p0, Loy8;->H0:F
+
+    iget-object p1, p1, Lty8;->w0:Landroid/content/Context;
+
+    invoke-static {p1, v0}, Lnz8;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Loy8;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    if-ne p0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    check-cast p1, Loy8;
-
-    iget-object v0, p0, Loy8;->d:Lny8;
-
-    if-nez v0, :cond_3
-
-    iget-object v1, p1, Loy8;->d:Lny8;
-
-    if-eqz v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Loy8;->a:Lvz8;
-
-    iget-object p1, p1, Loy8;->a:Lvz8;
-
-    invoke-virtual {v0, p1}, Lvz8;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    iget-object p1, p1, Loy8;->d:Lny8;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Loy8;->d:Lny8;
-
-    iget-object v1, p0, Loy8;->a:Lvz8;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ControllerInfo {pkg="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Loy8;->a:Lvz8;
-
-    iget-object v2, v1, Lvz8;->a:Lyz8;
-
-    iget-object v2, v2, Lyz8;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", uid="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, v1, Lvz8;->a:Lyz8;
-
-    iget v1, v1, Lyz8;->c:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

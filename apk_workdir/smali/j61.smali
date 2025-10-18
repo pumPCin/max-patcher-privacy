@@ -1,40 +1,78 @@
 .class public final Lj61;
-.super Ls1h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Ll61;
 
 
-# static fields
-.field public static final c:Lj61;
+# instance fields
+.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Lorf;
+
+.field public final f:Lorf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    .locals 1
 
-    new-instance v0, Lj61;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lbrc;->call_screen_connection_restored:I
+    iput-object p1, p0, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    const-wide/16 v2, 0x3e8
+    sget p1, Lkra;->G:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput p1, p0, Lj61;->b:I
 
-    move-result-object v2
+    sget p1, Ljra;->l0:I
 
-    invoke-direct {v0, v2, v1}, Ls1h;-><init>(Ljava/lang/Long;I)V
+    iput p1, p0, Lj61;->c:I
 
-    sput-object v0, Lj61;->c:Lj61;
+    sget p1, Ljra;->x0:I
+
+    iput p1, p0, Lj61;->d:I
+
+    sget p1, Lnra;->x2:I
+
+    new-instance v0, Lorf;
+
+    invoke-direct {v0, p1}, Lorf;-><init>(I)V
+
+    iput-object v0, p0, Lj61;->e:Lorf;
+
+    iput-object v0, p0, Lj61;->f:Lorf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()I
     .locals 1
+
+    iget v0, p0, Lj61;->c:I
+
+    return v0
+.end method
+
+.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    .locals 1
+
+    iget-object v0, p0, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -43,30 +81,97 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lj61;
+    instance-of v1, p1, Lj61;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lj61;
+
+    iget-object v1, p0, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    iget-object p1, p1, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
+.end method
+
+.method public final getContentDescription()Ltrf;
+    .locals 1
+
+    iget-object v0, p0, Lj61;->f:Lorf;
+
+    return-object v0
+.end method
+
+.method public final getIcon()I
+    .locals 1
+
+    iget v0, p0, Lj61;->d:I
+
+    return v0
+.end method
+
+.method public final getId()I
+    .locals 1
+
+    iget v0, p0, Lj61;->b:I
+
+    return v0
+.end method
+
+.method public final getTitle()Ltrf;
+    .locals 1
+
+    iget-object v0, p0, Lj61;->e:Lorf;
+
+    return-object v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x426150a3
+    iget-object v0, p0, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "Restored"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Unknown(device="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj61;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

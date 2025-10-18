@@ -1,151 +1,75 @@
 .class public final Lfxh;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lfxh;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final X:I
+.field public final a:Ljava/lang/Object;
 
-.field public final Y:I
+.field public final b:Ljava/lang/Object;
 
-.field public final Z:Z
-
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
-
-.field public final r0:Ljava/lang/String;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqvh;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lqvh;-><init>(I)V
-
-    sput-object v0, Lfxh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIIIIZLjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lfxh;->a:I
+    iput-object p1, p0, Lfxh;->a:Ljava/lang/Object;
 
-    iput p2, p0, Lfxh;->b:I
+    iput-object p2, p0, Lfxh;->b:Ljava/lang/Object;
 
-    iput p3, p0, Lfxh;->c:I
-
-    iput p4, p0, Lfxh;->o:I
-
-    iput p5, p0, Lfxh;->X:I
-
-    iput p6, p0, Lfxh;->Y:I
-
-    iput-boolean p7, p0, Lfxh;->Z:Z
-
-    iput-object p8, p0, Lfxh;->r0:Ljava/lang/String;
+    iput-object p3, p0, Lfxh;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final a()Ljava/lang/IllegalArgumentException;
+    .locals 8
 
-    const/16 p2, 0x4f45
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+    iget-object v1, p0, Lfxh;->a:Ljava/lang/Object;
 
-    move-result p2
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v2
 
-    const/4 v1, 0x4
+    iget-object v3, p0, Lfxh;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget v0, p0, Lfxh;->a:I
+    move-result-object v3
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const/4 v0, 0x2
+    move-result-object v1
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    iget-object v4, p0, Lfxh;->c:Ljava/lang/Object;
 
-    iget v0, p0, Lfxh;->b:I
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v4
 
-    const/4 v0, 0x3
+    const-string v5, " and "
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    const-string v6, "Multiple entries with same key: "
 
-    iget v0, p0, Lfxh;->c:I
+    const-string v7, "="
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v6, v2, v7, v3, v5}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v1, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    move-result-object v2
 
-    iget v0, p0, Lfxh;->o:I
+    invoke-static {v2, v1, v7, v4}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v1
 
-    const/4 v0, 0x5
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lfxh;->X:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x6
-
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lfxh;->Y:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x7
-
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lfxh;->Z:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v0, 0x8
-
-    iget-object v1, p0, Lfxh;->r0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
+    return-object v0
 .end method

@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract c(Lei1;Z)V
+.method public abstract h(Lmi1;Z)V
 .end method
 
-.method public h()V
+.method public i()V
     .locals 0
 
     return-void

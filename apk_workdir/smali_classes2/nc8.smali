@@ -1,129 +1,127 @@
-.class public final Lnc8;
-.super Lrne;
+.class public final synthetic Lnc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final X:Lkg9;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqc8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Lkg9;)V
+.method public synthetic constructor <init>(Lqc8;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lrne;-><init>(Ljava/util/concurrent/Executor;)V
+    iput p2, p0, Lnc8;->a:I
 
-    iput-object p2, p0, Lnc8;->X:Lkg9;
+    iput-object p1, p0, Lnc8;->b:Lqc8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final t(Landroid/view/ViewGroup;I)Lj6d;
+.method public final test(Ljava/lang/Object;)Z
     .locals 5
 
-    new-instance p2, Lzm0;
+    iget v0, p0, Lnc8;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lnc8;->b:Lqc8;
 
-    new-instance v0, Landroid/widget/TextView;
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    iget-object v1, v0, Lqc8;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {p2, v0}, Lzm0;-><init>(Landroid/view/View;)V
-
-    const/4 p1, 0x6
-
-    int-to-float p1, p1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lagi;->d(F)I
-
-    move-result p1
-
-    const/16 v1, 0x8
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    new-instance v2, Lu5d;
+    if-eqz v1, :cond_0
 
-    const/4 v3, -0x2
+    iget-object v0, v0, Lqc8;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 v4, -0x1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2, v3, v4}, Lu5d;-><init>(II)V
+    move-result-object p1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    check-cast p1, Lhcb;
 
-    invoke-virtual {v0, v1, p1, v1, p1}, Landroid/widget/TextView;->setPaddingRelative(IIII)V
+    monitor-enter p1
 
-    sget-object p1, Ldag;->f:Lpqf;
+    :try_start_0
+    iget-boolean v0, p1, Lhcb;->e:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, v0}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+    monitor-exit p1
 
-    new-instance p1, Llq6;
-
-    const/16 v1, 0x8
-
-    iget-object v2, p0, Lnc8;->X:Lkg9;
-
-    invoke-direct {p1, p2, v1, v2}, Llq6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p1}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    const/16 p1, 0x10
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
+    if-nez v0, :cond_0
 
     const/4 p1, 0x1
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
+    goto :goto_0
 
-    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-instance p1, Laa;
+    throw v0
 
-    const/4 v1, 0x3
+    :cond_0
+    const/4 p1, 0x0
 
-    const/16 v2, 0x16
+    :goto_0
+    return p1
 
-    const/4 v3, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lnc8;->b:Lqc8;
 
-    invoke-direct {p1, v1, v3, v2}, Laa;-><init>(ILkotlin/coroutines/Continuation;I)V
+    check-cast p1, Lhcb;
 
-    invoke-static {p1, v0}, Lkci;->m(Lgi6;Landroid/view/View;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p2
+    iget-object p1, p1, Lhcb;->b:Lfic;
+
+    invoke-virtual {p1}, Lfic;->m()Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    iget-wide v3, v0, Lqc8;->i:J
+
+    cmp-long p1, v1, v3
+
+    if-gtz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,116 +1,198 @@
 .class public final Liqd;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Lmqd;
-
-.field public final synthetic c:Lgqd;
-
-.field public final synthetic d:Lmqd;
-
-.field public final synthetic e:Lcqd;
+.field public final a:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lmqd;Lgqd;Lmqd;Lcqd;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Liqd;->a:Landroid/view/View;
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p2, p0, Liqd;->b:Lmqd;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p3, p0, Liqd;->c:Lgqd;
+    iput-object v0, p0, Liqd;->a:Ljava/util/HashSet;
 
-    iput-object p4, p0, Liqd;->d:Lmqd;
+    new-instance v0, Landroid/content/IntentFilter;
 
-    iput-object p5, p0, Liqd;->e:Lcqd;
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    const/16 p1, 0x8
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    iget-object v0, p0, Liqd;->a:Landroid/view/View;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    const-string v0, "android.intent.action.SCREEN_OFF"
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+    move-result p1
 
-    iget-object p1, p0, Liqd;->b:Lmqd;
+    const-string v0, "s2h"
 
-    iget-object p1, p1, Lmqd;->u0:Ljava/util/EnumMap;
+    if-eqz p1, :cond_1
 
-    iget-object v0, p0, Liqd;->c:Lgqd;
+    iget-object p1, p0, Liqd;->a:Ljava/util/HashSet;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    iget-object p1, p0, Liqd;->d:Lmqd;
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v0, p0, Liqd;->e:Lcqd;
+    move-result p2
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    if-eqz p2, :cond_5
 
-    return-void
-.end method
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    move-result-object p2
 
-    const/16 p1, 0x8
+    check-cast p2, Ls2h;
 
-    iget-object v0, p0, Liqd;->a:Landroid/view/View;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    const-string v1, "onScreenOff"
 
-    const/4 p1, 0x0
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+    iget-boolean v1, p2, Ls2h;->l:Z
 
-    iget-object p1, p0, Liqd;->b:Lmqd;
-
-    iget-object p1, p1, Lmqd;->u0:Ljava/util/EnumMap;
-
-    iget-object v0, p0, Liqd;->c:Lgqd;
+    if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v1, p2, Ls2h;->l:Z
 
-    iget-object p1, p0, Liqd;->d:Lmqd;
+    iget-boolean v1, p2, Ls2h;->k:Z
 
-    iget-object v0, p0, Liqd;->e:Lcqd;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-virtual {p2}, Ls2h;->a()V
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    const-string p2, "android.intent.action.SCREEN_ON"
 
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Liqd;->a:Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ls2h;
+
+    sget-object v1, Ltei;->a:Lmxa;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lc98;->o:Lc98;
+
+    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onScreenOn, isAppVisible="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v4, p2, Ls2h;->k:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isScreenOn="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p2, Ls2h;->l:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    iget-boolean v1, p2, Ls2h;->l:Z
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p2, Ls2h;->l:Z
+
+    iget-boolean v1, p2, Ls2h;->k:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2}, Ls2h;->b()V
+
+    goto :goto_1
+
+    :cond_5
     return-void
 .end method

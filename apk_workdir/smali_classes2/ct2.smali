@@ -1,26 +1,45 @@
-.class public final Lct2;
+.class public abstract Lct2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lht2;
 
-
-# instance fields
-.field public final a:Loqf;
-
-.field public final b:Ljava/util/List;
+# static fields
+.field public static final a:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Loqf;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ldt2;->a:Ldt2;
 
-    iput-object p1, p0, Lct2;->a:Loqf;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iput-object p2, p0, Lct2;->b:Ljava/util/List;
+    move-result-object v1
+
+    const-class v2, Ln0e;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    sput-object v1, Lct2;->a:Liu7;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v2, Lc3b;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lrib;
+
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     return-void
 .end method

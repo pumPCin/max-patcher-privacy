@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
+.implements Lsr3;
 
 
 # instance fields
@@ -40,7 +40,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    sget v0, Lru/ok/messages/views/ActAvatarCrop;->d1:I
+    sget v0, Lru/ok/messages/views/ActAvatarCrop;->c1:I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -60,11 +60,11 @@
 
     const-string v0, "ru.ok.messages.views.ActAvatarCrop"
 
-    invoke-static {v0, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v2, v1}, Landroid/app/Activity;->setResult(I)V
 
-    sget p1, Lwid;->F:I
+    sget p1, Ldkd;->F:I
 
     invoke-virtual {v2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -72,7 +72,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v0, v2, p1}, Lhyg;->z(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v2, p1}, Lurh;->d(ILandroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lh6;->finish()V
 
@@ -81,7 +81,7 @@
     :pswitch_0
     check-cast p1, Landroid/graphics/Rect;
 
-    sget v0, Lru/ok/messages/views/ActAvatarCrop;->d1:I
+    sget v0, Lru/ok/messages/views/ActAvatarCrop;->c1:I
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -93,7 +93,7 @@
 
     invoke-virtual {v0, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    iget-object v3, v2, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Point;
+    iget-object v3, v2, Lru/ok/messages/views/ActAvatarCrop;->Z0:Landroid/graphics/Point;
 
     new-instance v4, Landroid/graphics/RectF;
 

@@ -1,31 +1,37 @@
-.class public abstract Lsxc;
+.class public final Lsxc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:I
+# instance fields
+.field public final a:Ljava/time/Instant;
 
-.field public static b:Landroid/util/Size;
+.field public final b:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/net/DatagramPacket;Ljava/time/Instant;)V
+    .locals 1
 
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x8
+    iput-object p2, p0, Lsxc;->a:Ljava/time/Instant;
 
-    sput v0, Lsxc;->a:I
+    invoke-virtual {p1}, Ljava/net/DatagramPacket;->getData()[B
 
-    new-instance v0, Landroid/util/Size;
+    move-result-object p2
 
-    const/16 v1, 0xa0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+    invoke-virtual {p1}, Ljava/net/DatagramPacket;->getLength()I
 
-    sput-object v0, Lsxc;->b:Landroid/util/Size;
+    move-result p1
+
+    invoke-static {p2, v0, p1}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsxc;->b:Ljava/nio/ByteBuffer;
 
     return-void
 .end method

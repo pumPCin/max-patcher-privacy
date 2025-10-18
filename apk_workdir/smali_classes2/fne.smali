@@ -4,300 +4,56 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A:I
 
-.field public final b:Ljava/lang/String;
+.field public a:Lmne;
 
-.field public final c:Ljava/lang/String;
+.field public b:F
 
-.field public final d:Ljava/lang/String;
+.field public c:F
 
-.field public final e:Ljava/lang/String;
+.field public d:Z
 
-.field public final f:Ljava/lang/String;
+.field public e:Z
 
+.field public f:Z
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.field public g:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public h:I
 
-    iput-object p1, p0, Lfne;->a:Ljava/lang/String;
+.field public i:I
 
-    iput-object p2, p0, Lfne;->b:Ljava/lang/String;
+.field public j:I
 
-    iput-object p3, p0, Lfne;->c:Ljava/lang/String;
+.field public k:Z
 
-    iput-object p4, p0, Lfne;->d:Ljava/lang/String;
+.field public l:I
 
-    iput-object p5, p0, Lfne;->e:Ljava/lang/String;
+.field public m:Z
 
-    iput-object p6, p0, Lfne;->f:Ljava/lang/String;
+.field public n:J
 
-    return-void
-.end method
+.field public o:Z
 
+.field public p:[Ljava/lang/String;
 
-# virtual methods
-.method public final a(I)Ljava/lang/String;
-    .locals 1
+.field public q:F
 
-    sget-object v0, Lene;->$EnumSwitchMapping$0:[I
+.field public r:F
 
-    invoke-static {p1}, Lwx1;->v(I)I
+.field public s:Z
 
-    move-result p1
+.field public t:Ljava/lang/String;
 
-    aget p1, v0, p1
+.field public u:I
 
-    packed-switch p1, :pswitch_data_0
+.field public v:I
 
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+.field public w:I
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+.field public x:I
 
-    throw p1
+.field public y:Z
 
-    :pswitch_0
-    iget-object p1, p0, Lfne;->f:Ljava/lang/String;
-
-    return-object p1
-
-    :pswitch_1
-    iget-object p1, p0, Lfne;->e:Ljava/lang/String;
-
-    return-object p1
-
-    :pswitch_2
-    iget-object p1, p0, Lfne;->d:Ljava/lang/String;
-
-    return-object p1
-
-    :pswitch_3
-    iget-object p1, p0, Lfne;->c:Ljava/lang/String;
-
-    return-object p1
-
-    :pswitch_4
-    iget-object p1, p0, Lfne;->b:Ljava/lang/String;
-
-    return-object p1
-
-    :pswitch_5
-    iget-object p1, p0, Lfne;->a:Ljava/lang/String;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lfne;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lfne;
-
-    iget-object v1, p0, Lfne;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lfne;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lfne;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lfne;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lfne;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lfne;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lfne;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lfne;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lfne;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lfne;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lfne;->f:Ljava/lang/String;
-
-    iget-object p1, p1, Lfne;->f:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lfne;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lfne;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lfne;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lfne;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lfne;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lfne;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", connected="
-
-    const-string v1, ", reconnected="
-
-    const-string v2, "SignalingType(restart="
-
-    iget-object v3, p0, Lfne;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lfne;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", failedByPings="
-
-    const-string v2, ", failedByException="
-
-    iget-object v3, p0, Lfne;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lfne;->d:Ljava/lang/String;
-
-    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfne;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timeout="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfne;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public z:Z

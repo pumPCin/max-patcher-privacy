@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract m(Liz8;Loy8;I)Ljava/lang/Object;
+.method public abstract b(Lqz8;)V
 .end method

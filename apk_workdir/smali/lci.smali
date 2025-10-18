@@ -1,134 +1,196 @@
 .class public final Llci;
-.super Lqci;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+
+
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public c:Ljava/util/Iterator;
+
+.field public final synthetic o:Ldci;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ldci;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llci;->o:Ldci;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Llci;->a:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final L0(JLjava/lang/Object;)D
+.method public final a()Ljava/util/Iterator;
     .locals 1
 
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
+    iget-object v0, p0, Llci;->c:Ljava/util/Iterator;
 
-    check-cast v0, Lsun/misc/Unsafe;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
+    iget-object v0, p0, Llci;->o:Ldci;
 
-    move-result-wide p1
+    iget-object v0, v0, Ldci;->c:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-wide p1
+    move-result-object v0
 
-    return-wide p1
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llci;->c:Ljava/util/Iterator;
+
+    :cond_0
+    iget-object v0, p0, Llci;->c:Ljava/util/Iterator;
+
+    return-object v0
 .end method
 
-.method public final M0(JLjava/lang/Object;)F
-    .locals 1
+.method public final hasNext()Z
+    .locals 4
 
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
+    iget v0, p0, Llci;->a:I
 
-    check-cast v0, Lsun/misc/Unsafe;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
+    add-int/2addr v0, v1
 
-    move-result p1
+    iget-object v2, p0, Llci;->o:Ldci;
 
-    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
+    iget v3, v2, Ldci;->b:I
 
-    move-result p1
+    if-lt v0, v3, :cond_1
 
-    return p1
-.end method
+    iget-object v0, v2, Ldci;->c:Ljava/util/Map;
 
-.method public final N0(Ljava/lang/Object;JZ)V
-    .locals 1
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
-    sget-boolean v0, Ltci;->g:Z
+    move-result v0
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, p2, p3, p4}, Ltci;->c(Ljava/lang/Object;JB)V
+    return v1
+
+    :cond_0
+    return v2
+
+    :cond_1
+    return v1
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Llci;->b:Z
+
+    iget v1, p0, Llci;->a:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Llci;->a:I
+
+    iget-object v0, p0, Llci;->o:Ldci;
+
+    iget v2, v0, Ldci;->b:I
+
+    if-ge v1, v2, :cond_0
+
+    iget-object v0, v0, Ldci;->a:[Ljava/lang/Object;
+
+    aget-object v0, v0, v1
+
+    check-cast v0, Lgci;
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    return-object v0
+.end method
+
+.method public final remove()V
+    .locals 3
+
+    iget-boolean v0, p0, Llci;->b:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Llci;->b:Z
+
+    sget v0, Ldci;->Z:I
+
+    iget-object v0, p0, Llci;->o:Ldci;
+
+    invoke-virtual {v0}, Ldci;->g()V
+
+    iget v1, p0, Llci;->a:I
+
+    iget v2, v0, Ldci;->b:I
+
+    if-ge v1, v2, :cond_0
+
+    add-int/lit8 v2, v1, -0x1
+
+    iput v2, p0, Llci;->a:I
+
+    invoke-virtual {v0, v1}, Ldci;->e(I)Ljava/lang/Object;
 
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3, p4}, Ltci;->d(Ljava/lang/Object;JB)V
+    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final O0(Ljava/lang/Object;JB)V
-    .locals 1
-
-    sget-boolean v0, Ltci;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3, p4}, Ltci;->c(Ljava/lang/Object;JB)V
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     return-void
 
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ltci;->d(Ljava/lang/Object;JB)V
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    return-void
-.end method
+    const-string v1, "remove() was called before next()"
 
-.method public final P0(Ljava/lang/Object;JD)V
-    .locals 6
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p4, p5}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v4
-
-    iget-object p4, p0, Lqci;->b:Ljava/lang/Object;
-
-    move-object v0, p4
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
-
-    return-void
-.end method
-
-.method public final Q0(Ljava/lang/Object;JF)V
-    .locals 1
-
-    invoke-static {p4}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p4
-
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
-
-    return-void
-.end method
-
-.method public final R0(JLjava/lang/Object;)Z
-    .locals 1
-
-    sget-boolean v0, Ltci;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3}, Ltci;->m(JLjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    invoke-static {p1, p2, p3}, Ltci;->n(JLjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    throw v0
 .end method

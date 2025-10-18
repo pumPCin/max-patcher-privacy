@@ -2,237 +2,116 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyb4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(JJ)V
     .locals 0
-
-    iput p1, p0, Lzp5;->a:I
-
-    iput-object p2, p0, Lzp5;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-wide p1, p0, Lzp5;->a:J
 
-.method private final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Lr0;)V
-    .locals 0
+    iput-wide p3, p0, Lzp5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr0;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lzp5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lzp5;->b:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lddd;
-
-    invoke-virtual {p1}, Lr0;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lddd;->h:Lr0;
-
-    if-ne p1, v1, :cond_1
-
-    const/4 v1, 0x0
-
-    iget-object p1, p1, Lr0;->a:Ljava/util/Map;
+    :cond_0
+    instance-of v1, p1, Lzp5;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1, p1}, Lr0;->l(Ljava/lang/Object;ZLjava/util/Map;)Z
+    if-nez v1, :cond_1
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lr0;->h()Z
+    return v2
 
     :cond_1
-    :goto_0
-    return-void
+    check-cast p1, Lzp5;
 
-    :pswitch_0
-    iget-object v0, p0, Lzp5;->b:Ljava/lang/Object;
+    iget-wide v3, p0, Lzp5;->a:J
 
-    check-cast v0, Lg32;
+    iget-wide v5, p1, Lzp5;->a:J
 
-    invoke-virtual {v0}, Lg32;->isCancelled()Z
+    cmp-long v1, v3, v5
 
-    move-result v1
+    if-eqz v1, :cond_2
 
-    if-nez v1, :cond_3
-
-    invoke-virtual {p1}, Lr0;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+    iget-wide v3, p0, Lzp5;->b:J
 
-    move-result-object p1
+    iget-wide v5, p1, Lzp5;->b:J
 
-    invoke-virtual {v0, p1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
 
     :cond_3
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final b(Lr0;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget v0, p0, Lzp5;->a:I
+    iget-wide v0, p0, Lzp5;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object v0, p0, Lzp5;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lddd;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, v0, Lddd;->h:Lr0;
+    iget-wide v1, p0, Lzp5;->b:J
 
-    if-ne p1, v1, :cond_0
-
-    invoke-virtual {p1}, Lr0;->d()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lr0;->k(F)Z
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lr0;)V
-    .locals 2
-
-    iget v0, p0, Lzp5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lzp5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lddd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzp5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lg32;
-
-    invoke-virtual {v0}, Lg32;->r()Z
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    add-int/2addr v1, v0
 
-    invoke-virtual {p1}, Lr0;->c()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v1, "fail"
-
-    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, p1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method
 
-.method public final d()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Lzp5;->a:I
+    const-string v0, "FcmNotificationHistoryDb(chatServerId="
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, ", lastNotifyMessageId="
 
-    return-void
+    iget-wide v2, p0, Lzp5;->a:J
 
-    :pswitch_0
-    iget-object v0, p0, Lzp5;->b:Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lg32;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lg32;->r()Z
+    const-string v1, ")"
 
-    move-result v1
+    iget-wide v2, p0, Lzp5;->b:J
 
-    if-eqz v1, :cond_0
+    invoke-static {v0, v2, v3, v1}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lg32;->h(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

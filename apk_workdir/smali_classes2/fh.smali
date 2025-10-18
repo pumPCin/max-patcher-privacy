@@ -16,6 +16,8 @@
 
 .field public static final enum o:Lfh;
 
+.field public static final enum q0:Lfh;
+
 .field public static final enum r0:Lfh;
 
 .field public static final enum s0:Lfh;
@@ -26,9 +28,7 @@
 
 .field public static final enum v0:Lfh;
 
-.field public static final enum w0:Lfh;
-
-.field public static final synthetic x0:[Lfh;
+.field public static final synthetic w0:[Lfh;
 
 
 # instance fields
@@ -121,7 +121,7 @@
 
     invoke-direct {v6, v9, v7, v8}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v6, Lfh;->r0:Lfh;
+    sput-object v6, Lfh;->q0:Lfh;
 
     new-instance v7, Lfh;
 
@@ -133,7 +133,7 @@
 
     invoke-direct {v7, v10, v8, v9}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v7, Lfh;->s0:Lfh;
+    sput-object v7, Lfh;->r0:Lfh;
 
     new-instance v8, Lfh;
 
@@ -145,7 +145,7 @@
 
     invoke-direct {v8, v11, v9, v10}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v8, Lfh;->t0:Lfh;
+    sput-object v8, Lfh;->s0:Lfh;
 
     new-instance v9, Lfh;
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v9, v12, v10, v11}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v9, Lfh;->u0:Lfh;
+    sput-object v9, Lfh;->t0:Lfh;
 
     new-instance v10, Lfh;
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v10, v13, v11, v12}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v10, Lfh;->v0:Lfh;
+    sput-object v10, Lfh;->u0:Lfh;
 
     new-instance v11, Lfh;
 
@@ -181,13 +181,13 @@
 
     invoke-direct {v11, v14, v12, v13}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v11, Lfh;->w0:Lfh;
+    sput-object v11, Lfh;->v0:Lfh;
 
     filled-new-array/range {v0 .. v11}, [Lfh;
 
     move-result-object v0
 
-    sput-object v0, Lfh;->x0:[Lfh;
+    sput-object v0, Lfh;->w0:[Lfh;
 
     return-void
 .end method
@@ -219,7 +219,7 @@
 .method public static values()[Lfh;
     .locals 1
 
-    sget-object v0, Lfh;->x0:[Lfh;
+    sget-object v0, Lfh;->w0:[Lfh;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 

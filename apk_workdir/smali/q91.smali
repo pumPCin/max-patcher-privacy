@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lli6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic b:Lr91;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
+.method public synthetic constructor <init>(Lr91;I)V
     .locals 0
 
-    iput p1, p0, Lq91;->a:I
+    iput p2, p0, Lq91;->a:I
 
-    iput-object p2, p0, Lq91;->c:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Lq91;->b:Z
+    iput-object p1, p0, Lq91;->b:Lr91;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,62 +27,50 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, Lq91;->a:I
 
+    check-cast p1, Lv5b;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lq91;->c:Ljava/lang/Object;
+    sget-object p1, Ll05;->s0:Lk82;
 
-    check-cast v0, Lyq1;
+    iget-object v0, p0, Lq91;->b:Lr91;
 
-    iget-boolean v1, p0, Lq91;->b:Z
+    iget-object v0, v0, Lq7d;->a:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lyq1;->w(Lyq1;Z)V
+    invoke-virtual {p1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lv5b;->b()Lff0;
+
+    const/4 p1, 0x0
 
     :goto_0
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lq91;->c:Ljava/lang/Object;
+    sget-object p1, Ll05;->s0:Lk82;
 
-    check-cast v0, Lry6;
+    iget-object v0, p0, Lq91;->b:Lr91;
 
-    sget-object v1, Lg91;->c:Lg91;
+    iget-object v0, v0, Lq7d;->a:Landroid/view/View;
 
-    check-cast v0, Lpy6;
+    invoke-virtual {p1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
 
-    iget-wide v2, v0, Lpy6;->a:J
+    move-result-object p1
 
-    invoke-virtual {v1}, Lqci;->q0()Llf4;
+    invoke-interface {p1}, Lv5b;->getIcon()Ld77;
 
-    move-result-object v0
-
-    const-string v1, ":call-user?opponent_id="
-
-    const-string v4, "&video_enabled="
-
-    iget-boolean v5, p0, Lq91;->b:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lwc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "&microphone_enabled=true"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    const/4 p1, -0x1
 
     goto :goto_0
 

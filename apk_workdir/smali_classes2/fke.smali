@@ -1,203 +1,105 @@
 .class public final Lfke;
-.super Lyx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:[F
 
-.field public final b:Loqf;
+.field public final b:[I
 
-.field public final c:Loqf;
+.field public final c:I
 
-.field public final d:Ljava/util/List;
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public final g:F
+
+.field public final h:F
+
+.field public final i:Z
+
+.field public j:Z
+
+.field public k:Landroid/graphics/PorterDuff$Mode;
+
+.field public final l:I
+
+.field public final m:I
+
+.field public n:J
+
+.field public final o:J
+
+.field public p:Landroid/view/animation/Interpolator;
+
+.field public q:Landroid/animation/ValueAnimator;
 
 
 # direct methods
-.method public constructor <init>(JLoqf;Loqf;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lfke;->a:J
+    const/4 v0, 0x5
 
-    iput-object p3, p0, Lfke;->b:Loqf;
+    new-array v1, v0, [F
 
-    iput-object p4, p0, Lfke;->c:Loqf;
+    iput-object v1, p0, Lfke;->a:[F
 
-    iput-object p5, p0, Lfke;->d:Ljava/util/List;
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    iput-object v0, p0, Lfke;->b:[I
 
+    new-instance v0, Landroid/graphics/RectF;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput v0, p0, Lfke;->c:I
 
-    return v0
+    const/4 v1, -0x1
 
-    :cond_0
-    instance-of v1, p1, Lfke;
+    iput v1, p0, Lfke;->d:I
 
-    const/4 v2, 0x0
+    const v2, -0x777778
 
-    if-nez v1, :cond_1
+    iput v2, p0, Lfke;->e:I
 
-    return v2
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    :cond_1
-    check-cast p1, Lfke;
+    iput v2, p0, Lfke;->g:F
 
-    iget-wide v3, p0, Lfke;->a:J
+    iput v2, p0, Lfke;->h:F
 
-    iget-wide v5, p1, Lfke;->a:J
+    iput-boolean v0, p0, Lfke;->i:Z
 
-    cmp-long v1, v3, v5
+    iput-boolean v0, p0, Lfke;->j:Z
 
-    if-eqz v1, :cond_2
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    return v2
+    iput-object v2, p0, Lfke;->k:Landroid/graphics/PorterDuff$Mode;
 
-    :cond_2
-    iget-object v1, p0, Lfke;->b:Loqf;
+    iput v1, p0, Lfke;->l:I
 
-    iget-object v3, p1, Lfke;->b:Loqf;
+    iput v0, p0, Lfke;->m:I
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-wide/16 v0, 0x4b0
 
-    move-result v1
+    iput-wide v0, p0, Lfke;->n:J
 
-    if-nez v1, :cond_3
+    iput-wide v0, p0, Lfke;->o:J
 
-    return v2
+    new-instance v0, Lln5;
 
-    :cond_3
-    iget-object v1, p0, Lfke;->c:Loqf;
+    invoke-direct {v0}, Lln5;-><init>()V
 
-    iget-object v3, p1, Lfke;->c:Loqf;
+    iput-object v0, p0, Lfke;->p:Landroid/view/animation/Interpolator;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lfke;->d:Ljava/util/List;
-
-    iget-object p1, p1, Lfke;->d:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lfke;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lfke;->b:Loqf;
-
-    invoke-static {v0, v1, v2}, Lwc0;->c(IILoqf;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lfke;->c:Loqf;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lfke;->d:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowConfirmation(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lfke;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfke;->b:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfke;->c:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfke;->d:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

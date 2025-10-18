@@ -1,15 +1,13 @@
-.class public final enum Lwci;
-.super Ljava/lang/Enum;
+.class public final Lwci;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Ltha;
 
 
 # static fields
-.field public static final enum a:Lwci;
-
-.field public static final synthetic b:[Lwci;
+.field public static final a:Lwci;
 
 
 # direct methods
@@ -18,51 +16,145 @@
 
     new-instance v0, Lwci;
 
-    const-string v1, "INSTANCE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lwci;->a:Lwci;
 
-    filled-new-array {v0}, [Lwci;
+    new-instance v0, Ltwh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+
+    const-class v1, Lmxh;
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lwci;->b:[Lwci;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0xb
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0xc
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
-.end method
-
-.method public static values()[Lwci;
-    .locals 1
-
-    sget-object v0, Lwci;->b:[Lwci;
-
-    invoke-virtual {v0}, [Lwci;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwci;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Lxr6;->s()Lxr6;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v0, v0, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgt9;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    throw p1
 .end method

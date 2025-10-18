@@ -1,21 +1,19 @@
 .class public final Ll2c;
-.super Lb4a;
+.super Lo2c;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lu18;)V
+    .locals 0
 
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-direct {p0}, Lo2c;-><init>()V
 
-    invoke-direct {p0, v0}, Lb4a;-><init>(Ljava/lang/Object;)V
-
-    iput-wide p1, p0, Ll2c;->b:J
+    iput-object p1, p0, Ll2c;->b:Ljava/util/List;
 
     return-void
 .end method
@@ -23,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -43,13 +41,15 @@
     :cond_1
     check-cast p1, Ll2c;
 
-    iget-wide v3, p0, Ll2c;->b:J
+    iget-object v1, p0, Ll2c;->b:Ljava/util/List;
 
-    iget-wide v5, p1, Ll2c;->b:J
+    iget-object p1, p1, Ll2c;->b:Ljava/util/List;
 
-    cmp-long p1, v3, v5
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -58,11 +58,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Ll2c;->b:J
+    iget-object v0, p0, Ll2c;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -70,15 +70,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    const-string v0, "BackToChat(chatId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowContextMenu(actions="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll2c;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Ll2c;->b:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

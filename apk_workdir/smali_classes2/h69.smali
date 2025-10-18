@@ -1,122 +1,45 @@
 .class public final Lh69;
-.super Llff;
+.super Ldq;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lioh;
+# static fields
+.field public static final a:Lh69;
 
 
 # direct methods
-.method public constructor <init>(Lioh;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lh69;->Y:Lioh;
+    new-instance v0, Lh69;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lh69;->a:Lh69;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lx39;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lh69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lh69;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lh69;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/util/concurrent/ExecutorService;
     .locals 2
 
-    new-instance v0, Lh69;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v1, p0, Lh69;->Y:Lioh;
+    move-result-object v0
 
-    invoke-direct {v0, v1, p2}, Lh69;-><init>(Lioh;Lkotlin/coroutines/Continuation;)V
+    const-class v1, Leva;
 
-    iput-object p1, v0, Lh69;->X:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leva;
+
+    invoke-virtual {v0}, Leva;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lh69;->X:Ljava/lang/Object;
-
-    check-cast p1, Lx39;
-
-    sget-object v0, Lx39;->a:Lx39;
-
-    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lh69;->Y:Lioh;
-
-    iget-object v0, p1, Lioh;->g:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lioh;->f:Ljava/lang/Object;
-
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lp69;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lp69;-><init>(Lioh;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v2, v2, v1, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

@@ -4,373 +4,150 @@
 
 
 # direct methods
-.method public static a(I)I
-    .locals 4
+.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
-    const/16 v0, 0xc8
+    if-eq p0, p1, :cond_1
 
-    int-to-float v0, v0
+    if-eqz p0, :cond_0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    if-lt p0, v0, :cond_0
-
-    const/16 p0, 0x5a
-
-    int-to-float p0, p0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    return p0
+    if-eqz p0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    const/16 v0, 0x48
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    const/16 v1, 0x24
-
-    if-lt p0, v0, :cond_1
-
-    int-to-float p0, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
+    const/4 p0, 0x0
 
     return p0
 
     :cond_1
-    const/16 v0, 0x40
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    const/16 v2, 0x20
-
-    if-lt p0, v0, :cond_2
-
-    int-to-float p0, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/16 v0, 0x30
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    const/16 v3, 0x1c
-
-    if-lt p0, v0, :cond_3
-
-    int-to-float p0, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    int-to-float v0, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    if-lt p0, v0, :cond_4
-
-    const/16 p0, 0x18
-
-    int-to-float p0, p0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_4
-    int-to-float v0, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    if-lt p0, v0, :cond_5
-
-    const/16 p0, 0x14
-
-    int-to-float p0, p0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_5
-    if-lt p0, v3, :cond_6
-
-    const/16 p0, 0x10
-
-    int-to-float p0, p0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_6
-    const/16 p0, 0xc
-
-    int-to-float p0, p0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
+    :goto_0
+    const/4 p0, 0x1
 
     return p0
 .end method
 
-.method public static final b(Lone/me/sdk/bottomsheet/BottomSheetWidget;Ljava/lang/String;Lei6;)V
-    .locals 2
+.method public static final b(Lkotlin/coroutines/Continuation;)Lo32;
+    .locals 4
 
-    sget-object v0, Lfde;->a:Lfde;
+    instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    if-nez v0, :cond_0
+
+    new-instance v0, Lo32;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p0}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object v0
+
+    :cond_0
+    move-object v0, p0
+
+    check-cast v0, Lkotlinx/coroutines/internal/DispatchedContinuation;
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/internal/DispatchedContinuation;->claimReusableCancellableContinuation$kotlinx_coroutines_core()Lo32;
 
     move-result-object v0
 
-    const-class v1, Lfz7;
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    sget-object v1, Lo32;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v0
+    instance-of v3, v2, Loh3;
 
-    check-cast v0, Lfz7;
+    if-eqz v3, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v2, Loh3;
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget-object v2, v2, Loh3;->d:Ljava/lang/Object;
 
-    move-result-object p1
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v0, p1}, Lfz7;->e(Landroid/net/Uri;)Loy5;
+    invoke-virtual {v0}, Lo32;->i()V
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    new-instance v0, Lz01;
+    goto :goto_0
 
-    const/16 v1, 0x13
+    :cond_1
+    sget-object v2, Lo32;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    invoke-direct {v0, v1, p1}, Lz01;-><init>(ILjava/lang/Object;)V
+    const v3, 0x1fffffff
 
-    new-instance p1, Ln23;
+    invoke-virtual {v2, v0, v3}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->set(Ljava/lang/Object;I)V
 
-    const/16 v1, 0x9
+    sget-object v2, Ls7;->a:Ls7;
 
-    invoke-direct {p1, v0, v1}, Ln23;-><init>(Lzx5;I)V
+    invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v0, Ll;
+    :goto_0
+    if-nez v0, :cond_2
 
-    const/16 v1, 0x1c
+    goto :goto_1
 
-    invoke-direct {v0, v1, p0}, Ll;-><init>(ILjava/lang/Object;)V
+    :cond_2
+    return-object v0
 
-    invoke-interface {p2, p1, v0}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_3
+    :goto_1
+    new-instance v0, Lo32;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p0}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public static final c(Ln32;Ld32;)V
+    .locals 1
+
+    instance-of v0, p0, Lo32;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lo32;
+
+    invoke-virtual {p0, p1}, Lo32;->q(Lfaa;)V
 
     return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "third-party implementation of CancellableContinuation is not supported"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static d(Ljava/lang/Object;)Lo39;
+    .locals 2
+
+    new-instance v0, Lo39;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p0, v1}, Lo39;-><init>(Ljava/lang/String;I)V
+
+    return-object v0
 .end method

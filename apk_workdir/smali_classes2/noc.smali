@@ -3,30 +3,18 @@
 
 
 # static fields
-.field public static one_chat_react_default_react_anim_view:I = 0x7f0a05ef
+.field public static qrscanner_allow_permission:I = 0x7f0a09e7
 
-.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a05f0
+.field public static qrscanner_camera_preview:I = 0x7f0a09e8
 
-.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a05f1
+.field public static qrscanner_gallery_button_image:I = 0x7f0a09e9
 
-.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a05f2
+.field public static qrscanner_hint_view:I = 0x7f0a09ea
 
-.field public static one_chat_react_panel_layout:I = 0x7f0a05f3
+.field public static qrscanner_not_allow_permission:I = 0x7f0a09eb
 
-.field public static one_chat_reactions_expand_view_type:I = 0x7f0a05f4
+.field public static qrscanner_overlay_view:I = 0x7f0a09ec
 
-.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a05f5
+.field public static qrscanner_toolbar:I = 0x7f0a09ed
 
-.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a05f6
-
-.field public static onechat_react_badge_container:I = 0x7f0a05f8
-
-.field public static onechat_react_bubble:I = 0x7f0a05f9
-
-.field public static onechat_react_bubble_counter:I = 0x7f0a05fa
-
-.field public static onechat_react_bubble_counter_container:I = 0x7f0a05fb
-
-.field public static onechat_react_message_reaction_bubble:I = 0x7f0a05fc
-
-.field public static tag_reaction_effects_view:I = 0x7f0a0be9
+.field public static qrscanner_torch_button_image:I = 0x7f0a09ee

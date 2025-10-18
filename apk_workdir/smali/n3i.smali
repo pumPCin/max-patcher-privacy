@@ -3,75 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz7i;
-.implements Landroid/os/IInterface;
+.implements Ltha;
 
 
-# instance fields
-.field public final c:Landroid/os/IBinder;
+# static fields
+.field public static final a:Ln3i;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ln3i;
 
-    iput-object p1, p0, Ln3i;->c:Landroid/os/IBinder;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ln3i;->a:Ln3i;
+
+    new-instance v0, Ltwh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+
+    const-class v1, Lmxh;
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Ln3i;->c:Landroid/os/IBinder;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final k(Landroid/os/Parcel;I)Landroid/os/Parcel;
-    .locals 3
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    :try_start_0
-    iget-object v1, p0, Ln3i;->c:Landroid/os/IBinder;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p2
-
-    :try_start_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    throw p2
+    throw p1
 .end method

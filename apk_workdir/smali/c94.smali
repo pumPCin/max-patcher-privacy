@@ -1,112 +1,52 @@
-.class public abstract Lc94;
+.class public final Lc94;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
+# instance fields
+.field public final a:Lec7;
 
-.field public static final b:Ljava/lang/String;
+.field public final b:J
 
-.field public static final c:Ljava/lang/String;
+.field public final c:J
 
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(JJLjava/util/List;)V
     .locals 2
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    invoke-static {p5}, Lec7;->k(Ljava/util/Collection;)Lec7;
 
-    const/16 v1, 0x24
+    move-result-object p5
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    iput-object p5, p0, Lc94;->a:Lec7;
 
-    move-result-object v0
+    iput-wide p1, p0, Lc94;->b:J
 
-    sput-object v0, Lc94;->a:Ljava/lang/String;
+    iput-wide p3, p0, Lc94;->c:J
 
-    const/4 v0, 0x1
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    cmp-long p5, p1, v0
 
-    move-result-object v0
+    if-eqz p5, :cond_1
 
-    sput-object v0, Lc94;->b:Ljava/lang/String;
+    cmp-long p5, p3, v0
 
-    const/4 v0, 0x2
+    if-nez p5, :cond_0
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lc94;->c:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lc94;->d:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lc94;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Landroid/text/Spanned;Ljava/lang/Object;ILandroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 3
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Lc94;->a:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lc94;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lc94;->c:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result p0
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object p0, Lc94;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    if-eqz p3, :cond_0
-
-    sget-object p0, Lc94;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    goto :goto_0
 
     :cond_0
-    return-object v0
+    add-long v0, p1, p3
+
+    :cond_1
+    :goto_0
+    iput-wide v0, p0, Lc94;->d:J
+
+    return-void
 .end method

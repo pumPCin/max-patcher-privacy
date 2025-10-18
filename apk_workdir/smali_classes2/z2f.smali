@@ -1,97 +1,62 @@
 .class public final Lz2f;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
-
-# interfaces
-.implements La3f;
 
 
 # instance fields
-.field public final a:I
+.field public c:Lp2f;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lpf9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lz2f;->a:I
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d(Lpf9;Ljava/lang/String;)V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    const-string v0, "sticker"
 
-    goto :goto_1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p1}, Lp2f;->a(Lpf9;)Lp2f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz2f;->c:Lp2f;
+
+    return-void
 
     :cond_0
-    instance-of v0, p1, Lz2f;
+    invoke-virtual {p1}, Lpf9;->y()V
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lz2f;
-
-    iget v0, p0, Lz2f;->a:I
-
-    iget p1, p1, Lz2f;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lz2f;->a:I
-
-    invoke-static {v0}, Lwx1;->v(I)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lz2f;->c:Lp2f;
 
-    const-string v1, "TypeChange(newType="
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget v1, p0, Lz2f;->a:I
+    const-string v1, "{sticker = "
 
-    invoke-static {v1}, Lu9d;->p(I)Ljava/lang/String;
+    const-string v2, "}"
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

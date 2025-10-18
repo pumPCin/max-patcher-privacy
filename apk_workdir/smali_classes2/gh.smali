@@ -1,5 +1,5 @@
 .class public final Lgh;
-.super Lhlf;
+.super Lmmf;
 .source "SourceFile"
 
 
@@ -10,6 +10,8 @@
 
 .field public static final Z:Lgh;
 
+.field public static final q0:Lgh;
+
 .field public static final r0:Lgh;
 
 .field public static final s0:Lgh;
@@ -19,8 +21,6 @@
 .field public static final u0:Lgh;
 
 .field public static final v0:Lgh;
-
-.field public static final w0:Lgh;
 
 
 # instance fields
@@ -53,7 +53,7 @@
 
     const/4 v2, 0x1
 
-    sget-object v3, Lfh;->t0:Lfh;
+    sget-object v3, Lfh;->s0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
@@ -77,11 +77,11 @@
 
     const/4 v2, 0x3
 
-    sget-object v3, Lfh;->r0:Lfh;
+    sget-object v3, Lfh;->q0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->r0:Lgh;
+    sput-object v0, Lgh;->q0:Lgh;
 
     new-instance v0, Lgh;
 
@@ -89,11 +89,11 @@
 
     const/4 v2, 0x4
 
-    sget-object v3, Lfh;->s0:Lfh;
+    sget-object v3, Lfh;->r0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->s0:Lgh;
+    sput-object v0, Lgh;->r0:Lgh;
 
     new-instance v0, Lgh;
 
@@ -105,11 +105,11 @@
 
     const/4 v2, 0x5
 
-    sget-object v3, Lfh;->v0:Lfh;
+    sget-object v3, Lfh;->u0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->t0:Lgh;
+    sput-object v0, Lgh;->s0:Lgh;
 
     new-instance v0, Lgh;
 
@@ -121,11 +121,11 @@
 
     const/4 v2, 0x6
 
-    sget-object v3, Lfh;->w0:Lfh;
+    sget-object v3, Lfh;->v0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->u0:Lgh;
+    sput-object v0, Lgh;->t0:Lgh;
 
     new-instance v0, Lgh;
 
@@ -137,11 +137,11 @@
 
     const/4 v2, 0x7
 
-    sget-object v3, Lfh;->u0:Lfh;
+    sget-object v3, Lfh;->t0:Lfh;
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->v0:Lgh;
+    sput-object v0, Lgh;->u0:Lgh;
 
     new-instance v0, Lgh;
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v0, v3, v1, v2}, Lgh;-><init>(Lfh;Ljava/lang/Object;I)V
 
-    sput-object v0, Lgh;->w0:Lgh;
+    sput-object v0, Lgh;->v0:Lgh;
 
     return-void
 .end method
@@ -169,14 +169,14 @@
 
     const/4 p3, 0x1
 
-    invoke-direct {p0, p1, p3, p2}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p0, p1, p3, p2}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+.method public final D(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
     .locals 3
 
     iget p1, p0, Lgh;->o:I
@@ -191,7 +191,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -214,7 +214,7 @@
 
     check-cast v0, Lfh;
 
-    invoke-static {p2}, Lwqe;->c(Landroid/content/res/XmlResourceParser;)Ljava/util/LinkedHashMap;
+    invoke-static {p2}, Lese;->c(Landroid/content/res/XmlResourceParser;)Ljava/util/LinkedHashMap;
 
     move-result-object v2
 
@@ -253,7 +253,7 @@
 
     const/16 v2, 0x23
 
-    invoke-static {v1, v2}, Ls9f;->U(Ljava/lang/String;C)Z
+    invoke-static {v1, v2}, Lzaf;->b0(Ljava/lang/String;C)Z
 
     move-result v1
 
@@ -302,7 +302,7 @@
 
     const-string p3, "unknown value type "
 
-    invoke-static {p3, p2}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -421,7 +421,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lz9f;->g(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {p1}, Lgbf;->n(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object p1
 

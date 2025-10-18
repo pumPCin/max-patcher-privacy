@@ -3,82 +3,156 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lr6;
 
 
 # instance fields
-.field public final synthetic a:Lzn5;
+.field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:J
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzn5;JJ)V
+.method public synthetic constructor <init>(ILjava/util/List;)V
     .locals 0
 
+    iput p1, p0, Lyn5;->a:I
+
+    iput-object p2, p0, Lyn5;->b:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyn5;->a:Lzn5;
-
-    iput-wide p2, p0, Lyn5;->b:J
-
-    iput-wide p4, p0, Lyn5;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 10
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p0, Lyn5;->a:Lzn5;
+    iget v0, p0, Lyn5;->a:I
 
-    iget-object v0, v0, Lzn5;->a:Lll;
+    const-string v1, "go5"
 
-    check-cast v0, Lkma;
+    const-string v2, "m4f"
 
-    new-instance v1, Lwu;
+    const-string v3, "ap5"
 
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
+    iget-object v4, p0, Lyn5;->b:Ljava/util/List;
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "awaitNoTasksByTypes: finished for types=%s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "jpf"
+
+    invoke-static {v2, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "storeStickerSetsFromServer: success: %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v2, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    const-string v0, "storeStickerSets: success for sets = %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v2, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_2
+    const-string v0, "onNotifRemoved: removed stickers %s from cache"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_3
+    const-string v0, "onListUpdated: success store stickers %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_4
+    const-string v0, "removeFromFavorites: ids=%s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_5
+    const-string v0, "onAssetsUpdate: success store stickers %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_6
+    const-string v0, "onListUpdated: success store stickers sets=%s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Llwb;
+    invoke-static {v1, v0, v2}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v2, v2, Llwb;->a:Lg68;
+    return-void
 
-    invoke-virtual {v2}, Lgsd;->k()J
+    :pswitch_7
+    const-string v0, "onNotifRemoved: removed sticker sets %s from cache"
 
-    move-result-wide v2
+    filled-new-array {v4}, [Ljava/lang/Object;
 
-    const/4 v4, 0x5
+    move-result-object v2
 
-    iget-wide v5, p0, Lyn5;->b:J
+    invoke-static {v1, v0, v2}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-wide v7, p0, Lyn5;->c:J
+    return-void
 
-    const/4 v9, -0x1
+    nop
 
-    invoke-direct/range {v1 .. v9}, Lwu;-><init>(JIJJI)V
-
-    invoke-virtual {v0}, Lkma;->y()Lpmf;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3, v2}, Lpmf;->d(Lpmf;Lxm;ZI)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

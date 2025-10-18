@@ -1,307 +1,224 @@
 .class public final Lkm7;
-.super Lfrb;
+.super Lxod;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lpkd;
+
+.field public static final e:Lpkd;
+
+.field public static final f:J
+
+.field public static final g:Ljava/util/concurrent/TimeUnit;
+
+.field public static final h:Ljm7;
+
+.field public static final i:Z
+
+.field public static final j:Lhm7;
+
+
 # instance fields
-.field public final c:Ljava/lang/reflect/Method;
-
-.field public final d:Ljava/lang/reflect/Method;
-
-.field public final e:Ljava/lang/reflect/Method;
-
-.field public final f:Ljava/lang/Class;
-
-.field public final g:Ljava/lang/Class;
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/Class;Ljava/lang/Class;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    sput-object v0, Lkm7;->g:Ljava/util/concurrent/TimeUnit;
+
+    const-string v0, "rx3.io-keep-alive-time"
+
+    const-wide/16 v1, 0x3c
+
+    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sput-wide v0, Lkm7;->f:J
+
+    new-instance v0, Ljm7;
+
+    new-instance v1, Lpkd;
+
+    const-string v2, "RxCachedThreadSchedulerShutdown"
+
+    invoke-direct {v1, v2}, Lpkd;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1}, Ljm7;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lkm7;->h:Ljm7;
+
+    invoke-virtual {v0}, Lw8a;->g()V
+
+    const-string v0, "rx3.io-priority"
+
+    const/4 v1, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0xa
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v2, Lpkd;
+
+    const-string v3, "RxCachedThreadScheduler"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v0, v4}, Lpkd;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lkm7;->d:Lpkd;
+
+    new-instance v3, Lpkd;
+
+    const-string v5, "RxCachedWorkerPoolEvictor"
+
+    invoke-direct {v3, v5, v0, v4}, Lpkd;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lkm7;->e:Lpkd;
+
+    const-string v0, "rx3.io-scheduled-release"
+
+    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    sput-boolean v0, Lkm7;->i:Z
+
+    new-instance v0, Lhm7;
+
+    const-wide/16 v3, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct {v0, v3, v4, v5, v2}, Lhm7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lkm7;->j:Lhm7;
+
+    iget-object v2, v0, Lhm7;->c:Lni3;
+
+    invoke-virtual {v2}, Lni3;->g()V
+
+    iget-object v2, v0, Lhm7;->X:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_0
+    iget-object v0, v0, Lhm7;->o:Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    :cond_1
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkm7;->c:Ljava/lang/reflect/Method;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p2, p0, Lkm7;->d:Ljava/lang/reflect/Method;
+    sget-object v1, Lkm7;->j:Lhm7;
 
-    iput-object p3, p0, Lkm7;->e:Ljava/lang/reflect/Method;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p4, p0, Lkm7;->f:Ljava/lang/Class;
+    iput-object v0, p0, Lkm7;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p5, p0, Lkm7;->g:Ljava/lang/Class;
+    new-instance v2, Lhm7;
 
+    sget-wide v3, Lkm7;->f:J
+
+    sget-object v5, Lkm7;->g:Ljava/util/concurrent/TimeUnit;
+
+    sget-object v6, Lkm7;->d:Lpkd;
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lhm7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
+
+    :cond_0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_0
+
+    iget-object v0, v2, Lhm7;->c:Lni3;
+
+    invoke-virtual {v0}, Lni3;->g()V
+
+    iget-object v0, v2, Lhm7;->X:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_2
+    iget-object v0, v2, Lhm7;->o:Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    :cond_3
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)V
-    .locals 3
+.method public final a()Lvod;
+    .locals 2
 
-    const-string v0, "failed to remove ALPN"
+    new-instance v0, Lim7;
 
-    :try_start_0
-    iget-object v1, p0, Lkm7;->e:Ljava/lang/reflect/Method;
+    iget-object v1, p0, Lkm7;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_1
-
-    :goto_0
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :goto_1
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 4
-
-    const-string p2, "failed to set ALPN"
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p3
-
-    :cond_0
-    :goto_0
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    move-object v2, v1
+    check-cast v1, Lhm7;
 
-    check-cast v2, Lidc;
+    invoke-direct {v0, v1}, Lim7;-><init>(Lhm7;)V
 
-    sget-object v3, Lidc;->b:Lidc;
-
-    if-eq v2, v3, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p3, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {p3, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lidc;
-
-    iget-object v1, v1, Lidc;->a:Ljava/lang/String;
-
-    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    :try_start_0
-    const-class v0, Lfrb;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkm7;->f:Ljava/lang/Class;
-
-    iget-object v2, p0, Lkm7;->g:Ljava/lang/Class;
-
-    filled-new-array {v1, v2}, [Ljava/lang/Class;
-
-    move-result-object v1
-
-    new-instance v2, Ljm7;
-
-    invoke-direct {v2, p3}, Ljm7;-><init>(Ljava/util/ArrayList;)V
-
-    invoke-static {v0, v1, v2}, Ljava/lang/reflect/Proxy;->newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    iget-object v0, p0, Lkm7;->c:Ljava/lang/reflect/Method;
-
-    filled-new-array {p1, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p3, 0x0
-
-    invoke-virtual {v0, p3, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_3
-
-    :goto_2
-    new-instance p3, Ljava/lang/AssertionError;
-
-    invoke-direct {p3, p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p3
-
-    :goto_3
-    new-instance p3, Ljava/lang/AssertionError;
-
-    invoke-direct {p3, p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p3
-.end method
-
-.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "failed to get ALPN selected protocol"
-
-    :try_start_0
-    iget-object v1, p0, Lkm7;->d:Ljava/lang/reflect/Method;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/reflect/Proxy;->getInvocationHandler(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    check-cast p1, Ljm7;
-
-    iget-boolean v1, p1, Ljm7;->a:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v3, p1, Ljm7;->b:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    const-string p1, "ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?"
-
-    const/4 v1, 0x4
-
-    invoke-static {v1, p1, v2}, Lfrb;->i(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    return-object v2
-
-    :cond_1
-    iget-object p1, p1, Ljm7;->b:Ljava/lang/String;
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v1, "null cannot be cast to non-null type okhttp3.internal.platform.Jdk8WithJettyBootPlatform.AlpnProvider"
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :goto_1
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 .end method

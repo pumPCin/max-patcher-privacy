@@ -1,39 +1,58 @@
-.class public final Lz5d;
+.class public final synthetic Lz5d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic X:Ljava/lang/Throwable;
 
-.field public b:I
+.field public final synthetic a:Lf6d;
 
-.field public c:J
+.field public final synthetic b:Lnb0;
 
-.field public d:J
+.field public final synthetic c:J
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lf6d;Lnb0;JILjava/lang/Throwable;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lz5d;->a:Lf6d;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p2, p0, Lz5d;->b:Lnb0;
 
-    iput-object v0, p0, Lz5d;->a:Ljava/util/ArrayList;
+    iput-wide p3, p0, Lz5d;->c:J
 
-    const/4 v0, 0x5
+    iput p5, p0, Lz5d;->o:I
 
-    iput v0, p0, Lz5d;->b:I
+    iput-object p6, p0, Lz5d;->X:Ljava/lang/Throwable;
 
-    const-wide/16 v0, 0x0
+    return-void
+.end method
 
-    iput-wide v0, p0, Lz5d;->c:J
 
-    iput-wide v0, p0, Lz5d;->d:J
+# virtual methods
+.method public final run()V
+    .locals 6
+
+    iget v4, p0, Lz5d;->o:I
+
+    iget-object v5, p0, Lz5d;->X:Ljava/lang/Throwable;
+
+    iget-object v0, p0, Lz5d;->a:Lf6d;
+
+    iget-object v1, p0, Lz5d;->b:Lnb0;
+
+    iget-wide v2, p0, Lz5d;->c:J
+
+    invoke-virtual/range {v0 .. v5}, Lf6d;->I(Lnb0;JILjava/lang/Throwable;)V
 
     return-void
 .end method

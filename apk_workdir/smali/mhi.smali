@@ -1,68 +1,113 @@
-.class public final Lmhi;
+.class public abstract Lmhi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Lmhi;
-
-.field public static final b:Liq5;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(IJ)J
+    .locals 4
 
-    new-instance v0, Lmhi;
+    int-to-long v0, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v2, 0x0
 
-    sput-object v0, Lmhi;->a:Lmhi;
+    cmp-long p0, v0, v2
 
-    new-instance v0, Lq7i;
+    if-lez p0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    goto :goto_0
 
-    const-class v1, Ll8i;
+    :cond_0
+    const/4 p0, 0x0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    :goto_0
+    const-string v2, "sampleRate must be greater than 0."
 
-    move-result-object v0
+    invoke-static {v2, p0}, Ldvi;->a(Ljava/lang/String;Z)V
 
-    new-instance v1, Liq5;
+    sget-object p0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    const-wide/16 v2, 0x1
 
-    move-result-object v0
+    invoke-virtual {p0, v2, v3}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    const-string v2, "format"
+    move-result-wide v2
 
-    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    mul-long/2addr v2, p1
 
-    sput-object v1, Lmhi;->b:Liq5;
+    div-long/2addr v2, v0
 
-    return-void
+    return-wide v2
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public static b(FFF)F
     .locals 1
 
-    check-cast p1, Lc1j;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    check-cast p2, Lsga;
+    sub-float/2addr v0, p2
 
-    sget-object v0, Lmhi;->b:Liq5;
+    mul-float/2addr v0, p0
 
-    iget-object p1, p1, Lc1j;->a:Lg4i;
+    mul-float/2addr p2, p1
 
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    add-float/2addr p2, v0
 
-    return-void
+    return p2
+.end method
+
+.method public static c(IJ)J
+    .locals 4
+
+    int-to-long v0, p0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p0, v0, v2
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    const-string v2, "bytesPerFrame must be greater than 0."
+
+    invoke-static {v2, p0}, Ldvi;->a(Ljava/lang/String;Z)V
+
+    div-long/2addr p1, v0
+
+    return-wide p1
+.end method
+
+.method public static d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eq p0, p1, :cond_1
+
+    const/4 v1, 0x0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return v0
+
+    :cond_0
+    return v1
+
+    :cond_1
+    return v0
 .end method

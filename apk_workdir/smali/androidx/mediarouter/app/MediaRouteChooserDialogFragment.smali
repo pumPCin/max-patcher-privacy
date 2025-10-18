@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public A1:Lxx8;
+.field public final x1:Z
 
-.field public final y1:Z
+.field public y1:Lpo;
 
-.field public z1:Loo;
+.field public z1:Lzy8;
 
 
 # direct methods
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Z
+    iput-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->x1:Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->o1:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->n1:Z
 
-    iget-object v1, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
+    iget-object v1, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
     if-eqz v1, :cond_0
 
@@ -40,7 +40,7 @@
 .method public final D0()Landroid/app/Dialog;
     .locals 2
 
-    iget-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Z
+    iget-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->x1:Z
 
     if-eqz v0, :cond_0
 
@@ -48,17 +48,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lix8;
+    new-instance v1, Lky8;
 
-    invoke-direct {v1, v0}, Lix8;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lky8;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Loo;
+    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
 
     invoke-virtual {p0}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->G0()V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
-    invoke-virtual {v1, v0}, Lix8;->g(Lxx8;)V
+    invoke-virtual {v1, v0}, Lky8;->g(Lzy8;)V
 
     goto :goto_0
 
@@ -67,20 +67,20 @@
 
     move-result-object v0
 
-    new-instance v1, Lsw8;
+    new-instance v1, Lux8;
 
-    invoke-direct {v1, v0}, Lsw8;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lux8;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Loo;
+    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
 
     invoke-virtual {p0}, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->G0()V
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
-    invoke-virtual {v1, v0}, Lsw8;->g(Lxx8;)V
+    invoke-virtual {v1, v0}, Lux8;->g(Lzy8;)V
 
     :goto_0
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Loo;
+    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
 
     return-object v0
 .end method
@@ -88,7 +88,7 @@
 .method public final G0()V
     .locals 3
 
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
     if-nez v0, :cond_2
 
@@ -106,28 +106,28 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v2, Lxx8;
+    new-instance v2, Lzy8;
 
-    invoke-direct {v2, v0, v1}, Lxx8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
+    invoke-direct {v2, v0, v1}, Lzy8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
 
     move-object v1, v2
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lxx8;->c:Lxx8;
+    sget-object v0, Lzy8;->c:Lzy8;
 
     :goto_0
-    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iput-object v1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
     :cond_1
-    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iget-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
     if-nez v0, :cond_2
 
-    sget-object v0, Lxx8;->c:Lxx8;
+    sget-object v0, Lzy8;->c:Lzy8;
 
-    iput-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->A1:Lxx8;
+    iput-object v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Lzy8;
 
     :cond_2
     return-void
@@ -138,30 +138,30 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Landroidx/fragment/app/a;->Q0:Z
+    iput-boolean p1, p0, Landroidx/fragment/app/a;->P0:Z
 
-    iget-object p1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->z1:Loo;
+    iget-object p1, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Lpo;
 
     if-nez p1, :cond_0
 
     return-void
 
     :cond_0
-    iget-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->y1:Z
+    iget-boolean v0, p0, Landroidx/mediarouter/app/MediaRouteChooserDialogFragment;->x1:Z
 
     const/4 v1, -0x2
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lix8;
+    check-cast p1, Lky8;
 
-    iget-object v0, p1, Lix8;->r0:Landroid/content/Context;
+    iget-object v0, p1, Lky8;->q0:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Lcjc;->is_tablet:I
+    sget v3, Ljkc;->is_tablet:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -176,7 +176,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v0}, Lmii;->c(Landroid/content/Context;)I
+    invoke-static {v0}, Lsji;->c(Landroid/content/Context;)I
 
     move-result v2
 
@@ -185,7 +185,7 @@
 
     move-result-object v0
 
-    sget v4, Lcjc;->is_tablet:I
+    sget v4, Ljkc;->is_tablet:I
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -205,7 +205,7 @@
     return-void
 
     :cond_3
-    check-cast p1, Lsw8;
+    check-cast p1, Lux8;
 
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -215,7 +215,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lmii;->c(Landroid/content/Context;)I
+    invoke-static {p1}, Lsji;->c(Landroid/content/Context;)I
 
     move-result p1
 

@@ -1,73 +1,122 @@
-.class public final enum Lpbe;
-.super Ljava/lang/Enum;
+.class public final Lpbe;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final enum a:Lpbe;
 
-.field public static final enum b:Lpbe;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final synthetic c:[Lpbe;
+.field public final synthetic Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    .locals 0
 
-    new-instance v0, Lpbe;
+    iput-object p2, p0, Lpbe;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-    const-string v1, "NONE"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpbe;->a:Lpbe;
-
-    new-instance v1, Lpbe;
-
-    const-string v2, "DARK"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpbe;->b:Lpbe;
-
-    filled-new-array {v0, v1}, [Lpbe;
-
-    move-result-object v0
-
-    sput-object v0, Lpbe;->c:[Lpbe;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpbe;
-    .locals 1
 
-    const-class v0, Lpbe;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lpbe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lpbe;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Lpbe;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lpbe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lpbe;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lpbe;->c:[Lpbe;
+    new-instance v0, Lpbe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lpbe;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lpbe;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
 
-    check-cast v0, [Lpbe;
+    iput-object p1, v0, Lpbe;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpbe;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Map;
+
+    iget-object v0, p0, Lpbe;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+
+    iget-object v1, v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lh0d;
+
+    sget-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Z:[Ltr7;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwua;
+
+    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lwua;->setVisibility(I)V
+
+    iget-object v0, v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:Li76;
+
+    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

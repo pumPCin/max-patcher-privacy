@@ -1,90 +1,42 @@
-.class public final Lb9i;
+.class public abstract Lb9i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
 
 # static fields
-.field public static final a:Lb9i;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lb9i;
+    const-class v0, Lb9i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lb9i;->a:Lb9i;
-
-    new-instance v0, Lsvh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
-
-    const-class v1, Llwh;
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    throw p1
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Parcelable;
+
+    return-object p0
 .end method

@@ -1,90 +1,106 @@
 .class public final Lbqi;
-.super Ljava/lang/Object;
+.super Lwii;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
+# instance fields
+.field public final synthetic b:Lvof;
 
-# static fields
-.field public static final a:Lbqi;
+.field public final synthetic c:Lv8i;
+
+.field public final synthetic o:Lezi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lezi;Lvof;Lvof;Lv8i;)V
+    .locals 0
 
-    new-instance v0, Lbqi;
+    iput-object p3, p0, Lbqi;->b:Lvof;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lbqi;->c:Lv8i;
 
-    sput-object v0, Lbqi;->a:Lbqi;
+    iput-object p1, p0, Lbqi;->o:Lezi;
 
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p2}, Lwii;-><init>(Lvof;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 6
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lbqi;->o:Lezi;
 
-    move-result-object p1
+    iget-object v0, v0, Lezi;->f:Ljava/lang/Object;
 
-    throw p1
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lbqi;->o:Lezi;
+
+    iget-object v2, p0, Lbqi;->b:Lvof;
+
+    iget-object v3, v1, Lezi;->e:Ljava/util/HashSet;
+
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    iget-object v3, v2, Lvof;->a:Le2j;
+
+    new-instance v4, Lvxe;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v1, v2, v5}, Lvxe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
+
+    invoke-virtual {v3, v4}, Le2j;->i(Lrma;)Le2j;
+
+    iget-object v1, p0, Lbqi;->o:Lezi;
+
+    iget-object v1, v1, Lezi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Lbqi;->o:Lezi;
+
+    iget-object v1, v1, Lezi;->b:Lo7f;
+
+    const-string v2, "Already connected to the service."
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v3}, Lo7f;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lbqi;->o:Lezi;
+
+    iget-object v2, p0, Lbqi;->c:Lv8i;
+
+    invoke-static {v1, v2}, Lezi;->b(Lezi;Lv8i;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

@@ -1,412 +1,295 @@
 .class public final Lmcd;
-.super Ljava/lang/Object;
+.super Lyi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lq02;
-
-
-# instance fields
-.field public final b:Lq02;
-
-.field public final synthetic c:I
-
-.field public final d:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lq02;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmcd;->c:I
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lmcd;-><init>(Lq02;B)V
-
-    .line 2
-    iput-object p1, p0, Lmcd;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lq02;B)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lmcd;->b:Lq02;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lq02;Lx0d;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lmcd;->c:I
-
-    const/4 v0, 0x0
-
-    .line 5
-    invoke-direct {p0, p1, v0}, Lmcd;-><init>(Lq02;B)V
-
-    .line 6
-    iput-object p2, p0, Lmcd;->d:Ljava/lang/Object;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 9
 
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0}, Lq02;->a()V
-
-    return-void
-.end method
-
-.method public b(F)Lo18;
-    .locals 1
-
-    iget v0, p0, Lmcd;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->b(F)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
-
-    check-cast v0, Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->b(F)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lck3;)V
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->c(Lck3;)V
-
-    return-void
-.end method
-
-.method public d(F)Lo18;
-    .locals 1
-
-    iget v0, p0, Lmcd;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->d(F)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
-
-    check-cast v0, Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->d(F)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()Landroid/graphics/Rect;
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0}, Lq02;->e()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f(I)V
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->f(I)V
-
-    return-void
-.end method
-
-.method public final g(Lp87;)V
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->g(Lp87;)V
-
-    return-void
-.end method
-
-.method public h(Li65;)Lo18;
-    .locals 1
-
-    iget v0, p0, Lmcd;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->h(Li65;)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
-
-    check-cast v0, Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->h(Li65;)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public i(Ljava/util/ArrayList;II)Lo18;
-    .locals 2
-
-    iget v0, p0, Lmcd;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1, p2, p3}, Lq02;->i(Ljava/util/ArrayList;II)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v1
+
+    sub-int v2, v1, v0
+
+    iget-object v3, p0, Lyi0;->b:Lp50;
+
+    iget v3, v3, Lp50;->c:I
+
+    const/high16 v4, 0x30000000
+
+    const/high16 v5, 0x20000000
+
+    const/high16 v6, 0x10000000
+
+    const/4 v7, 0x4
+
+    const/4 v8, 0x3
+
+    if-eq v3, v8, :cond_2
+
+    if-eq v3, v7, :cond_3
+
+    if-eq v3, v6, :cond_4
+
+    if-eq v3, v5, :cond_1
+
+    if-ne v3, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    div-int/lit8 v2, v2, 0x3
+
+    :cond_2
+    mul-int/lit8 v2, v2, 0x2
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    div-int/lit8 v2, v2, 0x2
+
+    :cond_4
+    :goto_1
+    invoke-virtual {p0, v2}, Lyi0;->j(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lyi0;->b:Lp50;
+
+    iget v3, v3, Lp50;->c:I
+
+    if-eq v3, v8, :cond_9
+
+    if-eq v3, v7, :cond_8
+
+    if-eq v3, v6, :cond_7
+
+    if-eq v3, v5, :cond_6
+
+    if-ne v3, v4, :cond_5
+
+    :goto_2
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v3, v0, 0x3
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_2
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_6
+    :goto_3
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_3
+
+    :cond_7
+    :goto_4
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x2
+
+    goto :goto_4
+
+    :cond_8
+    :goto_5
+    if-ge v0, v1, :cond_a
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
+
+    move-result v3
+
+    const/high16 v4, -0x40800000    # -1.0f
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-static {v3, v4, v5}, Llig;->h(FFF)F
+
+    move-result v3
+
+    const v4, 0x46fffe00    # 32767.0f
+
+    mul-float/2addr v3, v4
+
+    float-to-int v3, v3
+
+    int-to-short v3, v3
+
+    and-int/lit16 v4, v3, 0xff
+
+    int-to-byte v4, v4
+
+    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    shr-int/lit8 v3, v3, 0x8
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_5
+
+    :cond_9
+    :goto_6
+    if-ge v0, v1, :cond_a
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v3, v3, -0x80
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6
+
+    :cond_a
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
+.end method
+
+.method public final f(Lp50;)Lp50;
+    .locals 3
+
+    iget v0, p1, Lp50;->c:I
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    if-eq v0, v2, :cond_1
+
+    const/high16 v1, 0x10000000
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x20000000
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x30000000
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
 
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lp50;)V
+
+    throw v0
+
+    :cond_1
     :goto_0
-    const-string v0, "Only support one capture config."
+    if-eq v0, v2, :cond_2
 
-    invoke-static {v0, v1}, Lbui;->a(Ljava/lang/String;Z)V
+    new-instance v0, Lp50;
 
-    iget-object v0, p0, Lmcd;->b:Lq02;
+    iget v1, p1, Lp50;->a:I
 
-    invoke-interface {v0, p2, p3}, Lq02;->l(II)Lo18;
+    iget p1, p1, Lp50;->b:I
 
-    move-result-object p2
-
-    invoke-static {p2}, Lfj6;->a(Lo18;)Lfj6;
-
-    move-result-object p3
-
-    new-instance v0, Ljj6;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p2, v1}, Ljj6;-><init>(Lo18;I)V
-
-    invoke-static {}, Ldmi;->a()Lst4;
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p3, v0, v1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
-
-    move-result-object p3
-
-    new-instance v0, Lohf;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p0, v1, p1}, Lohf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {}, Ldmi;->a()Lst4;
-
-    move-result-object p1
-
-    invoke-static {p3, v0, p1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
-
-    move-result-object p1
-
-    new-instance p3, Ljj6;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p3, p2, v0}, Ljj6;-><init>(Lo18;I)V
-
-    invoke-static {}, Ldmi;->a()Lst4;
-
-    move-result-object p2
-
-    invoke-static {p1, p3, p2}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lt9g;->b(Ljava/util/List;)La18;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final j(Lg5e;)V
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->j(Lg5e;)V
-
-    return-void
-.end method
-
-.method public k(Z)Lo18;
-    .locals 1
-
-    iget v0, p0, Lmcd;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->k(Z)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
-
-    check-cast v0, Lq02;
-
-    invoke-interface {v0, p1}, Lq02;->k(Z)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l(II)Lo18;
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0, p1, p2}, Lq02;->l(II)Lo18;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m()Lck3;
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0}, Lq02;->m()Lck3;
-
-    move-result-object v0
+    invoke-direct {v0, v1, p1, v2}, Lp50;-><init>(III)V
 
     return-object v0
-.end method
 
-.method public final n()V
-    .locals 1
+    :cond_2
+    sget-object p1, Lp50;->e:Lp50;
 
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0}, Lq02;->n()V
-
-    return-void
-.end method
-
-.method public final o()V
-    .locals 1
-
-    iget-object v0, p0, Lmcd;->b:Lq02;
-
-    invoke-interface {v0}, Lq02;->o()V
-
-    return-void
+    return-object p1
 .end method

@@ -1,375 +1,325 @@
-.class public abstract Lhq3;
-.super Ljava/lang/Object;
+.class public final Lhq3;
+.super Lksb;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Landroid/util/SparseIntArray;
+.field public static final d:Z
+
+
+# instance fields
+.field public final c:Ljava/security/Provider;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    :try_start_0
+    const-string v1, "org.conscrypt.Conscrypt$Version"
 
-    sput-object v0, Lhq3;->a:Landroid/util/SparseIntArray;
+    const-class v2, Lfq3;
 
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintWidth:I
+    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    const/16 v2, 0x40
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    invoke-static {v1, v0, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHeight:I
+    invoke-static {}, Lorg/conscrypt/Conscrypt;->isAvailable()Z
 
-    const/16 v2, 0x41
+    move-result v1
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    if-eqz v1, :cond_0
 
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintLeft_toLeftOf:I
+    invoke-static {}, Lfq3;->a()Z
 
-    const/16 v2, 0x8
+    move-result v1
+    :try_end_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    if-eqz v1, :cond_0
 
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintLeft_toRightOf:I
+    const/4 v0, 0x1
 
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintRight_toLeftOf:I
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintRight_toRightOf:I
-
-    const/16 v2, 0xb
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintTop_toTopOf:I
-
-    const/16 v2, 0xc
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintTop_toBottomOf:I
-
-    const/16 v2, 0xd
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBottom_toTopOf:I
-
-    const/16 v2, 0xe
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBottom_toBottomOf:I
-
-    const/16 v2, 0xf
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf:I
-
-    const/16 v2, 0x10
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBaseline_toTopOf:I
-
-    const/16 v2, 0x34
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBaseline_toBottomOf:I
-
-    const/16 v2, 0x35
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintCircle:I
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintCircleRadius:I
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintCircleAngle:I
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_editor_absoluteX:I
-
-    const/16 v2, 0x31
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_editor_absoluteY:I
-
-    const/16 v2, 0x32
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintGuide_begin:I
-
-    const/4 v2, 0x5
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintGuide_end:I
-
-    const/4 v2, 0x6
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintGuide_percent:I
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_guidelineUseRtl:I
-
-    const/16 v2, 0x43
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_android_orientation:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintStart_toEndOf:I
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintStart_toStartOf:I
-
-    const/16 v2, 0x12
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintEnd_toStartOf:I
-
-    const/16 v2, 0x13
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintEnd_toEndOf:I
-
-    const/16 v2, 0x14
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginLeft:I
-
-    const/16 v2, 0x15
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginTop:I
-
-    const/16 v2, 0x16
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginRight:I
-
-    const/16 v2, 0x17
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginBottom:I
-
-    const/16 v2, 0x18
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginStart:I
-
-    const/16 v2, 0x19
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginEnd:I
-
-    const/16 v2, 0x1a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_goneMarginBaseline:I
-
-    const/16 v2, 0x37
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_marginBaseline:I
-
-    const/16 v2, 0x36
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHorizontal_bias:I
-
-    const/16 v2, 0x1d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintVertical_bias:I
-
-    const/16 v2, 0x1e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintDimensionRatio:I
-
-    const/16 v2, 0x2c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHorizontal_weight:I
-
-    const/16 v2, 0x2d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintVertical_weight:I
-
-    const/16 v2, 0x2e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle:I
-
-    const/16 v2, 0x2f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintVertical_chainStyle:I
-
-    const/16 v2, 0x30
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constrainedWidth:I
-
-    const/16 v2, 0x1b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constrainedHeight:I
-
-    const/16 v2, 0x1c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintWidth_default:I
-
-    const/16 v2, 0x1f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHeight_default:I
-
-    const/16 v2, 0x20
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintWidth_min:I
-
-    const/16 v2, 0x21
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintWidth_max:I
-
-    const/16 v2, 0x22
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintWidth_percent:I
-
-    const/16 v2, 0x23
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHeight_min:I
-
-    const/16 v2, 0x24
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHeight_max:I
-
-    const/16 v2, 0x25
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintHeight_percent:I
-
-    const/16 v2, 0x26
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintLeft_creator:I
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintTop_creator:I
-
-    const/16 v2, 0x28
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintRight_creator:I
-
-    const/16 v2, 0x29
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBottom_creator:I
-
-    const/16 v2, 0x2a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintBaseline_creator:I
-
-    const/16 v2, 0x2b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_constraintTag:I
-
-    const/16 v2, 0x33
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lhuc;->ConstraintLayout_Layout_layout_wrapBehaviorInParent:I
-
-    const/16 v2, 0x42
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    :catch_0
+    :cond_0
+    sput-boolean v0, Lhq3;->d:Z
 
     return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Lorg/conscrypt/Conscrypt;->newProvider()Ljava/security/Provider;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lhq3;->c:Ljava/security/Provider;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 3
+
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lorg/conscrypt/Conscrypt;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :cond_0
+    :goto_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lpec;
+
+    sget-object v2, Lpec;->b:Lpec;
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p3, Ljava/util/ArrayList;
+
+    const/16 v0, 0xa
+
+    invoke-static {p2, v0}, Lpb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v0
+
+    invoke-direct {p3, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpec;
+
+    iget-object v0, v0, Lpec;->a:Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p2, 0x0
+
+    new-array p2, p2, [Ljava/lang/String;
+
+    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_3
+
+    check-cast p2, [Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lorg/conscrypt/Conscrypt;->setApplicationProtocols(Ljavax/net/ssl/SSLSocket;[Ljava/lang/String;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    return-void
+.end method
+
+.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->getApplicationProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final k()Ljavax/net/ssl/SSLContext;
+    .locals 2
+
+    const-string v0, "TLS"
+
+    iget-object v1, p0, Lhq3;->c:Ljava/security/Provider;
+
+    invoke-static {v0, v1}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;Ljava/security/Provider;)Ljavax/net/ssl/SSLContext;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l(Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
+    .locals 3
+
+    invoke-virtual {p0}, Lhq3;->k()Ljavax/net/ssl/SSLContext;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljavax/net/ssl/TrustManager;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, v1, p1}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m()Ljavax/net/ssl/X509TrustManager;
+    .locals 4
+
+    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    aget-object v1, v0, v2
+
+    instance-of v1, v1, Ljavax/net/ssl/X509TrustManager;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v2
+
+    :goto_0
+    if-eqz v3, :cond_2
+
+    aget-object v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Ljavax/net/ssl/X509TrustManager;
+
+    sget-object v1, Lgq3;->a:Lgq3;
+
+    check-cast v1, Lorg/conscrypt/ConscryptHostnameVerifier;
+
+    invoke-static {v0, v1}, Lorg/conscrypt/Conscrypt;->setHostnameVerifier(Ljavax/net/ssl/TrustManager;Lorg/conscrypt/ConscryptHostnameVerifier;)V
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Unexpected default trust managers: "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method

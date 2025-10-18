@@ -15,10 +15,10 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Lp28;",
+        "Lm38;",
         "liveLocationManager",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lp28;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lm38;)V",
         "tamtam-app_release"
     }
     k = 0x1
@@ -32,26 +32,26 @@
 
 
 # instance fields
-.field public final b:Lp28;
+.field public final b:Lm38;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lp28;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lm38;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/work/Worker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/messages/location/StopLiveLocationSchedulerImpl$StopLiveLocationSchedulerWorker;->b:Lp28;
+    iput-object p3, p0, Lru/ok/messages/location/StopLiveLocationSchedulerImpl$StopLiveLocationSchedulerWorker;->b:Lm38;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ls18;
+.method public final a()Lp28;
     .locals 4
 
-    invoke-virtual {p0}, Lt18;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lq28;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
@@ -71,15 +71,15 @@
 
     move-result-object v0
 
-    const-string v1, "t0j"
+    const-string v1, "w1j"
 
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/location/StopLiveLocationSchedulerImpl$StopLiveLocationSchedulerWorker;->b:Lp28;
+    iget-object v0, p0, Lru/ok/messages/location/StopLiveLocationSchedulerImpl$StopLiveLocationSchedulerWorker;->b:Lm38;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lt18;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lq28;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
@@ -97,9 +97,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Ls18;->b()Lr18;
+    invoke-static {}, Lp28;->b()Lo28;
 
     move-result-object v0
 

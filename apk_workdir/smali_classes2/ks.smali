@@ -1,5 +1,5 @@
 .class public final Lks;
-.super Lpj5;
+.super Ljk5;
 .source "SourceFile"
 
 
@@ -97,13 +97,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
-    sget-object v0, Lhwf;->X:Lhwf;
+    sget-object v0, Llxf;->X:Llxf;
 
-    iget-short v0, v0, Lhwf;->a:S
+    iget-short v0, v0, Llxf;->a:S
 
     const/4 v1, 0x3
 
-    invoke-virtual {p0, p1, v0, v1}, Lpj5;->b(Ljava/nio/ByteBuffer;II)I
+    invoke-virtual {p0, p1, v0, v1}, Ljk5;->b(Ljava/nio/ByteBuffer;II)I
 
     move-result v0
 
@@ -234,9 +234,9 @@
 
     move-result-object v2
 
-    sget-object v3, Lhwf;->b:Lhwf;
+    sget-object v3, Llxf;->b:Llxf;
 
-    iget-short v3, v3, Lhwf;->a:S
+    iget-short v3, v3, Llxf;->a:S
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
@@ -311,9 +311,9 @@
 
     move-result-object v1
 
-    sget-object v3, Lhwf;->X:Lhwf;
+    sget-object v3, Llxf;->X:Llxf;
 
-    iget-short v3, v3, Lhwf;->a:S
+    iget-short v3, v3, Llxf;->a:S
 
     invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 

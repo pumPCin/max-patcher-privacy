@@ -1,234 +1,106 @@
-.class public final synthetic Lvu1;
-.super Ljava/lang/Object;
+.class public final Lvu1;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Llt7;
-
-.field public final synthetic c:Llt7;
+.field public final synthetic Y:Lcv1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llt7;Llt7;I)V
+.method public constructor <init>(Lcv1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lvu1;->a:I
+    iput-object p1, p0, Lvu1;->Y:Lcv1;
 
-    iput-object p1, p0, Lvu1;->b:Llt7;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lvu1;->c:Llt7;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lvu1;->a:I
+    check-cast p1, Lmi1;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {}, Lc8;->a()Lmdf;
+    invoke-virtual {p0, p1, p2}, Lvu1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v1, p0, Lvu1;->b:Llt7;
+    check-cast p1, Lvu1;
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Lvu1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v1, Lqkf;
+    return-object p2
+.end method
 
-    check-cast v1, Losa;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v1}, Losa;->b()Lv44;
+    new-instance v0, Lvu1;
 
-    move-result-object v1
+    iget-object v1, p0, Lvu1;->Y:Lcv1;
 
-    invoke-interface {v0, v1}, Lt44;->plus(Lt44;)Lt44;
+    invoke-direct {v0, v1, p2}, Lvu1;-><init>(Lcv1;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lvu1;->c:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt44;
-
-    invoke-interface {v0, v1}, Lt44;->plus(Lt44;)Lt44;
-
-    move-result-object v0
+    iput-object p1, v0, Lvu1;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Ltui;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lvu1;->c:Llt7;
+    iget-object p1, p0, Lvu1;->X:Ljava/lang/Object;
 
-    iput-object v1, v0, Ltui;->a:Ljava/lang/Object;
+    check-cast p1, Lmi1;
 
-    new-instance v1, Li4b;
+    iget-object v0, p0, Lvu1;->Y:Lcv1;
 
-    const/16 v2, 0x13
+    invoke-virtual {v0}, Lcv1;->c()Le94;
 
-    invoke-direct {v1, v2, v0}, Li4b;-><init>(ILjava/lang/Object;)V
+    move-result-object v1
 
-    new-instance v2, Lrhf;
+    iget-boolean v1, v1, Le94;->i:Z
 
-    invoke-direct {v2, v1}, Lrhf;-><init>(Loh6;)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lvu1;->b:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqkf;
-
-    check-cast v0, Losa;
-
-    invoke-virtual {v0}, Losa;->b()Lv44;
-
-    move-result-object v0
+    if-eqz v1, :cond_0
 
     const/4 v1, 0x1
 
-    const-string v2, "shortcuts"
+    invoke-virtual {v0, p1, v1}, Lcv1;->h(Lmi1;Z)V
 
-    invoke-virtual {v0, v1, v2}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    invoke-virtual {v0}, Lcv1;->d()Lmdb;
 
-    iget-object v1, p0, Lvu1;->c:Llt7;
+    move-result-object p1
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lmdb;->a:Loi1;
 
-    move-result-object v1
+    invoke-interface {p1}, Loi1;->getId()Lmi1;
 
-    check-cast v1, Lt44;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lp0;->plus(Lt44;)Lt44;
+    invoke-virtual {v0, p1}, Lcv1;->i(Lmi1;)V
 
-    move-result-object v0
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {v0}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    invoke-static {}, Lx9i;->a()Lnm7;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lvu1;->b:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqkf;
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->a()Lv44;
-
-    move-result-object v1
-
-    const-string v2, "non-contacts"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lon7;->plus(Lt44;)Lt44;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lvu1;->c:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt44;
-
-    invoke-interface {v0, v1}, Lt44;->plus(Lt44;)Lt44;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    invoke-static {}, Lc8;->a()Lmdf;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lvu1;->b:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqkf;
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->b()Lv44;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lt44;->plus(Lt44;)Lt44;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lvu1;->c:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt44;
-
-    invoke-interface {v0, v1}, Lt44;->plus(Lt44;)Lt44;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

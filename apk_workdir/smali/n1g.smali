@@ -2,181 +2,130 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyv0;
-
 
 # instance fields
-.field public final a:Ll0g;
+.field public a:J
 
-.field public final b:[I
+.field public b:J
 
-.field public final c:I
+.field public c:I
 
-.field public final o:[Z
+.field public d:I
+
+.field public e:[J
+
+.field public f:[I
+
+.field public g:[I
+
+.field public h:[J
+
+.field public i:[Z
+
+.field public j:Z
+
+.field public k:[Z
+
+.field public l:Z
+
+.field public m:J
+
+.field public n:Z
+
+.field public o:Ljava/lang/Object;
+
+.field public p:Ljava/lang/Object;
+
+.field public final q:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll0g;[II[Z)V
+.method public constructor <init>(I)V
     .locals 2
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Ll0g;->a:I
+    const/4 p1, 0x0
 
-    array-length v1, p2
+    new-array v0, p1, [J
 
-    if-ne v0, v1, :cond_0
+    iput-object v0, p0, Ln1g;->e:[J
 
-    array-length v1, p4
+    new-array v0, p1, [I
 
-    if-ne v0, v1, :cond_0
+    iput-object v0, p0, Ln1g;->f:[I
 
-    const/4 v0, 0x1
+    new-array v0, p1, [I
 
-    goto :goto_0
+    iput-object v0, p0, Ln1g;->g:[I
 
-    :cond_0
-    const/4 v0, 0x0
+    new-array v0, p1, [J
 
-    :goto_0
-    invoke-static {v0}, Lefi;->d(Z)V
+    iput-object v0, p0, Ln1g;->h:[J
 
-    iput-object p1, p0, Ln1g;->a:Ll0g;
+    new-array v0, p1, [Z
 
-    invoke-virtual {p2}, [I->clone()Ljava/lang/Object;
+    iput-object v0, p0, Ln1g;->i:[Z
 
-    move-result-object p1
+    new-array p1, p1, [Z
 
-    check-cast p1, [I
+    iput-object p1, p0, Ln1g;->k:[Z
 
-    iput-object p1, p0, Ln1g;->b:[I
+    new-instance p1, Ldjg;
 
-    iput p3, p0, Ln1g;->c:I
+    const/4 v0, 0x2
 
-    invoke-virtual {p4}, [Z->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Z
-
-    iput-object p1, p0, Ln1g;->o:[Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    invoke-direct {p1, v0, v1}, Ldjg;-><init>(IZ)V
 
-    const-class v2, Ln1g;
+    iput-object p1, p0, Ln1g;->q:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    move-result-object v3
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq v2, v3, :cond_1
+    const/4 p1, 0x0
 
-    goto :goto_0
+    new-array v0, p1, [J
 
-    :cond_1
-    check-cast p1, Ln1g;
+    iput-object v0, p0, Ln1g;->e:[J
 
-    iget v2, p0, Ln1g;->c:I
+    new-array v0, p1, [I
 
-    iget v3, p1, Ln1g;->c:I
+    iput-object v0, p0, Ln1g;->f:[I
 
-    if-ne v2, v3, :cond_2
+    new-array v0, p1, [I
 
-    iget-object v2, p0, Ln1g;->a:Ll0g;
+    iput-object v0, p0, Ln1g;->g:[I
 
-    iget-object v3, p1, Ln1g;->a:Ll0g;
+    new-array v0, p1, [J
 
-    invoke-virtual {v2, v3}, Ll0g;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Ln1g;->h:[J
 
-    move-result v2
+    new-array v0, p1, [Z
 
-    if-eqz v2, :cond_2
+    iput-object v0, p0, Ln1g;->i:[Z
 
-    iget-object v2, p0, Ln1g;->b:[I
+    new-array p1, p1, [Z
 
-    iget-object v3, p1, Ln1g;->b:[I
+    iput-object p1, p0, Ln1g;->k:[Z
 
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+    new-instance p1, Ledb;
 
-    move-result v2
+    invoke-direct {p1}, Ledb;-><init>()V
 
-    if-eqz v2, :cond_2
+    iput-object p1, p0, Ln1g;->q:Ljava/lang/Object;
 
-    iget-object v2, p0, Ln1g;->o:[Z
+    return-void
 
-    iget-object p1, p1, Ln1g;->o:[Z
+    nop
 
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ln1g;->a:Ll0g;
-
-    invoke-virtual {v0}, Ll0g;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ln1g;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Ln1g;->c:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ln1g;->o:[Z
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

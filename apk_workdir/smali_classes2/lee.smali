@@ -1,21 +1,32 @@
 .class public final Llee;
-.super Lcq;
+.super Lvpe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Llee;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final A(Ly18;)V
     .locals 1
 
-    new-instance v0, Llee;
+    instance-of v0, p1, Lqwd;
 
-    invoke-direct {v0}, Lcq;-><init>()V
+    if-nez v0, :cond_0
 
-    sput-object v0, Llee;->a:Llee;
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+
+    check-cast v0, Lcde;
+
+    check-cast p1, Ltce;
+
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
+
+    return-void
+.end method
+
+.method public final F()V
+    .locals 0
 
     return-void
 .end method

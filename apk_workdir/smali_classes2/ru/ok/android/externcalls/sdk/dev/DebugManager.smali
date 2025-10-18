@@ -11,13 +11,13 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
         "",
-        "Lgze;",
+        "Ll0f;",
         "operation",
         "",
         "param",
-        "Lzag;",
+        "Lccg;",
         "report",
-        "(Lgze;Ljava/lang/String;)V",
+        "(Ll0f;Ljava/lang/String;)V",
         "",
         "error",
         "reportError",
@@ -25,23 +25,23 @@
         "dumpPath",
         "enableFullAudioDump",
         "(Ljava/lang/String;)V",
-        "Lt0f;",
+        "Lz1f;",
         "listener",
         "",
         "period",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "registerStatListener",
-        "(Lt0f;ILjava/util/concurrent/TimeUnit;)V",
+        "(Lz1f;ILjava/util/concurrent/TimeUnit;)V",
         "removeStatListener",
-        "(Lt0f;)V",
+        "(Lz1f;)V",
         "Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;",
         "getMediaDumpManager",
         "()Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;",
         "mediaDumpManager",
-        "Lyz0;",
+        "Lh01;",
         "getUnderlyingCall",
-        "()Lyz0;",
+        "()Lh01;",
         "underlyingCall",
         "calls-sdk_release"
     }
@@ -62,16 +62,16 @@
 .method public abstract getMediaDumpManager()Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;
 .end method
 
-.method public abstract getUnderlyingCall()Lyz0;
+.method public abstract getUnderlyingCall()Lh01;
 .end method
 
-.method public abstract registerStatListener(Lt0f;ILjava/util/concurrent/TimeUnit;)V
+.method public abstract registerStatListener(Lz1f;ILjava/util/concurrent/TimeUnit;)V
 .end method
 
-.method public abstract removeStatListener(Lt0f;)V
+.method public abstract removeStatListener(Lz1f;)V
 .end method
 
-.method public abstract report(Lgze;Ljava/lang/String;)V
+.method public abstract report(Ll0f;Ljava/lang/String;)V
 .end method
 
 .method public abstract reportError(Ljava/lang/Throwable;)V

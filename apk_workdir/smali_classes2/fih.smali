@@ -1,51 +1,19 @@
 .class public final Lfih;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lgih;
-
-.field public Z:I
-
-.field public o:Lgih;
-
-
-# direct methods
-.method public constructor <init>(Lgih;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lfih;->Y:Lgih;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final serializer()Lur7;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lur7;"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lfih;->X:Ljava/lang/Object;
+    sget-object v0, Leih;->a:Leih;
 
-    iget p1, p0, Lfih;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfih;->Z:I
-
-    iget-object p1, p0, Lfih;->Y:Lgih;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lgih;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

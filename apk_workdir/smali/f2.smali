@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Llq7;
+.implements Lir7;
 
 
 # instance fields
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ldd5;)V
+.method public constructor <init>(Lxd5;)V
     .locals 1
 
     const/4 v0, 0x4
@@ -43,7 +43,7 @@
     iput-object p1, p0, Lf2;->c:Ljava/lang/Object;
 
     .line 4
-    iget p1, p1, Lztb;->c:I
+    iget p1, p1, Levb;->c:I
 
     .line 5
     iput p1, p0, Lf2;->b:I
@@ -232,9 +232,9 @@
     :pswitch_0
     iget-object v0, p0, Lf2;->c:Ljava/lang/Object;
 
-    check-cast v0, Ldd5;
+    check-cast v0, Lxd5;
 
-    iget v1, v0, Lztb;->c:I
+    iget v1, v0, Levb;->c:I
 
     iget v2, p0, Lf2;->b:I
 
@@ -244,7 +244,7 @@
 
     sub-int/2addr v1, v2
 
-    iget-object v0, v0, Lztb;->e:[Ljava/lang/String;
+    iget-object v0, v0, Levb;->e:[Ljava/lang/String;
 
     aget-object v0, v0, v1
 
@@ -447,7 +447,7 @@
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->removeItem(I)V
 
-    sget-object v0, Lzag;->a:Lzag;
+    sget-object v0, Lccg;->a:Lccg;
 
     goto :goto_0
 

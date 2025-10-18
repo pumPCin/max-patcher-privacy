@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltzf;
+.implements Lx0g;
 
 
 # direct methods

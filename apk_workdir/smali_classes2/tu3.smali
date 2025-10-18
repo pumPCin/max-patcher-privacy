@@ -1,19 +1,19 @@
 .class public final Ltu3;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Boolean;
+.field public final c:Lru3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Boolean;)V
+.method public constructor <init>(Lru3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltu3;->a:Ljava/lang/Boolean;
+    iput-object p1, p0, Ltu3;->c:Lru3;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Ltu3;
 
-    iget-object v1, p0, Ltu3;->a:Ljava/lang/Boolean;
+    iget-object v1, p0, Ltu3;->c:Lru3;
 
-    iget-object p1, p1, Ltu3;->a:Ljava/lang/Boolean;
+    iget-object p1, p1, Ltu3;->c:Lru3;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,7 +60,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ltu3;->a:Ljava/lang/Boolean;
+    iget-object v0, p0, Ltu3;->c:Lru3;
 
     if-nez v0, :cond_0
 
@@ -81,17 +81,21 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Selection(isSelected="
+    const-string v1, "CONTACT_INFO_BY_PHONE.Response(contact="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltu3;->a:Ljava/lang/Boolean;
+    iget-object v1, p0, Ltu3;->c:Lru3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v1, ")"
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

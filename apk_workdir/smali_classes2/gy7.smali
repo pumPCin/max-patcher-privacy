@@ -1,85 +1,47 @@
 .class public final Lgy7;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lny7;
-.implements Lly7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgy7;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
+.field public final o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 1
 
-    new-instance v0, Lgt7;
+    const/4 v0, 0x0
 
-    const/16 v1, 0x11
+    invoke-direct {p0, v0}, Lmmf;-><init>(Lm8b;)V
 
-    invoke-direct {v0, v1}, Lgt7;-><init>(I)V
+    iput-boolean p2, p0, Lgy7;->o:Z
 
-    sput-object v0, Lgy7;->CREATOR:Landroid/os/Parcelable$Creator;
+    const-string p2, "link"
 
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lgy7;->a:J
-
-    iput-object p3, p0, Lgy7;->b:Ljava/lang/String;
+    invoke-virtual {p0, p2, p1}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final P()S
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lm8b;->c:Ln9a;
+
+    const/16 v0, 0x59
 
     return v0
 .end method
 
-.method public final n()Ljava/lang/String;
+.method public final X()Z
     .locals 1
 
-    iget-object v0, p0, Lgy7;->b:Ljava/lang/String;
+    iget-boolean v0, p0, Lgy7;->o:Z
 
-    return-object v0
-.end method
+    xor-int/lit8 v0, v0, 0x1
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-wide v0, p0, Lgy7;->a:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-object p2, p0, Lgy7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method

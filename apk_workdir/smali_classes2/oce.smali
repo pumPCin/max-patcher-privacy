@@ -1,122 +1,157 @@
 .class public final Loce;
-.super Ljava/lang/Object;
+.super Lqce;
 .source "SourceFile"
-
-# interfaces
-.implements Lgf4;
 
 
 # static fields
-.field public static final a:Loce;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Loce;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Lpce;
+
+# instance fields
+.field public a:Z
+
+.field public final b:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Loce;
+    new-instance v0, Lo0e;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x7
 
-    sput-object v0, Loce;->a:Loce;
+    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
 
-    sget-object v0, Lpce;->b:Lpce;
+    sput-object v0, Loce;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    sput-object v0, Loce;->b:Lpce;
+    return-void
+.end method
+
+.method public constructor <init>(ZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Loce;->a:Z
+
+    iput-boolean p2, p0, Loce;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lof4;
+.method public final describeContents()I
     .locals 1
 
-    sget-object v0, Loce;->b:Lpce;
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Loce;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Loce;
+
+    iget-boolean v1, p0, Loce;->a:Z
+
+    iget-boolean v3, p1, Loce;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Loce;->b:Z
+
+    iget-boolean p1, p1, Loce;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Loce;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Loce;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-boolean v0, p0, Loce;->a:Z
+
+    const-string v1, ", isEnabled="
+
+    const-string v2, ")"
+
+    const-string v3, "Switch(isChecked="
+
+    iget-boolean v4, p0, Loce;->b:Z
+
+    invoke-static {v3, v0, v1, v4, v2}, Lfd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Ljf4;Landroid/os/Bundle;)Lrf4;
-    .locals 10
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget-object v0, Loce;->b:Lpce;
+    iget-boolean p2, p0, Loce;->a:Z
 
-    iget-object v0, v0, Lof4;->a:Ljava/util/LinkedHashSet;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget-boolean p2, p0, Loce;->b:Z
 
-    move-result v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Lpce;->b:Lpce;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lpce;->c:Ljf4;
-
-    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v8, Lh;
-
-    const/16 v0, 0x1b
-
-    invoke-direct {v8, v0}, Lh;-><init>(I)V
-
-    new-instance v2, Lrf4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lrf4;-><init>(Ljava/lang/String;Ljf4;Landroid/os/Bundle;ILpf4;Lqf4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Loce;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lf67;->h(Ljava/lang/String;Ljf4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lf67;->h(Ljava/lang/String;Ljf4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-void
 .end method

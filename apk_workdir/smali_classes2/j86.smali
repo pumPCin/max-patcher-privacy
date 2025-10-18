@@ -1,175 +1,159 @@
-.class public final Lj86;
-.super Llff;
+.class public final synthetic Lj86;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lj86;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lbj6;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p0, p1, p2}, Lj86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Luhg;
 
-    move-result-object p1
+    check-cast p3, Ljava/lang/Number;
 
-    check-cast p1, Lj86;
+    invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-object p3, p0, Lau1;->receiver:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lj86;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p3, Lone/me/folders/list/FoldersListScreen;
 
-    return-object p2
-.end method
+    sget-object v0, Lone/me/folders/list/FoldersListScreen;->Z:[Ltr7;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p3}, Lone/me/folders/list/FoldersListScreen;->C0()Ls86;
 
-    new-instance v0, Lj86;
+    move-result-object v0
 
-    iget-object v1, p0, Lj86;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iput-object p2, v0, Ls86;->u0:Luhg;
 
-    invoke-direct {v0, p2, v1}, Lj86;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    const/4 v0, 0x1
 
-    iput-object p1, v0, Lj86;->X:Ljava/lang/Object;
+    invoke-static {v0}, Ldwi;->a(I)Lg14;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lj86;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lj86;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    sget-object v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lwq7;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_2
-
-    invoke-virtual {v0}, Lx14;->getView()Landroid/view/View;
+    invoke-interface {v0, p1}, Lg14;->t(Landroid/view/View;)Lg14;
 
     move-result-object p1
 
-    instance-of v2, p1, Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-virtual {p3}, Lone/me/folders/list/FoldersListScreen;->C0()Ls86;
 
-    if-eqz v2, :cond_0
+    move-result-object v0
 
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p2, Luhg;->a:Li46;
+
+    if-nez p2, :cond_0
+
+    sget-object p2, Lka5;->a:Lka5;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-static {}, Lob3;->b()Lu18;
 
-    :goto_0
-    if-eqz p1, :cond_1
+    move-result-object v0
 
-    iget-object v2, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:Lnn0;
+    new-instance v1, Lj14;
 
-    invoke-virtual {v2}, Lnn0;->getValue()Ljava/lang/Object;
+    sget v2, Lawa;->j:I
 
-    move-result-object v2
+    sget v3, Lcwa;->m:I
 
-    check-cast v2, Landroid/view/View;
+    move v4, v3
 
-    new-instance v4, Liq3;
+    new-instance v3, Lorf;
 
-    const/4 v5, -0x2
+    invoke-direct {v3, v4}, Lorf;-><init>(I)V
 
-    invoke-direct {v4, v1, v5}, Liq3;-><init>(II)V
+    sget v4, Ly0b;->h:I
 
-    iput v1, v4, Liq3;->i:I
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput v1, v4, Liq3;->e:I
+    move-result-object v4
 
-    iput v1, v4, Liq3;->h:I
+    const/4 v5, 0x0
 
-    iput v1, v4, Liq3;->l:I
+    const/16 v6, 0x14
 
-    invoke-static {p1, v2, v4}, Lsbi;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct/range {v1 .. v6}, Lj14;-><init>(ILtrf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
+
+    iget-object p2, p2, Li46;->r0:Ljava/util/Set;
+
+    sget-object v1, Lu66;->c:Lu66;
+
+    invoke-interface {p2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    sget v2, Lawa;->k:I
+
+    sget p2, Lcwa;->n:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, p2}, Lorf;-><init>(I)V
+
+    sget p2, Lpjd;->x:I
+
+    sget v1, Lw0b;->V:I
+
+    sget v4, Lw0b;->Q:I
+
+    move v5, v1
+
+    new-instance v1, Lj14;
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    move-object v4, v5
+
+    move-object v5, p2
+
+    invoke-direct/range {v1 .. v6}, Lj14;-><init>(ILtrf;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-object p1, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Lazc;
+    invoke-static {v0}, Lob3;->a(Ljava/util/List;)Lu18;
 
-    sget-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lwq7;
+    move-result-object p2
 
-    aget-object v2, v1, v3
-
-    invoke-interface {p1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lazc;
-
-    const/4 v3, 0x3
-
-    aget-object v1, v1, v3
-
-    invoke-interface {p1, v0, v1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {p1, p2}, Lg14;->i(Ljava/util/Collection;)Lg14;
 
     move-result-object p1
 
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-interface {p1}, Lg14;->c()Lg14;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p1
 
-    goto :goto_1
+    invoke-interface {p1}, Lg14;->build()Lh14;
 
-    :cond_2
-    iget-object v2, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Lo66;
+    move-result-object p1
 
-    new-instance v3, Lg86;
+    invoke-interface {p1, p3}, Lh14;->v(Lone/me/sdk/arch/Widget;)V
 
-    invoke-direct {v3, v1, v0}, Lg86;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, p1, v3}, Lu08;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    :goto_1
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

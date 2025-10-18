@@ -1,118 +1,66 @@
 .class public final Lhjf;
-.super Lvs7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqh6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lfg1;
-
-.field public final synthetic c:Lgg1;
-
-
-# direct methods
-.method public constructor <init>(Lfg1;Lgg1;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lhjf;->a:I
-
-    .line 1
-    iput-object p1, p0, Lhjf;->b:Lfg1;
-
-    iput-object p2, p0, Lhjf;->c:Lgg1;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lgg1;Lfg1;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lhjf;->a:I
-
-    .line 2
-    iput-object p1, p0, Lhjf;->c:Lgg1;
-
-    iput-object p2, p0, Lhjf;->b:Lfg1;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
-
-    return-void
-.end method
+.field public a:Landroid/os/Message;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 3
 
-    iget v0, p0, Lhjf;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iput-object v0, p0, Lhjf;->a:Landroid/os/Message;
 
-    check-cast p1, Leg1;
+    sget-object v0, Ljjf;->b:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lhjf;->b:Lfg1;
+    monitor-enter v0
 
-    iget-object v1, p0, Lhjf;->c:Lgg1;
-
-    invoke-virtual {v0, v1, p1}, Lfg1;->d(Lgg1;Leg1;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Leg1;
-
-    iget-object v0, p0, Lhjf;->c:Lgg1;
-
-    iget-object v1, v0, Lgg1;->i:Ljava/util/ArrayList;
-
-    iget-object v2, p0, Lhjf;->b:Lfg1;
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_0
+    const/16 v2, 0x32
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lhjf;->a:Landroid/os/Message;
+
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v2, Lfg1;->a:Landroid/opengl/EGLSurface;
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Lhjf;->a()V
 
-    iput-object v1, v2, Lfg1;->a:Landroid/opengl/EGLSurface;
-
-    invoke-virtual {p1, v0}, Leg1;->d(Landroid/opengl/EGLSurface;)V
-
-    invoke-virtual {v2, p1}, Lfg1;->c(Leg1;)V
-
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

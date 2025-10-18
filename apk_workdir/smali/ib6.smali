@@ -1,68 +1,113 @@
-.class public final synthetic Lib6;
+.class public final Lib6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:I
 
-.field public final synthetic b:Lnb6;
+.field public B:I
+
+.field public C:I
+
+.field public D:I
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Ljava/lang/String;
+
+.field public i:Lar9;
+
+.field public j:Ljava/lang/String;
+
+.field public k:Ljava/lang/String;
+
+.field public l:I
+
+.field public m:Ljava/util/List;
+
+.field public n:Lz15;
+
+.field public o:J
+
+.field public p:I
+
+.field public q:I
+
+.field public r:F
+
+.field public s:I
+
+.field public t:F
+
+.field public u:[B
+
+.field public v:I
+
+.field public w:Lxb3;
+
+.field public x:I
+
+.field public y:I
+
+.field public z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnb6;I)V
-    .locals 0
-
-    iput p2, p0, Lib6;->a:I
-
-    iput-object p1, p0, Lib6;->b:Lnb6;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, -0x1
+
+    iput v0, p0, Lib6;->f:I
+
+    iput v0, p0, Lib6;->g:I
+
+    iput v0, p0, Lib6;->l:I
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    iput-wide v1, p0, Lib6;->o:J
+
+    iput v0, p0, Lib6;->p:I
+
+    iput v0, p0, Lib6;->q:I
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    iput v1, p0, Lib6;->r:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, p0, Lib6;->t:F
+
+    iput v0, p0, Lib6;->v:I
+
+    iput v0, p0, Lib6;->x:I
+
+    iput v0, p0, Lib6;->y:I
+
+    iput v0, p0, Lib6;->z:I
+
+    iput v0, p0, Lib6;->C:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lib6;->D:I
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lib6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lib6;->b:Lnb6;
-
-    iget-object v0, v0, Lnb6;->f:Landroid/content/Context;
-
-    sget v1, Liid;->G1:I
-
-    invoke-static {v0, v1}, Lyui;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lib6;->b:Lnb6;
-
-    iget-object v0, v0, Lnb6;->f:Landroid/content/Context;
-
-    sget v1, Liid;->F1:I
-
-    invoke-static {v0, v1}, Lyui;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

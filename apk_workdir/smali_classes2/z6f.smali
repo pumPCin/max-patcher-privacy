@@ -1,48 +1,59 @@
 .class public final Lz6f;
-.super Lk14;
+.super Lrdi;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Liv8;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lz6f;
 
 
 # direct methods
-.method public constructor <init>(Liv8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lz6f;->Y:Liv8;
+    new-instance v0, Lz6f;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+
+    sput-object v0, Lz6f;->c:Lz6f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final S0(Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Lz6f;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
 
-    iget p1, p0, Lz6f;->X:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    new-instance v1, Ltcb;
 
-    or-int/2addr p1, v0
+    const-string v2, "oneme:share:data"
 
-    iput p1, p0, Lz6f;->X:I
+    invoke-direct {v1, v2, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lz6f;->Y:Liv8;
+    new-instance p1, Ltcb;
 
-    const/4 v0, 0x0
+    const-string v2, "tag"
 
-    invoke-virtual {p1, v0, p0}, Liv8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {p1, v2, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, p1}, [Ltcb;
 
     move-result-object p1
 
-    return-object p1
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string p2, ":chats/share"
+
+    invoke-virtual {v0, p2, p1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
 .end method

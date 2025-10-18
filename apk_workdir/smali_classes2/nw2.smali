@@ -1,82 +1,122 @@
 .class public final Lnw2;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lli6;
 
 
 # instance fields
-.field public final synthetic X:Low2;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lda2;
+.field public final synthetic b:Le5a;
 
 
 # direct methods
-.method public constructor <init>(Low2;Lda2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;Le5a;I)V
     .locals 0
 
-    iput-object p1, p0, Lnw2;->X:Low2;
+    iput p3, p0, Lnw2;->a:I
 
-    iput-object p2, p0, Lnw2;->Y:Lda2;
+    iput-object p2, p0, Lnw2;->b:Le5a;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lb54;
+    iget v0, p0, Lnw2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lnw2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Laze;
+
+    invoke-virtual {p1}, Laze;->T0()V
+
+    iget-object v0, p0, Lnw2;->b:Le5a;
+
+    check-cast v0, Lcw2;
+
+    iget-wide v0, v0, Lcw2;->b:J
+
+    const-string v2, ":start-conversation/add-subscribers?id="
+
+    invoke-static {v0, v1, v2}, Lrv8;->d(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lrdi;->q0()Lag4;
 
     move-result-object p1
 
-    check-cast p1, Lnw2;
+    const/4 v1, 0x0
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-virtual {p1, p2}, Lnw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lnw2;
-
-    iget-object v0, p0, Lnw2;->X:Low2;
-
-    iget-object v1, p0, Lnw2;->Y:Lda2;
-
-    invoke-direct {p1, v0, v1, p2}, Lnw2;-><init>(Low2;Lda2;Lkotlin/coroutines/Continuation;)V
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    :pswitch_0
+    check-cast p1, Laze;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Laze;->T0()V
 
-    iget-object p1, p0, Lnw2;->Y:Lda2;
+    iget-object v0, p0, Lnw2;->b:Le5a;
 
-    iget-wide v0, p1, Lda2;->a:J
+    check-cast v0, Ldw2;
 
-    iget-object p1, p0, Lnw2;->X:Low2;
+    iget-wide v0, v0, Ldw2;->b:J
 
-    invoke-static {p1, v0, v1}, Low2;->r(Low2;J)V
+    const-string v2, ":profile/edit/link?id="
 
-    sget-object p1, Lzag;->a:Lzag;
+    const-string v3, "&type=local_chat&flow=create"
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lrdi;->q0()Lag4;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
+
+    :pswitch_1
+    check-cast p1, Laze;
+
+    invoke-virtual {p1}, Laze;->T0()V
+
+    iget-object v0, p0, Lnw2;->b:Le5a;
+
+    check-cast v0, Lew2;
+
+    iget-wide v0, v0, Lew2;->b:J
+
+    invoke-virtual {p1, v0, v1}, Laze;->S0(J)Lwf4;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lrdi;->t0(Lwf4;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

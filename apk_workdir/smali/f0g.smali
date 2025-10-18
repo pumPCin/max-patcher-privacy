@@ -1,107 +1,292 @@
 .class public final Lf0g;
-.super Ljava/lang/Object;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+.implements Lx9b;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Landroid/view/GestureDetector;
 
-.field public final b:I
+.field public volatile Y:F
 
-.field public final c:J
+.field public final a:Landroid/graphics/PointF;
 
-.field public final d:J
+.field public final b:Landroid/graphics/PointF;
 
-.field public final e:J
+.field public final c:Lyve;
 
-.field public final f:J
-
-.field public final g:Lsa6;
-
-.field public final h:I
-
-.field public final i:[J
-
-.field public final j:[J
-
-.field public final k:I
-
-.field public final l:[Lj0g;
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(IIJJJJLsa6;I[Lj0g;I[J[J)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lyve;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    iput p1, p0, Lf0g;->a:I
+    new-instance v0, Landroid/graphics/PointF;
 
-    iput p2, p0, Lf0g;->b:I
+    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
-    iput-wide p3, p0, Lf0g;->c:J
+    iput-object v0, p0, Lf0g;->a:Landroid/graphics/PointF;
 
-    iput-wide p5, p0, Lf0g;->d:J
+    new-instance v0, Landroid/graphics/PointF;
 
-    iput-wide p7, p0, Lf0g;->e:J
+    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
-    iput-wide p9, p0, Lf0g;->f:J
+    iput-object v0, p0, Lf0g;->b:Landroid/graphics/PointF;
 
-    iput-object p11, p0, Lf0g;->g:Lsa6;
+    iput-object p2, p0, Lf0g;->c:Lyve;
 
-    iput p12, p0, Lf0g;->h:I
+    const/high16 p2, 0x41c80000    # 25.0f
 
-    iput-object p13, p0, Lf0g;->l:[Lj0g;
+    iput p2, p0, Lf0g;->o:F
 
-    iput p14, p0, Lf0g;->k:I
+    new-instance p2, Landroid/view/GestureDetector;
 
-    iput-object p15, p0, Lf0g;->i:[J
+    invoke-direct {p2, p1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    move-object/from16 p1, p16
+    iput-object p2, p0, Lf0g;->X:Landroid/view/GestureDetector;
 
-    iput-object p1, p0, Lf0g;->j:[J
+    const p1, 0x40490fdb    # (float)Math.PI
+
+    iput p1, p0, Lf0g;->Y:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lsa6;)Lf0g;
-    .locals 18
+.method public final a([FF)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    neg-float p1, p2
 
-    new-instance v1, Lf0g;
+    iput p1, p0, Lf0g;->Y:F
 
-    iget-object v2, v0, Lf0g;->i:[J
+    return-void
+.end method
 
-    iget-object v3, v0, Lf0g;->j:[J
+.method public final onDown(Landroid/view/MotionEvent;)Z
+    .locals 2
 
-    move-object/from16 v16, v2
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    iget v2, v0, Lf0g;->a:I
+    move-result v0
 
-    move-object/from16 v17, v3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    iget v3, v0, Lf0g;->b:I
+    move-result p1
 
-    iget-wide v4, v0, Lf0g;->c:J
+    iget-object v1, p0, Lf0g;->a:Landroid/graphics/PointF;
 
-    iget-wide v6, v0, Lf0g;->d:J
+    invoke-virtual {v1, v0, p1}, Landroid/graphics/PointF;->set(FF)V
 
-    iget-wide v8, v0, Lf0g;->e:J
+    const/4 p1, 0x1
 
-    iget-wide v10, v0, Lf0g;->f:J
+    return p1
+.end method
 
-    iget v13, v0, Lf0g;->h:I
+.method public final onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 16
 
-    iget-object v14, v0, Lf0g;->l:[Lj0g;
+    move-object/from16 v1, p0
 
-    iget v15, v0, Lf0g;->k:I
+    invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getX()F
 
-    move-object/from16 v12, p1
+    move-result v0
 
-    invoke-direct/range {v1 .. v17}, Lf0g;-><init>(IIJJJJLsa6;I[Lj0g;I[J[J)V
+    iget-object v2, v1, Lf0g;->a:Landroid/graphics/PointF;
 
-    return-object v1
+    iget v2, v2, Landroid/graphics/PointF;->x:F
+
+    sub-float/2addr v0, v2
+
+    iget v2, v1, Lf0g;->o:F
+
+    div-float/2addr v0, v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    iget-object v3, v1, Lf0g;->a:Landroid/graphics/PointF;
+
+    iget v4, v3, Landroid/graphics/PointF;->y:F
+
+    sub-float/2addr v2, v4
+
+    iget v4, v1, Lf0g;->o:F
+
+    div-float/2addr v2, v4
+
+    invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v4
+
+    invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v5
+
+    invoke-virtual {v3, v4, v5}, Landroid/graphics/PointF;->set(FF)V
+
+    iget v3, v1, Lf0g;->Y:F
+
+    float-to-double v3, v3
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    iget-object v4, v1, Lf0g;->b:Landroid/graphics/PointF;
+
+    iget v6, v4, Landroid/graphics/PointF;->x:F
+
+    mul-float v7, v5, v0
+
+    mul-float v8, v3, v2
+
+    sub-float/2addr v7, v8
+
+    sub-float/2addr v6, v7
+
+    iput v6, v4, Landroid/graphics/PointF;->x:F
+
+    iget v6, v4, Landroid/graphics/PointF;->y:F
+
+    mul-float/2addr v3, v0
+
+    mul-float/2addr v5, v2
+
+    add-float/2addr v5, v3
+
+    add-float/2addr v5, v6
+
+    iput v5, v4, Landroid/graphics/PointF;->y:F
+
+    const/high16 v0, 0x42340000    # 45.0f
+
+    invoke-static {v0, v5}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    const/high16 v2, -0x3dcc0000    # -45.0f
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    iput v0, v4, Landroid/graphics/PointF;->y:F
+
+    iget-object v2, v1, Lf0g;->c:Lyve;
+
+    iget-object v0, v1, Lf0g;->b:Landroid/graphics/PointF;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget v3, v0, Landroid/graphics/PointF;->y:F
+
+    iput v3, v2, Lyve;->Z:F
+
+    iget-object v4, v2, Lyve;->X:[F
+
+    neg-float v6, v3
+
+    iget v3, v2, Lyve;->q0:F
+
+    float-to-double v7, v3
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v7
+
+    double-to-float v7, v7
+
+    iget v3, v2, Lyve;->q0:F
+
+    float-to-double v8, v3
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    double-to-float v8, v8
+
+    const/4 v9, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v4 .. v9}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
+
+    iget-object v10, v2, Lyve;->Y:[F
+
+    iget v0, v0, Landroid/graphics/PointF;->x:F
+
+    neg-float v12, v0
+
+    const/high16 v14, 0x3f800000    # 1.0f
+
+    const/4 v15, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v13, 0x0
+
+    invoke-static/range {v10 .. v15}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v2
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    iget-object p1, p0, Lf0g;->c:Lyve;
+
+    iget-object p1, p1, Lyve;->t0:Lzve;
+
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    iget-object p1, p0, Lf0g;->X:Landroid/view/GestureDetector;
+
+    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

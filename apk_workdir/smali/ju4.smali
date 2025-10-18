@@ -3,82 +3,134 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lndf;
+.implements Ljava/util/concurrent/Executor;
+
+
+# static fields
+.field public static final synthetic X:Lju4;
+
+.field public static volatile b:Lju4;
+
+.field public static final synthetic c:Lju4;
+
+.field public static final synthetic o:Lju4;
 
 
 # instance fields
-.field public final a:Lxd8;
-
-.field public final b:Lkub;
-
-.field public final c:Lag5;
-
-.field public final d:Ll8a;
-
-.field public final e:Lcu4;
-
-.field public final f:Lcu4;
-
-.field public final g:Ljava/lang/Object;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lxd8;Lr97;)V
-    .locals 4
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    iget-object v0, p2, Lr97;->o:Lkub;
+    new-instance v0, Lju4;
 
-    iget-object v1, p2, Lr97;->i:Lag5;
+    const/4 v1, 0x1
 
-    iget-object v2, p2, Lr97;->j:Ll8a;
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
 
-    iget-object v3, p2, Lr97;->l:Lcu4;
+    sput-object v0, Lju4;->c:Lju4;
 
-    iget-object p2, p2, Lr97;->u:Lcu4;
+    new-instance v0, Lju4;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
+
+    sput-object v0, Lju4;->o:Lju4;
+
+    new-instance v0, Lju4;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
+
+    sput-object v0, Lju4;->X:Lju4;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lju4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lju4;->a:Lxd8;
-
-    iput-object v0, p0, Lju4;->b:Lkub;
-
-    iput-object v1, p0, Lju4;->c:Lag5;
-
-    iput-object v2, p0, Lju4;->d:Ll8a;
-
-    iput-object v3, p0, Lju4;->e:Lcu4;
-
-    iput-object p2, p0, Lju4;->f:Lcu4;
-
-    new-instance p1, Lgu4;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Lgu4;-><init>(Lju4;I)V
-
-    const/4 p2, 0x1
-
-    invoke-static {p2, p1}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lju4;->g:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    iget-object v0, p0, Lju4;->g:Ljava/lang/Object;
+    iget v0, p0, Lju4;->a:I
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    check-cast v0, Liu4;
+    return-void
 
-    return-object v0
+    :pswitch_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_1
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_4
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_5
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_6
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

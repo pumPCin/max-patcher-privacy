@@ -4,24 +4,20 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:Lq78;
 
-.field public b:Ljava/lang/String;
+.field public final b:J
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>(Lq78;J)V
+    .locals 0
 
-.field public e:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:[B
+    iput-object p1, p0, Lq10;->a:Lq78;
 
-.field public g:Ljava/lang/String;
+    iput-wide p2, p0, Lq10;->b:J
 
-.field public h:J
-
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/lang/String;
-
-.field public k:Ljava/lang/String;
+    return-void
+.end method

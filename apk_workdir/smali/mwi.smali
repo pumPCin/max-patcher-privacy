@@ -1,55 +1,65 @@
-.class public final Lmwi;
+.class public abstract Lmwi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Levi;
-
-.field public final b:Lc1j;
-
-.field public final c:Lg4i;
-
-.field public final d:Lg4i;
-
-.field public final e:Lavi;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lep4;)V
-    .locals 1
+.method public static final a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
-    iget-object v0, p1, Lep4;->a:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Levi;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lmwi;->a:Levi;
+    aget-object p0, p0, v0
 
-    iget-object v0, p1, Lep4;->b:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StackTraceElement;
 
-    check-cast v0, Lc1j;
+    const-string v1, "_COROUTINE."
 
-    iput-object v0, p0, Lmwi;->b:Lc1j;
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, p1, Lep4;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lg4i;
+    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
 
-    iput-object v0, p0, Lmwi;->c:Lg4i;
+    move-result-object v1
 
-    iget-object v0, p1, Lep4;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
 
-    check-cast v0, Lg4i;
+    move-result p0
 
-    iput-object v0, p0, Lmwi;->d:Lg4i;
+    const-string v2, "_"
 
-    iget-object p1, p1, Lep4;->X:Ljava/lang/Object;
+    invoke-direct {v0, p1, v2, v1, p0}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    check-cast p1, Lavi;
+    return-object v0
+.end method
 
-    iput-object p1, p0, Lmwi;->e:Lavi;
+.method public static final b(Lzcg;)V
+    .locals 2
+
+    new-instance v0, Lgpa;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+
+    const-class v1, Lxe9;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lgpa;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+
+    const-class v1, Luyc;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
     return-void
 .end method

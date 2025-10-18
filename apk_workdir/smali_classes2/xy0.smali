@@ -1,688 +1,123 @@
-.class public final Lxy0;
+.class public abstract synthetic Lxy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/res/XmlResourceParser;
 
-
-# instance fields
-.field public final a:Landroid/content/res/XmlResourceParser;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/XmlResourceParser;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Landroid/content/res/XmlResourceParser;->close()V
-
-    return-void
-.end method
-
-.method public final defineEntityReplacementText(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->defineEntityReplacementText(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final getAttributeBooleanValue(IZ)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeBooleanValue(Ljava/lang/String;Ljava/lang/String;Z)Z
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeBooleanValue(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeCount()I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getAttributeFloatValue(IF)F
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Landroid/util/AttributeSet;->getAttributeFloatValue(IF)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeFloatValue(Ljava/lang/String;Ljava/lang/String;F)F
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeFloatValue(Ljava/lang/String;Ljava/lang/String;F)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeIntValue(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeListValue(I[Ljava/lang/String;I)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeListValue(I[Ljava/lang/String;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeListValue(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;I)I
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/util/AttributeSet;->getAttributeListValue(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeName(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getAttributeNameResource(I)I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Landroid/util/AttributeSet;->getAttributeNameResource(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeNamespace(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Landroid/content/res/XmlResourceParser;->getAttributeNamespace(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getAttributePrefix(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributePrefix(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getAttributeResourceValue(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeType(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeType(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getAttributeUnsignedIntValue(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Landroid/util/AttributeSet;->getAttributeUnsignedIntValue(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeUnsignedIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeUnsignedIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getAttributeValue(I)Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getClassAttribute()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Landroid/util/AttributeSet;->getClassAttribute()Ljava/lang/String;
+    invoke-static {}, Lly0;->values()[Lly0;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    array-length v0, v0
 
-.method public final getColumnNumber()I
-    .locals 1
+    new-array v0, v0, [I
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :try_start_0
+    sget-object v1, Lly0;->r0:Lly0;
 
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getColumnNumber()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    return v0
-.end method
+    const/4 v2, 0x1
 
-.method public final getDepth()I
-    .locals 1
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_0
+    :try_start_1
+    sget-object v1, Lly0;->s0:Lly0;
 
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    return v0
-.end method
+    const/4 v2, 0x2
 
-.method public final getEventType()I
-    .locals 1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_1
+    :try_start_2
+    sget-object v1, Lly0;->t0:Lly0;
 
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    return v0
-.end method
+    const/4 v2, 0x3
 
-.method public final getFeature(Ljava/lang/String;)Z
-    .locals 1
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_2
+    :try_start_3
+    sget-object v1, Lly0;->u0:Lly0;
 
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getFeature(Ljava/lang/String;)Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result p1
+    move-result v1
 
-    return p1
-.end method
+    const/4 v2, 0x4
 
-.method public final getIdAttribute()Ljava/lang/String;
-    .locals 1
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_3
+    :try_start_4
+    sget-object v1, Lly0;->v0:Lly0;
 
-    invoke-interface {v0}, Landroid/util/AttributeSet;->getIdAttribute()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
-.end method
+    const/4 v2, 0x5
 
-.method public final getIdAttributeResourceValue(I)I
-    .locals 1
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_4
+    :try_start_5
+    sget-object v1, Lly0;->w0:Lly0;
 
-    invoke-interface {v0, p1}, Landroid/util/AttributeSet;->getIdAttributeResourceValue(I)I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result p1
+    move-result v1
 
-    return p1
-.end method
+    const/4 v2, 0x6
 
-.method public final getInputEncoding()Ljava/lang/String;
-    .locals 1
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
+    :catch_5
+    :try_start_6
+    sget-object v1, Lly0;->x0:Lly0;
 
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getInputEncoding()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
-.end method
+    const/4 v2, 0x7
 
-.method public final getLineNumber()I
-    .locals 1
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getNamespace()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getNamespace(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getNamespaceCount(I)I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespaceCount(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getNamespacePrefix(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespacePrefix(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getNamespaceUri(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespaceUri(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getPositionDescription()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getPrefix()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getPrefix()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getProperty(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getProperty(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getStyleAttribute()I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Landroid/util/AttributeSet;->getStyleAttribute()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getText()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getTextCharacters([I)[C
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getTextCharacters([I)[C
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isAttributeDefault(I)Z
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->isAttributeDefault(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final isEmptyElementTag()Z
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->isEmptyElementTag()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isWhitespace()Z
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->isWhitespace()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final next()I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextTag()I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextText()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final nextToken()I
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->nextToken()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final require(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final setFeature(Ljava/lang/String;Z)V
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setFeature(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final setInput(Ljava/io/InputStream;Ljava/lang/String;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final setInput(Ljava/io/Reader;)V
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
-
-    return-void
-.end method
-
-.method public final setProperty(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lxy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {v0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
+    :catch_6
+    sput-object v0, Lxy0;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

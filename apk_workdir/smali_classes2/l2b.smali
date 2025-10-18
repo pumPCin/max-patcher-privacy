@@ -1,99 +1,135 @@
-.class public final Ll2b;
-.super Lm2b;
+.class public abstract Ll2b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ll2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:J
 
-.field public static final b:Ll2b;
+.field public static final b:J
+
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
+
+.field public static final j:J
+
+.field public static final k:J
+
+.field public static final l:J
+
+.field public static final m:J
+
+.field public static final n:J
+
+.field public static final o:J
+
+.field public static final synthetic p:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Ll2b;
+    sget v0, Lfpc;->oneme_settings_privacy_content_level_access:I
 
-    const-wide/16 v1, 0x1388
+    int-to-long v0, v0
 
-    invoke-direct {v0, v1, v2}, Lm2b;-><init>(J)V
+    sput-wide v0, Ll2b;->a:J
 
-    sput-object v0, Ll2b;->b:Ll2b;
+    sget v0, Lfpc;->oneme_settings_privacy_info_header:I
 
-    new-instance v0, Luj8;
+    int-to-long v0, v0
 
-    const/16 v1, 0x16
+    sput-wide v0, Ll2b;->b:J
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
+    sget v0, Lfpc;->oneme_settings_privacy_safe_files:I
 
-    sput-object v0, Ll2b;->CREATOR:Landroid/os/Parcelable$Creator;
+    int-to-long v0, v0
 
-    return-void
-.end method
+    sput-wide v0, Ll2b;->c:J
 
+    sget v0, Lfpc;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    int-to-long v0, v0
 
-    const/4 v0, 0x0
+    sput-wide v0, Ll2b;->d:J
 
-    return v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_black_list:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    int-to-long v0, v0
 
-    const/4 v0, 0x1
+    sput-wide v0, Ll2b;->e:J
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lfpc;->oneme_settings_privacy_screen_call_me:I
 
-    return v0
+    int-to-long v0, v0
 
-    :cond_0
-    instance-of p1, p1, Ll2b;
+    sput-wide v0, Ll2b;->f:J
 
-    if-nez p1, :cond_1
+    sget v0, Lfpc;->oneme_settings_privacy_screen_finished_sessions:I
 
-    const/4 p1, 0x0
+    int-to-long v0, v0
 
-    return p1
+    sput-wide v0, Ll2b;->g:J
 
-    :cond_1
-    return v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_how_session:I
 
-.method public final hashCode()I
-    .locals 1
+    int-to-long v0, v0
 
-    const v0, -0x38a300d4
+    sput-wide v0, Ll2b;->h:J
 
-    return v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_safe_mode:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    int-to-long v0, v0
 
-    const-string v0, "Timer"
+    sput-wide v0, Ll2b;->i:J
 
-    return-object v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_search_by_phone:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    int-to-long v0, v0
 
-    const/4 p2, 0x1
+    sput-wide v0, Ll2b;->j:J
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sget v0, Lfpc;->oneme_settings_privacy_screen_see_online_state:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ll2b;->k:J
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ll2b;->l:J
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_profile_delete:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ll2b;->m:J
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_warning_item:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ll2b;->n:J
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_web_apps:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ll2b;->o:J
 
     return-void
 .end method

@@ -1,78 +1,99 @@
 .class public final Lsa8;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final g:Lyx6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lyx6;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lyx6;-><init>(I)V
+
+    sput-object v0, Lsa8;->g:Lyx6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ljava/io/File;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "LoginResponse{uid=\'"
 
-    invoke-virtual {p0, p1, p2}, Lsa8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v1, p0, Lsa8;->a:Ljava/lang/String;
 
-    check-cast p1, Lsa8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lzag;->a:Lzag;
+    const-string v1, "\', sessionKey=\'"
 
-    invoke-virtual {p1, p2}, Lsa8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lsa8;->b:Ljava/lang/String;
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const-string v1, "\', secretSessionKey=\'"
 
-    new-instance v0, Lsa8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lsa8;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lsa8;->X:Ljava/lang/Object;
+    const-string v1, "\', authenticationToken=\'"
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-object v1, p0, Lsa8;->d:Ljava/lang/String;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lsa8;->X:Ljava/lang/Object;
+    const-string v1, "\', apiServer=\'"
 
-    check-cast p1, Ljava/io/File;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Llpe;
+    iget-object v1, p0, Lsa8;->e:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "\', authenticationHash=\'"
 
-    invoke-direct {v0, p1}, Llpe;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p1, Lzjf;
+    iget-object v1, p0, Lsa8;->f:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const-string v2, "\'}"
 
-    invoke-direct {p1, v0, v1}, Lzjf;-><init>(Llpe;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v0, Ltjd;
-
-    invoke-direct {v0, p1}, Ltjd;-><init>(Lei6;)V
+    move-result-object v0
 
     return-object v0
 .end method

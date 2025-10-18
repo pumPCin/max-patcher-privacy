@@ -19,7 +19,7 @@
         "<init>",
         "()V",
         "listener",
-        "Lzag;",
+        "Lccg;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener;)V",
         "removeListener",

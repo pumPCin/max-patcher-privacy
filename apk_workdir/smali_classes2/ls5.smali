@@ -1,109 +1,144 @@
 .class public final Lls5;
-.super Ljava/lang/Object;
+.super Lkre;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final b:Lls5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lls5;
 
-    iput-object p1, p0, Lls5;->a:Ljava/lang/String;
+    invoke-direct {v0}, Lkre;-><init>()V
+
+    sput-object v0, Lls5;->b:Lls5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final c()Leg4;
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Leg4;
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Lbn5;
 
-    return v0
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lbn5;-><init>(I)V
+
+    new-instance v2, Lbn5;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3}, Lbn5;-><init>(I)V
+
+    invoke-direct {v0, v1, v2}, Leg4;-><init>(Lji6;Lji6;)V
+
+    return-object v0
+.end method
+
+.method public final d(Landroid/os/Bundle;)Lfg4;
+    .locals 13
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v3
+
+    const-string v0, "message_id"
+
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v5
+
+    const-string v0, "attach_id"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v0, "file_id"
+
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v8
+
+    const-string v0, "file_name"
+
+    invoke-static {v0, p1}, Llyi;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v0, "file_size"
+
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v11
+
+    const-string v0, "file_url"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    move-object v2, p1
+
+    check-cast v2, Landroid/net/Uri;
+
+    new-instance v1, Lks5;
+
+    invoke-direct/range {v1 .. v12}, Lks5;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+
+    return-object v1
 
     :cond_0
-    instance-of v1, p1, Lls5;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    if-nez v1, :cond_1
+    const-string v0, "Required value was null."
 
-    goto :goto_0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    check-cast p1, Lls5;
-
-    iget-object v1, p0, Lls5;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lls5;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v0
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lls5;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lwx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final e(Ljre;)V
     .locals 5
 
-    const-string v0, "BIG_CHANGES"
+    const-string v0, "file_name"
 
-    const-string v1, ")"
+    const-string v1, "file_size"
 
-    const-string v2, "FilePreferencesOptions(name="
+    const-string v2, "chat_id"
 
-    iget-object v3, p0, Lls5;->a:Ljava/lang/String;
+    const-string v3, "message_id"
 
-    const-string v4, ", isDebugMode=false, commitStrategy="
+    const-string v4, "file_id"
 
-    invoke-static {v2, v3, v4, v0, v1}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "file_url"
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
+
+    const/16 v2, 0xc
+
+    const-string v3, ":dialogs/file-download-warning"
+
+    invoke-static {p1, v3, v0, v1, v2}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    return-void
 .end method

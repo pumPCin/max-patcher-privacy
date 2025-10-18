@@ -1,88 +1,131 @@
 .class public final Lxv8;
-.super Llff;
+.super Lpd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:Landroid/net/Uri;
 
-.field public final synthetic Y:Lbw8;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbw8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lxv8;->Y:Lbw8;
+    const/16 v0, 0x8
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxv8;->b:Landroid/net/Uri;
+
+    iput-object p2, p0, Lxv8;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Let8;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lxv8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lxv8;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lxv8;
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-object v1, p0, Lxv8;->b:Landroid/net/Uri;
 
-    invoke-virtual {p1, p2}, Lxv8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lxv8;->b:Landroid/net/Uri;
 
-    return-object p2
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lxv8;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lxv8;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lxv8;
+    iget-object v0, p0, Lxv8;->b:Landroid/net/Uri;
 
-    iget-object v1, p0, Lxv8;->Y:Lbw8;
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    invoke-direct {v0, v1, p2}, Lxv8;-><init>(Lbw8;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lxv8;->X:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-object v1, p0, Lxv8;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lxv8;->X:Ljava/lang/Object;
+    const-string v1, "OpenCropScreenOld(uri="
 
-    check-cast p1, Let8;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lxv8;->Y:Lbw8;
+    iget-object v1, p0, Lxv8;->b:Landroid/net/Uri;
 
-    iget-object v0, v0, Lbw8;->r:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lr01;
+    const-string v1, ", path="
 
-    const/4 v2, 0x5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2, p1}, Lr01;-><init>(ILjava/lang/Object;)V
+    iget-object v1, p0, Lxv8;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lzag;->a:Lzag;
+    const-string v1, ")"
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

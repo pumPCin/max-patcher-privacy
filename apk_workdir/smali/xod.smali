@@ -1,208 +1,158 @@
-.class public final Lxod;
+.class public abstract Lxod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp87;
 
+# static fields
+.field public static final a:Z
 
-# instance fields
-.field public final a:Lp87;
-
-.field public final b:Ljava/lang/Object;
-
-.field public c:Z
-
-.field public d:Luy1;
+.field public static final b:J
 
 
 # direct methods
-.method public constructor <init>(Lp87;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "rx3.scheduler.use-nanotime"
 
-    iput-object p1, p0, Lxod;->a:Lp87;
+    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
 
-    new-instance p1, Ljava/lang/Object;
+    move-result v0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    sput-boolean v0, Lxod;->a:Z
 
-    iput-object p1, p0, Lxod;->b:Ljava/lang/Object;
+    const-string v0, "rx3.scheduler.drift-tolerance"
+
+    const-wide/16 v1, 0xf
+
+    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-string v2, "rx3.scheduler.drift-tolerance-unit"
+
+    const-string v3, "minutes"
+
+    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "seconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v3, "milliseconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    :goto_0
+    sput-wide v0, Lxod;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLuy1;)V
-    .locals 2
-
-    iget-object v0, p0, Lxod;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lxod;->c:Z
-
-    iput-object p3, p0, Lxod;->d:Luy1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    iget-object p3, p0, Lxod;->a:Lp87;
-
-    if-eqz p3, :cond_0
-
-    new-instance v0, Luy1;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Luy1;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p3, p1, p2, v0}, Lp87;->a(JLuy1;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    const-string p1, "ScreenFlashWrapper"
-
-    const-string p2, "apply: screenFlash is null!"
-
-    invoke-static {p1, p2}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lxod;->c()V
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
+.method public abstract a()Lvod;
 .end method
 
-.method public final b()V
+.method public b(Ljava/lang/Runnable;)Lvv4;
     .locals 3
 
-    iget-object v0, p0, Lxod;->b:Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    monitor-enter v0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    :try_start_0
-    iget-boolean v1, p0, Lxod;->c:Z
+    invoke-virtual {p0, p1, v0, v1, v2}, Lxod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    if-eqz v1, :cond_1
+    move-result-object p1
 
-    iget-object v1, p0, Lxod;->a:Lp87;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lp87;->clear()V
-
-    sget-object v1, Lzag;->a:Lzag;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    const-string v1, "ScreenFlashWrapper"
-
-    const-string v2, "completePendingScreenFlashClear: screenFlash is null!"
-
-    invoke-static {v1, v2}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_1
-    const-string v1, "ScreenFlashWrapper"
-
-    const-string v2, "completePendingScreenFlashClear: none pending!"
-
-    invoke-static {v1, v2}, Lgth;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    :goto_1
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lxod;->c:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-
-    throw v1
+    return-object p1
 .end method
 
-.method public final c()V
+.method public c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
     .locals 2
 
-    iget-object v0, p0, Lxod;->b:Ljava/lang/Object;
+    invoke-virtual {p0}, Lxod;->a()Lvod;
 
-    monitor-enter v0
+    move-result-object v0
 
-    :try_start_0
-    iget-object v1, p0, Lxod;->d:Luy1;
+    const-string v1, "run is null"
 
-    if-eqz v1, :cond_0
+    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Luy1;->a()V
+    new-instance v1, Ltod;
 
-    goto :goto_0
+    invoke-direct {v1, p1, v0}, Ltod;-><init>(Ljava/lang/Runnable;Lvod;)V
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {v0, v1, p2, p3, p4}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lxod;->d:Luy1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw v1
+    return-object v1
 .end method
 
-.method public final clear()V
-    .locals 0
+.method public d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
+    .locals 7
 
-    invoke-virtual {p0}, Lxod;->b()V
+    invoke-virtual {p0}, Lxod;->a()Lvod;
 
-    return-void
+    move-result-object v0
+
+    new-instance v1, Lcw6;
+
+    invoke-direct {v1, p1, v0}, Lcw6;-><init>(Ljava/lang/Runnable;Lvod;)V
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-object v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lvod;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
+
+    move-result-object p1
+
+    sget-object p2, Lfa5;->a:Lfa5;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    return-object v1
 .end method

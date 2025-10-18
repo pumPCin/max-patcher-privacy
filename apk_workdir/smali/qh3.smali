@@ -1,169 +1,81 @@
-.class public final Lqh3;
-.super Lvs7;
+.class public Lqh3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
+
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public final synthetic a:I
+.field private volatile synthetic _handled$volatile:I
 
-.field public final synthetic b:Landroidx/fragment/app/b;
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-class v0, Lqh3;
+
+    const-string v1, "_handled$volatile"
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lqh3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    iput p2, p0, Lqh3;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqh3;->b:Landroidx/fragment/app/b;
+    iput-object p1, p0, Lqh3;->a:Ljava/lang/Throwable;
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    iput p2, p0, Lqh3;->_handled$volatile:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lqh3;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v0, Lnla;
-
-    new-instance v1, Lhh3;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lqh3;->b:Landroidx/fragment/app/b;
-
-    invoke-direct {v1, v3, v2}, Lhh3;-><init>(Landroidx/fragment/app/b;I)V
-
-    invoke-direct {v0, v1}, Lnla;-><init>(Ljava/lang/Runnable;)V
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x21
-
-    if-lt v1, v2, :cond_1
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const/16 v1, 0x5b
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    new-instance v1, Landroid/os/Handler;
+    iget-object v1, p0, Lqh3;->a:Ljava/lang/Throwable;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const/16 v1, 0x5d
 
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljx1;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/16 v4, 0xc
-
-    invoke-direct {v2, v3, v4, v0}, Ljx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v3, Lrh3;->a:Lkw7;
-
-    new-instance v2, Llh3;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v0, v4, v3}, Llh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lkw7;->a(Lew7;)V
-
-    :cond_1
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lnh6;
-
-    iget-object v1, p0, Lqh3;->b:Landroidx/fragment/app/b;
-
-    iget-object v2, v1, Lrh3;->Y:Loh3;
-
-    new-instance v3, Lqh3;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v1, v4}, Lqh3;-><init>(Landroidx/fragment/app/b;I)V
-
-    invoke-direct {v0, v2, v3}, Lnh6;-><init>(Ljava/util/concurrent/Executor;Lqh3;)V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lqh3;->b:Landroidx/fragment/app/b;
-
-    invoke-virtual {v0}, Lrh3;->reportFullyDrawn()V
-
-    sget-object v0, Lzag;->a:Lzag;
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lsld;
-
-    iget-object v1, p0, Lqh3;->b:Landroidx/fragment/app/b;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v3, 0x0
-
-    :goto_1
-    invoke-direct {v0, v2, v1, v3}, Lsld;-><init>(Landroid/app/Application;Lrld;Landroid/os/Bundle;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

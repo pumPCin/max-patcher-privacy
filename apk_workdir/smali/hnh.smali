@@ -1,37 +1,73 @@
-.class public abstract Lhnh;
-.super Ljava/lang/Object;
+.class public final Lhnh;
+.super Linh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
-
-.field public static final b:[Ljava/lang/String;
+# instance fields
+.field public final e:Landroid/view/WindowInsetsAnimation;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/WindowInsetsAnimation;)V
+    .locals 4
 
-    const-string v0, "WrkDbPathHelper"
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
+    const-wide/16 v1, 0x0
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    sput-object v0, Lhnh;->a:Ljava/lang/String;
+    invoke-direct {p0, v3, v0, v1, v2}, Linh;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    const-string v0, "-shm"
+    iput-object p1, p0, Lhnh;->e:Landroid/view/WindowInsetsAnimation;
 
-    const-string v1, "-wal"
+    return-void
+.end method
 
-    const-string v2, "-journal"
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    move-result-object v0
+    iget-object v0, p0, Lhnh;->e:Landroid/view/WindowInsetsAnimation;
 
-    sput-object v0, Lhnh;->b:[Ljava/lang/String;
+    invoke-static {v0}, Lxbb;->d(Landroid/view/WindowInsetsAnimation;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()F
+    .locals 1
+
+    iget-object v0, p0, Lhnh;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lxbb;->a(Landroid/view/WindowInsetsAnimation;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    iget-object v0, p0, Lhnh;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lxbb;->c(Landroid/view/WindowInsetsAnimation;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(F)V
+    .locals 1
+
+    iget-object v0, p0, Lhnh;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0, p1}, Lxbb;->w(Landroid/view/WindowInsetsAnimation;F)V
 
     return-void
 .end method

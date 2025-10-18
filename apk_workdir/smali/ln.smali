@@ -1,29 +1,8 @@
-.class public final Lln;
-.super Landroid/widget/LinearLayout$LayoutParams;
+.class public interface abstract Lln;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:Lsfd;
-
-.field public c:Landroid/view/animation/Interpolator;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, -0x1
-
-    const/4 v1, -0x2
-
-    invoke-direct {p0, v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lln;->a:I
-
-    return-void
+# virtual methods
+.method public abstract i0(Lon;I)V
 .end method

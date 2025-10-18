@@ -1,156 +1,114 @@
-.class public final Lsd1;
+.class public final synthetic Lsd1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwd1;
+.implements Lyhd;
 
 
-# static fields
-.field public static final X:Ljbe;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final a:Lsd1;
-
-.field public static final b:J
-
-.field public static final c:Ljqf;
-
-.field public static final o:Ltt7;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+    .locals 0
 
-    new-instance v0, Lsd1;
+    iput p2, p0, Lsd1;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    sput-object v0, Lsd1;->a:Lsd1;
-
-    sget-wide v0, Lxpa;->a:J
-
-    sput-wide v0, Lsd1;->b:J
-
-    sget v0, Lzpa;->e:I
-
-    new-instance v1, Ljqf;
-
-    invoke-direct {v1, v0}, Ljqf;-><init>(I)V
-
-    sput-object v1, Lsd1;->c:Ljqf;
-
-    new-instance v0, Ltt7;
-
-    sget v1, Lvpa;->d:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Ltt7;-><init>(III)V
-
-    sput-object v0, Lsd1;->o:Ltt7;
-
-    sget-object v0, Ljbe;->a:Ljbe;
-
-    sput-object v0, Lsd1;->X:Ljbe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Lvt7;
-    .locals 1
+.method public final a()V
+    .locals 5
 
-    sget-object v0, Lsd1;->o:Ltt7;
+    iget v0, p0, Lsd1;->a:I
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget-object v2, Lzk8;->b:Lzk8;
 
-    const/4 v0, 0x1
+    const/4 v3, 0x1
 
-    if-ne p0, p1, :cond_0
+    iget-object v4, p0, Lsd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
+
+    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
+
+    move-result-object v0
+
+    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lqd1;->v0:Lx0f;
+
+    invoke-virtual {v4}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljd1;
+
+    iget-object v4, v4, Ljd1;->c:Lzk8;
+
+    if-ne v4, v2, :cond_0
+
+    move v1, v3
 
     :cond_0
-    instance-of p1, p1, Lsd1;
+    xor-int/2addr v1, v3
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, v1}, Lqd1;->t(Z)V
 
-    const/4 p1, 0x0
+    return-void
 
-    return p1
+    :pswitch_0
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
+
+    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
+
+    move-result-object v0
+
+    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lqd1;->v0:Lx0f;
+
+    invoke-virtual {v4}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljd1;
+
+    iget-object v4, v4, Ljd1;->b:Lzk8;
+
+    if-ne v4, v2, :cond_1
+
+    move v1, v3
 
     :cond_1
-    return v0
-.end method
+    xor-int/2addr v1, v3
 
-.method public final getItemId()J
-    .locals 2
+    invoke-virtual {v0, v1}, Lqd1;->s(Z)V
 
-    sget-wide v0, Lsd1;->b:J
+    return-void
 
-    return-wide v0
-.end method
+    nop
 
-.method public final getTitle()Loqf;
-    .locals 1
-
-    sget-object v0, Lsd1;->c:Ljqf;
-
-    return-object v0
-.end method
-
-.method public final getType()Ljbe;
-    .locals 1
-
-    sget-object v0, Lsd1;->X:Ljbe;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x122eeb95
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lwpa;->m:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CopyLink"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,41 +1,23 @@
 .class public abstract Lund;
-.super Ljf5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:La54;
+# static fields
+.field public static final a:Lh1a;
 
 
-# virtual methods
-.method public final dispatch(Lt44;Ljava/lang/Runnable;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object p1, p0, Lund;->a:La54;
+    new-instance v0, Lh1a;
 
-    const/4 v0, 0x6
+    const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0}, La54;->o(La54;Ljava/lang/Runnable;I)V
+    invoke-direct {v0, v1}, Lh1a;-><init>(I)V
 
-    return-void
-.end method
-
-.method public final dispatchYield(Lt44;Ljava/lang/Runnable;)V
-    .locals 1
-
-    iget-object p1, p0, Lund;->a:La54;
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, p2, v0}, La54;->o(La54;Ljava/lang/Runnable;I)V
+    sput-object v0, Lund;->a:Lh1a;
 
     return-void
-.end method
-
-.method public final n()Ljava/util/concurrent/Executor;
-    .locals 1
-
-    iget-object v0, p0, Lund;->a:La54;
-
-    return-object v0
 .end method

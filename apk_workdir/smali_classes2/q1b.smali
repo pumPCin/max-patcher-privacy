@@ -28,58 +28,88 @@
 
 .field public static final l:I
 
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_add:I
+    sget v0, Lapc;->oneme_section_description:I
 
     sput v0, Lq1b;->a:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_bottom:I
+    sget v0, Lapc;->oneme_section_end_arrow:I
 
     sput v0, Lq1b;->b:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_bottom_full:I
+    sget v0, Lapc;->oneme_section_end_checkbox:I
 
     sput v0, Lq1b;->c:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_header:I
+    sget v0, Lapc;->oneme_section_end_container:I
 
     sput v0, Lq1b;->d:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_wrong_duration:I
+    sget v0, Lapc;->oneme_section_end_custom_icon:I
 
     sput v0, Lq1b;->e:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_wrong_format:I
+    sget v0, Lapc;->oneme_section_end_text:I
 
     sput v0, Lq1b;->f:I
 
-    sget v0, Losc;->oneme_settings_ringtone_custom_section_wrong_size:I
+    sget v0, Lapc;->oneme_section_start_icon:I
 
     sput v0, Lq1b;->g:I
 
-    sget v0, Losc;->oneme_settings_ringtone_default_section:I
+    sget v0, Lapc;->oneme_section_title:I
 
     sput v0, Lq1b;->h:I
 
-    sget v0, Losc;->oneme_settings_ringtone_low_volume_level:I
+    sget v0, Lapc;->oneme_section_upper_text:I
 
     sput v0, Lq1b;->i:I
 
-    sget v0, Losc;->oneme_settings_ringtone_system_section:I
+    sget v0, Lapc;->oneme_settings_itemcontent_container:I
 
     sput v0, Lq1b;->j:I
 
-    sget v0, Losc;->oneme_settings_ringtone_system_title:I
+    sget v0, Lapc;->oneme_settings_itemcontent_counter:I
 
     sput v0, Lq1b;->k:I
 
-    sget v0, Losc;->oneme_settings_ringtone_title:I
+    sget v0, Lapc;->oneme_settings_itemcontent_end_custom_icon:I
 
     sput v0, Lq1b;->l:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_icon:I
+
+    sput v0, Lq1b;->m:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_radio:I
+
+    sput v0, Lq1b;->n:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_switch:I
+
+    sput v0, Lq1b;->o:I
+
+    sget v0, Lapc;->oneme_settings_itemcontent_end_text:I
+
+    sput v0, Lq1b;->p:I
+
+    sget v0, Lapc;->oneme_settingslist_rv:I
+
+    sput v0, Lq1b;->q:I
 
     return-void
 .end method

@@ -1,21 +1,27 @@
 .class public final Low1;
-.super Lcq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Low1;
+# instance fields
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
+    .locals 0
 
-    new-instance v0, Low1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcq;-><init>()V
+    iput-object p1, p0, Low1;->a:Liu7;
 
-    sput-object v0, Low1;->a:Low1;
+    iput-object p2, p0, Low1;->b:Liu7;
+
+    iput-object p3, p0, Low1;->c:Liu7;
 
     return-void
 .end method

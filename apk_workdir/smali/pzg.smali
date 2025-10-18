@@ -1,45 +1,99 @@
-.class public final Lpzg;
+.class public abstract Lpzg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv5d;
+
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
+
+.field public static final b:Ljava/lang/ThreadLocal;
 
 
-# virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Lpzg;->a:Ljava/lang/ThreadLocal;
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Lpzg;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-.method public final d(Landroid/view/View;)V
+.method public static a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lu5d;
+    instance-of v1, v0, Landroid/view/View;
 
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    if-eqz v1, :cond_0
 
-    const/4 v1, -0x1
+    if-eq v0, p0, :cond_0
 
-    if-ne v0, v1, :cond_0
+    check-cast v0, Landroid/view/View;
 
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+    invoke-static {p0, v0, p2}, Lpzg;->a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    if-ne p1, v1, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
-    return-void
+    move-result p0
+
+    neg-int p0, p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
-    const-string v0, "Pages must fill the whole ViewPager2 (use match_parent)"
+    move-result p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    int-to-float p0, p0
 
-    throw p1
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
+
+    :cond_1
+    return-void
 .end method

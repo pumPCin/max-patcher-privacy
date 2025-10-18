@@ -1,177 +1,223 @@
 .class public final Lifb;
-.super Lewc;
+.super Lf4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ljava/lang/String;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lifb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final b:F
+.field public final a:I
+
+.field public final b:Ljava/lang/Float;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
+    new-instance v0, Lgti;
 
-    const/16 v0, 0x24
+    const/4 v1, 0x2
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1}, Lgti;-><init>(I)V
 
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lifb;->c:Ljava/lang/String;
+    sput-object v0, Lifb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILjava/lang/Float;)V
+    .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/high16 v0, -0x40800000    # -1.0f
-
-    .line 2
-    iput v0, p0, Lifb;->b:F
-
-    return-void
-.end method
-
-.method public constructor <init>(F)V
-    .locals 2
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    cmpl-float v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/high16 v0, 0x42c80000    # 100.0f
-
-    cmpg-float v0, p1, v0
-
-    if-gtz v0, :cond_0
 
     const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    cmpl-float v2, v2, v3
+
+    if-ltz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v1
 
-    .line 4
+    :cond_1
     :goto_0
-    const-string v1, "percent must be in the range of [0, 100]"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0}, Lgfi;->a(Ljava/lang/Object;Z)V
+    const-string v2, "Invalid PatternItem: type="
 
-    .line 5
-    iput p1, p0, Lifb;->b:F
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " length="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lzui;->b(Ljava/lang/String;Z)V
+
+    iput p1, p0, Lifb;->a:I
+
+    iput-object p2, p0, Lifb;->b:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 2
-
-    iget v0, p0, Lifb;->b:F
-
-    const/high16 v1, -0x40800000    # -1.0f
-
-    cmpl-float v0, v0, v1
-
-    if-eqz v0, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Lifb;
 
-    return v0
-.end method
+    const/4 v2, 0x0
 
-.method public final c()Landroid/os/Bundle;
-    .locals 3
+    if-nez v1, :cond_1
 
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Lewc;->a:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lifb;->c:Ljava/lang/String;
-
-    iget v2, p0, Lifb;->b:F
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Lifb;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    check-cast p1, Lifb;
-
-    iget p1, p1, Lifb;->b:F
-
-    iget v0, p0, Lifb;->b:F
-
-    cmpl-float p1, v0, p1
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
+    return v2
 
     :cond_1
-    return v1
+    check-cast p1, Lifb;
+
+    iget v1, p0, Lifb;->a:I
+
+    iget v3, p1, Lifb;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lifb;->b:Ljava/lang/Float;
+
+    iget-object p1, p1, Lifb;->b:Ljava/lang/Float;
+
+    invoke-static {v1, p1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Lifb;->b:F
+    iget v0, p0, Lifb;->a:I
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    iget-object v1, p0, Lifb;->b:Ljava/lang/Float;
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[PatternItem: type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lifb;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " length="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lifb;->b:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x4
+
+    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lifb;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x3
+
+    iget-object v1, p0, Lifb;->b:Ljava/lang/Float;
+
+    invoke-static {p1, v0, v1}, Llyi;->m(Landroid/os/Parcel;ILjava/lang/Float;)V
+
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

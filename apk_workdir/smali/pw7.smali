@@ -1,226 +1,138 @@
 .class public final Lpw7;
-.super Ljava/io/FilterInputStream;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public a:I
+.field public X:I
 
-.field public b:I
+.field public final synthetic Y:Lrw7;
+
+.field public final synthetic Z:Lnw7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;I)V
+.method public constructor <init>(Lrw7;Lnw7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    iput-object p1, p0, Lpw7;->Y:Lrw7;
 
-    if-ltz p2, :cond_0
+    iput-object p2, p0, Lpw7;->Z:Lnw7;
 
-    iput p2, p0, Lpw7;->a:I
+    const/4 p1, 0x2
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Lpw7;->b:I
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "limit must be >= 0"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final available()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpw7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpw7;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lpw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    new-instance p1, Lpw7;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+    iget-object v0, p0, Lpw7;->Y:Lrw7;
 
-    move-result v0
+    iget-object v1, p0, Lpw7;->Z:Lnw7;
 
-    iget v1, p0, Lpw7;->a:I
+    invoke-direct {p1, v0, v1, p2}, Lpw7;-><init>(Lrw7;Lnw7;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method
 
-.method public final mark(I)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    iget v0, p0, Lpw7;->X:I
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
-
-    iget p1, p0, Lpw7;->a:I
-
-    iput p1, p0, Lpw7;->b:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final read()I
-    .locals 2
-
-    .line 1
-    iget v0, p0, Lpw7;->a:I
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    .line 3
-    iget v1, p0, Lpw7;->a:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lpw7;->a:I
-
-    :cond_1
-    return v0
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    .line 4
-    iget v0, p0, Lpw7;->a:I
-
-    if-nez v0, :cond_0
-
-    const/4 p1, -0x1
-
-    return p1
-
-    .line 5
-    :cond_0
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p3
-
-    .line 6
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-
-    if-lez p1, :cond_1
-
-    .line 7
-    iget p2, p0, Lpw7;->a:I
-
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Lpw7;->a:I
-
-    :cond_1
-    return p1
-.end method
-
-.method public final reset()V
-    .locals 2
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lpw7;->b:I
+    if-ne v0, v1, :cond_0
 
-    const/4 v1, -0x1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    iget v0, p0, Lpw7;->b:I
-
-    iput v0, p0, Lpw7;->a:I
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/io/IOException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "mark not set"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p1
 
     :cond_1
-    new-instance v0, Ljava/io/IOException;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "mark is not supported"
+    iget-object p1, p0, Lpw7;->Y:Lrw7;
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ltw7;
 
-    throw v0
-.end method
+    iget-object p1, p1, Ltw7;->a:Lhx7;
 
-.method public final skip(J)J
-    .locals 2
+    iput v1, p0, Lpw7;->X:I
 
-    iget v0, p0, Lpw7;->a:I
+    sget-object v0, Lmv4;->a:Lsm4;
 
-    int-to-long v0, v0
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lce8;
 
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
+    invoke-virtual {v0}, Lce8;->getImmediate()Lce8;
 
-    move-result-wide p1
+    move-result-object v0
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    new-instance v1, Llfb;
 
-    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
+    const/4 v2, 0x0
 
-    move-result-wide p1
+    sget-object v3, Lhw7;->c:Lhw7;
 
-    iget v0, p0, Lpw7;->a:I
+    iget-object v4, p0, Lpw7;->Z:Lnw7;
 
-    int-to-long v0, v0
+    invoke-direct {v1, p1, v3, v4, v2}, Llfb;-><init>(Lhx7;Lhw7;Lzi6;Lkotlin/coroutines/Continuation;)V
 
-    sub-long/2addr v0, p1
+    invoke-static {v0, v1, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    long-to-int v0, v0
+    move-result-object p1
 
-    iput v0, p0, Lpw7;->a:I
+    sget-object v0, Lr54;->a:Lr54;
 
-    return-wide p1
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

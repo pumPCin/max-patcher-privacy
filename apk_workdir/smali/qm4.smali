@@ -3,31 +3,29 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqm4;
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IIII)V
+    .locals 0
 
-    new-instance v0, Lqm4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lqm4;->a:I
 
-    sput-object v0, Lqm4;->a:Lqm4;
+    iput p2, p0, Lqm4;->b:I
+
+    iput p3, p0, Lqm4;->c:I
+
+    iput p4, p0, Lqm4;->d:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)J
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

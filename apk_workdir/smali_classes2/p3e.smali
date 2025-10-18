@@ -1,276 +1,101 @@
 .class public final Lp3e;
-.super Lk4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic t0:I
+.field public A:Lwpd;
 
-.field public final u0:Ljava/lang/Object;
+.field public B:Lh01;
+
+.field public C:Z
+
+.field public a:Lvje;
+
+.field public b:Lsje;
+
+.field public c:Lnvg;
+
+.field public d:Ljava/util/concurrent/ExecutorService;
+
+.field public e:Landroid/content/Context;
+
+.field public f:Lorg/webrtc/EglBase;
+
+.field public g:Lw0a;
+
+.field public h:Lqi1;
+
+.field public i:Lrne;
+
+.field public final j:Ljava/util/ArrayList;
+
+.field public final k:Ljava/util/ArrayList;
+
+.field public final l:Ljava/util/ArrayList;
+
+.field public m:Lgi1;
+
+.field public n:Lla3;
+
+.field public o:Lfwc;
+
+.field public p:Liwc;
+
+.field public q:Lrw5;
+
+.field public r:Llxb;
+
+.field public s:Z
+
+.field public t:Lbua;
+
+.field public u:Ldi;
+
+.field public v:Lef1;
+
+.field public w:Lhl8;
+
+.field public x:Lbrd;
+
+.field public y:Z
+
+.field public z:Lavf;
 
 
 # direct methods
-.method public constructor <init>(Lo3e;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lp3e;->j:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lp3e;->k:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lp3e;->l:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lp3e;->t0:I
+    iput-boolean v0, p0, Lp3e;->s:Z
 
-    .line 1
-    invoke-direct {p0, p1}, Lk4e;-><init>(Lj4e;)V
+    const/4 v1, 0x1
 
-    .line 2
-    iget-object p1, p1, Lo3e;->h:Ljava/lang/Object;
+    iput-boolean v1, p0, Lp3e;->y:Z
 
-    check-cast p1, La99;
-
-    .line 3
-    iput-object p1, p0, Lp3e;->u0:Ljava/lang/Object;
+    iput-boolean v0, p0, Lp3e;->C:Z
 
     return-void
-.end method
-
-.method public constructor <init>(Lo3e;B)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    iput p2, p0, Lp3e;->t0:I
-
-    .line 4
-    invoke-direct {p0, p1}, Lk4e;-><init>(Lj4e;)V
-
-    .line 5
-    iget-object p1, p1, Lo3e;->h:Ljava/lang/Object;
-
-    check-cast p1, Lk10;
-
-    iput-object p1, p0, Lp3e;->u0:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final x()Lna9;
-    .locals 6
-
-    iget v0, p0, Lp3e;->t0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Le10;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lp3e;->u0:Ljava/lang/Object;
-
-    check-cast v1, Lk10;
-
-    iput-object v1, v0, Le10;->c:Lk10;
-
-    sget-object v1, Lz10;->b:Lz10;
-
-    iput-object v1, v0, Le10;->a:Lz10;
-
-    invoke-virtual {v0}, Le10;->a()Ld20;
-
-    move-result-object v0
-
-    new-instance v1, Le20;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, v1, Le20;->a:Ljava/util/List;
-
-    invoke-virtual {v1}, Le20;->c()Lk68;
-
-    move-result-object v0
-
-    new-instance v1, Lna9;
-
-    invoke-direct {v1}, Lna9;-><init>()V
-
-    iput-object v0, v1, Lna9;->n:Lk68;
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lp3e;->u0:Ljava/lang/Object;
-
-    check-cast v0, La99;
-
-    iget-object v1, v0, La99;->a:Loa9;
-
-    iget-object v0, v0, La99;->a:Loa9;
-
-    iget-object v1, v1, Loa9;->x0:Lk68;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lk68;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/List;
-
-    if-eqz v1, :cond_2
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    check-cast v4, Ld20;
-
-    iget-object v4, v4, Ld20;->g:Lv10;
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {v2, v3}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ld20;
-
-    invoke-virtual {v3}, Ld20;->h()Le10;
-
-    move-result-object v3
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v3, Le10;->l:Ljava/lang/String;
-
-    invoke-virtual {v3}, Le10;->a()Ld20;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ls95;->a:Ls95;
-
-    :cond_3
-    invoke-virtual {v0}, Loa9;->M()Lna9;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x0
-
-    iput-wide v3, v2, Lna9;->b:J
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v2, Lna9;->u:Z
-
-    iget-object v0, v0, Loa9;->x0:Lk68;
-
-    const/4 v5, 0x0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Lk68;->u()Le20;
-
-    move-result-object v0
-
-    iput-object v5, v0, Le20;->c:Ly9d;
-
-    iput-object v5, v0, Le20;->b:Lkf7;
-
-    iput-object v1, v0, Le20;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Le20;->c()Lk68;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v5
-
-    :goto_2
-    iput-object v0, v2, Lna9;->n:Lk68;
-
-    const/4 v0, 0x0
-
-    iput v0, v2, Lna9;->o:I
-
-    iput-wide v3, v2, Lna9;->p:J
-
-    iput-object v5, v2, Lna9;->r:Ljava/lang/String;
-
-    iput-object v5, v2, Lna9;->s:Ljava/lang/String;
-
-    iput-object v5, v2, Lna9;->t:Ljava/lang/String;
-
-    iput v0, v2, Lna9;->G:I
-
-    iput-wide v3, v2, Lna9;->x:J
-
-    iput-wide v3, v2, Lna9;->y:J
-
-    iput-object v5, v2, Lna9;->q:Loa9;
-
-    iput-object v5, v2, Lna9;->E:Lvd9;
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

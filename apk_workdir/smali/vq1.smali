@@ -1,108 +1,125 @@
-.class public final synthetic Lvq1;
-.super Ljava/lang/Object;
+.class public final Lvq1;
+.super Lmmi;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:Lyq1;
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyq1;I)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    iput p2, p0, Lvq1;->a:I
-
-    iput-object p1, p0, Lvq1;->b:Lyq1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvq1;->b:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lvq1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lvq1;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lvq1;->b:Lyq1;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v1, Lyq1;->F0:Lxq1;
-
-    if-eqz v0, :cond_1
-
-    check-cast v0, Lj7;
-
-    iget-object v0, v0, Lj7;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->D0()Lbr1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lbr1;->c:Luu1;
-
-    iget-object v0, v0, Luu1;->i:Ldpd;
-
-    check-cast v0, Lmpd;
-
-    iget-object v0, v0, Lmpd;->s0:Lsze;
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
+    instance-of v1, p1, Lvq1;
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    move-object v2, v1
+    if-nez v1, :cond_1
 
-    check-cast v2, Lnpd;
+    return v2
 
-    const/16 v3, 0xb
+    :cond_1
+    check-cast p1, Lvq1;
 
-    const/4 v4, 0x0
+    iget-object v1, p0, Lvq1;->b:Ljava/lang/String;
 
-    invoke-static {v2, v4, v4, v4, v3}, Lnpd;->a(Lnpd;Lopd;Lcpd;Ljava/lang/String;I)Lnpd;
+    iget-object v3, p1, Lvq1;->b:Ljava/lang/String;
 
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_2
 
-    :cond_1
-    sget-object v0, Lzag;->a:Lzag;
+    return v2
 
-    return-object v0
+    :cond_2
+    iget-boolean v1, p0, Lvq1;->c:Z
 
-    :pswitch_0
-    sget-object v0, Lsz4;->t0:Lc82;
+    iget-boolean p1, p1, Lvq1;->c:Z
 
-    invoke-virtual {v0, v1}, Lc82;->o(Landroid/view/View;)Lcva;
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lvq1;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lvq1;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Link(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvq1;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isJoinByExistLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lvq1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcva;->c:Lu4b;
-
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

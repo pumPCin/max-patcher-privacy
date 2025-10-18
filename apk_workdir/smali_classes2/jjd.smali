@@ -1,49 +1,58 @@
-.class public final synthetic Ljjd;
+.class public final Ljjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lug3;
-.implements Ler3;
+.implements Lrk1;
 
 
 # instance fields
-.field public final synthetic a:Lr6;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr6;)V
-    .locals 0
-
-    iput-object p1, p0, Ljjd;->a:Lr6;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Ljjd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 0
+.method public final onRtcStats(Lhwc;)V
+    .locals 2
 
-    check-cast p1, Lzag;
+    iget-object v0, p0, Ljjd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object p1, p0, Ljjd;->a:Lr6;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {p1}, Lr6;->run()V
+    move-result-object v0
 
-    return-void
-.end method
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.method public c(Llg3;)V
-    .locals 1
+    move-result v1
 
-    iget-object v0, p0, Ljjd;->a:Lr6;
+    if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Lr6;->run()V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Llg3;->b()V
+    move-result-object v1
 
+    check-cast v1, Lrk1;
+
+    invoke-interface {v1, p1}, Lrk1;->onRtcStats(Lhwc;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

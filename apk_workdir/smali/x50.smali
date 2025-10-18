@@ -9,20 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Luq4;
-
-.field public final synthetic c:Ld60;
+.field public final synthetic b:Lir4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luq4;Ld60;I)V
+.method public synthetic constructor <init>(Lir4;Ljava/lang/Exception;I)V
     .locals 0
 
     iput p3, p0, Lx50;->a:I
 
-    iput-object p1, p0, Lx50;->b:Luq4;
-
-    iput-object p2, p0, Lx50;->c:Ld60;
+    iput-object p1, p0, Lx50;->b:Lir4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,66 +28,64 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 4
 
     iget v0, p0, Lx50;->a:I
 
-    iget-object v1, p0, Lx50;->c:Ld60;
-
-    iget-object v2, p0, Lx50;->b:Luq4;
+    iget-object v1, p0, Lx50;->b:Lir4;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v2, Luq4;->c:Ljava/lang/Object;
+    iget-object v0, v1, Lir4;->c:Ljava/lang/Object;
 
-    check-cast v0, Lxh5;
+    check-cast v0, Lri5;
 
-    sget-object v2, Ljhg;->a:Ljava/lang/String;
+    sget-object v1, Lnig;->a:Ljava/lang/String;
 
-    iget-object v0, v0, Lxh5;->a:Ldi5;
+    iget-object v0, v0, Lri5;->a:Lxi5;
 
-    iget-object v0, v0, Ldi5;->D0:Lpg4;
+    iget-object v0, v0, Lxi5;->C0:Leh4;
 
-    invoke-virtual {v0}, Lpg4;->H()Lnd;
+    invoke-virtual {v0}, Leh4;->H()Lnd;
 
-    move-result-object v2
+    move-result-object v1
 
-    new-instance v3, Ljg4;
+    new-instance v2, Lrg4;
 
-    const/4 v4, 0x0
+    const/16 v3, 0x14
 
-    invoke-direct {v3, v2, v1, v4}, Ljg4;-><init>(Lnd;Ld60;I)V
+    invoke-direct {v2, v3}, Lrg4;-><init>(I)V
 
-    const/16 v1, 0x408
+    const/16 v3, 0x3f6
 
-    invoke-virtual {v0, v2, v1, v3}, Lpg4;->I(Lnd;ILx18;)V
+    invoke-virtual {v0, v1, v3, v2}, Leh4;->I(Lnd;ILu28;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, v2, Luq4;->c:Ljava/lang/Object;
+    iget-object v0, v1, Lir4;->c:Ljava/lang/Object;
 
-    check-cast v0, Lxh5;
+    check-cast v0, Lri5;
 
-    sget-object v2, Ljhg;->a:Ljava/lang/String;
+    sget-object v1, Lnig;->a:Ljava/lang/String;
 
-    iget-object v0, v0, Lxh5;->a:Ldi5;
+    iget-object v0, v0, Lri5;->a:Lxi5;
 
-    iget-object v0, v0, Ldi5;->D0:Lpg4;
+    iget-object v0, v0, Lxi5;->C0:Leh4;
 
-    invoke-virtual {v0}, Lpg4;->H()Lnd;
+    invoke-virtual {v0}, Leh4;->H()Lnd;
 
-    move-result-object v2
+    move-result-object v1
 
-    new-instance v3, Ljg4;
+    new-instance v2, Lua4;
 
-    const/4 v4, 0x1
+    const/16 v3, 0x17
 
-    invoke-direct {v3, v2, v1, v4}, Ljg4;-><init>(Lnd;Ld60;I)V
+    invoke-direct {v2, v3}, Lua4;-><init>(I)V
 
-    const/16 v1, 0x407
+    const/16 v3, 0x405
 
-    invoke-virtual {v0, v2, v1, v3}, Lpg4;->I(Lnd;ILx18;)V
+    invoke-virtual {v0, v1, v3, v2}, Leh4;->I(Lnd;ILu28;)V
 
     return-void
 

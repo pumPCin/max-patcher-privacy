@@ -1,157 +1,168 @@
 .class public final Lrch;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final Companion:Lqch;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lqch;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lrch;->Companion:Lqch;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lrch;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lrch;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lpch;->a:Lpch;
+
+    invoke-virtual {p2}, Lpch;->d()Lb3e;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lwui;->c(IILb3e;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Lrch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    .line 3
+    iput-object p1, p0, Lrch;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 4
+    iput-object p2, p0, Lrch;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lrch;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lrch;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lrch;
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-object v1, p0, Lrch;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lrch;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lrch;->a:Ljava/lang/String;
 
-    return-object p2
-.end method
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result v1
 
-    new-instance v0, Lrch;
+    if-nez v1, :cond_2
 
-    iget-object v1, p0, Lrch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    return v2
 
-    invoke-direct {v0, p2, v1}, Lrch;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    :cond_2
+    iget-object v1, p0, Lrch;->b:Ljava/lang/String;
 
-    iput-object p1, v0, Lrch;->X:Ljava/lang/Object;
+    iget-object p1, p1, Lrch;->b:Ljava/lang/String;
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrch;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lrch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    if-nez p1, :cond_3
 
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
-
-    invoke-virtual {v0}, Lx14;->getActivity()Landroid/app/Activity;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
-
-    invoke-virtual {v0}, Lx14;->getActivity()Landroid/app/Activity;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/high16 v1, -0x40800000    # -1.0f
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    return v2
 
     :cond_3
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lrch;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lrch;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", value="
+
+    const-string v1, ")"
+
+    const-string v2, "WebAppOpenCodeReaderResponse(requestId="
+
+    iget-object v3, p0, Lrch;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lrch;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

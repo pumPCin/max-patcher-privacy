@@ -1,5 +1,5 @@
 .class public final Lcc;
-.super Lk14;
+.super Ly14;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p1, p0, Lcc;->Y:Ls3;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method

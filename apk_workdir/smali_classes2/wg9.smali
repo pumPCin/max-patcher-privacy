@@ -1,94 +1,63 @@
 .class public final Lwg9;
-.super Llff;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljava/lang/Long;
+
+.field public o:Ljava/lang/Object;
+
+.field public q0:Z
+
+.field public r0:Z
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Ljh9;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Ljh9;Ly14;)V
     .locals 0
 
-    iput-object p2, p0, Lwg9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p1, p0, Lwg9;->t0:Ljh9;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwg9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwg9;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lwg9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lwg9;
-
-    iget-object v1, p0, Lwg9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Lwg9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lwg9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lwg9;->s0:Ljava/lang/Object;
 
-    iget-object p1, p0, Lwg9;->X:Ljava/lang/Object;
+    iget p1, p0, Lwg9;->u0:I
 
-    check-cast p1, Ljava/lang/CharSequence;
+    const/high16 v0, -0x80000000
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:[Lwq7;
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Lwg9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p1, p0, Lwg9;->u0:I
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
+    const/4 p1, 0x0
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, p1}, Lfc9;->setText(Ljava/lang/CharSequence;)V
+    iget-object v1, p0, Lwg9;->t0:Ljh9;
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
+    invoke-static {v1, p1, p1, v0, p0}, Ljh9;->r(Ljh9;Ljg9;Lmg9;ZLy14;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lfc9;->h(I)V
-
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
 .end method

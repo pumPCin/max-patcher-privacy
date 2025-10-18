@@ -4,217 +4,576 @@
 
 
 # direct methods
-.method public static a(Z)I
-    .locals 4
+.method public static final a(Ls0d;Luqh;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lo32;
+
+    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {v0}, Lo32;->o()V
+
+    new-instance p1, Lama;
+
+    invoke-direct {p1, p0, v1}, Lama;-><init>(Ls0d;I)V
+
+    invoke-virtual {v0, p1}, Lo32;->e(Lli6;)V
+
+    new-instance p1, Ldgf;
+
+    invoke-direct {p1, v0}, Ldgf;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Ls0d;->e(Lbu1;)V
+
+    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final b(Landroid/text/Spannable;)V
+    .locals 7
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
 
     :try_start_0
-    new-instance v1, Lpa6;
+    const-class v2, Ljava/lang/Object;
 
-    invoke-direct {v1}, Lpa6;-><init>()V
+    invoke-interface {p0, v1, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
-    const-string v2, "video/avc"
-
-    invoke-static {v2}, Ler9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lpa6;->m:Ljava/lang/String;
-
-    new-instance v2, Lsa6;
-
-    invoke-direct {v2, v1}, Lsa6;-><init>(Lpa6;)V
-
-    iget-object v1, v2, Lsa6;->n:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    invoke-static {v1, p0, v0}, Luo8;->d(Ljava/lang/String;ZZ)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v2}, Luo8;->b(Lsa6;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    sget-object p0, Ls7d;->X:Ls7d;
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {v2, p0, v0}, Luo8;->d(Ljava/lang/String;ZZ)Ljava/util/List;
-
-    move-result-object p0
+    :catchall_0
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-static {}, Lhb7;->j()Leb7;
+    if-eqz v0, :cond_5
 
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lxa7;->d(Ljava/lang/Iterable;)V
-
-    invoke-virtual {v2, p0}, Lxa7;->d(Ljava/lang/Iterable;)V
-
-    invoke-virtual {v2}, Leb7;->i()Ls7d;
-
-    move-result-object p0
-
-    move v1, v0
+    array-length v2, v0
 
     :goto_1
-    iget v2, p0, Ls7d;->o:I
+    if-ge v1, v2, :cond_5
 
-    if-ge v1, v2, :cond_4
+    aget-object v3, v0, v1
 
-    invoke-virtual {p0, v1}, Ls7d;->get(I)Ljava/lang/Object;
+    if-eqz v3, :cond_3
 
-    move-result-object v2
+    instance-of v4, v3, Landroid/text/NoCopySpan;
 
-    check-cast v2, Lfo8;
+    if-nez v4, :cond_3
 
-    iget-object v2, v2, Lfo8;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
-    if-eqz v2, :cond_3
+    move-result v4
 
-    invoke-virtual {p0, v1}, Ls7d;->get(I)Ljava/lang/Object;
+    if-gez v4, :cond_0
 
-    move-result-object v2
+    goto :goto_2
 
-    check-cast v2, Lfo8;
+    :cond_0
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
-    iget-object v2, v2, Lfo8;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
+    move-result v5
 
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
+    if-gez v5, :cond_1
 
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    invoke-static {v2}, Lh05;->m(Landroid/media/MediaCodecInfo$VideoCapabilities;)Ljava/util/List;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    invoke-static {}, Lh05;->n()V
-
-    invoke-static {}, Lh05;->f()Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    move-result-object p0
-
-    move v1, v0
-
-    :goto_2
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_2
-
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lh05;->h(Ljava/lang/Object;)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
-
-    move-result-object v3
-
-    invoke-static {v3, p0}, Lh05;->u(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
-
-    move-result v3
-    :try_end_0
-    .catch Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz v3, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
+    goto :goto_2
 
     :cond_1
-    add-int/lit8 v1, v1, 0x1
+    if-ge v5, v4, :cond_2
 
     goto :goto_2
 
     :cond_2
-    const/4 p0, 0x1
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
-    return p0
+    move-result v6
+
+    if-gt v4, v6, :cond_3
+
+    if-le v5, v6, :cond_4
 
     :cond_3
+    :goto_2
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :catch_0
-    :cond_4
-    return v0
+    :cond_5
+    return-void
 .end method
 
-.method public static b(I)Z
-    .locals 1
+.method public static c(Ljava/lang/Object;Z)V
+    .locals 0
 
-    const v0, 0x8000
+    if-eqz p1, :cond_0
 
-    and-int/2addr p0, v0
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static d(Z)V
+    .locals 0
 
     if-eqz p0, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    return p0
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
 .end method
 
-.method public static c(Ljava/lang/Object;)I
+.method public static e(II)V
+    .locals 0
+
+    if-ltz p0, :cond_0
+
+    if-ge p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static f(Ljv8;)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public static g(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static h(Ljava/lang/Object;Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static i(Z)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static j(Ljava/lang/Object;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static k(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final l(Landroid/text/Spannable;II)V
     .locals 4
+
+    const-class v0, Llh8;
+
+    invoke-interface {p0, p1, p2, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Llh8;
+
+    array-length v1, v0
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    invoke-static {p0, v3, p1, p2}, Lsgi;->n(Landroid/text/Spannable;Lr44;II)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public static final m(Landroid/text/Editable;IIZLlh8;)V
+    .locals 5
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p0, p1, p2, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljt;->F([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llh8;
+
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v4
+
+    if-gt v4, p1, :cond_0
+
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v4
+
+    if-lt v4, p2, :cond_0
+
+    invoke-static {p0, v3, p1, p2}, Lsgi;->n(Landroid/text/Spannable;Lr44;II)V
+
+    return-void
+
+    :cond_1
+    if-eqz p3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move p3, p1
+
+    :goto_0
+    if-ge p3, p2, :cond_6
+
+    invoke-virtual {v1, p3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    invoke-static {v2}, Lvoi;->c(C)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llh8;
+
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v4
+
+    invoke-interface {p0, v3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v3
+
+    if-gt p3, v3, :cond_3
+
+    if-gt v4, p3, :cond_3
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    const/16 p3, 0x21
+
+    invoke-static {p0, p4, p1, p2, p3}, Lugi;->b(Landroid/text/Spannable;Llh8;III)V
+
+    return-void
+
+    :cond_5
+    :goto_2
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :goto_3
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p4
+
+    if-eqz p4, :cond_7
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Llh8;
+
+    invoke-static {p0, p4, p1, p2}, Lsgi;->n(Landroid/text/Spannable;Lr44;II)V
+
+    goto :goto_3
+
+    :cond_7
+    return-void
+.end method
+
+.method public static final n(Landroid/text/Spannable;Lr44;II)V
+    .locals 4
+
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-lt v0, p2, :cond_1
+
+    if-gt v1, p3, :cond_1
+
+    invoke-interface {p0, p1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v2
+
+    invoke-interface {p0, p1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    if-ge v0, p2, :cond_2
+
+    invoke-interface {p1}, Lr44;->copy()Lr44;
+
+    move-result-object v3
+
+    invoke-interface {p0, v3, v0, p2, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_2
+    if-le v1, p3, :cond_3
+
+    invoke-interface {p1}, Lr44;->copy()Lr44;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1, p3, v1, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public static final o(Landroid/text/Spannable;Ljava/lang/Class;II)V
+    .locals 1
+
+    :try_start_0
+    invoke-interface {p0, p2, p3, p1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    array-length p2, p1
+
+    const/4 p3, 0x0
+
+    :goto_0
+    if-ge p3, p2, :cond_0
+
+    aget-object v0, p1, p3
+
+    invoke-interface {p0, v0}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    :cond_0
+    return-void
+.end method
+
+.method public static p(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 3
 
     if-nez p0, :cond_0
 
     const/4 p0, 0x0
 
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :try_start_0
+    instance-of v0, p0, Lnve;
 
-    move-result p0
+    if-eqz v0, :cond_1
 
-    :goto_0
-    int-to-long v0, p0
+    check-cast p0, Landroid/text/SpannableString;
 
-    const-wide/32 v2, -0x3361d2af
+    return-object p0
 
-    mul-long/2addr v0, v2
+    :cond_1
+    sget v0, Lnve;->a:I
 
-    long-to-int p0, v0
+    invoke-static {p0}, Lnh2;->n(Ljava/lang/CharSequence;)Lnve;
 
-    const/16 v0, 0xf
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p0, v0}, Ljava/lang/Integer;->rotateLeft(II)I
+    return-object p0
 
-    move-result p0
+    :catchall_0
+    move-exception v0
 
-    int-to-long v0, p0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-wide/32 v2, 0x1b873593
+    const-string v2, "fail to make safeCopy of "
 
-    mul-long/2addr v0, v2
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    long-to-int p0, v0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return p0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Markdown"
+
+    invoke-static {v2, v1, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object p0
 .end method

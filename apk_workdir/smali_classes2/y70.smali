@@ -1,130 +1,84 @@
 .class public final Ly70;
-.super Li0;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ly70;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Ly70;->b:Ljava/lang/String;
+    iput-wide p1, p0, Ly70;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getScope()Lsm;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    sget-object v0, Lsm;->b:Lsm;
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    const-string v0, "auth.anonymLogin"
-
-    invoke-static {v0}, Lbn;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final populateParams(Lmm;)V
-    .locals 5
-
-    const-string v0, "referrer"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "deviceId"
-
-    iget-object v2, p0, Ly70;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v2}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lyq0;
-
-    const-string v3, "verification_supported"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v0, v3, v4}, Lyq0;-><init>(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1, v0}, Lmm;->a(Llm;)V
-
-    const-string v0, "verification_token"
-
-    invoke-virtual {p1, v0, v1}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "verification_supported_v"
-
-    const-string v1, "1"
-
-    invoke-virtual {p1, v0, v1}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "client"
-
-    const-string v1, "test"
-
-    invoke-virtual {p1, v0, v1}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lyq0;
-
-    const-string v3, "gen_token"
-
-    invoke-direct {v0, v3, v4}, Lyq0;-><init>(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1, v0}, Lmm;->a(Llm;)V
-
-    if-nez v2, :cond_0
-
-    move-object v2, v1
+    return v0
 
     :cond_0
-    const-string v0, "\", \"client_version\": 1}"
+    instance-of v1, p1, Ly70;
 
-    iget-object v1, p0, Ly70;->b:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
-    const-string v3, "{\"auth_token\": \""
-
-    const-string v4, "\", \"version\": 3, \"device_id\": \""
-
-    invoke-static {v3, v1, v4, v2, v0}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const-string v1, "{\"version\": 2, \"device_id\": \""
+    check-cast p1, Ly70;
 
-    invoke-static {v1, v2, v0}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-wide v3, p0, Ly70;->c:J
+
+    iget-wide v5, p1, Ly70;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ly70;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Response(timestampRemoveProfile="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ly70;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    const-string v1, "session_data"
-
-    invoke-virtual {p1, v1, v0}, Lmm;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

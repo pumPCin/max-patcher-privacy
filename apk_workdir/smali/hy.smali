@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lodf;
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final synthetic b:Lzp8;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public synthetic constructor <init>(Lbp8;Lzp8;I)V
     .locals 0
 
-    iput p2, p0, Lhy;->a:I
+    iput p3, p0, Lhy;->a:I
 
-    iput p1, p0, Lhy;->b:I
+    iput-object p2, p0, Lhy;->b:Lzp8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,78 +27,86 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
+    .locals 2
 
-    iget v0, p0, Lhy;->a:I
+    iget p1, p0, Lhy;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v0, Landroid/os/HandlerThread;
+    iget-object p1, p0, Lhy;->b:Lzp8;
 
-    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
+    iget-object p4, p1, Lzp8;->b:Landroid/os/Handler;
 
-    iget v2, p0, Lhy;->b:I
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v2, v1}, Ljy;->t(ILjava/lang/String;)Ljava/lang/String;
+    const/16 v0, 0x1e
 
-    move-result-object v1
+    if-ge p5, v0, :cond_0
 
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    const/16 p1, 0x20
 
-    return-object v0
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, p2, p3}, Lzp8;->a(J)V
+
+    :goto_0
+    return-void
 
     :pswitch_0
-    new-instance v0, Landroid/os/HandlerThread;
+    iget-object p1, p0, Lhy;->b:Lzp8;
 
-    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
+    iget-object p4, p1, Lzp8;->b:Landroid/os/Handler;
 
-    iget v2, p0, Lhy;->b:I
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v2, v1}, Liy;->d(ILjava/lang/String;)Ljava/lang/String;
+    const/16 v0, 0x1e
 
-    move-result-object v1
+    if-ge p5, v0, :cond_1
 
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    const/16 p1, 0x20
 
-    return-object v0
+    shr-long v0, p2, p1
 
-    :pswitch_1
-    new-instance v0, Landroid/os/HandlerThread;
+    long-to-int p1, v0
 
-    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
+    long-to-int p2, p2
 
-    iget v2, p0, Lhy;->b:I
+    const/4 p3, 0x0
 
-    invoke-static {v2, v1}, Ljy;->t(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    return-object v0
+    goto :goto_1
 
-    :pswitch_2
-    new-instance v0, Landroid/os/HandlerThread;
+    :cond_1
+    invoke-virtual {p1, p2, p3}, Lzp8;->a(J)V
 
-    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
-
-    iget v2, p0, Lhy;->b:I
-
-    invoke-static {v2, v1}, Liy;->d(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    :goto_1
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

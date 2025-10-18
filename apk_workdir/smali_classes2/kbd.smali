@@ -3,149 +3,138 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljbd;
+.implements Lyid;
 
 
 # instance fields
-.field public final a:Loh6;
+.field public final a:J
 
-.field public volatile b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Loh6;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkbd;->a:Loh6;
+    iput-wide p1, p0, Lkbd;->a:J
 
-    sget-object p1, Llw3;->t0:Llw3;
-
-    iput-object p1, p0, Lkbd;->b:Ljava/lang/Object;
-
-    iput-object p0, p0, Lkbd;->c:Ljava/lang/Object;
+    iput-wide p3, p0, Lkbd;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Z
-    .locals 2
-
-    iget-object v0, p0, Lkbd;->b:Ljava/lang/Object;
-
-    sget-object v1, Llw3;->t0:Llw3;
-
-    if-eq v0, v1, :cond_0
+.method public final a()Z
+    .locals 1
 
     const/4 v0, 0x1
 
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Lkbd;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    sget-object v1, Llw3;->t0:Llw3;
+    if-ne p0, p1, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    return-object v0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lkbd;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    monitor-enter v0
+    if-eqz p1, :cond_2
 
-    :try_start_0
-    iget-object v2, p0, Lkbd;->b:Ljava/lang/Object;
+    const-class v2, Lkbd;
 
-    if-eq v2, v1, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lkbd;->a:Loh6;
+    check-cast p1, Lkbd;
 
-    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
+    iget-wide v2, p0, Lkbd;->a:J
 
-    move-result-object v2
+    iget-wide v4, p1, Lkbd;->a:J
 
-    iput-object v2, p0, Lkbd;->b:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    cmp-long v2, v2, v4
 
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Lkbd;->b:J
+
+    iget-wide v4, p1, Lkbd;->b:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
     :goto_0
-    monitor-exit v0
-
-    return-object v2
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
+    return v1
 .end method
 
-.method public final reset()V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lkbd;->c:Ljava/lang/Object;
+    iget-wide v0, p0, Lkbd;->a:J
 
-    monitor-enter v0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :try_start_0
-    sget-object v1, Llw3;->t0:Llw3;
+    move-result-object v0
 
-    iput-object v1, p0, Lkbd;->b:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v1, p0, Lkbd;->b:J
 
-    monitor-exit v0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v1
 
-    :catchall_0
-    move-exception v1
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    monitor-exit v0
+    move-result-object v0
 
-    throw v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Lkbd;->e()Z
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lkbd;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReportNetworkStat{timestamp="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lkbd;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sendBitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lkbd;->b:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Lazy value not initialized yet."
 
     return-object v0
 .end method

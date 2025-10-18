@@ -1,385 +1,200 @@
 .class public final Lxvh;
-.super Lgt9;
+.super Lmuh;
 .source "SourceFile"
+
+# interfaces
+.implements Lhvh;
 
 
 # instance fields
-.field public final synthetic b:Lqhd;
+.field public final synthetic d:I
+
+.field public final synthetic e:Lvof;
 
 
 # direct methods
-.method public constructor <init>(Lqhd;Landroid/os/Looper;)V
-    .locals 1
+.method public constructor <init>(ILvof;)V
+    .locals 0
 
-    iput-object p1, p0, Lxvh;->b:Lqhd;
+    iput p1, p0, Lxvh;->d:I
 
-    const/4 p1, 0x5
+    iput-object p2, p0, Lxvh;->e:Lvof;
 
-    const/4 v0, 0x0
+    const-string p1, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallCallbacks"
 
-    invoke-direct {p0, p2, p1, v0}, Lgt9;-><init>(Landroid/os/Looper;IZ)V
+    const/4 p2, 0x0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-direct {p0, p1, p2}, Lmuh;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 8
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 1
 
-    iget-object v0, p0, Lxvh;->b:Lqhd;
+    const/4 p3, 0x1
 
-    if-eqz p1, :cond_e
+    if-eq p1, p3, :cond_3
 
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    instance-of v2, v1, Landroid/content/Intent;
+    if-eq p1, v0, :cond_2
 
-    if-eqz v2, :cond_e
+    const/4 p3, 0x3
 
-    check-cast v1, Landroid/content/Intent;
+    if-eq p1, p3, :cond_1
 
-    new-instance v2, Lh1i;
+    const/4 p3, 0x4
 
-    invoke-direct {v2}, Lh1i;-><init>()V
+    if-eq p1, p3, :cond_0
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
+    const/4 p1, 0x0
 
-    const-string v2, "google.messenger"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "google.messenger"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ll3i;
-
-    if-eqz v2, :cond_0
-
-    move-object v2, v1
-
-    check-cast v2, Ll3i;
-
-    iput-object v2, v0, Lqhd;->g:Ll3i;
+    return p1
 
     :cond_0
-    instance-of v2, v1, Landroid/os/Messenger;
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    if-eqz v2, :cond_1
-
-    check-cast v1, Landroid/os/Messenger;
-
-    iput-object v1, v0, Lqhd;->f:Landroid/os/Messenger;
-
-    :cond_1
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Landroid/content/Intent;
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "com.google.android.c2dm.intent.REGISTRATION"
-
-    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    if-nez v2, :cond_2
-
-    const-string p1, "Rpc"
-
-    invoke-static {p1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_d
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p2, p1}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    const-string v0, "Unexpected response action: "
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
 
-    const-string v1, "Rpc"
+    invoke-static {p2}, Luuh;->b(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_2
-    const-string v1, "registration_id"
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_3
-
-    const-string v1, "unregistered"
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_3
-    const/4 v2, 0x2
-
-    const/4 v4, 0x1
-
-    if-nez v1, :cond_b
-
-    const-string v1, "error"
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "Unexpected response, no error or registration id "
-
-    const-string v1, "Rpc"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_4
-    const-string v5, "Rpc"
-
-    invoke-static {v5, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    const-string v5, "Received InstanceID error "
-
-    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "Rpc"
-
-    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_5
-    const-string v5, "|"
-
-    invoke-virtual {v1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_9
-
-    const-string v5, "\\|"
-
-    invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v5
-
-    array-length v6, v5
-
-    if-le v6, v2, :cond_8
-
-    aget-object v6, v5, v4
-
-    const-string v7, "ID"
-
-    invoke-static {v6, v7}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    aget-object v1, v5, v2
-
-    aget-object v2, v5, v3
-
-    const-string v3, ":"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_7
-    const-string v3, "error"
-
-    invoke-virtual {p1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Lqhd;->b(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-void
-
-    :cond_8
-    :goto_0
-    const-string p1, "Unexpected structured response "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "Rpc"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_9
-    iget-object v5, v0, Lqhd;->a:Lsne;
-
-    monitor-enter v5
-
-    const/4 v1, 0x0
-
-    :goto_1
-    :try_start_0
-    iget-object v2, v0, Lqhd;->a:Lsne;
-
-    iget v3, v2, Lsne;->c:I
-
-    if-ge v1, v3, :cond_a
-
-    invoke-virtual {v2, v1}, Lsne;->f(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lqhd;->b(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_a
-    monitor-exit v5
-
-    return-void
-
-    :goto_2
-    monitor-exit v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
 
-    :cond_b
-    sget-object v5, Lqhd;->j:Ljava/util/regex/Pattern;
+    :cond_1
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {v5, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v6
-
-    if-nez v6, :cond_c
-
-    const-string p1, "Rpc"
-
-    invoke-static {p1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_d
-
-    const-string p1, "Unexpected response string: "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    const-string v0, "Rpc"
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    sget-object p1, Lju9;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    return-void
-
-    :cond_c
-    invoke-virtual {v5, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v1, :cond_d
-
-    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-static {p2, p1}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    const-string v3, "registration_id"
+    check-cast p1, Lju9;
 
-    invoke-virtual {p1, v3, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2}, Luuh;->b(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0, v1, p1}, Lqhd;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :cond_d
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object v0, Lku9;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v0}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lku9;
+
+    invoke-static {p2}, Luuh;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1, v0}, Lhvh;->s(Lcom/google/android/gms/common/api/Status;Lku9;)V
+
+    return p3
+
+    :cond_3
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object v0, Liu9;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v0}, Luuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Liu9;
+
+    invoke-static {p2}, Luuh;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1, v0}, Lhvh;->q(Lcom/google/android/gms/common/api/Status;Liu9;)V
+
+    return p3
+.end method
+
+.method public q(Lcom/google/android/gms/common/api/Status;Liu9;)V
+    .locals 1
+
+    iget v0, p0, Lxvh;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxvh;->e:Lvof;
+
+    invoke-static {p1, p2, v0}, Lki7;->e(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lvof;)V
+
     return-void
 
-    :cond_e
-    const-string p1, "Rpc"
+    nop
 
-    const-string v0, "Dropping invalid message"
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+.method public s(Lcom/google/android/gms/common/api/Status;Lku9;)V
+    .locals 1
+
+    iget v0, p0, Lxvh;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxvh;->e:Lvof;
+
+    invoke-static {p1, p2, v0}, Lki7;->e(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lvof;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

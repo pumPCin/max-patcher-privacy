@@ -1,88 +1,55 @@
-.class public final synthetic Lbf5;
-.super Ljava/lang/Object;
+.class public final Lbf5;
+.super Lcf5;
 .source "SourceFile"
-
-# interfaces
-.implements Lqh6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/reflect/Constructor;
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/reflect/Constructor;I)V
+.method public constructor <init>(Ljava/lang/Runnable;J)V
     .locals 0
 
-    iput p2, p0, Lbf5;->a:I
+    invoke-direct {p0, p2, p3}, Lcf5;-><init>(J)V
 
-    iput-object p1, p0, Lbf5;->b:Ljava/lang/reflect/Constructor;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbf5;->c:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iget v0, p0, Lbf5;->a:I
+    iget-object v0, p0, Lbf5;->c:Ljava/lang/Runnable;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget-object v0, p0, Lbf5;->b:Ljava/lang/reflect/Constructor;
+    return-void
+.end method
 
-    check-cast p1, Ljava/lang/Throwable;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->a(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object p1
+    invoke-super {p0}, Lcf5;->toString()Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lbf5;->b:Ljava/lang/reflect/Constructor;
+    move-result-object v1
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->c(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    iget-object v1, p0, Lbf5;->c:Ljava/lang/Runnable;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_1
-    iget-object v0, p0, Lbf5;->b:Ljava/lang/reflect/Constructor;
+    move-result-object v0
 
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->d(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Lbf5;->b:Ljava/lang/reflect/Constructor;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->e(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,114 +1,147 @@
 .class public final Lyp3;
-.super Lwp3;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwd;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lyp3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final r0:J
+.field public final X:I
 
-.field public final s0:I
+.field public final Y:[I
 
-.field public final t0:I
+.field public final a:Lohd;
 
-.field public final u0:Z
+.field public final b:Z
 
-.field public final v0:J
+.field public final c:Z
+
+.field public final o:[I
 
 
 # direct methods
-.method public constructor <init>(JJIIZ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct/range {p0 .. p7}, Lwp3;-><init>(JJIIZ)V
+    new-instance v0, Lp0i;
 
-    move v0, p7
+    const/16 v1, 0x19
 
-    move p7, p6
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    move p6, p5
+    sput-object v0, Lyp3;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-wide p4, p3
+    return-void
+.end method
 
-    move-wide p2, p1
+.method public constructor <init>(Lohd;ZZ[II[I)V
+    .locals 0
 
-    move-object p1, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p4, p1, Lyp3;->r0:J
+    iput-object p1, p0, Lyp3;->a:Lohd;
 
-    iput p6, p1, Lyp3;->s0:I
+    iput-boolean p2, p0, Lyp3;->b:Z
 
-    iput p7, p1, Lyp3;->t0:I
+    iput-boolean p3, p0, Lyp3;->c:Z
 
-    iput-boolean v0, p1, Lyp3;->u0:Z
+    iput-object p4, p0, Lyp3;->o:[I
 
-    const-wide/16 p4, -0x1
+    iput p5, p0, Lyp3;->X:I
 
-    cmp-long p6, p2, p4
-
-    if-eqz p6, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide p2, p4
-
-    :goto_0
-    iput-wide p2, p1, Lyp3;->v0:J
+    iput-object p6, p0, Lyp3;->Y:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget-wide v0, p0, Lyp3;->v0:J
+    const/16 v0, 0x4f45
 
-    return-wide v0
-.end method
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-.method public final b(J)J
-    .locals 4
+    move-result v0
 
-    const-wide/16 v0, 0x0
+    const/4 v1, 0x1
 
-    iget-wide v2, p0, Lwp3;->b:J
+    iget-object v2, p0, Lyp3;->a:Lohd;
 
-    sub-long/2addr p1, v2
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
+    const/4 p2, 0x2
 
-    move-result-wide p1
+    const/4 v1, 0x4
 
-    const-wide/32 v0, 0x7a1200
+    invoke-static {p1, p2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    mul-long/2addr p1, v0
+    iget-boolean p2, p0, Lyp3;->b:Z
 
-    iget v0, p0, Lwp3;->X:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    int-to-long v0, v0
+    const/4 p2, 0x3
 
-    div-long/2addr p1, v0
+    invoke-static {p1, p2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    return-wide p1
-.end method
+    iget-boolean p2, p0, Lyp3;->c:Z
 
-.method public final g()J
-    .locals 2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-wide v0, p0, Lyp3;->r0:J
+    iget-object p2, p0, Lyp3;->o:[I
 
-    return-wide v0
-.end method
+    if-nez p2, :cond_0
 
-.method public final h()I
-    .locals 1
+    goto :goto_0
 
-    iget v0, p0, Lyp3;->s0:I
+    :cond_0
+    invoke-static {p1, v1}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    return v0
+    move-result v2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-static {p1, v2}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    :goto_0
+    const/4 p2, 0x5
+
+    invoke-static {p1, p2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget p2, p0, Lyp3;->X:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lyp3;->Y:[I
+
+    if-nez p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x6
+
+    invoke-static {p1, v1}, Llyi;->t(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-static {p1, v1}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    :goto_1
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

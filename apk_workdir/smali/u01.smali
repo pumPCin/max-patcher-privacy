@@ -1,113 +1,26 @@
-.class public final synthetic Lu01;
-.super Ljava/lang/Object;
+.class public final Lu01;
+.super Lvpe;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
-
-
-# instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Li11;
-
-
-# direct methods
-.method public synthetic constructor <init>(ZLi11;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lu01;->a:Z
-
-    iput-object p2, p0, Lu01;->b:Li11;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final A(Ly18;)V
+    .locals 1
 
-    check-cast p1, Lht;
+    instance-of v0, p1, Lx11;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_0
 
-    new-instance v0, Lat;
-
-    invoke-direct {v0, p1}, Lat;-><init>(Lht;)V
+    return-void
 
     :cond_0
-    :goto_0
-    invoke-virtual {v0}, Lat;->hasNext()Z
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    move-result v1
+    check-cast v0, Lcde;
 
-    iget-boolean v2, p0, Lu01;->a:Z
+    check-cast p1, Ltce;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
 
-    invoke-virtual {v0}, Lat;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lu01;->b:Li11;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v3}, Li11;->d()Lj34;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lj34;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v3, 0x1
-
-    invoke-interface {v2, v1, v3}, Lru/ok/android/externcalls/sdk/Conversation;->promoteParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v3}, Li11;->d()Lj34;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lj34;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/Conversation;->removeParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    return-object p1
-
-    :cond_3
-    new-instance p1, Lht;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lht;-><init>(I)V
-
-    return-object p1
+    return-void
 .end method

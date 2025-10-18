@@ -1,3 +1,7 @@
 .class public final Lfr9;
-.super Ljava/lang/UnsatisfiedLinkError;
+.super Lgf4;
 .source "SourceFile"
+
+
+# instance fields
+.field public r0:J

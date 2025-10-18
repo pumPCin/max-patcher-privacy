@@ -1,152 +1,55 @@
-.class public final synthetic Lsbh;
-.super Ljava/lang/Object;
+.class public final Lsbh;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lmm6;
 
+# instance fields
+.field public X:Lrah;
 
-# static fields
-.field public static final a:Lsbh;
+.field public Y:Llbh;
 
-.field private static final descriptor:Lu1e;
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lvbh;
+
+.field public final synthetic q0:Lvbh;
+
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lvbh;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lsbh;
+    iput-object p1, p0, Lsbh;->q0:Lvbh;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsbh;->a:Lsbh;
-
-    new-instance v1, Lztb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lztb;-><init>(Ljava/lang/String;Lmm6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lztb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lsbh;->descriptor:Lu1e;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lsbh;->descriptor:Lu1e;
-
-    invoke-virtual {p1, v0}, Ld9;->k(Lu1e;)Ld9;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lu1e;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Ld9;->w(Lu1e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0}, Ld9;->z(Lu1e;)V
-
-    new-instance p1, Lubh;
-
-    invoke-direct {p1, v5, v3}, Lubh;-><init>(ILjava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(La24;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Lubh;
-
-    sget-object v0, Lsbh;->descriptor:Lu1e;
-
-    invoke-virtual {p1, v0}, La24;->b(Lu1e;)La24;
-
-    move-result-object p1
-
-    iget-object p2, p2, Lubh;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p2}, La24;->l(Lu1e;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, La24;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lxq7;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lxq7;
-
-    sget-object v1, Lo9f;->a:Lo9f;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lu1e;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lsbh;->descriptor:Lu1e;
+    iput-object p1, p0, Lsbh;->Z:Ljava/lang/Object;
 
-    return-object v0
+    iget p1, p0, Lsbh;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lsbh;->r0:I
+
+    iget-object p1, p0, Lsbh;->q0:Lvbh;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lvbh;->i(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,168 +1,178 @@
 .class public final Lqvi;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final H0:Li70;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcq3;Li70;Louh;Louh;)V
+    .locals 8
 
-    iput p1, p0, Lqvi;->a:I
+    const/16 v3, 0x44
 
-    iput-object p2, p0, Lqvi;->b:Ljava/lang/Object;
+    const/4 v7, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcq3;Lbs6;Lcs6;I)V
+
+    new-instance p1, Ld09;
+
+    if-nez p4, :cond_0
+
+    sget-object p4, Li70;->c:Li70;
+
+    :cond_0
+    const/4 p2, 0x4
+
+    const/4 p3, 0x0
+
+    invoke-direct {p1, p2, p3}, Ld09;-><init>(IZ)V
+
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    iput-object p2, p1, Ld09;->b:Ljava/lang/Object;
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-boolean p2, p4, Li70;->a:Z
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    iput-object p2, p1, Ld09;->b:Ljava/lang/Object;
+
+    iget-object p2, p4, Li70;->b:Ljava/lang/String;
+
+    iput-object p2, p1, Ld09;->c:Ljava/lang/Object;
+
+    const/16 p2, 0x10
+
+    new-array p2, p2, [B
+
+    sget-object p3, Lf0i;->a:Ljava/util/Random;
+
+    invoke-virtual {p3, p2}, Ljava/util/Random;->nextBytes([B)V
+
+    const/16 p3, 0xb
+
+    invoke-static {p2, p3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Ld09;->c:Ljava/lang/Object;
+
+    new-instance p2, Li70;
+
+    invoke-direct {p2, p1}, Li70;-><init>(Ld09;)V
+
+    iput-object p2, v0, Lqvi;->H0:Li70;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 3
+.method public final g()I
+    .locals 1
 
-    iget v0, p0, Lqvi;->a:I
+    const v0, 0xc35000
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqvi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lw1j;
-
-    iget-object v1, v0, Lw1j;->b:Lwv4;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
-
-    invoke-virtual {v1, v2, p1}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Ldyi;
-
-    invoke-direct {p1, p0, p2}, Ldyi;-><init>(Lqvi;Landroid/os/IBinder;)V
-
-    invoke-virtual {v0}, Lw1j;->a()Landroid/os/Handler;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lqvi;->b:Ljava/lang/Object;
-
-    check-cast v0, Leyi;
-
-    iget-object v1, v0, Leyi;->b:Ltt8;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
-
-    invoke-virtual {v1, v2, p1}, Ltt8;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Lu7i;
-
-    invoke-direct {p1, p0, p2}, Lu7i;-><init>(Lqvi;Landroid/os/IBinder;)V
-
-    invoke-virtual {v0}, Leyi;->a()Landroid/os/Handler;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 3
 
-    iget v0, p0, Lqvi;->a:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lqvi;->b:Ljava/lang/Object;
+    return-object p1
 
-    check-cast v0, Lw1j;
+    :cond_0
+    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
 
-    iget-object v1, v0, Lw1j;->b:Lwv4;
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    instance-of v2, v1, Li2j;
 
-    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v1, v2, p1}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    check-cast v1, Li2j;
 
-    new-instance p1, Lpvi;
+    return-object v1
 
-    const/4 v1, 0x1
+    :cond_1
+    new-instance v1, Li2j;
 
-    invoke-direct {p1, v1, p0}, Lpvi;-><init>(ILjava/lang/Object;)V
+    const/4 v2, 0x5
 
-    invoke-virtual {v0}, Lw1j;->a()Landroid/os/Handler;
+    invoke-direct {v1, p1, v0, v2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    move-result-object v0
+    return-object v1
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+.method public final n()Landroid/os/Bundle;
+    .locals 4
 
-    return-void
+    iget-object v0, p0, Lqvi;->H0:Li70;
 
-    :pswitch_0
-    iget-object v0, p0, Lqvi;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Leyi;
+    new-instance v1, Landroid/os/Bundle;
 
-    iget-object v1, v0, Leyi;->b:Ltt8;
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    const-string v2, "consumer_package"
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, p1}, Ltt8;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v2, "force_save_dialog"
 
-    new-instance p1, Ltqi;
+    iget-boolean v3, v0, Li70;->a:Z
 
-    const/4 v1, 0x1
+    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-direct {p1, v1, p0}, Ltqi;-><init>(ILjava/lang/Object;)V
+    const-string v2, "log_session_id"
 
-    invoke-virtual {v0}, Leyi;->a()Landroid/os/Handler;
+    iget-object v0, v0, Li70;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return-object v1
+.end method
 
-    return-void
+.method public final p()Ljava/lang/String;
+    .locals 1
 
-    nop
+    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.auth.api.credentials.service.START"
+
+    return-object v0
 .end method

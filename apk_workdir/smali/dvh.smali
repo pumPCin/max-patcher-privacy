@@ -1,71 +1,76 @@
-.class public abstract Ldvh;
+.class public final Ldvh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpvh;
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
 
-.field public static final b:Ljava/util/HashMap;
+# instance fields
+.field public final synthetic a:Landroid/widget/FrameLayout;
+
+.field public final synthetic b:Landroid/view/LayoutInflater;
+
+.field public final synthetic c:Landroid/view/ViewGroup;
+
+.field public final synthetic d:Landroid/os/Bundle;
+
+.field public final synthetic e:Lqp4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lqp4;Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p1, p0, Ldvh;->e:Lqp4;
 
-    sput-object v0, Ldvh;->a:Ljava/util/HashMap;
+    iput-object p2, p0, Ldvh;->a:Landroid/widget/FrameLayout;
 
-    new-instance v1, Ljava/util/HashMap;
+    iput-object p3, p0, Ldvh;->b:Landroid/view/LayoutInflater;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    iput-object p4, p0, Ldvh;->c:Landroid/view/ViewGroup;
 
-    sput-object v1, Ldvh;->b:Ljava/util/HashMap;
+    iput-object p5, p0, Ldvh;->d:Landroid/os/Bundle;
 
-    const/4 v2, -0x1
+    return-void
+.end method
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+# virtual methods
+.method public final a()I
+    .locals 1
 
-    const-string v3, "The Play Store app is either not installed or not the official version."
+    const/4 v0, 0x2
 
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
 
-    const/4 v3, -0x2
+.method public final b()V
+    .locals 5
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Ldvh;->a:Landroid/widget/FrameLayout;
 
-    move-result-object v3
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    const-string v4, "Call first requestReviewFlow to get the ReviewInfo."
+    iget-object v1, p0, Ldvh;->e:Lqp4;
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v1, Lqp4;->a:Ljava/lang/Object;
 
-    const/16 v4, -0x64
+    check-cast v1, Luw7;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, p0, Ldvh;->c:Landroid/view/ViewGroup;
 
-    move-result-object v4
+    iget-object v3, p0, Ldvh;->d:Landroid/os/Bundle;
 
-    const-string v5, "Retry with an exponential backoff. Consider filing a bug if fails consistently."
+    iget-object v4, p0, Ldvh;->b:Landroid/view/LayoutInflater;
 
-    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v4, v2, v3}, Luw7;->p(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    const-string v0, "PLAY_STORE_NOT_FOUND"
+    move-result-object v1
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "INVALID_REQUEST"
-
-    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "INTERNAL_ERROR"
-
-    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
 .end method

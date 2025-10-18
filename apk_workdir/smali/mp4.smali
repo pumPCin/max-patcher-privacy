@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lhu1;
 
 
 # instance fields
@@ -27,8 +27,8 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final o(Lgu1;)Ljava/lang/String;
+    .locals 2
 
     iget v0, p0, Lmp4;->a:I
 
@@ -36,155 +36,86 @@
 
     iget-object v0, p0, Lmp4;->b:Lnp4;
 
-    iget v1, v0, Lnp4;->Z:I
+    iget-object v1, v0, Lnp4;->a:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Lnp4;->Z:I
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v1
-
-    sget-object v2, Lnp4;->w0:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "onAllConstraintsMet for "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v4, v0, Lnp4;->c:Lknh;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lnp4;->o:Lvhf;
-
-    iget-object v1, v1, Lvhf;->o:Lpyb;
-
-    iget-object v2, v0, Lnp4;->v0:Lzye;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Lpyb;->h(Lzye;Lq8c;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lnp4;->o:Lvhf;
-
-    iget-object v1, v1, Lvhf;->c:Lnoh;
-
-    iget-object v2, v0, Lnp4;->c:Lknh;
-
-    const-string v3, "Starting timer for "
-
-    iget-object v4, v1, Lnoh;->d:Ljava/lang/Object;
-
-    monitor-enter v4
+    monitor-enter v1
 
     :try_start_0
-    invoke-static {}, Lwxh;->f()Lwxh;
+    iput-object p1, v0, Lnp4;->f:Lgu1;
 
-    move-result-object v5
-
-    sget-object v6, Lnoh;->e:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v5, v6, v3}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Lnoh;->a(Lknh;)V
-
-    new-instance v3, Lmoh;
-
-    invoke-direct {v3, v1, v2}, Lmoh;-><init>(Lnoh;Lknh;)V
-
-    iget-object v5, v1, Lnoh;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v5, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v5, v1, Lnoh;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v5, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, v1, Lnoh;->a:Lpzd;
-
-    iget-object v0, v0, Lpzd;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const-wide/32 v1, 0x927c0
-
-    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    monitor-exit v4
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v4
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    :cond_0
-    invoke-virtual {v0}, Lnp4;->b()V
+    const-string v1, "DeferrableSurface-close("
 
-    goto :goto_0
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    invoke-static {}, Lwxh;->f()Lwxh;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v0, ")"
 
-    sget-object v2, Lnp4;->w0:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v4, "Already started work for "
+    move-result-object p1
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object p1
 
-    iget-object v0, v0, Lnp4;->c:Lknh;
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v2, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
+    throw p1
 
     :pswitch_0
     iget-object v0, p0, Lmp4;->b:Lnp4;
 
-    invoke-static {v0}, Lnp4;->a(Lnp4;)V
+    iget-object v1, v0, Lnp4;->a:Ljava/lang/Object;
 
-    return-void
+    monitor-enter v1
+
+    :try_start_2
+    iput-object p1, v0, Lnp4;->d:Lgu1;
+
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeferrableSurface-termination("
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p1
 
     nop
 

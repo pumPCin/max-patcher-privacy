@@ -1,155 +1,171 @@
 .class public final Lwka;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lvv4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Lg1f;
+.field public X:Lvv4;
 
-.field public b:Ltui;
+.field public volatile Y:Z
 
-.field public final c:Ljava/util/ArrayList;
+.field public final a:Li3e;
 
-.field public final d:Ljava/util/ArrayList;
+.field public final b:J
 
-.field public e:Llh4;
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
-.field public f:Z
-
-.field public g:Lh8a;
-
-.field public h:Z
-
-.field public i:Z
-
-.field public j:Ln8a;
-
-.field public k:Lz1j;
-
-.field public l:Ljava/net/ProxySelector;
-
-.field public m:Lh8a;
-
-.field public n:Ljavax/net/SocketFactory;
-
-.field public o:Ljavax/net/ssl/SSLSocketFactory;
-
-.field public p:Ljavax/net/ssl/X509TrustManager;
-
-.field public q:Ljava/util/List;
-
-.field public r:Ljava/util/List;
-
-.field public s:Lvka;
-
-.field public t:La62;
-
-.field public u:Lpmi;
-
-.field public v:I
-
-.field public w:I
-
-.field public x:I
-
-.field public y:J
-
-.field public z:Ltui;
+.field public final o:Lvod;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Li3e;JLvod;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v0, Lg1f;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {v0}, Lg1f;-><init>()V
+    iput-object p1, p0, Lwka;->a:Li3e;
 
-    iput-object v0, p0, Lwka;->a:Lg1f;
+    iput-wide p2, p0, Lwka;->b:J
 
-    new-instance v0, Ltui;
+    iput-object v0, p0, Lwka;->c:Ljava/util/concurrent/TimeUnit;
 
-    const/16 v1, 0x9
+    iput-object p4, p0, Lwka;->o:Lvod;
 
-    invoke-direct {v0, v1}, Ltui;-><init>(I)V
+    return-void
+.end method
 
-    iput-object v0, p0, Lwka;->b:Ltui;
 
-    new-instance v0, Ljava/util/ArrayList;
+# virtual methods
+.method public final b()V
+    .locals 1
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iget-object v0, p0, Lwka;->a:Li3e;
 
-    iput-object v0, p0, Lwka;->c:Ljava/util/ArrayList;
+    invoke-virtual {v0}, Li3e;->b()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lwka;->o:Lvod;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-interface {v0}, Lvv4;->g()V
 
-    iput-object v0, p0, Lwka;->d:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    new-instance v0, Llh4;
+.method public final c(Lvv4;)V
+    .locals 1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lwka;->X:Lvv4;
 
-    iput-object v0, p0, Lwka;->e:Llh4;
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lwka;->X:Lvv4;
+
+    iget-object p1, p0, Lwka;->a:Li3e;
+
+    invoke-virtual {p1, p0}, Li3e;->c(Lvv4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-boolean v0, p0, Lwka;->Y:Z
+
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lwka;->f:Z
+    iput-boolean v0, p0, Lwka;->Y:Z
 
-    sget-object v1, Lh8a;->b:Lh8a;
+    iget-object v0, p0, Lwka;->a:Li3e;
 
-    iput-object v1, p0, Lwka;->g:Lh8a;
+    invoke-virtual {v0, p1}, Li3e;->d(Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Lwka;->h:Z
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lwka;->i:Z
+    move-result-object p1
 
-    sget-object v0, Ln8a;->b:Ln8a;
+    check-cast p1, Lvv4;
 
-    iput-object v0, p0, Lwka;->j:Ln8a;
+    if-eqz p1, :cond_0
 
-    sget-object v0, Lz1j;->c:Lz1j;
+    invoke-interface {p1}, Lvv4;->g()V
 
-    iput-object v0, p0, Lwka;->k:Lz1j;
+    :cond_0
+    iget-object p1, p0, Lwka;->o:Lvod;
 
-    iput-object v1, p0, Lwka;->m:Lh8a;
+    iget-wide v0, p0, Lwka;->b:J
 
-    invoke-static {}, Ljavax/net/SocketFactory;->getDefault()Ljavax/net/SocketFactory;
+    iget-object v2, p0, Lwka;->c:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object v0
+    invoke-virtual {p1, p0, v0, v1, v2}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    iput-object v0, p0, Lwka;->n:Ljavax/net/SocketFactory;
+    move-result-object p1
 
-    sget-object v0, Lxka;->L0:Ljava/util/List;
+    invoke-static {p0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    iput-object v0, p0, Lwka;->q:Ljava/util/List;
+    :cond_1
+    return-void
+.end method
 
-    sget-object v0, Lxka;->K0:Ljava/util/List;
+.method public final g()V
+    .locals 1
 
-    iput-object v0, p0, Lwka;->r:Ljava/util/List;
+    iget-object v0, p0, Lwka;->X:Lvv4;
 
-    sget-object v0, Lvka;->a:Lvka;
+    invoke-interface {v0}, Lvv4;->g()V
 
-    iput-object v0, p0, Lwka;->s:Lvka;
+    iget-object v0, p0, Lwka;->o:Lvod;
 
-    sget-object v0, La62;->c:La62;
+    invoke-interface {v0}, Lvv4;->g()V
 
-    iput-object v0, p0, Lwka;->t:La62;
+    return-void
+.end method
 
-    const/16 v0, 0x2710
+.method public final h()Z
+    .locals 1
 
-    iput v0, p0, Lwka;->v:I
+    iget-object v0, p0, Lwka;->o:Lvod;
 
-    iput v0, p0, Lwka;->w:I
+    invoke-interface {v0}, Lvv4;->h()Z
 
-    iput v0, p0, Lwka;->x:I
+    move-result v0
 
-    const-wide/16 v0, 0x400
+    return v0
+.end method
 
-    iput-wide v0, p0, Lwka;->y:J
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lwka;->a:Li3e;
+
+    invoke-virtual {v0, p1}, Li3e;->onError(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lwka;->o:Lvod;
+
+    invoke-interface {p1}, Lvv4;->g()V
+
+    return-void
+.end method
+
+.method public final run()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lwka;->Y:Z
 
     return-void
 .end method

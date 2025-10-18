@@ -2,102 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmhg;
+.implements Lka7;
+.implements Lptf;
+
 
 # static fields
-.field public static final d:Ljava/lang/Object;
+.field public static final X:Lz90;
+
+.field public static final Y:Lz90;
+
+.field public static final Z:Lz90;
+
+.field public static final b:Lz90;
+
+.field public static final c:Lz90;
+
+.field public static final o:Lz90;
 
 
 # instance fields
-.field public a:I
-
-.field public b:Ljava/util/ArrayList;
-
-.field public final c:Lmk4;
+.field public final a:Ls9b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lim5;
+    new-instance v0, Lz90;
 
-    const/16 v1, 0x14
+    const-string v1, "camerax.core.imageAnalysis.backpressureStrategy"
 
-    invoke-direct {v0, v1}, Lim5;-><init>(I)V
+    const-class v2, Lq87;
 
-    const/4 v1, 0x1
+    const/4 v3, 0x0
 
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    move-result-object v0
+    sput-object v0, Lz87;->b:Lz90;
 
-    sput-object v0, Lz87;->d:Ljava/lang/Object;
+    new-instance v0, Lz90;
+
+    const-string v1, "camerax.core.imageAnalysis.imageQueueDepth"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lz87;->c:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camerax.core.imageAnalysis.imageReaderProxyProvider"
+
+    const-class v2, Lva7;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lz87;->o:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camerax.core.imageAnalysis.outputImageFormat"
+
+    const-class v2, Lt87;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lz87;->X:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camerax.core.imageAnalysis.onePixelShiftEnabled"
+
+    const-class v2, Ljava/lang/Boolean;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lz87;->Y:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camerax.core.imageAnalysis.outputImageRotationEnabled"
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lz87;->Z:Lz90;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ls9b;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lmk4;
-
-    invoke-direct {v0}, Lmk4;-><init>()V
-
-    iput-object v0, p0, Lz87;->c:Lmk4;
-
-    invoke-virtual {p0}, Lz87;->a()V
+    iput-object p1, p0, Lz87;->a:Ls9b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final getConfig()Lpk3;
+    .locals 1
 
-    iget-object v0, p0, Lz87;->c:Lmk4;
+    iget-object v0, p0, Lz87;->a:Ls9b;
 
-    iget v0, v0, Lmk4;->a:I
+    return-object v0
+.end method
 
-    iput v0, p0, Lz87;->a:I
+.method public final getInputFormat()I
+    .locals 1
 
-    iget-object v0, p0, Lz87;->b:Ljava/util/ArrayList;
+    const/16 v0, 0x23
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx87;
-
-    iget v2, p0, Lz87;->a:I
-
-    invoke-interface {v1}, Lx87;->b()I
-
-    move-result v1
-
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    iput v1, p0, Lz87;->a:I
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return v0
 .end method

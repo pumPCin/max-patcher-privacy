@@ -1,153 +1,171 @@
-.class public final Lqr3;
+.class public final synthetic Lqr3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltr3;
+
 
 # instance fields
-.field public final a:Llt7;
+.field public final synthetic a:I
 
-.field public final b:Llt7;
-
-.field public final c:Llt7;
-
-.field public final d:Llt7;
-
-.field public final e:Llt7;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lqr3;->a:I
+
+    iput-object p2, p0, Lqr3;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqr3;->a:Llt7;
-
-    iput-object p2, p0, Lqr3;->b:Llt7;
-
-    iput-object p3, p0, Lqr3;->c:Llt7;
-
-    iput-object p4, p0, Lqr3;->d:Llt7;
-
-    iput-object p5, p0, Lqr3;->e:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 11
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    const-class v0, Lqr3;
+    iget v0, p0, Lqr3;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lqr3;->b:Ljava/lang/Object;
 
-    const-string v1, "block, id = "
+    check-cast v0, Leqe;
 
-    invoke-static {p1, p2, v1, v0}, Lxx1;->r(JLjava/lang/String;Ljava/lang/String;)V
+    check-cast p1, Lhi1;
 
-    iget-object v0, p0, Lqr3;->a:Llt7;
+    check-cast v0, Laqe;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Laqe;->a(Ljava/lang/Object;)V
 
-    move-result-object v0
+    return-void
 
-    check-cast v0, Lms3;
+    :pswitch_0
+    iget-object v0, p0, Lqr3;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lli6;
 
-    new-instance v1, Lb42;
+    check-cast p1, Lhi1;
 
-    const/16 v2, 0x12
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->f(Lli6;Lhi1;)V
 
-    sget-object v3, Lts3;->a:Lts3;
+    return-void
 
-    invoke-direct {v1, v2, v3}, Lb42;-><init>(ILjava/lang/Object;)V
+    :pswitch_1
+    iget-object v0, p0, Lqr3;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2, v1}, Lms3;->c(JLer3;)Lir3;
+    check-cast v0, Lb2f;
 
-    iget-object v0, p0, Lqr3;->d:Llt7;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    new-instance v1, Ln19;
 
-    move-result-object v0
+    const/16 v2, 0x11
 
-    check-cast v0, Lll;
+    invoke-direct {v1, v2, v0}, Ln19;-><init>(ILjava/lang/Object;)V
 
-    check-cast v0, Lkma;
+    invoke-virtual {p1, v1}, Lorg/webrtc/PeerConnection;->getStats(Lorg/webrtc/RTCStatsCollectorCallback;)V
 
-    new-instance v1, Lvx3;
+    return-void
 
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
+    :pswitch_2
+    iget-object v0, p0, Lqr3;->b:Ljava/lang/Object;
+
+    check-cast v0, [Lorg/webrtc/IceCandidate;
+
+    check-cast p1, Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {p1, v0}, Lorg/webrtc/PeerConnection;->removeIceCandidates([Lorg/webrtc/IceCandidate;)Z
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lqr3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lom4;
+
+    check-cast p1, Lorg/webrtc/PeerConnection;
+
+    iget-object p1, v0, Lom4;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, v0, Lom4;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Llwb;
+    check-cast v2, Ljava/lang/String;
 
-    iget-object v2, v2, Llwb;->a:Lg68;
+    iget-object v3, v0, Lom4;->h:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v2}, Lgsd;->k()J
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v3
+    move-result-object v3
 
-    const/4 v9, 0x0
+    check-cast v3, Lzs1;
 
-    const/4 v10, 0x0
+    const/4 v4, 0x0
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v2, v3, v4}, Lom4;->u(Ljava/lang/String;Lzs1;Ljava/util/List;)V
 
-    const/4 v7, 0x0
+    goto :goto_0
 
-    const/4 v8, 0x0
+    :catchall_0
+    move-exception v0
 
-    move-wide v5, p1
+    goto :goto_1
 
-    invoke-direct/range {v1 .. v10}, Lvx3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, Lkma;->v(Lkma;Lxm;)J
-
-    iget-object p1, p0, Lqr3;->b:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkd2;
-
-    sget-object p2, Lde2;->X:Lde2;
-
-    invoke-virtual {p1, v5, v6, p2}, Lkd2;->j(JLde2;)V
-
-    iget-object p1, p0, Lqr3;->c:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lokf;
-
-    invoke-static {v5, v6}, Lmb3;->e(J)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lokf;->f(Ljava/util/Collection;)V
-
-    iget-object p1, p0, Lqr3;->e:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgw0;
-
-    new-instance p2, Lqz3;
-
-    invoke-direct {p2, v5, v6}, Lqz3;-><init>(J)V
-
-    invoke-virtual {p1, p2}, Lgw0;->c(Ljava/lang/Object;)V
+    :cond_0
+    monitor-exit p1
 
     return-void
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :pswitch_4
+    iget-object p1, p0, Lqr3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

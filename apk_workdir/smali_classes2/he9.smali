@@ -2,52 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:[Lwq7;
-
-
-# instance fields
-.field public final a:Lyv4;
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public final clone()Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lxcc;
+    new-instance v0, Lhe9;
 
-    const-class v1, Lhe9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "prefs"
-
-    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Ls6d;->a:Lt6d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lwq7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lhe9;->b:[Lwq7;
-
-    return-void
+    return-object v0
 .end method
 
-.method public constructor <init>(Lyv4;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Lhe9;
 
-    iput-object p1, p0, Lhe9;->a:Lyv4;
+    if-nez v0, :cond_0
 
-    return-void
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    check-cast p1, Lhe9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x164be01
+
+    return v0
 .end method

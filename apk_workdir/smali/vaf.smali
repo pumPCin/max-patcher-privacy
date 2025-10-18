@@ -1,49 +1,66 @@
 .class public final Lvaf;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lur7;
 
-# instance fields
-.field public final synthetic X:Lwaf;
 
-.field public Y:I
+# static fields
+.field public static final a:Lvaf;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:Lxyb;
 
 
 # direct methods
-.method public constructor <init>(Lwaf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lvaf;->X:Lwaf;
+    new-instance v0, Lvaf;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lvaf;->a:Lvaf;
+
+    new-instance v0, Lxyb;
+
+    const-string v1, "kotlin.String"
+
+    sget-object v2, Lvyb;->c:Lvyb;
+
+    invoke-direct {v0, v1, v2}, Lxyb;-><init>(Ljava/lang/String;Lwyb;)V
+
+    sput-object v0, Lvaf;->b:Lxyb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lvaf;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Ld9;->v()Ljava/lang/String;
 
-    iget p1, p0, Lvaf;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvaf;->Y:I
-
-    iget-object p1, p0, Lvaf;->X:Lwaf;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lwaf;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lc54;->a:Lc54;
+    move-result-object p1
 
     return-object p1
+.end method
+
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Lo24;->k(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final d()Lb3e;
+    .locals 1
+
+    sget-object v0, Lvaf;->b:Lxyb;
+
+    return-object v0
 .end method

@@ -1,149 +1,55 @@
 .class public final Lz46;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final synthetic Z:Ll56;
+.field public final c:Liu7;
+
+.field public final d:Liu7;
+
+.field public final e:Lcg7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ll56;)V
-    .locals 0
+.method public constructor <init>(Lcg7;Liu7;Lulf;Ll54;Liu7;)V
+    .locals 1
 
-    iput-object p1, p0, Lz46;->Y:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lz46;->Z:Ll56;
+    const-class v0, Lz46;
 
-    const/4 p1, 0x2
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    iput-object v0, p0, Lz46;->a:Ljava/lang/String;
+
+    check-cast p3, Lqta;
+
+    invoke-virtual {p3}, Lqta;->b()Lk54;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p4}, Lp0;->plus(Li54;)Li54;
+
+    move-result-object p3
+
+    invoke-static {p3}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lz46;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    iput-object p2, p0, Lz46;->c:Liu7;
+
+    iput-object p5, p0, Lz46;->d:Liu7;
+
+    iput-object p1, p0, Lz46;->e:Lcg7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lz46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lz46;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lz46;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lz46;
-
-    iget-object v0, p0, Lz46;->Y:Ljava/lang/Object;
-
-    iget-object v1, p0, Lz46;->Z:Ll56;
-
-    invoke-direct {p1, v0, p2, v1}, Lz46;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ll56;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lz46;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lz46;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    sget-object p1, Ll56;->G0:[Lwq7;
-
-    iget-object p1, p0, Lz46;->Z:Ll56;
-
-    iget-object p1, p1, Ll56;->u0:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt23;
-
-    iput v1, p0, Lz46;->X:I
-
-    check-cast p1, Lu33;
-
-    invoke-virtual {p1, v2, v3, p0}, Lu33;->L(JLk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lda2;
-
-    if-eqz p1, :cond_3
-
-    iget-wide v0, p1, Lda2;->a:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    return-object p1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return-object p1
 .end method

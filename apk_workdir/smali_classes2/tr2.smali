@@ -1,9 +1,9 @@
 .class public final Ltr2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +30,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lus0;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Ltr2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +40,7 @@
 
     check-cast p1, Ltr2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Ltr2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,238 +62,58 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 5
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Ltr2;->X:Ljava/lang/Object;
 
-    check-cast p1, Lqbb;
+    check-cast p1, Lus0;
 
-    iget-object v0, p1, Lqbb;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
 
-    check-cast v0, Lpw2;
+    iget-object v0, p0, Ltr2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    iget-object p1, p1, Lqbb;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->b1()Lzk9;
 
-    check-cast p1, Llud;
+    move-result-object v1
 
-    iget-object v1, p0, Ltr2;->Y:Lone/me/chatscreen/ChatScreen;
-
-    invoke-virtual {v1}, Lx14;->getView()Landroid/view/View;
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_7
+    const-string v3, "SEARCH"
 
-    sget-object v3, Lone/me/chatscreen/ChatScreen;->j1:[Lwq7;
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    move-result v2
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Ls5b;->getRightActions()Li5b;
-
-    move-result-object v3
-
-    sget-object v4, Ld5b;->a:Ld5b;
-
-    invoke-static {v3, v4}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ls5b;->getRightActions()Li5b;
-
-    move-result-object v3
-
-    iget-object v4, v0, Lpw2;->g:Lf5b;
-
-    invoke-static {v3, v4}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
+    iget-object v1, v1, Lzk9;->b:Lx0f;
 
     :cond_0
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    iget-object v4, v0, Lpw2;->g:Lf5b;
+    move-object v4, v3
 
-    invoke-virtual {v3, v4}, Ls5b;->setRightActions(Li5b;)V
+    check-cast v4, Ljava/lang/Boolean;
 
-    :cond_1
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v4, v0, Lpw2;->b:Ljava/lang/CharSequence;
+    move-result-object v4
 
-    invoke-virtual {v3, v4}, Ls5b;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3, v4}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    move-result v3
 
-    move-result-object v3
+    if-eqz v3, :cond_0
 
-    iget-boolean v4, v0, Lpw2;->d:Z
+    invoke-static {v0, p1}, Lone/me/chatscreen/ChatScreen;->N0(Lone/me/chatscreen/ChatScreen;Lus0;)V
 
-    invoke-static {v1, v3, v4}, Lone/me/chatscreen/ChatScreen;->M0(Lone/me/chatscreen/ChatScreen;Ls5b;Z)V
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
-
-    move-result-object v3
-
-    iget-object v4, v0, Lpw2;->c:Loqf;
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ls5b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
-
-    move-result-object v2
-
-    iget-wide v6, v0, Lpw2;->a:J
-
-    iget-object v4, v0, Lpw2;->e:Ljava/lang/String;
-
-    iget-object v5, v0, Lpw2;->f:Ljava/lang/CharSequence;
-
-    iget-object v8, v0, Lpw2;->h:Lvd0;
-
-    new-instance v3, Lj5b;
-
-    const/16 v9, 0x8
-
-    invoke-direct/range {v3 .. v9}, Lj5b;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;JLvd0;I)V
-
-    invoke-virtual {v2, v3}, Ls5b;->setAvatar(Lj5b;)V
-
-    instance-of v0, p1, Liud;
-
-    sget-object v2, Lb1b;->o:Lb1b;
-
-    sget-object v3, Lb1b;->c:Lb1b;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ld1b;->getState()Lb1b;
-
-    move-result-object p1
-
-    if-eq p1, v3, :cond_2
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ld1b;->getState()Lb1b;
-
-    move-result-object p1
-
-    if-ne p1, v2, :cond_7
-
-    :cond_2
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ld1b;->b()V
-
-    goto :goto_0
-
-    :cond_3
-    instance-of v0, p1, Ljud;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ld1b;->getState()Lb1b;
-
-    move-result-object v0
-
-    if-eq v0, v3, :cond_7
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ld1b;->getState()Lb1b;
-
-    move-result-object v0
-
-    if-ne v0, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Lx14;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Ls5b;->f(Z)V
-
-    invoke-virtual {v1}, Lone/me/chatscreen/ChatScreen;->f1()Ld1b;
-
-    move-result-object v0
-
-    check-cast p1, Ljud;
-
-    iget-boolean p1, p1, Ljud;->a:Z
-
-    invoke-virtual {v0, p1}, Ld1b;->setExpandWithAnimation(Z)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Ld1b;->c(Z)V
-
-    goto :goto_0
-
-    :cond_5
-    instance-of p1, p1, Lhud;
-
-    if-eqz p1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_7
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

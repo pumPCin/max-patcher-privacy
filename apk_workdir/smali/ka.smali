@@ -1,19 +1,19 @@
 .class public final Lka;
-.super Lpoe;
+.super Lvpe;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final A(Lb18;)V
+.method public final A(Ly18;)V
     .locals 1
 
-    check-cast p1, Lugg;
+    check-cast p1, Lyhg;
 
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    check-cast v0, Ltbe;
+    check-cast v0, Lcde;
 
-    invoke-virtual {v0, p1}, Ltbe;->setModelItem(Lkbe;)V
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
 
     return-void
 .end method

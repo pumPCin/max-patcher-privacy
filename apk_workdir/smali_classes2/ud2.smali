@@ -1,97 +1,68 @@
 .class public final Lud2;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final l:Lud2;
-
-
 # instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
+.field public c:Lma2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lpf9;)V
+    .locals 0
 
-    new-instance v0, Lud2;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v0 .. v11}, Lud2;-><init>(ZZZZZZZZZZZ)V
-
-    sput-object v0, Lud2;->l:Lud2;
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ZZZZZZZZZZZ)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iput-boolean p1, p0, Lud2;->a:Z
+    const-string v0, "chat"
 
-    iput-boolean p2, p0, Lud2;->b:Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-boolean p3, p0, Lud2;->c:Z
+    move-result p2
 
-    iput-boolean p4, p0, Lud2;->d:Z
+    if-eqz p2, :cond_0
 
-    iput-boolean p5, p0, Lud2;->e:Z
+    invoke-static {p1}, Lma2;->a(Lpf9;)Lma2;
 
-    iput-boolean p6, p0, Lud2;->f:Z
+    move-result-object p1
 
-    iput-boolean p7, p0, Lud2;->g:Z
-
-    iput-boolean p8, p0, Lud2;->h:Z
-
-    iput-boolean p9, p0, Lud2;->i:Z
-
-    iput-boolean p10, p0, Lud2;->j:Z
-
-    iput-boolean p11, p0, Lud2;->k:Z
+    iput-object p1, p0, Lud2;->c:Lma2;
 
     return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lpf9;->y()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lud2;->c:Lma2;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

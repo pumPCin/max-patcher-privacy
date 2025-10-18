@@ -1,75 +1,98 @@
-.class public final Lpx;
-.super Lk14;
+.class public final synthetic Lpx;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final synthetic X:Lx7d;
 
-.field public Y:Ljava/lang/Object;
+.field public final synthetic Y:Lw7d;
 
-.field public Z:Lp6d;
+.field public final synthetic Z:Lx7d;
 
-.field public o:Lvx;
+.field public final synthetic a:Lwx;
 
-.field public r0:Lq6d;
+.field public final synthetic b:Lla2;
 
-.field public s0:Lq6d;
+.field public final synthetic c:J
 
-.field public t0:Lxf2;
+.field public final synthetic o:Lw7d;
 
-.field public u0:J
-
-.field public synthetic v0:Ljava/lang/Object;
-
-.field public final synthetic w0:Lvx;
-
-.field public x0:I
+.field public final synthetic q0:Lgg2;
 
 
 # direct methods
-.method public constructor <init>(Lvx;Lk14;)V
+.method public synthetic constructor <init>(Lwx;Lla2;JLw7d;Lx7d;Lw7d;Lx7d;Lgg2;)V
     .locals 0
 
-    iput-object p1, p0, Lpx;->w0:Lvx;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpx;->a:Lwx;
+
+    iput-object p2, p0, Lpx;->b:Lla2;
+
+    iput-wide p3, p0, Lpx;->c:J
+
+    iput-object p5, p0, Lpx;->o:Lw7d;
+
+    iput-object p6, p0, Lpx;->X:Lx7d;
+
+    iput-object p7, p0, Lpx;->Y:Lw7d;
+
+    iput-object p8, p0, Lpx;->Z:Lx7d;
+
+    iput-object p9, p0, Lpx;->q0:Lgg2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 17
 
-    iput-object p1, p0, Lpx;->v0:Ljava/lang/Object;
+    move-object/from16 v0, p0
 
-    iget p1, p0, Lpx;->x0:I
+    iget-object v1, v0, Lpx;->a:Lwx;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, v1, Lwx;->e:Lng2;
 
-    or-int/2addr p1, v0
+    iget-object v3, v0, Lpx;->b:Lla2;
 
-    iput p1, p0, Lpx;->x0:I
+    iget-wide v5, v3, Lla2;->a:J
 
-    const-wide/16 v5, 0x0
+    iget-object v3, v0, Lpx;->o:Lw7d;
 
-    const-wide/16 v7, 0x0
+    iget v9, v3, Lw7d;->a:I
 
-    iget-object v0, p0, Lpx;->w0:Lvx;
+    iget-object v3, v0, Lpx;->X:Lx7d;
 
-    const-wide/16 v1, 0x0
+    iget-wide v10, v3, Lx7d;->a:J
 
-    const/4 v3, 0x0
+    iget-object v3, v0, Lpx;->Y:Lw7d;
 
-    const/4 v4, 0x0
+    iget v12, v3, Lw7d;->a:I
 
-    move-object v9, p0
+    iget-object v3, v0, Lpx;->Z:Lx7d;
 
-    invoke-virtual/range {v0 .. v9}, Lvx;->e(JIIJJLk14;)Ljava/lang/Object;
+    iget-wide v13, v3, Lx7d;->a:J
 
-    move-result-object p1
+    iget-object v1, v1, Lwx;->b:Ldq4;
 
-    return-object p1
+    const-wide/16 v3, 0x0
+
+    iget-wide v7, v0, Lpx;->c:J
+
+    iget-object v15, v0, Lpx;->q0:Lgg2;
+
+    move-object/from16 v16, v1
+
+    invoke-virtual/range {v2 .. v16}, Lng2;->a(JJJIJIJLgg2;Ldq4;)V
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
 .end method

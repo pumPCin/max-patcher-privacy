@@ -1,238 +1,572 @@
-.class public final Lh2g;
+.class public Lh2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final q:Ls7d;
+# interfaces
+.implements Lhw0;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final A0:Lec7;
 
-.field public b:Ljava/lang/String;
+.field public final B0:Lec7;
 
-.field public c:Lf2g;
+.field public final C0:I
 
-.field public final d:Ls7d;
+.field public final D0:Z
 
-.field public final e:Z
+.field public final E0:Z
 
-.field public final f:J
+.field public final F0:Z
 
-.field public final g:I
+.field public final G0:Ld2g;
 
-.field public final h:Lc28;
+.field public final H0:Lpc7;
 
-.field public final i:Lsnd;
+.field public final X:I
 
-.field public final j:Lpo4;
+.field public final Y:I
 
-.field public k:Ljj4;
+.field public final Z:I
 
-.field public final l:Lll4;
+.field public final a:I
 
-.field public final m:Landroid/os/Looper;
+.field public final b:I
 
-.field public final n:Ley0;
+.field public final c:I
 
-.field public final o:Lyhf;
+.field public final o:I
 
-.field public final p:Lwoe;
+.field public final q0:I
+
+.field public final r0:I
+
+.field public final s0:I
+
+.field public final t0:Z
+
+.field public final u0:Lec7;
+
+.field public final v0:I
+
+.field public final w0:Lec7;
+
+.field public final x0:I
+
+.field public final y0:I
+
+.field public final z0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lf2g;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    const/16 v1, 0x5a
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/16 v2, 0xb4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/16 v3, 0x10e
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v4, Lhb7;->b:Lb36;
-
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1, v0}, Luli;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v1, v0}, Lhb7;->i(I[Ljava/lang/Object;)Ls7d;
-
-    move-result-object v0
-
-    sput-object v0, Lh2g;->q:Ls7d;
+    invoke-direct {v0}, Lf2g;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+.method public constructor <init>(Lf2g;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iget v0, p1, Lf2g;->a:I
 
-    move-result-object v0
+    iput v0, p0, Lh2g;->a:I
 
-    iput-object v0, p0, Lh2g;->a:Landroid/content/Context;
+    iget v0, p1, Lf2g;->b:I
 
-    sget-wide v1, Lj2g;->z:J
+    iput v0, p0, Lh2g;->b:I
 
-    iput-wide v1, p0, Lh2g;->f:J
+    iget v0, p1, Lf2g;->c:I
 
-    const/4 v1, -0x1
+    iput v0, p0, Lh2g;->c:I
 
-    iput v1, p0, Lh2g;->g:I
+    iget v0, p1, Lf2g;->d:I
 
-    sget-object v1, Ls7d;->X:Ls7d;
+    iput v0, p0, Lh2g;->o:I
 
-    new-instance v1, Lsnd;
+    iget v0, p1, Lf2g;->e:I
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lh2g;->X:I
 
-    iput-object v1, p0, Lh2g;->i:Lsnd;
+    iget v0, p1, Lf2g;->f:I
 
-    new-instance v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+    iput v0, p0, Lh2g;->Y:I
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    iget v0, p1, Lf2g;->g:I
 
-    const/4 v2, 0x1
+    iput v0, p0, Lh2g;->Z:I
 
-    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
+    iget v0, p1, Lf2g;->h:I
 
-    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->g:Z
+    iput v0, p0, Lh2g;->q0:I
 
-    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->h:Z
+    iget v0, p1, Lf2g;->i:I
 
-    invoke-virtual {v1}, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->build()Lpo4;
+    iput v0, p0, Lh2g;->r0:I
 
-    move-result-object v1
+    iget v0, p1, Lf2g;->j:I
 
-    iput-object v1, p0, Lh2g;->j:Lpo4;
+    iput v0, p0, Lh2g;->s0:I
 
-    new-instance v1, Ljj4;
+    iget-boolean v0, p1, Lf2g;->k:Z
 
-    invoke-direct {v1, v0}, Ljj4;-><init>(Landroid/content/Context;)V
+    iput-boolean v0, p0, Lh2g;->t0:Z
 
-    new-instance v0, Ljj4;
+    iget-object v0, p1, Lf2g;->l:Lec7;
 
-    invoke-direct {v0, v1}, Ljj4;-><init>(Ljj4;)V
+    iput-object v0, p0, Lh2g;->u0:Lec7;
 
-    iput-object v0, p0, Lh2g;->k:Ljj4;
+    iget v0, p1, Lf2g;->m:I
 
-    new-instance v0, Lll4;
+    iput v0, p0, Lh2g;->v0:I
 
-    invoke-direct {v0}, Lll4;-><init>()V
+    iget-object v0, p1, Lf2g;->n:Lec7;
 
-    iput-object v0, p0, Lh2g;->l:Lll4;
+    iput-object v0, p0, Lh2g;->w0:Lec7;
 
-    invoke-static {}, Ljhg;->z()Landroid/os/Looper;
+    iget v0, p1, Lf2g;->o:I
 
-    move-result-object v0
+    iput v0, p0, Lh2g;->x0:I
 
-    iput-object v0, p0, Lh2g;->m:Landroid/os/Looper;
+    iget v0, p1, Lf2g;->p:I
 
-    sget-object v1, Ley0;->o:Ley0;
+    iput v0, p0, Lh2g;->y0:I
 
-    iput-object v1, p0, Lh2g;->n:Ley0;
+    iget v0, p1, Lf2g;->q:I
 
-    sget-object v1, Lyhf;->a:Lyhf;
+    iput v0, p0, Lh2g;->z0:I
 
-    iput-object v1, p0, Lh2g;->o:Lyhf;
+    iget-object v0, p1, Lf2g;->r:Lec7;
 
-    new-instance v3, Lc28;
+    iput-object v0, p0, Lh2g;->A0:Lec7;
 
-    new-instance v4, Lk1g;
+    iget-object v0, p1, Lf2g;->s:Lec7;
 
-    const/4 v5, 0x3
+    iput-object v0, p0, Lh2g;->B0:Lec7;
 
-    invoke-direct {v4, v5}, Lk1g;-><init>(I)V
+    iget v0, p1, Lf2g;->t:I
 
-    invoke-direct {v3, v0, v1, v4}, Lc28;-><init>(Landroid/os/Looper;Lyhf;Lz18;)V
+    iput v0, p0, Lh2g;->C0:I
 
-    iput-object v3, p0, Lh2g;->h:Lc28;
+    iget-boolean v0, p1, Lf2g;->u:Z
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput-boolean v0, p0, Lh2g;->D0:Z
 
-    const/16 v1, 0x23
+    iget-boolean v0, p1, Lf2g;->v:Z
 
-    if-lt v0, v1, :cond_0
+    iput-boolean v0, p0, Lh2g;->E0:Z
 
-    iput-boolean v2, p0, Lh2g;->e:Z
+    iget-boolean v0, p1, Lf2g;->w:Z
 
-    new-instance v0, Lwoe;
+    iput-boolean v0, p0, Lh2g;->F0:Z
 
-    const/16 v1, 0xd
+    iget-object v0, p1, Lf2g;->x:Ld2g;
 
-    invoke-direct {v0, v1, p1}, Lwoe;-><init>(ILjava/lang/Object;)V
+    iput-object v0, p0, Lh2g;->G0:Ld2g;
 
-    iput-object v0, p0, Lh2g;->p:Lwoe;
+    iget-object p1, p1, Lf2g;->y:Lpc7;
 
-    :cond_0
-    sget-object p1, Lh2g;->q:Ls7d;
-
-    iput-object p1, p0, Lh2g;->d:Ls7d;
+    iput-object p1, p0, Lh2g;->H0:Lpc7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    check-cast p1, Lh2g;
+
+    iget v2, p0, Lh2g;->a:I
+
+    iget v3, p1, Lh2g;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->b:I
+
+    iget v3, p1, Lh2g;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->c:I
+
+    iget v3, p1, Lh2g;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->o:I
+
+    iget v3, p1, Lh2g;->o:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->X:I
+
+    iget v3, p1, Lh2g;->X:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->Y:I
+
+    iget v3, p1, Lh2g;->Y:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->Z:I
+
+    iget v3, p1, Lh2g;->Z:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->q0:I
+
+    iget v3, p1, Lh2g;->q0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lh2g;->t0:Z
+
+    iget-boolean v3, p1, Lh2g;->t0:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->r0:I
+
+    iget v3, p1, Lh2g;->r0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->s0:I
+
+    iget v3, p1, Lh2g;->s0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lh2g;->u0:Lec7;
+
+    iget-object v3, p1, Lh2g;->u0:Lec7;
+
+    invoke-virtual {v2, v3}, Lec7;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v2, p0, Lh2g;->v0:I
+
+    iget v3, p1, Lh2g;->v0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lh2g;->w0:Lec7;
+
+    iget-object v3, p1, Lh2g;->w0:Lec7;
+
+    invoke-virtual {v2, v3}, Lec7;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v2, p0, Lh2g;->x0:I
+
+    iget v3, p1, Lh2g;->x0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->y0:I
+
+    iget v3, p1, Lh2g;->y0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lh2g;->z0:I
+
+    iget v3, p1, Lh2g;->z0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lh2g;->A0:Lec7;
+
+    iget-object v3, p1, Lh2g;->A0:Lec7;
+
+    invoke-virtual {v2, v3}, Lec7;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lh2g;->B0:Lec7;
+
+    iget-object v3, p1, Lh2g;->B0:Lec7;
+
+    invoke-virtual {v2, v3}, Lec7;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v2, p0, Lh2g;->C0:I
+
+    iget v3, p1, Lh2g;->C0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lh2g;->D0:Z
+
+    iget-boolean v3, p1, Lh2g;->D0:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lh2g;->E0:Z
+
+    iget-boolean v3, p1, Lh2g;->E0:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lh2g;->F0:Z
+
+    iget-boolean v3, p1, Lh2g;->F0:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lh2g;->G0:Ld2g;
+
+    iget-object v3, p1, Lh2g;->G0:Ld2g;
+
+    invoke-virtual {v2, v3}, Ld2g;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lh2g;->H0:Lpc7;
+
+    iget-object p1, p1, Lh2g;->H0:Lpc7;
+
+    invoke-virtual {v2, p1}, Lpc7;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public hashCode()I
     .locals 3
 
-    invoke-static {p1}, Ler9;->h(Ljava/lang/String;)I
+    iget v0, p0, Lh2g;->a:I
+
+    const/16 v1, 0x1f
+
+    add-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->b:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->c:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->o:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->X:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->Y:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->Z:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->q0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lh2g;->t0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->r0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->s0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lh2g;->u0:Lec7;
+
+    invoke-virtual {v2}, Lec7;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget v0, p0, Lh2g;->v0:I
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lh2g;->w0:Lec7;
+
+    invoke-virtual {v0}, Lec7;->hashCode()I
 
     move-result v0
 
-    iget-object v1, p0, Lh2g;->l:Lll4;
+    add-int/2addr v0, v2
 
-    iget-object v1, v1, Lll4;->a:Llw3;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1, v0}, Llw3;->a(I)Ls7d;
+    iget v2, p0, Lh2g;->x0:I
 
-    move-result-object v0
+    add-int/2addr v0, v2
 
-    invoke-virtual {v0, p1}, Lhb7;->contains(Ljava/lang/Object;)Z
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->y0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lh2g;->z0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lh2g;->A0:Lec7;
+
+    invoke-virtual {v2}, Lec7;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lh2g;->B0:Lec7;
+
+    invoke-virtual {v0}, Lec7;->hashCode()I
 
     move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    add-int/2addr v0, v2
 
-    const-string v2, "Unsupported sample MIME type "
+    mul-int/2addr v0, v1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lh2g;->C0:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v0, v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    move-result-object p1
+    iget-boolean v2, p0, Lh2g;->D0:Z
 
-    invoke-static {p1, v0}, Lgfi;->f(Ljava/lang/Object;Z)V
+    add-int/2addr v0, v2
 
-    return-void
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lh2g;->E0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lh2g;->F0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lh2g;->G0:Ld2g;
+
+    iget-object v2, v2, Ld2g;->a:Lic7;
+
+    invoke-virtual {v2}, Lic7;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lh2g;->H0:Lpc7;
+
+    invoke-virtual {v0}, Lpc7;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method

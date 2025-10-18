@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lvh4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -105,13 +105,13 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ln7e;->f([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {v1}, Lu8e;->f([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lki4;)V
 
     return-object v0
 .end method
@@ -121,11 +121,11 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
-    sget-object v1, Lca5;->a:Lca5;
+    sget-object v1, Lua5;->a:Lua5;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lki4;)V
 
     return-object v0
 .end method
@@ -137,7 +137,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->getEntries()Led5;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->getEntries()Lyd5;
 
     move-result-object v1
 
@@ -186,7 +186,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
+    invoke-direct {p1, v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lki4;)V
 
     return-object p1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lu;
-.super Lb4a;
+.super Le5a;
 .source "SourceFile"
 
 
@@ -11,9 +11,9 @@
 .method public constructor <init>(J)V
     .locals 1
 
-    sget-object v0, Lzag;->a:Lzag;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-direct {p0, v0}, Lb4a;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
     iput-wide p1, p0, Lu;->b:J
 
@@ -78,7 +78,7 @@
 
     iget-wide v2, p0, Lu;->b:J
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

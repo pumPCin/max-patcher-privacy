@@ -1,11 +1,11 @@
-.class public interface abstract Ly57;
-.super Ljava/lang/Object;
+.class public final Ly57;
+.super Lyq5;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
 
+# instance fields
+.field public d:J
 
-# virtual methods
-.method public abstract L(Lq57;Landroid/os/Bundle;)V
-.end method
+.field public e:J
+
+.field public f:J

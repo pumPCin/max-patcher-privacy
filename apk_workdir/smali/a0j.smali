@@ -4,68 +4,89 @@
 
 
 # direct methods
-.method public static final a(Lzx5;)Ltjd;
-    .locals 9
-
-    sget v0, Lb35;->o:I
-
-    sget-object v0, Lg35;->c:Lg35;
-
-    const-wide/16 v1, 0x12c
-
-    invoke-static {v1, v2, v0}, Lsyi;->f(JLg35;)J
-
-    move-result-wide v6
-
-    new-instance v5, Lr6d;
-
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lx9i;->a()Lnm7;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lnm7;->D()Z
-
-    iput-object v0, v5, Lr6d;->a:Ljava/lang/Object;
-
-    new-instance v0, Lpr;
-
-    const/16 v1, 0xc
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v5, v2, v1}, Lpr;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v4, Lnz5;
-
-    invoke-direct {v4, p0, v0}, Lnz5;-><init>(Lzx5;Lgi6;)V
-
-    new-instance v3, Lqze;
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v3 .. v8}, Lqze;-><init>(Lnz5;Lr6d;JLkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Ltjd;
-
-    invoke-direct {p0, v3}, Ltjd;-><init>(Lei6;)V
-
-    return-object p0
-.end method
-
-.method public static final b(Lwbg;)V
+.method public static final a(La0j;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
     .locals 2
 
-    new-instance v0, Llr4;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x2
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
-    invoke-direct {v0, v1}, Llr4;-><init>(I)V
+    move-result p0
 
-    const-class v1, Lgf4;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
+    :goto_0
+    if-ge v0, p0, :cond_1
 
-    return-void
+    invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public abstract b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.end method
+
+.method public abstract c(I)F
+.end method
+
+.method public abstract d(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.end method
+
+.method public abstract e()I
+.end method
+
+.method public abstract f()I
+.end method
+
+.method public abstract g()I
+.end method
+
+.method public abstract h()I
+.end method
+
+.method public abstract i(Landroid/view/View;)I
+.end method
+
+.method public abstract j(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)I
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l(F)Z
+.end method
+
+.method public abstract m(Landroid/view/View;)Z
+.end method
+
+.method public abstract n(FF)Z
+.end method
+
+.method public abstract o(Landroid/view/View;F)Z
+.end method
+
+.method public abstract p(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.end method
+
+.method public abstract q(Landroid/view/ViewGroup$MarginLayoutParams;II)V
 .end method

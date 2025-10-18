@@ -1,83 +1,64 @@
-.class public abstract Lb34;
+.class public final Lb34;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf34;
+
 
 # static fields
-.field public static final a:Ljava/util/Set;
-
-.field public static final b:Ljava/util/Set;
-
-.field public static final c:Ljava/util/Set;
-
-.field public static final d:Ljava/util/Set;
+.field public static final a:Lb34;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    sget-object v0, Lmz1;->Y:Lmz1;
+    new-instance v0, Lb34;
 
-    sget-object v1, Lmz1;->Z:Lmz1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v2, Lmz1;->o:Lmz1;
-
-    sget-object v3, Lmz1;->X:Lmz1;
-
-    invoke-static {v2, v3, v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lb34;->a:Ljava/util/Set;
-
-    sget-object v0, Lnz1;->o:Lnz1;
-
-    sget-object v1, Lnz1;->a:Lnz1;
-
-    invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lb34;->b:Ljava/util/Set;
-
-    sget-object v0, Llz1;->X:Llz1;
-
-    sget-object v1, Llz1;->o:Llz1;
-
-    sget-object v2, Llz1;->a:Llz1;
-
-    invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lb34;->c:Ljava/util/Set;
-
-    invoke-static {v0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lb34;->d:Ljava/util/Set;
+    sput-object v0, Lb34;->a:Lb34;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lb34;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x4c87b195
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ClickMute"
+
+    return-object v0
 .end method

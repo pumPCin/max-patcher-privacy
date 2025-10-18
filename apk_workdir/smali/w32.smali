@@ -1,44 +1,64 @@
 .class public final Lw32;
-.super Ljava/lang/Object;
+.super Lqh3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
 # instance fields
-.field public final a:Ljava/util/List;
+.field private volatile synthetic _resumed$volatile:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lw32;
 
-    if-eqz p1, :cond_0
+    const-string v1, "_resumed$volatile"
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    sput-object v0, Lw32;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    new-instance v0, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+.method public constructor <init>(Lo32;Ljava/lang/Throwable;Z)V
+    .locals 2
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    if-nez p2, :cond_0
+
+    new-instance p2, Ljava/util/concurrent/CancellationException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Continuation "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " was cancelled normally"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lw32;->a:Ljava/util/List;
-
-    return-void
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-direct {p0, p2, p3}, Lqh3;-><init>(Ljava/lang/Throwable;Z)V
 
-    const-string v0, "Cannot set an empty CaptureStage list."
+    const/4 p1, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lw32;->_resumed$volatile:I
 
-    throw p1
+    return-void
 .end method

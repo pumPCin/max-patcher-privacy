@@ -1,148 +1,102 @@
-.class public final Lgwh;
-.super Lf4;
+.class public abstract Lgwh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgwh;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:I
+.field public a:Ljava/lang/Boolean;
 
 .field public b:Z
 
+.field public final synthetic c:Lcom/google/android/gms/common/internal/a;
+
+.field public final d:I
+
+.field public final e:Landroid/os/Bundle;
+
+.field public final synthetic f:Lcom/google/android/gms/common/internal/a;
+
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
+    .locals 1
 
-    new-instance v0, Lqvh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xa
+    iput-object p1, p0, Lgwh;->f:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v0, v1}, Lqvh;-><init>(I)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    sput-object v0, Lgwh;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p1, p0, Lgwh;->c:Lcom/google/android/gms/common/internal/a;
+
+    iput-object v0, p0, Lgwh;->a:Ljava/lang/Boolean;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lgwh;->b:Z
+
+    iput p2, p0, Lgwh;->d:I
+
+    iput-object p3, p0, Lgwh;->e:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lgwh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgwh;
-
-    iget v1, p0, Lgwh;->a:I
-
-    iget v3, p1, Lgwh;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Lgwh;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iget-boolean p1, p1, Lgwh;->b:Z
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+.method public abstract a(Lrp3;)V
 .end method
 
-.method public final hashCode()I
+.method public abstract b()Z
+.end method
+
+.method public final c()V
     .locals 2
 
-    iget v0, p0, Lgwh;->a:I
+    monitor-enter p0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    :try_start_0
+    iput-object v0, p0, Lgwh;->a:Ljava/lang/Boolean;
 
-    iget-boolean v1, p0, Lgwh;->b:Z
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, p0, Lgwh;->c:Lcom/google/android/gms/common/internal/a;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->t0:Ljava/util/ArrayList;
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    monitor-enter v0
 
-    move-result-object v0
+    :try_start_1
+    iget-object v1, p0, Lgwh;->c:Lcom/google/android/gms/common/internal/a;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    iget-object v1, v1, Lcom/google/android/gms/common/internal/a;->t0:Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    iget v0, p0, Lgwh;->a:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x4
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Lgwh;->b:Z
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
 .end method

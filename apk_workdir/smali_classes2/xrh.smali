@@ -1,43 +1,67 @@
-.class public final Lxrh;
+.class public abstract synthetic Lxrh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/ArrayList;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lv7b;->values()[Lv7b;
 
-    iput-object p1, p0, Lxrh;->a:Ljava/lang/String;
+    move-result-object v0
 
-    const/4 p1, 0x0
+    array-length v0, v0
 
-    iput-object p1, p0, Lxrh;->b:Ljava/lang/String;
+    new-array v0, v0, [I
 
-    new-instance p1, Ljava/util/ArrayList;
+    const/4 v1, 0x1
 
-    const/4 v0, 0x7
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p1, p0, Lxrh;->c:Ljava/util/ArrayList;
+    :catch_0
+    const/4 v2, 0x2
 
-    new-instance p1, Ljava/util/ArrayList;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    :catch_1
+    const/4 v1, 0x3
 
-    iput-object p1, p0, Lxrh;->d:Ljava/util/ArrayList;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lxrh;->a:[I
 
     return-void
 .end method

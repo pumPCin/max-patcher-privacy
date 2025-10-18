@@ -1,80 +1,108 @@
 .class public final Lu20;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lwh5;
-
-.field public final b:Landroid/os/Handler;
-
-.field public final synthetic c:Lae;
+.field public final a:Lt20;
 
 
 # direct methods
-.method public constructor <init>(Lae;Landroid/os/Handler;Lwh5;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x6
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x7
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lt20;)V
     .locals 0
 
-    iput-object p1, p0, Lu20;->c:Lae;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
-
-    iput-object p2, p0, Lu20;->b:Landroid/os/Handler;
-
-    iput-object p3, p0, Lu20;->a:Lwh5;
+    iput-object p1, p0, Lu20;->a:Lt20;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const-string p1, "android.media.AUDIO_BECOMING_NOISY"
+    instance-of v0, p1, Lu20;
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object p2
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return p1
+
+    :cond_0
+    check-cast p1, Lu20;
+
+    iget-object v0, p0, Lu20;->a:Lt20;
+
+    iget-object p1, p1, Lu20;->a:Lt20;
+
+    invoke-virtual {v0, p1}, Lt20;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lu20;->b:Landroid/os/Handler;
-
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
+    return p1
 .end method
 
-.method public final run()V
-    .locals 4
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Lu20;->c:Lae;
+    iget-object v0, p0, Lu20;->a:Lt20;
 
-    iget-boolean v0, v0, Lae;->b:Z
+    invoke-virtual {v0}, Lt20;->hashCode()I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    iget-object v0, p0, Lu20;->a:Lwh5;
+    return v0
+.end method
 
-    iget-object v0, v0, Lwh5;->a:Lci5;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    const/4 v1, -0x1
+    iget-object v0, p0, Lu20;->a:Lt20;
 
-    const/4 v2, 0x3
+    invoke-virtual {v0}, Lt20;->toString()Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2, v3}, Lci5;->h1(IIZ)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

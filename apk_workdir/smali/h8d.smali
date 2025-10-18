@@ -1,27 +1,73 @@
-.class public abstract Lh8d;
+.class public final Lh8d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Li8d;
+
+
 # direct methods
-.method public static a(Ljava/lang/Object;)I
+.method public constructor <init>(Li8d;)V
     .locals 0
 
-    check-cast p0, Landroid/app/RemoteInput;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
+    iput-object p1, p0, Lh8d;->a:Li8d;
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
-    .locals 0
+.method public static a(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/app/RemoteInput$Builder;->setEditChoicesBeforeSending(I)Landroid/app/RemoteInput$Builder;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Error: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", data: "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    const-string p1, "MediaRouteProviderProxy"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Landroid/os/Bundle;)V
+    .locals 2
+
+    const-string v0, "groupableTitle"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lh8d;->a:Li8d;
+
+    iput-object v0, v1, Li8d;->g:Ljava/lang/String;
+
+    const-string v0, "transferableTitle"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v1, Li8d;->h:Ljava/lang/String;
+
+    return-void
 .end method

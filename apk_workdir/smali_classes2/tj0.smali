@@ -1,134 +1,62 @@
-.class public final synthetic Ltj0;
-.super Ljava/lang/Object;
+.class public Ltj0;
+.super Luj0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltwa;
+.field public final b:Lzlf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltwa;I)V
+.method public constructor <init>(JLzlf;)V
     .locals 0
 
-    iput p2, p0, Ltj0;->a:I
+    .line 2
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    iput-object p1, p0, Ltj0;->b:Ltwa;
+    .line 3
+    iput-object p3, p0, Ltj0;->b:Lzlf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method public constructor <init>(Lzlf;)V
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    .line 1
+    invoke-direct {p0, v0, v1, p1}, Ltj0;-><init>(JLzlf;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public toString()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Ltj0;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "BaseErrorEvent{error="
 
-    iget-object v0, p0, Ltj0;->b:Ltwa;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Luj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v1, p0, Ltj0;->b:Lzlf;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", requestId="
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    iget-wide v1, p0, Luj0;->a:J
 
-    if-eqz v1, :cond_0
+    const/16 v3, 0x7d
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Likg;
-
-    invoke-virtual {v1}, Likg;->c()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltj0;->b:Ltwa;
-
-    iget-object v0, v0, Luj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_1
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Likg;
-
-    iget-object v2, v1, Likg;->e:Ljava/lang/String;
-
-    sget-object v3, Lndi;->a:Lkwa;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v4, Lf88;->o:Lf88;
-
-    invoke-virtual {v3, v4}, Lkwa;->b(Lf88;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    const-string v5, "Player autoplay. onMediaProcessingFinished."
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_2
-    const/4 v2, 0x0
-
-    iput-boolean v2, v1, Likg;->t:Z
-
-    iget-object v3, v1, Likg;->f:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v1, v3, v2}, Likg;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
-
-    goto :goto_1
-
-    :cond_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

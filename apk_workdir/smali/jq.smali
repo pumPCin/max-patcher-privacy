@@ -1,7 +1,13 @@
 .class public abstract Ljq;
-.super Landroid/app/Service;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# direct methods
+.method public static a()I
+    .locals 1
+
+    const/16 v0, 0x200
+
+    return v0
+.end method

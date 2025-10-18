@@ -1,159 +1,185 @@
 .class public final Lxsf;
-.super Lsyg;
+.super Landroid/graphics/drawable/DrawableWrapper;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lwq7;
+# interfaces
+.implements Lwsf;
+.implements Landroid/graphics/drawable/Animatable;
 
 
 # instance fields
-.field public final b:Lsze;
-
-.field public final c:Lpzd;
-
-.field public final o:Ljava/util/List;
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    .locals 1
 
-    new-instance v0, Lc0a;
+    sget v0, Lw0b;->S:I
 
-    const-string v1, "loadJob"
+    invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    const-string v2, "getLoadJob()Lkotlinx/coroutines/Job;"
+    iput v0, p0, Lxsf;->a:I
 
-    const-class v3, Lxsf;
+    if-eqz p2, :cond_0
 
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    sget-object p1, Ll05;->s0:Lk82;
 
-    sget-object v1, Ls6d;->a:Lt6d;
+    invoke-virtual {p1, p2}, Lk82;->e(Landroid/content/Context;)Ll05;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Ll05;->l()Lv5b;
 
-    new-array v1, v1, [Lwq7;
+    move-result-object p1
 
-    const/4 v2, 0x0
+    invoke-interface {p1, v0}, Lv5b;->d(I)I
 
-    aput-object v0, v1, v2
+    move-result p1
 
-    sput-object v1, Lxsf;->X:[Lwq7;
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Lcua;)V
-    .locals 7
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+# virtual methods
+.method public final isRunning()Z
+    .locals 2
 
-    sget-object v0, Ls95;->a:Ls95;
-
-    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lxsf;->b:Lsze;
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    invoke-static {}, Lnvi;->a()Lpzd;
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/Animatable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onThemeChanged(Lv5b;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lxsf;->c:Lpzd;
+    instance-of v0, v0, Lwsf;
 
-    invoke-virtual {p1}, Lcua;->d()Ljava/util/concurrent/ExecutorService;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    new-instance v2, Lqbb;
+    move-result-object v0
 
-    const-string v3, "single"
+    instance-of v1, v0, Lwsf;
 
-    invoke-direct {v2, v3, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    iget-object v1, p1, Lcua;->k:Lif5;
+    check-cast v0, Lwsf;
 
-    sget-object v3, Lcua;->p:[Lwq7;
+    goto :goto_0
 
-    const/4 v4, 0x5
+    :cond_0
+    const/4 v0, 0x0
 
-    aget-object v4, v3, v4
+    :goto_0
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p1, v1}, Lcua;->e(Lif5;)Ljava/util/concurrent/ExecutorService;
+    invoke-interface {v0, p1}, Lwsf;->onThemeChanged(Lv5b;)V
 
-    move-result-object v1
+    return-void
 
-    new-instance v4, Lqbb;
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const-string v5, "trnsmt"
+    move-result-object v0
 
-    invoke-direct {v4, v5, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v0, :cond_2
 
-    iget-object v1, p1, Lcua;->j:Lif5;
+    iget v1, p0, Lxsf;->a:I
 
-    const/4 v5, 0x4
+    invoke-interface {p1, v1}, Lv5b;->d(I)I
 
-    aget-object v5, v3, v5
+    move-result p1
 
-    invoke-virtual {p1, v1}, Lcua;->e(Lif5;)Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    move-result-object v1
+    :cond_2
+    return-void
+.end method
 
-    new-instance v5, Lqbb;
+.method public final start()V
+    .locals 2
 
-    const-string v6, "net"
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v5, v6, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object v1, p1, Lcua;->i:Lif5;
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    const/4 v6, 0x3
+    if-eqz v1, :cond_0
 
-    aget-object v3, v3, v6
+    check-cast v0, Landroid/graphics/drawable/Animatable;
 
-    invoke-virtual {p1, v1}, Lcua;->e(Lif5;)Ljava/util/concurrent/ExecutorService;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance v1, Lqbb;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    const-string v3, "single-low"
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
 
-    invoke-direct {v1, v3, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_1
+    return-void
+.end method
 
-    filled-new-array {v2, v4, v5, v1}, [Lqbb;
+.method public final stop()V
+    .locals 2
 
-    move-result-object p1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v0
 
-    move-result-object p1
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    iput-object p1, p0, Lxsf;->o:Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    new-instance p1, Lwsf;
+    check-cast v0, Landroid/graphics/drawable/Animatable;
 
-    const/4 v1, 0x0
+    goto :goto_0
 
-    invoke-direct {p1, p0, v1}, Lwsf;-><init>(Lxsf;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x1
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-static {p0, v1, p1, v2}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
 
-    move-result-object p1
-
-    sget-object v1, Lxsf;->X:[Lwq7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, p0, v1, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
+    :cond_1
     return-void
 .end method

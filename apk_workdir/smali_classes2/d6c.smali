@@ -1,164 +1,138 @@
 .class public final Ld6c;
-.super Lg6c;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # instance fields
-.field public final a:Ljqf;
+.field public final synthetic X:I
 
-.field public final b:Ljqf;
+.field public synthetic Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public final c:Ljava/util/List;
+.field public synthetic Z:Lv5b;
 
 
 # direct methods
-.method public constructor <init>(Ljqf;Ljqf;Ljava/util/List;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ld6c;->X:I
 
-    iput-object p1, p0, Ld6c;->a:Ljqf;
-
-    iput-object p2, p0, Ld6c;->b:Ljqf;
-
-    iput-object p3, p0, Ld6c;->c:Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ld6c;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ld6c;
-
-    iget-object v0, p0, Ld6c;->a:Ljqf;
-
-    iget-object v1, p1, Ld6c;->a:Ljqf;
-
-    invoke-virtual {v0, v1}, Ljqf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ld6c;->b:Ljqf;
-
-    iget-object v1, p1, Ld6c;->b:Ljqf;
-
-    invoke-virtual {v0, v1}, Ljqf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ld6c;->c:Ljava/util/List;
-
-    iget-object p1, p1, Ld6c;->c:Ljava/util/List;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Ld6c;->a:Ljqf;
+    iget v0, p0, Ld6c;->X:I
 
-    iget v0, v0, Ljqf;->c:I
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    check-cast p2, Lv5b;
 
-    move-result v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    mul-int/2addr v0, v1
+    new-instance v0, Ld6c;
 
-    iget-object v2, p0, Ld6c;->b:Ljqf;
+    const/4 v1, 0x3
 
-    iget v2, v2, Ljqf;->c:I
+    const/4 v2, 0x1
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-direct {v0, v1, p3, v2}, Ld6c;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result v0
+    iput-object p1, v0, Ld6c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    iget-object v1, p0, Ld6c;->c:Ljava/util/List;
+    iput-object p2, v0, Ld6c;->Z:Lv5b;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result v1
+    invoke-virtual {v0, p1}, Ld6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-int/2addr v1, v0
+    return-object p1
 
-    return v1
+    :pswitch_0
+    new-instance v0, Ld6c;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Ld6c;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Ld6c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iput-object p2, v0, Ld6c;->Z:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Ld6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Ld6c;->X:I
 
-    const-string v1, "ShowBottomSheet(title="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Ld6c;->a:Ljqf;
+    iget-object p1, p0, Ld6c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ld6c;->Z:Lv5b;
 
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ld6c;->b:Ljqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Ld6c;->c:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lwx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lff0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ld6c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v0, p0, Ld6c;->Z:Lv5b;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

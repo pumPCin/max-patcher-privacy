@@ -1,188 +1,462 @@
 .class public final Lyc5;
-.super Lsyg;
+.super Lv6d;
 .source "SourceFile"
-
-# interfaces
-.implements Lln3;
-
-
-# static fields
-.field public static final synthetic t0:[Lwq7;
 
 
 # instance fields
-.field public final X:Lde5;
+.field public final synthetic a:I
 
-.field public final Y:Lde5;
+.field public final b:Ljava/lang/Object;
 
-.field public final Z:Lde5;
+.field public final c:Ljava/lang/Object;
 
-.field public final b:Llt7;
-
-.field public final c:Llt7;
-
-.field public final o:Llt7;
-
-.field public final r0:Lpzd;
-
-.field public s0:Z
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lfsd;Landroidx/recyclerview/widget/RecyclerView;Lt6d;)V
+    .locals 1
 
-    new-instance v0, Lc0a;
+    const/4 v0, 0x1
 
-    const-string v1, "codeJob"
+    iput v0, p0, Lyc5;->a:I
 
-    const-string v2, "getCodeJob()Lkotlinx/coroutines/Job;"
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v3, Lyc5;
+    .line 2
+    iput-object p1, p0, Lyc5;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p2, p0, Lyc5;->c:Ljava/lang/Object;
 
-    sget-object v1, Ls6d;->a:Lt6d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lwq7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lyc5;->t0:[Lwq7;
+    iput-object p3, p0, Lyc5;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
+    .locals 2
 
-    sget-object v0, Lfde;->a:Lfde;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iput v0, p0, Lyc5;->a:I
 
-    move-result-object v1
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v2, Ll83;
+    .line 4
+    iput-object p1, p0, Lyc5;->d:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    .line 5
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Lfde;->a()Llt7;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    move-result-object v2
+    iput-object v0, p0, Lyc5;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    .line 6
+    new-instance v0, Lgk6;
 
-    move-result-object v0
+    const/4 v1, 0x7
 
-    const-class v3, Lye5;
+    invoke-direct {v0, p0, v1, p1}, Lgk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lsyg;-><init>()V
-
-    iput-object v1, p0, Lyc5;->b:Llt7;
-
-    iput-object v2, p0, Lyc5;->c:Llt7;
-
-    iput-object v0, p0, Lyc5;->o:Llt7;
-
-    new-instance v0, Lde5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lde5;-><init>(I)V
-
-    iput-object v0, p0, Lyc5;->X:Lde5;
-
-    new-instance v0, Lde5;
-
-    invoke-direct {v0, v1}, Lde5;-><init>(I)V
-
-    iput-object v0, p0, Lyc5;->Y:Lde5;
-
-    new-instance v0, Lde5;
-
-    invoke-direct {v0, v1}, Lde5;-><init>(I)V
-
-    iput-object v0, p0, Lyc5;->Z:Lde5;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyc5;->r0:Lpzd;
+    .line 7
+    iput-object v0, p0, Lyc5;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 3
+.method public a()V
+    .locals 1
 
-    iget-object v0, p0, Lyc5;->c:Llt7;
+    iget v0, p0, Lyc5;->a:I
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyc5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b(II)V
+    .locals 5
+
+    iget p1, p0, Lyc5;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lc98;->o:Lc98;
+
+    const-class p2, Lyc5;
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lqkf;
+    iget-object v1, p0, Lyc5;->d:Ljava/lang/Object;
 
-    check-cast v0, Losa;
+    check-cast v1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-virtual {v0}, Losa;->a()Lv44;
+    sget-object v2, Ltei;->a:Lmxa;
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lyc5;->o:Llt7;
+    if-nez v2, :cond_0
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, p1}, Lmxa;->b(Lc98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v1
+
+    const-string v4, "onItemRangeInserted start. isComputingLayout:"
+
+    invoke-static {v4, v1}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lye5;
+    invoke-virtual {v2, p1, v0, v1, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance v2, Lkk;
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lyc5;->h()V
 
-    invoke-direct {v2, v1}, Lkk;-><init>(Lye5;)V
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lp0;->plus(Lt44;)Lt44;
+    move-result-object p2
+
+    iget-object v0, p0, Lyc5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    sget-object v1, Ltei;->a:Lmxa;
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1, p1}, Lmxa;->b(Lc98;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v0
+
+    const-string v2, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v2, v0}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lxc5;
+    invoke-virtual {v1, p1, p2, v0, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(IILjava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lyc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lv6d;->c(IILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyc5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(II)V
+    .locals 4
+
+    iget v0, p0, Lyc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lc98;->o:Lc98;
+
+    iget-object v1, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast v1, Lfsd;
+
+    const/4 v2, 0x1
+
+    if-ne p2, v2, :cond_3
+
+    iget-object p2, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {v1, p2, p1}, Lfsd;->d(Lfsd;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfsd;
+
+    iget-object p1, p1, Lfsd;->d:Ljava/lang/String;
+
+    iget-object p2, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Ltei;->a:Lmxa;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, v2}, Lxc5;-><init>(Lyc5;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    if-nez v1, :cond_0
 
-    iget-object p1, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    goto :goto_0
 
-    sget-object v2, Le54;->b:Le54;
+    :cond_0
+    invoke-virtual {v1, v0}, Lmxa;->b(Lc98;)Z
 
-    invoke-static {p1, v0, v2, v1}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
+    move-result v3
 
-    move-result-object p1
+    if-eqz v3, :cond_1
 
-    sget-object v0, Lyc5;->t0:[Lwq7;
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
 
-    const/4 v1, 0x0
+    move-result p2
 
-    aget-object v0, v0, v1
+    const-string v3, "onItemRangeInserted start. isComputingLayout:"
 
-    iget-object v1, p0, Lyc5;->r0:Lpzd;
+    invoke-static {v3, p2}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
 
-    invoke-virtual {v1, p0, v0, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2, v2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfsd;
+
+    iget-object p2, p0, Lyc5;->d:Ljava/lang/Object;
+
+    check-cast p2, Lt6d;
+
+    invoke-static {p1, p2}, Lfsd;->e(Lfsd;Lt6d;)V
+
+    iget-object p1, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfsd;
+
+    iget-object p1, p1, Lfsd;->d:Ljava/lang/String;
+
+    iget-object p2, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Ltei;->a:Lmxa;
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1, v0}, Lmxa;->b(Lc98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result p2
+
+    const-string v3, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v3, p2}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2, v2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyc5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(II)V
+    .locals 3
+
+    iget v0, p0, Lyc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyc5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lt6d;
+
+    iget-object v1, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v2, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast v2, Lfsd;
+
+    invoke-static {v2, v1, p1}, Lfsd;->d(Lfsd;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2, v0}, Lfsd;->e(Lfsd;Lt6d;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2, v1, p2}, Lfsd;->d(Lfsd;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {v2, v0}, Lfsd;->e(Lfsd;Lt6d;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyc5;->h()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(II)V
+    .locals 2
+
+    iget v0, p0, Lyc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyc5;->b:Ljava/lang/Object;
+
+    check-cast v0, Lfsd;
+
+    const/4 v1, 0x1
+
+    if-ne p2, v1, :cond_0
+
+    iget-object p2, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {v0, p2, p1}, Lfsd;->d(Lfsd;Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lyc5;->d:Ljava/lang/Object;
+
+    check-cast p1, Lt6d;
+
+    invoke-static {v0, p1}, Lfsd;->e(Lfsd;Lt6d;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyc5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h()V
+    .locals 4
+
+    iget-object v0, p0, Lyc5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    iget-object v1, p0, Lyc5;->c:Ljava/lang/Object;
+
+    check-cast v1, Lgk6;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x5
+
+    invoke-static {v3, v0, v1, v2}, Lhxi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method

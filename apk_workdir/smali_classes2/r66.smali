@@ -1,104 +1,63 @@
-.class public abstract Lr66;
-.super Ljava/lang/Object;
+.class public final Lr66;
+.super Lvpe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lxh7;
+# virtual methods
+.method public final bridge synthetic A(Ly18;)V
+    .locals 0
 
-.field public static final b:Lxh7;
+    check-cast p1, Lk66;
 
-.field public static final c:Lxh7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lxh7;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x13f
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
-
-    sput-object v0, Lr66;->a:Lxh7;
-
-    new-instance v0, Lxh7;
-
-    const/16 v1, 0x140
-
-    const/16 v2, 0x21b
-
-    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
-
-    sput-object v0, Lr66;->b:Lxh7;
-
-    new-instance v0, Lxh7;
-
-    const/16 v1, 0x21c
-
-    const v2, 0x7fffffff
-
-    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
-
-    sput-object v0, Lr66;->c:Lxh7;
+    invoke-virtual {p0, p1}, Lr66;->G(Lk66;)V
 
     return-void
 .end method
 
-.method public static a(I)I
-    .locals 1
+.method public final F()V
+    .locals 2
 
-    sget v0, Lfmc;->oneme_big_folder_widget_view_type:I
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    if-ne p0, v0, :cond_0
+    check-cast v0, Lwra;
 
-    const/16 p0, 0x5c
+    const/4 v1, 0x0
 
-    int-to-float p0, p0
+    invoke-virtual {v0, v1}, Lwra;->setFirstTrailingIconClickListener(Lji6;)V
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final G(Lk66;)V
+    .locals 5
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    move-result-object v0
+    check-cast v0, Lwra;
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    iget-object v1, p1, Lk66;->c:Ljava/lang/CharSequence;
 
-    mul-float/2addr p0, v0
+    invoke-virtual {v0, v1}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-static {p0}, Lagi;->d(F)I
+    iget-wide v1, p1, Lk66;->o:J
 
-    move-result p0
+    iget-object v3, p1, Lk66;->X:Ljava/lang/CharSequence;
 
-    return p0
+    iget-object v4, p1, Lk66;->b:Ljava/lang/String;
 
-    :cond_0
-    const/16 p0, 0x80
+    invoke-virtual {v0, v1, v2, v3, v4}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    int-to-float p0, p0
+    sget v1, Lpjd;->x:I
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0, v1}, Lwra;->setFirstTrailingIcon(Ljava/lang/Integer;)V
 
-    move-result-object v0
+    iget-boolean p1, p1, Lk66;->Y:Z
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v0, p1}, Lwra;->setVerified(Z)V
 
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lagi;->d(F)I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

@@ -1,49 +1,195 @@
-.class public final Ltp4;
-.super Ljava/lang/Object;
+.class public Ltp4;
+.super Lam0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lat6;
+.field public final a:Lela;
 
-.field public final b:Lpzd;
-
-.field public final c:Ljava/util/HashMap;
+.field public b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lela;)V
+    .locals 0
 
-    const-string v0, "DelayedWorkTracker"
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ltp4;->d:Ljava/lang/String;
+    iput-object p1, p0, Ltp4;->a:Lela;
 
     return-void
 .end method
 
-.method public constructor <init>(Lat6;Lpzd;)V
+
+# virtual methods
+.method public a(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltp4;->a:Lat6;
-
-    iput-object p2, p0, Ltp4;->b:Lpzd;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Ltp4;->c:Ljava/util/HashMap;
+    invoke-virtual {p0, p1}, Ltp4;->e(Ljava/lang/Object;)V
 
     return-void
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    const/16 v0, 0x20
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ltp4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v1, v0, 0x36
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v1, 0x8
+
+    iget-object v2, p0, Ltp4;->a:Lela;
+
+    if-ne v0, v1, :cond_1
+
+    iput-object p1, p0, Ltp4;->b:Ljava/lang/Object;
+
+    const/16 p1, 0x10
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    const/4 p1, 0x0
+
+    invoke-interface {v2, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    invoke-interface {v2, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result p1
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_2
+
+    invoke-interface {v2}, Lela;->b()V
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public g()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ltp4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Ltp4;->b:Ljava/lang/Object;
+
+    iput-object v2, p0, Ltp4;->b:Ljava/lang/Object;
+
+    const/16 v1, 0x20
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return-object v0
+
+    :cond_0
+    return-object v2
+.end method
+
+.method public final q(I)I
+    .locals 0
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    const/4 p1, 0x2
+
+    return p1
 .end method

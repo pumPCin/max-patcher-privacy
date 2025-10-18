@@ -4,928 +4,544 @@
 
 
 # instance fields
-.field public final a:Lt1e;
+.field public final synthetic a:I
 
-.field public final b:Lgv6;
+.field public final b:Ljava/lang/Object;
 
-.field public c:Lzx1;
-
-.field public d:Ljava/util/concurrent/ScheduledFuture;
-
-.field public final e:Lyx1;
-
-.field public final synthetic f:Lby1;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lby1;Lt1e;Lgv6;J)V
-    .locals 0
+.method public constructor <init>(Liy1;Lgu1;)V
+    .locals 1
 
-    iput-object p1, p0, Lay1;->f:Lby1;
+    const/4 v0, 0x0
+
+    iput v0, p0, Lay1;->a:I
+
+    .line 4
+    iput-object p1, p0, Lay1;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lay1;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
-    iput-object p2, p0, Lay1;->a:Lt1e;
+    return-void
+.end method
 
-    iput-object p3, p0, Lay1;->b:Lgv6;
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    .locals 1
 
-    new-instance p1, Lyx1;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lay1;->a:I
 
-    iput-object p0, p1, Lyx1;->c:Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
-    const-wide/16 p2, -0x1
+    .line 2
+    iput-object p1, p0, Lay1;->c:Ljava/lang/Object;
 
-    iput-wide p2, p1, Lyx1;->b:J
-
-    iput-wide p4, p1, Lyx1;->a:J
-
-    iput-object p1, p0, Lay1;->e:Lyx1;
+    .line 3
+    iput-object p2, p0, Lay1;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
-
-    iget-object v0, p0, Lay1;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Cancelling scheduled re-open: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lay1;->c:Lzx1;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lay1;->f:Lby1;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v0, v3}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lay1;->c:Lzx1;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v0, Lzx1;->b:Z
-
-    iput-object v3, p0, Lay1;->c:Lzx1;
-
-    iget-object v0, p0, Lay1;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v3, p0, Lay1;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    return v2
-
-    :cond_0
-    return v1
-.end method
-
-.method public final b()V
-    .locals 10
-
-    iget-object v0, p0, Lay1;->c:Lzx1;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    const/4 v3, 0x0
-
-    invoke-static {v3, v0}, Lbui;->f(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lay1;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v2
-
-    :goto_1
-    invoke-static {v3, v1}, Lbui;->f(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lay1;->e:Lyx1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v4
-
-    iget-wide v6, v0, Lyx1;->b:J
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v1, v6, v8
-
-    if-nez v1, :cond_2
-
-    iput-wide v4, v0, Lyx1;->b:J
-
-    :cond_2
-    iget-wide v6, v0, Lyx1;->b:J
-
-    sub-long/2addr v4, v6
-
-    invoke-virtual {v0}, Lyx1;->b()I
-
-    move-result v1
-
-    int-to-long v6, v1
-
-    cmp-long v1, v4, v6
-
-    iget-object v4, p0, Lay1;->f:Lby1;
-
-    if-ltz v1, :cond_3
-
-    iput-wide v8, v0, Lyx1;->b:J
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v5, "Camera reopening attempted for "
-
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lyx1;->b()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, "ms without success."
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Camera2CameraImpl"
-
-    invoke-static {v1, v0}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x4
-
-    invoke-virtual {v4, v0, v3, v2}, Lby1;->E(ILl90;Z)V
-
-    return-void
-
-    :cond_3
-    new-instance v1, Lzx1;
-
-    iget-object v2, p0, Lay1;->a:Lt1e;
-
-    invoke-direct {v1, p0, v2}, Lzx1;-><init>(Lay1;Lt1e;)V
-
-    iput-object v1, p0, Lay1;->c:Lzx1;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Attempting camera re-open in "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lyx1;->a()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, "ms: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lay1;->c:Lzx1;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " activeResuming = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v2, v4, Lby1;->M0:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1, v3}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v1, p0, Lay1;->c:Lzx1;
-
-    invoke-virtual {v0}, Lyx1;->a()I
-
-    move-result v0
-
-    int-to-long v2, v0
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v4, p0, Lay1;->b:Lgv6;
-
-    invoke-virtual {v4, v1, v2, v3, v0}, Lgv6;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lay1;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    return-void
-.end method
-
-.method public final c()Z
-    .locals 3
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget-boolean v1, v0, Lby1;->M0:Z
-
-    if-eqz v1, :cond_1
-
-    iget v0, v0, Lby1;->u0:I
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_1
-
-    :cond_0
-    return v1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 6
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    const-string v1, "CameraDevice.onClosed()"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget-object v0, v0, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x1
-
-    if-nez v0, :cond_0
-
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Unexpected onClose callback on camera device: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1, v0}, Lbui;->f(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget p1, p1, Lby1;->R0:I
-
-    invoke-static {p1}, Lwx1;->v(I)I
-
-    move-result p1
-
-    if-eq p1, v3, :cond_4
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_4
-
-    const/4 v0, 0x5
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x6
-
-    if-ne p1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    invoke-static {v0}, Lwc0;->r(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Camera closed while in state: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    :goto_1
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget v0, p1, Lby1;->u0:I
-
-    if-eqz v0, :cond_3
-
-    invoke-static {v0}, Lby1;->v(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Camera closed due to error: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v2}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lay1;->b()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p1, v1}, Lby1;->J(Z)V
-
-    return-void
-
-    :cond_4
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget-object p1, p1, Lby1;->w0:Ljava/util/LinkedHashMap;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    invoke-static {v2, p1}, Lbui;->f(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    invoke-virtual {p1}, Lby1;->r()V
-
-    return-void
-.end method
-
-.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
     .locals 3
 
-    const-string v0, "CameraDevice.onDisconnected()"
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lay1;->f:Lby1;
-
-    invoke-virtual {v2, v0, v1}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lay1;->onError(Landroid/hardware/camera2/CameraDevice;I)V
-
-    return-void
-.end method
-
-.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 11
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iput-object p1, v0, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
-
-    iput p2, v0, Lby1;->u0:I
-
-    iget-object v0, v0, Lby1;->Q0:Lar8;
-
-    iget-object v1, v0, Lar8;->b:Ljava/lang/Object;
-
-    check-cast v1, Lby1;
-
-    const-string v2, "Camera receive onErrorCallback"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Lar8;->d()V
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    invoke-static {v0}, Lwx1;->v(I)I
-
-    move-result v0
-
-    const-string v1, " while in "
-
-    const-string v2, " failed with "
-
-    const-string v4, "CameraDevice.onError(): "
-
-    const-string v5, "Camera2CameraImpl"
-
-    const/4 v6, 0x1
-
-    if-eq v0, v6, :cond_7
+    iget v0, p0, Lay1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lay1;->c:Ljava/lang/Object;
 
-    iget-object p2, p0, Lay1;->f:Lby1;
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    iget p2, p2, Lby1;->R0:I
+    new-instance v1, Lc12;
 
-    invoke-static {p2}, Lwc0;->r(I)Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object p2
+    invoke-direct {v1, p0, p1, v2}, Lc12;-><init>(Lay1;Landroid/hardware/camera2/CameraDevice;I)V
 
-    const-string v0, "onError() should not be possible from state: "
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     :pswitch_0
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+    iget-object p1, p0, Lay1;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Liy1;
 
-    invoke-static {p2}, Lby1;->v(I)Ljava/lang/String;
+    const-string v0, "openCameraConfigAndClose camera closed"
 
-    move-result-object v7
+    const/4 v1, 0x0
 
-    iget-object v8, p0, Lay1;->f:Lby1;
+    invoke-virtual {p1, v0, v1}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget v8, v8, Lby1;->R0:I
+    iget-object p1, p0, Lay1;->b:Ljava/lang/Object;
 
-    invoke-static {v8}, Lwc0;->n(I)Ljava/lang/String;
+    check-cast p1, Lgu1;
 
-    move-result-object v8
-
-    invoke-static {v4, v0, v2, v7, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " state. Will attempt recovering from error."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v5, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    const/16 v1, 0x8
-
-    const/4 v2, 0x6
-
-    const/4 v4, 0x0
-
-    const/4 v7, 0x7
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    const/16 v1, 0x9
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    if-eq v0, v7, :cond_1
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    if-ne v0, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v0, v6
-
-    :goto_1
-    iget-object v1, p0, Lay1;->f:Lby1;
-
-    iget v1, v1, Lby1;->R0:I
-
-    invoke-static {v1}, Lwc0;->r(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v8, "Attempt to handle open error from non open state: "
-
-    invoke-virtual {v8, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    if-eq p2, v6, :cond_3
-
-    if-eq p2, v1, :cond_3
-
-    const/4 v8, 0x4
-
-    if-eq p2, v8, :cond_3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "Error observed on open (or opening) camera device "
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ": "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p2}, Lby1;->v(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " closing camera."
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v5, p1}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x5
-
-    if-ne p2, v0, :cond_2
-
-    move v2, p1
-
-    :cond_2
-    iget-object p2, p0, Lay1;->f:Lby1;
-
-    new-instance v0, Ll90;
-
-    invoke-direct {v0, v2, v3}, Ll90;-><init>(ILjava/lang/Throwable;)V
-
-    invoke-virtual {p2, p1, v0, v6}, Lby1;->E(ILl90;Z)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    invoke-virtual {p1}, Lby1;->q()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2}, Lby1;->v(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v8, "] after error["
-
-    const-string v9, "]"
-
-    const-string v10, "Attempt to reopen camera["
-
-    invoke-static {v10, p1, v8, v2, v9}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v5, p1}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget v2, p1, Lby1;->u0:I
-
-    if-eqz v2, :cond_4
-
-    move v4, v6
-
-    :cond_4
-    const-string v2, "Can only reopen camera device after error if the camera device is actually in an error state."
-
-    invoke-static {v2, v4}, Lbui;->f(Ljava/lang/String;Z)V
-
-    if-eq p2, v6, :cond_6
-
-    if-eq p2, v1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move v0, v6
-
-    goto :goto_2
-
-    :cond_6
-    move v0, v1
-
-    :goto_2
-    new-instance p2, Ll90;
-
-    invoke-direct {p2, v0, v3}, Ll90;-><init>(ILjava/lang/Throwable;)V
-
-    invoke-virtual {p1, v7, p2, v6}, Lby1;->E(ILl90;Z)V
-
-    invoke-virtual {p1}, Lby1;->q()V
-
-    return-void
-
-    :cond_7
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2}, Lby1;->v(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lay1;->f:Lby1;
-
-    iget v0, v0, Lby1;->R0:I
-
-    invoke-static {v0}, Lwc0;->n(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v4, p1, v2, p2, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " state. Will finish closing camera."
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v5, p1}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    invoke-virtual {p1}, Lby1;->q()V
+    invoke-virtual {p1, v1}, Lgu1;->b(Ljava/lang/Object;)Z
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
+    .packed-switch 0x0
         :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 3
+
+    iget v0, p0, Lay1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lay1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lc12;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, v2}, Lc12;-><init>(Lay1;Landroid/hardware/camera2/CameraDevice;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lay1;->c:Ljava/lang/Object;
+
+    check-cast p1, Liy1;
+
+    const-string v0, "openCameraConfigAndClose camera disconnected"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lay1;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgu1;
+
+    invoke-virtual {p1, v1}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
-        :pswitch_0
-        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 3
+
+    iget v0, p0, Lay1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lay1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lym1;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p0, p1, p2, v2}, Lym1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lay1;->c:Ljava/lang/Object;
+
+    check-cast p1, Liy1;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "openCameraConfigAndClose camera error "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p2, v0}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lay1;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgu1;
+
+    invoke-virtual {p1, v0}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method
 
 .method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 5
+    .locals 26
 
-    iget-object v0, p0, Lay1;->f:Lby1;
+    move-object/from16 v0, p0
 
-    const-string v1, "CameraDevice.onOpened()"
+    move-object/from16 v1, p1
 
-    const/4 v2, 0x0
+    iget v2, v0, Lay1;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lby1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v3, v0, Lay1;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lay1;->f:Lby1;
+    packed-switch v2, :pswitch_data_0
 
-    iput-object p1, v0, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
+    check-cast v3, Ljava/util/concurrent/Executor;
 
-    const/4 v1, 0x0
+    new-instance v2, Lc12;
 
-    iput v1, v0, Lby1;->u0:I
+    const/4 v4, 0x2
 
-    iget-object v1, p0, Lay1;->e:Lyx1;
+    invoke-direct {v2, v0, v1, v4}, Lc12;-><init>(Lay1;Landroid/hardware/camera2/CameraDevice;I)V
 
-    const-wide/16 v3, -0x1
+    invoke-interface {v3, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iput-wide v3, v1, Lyx1;->b:J
+    return-void
 
-    iget v0, v0, Lby1;->R0:I
+    :pswitch_0
+    check-cast v3, Liy1;
 
-    invoke-static {v0}, Lwx1;->v(I)I
+    iget-object v2, v3, Liy1;->c:La3e;
 
-    move-result v0
+    const-string v4, "openCameraConfigAndClose camera opened"
 
-    const/4 v1, 0x1
+    const/4 v5, 0x0
 
-    if-eq v0, v1, :cond_3
+    invoke-virtual {v3, v4, v5}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v1, 0x4
+    new-instance v4, Lp42;
 
-    if-eq v0, v1, :cond_3
+    iget-object v6, v3, Liy1;->N0:Ls9d;
 
-    const/4 v1, 0x5
+    new-instance v7, Lp95;
 
-    if-eq v0, v1, :cond_1
+    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 v1, 0x6
+    invoke-direct {v7, v8}, Lp95;-><init>(Ljava/util/List;)V
 
-    if-eq v0, v1, :cond_1
+    const/4 v8, 0x0
 
-    const/4 v1, 0x7
+    invoke-direct {v4, v6, v7, v8}, Lp42;-><init>(Ls9d;Lp95;Z)V
 
-    if-ne v0, v1, :cond_0
+    new-instance v6, Landroid/graphics/SurfaceTexture;
+
+    invoke-direct {v6, v8}, Landroid/graphics/SurfaceTexture;-><init>(I)V
+
+    const/16 v7, 0x280
+
+    const/16 v9, 0x1e0
+
+    invoke-virtual {v6, v7, v9}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
+
+    new-instance v7, Landroid/view/Surface;
+
+    invoke-direct {v7, v6}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+
+    new-instance v9, Lkb7;
+
+    invoke-direct {v9, v7}, Lkb7;-><init>(Landroid/view/Surface;)V
+
+    iget-object v10, v9, Lnp4;->e:Lju1;
+
+    invoke-static {v10}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object v10
+
+    new-instance v11, Lqx1;
+
+    const/4 v12, 0x3
+
+    invoke-direct {v11, v7, v12, v6}, Lqx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v6
+
+    invoke-interface {v10, v11, v6}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    new-instance v6, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v6}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v7, Ljava/util/HashSet;
+
+    invoke-direct {v7}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {}, Lc1a;->c()Lc1a;
+
+    move-result-object v10
+
+    new-instance v11, Ljava/util/ArrayList;
+
+    invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lk1a;->a()Lk1a;
+
+    move-result-object v12
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v14, Ljava/util/ArrayList;
+
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v15, Ljava/util/ArrayList;
+
+    invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v9}, Lrb0;->a(Lnp4;)La76;
+
+    move-result-object v8
+
+    sget-object v5, Lv45;->d:Lv45;
+
+    iput-object v5, v8, La76;->X:Ljava/lang/Object;
+
+    invoke-virtual {v8}, La76;->g()Lrb0;
+
+    move-result-object v5
+
+    invoke-interface {v6, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    const-string v5, "Start configAndClose."
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v3, v5, v8}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance v16, Lr6e;
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6, v13}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8, v14}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13, v15}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v17, Lg42;
+
+    new-instance v14, Ljava/util/ArrayList;
+
+    invoke-direct {v14, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v10}, Ls9b;->a(Lpk3;)Ls9b;
+
+    move-result-object v19
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7, v11}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v10, Lalf;->b:Lalf;
+
+    new-instance v10, Landroid/util/ArrayMap;
+
+    invoke-direct {v10}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v11, v12, Lalf;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {v11}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+
+    move-result-object v12
+
+    invoke-interface {v12}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v12
+
+    :goto_0
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v15
+
+    if-eqz v15, :cond_0
+
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/lang/String;
+
+    invoke-virtual {v11, v15}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v10, v15, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object/from16 v0, p0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Lalf;
 
-    iget-object v0, p0, Lay1;->f:Lby1;
+    invoke-direct {v0, v10}, Lalf;-><init>(Landroid/util/ArrayMap;)V
 
-    iget v0, v0, Lby1;->R0:I
+    const/16 v20, 0x1
 
-    invoke-static {v0}, Lwc0;->r(I)Ljava/lang/String;
+    const/16 v21, 0x0
+
+    const/16 v25, 0x0
+
+    move/from16 v23, v21
+
+    move-object/from16 v24, v0
+
+    move-object/from16 v22, v7
+
+    move-object/from16 v18, v14
+
+    invoke-direct/range {v17 .. v25}, Lg42;-><init>(Ljava/util/ArrayList;Ls9b;IZLjava/util/ArrayList;ZLalf;Lwz1;)V
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    move-object/from16 v18, v6
+
+    move-object/from16 v19, v8
+
+    move-object/from16 v20, v13
+
+    move-object/from16 v21, v17
+
+    move-object/from16 v17, v5
+
+    invoke-direct/range {v16 .. v24}, Lr6e;-><init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lg42;Lp6e;Landroid/hardware/camera2/params/InputConfiguration;Lrb0;)V
+
+    move-object/from16 v0, v16
+
+    iget-object v3, v3, Liy1;->H0:Lcq3;
+
+    new-instance v16, Lvif;
+
+    iget-object v5, v3, Lcq3;->e:Ljava/lang/Object;
+
+    move-object/from16 v18, v5
+
+    check-cast v18, Lp95;
+
+    iget-object v5, v3, Lcq3;->f:Ljava/lang/Object;
+
+    move-object/from16 v19, v5
+
+    check-cast v19, Lp95;
+
+    iget-object v5, v3, Lcq3;->d:Ljava/lang/Object;
+
+    move-object/from16 v17, v5
+
+    check-cast v17, Lz73;
+
+    iget-object v5, v3, Lcq3;->a:Ljava/lang/Object;
+
+    move-object/from16 v21, v5
+
+    check-cast v21, La3e;
+
+    iget-object v5, v3, Lcq3;->b:Ljava/lang/Object;
+
+    move-object/from16 v20, v5
+
+    check-cast v20, Law6;
+
+    iget-object v3, v3, Lcq3;->c:Ljava/lang/Object;
+
+    move-object/from16 v22, v3
+
+    check-cast v22, Landroid/os/Handler;
+
+    invoke-direct/range {v16 .. v22}, Lvif;-><init>(Lz73;Lp95;Lp95;Law6;La3e;Landroid/os/Handler;)V
+
+    move-object/from16 v3, v16
+
+    invoke-virtual {v4, v0, v1, v3}, Lp42;->l(Lr6e;Landroid/hardware/camera2/CameraDevice;Lvif;)Ll28;
 
     move-result-object v0
 
-    const-string v1, "onOpened() should not be possible from state: "
+    new-instance v3, Lek6;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v0, v5}, Lek6;-><init>(Ll28;I)V
+
+    invoke-static {v3}, Lomi;->a(Lhu1;)Lju1;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Lak6;->a(Ll28;)Lak6;
 
-    throw p1
+    move-result-object v0
 
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lay1;->f:Lby1;
+    new-instance v3, Lp00;
 
-    const/16 v1, 0x9
+    const/16 v6, 0x8
 
-    invoke-virtual {v0, v1}, Lby1;->F(I)V
+    invoke-direct {v3, v4, v6, v9}, Lp00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lay1;->f:Lby1;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v0, Lby1;->A0:Lh22;
+    invoke-static {v0, v3, v2}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
 
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lay1;->f:Lby1;
+    new-instance v3, Lzx1;
 
-    iget-object v2, v1, Lby1;->z0:Lh1g;
+    invoke-direct {v3, v5, v1}, Lzx1;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, v1, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
-
-    invoke-virtual {v1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Lh1g;->J(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lh22;->e(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    invoke-virtual {p1}, Lby1;->B()V
-
-    :cond_2
-    return-void
-
-    :cond_3
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget-object p1, p1, Lby1;->w0:Ljava/util/LinkedHashMap;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    invoke-static {v2, p1}, Lbui;->f(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iget-object p1, p1, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
-
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
-
-    iget-object p1, p0, Lay1;->f:Lby1;
-
-    iput-object v2, p1, Lby1;->t0:Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0, v3, v2}, Lak6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

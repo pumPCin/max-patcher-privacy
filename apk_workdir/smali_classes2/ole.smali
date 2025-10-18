@@ -1,97 +1,87 @@
-.class public final enum Lole;
-.super Ljava/lang/Enum;
+.class public final Lole;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llk9;
 
-# static fields
-.field public static final synthetic X:[Lole;
 
-.field public static final enum a:Lole;
-
-.field public static final enum b:Lole;
-
-.field public static final enum c:Lole;
-
-.field public static final enum o:Lole;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lole;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LOADING"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lole;->a:Lole;
-
-    new-instance v1, Lole;
-
-    const-string v2, "CONTENT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lole;->b:Lole;
-
-    new-instance v2, Lole;
-
-    const-string v3, "CONTENT_SEARCH"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lole;->c:Lole;
-
-    new-instance v3, Lole;
-
-    const-string v4, "EMPTY_SEARCH"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lole;->o:Lole;
-
-    filled-new-array {v0, v1, v2, v3}, [Lole;
-
-    move-result-object v0
-
-    sput-object v0, Lole;->X:[Lole;
+    iput-wide p1, p0, Lole;->a:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lole;
-    .locals 1
 
-    const-class v0, Lole;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lole;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lole;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lole;
+
+    iget-wide v3, p0, Lole;->a:J
+
+    iget-wide v5, p1, Lole;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public static values()[Lole;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Lole;->X:[Lole;
+    iget-wide v0, p0, Lole;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ShowEditMessage(messageId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lole;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lole;
 
     return-object v0
 .end method

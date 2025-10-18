@@ -1,48 +1,76 @@
 .class public final Lm3d;
-.super Lk14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public volatile a:Lcye;
 
-.field public final synthetic Y:Lj7a;
+.field public b:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:J
+
+.field public final d:Lx0f;
+
+.field public final e:Ln0d;
 
 
 # direct methods
-.method public constructor <init>(Lj7a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lm3d;->Y:Lj7a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lm3d;->d:Lx0f;
+
+    new-instance v1, Ln0d;
+
+    invoke-direct {v1, v0}, Ln0d;-><init>(Lj1a;)V
+
+    iput-object v1, p0, Lm3d;->e:Ln0d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iput-object p1, p0, Lm3d;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lm3d;->a:Lcye;
 
-    iget p1, p0, Lm3d;->X:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    if-eqz v0, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Llo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    iput p1, p0, Lm3d;->X:I
+    :cond_0
+    iput-object v1, p0, Lm3d;->a:Lcye;
 
-    iget-object p1, p0, Lm3d;->Y:Lj7a;
+    iget-object v0, p0, Lm3d;->d:Lx0f;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lj7a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Ljava/lang/Number;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lm3d;->b:J
+
+    return-void
 .end method

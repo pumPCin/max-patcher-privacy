@@ -1,100 +1,147 @@
-.class public abstract Llw7;
-.super Landroid/app/Service;
+.class public final Llw7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liw7;
+.implements Lbx7;
 
 
 # instance fields
-.field public final a:Lkoh;
+.field public final a:La76;
+
+.field public final b:Lfx7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lfx7;La76;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lkoh;
+    iput-object p1, p0, Llw7;->b:Lfx7;
 
-    invoke-direct {v0, p0}, Lkoh;-><init>(Llw7;)V
-
-    iput-object v0, p0, Llw7;->a:Lkoh;
+    iput-object p2, p0, Llw7;->a:La76;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+.method public onDestroy(Lfx7;)V
+    .locals 5
+    .annotation runtime Luma;
+        value = .enum Lgw7;->ON_DESTROY:Lgw7;
+    .end annotation
+
+    iget-object v0, p0, Llw7;->a:La76;
+
+    iget-object v1, v0, La76;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v0, p1}, La76;->k(Lfx7;)Llw7;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0, p1}, La76;->p(Lfx7;)V
+
+    iget-object p1, v0, La76;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lva0;
+
+    iget-object v4, v0, La76;->b:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, v0, La76;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-virtual {p1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, v2, Llw7;->b:Lfx7;
+
+    invoke-interface {p1}, Lfx7;->x()Lhx7;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Lhx7;->f(Lbx7;)V
+
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public onStart(Lfx7;)V
     .locals 1
+    .annotation runtime Luma;
+        value = .enum Lgw7;->ON_START:Lgw7;
+    .end annotation
 
-    iget-object p1, p0, Llw7;->a:Lkoh;
+    iget-object v0, p0, Llw7;->a:La76;
 
-    sget-object v0, Ljv7;->ON_START:Ljv7;
-
-    invoke-virtual {p1, v0}, Lkoh;->C(Ljv7;)V
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public onCreate()V
-    .locals 2
-
-    iget-object v0, p0, Llw7;->a:Lkoh;
-
-    sget-object v1, Ljv7;->ON_CREATE:Ljv7;
-
-    invoke-virtual {v0, v1}, Lkoh;->C(Ljv7;)V
-
-    invoke-super {p0}, Landroid/app/Service;->onCreate()V
+    invoke-virtual {v0, p1}, La76;->o(Lfx7;)V
 
     return-void
 .end method
 
-.method public onDestroy()V
-    .locals 2
-
-    sget-object v0, Ljv7;->ON_STOP:Ljv7;
-
-    iget-object v1, p0, Llw7;->a:Lkoh;
-
-    invoke-virtual {v1, v0}, Lkoh;->C(Ljv7;)V
-
-    sget-object v0, Ljv7;->ON_DESTROY:Ljv7;
-
-    invoke-virtual {v1, v0}, Lkoh;->C(Ljv7;)V
-
-    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
-
-    return-void
-.end method
-
-.method public final onStart(Landroid/content/Intent;I)V
-    .locals 2
-
-    iget-object v0, p0, Llw7;->a:Lkoh;
-
-    sget-object v1, Ljv7;->ON_START:Ljv7;
-
-    invoke-virtual {v0, v1}, Lkoh;->C(Ljv7;)V
-
-    invoke-super {p0, p1, p2}, Landroid/app/Service;->onStart(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-.method public final x()Lkw7;
+.method public onStop(Lfx7;)V
     .locals 1
+    .annotation runtime Luma;
+        value = .enum Lgw7;->ON_STOP:Lgw7;
+    .end annotation
 
-    iget-object v0, p0, Llw7;->a:Lkoh;
+    iget-object v0, p0, Llw7;->a:La76;
 
-    iget-object v0, v0, Lkoh;->b:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, La76;->p(Lfx7;)V
 
-    check-cast v0, Lkw7;
-
-    return-object v0
+    return-void
 .end method

@@ -3,11 +3,15 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Ltha;
 
 
 # static fields
 .field public static final a:Lt80;
+
+.field public static final b:Lbr5;
+
+.field public static final c:Lbr5;
 
 
 # direct methods
@@ -20,9 +24,21 @@
 
     sput-object v0, Lt80;->a:Lt80;
 
-    const-string v0, "messagingClientEventExtension"
+    const-string v0, "networkType"
 
-    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+
+    move-result-object v0
+
+    sput-object v0, Lt80;->b:Lbr5;
+
+    const-string v0, "mobileSubtype"
+
+    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+
+    move-result-object v0
+
+    sput-object v0, Lt80;->c:Lbr5;
 
     return-void
 .end method
@@ -30,11 +46,25 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .locals 2
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lb6a;
 
-    move-result-object p1
+    check-cast p2, Luha;
 
-    throw p1
+    check-cast p1, Lab0;
+
+    iget-object v0, p1, Lab0;->a:La6a;
+
+    sget-object v1, Lt80;->b:Lbr5;
+
+    invoke-interface {p2, v1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    sget-object v0, Lt80;->c:Lbr5;
+
+    iget-object p1, p1, Lab0;->b:Lz5a;
+
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    return-void
 .end method

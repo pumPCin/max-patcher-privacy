@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public final a:Lst4;
+.field public final a:Lju4;
 
 
 # direct methods
@@ -51,13 +51,13 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lst4;
+    new-instance v0, Lju4;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1}, Lst4;-><init>(I)V
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
 
-    iput-object v0, p0, Ltd;->a:Lst4;
+    iput-object v0, p0, Ltd;->a:Lju4;
 
     return-void
 .end method

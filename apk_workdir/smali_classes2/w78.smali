@@ -1,55 +1,63 @@
 .class public final Lw78;
-.super Lk14;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/List;
+# static fields
+.field public static final b:Lw78;
 
-.field public Y:Ljava/lang/Exception;
+.field public static final c:Lyf4;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Ly78;
-
-.field public final synthetic r0:Ly78;
-
-.field public s0:I
+.field public static final d:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(Ly78;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lw78;->r0:Ly78;
+    new-instance v0, Lw78;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ldg4;-><init>()V
+
+    sput-object v0, Lw78;->b:Lw78;
+
+    const-string v1, "request_code"
+
+    const-string v2, "chat_id"
+
+    filled-new-array {v2, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, ":location-new/pick"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    invoke-static {v0, v3, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v1
+
+    sput-object v1, Lw78;->c:Lyf4;
+
+    const-string v1, "lon"
+
+    const-string v3, "z"
+
+    const-string v6, "lat"
+
+    filled-new-array {v2, v6, v1, v3}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":location-new/show"
+
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Lw78;->d:Lyf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lw78;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lw78;->s0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lw78;->s0:I
-
-    iget-object p1, p0, Lw78;->r0:Ly78;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, v0, p0}, Ly78;->a(Ly78;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

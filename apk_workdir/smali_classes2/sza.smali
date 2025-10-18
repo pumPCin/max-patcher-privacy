@@ -4,34 +4,82 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:J
 
-.field public static final b:I
+.field public static final b:J
 
-.field public static final c:I
+.field public static final c:J
 
-.field public static final d:I
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Linc;->oneme_bottom_sheet_popup:I
+    sget v0, Lmoc;->profile_edit_admin_move_rights:I
 
-    sput v0, Lsza;->a:I
+    int-to-long v0, v0
 
-    sget v0, Linc;->oneme_bottom_sheet_popup_card:I
+    sput-wide v0, Lsza;->a:J
 
-    sput v0, Lsza;->b:I
+    sget v0, Lmoc;->profile_edit_admin_permissions_change_chat_info:I
 
-    sget v0, Linc;->oneme_bottom_sheet_toolbar:I
+    int-to-long v0, v0
 
-    sput v0, Lsza;->c:I
+    sput-wide v0, Lsza;->b:J
 
-    sget v0, Linc;->oneme_too_many_requests_bottomsheet_positive_button:I
+    sget v0, Lmoc;->profile_edit_admin_permissions_control_admin:I
 
-    sput v0, Lsza;->d:I
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->c:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_delete_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->d:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_link:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->e:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_members:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->f:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->g:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_pin_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->h:J
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_send_messages:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lsza;->i:J
 
     return-void
 .end method

@@ -1,49 +1,57 @@
-.class public abstract Lonh;
-.super Ljava/lang/Object;
+.class public final Lonh;
+.super Lmnh;
 .source "SourceFile"
 
 
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lmnh;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxnh;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p1}, Lmnh;-><init>(Lxnh;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final a(Landroidx/work/WorkRequest;)V
-    .locals 6
+.method public c(ILei7;)V
+    .locals 1
 
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
 
-    move-result-object v4
-
-    move-object v1, p0
-
-    check-cast v1, Lrnh;
-
-    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
+    invoke-static {p1}, Lwnh;->a(I)I
 
     move-result p1
 
-    if-nez p1, :cond_0
+    invoke-virtual {p2}, Lei7;->d()Landroid/graphics/Insets;
 
-    new-instance v0, Lfnh;
+    move-result-object p2
 
-    sget-object v3, Lug5;->b:Lug5;
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfnh;-><init>(Lrnh;Ljava/lang/String;Lug5;Ljava/util/List;I)V
-
-    invoke-virtual {v0}, Lfnh;->c()Lh8b;
+    invoke-static {v0, p1, p2}, Lxbb;->v(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "enqueue needs at least one WorkRequest."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public abstract b(Ljava/lang/String;ILngb;)Lh8b;
+.method public i(IZ)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-static {p1}, Lwnh;->a(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1, p2}, Lnnh;->f(Landroid/view/WindowInsets$Builder;IZ)V
+
+    return-void
 .end method

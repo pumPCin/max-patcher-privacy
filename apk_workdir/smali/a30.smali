@@ -4,101 +4,152 @@
 
 
 # static fields
-.field public static final c:La30;
-
 .field public static final d:La30;
-
-.field public static final e:[I
 
 
 # instance fields
-.field public final a:[I
+.field public final a:I
 
 .field public final b:I
+
+.field public final c:Lpc7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    const/16 v2, 0xa
+
+    const/4 v3, 0x2
+
+    if-lt v0, v1, :cond_1
 
     new-instance v0, La30;
 
-    const/4 v1, 0x2
+    new-instance v1, Loc7;
 
-    filled-new-array {v1}, [I
+    const/4 v4, 0x4
 
-    move-result-object v2
+    invoke-direct {v1, v4}, Lub7;-><init>(I)V
 
-    const/16 v3, 0x8
+    const/4 v4, 0x1
 
-    invoke-direct {v0, v3, v2}, La30;-><init>(I[I)V
+    :goto_0
+    if-gt v4, v2, :cond_0
 
-    sput-object v0, La30;->c:La30;
+    invoke-static {v4}, Lnig;->s(I)I
 
-    new-instance v0, La30;
+    move-result v5
 
-    const/4 v2, 0x5
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v4, 0x6
+    move-result-object v5
 
-    filled-new-array {v1, v2, v4}, [I
+    invoke-virtual {v1, v5}, Lub7;->a(Ljava/lang/Object;)V
 
-    move-result-object v1
-
-    invoke-direct {v0, v3, v1}, La30;-><init>(I[I)V
-
-    sput-object v0, La30;->d:La30;
-
-    const/4 v0, 0x7
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, La30;->e:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x5
-        0x6
-        0x12
-        0x11
-        0xe
-        0x7
-        0x8
-    .end array-data
-.end method
-
-.method public constructor <init>(I[I)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p2, :cond_0
-
-    array-length v0, p2
-
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p2
-
-    iput-object p2, p0, La30;->a:[I
-
-    invoke-static {p2}, Ljava/util/Arrays;->sort([I)V
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_0
+    invoke-virtual {v1}, Loc7;->j()Lpc7;
+
+    move-result-object v1
+
+    invoke-direct {v0, v3, v1}, La30;-><init>(ILjava/util/Set;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, La30;
+
+    invoke-direct {v0, v3, v2}, La30;-><init>(II)V
+
+    :goto_1
+    sput-object v0, La30;->d:La30;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 0
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput p1, p0, La30;->a:I
+
+    .line 9
+    iput p2, p0, La30;->b:I
+
+    const/4 p1, 0x0
+
+    .line 10
+    iput-object p1, p0, La30;->c:Lpc7;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/Set;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, La30;->a:I
+
+    .line 3
+    invoke-static {p2}, Lpc7;->k(Ljava/util/Collection;)Lpc7;
+
+    move-result-object p1
+
+    iput-object p1, p0, La30;->c:Lpc7;
+
+    .line 4
+    invoke-virtual {p1}, Lvb7;->h()Lmcg;
+
+    move-result-object p1
+
     const/4 p2, 0x0
 
-    new-array p2, p2, [I
-
-    iput-object p2, p0, La30;->a:[I
-
     :goto_0
-    iput p1, p0, La30;->b:I
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 5
+    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result v0
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    iput p2, p0, La30;->b:I
 
     return-void
 .end method
@@ -126,21 +177,27 @@
     :cond_1
     check-cast p1, La30;
 
-    iget-object v1, p0, La30;->a:[I
+    iget v1, p0, La30;->a:I
 
-    iget-object v3, p1, La30;->a:[I
+    iget v3, p1, La30;->a:I
 
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
+    if-ne v1, v3, :cond_2
 
     iget v1, p0, La30;->b:I
 
-    iget p1, p1, La30;->b:I
+    iget v3, p1, La30;->b:I
 
-    if-ne v1, p1, :cond_2
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, La30;->c:Lpc7;
+
+    iget-object p1, p1, La30;->c:Lpc7;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     return v0
 
@@ -151,11 +208,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, La30;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
+    iget v0, p0, La30;->a:I
 
     mul-int/lit8 v0, v0, 0x1f
 
@@ -163,47 +216,61 @@
 
     add-int/2addr v0, v1
 
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, La30;->c:Lpc7;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lpc7;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, La30;->a:[I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string v1, "AudioProfile[format="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x43
+    iget v1, p0, La30;->a:I
 
-    invoke-static {v1, v0}, Ld15;->e(ILjava/lang/String;)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v1, ", maxChannelCount="
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "AudioCapabilities[maxChannelCount="
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, La30;->b:I
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", supportedEncodings="
+    const-string v1, ", channelMasks="
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, La30;->c:Lpc7;
 
-    const-string v0, "]"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "]"
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

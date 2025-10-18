@@ -3,14 +3,12 @@
 
 
 # static fields
-.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a55
+.field public static oneme_in_app_review_close:I = 0x7f130845
 
-.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a56
+.field public static oneme_in_app_review_not_now:I = 0x7f130846
 
-.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a57
+.field public static oneme_in_app_review_send:I = 0x7f130847
 
-.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a58
+.field public static oneme_in_app_review_subtitle:I = 0x7f130848
 
-.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a59
-
-.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a5a
+.field public static oneme_in_app_review_thanks:I = 0x7f130849

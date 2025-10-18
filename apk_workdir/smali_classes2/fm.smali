@@ -7,38 +7,38 @@
 
 
 # instance fields
-.field public final a:Lnm;
+.field public final a:Lom;
 
-.field public final b:Lsp7;
+.field public final b:Lpq7;
 
 
 # direct methods
-.method public constructor <init>(Lnm;Lsp7;)V
+.method public constructor <init>(Lom;Lpq7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfm;->a:Lnm;
+    iput-object p1, p0, Lfm;->a:Lom;
 
-    iput-object p2, p0, Lfm;->b:Lsp7;
+    iput-object p2, p0, Lfm;->b:Lpq7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getFailParser()Lsp7;
+.method public final getFailParser()Lpq7;
     .locals 1
 
-    sget-object v0, Lg93;->a:Lg93;
+    sget-object v0, Lzw3;->a:Lzw3;
 
     return-object v0
 .end method
 
-.method public final getOkParser()Lsp7;
+.method public final getOkParser()Lpq7;
     .locals 1
 
-    iget-object v0, p0, Lfm;->b:Lsp7;
+    iget-object v0, p0, Lfm;->b:Lpq7;
 
     return-object v0
 .end method
@@ -46,21 +46,21 @@
 .method public final getPriority()I
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->getPriority()I
+    invoke-interface {v0}, Lom;->getPriority()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final getScope()Lsm;
+.method public final getScope()Ltm;
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->getScope()Lsm;
+    invoke-interface {v0}, Lom;->getScope()Ltm;
 
     move-result-object v0
 
@@ -70,9 +70,9 @@
 .method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->getUri()Landroid/net/Uri;
+    invoke-interface {v0}, Lom;->getUri()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -82,9 +82,9 @@
 .method public final shouldGzip()Z
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->shouldGzip()Z
+    invoke-interface {v0}, Lom;->shouldGzip()Z
 
     move-result v0
 
@@ -94,9 +94,9 @@
 .method public final shouldPost()Z
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->shouldPost()Z
+    invoke-interface {v0}, Lom;->shouldPost()Z
 
     move-result v0
 
@@ -106,9 +106,9 @@
 .method public final willWriteParams()Z
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->willWriteParams()Z
+    invoke-interface {v0}, Lom;->willWriteParams()Z
 
     move-result v0
 
@@ -118,31 +118,31 @@
 .method public final willWriteSupplyParams()Z
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0}, Lnm;->willWriteSupplyParams()Z
+    invoke-interface {v0}, Lom;->willWriteSupplyParams()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final writeParams(Lfq7;)V
+.method public final writeParams(Lcr7;)V
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0, p1}, Lnm;->writeParams(Lfq7;)V
+    invoke-interface {v0, p1}, Lom;->writeParams(Lcr7;)V
 
     return-void
 .end method
 
-.method public final writeSupplyParams(Lfq7;)V
+.method public final writeSupplyParams(Lcr7;)V
     .locals 1
 
-    iget-object v0, p0, Lfm;->a:Lnm;
+    iget-object v0, p0, Lfm;->a:Lom;
 
-    invoke-interface {v0, p1}, Lnm;->writeSupplyParams(Lfq7;)V
+    invoke-interface {v0, p1}, Lom;->writeSupplyParams(Lcr7;)V
 
     return-void
 .end method

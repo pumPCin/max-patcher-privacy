@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le79;
-.implements Lm79;
+
+# virtual methods
+.method public abstract getCallerFrame()Ls54;
+.end method
+
+.method public abstract getStackTraceElement()Ljava/lang/StackTraceElement;
+.end method

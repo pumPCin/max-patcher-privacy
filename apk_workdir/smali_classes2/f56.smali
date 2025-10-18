@@ -1,82 +1,64 @@
 .class public final Lf56;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lh56;
 
 
-# instance fields
-.field public final synthetic X:Ll56;
-
-.field public final synthetic Y:J
+# static fields
+.field public static final a:Lf56;
 
 
 # direct methods
-.method public constructor <init>(Ll56;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lf56;->X:Ll56;
+    new-instance v0, Lf56;
 
-    iput-wide p2, p0, Lf56;->Y:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lf56;->a:Lf56;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lf56;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lf56;
 
-    check-cast p1, Lf56;
+    if-nez p1, :cond_1
 
-    sget-object p2, Lzag;->a:Lzag;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Lf56;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    return-object p2
+    :cond_1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    new-instance p1, Lf56;
+    const v0, -0x667a69eb
 
-    iget-object v0, p0, Lf56;->X:Ll56;
-
-    iget-wide v1, p0, Lf56;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lf56;-><init>(Ll56;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const-string v0, "ConfirmDeletion"
 
-    sget-object p1, Ll56;->G0:[Lwq7;
-
-    iget-object p1, p0, Lf56;->X:Ll56;
-
-    iget-wide v0, p0, Lf56;->Y:J
-
-    invoke-virtual {p1, v0, v1}, Ll56;->t(J)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-object v0
 .end method

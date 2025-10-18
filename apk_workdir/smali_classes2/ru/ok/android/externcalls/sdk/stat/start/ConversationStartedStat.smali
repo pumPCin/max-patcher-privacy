@@ -19,24 +19,24 @@
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
         "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
         "callType",
-        "Lvtf;",
+        "Lavf;",
         "timeProvider",
         "Lkotlin/Function0;",
-        "Lp71;",
+        "Lx71;",
         "getEventualStatSender",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/Conversation$CallType;Lvtf;Loh6;)V",
+        "(Lru/ok/android/externcalls/sdk/Conversation$CallType;Lavf;Lji6;)V",
         "callEventualStatSender",
-        "Lzag;",
+        "Lccg;",
         "report",
-        "(Lp71;)V",
+        "(Lx71;)V",
         "",
         "getWarmupStatusString",
         "()Ljava/lang/String;",
         "onConversationStarted",
         "()V",
         "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
-        "Lvtf;",
+        "Lavf;",
         "",
         "startTimeMs",
         "J",
@@ -77,7 +77,7 @@
 
 .field private final startTimeMs:J
 
-.field private final timeProvider:Lvtf;
+.field private final timeProvider:Lavf;
 
 
 # direct methods
@@ -88,32 +88,32 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->Companion:Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation$CallType;Lvtf;Loh6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation$CallType;Lavf;Lji6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
-            "Lvtf;",
-            "Loh6;",
+            "Lavf;",
+            "Lji6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Loh6;)V
+    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lji6;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->callType:Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lvtf;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lavf;
 
-    invoke-interface {p2}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {p2}, Lavf;->getMsSinceBoot()J
 
     move-result-wide p1
 
@@ -122,10 +122,10 @@
     return-void
 .end method
 
-.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;Lp71;)V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;Lx71;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->report(Lp71;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->report(Lx71;)V
 
     return-void
 .end method
@@ -138,12 +138,12 @@
     return-object v0
 .end method
 
-.method private final report(Lp71;)V
+.method private final report(Lx71;)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lvtf;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lavf;
 
-    invoke-interface {v0}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {v0}, Lavf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -179,7 +179,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v2}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
@@ -207,7 +207,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    invoke-static {v5}, Ls9f;->E(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Lzaf;->L(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
@@ -222,7 +222,7 @@
 
     const/16 v4, 0xa
 
-    invoke-static {v3, v4}, Lcb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {v3, v4}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v4
 
@@ -307,11 +307,11 @@
     invoke-virtual {v1, v3, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     :cond_4
-    check-cast p1, Lq71;
+    check-cast p1, Ly71;
 
     const-string v2, "call_start"
 
-    invoke-virtual {p1, v2, v0, v1}, Lq71;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {p1, v2, v0, v1}, Ly71;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     return-void
 .end method
@@ -325,7 +325,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$onConversationStarted$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lqh6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lli6;)V
 
     return-void
 .end method

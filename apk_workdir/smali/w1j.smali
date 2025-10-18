@@ -1,377 +1,102 @@
-.class public final Lw1j;
+.class public abstract Lw1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly8f;
+
 
 # static fields
-.field public static final n:Ljava/util/HashMap;
-
-
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lwv4;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/util/ArrayList;
-
-.field public final e:Ljava/util/HashSet;
-
-.field public final f:Ljava/lang/Object;
-
-.field public g:Z
-
-.field public final h:Landroid/content/Intent;
-
-.field public final i:Ljava/lang/ref/WeakReference;
-
-.field public final j:Loki;
-
-.field public final k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public l:Lqvi;
-
-.field public m:Lt7i;
+.field public static final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lw1j;->n:Ljava/util/HashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lwv4;Landroid/content/Intent;)V
+.method public static final a(Lg66;Lpf9;)Ljava/lang/Object;
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lkv5;->$EnumSwitchMapping$0:[I
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    move-result p0
 
-    iput-object v0, p0, Lw1j;->d:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lw1j;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lw1j;->f:Ljava/lang/Object;
-
-    new-instance v0, Loki;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Loki;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lw1j;->j:Loki;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Lw1j;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-object p1, p0, Lw1j;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lw1j;->b:Lwv4;
-
-    const-string p1, "AppUpdateService"
-
-    iput-object p1, p0, Lw1j;->c:Ljava/lang/String;
-
-    iput-object p3, p0, Lw1j;->h:Landroid/content/Intent;
-
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lw1j;->i:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public static b(Lw1j;Lzoi;)V
-    .locals 6
-
-    iget-object v0, p0, Lw1j;->m:Lt7i;
-
-    iget-object v1, p0, Lw1j;->b:Lwv4;
-
-    iget-object v2, p0, Lw1j;->d:Ljava/util/ArrayList;
-
-    const/4 v3, 0x0
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lw1j;->g:Z
-
-    if-nez v0, :cond_3
-
-    new-array v0, v3, [Ljava/lang/Object;
-
-    const-string v4, "Initiate binding to the service."
-
-    invoke-virtual {v1, v4, v0}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance p1, Lqvi;
+    aget p0, v0, p0
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, v0, p0}, Lqvi;-><init>(ILjava/lang/Object;)V
+    if-ne p0, v0, :cond_0
 
-    iput-object p1, p0, Lw1j;->l:Lqvi;
-
-    iput-boolean v0, p0, Lw1j;->g:Z
-
-    iget-object v4, p0, Lw1j;->a:Landroid/content/Context;
-
-    iget-object v5, p0, Lw1j;->h:Landroid/content/Intent;
-
-    invoke-virtual {v4, v5, p1, v0}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    new-array p1, v3, [Ljava/lang/Object;
-
-    const-string v0, "Failed to bind to the service."
-
-    invoke-virtual {v1, v0, p1}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-boolean v3, p0, Lw1j;->g:Z
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Lf4e;->c(Lpf9;)[J
 
     move-result-object p0
 
+    return-object p0
+
     :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_0
+    invoke-virtual {p1}, Lpf9;->y()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result p1
+    goto :goto_1
 
-    if-eqz p1, :cond_1
+    :catchall_0
+    move-exception p0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string p1, "ServerPayload/PayloadCatching"
+
+    const-string v1, "payloadCatching catch error"
+
+    invoke-static {p1, v1, p0}, Ltei;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object p1, Lf4e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Lsqi;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v0, Lcom/google/android/play/core/appupdate/internal/zzy;
+    move-result v1
 
-    invoke-direct {v0}, Lcom/google/android/play/core/appupdate/internal/zzy;-><init>()V
+    if-eqz v1, :cond_1
 
-    iget-object p1, p1, Lsqi;->a:Lrnf;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Lrnf;->c(Ljava/lang/Exception;)Z
+    check-cast v1, Lvna;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Lvna;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
+    sget p1, Labd;->a:I
+
+    invoke-static {p1}, Ldy1;->v(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    if-eq p1, v0, :cond_2
+
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 
     :cond_2
-    return-void
+    throw p0
 
     :cond_3
-    iget-boolean p0, p0, Lw1j;->g:Z
-
-    if-eqz p0, :cond_4
-
-    new-array p0, v3, [Ljava/lang/Object;
-
-    const-string v0, "Waiting to bind to the service."
-
-    invoke-virtual {v1, v0, p0}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_4
-    invoke-virtual {p1}, Lsqi;->run()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Landroid/os/Handler;
-    .locals 4
-
-    sget-object v0, Lw1j;->n:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lw1j;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/os/HandlerThread;
-
-    iget-object v2, p0, Lw1j;->c:Ljava/lang/String;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v1, v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
-
-    iget-object v2, p0, Lw1j;->c:Ljava/lang/String;
-
-    new-instance v3, Landroid/os/Handler;
-
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v3, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lw1j;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Handler;
-
-    monitor-exit v0
-
-    return-object v1
-
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 p0, 0x0
 
-    throw v1
-.end method
-
-.method public final c(Lrnf;)V
-    .locals 2
-
-    iget-object v0, p0, Lw1j;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lw1j;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance p1, Lpvi;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0, p0}, Lpvi;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Lw1j;->a()Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final d()V
-    .locals 6
-
-    iget-object v0, p0, Lw1j;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lrnf;
-
-    new-instance v3, Landroid/os/RemoteException;
-
-    iget-object v4, p0, Lw1j;->c:Ljava/lang/String;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, " : Binder has died."
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v3}, Lrnf;->c(Ljava/lang/Exception;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-
-    return-void
+    return-object p0
 .end method

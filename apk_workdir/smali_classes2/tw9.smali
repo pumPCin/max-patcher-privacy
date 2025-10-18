@@ -1,165 +1,98 @@
-.class public final Ltw9;
-.super Lklf;
+.class public abstract Ltw9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public c:Lb99;
-
-.field public o:Lea2;
-
-
 # direct methods
-.method public constructor <init>(Loe9;)V
-    .locals 0
+.method public static a([B)Luw9;
+    .locals 14
 
-    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
 
-    return-void
-.end method
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDelete;-><init>()V
 
+    :try_start_0
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
-# virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 2
+    move-result-object p0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
+
+    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    const/4 v1, -0x1
+    if-nez v0, :cond_0
 
-    sparse-switch v0, :sswitch_data_0
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
 
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "message"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "chat"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "chatAccessToken"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Loe9;->y()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lbji;->c(Loe9;)Lb99;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltw9;->c:Lb99;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lea2;->a(Loe9;)Lea2;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltw9;->o:Lea2;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lfzh;->s(Loe9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltw9;->X:Ljava/lang/String;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7ca41f83 -> :sswitch_2
-        0x2e9358 -> :sswitch_1
-        0x38eb0007 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Ltw9;->c:Lb99;
-
-    iget-object v1, p0, Ltw9;->o:Lea2;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Response{, message="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", chat="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lgg3;->a(Ljava/lang/String;)Lgg3;
 
     move-result-object v0
 
-    return-object v0
+    :goto_0
+    move-object v10, v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v1, Luw9;
+
+    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->requestId:J
+
+    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatId:J
+
+    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatServerId:J
+
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesId:[J
+
+    invoke-static {v0}, Ljt;->E([J)Ljava/util/List;
+
+    move-result-object v8
+
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesServerId:[J
+
+    invoke-static {v0}, Ljt;->E([J)Ljava/util/List;
+
+    move-result-object v9
+
+    iget-boolean v11, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->forMe:Z
+
+    sget-object v0, Ldq4;->o:Lxo6;
+
+    iget v12, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->itemTypeId:I
+
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v12
+
+    invoke-static {v0, v12}, Lxo6;->e(Lxo6;Ljava/lang/Integer;)Ldq4;
+
+    move-result-object v12
+
+    iget-boolean v13, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
+
+    invoke-direct/range {v1 .. v13}, Luw9;-><init>(JJJLjava/util/List;Ljava/util/List;Lgg3;ZLdq4;Z)V
+
+    return-object v1
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

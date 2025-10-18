@@ -1,81 +1,117 @@
-.class public final synthetic Lzm3;
-.super Ljava/lang/Object;
+.class public final Lzm3;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+.field public final synthetic Y:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
+.method public constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lzm3;->a:I
+    iput-object p1, p0, Lzm3;->Y:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    iput-object p1, p0, Lzm3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lzm3;->a:I
+    check-cast p1, Ljava/lang/String;
 
-    iget-object v1, p0, Lzm3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lzm3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
+    move-result-object p1
 
-    new-instance v0, Lgn3;
+    check-cast p1, Lzm3;
 
-    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lqs;
+    sget-object p2, Lccg;->a:Lccg;
 
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
+    invoke-virtual {p1, p2}, Lzm3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    return-object p2
+.end method
 
-    aget-object v3, v3, v4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    new-instance v0, Lzm3;
+
+    iget-object v1, p0, Lzm3;->Y:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    invoke-direct {v0, v1, p2}, Lzm3;-><init>(Lone/me/login/confirm/ConfirmPhoneScreen;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lzm3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzm3;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:[Ltr7;
+
+    iget-object v0, p0, Lzm3;->Y:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    iget-object v1, v0, Lone/me/login/confirm/ConfirmPhoneScreen;->z0:Lw0e;
+
+    sget-object v2, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:[Ltr7;
+
+    const/4 v3, 0x7
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2}, Lw0e;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v1, Ljn7;
 
-    invoke-direct {v0, v1}, Lgn3;-><init>(Ljava/lang/String;)V
+    sget-object v2, Lccg;->a:Lccg;
 
-    return-object v0
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
+    invoke-interface {v1}, Ljn7;->isActive()Z
 
-    invoke-virtual {v1}, Lx14;->getOnBackPressedDispatcher()Lnla;
+    move-result v1
 
-    move-result-object v0
+    const/4 v3, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne v1, v3, :cond_0
 
-    invoke-virtual {v0}, Lnla;->d()V
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lzag;->a:Lzag;
+    iget-object v1, v0, Lone/me/login/confirm/ConfirmPhoneScreen;->y0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    return-object v0
+    if-eqz v1, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    return-object v2
+
+    :cond_1
+    invoke-virtual {v0, p1}, Lone/me/login/confirm/ConfirmPhoneScreen;->I0(Ljava/lang/String;)V
+
+    return-object v2
 .end method

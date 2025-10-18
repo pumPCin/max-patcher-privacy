@@ -1,171 +1,153 @@
-.class public abstract Lbvh;
-.super Ljava/lang/Object;
+.class public final Lbvh;
+.super Lub7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
+# instance fields
+.field public final synthetic d:I
 
-.field public static final b:Ljava/util/HashMap;
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput v0, p0, Lbvh;->d:I
 
-    sput-object v0, Lbvh;->a:Ljava/util/HashMap;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/HashMap;
+    const/4 v0, 0x0
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    iput-object v0, p0, Lub7;->c:[Ljava/lang/Object;
 
-    sput-object v1, Lbvh;->b:Ljava/util/HashMap;
+    const/4 v0, 0x0
 
-    const/4 v2, -0x2
+    iput-boolean v0, p0, Lub7;->a:Z
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const-string v3, "An unknown error occurred."
-
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v3, -0x3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const-string v4, "The API is not available on this device."
-
-    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v4, -0x4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const-string v5, "The request that was sent by the app is malformed."
-
-    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v5, -0x5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v6, "The install is unavailable to this user or device."
-
-    invoke-virtual {v0, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v6, -0x6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v7, "The download/install is not allowed, due to the current device state (e.g. low battery, low disk space, ...)."
-
-    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v7, -0x7
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v8, "The install/update has not been (fully) downloaded yet."
-
-    invoke-virtual {v0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v8, -0x8
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v9, "The install is already in progress and there is no UI flow to resume."
-
-    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v9, -0x9
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v10, "The Play Store app is either not installed or not the official version."
-
-    invoke-virtual {v0, v9, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v10, -0xa
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const-string v11, "The app is not owned by any user on this device. An app is \"owned\" if it has been acquired from Play."
-
-    invoke-virtual {v0, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v11, -0x64
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    const-string v12, "An internal error happened in the Play Store."
-
-    invoke-virtual {v0, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_UNKNOWN"
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_API_NOT_AVAILABLE"
-
-    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INVALID_REQUEST"
-
-    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_UNAVAILABLE"
-
-    invoke-virtual {v1, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_NOT_ALLOWED"
-
-    invoke-virtual {v1, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_DOWNLOAD_NOT_PRESENT"
-
-    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_IN_PROGRESS"
-
-    invoke-virtual {v1, v8, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INTERNAL_ERROR"
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "ERROR_PLAY_STORE_NOT_FOUND"
-
-    invoke-virtual {v1, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "ERROR_APP_NOT_OWNED"
-
-    invoke-virtual {v1, v10, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v0, p0, Lub7;->b:I
 
     return-void
+.end method
+
+.method public constructor <init>(Lns0;[Lcq5;ZI)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lbvh;->d:I
+
+    .line 2
+    iput-object p1, p0, Lbvh;->e:Ljava/lang/Object;
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lub7;->c:[Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    if-eqz p2, :cond_0
+
+    if-eqz p3, :cond_0
+
+    const/4 p1, 0x1
+
+    :cond_0
+    iput-boolean p1, p0, Lub7;->a:Z
+
+    iput p4, p0, Lub7;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final f(Lkl;Lvof;)V
+    .locals 3
+
+    iget v0, p0, Lbvh;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lngi;
+
+    iput-object p2, p0, Lbvh;->e:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+
+    move-result-object p1
+
+    check-cast p1, Lc9i;
+
+    new-instance p2, Lzni;
+
+    invoke-direct {p2, p0}, Lzni;-><init>(Lbvh;)V
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v1, Lm2i;->a:I
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object p2
+
+    :try_start_0
+    iget-object p1, p1, Lc9i;->c:Landroid/os/IBinder;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v1, v0, p2, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lbvh;->e:Ljava/lang/Object;
+
+    check-cast v0, Lns0;
+
+    iget-object v0, v0, Lns0;->d:Ljava/lang/Object;
+
+    check-cast v0, Li9d;
+
+    invoke-interface {v0, p1, p2}, Li9d;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

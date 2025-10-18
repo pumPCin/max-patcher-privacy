@@ -3,150 +3,170 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzng;
+.implements Ldb7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Lkng;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lhy9;->a:I
-
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    new-instance v0, Lasb;
-
-    .line 5
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object v0, p0, Lhy9;->b:Lkng;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkng;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lhy9;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lhy9;->b:Lkng;
+    iput p1, p0, Lhy9;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Llb3;Ley0;Laog;Ljava/util/concurrent/Executor;JZ)Lbog;
-    .locals 10
+.method public final createImageTranscoder(Lv97;Z)Lcb7;
+    .locals 5
 
     iget v0, p0, Lhy9;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "Dependency \':native-imagetranscoder\' is needed to use the default native image transcoder."
 
     :try_start_0
-    const-class v0, Landroidx/media3/effect/SingleInputVideoGraph$Factory;
+    const-class v2, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;
 
-    const-class v1, Lkng;
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    filled-new-array {v1}, [Ljava/lang/Class;
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    move-result-object v1
+    filled-new-array {v3, v4, v4}, [Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    move-result-object v3
 
-    move-result-object v0
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    iget-object v1, p0, Lhy9;->b:Lkng;
+    move-result-object v2
 
-    check-cast v1, Lasb;
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    move-object v1, v0
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    check-cast v1, Lzng;
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldb7;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    move-wide/from16 v7, p6
-
-    move/from16 v9, p8
-
-    invoke-interface/range {v1 .. v9}, Lzng;->a(Landroid/content/Context;Llb3;Ley0;Laog;Ljava/util/concurrent/Executor;JZ)Lbog;
+    invoke-interface {v0, p1, p2}, Ldb7;->createImageTranscoder(Lv97;Z)Lcb7;
 
     move-result-object p1
 
+    if-nez p1, :cond_0
+
+    new-instance p1, Lmj3;
+
+    iget v0, p0, Lhy9;->a:I
+
+    invoke-direct {p1, p2, v0}, Lmj3;-><init>(ZI)V
+
+    :cond_0
     return-object p1
 
     :catch_0
-    move-exception v0
+    move-exception p1
 
-    move-object p1, v0
+    goto :goto_0
 
-    new-instance p2, Ljava/lang/IllegalStateException;
+    :catch_1
+    move-exception p1
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_4
+    move-exception p1
+
+    goto :goto_4
+
+    :catch_5
+    move-exception p1
+
+    goto :goto_5
+
+    :catch_6
+    move-exception p1
+
+    goto :goto_6
+
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p2
 
-    :pswitch_0
-    new-instance v0, Liy9;
+    :goto_1
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    iget-object v3, p0, Lhy9;->b:Lkng;
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v5, p1
+    throw p2
 
-    move-object v2, p2
+    :goto_2
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move-object v1, p3
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v4, p4
+    throw p2
 
-    move-object v6, p5
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move/from16 v7, p8
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct/range {v0 .. v7}, Liy9;-><init>(Ley0;Llb3;Lkng;Laog;Landroid/content/Context;Ljava/util/concurrent/Executor;Z)V
+    throw p2
 
-    return-object v0
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    nop
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p2
+
+    :goto_5
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_6
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvdc;
+.implements Lxw7;
 
 
 # instance fields
@@ -31,161 +31,124 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 6
+.method public final d(Lfx7;Lgw7;)V
+    .locals 4
 
     iget v0, p0, Lyh3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyh3;->b:Ljava/lang/Object;
+    iget-object p2, p0, Lyh3;->b:Ljava/lang/Object;
 
-    check-cast v0, Lnv5;
+    check-cast p2, Lmw7;
 
-    iget-object v1, p0, Lyh3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lyh3;->c:Ljava/lang/Object;
 
-    check-cast v1, Landroid/content/Context;
+    check-cast v0, Ljn7;
 
-    new-instance v2, Ldb4;
+    iget-object v1, p2, Lmw7;->c:Lgv4;
 
-    invoke-virtual {v0}, Lnv5;->c()Ljava/lang/String;
+    invoke-interface {p1}, Lfx7;->x()Lhx7;
 
-    move-result-object v3
+    move-result-object v2
 
-    iget-object v0, v0, Lnv5;->d:Lzh3;
+    iget-object v2, v2, Lhx7;->d:Lhw7;
 
-    const-class v4, Lpec;
+    sget-object v3, Lhw7;->a:Lhw7;
 
-    invoke-interface {v0, v4}, Lsh3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    if-ne v2, v3, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    check-cast v0, Lpec;
+    invoke-interface {v0, p1}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v1}, Lo04;->a(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "com.google.firebase.common.prefs:"
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v1
-
-    const-string v3, "firebase_data_collection_default_enabled"
-
-    invoke-interface {v1, v3}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {v1, v3, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v5
+    invoke-virtual {p2}, Lmw7;->a()V
 
     goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-interface {p1}, Lfx7;->x()Lhx7;
 
-    move-result-object v1
+    move-result-object p1
 
-    if-eqz v1, :cond_1
+    iget-object p1, p1, Lhx7;->d:Lhw7;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    iget-object p2, p2, Lmw7;->b:Lhw7;
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    const/16 v4, 0x80
+    move-result p1
 
-    invoke-virtual {v1, v0, v4}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    if-gez p1, :cond_1
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    if-eqz v0, :cond_1
+    iput-boolean p1, v1, Lgv4;->a:Z
 
-    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+    goto :goto_0
 
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v3}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v5
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
     :cond_1
-    :goto_0
-    iput-boolean v5, v2, Ldb4;->a:Z
+    iget-boolean p1, v1, Lgv4;->a:Z
 
-    return-object v2
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean p1, v1, Lgv4;->b:Z
+
+    if-nez p1, :cond_3
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lgv4;->a:Z
+
+    invoke-virtual {v1}, Lgv4;->a()V
+
+    :goto_0
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Cannot resume a finished dispatcher"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :pswitch_0
-    iget-object v0, p0, Lyh3;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lyh3;->b:Ljava/lang/Object;
 
-    check-cast v0, Landroid/content/Context;
+    check-cast p1, Lpma;
 
-    iget-object v1, p0, Lyh3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lyh3;->c:Ljava/lang/Object;
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v0, Landroidx/fragment/app/b;
 
-    new-instance v2, Ldx6;
+    sget-object v1, Lgw7;->ON_CREATE:Lgw7;
 
-    invoke-direct {v2, v0, v1}, Ldx6;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    if-ne p2, v1, :cond_4
 
-    return-object v2
+    sget-object p2, Lzh3;->a:Lzh3;
 
-    :pswitch_1
-    iget-object v0, p0, Lyh3;->b:Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Lzh3;->a(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
 
-    check-cast v0, Lzh3;
+    move-result-object p2
 
-    iget-object v1, p0, Lyh3;->c:Ljava/lang/Object;
+    iput-object p2, p1, Lpma;->e:Landroid/window/OnBackInvokedDispatcher;
 
-    check-cast v1, Lgh3;
+    iget-boolean p2, p1, Lpma;->g:Z
 
-    iget-object v2, v1, Lgh3;->f:Lvh3;
+    invoke-virtual {p1, p2}, Lpma;->e(Z)V
 
-    new-instance v3, Lvuc;
+    :cond_4
+    return-void
 
-    invoke-direct {v3, v1, v0}, Lvuc;-><init>(Lgh3;Lsh3;)V
-
-    invoke-interface {v2, v3}, Lvh3;->i(Lvuc;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

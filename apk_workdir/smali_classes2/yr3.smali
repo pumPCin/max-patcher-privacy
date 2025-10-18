@@ -1,48 +1,33 @@
-.class public final Lyr3;
-.super Lk14;
+.class public abstract Lyr3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lxr3;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lfo3;
 
 
 # direct methods
-.method public constructor <init>(Lxr3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lyr3;->Y:Lxr3;
+    new-instance v0, Lfo3;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget v1, Ltsa;->k:I
+
+    sget v2, Ldkd;->q:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v2}, Lorf;-><init>(I)V
+
+    const/4 v2, 0x2
+
+    const/16 v4, 0x38
+
+    invoke-direct {v0, v1, v3, v2, v4}, Lfo3;-><init>(ILtrf;II)V
+
+    sput-object v0, Lyr3;->a:Lfo3;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lyr3;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lyr3;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lyr3;->X:I
-
-    iget-object p1, p0, Lyr3;->Y:Lxr3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lxr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,126 +1,48 @@
 .class public final Lelf;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lwp9;
+.super Ly14;
 
 
 # instance fields
-.field public final a:Lye5;
+.field public X:I
 
-.field public final b:Llt7;
+.field public final synthetic Y:Ltz7;
 
-.field public final c:Llt7;
-
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:Llt7;
-
-.field public final g:Llt7;
-
-.field public final h:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Lrhf;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lye5;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Lqkf;Llt7;)V
+.method public constructor <init>(Ltz7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lelf;->Y:Ltz7;
 
-    iput-object p1, p0, Lelf;->a:Lye5;
-
-    iput-object p2, p0, Lelf;->b:Llt7;
-
-    iput-object p3, p0, Lelf;->c:Llt7;
-
-    iput-object p5, p0, Lelf;->d:Llt7;
-
-    iput-object p6, p0, Lelf;->e:Llt7;
-
-    iput-object p7, p0, Lelf;->f:Llt7;
-
-    new-instance p2, Lvu1;
-
-    const/4 p3, 0x3
-
-    invoke-direct {p2, p4, p5, p3}, Lvu1;-><init>(Llt7;Llt7;I)V
-
-    new-instance p3, Lrhf;
-
-    invoke-direct {p3, p2}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p9, p0, Lelf;->g:Llt7;
-
-    check-cast p8, Losa;
-
-    invoke-virtual {p8}, Losa;->b()Lv44;
-
-    move-result-object p2
-
-    const/4 p3, 0x2
-
-    const-string p4, "cloud-pushes"
-
-    invoke-virtual {p2, p3, p4}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
-
-    move-result-object p2
-
-    new-instance p3, Lkk;
-
-    invoke-direct {p3, p1}, Lkk;-><init>(Lye5;)V
-
-    invoke-virtual {p2, p3}, Lp0;->plus(Lt44;)Lt44;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lelf;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    const-class p1, Lelf;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lelf;->i:Ljava/lang/String;
-
-    new-instance p1, Lwxe;
-
-    const/16 p2, 0xd
-
-    invoke-direct {p1, p2}, Lwxe;-><init>(I)V
-
-    new-instance p2, Lrhf;
-
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p2, p0, Lelf;->j:Lrhf;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lflf;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lelf;->b:Llt7;
+    iput-object p1, p0, Lelf;->o:Ljava/lang/Object;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    iget p1, p0, Lelf;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lflf;
+    or-int/2addr p1, v0
 
-    return-object v0
+    iput p1, p0, Lelf;->X:I
+
+    iget-object p1, p0, Lelf;->Y:Ltz7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ltz7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,19 +1,19 @@
 .class public final Li7c;
-.super Lk7c;
+.super Lm7c;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Li7c;->a:I
+    iput-object p1, p0, Li7c;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -41,44 +41,30 @@
     :cond_1
     check-cast p1, Li7c;
 
-    iget v1, p0, Li7c;->a:I
+    iget-object v1, p0, Li7c;->a:Ljava/lang/String;
 
-    iget p1, p1, Li7c;->a:I
+    iget-object p1, p1, Li7c;->a:Ljava/lang/String;
 
-    if-ne v1, p1, :cond_2
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v0
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    return v2
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x400
-
-    int-to-long v0, v0
-
-    return-wide v0
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Li7c;->a:I
+    iget-object v0, p0, Li7c;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Li7c;->a:I
 
     return v0
 .end method
@@ -86,17 +72,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Li7c;->a:I
+    const-string v0, "CopyToClipboard(text="
 
-    invoke-static {v0}, Lkui;->b(I)Ljava/lang/String;
+    const-string v1, ")"
 
-    move-result-object v0
+    iget-object v2, p0, Li7c;->a:Ljava/lang/String;
 
-    const-string v1, "Loading(itemViewType="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

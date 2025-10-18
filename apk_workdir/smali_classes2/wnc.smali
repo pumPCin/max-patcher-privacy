@@ -3,38 +3,48 @@
 
 
 # static fields
-.field public static oneme_settings_avatar_select_screen:I = 0x7f0a0785
+.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a0692
 
-.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a0786
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a0693
 
-.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a0787
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0694
 
-.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a0788
+.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a0695
 
-.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0789
+.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a0696
 
-.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a078a
+.field public static oneme_folders_edit_create_button:I = 0x7f0a0697
 
-.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a078b
+.field public static oneme_folders_edit_delete_button:I = 0x7f0a0698
 
-.field public static oneme_settings_container:I = 0x7f0a078c
+.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a0699
 
-.field public static oneme_settings_list_screen_appbar:I = 0x7f0a0794
+.field public static oneme_folders_edit_members_add_button:I = 0x7f0a069a
 
-.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a0795
+.field public static oneme_folders_edit_members_list:I = 0x7f0a069b
 
-.field public static oneme_settings_toolbar:I = 0x7f0a082f
+.field public static oneme_folders_edit_save_button:I = 0x7f0a069c
 
-.field public static oneme_settings_topbar:I = 0x7f0a0830
+.field public static oneme_folders_edit_screen:I = 0x7f0a069d
 
-.field public static oneme_settings_topbar_avatar:I = 0x7f0a0831
+.field public static oneme_folders_edit_title_input:I = 0x7f0a069e
 
-.field public static oneme_settings_topbar_container:I = 0x7f0a0832
+.field public static oneme_folders_edit_toolbar:I = 0x7f0a069f
 
-.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a0833
+.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a06a0
 
-.field public static oneme_settings_topbar_name:I = 0x7f0a0834
+.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a06a1
 
-.field public static oneme_settings_topbar_nick:I = 0x7f0a0835
+.field public static oneme_folders_list_menu_action_change:I = 0x7f0a06a2
 
-.field public static oneme_settings_topbar_phone:I = 0x7f0a0836
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a06a3
+
+.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a06a4
+
+.field public static oneme_folders_list_recycler_view:I = 0x7f0a06a5
+
+.field public static oneme_folders_list_screen:I = 0x7f0a06a6
+
+.field public static oneme_folders_list_toolbar:I = 0x7f0a06a7
+
+.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a06a8

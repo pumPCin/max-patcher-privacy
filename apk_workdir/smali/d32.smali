@@ -2,7 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfaa;
+
 
 # virtual methods
-.method public abstract cancel()V
+.method public abstract b(Ljava/lang/Throwable;)V
 .end method

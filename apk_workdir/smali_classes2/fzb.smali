@@ -1,105 +1,79 @@
-.class public abstract Lfzb;
-.super Ljava/lang/Object;
+.class public final Lfzb;
+.super Ltj0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final X:Lzlf;
+
+
+# instance fields
+.field public final c:J
+
+.field public final o:Ljava/util/List;
+
+
 # direct methods
-.method public static a([B)Lgzb;
-    .locals 14
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
+    new-instance v0, Lzlf;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
+    const-string v1, "privacy.restricted"
 
-    :try_start_0
-    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    invoke-direct {v0, v1, v2, v2}, Lzlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lfzb;->X:Lzlf;
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 1
 
-    new-instance v1, Lu10;
+    sget-object v0, Lfzb;->X:Lzlf;
 
-    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+    invoke-direct {p0, v0}, Ltj0;-><init>(Lzlf;)V
 
-    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+    iput-wide p1, p0, Lfzb;->c:J
 
-    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+    iput-object p3, p0, Lfzb;->o:Ljava/util/List;
 
-    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+    return-void
+.end method
 
-    const/4 v6, 0x2
 
-    invoke-direct/range {v1 .. v6}, Lu10;-><init>(FFFFI)V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :goto_0
-    move-object v10, v1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, "PrivacyRestrictedError{chatId="
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-wide v1, p0, Lfzb;->c:J
 
-    :goto_1
-    new-instance v2, Lgzb;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
+    const-string v1, ", contactIds="
 
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+    iget-object v1, p0, Lfzb;->o:Ljava/util/List;
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
+    const/16 v1, 0x7d
 
-    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v0, "PRESET_AVATAR"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    :goto_2
-    move v13, p0
-
-    goto :goto_3
-
-    :cond_1
-    const/4 p0, 0x2
-
-    goto :goto_2
-
-    :goto_3
-    invoke-direct/range {v2 .. v13}, Lgzb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLu10;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

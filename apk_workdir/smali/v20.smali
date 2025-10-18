@@ -2,26 +2,29 @@
 .super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lxh5;
+.field public final a:Lqi5;
 
-.field public final b:Lgif;
+.field public final b:Landroid/os/Handler;
 
-.field public final synthetic c:Llg6;
+.field public final synthetic c:Lae;
 
 
 # direct methods
-.method public constructor <init>(Llg6;Lgif;Lxh5;)V
+.method public constructor <init>(Lae;Landroid/os/Handler;Lqi5;)V
     .locals 0
 
-    iput-object p1, p0, Lv20;->c:Llg6;
+    iput-object p1, p0, Lv20;->c:Lae;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p2, p0, Lv20;->b:Lgif;
+    iput-object p2, p0, Lv20;->b:Landroid/os/Handler;
 
-    iput-object p3, p0, Lv20;->a:Lxh5;
+    iput-object p3, p0, Lv20;->a:Lqi5;
 
     return-void
 .end method
@@ -43,15 +46,34 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Lk3;
+    iget-object p1, p0, Lv20;->b:Landroid/os/Handler;
 
-    const/16 p2, 0xc
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {p1, p2, p0}, Lk3;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    return-void
+.end method
 
-    iget-object p2, p0, Lv20;->b:Lgif;
+.method public final run()V
+    .locals 4
 
-    invoke-virtual {p2, p1}, Lgif;->d(Ljava/lang/Runnable;)Z
+    iget-object v0, p0, Lv20;->c:Lae;
+
+    iget-boolean v0, v0, Lae;->b:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lv20;->a:Lqi5;
+
+    iget-object v0, v0, Lqi5;->a:Lwi5;
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Lwi5;->h1(IIZ)V
 
     :cond_0
     return-void

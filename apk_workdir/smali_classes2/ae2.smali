@@ -3,53 +3,109 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Lae2;
+
+.field public static final g:Lae2;
+
+
 # instance fields
-.field public final a:J
+.field public final a:Lge2;
 
-.field public final b:Z
+.field public final b:I
 
-.field public final c:Z
+.field public final c:J
 
-.field public final d:Z
+.field public final d:J
 
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:I
-
-.field public final j:Lmu6;
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(JZZZLjava/lang/String;Ljava/lang/String;ZZILmu6;)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v0, Lae2;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lae2;-><init>(Lge2;IJJLjava/util/List;)V
+
+    sput-object v0, Lae2;->f:Lae2;
+
+    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v1, Lae2;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lae2;-><init>(Lge2;IJJLjava/util/List;)V
+
+    sput-object v1, Lae2;->g:Lae2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lge2;IJJLjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lae2;->a:J
+    iput-object p1, p0, Lae2;->a:Lge2;
 
-    iput-boolean p3, p0, Lae2;->b:Z
+    iput p2, p0, Lae2;->b:I
 
-    iput-boolean p4, p0, Lae2;->c:Z
+    iput-wide p3, p0, Lae2;->c:J
 
-    iput-boolean p5, p0, Lae2;->d:Z
+    iput-wide p5, p0, Lae2;->d:J
 
-    iput-object p6, p0, Lae2;->e:Ljava/lang/String;
-
-    iput-object p7, p0, Lae2;->f:Ljava/lang/String;
-
-    iput-boolean p8, p0, Lae2;->g:Z
-
-    iput-boolean p9, p0, Lae2;->h:Z
-
-    iput p10, p0, Lae2;->i:I
-
-    iput-object p11, p0, Lae2;->j:Lmu6;
+    iput-object p7, p0, Lae2;->e:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lzd2;
+    .locals 3
+
+    new-instance v0, Lzd2;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lae2;->a:Lge2;
+
+    iput-object v1, v0, Lzd2;->o:Ljava/lang/Object;
+
+    iget v1, p0, Lae2;->b:I
+
+    iput v1, v0, Lzd2;->a:I
+
+    iget-wide v1, p0, Lae2;->c:J
+
+    iput-wide v1, v0, Lzd2;->b:J
+
+    iget-wide v1, p0, Lae2;->d:J
+
+    iput-wide v1, v0, Lzd2;->c:J
+
+    iget-object v1, p0, Lae2;->e:Ljava/util/List;
+
+    iput-object v1, v0, Lzd2;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method

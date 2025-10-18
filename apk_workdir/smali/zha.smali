@@ -1,42 +1,14 @@
-.class public final Lzha;
-.super Lwga;
+.class public interface abstract Lzha;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvld;
-
-
-# static fields
-.field public static final a:Lzha;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lzha;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzha;->a:Lzha;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract g(Ljava/util/concurrent/Executor;Lxha;)V
 .end method
 
-.method public final o(Lcka;)V
-    .locals 0
+.method public abstract o()Ll28;
+.end method
 
-    invoke-static {p1}, Ln95;->a(Lcka;)V
-
-    return-void
+.method public abstract q(Lxha;)V
 .end method

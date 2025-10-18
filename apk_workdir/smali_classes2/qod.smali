@@ -1,231 +1,376 @@
 .class public final Lqod;
-.super Landroid/media/projection/MediaProjection$Callback;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
+.field public final synthetic X:Lsmd;
 
-.field public final b:Lyuc;
-
-.field public volatile c:Z
-
-.field public volatile d:Z
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public final h:Ljava/util/concurrent/Executor;
+.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Lyuc;)V
+.method public constructor <init>(Lsmd;Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
+    iput-object p1, p0, Lqod;->X:Lsmd;
 
-    iput-object p3, p0, Lqod;->b:Lyuc;
+    iput-object p2, p0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    iput-object p2, p0, Lqod;->h:Ljava/util/concurrent/Executor;
+    const/4 p1, 0x2
 
-    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
-
-    iput-object p2, p0, Lqod;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lqod;->b:Lyuc;
+    check-cast p1, Lq54;
 
-    const-string v1, "x"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v2, "@30"
+    invoke-virtual {p0, p1, p2}, Lqod;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string v3, "changeFormat, "
+    move-result-object p1
 
-    invoke-static {v3, p1, v1, p2, v2}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    check-cast p1, Lqod;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lqod;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lqod;
+
+    iget-object v0, p0, Lqod;->X:Lsmd;
+
+    iget-object v1, p0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+
+    invoke-direct {p1, v0, v1, p2}, Lqod;-><init>(Lsmd;Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    const-string v1, "ScheduledSendPickerViewModel:delayed_attrs"
+
+    iget-object v2, v0, Lqod;->X:Lsmd;
+
+    iget-object v3, v2, Lsmd;->a:Ljava/util/LinkedHashMap;
+
+    const/4 v4, 0x0
+
+    :try_start_0
+    invoke-virtual {v3, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
-
-    const-string v2, "ScreenCapturerAdapter"
-
-    invoke-interface {v0, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p0, Lqod;->g:I
-
-    const/16 v1, 0x1e
-
-    if-ne v0, p1, :cond_1
-
-    iget v0, p0, Lqod;->f:I
-
-    if-ne v0, p2, :cond_1
-
-    iget v0, p0, Lqod;->e:I
-
-    if-eq v0, v1, :cond_0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    return-void
+    :catch_0
+    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
+    iget-object v3, v2, Lsmd;->c:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-nez v3, :cond_b
+
+    iget-object v2, v2, Lsmd;->d:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object v1, v4
+
     :goto_0
-    iput v1, p0, Lqod;->e:I
+    instance-of v2, v1, Leq4;
 
-    iput p2, p0, Lqod;->f:I
+    if-eqz v2, :cond_0
 
-    iput p1, p0, Lqod;->g:I
-
-    iget-boolean v0, p0, Lqod;->d:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lqod;->b:Lyuc;
-
-    const-string v3, "Screen capture is already started, just change capture format"
-
-    invoke-interface {v0, v2, v3}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object v0, p0, Lqod;->a:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v1, Leq4;
 
     goto :goto_1
 
-    :catch_0
-    move-exception p1
+    :cond_0
+    move-object v1, v4
 
-    iget-object p2, p0, Lqod;->b:Lyuc;
+    :goto_1
+    iget-object v2, v0, Lqod;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    if-eqz v1, :cond_a
 
-    const-string v1, "Cant change screen capture format"
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v3
 
-    const-string p1, "screen.capture.change.format"
+    iget-wide v5, v1, Leq4;->a:J
 
-    invoke-interface {p2, v2, p1, v0}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v3, v5, v6}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v3, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v3, v5}, Ljava/util/Calendar;->get(I)I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v3, v6}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    const/16 v7, 0xb
+
+    invoke-virtual {v3, v7}, Ljava/util/Calendar;->get(I)I
+
+    move-result v7
+
+    const/16 v8, 0xc
+
+    invoke-virtual {v3, v8}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v10, v8, Lcod;->a:Ljava/util/List;
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v11, v8, Lcod;->b:Ljava/util/List;
+
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
+
+    move-result-object v8
+
+    iget-object v12, v8, Lcod;->c:Ljava/util/List;
+
+    invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    const/4 v13, 0x0
+
+    :goto_2
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v14
+
+    const/4 v15, -0x1
+
+    if-eqz v14, :cond_2
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Lmd4;
+
+    iget v9, v14, Lmd4;->o:I
+
+    if-ne v9, v6, :cond_1
+
+    iget v9, v14, Lmd4;->c:I
+
+    if-ne v9, v5, :cond_1
+
+    iget v9, v14, Lmd4;->b:I
+
+    if-ne v9, v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    add-int/lit8 v13, v13, 0x1
+
+    goto :goto_2
 
     :cond_2
-    :goto_1
-    return-void
-.end method
+    move v13, v15
 
-.method public final b()V
-    .locals 3
+    :goto_3
+    if-gez v13, :cond_3
 
-    const-string v0, "ScreenCapturerAdapter"
+    const/4 v13, 0x0
 
-    const-string v1, "release"
+    :cond_3
+    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iget-object v2, p0, Lqod;->b:Lyuc;
+    move-result-object v1
 
-    invoke-interface {v2, v0, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v5, 0x0
 
-    invoke-virtual {p0}, Lqod;->c()V
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v0, p0, Lqod;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    move-result v6
 
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
+    if-eqz v6, :cond_5
 
-    return-void
-.end method
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final c()V
-    .locals 5
+    move-result-object v6
 
-    iget-object v0, p0, Lqod;->b:Lyuc;
+    check-cast v6, Lvuf;
 
-    const-string v1, "stop"
+    iget v6, v6, Lvuf;->a:I
 
-    const-string v2, "ScreenCapturerAdapter"
+    if-ne v6, v7, :cond_4
 
-    invoke-interface {v0, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_5
 
-    iget-boolean v0, p0, Lqod;->d:Z
+    :cond_4
+    add-int/lit8 v5, v5, 0x1
 
-    if-nez v0, :cond_0
+    goto :goto_4
 
-    iget-object v0, p0, Lqod;->b:Lyuc;
+    :cond_5
+    move v5, v15
 
-    const-string v1, "Screen capturer is not yet started"
+    :goto_5
+    if-gez v5, :cond_6
 
-    invoke-interface {v0, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v14, 0x0
 
-    return-void
+    goto :goto_6
 
-    :cond_0
-    const/4 v0, 0x0
+    :cond_6
+    move v14, v5
 
-    iput-boolean v0, p0, Lqod;->d:Z
+    :goto_6
+    invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    :try_start_0
-    iget-object v0, p0, Lqod;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v5, 0x0
 
-    return-void
+    :goto_7
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    :catch_0
-    move-exception v0
+    move-result v6
 
-    iget-object v1, p0, Lqod;->b:Lyuc;
+    if-eqz v6, :cond_8
 
-    new-instance v3, Ljava/lang/RuntimeException;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v4, "Stop screen capture failed"
+    move-result-object v6
 
-    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v6, Lvuf;
 
-    const-string v0, "screen.capture.stop"
+    iget v6, v6, Lvuf;->a:I
 
-    invoke-interface {v1, v2, v0, v3}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-ne v6, v3, :cond_7
 
-    return-void
-.end method
+    move v15, v5
 
-.method public final onStop()V
-    .locals 3
+    goto :goto_8
 
-    iget-object v0, p0, Lqod;->b:Lyuc;
+    :cond_7
+    add-int/lit8 v5, v5, 0x1
 
-    const-string v1, "ScreenCapturerAdapter"
+    goto :goto_7
 
-    const-string v2, "onStop, screen capture session stopped"
+    :cond_8
+    :goto_8
+    if-gez v15, :cond_9
 
-    invoke-interface {v0, v1, v2}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v15, 0x0
 
-    const/4 v0, 0x1
+    :cond_9
+    new-instance v9, Lcod;
 
-    iput-boolean v0, p0, Lqod;->c:Z
+    invoke-direct/range {v9 .. v15}, Lcod;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;III)V
 
-    iget-object v0, p0, Lqod;->h:Ljava/util/concurrent/Executor;
+    goto :goto_9
 
-    new-instance v1, Lpsa;
+    :cond_a
+    invoke-static {v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Lcod;
 
-    const/16 v2, 0x14
+    move-result-object v9
 
-    invoke-direct {v1, v2, p0}, Lpsa;-><init>(ILjava/lang/Object;)V
+    :goto_9
+    iget-object v1, v2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e:Lx0f;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    new-instance v3, Lad4;
 
-    return-void
+    iget-object v5, v9, Lcod;->a:Ljava/util/List;
+
+    iget v6, v9, Lcod;->d:I
+
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lmd4;
+
+    iget-object v6, v9, Lcod;->b:Ljava/util/List;
+
+    iget v7, v9, Lcod;->e:I
+
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lvuf;
+
+    iget-object v7, v9, Lcod;->c:Ljava/util/List;
+
+    iget v8, v9, Lcod;->f:I
+
+    invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lvuf;
+
+    invoke-direct {v3, v5, v6, v7}, Lad4;-><init>(Lmd4;Lvuf;Lvuf;)V
+
+    invoke-virtual {v1, v4, v3}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, v2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->c:Lx0f;
+
+    invoke-virtual {v1, v4, v9}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
+
+    :cond_b
+    new-instance v1, Ljava/lang/ClassCastException;
+
+    invoke-direct {v1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v1
 .end method

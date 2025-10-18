@@ -1,242 +1,146 @@
-.class public final Lrl7;
-.super Lwl7;
+.class public final synthetic Lrl7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lim3;
 
 
 # instance fields
-.field public final Y:Lone/me/folders/list/FoldersListScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/folders/list/FoldersListScreen;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p1, p0, Lrl7;->a:I
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Lrl7;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, v0, v1}, Lwl7;-><init>(II)V
-
-    iput-object p1, p0, Lrl7;->Y:Lone/me/folders/list/FoldersListScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Lj6d;)V
-    .locals 5
+.method public final a()V
+    .locals 6
 
-    invoke-super {p0, p1, p2}, Lwl7;->a(Landroidx/recyclerview/widget/RecyclerView;Lj6d;)V
+    iget v0, p0, Lrl7;->a:I
 
-    instance-of p1, p2, Lyl7;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lrl7;->b:Ljava/lang/Object;
 
-    check-cast p2, Lyl7;
+    check-cast v0, Leqa;
 
-    check-cast p2, Lsgg;
+    iget-object v0, v0, Leqa;->d:Lqcd;
 
-    iget-object p1, p2, Lj6d;->a:Landroid/view/View;
+    invoke-virtual {v0}, Lqcd;->reset()V
 
-    check-cast p1, Lrgg;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
-
-    iget-object p1, p2, Lsgg;->E0:Lpzd;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lpzd;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/folders/list/FoldersListScreen;
-
-    invoke-virtual {p1}, Lone/me/folders/list/FoldersListScreen;->C0()Ly76;
-
-    move-result-object p1
-
-    invoke-virtual {p2}, Lj6d;->g()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, -0x1
-
-    iget-object v0, p1, Ly76;->u0:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v2, p1, Ly76;->c:Lqkf;
-
-    check-cast v2, Losa;
-
-    invoke-virtual {v2}, Losa;->c()Lfd8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lfd8;->getImmediate()Lfd8;
-
-    move-result-object v2
-
-    new-instance v3, Lw76;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v0, p2, v4}, Lw76;-><init>(Ly76;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x2
-
-    invoke-static {v1, v2, v4, v3, p2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    iput-object v4, p1, Ly76;->u0:Ljava/lang/String;
-
-    :cond_1
-    :goto_0
     return-void
-.end method
 
-.method public final i(Lj6d;Lj6d;)Z
-    .locals 5
+    :pswitch_0
+    iget-object v0, p0, Lrl7;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lj6d;->h()I
+    check-cast v0, Lck9;
 
-    move-result p1
+    invoke-virtual {v0}, Lck9;->e()Led8;
 
-    invoke-virtual {p2}, Lj6d;->h()I
+    move-result-object v0
 
-    move-result p2
+    const/4 v1, -0x1
 
-    iget-object v0, p0, Lrl7;->Y:Lone/me/folders/list/FoldersListScreen;
+    invoke-virtual {v0, v1}, Led8;->i(I)V
 
-    iget-object v0, v0, Lone/me/folders/list/FoldersListScreen;->X:Ln76;
+    return-void
 
-    invoke-virtual {v0, p2}, Lu08;->C(I)Ljava/lang/Object;
+    :pswitch_1
+    iget-object v0, p0, Lrl7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    sget-object v1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0:[Ltr7;
+
+    const-class v1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lb18;
-
-    check-cast v1, Lqgg;
-
-    iget-object v1, v1, Lqgg;->b:Lpgg;
-
-    sget-object v2, Lpgg;->b:Lpgg;
+    sget-object v2, Ltei;->a:Lmxa;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    move v1, v4
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    sget-object v4, Lc98;->X:Lc98;
 
-    :goto_0
-    if-lez p2, :cond_1
+    invoke-virtual {v2, v4}, Lmxa;->b(Lc98;)Z
 
-    invoke-virtual {v0}, Lu08;->j()I
+    move-result v5
 
-    move-result v2
+    if-eqz v5, :cond_1
 
-    if-lt p2, v2, :cond_2
+    const-string v5, "Recreate qr code due to display config change"
+
+    invoke-virtual {v2, v4, v1, v5, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    move v3, v4
-
-    :cond_2
-    if-eqz v1, :cond_4
-
-    if-eqz v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v1, v0, Lu08;->o:Lsv;
-
-    iget-object v1, v1, Lsv;->f:Ljava/util/List;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0}, Ll24;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    invoke-virtual {v2, p2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    if-eqz v1, :cond_2
 
-    new-instance v1, Lqm1;
+    iget-object v1, v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->C0:Lh0d;
 
-    invoke-direct {v1, v0, p1, p2, v2}, Lqm1;-><init>(Ln76;IILjava/util/ArrayList;)V
+    sget-object v4, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0:[Ltr7;
 
-    invoke-virtual {v0, v2, v1}, Lu08;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+    aget-object v4, v4, v2
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    invoke-interface {v1, v0, v4}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    return p1
-.end method
+    move-result-object v1
 
-.method public final j(Lj6d;I)V
-    .locals 1
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
 
-    if-eqz p2, :cond_0
+    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    instance-of p2, p1, Lyl7;
+    :cond_2
+    iget-object v1, v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->I0:Liu7;
 
-    if-eqz p2, :cond_0
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lyl7;
+    move-result-object v1
 
-    check-cast p1, Lsgg;
+    check-cast v1, Lwl7;
 
-    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->S0()Lngc;
 
-    check-cast p1, Lrgg;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    sget-object v3, Lwl7;->r0:[Ltr7;
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-virtual {v1, v0, v2, v3}, Lwl7;->r(Lngc;ZI)V
 
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41a00000    # 20.0f
-
-    mul-float/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

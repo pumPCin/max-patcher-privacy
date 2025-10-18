@@ -1,64 +1,54 @@
-.class public final synthetic Lxrb;
-.super Ljava/lang/Object;
+.class public final Lxrb;
+.super Ly0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final m:Lma7;
 
-.field public final synthetic b:Lawg;
+.field public final n:Lmi3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lawg;I)V
+.method public constructor <init>(Landroid/content/Context;Lmi3;Lma7;)V
     .locals 0
 
-    iput p2, p0, Lxrb;->a:I
+    invoke-direct {p0, p1}, Ly0;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lxrb;->b:Lawg;
+    iput-object p3, p0, Lxrb;->m:Lma7;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lxrb;->n:Lmi3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final c(Landroid/net/Uri;)V
     .locals 1
 
-    iget v0, p0, Lxrb;->a:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lxrb;->b:Lawg;
-
-    invoke-interface {v0}, Lawg;->onFirstFrameRendered()V
+    iput-object p1, p0, Ly0;->b:Lab7;
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lxrb;->b:Lawg;
+    :cond_0
+    invoke-static {p1}, Lbb7;->d(Landroid/net/Uri;)Lbb7;
 
-    invoke-interface {v0}, Lawg;->b()V
+    move-result-object p1
+
+    sget-object v0, Lrhd;->d:Lrhd;
+
+    iput-object v0, p1, Lbb7;->e:Lrhd;
+
+    invoke-virtual {p1}, Lbb7;->a()Lab7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly0;->b:Lab7;
 
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lxrb;->b:Lawg;
-
-    invoke-interface {v0}, Lawg;->c()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

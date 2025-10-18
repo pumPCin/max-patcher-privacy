@@ -1,137 +1,81 @@
 .class public final Lrvh;
-.super Li6i;
+.super Lf4;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
 
 
 # static fields
-.field private static final zzb:Lrvh;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrvh;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private zzd:I
+.field public final a:I
 
-.field private zze:I
-
-.field private zzf:Ljava/lang/String;
+.field public final b:Lyvh;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lrvh;
+    new-instance v0, Ljmg;
 
-    invoke-direct {v0}, Lrvh;-><init>()V
+    const/16 v1, 0x11
 
-    sput-object v0, Lrvh;->zzb:Lrvh;
+    invoke-direct {v0, v1}, Ljmg;-><init>(I)V
 
-    const-class v1, Lrvh;
-
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    sput-object v0, Lrvh;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILyvh;)V
+    .locals 0
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x1111
+    iput p1, p0, Lrvh;->a:I
 
-    iput v0, p0, Lrvh;->zze:I
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lrvh;->zzf:Ljava/lang/String;
+    iput-object p2, p0, Lrvh;->b:Lyvh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    add-int/lit8 p1, p1, -0x1
+    const/16 v0, 0x4f45
 
-    if-eqz p1, :cond_4
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    const/4 p2, 0x2
+    move-result v0
 
-    if-eq p1, p2, :cond_3
+    const/4 v1, 0x4
 
-    const/4 p2, 0x3
+    const/4 v2, 0x1
 
-    if-eq p1, p2, :cond_2
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    const/4 p2, 0x4
+    iget v1, p0, Lrvh;->a:I
 
-    if-eq p1, p2, :cond_1
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 p2, 0x5
+    const/4 v1, 0x2
 
-    if-eq p1, p2, :cond_0
+    iget-object v2, p0, Lrvh;->b:Lyvh;
 
-    const/4 p1, 0x0
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    return-object p1
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
-    :cond_0
-    sget-object p1, Lrvh;->zzb:Lrvh;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Laki;
-
-    sget-object p2, Lrvh;->zzb:Lrvh;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p1, v0, p2}, Laki;-><init>(ILi6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lrvh;
-
-    invoke-direct {p1}, Lrvh;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    sget-object p1, Lbwh;->B:Lbwh;
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    filled-new-array {v0, v1, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lrvh;->zzb:Lrvh;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1008\u0001"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

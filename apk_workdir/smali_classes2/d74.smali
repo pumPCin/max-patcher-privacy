@@ -1,65 +1,61 @@
 .class public final Ld74;
-.super Lk14;
+.super Lf74;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lrf2;
-
-.field public Y:Lzz9;
-
-.field public Z:Ly74;
-
-.field public o:Ly74;
-
-.field public r0:J
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Ly74;
-
-.field public u0:I
+# static fields
+.field public static final a:Ld74;
 
 
 # direct methods
-.method public constructor <init>(Ly74;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ld74;->t0:Ly74;
+    new-instance v0, Ld74;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ld74;->a:Ld74;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Ld74;->s0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ld74;->u0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Ld74;
 
-    iput p1, p0, Ld74;->u0:I
+    if-nez p1, :cond_1
 
-    const/4 v3, 0x0
+    const/4 p1, 0x0
 
-    const/4 v4, 0x0
+    return p1
 
-    iget-object v0, p0, Ld74;->t0:Ly74;
+    :cond_1
+    return v0
+.end method
 
-    const-wide/16 v1, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    move-object v5, p0
+    const v0, 0x7e4d4462
 
-    invoke-virtual/range {v0 .. v5}, Ly74;->j(JLrf2;Lzz9;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    const-string v0, "NoInternetConnection"
+
+    return-object v0
 .end method

@@ -1,18 +1,19 @@
-.class public final Llkg;
+.class public abstract Llkg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmkg;
+
+# static fields
+.field public static final a:I
 
 
-# virtual methods
-.method public final c(Lc45;)Ljava/util/ArrayList;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance p1, Ljava/util/ArrayList;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    sput v0, Llkg;->a:I
 
-    return-object p1
+    return-void
 .end method

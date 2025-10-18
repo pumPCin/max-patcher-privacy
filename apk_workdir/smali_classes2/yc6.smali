@@ -1,444 +1,253 @@
 .class public final Lyc6;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lw6b;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lggd;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final synthetic Y:Lone/me/chats/forward/ForwardPickerScreen;
+
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
 
-    new-instance v0, Lggd;
+    iput-object p2, p0, Lyc6;->Z:Landroid/view/View;
 
-    const/4 v1, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Lggd;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lyc6;->a:Lggd;
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object v0, p0, Lyc6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ly6b;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ltc6;
+    check-cast p1, Ljava/util/Set;
 
-    const/4 v1, 0x3
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
+    invoke-virtual {p0, p1, p2}, Lyc6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    check-cast p1, Lyc6;
 
-    return-void
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lyc6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b(Ly6b;)V
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    new-instance v0, Ltc6;
+    new-instance v0, Lyc6;
 
-    const/4 v1, 0x5
+    iget-object v1, p0, Lyc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
+    iget-object v2, p0, Lyc6;->Z:Landroid/view/View;
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    invoke-direct {v0, v1, v2, p2}, Lyc6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    iput-object p1, v0, Lyc6;->X:Ljava/lang/Object;
 
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Ly6b;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lh33;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Lo6b;
+    iget-object p1, p0, Lyc6;->X:Ljava/lang/Object;
 
-    const/16 v1, 0x11
+    check-cast p1, Ljava/util/Set;
 
-    invoke-direct {v0, p0, v1, p1}, Lh33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v0, p0, Lyc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    iget-object v1, v0, Lone/me/chats/forward/ForwardPickerScreen;->y0:Landroid/transition/AutoTransition;
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    sget-object v2, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->S0()Z
 
-.method public final d(Lo6b;Lqqf;Z)V
-    .locals 6
+    move-result v2
 
-    new-instance v0, Lvm1;
+    sget-object v3, Lccg;->a:Lccg;
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    move-object v1, p0
+    if-nez v2, :cond_0
 
-    move-object v2, p1
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    move-object v4, p2
+    move-result v2
 
-    move v3, p3
+    if-ne v2, v4, :cond_0
 
-    invoke-direct/range {v0 .. v5}, Lvm1;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZLjava/lang/Object;I)V
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
 
-    iget-object p1, v1, Lyc6;->a:Lggd;
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    iget-object v1, v1, Lmnb;->c:Lkpb;
 
-    return-void
-.end method
+    check-cast v1, Lhc6;
 
-.method public final e(Lone/video/exo/error/OneVideoExoPlaybackException;Lgwg;Ly6b;)V
-    .locals 6
+    const/4 v2, 0x0
 
-    new-instance v0, Lkq;
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->S0()Z
 
-    const/4 v5, 0x2
+    move-result v0
 
-    move-object v1, p0
+    invoke-virtual {v1, v2, p1, v0}, Lhc6;->h(Ljava/lang/CharSequence;Ljava/util/Set;Z)V
 
-    move-object v2, p1
+    return-object v3
 
-    move-object v3, p2
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    move-object v4, p3
+    move-result p1
 
-    invoke-direct/range {v0 .. v5}, Lkq;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->P0()Lgd9;
 
-    iget-object p1, v1, Lyc6;->a:Lggd;
+    move-result-object v2
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    return-void
-.end method
+    move-result v2
 
-.method public final f(Ly6b;)V
-    .locals 2
+    const/4 v5, 0x0
 
-    new-instance v0, Ltc6;
+    if-nez v2, :cond_1
 
-    const/16 v1, 0x9
+    move v2, v4
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
+    goto :goto_0
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    :cond_1
+    move v2, v5
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    :goto_0
+    iget-object v6, p0, Lyc6;->Z:Landroid/view/View;
 
-    return-void
-.end method
+    if-nez v2, :cond_2
 
-.method public final g(Ly6b;F)V
-    .locals 1
+    if-lez p1, :cond_2
 
-    new-instance v0, Lrc6;
+    check-cast v6, Landroid/view/ViewGroup;
 
-    invoke-direct {v0, p0, p1, p2}, Lrc6;-><init>(Lyc6;Ly6b;F)V
+    invoke-static {v6, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    move-result-object p1
 
-    return-void
-.end method
+    iget-object p1, p1, Lmnb;->c:Lkpb;
 
-.method public final h(Lo6b;Lmwg;)V
-    .locals 2
+    check-cast p1, Lhc6;
 
-    new-instance v0, Lvc6;
+    invoke-virtual {p1}, Lhc6;->f()V
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Lqjc;
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lvc6;-><init>(Lyc6;Lo6b;Lmwg;I)V
+    move-result-object p1
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    invoke-virtual {p1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->P0()Lgd9;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final i(Ly6b;)V
-    .locals 2
+    invoke-virtual {p1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v0, Ltc6;
+    return-object v3
 
-    const/4 v1, 0x7
+    :cond_2
+    if-eqz v2, :cond_5
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
+    if-nez p1, :cond_5
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    check-cast v6, Landroid/view/ViewGroup;
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    invoke-static {v6, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    return-void
-.end method
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Lqjc;
 
-.method public final j(Ly6b;)V
-    .locals 2
-
-    new-instance v0, Ltc6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final k(Lo6b;Lmwg;)V
-    .locals 2
-
-    new-instance v0, Lvc6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lvc6;-><init>(Lyc6;Lo6b;Lmwg;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final l(Ly6b;)V
-    .locals 2
-
-    new-instance v0, Ltc6;
+    move-result-object p1
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->z0:Lwn0;
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    invoke-virtual {p1}, Lwn0;->e()Z
 
-    return-void
-.end method
+    move-result v2
 
-.method public final m(Ly6b;I)V
-    .locals 2
+    if-eqz v2, :cond_3
 
-    new-instance v0, Lqc6;
+    invoke-virtual {p1}, Lwn0;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lqc6;-><init>(Lyc6;Ly6b;II)V
+    check-cast p1, Lgd9;
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    :cond_3
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->D0:Lqid;
 
-    return-void
-.end method
+    if-eqz p1, :cond_4
 
-.method public final n(Ly6b;Z)V
-    .locals 2
+    invoke-virtual {p1}, Lqid;->n()Z
 
-    new-instance v0, Lsc6;
+    move-result p1
 
-    const/4 v1, 0x1
+    if-ne p1, v4, :cond_4
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lsc6;-><init>(Lyc6;Ly6b;ZI)V
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    iget-object p1, p1, Lmnb;->c:Lkpb;
 
-    return-void
-.end method
+    check-cast p1, Lhc6;
 
-.method public final o(Lo6b;Lo60;)V
-    .locals 2
+    iget-object p1, p1, Lhc6;->r:Lzgd;
 
-    new-instance v0, Lzr;
+    invoke-virtual {p1, v4}, Lzgd;->A(I)V
 
-    const/4 v1, 0x5
+    return-object v3
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lzr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    :cond_4
+    sget p1, Lus7;->a:I
 
-    iget-object p1, p0, Lyc6;->a:Lggd;
+    sget p1, Lus7;->c:I
 
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
+    invoke-static {p1}, Lus7;->b(I)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public final p(Ly6b;)V
-    .locals 2
+    if-eqz p1, :cond_5
 
-    new-instance v0, Ltc6;
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Lsc6;
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Lsc6;->k()V
 
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final q(Ly6b;Lv6b;La22;La22;)V
-    .locals 7
-
-    new-instance v0, La74;
-
-    const/4 v6, 0x1
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v6}, La74;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iget-object p1, v1, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final r(Ly6b;)V
-    .locals 2
-
-    new-instance v0, Ltc6;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final s(Lll0;II)V
-    .locals 1
-
-    new-instance v0, Luc6;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Luc6;-><init>(Lyc6;Lll0;II)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final t(Ly6b;J)V
-    .locals 1
-
-    new-instance v0, Lwc6;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Lwc6;-><init>(Lyc6;Ly6b;J)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final u(Ly6b;)V
-    .locals 2
-
-    new-instance v0, Ltc6;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final v(Ly6b;)V
-    .locals 2
-
-    new-instance v0, Ltc6;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, p1, v1}, Ltc6;-><init>(Lyc6;Ly6b;I)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final w(Ly6b;Z)V
-    .locals 2
-
-    new-instance v0, Lsc6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lsc6;-><init>(Lyc6;Ly6b;ZI)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
-.end method
-
-.method public final x(Ly6b;I)V
-    .locals 2
-
-    new-instance v0, Lqc6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lqc6;-><init>(Lyc6;Ly6b;II)V
-
-    iget-object p1, p0, Lyc6;->a:Lggd;
-
-    invoke-virtual {p1, v0}, Lggd;->d0(Loh6;)V
-
-    return-void
+    :cond_5
+    return-object v3
 .end method

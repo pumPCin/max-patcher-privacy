@@ -1,134 +1,68 @@
-.class public abstract Lqoi;
+.class public final Lqoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lqoi;
+
+.field public static final b:Lbr5;
+
 
 # direct methods
-.method public static final a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    if-nez p1, :cond_0
-
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p1, p0}, Lozi;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static final b(I)I
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1f
-
-    if-lt v0, v1, :cond_0
-
-    const/high16 v0, 0x4000000
-
-    and-int/2addr v0, p0
-
-    if-nez v0, :cond_0
-
-    const/high16 v0, 0x2000000
-
-    or-int/2addr p0, v0
-
-    :cond_0
-    return p0
-.end method
-
-.method public static final c(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
-    .locals 1
-
-    const/high16 v0, 0x8000000
-
-    invoke-static {v0}, Lqoi;->b(I)I
-
-    move-result v0
-
-    invoke-static {p2, v0}, Lqoi;->d(Landroid/content/Intent;I)I
-
-    move-result v0
-
-    invoke-static {p0, p1, p2, v0}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/content/Intent;I)I
+.method static constructor <clinit>()V
     .locals 3
 
-    const/high16 v0, 0x2000000
+    new-instance v0, Lqoi;
 
-    and-int/2addr v0, p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Lqoi;->a:Lqoi;
 
-    const/4 v0, 0x1
+    new-instance v0, Lr8i;
 
-    goto :goto_0
+    const/4 v1, 0x1
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    :goto_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-class v1, Lm9i;
 
-    const/16 v2, 0x22
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    if-lt v1, v2, :cond_3
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+    new-instance v1, Lbr5;
 
-    move-result-object v1
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    if-eqz v1, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const-string v2, "errorCode"
 
-    move-result v1
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    if-nez v1, :cond_1
+    sput-object v1, Lqoi;->b:Lbr5;
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result-object p0
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    if-nez p0, :cond_3
+    check-cast p1, Lnxi;
 
-    :cond_2
-    :goto_1
-    if-eqz v0, :cond_3
+    check-cast p2, Luha;
 
-    const/high16 p0, 0x1000000
+    sget-object v0, Lqoi;->b:Lbr5;
 
-    or-int/2addr p0, p1
+    iget-object p1, p1, Lnxi;->a:Lzwi;
 
-    return p0
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    :cond_3
-    return p1
+    return-void
 .end method

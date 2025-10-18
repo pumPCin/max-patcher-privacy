@@ -34,9 +34,9 @@
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lgjg;
+    check-cast p1, Lkkg;
 
-    invoke-virtual {p1}, Lgjg;->a()[B
+    invoke-virtual {p1}, Lkkg;->a()[B
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
 
     iget-object v2, p0, Ljs;->b:Ljava/nio/ByteBuffer;
 
-    invoke-static {v0, v1, v2}, Loai;->c(JLjava/nio/ByteBuffer;)I
+    invoke-static {v0, v1, v2}, Lubi;->g(JLjava/nio/ByteBuffer;)I
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -106,15 +106,15 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1, v2}, Loai;->c(JLjava/nio/ByteBuffer;)I
+    invoke-static {v0, v1, v2}, Lubi;->g(JLjava/nio/ByteBuffer;)I
 
     :cond_1
     return-void
 
     :pswitch_1
-    check-cast p1, Lgjg;
+    check-cast p1, Lkkg;
 
-    invoke-virtual {p1}, Lgjg;->a()[B
+    invoke-virtual {p1}, Lkkg;->a()[B
 
     move-result-object p1
 
@@ -127,16 +127,16 @@
     :pswitch_2
     iget-object v0, p0, Ljs;->b:Ljava/nio/ByteBuffer;
 
-    check-cast p1, Lxgc;
+    check-cast p1, Leic;
 
-    invoke-virtual {p1, v0}, Lxgc;->g(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p1, v0}, Leic;->f(Ljava/nio/ByteBuffer;)V
 
     return-void
 
     :pswitch_3
-    check-cast p1, Lkwf;
+    check-cast p1, Loxf;
 
-    iget-byte p1, p1, Lkwf;->a:B
+    iget-byte p1, p1, Loxf;->a:B
 
     iget-object v0, p0, Ljs;->b:Ljava/nio/ByteBuffer;
 

@@ -1,222 +1,126 @@
 .class public final Luag;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkcf;
+
+
+# static fields
+.field public static final b:Luag;
 
 
 # instance fields
-.field public final a:Ljava/lang/ThreadLocal;
-
-.field private volatile threadLocalIsSet:Z
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lt44;Lkotlin/coroutines/Continuation;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    sget-object v0, Lvag;->a:Lvag;
+    new-instance v0, Luag;
 
-    invoke-interface {p1, v0}, Lt44;->get(Ls44;)Lr44;
+    invoke-direct {v0}, Luag;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Luag;->b:Luag;
 
-    if-nez v1, :cond_0
+    return-void
+.end method
 
-    invoke-interface {p1, v0}, Lt44;->plus(Lt44;)Lt44;
+.method public constructor <init>()V
+    .locals 1
 
-    move-result-object v0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    .line 4
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    :cond_0
-    move-object v0, p1
+    iput-object v0, p0, Luag;->a:Ljava/util/List;
 
-    :goto_0
-    invoke-direct {p0, v0, p2}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lt44;Lkotlin/coroutines/Continuation;)V
+    return-void
+.end method
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+.method public constructor <init>(Ly84;)V
+    .locals 0
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Luag;->a:Ljava/lang/ThreadLocal;
+    .line 2
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
+    move-result-object p1
 
-    move-result-object p2
+    iput-object p1, p0, Luag;->a:Ljava/util/List;
 
-    sget-object v0, Lk8a;->o:Lk8a;
-
-    invoke-interface {p2, v0}, Lt44;->get(Ls44;)Lr44;
-
-    move-result-object p2
-
-    instance-of p2, p2, Lv44;
-
-    if-nez p2, :cond_1
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lt44;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lt44;Ljava/lang/Object;)V
-
-    invoke-virtual {p0, p1, p2}, Luag;->E(Lt44;Ljava/lang/Object;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final D()Z
-    .locals 3
+.method public final f(J)I
+    .locals 2
 
-    iget-boolean v0, p0, Luag;->threadLocalIsSet:Z
+    const-wide/16 v0, 0x0
 
-    const/4 v1, 0x1
+    cmp-long p1, p1, v0
 
-    if-eqz v0, :cond_0
+    if-gez p1, :cond_0
 
-    iget-object v0, p0, Luag;->a:Ljava/lang/ThreadLocal;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    return p1
 
-    move-result-object v0
+    :cond_0
+    const/4 p1, -0x1
 
-    if-nez v0, :cond_0
+    return p1
+.end method
 
-    move v0, v1
+.method public final h(I)J
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    iget-object v2, p0, Luag;->a:Ljava/lang/ThreadLocal;
+    invoke-static {p1}, Lzg8;->c(Z)V
 
-    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->remove()V
+    const-wide/16 v0, 0x0
 
-    xor-int/2addr v0, v1
-
-    return v0
+    return-wide v0
 .end method
 
-.method public final E(Lt44;Ljava/lang/Object;)V
+.method public final m(J)Ljava/util/List;
     .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-ltz p1, :cond_0
+
+    iget-object p1, p0, Luag;->a:Ljava/util/List;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method public final s()I
+    .locals 1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Luag;->threadLocalIsSet:Z
-
-    iget-object v0, p0, Luag;->a:Ljava/lang/ThreadLocal;
-
-    new-instance v1, Lqbb;
-
-    invoke-direct {v1, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 5
-
-    iget-boolean v0, p0, Luag;->threadLocalIsSet:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Luag;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqbb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lqbb;->a:Ljava/lang/Object;
-
-    check-cast v1, Lt44;
-
-    iget-object v0, v0, Lqbb;->b:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lt44;Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Luag;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
-
-    :cond_1
-    invoke-static {p1}, Lxti;->h(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lt44;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    sget-object v4, Lkotlinx/coroutines/internal/ThreadContextKt;->NO_THREAD_ELEMENTS:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v3, v4, :cond_2
-
-    invoke-static {v0, v1, v3}, Lkvi;->c(Lkotlin/coroutines/Continuation;Lt44;Ljava/lang/Object;)Luag;
-
-    move-result-object v2
-
-    :cond_2
-    :try_start_0
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Luag;->D()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-
-    :cond_4
-    :goto_0
-    invoke-static {v1, v3}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lt44;Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Luag;->D()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    :cond_5
-    invoke-static {v1, v3}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lt44;Ljava/lang/Object;)V
-
-    :cond_6
-    throw p1
+    return v0
 .end method

@@ -1,104 +1,133 @@
-.class public final Lrxf;
-.super Luqh;
+.class public final enum Lrxf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lrxf;
+
+.field public static final enum Y:Lrxf;
+
+.field public static final synthetic Z:[Lrxf;
+
+.field public static final enum b:Lrxf;
+
+.field public static final enum c:Lrxf;
+
+.field public static final enum o:Lrxf;
+
+
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrxf;
 
-    iput-object p1, p0, Lrxf;->b:Ljava/lang/String;
+    const/4 v1, 0x0
+
+    const-string v2, "TLSv1.3"
+
+    const-string v3, "TLS_1_3"
+
+    invoke-direct {v0, v3, v1, v2}, Lrxf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lrxf;->b:Lrxf;
+
+    new-instance v1, Lrxf;
+
+    const/4 v2, 0x1
+
+    const-string v3, "TLSv1.2"
+
+    const-string v4, "TLS_1_2"
+
+    invoke-direct {v1, v4, v2, v3}, Lrxf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lrxf;->c:Lrxf;
+
+    new-instance v2, Lrxf;
+
+    const/4 v3, 0x2
+
+    const-string v4, "TLSv1.1"
+
+    const-string v5, "TLS_1_1"
+
+    invoke-direct {v2, v5, v3, v4}, Lrxf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lrxf;->o:Lrxf;
+
+    new-instance v3, Lrxf;
+
+    const/4 v4, 0x3
+
+    const-string v5, "TLSv1"
+
+    const-string v6, "TLS_1_0"
+
+    invoke-direct {v3, v6, v4, v5}, Lrxf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lrxf;->X:Lrxf;
+
+    new-instance v4, Lrxf;
+
+    const/4 v5, 0x4
+
+    const-string v6, "SSLv3"
+
+    const-string v7, "SSL_3_0"
+
+    invoke-direct {v4, v7, v5, v6}, Lrxf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lrxf;->Y:Lrxf;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lrxf;
+
+    move-result-object v0
+
+    sput-object v0, Lrxf;->Z:[Lrxf;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final c()Ljava/lang/CharSequence;
-    .locals 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lrxf;->b:Ljava/lang/String;
+    iput-object p3, p0, Lrxf;->a:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)Lrxf;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    const-class v0, Lrxf;
 
-    goto :goto_1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :cond_0
-    instance-of v0, p1, Lrxf;
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    check-cast p0, Lrxf;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrxf;
-
-    iget-object v0, p0, Lrxf;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lrxf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[Lrxf;
     .locals 1
 
-    iget-object v0, p0, Lrxf;->b:Ljava/lang/String;
+    sget-object v0, Lrxf;->Z:[Lrxf;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LostConnection(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrxf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Lrxf;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lrxf;
 
     return-object v0
 .end method

@@ -12,9 +12,9 @@
 
 .field public static final o:Ljava/lang/String;
 
-.field public static final r0:Ljava/lang/String;
+.field public static final q0:Ljava/lang/String;
 
-.field public static final s0:Ljava/lang/String;
+.field public static final r0:Ljava/lang/String;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->r0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->q0:Ljava/lang/String;
 
     const/4 v0, 0x5
 
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->s0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->r0:Ljava/lang/String;
 
     return-void
 .end method

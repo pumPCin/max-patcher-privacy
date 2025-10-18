@@ -1,22 +1,25 @@
 .class public final Lmp5;
-.super Lk14;
+.super Ly14;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lpp5;
+.field public final synthetic Y:Lup5;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public Z:I
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lpp5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lup5;Ly14;)V
     .locals 0
 
-    iput-object p1, p0, Lmp5;->Y:Lpp5;
+    iput-object p1, p0, Lmp5;->Y:Lup5;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -24,25 +27,25 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    iput-object p1, p0, Lmp5;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lmp5;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lmp5;->X:I
+    iget p1, p0, Lmp5;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lmp5;->X:I
+    iput p1, p0, Lmp5;->Z:I
 
-    iget-object p1, p0, Lmp5;->Y:Lpp5;
+    iget-object p1, p0, Lmp5;->Y:Lup5;
 
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lpp5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, p0}, Lup5;->U0(JLy14;)Ljava/lang/Object;
 
-    sget-object p1, Lc54;->a:Lc54;
+    move-result-object p1
 
     return-object p1
 .end method

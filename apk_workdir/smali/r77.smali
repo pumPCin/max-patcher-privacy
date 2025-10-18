@@ -2,292 +2,274 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:[Ljava/lang/String;
+# interfaces
+.implements Ldc4;
 
 
 # instance fields
-.field public final a:Landroid/content/SharedPreferences;
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public final a:Ldc4;
+
+.field public final b:I
+
+.field public final c:Lkdc;
+
+.field public final o:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const-string v0, "GCM"
-
-    const-string v1, ""
-
-    const-string v2, "*"
-
-    const-string v3, "FCM"
-
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr77;->c:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lnv5;)V
-    .locals 3
+.method public constructor <init>(Ldc4;ILkdc;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lnv5;->a()V
-
-    iget-object v0, p1, Lnv5;->a:Landroid/content/Context;
-
-    const-string v1, "com.google.android.gms.appid"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lr77;->a:Landroid/content/SharedPreferences;
-
-    invoke-virtual {p1}, Lnv5;->a()V
-
-    iget-object v0, p1, Lnv5;->c:Lwv5;
-
-    iget-object v1, v0, Lwv5;->e:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Lnv5;->a()V
-
-    iget-object v1, v0, Lwv5;->b:Ljava/lang/String;
-
-    const-string p1, "1:"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    const-string p1, "2:"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const-string p1, ":"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p1
-
-    array-length v0, p1
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_2
-
-    :goto_0
-    move-object v1, v2
-
-    goto :goto_1
-
-    :cond_2
     const/4 v0, 0x1
 
-    aget-object v1, p1, v0
+    if-lez p2, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
+    move v1, v0
 
     goto :goto_0
 
-    :cond_3
-    :goto_1
-    iput-object v1, p0, Lr77;->b:Ljava/lang/String;
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Lzg8;->c(Z)V
+
+    iput-object p1, p0, Lr77;->a:Ldc4;
+
+    iput p2, p0, Lr77;->b:I
+
+    iput-object p3, p0, Lr77;->c:Lkdc;
+
+    new-array p1, v0, [B
+
+    iput-object p1, p0, Lr77;->o:[B
+
+    iput p2, p0, Lr77;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 7
+.method public final R(Llc4;)J
+    .locals 0
 
-    iget-object v0, p0, Lr77;->a:Landroid/content/SharedPreferences;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    monitor-enter v0
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    :try_start_0
-    iget-object v1, p0, Lr77;->a:Landroid/content/SharedPreferences;
+    throw p1
+.end method
 
-    const-string v2, "|S||P|"
+.method public final S(Lb3g;)V
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lr77;->a:Ldc4;
+
+    invoke-interface {v0, p1}, Ldc4;->S(Lb3g;)V
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lr77;->a:Ldc4;
+
+    invoke-interface {v0}, Ldc4;->getUri()Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 14
+
+    iget v0, p0, Lr77;->X:I
+
+    iget-object v1, p0, Lr77;->a:Ldc4;
+
+    const/4 v2, -0x1
+
+    if-nez v0, :cond_7
+
+    iget-object v0, p0, Lr77;->o:[B
 
     const/4 v3, 0x0
 
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v4, 0x1
 
-    move-result-object v1
+    invoke-interface {v1, v0, v3, v4}, Lxb4;->read([BII)I
 
-    if-nez v1, :cond_0
+    move-result v5
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object v3
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_3
-
-    :cond_0
-    const/16 v2, 0x8
-
-    :try_start_1
-    invoke-static {v1, v2}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v1
-
-    const-string v4, "RSA"
-
-    invoke-static {v4}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/security/spec/X509EncodedKeySpec;
-
-    invoke-direct {v5, v1}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
-
-    invoke-virtual {v4, v5}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
-
-    move-result-object v1
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-ne v5, v2, :cond_0
 
     goto :goto_1
 
-    :catch_0
-    move-exception v1
+    :cond_0
+    aget-byte v0, v0, v3
 
-    goto :goto_0
+    and-int/lit16 v0, v0, 0xff
 
-    :catch_1
-    move-exception v1
+    shl-int/lit8 v0, v0, 0x4
 
-    goto :goto_0
+    if-nez v0, :cond_1
 
-    :catch_2
-    move-exception v1
-
-    :goto_0
-    :try_start_2
-    const-string v4, "ContentValues"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Invalid key stored "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-object v1, v3
-
-    :goto_1
-    if-nez v1, :cond_1
-
-    monitor-exit v0
-
-    return-object v3
+    goto :goto_5
 
     :cond_1
-    invoke-interface {v1}, Ljava/security/Key;->getEncoded()[B
+    new-array v5, v0, [B
 
-    move-result-object v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move v6, v0
 
-    :try_start_3
-    const-string v4, "SHA1"
+    :goto_0
+    if-lez v6, :cond_3
 
-    invoke-static {v4}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    invoke-interface {v1, v5, v3, v6}, Lxb4;->read([BII)I
 
-    move-result-object v4
+    move-result v7
 
-    invoke-virtual {v4, v1}, Ljava/security/MessageDigest;->digest([B)[B
+    if-ne v7, v2, :cond_2
 
-    move-result-object v1
+    :goto_1
+    return v2
 
-    const/4 v4, 0x0
+    :cond_2
+    add-int/2addr v3, v7
 
-    aget-byte v5, v1, v4
+    sub-int/2addr v6, v7
 
-    and-int/lit8 v5, v5, 0xf
+    goto :goto_0
 
-    add-int/lit8 v5, v5, 0x70
+    :cond_3
+    :goto_2
+    if-lez v0, :cond_4
 
-    and-int/lit16 v5, v5, 0xff
+    add-int/lit8 v3, v0, -0x1
 
-    int-to-byte v5, v5
+    aget-byte v3, v5, v3
 
-    aput-byte v5, v1, v4
+    if-nez v3, :cond_4
 
-    const/16 v5, 0xb
-
-    invoke-static {v1, v4, v2, v5}, Landroid/util/Base64;->encodeToString([BIII)Ljava/lang/String;
-
-    move-result-object v3
-    :try_end_3
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_3 .. :try_end_3} :catch_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_2
 
-    :catch_3
-    :try_start_4
-    const-string v1, "ContentValues"
+    :cond_4
+    if-lez v0, :cond_6
 
-    const-string v2, "Unexpected error, device missing required algorithms"
+    new-instance v3, Ldjg;
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v3, v0, v5}, Ldjg;-><init>(I[B)V
 
-    :goto_2
-    monitor-exit v0
+    iget-object v0, p0, Lr77;->c:Lkdc;
 
-    return-object v3
+    iget-boolean v5, v0, Lkdc;->w0:Z
+
+    if-nez v5, :cond_5
+
+    iget-wide v5, v0, Lkdc;->s0:J
 
     :goto_3
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    move-wide v8, v5
 
-    throw v1
+    goto :goto_4
+
+    :cond_5
+    iget-object v5, v0, Lkdc;->x0:Lqdc;
+
+    invoke-virtual {v5}, Lqdc;->h()J
+
+    move-result-wide v5
+
+    iget-wide v7, v0, Lkdc;->s0:J
+
+    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v5
+
+    goto :goto_3
+
+    :goto_4
+    invoke-virtual {v3}, Ldjg;->c()I
+
+    move-result v11
+
+    iget-object v7, v0, Lkdc;->v0:Luld;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v7, v11, v3}, Luld;->c(ILdjg;)V
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v10, 0x1
+
+    invoke-interface/range {v7 .. v13}, Lv1g;->b(JIIILt1g;)V
+
+    iput-boolean v4, v0, Lkdc;->w0:Z
+
+    :cond_6
+    :goto_5
+    iget v0, p0, Lr77;->b:I
+
+    iput v0, p0, Lr77;->X:I
+
+    :cond_7
+    iget v0, p0, Lr77;->X:I
+
+    move/from16 v3, p3
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    move/from16 v3, p2
+
+    invoke-interface {v1, p1, v3, v0}, Lxb4;->read([BII)I
+
+    move-result p1
+
+    if-eq p1, v2, :cond_8
+
+    iget v0, p0, Lr77;->X:I
+
+    sub-int/2addr v0, p1
+
+    iput v0, p0, Lr77;->X:I
+
+    :cond_8
+    return p1
+.end method
+
+.method public final x()Ljava/util/Map;
+    .locals 1
+
+    iget-object v0, p0, Lr77;->a:Ldc4;
+
+    invoke-interface {v0}, Ldc4;->x()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,33 +1,50 @@
-.class public abstract Lcpi;
+.class public final Lcpi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
 
 # static fields
-.field public static final a:[Lyhi;
+.field public static final a:Lcpi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x2
+    new-instance v0, Lcpi;
 
-    new-array v0, v0, [Lyhi;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lwqi;->a:Lx7i;
+    sput-object v0, Lcpi;->a:Lcpi;
 
-    const/4 v2, 0x0
+    new-instance v0, Lr8i;
 
-    aput-object v1, v0, v2
+    const/4 v1, 0x1
 
-    sget-object v1, Lwqi;->b:Lx7i;
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    const/4 v2, 0x1
+    const-class v1, Lm9i;
 
-    aput-object v1, v0, v2
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    sput-object v0, Lcpi;->a:[Lyhi;
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

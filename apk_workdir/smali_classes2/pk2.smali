@@ -1,131 +1,98 @@
-.class public final Lpk2;
+.class public final synthetic Lpk2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public final a:Lj5b;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lqk2;
 
 
 # direct methods
-.method public constructor <init>(Lj5b;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lqk2;I)V
     .locals 0
 
+    iput p2, p0, Lpk2;->a:I
+
+    iput-object p1, p0, Lpk2;->b:Lqk2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpk2;->a:Lj5b;
-
-    iput-object p2, p0, Lpk2;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lpk2;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lpk2;
+    iget-object v0, p0, Lpk2;->b:Lqk2;
 
-    if-nez v0, :cond_1
+    sget-object v1, Ll05;->s0:Lk82;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lpk2;
-
-    iget-object v0, p0, Lpk2;->a:Lj5b;
-
-    iget-object v1, p1, Lpk2;->a:Lj5b;
-
-    invoke-virtual {v0, v1}, Lj5b;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lpk2;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lpk2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lpk2;->a:Lj5b;
-
-    invoke-virtual {v0}, Lj5b;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lpk2;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatMediaTabsViewState(avatarParams="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpk2;->a:Lj5b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpk2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
 
     move-result-object v0
 
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lff0;->a:Lef0;
+
+    iget v0, v0, Lef0;->h:I
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    return-object v1
+
+    :pswitch_0
+    sget v0, Lpjd;->W:I
+
+    sget-object v1, Ll05;->s0:Lk82;
+
+    iget-object v2, p0, Lpk2;->b:Lqk2;
+
+    invoke-virtual {v1, v2}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lv5b;->getIcon()Ld77;
+
+    move-result-object v1
+
+    iget v1, v1, Ld77;->h:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

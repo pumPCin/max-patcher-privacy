@@ -1,68 +1,201 @@
 .class public final Llx8;
-.super Landroid/support/v4/media/session/MediaControllerCompat$Callback;
+.super Lwy8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lrx8;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lkx8;
 
 
 # direct methods
-.method public constructor <init>(Lrx8;)V
+.method public constructor <init>(Ljava/lang/String;Lkx8;)V
     .locals 0
 
-    iput-object p1, p0, Llx8;->a:Lrx8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;-><init>()V
+    iput-object p1, p0, Llx8;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Llx8;->b:Lkx8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
-    .locals 1
+.method public final f(I)V
+    .locals 6
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Llx8;->a:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Llx8;->b:Lkx8;
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+    iget-object v2, v1, Lkx8;->h:Landroid/os/Messenger;
 
-    move-result-object p1
+    iget-object v3, v1, Lkx8;->g:Landroid/media/MediaRouter2$RoutingController;
 
+    if-eqz v3, :cond_2
+
+    invoke-static {v3}, Lix8;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, v1, Lkx8;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v3
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v4
+
+    const/4 v5, 0x7
+
+    iput v5, v4, Landroid/os/Message;->what:I
+
+    iput v3, v4, Landroid/os/Message;->arg1:I
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v5, "volume"
+
+    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p1, "routeId"
+
+    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p1, v1, Lkx8;->i:Landroid/os/Messenger;
+
+    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    :try_start_0
+    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "MR2Provider"
+
+    const-string v1, "Could not send control request to service."
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
+    :cond_2
     :goto_0
-    iget-object v0, p0, Llx8;->a:Lrx8;
-
-    iput-object p1, v0, Lrx8;->V0:Landroid/support/v4/media/MediaDescriptionCompat;
-
-    invoke-virtual {v0}, Lrx8;->g()V
-
-    invoke-virtual {v0}, Lrx8;->k()V
-
     return-void
 .end method
 
-.method public final onSessionDestroyed()V
-    .locals 3
+.method public final i(I)V
+    .locals 6
 
-    iget-object v0, p0, Llx8;->a:Lrx8;
+    iget-object v0, p0, Llx8;->a:Ljava/lang/String;
 
-    iget-object v1, v0, Lrx8;->T0:Landroid/support/v4/media/session/MediaControllerCompat;
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Llx8;->b:Lkx8;
 
-    iget-object v2, v0, Lrx8;->U0:Llx8;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaControllerCompat;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lrx8;->T0:Landroid/support/v4/media/session/MediaControllerCompat;
+    goto :goto_0
 
     :cond_0
+    iget-object v2, v1, Lkx8;->h:Landroid/os/Messenger;
+
+    iget-object v3, v1, Lkx8;->g:Landroid/media/MediaRouter2$RoutingController;
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v3}, Lix8;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, v1, Lkx8;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v3
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v4
+
+    const/16 v5, 0x8
+
+    iput v5, v4, Landroid/os/Message;->what:I
+
+    iput v3, v4, Landroid/os/Message;->arg1:I
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v5, "volume"
+
+    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p1, "routeId"
+
+    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p1, v1, Lkx8;->i:Landroid/os/Messenger;
+
+    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    :try_start_0
+    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "MR2Provider"
+
+    const-string v1, "Could not send control request to service."
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
+    :cond_2
+    :goto_0
     return-void
 .end method

@@ -1,86 +1,102 @@
 .class public final La1c;
-.super Li1c;
+.super Lq94;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public u0:Ljava/util/List;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public final E(Lqid;I)V
+    .locals 7
 
-    invoke-direct {p0}, Li1c;-><init>()V
+    iget-object v0, p0, La1c;->u0:Ljava/util/List;
 
-    iput-object p1, p0, La1c;->b:Ljava/lang/String;
+    invoke-static {p2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lo0c;
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
+
+    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Lo0c;)V
+
+    new-instance v0, Ltid;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-virtual {p1, v0}, Lqid;->R(Ltid;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, La1c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, La1c;
-
-    iget-object v1, p0, La1c;->b:Ljava/lang/String;
-
-    iget-object p1, p1, La1c;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final j()I
     .locals 1
 
-    iget-object v0, p0, La1c;->b:Ljava/lang/String;
+    iget-object v0, p0, La1c;->u0:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final k(I)J
+    .locals 2
 
-    const-string v0, "CopyToClipboard(link="
+    iget-object v0, p0, La1c;->u0:Ljava/util/List;
 
-    const-string v1, ")"
+    invoke-static {p1, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    iget-object v2, p0, La1c;->b:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    check-cast p1, Lo0c;
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    return-object v0
+    iget-wide v0, p1, Lo0c;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    int-to-long v0, p1
+
+    return-wide v0
 .end method

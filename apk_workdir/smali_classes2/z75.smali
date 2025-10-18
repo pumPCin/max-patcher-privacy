@@ -3,362 +3,519 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb18;
+.implements Lt85;
 
 
 # instance fields
-.field public final X:Landroid/graphics/drawable/Drawable;
-
-.field public final Y:J
-
-.field public final Z:I
-
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final o:Ljava/util/List;
-
-.field public final r0:J
+.field public final a:Lv75;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JI)V
-    .locals 8
-
-    and-int/lit8 v0, p8, 0x8
-
-    if-eqz v0, :cond_0
-
-    .line 10
-    sget-object p4, Ls95;->a:Ls95;
-
-    :cond_0
-    move-object v4, p4
-
-    and-int/lit8 p4, p8, 0x20
-
-    if-eqz p4, :cond_1
-
-    const-wide/16 v0, 0x0
-
-    move-wide v6, v0
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    move-object v0, p0
-
-    move v1, p1
-
-    goto :goto_0
-
-    :cond_1
-    move-wide v6, p6
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    .line 11
-    :goto_0
-    invoke-direct/range {v0 .. v7}, Lz75;-><init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;J)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;J)V
+.method public constructor <init>(Lv75;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lz75;->a:I
-
-    .line 3
-    iput p2, p0, Lz75;->b:I
-
-    .line 4
-    iput-object p3, p0, Lz75;->c:Ljava/lang/CharSequence;
-
-    .line 5
-    iput-object p4, p0, Lz75;->o:Ljava/util/List;
-
-    .line 6
-    iput-object p5, p0, Lz75;->X:Landroid/graphics/drawable/Drawable;
-
-    .line 7
-    iput-wide p6, p0, Lz75;->Y:J
-
-    .line 8
-    sget p3, Lb0b;->a:I
-
-    iput p3, p0, Lz75;->Z:I
-
-    const-wide/16 p3, 0x0
-
-    cmp-long p3, p6, p3
-
-    if-eqz p3, :cond_0
-
-    const-wide p2, 0x7fffffffffffffffL
-
-    .line 9
-    invoke-static {p6, p7}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide p4
-
-    sub-long/2addr p2, p4
-
-    int-to-long p4, p1
-
-    sub-long/2addr p2, p4
-
-    goto :goto_0
-
-    :cond_0
-    int-to-long p2, p2
-
-    :goto_0
-    iput-wide p2, p0, Lz75;->r0:J
+    iput-object p1, p0, Lz75;->a:Lv75;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(ILjava/lang/CharSequence;)Z
+    .locals 8
 
-    const/4 v0, 0x1
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    return v0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    goto/16 :goto_3
 
     :cond_0
-    instance-of v1, p1, Lz75;
+    if-ltz p1, :cond_5
 
-    const/4 v2, 0x0
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
-    if-nez v1, :cond_1
+    move-result v0
 
-    return v2
+    if-lt p1, v0, :cond_1
+
+    goto :goto_3
 
     :cond_1
-    check-cast p1, Lz75;
+    :try_start_0
+    iget-object v2, p0, Lz75;->a:Lv75;
 
-    iget v1, p0, Lz75;->a:I
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
-    iget v3, p1, Lz75;->a:I
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    if-eq v1, v3, :cond_2
+    const v6, 0x7fffffff
 
-    return v2
+    const/4 v7, 0x1
+
+    const/4 v3, 0x0
+
+    move-object v5, p2
+
+    :try_start_1
+    invoke-virtual/range {v2 .. v7}, Lv75;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    move-result-object p2
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    instance-of v0, p2, Landroid/text/Spanned;
+
+    if-eqz v0, :cond_5
+
+    check-cast p2, Landroid/text/Spanned;
+
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const-class v2, Lcbg;
+
+    invoke-interface {p2, v1, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcbg;
+
+    if-eqz v0, :cond_5
+
+    array-length v2, v0
+
+    if-nez v2, :cond_2
+
+    goto :goto_3
 
     :cond_2
-    iget v1, p0, Lz75;->b:I
+    array-length v2, v0
 
-    iget v3, p1, Lz75;->b:I
+    move v3, v1
 
-    if-eq v1, v3, :cond_3
+    :goto_0
+    if-ge v3, v2, :cond_5
 
-    return v2
+    aget-object v4, v0, v3
+
+    invoke-interface {p2, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v5
+
+    invoke-interface {p2, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v4
+
+    if-lt p1, v5, :cond_3
+
+    if-ge p1, v4, :cond_3
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_3
-    iget-object v1, p0, Lz75;->c:Ljava/lang/CharSequence;
+    if-lt p1, v4, :cond_4
 
-    iget-object v3, p1, Lz75;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
+    goto :goto_3
 
     :cond_4
-    iget-object v1, p0, Lz75;->o:Ljava/util/List;
+    add-int/lit8 v3, v3, 0x1
 
-    iget-object v3, p1, Lz75;->o:Ljava/util/List;
+    goto :goto_0
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :catch_0
+    move-exception v0
 
-    move-result v1
+    :goto_1
+    move-object p1, v0
 
-    if-nez v1, :cond_5
+    goto :goto_2
 
-    return v2
+    :catch_1
+    move-exception v0
+
+    move-object v5, p2
+
+    goto :goto_1
+
+    :goto_2
+    sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v0, "Can\'t know is emoji at position %s"
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {p2, v0, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "z75"
+
+    invoke-static {v0, p2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
-    iget-object v1, p0, Lz75;->X:Landroid/graphics/drawable/Drawable;
-
-    iget-object v3, p1, Lz75;->X:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Lz75;->Y:J
-
-    iget-wide v5, p1, Lz75;->Y:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    :goto_3
+    return v1
 .end method
 
-.method public final getItemId()J
-    .locals 2
+.method public final c(Ljava/lang/CharSequence;)Ljava/util/List;
+    .locals 9
 
-    iget-wide v0, p0, Lz75;->r0:J
+    const-string v1, "z75"
 
-    return-wide v0
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+
+    :cond_0
+    :try_start_0
+    iget-object v2, p0, Lz75;->a:Lv75;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const v6, 0x7fffffff
+
+    const/4 v7, 0x1
+
+    const/4 v3, 0x0
+
+    move-object v5, p1
+
+    :try_start_1
+    invoke-virtual/range {v2 .. v7}, Lv75;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    instance-of v0, p1, Landroid/text/Spanned;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Landroid/text/Spanned;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const-class v2, Lcbg;
+
+    const/4 v3, 0x0
+
+    invoke-interface {p1, v3, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcbg;
+
+    if-eqz v0, :cond_3
+
+    array-length v2, v0
+
+    if-nez v2, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    new-instance v2, Ljava/util/ArrayList;
+
+    array-length v4, v0
+
+    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v4, v0
+
+    :goto_0
+    if-ge v3, v4, :cond_2
+
+    aget-object v6, v0, v3
+
+    invoke-interface {p1, v6}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v7
+
+    invoke-interface {p1, v6}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v6
+
+    :try_start_2
+    invoke-interface {p1, v7, v6}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v8
+
+    invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    sget-object v8, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    filled-new-array {v7, v6, v5}, [Ljava/lang/Object;
+
+    move-result-object v6
+
+    const-string v7, "Can\'t create emoji span: start = %d, end = %d, text = %s"
+
+    invoke-static {v8, v7, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    invoke-static {v1, v6, v7}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-object v2
+
+    :cond_3
+    :goto_2
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+
+    :cond_4
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+
+    :catchall_0
+    move-exception v0
+
+    :goto_3
+    move-object p1, v0
+
+    goto :goto_4
+
+    :catchall_1
+    move-exception v0
+
+    move-object v5, p1
+
+    goto :goto_3
+
+    :goto_4
+    const-string v0, "Can\'t get emoji tokens %s"
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, p1, v0, v2}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 7
 
-    iget v0, p0, Lz75;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz75;->b:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lz75;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Ld15;->f(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Lz75;->o:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lfef;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Lz75;->X:Landroid/graphics/drawable/Drawable;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :try_start_0
+    iget-object v1, p0, Lz75;->a:Lv75;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    const v5, 0x7fffffff
+
+    const/4 v6, 0x1
+
+    const/4 v2, 0x0
+
+    move-object v4, p1
+
+    :try_start_1
+    invoke-virtual/range {v1 .. v6}, Lv75;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const-string p1, ""
+
+    :cond_1
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    :goto_1
+    move-object p1, v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    move-object v4, p1
+
+    goto :goto_1
+
+    :goto_2
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v1, "Can\'t process emoji %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "z75"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v4
+.end method
+
+.method public final g(Ljava/lang/CharSequence;)Z
+    .locals 4
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lz75;->c(Ljava/lang/CharSequence;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-wide v1, p0, Lz75;->Y:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
+    if-eqz v2, :cond_1
 
     return v1
-.end method
 
-.method public final m()I
-    .locals 1
+    :cond_1
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    iget v0, p0, Lz75;->Z:I
+    move-result-object p1
 
-    return v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    move-result-object p1
 
-    const-string v0, ", itemIndex="
-
-    const-string v1, ", defaultValue="
-
-    const-string v2, "EmojiModel(groupIndex="
-
-    iget v3, p0, Lz75;->a:I
-
-    iget v4, p0, Lz75;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    iget-object v1, p0, Lz75;->c:Ljava/lang/CharSequence;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    const-string v1, ", values="
+    if-eqz v2, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v1, p0, Lz75;->o:Ljava/util/List;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v2, Ljava/lang/CharSequence;
 
-    const-string v1, ", drawable="
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    iget-object v1, p0, Lz75;->X:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v3
 
-    const-string v1, ", animojiId="
+    if-nez v3, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v1
 
-    iget-wide v1, p0, Lz75;->Y:J
+    :cond_2
+    invoke-static {v2}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const-string v1, ")"
+    const-string v3, ""
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    return-object v0
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    return v1
 .end method

@@ -1,61 +1,176 @@
 .class public final Lq74;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public X:Lrf2;
+.field public final synthetic a:Li46;
 
-.field public Y:Lh0a;
-
-.field public Z:Lo36;
-
-.field public o:Ly74;
-
-.field public r0:Lrf2;
-
-.field public s0:Lred;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Ly74;
-
-.field public v0:I
+.field public final synthetic b:Ln84;
 
 
 # direct methods
-.method public constructor <init>(Ly74;Lk14;)V
+.method public constructor <init>(Li46;Ln84;)V
     .locals 0
 
-    iput-object p1, p0, Lq74;->u0:Ly74;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq74;->a:Li46;
+
+    iput-object p2, p0, Lq74;->b:Ln84;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lq74;->t0:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/String;
 
-    iget p1, p0, Lq74;->v0:I
+    check-cast p2, Lj1a;
 
-    const/high16 v0, -0x80000000
+    sget-object p1, Lc98;->o:Lc98;
 
-    or-int/2addr p1, v0
+    if-nez p2, :cond_0
 
-    iput p1, p0, Lq74;->v0:I
+    iget-object p1, p0, Lq74;->a:Li46;
 
-    iget-object p1, p0, Lq74;->u0:Ly74;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Ly74;->I(Lrf2;Ljava/lang/Integer;Lk14;)Ljava/lang/Object;
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
     move-result-object p1
 
     return-object p1
+
+    :cond_0
+    invoke-interface {p2}, Lj1a;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Li46;
+
+    const/4 v1, 0x0
+
+    const-string v2, "Folder("
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lq74;->b:Ln84;
+
+    iget-object v0, v0, Ln84;->b:Ljava/lang/String;
+
+    iget-object v3, p0, Lq74;->a:Li46;
+
+    sget-object v4, Ltei;->a:Lmxa;
+
+    if-nez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v4, p1}, Lmxa;->b(Lc98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    iget-object v3, v3, Li46;->a:Ljava/lang/String;
+
+    const-string v5, ") was set to flow"
+
+    invoke-static {v2, v3, v5}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, p1, v0, v2, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lq74;->a:Li46;
+
+    invoke-interface {p2, p1}, Lj1a;->setValue(Ljava/lang/Object;)V
+
+    return-object p2
+
+    :cond_3
+    iget-wide v3, v0, Li46;->t0:J
+
+    iget-object v0, p0, Lq74;->a:Li46;
+
+    iget-wide v5, v0, Li46;->t0:J
+
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_6
+
+    iget-object v3, p0, Lq74;->b:Ln84;
+
+    iget-object v3, v3, Ln84;->b:Ljava/lang/String;
+
+    sget-object v4, Ltei;->a:Lmxa;
+
+    if-nez v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {v4, p1}, Lmxa;->b(Lc98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    iget-object v0, v0, Li46;->a:Ljava/lang/String;
+
+    const-string v5, ") was ignored due to greater time of present folder"
+
+    invoke-static {v2, v0, v5}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, p1, v3, v0, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_1
+    return-object p2
+
+    :cond_6
+    iget-object v3, p0, Lq74;->b:Ln84;
+
+    iget-object v3, v3, Ln84;->b:Ljava/lang/String;
+
+    sget-object v4, Ltei;->a:Lmxa;
+
+    if-nez v4, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    invoke-virtual {v4, p1}, Lmxa;->b(Lc98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    iget-object v0, v0, Li46;->a:Ljava/lang/String;
+
+    const-string v5, ") was updated by folder from cache"
+
+    invoke-static {v2, v0, v5}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, p1, v3, v0, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_8
+    :goto_2
+    iget-object p1, p0, Lq74;->a:Li46;
+
+    invoke-interface {p2, p1}, Lj1a;->setValue(Ljava/lang/Object;)V
+
+    return-object p2
 .end method

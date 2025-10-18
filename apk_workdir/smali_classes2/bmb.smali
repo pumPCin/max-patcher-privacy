@@ -1,182 +1,214 @@
 .class public final Lbmb;
-.super Lrne;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Lamb;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:I
+.field public final synthetic Y:Lhmb;
 
 
 # direct methods
-.method public constructor <init>(Lamb;Ljava/util/concurrent/ExecutorService;I)V
+.method public constructor <init>(Lhmb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lrne;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p1, p0, Lbmb;->Y:Lhmb;
 
-    iput-object p1, p0, Lbmb;->X:Lamb;
+    const/4 p1, 0x2
 
-    iput p3, p0, Lbmb;->Y:I
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Lpoe;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lemb;
+    check-cast p1, Lg5g;
 
-    invoke-virtual {p0, p1, p2}, Lbmb;->J(Lemb;I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
-
-.method public final J(Lemb;I)V
-    .locals 9
-
-    invoke-virtual {p0, p2}, Lu08;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lb18;
-
-    check-cast p2, Ldmb;
-
-    new-instance v0, Luk9;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x4
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lbmb;->X:Lamb;
-
-    const-class v3, Lamb;
-
-    const-string v4, "onItemClick"
-
-    const-string v5, "onItemClick(Lone/me/chats/picker/PickerEntity;Z)V"
-
-    invoke-direct/range {v0 .. v7}, Luk9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v1, Luk9;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x5
-
-    const/4 v2, 0x2
-
-    iget-object v3, p0, Lbmb;->X:Lamb;
-
-    const-class v4, Lamb;
-
-    const-string v5, "onItemLongClick"
-
-    const-string v6, "onItemLongClick(Lone/me/chats/picker/PickerEntity;Z)Z"
-
-    invoke-direct/range {v1 .. v8}, Luk9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {p1, p2}, Lemb;->G(Ldmb;)V
-
-    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
-
-    new-instance v2, Llq6;
-
-    const/16 v3, 0x16
-
-    invoke-direct {v2, v0, v3, p2}, Llq6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    check-cast p1, Ltqa;
-
-    new-instance v0, Lx52;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2, p2}, Lx52;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    return-void
-.end method
-
-.method public final l(I)I
-    .locals 0
-
-    sget p1, Lfmb;->a:I
-
-    return p1
-.end method
-
-.method public final bridge synthetic r(Lj6d;I)V
-    .locals 0
-
-    check-cast p1, Lemb;
-
-    invoke-virtual {p0, p1, p2}, Lbmb;->J(Lemb;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lj6d;
-    .locals 4
-
-    new-instance p2, Lemb;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0, p1, p2}, Lbmb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    new-instance v0, Ltqa;
+    check-cast p1, Lbmb;
 
-    const/4 v1, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-direct {v0, p1, v1}, Ltqa;-><init>(Landroid/content/Context;Z)V
+    invoke-virtual {p1, p2}, Lbmb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p2, v0}, Lj6d;-><init>(Landroid/view/View;)V
+    return-object p2
+.end method
 
-    iget p1, p0, Lbmb;->Y:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-lez p1, :cond_0
+    new-instance v0, Lbmb;
 
-    int-to-float p1, p1
+    iget-object v1, p0, Lbmb;->Y:Lhmb;
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-direct {v0, v1, p2}, Lbmb;-><init>(Lhmb;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lbmb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lbmb;->X:Ljava/lang/Object;
+
+    check-cast v1, Lg5g;
+
+    iget-object v2, v1, Lg5g;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v4
+
+    iget-object v2, v1, Lg5g;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v6
+
+    iget-object v1, v1, Lg5g;->c:Ljava/lang/Object;
+
+    move-object v14, v1
+
+    check-cast v14, Ljava/lang/String;
+
+    iget-object v1, v0, Lbmb;->Y:Lhmb;
+
+    iget-object v2, v1, Lhmb;->Z:Lx0f;
+
+    invoke-virtual {v2}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lzlb;
+
+    iget-object v3, v3, Lzlb;->a:Ljava/lang/Double;
+
+    invoke-virtual {v2}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lzlb;
+
+    iget-object v8, v8, Lzlb;->b:Ljava/lang/Double;
+
+    if-eqz v3, :cond_1
+
+    if-eqz v8, :cond_1
+
+    iget-object v1, v1, Lhmb;->c:Liu7;
+
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v1, Lcmf;
 
-    move-result-object v1
+    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    move-result-wide v9
 
-    mul-float/2addr p1, v1
+    invoke-virtual {v8}, Ljava/lang/Double;->doubleValue()D
 
-    invoke-static {p1}, Lagi;->d(F)I
+    move-result-wide v11
 
-    move-result p1
+    move-object v3, v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+    move-wide v8, v9
+
+    move-wide v10, v11
+
+    invoke-interface/range {v3 .. v11}, Lcmf;->c(DDDD)Z
 
     move-result v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingEnd()I
+    if-eqz v1, :cond_0
 
-    move-result v2
+    sget v1, Lxsc;->oneme_location_map_send_geolocation:I
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
+    new-instance v3, Lorf;
 
-    move-result v3
+    invoke-direct {v3, v1}, Lorf;-><init>(I)V
 
-    invoke-virtual {v0, p1, v1, v2, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
+    :goto_0
+    move-object v13, v3
+
+    goto :goto_1
 
     :cond_0
-    return-object p2
+    sget v1, Lxsc;->oneme_location_map_send_place:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v1}, Lorf;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_1
+    sget v1, Lxsc;->oneme_location_map_send_place:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v1}, Lorf;-><init>(I)V
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v2}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Lzlb;
+
+    new-instance v11, Ljava/lang/Double;
+
+    invoke-direct {v11, v4, v5}, Ljava/lang/Double;-><init>(D)V
+
+    new-instance v12, Ljava/lang/Double;
+
+    invoke-direct {v12, v6, v7}, Ljava/lang/Double;-><init>(D)V
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x3
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v8 .. v16}, Lzlb;->a(Lzlb;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lorf;Ljava/lang/String;ZI)Lzlb;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3, v1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
 .end method

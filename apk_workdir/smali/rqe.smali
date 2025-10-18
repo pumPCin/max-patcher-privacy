@@ -1,127 +1,81 @@
 .class public final Lrqe;
-.super Lsb7;
+.super Lwpe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final transient o:Ljava/lang/Object;
+.field public final synthetic a:I
+
+.field public final b:Lwpe;
+
+.field public final c:Lxod;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Lwpe;Lxod;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    iput p3, p0, Lrqe;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lrqe;->b:Lwpe;
 
-    iput-object p1, p0, Lrqe;->o:Ljava/lang/Object;
+    iput-object p2, p0, Lrqe;->c:Lxod;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lhb7;
-    .locals 1
+.method public final l(Lsqe;)V
+    .locals 3
 
-    iget-object v0, p0, Lrqe;->o:Ljava/lang/Object;
+    iget v0, p0, Lrqe;->a:I
 
-    invoke-static {v0}, Lhb7;->n(Ljava/lang/Object;)Ls7d;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance v0, Leh3;
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lrqe;->b:Lwpe;
 
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 1
+    invoke-direct {v0, p1, v1}, Leh3;-><init>(Lsqe;Lwpe;)V
 
-    iget-object v0, p0, Lrqe;->o:Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lsqe;->c(Lvv4;)V
 
-    aput-object v0, p2, p1
+    iget-object p1, p0, Lrqe;->c:Lxod;
 
-    add-int/lit8 p1, p1, 0x1
+    invoke-virtual {p1, v0}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, v0, Leh3;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lrqe;->o:Ljava/lang/Object;
+    check-cast v0, Lq32;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result p1
+    invoke-static {v0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    return p1
-.end method
+    return-void
 
-.method public final g()Z
-    .locals 1
+    :pswitch_0
+    new-instance v0, Llk8;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lrqe;->c:Lxod;
 
-    return v0
-.end method
+    const/4 v2, 0x1
 
-.method public final h()Ljbg;
-    .locals 2
+    invoke-direct {v0, p1, v1, v2}, Llk8;-><init>(Ljava/lang/Object;Lxod;I)V
 
-    new-instance v0, Lem7;
+    iget-object p1, p0, Lrqe;->b:Lwpe;
 
-    iget-object v1, p0, Lrqe;->o:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lwpe;->k(Lsqe;)V
 
-    invoke-direct {v0, v1}, Lem7;-><init>(Ljava/lang/Object;)V
+    return-void
 
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lrqe;->o:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrqe;->o:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

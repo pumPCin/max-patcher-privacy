@@ -1,210 +1,262 @@
-.class public final enum Lxp7;
-.super Ljava/lang/Enum;
+.class public abstract Lxp7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lhm7;
 
 
 # static fields
-.field public static final enum c:Lxp7;
-
-.field public static final synthetic o:[Lxp7;
+.field public static final d:Lwp7;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Laq7;
 
-.field public final b:Lrp7;
+.field public final b:Lgbi;
+
+.field public final c:Li5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 9
 
-    new-instance v0, Lxp7;
+    new-instance v0, Lwp7;
 
-    const/4 v1, 0x0
+    new-instance v1, Laq7;
 
-    sget-object v2, Lrp7;->o:Lrp7;
+    const/4 v8, 0x1
 
-    const-string v3, "ALLOW_JAVA_COMMENTS"
+    const/4 v2, 0x3
 
-    invoke-direct {v0, v3, v1, v2}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
+    const-string v3, "    "
 
-    new-instance v1, Lxp7;
+    const-string v4, "type"
 
-    const/4 v2, 0x1
+    const/4 v5, 0x0
 
-    sget-object v3, Lrp7;->X:Lrp7;
+    const/4 v6, 0x0
 
-    const-string v4, "ALLOW_YAML_COMMENTS"
+    const/4 v7, 0x1
 
-    invoke-direct {v1, v4, v2, v3}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
+    invoke-direct/range {v1 .. v8}, Laq7;-><init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
 
-    new-instance v2, Lxp7;
+    sget-object v2, Lr2i;->a:Lgbi;
 
-    const/4 v3, 0x2
+    invoke-direct {v0, v1, v2}, Lxp7;-><init>(Laq7;Lgbi;)V
 
-    sget-object v4, Lrp7;->Z:Lrp7;
-
-    const-string v5, "ALLOW_SINGLE_QUOTES"
-
-    invoke-direct {v2, v5, v3, v4}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v3, Lxp7;
-
-    const/4 v4, 0x3
-
-    sget-object v5, Lrp7;->Y:Lrp7;
-
-    const-string v6, "ALLOW_UNQUOTED_FIELD_NAMES"
-
-    invoke-direct {v3, v6, v4, v5}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v4, Lxp7;
-
-    const/4 v5, 0x4
-
-    sget-object v6, Lrp7;->r0:Lrp7;
-
-    const-string v7, "ALLOW_UNESCAPED_CONTROL_CHARS"
-
-    invoke-direct {v4, v7, v5, v6}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v5, Lxp7;
-
-    const/4 v6, 0x5
-
-    sget-object v7, Lrp7;->s0:Lrp7;
-
-    const-string v8, "ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER"
-
-    invoke-direct {v5, v8, v6, v7}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v6, Lxp7;
-
-    const/4 v7, 0x6
-
-    sget-object v8, Lrp7;->t0:Lrp7;
-
-    const-string v9, "ALLOW_LEADING_ZEROS_FOR_NUMBERS"
-
-    invoke-direct {v6, v9, v7, v8}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v7, Lxp7;
-
-    const/4 v8, 0x7
-
-    sget-object v9, Lrp7;->u0:Lrp7;
-
-    const-string v10, "ALLOW_LEADING_DECIMAL_POINT_FOR_NUMBERS"
-
-    invoke-direct {v7, v10, v8, v9}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    sput-object v7, Lxp7;->c:Lxp7;
-
-    new-instance v8, Lxp7;
-
-    const/16 v9, 0x8
-
-    sget-object v10, Lrp7;->v0:Lrp7;
-
-    const-string v11, "ALLOW_NON_NUMERIC_NUMBERS"
-
-    invoke-direct {v8, v11, v9, v10}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v9, Lxp7;
-
-    const/16 v10, 0x9
-
-    sget-object v11, Lrp7;->w0:Lrp7;
-
-    const-string v12, "ALLOW_MISSING_VALUES"
-
-    invoke-direct {v9, v12, v10, v11}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    new-instance v10, Lxp7;
-
-    const/16 v11, 0xa
-
-    sget-object v12, Lrp7;->x0:Lrp7;
-
-    const-string v13, "ALLOW_TRAILING_COMMA"
-
-    invoke-direct {v10, v13, v11, v12}, Lxp7;-><init>(Ljava/lang/String;ILrp7;)V
-
-    filled-new-array/range {v0 .. v10}, [Lxp7;
-
-    move-result-object v0
-
-    sput-object v0, Lxp7;->o:[Lxp7;
+    sput-object v0, Lxp7;->d:Lwp7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILrp7;)V
+.method public constructor <init>(Laq7;Lgbi;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lxp7;->a:Laq7;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iput-object p2, p0, Lxp7;->b:Lgbi;
 
-    move-result p2
+    new-instance p1, Li5;
 
-    shl-int/2addr p1, p2
+    const/16 p2, 0xc
 
-    iput p1, p0, Lxp7;->a:I
+    invoke-direct {p1, p2}, Li5;-><init>(I)V
 
-    iput-object p3, p0, Lxp7;->b:Lrp7;
+    iput-object p1, p0, Lxp7;->c:Li5;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lxp7;
-    .locals 1
-
-    const-class v0, Lxp7;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lxp7;
-
-    return-object p0
-.end method
-
-.method public static values()[Lxp7;
-    .locals 1
-
-    sget-object v0, Lxp7;->o:[Lxp7;
-
-    invoke-virtual {v0}, [Lxp7;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lxp7;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Lur7;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x0
+    new-instance v0, Lk2g;
 
-    return v0
+    invoke-direct {v0, p2}, Lk2g;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ld9;
+
+    sget-object v2, Lgqh;->c:Lgqh;
+
+    invoke-interface {p1}, Lur7;->d()Lb3e;
+
+    move-result-object v3
+
+    invoke-direct {v1, p0, v2, v0, v3}, Ld9;-><init>(Lxp7;Lgqh;Lk2g;Lb3e;)V
+
+    invoke-virtual {v1, p1}, Ld9;->u(Lur7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lk2g;->v()B
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    if-ne v1, v2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "Expected EOF after parsing, but had "
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, v0, Lk2g;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string p2, " instead"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x6
+
+    invoke-static {v0, p1, p2, v1}, Lk2g;->D(Lk2g;Ljava/lang/String;II)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public final b()I
-    .locals 1
+.method public final b(Lur7;Ljava/lang/Object;)Ljava/lang/String;
+    .locals 6
 
-    iget v0, p0, Lxp7;->a:I
+    new-instance v0, Lfj;
 
-    return v0
+    const/16 v1, 0xa
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lfj;-><init>(IZ)V
+
+    sget-object v1, Lt92;->c:Lt92;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v1, Lu92;->b:Ljava/lang/Object;
+
+    check-cast v2, Lss;
+
+    invoke-virtual {v2}, Lss;->isEmpty()Z
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    move-object v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Lss;->removeLast()Ljava/lang/Object;
+
+    move-result-object v2
+
+    :goto_0
+    check-cast v2, [C
+
+    if-eqz v2, :cond_1
+
+    iget v3, v1, Lu92;->a:I
+
+    array-length v4, v2
+
+    sub-int/2addr v3, v4
+
+    iput v3, v1, Lu92;->a:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v4, v2
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    monitor-exit v1
+
+    if-nez v4, :cond_2
+
+    const/16 v1, 0x80
+
+    new-array v4, v1, [C
+
+    :cond_2
+    iput-object v4, v0, Lfj;->c:Ljava/lang/Object;
+
+    :try_start_1
+    new-instance v1, Lo24;
+
+    sget-object v2, Lgqh;->c:Lgqh;
+
+    sget-object v3, Lgqh;->q0:Lzd5;
+
+    invoke-virtual {v3}, Lk0;->getSize()I
+
+    move-result v3
+
+    new-array v3, v3, [Lo24;
+
+    new-instance v4, Lks0;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, v4, Lks0;->b:Ljava/lang/Object;
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v4, Lks0;->a:Z
+
+    invoke-direct {v1, v4, p0, v2, v3}, Lo24;-><init>(Lks0;Lxp7;Lgqh;[Lo24;)V
+
+    invoke-virtual {v1, p1, p2}, Lo24;->j(Lur7;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Lfj;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {v0}, Lfj;->q()V
+
+    return-object p1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-virtual {v0}, Lfj;->q()V
+
+    throw p1
+
+    :goto_2
+    monitor-exit v1
+
+    throw p1
 .end method

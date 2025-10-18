@@ -1,183 +1,86 @@
-.class public abstract Lhrf;
-.super Ljava/lang/Object;
+.class public final Lhrf;
+.super Lc9e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final N0:Landroid/widget/TextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
+    .locals 2
 
-    const-string v0, "#(?i)([\\p{L}0-9_]+)"
+    invoke-direct {p0, p1, p3}, Lc9e;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    sget p3, Lsqc;->row_setting_text:I
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p3, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lhrf;->N0:Landroid/widget/TextView;
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    sget-object v1, Lynf;->a0:Lwif;
+
+    invoke-static {p3}, Laa4;->c(Landroid/content/Context;)Lynf;
+
+    move-result-object p3
+
+    iget p3, p3, Lynf;->F:I
+
+    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget p3, Lvpc;->row_setting__fl_value:I
+
+    invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
-.method public static a(Lwib;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
 
-    const-string v0, "+"
-
-    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    move-object p2, p3
-
-    :cond_0
-    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result p3
-
-    const-string v1, "RU"
-
-    if-eqz p3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object p3, p0, Lwib;->f:Ljava/util/HashSet;
-
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p3
-
-    invoke-interface {p3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object v1, p2
-
-    :goto_0
-    :try_start_0
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    goto :goto_1
-
-    :cond_3
-    move-object p2, p1
-
-    :goto_1
-    invoke-virtual {p0, p2, v1}, Lwib;->t(Ljava/lang/String;Ljava/lang/String;)Lnjb;
-
-    move-result-object p2
-    :try_end_0
-    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    const/4 p2, 0x0
-
-    :goto_2
-    if-nez p2, :cond_4
-
-    return-object p1
-
-    :cond_4
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, p2, p1}, Lwib;->d(Lnjb;I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+# virtual methods
+.method public final A(Lz8e;Z)V
     .locals 1
 
-    instance-of v0, p1, Lru/ok/messages/video/fetcher/FetcherException;
+    invoke-super {p0, p1, p2}, Lc9e;->A(Lz8e;Z)V
 
-    if-eqz v0, :cond_0
+    iget-object p1, p1, Lz8e;->X:Ljava/lang/Object;
 
-    check-cast p1, Lru/ok/messages/video/fetcher/FetcherException;
+    iget-object p2, p0, Lhrf;->N0:Landroid/widget/TextView;
 
-    iget p1, p1, Lru/ok/messages/video/fetcher/FetcherException;->a:I
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lwx1;->v(I)I
+    const/4 v0, 0x0
 
-    move-result p1
+    invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p1, Ljava/lang/String;
 
-    sget p1, Lwid;->H:I
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_0
-
-    :pswitch_0
-    sget p1, Lwid;->Z2:I
-
-    goto :goto_0
-
-    :pswitch_1
-    sget p1, Lwid;->b3:I
-
-    goto :goto_0
-
-    :pswitch_2
-    sget p1, Lwid;->c3:I
-
-    goto :goto_0
-
-    :pswitch_3
-    sget p1, Lwid;->d3:I
-
-    goto :goto_0
-
-    :pswitch_4
-    sget p1, Lwid;->f3:I
-
-    goto :goto_0
-
-    :pswitch_5
-    sget p1, Lwid;->a3:I
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    sget p1, Lwid;->Z2:I
+    const/16 p1, 0x8
 
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

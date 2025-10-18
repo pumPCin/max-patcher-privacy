@@ -1,284 +1,549 @@
-.class public final Ljfi;
+.class public abstract Ljfi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ltt8;
-
-
-# instance fields
-.field public final a:Leyi;
-
-.field public final b:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 1
 
-    new-instance v0, Ltt8;
+    const-string v0, "TRuntime."
 
-    const-string v1, "ReviewService"
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x1
+    move-result-object p0
 
-    invoke-direct {v0, v1, v2}, Ltt8;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x3
 
-    sput-object v0, Ljfi;->c:Ltt8;
+    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 10
+.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "TRuntime."
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    iput-object v0, p0, Ljfi;->b:Ljava/lang/String;
+    const/4 v0, 0x6
 
-    const-string v0, "Play Store package is not found."
+    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    const-string v1, "com.android.vending"
+    move-result v0
 
-    sget-object v2, Le1j;->a:Ltt8;
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x0
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v4
-
-    iget-boolean v4, v4, Landroid/content/pm/ApplicationInfo;->enabled:Z
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-
-    if-nez v4, :cond_0
-
-    new-array p1, v3, [Ljava/lang/Object;
-
-    const-string v0, "Play Store package is disabled."
-
-    invoke-virtual {v2, v0, p1}, Ltt8;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
+    invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
-    :try_start_1
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    return-void
+.end method
 
-    move-result-object v4
+.method public static final e(Lll;Lcg2;JILjava/lang/String;La8e;Ly14;)Ljava/lang/Object;
+    .locals 19
 
-    const/16 v5, 0x40
+    move-object/from16 v0, p7
 
-    invoke-virtual {v4, v1, v5}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    instance-of v1, v0, Lgm;
 
-    move-result-object v4
+    if-eqz v1, :cond_0
 
-    iget-object v0, v4, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-    :try_end_1
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    move-object v1, v0
 
-    if-eqz v0, :cond_7
+    check-cast v1, Lgm;
 
-    array-length v4, v0
+    iget v2, v1, Lgm;->w0:I
 
-    if-nez v4, :cond_1
+    const/high16 v3, -0x80000000
 
-    goto/16 :goto_3
+    and-int v4, v2, v3
 
-    :cond_1
-    new-instance v5, Ljava/util/ArrayList;
+    if-eqz v4, :cond_0
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    sub-int/2addr v2, v3
 
-    move v6, v3
-
-    :goto_0
-    if-ge v6, v4, :cond_5
-
-    aget-object v7, v0, v6
-
-    invoke-virtual {v7}, Landroid/content/pm/Signature;->toByteArray()[B
-
-    move-result-object v7
-
-    :try_start_2
-    const-string v8, "SHA-256"
-
-    invoke-static {v8}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v8
-    :try_end_2
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_0
-
-    invoke-virtual {v8, v7}, Ljava/security/MessageDigest;->update([B)V
-
-    invoke-virtual {v8}, Ljava/security/MessageDigest;->digest()[B
-
-    move-result-object v7
-
-    const/16 v8, 0xb
-
-    invoke-static {v7, v8}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_1
-
-    :catch_0
-    const-string v7, ""
-
-    :goto_1
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v8, "8P1sW0EPJcslw7UzRsiXL64w-O50Ed-RBICtay1g24M"
-
-    invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_4
-
-    sget-object v8, Landroid/os/Build;->TAGS:Ljava/lang/String;
-
-    const-string v9, "dev-keys"
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_2
-
-    const-string v9, "notest-keys"
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    :cond_2
-    const-string v8, "GXWy8XF3vIml3_MfnmSmyuKBpT3B0dWbHRR_4cgq-gA"
-
-    invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    :cond_3
-    add-int/lit8 v6, v6, 0x1
+    iput v2, v1, Lgm;->w0:I
 
     goto :goto_0
 
-    :cond_4
-    new-instance v0, Landroid/content/Intent;
+    :cond_0
+    new-instance v1, Lgm;
 
-    const-string v2, "com.google.android.finsky.BIND_IN_APP_REVIEW_SERVICE"
+    invoke-direct {v1, v0}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    :goto_0
+    iget-object v0, v1, Lgm;->v0:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    sget-object v2, Lr54;->a:Lr54;
 
-    move-result-object v0
+    iget v3, v1, Lgm;->w0:I
 
-    new-instance v1, Leyi;
+    const/4 v4, 0x3
 
-    sget-object v2, Ljfi;->c:Ltt8;
+    const/4 v5, 0x2
 
-    invoke-direct {v1, p1, v2, v0}, Leyi;-><init>(Landroid/content/Context;Ltt8;Landroid/content/Intent;)V
+    const/4 v6, 0x1
 
-    iput-object v1, p0, Ljfi;->a:Leyi;
+    if-eqz v3, :cond_4
 
-    return-void
+    if-eq v3, v6, :cond_3
 
-    :cond_5
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-eq v3, v5, :cond_2
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    if-ne v3, v4, :cond_1
 
-    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget v3, v1, Lgm;->u0:I
 
-    move-result-object v0
+    iget v7, v1, Lgm;->t0:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-wide v8, v1, Lgm;->s0:J
 
-    move-result v1
+    iget-object v10, v1, Lgm;->r0:Lpmf;
 
-    if-eqz v1, :cond_6
+    iget-object v11, v1, Lgm;->q0:Lli6;
 
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v12, v1, Lgm;->Z:La8e;
 
-    move-result-object v1
+    iget-object v13, v1, Lgm;->Y:Ljava/lang/String;
 
-    check-cast v1, Ljava/lang/CharSequence;
+    iget-object v14, v1, Lgm;->X:Lmmf;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    iget-object v15, v1, Lgm;->o:Lll;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result v1
+    goto/16 :goto_8
 
-    if-eqz v1, :cond_6
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, ", "
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    iget v3, v1, Lgm;->u0:I
+
+    iget v7, v1, Lgm;->t0:I
+
+    iget-wide v8, v1, Lgm;->s0:J
+
+    iget-object v10, v1, Lgm;->r0:Lpmf;
+
+    iget-object v11, v1, Lgm;->q0:Lli6;
+
+    iget-object v12, v1, Lgm;->Z:La8e;
+
+    iget-object v13, v1, Lgm;->Y:Ljava/lang/String;
+
+    iget-object v14, v1, Lgm;->X:Lmmf;
+
+    iget-object v15, v1, Lgm;->o:Lll;
+
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_6
+
+    :cond_3
+    iget v3, v1, Lgm;->u0:I
+
+    iget v7, v1, Lgm;->t0:I
+
+    iget-wide v8, v1, Lgm;->s0:J
+
+    iget-object v10, v1, Lgm;->r0:Lpmf;
+
+    iget-object v11, v1, Lgm;->q0:Lli6;
+
+    iget-object v12, v1, Lgm;->Z:La8e;
+
+    iget-object v13, v1, Lgm;->Y:Ljava/lang/String;
+
+    iget-object v14, v1, Lgm;->X:Lmmf;
+
+    iget-object v15, v1, Lgm;->o:Lll;
+
+    :try_start_0
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_2
 
-    :cond_6
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    move-result-object p1
+    goto/16 :goto_5
 
-    const-string v0, "Play Store package certs are not valid. Found these sha256 certs: ["
+    :cond_4
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "]."
+    const/4 v0, 0x0
 
-    invoke-static {v0, p1, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v3, 0x0
 
-    move-result-object p1
+    move-wide/from16 v7, p2
 
-    new-array v0, v3, [Ljava/lang/Object;
+    move/from16 v9, p4
 
-    invoke-virtual {v2, p1, v0}, Ltt8;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object/from16 v10, p5
 
-    goto :goto_4
+    move-object/from16 v11, p6
 
-    :cond_7
+    move-object v13, v0
+
+    move-object v14, v13
+
+    move-object v12, v1
+
+    move v0, v3
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v3, p1
+
+    :goto_1
+    add-int/lit8 v15, v0, 0x1
+
+    :try_start_1
+    iput-object v1, v12, Lgm;->o:Lll;
+
+    iput-object v3, v12, Lgm;->X:Lmmf;
+
+    iput-object v10, v12, Lgm;->Y:Ljava/lang/String;
+
+    iput-object v11, v12, Lgm;->Z:La8e;
+
+    iput-object v14, v12, Lgm;->q0:Lli6;
+
+    iput-object v13, v12, Lgm;->r0:Lpmf;
+
+    iput-wide v7, v12, Lgm;->s0:J
+
+    iput v9, v12, Lgm;->t0:I
+
+    iput v15, v12, Lgm;->u0:I
+
+    iput v6, v12, Lgm;->w0:I
+
+    move-object v0, v1
+
+    check-cast v0, Lmna;
+
+    invoke-virtual {v0, v3, v12}, Lmna;->I(Lmmf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-ne v1, v2, :cond_5
+
+    goto/16 :goto_7
+
+    :cond_5
+    move/from16 v17, v15
+
+    move-object v15, v0
+
+    move-object v0, v1
+
+    move-object v1, v12
+
+    move-object v12, v11
+
+    move-object v11, v14
+
+    move-object v14, v3
+
+    move/from16 v3, v17
+
+    move-wide/from16 v17, v7
+
+    move v7, v9
+
+    move-wide/from16 v8, v17
+
+    move-object/from16 v17, v13
+
+    move-object v13, v10
+
+    move-object/from16 v10, v17
+
+    :goto_2
+    :try_start_2
+    check-cast v0, Lpmf;
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-object v10, v13
+
+    move-object v13, v0
+
     :goto_3
-    new-array p1, v3, [Ljava/lang/Object;
+    move-wide/from16 v17, v8
 
-    const-string v0, "Play Store package is not signed -- possibly self-built package. Could not verify."
+    move v9, v7
 
-    invoke-virtual {v2, v0, p1}, Ltt8;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-wide/from16 v7, v17
 
-    return-void
+    move v0, v3
 
-    :catch_1
-    new-array p1, v3, [Ljava/lang/Object;
+    move-object v3, v14
 
-    invoke-virtual {v2, v0, p1}, Ltt8;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object v14, v11
 
-    goto :goto_4
+    move-object v11, v12
 
-    :catch_2
-    new-array p1, v3, [Ljava/lang/Object;
+    move-object v12, v1
 
-    invoke-virtual {v2, v0, p1}, Ltt8;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object v1, v15
+
+    goto/16 :goto_9
 
     :goto_4
-    return-void
+    move/from16 v17, v15
+
+    move-object v15, v1
+
+    move-object v1, v12
+
+    move-object v12, v11
+
+    move-object v11, v14
+
+    move-object v14, v3
+
+    move/from16 v3, v17
+
+    move-wide/from16 v17, v7
+
+    move v7, v9
+
+    move-wide/from16 v8, v17
+
+    move-object/from16 v17, v13
+
+    move-object v13, v10
+
+    move-object/from16 v10, v17
+
+    goto :goto_5
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_4
+
+    :goto_5
+    if-eqz v12, :cond_7
+
+    invoke-static {v0}, Llnf;->d(Ljava/lang/Throwable;)Z
+
+    move-result v16
+
+    if-eqz v16, :cond_7
+
+    move-object v6, v12
+
+    check-cast v6, Lc8e;
+
+    iget v4, v6, Lc8e;->h:I
+
+    invoke-static {v4}, Llnf;->a(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_7
+
+    iget-object v0, v6, Lc8e;->e:Lrm0;
+
+    sget-object v4, Lt93;->b:Lt93;
+
+    invoke-virtual {v0, v4}, Lyha;->g(Lexb;)Lbia;
+
+    move-result-object v0
+
+    iput-object v15, v1, Lgm;->o:Lll;
+
+    iput-object v14, v1, Lgm;->X:Lmmf;
+
+    iput-object v13, v1, Lgm;->Y:Ljava/lang/String;
+
+    iput-object v12, v1, Lgm;->Z:La8e;
+
+    iput-object v11, v1, Lgm;->q0:Lli6;
+
+    iput-object v10, v1, Lgm;->r0:Lpmf;
+
+    iput-wide v8, v1, Lgm;->s0:J
+
+    iput v7, v1, Lgm;->t0:I
+
+    iput v3, v1, Lgm;->u0:I
+
+    iput v5, v1, Lgm;->w0:I
+
+    invoke-static {v0, v1}, Leyi;->c(Lyha;Ly14;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v2, :cond_6
+
+    goto :goto_7
+
+    :cond_6
+    :goto_6
+    const/4 v4, 0x3
+
+    goto :goto_8
+
+    :cond_7
+    if-eq v3, v7, :cond_d
+
+    invoke-static {v0}, Llnf;->c(Ljava/lang/Throwable;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
+
+    iput-object v15, v1, Lgm;->o:Lll;
+
+    iput-object v14, v1, Lgm;->X:Lmmf;
+
+    iput-object v13, v1, Lgm;->Y:Ljava/lang/String;
+
+    iput-object v12, v1, Lgm;->Z:La8e;
+
+    iput-object v11, v1, Lgm;->q0:Lli6;
+
+    iput-object v10, v1, Lgm;->r0:Lpmf;
+
+    iput-wide v8, v1, Lgm;->s0:J
+
+    iput v7, v1, Lgm;->t0:I
+
+    iput v3, v1, Lgm;->u0:I
+
+    const/4 v4, 0x3
+
+    iput v4, v1, Lgm;->w0:I
+
+    invoke-static {v8, v9, v1}, Lqyi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v2, :cond_8
+
+    :goto_7
+    return-object v2
+
+    :cond_8
+    :goto_8
+    move-object v0, v13
+
+    move-object v13, v10
+
+    move-object v10, v0
+
+    goto/16 :goto_3
+
+    :goto_9
+    iget-object v6, v12, Ly14;->b:Li54;
+
+    invoke-static {v6}, Ldbi;->i(Li54;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_a
+
+    if-lt v0, v9, :cond_9
+
+    goto :goto_a
+
+    :cond_9
+    const/4 v6, 0x1
+
+    goto/16 :goto_1
+
+    :cond_a
+    :goto_a
+    return-object v13
+
+    :cond_b
+    if-eqz v11, :cond_c
+
+    invoke-interface {v11, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_c
+    throw v0
+
+    :cond_d
+    new-instance v0, Lru/ok/tamtam/api/MaxRetryCountExceededException;
+
+    const-string v1, "Got max retries for "
+
+    invoke-virtual {v1, v13}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public abstract c(I)V
+.end method
+
+.method public abstract d()Z
+.end method
+
+.method public abstract f(Z)V
+.end method
+
+.method public abstract g(Z)V
+.end method
+
+.method public abstract h()V
+.end method
+
+.method public abstract i(I)V
 .end method

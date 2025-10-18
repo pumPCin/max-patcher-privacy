@@ -1,269 +1,362 @@
 .class public final Lvj8;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lxp9;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lvj8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lnk8;
+.implements Lvv4;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:[B
+.field public final b:Ljava/lang/Object;
 
-.field public final c:I
+.field public final c:Ljava/lang/Object;
 
-.field public final o:I
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lnk8;Laj6;)V
+    .locals 1
 
-    new-instance v0, Luj8;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
-
-    sput-object v0, Lvj8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget v1, Lhhg;->a:I
-
-    iput-object v0, p0, Lvj8;->a:Ljava/lang/String;
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lvj8;->b:[B
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lvj8;->c:I
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Lvj8;->o:I
-
-    return-void
-.end method
-
-.method public constructor <init>([BIILjava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p4, p0, Lvj8;->a:Ljava/lang/String;
-
-    .line 3
-    iput-object p1, p0, Lvj8;->b:[B
-
-    .line 4
-    iput p2, p0, Lvj8;->c:I
+    iput v0, p0, Lvj8;->a:I
 
     .line 5
-    iput p3, p0, Lvj8;->o:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lvj8;->b:Ljava/lang/Object;
+
+    .line 7
+    iput-object p2, p0, Lvj8;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lsr3;Lsr3;Lr6;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lvj8;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lvj8;->b:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lvj8;->c:Ljava/lang/Object;
+
+    .line 4
+    iput-object p3, p0, Lvj8;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lvj8;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    :try_start_0
+    iget-object v0, p0, Lvj8;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast v0, Laj6;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0, p1}, Laj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x0
+    const-string v0, "The mapper returned a null MaybeSource"
 
-    if-eqz p1, :cond_2
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const-class v2, Lvj8;
+    check-cast p1, Lsk8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvj8;
-
-    iget-object v2, p0, Lvj8;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lvj8;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lvj8;->b:[B
-
-    iget-object v3, p1, Lvj8;->b:[B
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Lvj8;->c:I
-
-    iget v3, p1, Lvj8;->c:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lvj8;->o:I
-
-    iget p1, p1, Lvj8;->o:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/16 v0, 0x20f
-
-    const/16 v1, 0x1f
-
-    iget-object v2, p0, Lvj8;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+    invoke-virtual {p0}, Lvj8;->h()Z
 
     move-result v0
 
-    iget-object v2, p0, Lvj8;->b:[B
+    if-nez v0, :cond_0
 
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
+    new-instance v0, Lbm2;
 
-    move-result v2
+    const/16 v1, 0xc
 
-    add-int/2addr v2, v0
+    invoke-direct {v0, v1, p0}, Lbm2;-><init>(ILjava/lang/Object;)V
 
-    mul-int/2addr v2, v1
+    invoke-interface {p1, v0}, Lsk8;->a(Lnk8;)V
 
-    iget v0, p0, Lvj8;->c:I
+    goto :goto_0
 
-    add-int/2addr v2, v0
+    :catchall_0
+    move-exception p1
 
-    mul-int/2addr v2, v1
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    iget v0, p0, Lvj8;->o:I
+    iget-object v0, p0, Lvj8;->b:Ljava/lang/Object;
 
-    add-int/2addr v2, v0
+    check-cast v0, Lnk8;
 
-    return v2
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lvj8;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const-string v2, "mdta: key="
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    invoke-interface {v0, p1}, Lnk8;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
-    new-instance v0, Ljava/lang/String;
+    :goto_0
+    return-void
 
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    sget-object v0, Lzv4;->a:Lzv4;
 
-    return-object v0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_1
+    iget-object v0, p0, Lvj8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final b()V
+    .locals 1
 
-    iget-object p2, p0, Lvj8;->a:Ljava/lang/String;
+    iget v0, p0, Lvj8;->a:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Lvj8;->b:[B
+    iget-object v0, p0, Lvj8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    check-cast v0, Lnk8;
 
-    iget p2, p0, Lvj8;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lvj8;->o:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-interface {v0}, Lnk8;->b()V
 
     return-void
+
+    :pswitch_0
+    sget-object v0, Lzv4;->a:Lzv4;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Lvj8;->o:Ljava/lang/Object;
+
+    check-cast v0, Lr6;
+
+    invoke-interface {v0}, Lr6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget v0, p0, Lvj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvj8;->o:Ljava/lang/Object;
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lvj8;->o:Ljava/lang/Object;
+
+    iget-object p1, p0, Lvj8;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnk8;
+
+    invoke-interface {p1, p0}, Lnk8;->c(Lvv4;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p0, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Lvj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Lvj8;->o:Ljava/lang/Object;
+
+    check-cast v0, Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lvj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget v0, p0, Lvj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvj8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnk8;
+
+    invoke-interface {v0, p1}, Lnk8;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Lzv4;->a:Lzv4;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Lvj8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

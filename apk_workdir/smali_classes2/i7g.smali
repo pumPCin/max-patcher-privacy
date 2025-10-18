@@ -1,26 +1,15 @@
-.class public final Li7g;
-.super Ljava/lang/Object;
+.class public abstract Li7g;
+.super Le5a;
 .source "SourceFile"
-
-# interfaces
-.implements Lm7g;
-
-
-# instance fields
-.field public final a:Lmn3;
-
-.field public final b:Loqf;
 
 
 # direct methods
-.method public constructor <init>(Lmn3;Loqf;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lccg;->a:Lccg;
 
-    iput-object p1, p0, Li7g;->a:Lmn3;
-
-    iput-object p2, p0, Li7g;->b:Loqf;
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method

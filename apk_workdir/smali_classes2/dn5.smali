@@ -2,42 +2,53 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsuf;
 
-# instance fields
-.field public final a:Loza;
+
+# static fields
+.field public static final a:Ldn5;
+
+.field public static final b:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Loza;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldn5;
 
-    iput-object p1, p0, Ldn5;->a:Loza;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ldn5;->a:Ldn5;
+
+    new-instance v0, Lbn5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbn5;-><init>(I)V
+
+    new-instance v1, Lwif;
+
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
+
+    sput-object v1, Ldn5;->b:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lape;
-    .locals 3
+.method public final a(III)Lpuf;
+    .locals 0
 
-    iget-object v0, p0, Ldn5;->a:Loza;
+    sget-object p1, Ldn5;->b:Lwif;
 
-    invoke-virtual {v0}, Lzed;->n()Lrja;
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lbg5;
+    check-cast p1, Lpuf;
 
-    const/16 v2, 0xd
-
-    invoke-direct {v1, v2}, Lbg5;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lqoe;->h(Lfi6;)Lape;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

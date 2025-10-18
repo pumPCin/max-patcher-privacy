@@ -80,7 +80,7 @@
 
     iget-object v0, p0, Lhg;->b:Landroid/view/View;
 
-    invoke-static {v0, p1}, Lhyg;->y(Landroid/view/View;F)V
+    invoke-static {v0, p1}, Lmzg;->A(Landroid/view/View;F)V
 
     return-void
 

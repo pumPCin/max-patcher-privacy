@@ -1,137 +1,100 @@
-.class public final enum Luz7;
-.super Ljava/lang/Enum;
+.class public final Luz7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lty5;
 
-# static fields
-.field public static final enum X:Luz7;
 
-.field public static final enum Y:Luz7;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic Z:[Luz7;
+.field public final synthetic b:Lty5;
 
-.field public static final enum a:Luz7;
-
-.field public static final enum b:Luz7;
-
-.field public static final enum c:Luz7;
-
-.field public static final enum o:Luz7;
-
-.field public static final synthetic r0:Lfd5;
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(Lty5;Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Luz7;
+    iput p3, p0, Luz7;->a:I
 
-    const-string v1, "URL"
+    iput-object p1, p0, Luz7;->b:Lty5;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Luz7;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Luz7;->a:Luz7;
-
-    new-instance v1, Luz7;
-
-    const-string v2, "HASH_TAG"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luz7;->b:Luz7;
-
-    new-instance v2, Luz7;
-
-    const-string v3, "BOT_COMMAND"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Luz7;->c:Luz7;
-
-    new-instance v3, Luz7;
-
-    const-string v4, "PROFILE_TAG"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Luz7;->o:Luz7;
-
-    new-instance v4, Luz7;
-
-    const-string v5, "MENTION"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Luz7;->X:Luz7;
-
-    new-instance v5, Luz7;
-
-    const-string v6, "ML_ENTRY"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Luz7;
-
-    const-string v7, "MARKDOWN_LINK"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Luz7;->Y:Luz7;
-
-    filled-new-array/range {v0 .. v6}, [Luz7;
-
-    move-result-object v0
-
-    sput-object v0, Luz7;->Z:[Luz7;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Luz7;->r0:Lfd5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luz7;
-    .locals 1
 
-    const-class v0, Luz7;
+# virtual methods
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Luz7;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Luz7;
+    new-instance v0, Ltz7;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Luz7;->c:Ljava/lang/String;
 
-.method public static values()[Luz7;
-    .locals 1
+    const/4 v2, 0x1
 
-    sget-object v0, Luz7;->Z:[Luz7;
+    invoke-direct {v0, p1, v1, v2}, Ltz7;-><init>(Lvy5;Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p1, p0, Luz7;->b:Lty5;
 
-    move-result-object v0
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v0, [Luz7;
+    move-result-object p1
 
-    return-object v0
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Ltz7;
+
+    iget-object v1, p0, Luz7;->c:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Ltz7;-><init>(Lvy5;Ljava/lang/String;I)V
+
+    iget-object p1, p0, Luz7;->b:Lty5;
+
+    invoke-interface {p1, v0, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lr54;->a:Lr54;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

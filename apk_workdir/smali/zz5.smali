@@ -1,10 +1,10 @@
 .class public final Lzz5;
-.super Lk14;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lzq2;
+.field public final synthetic X:Lcz5;
 
 .field public Y:I
 
@@ -12,12 +12,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lzq2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcz5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lzz5;->X:Lzq2;
+    iput-object p1, p0, Lzz5;->X:Lcz5;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -37,11 +37,11 @@
 
     iput p1, p0, Lzz5;->Y:I
 
-    iget-object p1, p0, Lzz5;->X:Lzq2;
+    iget-object p1, p0, Lzz5;->X:Lcz5;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lzq2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lcz5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

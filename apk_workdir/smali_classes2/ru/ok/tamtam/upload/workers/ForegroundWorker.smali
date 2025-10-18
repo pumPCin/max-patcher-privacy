@@ -17,22 +17,22 @@
         "workerParams",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "Lba6;",
+        "Lva6;",
         "getForegroundInfo",
         "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "Lzag;",
+        "Lccg;",
         "updateForeground",
-        "Lfa6;",
+        "Lza6;",
         "newProgress",
         "",
         "needToShowNotification-P3Ng7BI",
         "(I)Z",
         "needToShowNotification",
-        "Ls18;",
+        "Lp28;",
         "doWork",
-        "Lg4a;",
+        "Lj5a;",
         "needUpdateWorkerProgressNotifUseCase",
-        "Lg4a;",
+        "Lj5a;",
         "",
         "startTime",
         "J",
@@ -45,7 +45,7 @@
         "getWorkDelay",
         "()J",
         "Companion",
-        "ea6",
+        "ya6",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -59,7 +59,7 @@
 
 
 # static fields
-.field private static final Companion:Lea6;
+.field private static final Companion:Lya6;
 
 .field public static final WORK_DELAY:J = 0x3e8L
     .annotation runtime Ljava/lang/Deprecated;
@@ -70,7 +70,7 @@
 # instance fields
 .field private isGetForegroundInfoCalled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private final needUpdateWorkerProgressNotifUseCase:Lg4a;
+.field private final needUpdateWorkerProgressNotifUseCase:Lj5a;
 
 .field private oldProgress:I
 
@@ -83,11 +83,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lea6;
+    new-instance v0, Lya6;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->Companion:Lea6;
+    sput-object v0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->Companion:Lya6;
 
     return-void
 .end method
@@ -97,21 +97,21 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    new-instance p1, Lg4a;
+    new-instance p1, Lj5a;
 
-    new-instance p2, Lc14;
+    new-instance p2, Lm14;
 
-    const/16 v0, 0x13
+    const/16 v0, 0x14
 
-    invoke-direct {p2, v0, p0}, Lc14;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lm14;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Lrhf;
+    new-instance v0, Lwif;
 
-    invoke-direct {v0, p2}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v0, p2}, Lwif;-><init>(Lji6;)V
 
-    invoke-direct {p1, v0}, Lg4a;-><init>(Lrhf;)V
+    invoke-direct {p1, v0}, Lj5a;-><init>(Lwif;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needUpdateWorkerProgressNotifUseCase:Lg4a;
+    iput-object p1, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needUpdateWorkerProgressNotifUseCase:Lj5a;
 
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -161,21 +161,21 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Ls18;",
+            "Lp28;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    instance-of v0, p1, Lga6;
+    instance-of v0, p1, Lab6;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lga6;
+    check-cast v0, Lab6;
 
-    iget v1, v0, Lga6;->Z:I
+    iget v1, v0, Lab6;->Z:I
 
     const/high16 v2, -0x80000000
 
@@ -185,19 +185,19 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lga6;->Z:I
+    iput v1, v0, Lab6;->Z:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lga6;
+    new-instance v0, Lab6;
 
-    invoke-direct {v0, p0, p1}, Lga6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1}, Lab6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    iget-object p1, v0, Lga6;->X:Ljava/lang/Object;
+    iget-object p1, v0, Lab6;->X:Ljava/lang/Object;
 
-    iget v1, v0, Lga6;->Z:I
+    iget v1, v0, Lab6;->Z:I
 
     const/4 v2, 0x1
 
@@ -205,9 +205,9 @@
 
     if-ne v1, v2, :cond_1
 
-    iget-object v0, v0, Lga6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iget-object v0, v0, Lab6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -221,7 +221,7 @@
     throw p1
 
     :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -229,13 +229,13 @@
 
     iput-wide v3, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->startTime:J
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Llkf;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
 
     move-result-object p1
 
-    check-cast p1, Lisd;
+    check-cast p1, Lptd;
 
-    invoke-virtual {p1}, Lisd;->e()Lxr4;
+    invoke-virtual {p1}, Lptd;->e()Los4;
 
     move-result-object p1
 
@@ -243,17 +243,17 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lxr4;->f(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Los4;->f(Ljava/lang/String;)V
 
-    iput-object p0, v0, Lga6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iput-object p0, v0, Lab6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput v2, v0, Lga6;->Z:I
+    iput v2, v0, Lab6;->Z:I
 
     invoke-virtual {p0, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
+    sget-object v0, Lr54;->a:Lr54;
 
     if-ne p1, v0, :cond_3
 
@@ -263,15 +263,15 @@
     move-object v0, p0
 
     :goto_1
-    check-cast p1, Ls18;
+    check-cast p1, Lp28;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Llkf;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lplf;
 
     move-result-object v1
 
-    check-cast v1, Lisd;
+    check-cast v1, Lptd;
 
-    invoke-virtual {v1}, Lisd;->e()Lxr4;
+    invoke-virtual {v1}, Lptd;->e()Los4;
 
     move-result-object v1
 
@@ -279,7 +279,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lxr4;->g(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Los4;->g(Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -291,21 +291,21 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Lba6;",
+            "Lva6;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    instance-of v0, p1, Lha6;
+    instance-of v0, p1, Lbb6;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lha6;
+    check-cast v0, Lbb6;
 
-    iget v1, v0, Lha6;->Z:I
+    iget v1, v0, Lbb6;->Z:I
 
     const/high16 v2, -0x80000000
 
@@ -315,19 +315,19 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lha6;->Z:I
+    iput v1, v0, Lbb6;->Z:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lha6;
+    new-instance v0, Lbb6;
 
-    invoke-direct {v0, p0, p1}, Lha6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1}, Lbb6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    iget-object p1, v0, Lha6;->X:Ljava/lang/Object;
+    iget-object p1, v0, Lbb6;->X:Ljava/lang/Object;
 
-    iget v1, v0, Lha6;->Z:I
+    iget v1, v0, Lbb6;->Z:I
 
     const/4 v2, 0x1
 
@@ -335,9 +335,9 @@
 
     if-ne v1, v2, :cond_1
 
-    iget-object v0, v0, Lha6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iget-object v0, v0, Lbb6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -351,21 +351,21 @@
     throw p1
 
     :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->isGetForegroundInfoCalled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iput-object p0, v0, Lha6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iput-object p0, v0, Lbb6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput v2, v0, Lha6;->Z:I
+    iput v2, v0, Lbb6;->Z:I
 
     invoke-virtual {p0, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
+    sget-object v0, Lr54;->a:Lr54;
 
     if-ne p1, v0, :cond_3
 
@@ -375,7 +375,7 @@
     move-object v0, p0
 
     :goto_1
-    check-cast p1, Lba6;
+    check-cast p1, Lva6;
 
     invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getName()Ljava/lang/String;
 
@@ -387,7 +387,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object p1
 .end method
@@ -422,7 +422,7 @@
 
     const-string v2, "needToShowNotification: first foreground show"
 
-    invoke-static {v0, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 
@@ -439,7 +439,7 @@
 
     const-string v1, "needToShowNotification: ignore indeterminate (already shown)"
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     move v1, v2
@@ -453,7 +453,7 @@
 
     if-ge p1, v0, :cond_9
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needUpdateWorkerProgressNotifUseCase:Lg4a;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needUpdateWorkerProgressNotifUseCase:Lj5a;
 
     iget v3, p0, Lru/ok/tamtam/upload/workers/ForegroundWorker;->oldProgress:I
 
@@ -488,15 +488,15 @@
 
     sub-long/2addr v6, v4
 
-    iget-object v4, v0, Lg4a;->a:Lrhf;
+    iget-object v4, v0, Lj5a;->a:Lwif;
 
-    invoke-virtual {v4}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lc3e;
+    check-cast v4, Lj4e;
 
-    check-cast v4, Lpsd;
+    check-cast v4, Lwtd;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -504,7 +504,7 @@
 
     const-wide/16 v8, 0x2710
 
-    invoke-virtual {v4, v5, v8, v9}, Lpsd;->m(Ljava/lang/Enum;J)J
+    invoke-virtual {v4, v5, v8, v9}, Lwtd;->m(Ljava/lang/Enum;J)J
 
     move-result-wide v4
 
@@ -522,15 +522,15 @@
     :goto_2
     int-to-float v3, v3
 
-    iget-object v0, v0, Lg4a;->a:Lrhf;
+    iget-object v0, v0, Lj5a;->a:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc3e;
+    check-cast v0, Lj4e;
 
-    check-cast v0, Lpsd;
+    check-cast v0, Lwtd;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -540,11 +540,11 @@
 
     move-result-object v5
 
-    iget-object v0, v0, Lw3;->h:Lot7;
+    iget-object v0, v0, Lw3;->h:Llu7;
 
     const/high16 v6, 0x41a00000    # 20.0f
 
-    invoke-virtual {v0, v5, v6}, Lot7;->getFloat(Ljava/lang/String;F)F
+    invoke-virtual {v0, v5, v6}, Llu7;->getFloat(Ljava/lang/String;F)F
 
     move-result v0
 
@@ -562,16 +562,16 @@
 
     move-result-object v0
 
-    sget-object v2, Lndi;->a:Lkwa;
+    sget-object v2, Ltei;->a:Lmxa;
 
     if-nez v2, :cond_8
 
     goto :goto_4
 
     :cond_8
-    sget-object v3, Lf88;->o:Lf88;
+    sget-object v3, Lc98;->o:Lc98;
 
-    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
+    invoke-virtual {v2, v3}, Lmxa;->b(Lc98;)Z
 
     move-result v4
 
@@ -581,11 +581,11 @@
 
     move-result v4
 
-    invoke-static {v4}, Lfa6;->a(I)Ljava/lang/String;
+    invoke-static {v4}, Lza6;->a(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lfa6;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lza6;->a(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -625,7 +625,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v2, v3, v0, v4, v5}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v0, v4, v5}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_4
 
@@ -636,7 +636,7 @@
 
     const-string v1, "needToShowNotification: none progress, skip"
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -654,21 +654,21 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Lzag;",
+            "Lccg;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    instance-of v0, p1, Lia6;
+    instance-of v0, p1, Lcb6;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lia6;
+    check-cast v0, Lcb6;
 
-    iget v1, v0, Lia6;->Z:I
+    iget v1, v0, Lcb6;->Z:I
 
     const/high16 v2, -0x80000000
 
@@ -678,25 +678,25 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lia6;->Z:I
+    iput v1, v0, Lcb6;->Z:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lia6;
+    new-instance v0, Lcb6;
 
-    invoke-direct {v0, p0, p1}, Lia6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1}, Lcb6;-><init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    iget-object p1, v0, Lia6;->X:Ljava/lang/Object;
+    iget-object p1, v0, Lcb6;->X:Ljava/lang/Object;
 
-    iget v1, v0, Lia6;->Z:I
+    iget v1, v0, Lcb6;->Z:I
 
     const/4 v2, 0x2
 
     const/4 v3, 0x1
 
-    sget-object v4, Lc54;->a:Lc54;
+    sget-object v4, Lr54;->a:Lr54;
 
     if-eqz v1, :cond_3
 
@@ -704,7 +704,7 @@
 
     if-ne v1, v2, :cond_1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -718,18 +718,18 @@
     throw p1
 
     :cond_2
-    iget-object v1, v0, Lia6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iget-object v1, v0, Lcb6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
     :cond_3
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-object p0, v0, Lia6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iput-object p0, v0, Lcb6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput v3, v0, Lia6;->Z:I
+    iput v3, v0, Lcb6;->Z:I
 
     invoke-virtual {p0, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
@@ -743,15 +743,15 @@
     move-object v1, p0
 
     :goto_1
-    check-cast p1, Lba6;
+    check-cast p1, Lva6;
 
     const/4 v3, 0x0
 
-    iput-object v3, v0, Lia6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iput-object v3, v0, Lcb6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
 
-    iput v2, v0, Lia6;->Z:I
+    iput v2, v0, Lcb6;->Z:I
 
-    invoke-virtual {v1, p1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lba6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lva6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -762,7 +762,7 @@
 
     :cond_5
     :goto_3
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

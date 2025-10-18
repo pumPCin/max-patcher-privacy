@@ -1,202 +1,444 @@
 .class public final Lgj5;
-.super Li5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:Lhj5;
+.field public final synthetic a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhj5;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lgj5;->c:Lhj5;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x0
+    iput v0, p0, Lgj5;->a:I
 
-    invoke-direct {p0, p1}, Li5;-><init>(I)V
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-virtual {p0}, Lgj5;->e()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lusb;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgj5;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lgj5;->f:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final I(IILandroid/os/Bundle;)Z
-    .locals 7
+.method public a()V
+    .locals 1
 
-    iget-object v0, p0, Lgj5;->c:Lhj5;
+    iget-boolean v0, p0, Lgj5;->d:Z
 
-    iget-object v1, v0, Lhj5;->i:Landroid/view/View;
+    if-eqz v0, :cond_0
 
-    const/4 v2, -0x1
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    if-eq p1, v2, :cond_8
+    check-cast v0, Ltp7;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Ltp7;->h()I
 
-    if-eq p2, v2, :cond_7
+    move-result v0
 
-    const/4 v3, 0x2
+    goto :goto_0
 
-    if-eq p2, v3, :cond_6
+    :cond_0
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    const/16 v3, 0x40
+    check-cast v0, Ltp7;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Ltp7;->m()I
 
-    const/high16 v5, 0x10000
+    move-result v0
 
-    const/high16 v6, -0x80000000
+    :goto_0
+    iput v0, p0, Lgj5;->c:I
 
-    if-eq p2, v3, :cond_2
+    return-void
+.end method
 
-    const/16 v3, 0x80
+.method public b(Landroid/view/View;I)V
+    .locals 1
 
-    if-eq p2, v3, :cond_0
+    iget-boolean v0, p0, Lgj5;->d:Z
 
-    invoke-virtual {v0, p1, p2, p3}, Lhj5;->s(IILandroid/os/Bundle;)Z
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v0, Ltp7;
+
+    invoke-virtual {v0, p1}, Ltp7;->c(Landroid/view/View;)I
 
     move-result p1
 
-    return p1
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v0, Ltp7;
+
+    invoke-virtual {v0}, Ltp7;->o()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lgj5;->c:I
+
+    goto :goto_0
 
     :cond_0
-    iget p2, v0, Lhj5;->k:I
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    if-ne p2, p1, :cond_1
+    check-cast v0, Ltp7;
 
-    iput v6, v0, Lhj5;->k:I
+    invoke-virtual {v0, p1}, Ltp7;->f(Landroid/view/View;)I
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    move-result p1
 
-    invoke-virtual {v0, p1, v5}, Lhj5;->x(II)V
+    iput p1, p0, Lgj5;->c:I
 
-    return v2
+    :goto_0
+    iput p2, p0, Lgj5;->b:I
 
-    :cond_1
-    return v4
+    return-void
+.end method
 
-    :cond_2
-    iget-object p2, v0, Lhj5;->h:Landroid/view/accessibility/AccessibilityManager;
+.method public c(Landroid/view/View;I)V
+    .locals 4
 
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    move-result p3
+    check-cast v0, Ltp7;
 
-    if-eqz p3, :cond_5
+    invoke-virtual {v0}, Ltp7;->o()I
 
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    invoke-virtual {p0, p1, p2}, Lgj5;->b(Landroid/view/View;I)V
+
+    return-void
+
+    :cond_0
+    iput p2, p0, Lgj5;->b:I
+
+    iget-boolean p2, p0, Lgj5;->d:Z
+
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast p2, Ltp7;
+
+    invoke-virtual {p2}, Ltp7;->h()I
 
     move-result p2
 
-    if-nez p2, :cond_3
+    sub-int/2addr p2, v0
 
-    goto :goto_0
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    :cond_3
-    iget p2, v0, Lhj5;->k:I
+    check-cast v0, Ltp7;
 
-    if-eq p2, p1, :cond_5
+    invoke-virtual {v0, p1}, Ltp7;->c(Landroid/view/View;)I
 
-    if-eq p2, v6, :cond_4
+    move-result v0
 
-    iput v6, v0, Lhj5;->k:I
+    sub-int/2addr p2, v0
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    invoke-virtual {v0, p2, v5}, Lhj5;->x(II)V
+    check-cast v0, Ltp7;
 
-    :cond_4
-    iput p1, v0, Lhj5;->k:I
+    invoke-virtual {v0}, Ltp7;->h()I
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    move-result v0
 
-    const p2, 0x8000
+    sub-int/2addr v0, p2
 
-    invoke-virtual {v0, p1, p2}, Lhj5;->x(II)V
+    iput v0, p0, Lgj5;->c:I
 
-    return v2
+    if-lez p2, :cond_2
 
-    :cond_5
-    :goto_0
-    return v4
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
 
-    :cond_6
-    invoke-virtual {v0, p1}, Lhj5;->j(I)Z
+    check-cast v0, Ltp7;
+
+    invoke-virtual {v0, p1}, Ltp7;->d(Landroid/view/View;)I
+
+    move-result v0
+
+    iget v2, p0, Lgj5;->c:I
+
+    sub-int/2addr v2, v0
+
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v0, Ltp7;
+
+    invoke-virtual {v0}, Ltp7;->m()I
+
+    move-result v0
+
+    iget-object v3, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v3, Ltp7;
+
+    invoke-virtual {v3, p1}, Ltp7;->f(Landroid/view/View;)I
 
     move-result p1
 
-    return p1
+    sub-int/2addr p1, v0
 
-    :cond_7
-    invoke-virtual {v0, p1}, Lhj5;->w(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_8
-    sget-object p1, Lcyg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v1, p2, p3}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    return p1
+    add-int/2addr p1, v0
+
+    sub-int/2addr v2, p1
+
+    if-gez v2, :cond_2
+
+    iget p1, p0, Lgj5;->c:I
+
+    neg-int v0, v2
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lgj5;->c:I
+
+    return-void
+
+    :cond_1
+    iget-object p2, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast p2, Ltp7;
+
+    invoke-virtual {p2, p1}, Ltp7;->f(Landroid/view/View;)I
+
+    move-result p2
+
+    iget-object v2, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v2, Ltp7;
+
+    invoke-virtual {v2}, Ltp7;->m()I
+
+    move-result v2
+
+    sub-int v2, p2, v2
+
+    iput p2, p0, Lgj5;->c:I
+
+    if-lez v2, :cond_2
+
+    iget-object v3, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v3, Ltp7;
+
+    invoke-virtual {v3, p1}, Ltp7;->d(Landroid/view/View;)I
+
+    move-result v3
+
+    add-int/2addr v3, p2
+
+    iget-object p2, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast p2, Ltp7;
+
+    invoke-virtual {p2}, Ltp7;->h()I
+
+    move-result p2
+
+    sub-int/2addr p2, v0
+
+    iget-object v0, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast v0, Ltp7;
+
+    invoke-virtual {v0, p1}, Ltp7;->c(Landroid/view/View;)I
+
+    move-result p1
+
+    sub-int/2addr p2, p1
+
+    iget-object p1, p0, Lgj5;->f:Ljava/lang/Object;
+
+    check-cast p1, Ltp7;
+
+    invoke-virtual {p1}, Ltp7;->h()I
+
+    move-result p1
+
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    sub-int/2addr p1, p2
+
+    sub-int/2addr p1, v3
+
+    if-gez p1, :cond_2
+
+    iget p2, p0, Lgj5;->c:I
+
+    neg-int p1, p1
+
+    invoke-static {v2, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    sub-int/2addr p2, p1
+
+    iput p2, p0, Lgj5;->c:I
+
+    :cond_2
+    return-void
 .end method
 
-.method public final l(I)Lg5;
-    .locals 1
-
-    iget-object v0, p0, Lgj5;->c:Lhj5;
-
-    invoke-virtual {v0, p1}, Lhj5;->r(I)Lg5;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    new-instance v0, Lg5;
-
-    invoke-direct {v0, p1}, Lg5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-
-    return-object v0
-.end method
-
-.method public final n(I)Lg5;
+.method public d(I)V
     .locals 2
 
-    const/4 v0, 0x2
+    iget-boolean v0, p0, Lgj5;->d:Z
 
-    iget-object v1, p0, Lgj5;->c:Lhj5;
+    if-lez p1, :cond_0
 
-    if-ne p1, v0, :cond_0
-
-    iget p1, v1, Lhj5;->k:I
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget p1, v1, Lhj5;->l:I
+    const/4 v1, 0x0
 
     :goto_0
+    or-int/2addr v0, v1
+
+    iput-boolean v0, p0, Lgj5;->d:Z
+
+    iget v0, p0, Lgj5;->b:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lgj5;->b:I
+
+    return-void
+.end method
+
+.method public e()V
+    .locals 1
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lgj5;->b:I
+
     const/high16 v0, -0x80000000
 
-    if-ne p1, v0, :cond_1
+    iput v0, p0, Lgj5;->c:I
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return-object p1
+    iput-boolean v0, p0, Lgj5;->d:Z
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lgj5;->l(I)Lg5;
+    iput-boolean v0, p0, Lgj5;->e:Z
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lgj5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AnchorInfo{mPosition="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lgj5;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mCoordinate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgj5;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mLayoutFromEnd="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lgj5;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mValid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lgj5;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

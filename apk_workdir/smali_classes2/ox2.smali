@@ -2,155 +2,107 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljy6;
-
-
-# static fields
-.field public static final f:Ljava/util/List;
-
 
 # instance fields
-.field public final b:Lrhf;
+.field public final a:Lnje;
 
-.field public final c:Lrhf;
-
-.field public final d:Lv00;
-
-.field public final e:Lv00;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lnx2;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lox2;->f:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Llt7;Lrhf;)V
+.method public constructor <init>(Lpw0;Lulf;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lmx2;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x7
 
-    invoke-direct {v0, p2, p1, p0, v1}, Lmx2;-><init>(Lrhf;Llt7;Lox2;I)V
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
 
-    new-instance v1, Lrhf;
+    move-result-object v0
 
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+    iput-object v0, p0, Lox2;->a:Lnje;
 
-    iput-object v1, p0, Lox2;->b:Lrhf;
+    check-cast p2, Lqta;
 
-    new-instance v0, Lmx2;
+    invoke-virtual {p2}, Lqta;->a()Lk54;
 
-    const/4 v1, 0x1
+    move-result-object p2
 
-    invoke-direct {v0, p2, p1, p0, v1}, Lmx2;-><init>(Lrhf;Llt7;Lox2;I)V
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance p1, Lrhf;
+    move-result-object p2
 
-    invoke-direct {p1, v0}, Lrhf;-><init>(Loh6;)V
+    iput-object p2, p0, Lox2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iput-object p1, p0, Lox2;->c:Lrhf;
-
-    new-instance p1, Lv00;
-
-    const/16 p2, 0xb
-
-    invoke-direct {p1, p2}, Lv00;-><init>(I)V
-
-    iput-object p1, p0, Lox2;->d:Lv00;
-
-    new-instance p1, Lv00;
-
-    const/16 p2, 0xc
-
-    invoke-direct {p1, p2}, Lv00;-><init>(I)V
-
-    iput-object p1, p0, Lox2;->e:Lv00;
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final onEvent(Lfa8;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
+
+    .line 3
+    new-instance p1, Lnx2;
 
     const/4 v0, 0x0
 
-    return v0
+    invoke-direct {p1, p0, v0}, Lnx2;-><init>(Lox2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lox2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-void
 .end method
 
-.method public final c()Ljava/util/Comparator;
-    .locals 1
+.method public final onEvent(Lme7;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    iget-object v0, p0, Lox2;->d:Lv00;
+    .line 2
+    new-instance p1, Lnx2;
 
-    return-object v0
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lnx2;-><init>(Lox2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lox2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-void
 .end method
 
-.method public final e()Ljava/util/Comparator;
-    .locals 1
+.method public final onEvent(Lr43;)V
+    .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    iget-object v0, p0, Lox2;->e:Lv00;
+    .line 1
+    new-instance p1, Lnx2;
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public final g()J
-    .locals 2
+    invoke-direct {p1, p0, v0}, Lnx2;-><init>(Lox2;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Lox2;->b:Lrhf;
+    const/4 v1, 0x3
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    iget-object v2, p0, Lox2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v0
+    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    iget-object v0, p0, Lox2;->c:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lox2;->f:Ljava/util/List;
-
-    return-object v0
+    return-void
 .end method

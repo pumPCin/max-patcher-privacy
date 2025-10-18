@@ -1,282 +1,80 @@
 .class public final Lc26;
-.super Lvl0;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final synthetic X:Lh38;
 
-.field public b:I
-
-.field public volatile c:Z
-
-.field public final o:Lxaf;
+.field public final synthetic Y:Lfla;
 
 
 # direct methods
-.method public constructor <init>(Lxaf;[Ljava/lang/Object;)V
+.method public constructor <init>(Lh38;Lfla;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    iput-object p1, p0, Lc26;->X:Lh38;
 
-    iput-object p2, p0, Lc26;->a:[Ljava/lang/Object;
+    iput-object p2, p0, Lc26;->Y:Lfla;
 
-    iput-object p1, p0, Lc26;->o:Lxaf;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lc26;->c:Z
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lc26;->a:[Ljava/lang/Object;
-
-    array-length v0, v0
-
-    iput v0, p0, Lc26;->b:I
-
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    iget v0, p0, Lc26;->b:I
-
-    iget-object v1, p0, Lc26;->a:[Ljava/lang/Object;
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final j(J)V
-    .locals 12
-
-    invoke-static {p1, p2}, Lcbf;->e(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    invoke-static {p0, p1, p2}, Leii;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_b
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    cmp-long v0, p1, v0
-
-    const-string v1, " is null"
-
-    const-string v4, "The element at index "
-
-    if-nez v0, :cond_4
-
-    iget-object p1, p0, Lc26;->a:[Ljava/lang/Object;
-
-    array-length p2, p1
-
-    iget-object v0, p0, Lc26;->o:Lxaf;
-
-    iget v2, p0, Lc26;->b:I
-
-    :goto_0
-    if-eq v2, p2, :cond_2
-
-    iget-boolean v3, p0, Lc26;->c:Z
-
-    if-eqz v3, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    aget-object v3, p1, v2
-
-    if-nez v3, :cond_1
-
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-static {v2, v4, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    invoke-interface {v0, v3}, Lxaf;->d(Ljava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean p1, p0, Lc26;->c:Z
-
-    if-eqz p1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    invoke-interface {v0}, Lxaf;->b()V
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lc26;->a:[Ljava/lang/Object;
-
-    array-length v5, v0
-
-    iget v6, p0, Lc26;->b:I
-
-    iget-object v7, p0, Lc26;->o:Lxaf;
-
-    :cond_5
-    move-wide v8, v2
-
-    :cond_6
-    :goto_1
-    cmp-long v10, v8, p1
-
-    if-eqz v10, :cond_9
-
-    if-eq v6, v5, :cond_9
-
-    iget-boolean v10, p0, Lc26;->c:Z
-
-    if-eqz v10, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    aget-object v10, v0, v6
-
-    if-nez v10, :cond_8
-
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-static {v6, v4, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v7, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_8
-    invoke-interface {v7, v10}, Lxaf;->d(Ljava/lang/Object;)V
-
-    const-wide/16 v10, 0x1
-
-    add-long/2addr v8, v10
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_1
-
-    :cond_9
-    if-ne v6, v5, :cond_a
-
-    iget-boolean p1, p0, Lc26;->c:Z
-
-    if-nez p1, :cond_b
-
-    invoke-interface {v7}, Lxaf;->b()V
-
-    return-void
-
-    :cond_a
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide p1
-
-    cmp-long v10, v8, p1
-
-    if-nez v10, :cond_6
-
-    iput v6, p0, Lc26;->b:I
-
-    neg-long p1, v8
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
-
-    move-result-wide p1
-
-    cmp-long v8, p1, v2
-
-    if-nez v8, :cond_5
-
-    :cond_b
-    :goto_2
-    return-void
-.end method
-
-.method public final l(I)I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p1, 0x1
+    check-cast p1, Lq54;
 
-    return p1
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lc26;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lc26;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lc26;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final poll()Ljava/lang/Object;
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lc26;->b:I
+    new-instance p1, Lc26;
 
-    iget-object v1, p0, Lc26;->a:[Ljava/lang/Object;
+    iget-object v0, p0, Lc26;->X:Lh38;
 
-    array-length v2, v1
+    iget-object v1, p0, Lc26;->Y:Lfla;
 
-    if-ne v0, v2, :cond_0
+    invoke-direct {p1, v0, v1, p2}, Lc26;-><init>(Lh38;Lfla;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :cond_0
-    add-int/lit8 v2, v0, 0x1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput v2, p0, Lc26;->b:I
+    iget-object p1, p0, Lc26;->X:Lh38;
 
-    aget-object v0, v1, v0
+    iget-object v0, p0, Lc26;->Y:Lfla;
 
-    const-string v1, "array element is null"
+    invoke-virtual {p1, v0}, Lh38;->f(Lfla;)V
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    sget-object p1, Lccg;->a:Lccg;
 
-    return-object v0
+    return-object p1
 .end method

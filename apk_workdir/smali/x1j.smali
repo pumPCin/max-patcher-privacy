@@ -1,173 +1,394 @@
-.class public final Lx1j;
-.super Li6i;
+.class public abstract Lx1j;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
-
-
-# static fields
-.field private static final zzb:Lx1j;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:Ljava/lang/String;
-
-.field private zzf:Ljava/lang/String;
-
-.field private zzg:Ljava/lang/String;
-
-.field private zzh:Ljava/lang/String;
-
-.field private zzi:Ljava/lang/String;
-
-.field private zzj:Ljava/lang/String;
-
-.field private zzk:Ljava/lang/String;
-
-.field private zzl:Ljava/lang/String;
-
-.field private zzm:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Ldjg;Lwx5;ILq7;)Z
+    .locals 19
 
-    new-instance v0, Lx1j;
+    move-object/from16 v0, p0
 
-    invoke-direct {v0}, Lx1j;-><init>()V
+    move-object/from16 v1, p1
 
-    sput-object v0, Lx1j;->zzb:Lx1j;
+    iget v2, v0, Ldjg;->b:I
 
-    const-class v1, Lx1j;
+    invoke-virtual {v0}, Ldjg;->t()J
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    move-result-wide v3
 
-    return-void
-.end method
+    const/16 v5, 0x10
 
-.method public constructor <init>()V
-    .locals 1
+    ushr-long v5, v3, v5
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    move/from16 v7, p2
 
-    const-string v0, ""
+    int-to-long v7, v7
 
-    iput-object v0, p0, Lx1j;->zze:Ljava/lang/String;
+    cmp-long v7, v5, v7
 
-    iput-object v0, p0, Lx1j;->zzf:Ljava/lang/String;
+    if-eqz v7, :cond_0
 
-    iput-object v0, p0, Lx1j;->zzg:Ljava/lang/String;
+    const/16 p2, 0x0
 
-    iput-object v0, p0, Lx1j;->zzh:Ljava/lang/String;
-
-    iput-object v0, p0, Lx1j;->zzi:Ljava/lang/String;
-
-    iput-object v0, p0, Lx1j;->zzj:Ljava/lang/String;
-
-    iput-object v0, p0, Lx1j;->zzk:Ljava/lang/String;
-
-    iput-object v0, p0, Lx1j;->zzl:Ljava/lang/String;
-
-    iput-object v0, p0, Lx1j;->zzm:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 10
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    goto/16 :goto_8
 
     :cond_0
-    sget-object p1, Lx1j;->zzb:Lx1j;
+    const-wide/16 v9, 0x1
 
-    return-object p1
+    and-long/2addr v5, v9
+
+    cmp-long v5, v5, v9
+
+    const/4 v6, 0x1
+
+    if-nez v5, :cond_1
+
+    move v5, v6
+
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ldii;
+    const/4 v5, 0x0
 
-    sget-object p2, Lx1j;->zzb:Lx1j;
+    :goto_0
+    const/16 v7, 0xc
 
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
+    shr-long v11, v3, v7
 
-    return-object p1
+    const-wide/16 v13, 0xf
+
+    and-long/2addr v11, v13
+
+    long-to-int v11, v11
+
+    const/16 v12, 0x8
+
+    shr-long v15, v3, v12
+
+    move-wide/from16 v17, v9
+
+    const/16 p2, 0x0
+
+    and-long v8, v15, v13
+
+    long-to-int v8, v8
+
+    const/4 v9, 0x4
+
+    shr-long v9, v3, v9
+
+    and-long/2addr v9, v13
+
+    long-to-int v9, v9
+
+    shr-long v12, v3, v6
+
+    const-wide/16 v14, 0x7
+
+    and-long/2addr v12, v14
+
+    long-to-int v10, v12
+
+    and-long v3, v3, v17
+
+    cmp-long v3, v3, v17
+
+    if-nez v3, :cond_2
+
+    move v3, v6
+
+    goto :goto_1
 
     :cond_2
-    new-instance p1, Lx1j;
+    move/from16 v3, p2
 
-    invoke-direct {p1}, Lx1j;-><init>()V
+    :goto_1
+    const/4 v4, 0x7
 
-    return-object p1
+    if-gt v9, v4, :cond_3
+
+    iget v4, v1, Lwx5;->h:I
+
+    sub-int/2addr v4, v6
+
+    if-ne v9, v4, :cond_b
+
+    goto :goto_2
 
     :cond_3
-    const-string v8, "zzl"
+    const/16 v4, 0xa
 
-    const-string v9, "zzm"
+    if-gt v9, v4, :cond_b
 
-    const-string v0, "zzd"
+    iget v4, v1, Lwx5;->h:I
 
-    const-string v1, "zze"
+    const/4 v9, 0x2
 
-    const-string v2, "zzf"
+    if-ne v4, v9, :cond_b
 
-    const-string v3, "zzg"
+    :goto_2
+    if-nez v10, :cond_4
 
-    const-string v4, "zzh"
-
-    const-string v5, "zzi"
-
-    const-string v6, "zzj"
-
-    const-string v7, "zzk"
-
-    filled-new-array/range {v0 .. v9}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lx1j;->zzb:Lx1j;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0004\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u1008\u0003\u0005\u1008\u0004\u0006\u1008\u0005\u0007\u1008\u0006\u0008\u1008\u0007\t\u1008\u0008"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
+    goto :goto_3
 
     :cond_4
-    const/4 p1, 0x1
+    iget v4, v1, Lwx5;->j:I
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    if-ne v10, v4, :cond_b
 
-    move-result-object p1
+    :goto_3
+    if-nez v3, :cond_b
 
-    return-object p1
+    :try_start_0
+    invoke-virtual {v0}, Ldjg;->A()J
+
+    move-result-wide v3
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v5, :cond_5
+
+    :goto_4
+    move-object/from16 v5, p3
+
+    goto :goto_5
+
+    :cond_5
+    iget v5, v1, Lwx5;->c:I
+
+    int-to-long v9, v5
+
+    mul-long/2addr v3, v9
+
+    goto :goto_4
+
+    :goto_5
+    iput-wide v3, v5, Lq7;->a:J
+
+    invoke-static {v11, v0}, Lx1j;->b(ILdjg;)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-eq v3, v4, :cond_b
+
+    iget v4, v1, Lwx5;->c:I
+
+    if-gt v3, v4, :cond_b
+
+    iget v3, v1, Lwx5;->f:I
+
+    if-nez v8, :cond_6
+
+    goto :goto_6
+
+    :cond_6
+    const/16 v4, 0xb
+
+    if-gt v8, v4, :cond_7
+
+    iget v1, v1, Lwx5;->g:I
+
+    if-ne v8, v1, :cond_b
+
+    goto :goto_6
+
+    :cond_7
+    if-ne v8, v7, :cond_8
+
+    invoke-virtual {v0}, Ldjg;->s()I
+
+    move-result v1
+
+    mul-int/lit16 v1, v1, 0x3e8
+
+    if-ne v1, v3, :cond_b
+
+    goto :goto_6
+
+    :cond_8
+    const/16 v1, 0xe
+
+    if-gt v8, v1, :cond_b
+
+    invoke-virtual {v0}, Ldjg;->x()I
+
+    move-result v4
+
+    if-ne v8, v1, :cond_9
+
+    mul-int/lit8 v4, v4, 0xa
+
+    :cond_9
+    if-ne v4, v3, :cond_b
+
+    :goto_6
+    invoke-virtual {v0}, Ldjg;->s()I
+
+    move-result v1
+
+    iget v3, v0, Ldjg;->b:I
+
+    iget-object v0, v0, Ldjg;->a:[B
+
+    sub-int/2addr v3, v6
+
+    move/from16 v4, p2
+
+    :goto_7
+    if-ge v2, v3, :cond_a
+
+    sget-object v5, Llig;->n:[I
+
+    aget-byte v7, v0, v2
+
+    and-int/lit16 v7, v7, 0xff
+
+    xor-int/2addr v4, v7
+
+    aget v4, v5, v4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_7
+
+    :cond_a
+    sget v0, Llig;->a:I
+
+    if-ne v1, v4, :cond_b
+
+    return v6
+
+    :catch_0
+    :cond_b
+    :goto_8
+    return p2
+.end method
+
+.method public static b(ILdjg;)I
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_0
+    add-int/lit8 p0, p0, -0x8
+
+    const/16 p1, 0x100
+
+    shl-int p0, p1, p0
+
+    return p0
+
+    :pswitch_1
+    invoke-virtual {p1}, Ldjg;->x()I
+
+    move-result p0
+
+    add-int/lit8 p0, p0, 0x1
+
+    return p0
+
+    :pswitch_2
+    invoke-virtual {p1}, Ldjg;->s()I
+
+    move-result p0
+
+    add-int/lit8 p0, p0, 0x1
+
+    return p0
+
+    :pswitch_3
+    add-int/lit8 p0, p0, -0x2
+
+    const/16 p1, 0x240
+
+    shl-int p0, p1, p0
+
+    return p0
+
+    :pswitch_4
+    const/16 p0, 0xc0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static final c(Ljava/io/InputStream;IZ)I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v0, p1, :cond_2
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->read()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_1
+
+    if-eqz p2, :cond_0
+
+    and-int/lit16 v2, v2, 0xff
+
+    mul-int/lit8 v3, v0, 0x8
+
+    shl-int/2addr v2, v3
+
+    :goto_1
+    or-int/2addr v1, v2
+
+    goto :goto_2
+
+    :cond_0
+    shl-int/lit8 v1, v1, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    goto :goto_1
+
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p0, Ljava/io/IOException;
+
+    const-string p1, "no more bytes"
+
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    return v1
 .end method

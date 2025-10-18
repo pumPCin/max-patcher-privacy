@@ -1,48 +1,48 @@
-.class public final Lv2c;
-.super Lk14;
+.class public final synthetic Lv2c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lfg4;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:J
 
-.field public final synthetic Y:Lwb2;
+.field public final synthetic b:Lz2c;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lwb2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JLz2c;Z)V
     .locals 0
 
-    iput-object p1, p0, Lv2c;->Y:Lwb2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lv2c;->a:J
+
+    iput-object p3, p0, Lv2c;->b:Lz2c;
+
+    iput-boolean p4, p0, Lv2c;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lv2c;->o:Ljava/lang/Object;
+    new-instance v0, Lone/me/profile/ProfileScreen;
 
-    iget p1, p0, Lv2c;->X:I
+    iget-wide v1, p0, Lv2c;->a:J
 
-    const/high16 v0, -0x80000000
+    iget-object v3, p0, Lv2c;->b:Lz2c;
 
-    or-int/2addr p1, v0
+    iget-boolean v4, p0, Lv2c;->c:Z
 
-    iput p1, p0, Lv2c;->X:I
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/profile/ProfileScreen;-><init>(JLz2c;Z)V
 
-    iget-object p1, p0, Lv2c;->Y:Lwb2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lwb2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,221 +1,102 @@
 .class public final Lsw7;
-.super Lhlf;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final t0:Ll62;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Lsm5;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Lbx7;
-
-.field public Z:I
-
-.field public o:Landroid/animation/ObjectAnimator;
-
-.field public r0:Z
-
-.field public s0:F
+.field public final synthetic Y:Ltw7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ltw7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ll62;
+    iput-object p1, p0, Lsw7;->Y:Ltw7;
 
-    const-string v1, "animationFraction"
+    const/4 p1, 0x2
 
-    const/16 v2, 0x8
-
-    const-class v3, Ljava/lang/Float;
-
-    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lsw7;->t0:Ll62;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbx7;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0}, Lhlf;-><init>(I)V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lsw7;->Z:I
-
-    iput-object p1, p0, Lsw7;->Y:Lbx7;
-
-    new-instance p1, Lsm5;
-
-    invoke-direct {p1}, Lsm5;-><init>()V
-
-    iput-object p1, p0, Lsw7;->X:Lsm5;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()V
-    .locals 1
-
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final T()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Lsw7;->f0()V
+    check-cast p1, Lq54;
 
-    return-void
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lsw7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lsw7;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lsw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final a0(Lkk0;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance v0, Lsw7;
+
+    iget-object v1, p0, Lsw7;->Y:Ltw7;
+
+    invoke-direct {v0, v1, p2}, Lsw7;-><init>(Ltw7;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lsw7;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final b0()V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-void
-.end method
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.method public final d0()V
-    .locals 3
+    iget-object p1, p0, Lsw7;->X:Ljava/lang/Object;
 
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+    check-cast p1, Lq54;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lsw7;->Y:Ltw7;
 
-    const/4 v0, 0x2
+    iget-object v1, v0, Ltw7;->a:Lhx7;
 
-    new-array v0, v0, [F
+    iget-object v2, v1, Lhx7;->d:Lhw7;
 
-    fill-array-data v0, :array_0
+    sget-object v3, Lhw7;->b:Lhw7;
 
-    sget-object v1, Lsw7;->t0:Ll62;
+    invoke-virtual {v2, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    invoke-static {p0, v1, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    move-result v2
 
-    move-result-object v0
+    if-ltz v2, :cond_0
 
-    iput-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v1, 0x14d
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
-
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    new-instance v1, Lu6;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2, p0}, Lu6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    :cond_0
-    invoke-virtual {p0}, Lsw7;->f0()V
-
-    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public final e0()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f0()V
-    .locals 5
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lsw7;->r0:Z
-
-    iput v0, p0, Lsw7;->Z:I
-
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly05;
-
-    iget-object v2, p0, Lsw7;->Y:Lbx7;
-
-    iget-object v3, v2, Lmk0;->c:[I
-
-    const/4 v4, 0x0
-
-    aget v3, v3, v4
-
-    iput v3, v1, Ly05;->c:I
-
-    iget v2, v2, Lmk0;->g:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    iput v2, v1, Ly05;->d:I
+    invoke-virtual {v1, v0}, Lhx7;->a(Lbx7;)V
 
     goto :goto_0
 
     :cond_0
-    return-void
+    invoke-interface {p1}, Lq54;->getCoroutineContext()Li54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldbi;->b(Li54;)V
+
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

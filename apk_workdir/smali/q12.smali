@@ -1,168 +1,89 @@
-.class public final Lq12;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
+.class public interface abstract Lq12;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lt1e;
-
-.field public final b:Lux1;
-
-.field public final c:Ljava/lang/Object;
-
-.field public d:Z
-
-
-# direct methods
-.method public constructor <init>(Lt1e;Lux1;)V
-    .locals 1
-
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lq12;->c:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lq12;->d:Z
-
-    iput-object p1, p0, Lq12;->a:Lt1e;
-
-    iput-object p2, p0, Lq12;->b:Lux1;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final onCameraAccessPrioritiesChanged()V
-    .locals 4
-
-    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lq12;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lq12;->a:Lt1e;
-
-    new-instance v2, Lsx1;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v2, v3, p0}, Lsx1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+.method public abstract a()Ljava/util/Set;
 .end method
 
-.method public final onCameraAvailable(Ljava/lang/String;)V
-    .locals 4
-
-    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lq12;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lq12;->a:Lt1e;
-
-    new-instance v2, Lp12;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, p1, v3}, Lp12;-><init>(Lq12;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+.method public abstract b()I
 .end method
 
-.method public final onCameraUnavailable(Ljava/lang/String;)V
-    .locals 4
+.method public abstract c()Z
+.end method
 
-    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
+.method public abstract d()Ljava/lang/String;
+.end method
 
-    monitor-enter v0
+.method public abstract e()Lh38;
+.end method
 
-    :try_start_0
-    iget-boolean v1, p0, Lq12;->d:Z
+.method public abstract f(Ljava/util/concurrent/Executor;Lsx1;)V
+.end method
 
-    if-nez v1, :cond_0
+.method public g()Lq12;
+    .locals 0
 
-    iget-object v1, p0, Lq12;->a:Lt1e;
+    return-object p0
+.end method
 
-    new-instance v2, Lp12;
+.method public abstract h()I
+.end method
 
-    const/4 v3, 0x1
+.method public abstract i()Lhvf;
+.end method
 
-    invoke-direct {v2, p0, p1, v3}, Lp12;-><init>(Lq12;Ljava/lang/String;I)V
+.method public j()Ll22;
+    .locals 3
 
-    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    goto :goto_0
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    :catchall_0
-    move-exception p1
+    new-instance v1, Lp12;
 
-    goto :goto_1
+    invoke-direct {v1, p0}, Lp12;-><init>(Lq12;)V
 
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    return-void
+    new-instance v1, Luv7;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p0}, Lq12;->h()I
 
-    throw p1
+    move-result v2
+
+    invoke-direct {v1, v2}, Luv7;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Ll22;
+
+    invoke-direct {v1, v0}, Ll22;-><init>(Ljava/util/LinkedHashSet;)V
+
+    return-object v1
+.end method
+
+.method public abstract k()Ljava/lang/String;
+.end method
+
+.method public abstract l(I)I
+.end method
+
+.method public abstract m()Z
+.end method
+
+.method public abstract n()Ldc5;
+.end method
+
+.method public abstract o()Lp95;
+.end method
+
+.method public abstract p(I)Ljava/util/List;
+.end method
+
+.method public abstract q()Lh38;
+.end method
+
+.method public abstract r(Lpz1;)V
 .end method

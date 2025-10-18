@@ -1,480 +1,254 @@
-.class public abstract Ln7i;
-.super Lh7i;
+.class public final Ln7i;
+.super Lf4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/List;
-.implements Ljava/util/RandomAccess;
 
 
 # static fields
-.field public static final b:Lj7i;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ln7i;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final X:Landroid/app/PendingIntent;
+
+.field public final Y:Luwi;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:I
+
+.field public final b:Li7i;
+
+.field public final c:Lv3j;
+
+.field public final o:Ll2j;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lp0i;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
+
+    sput-object v0, Ln7i;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILi7i;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/PendingIntent;Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 3
 
-    new-instance v0, Lj7i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lp7i;->X:Lp7i;
+    iput p1, p0, Ln7i;->a:I
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Ln7i;->b:Li7i;
 
-    invoke-direct {v0, v1, v2}, Lj7i;-><init>(Ln7i;I)V
+    const/4 p1, 0x3
 
-    sput-object v0, Ln7i;->b:Lj7i;
+    const/4 p2, 0x0
+
+    if-eqz p3, :cond_1
+
+    sget v0, Lo3j;->d:I
+
+    const-string v0, "com.google.android.gms.location.ILocationListener"
+
+    invoke-interface {p3, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lv3j;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Lv3j;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Lx2j;
+
+    invoke-direct {v1, p3, v0, p1}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    goto :goto_0
+
+    :cond_1
+    move-object v1, p2
+
+    :goto_0
+    iput-object v1, p0, Ln7i;->c:Lv3j;
+
+    iput-object p5, p0, Ln7i;->X:Landroid/app/PendingIntent;
+
+    if-eqz p4, :cond_3
+
+    sget p3, Le6i;->e:I
+
+    const-string p3, "com.google.android.gms.location.ILocationCallback"
+
+    invoke-interface {p4, p3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object p5
+
+    instance-of v0, p5, Ll2j;
+
+    if-eqz v0, :cond_2
+
+    check-cast p5, Ll2j;
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p5, Lh0j;
+
+    invoke-direct {p5, p4, p3, p1}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    goto :goto_1
+
+    :cond_3
+    move-object p5, p2
+
+    :goto_1
+    iput-object p5, p0, Ln7i;->o:Ll2j;
+
+    if-eqz p6, :cond_5
+
+    const-string p2, "com.google.android.gms.location.internal.IFusedLocationProviderCallback"
+
+    invoke-interface {p6, p2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object p3
+
+    instance-of p4, p3, Luwi;
+
+    if-eqz p4, :cond_4
+
+    move-object p2, p3
+
+    check-cast p2, Luwi;
+
+    goto :goto_2
+
+    :cond_4
+    new-instance p3, Ljui;
+
+    invoke-direct {p3, p6, p2, p1}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p2, p3
+
+    :cond_5
+    :goto_2
+    iput-object p2, p0, Ln7i;->Y:Luwi;
+
+    iput-object p7, p0, Ln7i;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(ILjava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ln7i;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
 
-    if-ne p1, p0, :cond_0
+    const/16 v0, 0x4f45
 
-    goto :goto_2
-
-    :cond_0
-    instance-of v0, p1, Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    const/4 v1, 0x1
 
-    move-result v2
+    const/4 v2, 0x4
 
-    if-eq v0, v2, :cond_2
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    goto :goto_3
+    iget v1, p0, Ln7i;->a:I
 
-    :cond_2
-    instance-of v2, p1, Ljava/util/RandomAccess;
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz v2, :cond_4
+    const/4 v1, 0x2
 
-    move v2, v1
+    iget-object v3, p0, Ln7i;->b:Li7i;
 
-    :goto_0
-    if-ge v2, v0, :cond_8
+    invoke-static {p1, v1, v3, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v3
+    iget-object v3, p0, Ln7i;->c:Lv3j;
 
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-nez v3, :cond_0
 
-    move-result-object v4
-
-    if-eq v3, v4, :cond_3
-
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    move-object v3, v1
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {p0, v1}, Ln7i;->h(I)Lj7i;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_5
-    :goto_1
-    invoke-virtual {v0}, Lj7i;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {v0}, Lj7i;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_0
+    invoke-interface {v3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    if-eq v2, v3, :cond_5
+    :goto_0
+    const/4 v4, 0x3
 
-    if-eqz v2, :cond_9
+    invoke-static {p1, v4, v3}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p0, Ln7i;->X:Landroid/app/PendingIntent;
 
-    move-result v2
+    invoke-static {p1, v2, v3, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    if-eqz v2, :cond_9
+    iget-object p2, p0, Ln7i;->o:Ll2j;
+
+    if-nez p2, :cond_1
+
+    move-object p2, v1
 
     goto :goto_1
 
-    :cond_7
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    :cond_1
+    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    move-result p1
+    move-result-object p2
 
-    if-nez p1, :cond_9
+    :goto_1
+    const/4 v2, 0x5
 
-    :cond_8
+    invoke-static {p1, v2, p2}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget-object p2, p0, Ln7i;->Y:Luwi;
+
+    if-nez p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
     :goto_2
-    const/4 p1, 0x1
+    const/4 p2, 0x6
 
-    return p1
+    invoke-static {p1, p2, v1}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    :cond_9
-    :goto_3
-    return v1
-.end method
+    const/16 p2, 0x8
 
-.method public f([Ljava/lang/Object;)I
-    .locals 3
+    iget-object v1, p0, Ln7i;->Z:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-static {p1, p2, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result v0
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    aput-object v2, p1, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-.end method
-
-.method public g(II)Ln7i;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    invoke-static {p1, p2, v0}, Leii;->f(III)V
-
-    sub-int/2addr p2, p1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    if-ne p2, v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    sget-object p1, Lp7i;->X:Lp7i;
-
-    return-object p1
-
-    :cond_1
-    new-instance v0, Ll7i;
-
-    invoke-direct {v0, p0, p1, p2}, Ll7i;-><init>(Ln7i;II)V
-
-    return-object v0
-.end method
-
-.method public final h(I)Lj7i;
-    .locals 3
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    if-ltz p1, :cond_1
-
-    if-gt p1, v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Ln7i;->b:Lj7i;
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lj7i;
-
-    invoke-direct {v0, p0, p1}, Lj7i;-><init>(Ln7i;I)V
-
-    return-object v0
-
-    :cond_1
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, "index"
-
-    invoke-static {p1, v0, v2}, Leii;->g(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v2
-.end method
-
-.method public final indexOf(Ljava/lang/Object;)I
-    .locals 4
-
-    const/4 v0, -0x1
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_2
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    return v2
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return v0
-.end method
-
-.method public final synthetic iterator()Ljava/util/Iterator;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ln7i;->h(I)Lj7i;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final lastIndexOf(Ljava/lang/Object;)I
-    .locals 3
-
-    const/4 v0, -0x1
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    :goto_0
-    if-ltz v1, :cond_2
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    return v1
-
-    :cond_1
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    return v0
-.end method
-
-.method public final synthetic listIterator()Ljava/util/ListIterator;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0}, Ln7i;->h(I)Lj7i;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
-    .locals 0
-
-    .line 2
-    invoke-virtual {p0, p1}, Ln7i;->h(I)Lj7i;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ln7i;->g(II)Ln7i;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

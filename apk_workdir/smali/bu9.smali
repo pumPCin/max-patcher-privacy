@@ -2,255 +2,242 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbyd;
+
 
 # instance fields
-.field public a:J
+.field public final a:[J
 
-.field public b:J
+.field public final b:[J
 
-.field public c:Landroid/animation/TimeInterpolator;
-
-.field public d:I
-
-.field public e:I
+.field public final c:J
 
 
-# virtual methods
-.method public final a()Landroid/animation/TimeInterpolator;
-    .locals 1
+# direct methods
+.method public constructor <init>(J[J[J)V
+    .locals 2
 
-    iget-object v0, p0, Lbu9;->c:Landroid/animation/TimeInterpolator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p3, p0, Lbu9;->a:[J
 
-    return-object v0
+    iput-object p4, p0, Lbu9;->b:[J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p3, p1, v0
+
+    if-eqz p3, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lvg;->b:Lsm5;
+    array-length p1, p4
 
-    return-object v0
+    add-int/lit8 p1, p1, -0x1
+
+    aget-wide p1, p4, p1
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    :goto_0
+    iput-wide p1, p0, Lbu9;->c:J
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public static d(J[J[J)Landroid/util/Pair;
+    .locals 10
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x1
 
-    const/4 p1, 0x1
+    invoke-static {p2, p0, p1, v0}, Llig;->e([JJZ)I
 
-    return p1
+    move-result v1
+
+    aget-wide v2, p2, v1
+
+    aget-wide v4, p3, v1
+
+    add-int/2addr v1, v0
+
+    array-length v0, p2
+
+    if-ne v1, v0, :cond_0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    instance-of v0, p1, Lbu9;
+    aget-wide v6, p2, v1
 
-    const/4 v1, 0x0
+    aget-wide p2, p3, v1
+
+    cmp-long v0, v6, v2
 
     if-nez v0, :cond_1
 
-    return v1
+    const-wide/16 v0, 0x0
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lbu9;
+    long-to-double v0, p0
 
-    iget-wide v2, p0, Lbu9;->a:J
+    long-to-double v8, v2
 
-    iget-wide v4, p1, Lbu9;->a:J
+    sub-double/2addr v0, v8
 
-    cmp-long v0, v2, v4
+    sub-long/2addr v6, v2
 
-    if-eqz v0, :cond_2
+    long-to-double v2, v6
 
-    return v1
+    div-double/2addr v0, v2
 
-    :cond_2
-    iget-wide v2, p0, Lbu9;->b:J
+    :goto_0
+    sub-long/2addr p2, v4
 
-    iget-wide v4, p1, Lbu9;->b:J
+    long-to-double p2, p2
 
-    cmp-long v0, v2, v4
+    mul-double/2addr v0, p2
 
-    if-eqz v0, :cond_3
+    double-to-long p2, v0
 
-    return v1
+    add-long/2addr p2, v4
 
-    :cond_3
-    iget v0, p0, Lbu9;->d:I
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget v2, p1, Lbu9;->d:I
+    move-result-object p0
 
-    if-eq v0, v2, :cond_4
-
-    return v1
-
-    :cond_4
-    iget v0, p0, Lbu9;->e:I
-
-    iget v2, p1, Lbu9;->e:I
-
-    if-eq v0, v2, :cond_5
-
-    return v1
-
-    :cond_5
-    invoke-virtual {p0}, Lbu9;->a()Landroid/animation/TimeInterpolator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lbu9;->a()Landroid/animation/TimeInterpolator;
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final b(J)J
+    .locals 2
+
+    iget-object v0, p0, Lbu9;->a:[J
+
+    iget-object v1, p0, Lbu9;->b:[J
+
+    invoke-static {p1, p2, v0, v1}, Lbu9;->d(J[J[J)Landroid/util/Pair;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    move-result p1
+    check-cast p1, Ljava/lang/Long;
 
-    return p1
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public final c()Z
+    .locals 1
 
-    iget-wide v0, p0, Lbu9;->a:J
+    const/4 v0, 0x1
 
-    const/16 v2, 0x20
-
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lbu9;->b:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    invoke-virtual {p0}, Lbu9;->a()Landroid/animation/TimeInterpolator;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lbu9;->d:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lbu9;->e:I
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final e(J)Lrxd;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x0
 
-    const-string v1, "\n"
+    iget-wide v4, p0, Lbu9;->c:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-wide v0, p1
 
-    const-class v1, Lbu9;
+    invoke-static/range {v0 .. v5}, Llig;->j(JJJ)J
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result-wide p1
 
-    move-result-object v1
+    invoke-static {p1, p2}, Llig;->K(J)J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide p1
 
-    const/16 v1, 0x7b
+    iget-object v0, p0, Lbu9;->b:[J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lbu9;->a:[J
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-static {p1, p2, v0, v1}, Lbu9;->d(J[J[J)Landroid/util/Pair;
 
-    move-result v1
+    move-result-object p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast p2, Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
-    const-string v1, " delay: "
+    move-result-wide v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Llig;->B(J)J
 
-    iget-wide v1, p0, Lbu9;->a:J
+    move-result-wide v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    const-string v1, " duration: "
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    iget-wide v1, p0, Lbu9;->b:J
+    move-result-wide p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance v2, Lrxd;
 
-    const-string v1, " interpolator: "
+    new-instance v3, Lxxd;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v0, v1, p1, p2}, Lxxd;-><init>(JJ)V
 
-    invoke-virtual {p0}, Lbu9;->a()Landroid/animation/TimeInterpolator;
+    invoke-direct {v2, v3, v3}, Lrxd;-><init>(Lxxd;Lxxd;)V
 
-    move-result-object v1
+    return-object v2
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final f()J
+    .locals 2
 
-    move-result-object v1
+    iget-wide v0, p0, Lbu9;->c:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " repeatCount: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lbu9;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " repeatMode: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lbu9;->e:I
-
-    const-string v2, "}\n"
-
-    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

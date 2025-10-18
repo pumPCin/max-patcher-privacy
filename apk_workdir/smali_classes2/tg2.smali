@@ -1,94 +1,79 @@
 .class public final Ltg2;
-.super Lgj2;
+.super Luj0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
+
+.field public final o:I
+
+
+# direct methods
+.method public constructor <init>(IJJLjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p2, p3}, Luj0;-><init>(J)V
+
+    iput-object p6, p0, Ltg2;->b:Ljava/lang/String;
+
+    iput-wide p4, p0, Ltg2;->c:J
+
+    iput p1, p0, Ltg2;->o:I
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final bridge synthetic A(Lb18;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Lp39;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ltg2;->H(Lp39;)V
+    const-string v1, "ChatJoinEvent{link=\'"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final G(Ls39;Lqh6;Lei6;)V
-    .locals 0
+    iget-object v1, p0, Ltg2;->b:Ljava/lang/String;
 
-    check-cast p1, Lp39;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ltg2;->H(Lp39;)V
+    const-string v1, "\', chatId="
 
-    invoke-super {p0, p1, p2, p3}, Lgj2;->G(Ls39;Lqh6;Lei6;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-wide v1, p0, Ltg2;->c:J
 
-.method public final H(Lp39;)V
-    .locals 5
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+    const-string v1, ", type="
 
-    check-cast v0, Ldj2;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p1, Lp39;->a:J
+    iget v1, p0, Ltg2;->o:I
 
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v1, p1, Lp39;->X:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ldj2;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lp39;->Z:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ldj2;->setLink(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lp39;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ldj2;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Lp39;->r0:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object p1, v0, Ldj2;->J0:Lvna;
-
-    iget-object v1, v0, Ldj2;->F0:Ljava/lang/Object;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-static {v1}, Ley1;->y(I)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lje1;
+    const/16 v1, 0x7d
 
-    const/16 v3, 0x10
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Lje1;-><init>(I)V
+    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
 
-    new-instance v3, Lje1;
+    move-result-object v1
 
-    const/16 v4, 0x11
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v4}, Lje1;-><init>(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x6
+    move-result-object v0
 
-    invoke-static {p1, v1, v2, v3, v4}, Lvna;->o(Lvna;Landroid/graphics/drawable/Drawable;Lqh6;Lqh6;I)V
-
-    invoke-virtual {v0}, Ldj2;->v()V
-
-    return-void
-
-    :cond_0
-    iget-object p1, p1, Lp39;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ldj2;->setLinkPhoto(Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

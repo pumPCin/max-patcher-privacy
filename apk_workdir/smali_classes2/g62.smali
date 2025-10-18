@@ -1,228 +1,197 @@
 .class public final Lg62;
-.super Ljava/lang/Object;
+.super Ljk5;
 .source "SourceFile"
-
-# interfaces
-.implements Lnvb;
-
-
-# static fields
-.field public static final synthetic c:[Lwq7;
 
 
 # instance fields
-.field public final a:[Lnvb;
-
-.field public final b:Lrhf;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lb0a;
-
-    const-class v1, Lg62;
-
-    const-string v2, "result"
-
-    invoke-direct {v0, v1, v2}, Lb0a;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
-
-    sget-object v1, Ls6d;->a:Lt6d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lwq7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lg62;->c:[Lwq7;
-
-    return-void
-.end method
-
-.method public constructor <init>([Lnvb;)V
-    .locals 2
+.method public constructor <init>(Ljava/nio/ByteBuffer;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg62;->a:[Lnvb;
+    new-instance v0, Ljava/util/ArrayList;
 
-    new-instance v0, Llj1;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v1, 0x5
+    iput-object v0, p0, Lg62;->a:Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1, p0}, Llj1;-><init>(ILjava/lang/Object;)V
+    sget-object v0, Llxf;->s0:Llxf;
 
-    new-instance v1, Lrhf;
+    iget-short v0, v0, Llxf;->a:S
 
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+    const/4 v1, 0x2
 
-    iput-object v1, p0, Lg62;->b:Lrhf;
+    invoke-virtual {p0, p1, v0, v1}, Ljk5;->b(Ljava/nio/ByteBuffer;II)I
 
-    array-length p1, p1
+    move-result v0
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    return-void
+    move-result v2
+
+    add-int/lit8 v3, v2, 0x2
+
+    const-string v4, "inconsistent length fields"
+
+    if-ne v0, v3, :cond_4
+
+    :goto_0
+    if-lez v2, :cond_3
+
+    if-lt v2, v1, :cond_2
+
+    add-int/lit8 v2, v2, -0x2
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    const v3, 0xffff
+
+    and-int/2addr v0, v3
+
+    if-gt v0, v2, :cond_1
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v3
+
+    if-gt v0, v3, :cond_0
+
+    new-array v3, v0, [B
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    sub-int/2addr v2, v0
+
+    :try_start_0
+    iget-object v0, p0, Lg62;->a:Ljava/util/ArrayList;
+
+    new-instance v5, Ljavax/security/auth/x500/X500Principal;
+
+    invoke-direct {v5, v3}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string v0, "authority not in DER format"
+
+    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    const-string v0, "postprocessors must be not empty!"
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    throw p1
+
+    :cond_1
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    return-void
+
+    :cond_4
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;Lhrb;)Lq93;
-    .locals 8
+.method public final a()[B
+    .locals 4
 
-    iget-object v0, p0, Lg62;->a:[Lnvb;
+    iget-object v0, p0, Lg62;->a:Ljava/util/ArrayList;
 
-    array-length v1, v0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    const/4 v2, 0x1
+    move-result-object v1
 
-    if-ne v1, v2, :cond_0
+    new-instance v2, Ln0;
 
-    invoke-static {v0}, Ljt;->u([Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x4
 
-    move-result-object v0
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
 
-    check-cast v0, Lnvb;
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
-    invoke-interface {v0, p1, p2}, Lnvb;->a(Landroid/graphics/Bitmap;Lhrb;)Lq93;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
 
-    return-object p1
+    move-result v1
 
-    :cond_0
-    array-length v1, v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    const/4 v2, 0x0
+    move-result v2
 
-    const/4 v3, 0x0
+    mul-int/lit8 v2, v2, 0x2
 
-    move v4, v3
+    add-int/2addr v2, v1
 
-    :goto_0
-    const-string v5, " should be initialized before get."
+    add-int/lit8 v1, v2, 0x6
 
-    const-string v6, "Property "
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    sget-object v7, Lg62;->c:[Lwq7;
+    move-result-object v1
 
-    if-ge v4, v1, :cond_2
+    sget-object v3, Llxf;->s0:Llxf;
 
-    aget-object v2, v0, v4
+    iget-short v3, v3, Llxf;->a:S
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    invoke-interface {v2, p1, p2}, Lnvb;->a(Landroid/graphics/Bitmap;Lhrb;)Lq93;
+    add-int/lit8 v3, v2, 0x2
 
-    move-result-object v2
+    int-to-short v3, v3
 
-    aget-object p1, v7, v3
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    if-eqz v2, :cond_1
+    int-to-short v2, v2
 
-    invoke-virtual {v2}, Lq93;->Z()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    move-result-object p1
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lhq7;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    aget-object p1, v7, v3
-
-    if-eqz v2, :cond_3
-
-    return-object v2
-
-    :cond_3
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lhq7;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public final b()Ldy0;
-    .locals 1
-
-    iget-object v0, p0, Lg62;->b:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    check-cast v0, Lvne;
+    new-instance v2, Ljs;
 
-    return-object v0
-.end method
+    const/4 v3, 0x1
 
-.method public final getName()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v2, v3, v1}, Ljs;-><init>(ILjava/nio/ByteBuffer;)V
 
-    iget-object v0, p0, Lg62;->b:Lrhf;
+    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
-
-    check-cast v0, Lvne;
-
-    iget-object v0, v0, Lvne;->a:Ljava/lang/String;
 
     return-object v0
 .end method

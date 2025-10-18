@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lev4;
+.implements Lvv4;
 
 
 # instance fields
@@ -64,7 +64,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Laf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, Luf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 

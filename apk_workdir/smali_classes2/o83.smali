@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
@@ -14,20 +14,6 @@
 .method public synthetic constructor <init>(I)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lo83;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Li57;)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x2
-
     iput p1, p0, Lo83;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,126 +23,310 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final test(Ljava/lang/Object;)Z
     .locals 2
 
     iget v0, p0, Lo83;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lzgc;
+    check-cast p1, Lhcb;
 
-    return-void
+    iget-object p1, p1, Lhcb;->b:Lfic;
+
+    invoke-virtual {p1}, Lfic;->p()Z
+
+    move-result p1
+
+    return p1
 
     :pswitch_0
-    check-cast p1, Lzgc;
+    check-cast p1, Lhcb;
 
-    iget-object v0, p1, Lzgc;->f:Lo8f;
+    invoke-virtual {p1}, Lhcb;->b()Z
 
-    invoke-virtual {v0}, Lo8f;->m()V
+    move-result p1
 
-    iget-object p1, p1, Lzgc;->e:Lf8f;
-
-    invoke-virtual {p1}, Lf8f;->m()V
-
-    return-void
+    return p1
 
     :pswitch_1
-    check-cast p1, Lpo3;
+    check-cast p1, Lhcb;
 
-    const/4 v0, 0x2
+    iget-object p1, p1, Lhcb;->b:Lfic;
 
-    iput v0, p1, Lpo3;->c:I
+    invoke-virtual {p1}, Lfic;->r()Z
 
-    return-void
+    move-result p1
+
+    return p1
 
     :pswitch_2
-    check-cast p1, Lpo3;
+    check-cast p1, Lhcb;
 
-    const/4 v0, 0x3
+    iget-object p1, p1, Lhcb;->b:Lfic;
 
-    iput v0, p1, Lpo3;->c:I
+    invoke-virtual {p1}, Lfic;->q()Z
 
-    return-void
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
 
     :pswitch_3
-    check-cast p1, Lhjh;
+    check-cast p1, Lhcb;
 
-    sget-object p1, Ljava/lang/System;->err:Ljava/io/PrintStream;
+    invoke-virtual {p1}, Lhcb;->a()Z
 
-    const-string v0, "No handler set for incoming bidirectional stream."
+    move-result p1
 
-    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    return-void
+    return p1
 
     :pswitch_4
-    check-cast p1, Lhjh;
+    check-cast p1, Lhcb;
 
-    sget-object p1, Ljava/lang/System;->err:Ljava/io/PrintStream;
+    iget-object p1, p1, Lhcb;->b:Lfic;
 
-    const-string v0, "No handler set for incoming unidirectional stream."
+    invoke-virtual {p1}, Lfic;->q()Z
 
-    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    move-result p1
 
-    return-void
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
 
     :pswitch_5
-    check-cast p1, Lu47;
+    check-cast p1, Lhcb;
 
-    const-wide/32 v0, 0x170d7b68
+    invoke-virtual {p1}, Lhcb;->a()Z
 
-    invoke-interface {p1, v0, v1}, Lu47;->d(J)V
+    move-result p1
 
-    return-void
+    return p1
 
     :pswitch_6
-    check-cast p1, Lu47;
+    invoke-static {p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->b(Ljava/lang/Object;)Z
 
-    const-wide/32 v0, 0x170d7b68
+    move-result p1
 
-    invoke-interface {p1, v0, v1}, Lu47;->e(J)V
-
-    return-void
+    return p1
 
     :pswitch_7
-    check-cast p1, Lq0e;
+    check-cast p1, Ljava/net/InetAddress;
 
-    const/4 v0, 0x1
+    instance-of p1, p1, Ljava/net/Inet6Address;
 
-    invoke-virtual {p1, v0}, Lq0e;->b(Z)V
-
-    return-void
+    return p1
 
     :pswitch_8
-    check-cast p1, Lygc;
+    check-cast p1, Ljava/net/InetAddress;
 
-    return-void
+    instance-of p1, p1, Ljava/net/Inet4Address;
+
+    return p1
 
     :pswitch_9
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_a
-    check-cast p1, Lxgc;
-
-    return-void
-
-    :pswitch_b
     check-cast p1, Ljava/util/Map$Entry;
-
-    sget-object v0, Li57;->a:[Lh57;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    const-string v0, ":"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_a
+    check-cast p1, Ljava/lang/String;
+
+    const-string v0, ":"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_b
+    check-cast p1, Ljava/time/Instant;
+
+    invoke-static {p1}, Ljava/util/Objects;->nonNull(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_c
+    check-cast p1, Lfic;
+
+    instance-of p1, p1, Lyf7;
+
+    return p1
+
+    :pswitch_d
+    check-cast p1, Leic;
+
+    instance-of v0, p1, Lyeb;
+
+    if-nez v0, :cond_1
+
+    instance-of p1, p1, Lgfb;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+
+    :pswitch_e
+    check-cast p1, Leic;
+
+    instance-of v0, p1, Licb;
+
+    if-nez v0, :cond_3
+
+    instance-of v0, p1, Lmqb;
+
+    if-nez v0, :cond_3
+
+    instance-of v0, p1, Ly5;
+
+    if-nez v0, :cond_3
+
+    instance-of v0, p1, Lq84;
+
+    if-nez v0, :cond_3
+
+    instance-of v0, p1, Lwo3;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lwo3;
+
+    iget p1, p1, Lwo3;->X:I
+
+    const/16 v0, 0x1c
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    const/4 p1, 0x1
+
+    :goto_3
+    return p1
+
+    :pswitch_f
+    check-cast p1, Leic;
+
+    instance-of v0, p1, Lq84;
+
+    if-nez v0, :cond_5
+
+    instance-of v0, p1, Ly5;
+
+    if-nez v0, :cond_5
+
+    instance-of v0, p1, Lx8a;
+
+    if-nez v0, :cond_5
+
+    instance-of v0, p1, Lgfb;
+
+    if-nez v0, :cond_5
+
+    instance-of p1, p1, Lgw6;
+
+    if-eqz p1, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    const/4 p1, 0x0
+
+    goto :goto_5
+
+    :cond_5
+    :goto_4
+    const/4 p1, 0x1
+
+    :goto_5
+    return p1
+
+    :pswitch_10
+    check-cast p1, Leic;
+
+    instance-of v0, p1, Licb;
+
+    if-nez v0, :cond_7
+
+    instance-of v0, p1, Lmqb;
+
+    if-nez v0, :cond_7
+
+    instance-of v0, p1, Ly5;
+
+    if-nez v0, :cond_7
+
+    instance-of v0, p1, Lq84;
+
+    if-nez v0, :cond_7
+
+    instance-of v0, p1, Lwo3;
+
+    if-eqz v0, :cond_6
+
+    check-cast p1, Lwo3;
+
+    iget p1, p1, Lwo3;->X:I
+
+    const/16 v0, 0x1c
+
+    if-ne p1, v0, :cond_6
+
+    goto :goto_6
+
+    :cond_6
+    const/4 p1, 0x0
+
+    goto :goto_7
+
+    :cond_7
+    :goto_6
+    const/4 p1, 0x1
+
+    :goto_7
+    return p1
+
+    :pswitch_11
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -166,22 +336,244 @@
 
     move-result p1
 
-    invoke-static {v0, v1, p1}, Li57;->a([Lh57;Ljava/lang/String;I)V
+    rem-int/lit8 p1, p1, 0x4
 
-    return-void
+    const/4 v0, 0x2
 
-    :pswitch_c
-    check-cast p1, Lu47;
+    if-ne p1, v0, :cond_8
 
-    return-void
+    const/4 p1, 0x1
 
-    :pswitch_d
-    check-cast p1, Lhjh;
+    goto :goto_8
 
-    return-void
+    :cond_8
+    const/4 p1, 0x0
+
+    :goto_8
+    return p1
+
+    :pswitch_12
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    rem-int/lit8 p1, p1, 0x4
+
+    if-nez p1, :cond_9
+
+    const/4 p1, 0x1
+
+    goto :goto_9
+
+    :cond_9
+    const/4 p1, 0x0
+
+    :goto_9
+    return p1
+
+    :pswitch_13
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    rem-int/lit8 p1, p1, 0x4
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_a
+
+    goto :goto_a
+
+    :cond_a
+    const/4 v0, 0x0
+
+    :goto_a
+    return v0
+
+    :pswitch_14
+    check-cast p1, Lcp3;
+
+    iget p1, p1, Lcp3;->c:I
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0}, Ldy1;->c(II)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_15
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcp3;
+
+    iget p1, p1, Lcp3;->c:I
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0}, Ldy1;->c(II)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_16
+    check-cast p1, Lcp3;
+
+    iget p1, p1, Lcp3;->c:I
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Ldy1;->c(II)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
+    const/4 v1, 0x4
+
+    invoke-static {p1, v1}, Ldy1;->c(II)Z
+
+    move-result p1
+
+    if-nez p1, :cond_b
+
+    goto :goto_b
+
+    :cond_b
+    const/4 v0, 0x0
+
+    :goto_b
+    return v0
+
+    :pswitch_17
+    check-cast p1, Ljava/lang/String;
+
+    const-string v0, "CN="
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_18
+    check-cast p1, Ljava/util/List;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_19
+    check-cast p1, Ldt3;
+
+    invoke-static {p1}, Ljava/util/Objects;->isNull(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1a
+    check-cast p1, Lcp3;
+
+    iget p1, p1, Lcp3;->c:I
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0}, Ldy1;->c(II)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_1b
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcp3;
+
+    iget p1, p1, Lcp3;->c:I
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, v0}, Ldy1;->c(II)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_1c
+    check-cast p1, Ljk5;
+
+    instance-of p1, p1, Lzwb;
+
+    return p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
         :pswitch_d
         :pswitch_c
         :pswitch_b

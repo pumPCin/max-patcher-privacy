@@ -2,219 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmj8;
-.implements Lkpe;
-.implements Lev4;
-.implements Lcka;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:I
 
-.field public b:Lev4;
+.field public B:I
 
-.field public final c:Ljava/lang/Object;
+.field public C:I
 
+.field public D:I
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.field public E:I
 
-    iput p1, p0, Lnj8;->a:I
+.field public F:F
 
-    iput-object p2, p0, Lnj8;->c:Ljava/lang/Object;
+.field public G:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public H:F
 
-    return-void
-.end method
+.field public I:F
+
+.field public J:F
+
+.field public K:F
+
+.field public L:F
+
+.field public M:F
+
+.field public N:F
+
+.field public O:F
+
+.field public P:[B
+
+.field public Q:I
+
+.field public R:I
+
+.field public S:I
+
+.field public T:J
+
+.field public U:J
+
+.field public V:Lh5g;
+
+.field public W:Z
+
+.field public X:Z
+
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lw1g;
+
+.field public a:Z
+
+.field public a0:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Z
+
+.field public j:[B
+
+.field public k:Lu1g;
+
+.field public l:[B
+
+.field public m:La25;
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:F
+
+.field public v:F
+
+.field public w:F
+
+.field public x:[B
+
+.field public y:I
+
+.field public z:Z
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Ljava/lang/String;)[B
+    .locals 2
 
-    iget-object v0, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lmj8;
-
-    invoke-interface {v0, p1}, Lmj8;->a(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget v0, p0, Lnj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast v0, Ltg3;
-
-    invoke-interface {v0}, Ltg3;->b()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lmj8;
-
-    invoke-interface {v0}, Lmj8;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lev4;)V
-    .locals 1
-
-    iget v0, p0, Lnj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Lnj8;->b:Lev4;
-
-    iget-object p1, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast p1, Ltg3;
-
-    invoke-interface {p1, p0}, Ltg3;->c(Lev4;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnj8;->b:Lev4;
-
-    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
-
-    move-result v0
+    iget-object v0, p0, Lnj8;->l:[B
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lnj8;->b:Lev4;
-
-    iget-object p1, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmj8;
-
-    invoke-interface {p1, p0}, Lmj8;->c(Lev4;)V
+    return-object v0
 
     :cond_0
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, "Missing CodecPrivate for codec "
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public d(Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final g()V
-    .locals 1
+    move-result-object p1
 
-    iget v0, p0, Lnj8;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
 
-    iget-object v0, p0, Lnj8;->b:Lev4;
+    move-result-object p1
 
-    invoke-interface {v0}, Lev4;->g()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnj8;->b:Lev4;
-
-    invoke-interface {v0}, Lev4;->g()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget v0, p0, Lnj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lnj8;->b:Lev4;
-
-    invoke-interface {v0}, Lev4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lnj8;->b:Lev4;
-
-    invoke-interface {v0}, Lev4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lnj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast v0, Ltg3;
-
-    invoke-interface {v0, p1}, Ltg3;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lnj8;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmj8;
-
-    invoke-interface {p1}, Lmj8;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -1,183 +1,146 @@
 .class public final Lnse;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic e:[Lwq7;
-
-
 # instance fields
-.field public final a:Lwv7;
+.field public final synthetic c:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Lpzd;
-
-.field public final d:Lpzd;
+.field public final synthetic o:Lose;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lose;I)V
+    .locals 0
 
-    new-instance v0, Lc0a;
+    iput p2, p0, Lnse;->c:I
 
-    const-string v1, "infiniteAnimationJob"
+    packed-switch p2, :pswitch_data_0
 
-    const-string v2, "getInfiniteAnimationJob()Lkotlinx/coroutines/Job;"
+    const/4 p2, 0x0
 
-    const-class v3, Lnse;
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p2
 
-    sget-object v1, Ls6d;->a:Lt6d;
+    iput-object p1, p0, Lnse;->o:Lose;
 
-    const-string v2, "stateAnimationJob"
+    const/16 p1, 0xc
 
-    const-string v4, "getStateAnimationJob()Lkotlinx/coroutines/Job;"
-
-    invoke-static {v1, v3, v2, v4}, Ld15;->h(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lc0a;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Lwq7;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sput-object v2, Lnse;->e:[Lwq7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwv7;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnse;->a:Lwv7;
-
-    new-instance p1, Ly2e;
-
-    const/16 v0, 0x19
-
-    invoke-direct {p1, v0}, Ly2e;-><init>(I)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnse;->b:Ljava/lang/Object;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnse;->c:Lpzd;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnse;->d:Lpzd;
-
-    return-void
-.end method
-
-.method public static a(Lxf7;I)V
-    .locals 2
-
-    if-nez p0, :cond_0
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 
-    :cond_0
-    move-object v0, p0
+    :pswitch_0
+    const/high16 p2, 0x3f800000    # 1.0f
 
-    check-cast v0, Lbse;
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object v0, v0, Lbse;->G0:Lkn3;
+    move-result-object p2
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getCurrentTextColor()I
+    iput-object p1, p0, Lnse;->o:Lose;
 
-    move-result v0
+    const/16 p1, 0xc
 
-    new-instance v1, Landroid/animation/ArgbEvaluator;
-
-    invoke-direct {v1}, Landroid/animation/ArgbEvaluator;-><init>()V
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {v0, p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/animation/ValueAnimator;->ofObject(Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0xc8
-
-    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v0, Lhse;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lhse;-><init>(Lxf7;I)V
-
-    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_1
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lnse;->o:Lose;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    sget-object v0, Lnse;->e:[Lwq7;
+    iget v0, p0, Lnse;->c:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    aget-object v2, v0, v1
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lnse;->c:Lpzd;
+    move-result p1
 
-    invoke-virtual {v3, p0, v2}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    move-result-object v2
+    iget-object p1, p0, Lnse;->o:Lose;
 
-    check-cast v2, Lmm7;
+    invoke-virtual {p1}, Lose;->a()I
 
-    const/4 v4, 0x0
+    move-result p2
 
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, v4}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    iput p2, p1, Lose;->e:I
 
     :cond_0
-    aget-object v0, v0, v1
-
-    invoke-virtual {v3, p0, v0, v4}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
     return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lnse;->o:Lose;
+
+    iget p2, p1, Lose;->d:F
+
+    invoke-virtual {p1, p2}, Lose;->c(F)V
+
+    invoke-virtual {p1}, Lose;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lose;->e:I
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lnse;->o:Lose;
+
+    iget p2, p1, Lose;->d:F
+
+    invoke-virtual {p1, p2}, Lose;->c(F)V
+
+    invoke-virtual {p1}, Lose;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lose;->e:I
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -21,10 +21,10 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Ljod;",
+        "Lqpd;",
         "scopeId",
-        "(Ljava/lang/String;Lvh4;)V",
-        "t2f",
+        "(Ljava/lang/String;Lki4;)V",
+        "z3f",
         "stickers-preview_release"
     }
     k = 0x1
@@ -38,32 +38,32 @@
 
 
 # static fields
-.field public static final synthetic D0:[Lwq7;
+.field public static final synthetic C0:[Ltr7;
 
 
 # instance fields
-.field public final A0:Lqih;
+.field public final A0:I
 
-.field public final B0:I
+.field public final B0:Lwn0;
 
-.field public final C0:Lnn0;
+.field public final u0:Liu7;
 
-.field public final v0:Llt7;
+.field public final v0:Lqs;
 
-.field public final w0:Lqs;
+.field public w0:Lwc8;
 
-.field public x0:Lzb8;
+.field public final x0:Lh0d;
 
-.field public final y0:Lazc;
+.field public final y0:Lh0d;
 
-.field public final z0:Lazc;
+.field public final z0:Lqjh;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Lxcc;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
@@ -73,37 +73,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ls6d;->a:Lt6d;
+    sget-object v2, Lz7d;->a:La8d;
 
     const-string v3, "headerView"
 
     const-string v5, "getHeaderView()Lone/me/sdk/stickers/set/StickersSetHeaderView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
     move-result-object v2
 
-    new-instance v3, Lxcc;
+    new-instance v3, Leec;
 
     const-string v5, "stickerSetRecycler"
 
     const-string v6, "getStickerSetRecycler()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lxcc;
+    new-instance v5, Leec;
 
     const-string v6, "loadingView"
 
     const-string v7, "getLoadingView()Landroid/view/View;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lwq7;
+    new-array v1, v1, [Ltr7;
 
     aput-object v0, v1, v4
 
@@ -119,7 +119,7 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Lwq7;
+    sput-object v1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:[Ltr7;
 
     return-void
 .end method
@@ -133,9 +133,9 @@
     .line 7
     const-string v0, "arg_key_scope_id"
 
-    const-class v1, Ljod;
+    const-class v1, Lqpd;
 
-    invoke-static {p1, v0, v1}, Lyji;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v0, v1}, Lbli;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -143,23 +143,23 @@
 
     check-cast p1, Landroid/os/Parcelable;
 
-    check-cast p1, Ljod;
+    check-cast p1, Lqpd;
 
     .line 8
-    iget-object p1, p1, Ljod;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 
     .line 9
-    const-class v1, Lm2f;
+    const-class v1, Ls3f;
 
     .line 10
-    invoke-virtual {p0, p1, v1, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v1, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 11
-    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Llt7;
+    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->u0:Liu7;
 
     const-wide/16 v0, 0x0
 
@@ -178,31 +178,31 @@
     invoke-direct {v0, v1, p1, v2}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    iput-object v0, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->w0:Lqs;
+    iput-object v0, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Lqs;
 
     .line 15
-    sget p1, Lk3b;->j:I
+    sget p1, Lm4b;->j:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->y0:Lazc;
+    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->x0:Lh0d;
 
     .line 16
-    sget p1, Lk3b;->i:I
+    sget p1, Lm4b;->i:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->z0:Lazc;
+    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->y0:Lh0d;
 
     .line 17
-    new-instance p1, Lqih;
+    new-instance p1, Lqjh;
 
     .line 18
-    sget-object v0, Lx3f;->a:Lx3f;
+    sget-object v0, Le5f;->a:Le5f;
 
     .line 19
     invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
@@ -210,35 +210,35 @@
     move-result-object v0
 
     .line 20
-    const-class v1, Lcua;
+    const-class v1, Leva;
 
     invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcua;
+    check-cast v0, Leva;
 
     .line 21
-    invoke-virtual {v0}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0}, Leva;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     .line 22
-    new-instance v1, Lsse;
+    new-instance v1, Laue;
 
-    invoke-direct {v1, p0}, Lsse;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, p0}, Laue;-><init>(Ljava/lang/Object;)V
 
     .line 23
-    invoke-direct {p1, v0, v1}, Lqih;-><init>(Ljava/util/concurrent/Executor;La2f;)V
+    invoke-direct {p1, v0, v1}, Lqjh;-><init>(Ljava/util/concurrent/Executor;Lg3f;)V
 
-    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->A0:Lqih;
+    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->z0:Lqjh;
 
     const/16 p1, 0xb7
 
     int-to-float p1, p1
 
     .line 24
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -250,25 +250,25 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Lagi;->d(F)I
+    invoke-static {p1}, Lfhi;->b(F)I
 
     move-result p1
 
     .line 25
-    iput p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->B0:I
+    iput p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->A0:I
 
     .line 26
-    new-instance p1, Lnfd;
+    new-instance p1, Lxgd;
 
-    const/16 v0, 0x16
+    const/16 v0, 0x15
 
-    invoke-direct {p1, v0, p0}, Lnfd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lxgd;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:Lnn0;
+    iput-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->B0:Lwn0;
 
     const/4 p1, 0x0
 
@@ -288,7 +288,7 @@
     const-string v1, " in bundle"
 
     .line 29
-    invoke-static {v0, p1, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -304,28 +304,28 @@
     throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lvh4;)V
+.method public constructor <init>(Ljava/lang/String;Lki4;)V
     .locals 1
 
     .line 1
-    new-instance p2, Ljod;
+    new-instance p2, Lqpd;
 
-    invoke-direct {p2, p1}, Ljod;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lqpd;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Lqbb;
+    new-instance p1, Ltcb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1}, [Lqbb;
+    filled-new-array {p1}, [Ltcb;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -338,15 +338,15 @@
 .method public static final P0(Lone/me/stickerspreview/set/StickerSetBottomSheet;)I
     .locals 4
 
-    invoke-virtual {p0}, Lx14;->getParentController()Lx14;
+    invoke-virtual {p0}, Ll24;->getParentController()Ll24;
 
     move-result-object p0
 
-    instance-of v0, p0, Lt2f;
+    instance-of v0, p0, Lz3f;
 
     if-eqz v0, :cond_0
 
-    check-cast p0, Lt2f;
+    check-cast p0, Lz3f;
 
     goto :goto_0
 
@@ -358,31 +358,31 @@
 
     check-cast p0, Lone/me/stickerspreview/StickerPreviewScreen;
 
-    iget-object v0, p0, Lone/me/stickerspreview/StickerPreviewScreen;->r0:Lazc;
+    iget-object v0, p0, Lone/me/stickerspreview/StickerPreviewScreen;->q0:Lh0d;
 
-    sget-object v1, Lone/me/stickerspreview/StickerPreviewScreen;->z0:[Lwq7;
+    sget-object v1, Lone/me/stickerspreview/StickerPreviewScreen;->y0:[Ltr7;
 
     const/4 v2, 0x3
 
     aget-object v2, v1, v2
 
-    invoke-interface {v0, p0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ls5b;
+    check-cast v0, Lu6b;
 
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
-    iget-object v2, p0, Lone/me/stickerspreview/StickerPreviewScreen;->s0:Lazc;
+    iget-object v2, p0, Lone/me/stickerspreview/StickerPreviewScreen;->r0:Lh0d;
 
     const/4 v3, 0x4
 
     aget-object v1, v1, v3
 
-    invoke-interface {v2, p0, v1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -404,22 +404,22 @@
 
 
 # virtual methods
-.method public final D0()Lxub;
+.method public final D0()Lcwb;
     .locals 1
 
-    new-instance v0, Lu2f;
+    new-instance v0, La4f;
 
-    invoke-direct {v0, p0}, Lu2f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;)V
+    invoke-direct {v0, p0}, La4f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;)V
 
     return-object v0
 .end method
 
-.method public final E0()Lkh7;
+.method public final E0()Lgi7;
     .locals 1
 
-    sget-object v0, Lkh7;->e:Lkh7;
+    sget-object v0, Lgi7;->e:Lgi7;
 
-    sget-object v0, Lkh7;->e:Lkh7;
+    sget-object v0, Lgi7;->e:Lgi7;
 
     return-object v0
 .end method
@@ -437,7 +437,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -449,7 +449,7 @@
 
     mul-float/2addr p3, p2
 
-    invoke-static {p3}, Lagi;->d(F)I
+    invoke-static {p3}, Lfhi;->b(F)I
 
     move-result p3
 
@@ -457,7 +457,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -469,11 +469,11 @@
 
     mul-float/2addr v1, v0
 
-    invoke-static {v1}, Lagi;->d(F)I
+    invoke-static {v1}, Lfhi;->b(F)I
 
     move-result v1
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -485,7 +485,7 @@
 
     mul-float/2addr v0, v2
 
-    invoke-static {v0}, Lagi;->d(F)I
+    invoke-static {v0}, Lfhi;->b(F)I
 
     move-result v0
 
@@ -519,15 +519,15 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Ld5f;
+    new-instance v2, Lk6f;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Ld5f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lk6f;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lk3b;->j:I
+    sget v3, Lm4b;->j:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
@@ -537,7 +537,7 @@
 
     invoke-direct {v3, v1, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -549,7 +549,7 @@
 
     mul-float/2addr p2, v5
 
-    invoke-static {p2}, Lagi;->d(F)I
+    invoke-static {p2}, Lfhi;->b(F)I
 
     move-result p2
 
@@ -559,7 +559,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -571,7 +571,7 @@
 
     mul-float/2addr v5, p2
 
-    invoke-static {v5}, Lagi;->d(F)I
+    invoke-static {v5}, Lfhi;->b(F)I
 
     move-result v5
 
@@ -579,17 +579,17 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v2}, Ld5f;->getHeaderButton()Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v2}, Lk6f;->getHeaderButton()Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object v3
 
-    new-instance v5, Ls2f;
+    new-instance v5, Ly3f;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, p0, v6}, Ls2f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
+    invoke-direct {v5, p0, v6}, Ly3f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
 
-    invoke-static {v3, v5}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v3, v5}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -603,7 +603,7 @@
 
     invoke-direct {v2, v3, v5}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v3, Lk3b;->i:I
+    sget v3, Lm4b;->i:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
@@ -617,7 +617,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Ln0j;->c(Landroid/content/Context;)I
+    invoke-static {v3}, Lq1j;->c(Landroid/content/Context;)I
 
     move-result v3
 
@@ -629,9 +629,9 @@
 
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    new-instance v4, Lo75;
+    new-instance v4, Lg85;
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -643,45 +643,45 @@
 
     mul-float/2addr p2, v5
 
-    invoke-static {p2}, Lagi;->d(F)I
+    invoke-static {p2}, Lfhi;->b(F)I
 
     move-result p2
 
     const/4 v5, 0x6
 
-    invoke-direct {v4, v3, p2, v5}, Lo75;-><init>(III)V
+    invoke-direct {v4, v3, p2, v5}, Lg85;-><init>(III)V
 
-    invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+    invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
 
-    new-instance p2, Las7;
+    new-instance p2, Lxs7;
 
     const/4 v3, 0x2
 
-    invoke-direct {p2, v3, p0}, Las7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v3, p0}, Lxs7;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v2, p2}, Landroidx/recyclerview/widget/RecyclerView;->k(Lv5d;)V
+    invoke-virtual {v2, p2}, Landroidx/recyclerview/widget/RecyclerView;->k(Lc7d;)V
 
-    iget-object p2, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->A0:Lqih;
+    iget-object p2, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->z0:Lqjh;
 
-    invoke-virtual {v2, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
+    invoke-virtual {v2, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
 
-    new-instance p2, Llj6;
+    new-instance p2, Lgk6;
 
-    invoke-direct {p2, v2, v2, p0}, Llj6;-><init>(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView;Lone/me/stickerspreview/set/StickerSetBottomSheet;)V
+    invoke-direct {p2, v2, v2, p0}, Lgk6;-><init>(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView;Lone/me/stickerspreview/set/StickerSetBottomSheet;)V
 
-    invoke-static {v2, p2}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+    invoke-static {v2, p2}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget-object p2, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Lwq7;
+    sget-object p2, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:[Ltr7;
 
     const/4 v2, 0x3
 
     aget-object p2, p2, v2
 
-    iget-object p2, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:Lnn0;
+    iget-object p2, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->B0:Lwn0;
 
-    invoke-virtual {p2}, Lnn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lwn0;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -695,13 +695,13 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p2, La05;
+    new-instance p2, Lt05;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, La05;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v0}, Lt05;-><init>(Landroid/content/Context;)V
 
     neg-int p3, p3
 
@@ -709,7 +709,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -719,7 +719,7 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v0, v1, p3}, Ld15;->c(FFI)I
+    invoke-static {v0, v1, p3}, Lu15;->c(FFI)I
 
     move-result p3
 
@@ -743,21 +743,21 @@
 .method public final onAttach(Landroid/view/View;)V
     .locals 2
 
-    iget-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Llt7;
+    iget-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->u0:Liu7;
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lm2f;
+    check-cast p1, Ls3f;
 
-    sget-object v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Lwq7;
+    sget-object v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->C0:[Ltr7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->w0:Lqs;
+    iget-object v0, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Lqs;
 
     invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -773,7 +773,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lm2f;->s(Ljava/lang/Long;)V
+    invoke-virtual {p1, v0}, Ls3f;->s(Ljava/lang/Long;)V
 
     return-void
 .end method
@@ -781,25 +781,25 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 8
 
-    new-instance v0, Ls2f;
+    new-instance v0, Ly3f;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Ls2f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
+    invoke-direct {v0, p0, v1}, Ly3f;-><init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
 
-    invoke-static {p1, v0}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p1, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iget-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Llt7;
+    iget-object p1, p0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->u0:Liu7;
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lm2f;
+    check-cast p1, Ls3f;
 
-    iget-object p1, p1, Lm2f;->B0:Lgzc;
+    iget-object p1, p1, Ls3f;->A0:Ln0d;
 
-    new-instance v0, Lkpb;
+    new-instance v0, Loqb;
 
     const/4 v6, 0x4
 
@@ -815,19 +815,19 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Lkpb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Loqb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v1, Lh06;
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     return-void
 .end method

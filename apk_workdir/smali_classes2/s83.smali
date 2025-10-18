@@ -1,98 +1,181 @@
 .class public final Ls83;
-.super Landroid/transition/Transition;
+.super Lzwb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field public a:Ljava/util/List;
 
-.field public final b:Z
+.field public b:Ljava/util/ArrayList;
 
-
-# direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
-
-    iput-object p1, p0, Ls83;->a:Landroid/graphics/Rect;
-
-    iput-boolean p2, p0, Ls83;->b:Z
-
-    return-void
-.end method
+.field public c:I
 
 
 # virtual methods
-.method public final captureEndValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+.method public final a()[B
+    .locals 6
 
-    return-void
-.end method
+    iget-object v0, p0, Ls83;->a:Ljava/util/List;
 
-.method public final captureStartValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
-    .locals 2
+    new-instance v1, Ln0;
 
-    if-eqz p2, :cond_1
+    const/4 v2, 0x7
 
-    if-eqz p3, :cond_1
+    invoke-direct {v1, v2}, Ln0;-><init>(I)V
 
-    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
-    instance-of p1, p1, Lum6;
+    move-result-object v0
 
-    if-nez p1, :cond_0
+    invoke-interface {v0}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v0
+
+    iget-object v1, p0, Ls83;->b:Ljava/util/ArrayList;
+
+    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    add-int/lit8 v2, v0, 0x4
+
+    add-int/2addr v2, v1
+
+    add-int/lit8 v3, v2, 0x4
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    sget-object v4, Llxf;->Y:Llxf;
+
+    iget-short v4, v4, Llxf;->a:S
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v0, v0
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Ls83;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lr83;
+
+    iget-object v4, v2, Lr83;->a:[B
+
+    array-length v4, v4
+
+    int-to-short v4, v4
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v4, v2, Lr83;->a:[B
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-wide v4, v2, Lr83;->b:J
+
+    long-to-int v2, v4
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x2
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
 
-    new-array p1, p1, [F
+    move-result v0
 
-    fill-array-data p1, :array_0
+    iput v0, p0, Ls83;->c:I
 
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    int-to-short v0, v1
 
-    move-result-object p1
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    new-instance p3, Lwg;
+    iget-object v0, p0, Ls83;->b:Ljava/util/ArrayList;
 
-    const/4 v0, 0x3
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {p3, p0, v0, p2}, Lwg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance p3, Loh;
+    move-result v1
 
-    const/4 v0, 0x1
+    if-eqz v1, :cond_1
 
-    const/4 v1, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {p3, p0, p2, v1, v0}, Loh;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    move-result-object v1
 
-    invoke-virtual {p1, p3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    check-cast v1, Lq83;
 
-    return-object p1
+    iget-object v2, v1, Lq83;->a:[B
+
+    array-length v2, v2
+
+    int-to-byte v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, v1, Lq83;->a:[B
+
+    invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
 
-    return-object p1
+    move-result v0
 
-    nop
+    new-array v0, v0, [B
 
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    return-object v0
 .end method

@@ -1,264 +1,199 @@
-.class public final synthetic Loki;
-.super Ljava/lang/Object;
+.class public final Loki;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Lbai;
+
+
+# static fields
+.field private static final zzb:Loki;
 
 
 # instance fields
-.field public final synthetic a:I
+.field private zzd:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field private zze:I
+
+.field private zzf:Laki;
+
+.field private zzg:Lwhi;
+
+.field private zzh:Lifi;
+
+.field private zzi:Lsii;
+
+.field private zzj:Ljhi;
+
+.field private zzk:Lufi;
+
+.field private zzl:Lvki;
+
+.field private zzm:Lbgi;
+
+.field private zzn:Liii;
+
+.field private zzo:Loii;
+
+.field private zzp:Loii;
+
+.field private zzq:Loii;
+
+.field private zzr:Z
+
+.field private zzs:Lqhi;
+
+.field private zzt:I
+
+.field private zzu:Z
+
+.field private zzv:Ljki;
+
+.field private zzw:Lnfi;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Loki;->a:I
+    new-instance v0, Loki;
 
-    iput-object p2, p0, Loki;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Loki;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Loki;->zzb:Loki;
+
+    const-class v1, Loki;
+
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lj7i;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Loki;->zzt:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final binderDied()V
-    .locals 6
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 22
 
-    iget v0, p0, Loki;->a:I
+    add-int/lit8 v0, p1, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_4
 
-    iget-object v0, p0, Loki;->b:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast v0, Lw1j;
+    if-eq v0, v1, :cond_3
 
-    iget-object v1, v0, Lw1j;->b:Lwv4;
+    const/4 v1, 0x3
 
-    const-string v2, "reportBinderDeath"
+    if-eq v0, v1, :cond_2
 
-    const/4 v3, 0x0
+    const/4 v1, 0x4
 
-    new-array v3, v3, [Ljava/lang/Object;
+    if-eq v0, v1, :cond_1
 
-    invoke-virtual {v1, v2, v3}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v1, 0x5
 
-    iget-object v1, v0, Lw1j;->i:Ljava/lang/ref/WeakReference;
+    if-eq v0, v1, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, v0, Lw1j;->b:Lwv4;
-
-    iget-object v2, v0, Lw1j;->c:Ljava/lang/String;
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "%s : Binder has died."
-
-    invoke-virtual {v1, v3, v2}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lw1j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    return-object v0
 
     :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v0, Loki;->zzb:Loki;
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lsqi;
-
-    new-instance v3, Landroid/os/RemoteException;
-
-    iget-object v4, v0, Lw1j;->c:Ljava/lang/String;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, " : Binder has died."
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, v2, Lsqi;->a:Lrnf;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2, v3}, Lrnf;->c(Ljava/lang/Exception;)Z
-
-    goto :goto_0
+    return-object v0
 
     :cond_1
-    iget-object v1, v0, Lw1j;->d:Ljava/util/ArrayList;
+    new-instance v0, Leji;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    sget-object v1, Loki;->zzb:Loki;
 
-    iget-object v1, v0, Lw1j;->f:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ly6i;-><init>(Lj7i;)V
 
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v0}, Lw1j;->d()V
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
+    return-object v0
 
     :cond_2
-    new-instance v0, Ljava/lang/ClassCastException;
+    new-instance v0, Loki;
 
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {v0}, Loki;-><init>()V
 
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Loki;->b:Ljava/lang/Object;
-
-    check-cast v0, Leyi;
-
-    iget-object v1, v0, Leyi;->b:Ltt8;
-
-    const-string v2, "reportBinderDeath"
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Ltt8;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Leyi;->i:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_5
-
-    iget-object v1, v0, Leyi;->b:Ltt8;
-
-    iget-object v2, v0, Leyi;->c:Ljava/lang/String;
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "%s : Binder has died."
-
-    invoke-virtual {v1, v3, v2}, Ltt8;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Leyi;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    return-object v0
 
     :cond_3
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v3, Lcxh;->k:Lcxh;
 
-    move-result v2
+    const-string v20, "zzn"
 
-    if-eqz v2, :cond_4
+    const-string v21, "zzw"
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v1, "zzd"
 
-    move-result-object v2
+    const-string v2, "zze"
 
-    check-cast v2, Lvhi;
+    const-string v4, "zzf"
 
-    iget-object v3, v0, Leyi;->c:Ljava/lang/String;
+    const-string v5, "zzg"
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v6, "zzh"
 
-    move-result-object v3
+    const-string v7, "zzi"
 
-    const-string v4, " : Binder has died."
+    const-string v8, "zzo"
 
-    new-instance v5, Landroid/os/RemoteException;
+    const-string v9, "zzp"
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v10, "zzq"
 
-    move-result-object v3
+    const-string v11, "zzr"
 
-    invoke-direct {v5, v3}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
+    const-string v12, "zzj"
 
-    iget-object v2, v2, Lvhi;->a:Lrnf;
+    const-string v13, "zzs"
 
-    if-eqz v2, :cond_3
+    const-string v14, "zzk"
 
-    invoke-virtual {v2, v5}, Lrnf;->c(Ljava/lang/Exception;)Z
+    const-string v15, "zzl"
 
-    goto :goto_1
+    const-string v16, "zzt"
+
+    const-string v17, "zzm"
+
+    const-string v18, "zzu"
+
+    const-string v19, "zzv"
+
+    filled-new-array/range {v1 .. v21}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Loki;->zzb:Loki;
+
+    new-instance v2, Lwai;
+
+    const-string v3, "\u0001\u0013\u0000\u0001\u0001\u0013\u0013\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1009\u0001\u0003\u1009\u0002\u0004\u1009\u0003\u0005\u1009\u0004\u0006\u1009\n\u0007\u1009\u000b\u0008\u1009\u000c\t\u1007\r\n\u1009\u0005\u000b\u1009\u000e\u000c\u1009\u0006\r\u1009\u0007\u000e\u1004\u000f\u000f\u1009\u0008\u0010\u1007\u0010\u0011\u1009\u0011\u0012\u1009\t\u0013\u1009\u0012"
+
+    invoke-direct {v2, v1, v3, v0}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v2
 
     :cond_4
-    iget-object v1, v0, Leyi;->d:Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    iget-object v1, v0, Leyi;->f:Ljava/lang/Object;
+    move-result-object v0
 
-    monitor-enter v1
-
-    :try_start_1
-    invoke-virtual {v0}, Leyi;->c()V
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

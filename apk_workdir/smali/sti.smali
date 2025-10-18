@@ -1,59 +1,60 @@
-.class public abstract Lsti;
+.class public final Lsti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
 
 # static fields
-.field public static a:I
+.field public static final a:Lsti;
 
 
 # direct methods
-.method public static a(I)I
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-eqz p0, :cond_3
+    new-instance v0, Lsti;
 
-    const/16 v0, 0x5a
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_2
+    sput-object v0, Lsti;->a:Lsti;
 
-    const/16 v0, 0xb4
+    new-instance v0, Lr8i;
 
-    if-eq p0, v0, :cond_1
+    const/4 v1, 0x1
 
-    const/16 v0, 0x10e
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    if-ne p0, v0, :cond_0
+    const-class v1, Lm9i;
 
-    const/4 p0, 0x3
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    return p0
+    move-result-object v0
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 v2, 0x2
 
-    const-string v1, "Invalid rotation: "
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    invoke-static {p0, v1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
-    :cond_1
-    const/4 p0, 0x2
+    return-void
+.end method
 
-    return p0
 
-    :cond_2
-    const/4 p0, 0x1
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    return p0
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :cond_3
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return p0
+    throw p1
 .end method

@@ -1,48 +1,79 @@
-.class public final Liwa;
-.super Lk14;
+.class public abstract Liwa;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lj7a;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Lj7a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Liwa;->Y:Lj7a;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Liwa;->o:Ljava/lang/Object;
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    iget p1, p0, Liwa;->X:I
+    sput v0, Liwa;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
-    or-int/2addr p1, v0
+    sput v0, Liwa;->b:I
 
-    iput p1, p0, Liwa;->X:I
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
 
-    iget-object p1, p0, Liwa;->Y:Lj7a;
+    sput v0, Liwa;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
 
-    invoke-virtual {p1, v0, p0}, Lj7a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sput v0, Liwa;->d:I
 
-    move-result-object p1
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
 
-    return-object p1
+    sput v0, Liwa;->e:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+
+    sput v0, Liwa;->f:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_rate_view_title:I
+
+    sput v0, Liwa;->g:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_thank_view:I
+
+    sput v0, Liwa;->h:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
+
+    sput v0, Liwa;->i:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_thank_view_icon:I
+
+    sput v0, Liwa;->j:I
+
+    sget v0, Lxnc;->fake_in_app_review_bottom_sheet_thank_view_title:I
+
+    sput v0, Liwa;->k:I
+
+    return-void
 .end method

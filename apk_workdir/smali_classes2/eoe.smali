@@ -1,29 +1,17 @@
-.class public Leoe;
-.super La3;
+.class public final Leoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public a:Z
 
+.field public b:Z
 
-# direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
+.field public c:Z
 
-    invoke-direct {p0, p1}, La3;-><init>(I)V
+.field public d:Z
 
-    iput-object p2, p0, Leoe;->b:Ljava/lang/String;
+.field public e:Z
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Leoe;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
+.field public f:Z

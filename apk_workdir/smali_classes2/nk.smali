@@ -62,9 +62,9 @@
     return-object v0
 
     :pswitch_3
-    new-instance v0, Lk99;
+    new-instance v0, Lma9;
 
-    invoke-direct {v0}, Lk99;-><init>()V
+    invoke-direct {v0}, Lma9;-><init>()V
 
     return-object v0
 

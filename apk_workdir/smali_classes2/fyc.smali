@@ -1,97 +1,41 @@
-.class public final synthetic Lfyc;
-.super Ljava/lang/Object;
+.class public final Lfyc;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
-
-# instance fields
-.field public final synthetic a:Lxxc;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Lqh6;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lxxc;Landroid/view/ViewGroup;Lqh6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfyc;->a:Lxxc;
-
-    iput-object p2, p0, Lfyc;->b:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Lfyc;->c:Lqh6;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 6
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    move-result-object p1
+    move-result v3
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result v4
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
-    iget-object v1, p0, Lfyc;->a:Lxxc;
+    int-to-float v0, v0
 
-    iget-object v1, v1, Lxxc;->d:Landroidx/recyclerview/widget/RecyclerView;
+    const/high16 v1, 0x40000000    # 2.0f
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    div-float v5, v0, v1
 
-    move-result-object v2
+    const/4 v1, 0x0
 
-    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_2
+    move-object v0, p2
 
-    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 p2, 0x1
 
-    iget-object v1, p0, Lfyc;->b:Landroid/view/ViewGroup;
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v0, p0, Lfyc;->c:Lqh6;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

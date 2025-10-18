@@ -1632,6 +1632,7 @@
     <item type="id" name="oneme_permissions_positive" />
     <item type="id" name="oneme_permissions_rationale" />
     <item type="id" name="oneme_permissions_title" />
+    <item type="id" name="oneme_picker_bottom_button" />
     <item type="id" name="oneme_picker_chat_item_view_type" />
     <item type="id" name="oneme_picker_confirm_cancel" />
     <item type="id" name="oneme_picker_confirm_close" />
@@ -1656,6 +1657,7 @@
     <item type="id" name="oneme_section_avatar" />
     <item type="id" name="oneme_section_description" />
     <item type="id" name="oneme_section_end_arrow" />
+    <item type="id" name="oneme_section_end_checkbox" />
     <item type="id" name="oneme_section_end_container" />
     <item type="id" name="oneme_section_end_custom_icon" />
     <item type="id" name="oneme_section_end_text" />

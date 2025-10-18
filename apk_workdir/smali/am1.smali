@@ -1,5 +1,5 @@
 .class public final Lam1;
-.super Lim1;
+.super Lqm1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lam1;
 
-    invoke-direct {v0}, Lim1;-><init>()V
+    invoke-direct {v0}, Lqm1;-><init>()V
 
     sput-object v0, Lam1;->D:Lam1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x6cfea200
+    const v0, -0x460cc81d
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RecordStateScreen"
+    const-string v0, "OpenAddUserChatConfirmation"
 
     return-object v0
 .end method

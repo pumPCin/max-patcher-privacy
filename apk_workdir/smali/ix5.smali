@@ -4,55 +4,145 @@
 
 
 # instance fields
-.field public final a:Lzsa;
+.field public final synthetic a:I
 
-.field public final b:Lhx5;
+.field public b:Z
+
+.field public c:J
+
+.field public d:I
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ln79;Llub;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lix5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p2, Llub;->d:I
+    return-void
+.end method
 
-    if-lez v0, :cond_0
+.method public constructor <init>(Landroid/graphics/Bitmap;JLandroid/graphics/Point;IZ)V
+    .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
-    goto :goto_0
+    iput v0, p0, Lix5;->a:I
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :goto_0
-    if-eqz v0, :cond_1
+    .line 9
+    iput-object p1, p0, Lix5;->e:Ljava/lang/Object;
 
-    new-instance v0, Lhx5;
+    .line 10
+    iput-wide p2, p0, Lix5;->c:J
 
-    invoke-static {}, Ln8a;->m()Ln8a;
+    .line 11
+    iput-object p4, p0, Lix5;->f:Ljava/lang/Object;
 
-    move-result-object v1
+    .line 12
+    iput p5, p0, Lix5;->d:I
 
-    invoke-direct {v0, p1, p2, v1}, Lpm6;-><init>(Ln79;Llub;Ln8a;)V
-
-    iput-object v0, p0, Lix5;->b:Lhx5;
-
-    new-instance p1, Lzsa;
-
-    const/16 p2, 0xd
-
-    invoke-direct {p1, p2, p0}, Lzsa;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lix5;->a:Lzsa;
+    .line 13
+    iput-boolean p6, p0, Lix5;->b:Z
 
     return-void
+.end method
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Ljava/lang/String;IJZLjava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    const/4 v0, 0x2
 
-    throw p1
+    iput v0, p0, Lix5;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lix5;->e:Ljava/lang/Object;
+
+    .line 4
+    iput p2, p0, Lix5;->d:I
+
+    .line 5
+    iput-wide p3, p0, Lix5;->c:J
+
+    .line 6
+    iput-boolean p5, p0, Lix5;->b:Z
+
+    .line 7
+    iput-object p6, p0, Lix5;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 8
+
+    iget v0, p0, Lix5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lix5;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget v1, p0, Lix5;->d:I
+
+    iget-wide v2, p0, Lix5;->c:J
+
+    iget-boolean v4, p0, Lix5;->b:Z
+
+    const-string v5, "\', bytesSent="
+
+    const-string v6, ", bytesReceived=0, responseTime="
+
+    const-string v7, "SessionLogEvent{opcode=\'"
+
+    invoke-static {v1, v7, v0, v5, v6}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", retry=false, error="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,178 +1,97 @@
 .class public final Lkl6;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lll6;
 
 
 # instance fields
-.field public final synthetic X:Lfm6;
-
-.field public final synthetic Y:Z
+.field public final a:Lp0e;
 
 
 # direct methods
-.method public constructor <init>(Lfm6;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lp0e;)V
     .locals 0
 
-    iput-object p1, p0, Lkl6;->X:Lfm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lkl6;->Y:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkl6;->a:Lp0e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lkl6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkl6;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lkl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lkl6;
-
-    iget-object v0, p0, Lkl6;->X:Lfm6;
-
-    iget-boolean v1, p0, Lkl6;->Y:Z
-
-    invoke-direct {p1, v0, v1, p2}, Lkl6;-><init>(Lfm6;ZLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkl6;->X:Lfm6;
-
-    iget-object v0, p1, Lfm6;->v0:Lsze;
-
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Lal6;
-
-    iget v2, v3, Lal6;->h:I
-
-    if-eqz v2, :cond_0
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x7bf
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v3 .. v11}, Lal6;->b(Lal6;Lvjb;Lwlg;Landroid/net/Uri;IZILandroid/net/Uri;I)Lal6;
-
-    move-result-object v3
+    return v0
 
     :cond_0
-    move-object v4, v3
+    instance-of v1, p1, Lkl6;
 
-    iget-boolean v2, p0, Lkl6;->Y:Z
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_1
+    if-nez v1, :cond_1
 
-    iget-object v2, v4, Lal6;->c:Lm58;
-
-    iget-object v11, v2, Lm58;->u0:Landroid/net/Uri;
-
-    const/4 v10, 0x0
-
-    const/16 v12, 0x3df
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v4 .. v12}, Lal6;->b(Lal6;Lvjb;Lwlg;Landroid/net/Uri;IZILandroid/net/Uri;I)Lal6;
-
-    move-result-object v4
+    return v2
 
     :cond_1
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    check-cast p1, Lkl6;
 
-    goto :goto_0
+    iget-object v1, p0, Lkl6;->a:Lp0e;
+
+    iget-object p1, p1, Lkl6;->a:Lp0e;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    iget-object p1, p1, Lfm6;->v0:Lsze;
+    return v0
+.end method
 
-    const/4 v0, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p1, v0, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Lkl6;->a:Lp0e;
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v0}, Lp0e;->hashCode()I
 
-    return-object p1
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RemoveMediaItem(item="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkl6;->a:Lp0e;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

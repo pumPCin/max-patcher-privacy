@@ -1,106 +1,48 @@
-.class public final synthetic Lkh5;
+.class public abstract Lkh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw18;
-.implements Lx18;
-.implements Ldr3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:F
-
 
 # direct methods
-.method public synthetic constructor <init>(IF)V
+.method public static a(Ljava/io/FileDescriptor;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-    iput p1, p0, Lkh5;->a:I
-
-    iput p2, p0, Lkh5;->b:F
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
 
     return-void
 .end method
 
+.method public static b(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+    invoke-static {p0}, Landroid/system/Os;->dup(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
 
-    iget v0, p0, Lkh5;->a:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lrtb;
-
-    invoke-virtual {p1}, Lrtb;->m0()V
-
-    iget-object p1, p1, Lrtb;->a:Ldi5;
-
-    iget v0, p0, Lkh5;->b:F
-
-    invoke-virtual {p1, v0}, Ldi5;->A1(F)V
-
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Lkh5;->b:F
-
-    check-cast p1, Lrtb;
-
-    invoke-virtual {p1, v0}, Lrtb;->i0(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public static c(Ljava/io/FileDescriptor;JI)J
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-    iget v0, p0, Lkh5;->a:I
+    invoke-static {p0, p1, p2, p3}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide p0
 
-    iget v0, p0, Lkh5;->b:F
-
-    check-cast p1, Lisb;
-
-    invoke-interface {p1, v0}, Lisb;->j(F)V
-
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Lkh5;->b:F
-
-    check-cast p1, Lisb;
-
-    invoke-interface {p1, v0}, Lisb;->j(F)V
-
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Lkh5;->b:F
-
-    check-cast p1, Lhsb;
-
-    invoke-interface {p1, v0}, Lhsb;->j(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide p0
 .end method

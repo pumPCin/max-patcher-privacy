@@ -1,126 +1,64 @@
-.class public final Lb40;
+.class public final synthetic Lb40;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loq8;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
     .locals 0
 
+    iput p2, p0, Lb40;->a:I
+
+    iput-object p1, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb40;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lb40;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lb40;->c:Ljava/lang/String;
-
-    iput p4, p0, Lb40;->d:I
-
-    iput p5, p0, Lb40;->e:I
-
-    iput p6, p0, Lb40;->f:I
-
-    iput-object p7, p0, Lb40;->g:Ljava/lang/String;
-
-    iput-object p8, p0, Lb40;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lb40;->b:Ljava/lang/String;
+    iget v0, p0, Lb40;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    const-string v0, ", sampleMimeType: "
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->d(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    const-string v1, ", codecs: "
+    return-void
 
-    const-string v2, "AudioFormat(id: "
+    :pswitch_0
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    iget-object v3, p0, Lb40;->a:Ljava/lang/String;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->b(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    iget-object v4, p0, Lb40;->b:Ljava/lang/String;
+    return-void
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_1
+    iget-object v0, p0, Lb40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    move-result-object v0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->c(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    iget-object v1, p0, Lb40;->c:Ljava/lang/String;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    const-string v1, ", bitrate: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb40;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", channelCount: "
-
-    const-string v2, ", label: "
-
-    iget v3, p0, Lb40;->e:I
-
-    iget v4, p0, Lb40;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget-object v1, p0, Lb40;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", language: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb40;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

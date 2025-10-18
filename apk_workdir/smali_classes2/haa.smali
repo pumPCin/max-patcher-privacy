@@ -1,53 +1,132 @@
 .class public final Lhaa;
-.super Lk14;
+.super Ljava/io/Writer;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Llaa;
-
-.field public o:Llaa;
-
-.field public r0:I
+# static fields
+.field public static final a:Lhaa;
 
 
 # direct methods
-.method public constructor <init>(Llaa;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lhaa;->Z:Llaa;
+    new-instance v0, Lhaa;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/io/Writer;-><init>()V
+
+    sput-object v0, Lhaa;->a:Lhaa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final append(C)Ljava/io/Writer;
+    .locals 0
 
-    iput-object p1, p0, Lhaa;->Y:Ljava/lang/Object;
+    .line 4
+    return-object p0
+.end method
 
-    iget p1, p0, Lhaa;->r0:I
+.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    .line 5
+    return-object p0
+.end method
 
-    or-int/2addr p1, v0
+.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+    .locals 0
 
-    iput p1, p0, Lhaa;->r0:I
+    .line 6
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lhaa;->Z:Llaa;
+.method public final append(C)Ljava/lang/Appendable;
+    .locals 0
 
-    const-wide/16 v0, 0x0
+    .line 1
+    return-object p0
+.end method
 
-    invoke-virtual {p1, v0, v1, p0}, Llaa;->b(JLk14;)Ljava/lang/Object;
+.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 0
 
-    move-result-object p1
+    .line 2
+    return-object p0
+.end method
 
-    return-object p1
+.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 3
+    return-object p0
+.end method
+
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final flush()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-class v0, Lhaa;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final write(I)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public final write(Ljava/lang/String;)V
+    .locals 0
+
+    .line 4
+    return-void
+.end method
+
+.method public final write(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 5
+    return-void
+.end method
+
+.method public final write([C)V
+    .locals 0
+
+    .line 2
+    return-void
+.end method
+
+.method public final write([CII)V
+    .locals 0
+
+    .line 3
+    return-void
 .end method

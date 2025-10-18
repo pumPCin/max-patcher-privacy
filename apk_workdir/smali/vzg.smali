@@ -1,61 +1,85 @@
-.class public final Lvzg;
-.super Landroid/view/View$BaseSavedState;
+.class public final enum Lvzg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lvzg;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final enum a:Lvzg;
 
+.field public static final enum b:Lvzg;
 
-# instance fields
-.field public a:I
+.field public static final enum c:Lvzg;
 
-.field public b:I
-
-.field public c:Landroid/os/Parcelable;
+.field public static final synthetic o:[Lvzg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lf0;
+    new-instance v0, Lvzg;
 
-    const/16 v1, 0xa
+    const-string v1, "SPEAKER"
 
-    invoke-direct {v0, v1}, Lf0;-><init>(I)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lvzg;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lvzg;->a:Lvzg;
+
+    new-instance v1, Lvzg;
+
+    const-string v2, "SHARING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lvzg;->b:Lvzg;
+
+    new-instance v2, Lvzg;
+
+    const-string v3, "GRID"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lvzg;->c:Lvzg;
+
+    filled-new-array {v0, v1, v2}, [Lvzg;
+
+    move-result-object v0
+
+    sput-object v0, Lvzg;->o:[Lvzg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static valueOf(Ljava/lang/String;)Lvzg;
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    const-class v0, Lvzg;
 
-    iget v0, p0, Lvzg;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p0
 
-    iget v0, p0, Lvzg;->b:I
+    check-cast p0, Lvzg;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lvzg;->c:Landroid/os/Parcelable;
+.method public static values()[Lvzg;
+    .locals 1
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    sget-object v0, Lvzg;->o:[Lvzg;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lvzg;
+
+    return-object v0
 .end method

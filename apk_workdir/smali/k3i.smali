@@ -1,297 +1,199 @@
 .class public final Lk3i;
-.super Ljava/lang/Object;
+.super Lj7i;
 .source "SourceFile"
+
+# interfaces
+.implements Lbai;
+
+
+# static fields
+.field private static final zzb:Lk3i;
 
 
 # instance fields
-.field public a:Lb48;
+.field private zzd:I
 
-.field public b:Z
+.field private zze:I
 
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public final f:Ljava/util/concurrent/Executor;
-
-.field public volatile g:Lyx;
-
-.field public volatile h:Lyx;
-
-.field public final i:Ljava/util/concurrent/Semaphore;
-
-.field public final j:Ljava/util/Set;
+.field private zzf:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/Set;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Lyx;->r0:Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v0, Lk3i;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lk3i;-><init>()V
 
-    const/4 v1, 0x0
+    sput-object v0, Lk3i;->zzb:Lk3i;
 
-    iput-boolean v1, p0, Lk3i;->b:Z
+    const-class v1, Lk3i;
 
-    iput-boolean v1, p0, Lk3i;->c:Z
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lk3i;->d:Z
-
-    iput-boolean v1, p0, Lk3i;->e:Z
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    iput-object v0, p0, Lk3i;->f:Ljava/util/concurrent/Executor;
-
-    new-instance p1, Ljava/util/concurrent/Semaphore;
-
-    invoke-direct {p1, v1}, Ljava/util/concurrent/Semaphore;-><init>(I)V
-
-    iput-object p1, p0, Lk3i;->i:Ljava/util/concurrent/Semaphore;
-
-    iput-object p2, p0, Lk3i;->j:Ljava/util/Set;
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lj7i;-><init>()V
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lk3i;->zzf:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static n()Lk3i;
+    .locals 1
+
+    sget-object v0, Lk3i;->zzb:Lk3i;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 2
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-eqz p1, :cond_4
+
+    const/4 p2, 0x2
+
+    if-eq p1, p2, :cond_3
+
+    const/4 p2, 0x3
+
+    if-eq p1, p2, :cond_2
+
+    const/4 p2, 0x4
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x5
+
+    if-eq p1, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lk3i;->zzb:Lk3i;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lali;
+
+    sget-object p2, Lk3i;->zzb:Lk3i;
+
+    const/16 v0, 0xb
+
+    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lk3i;
+
+    invoke-direct {p1}, Lk3i;-><init>()V
+
+    return-object p1
+
+    :cond_3
+    sget-object p1, Lcxh;->f:Lcxh;
+
+    const-string p2, "zzf"
+
+    const-string v0, "zzd"
+
+    const-string v1, "zze"
+
+    filled-new-array {v0, v1, p1, p2}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lk3i;->zzb:Lk3i;
+
+    new-instance v0, Lwai;
+
+    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1008\u0001"
+
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_4
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final o()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lk3i;->zzf:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final p()I
     .locals 4
 
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    if-eqz v0, :cond_3
-
-    iget-boolean v0, p0, Lk3i;->b:Z
+    iget v0, p0, Lk3i;->zze:I
 
     const/4 v1, 0x1
 
-    if-nez v0, :cond_0
-
-    iput-boolean v1, p0, Lk3i;->e:Z
-
-    :cond_0
-    iget-object v0, p0, Lk3i;->h:Lyx;
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object v2, p0, Lk3i;->g:Lyx;
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    iget-object v3, v0, Lyx;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    iget-object v0, v0, Lyx;->b:Let9;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
-
-    move-result v0
-
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lk3i;->g:Lyx;
+    const/4 v2, 0x2
 
-    iput-object v0, p0, Lk3i;->h:Lyx;
+    if-eq v0, v1, :cond_3
 
-    :cond_2
-    iput-object v2, p0, Lk3i;->g:Lyx;
+    const/4 v3, 0x3
 
-    :cond_3
-    return-void
-.end method
+    if-eq v0, v2, :cond_1
 
-.method public final b()V
-    .locals 5
+    const/4 v2, 0x4
 
-    iget-object v0, p0, Lk3i;->h:Lyx;
+    if-eq v0, v3, :cond_3
 
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lk3i;->g:Lyx;
-
-    iget-object v1, p0, Lk3i;->f:Ljava/util/concurrent/Executor;
-
-    iget v2, v0, Lyx;->c:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    if-eq v2, v4, :cond_2
-
-    iget v0, v0, Lyx;->c:I
-
-    invoke-static {v0}, Lwx1;->v(I)I
-
-    move-result v0
-
-    if-eq v0, v4, :cond_1
-
-    if-eq v0, v3, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "We should never reach this state"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot execute task: the task has already been executed (a task can be executed only once)"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot execute task: the task is already running."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iput v3, v0, Lyx;->c:I
-
-    iget-object v2, v0, Lyx;->a:Lej4;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lyx;->b:Let9;
-
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final c()V
-    .locals 5
-
-    iget-object v0, p0, Lk3i;->j:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lk3i;->i:Ljava/util/concurrent/Semaphore;
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    if-eq v0, v2, :cond_0
 
     const/4 v2, 0x0
-
-    const-wide/16 v3, 0x5
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Ljava/util/concurrent/Semaphore;->tryAcquire(IJLjava/util/concurrent/TimeUnit;)Z
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    const-string v1, "GACSignInLoader"
-
-    const-string v2, "Unexpected InterruptedException"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :goto_0
-    return-void
-
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v2, 0x5
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lpth;
+    :cond_1
+    move v2, v3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    :cond_2
+    move v2, v1
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    :cond_3
+    :goto_0
+    if-nez v2, :cond_4
 
-    throw v0
-.end method
+    return v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-static {v0, p0}, Lixi;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
-
-    const-string v1, " id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_4
+    return v2
 .end method

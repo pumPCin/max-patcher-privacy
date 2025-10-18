@@ -1,170 +1,133 @@
-.class public final synthetic Ltz1;
-.super Ljava/lang/Object;
+.class public final enum Ltz1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum X:Ltz1;
 
-# instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public static final enum Y:Ltz1;
 
-.field public final synthetic a:I
+.field public static final enum Z:Ltz1;
 
-.field public final synthetic b:J
+.field public static final enum a:Ltz1;
 
-.field public final synthetic c:I
+.field public static final enum b:Ltz1;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public static final enum c:Ltz1;
+
+.field public static final enum o:Ltz1;
+
+.field public static final synthetic q0:[Ltz1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmx1;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Ltz1;
 
-    iput v0, p0, Ltz1;->a:I
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Ltz1;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, p0, Ltz1;->X:Ljava/lang/Object;
+    sput-object v0, Ltz1;->a:Ltz1;
 
-    iput p3, p0, Ltz1;->c:I
+    new-instance v1, Ltz1;
 
-    iput-wide p4, p0, Ltz1;->b:J
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lulf;Lxm;JI)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Ltz1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltz1;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Ltz1;->X:Ljava/lang/Object;
-
-    iput-wide p3, p0, Ltz1;->b:J
-
-    iput p5, p0, Ltz1;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 6
-
-    iget v0, p0, Ltz1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltz1;->o:Ljava/lang/Object;
-
-    check-cast v0, Lulf;
-
-    iget-object v1, p0, Ltz1;->X:Ljava/lang/Object;
-
-    check-cast v1, Lxm;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Lulf;->z0:Ljava/lang/String;
-
-    const-string v3, "persistable task execution started, force connection"
-
-    invoke-static {v2, v3}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Lulf;->X:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljwb;
-
-    check-cast v2, Llwb;
-
-    iget-object v2, v2, Llwb;->a:Lg68;
+    const-string v2, "INACTIVE"
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lgsd;->A(Z)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v2, v0, Lulf;->o:Llt7;
+    sput-object v1, Ltz1;->b:Ltz1;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    new-instance v2, Ltz1;
 
-    move-result-object v2
+    const-string v3, "SCANNING"
 
-    check-cast v2, Lfof;
+    const/4 v4, 0x2
 
-    check-cast v1, Lphb;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v3, p0, Ltz1;->b:J
+    sput-object v2, Ltz1;->c:Ltz1;
 
-    iget v5, p0, Ltz1;->c:I
+    new-instance v3, Ltz1;
 
-    invoke-virtual {v2, v1, v3, v4, v5}, Lfof;->g(Lphb;JI)V
+    const-string v4, "PASSIVE_FOCUSED"
 
-    iget-object v1, v0, Lulf;->t0:Llt7;
+    const/4 v5, 0x3
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v1
+    sput-object v3, Ltz1;->o:Ltz1;
 
-    check-cast v1, Lsoh;
+    new-instance v4, Ltz1;
 
-    invoke-static {v1}, Lv4e;->x(Lsoh;)V
+    const-string v5, "PASSIVE_NOT_FOCUSED"
 
-    iget-object v0, v0, Lulf;->u0:Llt7;
+    const/4 v6, 0x4
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ltz1;->X:Ltz1;
+
+    new-instance v5, Ltz1;
+
+    const-string v6, "LOCKED_FOCUSED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Ltz1;->Y:Ltz1;
+
+    new-instance v6, Ltz1;
+
+    const-string v7, "LOCKED_NOT_FOCUSED"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Ltz1;->Z:Ltz1;
+
+    filled-new-array/range {v0 .. v6}, [Ltz1;
 
     move-result-object v0
 
-    check-cast v0, Lcof;
-
-    invoke-virtual {v0}, Lcof;->a()V
+    sput-object v0, Ltz1;->q0:[Ltz1;
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ltz1;->o:Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Ltz1;
+    .locals 1
 
-    check-cast v0, Lmx1;
+    const-class v0, Ltz1;
 
-    iget-object v1, p0, Ltz1;->X:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
+    move-result-object p0
 
-    iget-object v0, v0, Lmx1;->b:Ljava/lang/Object;
+    check-cast p0, Ltz1;
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    return-object p0
+.end method
 
-    iget v2, p0, Ltz1;->c:I
+.method public static values()[Ltz1;
+    .locals 1
 
-    iget-wide v3, p0, Ltz1;->b:J
+    sget-object v0, Ltz1;->q0:[Ltz1;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+    invoke-virtual {v0}, [Ltz1;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    nop
+    check-cast v0, [Ltz1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb21;
+.implements Lk21;
 
 
 # instance fields
@@ -47,9 +47,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lb21;
+    check-cast v1, Lk21;
 
-    invoke-interface {v1, p1}, Lb21;->onAsrDataPackage(Leu;)V
+    invoke-interface {v1, p1}, Lk21;->onAsrDataPackage(Leu;)V
 
     goto :goto_0
 

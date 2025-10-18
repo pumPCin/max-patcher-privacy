@@ -4,11 +4,11 @@
 
 # interfaces
 .implements Landroid/graphics/drawable/Animatable;
-.implements Lp05;
+.implements Li15;
 
 
 # static fields
-.field public static final z0:Lc82;
+.field public static final y0:Lk82;
 
 
 # instance fields
@@ -20,40 +20,40 @@
 
 .field public final a:Leg;
 
-.field public final b:Lu43;
+.field public final b:Lg53;
 
 .field public volatile c:Z
 
 .field public o:J
 
+.field public q0:J
+
 .field public r0:J
 
-.field public s0:J
+.field public s0:I
 
-.field public t0:I
+.field public final t0:J
 
-.field public final u0:J
+.field public u0:I
 
-.field public v0:I
+.field public volatile v0:Lk82;
 
-.field public volatile w0:Lc82;
+.field public w0:Lz05;
 
-.field public x0:Lg05;
-
-.field public final y0:Lxe;
+.field public final x0:Lxe;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lc82;
+    new-instance v0, Lk82;
 
     const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lc82;-><init>(I)V
+    invoke-direct {v0, v1}, Lk82;-><init>(I)V
 
-    sput-object v0, Lye;->z0:Lc82;
+    sput-object v0, Lye;->y0:Lk82;
 
     return-void
 .end method
@@ -67,11 +67,11 @@
 
     const-wide/16 v0, 0x8
 
-    iput-wide v0, p0, Lye;->u0:J
+    iput-wide v0, p0, Lye;->t0:J
 
-    sget-object v0, Lye;->z0:Lc82;
+    sget-object v0, Lye;->y0:Lk82;
 
-    iput-object v0, p0, Lye;->w0:Lc82;
+    iput-object v0, p0, Lye;->v0:Lk82;
 
     new-instance v0, Lxe;
 
@@ -79,13 +79,13 @@
 
     invoke-direct {v0, v1, p0}, Lxe;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lye;->y0:Lxe;
+    iput-object v0, p0, Lye;->x0:Lxe;
 
-    new-instance v0, Lu43;
+    new-instance v0, Lg53;
 
-    invoke-direct {v0, p1}, Lu43;-><init>(Leg;)V
+    invoke-direct {v0, p1}, Lg53;-><init>(Leg;)V
 
-    iput-object v0, p0, Lye;->b:Lu43;
+    iput-object v0, p0, Lye;->b:Lg53;
 
     return-void
 .end method
@@ -101,9 +101,9 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    invoke-virtual {v0}, Lpo0;->a()V
+    invoke-virtual {v0}, Lyo0;->a()V
 
     :cond_0
     return-void
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_14
 
-    iget-object v1, v0, Lye;->b:Lu43;
+    iget-object v1, v0, Lye;->b:Lg53;
 
     if-nez v1, :cond_0
 
@@ -153,13 +153,13 @@
     double-to-long v3, v3
 
     :goto_0
-    iget-object v5, v0, Lye;->b:Lu43;
+    iget-object v5, v0, Lye;->b:Lg53;
 
-    iget-object v6, v5, Lu43;->c:Ljava/lang/Object;
+    iget-object v6, v5, Lg53;->c:Ljava/lang/Object;
 
     check-cast v6, Leg;
 
-    invoke-virtual {v5}, Lu43;->Y()J
+    invoke-virtual {v5}, Lg53;->Y()J
 
     move-result-wide v7
 
@@ -262,7 +262,7 @@
 
     if-ltz v1, :cond_8
 
-    iget-object v1, v0, Lye;->w0:Lc82;
+    iget-object v1, v0, Lye;->v0:Lk82;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -277,7 +277,7 @@
 
     add-int/lit8 v11, v1, -0x1
 
-    iget-object v1, v0, Lye;->w0:Lc82;
+    iget-object v1, v0, Lye;->v0:Lk82;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -289,9 +289,9 @@
 
     iget-object v2, v1, Leg;->e:Ljava/lang/Object;
 
-    check-cast v2, Llt9;
+    check-cast v2, Lmu9;
 
-    invoke-interface {v2}, Llt9;->now()J
+    invoke-interface {v2}, Lmu9;->now()J
 
     move-result-wide v6
 
@@ -299,31 +299,31 @@
 
     iget-object v2, v1, Leg;->c:Ljava/lang/Object;
 
-    check-cast v2, Lpo0;
+    check-cast v2, Lyo0;
 
     const/4 v6, 0x0
 
     move-object/from16 v12, p1
 
-    invoke-virtual {v2, v12, v11, v6}, Lpo0;->c(Landroid/graphics/Canvas;II)Z
+    invoke-virtual {v2, v12, v11, v6}, Lyo0;->c(Landroid/graphics/Canvas;II)Z
 
     move-result v6
 
-    iget-boolean v7, v2, Lpo0;->e:Z
+    iget-boolean v7, v2, Lyo0;->e:Z
 
     if-nez v7, :cond_9
 
-    iget-object v7, v2, Lpo0;->g:Lih4;
+    iget-object v7, v2, Lyo0;->g:Lxh4;
 
     if-eqz v7, :cond_9
 
-    iget-object v8, v2, Lpo0;->f:Lwo0;
+    iget-object v8, v2, Lyo0;->f:Lfp0;
 
     if-eqz v8, :cond_9
 
-    iget-object v9, v2, Lpo0;->b:Lvo0;
+    iget-object v9, v2, Lyo0;->b:Lep0;
 
-    invoke-interface {v8, v7, v9, v2, v11}, Lwo0;->h(Lih4;Lvo0;Lpo0;I)V
+    invoke-interface {v8, v7, v9, v2, v11}, Lfp0;->g(Lxh4;Lep0;Lyo0;I)V
 
     :cond_9
     const/4 v2, 0x1
@@ -340,7 +340,7 @@
 
     if-eqz v2, :cond_b
 
-    iget-object v1, v0, Lye;->w0:Lc82;
+    iget-object v1, v0, Lye;->v0:Lk82;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -349,23 +349,23 @@
     :cond_b
     if-nez v2, :cond_c
 
-    iget v1, v0, Lye;->v0:I
+    iget v1, v0, Lye;->u0:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v0, Lye;->v0:I
+    iput v1, v0, Lye;->u0:I
 
     const/4 v1, 0x2
 
-    sget-object v2, Lll5;->a:Lu88;
+    sget-object v2, Lem5;->a:Lr98;
 
-    invoke-interface {v2, v1}, Lu88;->h(I)Z
+    invoke-interface {v2, v1}, Lr98;->h(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    iget v1, v0, Lye;->v0:I
+    iget v1, v0, Lye;->u0:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -375,7 +375,7 @@
 
     const-string v6, "Dropped a frame. Count: %s"
 
-    invoke-static {v2, v1, v6}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v6}, Lem5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_c
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -386,17 +386,17 @@
 
     if-eqz v6, :cond_12
 
-    iget-object v6, v0, Lye;->b:Lu43;
+    iget-object v6, v0, Lye;->b:Lg53;
 
     iget-wide v7, v0, Lye;->o:J
 
     sub-long/2addr v1, v7
 
-    iget-object v7, v6, Lu43;->c:Ljava/lang/Object;
+    iget-object v7, v6, Lg53;->c:Ljava/lang/Object;
 
     check-cast v7, Leg;
 
-    invoke-virtual {v6}, Lu43;->Y()J
+    invoke-virtual {v6}, Lg53;->Y()J
 
     move-result-wide v8
 
@@ -476,7 +476,7 @@
 
     if-eqz v6, :cond_11
 
-    iget-wide v5, v0, Lye;->u0:J
+    iget-wide v5, v0, Lye;->t0:J
 
     add-long/2addr v1, v5
 
@@ -486,14 +486,14 @@
 
     iput-wide v5, v0, Lye;->Y:J
 
-    iget-object v1, v0, Lye;->y0:Lxe;
+    iget-object v1, v0, Lye;->x0:Lxe;
 
     invoke-virtual {v0, v1, v5, v6}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
     goto :goto_b
 
     :cond_11
-    iget-object v1, v0, Lye;->w0:Lc82;
+    iget-object v1, v0, Lye;->v0:Lk82;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -526,9 +526,9 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget v0, v0, Lpo0;->l:I
+    iget v0, v0, Lyo0;->l:I
 
     return v0
 
@@ -549,9 +549,9 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget v0, v0, Lpo0;->k:I
+    iget v0, v0, Lyo0;->k:I
 
     return v0
 
@@ -590,25 +590,25 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iput-object p1, v0, Lpo0;->j:Landroid/graphics/Rect;
+    iput-object p1, v0, Lyo0;->j:Landroid/graphics/Rect;
 
-    iget-object v1, v0, Lpo0;->d:Lze;
+    iget-object v1, v0, Lyo0;->d:Lze;
 
     iget-object v2, v1, Lze;->c:Ljava/lang/Object;
 
-    check-cast v2, Lep3;
+    check-cast v2, Lsp3;
 
-    iget-object v3, v2, Lep3;->e:Ljava/lang/Object;
+    iget-object v3, v2, Lsp3;->e:Ljava/lang/Object;
 
     check-cast v3, Lcom/facebook/animated/gif/GifImage;
 
-    invoke-static {v3, p1}, Lep3;->d(Lcom/facebook/animated/gif/GifImage;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    invoke-static {v3, p1}, Lsp3;->d(Lcom/facebook/animated/gif/GifImage;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v3
 
-    iget-object v4, v2, Lep3;->f:Ljava/lang/Object;
+    iget-object v4, v2, Lsp3;->f:Ljava/lang/Object;
 
     check-cast v4, Landroid/graphics/Rect;
 
@@ -621,45 +621,45 @@
     goto :goto_0
 
     :cond_0
-    new-instance v3, Lep3;
+    new-instance v3, Lsp3;
 
-    iget-object v4, v2, Lep3;->c:Ljava/lang/Object;
+    iget-object v4, v2, Lsp3;->c:Ljava/lang/Object;
 
-    check-cast v4, Li8a;
+    check-cast v4, Lm9a;
 
-    iget-object v5, v2, Lep3;->d:Ljava/lang/Object;
+    iget-object v5, v2, Lsp3;->d:Ljava/lang/Object;
 
-    check-cast v5, Lznh;
+    check-cast v5, Laph;
 
-    iget-boolean v2, v2, Lep3;->b:Z
+    iget-boolean v2, v2, Lsp3;->b:Z
 
-    invoke-direct {v3, v4, v5, p1, v2}, Lep3;-><init>(Li8a;Lznh;Landroid/graphics/Rect;Z)V
+    invoke-direct {v3, v4, v5, p1, v2}, Lsp3;-><init>(Lm9a;Laph;Landroid/graphics/Rect;Z)V
 
     move-object v2, v3
 
     :goto_0
     iget-object p1, v1, Lze;->c:Ljava/lang/Object;
 
-    check-cast p1, Lep3;
+    check-cast p1, Lsp3;
 
     if-eq v2, p1, :cond_1
 
     iput-object v2, v1, Lze;->c:Ljava/lang/Object;
 
-    new-instance p1, Llg6;
+    new-instance p1, Lfh6;
 
     iget-boolean v3, v1, Lze;->a:Z
 
     iget-object v4, v1, Lze;->X:Ljava/lang/Object;
 
-    check-cast v4, Lzsa;
+    check-cast v4, Lbua;
 
-    invoke-direct {p1, v2, v3, v4}, Llg6;-><init>(Lep3;ZLzsa;)V
+    invoke-direct {p1, v2, v3, v4}, Lfh6;-><init>(Lsp3;ZLbua;)V
 
     iput-object p1, v1, Lze;->o:Ljava/lang/Object;
 
     :cond_1
-    invoke-virtual {v0}, Lpo0;->d()V
+    invoke-virtual {v0}, Lyo0;->d()V
 
     :cond_2
     return-void
@@ -701,20 +701,20 @@
 .method public final setAlpha(I)V
     .locals 1
 
-    iget-object v0, p0, Lye;->x0:Lg05;
+    iget-object v0, p0, Lye;->w0:Lz05;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lg05;
+    new-instance v0, Lz05;
 
-    invoke-direct {v0}, Lg05;-><init>()V
+    invoke-direct {v0}, Lz05;-><init>()V
 
-    iput-object v0, p0, Lye;->x0:Lg05;
+    iput-object v0, p0, Lye;->w0:Lz05;
 
     :cond_0
-    iget-object v0, p0, Lye;->x0:Lg05;
+    iget-object v0, p0, Lye;->w0:Lz05;
 
-    iput p1, v0, Lg05;->a:I
+    iput p1, v0, Lz05;->a:I
 
     iget-object v0, p0, Lye;->a:Leg;
 
@@ -722,9 +722,9 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget-object v0, v0, Lpo0;->i:Landroid/graphics/Paint;
+    iget-object v0, v0, Lyo0;->i:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
@@ -735,20 +735,20 @@
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 
-    iget-object v0, p0, Lye;->x0:Lg05;
+    iget-object v0, p0, Lye;->w0:Lz05;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lg05;
+    new-instance v0, Lz05;
 
-    invoke-direct {v0}, Lg05;-><init>()V
+    invoke-direct {v0}, Lz05;-><init>()V
 
-    iput-object v0, p0, Lye;->x0:Lg05;
+    iput-object v0, p0, Lye;->w0:Lz05;
 
     :cond_0
-    iget-object v0, p0, Lye;->x0:Lg05;
+    iget-object v0, p0, Lye;->w0:Lz05;
 
-    iput-object p1, v0, Lg05;->e:Ljava/lang/Object;
+    iput-object p1, v0, Lz05;->e:Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
@@ -760,7 +760,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    iput-boolean v1, v0, Lg05;->d:Z
+    iput-boolean v1, v0, Lz05;->d:Z
 
     iget-object v0, p0, Lye;->a:Leg;
 
@@ -768,9 +768,9 @@
 
     iget-object v0, v0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget-object v0, v0, Lpo0;->i:Landroid/graphics/Paint;
+    iget-object v0, v0, Lyo0;->i:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
@@ -806,7 +806,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lye;->r0:J
+    iget-wide v2, p0, Lye;->q0:J
 
     sub-long v2, v0, v2
 
@@ -814,19 +814,19 @@
 
     iput-wide v2, p0, Lye;->Y:J
 
-    iget-wide v2, p0, Lye;->s0:J
+    iget-wide v2, p0, Lye;->r0:J
 
     sub-long/2addr v0, v2
 
     iput-wide v0, p0, Lye;->X:J
 
-    iget v0, p0, Lye;->t0:I
+    iget v0, p0, Lye;->s0:I
 
     iput v0, p0, Lye;->Z:I
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    iget-object v0, p0, Lye;->w0:Lc82;
+    iget-object v0, p0, Lye;->v0:Lk82;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -853,17 +853,17 @@
 
     sub-long v2, v0, v2
 
-    iput-wide v2, p0, Lye;->r0:J
+    iput-wide v2, p0, Lye;->q0:J
 
     iget-wide v2, p0, Lye;->X:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lye;->s0:J
+    iput-wide v0, p0, Lye;->r0:J
 
     iget v0, p0, Lye;->Z:I
 
-    iput v0, p0, Lye;->t0:I
+    iput v0, p0, Lye;->s0:I
 
     const/4 v0, 0x0
 
@@ -883,11 +883,11 @@
 
     iput v0, p0, Lye;->Z:I
 
-    iget-object v0, p0, Lye;->y0:Lxe;
+    iget-object v0, p0, Lye;->x0:Lxe;
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lye;->w0:Lc82;
+    iget-object v0, p0, Lye;->v0:Lk82;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

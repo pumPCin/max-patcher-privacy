@@ -1,115 +1,142 @@
 .class public final Ls26;
-.super Lqoe;
+.super La1;
 .source "SourceFile"
-
-# interfaces
-.implements Laj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final b:La1;
+.field public final c:Ljnf;
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(La1;I)V
+.method public constructor <init>(Lf26;Ljnf;II)V
     .locals 0
 
-    iput p2, p0, Ls26;->a:I
+    invoke-direct {p0, p1}, La1;-><init>(Lf26;)V
 
-    iput-object p1, p0, Ls26;->b:La1;
+    iput-object p2, p0, Ls26;->c:Ljnf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ls26;->o:I
+
+    iput p4, p0, Ls26;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ll16;
-    .locals 2
+.method public final g(Lq36;)V
+    .locals 5
 
-    iget v0, p0, Ls26;->a:I
+    iget-object v0, p0, La1;->b:Lf26;
 
-    packed-switch v0, :pswitch_data_0
+    instance-of v1, v0, Lxef;
 
-    new-instance v0, Lm26;
+    iget-object v2, p0, Ls26;->c:Ljnf;
 
-    iget-object v1, p0, Ls26;->b:La1;
-
-    check-cast v1, Ln16;
-
-    invoke-direct {v0, v1}, Lm26;-><init>(Ln16;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lq26;
-
-    iget-object v1, p0, Ls26;->b:La1;
-
-    invoke-direct {v0, v1}, Lq26;-><init>(La1;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l(Lkpe;)V
-    .locals 3
-
-    iget v0, p0, Ls26;->a:I
-
-    iget-object v1, p0, Ls26;->b:La1;
-
-    packed-switch v0, :pswitch_data_0
+    if-eqz v1, :cond_3
 
     :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    check-cast v0, Lxef;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-interface {v0}, Lxef;->get()Ljava/lang/Object;
 
-    sget-object v2, Laf5;->a:Lze5;
+    move-result-object v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    check-cast v1, Ln16;
+    if-nez v0, :cond_0
 
-    new-instance v2, La36;
+    invoke-static {p1}, Lab5;->a(Lecf;)V
 
-    invoke-direct {v2, p1, v0}, La36;-><init>(Lkpe;Ljava/util/ArrayList;)V
+    return-void
 
-    invoke-virtual {v1, v2}, Ll16;->c(Lw26;)V
+    :cond_0
+    :try_start_1
+    invoke-virtual {v2, v0}, Ljnf;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
+
+    check-cast v0, Lvfc;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    instance-of v1, v0, Lxef;
+
+    if-eqz v1, :cond_2
+
+    :try_start_2
+    check-cast v0, Lxef;
+
+    invoke-interface {v0}, Lxef;->get()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Lab5;->a(Lecf;)V
+
+    return-void
+
+    :cond_1
+    new-instance v1, Lbnd;
+
+    invoke-direct {v1, p1, v0}, Lbnd;-><init>(Lecf;Ljava/lang/Object;)V
+
+    invoke-interface {p1, v1}, Lecf;->e(Lgcf;)V
+
+    return-void
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    invoke-static {v0, p1}, Ln95;->d(Ljava/lang/Throwable;Lkpe;)V
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    goto :goto_0
+
+    :cond_2
+    check-cast v0, Lf26;
+
+    invoke-virtual {v0, p1}, Lf26;->f(Lecf;)V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
 
     :goto_0
     return-void
 
-    :pswitch_0
-    new-instance v0, Lr26;
+    :cond_3
+    new-instance v1, Lr26;
 
-    invoke-direct {v0, p1}, Lr26;-><init>(Lkpe;)V
+    iget v3, p0, Ls26;->o:I
 
-    invoke-virtual {v1, v0}, Ll16;->c(Lw26;)V
+    iget v4, p0, Ls26;->X:I
+
+    invoke-direct {v1, p1, v2, v3, v4}, Lr26;-><init>(Lecf;Ljnf;II)V
+
+    invoke-virtual {v0, v1}, Lf26;->c(Lq36;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

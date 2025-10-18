@@ -1,317 +1,217 @@
 .class public final Ldff;
-.super Lkca;
+.super Landroid/view/ActionMode;
 .source "SourceFile"
 
 
 # instance fields
-.field public e:Landroid/view/SurfaceView;
+.field public final a:Landroid/content/Context;
 
-.field public final f:Lcff;
+.field public final b:Lo7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;Lgxb;)V
+.method public constructor <init>(Landroid/content/Context;Lo7;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lkca;-><init>(Landroid/widget/FrameLayout;Lgxb;)V
+    invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
 
-    new-instance p1, Lcff;
+    iput-object p1, p0, Ldff;->a:Landroid/content/Context;
 
-    invoke-direct {p1, p0}, Lcff;-><init>(Ldff;)V
-
-    iput-object p1, p0, Ldff;->f:Lcff;
+    iput-object p2, p0, Ldff;->b:Lo7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Landroid/view/View;
+.method public final finish()V
     .locals 1
 
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
+    iget-object v0, p0, Ldff;->b:Lo7;
 
-    return-object v0
-.end method
-
-.method public final e()Landroid/graphics/Bitmap;
-    .locals 8
-
-    const-string v0, "SurfaceViewImpl"
-
-    iget-object v1, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v1}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/Surface;->isValid()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    new-instance v1, Ljava/util/concurrent/Semaphore;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/Semaphore;-><init>(I)V
-
-    iget-object v2, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget-object v3, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
-
-    move-result v3
-
-    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v2, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/os/HandlerThread;
-
-    const-string v4, "pixelCopyRequest Thread"
-
-    invoke-direct {v3, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
-
-    new-instance v4, Landroid/os/Handler;
-
-    invoke-virtual {v3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iget-object v5, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    new-instance v6, Lbff;
-
-    invoke-direct {v6, v1}, Lbff;-><init>(Ljava/util/concurrent/Semaphore;)V
-
-    invoke-static {v5, v2, v6, v4}, Landroid/view/PixelCopy;->request(Landroid/view/SurfaceView;Landroid/graphics/Bitmap;Landroid/view/PixelCopy$OnPixelCopyFinishedListener;Landroid/os/Handler;)V
-
-    :try_start_0
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const/4 v5, 0x1
-
-    const-wide/16 v6, 0x64
-
-    invoke-virtual {v1, v5, v6, v7, v4}, Ljava/util/concurrent/Semaphore;->tryAcquire(IJLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const-string v1, "Timed out while trying to acquire screenshot."
-
-    invoke-static {v0, v1}, Lgth;->c(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v3}, Landroid/os/HandlerThread;->quitSafely()Z
-
-    return-object v2
-
-    :goto_1
-    :try_start_1
-    const-string v4, "Interrupted while trying to acquire screenshot."
-
-    invoke-static {v0, v4, v1}, Lgth;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v3}, Landroid/os/HandlerThread;->quitSafely()Z
-
-    return-object v2
-
-    :goto_2
-    invoke-virtual {v3}, Landroid/os/HandlerThread;->quitSafely()Z
-
-    throw v0
-
-    :cond_2
-    :goto_3
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final f()V
-    .locals 0
+    invoke-virtual {v0}, Lo7;->a()V
 
     return-void
 .end method
 
-.method public final g()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lzef;Ltl;)V
-    .locals 5
-
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    iget-object v1, p0, Lkca;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/util/Size;
-
-    iget-object v2, p1, Lzef;->b:Landroid/util/Size;
-
-    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v0, :cond_0
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p1, Lzef;->b:Landroid/util/Size;
-
-    iput-object v0, p0, Lkca;->b:Ljava/lang/Object;
-
-    iget-object v1, p0, Lkca;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Landroid/view/SurfaceView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v3, p0, Lkca;->b:Ljava/lang/Object;
-
-    check-cast v3, Landroid/util/Size;
-
-    invoke-virtual {v3}, Landroid/util/Size;->getWidth()I
-
-    move-result v3
-
-    iget-object v4, p0, Lkca;->b:Ljava/lang/Object;
-
-    check-cast v4, Landroid/util/Size;
-
-    invoke-virtual {v4}, Landroid/util/Size;->getHeight()I
-
-    move-result v4
-
-    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ldff;->f:Lcff;
-
-    invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
-
-    :goto_0
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lc8;->e(Landroid/content/Context;)Ljava/util/concurrent/Executor;
-
-    move-result-object v0
-
-    new-instance v1, Lqie;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, v2, p2}, Lqie;-><init>(ILjava/lang/Object;)V
-
-    iget-object v2, p1, Lzef;->k:Lyt1;
-
-    invoke-virtual {v2, v1, v0}, Lyt1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object v0, p0, Ldff;->e:Landroid/view/SurfaceView;
-
-    new-instance v1, Lyrb;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lyrb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final j()Lo18;
+.method public final getCustomView()Landroid/view/View;
     .locals 1
 
-    sget-object v0, Lla7;->c:Lla7;
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->b()Landroid/view/View;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final getMenu()Landroid/view/Menu;
+    .locals 3
+
+    new-instance v0, Ln99;
+
+    iget-object v1, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v1}, Lo7;->c()Lt89;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ldff;->a:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v1}, Ln99;-><init>(Landroid/content/Context;Lt89;)V
+
+    return-object v0
+.end method
+
+.method public final getMenuInflater()Landroid/view/MenuInflater;
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->d()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getSubtitle()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->e()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getTag()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    iget-object v0, v0, Lo7;->a:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final getTitle()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->f()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getTitleOptionalHint()Z
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    iget-boolean v0, v0, Lo7;->b:Z
+
+    return v0
+.end method
+
+.method public final invalidate()V
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->h()V
+
+    return-void
+.end method
+
+.method public final isTitleOptional()Z
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0}, Lo7;->i()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final setCustomView(Landroid/view/View;)V
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->k(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final setSubtitle(I)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->l(I)V
+
+    return-void
+.end method
+
+.method public final setSubtitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->m(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final setTag(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    iput-object p1, v0, Lo7;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final setTitle(I)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->n(I)V
+
+    return-void
+.end method
+
+.method public final setTitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->o(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final setTitleOptionalHint(Z)V
+    .locals 1
+
+    iget-object v0, p0, Ldff;->b:Lo7;
+
+    invoke-virtual {v0, p1}, Lo7;->p(Z)V
+
+    return-void
 .end method

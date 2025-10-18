@@ -1,77 +1,51 @@
-.class public final synthetic Lr46;
-.super Ljava/lang/Object;
+.class public final Lr46;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lqh6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lhz2;
 
-.field public final synthetic b:Lone/me/folders/edit/FolderEditScreen;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ls46;
+
+.field public o:Ls46;
+
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/edit/FolderEditScreen;I)V
+.method public constructor <init>(Ls46;Ly14;)V
     .locals 0
 
-    iput p2, p0, Lr46;->a:I
+    iput-object p1, p0, Lr46;->Z:Ls46;
 
-    iput-object p1, p0, Lr46;->b:Lone/me/folders/edit/FolderEditScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lr46;->a:I
+    iput-object p1, p0, Lr46;->Y:Ljava/lang/Object;
 
-    sget-object v1, Lzag;->a:Lzag;
+    iget p1, p0, Lr46;->q0:I
 
-    iget-object v2, p0, Lr46;->b:Lone/me/folders/edit/FolderEditScreen;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Landroid/view/View;
+    or-int/2addr p1, v0
 
-    packed-switch v0, :pswitch_data_0
+    iput p1, p0, Lr46;->q0:I
 
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
+    iget-object p1, p0, Lr46;->Z:Ls46;
 
-    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->D0()Ll56;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll56;->v()V
-
-    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->E0()V
-
-    return-object v1
-
-    :pswitch_0
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
-
-    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->E0()V
-
-    invoke-virtual {v2}, Lx14;->getOnBackPressedDispatcher()Lnla;
+    invoke-static {p1, p0}, Ls46;->b(Ls46;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lnla;->d()V
-
-    :cond_0
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

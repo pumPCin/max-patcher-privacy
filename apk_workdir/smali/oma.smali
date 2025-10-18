@@ -1,115 +1,70 @@
-.class public abstract Loma;
+.class public final Loma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lm32;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lhma;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
+.field public final synthetic b:Lpma;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lpma;Lhma;)V
+    .locals 0
 
-    sget v0, Luqc;->oneme_appearance_settings_dark_mode:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Loma;->a:I
+    iput-object p1, p0, Loma;->b:Lpma;
 
-    sget v0, Luqc;->oneme_appearance_settings_font_size_reset:I
+    iput-object p2, p0, Loma;->a:Lhma;
 
-    sput v0, Loma;->b:I
+    return-void
+.end method
 
-    sget v0, Luqc;->oneme_appearance_settings_font_size_title:I
 
-    sput v0, Loma;->c:I
+# virtual methods
+.method public final cancel()V
+    .locals 4
 
-    sget v0, Luqc;->oneme_appearance_settings_light_mode:I
+    iget-object v0, p0, Loma;->b:Lpma;
 
-    sput v0, Loma;->d:I
+    iget-object v1, v0, Lpma;->b:Lss;
 
-    sget v0, Luqc;->oneme_appearance_settings_message_incoming_first:I
+    iget-object v2, p0, Loma;->a:Lhma;
 
-    sput v0, Loma;->e:I
+    invoke-virtual {v1, v2}, Lss;->remove(Ljava/lang/Object;)Z
 
-    sget v0, Luqc;->oneme_appearance_settings_message_incoming_second:I
+    iget-object v1, v0, Lpma;->c:Lhma;
 
-    sput v0, Loma;->f:I
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Luqc;->oneme_appearance_settings_message_outgoing_new:I
+    move-result v1
 
-    sput v0, Loma;->g:I
+    const/4 v3, 0x0
 
-    sget v0, Luqc;->oneme_appearance_settings_mode_title:I
+    if-eqz v1, :cond_0
 
-    sput v0, Loma;->h:I
+    invoke-virtual {v2}, Lhma;->a()V
 
-    sget v0, Luqc;->oneme_appearance_settings_system_mode:I
+    iput-object v3, v0, Lpma;->c:Lhma;
 
-    sput v0, Loma;->i:I
+    :cond_0
+    iget-object v0, v2, Lhma;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    sget v0, Luqc;->oneme_appearance_settings_toolbar_title:I
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    sput v0, Loma;->j:I
+    iget-object v0, v2, Lhma;->c:Loj6;
 
-    sget v0, Luqc;->oneme_appearance_theme_lebedev_name:I
+    if-eqz v0, :cond_1
 
-    sput v0, Loma;->k:I
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    sget v0, Luqc;->oneme_appearance_theme_moscow_name:I
-
-    sput v0, Loma;->l:I
-
-    sget v0, Luqc;->oneme_appearance_theme_nature_name:I
-
-    sput v0, Loma;->m:I
-
-    sget v0, Luqc;->oneme_appearance_theme_neon_name:I
-
-    sput v0, Loma;->n:I
-
-    sget v0, Luqc;->oneme_appearance_theme_simple_name:I
-
-    sput v0, Loma;->o:I
-
-    sget v0, Luqc;->oneme_appearance_theme_space_name:I
-
-    sput v0, Loma;->p:I
-
-    sget v0, Luqc;->oneme_appearance_theme_unknown_name:I
-
-    sput v0, Loma;->q:I
+    :cond_1
+    iput-object v3, v2, Lhma;->c:Loj6;
 
     return-void
 .end method

@@ -1,63 +1,144 @@
 .class public final Lnt7;
-.super Lbp4;
+.super Lst7;
 .source "SourceFile"
+
+# interfaces
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Lkotlin/coroutines/Continuation;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lx7d;
+
+.field public final synthetic c:Lx7d;
 
 
 # direct methods
-.method public constructor <init>(Lt44;Lei6;)V
-    .locals 2
+.method public synthetic constructor <init>(Lx7d;Lx7d;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p3, p0, Lnt7;->a:I
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lnt7;->b:Lx7d;
 
-    invoke-direct {p0, p1, v1, v0}, Lo0;-><init>(Lt44;ZZ)V
+    iput-object p2, p0, Lnt7;->c:Lx7d;
 
-    invoke-static {p2, p0, p0}, Lf0i;->a(Lei6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    iput-object p1, p0, Lnt7;->a:Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onStart()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lnt7;->a:Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lnt7;->a:I
 
-    :try_start_0
-    invoke-static {v0}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Llxe;
 
-    sget-object v1, Lzag;->a:Lzag;
+    iget-object v0, p0, Lnt7;->b:Lx7d;
 
-    const/4 v2, 0x2
+    iget-wide v1, v0, Lx7d;->a:J
 
-    const/4 v3, 0x0
+    iget-object v3, p1, Llxe;->h:Ljava/math/BigInteger;
 
-    invoke-static {v0, v1, v3, v2, v3}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lqh6;ILjava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-wide/16 v4, 0x0
 
-    return-void
+    if-eqz v3, :cond_0
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
 
-    new-instance v1, Lvcd;
+    move-result-wide v6
 
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    invoke-interface {p0, v1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    :cond_0
+    move-wide v6, v4
 
-    throw v0
+    :goto_0
+    add-long/2addr v1, v6
+
+    iput-wide v1, v0, Lx7d;->a:J
+
+    iget-object v0, p0, Lnt7;->c:Lx7d;
+
+    iget-wide v1, v0, Lx7d;->a:J
+
+    iget-object p1, p1, Llxe;->i:Ljava/math/BigInteger;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v4
+
+    :cond_1
+    add-long/2addr v1, v4
+
+    iput-wide v1, v0, Lx7d;->a:J
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lkxe;
+
+    iget-object v0, p0, Lnt7;->b:Lx7d;
+
+    iget-wide v1, v0, Lx7d;->a:J
+
+    iget-object v3, p1, Lkxe;->h:Ljava/math/BigInteger;
+
+    const-wide/16 v4, 0x0
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v6
+
+    goto :goto_1
+
+    :cond_2
+    move-wide v6, v4
+
+    :goto_1
+    add-long/2addr v1, v6
+
+    iput-wide v1, v0, Lx7d;->a:J
+
+    iget-object v0, p0, Lnt7;->c:Lx7d;
+
+    iget-wide v1, v0, Lx7d;->a:J
+
+    iget-object p1, p1, Lkxe;->i:Ljava/math/BigInteger;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v4
+
+    :cond_3
+    add-long/2addr v1, v4
+
+    iput-wide v1, v0, Lx7d;->a:J
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

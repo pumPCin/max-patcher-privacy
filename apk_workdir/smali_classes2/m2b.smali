@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
 
-
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Larc;->oneme_settings_privacy_twofa_delete_user_days_left_notif:I
 
-    iput-wide p1, p0, Lm2b;->a:J
+    sput v0, Lm2b;->a:I
 
     return-void
 .end method

@@ -1,107 +1,99 @@
 .class public final Lfzi;
-.super Llti;
+.super Lj7i;
 .source "SourceFile"
+
+# interfaces
+.implements Lbai;
 
 
 # static fields
-.field public static final X:Lfzi;
-
-
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient o:I
+.field private static final zzb:Lfzi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     new-instance v0, Lfzi;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Lj7i;-><init>()V
 
-    new-array v2, v1, [Ljava/lang/Object;
+    sput-object v0, Lfzi;->zzb:Lfzi;
 
-    invoke-direct {v0, v1, v2}, Lfzi;-><init>(I[Ljava/lang/Object;)V
+    const-class v1, Lfzi;
 
-    sput-object v0, Lfzi;->X:Lfzi;
-
-    return-void
-.end method
-
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    iput-object p2, p0, Lfzi;->c:[Ljava/lang/Object;
-
-    iput p1, p0, Lfzi;->o:I
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 3
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lfzi;->c:[Ljava/lang/Object;
+    add-int/lit8 p1, p1, -0x1
 
-    const/4 v1, 0x0
+    if-eqz p1, :cond_4
 
-    iget v2, p0, Lfzi;->o:I
-
-    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return v2
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lfzi;->o:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
+    const/4 p2, 0x2
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    if-eq p1, p2, :cond_3
 
-.method public final e()[Ljava/lang/Object;
-    .locals 1
+    const/4 p2, 0x3
 
-    iget-object v0, p0, Lfzi;->c:[Ljava/lang/Object;
+    if-eq p1, p2, :cond_2
+
+    const/4 p2, 0x4
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x5
+
+    if-eq p1, p2, :cond_0
 
     return-object v0
-.end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lfzi;->o:I
-
-    invoke-static {p1, v0}, Ljii;->b(II)V
-
-    iget-object v0, p0, Lfzi;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    sget-object p1, Lfzi;->zzb:Lfzi;
 
     return-object p1
-.end method
 
-.method public final size()I
-    .locals 1
+    :cond_1
+    new-instance p1, Leji;
 
-    iget v0, p0, Lfzi;->o:I
+    sget-object p2, Lfzi;->zzb:Lfzi;
 
-    return v0
+    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lfzi;
+
+    invoke-direct {p1}, Lj7i;-><init>()V
+
+    return-object p1
+
+    :cond_3
+    sget-object p1, Lfzi;->zzb:Lfzi;
+
+    new-instance p2, Lwai;
+
+    const-string v1, "\u0001\u0000"
+
+    invoke-direct {p2, p1, v1, v0}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object p2
+
+    :cond_4
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    return-object p1
 .end method

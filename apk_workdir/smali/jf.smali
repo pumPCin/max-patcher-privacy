@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldy0;
+.implements Lmy0;
 
 
 # instance fields
@@ -105,7 +105,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    invoke-static {p0}, Ldmi;->f(Ljava/lang/Object;)Lk68;
+    invoke-static {p0}, Lhni;->d(Ljava/lang/Object;)Lo39;
 
     move-result-object v0
 
@@ -113,15 +113,15 @@
 
     iget-object v2, p0, Ljf;->a:Llg;
 
-    invoke-virtual {v0, v2, v1}, Lk68;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lo39;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "frameIndex"
 
     iget v2, p0, Ljf;->b:I
 
-    invoke-virtual {v0, v2, v1}, Lk68;->d(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lo39;->f(ILjava/lang/String;)V
 
-    invoke-virtual {v0}, Lk68;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lo39;->toString()Ljava/lang/String;
 
     move-result-object v0
 

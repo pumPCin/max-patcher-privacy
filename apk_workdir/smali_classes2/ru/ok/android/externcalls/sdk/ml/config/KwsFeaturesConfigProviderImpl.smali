@@ -33,12 +33,12 @@
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lyuc;",
+        "Lfwc;",
         "log",
         "",
         "configKey",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;)V",
         "config",
         "parseConfig",
         "(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;",
@@ -82,14 +82,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;->Companion:Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;)V
     .locals 6
 
     new-instance v4, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;
@@ -98,7 +98,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {v4, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ILvh4;)V
+    invoke-direct {v4, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ILki4;)V
 
     const-string v5, "MLFeaturesConfigProviderImpl"
 
@@ -110,7 +110,7 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

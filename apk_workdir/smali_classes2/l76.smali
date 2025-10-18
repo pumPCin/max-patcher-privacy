@@ -1,74 +1,104 @@
-.class public final Ll76;
-.super Lhlf;
+.class public abstract Ll76;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final o:J
+# static fields
+.field public static final a:Lti7;
+
+.field public static final b:Lti7;
+
+.field public static final c:Lti7;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    sget-object v0, Lk7b;->M2:Lk7b;
+    new-instance v0, Lti7;
 
-    invoke-direct {p0, v0}, Lhlf;-><init>(Lk7b;)V
+    const/4 v1, 0x0
 
-    iput-wide p1, p0, Ll76;->o:J
+    const/16 v2, 0x13f
 
-    const-string v0, "folderSync"
+    const/4 v3, 0x1
 
-    invoke-virtual {p0, p1, p2, v0}, Lhlf;->u(JLjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lri7;-><init>(III)V
+
+    sput-object v0, Ll76;->a:Lti7;
+
+    new-instance v0, Lti7;
+
+    const/16 v1, 0x140
+
+    const/16 v2, 0x21b
+
+    invoke-direct {v0, v1, v2, v3}, Lri7;-><init>(III)V
+
+    sput-object v0, Ll76;->b:Lti7;
+
+    new-instance v0, Lti7;
+
+    const/16 v1, 0x21c
+
+    const v2, 0x7fffffff
+
+    invoke-direct {v0, v1, v2, v3}, Lri7;-><init>(III)V
+
+    sput-object v0, Ll76;->c:Lti7;
 
     return-void
 .end method
 
+.method public static a(I)I
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    sget v0, Lmnc;->oneme_big_folder_widget_view_type:I
 
-    const/4 v0, 0x1
+    if-ne p0, v0, :cond_0
 
-    if-ne p0, p1, :cond_0
+    const/16 p0, 0x5c
 
-    return v0
+    int-to-float p0, p0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p0, v0
+
+    invoke-static {p0}, Lfhi;->b(F)I
+
+    move-result p0
+
+    return p0
 
     :cond_0
-    instance-of v1, p1, Ll76;
+    const/16 p0, 0x80
 
-    const/4 v2, 0x0
+    int-to-float p0, p0
 
-    if-nez v1, :cond_1
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    return v2
+    move-result-object v0
 
-    :cond_1
-    check-cast p1, Ll76;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-wide v3, p0, Ll76;->o:J
+    move-result-object v0
 
-    iget-wide v5, p1, Ll76;->o:J
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    cmp-long p1, v3, v5
+    mul-float/2addr p0, v0
 
-    if-eqz p1, :cond_2
+    invoke-static {p0}, Lfhi;->b(F)I
 
-    return v2
+    move-result p0
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ll76;->o:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
+    return p0
 .end method

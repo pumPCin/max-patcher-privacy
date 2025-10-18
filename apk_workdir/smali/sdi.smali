@@ -1,55 +1,60 @@
-.class public abstract Lsdi;
+.class public final Lsdi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lsdi;
+
 
 # direct methods
-.method public static final a(Landroid/animation/Animator;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lsdi;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsdi;->a:Lsdi;
+
+    new-instance v0, Ltwh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+
+    const-class v1, Lmxh;
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public static final b(Lx14;)Ljava/lang/String;
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    const-string v1, "@"
-
-    invoke-static {p0, v0, v1}, Lwc0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final c(Lwbg;)V
-    .locals 2
-
-    new-instance v0, La4h;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, La4h;-><init>(I)V
-
-    const-class v1, Lgf4;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
-
-    return-void
+    throw p1
 .end method

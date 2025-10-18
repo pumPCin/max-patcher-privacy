@@ -35,7 +35,7 @@
 
     iget-object v0, p0, Lh5;->a:Li5;
 
-    invoke-virtual {v0, p1}, Li5;->l(I)Lg5;
+    invoke-virtual {v0, p1}, Li5;->m(I)Lg5;
 
     move-result-object p1
 
@@ -68,7 +68,7 @@
 
     iget-object v0, p0, Lh5;->a:Li5;
 
-    invoke-virtual {v0, p1}, Li5;->n(I)Lg5;
+    invoke-virtual {v0, p1}, Li5;->p(I)Lg5;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
 
     iget-object v0, p0, Lh5;->a:Li5;
 
-    invoke-virtual {v0, p1, p2, p3}, Li5;->I(IILandroid/os/Bundle;)Z
+    invoke-virtual {v0, p1, p2, p3}, Li5;->J(IILandroid/os/Bundle;)Z
 
     move-result p1
 

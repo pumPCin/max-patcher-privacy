@@ -1,59 +1,50 @@
 .class public final Lrad;
-.super Lc0i;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic a:[B
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lo29;
-
-.field public final synthetic c:I
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>([BLo29;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrad;->a:[B
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput-object p2, p0, Lrad;->b:Lo29;
+    iput-wide v0, p0, Lrad;->b:J
 
-    iput p3, p0, Lrad;->c:I
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lrad;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()J
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iget v0, p0, Lrad;->c:I
+    check-cast p1, Lrad;
 
-    int-to-long v0, v0
+    iget-wide v0, p0, Lrad;->b:J
 
-    return-wide v0
-.end method
+    iget-wide v2, p1, Lrad;->b:J
 
-.method public final e()Lo29;
-    .locals 1
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    iget-object v0, p0, Lrad;->b:Lo29;
+    move-result p1
 
-    return-object v0
-.end method
-
-.method public final h(Liv0;)V
-    .locals 2
-
-    iget-object v0, p0, Lrad;->a:[B
-
-    iget v1, p0, Lrad;->c:I
-
-    invoke-interface {p1, v1, v0}, Liv0;->E(I[B)Liv0;
-
-    return-void
+    return p1
 .end method

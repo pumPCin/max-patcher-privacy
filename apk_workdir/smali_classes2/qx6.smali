@@ -1,61 +1,112 @@
 .class public final Lqx6;
-.super Lzd5;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Lqx6;
+
+# instance fields
+.field public final synthetic X:Lsx6;
+
+.field public final synthetic Y:Ljava/io/File;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsx6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lqx6;
+    iput-object p1, p0, Lqx6;->X:Lsx6;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lqx6;->Y:Ljava/io/File;
 
-    sput-object v0, Lqx6;->a:Lqx6;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lq54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lqx6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lqx6;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lqx6;
 
-    const/4 p1, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    return p1
+    invoke-virtual {p1, p2}, Lqx6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, 0x3e8b5524
+    new-instance p1, Lqx6;
 
-    return v0
+    iget-object v0, p0, Lqx6;->X:Lsx6;
+
+    iget-object v1, p0, Lqx6;->Y:Ljava/io/File;
+
+    invoke-direct {p1, v0, v1, p2}, Lqx6;-><init>(Lsx6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const-string v0, "HidePlaceholderSurnameEvent"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Lqx6;->X:Lsx6;
+
+    iget-object p1, p1, Lsx6;->d:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc3b;
+
+    const-string v0, "\u0414\u0430\u043c\u043f \u043f\u0430\u043c\u044f\u0442\u0438 \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b\u0441\u044f"
+
+    invoke-virtual {p1, v0}, Lc3b;->h(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lqx6;->Y:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "\u0415\u0441\u043b\u0438 \u0447\u0442\u043e \u0444\u0430\u0439\u043b \u043c\u043e\u0436\u043d\u043e \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u0439\u0442\u0438 \u043f\u043e \u044d\u0442\u043e\u043c\u0443 \u043f\u0443\u0442\u0438: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lc3b;->b(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    move-result-object p1
+
+    return-object p1
 .end method

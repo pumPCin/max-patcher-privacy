@@ -1,137 +1,176 @@
 .class public final Lyr0;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final c:Lyr0;
 
-.field public b:F
+
+# instance fields
+.field public a:Z
+
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lyr0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Lyr0;-><init>(ZZ)V
+
+    sput-object v0, Lyr0;->c:Lyr0;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lp95;I)V
     .locals 1
 
-    const/4 v0, 0x2
-
-    iput v0, p0, Lyr0;->a:I
-
-    iput p1, p0, Lyr0;->b:F
+    packed-switch p2, :pswitch_data_0
 
     .line 2
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 3
+    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailWithAutoFlashQuirk;
 
-.method public synthetic constructor <init>(IF)V
-    .locals 0
+    .line 4
+    invoke-virtual {p1, p2}, Lp95;->t(Ljava/lang/Class;)Z
 
-    .line 1
-    iput p1, p0, Lyr0;->a:I
+    move-result p1
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput-boolean p1, p0, Lyr0;->a:Z
 
-    iput p2, p0, Lyr0;->b:F
+    .line 5
+    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
 
-    return-void
-.end method
+    .line 6
+    sget-object p2, Lws4;->a:Lp95;
 
+    invoke-virtual {p2, p1}, Lp95;->C(Ljava/lang/Class;)Lgjc;
 
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 13
+    move-result-object p1
 
-    iget v0, p0, Lyr0;->a:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    goto :goto_0
 
-    move-result v4
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v5
-
-    iget v6, p0, Lyr0;->b:F
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v1, p2
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    .line 7
+    :goto_0
+    iput-boolean p1, p0, Lyr0;->b:Z
 
     return-void
 
+    .line 8
     :pswitch_0
-    move-object v7, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    .line 9
+    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
 
-    move-result v10
+    invoke-virtual {p1, p2}, Lp95;->D(Ljava/lang/Class;)Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    move-result-object p2
 
-    move-result p2
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    iget v12, p0, Lyr0;->b:F
+    move-result-object p2
 
-    float-to-int v0, v12
+    :cond_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    add-int v11, p2, v0
+    move-result v0
 
-    const/4 v8, 0x0
+    if-eqz v0, :cond_2
 
-    const/4 v9, 0x0
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    move-result-object v0
+
+    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
+
+    .line 10
+    invoke-interface {v0}, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    goto :goto_1
+
+    :cond_2
+    const/4 p2, 0x0
+
+    .line 11
+    :goto_1
+    iput-boolean p2, p0, Lyr0;->a:Z
+
+    .line 12
+    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedForVideoSnapshotQuirk;
+
+    invoke-virtual {p1, p2}, Lp95;->t(Ljava/lang/Class;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lyr0;->b:Z
 
     return-void
 
+    .line 13
     :pswitch_1
-    move-object v7, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p2, p0, Lyr0;->b:F
+    const/4 p2, 0x0
 
-    invoke-static {p2}, Lagi;->d(F)I
+    .line 14
+    iput-boolean p2, p0, Lyr0;->b:Z
 
-    move-result p2
+    .line 15
+    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/AutoFlashUnderExposedQuirk;
 
-    neg-int v9, p2
+    invoke-virtual {p1, v0}, Lp95;->C(Ljava/lang/Class;)Lgjc;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    move-result-object p1
 
-    move-result v10
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v11
-
-    iget v12, p0, Lyr0;->b:F
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    if-eqz p1, :cond_3
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    :cond_3
+    iput-boolean p2, p0, Lyr0;->a:Z
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x4
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public synthetic constructor <init>(ZZ)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lyr0;->a:Z
+
+    iput-boolean p2, p0, Lyr0;->b:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

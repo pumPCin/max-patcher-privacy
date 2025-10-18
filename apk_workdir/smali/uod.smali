@@ -2,85 +2,140 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ltod;
+.field public X:J
 
-.field public final b:Lp87;
+.field public Y:J
+
+.field public final synthetic Z:Lvod;
+
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Lq32;
+
+.field public final c:J
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Ltod;Lp87;)V
+.method public constructor <init>(Lvod;JLjava/lang/Runnable;JLq32;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luod;->a:Ltod;
+    iput-object p1, p0, Luod;->Z:Lvod;
 
-    iput-object p2, p0, Luod;->b:Lp87;
+    iput-object p4, p0, Luod;->a:Ljava/lang/Object;
+
+    iput-object p7, p0, Luod;->b:Lq32;
+
+    iput-wide p8, p0, Luod;->c:J
+
+    iput-wide p5, p0, Luod;->X:J
+
+    iput-wide p2, p0, Luod;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 15
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Luod;->a:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    return v0
+    iget-object v0, p0, Luod;->b:Lq32;
+
+    invoke-virtual {v0}, Lq32;->h()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v2, p0, Luod;->Z:Lvod;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Lvod;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v3
+
+    sget-wide v5, Lxod;->b:J
+
+    add-long v7, v3, v5
+
+    iget-wide v9, p0, Luod;->X:J
+
+    cmp-long v7, v7, v9
+
+    const-wide/16 v11, 0x1
+
+    iget-wide v13, p0, Luod;->c:J
+
+    if-ltz v7, :cond_1
+
+    add-long/2addr v9, v13
+
+    add-long/2addr v9, v5
+
+    cmp-long v5, v3, v9
+
+    if-ltz v5, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Luod;
+    iget-wide v5, p0, Luod;->Y:J
 
-    const/4 v2, 0x0
+    iget-wide v7, p0, Luod;->o:J
 
-    if-nez v1, :cond_1
+    add-long/2addr v7, v11
 
-    return v2
+    iput-wide v7, p0, Luod;->o:J
+
+    mul-long/2addr v7, v13
+
+    add-long/2addr v7, v5
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Luod;
+    :goto_0
+    add-long v7, v3, v13
 
-    iget-object v1, p0, Luod;->a:Ltod;
+    iget-wide v5, p0, Luod;->o:J
 
-    iget-object v3, p1, Luod;->a:Ltod;
+    add-long/2addr v5, v11
 
-    if-ne v1, v3, :cond_2
+    iput-wide v5, p0, Luod;->o:J
 
-    iget-object v1, p0, Luod;->b:Lp87;
+    mul-long/2addr v13, v5
 
-    iget-object p1, p1, Luod;->b:Lp87;
+    sub-long v5, v7, v13
 
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-wide v5, p0, Luod;->Y:J
 
-    move-result p1
+    :goto_1
+    iput-wide v3, p0, Luod;->X:J
 
-    if-eqz p1, :cond_2
+    sub-long/2addr v7, v3
 
-    return v0
+    invoke-virtual {v2, p0, v7, v8, v1}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
     :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Luod;->a:Ltod;
-
-    iget-object v1, p0, Luod;->b:Lp87;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

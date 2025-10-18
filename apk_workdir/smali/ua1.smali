@@ -1,74 +1,85 @@
-.class public final Lua1;
-.super Llff;
+.class public final enum Lua1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final enum a:Lua1;
+
+.field public static final enum b:Lua1;
+
+.field public static final enum c:Lua1;
+
+.field public static final synthetic o:[Lua1;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lua1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lua1;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lua1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
     new-instance v0, Lua1;
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lua1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lua1;->X:Ljava/lang/Object;
-
-    check-cast p1, Lb54;
-
-    new-instance v0, Lta1;
-
-    const/4 v1, 0x2
+    const-string v1, "Old"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v1, 0x3
+    sput-object v0, Lua1;->a:Lua1;
 
-    invoke-static {p1, v2, v2, v0, v1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    new-instance v1, Lua1;
 
-    move-result-object p1
+    const-string v2, "Strategy1"
 
-    return-object p1
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lua1;->b:Lua1;
+
+    new-instance v2, Lua1;
+
+    const-string v3, "Strategy2"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lua1;->c:Lua1;
+
+    filled-new-array {v0, v1, v2}, [Lua1;
+
+    move-result-object v0
+
+    sput-object v0, Lua1;->o:[Lua1;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lua1;
+    .locals 1
+
+    const-class v0, Lua1;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lua1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lua1;
+    .locals 1
+
+    sget-object v0, Lua1;->o:[Lua1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lua1;
+
+    return-object v0
 .end method

@@ -1,211 +1,85 @@
-.class public final Lbyc;
-.super Ljava/lang/Object;
+.class public final enum Lbyc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Lbyc;
 
-# instance fields
-.field public final synthetic X:Lzxc;
+.field public static final enum b:Lbyc;
 
-.field public final synthetic Y:Z
+.field public static final enum c:Lbyc;
 
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Ldyc;
-
-.field public final synthetic c:Lj6d;
-
-.field public final synthetic o:J
+.field public static final synthetic o:[Lbyc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ldyc;Lj6d;JLzxc;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbyc;
 
-    iput-object p1, p0, Lbyc;->a:Landroid/view/View;
+    const-string v1, "NONE"
 
-    iput-object p2, p0, Lbyc;->b:Ldyc;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lbyc;->c:Lj6d;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide p4, p0, Lbyc;->o:J
+    sput-object v0, Lbyc;->a:Lbyc;
 
-    iput-object p6, p0, Lbyc;->X:Lzxc;
+    new-instance v1, Lbyc;
 
-    iput-boolean p7, p0, Lbyc;->Y:Z
+    const-string v2, "READ"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbyc;->b:Lbyc;
+
+    new-instance v2, Lbyc;
+
+    const-string v3, "WRITE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lbyc;->c:Lbyc;
+
+    filled-new-array {v0, v1, v2}, [Lbyc;
+
+    move-result-object v0
+
+    sput-object v0, Lbyc;->o:[Lbyc;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lbyc;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 9
+    const-class v0, Lbyc;
 
-    iget-object v0, p0, Lbyc;->b:Ldyc;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v1, p0, Lbyc;->c:Lj6d;
+    move-result-object p0
 
-    invoke-virtual {v1}, Lj6d;->h()I
+    check-cast p0, Lbyc;
 
-    move-result v1
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Ldyc;->e(I)Z
+.method public static values()[Lbyc;
+    .locals 1
 
-    move-result v0
+    sget-object v0, Lbyc;->o:[Lbyc;
 
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lbyc;->b:Ldyc;
-
-    iget-object v0, v0, Ldyc;->f:Ljava/util/LinkedList;
-
-    iget-wide v1, p0, Lbyc;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lbyc;->b:Ldyc;
-
-    iget-object v0, v0, Ldyc;->e:Ljava/util/LinkedHashSet;
-
-    iget-object v1, p0, Lbyc;->X:Lzxc;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lbyc;->c:Lj6d;
-
-    iget-object v0, v0, Lj6d;->a:Landroid/view/View;
-
-    iget-object v1, p0, Lbyc;->X:Lzxc;
-
-    iget-object v1, v1, Lzxc;->c:Lwwc;
-
-    iget-object v1, v1, Lwwc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lbyc;->b:Ldyc;
+    check-cast v0, [Lbyc;
 
-    iget-object v1, v1, Ldyc;->c:Lsn7;
-
-    iget-object v1, v1, Lsn7;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0, v1}, Lo0h;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v3, p0, Lbyc;->b:Ldyc;
-
-    iget-object v3, v3, Ldyc;->d:Ljava/lang/String;
-
-    sget-object v4, Lndi;->a:Lkwa;
-
-    if-nez v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v5, Lf88;->o:Lf88;
-
-    invoke-virtual {v4, v5}, Lkwa;->b(Lf88;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    iget-boolean v6, p0, Lbyc;->Y:Z
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "Play pending reaction effect, by place:"
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, ", onCreation:"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v5, v3, v6, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_1
-    iget-object v2, p0, Lbyc;->b:Ldyc;
-
-    iget-object v3, p0, Lbyc;->X:Lzxc;
-
-    iget-object v4, v3, Lzxc;->b:Ljava/lang/String;
-
-    iget-wide v5, v3, Lzxc;->a:J
-
-    invoke-static {v2, v4, v5, v6, v1}, Ldyc;->c(Ldyc;Ljava/lang/String;JLandroid/graphics/Rect;)V
-
-    iget-boolean v1, p0, Lbyc;->Y:Z
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, p0, Lbyc;->c:Lj6d;
-
-    iget-object v1, v1, Lj6d;->a:Landroid/view/View;
-
-    new-instance v2, Lcyc;
-
-    iget-object v3, p0, Lbyc;->b:Ldyc;
-
-    iget-wide v4, p0, Lbyc;->o:J
-
-    invoke-direct {v2, v3, v0, v4, v5}, Lcyc;-><init>(Ldyc;Landroid/view/View;J)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    :cond_5
-    :goto_2
-    return-void
+    return-object v0
 .end method

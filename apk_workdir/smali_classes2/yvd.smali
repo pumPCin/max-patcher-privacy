@@ -1,209 +1,147 @@
-.class public final Lyvd;
+.class public final synthetic Lyvd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lawd;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final a:Ljqf;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Ljava/util/List;
+
+.field public final synthetic c:Ljava/util/Collection;
+
+.field public final synthetic d:Ljava/util/Collection;
 
 
 # direct methods
-.method public constructor <init>(Ljqf;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/Collection;Ljava/util/Collection;I)V
+    .locals 0
 
-    sget v0, Lp1b;->f:I
+    iput p4, p0, Lyvd;->a:I
+
+    iput-object p1, p0, Lyvd;->b:Ljava/util/List;
+
+    iput-object p2, p0, Lyvd;->c:Ljava/util/Collection;
+
+    iput-object p3, p0, Lyvd;->d:Ljava/util/Collection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyvd;->a:Ljqf;
-
-    sget p1, Lo1b;->d:I
-
-    iput p1, p0, Lyvd;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final test(Ljava/lang/Object;)Z
+    .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyvd;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lyvd;->c:Ljava/util/Collection;
 
-    :cond_0
-    instance-of v1, p1, Lyvd;
+    check-cast v0, Ljava/util/List;
 
-    if-nez v1, :cond_1
+    iget-object v1, p0, Lyvd;->d:Ljava/util/Collection;
 
-    goto :goto_0
+    check-cast v1, Ljava/util/List;
 
-    :cond_1
-    check-cast p1, Lyvd;
+    check-cast p1, Lsfc;
 
-    iget-object v1, p0, Lyvd;->a:Ljqf;
+    iget-object v2, p0, Lyvd;->b:Ljava/util/List;
 
-    iget-object p1, p1, Lyvd;->a:Ljqf;
-
-    invoke-virtual {v1, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1, v2, v0, v1}, Lbwd;->f(Lsfc;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyvd;->b:Ljava/util/List;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lyvd;->c:Ljava/util/Collection;
+
+    check-cast v1, Ljava/util/Set;
+
+    iget-object v2, p0, Lyvd;->d:Ljava/util/Collection;
+
+    check-cast v2, Ljava/util/Set;
+
+    check-cast p1, Lhvd;
+
+    iget-object v3, p1, Lhvd;->o:Lla2;
+
+    iget-object p1, p1, Lhvd;->X:Lwr3;
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_0
+
+    iget-wide v2, v3, Lla2;->a:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-interface {v1, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    xor-int/2addr v4, p1
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lwr3;->p()J
+
+    move-result-wide v5
+
+    new-instance v1, Lb10;
+
+    const/16 v3, 0x18
+
+    invoke-direct {v1, v5, v6, v3}, Lb10;-><init>(JI)V
+
+    invoke-static {v0, v1}, Lwdi;->a(Ljava/lang/Iterable;Lexb;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v4, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lwr3;->p()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-interface {v2, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
 
     goto :goto_0
 
     :cond_2
-    sget-wide v1, Lp1b;->d:J
+    :goto_1
+    return v4
 
-    cmp-long p1, v1, v1
-
-    if-eqz p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lp1b;->d:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Loqf;
-    .locals 1
-
-    iget-object v0, p0, Lyvd;->a:Ljqf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lyvd;->a:Ljqf;
-
-    iget v0, v0, Ljqf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    sget-wide v2, Lp1b;->d:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lwx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lyvd;->b:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Lp1b;->d:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Header(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lyvd;->a:Ljqf;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId=1, itemId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionItemType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Lu9d;->v(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

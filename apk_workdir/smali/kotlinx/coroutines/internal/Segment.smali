@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld9a;
+.implements Lfaa;
 
 
 # annotations
@@ -14,7 +14,7 @@
         "TS;>;>",
         "Lkotlinx/coroutines/internal/ConcurrentLinkedListNode<",
         "TS;>;",
-        "Ld9a;"
+        "Lfaa;"
     }
 .end annotation
 
@@ -26,7 +26,7 @@
         "Lkotlinx/coroutines/internal/Segment;",
         "S",
         "Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
-        "Ld9a;",
+        "Lfaa;",
         "",
         "id",
         "prev",
@@ -43,11 +43,11 @@
         "index",
         "",
         "cause",
-        "Lt44;",
+        "Li54;",
         "context",
-        "Lzag;",
+        "Lccg;",
         "onCancellation",
-        "(ILjava/lang/Throwable;Lt44;)V",
+        "(ILjava/lang/Throwable;Li54;)V",
         "onSlotCleaned",
         "()V",
         "J",
@@ -212,7 +212,7 @@
     return v0
 .end method
 
-.method public abstract onCancellation(ILjava/lang/Throwable;Lt44;)V
+.method public abstract onCancellation(ILjava/lang/Throwable;Li54;)V
 .end method
 
 .method public final onSlotCleaned()V

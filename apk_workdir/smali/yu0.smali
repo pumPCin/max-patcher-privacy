@@ -1,447 +1,316 @@
-.class public final Lyu0;
+.class public abstract Lyu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll2h;
 
-
-# instance fields
-.field public a:Ljava/lang/Object;
-
-.field public b:Lg32;
-
-.field public final synthetic c:Ldv0;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Ldv0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "0123456789abcdef"
 
-    iput-object p1, p0, Lyu0;->c:Ldv0;
+    sget-object v1, Lha2;->a:Ljava/nio/charset/Charset;
 
-    sget-object p1, Lfv0;->p:Lkotlinx/coroutines/internal/Symbol;
-
-    iput-object p1, p0, Lyu0;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lkotlinx/coroutines/internal/Segment;I)V
-    .locals 1
-
-    iget-object v0, p0, Lyu0;->b:Lg32;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lg32;->a(Lkotlinx/coroutines/internal/Segment;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(Lk14;)Ljava/lang/Object;
-    .locals 13
-
-    iget-object v0, p0, Lyu0;->a:Ljava/lang/Object;
-
-    sget-object v1, Lfv0;->p:Lkotlinx/coroutines/internal/Symbol;
-
-    const/4 v2, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    sget-object v1, Lfv0;->l:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v0, v1, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    sget-object v0, Ldv0;->Z:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iget-object v6, p0, Lyu0;->c:Ldv0;
-
-    invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    check-cast v0, Lf92;
+    sput-object v0, Lyu0;->a:[B
+
+    return-void
+.end method
+
+.method public static final a(Lnu0;J)Ljava/lang/String;
+    .locals 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    const-wide/16 v1, 0x1
+
+    if-lez v0, :cond_0
+
+    sub-long v3, p1, v1
+
+    invoke-virtual {p0, v3, v4}, Lnu0;->Q(J)B
+
+    move-result v0
+
+    const/16 v5, 0xd
+
+    int-to-byte v5, v5
+
+    if-ne v0, v5, :cond_0
+
+    sget-object p1, Lha2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v3, v4, p1}, Lnu0;->j0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0x2
+
+    invoke-virtual {p0, v0, v1}, Lnu0;->skip(J)V
+
+    return-object p1
+
+    :cond_0
+    sget-object v0, Lha2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, p1, p2, v0}, Lnu0;->j0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, v2}, Lnu0;->skip(J)V
+
+    return-object p1
+.end method
+
+.method public static final b(Lnu0;Lr9b;Z)I
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lnu0;->a:Liyd;
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_f
+
+    iget-object v2, v0, Liyd;->a:[B
+
+    iget v3, v0, Liyd;->b:I
+
+    iget v4, v0, Liyd;->c:I
+
+    move-object/from16 v5, p1
+
+    iget-object v5, v5, Lr9b;->b:[I
+
+    const/4 v6, 0x0
+
+    move-object v8, v0
+
+    move v9, v1
+
+    move v7, v6
 
     :goto_0
-    invoke-virtual {v6}, Ldv0;->v()Z
+    add-int/lit8 v10, v7, 0x1
 
-    move-result v1
+    aget v11, v5, v7
 
-    if-eqz v1, :cond_2
+    add-int/lit8 v7, v7, 0x2
 
-    sget-object v0, Lfv0;->l:Lkotlinx/coroutines/internal/Symbol;
+    aget v10, v5, v10
 
-    iput-object v0, p0, Lyu0;->a:Ljava/lang/Object;
+    if-eq v10, v1, :cond_0
 
-    invoke-virtual {v6}, Ldv0;->p()Ljava/lang/Throwable;
+    move v9, v10
 
-    move-result-object v0
+    :cond_0
+    if-nez v8, :cond_1
 
-    if-nez v0, :cond_1
-
-    const/4 v2, 0x0
-
-    goto/16 :goto_5
+    goto :goto_3
 
     :cond_1
-    invoke-static {v0}, Lkotlinx/coroutines/internal/StackTraceRecoveryKt;->recoverStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    const/4 v10, 0x0
 
-    move-result-object v0
+    if-gez v11, :cond_8
 
-    throw v0
+    mul-int/lit8 v11, v11, -0x1
+
+    add-int v12, v11, v7
+
+    :goto_1
+    add-int/lit8 v11, v3, 0x1
+
+    aget-byte v3, v2, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v13, v7, 0x1
+
+    aget v7, v5, v7
+
+    if-eq v3, v7, :cond_2
+
+    goto :goto_6
 
     :cond_2
-    sget-object v1, Ldv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    if-ne v13, v12, :cond_3
 
-    invoke-virtual {v1, v6}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
-
-    move-result-wide v3
-
-    sget v1, Lfv0;->b:I
-
-    int-to-long v7, v1
-
-    div-long v9, v3, v7
-
-    rem-long v7, v3, v7
-
-    long-to-int v8, v7
-
-    iget-wide v11, v0, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    cmp-long v1, v11, v9
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v6, v9, v10, v0}, Ldv0;->o(JLf92;)Lf92;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    goto :goto_0
-
-    :cond_3
-    move-object v1, v0
-
-    :cond_4
-    const/4 v11, 0x0
-
-    move-object v7, v1
-
-    move-wide v9, v3
-
-    invoke-virtual/range {v6 .. v11}, Ldv0;->G(Lf92;IJLjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v7, Lfv0;->m:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v0, v7, :cond_13
-
-    sget-object v9, Lfv0;->o:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v0, v9, :cond_6
-
-    invoke-virtual {v6}, Ldv0;->s()J
-
-    move-result-wide v7
-
-    cmp-long v0, v3, v7
-
-    if-gez v0, :cond_5
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    :cond_5
-    move-object v0, v1
-
-    goto :goto_0
-
-    :cond_6
-    sget-object v10, Lfv0;->n:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v0, v10, :cond_12
-
-    iget-object v0, p0, Lyu0;->c:Ldv0;
-
-    invoke-static {p1}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lfmi;->a(Lkotlin/coroutines/Continuation;)Lg32;
-
-    move-result-object v10
-
-    :try_start_0
-    iput-object v10, p0, Lyu0;->b:Lg32;
-
-    move-object v5, p0
-
-    move v2, v8
-
-    invoke-virtual/range {v0 .. v5}, Ldv0;->G(Lf92;IJLjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    if-ne v8, v7, :cond_7
-
-    invoke-virtual {p0, v1, v2}, Lyu0;->a(Lkotlinx/coroutines/internal/Segment;I)V
-
-    goto/16 :goto_3
-
-    :catchall_0
-    move-exception v0
-
-    goto/16 :goto_4
-
-    :cond_7
-    const/4 v7, 0x0
-
-    if-ne v8, v9, :cond_11
-
-    invoke-virtual {v0}, Ldv0;->s()J
-
-    move-result-wide v8
-
-    cmp-long v2, v3, v8
-
-    if-gez v2, :cond_8
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    :cond_8
-    sget-object v1, Ldv0;->Z:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lf92;
-
-    :cond_9
-    :goto_1
-    invoke-virtual {v0}, Ldv0;->v()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    iget-object v0, p0, Lyu0;->b:Lg32;
-
-    iput-object v7, p0, Lyu0;->b:Lg32;
-
-    sget-object v1, Lfv0;->l:Lkotlinx/coroutines/internal/Symbol;
-
-    iput-object v1, p0, Lyu0;->a:Ljava/lang/Object;
-
-    invoke-virtual {v6}, Ldv0;->p()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    if-nez v1, :cond_a
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_a
-    new-instance v2, Lvcd;
-
-    invoke-direct {v2, v1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v2}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_b
-    sget-object v2, Ldv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
-
-    move-result-wide v3
-
-    sget v2, Lfv0;->b:I
-
-    int-to-long v8, v2
-
-    div-long v11, v3, v8
-
-    rem-long v8, v3, v8
-
-    long-to-int v2, v8
-
-    iget-wide v8, v1, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    cmp-long v8, v8, v11
-
-    if-eqz v8, :cond_d
-
-    invoke-virtual {v0, v11, v12, v1}, Ldv0;->o(JLf92;)Lf92;
-
-    move-result-object v8
-
-    if-nez v8, :cond_c
-
-    goto :goto_1
-
-    :cond_c
-    move-object v1, v8
-
-    :cond_d
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Ldv0;->G(Lf92;IJLjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    sget-object v9, Lfv0;->m:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v8, v9, :cond_e
-
-    invoke-virtual {p0, v1, v2}, Lyu0;->a(Lkotlinx/coroutines/internal/Segment;I)V
-
-    goto :goto_3
-
-    :cond_e
-    sget-object v2, Lfv0;->o:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v8, v2, :cond_f
-
-    invoke-virtual {v0}, Ldv0;->s()J
-
-    move-result-wide v8
-
-    cmp-long v2, v3, v8
-
-    if-gez v2, :cond_9
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    goto :goto_1
-
-    :cond_f
-    sget-object v0, Lfv0;->n:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v8, v0, :cond_10
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    iput-object v8, p0, Lyu0;->a:Ljava/lang/Object;
-
-    iput-object v7, p0, Lyu0;->b:Lg32;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    :goto_2
-    invoke-virtual {v10, v0, v7}, Lg32;->f(Ljava/lang/Object;Lgi6;)V
-
-    goto :goto_3
-
-    :cond_10
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "unexpected"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_11
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    iput-object v8, p0, Lyu0;->a:Ljava/lang/Object;
-
-    iput-object v7, p0, Lyu0;->b:Lg32;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v3, 0x1
 
     goto :goto_2
 
+    :cond_3
+    move v3, v6
+
+    :goto_2
+    if-ne v11, v4, :cond_6
+
+    iget-object v2, v8, Liyd;->f:Liyd;
+
+    iget v4, v2, Liyd;->b:I
+
+    iget-object v7, v2, Liyd;->a:[B
+
+    iget v8, v2, Liyd;->c:I
+
+    if-ne v2, v0, :cond_5
+
+    if-nez v3, :cond_4
+
     :goto_3
-    invoke-virtual {v10}, Lg32;->n()Ljava/lang/Object;
+    if-eqz p2, :cond_9
 
-    move-result-object v0
+    goto/16 :goto_8
 
-    return-object v0
+    :cond_4
+    move-object v2, v7
+
+    move-object v7, v10
+
+    goto :goto_4
+
+    :cond_5
+    move-object v15, v7
+
+    move-object v7, v2
+
+    move-object v2, v15
+
+    goto :goto_4
+
+    :cond_6
+    move-object v7, v8
+
+    move v8, v4
+
+    move v4, v11
 
     :goto_4
-    invoke-virtual {v10}, Lg32;->v()V
+    if-eqz v3, :cond_7
 
-    throw v0
+    aget v3, v5, v13
 
-    :cond_12
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+    move v15, v8
 
-    iput-object v0, p0, Lyu0;->a:Ljava/lang/Object;
+    move-object v8, v7
+
+    move v7, v15
+
+    goto :goto_7
+
+    :cond_7
+    move v3, v4
+
+    move v4, v8
+
+    move-object v8, v7
+
+    move v7, v13
+
+    goto :goto_1
+
+    :cond_8
+    add-int/lit8 v12, v3, 0x1
+
+    aget-byte v3, v2, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int v13, v7, v11
 
     :goto_5
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-ne v7, v13, :cond_a
 
-    move-result-object v0
+    :cond_9
+    :goto_6
+    return v9
 
-    return-object v0
+    :cond_a
+    aget v14, v5, v7
 
-    :cond_13
-    new-instance v0, Ljava/lang/IllegalStateException;
+    if-ne v3, v14, :cond_e
 
-    const-string v1, "unreachable"
+    add-int/2addr v7, v11
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    aget v3, v5, v7
 
-    throw v0
-.end method
+    if-ne v12, v4, :cond_c
 
-.method public final c()Ljava/lang/Object;
-    .locals 2
+    iget-object v8, v8, Liyd;->f:Liyd;
 
-    iget-object v0, p0, Lyu0;->a:Ljava/lang/Object;
+    iget v2, v8, Liyd;->b:I
 
-    sget-object v1, Lfv0;->p:Lkotlinx/coroutines/internal/Symbol;
+    iget-object v4, v8, Liyd;->a:[B
 
-    if-eq v0, v1, :cond_1
+    iget v7, v8, Liyd;->c:I
 
-    iput-object v1, p0, Lyu0;->a:Ljava/lang/Object;
+    if-ne v8, v0, :cond_b
 
-    sget-object v1, Lfv0;->l:Lkotlinx/coroutines/internal/Symbol;
+    move-object v8, v4
 
-    if-eq v0, v1, :cond_0
+    move v4, v2
 
-    return-object v0
+    move-object v2, v8
 
-    :cond_0
-    iget-object v0, p0, Lyu0;->c:Ldv0;
+    move-object v8, v10
 
-    invoke-virtual {v0}, Ldv0;->q()Ljava/lang/Throwable;
+    goto :goto_7
 
-    move-result-object v0
+    :cond_b
+    move-object v15, v4
 
-    invoke-static {v0}, Lkotlinx/coroutines/internal/StackTraceRecoveryKt;->recoverStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    move v4, v2
 
-    move-result-object v0
+    move-object v2, v15
 
-    throw v0
+    goto :goto_7
 
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :cond_c
+    move v7, v4
 
-    const-string v1, "`hasNext()` has not been invoked"
+    move v4, v12
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_7
+    if-ltz v3, :cond_d
 
-    throw v0
+    return v3
+
+    :cond_d
+    neg-int v3, v3
+
+    move v15, v7
+
+    move v7, v3
+
+    move v3, v4
+
+    move v4, v15
+
+    goto/16 :goto_0
+
+    :cond_e
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_5
+
+    :cond_f
+    if-eqz p2, :cond_10
+
+    :goto_8
+    const/4 v0, -0x2
+
+    return v0
+
+    :cond_10
+    return v1
 .end method

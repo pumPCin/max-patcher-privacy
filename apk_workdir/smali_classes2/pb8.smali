@@ -1,79 +1,78 @@
 .class public final Lpb8;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:J
-
-.field public d:J
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final a(JJ)D
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v0, p0, Lpb8;->a:J
+    check-cast p1, Ljava/io/File;
 
-    sub-long v0, p1, v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p0, p1, p2}, Lpb8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    cmp-long v4, v0, v2
+    move-result-object p1
 
-    if-gez v4, :cond_0
+    check-cast p1, Lpb8;
 
-    move-wide v0, v2
+    sget-object p2, Lccg;->a:Lccg;
 
-    :cond_0
-    iput-wide v0, p0, Lpb8;->c:J
+    invoke-virtual {p1, p2}, Lpb8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v4, p0, Lpb8;->b:J
+    move-result-object p1
 
-    sub-long v4, p3, v4
+    return-object p1
+.end method
 
-    cmp-long v6, v4, v2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-gez v6, :cond_1
+    new-instance v0, Lpb8;
 
-    move-wide v4, v2
+    const/4 v1, 0x2
 
-    :cond_1
-    iput-wide v4, p0, Lpb8;->d:J
+    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    cmp-long v6, v4, v2
+    iput-object p1, v0, Lpb8;->X:Ljava/lang/Object;
 
-    if-nez v6, :cond_3
+    return-object v0
+.end method
 
-    cmp-long v2, v0, v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-eqz v2, :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lpb8;->X:Ljava/lang/Object;
 
-    :cond_2
-    const-wide/16 v0, 0x0
+    check-cast p1, Ljava/io/File;
 
-    goto :goto_1
+    new-instance v0, Ltqe;
 
-    :cond_3
-    :goto_0
-    long-to-double v2, v0
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    add-long/2addr v4, v0
+    move-result-object p1
 
-    long-to-double v0, v4
+    invoke-direct {v0, p1}, Ltqe;-><init>(Ljava/lang/String;)V
 
-    div-double v0, v2, v0
+    new-instance p1, Ldlf;
 
-    :goto_1
-    iput-wide p1, p0, Lpb8;->a:J
+    const/4 v1, 0x0
 
-    iput-wide p3, p0, Lpb8;->b:J
+    invoke-direct {p1, v0, v1}, Ldlf;-><init>(Ltqe;Lkotlin/coroutines/Continuation;)V
 
-    return-wide v0
+    new-instance v0, Lald;
+
+    invoke-direct {v0, p1}, Lald;-><init>(Lzi6;)V
+
+    return-object v0
 .end method

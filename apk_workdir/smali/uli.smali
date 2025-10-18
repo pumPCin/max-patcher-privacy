@@ -1,110 +1,105 @@
-.class public abstract Luli;
-.super Ljava/lang/Object;
+.class public final Luli;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Luli;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public X:Ljava/lang/String;
+
+.field public Y:Lbji;
+
+.field public Z:Lbji;
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
+
+
 # direct methods
-.method public static a(I[Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lgti;
 
-    :goto_0
-    if-ge v0, p0, :cond_1
+    const/4 v1, 0x7
 
-    aget-object v1, p1, v0
+    invoke-direct {v0, v1}, Lgti;-><init>(I)V
 
-    if-eqz v1, :cond_0
+    sput-object v0, Luli;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "at index "
-
-    invoke-static {v0, p1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
     return-void
 .end method
 
-.method public static b(Lr12;Ljava/lang/String;)Z
-    .locals 4
 
-    const-string v0, "robolectric"
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    sget-object v1, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+    const/16 v0, 0x4f45
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Luli;->a:Ljava/lang/String;
 
-    return v1
+    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Lr12;->b(Ljava/lang/String;)Lg02;
+    const/4 v1, 0x3
 
-    move-result-object p0
+    iget-object v2, p0, Luli;->b:Ljava/lang/String;
 
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_CAPABILITIES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lg02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    const/4 v1, 0x4
 
-    move-result-object p0
+    iget-object v2, p0, Luli;->c:Ljava/lang/String;
 
-    check-cast p0, [I
-    :try_end_0
-    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    const/4 p1, 0x0
+    const/4 v1, 0x5
 
-    if-eqz p0, :cond_2
+    iget-object v2, p0, Luli;->o:Ljava/lang/String;
 
-    array-length v0, p0
+    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move v2, p1
+    const/4 v1, 0x6
 
-    :goto_0
-    if-ge v2, v0, :cond_2
+    iget-object v2, p0, Luli;->X:Ljava/lang/String;
 
-    aget v3, p0, v2
+    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    if-nez v3, :cond_1
+    const/4 v1, 0x7
 
-    return v1
+    iget-object v2, p0, Luli;->Y:Lbji;
 
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    goto :goto_0
+    const/16 v1, 0x8
 
-    :cond_2
-    return p1
+    iget-object v2, p0, Luli;->Z:Lbji;
 
-    :catch_0
-    move-exception p0
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    new-instance p1, Landroidx/camera/core/InitializationException;
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
-    new-instance v0, Landroidx/camera/core/CameraUnavailableException;
-
-    invoke-direct {v0, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-direct {p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    return-void
 .end method

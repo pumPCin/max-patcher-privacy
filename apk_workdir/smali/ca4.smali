@@ -4,52 +4,32 @@
 
 
 # instance fields
-.field public final a:Lsa6;
+.field public final a:Lth3;
 
-.field public final b:Lhb7;
+.field public final b:Ljava/util/HashSet;
 
-.field public final c:Lmxd;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/util/ArrayList;
-
-.field public final f:Ljava/util/ArrayList;
-
-.field public final g:J
-
-.field public final h:Ljava/util/List;
-
-.field public final i:Ljava/util/List;
+.field public final c:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Lsa6;Ljava/util/List;Lmxd;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
-    .locals 0
+.method public constructor <init>(Lth3;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lca4;->a:Lsa6;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-static {p2}, Lhb7;->k(Ljava/util/Collection;)Lhb7;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object p1
+    iput-object v0, p0, Lca4;->b:Ljava/util/HashSet;
 
-    iput-object p1, p0, Lca4;->b:Lhb7;
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p3, p0, Lca4;->c:Lmxd;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p4, p0, Lca4;->d:Ljava/lang/String;
+    iput-object v0, p0, Lca4;->c:Ljava/util/HashSet;
 
-    iput-object p5, p0, Lca4;->e:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Lca4;->f:Ljava/util/ArrayList;
-
-    iput-object p7, p0, Lca4;->h:Ljava/util/List;
-
-    iput-object p8, p0, Lca4;->i:Ljava/util/List;
-
-    iput-wide p9, p0, Lca4;->g:J
+    iput-object p1, p0, Lca4;->a:Lth3;
 
     return-void
 .end method

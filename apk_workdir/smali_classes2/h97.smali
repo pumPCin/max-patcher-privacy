@@ -1,196 +1,200 @@
 .class public final Lh97;
-.super Lhj0;
+.super Lrdi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lj97;
+.field public final synthetic c:I
 
-.field public final synthetic b:Lda7;
-
-.field public final synthetic c:Lk97;
+.field public final synthetic o:Li97;
 
 
 # direct methods
-.method public constructor <init>(Lk97;Lj97;Lda7;)V
+.method public synthetic constructor <init>(Li97;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    iput p2, p0, Lh97;->c:I
 
-    iput-object p1, p0, Lh97;->c:Lk97;
+    iput-object p1, p0, Lh97;->o:Li97;
 
-    iput-object p2, p0, Lh97;->a:Lj97;
+    const/4 p1, 0x0
 
-    iput-object p3, p0, Lh97;->b:Lda7;
+    const/16 p2, 0xc
+
+    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Li97;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lh97;->c:I
+
+    iput-object p2, p0, Lh97;->o:Li97;
+
+    const/16 p2, 0xc
+
+    .line 2
+    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lr0;)V
-    .locals 1
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object p1, p0, Lh97;->c:Lk97;
+    iget v0, p0, Lh97;->c:I
 
-    iget-object v0, p0, Lh97;->a:Lj97;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, v0}, Lk97;->b(Lj97;)V
-
-    return-void
-.end method
-
-.method public final f(Lr0;)V
-    .locals 7
-
-    invoke-virtual {p1}, Lr0;->h()Z
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    return-void
+    check-cast p2, Lf97;
+
+    check-cast p1, Lf97;
+
+    iget-object p1, p0, Lh97;->o:Li97;
+
+    invoke-static {p1, p2}, Li97;->j(Li97;Lf97;)V
 
     :cond_0
-    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Landroid/graphics/drawable/Drawable;
+
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    iget-object p1, p0, Lh97;->o:Li97;
+
+    invoke-virtual {p1}, Lq15;->getHierarchy()Ln15;
+
+    move-result-object p2
+
+    check-cast p2, Lnn6;
+
+    invoke-virtual {p1}, Li97;->getOverlayDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    check-cast p1, Lq93;
-
-    iget-object v0, p0, Lh97;->a:Lj97;
-
-    iget-object v1, p0, Lh97;->c:Lk97;
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {v1, v0}, Lk97;->b(Lj97;)V
-
-    return-void
+    invoke-virtual {p2, p1}, Lnn6;->k(Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
-    new-instance v2, Loub;
+    return-void
 
-    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
+    :pswitch_1
+    check-cast p2, Ly97;
 
-    move-result-object v3
+    check-cast p1, Ly97;
 
-    check-cast v3, Lj79;
+    const/4 v0, 0x0
 
-    invoke-direct {v2, v3}, Loub;-><init>(Lj79;)V
+    if-eqz p1, :cond_2
 
-    :try_start_0
-    sget-object v3, Lz87;->d:Ljava/lang/Object;
+    invoke-interface {p1}, Ly97;->getWidth()I
 
-    invoke-static {v2}, Lpyh;->d(Ljava/io/InputStream;)Ly87;
+    move-result v1
 
-    move-result-object v3
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v3, v3, Ly87;->b:Ljava/lang/String;
-
-    const-string v4, "webp"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    iget-object v3, v1, Lk97;->a:Llt7;
-
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lat5;
-
-    iget-object v4, p0, Lh97;->b:Lda7;
-
-    invoke-static {}, Lhg6;->b()Lp97;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v5, v4, v6}, Lp97;->a(Lda7;Ljava/lang/Object;)Lr0;
-
-    move-result-object v4
-
-    new-instance v5, Li97;
-
-    invoke-direct {v5, v1, v0, v3}, Li97;-><init>(Lk97;Lj97;Lat5;)V
-
-    sget-object v3, Ldu1;->a:Ldu1;
-
-    invoke-virtual {v4, v5, v3}, Lr0;->m(Lyb4;Ljava/util/concurrent/Executor;)V
+    move-result-object v1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_2
+    move-object v1, v0
 
-    goto :goto_2
+    :goto_0
+    if-eqz p2, :cond_3
 
-    :catch_0
-    move-exception v3
+    invoke-interface {p2}, Ly97;->getWidth()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
 
     goto :goto_1
 
-    :cond_2
-    iget-object v4, v1, Lk97;->a:Llt7;
-
-    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lat5;
-
-    invoke-interface {v4, v3}, Lat5;->a(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v3
-
-    invoke-static {v3, v2}, Lh0j;->f(Ljava/io/File;Ljava/io/InputStream;)V
-
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Lwu5;
-
-    const/16 v5, 0xd
-
-    invoke-direct {v4, v0, v5, v3}, Lwu5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v4}, Lk97;->c(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-static {v2}, Ls93;->b(Ljava/io/InputStream;)V
-
-    invoke-virtual {p1}, Lq93;->close()V
-
-    return-void
+    :cond_3
+    move-object v2, v0
 
     :goto_1
-    :try_start_1
-    const-string v4, "k97"
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v5, "onNewResultImpl: failed to save image"
+    move-result v1
 
-    invoke-static {v4, v5, v3}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v1, v0}, Lk97;->b(Lj97;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz p1, :cond_4
 
-    goto :goto_0
+    invoke-interface {p1}, Ly97;->getHeight()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v0
 
     :goto_2
-    invoke-static {v2}, Ls93;->b(Ljava/io/InputStream;)V
+    if-eqz p2, :cond_5
 
-    invoke-virtual {p1}, Lq93;->close()V
+    invoke-interface {p2}, Ly97;->getHeight()I
 
-    throw v0
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    :cond_6
+    new-instance p1, Lxe;
+
+    const/16 p2, 0x1a
+
+    iget-object v0, p0, Lh97;->o:Li97;
+
+    invoke-direct {p1, p2, v0}, Lxe;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_7
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

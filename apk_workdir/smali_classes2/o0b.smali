@@ -20,90 +20,42 @@
 
 .field public static final h:I
 
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ltnc;->oneme_section_description:I
+    sget v0, Litc;->oneme_qrscanner_camera_request_description:I
 
     sput v0, Lo0b;->a:I
 
-    sget v0, Ltnc;->oneme_section_end_arrow:I
+    sget v0, Litc;->oneme_qrscanner_context_menu_title:I
 
     sput v0, Lo0b;->b:I
 
-    sget v0, Ltnc;->oneme_section_end_container:I
+    sget v0, Litc;->oneme_qrscanner_error_snackbar_description:I
 
     sput v0, Lo0b;->c:I
 
-    sget v0, Ltnc;->oneme_section_end_custom_icon:I
+    sget v0, Litc;->oneme_qrscanner_error_snackbar_title:I
 
     sput v0, Lo0b;->d:I
 
-    sget v0, Ltnc;->oneme_section_end_text:I
+    sget v0, Litc;->oneme_qrscanner_hint_with_gallery:I
 
     sput v0, Lo0b;->e:I
 
-    sget v0, Ltnc;->oneme_section_start_icon:I
+    sget v0, Litc;->oneme_qrscanner_hint_without_gallery:I
 
     sput v0, Lo0b;->f:I
 
-    sget v0, Ltnc;->oneme_section_title:I
+    sget v0, Litc;->oneme_qrscanner_storage_request_description:I
 
     sput v0, Lo0b;->g:I
 
-    sget v0, Ltnc;->oneme_section_upper_text:I
+    sget v0, Litc;->oneme_qrscanner_toolbar_title:I
 
     sput v0, Lo0b;->h:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_container:I
-
-    sput v0, Lo0b;->i:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_counter:I
-
-    sput v0, Lo0b;->j:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_end_custom_icon:I
-
-    sput v0, Lo0b;->k:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_end_icon:I
-
-    sput v0, Lo0b;->l:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_end_radio:I
-
-    sput v0, Lo0b;->m:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_end_switch:I
-
-    sput v0, Lo0b;->n:I
-
-    sget v0, Ltnc;->oneme_settings_itemcontent_end_text:I
-
-    sput v0, Lo0b;->o:I
-
-    sget v0, Ltnc;->oneme_settingslist_rv:I
-
-    sput v0, Lo0b;->p:I
 
     return-void
 .end method

@@ -1,112 +1,53 @@
 .class public final Lo2d;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lq2d;
 
 
 # instance fields
-.field public final a:Z
+.field public X:Ljava/util/List;
 
-.field public final b:Z
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lp2d;
+
+.field public o:Lp2d;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Lp2d;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo2d;->Z:Lp2d;
 
-    iput-boolean p1, p0, Lo2d;->a:Z
-
-    iput-boolean p2, p0, Lo2d;->b:Z
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lo2d;->Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lo2d;->q0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lo2d;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lo2d;->q0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lo2d;->Z:Lp2d;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lo2d;
+    invoke-virtual {p1, v0, p0}, Lp2d;->c(Ljava/util/List;Ly14;)Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lo2d;->a:Z
+    move-result-object p1
 
-    iget-boolean v3, p1, Lo2d;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lo2d;->b:Z
-
-    iget-boolean p1, p1, Lo2d;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lo2d;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lo2d;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", isLocked="
-
-    const-string v1, ")"
-
-    const-string v2, "Recording(afterPause="
-
-    iget-boolean v3, p0, Lo2d;->a:Z
-
-    iget-boolean v4, p0, Lo2d;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

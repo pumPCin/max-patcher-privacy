@@ -1,256 +1,161 @@
-.class public final Lyx1;
+.class public final synthetic Lyx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhu1;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:J
-
-.field public c:Ljava/lang/Object;
+.field public final synthetic b:Liy1;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Liy1;I)V
+    .locals 0
+
+    iput p2, p0, Lyx1;->a:I
+
+    iput-object p1, p0, Lyx1;->b:Liy1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lyx1;->a:J
-
-    iput-wide v0, p0, Lyx1;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 6
-
-    iget-object v0, p0, Lyx1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lay1;
-
-    invoke-virtual {v0}, Lay1;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/16 v0, 0x2bc
-
-    return v0
-
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lyx1;->b:J
-
-    const-wide/16 v4, -0x1
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_1
-
-    iput-wide v0, p0, Lyx1;->b:J
-
-    :cond_1
-    iget-wide v2, p0, Lyx1;->b:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/32 v2, 0x1d4c0
-
-    cmp-long v2, v0, v2
-
-    if-gtz v2, :cond_2
-
-    const/16 v0, 0x3e8
-
-    return v0
-
-    :cond_2
-    const-wide/32 v2, 0x493e0
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_3
-
-    const/16 v0, 0x7d0
-
-    return v0
-
-    :cond_3
-    const/16 v0, 0xfa0
-
-    return v0
-.end method
-
-.method public b()I
+.method public o(Lgu1;)Ljava/lang/String;
     .locals 5
 
-    iget-wide v0, p0, Lyx1;->a:J
+    iget v0, p0, Lyx1;->a:I
 
-    iget-object v2, p0, Lyx1;->c:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v2, Lay1;
-
-    invoke-virtual {v2}, Lay1;->c()Z
-
-    move-result v2
-
-    const-wide/16 v3, 0x0
-
-    if-nez v2, :cond_1
-
-    cmp-long v2, v0, v3
-
-    const/16 v3, 0x2710
-
-    if-lez v2, :cond_0
-
-    long-to-int v0, v0
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    return v3
-
-    :cond_1
-    cmp-long v2, v0, v3
-
-    const v3, 0x1b7740
-
-    if-lez v2, :cond_2
-
-    long-to-int v0, v0
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
-
-    :cond_2
-    return v3
-.end method
-
-.method public c(Ljava/lang/Exception;)V
-    .locals 7
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Lyx1;->c:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Exception;
-
-    if-nez v2, :cond_0
-
-    iput-object p1, p0, Lyx1;->c:Ljava/lang/Object;
-
-    :cond_0
-    iget-wide v2, p0, Lyx1;->a:J
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    sget-object v2, Lbh4;->l0:Ljava/lang/Object;
-
-    monitor-enter v2
+    iget-object v0, p0, Lyx1;->b:Liy1;
 
     :try_start_0
-    sget v3, Lbh4;->n0:I
+    iget-object v1, v0, Liy1;->c:La3e;
 
-    if-lez v3, :cond_1
+    new-instance v2, Lqx1;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v0, v3, p1}, Lqx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, La3e;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v3, 0x0
+    :catch_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Unable to check if MeteringRepeating is attached. Camera executor shut down."
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
 
     :goto_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string p1, "isMeteringRepeatingAttached"
 
-    if-nez v3, :cond_2
+    return-object p1
 
-    const-wide/16 v2, 0xc8
+    :pswitch_0
+    iget-object v0, p0, Lyx1;->b:Liy1;
 
-    add-long/2addr v2, v0
+    :try_start_1
+    iget-object v1, v0, Liy1;->a:Lvxe;
 
-    iput-wide v2, p0, Lyx1;->a:J
+    invoke-virtual {v1}, Lvxe;->d()Lq6e;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lq6e;->b()Lr6e;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    iget-object v1, v1, Lr6e;->c:Ljava/util/List;
+
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iget-object v1, v0, Liy1;->G0:Lz73;
+
+    iget-object v1, v1, Lz73;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lg12;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lay1;
+
+    invoke-direct {v1, v0, p1}, Lay1;-><init>(Liy1;Lgu1;)V
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, v0, Liy1;->b:Ly12;
+
+    iget-object v3, v0, Liy1;->r0:Lly1;
+
+    iget-object v3, v3, Lly1;->a:Ljava/lang/String;
+
+    iget-object v4, v0, Liy1;->c:La3e;
+
+    invoke-static {v2}, Lumi;->a(Ljava/util/ArrayList;)Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    move-result-object v2
+
+    iget-object v1, v1, Ly12;->a:Lu1f;
+
+    invoke-virtual {v1, v3, v4, v2}, Lu1f;->A(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    :try_end_1
+    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p1
+    :catch_2
+    move-exception v1
 
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :cond_2
     :goto_1
-    iget-wide v2, p0, Lyx1;->a:J
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    cmp-long v6, v2, v4
+    const-string v3, "Unable to open camera for configAndClose: "
 
-    if-eqz v6, :cond_4
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    cmp-long v2, v0, v2
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    if-ltz v2, :cond_4
+    move-result-object v3
 
-    iget-object v0, p0, Lyx1;->c:Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Ljava/lang/Exception;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eq v0, p1, :cond_3
+    move-result-object v2
 
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v2, v1}, Liy1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_3
-    iget-object p1, p0, Lyx1;->c:Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Lgu1;->d(Ljava/lang/Throwable;)Z
 
-    check-cast p1, Ljava/lang/Exception;
+    :goto_2
+    const-string p1, "configAndCloseTask"
 
-    const/4 v0, 0x0
+    return-object p1
 
-    iput-object v0, p0, Lyx1;->c:Ljava/lang/Object;
-
-    iput-wide v4, p0, Lyx1;->a:J
-
-    iput-wide v4, p0, Lyx1;->b:J
-
-    throw p1
-
-    :cond_4
-    const-wide/16 v2, 0x32
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lyx1;->b:J
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

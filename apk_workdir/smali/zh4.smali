@@ -1,61 +1,69 @@
-.class public final Lzh4;
-.super Lsj0;
+.class public abstract Lzh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lyh4;
+# static fields
+.field public static final a:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public constructor <init>(Lyh4;JJ)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
 
-    move-object v0, p0
+    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    invoke-direct/range {v0 .. v5}, Lsj0;-><init>(IJJ)V
-
-    iput-object p1, v0, Lzh4;->X:Lyh4;
+    sput-object v0, Lzh4;->a:Landroid/util/SparseIntArray;
 
     return-void
 .end method
 
+.method public static final a()Lqvb;
+    .locals 5
 
-# virtual methods
-.method public final a()J
-    .locals 3
+    new-instance v0, Lqvb;
 
-    invoke-virtual {p0}, Lsj0;->c()V
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    iget-object v0, p0, Lzh4;->X:Lyh4;
+    move-result-object v1
 
-    iget-wide v1, p0, Lsj0;->o:J
+    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
 
-    invoke-virtual {v0, v1, v2}, Lyh4;->i(J)J
+    move-result-wide v1
 
-    move-result-wide v0
+    const-wide/32 v3, 0x7fffffff
 
-    return-wide v0
-.end method
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
-.method public final b()J
-    .locals 3
+    move-result-wide v1
 
-    invoke-virtual {p0}, Lsj0;->c()V
+    long-to-int v1, v1
 
-    iget-object v0, p0, Lzh4;->X:Lyh4;
+    const/high16 v2, 0x1000000
 
-    iget-wide v1, p0, Lsj0;->o:J
+    if-le v1, v2, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Lyh4;->g(J)J
+    div-int/lit8 v1, v1, 0x4
 
-    move-result-wide v0
+    mul-int/lit8 v1, v1, 0x3
 
-    return-wide v0
+    goto :goto_0
+
+    :cond_0
+    div-int/lit8 v1, v1, 0x2
+
+    :goto_0
+    sget-object v2, Lzh4;->a:Landroid/util/SparseIntArray;
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v4, v1, v2, v3}, Lqvb;-><init>(IILandroid/util/SparseIntArray;I)V
+
+    return-object v0
 .end method

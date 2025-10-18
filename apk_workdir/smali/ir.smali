@@ -6,7 +6,7 @@
 # static fields
 .field public static final synthetic X:[Lir;
 
-.field public static final synthetic Y:Lfd5;
+.field public static final synthetic Y:Lzd5;
 
 .field public static final enum b:Lir;
 
@@ -61,11 +61,11 @@
 
     sput-object v0, Lir;->X:[Lir;
 
-    new-instance v1, Lfd5;
+    new-instance v1, Lzd5;
 
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lir;->Y:Lfd5;
+    sput-object v1, Lir;->Y:Lzd5;
 
     return-void
 .end method

@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lej6;
 
 
 # virtual methods
-.method public abstract k(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Le16;)Ljava/lang/Object;
+.method public abstract invoke(Ljava/lang/Object;)Ljava/lang/Object;
 .end method

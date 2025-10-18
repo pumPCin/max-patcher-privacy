@@ -1,67 +1,72 @@
-.class public abstract synthetic Llp3;
+.class public final synthetic Llp3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lop3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lop3;I)V
+    .locals 0
 
-    invoke-static {}, Lmp3;->values()[Lmp3;
+    iput p2, p0, Llp3;->a:I
+
+    iput-object p1, p0, Llp3;->b:Lop3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Llp3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llp3;->b:Lop3;
+
+    iget-object v0, v0, Lop3;->a:Landroid/content/Context;
+
+    const-string v1, "phone"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Landroid/telephony/TelephonyManager;
 
-    new-array v0, v0, [I
+    return-object v0
 
-    const/4 v1, 0x1
+    :pswitch_0
+    iget-object v0, p0, Llp3;->b:Lop3;
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Lop3;->a:Landroid/content/Context;
 
-    :catch_0
-    const/4 v1, 0x2
+    const-string v1, "connectivity"
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    :catch_1
-    const/4 v1, 0x3
+    move-result-object v0
 
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    :catch_2
-    const/4 v1, 0x4
+    return-object v0
 
-    :try_start_3
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    nop
 
-    :catch_3
-    const/4 v1, 0x0
-
-    const/4 v2, 0x5
-
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Llp3;->$EnumSwitchMapping$0:[I
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

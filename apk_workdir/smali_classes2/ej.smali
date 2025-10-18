@@ -1,5 +1,5 @@
 .class public final Lej;
-.super Ls0d;
+.super Lz1d;
 .source "SourceFile"
 
 
@@ -8,11 +8,11 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lf1d;->b:Lf1d;
+    sget-object v0, Lm2d;->b:Lm2d;
 
     const-wide/16 v1, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Ls0d;-><init>(Lf1d;J)V
+    invoke-direct {p0, v0, v1, v2}, Lz1d;-><init>(Lm2d;J)V
 
     return-void
 .end method
@@ -21,9 +21,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lf1d;->Y:Lf1d;
+    sget-object v0, Lm2d;->Y:Lm2d;
 
-    invoke-direct {p0, v0, p1, p2}, Ls0d;-><init>(Lf1d;J)V
+    invoke-direct {p0, v0, p1, p2}, Lz1d;-><init>(Lm2d;J)V
 
     return-void
 .end method

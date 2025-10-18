@@ -3,88 +3,77 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[I
-
-
 # direct methods
-.method public constructor <init>([I)V
-    .locals 0
+.method public static a(Landroid/content/Context;Lh88;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lg88;->a:I
 
-    iput-object p1, p0, Ljs6;->a:[I
+    new-instance v0, Luvh;
 
-    return-void
-.end method
+    sget-object v1, Luvh;->v0:Lkxb;
 
+    sget-object v2, Ljl;->d:Lil;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget-object v3, Lxr6;->c:Lxr6;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p0, v1, v2, v3}, Lyr6;-><init>(Landroid/content/Context;Lkxb;Ljl;Lxr6;)V
 
-    if-ne p0, p1, :cond_0
+    new-instance p0, Ljava/util/ArrayList;
 
-    return v0
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    :cond_0
-    instance-of v1, p1, Ljs6;
+    new-instance v1, Lcom/google/android/gms/location/LocationRequest;
+
+    invoke-direct {v1}, Lcom/google/android/gms/location/LocationRequest;-><init>()V
+
+    const/16 v2, 0x64
+
+    invoke-static {v2}, Lhhi;->e(I)V
+
+    iput v2, v1, Lcom/google/android/gms/location/LocationRequest;->a:I
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Li88;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v1, p0, v2, v2}, Li88;-><init>(Ljava/util/ArrayList;ZZ)V
 
-    return v2
+    invoke-static {}, Lub7;->e()Lns0;
 
-    :cond_1
-    check-cast p1, Ljs6;
+    move-result-object p0
 
-    iget-object v1, p0, Ljs6;->a:[I
+    new-instance v3, Laue;
 
-    iget-object p1, p1, Ljs6;->a:[I
+    invoke-direct {v3, v1}, Laue;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object v3, p0, Lns0;->d:Ljava/lang/Object;
 
-    move-result p1
+    const/16 v1, 0x97a
 
-    if-nez p1, :cond_2
+    iput v1, p0, Lns0;->b:I
 
-    return v2
+    invoke-virtual {p0}, Lns0;->e()Lbvh;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object p0
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v0, v2, p0}, Lyr6;->c(ILub7;)Le2j;
 
-    iget-object v0, p0, Ljs6;->a:[I
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    new-instance v0, Lis6;
 
-    move-result v0
+    invoke-direct {v0, p1}, Lis6;-><init>(Lh88;)V
 
-    return v0
-.end method
+    invoke-virtual {p0, v0}, Le2j;->i(Lrma;)Le2j;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    new-instance v0, Lis6;
 
-    iget-object v0, p0, Ljs6;->a:[I
+    invoke-direct {v0, p1}, Lis6;-><init>(Lh88;)V
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Le2j;->j(Ltma;)Le2j;
 
-    move-result-object v0
-
-    const-string v1, "GradientsComplexColors(overlayFloatingGradient="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

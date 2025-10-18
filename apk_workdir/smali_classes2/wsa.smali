@@ -1,61 +1,66 @@
-.class public abstract Lwsa;
+.class public final synthetic Lwsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-# static fields
-.field public static final a:Lxsa;
 
-.field public static final b:Lxsa;
+# instance fields
+.field public final synthetic a:Lzsa;
+
+.field public final synthetic b:Lcom/google/android/material/chip/Chip;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/CharSequence;
+
+.field public final synthetic f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lzsa;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lxsa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lkid;->i:I
+    iput-object p1, p0, Lwsa;->a:Lzsa;
 
-    new-instance v2, Ljqf;
+    iput-object p2, p0, Lwsa;->b:Lcom/google/android/material/chip/Chip;
 
-    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
+    iput-wide p3, p0, Lwsa;->c:J
 
-    sget v1, Liid;->x0:I
+    iput-wide p5, p0, Lwsa;->d:J
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p7, p0, Lwsa;->e:Ljava/lang/CharSequence;
 
-    move-result-object v1
+    iput-object p8, p0, Lwsa;->f:Ljava/lang/String;
 
-    const-string v3, "BY"
+    return-void
+.end method
 
-    const/16 v4, 0x177
 
-    invoke-direct {v0, v3, v4, v2, v1}, Lxsa;-><init>(Ljava/lang/String;ILjqf;Ljava/lang/Integer;)V
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 9
 
-    sput-object v0, Lwsa;->a:Lxsa;
+    iget-object v7, p0, Lwsa;->e:Ljava/lang/CharSequence;
 
-    new-instance v0, Lxsa;
+    iget-object v8, p0, Lwsa;->f:Ljava/lang/String;
 
-    sget v1, Lkid;->y0:I
+    iget-object v0, p0, Lwsa;->a:Lzsa;
 
-    new-instance v2, Ljqf;
+    iget-object v1, p0, Lwsa;->b:Lcom/google/android/material/chip/Chip;
 
-    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
+    iget-wide v3, p0, Lwsa;->c:J
 
-    sget v1, Liid;->y0:I
+    iget-wide v5, p0, Lwsa;->d:J
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move v2, p2
 
-    move-result-object v1
-
-    const-string v3, "RU"
-
-    const/4 v4, 0x7
-
-    invoke-direct {v0, v3, v4, v2, v1}, Lxsa;-><init>(Ljava/lang/String;ILjqf;Ljava/lang/Integer;)V
-
-    sput-object v0, Lwsa;->b:Lxsa;
+    invoke-virtual/range {v0 .. v8}, Lzsa;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

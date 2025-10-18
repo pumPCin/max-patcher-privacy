@@ -1,82 +1,63 @@
-.class public final Ljxh;
-.super Lqwh;
+.class public final enum Ljxh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final transient c:Loxh;
+# static fields
+.field public static final enum a:Ljxh;
 
-.field public final transient o:Lkxh;
+.field public static final synthetic b:[Ljxh;
 
 
 # direct methods
-.method public constructor <init>(Loxh;Lkxh;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Ljxh;
 
-    iput-object p1, p0, Ljxh;->c:Loxh;
+    const-string v1, "DEFAULT"
 
-    iput-object p2, p0, Ljxh;->o:Lkxh;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljxh;->a:Ljxh;
+
+    new-instance v1, Ljxh;
+
+    const-string v2, "SIGNED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Ljxh;
+
+    const-string v3, "FIXED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Ljxh;
+
+    move-result-object v0
+
+    sput-object v0, Ljxh;->b:[Ljxh;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a([Ljava/lang/Object;)I
+.method public static values()[Ljxh;
     .locals 1
 
-    iget-object v0, p0, Ljxh;->o:Lkxh;
+    sget-object v0, Ljxh;->b:[Ljxh;
 
-    invoke-virtual {v0, p1}, Lawh;->a([Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Ljxh;->c:Loxh;
-
-    invoke-virtual {v0, p1}, Loxh;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final synthetic iterator()Ljava/util/Iterator;
-    .locals 2
-
-    iget-object v0, p0, Ljxh;->o:Lkxh;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lawh;->g(I)Lpvh;
+    invoke-virtual {v0}, [Ljxh;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, [Ljxh;
+
     return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ljxh;->c:Loxh;
-
-    iget v0, v0, Loxh;->Y:I
-
-    return v0
 .end method

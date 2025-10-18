@@ -1,24 +1,28 @@
 .class public final Lms2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
 .method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput-object p2, p0, Lms2;->X:Lone/me/chatscreen/ChatScreen;
+    iput-object p2, p0, Lms2;->Z:Lone/me/chatscreen/ChatScreen;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,8 +32,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lby5;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lms2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,112 +40,118 @@
 
     check-cast p1, Lms2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lms2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lms2;
+    new-instance v0, Lms2;
 
-    iget-object v0, p0, Lms2;->X:Lone/me/chatscreen/ChatScreen;
+    iget-object v1, p0, Lms2;->Z:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p1, p2, v0}, Lms2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+    invoke-direct {v0, p2, v1}, Lms2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lms2;->Y:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 6
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lms2;->X:I
 
-    iget-object p1, p0, Lms2;->X:Lone/me/chatscreen/ChatScreen;
+    sget-object v1, Lccg;->a:Lccg;
 
-    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lms2;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lme2;
+
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
+
+    iget-object v0, p0, Lms2;->Z:Lone/me/chatscreen/ChatScreen;
+
+    iget-object v3, v0, Lone/me/chatscreen/ChatScreen;->E0:Liu7;
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llef;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput v2, p0, Lms2;->X:I
+
+    iget-object v2, v3, Llef;->q0:Liu7;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lulf;
+
+    check-cast v2, Lqta;
+
+    invoke-virtual {v2}, Lqta;->a()Lk54;
+
+    move-result-object v2
+
+    new-instance v4, Lief;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p1, v3, v0, v5}, Lief;-><init>(Lme2;Llef;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2, v4, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lndi;->a:Lkwa;
+    sget-object v0, Lr54;->a:Lr54;
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
+    if-ne p1, v0, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    sget-object v2, Lf88;->o:Lf88;
+    :cond_2
+    move-object p1, v1
 
-    invoke-virtual {v0, v2}, Lkwa;->b(Lf88;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "Start subscribing on viewModel.events"
-
-    invoke-virtual {v0, v2, p1, v3, v1}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     :goto_0
-    iget-object p1, p0, Lms2;->X:Lone/me/chatscreen/ChatScreen;
+    if-ne p1, v0, :cond_3
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->j1:[Lwq7;
+    return-object v0
 
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->k1()Luu2;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-class v0, Luu2;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "restore draft"
-
-    invoke-static {v0, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Luu2;->v()Lqkf;
-
-    move-result-object v0
-
-    check-cast v0, Losa;
-
-    invoke-virtual {v0}, Losa;->b()Lv44;
-
-    move-result-object v0
-
-    sget-object v2, Le54;->b:Le54;
-
-    new-instance v3, Lut2;
-
-    invoke-direct {v3, p1, v1}, Lut2;-><init>(Luu2;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v0, v2, v3}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
-
-    move-result-object v0
-
-    iget-object v1, p1, Luu2;->V0:Lpzd;
-
-    sget-object v2, Luu2;->f1:[Lwq7;
-
-    const/16 v3, 0xa
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :cond_3
+    return-object v1
 .end method

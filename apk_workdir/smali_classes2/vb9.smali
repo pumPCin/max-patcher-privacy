@@ -1,62 +1,79 @@
 .class public final Lvb9;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
-# interfaces
-.implements Lzb9;
+
+# instance fields
+.field public final a:Ldhg;
+
+.field public final b:Ljava/security/MessageDigest;
+
+
+# direct methods
+.method public constructor <init>(Ldhg;Ljava/security/MessageDigest;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+
+    iput-object p1, p0, Lvb9;->a:Ldhg;
+
+    iput-object p2, p0, Lvb9;->b:Ljava/security/MessageDigest;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvb9;
-
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lvb9;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final close()V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lvb9;->a:Ldhg;
 
-    invoke-static {v0}, Lwx1;->v(I)I
+    invoke-virtual {v0}, Ldhg;->close()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final flush()V
+    .locals 1
 
-    const-string v0, "MICROPHONE"
+    iget-object v0, p0, Lvb9;->a:Ldhg;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Ldhg;->flush()V
 
-    const-string v2, "Alternate(iconType="
+    return-void
+.end method
 
-    invoke-static {v2, v0, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final write(I)V
+    .locals 1
 
-    move-result-object v0
+    .line 1
+    iget-object v0, p0, Lvb9;->a:Ldhg;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Ldhg;->write(I)V
+
+    .line 2
+    iget-object v0, p0, Lvb9;->b:Ljava/security/MessageDigest;
+
+    int-to-byte p1, p1
+
+    invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
+
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 1
+
+    .line 3
+    iget-object v0, p0, Lvb9;->a:Ldhg;
+
+    invoke-virtual {v0, p1, p2, p3}, Ldhg;->write([BII)V
+
+    .line 4
+    iget-object v0, p0, Lvb9;->b:Ljava/security/MessageDigest;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V
+
+    return-void
 .end method

@@ -1,826 +1,577 @@
-.class public final Lbw8;
+.class public final synthetic Lbw8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lutb;
-
-
-# static fields
-.field public static final synthetic y:[Lwq7;
-
-.field public static final z:Ljava/util/Set;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Loy9;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Llt7;
-
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:Llt7;
-
-.field public final g:Llt7;
-
-.field public final h:Llt7;
-
-.field public final i:Llt7;
-
-.field public final j:Llt7;
-
-.field public final k:Llt7;
-
-.field public final l:Llt7;
-
-.field public final m:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public volatile n:Llx0;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public volatile p:Lex;
-
-.field public volatile q:Z
-
-.field public final r:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public s:Lwwe;
-
-.field public t:Lwwe;
-
-.field public u:Lwwe;
-
-.field public final v:Lpzd;
-
-.field public final w:Lpzd;
-
-.field public final x:Luv8;
+.field public final synthetic b:Lone/me/mediapicker/MediaPickerScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lc0a;
-
-    const-string v1, "createJob"
-
-    const-string v2, "getCreateJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lbw8;
-
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Ls6d;->a:Lt6d;
-
-    const-string v2, "nextJob"
-
-    const-string v4, "getNextJob()Lkotlinx/coroutines/Job;"
-
-    invoke-static {v1, v3, v2, v4}, Ld15;->h(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lc0a;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Lwq7;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sput-object v2, Lbw8;->y:[Lwq7;
-
-    sget-object v0, Lz00;->A0:Lz00;
-
-    sget-object v1, Lz00;->Y:Lz00;
-
-    filled-new-array {v0, v1}, [Lz00;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ln7e;->f([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lbw8;->z:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Loy9;)V
+.method public synthetic constructor <init>(Lone/me/mediapicker/MediaPickerScreen;I)V
     .locals 0
+
+    iput p2, p0, Lbw8;->a:I
+
+    iput-object p1, p0, Lbw8;->b:Lone/me/mediapicker/MediaPickerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p12, p0, Lbw8;->a:Loy9;
-
-    const-class p12, Lbw8;
-
-    invoke-virtual {p12}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p12
-
-    iput-object p12, p0, Lbw8;->b:Ljava/lang/String;
-
-    iput-object p1, p0, Lbw8;->c:Llt7;
-
-    iput-object p2, p0, Lbw8;->d:Llt7;
-
-    iput-object p3, p0, Lbw8;->e:Llt7;
-
-    iput-object p4, p0, Lbw8;->f:Llt7;
-
-    iput-object p5, p0, Lbw8;->g:Llt7;
-
-    iput-object p6, p0, Lbw8;->h:Llt7;
-
-    iput-object p8, p0, Lbw8;->i:Llt7;
-
-    iput-object p7, p0, Lbw8;->j:Llt7;
-
-    iput-object p9, p0, Lbw8;->k:Llt7;
-
-    iput-object p10, p0, Lbw8;->l:Llt7;
-
-    invoke-interface {p7}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqkf;
-
-    check-cast p1, Losa;
-
-    invoke-virtual {p1}, Losa;->a()Lv44;
-
-    move-result-object p1
-
-    invoke-interface {p11}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lt44;
-
-    invoke-virtual {p1, p2}, Lp0;->plus(Lt44;)Lt44;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbw8;->m:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p2, Lrv8;
-
-    invoke-direct {p2}, Lrv8;-><init>()V
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lbw8;->r:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbw8;->v:Lpzd;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbw8;->w:Lpzd;
-
-    new-instance p1, Luv8;
-
-    invoke-direct {p1, p0}, Luv8;-><init>(Lbw8;)V
-
-    iput-object p1, p0, Lbw8;->x:Luv8;
-
-    return-void
-.end method
-
-.method public static final a(Lbw8;Ljava/lang/Long;)V
-    .locals 4
-
-    iget-object v0, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrv8;
-
-    iget-wide v0, v0, Lrv8;->a:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lbw8;->b:Ljava/lang/String;
-
-    const-string v0, "Try play next from media playlist"
-
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lbw8;->f()V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 19
 
-    iget-object v0, p0, Lbw8;->a:Loy9;
+    move-object/from16 v0, p0
 
-    iget-object v1, p0, Lbw8;->x:Luv8;
-
-    check-cast v0, Lez9;
-
-    invoke-virtual {v0, v1}, Lez9;->r(Lmy9;)V
-
-    iget-object v0, p0, Lbw8;->u:Lwwe;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Lon7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    iput-object v1, p0, Lbw8;->u:Lwwe;
-
-    iget-object v0, p0, Lbw8;->s:Lwwe;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Lon7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iget-object v0, p0, Lbw8;->t:Lwwe;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, v1}, Lon7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_2
-    iget-object v0, p0, Lbw8;->v:Lpzd;
-
-    sget-object v2, Lbw8;->y:[Lwq7;
-
-    const/4 v3, 0x0
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v0, p0, v4}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmm7;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0, v1}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_3
-    iget-object v0, p0, Lbw8;->w:Lpzd;
-
-    const/4 v4, 0x1
-
-    aget-object v2, v2, v4
-
-    invoke-virtual {v0, p0, v2}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmm7;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0, v1}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_4
-    iput-object v1, p0, Lbw8;->n:Llx0;
-
-    iget-object v0, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v2, Lrv8;
-
-    invoke-direct {v2}, Lrv8;-><init>()V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lbw8;->p:Lex;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Lex;->g()V
-
-    :cond_5
-    iput-object v1, p0, Lbw8;->p:Lex;
-
-    iput-boolean v3, p0, Lbw8;->q:Z
-
-    iget-object v0, p0, Lbw8;->r:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final c(JJZ)V
-    .locals 12
-
-    move-wide v2, p3
-
-    iget-object v0, p0, Lbw8;->k:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkp5;
-
-    check-cast v0, Lqp5;
-
-    invoke-virtual {v0}, Lqp5;->s()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lbw8;->l:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrq;
-
-    check-cast v0, Lchg;
-
-    const-string v1, "app.media.autoplay.playlist"
-
-    iget-object v0, v0, Lw3;->h:Lot7;
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v0, v1, v8}, Lot7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lbw8;->n:Llx0;
-
-    if-eqz v0, :cond_2
-
-    iget-wide v0, v0, Llx0;->c:J
-
-    cmp-long v0, v0, p1
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lbw8;->n:Llx0;
-
-    if-eqz v0, :cond_2
-
-    iget-wide v0, v0, Llx0;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lbw8;->n:Llx0;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, v0, Llx0;->a:Z
-
-    move/from16 v6, p5
-
-    if-ne v0, v6, :cond_3
-
-    iget-object p1, p0, Lbw8;->b:Ljava/lang/String;
-
-    const-string p2, "Skip create playlist because click on same initial message"
-
-    invoke-static {p1, p2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lrv8;
-
-    iget-object p2, p1, Lrv8;->b:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    iget-object p2, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v0, Lqv8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v2, v3, v1}, Lqv8;-><init>(Lrv8;JI)V
-
-    invoke-virtual {p2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-
-    :cond_2
-    move/from16 v6, p5
-
-    :cond_3
-    iget-object v0, p0, Lbw8;->u:Lwwe;
-
-    const/4 v9, 0x0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Lo0;->isActive()Z
-
-    move-result v0
-
-    if-ne v0, v8, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lbw8;->a:Loy9;
-
-    iget-object v1, p0, Lbw8;->x:Luv8;
-
-    check-cast v0, Lez9;
-
-    invoke-virtual {v0, v1}, Lez9;->d(Lmy9;)V
-
-    iget-object v0, p0, Lbw8;->d:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcrg;
-
-    iget-object v0, v0, Lcrg;->g:Lfzc;
-
-    new-instance v1, Ln23;
-
-    const/16 v4, 0xf
-
-    invoke-direct {v1, v0, v4}, Ln23;-><init>(Lzx5;I)V
-
-    new-instance v0, Lzv8;
-
-    invoke-direct {v0, p0, v9}, Lzv8;-><init>(Lbw8;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v4, Lh06;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, v1, v0, v5}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    iget-object v0, p0, Lbw8;->m:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v4, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lbw8;->u:Lwwe;
-
-    :goto_0
-    iget-object v10, p0, Lbw8;->m:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v11, Le54;->b:Le54;
-
-    new-instance v0, Ltv8;
-
-    const/4 v7, 0x0
-
-    move-object v1, p0
-
-    move-wide v4, p1
-
-    invoke-direct/range {v0 .. v7}, Ltv8;-><init>(Lbw8;JJZLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v10, v9, v11, v0, v8}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lbw8;->v:Lpzd;
-
-    sget-object v0, Lbw8;->y:[Lwq7;
+    iget v1, v0, Lbw8;->a:I
 
     const/4 v2, 0x0
 
-    aget-object v0, v0, v2
+    const/4 v3, 0x2
 
-    invoke-virtual {p2, p0, v0, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    const/16 v4, 0x11
 
-    return-void
+    const/16 v5, 0x8
 
-    :cond_5
-    :goto_1
-    invoke-virtual {p0}, Lbw8;->b()V
+    const/4 v6, 0x1
 
-    return-void
-.end method
+    const/4 v7, -0x1
 
-.method public final d(Lrv8;)Lqbb;
-    .locals 12
+    const/4 v8, 0x0
 
-    iget-object v0, p1, Lrv8;->b:Ljava/util/LinkedHashSet;
+    const/4 v9, 0x3
 
-    iget-wide v1, p1, Lrv8;->a:J
+    iget-object v10, v0, Lbw8;->b:Lone/me/mediapicker/MediaPickerScreen;
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    packed-switch v1, :pswitch_data_0
 
-    move-result p1
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
 
-    const-wide/16 v3, 0x0
+    new-instance v1, Landroid/widget/TextView;
 
-    if-nez p1, :cond_4
+    invoke-virtual {v10}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+    move-result-object v2
 
-    move-result p1
+    invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const/4 v5, 0x1
+    sget v2, Lzxa;->c:I
 
-    if-ne p1, v5, :cond_0
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object v2, Lgbg;->u:Lurf;
 
-    move-result-object p1
+    invoke-static {v2, v1}, Lurf;->d(Lurf;Landroid/widget/TextView;)V
 
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    move-result p1
+    new-instance v2, Laa;
 
-    if-eqz p1, :cond_0
+    const/16 v3, 0x17
 
-    goto :goto_1
+    invoke-direct {v2, v9, v8, v3}, Laa;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    :cond_0
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {v2, v1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
-    move-result-object p1
+    iget-object v2, v10, Lone/me/mediapicker/MediaPickerScreen;->y0:Lh0d;
 
-    const/4 v0, 0x0
+    sget-object v3, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
 
-    move v6, v0
+    const/16 v4, 0x9
 
-    move v7, v6
+    aget-object v3, v3, v4
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2, v10, v3}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    move-result v8
+    move-result-object v2
 
-    if-eqz v8, :cond_3
+    check-cast v2, Landroid/widget/FrameLayout;
 
-    add-int/lit8 v8, v6, 0x1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/lang/Number;
-
-    invoke-virtual {v9}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v9
-
-    cmp-long v11, v9, v1
-
-    if-nez v11, :cond_2
-
-    move v7, v5
-
-    :cond_1
-    move v6, v8
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz v7, :cond_1
-
-    move v0, v6
-
-    move-wide v3, v9
-
-    :cond_3
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v1, Lqbb;
-
-    invoke-direct {v1, p1, v0}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-object v1
 
-    :cond_4
-    :goto_1
-    iget-object p1, p0, Lbw8;->b:Ljava/lang/String;
+    :pswitch_0
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
 
-    const-string v0, "Can\'t play next because playlist is empty"
+    new-instance v1, Landroid/view/View;
 
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v10}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v2
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const/4 v0, -0x1
+    sget v2, Lyxa;->l:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    move-result-object v0
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    new-instance v1, Lqbb;
+    int-to-float v4, v6
 
-    invoke-direct {v1, p1, v0}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v1
-.end method
-
-.method public final e(J)Z
-    .locals 8
-
-    iget-object v0, p0, Lbw8;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrv8;
-
-    invoke-virtual {p0, v0}, Lbw8;->d(Lrv8;)Lqbb;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lrv8;->b:Ljava/util/LinkedHashSet;
-
-    iget-object v1, v1, Lqbb;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_2
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    move v4, v3
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    add-int/lit8 v5, v4, 0x1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    check-cast v6, Ljava/lang/Number;
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
+    move-result-object v6
 
-    move-result-wide v6
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
 
-    cmp-long v6, p1, v6
+    mul-float/2addr v4, v6
 
-    if-nez v6, :cond_0
+    invoke-static {v4}, Lfhi;->b(F)I
 
-    goto :goto_1
+    move-result v4
 
-    :cond_0
-    move v4, v5
+    invoke-direct {v2, v7, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v4, 0x30
+
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v2, Lm3;
+
+    invoke-direct {v2, v9, v8, v3}, Lm3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v2, v1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+
+    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_1
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    new-instance v1, Lu6b;
+
+    invoke-virtual {v10}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/4 v3, 0x6
+
+    invoke-direct {v1, v2, v3}, Lu6b;-><init>(Landroid/content/Context;I)V
+
+    sget v2, Lyxa;->m:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
+
+    sget v2, Lzxa;->a:I
+
+    invoke-virtual {v1, v2}, Lu6b;->setTitle(I)V
+
+    new-instance v2, Lc6b;
+
+    new-instance v3, Ljs7;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v3, v4, v10}, Ljs7;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v2, v3}, Lc6b;-><init>(Lli6;)V
+
+    invoke-virtual {v1, v2}, Lu6b;->setLeftActions(Li6b;)V
+
+    new-instance v2, Lbw8;
+
+    invoke-direct {v2, v10, v6}, Lbw8;-><init>(Lone/me/mediapicker/MediaPickerScreen;I)V
+
+    invoke-virtual {v1, v2}, Lu6b;->setTitleClickListener(Lji6;)V
+
+    invoke-virtual {v1, v6}, Lu6b;->setShowDropdown(Z)V
+
+    return-object v1
+
+    :pswitch_2
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    new-instance v1, Le72;
+
+    invoke-virtual {v10}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    sget v2, Lyxa;->j:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v2, v7, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v1
+
+    :pswitch_3
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    new-instance v1, Le72;
+
+    invoke-virtual {v10}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    sget v2, Lyxa;->i:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v2, v7, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_4
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    new-instance v1, Llw8;
+
+    invoke-virtual {v10}, Lone/me/mediapicker/MediaPickerScreen;->D0()Lel6;
+
+    move-result-object v2
+
+    iget-object v3, v10, Lone/me/mediapicker/MediaPickerScreen;->q0:Liu7;
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lozd;
+
+    iget-object v4, v10, Lone/me/mediapicker/MediaPickerScreen;->Z:Liu7;
+
+    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ltl6;
+
+    invoke-direct {v1, v2, v3, v4}, Llw8;-><init>(Lel6;Lozd;Ltl6;)V
+
+    return-object v1
+
+    :pswitch_5
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    new-instance v1, Lozd;
+
+    sget-object v3, Lpv8;->a:Lpv8;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const-class v4, Lr68;
+
+    invoke-virtual {v3, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lr68;
+
+    new-instance v4, Ldzd;
+
+    invoke-virtual {v10}, Lone/me/mediapicker/MediaPickerScreen;->D0()Lel6;
+
+    move-result-object v5
+
+    iget-boolean v5, v5, Lel6;->r0:Z
+
+    invoke-direct {v4, v5, v2}, Ldzd;-><init>(ZZ)V
+
+    invoke-direct {v1, v3, v4}, Lozd;-><init>(Lr68;Ldzd;)V
+
+    return-object v1
+
+    :pswitch_6
+    iget-object v1, v10, Lone/me/mediapicker/MediaPickerScreen;->X:Lqs;
+
+    sget-object v2, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    invoke-virtual {v10}, Lone/me/mediapicker/MediaPickerScreen;->D0()Lel6;
+
+    move-result-object v2
+
+    iget-boolean v2, v2, Lel6;->q0:Z
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    aget-object v4, v2, v3
+
+    invoke-virtual {v1, v10}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Long;
+
+    if-eqz v4, :cond_0
+
+    new-instance v11, Ladb;
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v10}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v15, v1
+
+    check-cast v15, Ljava/lang/Long;
+
+    const/16 v18, 0x33
+
+    const/4 v13, 0x0
+
+    const/4 v12, 0x0
+
+    sget-object v14, Lfve;->Y:Lfve;
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    invoke-direct/range {v11 .. v18}, Ladb;-><init>(Lurb;ILfve;Ljava/lang/Long;Ljava/lang/Long;Let;I)V
 
     goto :goto_0
 
+    :cond_0
+    sget-object v11, Ladb;->g:Ladb;
+
+    :goto_0
+    return-object v11
+
+    :pswitch_7
+    iget-object v1, v10, Lone/me/mediapicker/MediaPickerScreen;->s0:Lh0d;
+
+    sget-object v3, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    invoke-virtual {v10}, Lone/me/mediapicker/MediaPickerScreen;->F0()Llw8;
+
+    move-result-object v3
+
+    iget-object v3, v3, Llw8;->x0:Ln0d;
+
+    iget-object v3, v3, Ln0d;->a:Lq0f;
+
+    invoke-interface {v3}, Lq0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    instance-of v3, v3, Lw04;
+
+    if-eqz v3, :cond_1
+
+    goto/16 :goto_2
+
     :cond_1
-    move v4, v3
+    iget-object v3, v10, Lone/me/mediapicker/MediaPickerScreen;->t0:Lwn0;
 
-    :goto_1
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+    sget-object v4, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
 
-    move-result p1
+    const/4 v6, 0x4
 
-    sub-int/2addr p1, v2
+    aget-object v6, v4, v6
 
-    if-ne v4, p1, :cond_3
+    invoke-virtual {v3}, Lwn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Le72;
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v3, v10, Lone/me/mediapicker/MediaPickerScreen;->x0:Lwn0;
+
+    aget-object v5, v4, v5
+
+    invoke-virtual {v3}, Lwn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/view/View;
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
+
+    aget-object v3, v4, v9
+
+    invoke-interface {v1, v10, v3}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lj53;
+
+    iget-object v5, v3, Lj53;->a:Lqid;
+
+    invoke-virtual {v3}, Lj53;->c()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v6, "SELECT_ALBUM_WIDGET_TAG"
+
+    invoke-static {v3, v6}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    invoke-virtual {v5, v2}, Lqid;->Q(Z)V
+
+    new-instance v12, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
+    iget-object v2, v10, Lone/me/mediapicker/MediaPickerScreen;->c:Ljava/lang/String;
+
+    invoke-direct {v12, v2, v8}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;-><init>(Ljava/lang/String;Lki4;)V
+
+    new-instance v11, Ltid;
+
+    const/16 v16, 0x0
+
+    const/16 v17, -0x1
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    invoke-direct/range {v11 .. v17}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-virtual {v11, v6}, Ltid;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v11}, Lqid;->R(Ltid;)V
 
     :cond_2
-    return v3
+    aget-object v2, v4, v9
+
+    invoke-interface {v1, v10, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lj53;
+
+    invoke-virtual {v1}, Lj53;->b()Ll24;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
+    if-eqz v2, :cond_3
+
+    check-cast v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
+    goto :goto_1
 
     :cond_3
-    return v2
-.end method
+    move-object v1, v8
 
-.method public final f()V
-    .locals 5
+    :goto_1
+    if-eqz v1, :cond_5
 
-    new-instance v0, Lvv8;
+    invoke-virtual {v1}, Ll24;->getView()Landroid/view/View;
 
-    const/4 v1, 0x0
+    move-result-object v2
 
-    invoke-direct {v0, p0, v1}, Lvv8;-><init>(Lbw8;Lkotlin/coroutines/Continuation;)V
+    if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lbw8;->m:Lkotlinx/coroutines/internal/ContextScope;
+    sget v3, Lg1b;->d:I
 
-    sget-object v3, Le54;->b:Le54;
+    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const/4 v4, 0x1
+    move-result-object v2
 
-    invoke-static {v2, v1, v3, v0, v4}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    if-eqz v2, :cond_4
 
-    move-result-object v0
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
-    sget-object v1, Lbw8;->y:[Lwq7;
+    move-result v3
 
-    aget-object v1, v1, v4
+    iget-object v5, v10, Lone/me/mediapicker/MediaPickerScreen;->u0:Lqs;
 
-    iget-object v2, p0, Lbw8;->w:Lpzd;
+    const/4 v6, 0x5
 
-    invoke-virtual {v2, p0, v1, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    aget-object v4, v4, v6
 
-    return-void
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v10, v3}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    new-instance v3, Lm3;
+
+    invoke-direct {v3, v9, v8, v9}, Lm3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v3, v2}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+
+    :cond_4
+    invoke-virtual {v1}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->F0()V
+
+    :cond_5
+    :goto_2
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
+
+    :pswitch_8
+    sget-object v1, Lone/me/mediapicker/MediaPickerScreen;->A0:[Ltr7;
+
+    invoke-virtual {v10}, Lone/me/mediapicker/MediaPickerScreen;->D0()Lel6;
+
+    move-result-object v1
+
+    iget-boolean v1, v1, Lel6;->q0:Z
+
+    if-eqz v1, :cond_6
+
+    sget-object v1, Lupd;->M1:Lupd;
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v1, Lupd;->B0:Lupd;
+
+    :goto_3
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

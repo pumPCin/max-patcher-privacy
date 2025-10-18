@@ -1,76 +1,49 @@
-.class public final synthetic Ldxf;
-.super Ljava/lang/Object;
+.class public final Ldxf;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Li5b;
+.field public final synthetic Y:Lfxf;
+
+.field public Z:I
+
+.field public o:Lfxf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li5b;I)V
+.method public constructor <init>(Lfxf;Ly14;)V
     .locals 0
 
-    iput p2, p0, Ldxf;->a:I
+    iput-object p1, p0, Ldxf;->Y:Lfxf;
 
-    iput-object p1, p0, Ldxf;->b:Li5b;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ldxf;->a:I
+    iput-object p1, p0, Ldxf;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Ldxf;->Z:I
 
-    iget-object v0, p0, Ldxf;->b:Li5b;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lb5b;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Lb5b;->a:Lqh6;
+    iput p1, p0, Ldxf;->Z:I
 
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Ldxf;->Y:Lfxf;
 
-    return-void
+    invoke-virtual {p1, p0}, Lfxf;->a(Ly14;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Ldxf;->b:Li5b;
+    move-result-object p1
 
-    check-cast v0, Lc5b;
-
-    iget-object v0, v0, Lc5b;->a:Lqh6;
-
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ldxf;->b:Li5b;
-
-    check-cast v0, Lh5b;
-
-    iget-object v0, v0, Lh5b;->a:Lqh6;
-
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,9 +1,9 @@
 .class public final Lon9;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +30,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Ljava/util/List;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lon9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +40,7 @@
 
     check-cast p1, Lon9;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lon9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,792 +62,306 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+    .locals 11
 
-    move-object/from16 v0, p0
+    sget-object v0, Lc98;->o:Lc98;
 
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lon9;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lon9;->X:Ljava/lang/Object;
 
-    check-cast v1, Lga5;
+    check-cast p1, Ljava/util/List;
 
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-object v2, v0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
-    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Landroid/widget/FrameLayout;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-interface {v1}, Lfx7;->x()Lhx7;
 
-    invoke-virtual {v3}, Landroid/view/ViewGroup;->removeAllViews()V
+    move-result-object v1
 
-    instance-of v3, v1, Lda5;
+    iget-object v1, v1, Lhx7;->d:Lhw7;
+
+    sget-object v2, Lhw7;->o:Lhw7;
+
+    invoke-virtual {v1, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result v1
+
+    const-string v2, ", last="
+
+    const-string v3, ", first="
 
     const/4 v4, 0x0
 
-    const/16 v5, 0x11
+    if-ltz v1, :cond_7
 
-    const/4 v6, -0x2
+    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    if-eqz v3, :cond_4
+    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
 
-    check-cast v1, Lda5;
+    sget-object v5, Ltei;->a:Lmxa;
 
-    new-instance v3, Lvm9;
+    if-nez v5, :cond_0
 
-    invoke-direct {v3, v2}, Lvm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    goto :goto_4
 
-    new-instance v7, Lgr0;
+    :cond_0
+    invoke-virtual {v5, v0}, Lmxa;->b(Lc98;)Z
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result v6
 
-    move-result-object v8
+    if-eqz v6, :cond_5
 
-    invoke-direct {v7, v8}, Lgr0;-><init>(Landroid/content/Context;)V
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-virtual {v7, v3}, Lgr0;->setLinkListener(Lqz7;)V
+    move-result v6
 
-    invoke-virtual {v7, v1}, Lgr0;->setState(Lda5;)V
+    invoke-static {p1}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
+    move-result-object v7
 
-    const/16 v8, 0x110
+    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
 
-    int-to-float v8, v8
+    if-eqz v8, :cond_1
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lagi;->d(F)I
-
-    move-result v8
-
-    invoke-direct {v3, v8, v6, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    invoke-virtual {v7, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v3, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v3}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v5}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    const/16 v6, 0x8
-
-    new-array v8, v6, [F
-
-    move v9, v5
-
-    :goto_0
-    if-ge v9, v6, :cond_0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v11, 0x41a80000    # 21.0f
-
-    mul-float/2addr v10, v11
-
-    aput v10, v8, v9
-
-    add-int/lit8 v9, v9, 0x1
+    check-cast v7, Lone/me/messages/list/loader/MessageModel;
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v3, v8}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
+    :cond_1
+    move-object v7, v4
 
-    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
+    :goto_0
+    if-eqz v7, :cond_2
 
-    const/16 v9, 0x1d
+    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
 
-    const/4 v10, 0x3
-
-    sget-object v11, Lsz4;->t0:Lc82;
-
-    if-lt v8, v9, :cond_1
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    invoke-virtual {v11, v8}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lsz4;->l()Lu4b;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lu4b;->a()Lpv2;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lpv2;->t()Lyd3;
-
-    move-result-object v8
-
-    iget-object v8, v8, Lyd3;->b:Lpc3;
-
-    iget-object v8, v8, Lpc3;->d:Lyc3;
-
-    iget-object v8, v8, Lyc3;->a:[I
-
-    new-array v9, v10, [F
-
-    fill-array-data v9, :array_0
-
-    invoke-static {v3, v8, v9}, Lh05;->q(Landroid/graphics/drawable/GradientDrawable;[I[F)V
+    move-result-object v7
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    invoke-virtual {v11, v8}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lsz4;->l()Lu4b;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lu4b;->a()Lpv2;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lpv2;->t()Lyd3;
-
-    move-result-object v8
-
-    iget-object v8, v8, Lyd3;->b:Lpc3;
-
-    iget-object v8, v8, Lpc3;->d:Lyc3;
-
-    iget-object v8, v8, Lyc3;->a:[I
-
-    invoke-virtual {v3, v8}, Landroid/graphics/drawable/GradientDrawable;->setColors([I)V
+    :cond_2
+    move-object v7, v4
 
     :goto_1
-    new-instance v8, Lal8;
+    invoke-static {p1}, Lnb3;->L(Ljava/util/List;)Ljava/lang/Object;
 
-    const/4 v9, 0x1
+    move-result-object v8
 
-    invoke-direct {v8, v3, v4, v9}, Lal8;-><init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
+    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
 
-    invoke-static {v8, v7}, Lkci;->m(Lgi6;Landroid/view/View;)V
+    if-eqz v9, :cond_3
 
-    new-instance v8, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v8}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    invoke-virtual {v8, v5}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    new-array v12, v6, [F
-
-    move v13, v5
-
-    :goto_2
-    if-ge v13, v6, :cond_2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v14
-
-    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v15, 0x41b80000    # 23.0f
-
-    mul-float/2addr v14, v15
-
-    aput v14, v12, v13
-
-    add-int/lit8 v13, v13, 0x1
+    check-cast v8, Lone/me/messages/list/loader/MessageModel;
 
     goto :goto_2
 
-    :cond_2
-    invoke-virtual {v8, v12}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
+    :cond_3
+    move-object v8, v4
 
-    iget-boolean v6, v1, Lda5;->g:Z
+    :goto_2
+    if-eqz v8, :cond_4
 
-    const/4 v12, 0x2
+    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
 
-    if-nez v6, :cond_3
-
-    new-array v6, v12, [I
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v13
-
-    invoke-virtual {v11, v13}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Lsz4;->l()Lu4b;
-
-    move-result-object v13
-
-    invoke-interface {v13}, Lu4b;->a()Lpv2;
-
-    const v13, 0x33ffffff
-
-    aput v13, v6, v5
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v13
-
-    invoke-virtual {v11, v13}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Lsz4;->l()Lu4b;
-
-    move-result-object v11
-
-    invoke-interface {v11}, Lu4b;->a()Lpv2;
-
-    const v11, 0x1affffff
-
-    aput v11, v6, v9
+    move-result-object v8
 
     goto :goto_3
 
-    :cond_3
-    new-array v6, v12, [I
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v13
-
-    invoke-virtual {v11, v13}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Lsz4;->l()Lu4b;
-
-    move-result-object v13
-
-    invoke-interface {v13}, Lu4b;->a()Lpv2;
-
-    move-result-object v13
-
-    invoke-interface {v13}, Lpv2;->t()Lyd3;
-
-    move-result-object v13
-
-    iget-object v13, v13, Lyd3;->b:Lpc3;
-
-    iget-object v13, v13, Lpc3;->d:Lyc3;
-
-    iget v13, v13, Lyc3;->g:I
-
-    aput v13, v6, v5
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v13
-
-    invoke-virtual {v11, v13}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Lsz4;->l()Lu4b;
-
-    move-result-object v11
-
-    invoke-interface {v11}, Lu4b;->a()Lpv2;
-
-    move-result-object v11
-
-    invoke-interface {v11}, Lpv2;->t()Lyd3;
-
-    move-result-object v11
-
-    iget-object v11, v11, Lyd3;->b:Lpc3;
-
-    iget-object v11, v11, Lpc3;->d:Lyc3;
-
-    iget v11, v11, Lyc3;->h:I
-
-    aput v11, v6, v9
+    :cond_4
+    move-object v8, v4
 
     :goto_3
-    invoke-virtual {v8, v6}, Landroid/graphics/drawable/GradientDrawable;->setColors([I)V
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    new-instance v6, Lo3;
+    const-string v10, "Got new messages on UI, size="
 
-    const/16 v11, 0x16
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v6, v8, v1, v4, v11}, Lo3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v6, v7}, Lkci;->m(Lgi6;Landroid/view/View;)V
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v13, Landroid/graphics/drawable/LayerDrawable;
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v2, Lone/me/messages/list/ui/MessagesListWidget;->d1:Ljava/lang/Object;
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v1, Landroid/graphics/drawable/ShapeDrawable;
+    move-result-object v2
 
-    new-array v4, v10, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v1, v4, v5
-
-    aput-object v8, v4, v9
-
-    aput-object v3, v4, v12
-
-    invoke-direct {v13, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    int-to-float v1, v12
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v15
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v16
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v17
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v18
-
-    const/4 v14, 0x1
-
-    invoke-virtual/range {v13 .. v18}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    int-to-float v1, v10
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v15
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v16
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v1
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v17
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v18
-
-    const/4 v14, 0x2
-
-    invoke-virtual/range {v13 .. v18}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    invoke-virtual {v7, v13}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v1, Lq44;
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v4, 0x41c00000    # 24.0f
-
-    mul-float/2addr v3, v4
-
-    invoke-direct {v1, v3}, Lq44;-><init>(F)V
-
-    invoke-virtual {v7, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    move-object v4, v7
-
-    goto/16 :goto_4
-
-    :cond_4
-    instance-of v3, v1, Lea5;
-
-    const/16 v7, 0x1e
-
-    if-eqz v3, :cond_6
-
-    new-instance v4, Lls4;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {v4, v3}, Lls4;-><init>(Landroid/content/Context;)V
-
-    check-cast v1, Lea5;
-
-    new-instance v3, Lxm8;
-
-    const/16 v8, 0xb
-
-    invoke-direct {v3, v8, v2}, Lxm8;-><init>(ILjava/lang/Object;)V
-
-    iget-object v8, v4, Lls4;->b:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget v9, Lkxa;->N:I
-
-    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object v8, v4, Lls4;->c:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget v9, Lkxa;->M:I
-
-    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object v1, v1, Lea5;->a:Ld2f;
-
-    if-eqz v1, :cond_5
-
-    const/16 v8, 0x90
-
-    int-to-float v8, v8
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lagi;->d(F)I
-
-    move-result v8
-
-    iget-object v9, v4, Lls4;->o:Lbc8;
-
-    invoke-virtual {v9, v1, v8}, Lbc8;->a(Ld2f;I)V
+    invoke-virtual {v5, v0, v1, v2, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
-    iput-object v3, v4, Lls4;->a:Loh6;
+    :goto_4
+    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    sget v1, Lgoc;->messages_list_recycler_view:I
 
-    const/16 v3, 0x106
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
 
-    int-to-float v3, v3
+    move-result-object v0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v8
+    if-nez v0, :cond_6
 
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result-object v8
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lfk9;
 
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
+    new-instance v2, Lnn9;
 
-    mul-float/2addr v3, v8
+    const/4 v3, 0x0
 
-    invoke-static {v3}, Lagi;->d(F)I
+    invoke-direct {v2, v0, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    move-result v3
+    invoke-virtual {v1, p1, v2}, Lfk9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    invoke-direct {v1, v3, v6, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    const/16 v3, 0xc
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ldti;->e(Landroid/content/Context;)Lhgb;
-
-    move-result-object v1
-
-    iget-boolean v1, v1, Lhgb;->b:Z
-
-    if-eqz v1, :cond_8
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v1, v7, :cond_8
-
-    new-instance v1, Lja5;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-direct {v1, v4, v3}, Lja5;-><init>(Ljj0;Landroid/view/View;)V
-
-    iput-object v1, v2, Lone/me/messages/list/ui/MessagesListWidget;->a1:Lja5;
-
-    goto :goto_4
+    goto/16 :goto_a
 
     :cond_6
-    instance-of v3, v1, Lfa5;
+    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    if-eqz v3, :cond_7
+    new-instance v2, Lnn9;
 
-    new-instance v4, Ljld;
+    const/4 v3, 0x1
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-direct {v2, v1, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    move-result-object v3
+    new-instance v3, Lnn9;
 
-    invoke-direct {v4, v3}, Ljld;-><init>(Landroid/content/Context;)V
+    const/4 v4, 0x2
 
-    check-cast v1, Lfa5;
+    invoke-direct {v3, v1, p1, v4}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    invoke-virtual {v4, v1}, Ljld;->setState(Lfa5;)V
+    const/4 p1, 0x1
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {p1, v0, v2, v3}, Lhxi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    invoke-direct {v1, v6, v6, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    const/16 v3, 0x20
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ldti;->e(Landroid/content/Context;)Lhgb;
-
-    move-result-object v1
-
-    iget-boolean v1, v1, Lhgb;->b:Z
-
-    if-eqz v1, :cond_8
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v1, v7, :cond_8
-
-    new-instance v1, Lja5;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-direct {v1, v4, v3}, Lja5;-><init>(Ljj0;Landroid/view/View;)V
-
-    iput-object v1, v2, Lone/me/messages/list/ui/MessagesListWidget;->a1:Lja5;
-
-    goto :goto_4
+    goto/16 :goto_a
 
     :cond_7
-    if-nez v1, :cond_a
+    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    sget-object v5, Ltei;->a:Lmxa;
+
+    if-nez v5, :cond_8
+
+    goto :goto_9
 
     :cond_8
-    :goto_4
-    if-eqz v4, :cond_9
+    invoke-virtual {v5, v0}, Lmxa;->b(Lc98;)Z
 
-    new-instance v1, Lyth;
+    move-result v6
 
-    invoke-direct {v1, v4}, Lyth;-><init>(Ljj0;)V
+    if-eqz v6, :cond_d
 
-    invoke-static {v4, v1}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Landroid/widget/FrameLayout;
+    move-result v6
 
-    move-result-object v1
+    invoke-static {p1}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result-object v7
+
+    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v8, :cond_9
+
+    check-cast v7, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_5
 
     :cond_9
-    sget-object v1, Lzag;->a:Lzag;
+    move-object v7, v4
 
-    return-object v1
+    :goto_5
+    if-eqz v7, :cond_a
+
+    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_6
 
     :cond_a
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+    move-object v7, v4
 
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :goto_6
+    invoke-static {p1}, Lnb3;->L(Ljava/util/List;)Ljava/lang/Object;
 
-    throw v1
+    move-result-object v8
 
-    nop
+    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
 
-    :array_0
-    .array-data 4
-        0x0
-        0x3ecccccd    # 0.4f
-        0x3f800000    # 1.0f
-    .end array-data
+    if-eqz v9, :cond_b
+
+    check-cast v8, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_7
+
+    :cond_b
+    move-object v8, v4
+
+    :goto_7
+    if-eqz v8, :cond_c
+
+    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_8
+
+    :cond_c
+    move-object v8, v4
+
+    :goto_8
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Got new messages (lifecycle scope), size="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v5, v0, v1, v2, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    :goto_9
+    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lfk9;
+
+    new-instance v2, Lnn9;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+
+    invoke-virtual {v1, p1, v2}, Lfk9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :goto_a
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

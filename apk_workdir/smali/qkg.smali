@@ -1,157 +1,270 @@
 .class public final Lqkg;
-.super Liz1;
+.super Lpkg;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final d:Landroid/util/SparseIntArray;
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final e:Landroid/os/Parcel;
 
-.field public final synthetic c:Lyt1;
+.field public final f:I
 
-.field public final synthetic d:Lg5e;
+.field public final g:I
+
+.field public final h:Ljava/lang/String;
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lyt1;Lg5e;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 8
+
+    .line 1
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataSize()I
+
+    move-result v3
+
+    new-instance v5, Let;
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {v5, v0}, Lzoe;-><init>(I)V
+
+    .line 3
+    new-instance v6, Let;
+
+    .line 4
+    invoke-direct {v6, v0}, Lzoe;-><init>(I)V
+
+    .line 5
+    new-instance v7, Let;
+
+    .line 6
+    invoke-direct {v7, v0}, Lzoe;-><init>(I)V
+
+    .line 7
+    const-string v4, ""
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v7}, Lqkg;-><init>(Landroid/os/Parcel;IILjava/lang/String;Let;Let;Let;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;IILjava/lang/String;Let;Let;Let;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 8
+    invoke-direct {p0, p5, p6, p7}, Lpkg;-><init>(Let;Let;Let;)V
 
-    iput-object p1, p0, Lqkg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 9
+    new-instance p5, Landroid/util/SparseIntArray;
 
-    iput-object p2, p0, Lqkg;->c:Lyt1;
+    invoke-direct {p5}, Landroid/util/SparseIntArray;-><init>()V
 
-    iput-object p3, p0, Lqkg;->d:Lg5e;
+    iput-object p5, p0, Lqkg;->d:Landroid/util/SparseIntArray;
 
-    const/4 p1, 0x1
+    const/4 p5, -0x1
 
-    iput-boolean p1, p0, Lqkg;->a:Z
+    .line 10
+    iput p5, p0, Lqkg;->i:I
+
+    .line 11
+    iput p5, p0, Lqkg;->k:I
+
+    .line 12
+    iput-object p1, p0, Lqkg;->e:Landroid/os/Parcel;
+
+    .line 13
+    iput p2, p0, Lqkg;->f:I
+
+    .line 14
+    iput p3, p0, Lqkg;->g:I
+
+    .line 15
+    iput p2, p0, Lqkg;->j:I
+
+    .line 16
+    iput-object p4, p0, Lqkg;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(ILpz1;)V
-    .locals 2
+.method public final a()Lqkg;
+    .locals 8
 
-    iget-boolean p1, p0, Lqkg;->a:Z
+    new-instance v0, Lqkg;
 
-    if-eqz p1, :cond_0
+    iget-object v1, p0, Lqkg;->e:Landroid/os/Parcel;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Landroid/os/Parcel;->dataPosition()I
 
-    iput-boolean p1, p0, Lqkg;->a:Z
+    move-result v2
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    iget v3, p0, Lqkg;->j:I
 
-    const-string v0, "cameraCaptureResult timestampNs = "
+    iget v4, p0, Lqkg;->f:I
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne v3, v4, :cond_0
 
-    invoke-interface {p2}, Lpz1;->getTimestamp()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", current system uptimeMs = "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", current system realtimeMs = "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "VideoCapture"
-
-    invoke-static {v0, p1}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+    iget v3, p0, Lqkg;->g:I
 
     :cond_0
-    iget-object p1, p0, Lqkg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v5, p0, Lqkg;->h:Ljava/lang/String;
+
+    const-string v6, "  "
+
+    invoke-static {v4, v5, v6}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lpkg;->b:Let;
+
+    iget-object v7, p0, Lpkg;->c:Let;
+
+    iget-object v5, p0, Lpkg;->a:Let;
+
+    invoke-direct/range {v0 .. v7}, Lqkg;-><init>(Landroid/os/Parcel;IILjava/lang/String;Let;Let;Let;)V
+
+    return-object v0
+.end method
+
+.method public final e(I)Z
+    .locals 2
+
+    :goto_0
+    iget v0, p0, Lqkg;->j:I
+
+    iget v1, p0, Lqkg;->g:I
+
+    if-ge v0, v1, :cond_2
+
+    iget v0, p0, Lqkg;->k:I
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-lez v0, :cond_1
 
-    invoke-interface {p2}, Lpz1;->f()Lwjf;
+    goto :goto_2
 
-    move-result-object p2
+    :cond_1
+    iget v0, p0, Lqkg;->j:I
 
-    const-string v0, "androidx.camera.video.VideoCapture.streamUpdate"
+    iget-object v1, p0, Lqkg;->e:Landroid/os/Parcel;
 
-    iget-object p2, p2, Lwjf;->a:Landroid/util/ArrayMap;
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    invoke-virtual {p2, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
-    move-result-object p2
+    move-result v0
 
-    if-eqz p2, :cond_1
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    iget-object v0, p0, Lqkg;->c:Lyt1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    if-ne p2, v1, :cond_1
+    iput v1, p0, Lqkg;->k:I
 
-    const/4 p2, 0x0
+    iget v1, p0, Lqkg;->j:I
 
-    invoke-virtual {v0, p2}, Lyt1;->b(Ljava/lang/Object;)Z
+    add-int/2addr v1, v0
 
-    move-result p2
+    iput v1, p0, Lqkg;->j:I
 
-    if-eqz p2, :cond_1
+    goto :goto_0
 
-    const/4 p2, 0x1
+    :cond_2
+    iget v0, p0, Lqkg;->k:I
 
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    if-ne v0, p1, :cond_3
 
-    move-result p1
+    :goto_1
+    const/4 p1, 0x1
 
-    if-nez p1, :cond_1
+    return p1
 
-    invoke-static {}, Ldmi;->e()Lgv6;
+    :cond_3
+    :goto_2
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
+.end method
 
-    new-instance p2, Lpkg;
+.method public final i(I)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lqkg;->i:I
 
-    iget-object v1, p0, Lqkg;->d:Lg5e;
+    iget-object v1, p0, Lqkg;->d:Landroid/util/SparseIntArray;
 
-    invoke-direct {p2, p0, v0, v1}, Lpkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v2, p0, Lqkg;->e:Landroid/os/Parcel;
 
-    invoke-virtual {p1, p2}, Lgv6;->execute(Ljava/lang/Runnable;)V
+    if-ltz v0, :cond_0
 
-    :cond_1
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->get(I)I
+
+    move-result v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v3
+
+    sub-int v4, v3, v0
+
+    invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v2, v3}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    :cond_0
+    iput p1, p0, Lqkg;->i:I
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v0
+
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
 .end method

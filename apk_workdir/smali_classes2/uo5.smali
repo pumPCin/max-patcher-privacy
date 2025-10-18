@@ -1,47 +1,23 @@
 .class public final Luo5;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lbp5;
+.field public final a:Ljava/util/List;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lbp5;Lk14;)V
+.method public constructor <init>(JLjava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Luo5;->X:Lbp5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Luo5;->a:Ljava/util/List;
+
+    iput-wide p1, p0, Luo5;->b:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Luo5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Luo5;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Luo5;->Y:I
-
-    iget-object p1, p0, Luo5;->X:Lbp5;
-
-    invoke-virtual {p1, p0}, Lbp5;->V0(Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

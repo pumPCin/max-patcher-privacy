@@ -95,7 +95,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->Companion:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Companion;
 
@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Set;Lvh4;)V
+.method public synthetic constructor <init>(Ljava/util/Set;Lki4;)V
     .locals 0
 
     .line 1
@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ln7e;->f([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p1}, Lu8e;->f([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -281,7 +281,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->caps:Ljava/util/Set;
 
-    invoke-static {v0, p1}, Ln7e;->d(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+    invoke-static {v0, p1}, Lu8e;->d(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
     move-result-object p1
 
@@ -310,7 +310,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lyf8;->e(I)I
+    invoke-static {v2}, Lzg8;->i(I)I
 
     move-result v2
 
@@ -340,7 +340,7 @@
 
     if-nez v3, :cond_2
 
-    invoke-static {v4, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 

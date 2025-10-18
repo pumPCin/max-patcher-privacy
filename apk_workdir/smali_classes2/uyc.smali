@@ -1,26 +1,44 @@
-.class public interface abstract Luyc;
+.class public final Luyc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/content/Context;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luyc;->a:Landroid/content/Context;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract g(Lvd9;Z)V
-.end method
+.method public final a()I
+    .locals 2
 
-.method public abstract l(Lmt0;Z)V
-.end method
+    iget-object v0, p0, Luyc;->a:Landroid/content/Context;
 
-.method public abstract r(Z)V
-.end method
+    invoke-static {v0}, Ltyi;->b(Landroid/content/Context;)I
 
-.method public abstract setChipObserver(Lxwc;)V
-.end method
+    move-result v0
 
-.method public abstract setIsIncoming(Z)V
-.end method
+    const/16 v1, 0x168
 
-.method public abstract setOnClickListener(Lqh6;)V
-.end method
+    if-lt v0, v1, :cond_0
 
-.method public abstract setStackFromEnd(Z)V
+    const/16 v0, 0x20
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x1c
+
+    return v0
 .end method

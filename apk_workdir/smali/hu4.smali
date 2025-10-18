@@ -1,234 +1,82 @@
-.class public final synthetic Lhu4;
-.super Ljava/lang/Object;
+.class public final enum Lhu4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lhu4;
 
-.field public final synthetic b:Liu4;
-
-.field public final synthetic c:Lju4;
+.field public static final synthetic b:[Lhu4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liu4;Lju4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lhu4;->a:I
+    new-instance v0, Lhu4;
 
-    iput-object p1, p0, Lhu4;->b:Liu4;
+    const-string v1, "INSTANCE"
 
-    iput-object p2, p0, Lhu4;->c:Lju4;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lhu4;->a:Lhu4;
+
+    filled-new-array {v0}, [Lhu4;
+
+    move-result-object v0
+
+    sput-object v0, Lhu4;->b:[Lhu4;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lhu4;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 14
+    const-class v0, Lhu4;
 
-    iget v0, p0, Lhu4;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lhu4;->c:Lju4;
+    check-cast p0, Lhu4;
 
-    iget-object v1, v0, Lju4;->c:Lag5;
+    return-object p0
+.end method
 
-    iget-object v2, v0, Lju4;->b:Lkub;
+.method public static values()[Lhu4;
+    .locals 1
 
-    iget-object v3, p0, Lhu4;->b:Liu4;
+    sget-object v0, Lhu4;->b:[Lhu4;
 
-    iget-object v3, v3, Liu4;->e:Ljava/lang/Object;
+    invoke-virtual {v0}, [Lhu4;->clone()Ljava/lang/Object;
 
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map;
-
-    new-instance v4, Ljava/util/LinkedHashMap;
-
-    invoke-interface {v3}, Ljava/util/Map;->size()I
-
-    move-result v5
-
-    invoke-static {v5}, Lyf8;->e(I)I
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Map$Entry;
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v8, v5
-
-    check-cast v8, Lzq5;
-
-    new-instance v7, Lhv0;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v5}, Lkub;->b(I)Lar8;
-
-    move-result-object v9
-
-    invoke-virtual {v2}, Lkub;->c()Lfj;
-
-    move-result-object v10
-
-    invoke-interface {v1}, Lag5;->l()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v11
-
-    invoke-interface {v1}, Lag5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v12
-
-    iget-object v13, v0, Lju4;->d:Ll8a;
-
-    invoke-direct/range {v7 .. v13}, Lhv0;-><init>(Lzq5;Lar8;Lfj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Ll8a;)V
-
-    invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lmb7;
-
-    invoke-direct {v0, v4}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    check-cast v0, [Lhu4;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v5, Lhv0;
 
-    iget-object v0, p0, Lhu4;->b:Liu4;
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget-object v0, v0, Liu4;->c:Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-object v6, v0
+    const-string v0, "DirectExecutor"
 
-    check-cast v6, Lzq5;
-
-    iget-object v0, p0, Lhu4;->c:Lju4;
-
-    iget-object v1, v0, Lju4;->b:Lkub;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lkub;->b(I)Lar8;
-
-    move-result-object v7
-
-    invoke-virtual {v1}, Lkub;->c()Lfj;
-
-    move-result-object v8
-
-    iget-object v1, v0, Lju4;->c:Lag5;
-
-    invoke-interface {v1}, Lag5;->l()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v9
-
-    invoke-interface {v1}, Lag5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    iget-object v11, v0, Lju4;->d:Ll8a;
-
-    invoke-direct/range {v5 .. v11}, Lhv0;-><init>(Lzq5;Lar8;Lfj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Ll8a;)V
-
-    return-object v5
-
-    :pswitch_1
-    new-instance v6, Lhv0;
-
-    iget-object v0, p0, Lhu4;->b:Liu4;
-
-    iget-object v0, v0, Liu4;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Lzq5;
-
-    iget-object v0, p0, Lhu4;->c:Lju4;
-
-    iget-object v1, v0, Lju4;->b:Lkub;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lkub;->b(I)Lar8;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Lkub;->c()Lfj;
-
-    move-result-object v9
-
-    iget-object v1, v0, Lju4;->c:Lag5;
-
-    invoke-interface {v1}, Lag5;->l()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    invoke-interface {v1}, Lag5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v11
-
-    iget-object v12, v0, Lju4;->d:Ll8a;
-
-    invoke-direct/range {v6 .. v12}, Lhv0;-><init>(Lzq5;Lar8;Lfj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Ll8a;)V
-
-    return-object v6
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

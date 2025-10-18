@@ -4,52 +4,44 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final b:I
+.field public final b:Luib;
 
-.field public final c:I
+.field public final c:Lmpf;
 
 .field public final d:I
 
-.field public final e:I
+.field public final e:J
 
 .field public final f:I
 
-.field public final g:I
+.field public final g:[B
 
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
+.field public final h:J
 
 
 # direct methods
-.method public constructor <init>(IIIIIIIIII)V
+.method public constructor <init>(JLuib;Lmpf;IJI[BJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lapf;->a:I
+    iput-wide p1, p0, Lapf;->a:J
 
-    iput p2, p0, Lapf;->b:I
+    iput-object p3, p0, Lapf;->b:Luib;
 
-    iput p3, p0, Lapf;->c:I
+    iput-object p4, p0, Lapf;->c:Lmpf;
 
-    iput p4, p0, Lapf;->d:I
+    iput p5, p0, Lapf;->d:I
 
-    iput p5, p0, Lapf;->e:I
+    iput-wide p6, p0, Lapf;->e:J
 
-    iput p6, p0, Lapf;->f:I
+    iput p8, p0, Lapf;->f:I
 
-    iput p7, p0, Lapf;->g:I
+    iput-object p9, p0, Lapf;->g:[B
 
-    iput p8, p0, Lapf;->h:I
-
-    iput p9, p0, Lapf;->i:I
-
-    iput p10, p0, Lapf;->j:I
+    iput-wide p10, p0, Lapf;->h:J
 
     return-void
 .end method
@@ -57,127 +49,117 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lapf;
+    instance-of v1, p1, Lapf;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lapf;
 
-    iget v0, p0, Lapf;->a:I
+    iget-wide v3, p0, Lapf;->a:J
 
-    iget v1, p1, Lapf;->a:I
+    iget-wide v5, p1, Lapf;->a:J
 
-    if-eq v0, v1, :cond_2
+    cmp-long v1, v3, v5
 
-    goto :goto_0
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget v0, p0, Lapf;->b:I
+    iget-object v1, p0, Lapf;->b:Luib;
 
-    iget v1, p1, Lapf;->b:I
+    iget-object v3, p1, Lapf;->b:Luib;
 
-    if-eq v0, v1, :cond_3
+    if-eq v1, v3, :cond_3
 
-    goto :goto_0
+    return v2
 
     :cond_3
-    iget v0, p0, Lapf;->c:I
+    iget-object v1, p0, Lapf;->c:Lmpf;
 
-    iget v1, p1, Lapf;->c:I
+    iget-object v3, p1, Lapf;->c:Lmpf;
 
-    if-eq v0, v1, :cond_4
+    if-eq v1, v3, :cond_4
 
-    goto :goto_0
+    return v2
 
     :cond_4
-    iget v0, p0, Lapf;->d:I
+    iget v1, p0, Lapf;->d:I
 
-    iget v1, p1, Lapf;->d:I
+    iget v3, p1, Lapf;->d:I
 
-    if-eq v0, v1, :cond_5
+    if-eq v1, v3, :cond_5
 
-    goto :goto_0
+    return v2
 
     :cond_5
-    iget v0, p0, Lapf;->e:I
+    iget-wide v3, p0, Lapf;->e:J
 
-    iget v1, p1, Lapf;->e:I
+    iget-wide v5, p1, Lapf;->e:J
 
-    if-eq v0, v1, :cond_6
+    cmp-long v1, v3, v5
 
-    goto :goto_0
+    if-eqz v1, :cond_6
+
+    return v2
 
     :cond_6
-    iget v0, p0, Lapf;->f:I
+    iget v1, p0, Lapf;->f:I
 
-    iget v1, p1, Lapf;->f:I
+    iget v3, p1, Lapf;->f:I
 
-    if-eq v0, v1, :cond_7
+    if-eq v1, v3, :cond_7
 
-    goto :goto_0
+    return v2
 
     :cond_7
-    iget v0, p0, Lapf;->g:I
+    iget-object v1, p0, Lapf;->g:[B
 
-    iget v1, p1, Lapf;->g:I
+    iget-object v3, p1, Lapf;->g:[B
 
-    if-eq v0, v1, :cond_8
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
 
     :cond_8
-    iget v0, p0, Lapf;->h:I
+    iget-wide v3, p0, Lapf;->h:J
 
-    iget v1, p1, Lapf;->h:I
+    iget-wide v5, p1, Lapf;->h:J
 
-    if-eq v0, v1, :cond_9
+    cmp-long p1, v3, v5
 
-    goto :goto_0
+    if-eqz p1, :cond_9
+
+    return v2
 
     :cond_9
-    iget v0, p0, Lapf;->i:I
-
-    iget v1, p1, Lapf;->i:I
-
-    if-eq v0, v1, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget v0, p0, Lapf;->j:I
-
-    iget p1, p1, Lapf;->j:I
-
-    if-eq v0, p1, :cond_b
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_b
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
-    iget v0, p0, Lapf;->a:I
+    iget-wide v0, p0, Lapf;->a:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
@@ -185,133 +167,135 @@
 
     mul-int/2addr v0, v1
 
-    const/4 v2, -0x1
+    iget-object v2, p0, Lapf;->b:Luib;
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    move-result v0
+    move-result v2
 
-    const v2, -0x1f000001
+    add-int/2addr v2, v0
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    mul-int/2addr v2, v1
 
-    move-result v0
+    iget-object v0, p0, Lapf;->c:Lmpf;
 
-    iget v2, p0, Lapf;->b:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget v2, p0, Lapf;->c:I
+    add-int/2addr v0, v2
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
+    mul-int/2addr v0, v1
 
     iget v2, p0, Lapf;->d:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
-    iget v2, p0, Lapf;->e:I
+    iget-wide v2, p0, Lapf;->e:J
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
 
     move-result v0
 
     iget v2, p0, Lapf;->f:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
-    iget v2, p0, Lapf;->g:I
+    iget-object v2, p0, Lapf;->g:[B
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
 
-    move-result v0
+    move-result v2
 
-    iget v2, p0, Lapf;->h:I
+    add-int/2addr v2, v0
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    mul-int/2addr v2, v1
 
-    move-result v0
+    iget-wide v0, p0, Lapf;->h:J
 
-    iget v2, p0, Lapf;->i:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    iget v1, p0, Lapf;->j:I
+    add-int/2addr v0, v2
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
-    const-string v0, ", contrastStatic=-1, fileType=-520093697, negative="
+    iget-object v0, p0, Lapf;->g:[B
 
-    const-string v1, ", neutralThemed="
-
-    const-string v2, "TextColors(contrast="
-
-    iget v3, p0, Lapf;->a:I
-
-    iget v4, p0, Lapf;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", positive="
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, ", primary="
+    const-string v2, "TaskEntity(id="
 
-    iget v3, p0, Lapf;->c:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v4, p0, Lapf;->d:I
+    iget-wide v2, p0, Lapf;->a:J
 
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", primaryStatic="
+    const-string v2, ", type="
 
-    const-string v2, ", secondary="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lapf;->e:I
+    iget-object v2, p0, Lapf;->b:Luib;
 
-    iget v4, p0, Lapf;->f:I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    const-string v2, ", status="
 
-    const-string v1, ", subhead="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", tertiary="
+    iget-object v2, p0, Lapf;->c:Lmpf;
 
-    iget v3, p0, Lapf;->g:I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lapf;->h:I
+    const-string v2, ", failsCount="
 
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", themed="
+    iget v2, p0, Lapf;->d:I
 
-    const-string v2, ")"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lapf;->i:I
+    const-string v2, ", dependsRequestId="
 
-    iget v4, p0, Lapf;->j:I
+    const-string v3, ", dependencyType="
 
-    invoke-static {v0, v3, v1, v4, v2}, Lwc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    iget-wide v4, p0, Lapf;->e:J
+
+    invoke-static {v4, v5, v2, v3, v1}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget v2, p0, Lapf;->f:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", data="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", createdTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-wide v2, p0, Lapf;->h:J
+
+    invoke-static {v1, v2, v3, v0}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

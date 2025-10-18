@@ -1,65 +1,74 @@
 .class public final Ll11;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lb24;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final synthetic X:Lr11;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+.method public constructor <init>(Lr11;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll11;->X:Lr11;
 
-    iput-object p1, p0, Ll11;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx14;Lx14;Z)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lhu3;
 
-.method public final b(Lx14;Lx14;Z)V
-    .locals 0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz p3, :cond_0
-
-    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lwq7;
-
-    iget-object p1, p0, Ll11;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->C0()Lu11;
+    invoke-virtual {p0, p1, p2}, Ll11;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lu11;->r()Ln01;
+    check-cast p1, Ll11;
 
-    move-result-object p2
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, p2}, Ll11;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Li11;
+    return-object p2
+.end method
 
-    iget-object p2, p2, Li11;->F0:Lsze;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {p2}, Lsze;->getValue()Ljava/lang/Object;
+    new-instance p1, Ll11;
 
-    move-result-object p2
+    iget-object v0, p0, Ll11;->X:Lr11;
 
-    check-cast p2, Lfa;
+    invoke-direct {p1, v0, p2}, Ll11;-><init>(Lr11;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, p2}, Lu11;->s(Lfa;)V
+    return-object p1
+.end method
 
-    :cond_0
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lr11;->F0:[Ltr7;
+
+    iget-object p1, p0, Ll11;->X:Lr11;
+
+    invoke-virtual {p1}, Lr11;->m()V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

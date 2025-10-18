@@ -1,74 +1,108 @@
-.class public final Lpq4;
+.class public final synthetic Lpq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrq4;
+
+.field public final synthetic c:Ljava/lang/Runnable;
+
+.field public final synthetic o:Lyxe;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lrq4;Ljava/lang/Runnable;Lyxe;I)V
+    .locals 0
+
+    iput p4, p0, Lpq4;->a:I
+
+    iput-object p1, p0, Lpq4;->b:Lrq4;
+
+    iput-object p2, p0, Lpq4;->c:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Lpq4;->o:Lyxe;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpq4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpq4;
-
-    iget v1, p0, Lpq4;->a:I
-
-    iget p1, p1, Lpq4;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
+.method public final run()V
+    .locals 5
 
     iget v0, p0, Lpq4;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lpq4;->b:Lrq4;
 
-    return v0
-.end method
+    iget-object v0, v0, Lrq4;->a:Ljava/util/concurrent/ExecutorService;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    new-instance v1, Lnq4;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const-string v1, "DeltaCounter(count="
+    iget-object v3, p0, Lpq4;->c:Ljava/lang/Runnable;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v4, p0, Lpq4;->o:Lyxe;
 
-    iget v1, p0, Lpq4;->a:I
+    invoke-direct {v1, v3, v4, v2}, Lnq4;-><init>(Ljava/lang/Runnable;Lyxe;I)V
 
-    const/16 v2, 0x29
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lpq4;->b:Lrq4;
 
-    return-object v0
+    iget-object v0, v0, Lrq4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lnq4;
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lpq4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Lpq4;->o:Lyxe;
+
+    invoke-direct {v1, v3, v4, v2}, Lnq4;-><init>(Ljava/lang/Runnable;Lyxe;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpq4;->b:Lrq4;
+
+    iget-object v0, v0, Lrq4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lnq4;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lpq4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Lpq4;->o:Lyxe;
+
+    invoke-direct {v1, v3, v4, v2}, Lnq4;-><init>(Ljava/lang/Runnable;Lyxe;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,62 +1,102 @@
-.class public abstract Lgm7;
+.class public final Lgm7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
 
 # static fields
-.field public static final a:Ljava/lang/Integer;
+.field public static volatile c:Lgm7;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
     const/4 v0, 0x0
 
-    :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    iput v0, p0, Lgm7;->a:I
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    .line 3
+    new-instance v0, Lp30;
 
-    const-string v2, "SDK_INT"
+    const/4 v1, 0x3
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-direct {v0, v1}, Lp30;-><init>(I)V
 
-    move-result-object v1
+    const/4 v1, 0x2
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v1
+    move-result-object v0
 
-    instance-of v2, v1, Ljava/lang/Integer;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    sput-object v0, Lgm7;->a:Ljava/lang/Integer;
+    iput-object v0, p0, Lgm7;->b:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Looper;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgm7;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lhu9;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, p1, v1}, Lhu9;-><init>(Landroid/os/Looper;I)V
+
+    iput-object v0, p0, Lgm7;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
+
+    iget v0, p0, Lgm7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgm7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhu9;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgm7;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

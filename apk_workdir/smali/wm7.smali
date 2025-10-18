@@ -1,57 +1,45 @@
-.class public abstract Lwm7;
-.super Ljava/lang/Object;
+.class public final Lwm7;
+.super Lx36;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:Ljava/lang/Iterable;
 
-.field public b:I
+.field public final synthetic b:Ldxb;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Iterable;Ldxb;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwm7;->a:Ljava/lang/Iterable;
+
+    iput-object p2, p0, Lwm7;->b:Ldxb;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final iterator()Ljava/util/Iterator;
     .locals 3
 
-    iget-boolean v0, p0, Lwm7;->a:Z
+    iget-object v0, p0, Lwm7;->a:Ljava/lang/Iterable;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Lwm7;->a:Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput p1, p0, Lwm7;->b:I
+    new-instance v1, Lxm7;
 
-    return-void
+    iget-object v2, p0, Lwm7;->b:Ldxb;
 
-    :cond_0
-    iget v0, p0, Lwm7;->b:I
+    invoke-direct {v1, v0, v2}, Lxm7;-><init>(Ljava/util/Iterator;Ldxb;)V
 
-    if-ne v0, p1, :cond_1
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Given job ID "
-
-    const-string v2, " is different than previous "
-
-    invoke-static {p1, v1, v2}, Lf67;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v1, p0, Lwm7;->b:I
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v1
 .end method

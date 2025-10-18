@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv87;
+.implements Ls97;
 
 
 # instance fields
@@ -27,51 +27,51 @@
 
 
 # virtual methods
-.method public final a(Lna5;ILhgc;Lu87;)Ln93;
+.method public final a(Lfb5;ILohc;Lr97;)Laa3;
     .locals 5
 
     iget v0, p0, Lef;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-virtual {p1}, Lfb5;->i0()V
 
-    iget-object v0, p1, Lna5;->b:Ly87;
+    iget-object v0, p1, Lfb5;->b:Lv97;
 
     iget-object v1, p0, Lef;->b:Ljava/lang/Object;
 
-    check-cast v1, Llk4;
+    check-cast v1, Lzk4;
 
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v3, Lnk4;->a:Ly87;
+    sget-object v3, Lbl4;->a:Lv97;
 
     const/4 v4, 0x0
 
     if-ne v0, v3, :cond_0
 
-    iget-object v0, v1, Llk4;->c:Lirb;
+    iget-object v0, v1, Lzk4;->c:Lnsb;
 
-    iget-object p4, p4, Lu87;->a:Landroid/graphics/Bitmap$Config;
+    iget-object p4, p4, Lr97;->a:Landroid/graphics/Bitmap$Config;
 
-    invoke-interface {v0, p1, p4, p2, v4}, Lirb;->b(Lna5;Landroid/graphics/Bitmap$Config;ILandroid/graphics/ColorSpace;)Lq93;
+    invoke-interface {v0, p1, p4, p2, v4}, Lnsb;->c(Lfb5;Landroid/graphics/Bitmap$Config;ILandroid/graphics/ColorSpace;)Lda3;
 
     move-result-object p2
 
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-virtual {p1}, Lfb5;->i0()V
 
-    iget p4, p1, Lna5;->c:I
+    iget p4, p1, Lfb5;->c:I
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-virtual {p1}, Lfb5;->i0()V
 
-    iget p1, p1, Lna5;->o:I
+    iget p1, p1, Lfb5;->o:I
 
-    invoke-static {p2, p3, p4, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lq93;Lhgc;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    invoke-static {p2, p3, p4, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lda3;Lohc;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
     move-result-object v4
 
@@ -81,50 +81,50 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Lq93;->close()V
+    invoke-virtual {p2}, Lda3;->close()V
 
     goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    invoke-static {p2}, Lq93;->P(Lq93;)V
+    invoke-static {p2}, Lda3;->P(Lda3;)V
 
     throw p1
 
     :cond_0
-    sget-object v2, Lnk4;->c:Ly87;
+    sget-object v2, Lbl4;->c:Lv97;
 
     if-ne v0, v2, :cond_3
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-virtual {p1}, Lfb5;->i0()V
 
-    iget v0, p1, Lna5;->X:I
+    iget v0, p1, Lfb5;->X:I
 
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_2
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-virtual {p1}, Lfb5;->i0()V
 
-    iget v0, p1, Lna5;->Y:I
+    iget v0, p1, Lfb5;->Y:I
 
     if-eq v0, v2, :cond_2
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v1, Llk4;->a:Lv87;
+    iget-object v0, v1, Lzk4;->a:Ls97;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lv87;->a(Lna5;ILhgc;Lu87;)Ln93;
+    invoke-interface {v0, p1, p2, p3, p4}, Ls97;->a(Lfb5;ILohc;Lr97;)Laa3;
 
     move-result-object v4
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v1, p1, p4}, Llk4;->b(Lna5;Lu87;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    invoke-virtual {v1, p1, p4}, Lzk4;->b(Lfb5;Lr97;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
     move-result-object v4
 
@@ -135,47 +135,47 @@
 
     const-string p3, "image width or height is incorrect"
 
-    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lna5;)V
+    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lfb5;)V
 
     throw p2
 
     :cond_3
-    sget-object v2, Lnk4;->j:Ly87;
+    sget-object v2, Lbl4;->j:Lv97;
 
     if-ne v0, v2, :cond_5
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v1, Llk4;->b:Lv87;
+    iget-object v0, v1, Lzk4;->b:Ls97;
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lv87;->a(Lna5;ILhgc;Lu87;)Ln93;
+    invoke-interface {v0, p1, p2, p3, p4}, Ls97;->a(Lfb5;ILohc;Lr97;)Laa3;
 
     move-result-object v4
 
     goto :goto_0
 
     :cond_4
-    invoke-virtual {v1, p1, p4}, Llk4;->b(Lna5;Lu87;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    invoke-virtual {v1, p1, p4}, Lzk4;->b(Lfb5;Lr97;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
     move-result-object v4
 
     goto :goto_0
 
     :cond_5
-    sget-object p2, Lnk4;->m:Ly87;
+    sget-object p2, Lbl4;->m:Lv97;
 
     if-ne v0, p2, :cond_6
 
     goto :goto_0
 
     :cond_6
-    sget-object p2, Ly87;->c:Ly87;
+    sget-object p2, Lv97;->c:Lv97;
 
     if-eq v0, p2, :cond_7
 
-    invoke-virtual {v1, p1, p4}, Llk4;->b(Lna5;Lu87;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    invoke-virtual {v1, p1, p4}, Lzk4;->b(Lfb5;Lr97;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
     move-result-object v4
 
@@ -187,7 +187,7 @@
 
     const-string p3, "unknown image format"
 
-    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lna5;)V
+    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lfb5;)V
 
     throw p2
 
@@ -200,26 +200,26 @@
 
     if-nez p3, :cond_8
 
-    new-instance p3, Lpzd;
+    new-instance p3, Lw0e;
 
     const/4 v0, 0x2
 
-    invoke-direct {p3, v0, p2}, Lpzd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p3, v0, p2}, Lw0e;-><init>(ILjava/lang/Object;)V
 
     new-instance v0, Lkf;
 
-    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Lhrb;
+    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Lmsb;
 
     iget-boolean v2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->k:Z
 
-    invoke-direct {v0, p3, v1, v2}, Lkf;-><init>(Lpzd;Lhrb;Z)V
+    invoke-direct {v0, p3, v1, v2}, Lkf;-><init>(Lw0e;Lmsb;Z)V
 
     iput-object v0, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lkf;
 
     :cond_8
     iget-object p2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lkf;
 
-    iget-object p3, p4, Lu87;->b:Landroid/graphics/Bitmap$Config;
+    iget-object p3, p4, Lr97;->b:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -227,32 +227,32 @@
 
     if-eqz p2, :cond_a
 
-    iget-object p2, p1, Lna5;->a:Lq93;
+    iget-object p2, p1, Lfb5;->a:Lda3;
 
-    invoke-static {p2}, Lq93;->o(Lq93;)Lq93;
+    invoke-static {p2}, Lda3;->o(Lda3;)Lda3;
 
     move-result-object p2
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :try_start_1
-    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+    invoke-virtual {p2}, Lda3;->Z()Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Lj79;
+    check-cast p3, Ll89;
 
-    invoke-virtual {p3}, Lj79;->r()Ljava/nio/ByteBuffer;
+    invoke-virtual {p3}, Ll89;->r()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {p3}, Lj79;->r()Ljava/nio/ByteBuffer;
+    invoke-virtual {p3}, Ll89;->r()Ljava/nio/ByteBuffer;
 
     move-result-object p3
 
-    invoke-static {p3, p4}, Lcom/facebook/animated/gif/GifImage;->a(Ljava/nio/ByteBuffer;Lu87;)Lcom/facebook/animated/gif/GifImage;
+    invoke-static {p3, p4}, Lcom/facebook/animated/gif/GifImage;->a(Ljava/nio/ByteBuffer;Lr97;)Lcom/facebook/animated/gif/GifImage;
 
     move-result-object p3
 
@@ -264,33 +264,33 @@
     goto :goto_2
 
     :cond_9
-    invoke-virtual {p3}, Lj79;->n()J
+    invoke-virtual {p3}, Ll89;->n()J
 
     move-result-wide v0
 
-    invoke-virtual {p3}, Lj79;->Q()I
+    invoke-virtual {p3}, Ll89;->Q()I
 
     move-result p3
 
-    invoke-static {v0, v1, p3, p4}, Lcom/facebook/animated/gif/GifImage;->b(JILu87;)Lcom/facebook/animated/gif/GifImage;
+    invoke-static {v0, v1, p3, p4}, Lcom/facebook/animated/gif/GifImage;->b(JILr97;)Lcom/facebook/animated/gif/GifImage;
 
     move-result-object p3
 
     :goto_1
-    iget-object p1, p1, Lna5;->t0:Ljava/lang/String;
+    iget-object p1, p1, Lfb5;->s0:Ljava/lang/String;
 
-    invoke-static {p1, p4, p3}, Lkf;->a(Ljava/lang/String;Lu87;Lcom/facebook/animated/gif/GifImage;)Ll93;
+    invoke-static {p1, p4, p3}, Lkf;->a(Ljava/lang/String;Lr97;Lcom/facebook/animated/gif/GifImage;)Ly93;
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p2}, Lq93;->close()V
+    invoke-virtual {p2}, Lda3;->close()V
 
     return-object p1
 
     :goto_2
-    invoke-virtual {p2}, Lq93;->close()V
+    invoke-virtual {p2}, Lda3;->close()V
 
     throw p1
 

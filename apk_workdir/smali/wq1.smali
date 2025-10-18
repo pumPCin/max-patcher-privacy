@@ -1,31 +1,39 @@
 .class public final Lwq1;
-.super Ljava/lang/Object;
+.super Lmmi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final b:J
 
-.field public final b:Z
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(JZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lwq1;->a:Z
+    iput-wide p1, p0, Lwq1;->b:J
 
-    iput-boolean p2, p0, Lwq1;->b:Z
+    iput-boolean p3, p0, Lwq1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lwq1;->c:Z
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -45,18 +53,20 @@
     :cond_1
     check-cast p1, Lwq1;
 
-    iget-boolean v1, p0, Lwq1;->a:Z
+    iget-wide v3, p0, Lwq1;->b:J
 
-    iget-boolean v3, p1, Lwq1;->a:Z
+    iget-wide v5, p1, Lwq1;->b:J
 
-    if-eq v1, v3, :cond_2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-boolean v1, p0, Lwq1;->b:Z
+    iget-boolean v1, p0, Lwq1;->c:Z
 
-    iget-boolean p1, p1, Lwq1;->b:Z
+    iget-boolean p1, p1, Lwq1;->c:Z
 
     if-eq v1, p1, :cond_3
 
@@ -69,15 +79,15 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-boolean v0, p0, Lwq1;->a:Z
+    iget-wide v0, p0, Lwq1;->b:J
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v1, p0, Lwq1;->b:Z
+    iget-boolean v1, p0, Lwq1;->c:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
@@ -91,17 +101,23 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", settingsButtonVisibility="
+    const-string v0, "User(userId="
+
+    const-string v1, ", isVideo="
+
+    iget-wide v2, p0, Lwq1;->b:J
+
+    iget-boolean v4, p0, Lwq1;->c:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     const-string v1, ")"
 
-    const-string v2, "ButtonsVisibility(moreButtonVisibility="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lwq1;->a:Z
-
-    iget-boolean v4, p0, Lwq1;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

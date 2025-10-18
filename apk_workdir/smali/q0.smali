@@ -9,7 +9,7 @@
 # instance fields
 .field public final synthetic a:Z
 
-.field public final synthetic b:Lyb4;
+.field public final synthetic b:Lnc4;
 
 .field public final synthetic c:Z
 
@@ -17,7 +17,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lr0;ZLyb4;Z)V
+.method public constructor <init>(Lr0;ZLnc4;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +26,7 @@
 
     iput-boolean p2, p0, Lq0;->a:Z
 
-    iput-object p3, p0, Lq0;->b:Lyb4;
+    iput-object p3, p0, Lq0;->b:Lnc4;
 
     iput-boolean p4, p0, Lq0;->c:Z
 
@@ -42,11 +42,11 @@
 
     iget-object v1, p0, Lq0;->o:Lr0;
 
-    iget-object v2, p0, Lq0;->b:Lyb4;
+    iget-object v2, p0, Lq0;->b:Lnc4;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v2, v1}, Lyb4;->c(Lr0;)V
+    invoke-interface {v2, v1}, Lnc4;->c(Lr0;)V
 
     return-void
 
@@ -55,12 +55,12 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v2}, Lyb4;->d()V
+    invoke-interface {v2}, Lnc4;->d()V
 
     return-void
 
     :cond_1
-    invoke-interface {v2, v1}, Lyb4;->a(Lr0;)V
+    invoke-interface {v2, v1}, Lnc4;->a(Lr0;)V
 
     return-void
 .end method

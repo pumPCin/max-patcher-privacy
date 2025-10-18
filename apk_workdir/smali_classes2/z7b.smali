@@ -1,150 +1,139 @@
 .class public final Lz7b;
-.super Lb4a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lma5;
 
 
 # instance fields
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic a:Lb8b;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lb8b;)V
+    .locals 0
 
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lb4a;-><init>(Ljava/lang/Object;)V
-
-    iput-wide p1, p0, Lz7b;->b:J
-
-    iput-object p3, p0, Lz7b;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lz7b;->d:Ljava/lang/String;
+    iput-object p1, p0, Lz7b;->a:Lb8b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final g(La8b;F)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-object p1, p0, Lz7b;->a:Lb8b;
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p1, Lb8b;->o:Lpi3;
 
-    return v0
+    invoke-virtual {p1, p2}, Lpi3;->a(F)V
+
+    return-void
+.end method
+
+.method public final r(La8b;)V
+    .locals 0
+
+    iget-object p1, p0, Lz7b;->a:Lb8b;
+
+    iget-object p1, p1, Lb8b;->o:Lpi3;
+
+    invoke-virtual {p1}, Lpi3;->c()V
+
+    return-void
+.end method
+
+.method public final s(Lul0;II)V
+    .locals 4
+
+    iget-object p2, p0, Lz7b;->a:Lb8b;
+
+    iget-object v0, p2, Lb8b;->o:Lpi3;
+
+    invoke-static {p3}, Ldy1;->v(I)I
+
+    move-result p3
+
+    packed-switch p3, :pswitch_data_0
+
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p1, Lul0;->w:Lone/video/player/error/OneVideoPlaybackException;
+
+    if-eqz p1, :cond_0
+
+    iget-object p2, p2, Lb8b;->a:Lsf5;
+
+    new-instance p3, Lru/ok/tamtam/ExceptionHandler$HandledException;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    const-string v3, "Playback failed"
+
+    invoke-direct {p3, v3, p1, v2, v1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
+
+    invoke-static {p2, p3}, Lsf5;->b(Lsf5;Ljava/lang/Throwable;)V
 
     :cond_0
-    instance-of v1, p1, Lz7b;
+    invoke-virtual {v0, p1}, Lpi3;->A(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    if-nez v1, :cond_1
+    :pswitch_2
+    invoke-virtual {v0}, Lpi3;->d()V
 
-    return v2
+    return-void
 
-    :cond_1
-    check-cast p1, Lz7b;
+    :pswitch_3
+    invoke-virtual {v0}, Lpi3;->p()V
 
-    iget-wide v3, p0, Lz7b;->b:J
+    return-void
 
-    iget-wide v5, p1, Lz7b;->b:J
+    :pswitch_4
+    iget-object p1, p2, Lb8b;->Z:Lz30;
 
-    cmp-long v1, v3, v5
+    const/4 p3, 0x3
 
-    if-eqz v1, :cond_2
+    iget p2, p2, Lb8b;->Y:I
 
-    return v2
+    invoke-virtual {p1, p3, p2}, Lz30;->d(II)V
 
-    :cond_2
-    iget-object v1, p0, Lz7b;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Lpi3;->s()V
 
-    iget-object v3, p1, Lz7b;->c:Ljava/lang/String;
+    return-void
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_5
+    invoke-virtual {v0}, Lpi3;->x()V
 
-    move-result v1
+    return-void
 
-    if-nez v1, :cond_3
+    :pswitch_6
+    invoke-virtual {v0}, Lpi3;->b()V
 
-    return v2
+    return-void
 
-    :cond_3
-    iget-object v1, p0, Lz7b;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lz7b;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lz7b;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lz7b;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lz7b;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "OpenPhoneBook(contactId="
-
-    const-string v1, ", fullName="
-
-    iget-wide v2, p0, Lz7b;->b:J
-
-    iget-object v4, p0, Lz7b;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lf67;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", phone="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lz7b;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lfef;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

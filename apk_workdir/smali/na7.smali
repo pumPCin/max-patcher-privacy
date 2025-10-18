@@ -1,100 +1,87 @@
 .class public final Lna7;
-.super Lzo4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic o:I
+.field public a:Lmlf;
 
-.field public final p:Ljava/lang/Object;
+.field public final b:Landroid/content/Context;
+
+.field public c:Lwz4;
+
+.field public d:Lr1e;
+
+.field public e:Lcs8;
+
+.field public f:Ltu4;
+
+.field public g:Llmf;
+
+.field public h:Lpvb;
+
+.field public i:Ljava/util/Set;
+
+.field public j:Ltu4;
+
+.field public k:Leh8;
+
+.field public final l:Lpg6;
+
+.field public final m:Lr55;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lna7;->o:I
+    sget-object v0, Lwz4;->b:Lwz4;
 
-    .line 3
-    sget-object v0, Lzo4;->k:Landroid/util/Size;
+    iput-object v0, p0, Lna7;->c:Lwz4;
 
-    const/4 v1, 0x0
+    new-instance v0, Lpg6;
 
-    invoke-direct {p0, v0, v1}, Lzo4;-><init>(Landroid/util/Size;I)V
+    const/16 v1, 0xc
 
-    .line 4
-    iput-object p1, p0, Lna7;->p:Ljava/lang/Object;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lpg6;-><init>(CI)V
+
+    const/16 v1, 0x800
+
+    iput v1, v0, Lpg6;->b:I
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    new-instance v2, Lru4;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, v1}, Lru4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v2, v0, Lpg6;->c:Ljava/lang/Object;
+
+    new-instance v1, Lwyi;
+
+    const/16 v2, 0xc
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Lwyi;-><init>(IB)V
+
+    iput-object v1, v0, Lpg6;->o:Ljava/lang/Object;
+
+    iput-object v0, p0, Lna7;->l:Lpg6;
+
+    new-instance v0, Lr55;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lna7;->m:Lr55;
+
+    iput-object p1, p0, Lna7;->b:Landroid/content/Context;
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lna7;->o:I
-
-    .line 1
-    invoke-direct {p0, p2, p3}, Lzo4;-><init>(Landroid/util/Size;I)V
-
-    .line 2
-    iput-object p1, p0, Lna7;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzef;Landroid/util/Size;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lna7;->o:I
-
-    .line 5
-    iput-object p1, p0, Lna7;->p:Ljava/lang/Object;
-
-    const/16 p1, 0x22
-
-    invoke-direct {p0, p2, p1}, Lzo4;-><init>(Landroid/util/Size;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final f()Lo18;
-    .locals 1
-
-    iget v0, p0, Lna7;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lna7;->p:Ljava/lang/Object;
-
-    check-cast v0, Lzef;
-
-    iget-object v0, v0, Lzef;->g:Lbu1;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lna7;->p:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/Surface;
-
-    invoke-static {v0}, Lt9g;->l(Ljava/lang/Object;)Lla7;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

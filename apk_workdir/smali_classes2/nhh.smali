@@ -1,150 +1,193 @@
-.class public final Lnhh;
-.super Llff;
+.class public final synthetic Lnhh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lhn6;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Lnhh;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lrhh;
-
-.field public final synthetic r0:Lhhh;
-
-.field public final synthetic s0:Ldhh;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
-.method public constructor <init>(Ldhh;Lhhh;Lrhh;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p3, p0, Lnhh;->Z:Lrhh;
+    new-instance v0, Lnhh;
 
-    iput-object p2, p0, Lnhh;->r0:Lhhh;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnhh;->s0:Ldhh;
+    sput-object v0, Lnhh;->a:Lnhh;
 
-    const/4 p1, 0x2
+    new-instance v1, Levb;
 
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.share.WebAppShareResponse"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "status"
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lnhh;->descriptor:Lb3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget-object v0, Lnhh;->descriptor:Lb3e;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnhh;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
 
     move-result-object p1
 
-    check-cast p1, Lnhh;
+    sget-object v1, Lphh;->c:[Lur7;
 
-    sget-object p2, Lzag;->a:Lzag;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, p2}, Lnhh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    return-object p1
-.end method
+    move v6, v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    move v7, v3
 
-    new-instance v0, Lnhh;
+    move-object v5, v4
 
-    iget-object v1, p0, Lnhh;->r0:Lhhh;
+    :goto_0
+    if-eqz v6, :cond_3
 
-    iget-object v2, p0, Lnhh;->s0:Ldhh;
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
 
-    iget-object v3, p0, Lnhh;->Z:Lrhh;
+    move-result v8
 
-    invoke-direct {v0, v2, v1, v3, p2}, Lnhh;-><init>(Ldhh;Lhhh;Lrhh;Lkotlin/coroutines/Continuation;)V
+    const/4 v9, -0x1
 
-    iput-object p1, v0, Lnhh;->Y:Ljava/lang/Object;
+    if-eq v8, v9, :cond_2
 
-    return-object v0
-.end method
+    if-eqz v8, :cond_1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    if-ne v8, v2, :cond_0
 
-    iget v0, p0, Lnhh;->X:I
+    aget-object v8, v1, v2
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0, v2, v8, v5}, Ld9;->t(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object v5
 
-    if-ne v0, v1, :cond_0
+    check-cast v5, Lrhh;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    or-int/lit8 v7, v7, 0x2
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnhh;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lnhh;->Z:Lrhh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lrhh;->f(Ljava/lang/Throwable;)Lwo7;
+    invoke-virtual {p1, v0, v3}, Ld9;->w(Lb3e;I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lrhh;->g()Lbe3;
+    or-int/lit8 v7, v7, 0x1
 
-    move-result-object v2
+    goto :goto_0
 
-    iget-object v3, v0, Lrhh;->e:Ldv0;
+    :cond_2
+    move v6, v3
 
-    iget-object p1, p0, Lnhh;->s0:Ldhh;
+    goto :goto_0
 
-    iget-object v6, p1, Ldhh;->b:Ljava/lang/String;
+    :cond_3
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
 
-    iput v1, p0, Lnhh;->X:I
+    new-instance p1, Lphh;
 
-    iget-object v5, p0, Lnhh;->r0:Lhhh;
+    invoke-direct {p1, v7, v4, v5}, Lphh;-><init>(ILjava/lang/String;Lrhh;)V
 
-    move-object v7, p0
+    return-object p1
+.end method
 
-    invoke-virtual/range {v2 .. v7}, Lbe3;->a(Le82;Lwo7;Lkbh;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 4
+
+    check-cast p2, Lphh;
+
+    sget-object v0, Lnhh;->descriptor:Lb3e;
+
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
 
     move-result-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
+    sget-object v1, Lphh;->c:[Lur7;
 
-    if-ne p1, v0, :cond_2
+    iget-object v2, p2, Lphh;->a:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    const/4 v2, 0x1
+
+    aget-object v1, v1, v2
+
+    iget-object p2, p2, Lphh;->b:Lrhh;
+
+    invoke-virtual {p1, v0, v2, v1, p2}, Lo24;->i(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
+    .locals 5
+
+    sget-object v0, Lphh;->c:[Lur7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lur7;
+
+    sget-object v3, Lvaf;->a:Lvaf;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    aput-object v0, v2, v1
+
+    return-object v2
+.end method
+
+.method public final d()Lb3e;
+    .locals 1
+
+    sget-object v0, Lnhh;->descriptor:Lb3e;
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

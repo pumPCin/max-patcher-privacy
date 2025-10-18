@@ -1,48 +1,19 @@
 .class public final Ldna;
-.super Lk14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lj7a;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lj7a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Ldna;->Y:Lj7a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ldna;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ldna;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ldna;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ldna;->X:I
-
-    iget-object p1, p0, Ldna;->Y:Lj7a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lj7a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -4,36 +4,22 @@
 
 
 # instance fields
-.field public final a:Lyed;
+.field public a:J
 
-.field public final b:Lei;
+.field public b:Ljava/lang/String;
 
-.field public final c:Lqed;
+.field public c:Ljava/lang/String;
 
+.field public d:J
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.field public e:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public f:J
 
-    iput-object p1, p0, Lv3f;->a:Lyed;
+.field public g:Ljava/util/ArrayList;
 
-    new-instance v0, Lei;
+.field public h:Ljava/lang/String;
 
-    const/16 v1, 0x1a
+.field public i:Z
 
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lv3f;->b:Lei;
-
-    new-instance v0, Lqed;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, p1, v1}, Lqed;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lv3f;->c:Lqed;
-
-    return-void
-.end method
+.field public j:I

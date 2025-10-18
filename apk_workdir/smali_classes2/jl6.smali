@@ -1,51 +1,97 @@
-.class public final synthetic Ljl6;
+.class public final Ljl6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lll6;
+
 
 # instance fields
-.field public final synthetic a:Lfm6;
+.field public final a:Lcl6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfm6;)V
+.method public constructor <init>(Lcl6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljl6;->a:Lfm6;
+    iput-object p1, p0, Ljl6;->a:Lcl6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfzd;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljl6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljl6;
+
+    iget-object v1, p0, Ljl6;->a:Lcl6;
+
+    iget-object p1, p1, Ljl6;->a:Lcl6;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ljl6;->a:Lcl6;
+
+    invoke-virtual {v0}, Lcl6;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "got toggle state "
+    const-string v1, "OnSelectAlbum(album="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Ljl6;->a:Lcl6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "fm6"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ljl6;->a:Lfm6;
-
-    iget-object v0, v0, Lfm6;->N0:Lsze;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
+    return-object v0
 .end method

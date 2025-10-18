@@ -1,98 +1,140 @@
-.class public abstract Lsv9;
+.class public final Lsv9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
+
+
 # direct methods
-.method public static a([B)Ltv9;
-    .locals 14
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDelete;-><init>()V
+    iput-object p1, p0, Lsv9;->a:Ljava/lang/String;
 
-    :try_start_0
-    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
+    iput p2, p0, Lsv9;->b:I
 
-    move-result-object p0
+    iput p3, p0, Lsv9;->c:I
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
 
-    invoke-static {v0}, Lke8;->c(Ljava/lang/CharSequence;)Z
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lsv9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lsv9;
+
+    iget-object v1, p0, Lsv9;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lsv9;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lsv9;->b:I
+
+    iget v3, p1, Lsv9;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lsv9;->c:I
+
+    iget p1, p1, Lsv9;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lsv9;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
+    iget v1, p0, Lsv9;->b:I
 
-    invoke-static {v0}, Ltf3;->a(Ljava/lang/String;)Ltf3;
+    invoke-static {v1, v0}, Lcgi;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lsv9;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", width="
+
+    const-string v1, ", height="
+
+    iget v2, p0, Lsv9;->b:I
+
+    const-string v3, "Quality(link="
+
+    iget-object v4, p0, Lsv9;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    :goto_0
-    move-object v10, v0
+    const-string v1, ")"
 
-    goto :goto_1
+    iget v2, p0, Lsv9;->c:I
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :goto_1
-    new-instance v1, Ltv9;
-
-    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->requestId:J
-
-    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatId:J
-
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatServerId:J
-
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesId:[J
-
-    invoke-static {v0}, Ljt;->B([J)Ljava/util/List;
-
-    move-result-object v8
-
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesServerId:[J
-
-    invoke-static {v0}, Ljt;->B([J)Ljava/util/List;
-
-    move-result-object v9
-
-    iget-boolean v11, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->forMe:Z
-
-    sget-object v0, Lpp4;->o:Lco6;
-
-    iget v12, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->itemTypeId:I
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    invoke-static {v0, v12}, Lco6;->g(Lco6;Ljava/lang/Integer;)Lpp4;
-
-    move-result-object v12
-
-    iget-boolean v13, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
-
-    invoke-direct/range {v1 .. v13}, Ltv9;-><init>(JJJLjava/util/List;Ljava/util/List;Ltf3;ZLpp4;Z)V
-
-    return-object v1
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

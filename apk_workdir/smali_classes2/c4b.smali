@@ -1,53 +1,99 @@
 .class public final Lc4b;
-.super Lk14;
+.super Lrdi;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
+.field public final synthetic c:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ld4b;
-
-.field public o:Ld4b;
-
-.field public r0:I
+.field public final synthetic o:Ld4b;
 
 
 # direct methods
-.method public constructor <init>(Ld4b;Lk14;)V
+.method public constructor <init>(Ld4b;I)V
     .locals 0
 
-    iput-object p1, p0, Lc4b;->Z:Ld4b;
+    iput p2, p0, Lc4b;->c:I
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lc4b;->o:Ld4b;
+
+    const/16 p1, 0xc
+
+    packed-switch p2, :pswitch_data_0
+
+    sget-object p2, Lr3b;->a:Lr3b;
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Ly3b;->a:Ly3b;
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    iput-object p1, p0, Lc4b;->Y:Ljava/lang/Object;
+    iget v0, p0, Lc4b;->c:I
 
-    iget p1, p0, Lc4b;->r0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p2, La4b;
 
-    or-int/2addr p1, v0
+    check-cast p1, La4b;
 
-    iput p1, p0, Lc4b;->r0:I
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lc4b;->Z:Ld4b;
+    move-result p1
 
-    const/4 v0, 0x0
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1, v0, v0, p0}, Ld4b;->l(Lw3b;Ljava/io/File;Lk14;)Ljava/lang/Object;
+    iget-object p1, p0, Lc4b;->o:Ld4b;
 
-    move-result-object p1
+    invoke-static {p1, p2}, Ld4b;->w(Ld4b;La4b;)V
 
-    return-object p1
+    invoke-virtual {p1}, Ld4b;->x()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast p2, Lu3b;
+
+    check-cast p1, Lu3b;
+
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lc4b;->o:Ld4b;
+
+    invoke-static {p1, p2}, Ld4b;->v(Ld4b;Lu3b;)V
+
+    invoke-virtual {p1}, Ld4b;->x()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

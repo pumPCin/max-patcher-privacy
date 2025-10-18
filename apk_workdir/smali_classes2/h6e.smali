@@ -3,56 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lho1;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final X:Z
+
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-wide p1, p0, Lh6e;->a:J
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p3, p0, Lh6e;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Lh6e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p4, p0, Lh6e;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lh6e;->o:Ljava/lang/String;
+
+    iput-boolean p6, p0, Lh6e;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Luq4;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object v0, p0, Lh6e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const-string v0, "Session{="
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    const-string v1, ", current="
+
+    iget-wide v2, p0, Lh6e;->a:J
+
+    iget-boolean v4, p0, Lh6e;->X:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v1, "}"
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
-
-    check-cast v1, Lho1;
-
-    invoke-interface {v1, p1}, Lho1;->a(Luq4;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

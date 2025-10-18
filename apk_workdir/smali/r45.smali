@@ -1,13 +1,19 @@
-.class public abstract Lr45;
+.class public final Lr45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:F
+
+.field public b:F
+
+
 # direct methods
-.method public static a(Landroid/widget/EdgeEffect;FF)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

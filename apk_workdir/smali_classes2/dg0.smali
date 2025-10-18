@@ -1,150 +1,92 @@
 .class public final Ldg0;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public final b:Z
+.field public final synthetic Y:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldg0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iput-boolean p1, p0, Ldg0;->a:Z
+    iput-object p2, p0, Ldg0;->Y:Ljava/util/HashSet;
 
-    iput-boolean p2, p0, Ldg0;->b:Z
+    const/4 p1, 0x2
 
-    return-void
-.end method
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.method public static a(ZLyuc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "["
-
-    const-string v0, "]: "
-
-    invoke-static {p0, p2, v0, p3}, Lwc0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p2, "BadNetworkIndicatorConfig"
-
-    invoke-interface {p1, p2, p0}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lyuc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Ldg0;->a:Z
+    check-cast p1, Lq54;
 
-    invoke-static {v0, p1, p2, p3}, Ldg0;->a(ZLyuc;Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
+    invoke-virtual {p0, p1, p2}, Ldg0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.method public final c(Lyuc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    move-result-object p1
 
-    iget-boolean v0, p0, Ldg0;->b:Z
-
-    invoke-static {v0, p1, p2, p3}, Ldg0;->a(ZLyuc;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldg0;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ldg0;
 
-    iget-boolean v1, p0, Ldg0;->a:Z
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-boolean v3, p1, Ldg0;->a:Z
+    invoke-virtual {p1, p2}, Ldg0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Ldg0;->b:Z
-
-    iget-boolean p1, p1, Ldg0;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-boolean v0, p0, Ldg0;->a:Z
+    new-instance p1, Ldg0;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v0, p0, Ldg0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    move-result v0
+    iget-object v1, p0, Ldg0;->Y:Ljava/util/HashSet;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {p1, v0, v1, p2}, Ldg0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
 
-    iget-boolean v1, p0, Ldg0;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, ", debugVerboseLogging="
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Ldg0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    const-string v2, "DebugLoggingConfig(debugLogging="
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Lwoh;
 
-    iget-boolean v3, p0, Ldg0;->a:Z
+    move-result-object p1
 
-    iget-boolean v4, p0, Ldg0;->b:Z
+    invoke-virtual {p1}, Lwoh;->g()Landroidx/work/impl/model/WorkersQueueDao;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    move-result-object p1
+
+    iget-object v0, p0, Ldg0;->Y:Ljava/util/HashSet;
+
+    invoke-static {v0}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->delete(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

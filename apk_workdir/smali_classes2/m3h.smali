@@ -1,224 +1,546 @@
 .class public final Lm3h;
-.super Llff;
+.super Lsoe;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Lo3h;
+.field public final t:Lzla;
 
-.field public final synthetic Y:[B
+.field public u:Ld1d;
 
 
 # direct methods
-.method public constructor <init>(Lo3h;Lkotlin/coroutines/Continuation;[B)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;Z)V
+    .locals 15
 
-    iput-object p1, p0, Lm3h;->X:Lo3h;
+    new-instance v14, Lnoe;
 
-    iput-object p3, p0, Lm3h;->Y:[B
+    const-string v5, "websocket_failed_exception"
 
-    const/4 p1, 0x2
+    const-string v6, "websocket_timeout"
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v1, "websocket_restart"
+
+    const-string v2, "websocket_connected"
+
+    const-string v3, "websocket_reconnected"
+
+    const-string v4, "websocket_failed_pings"
+
+    move-object v0, v14
+
+    invoke-direct/range {v0 .. v6}, Lnoe;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "WS"
+
+    move-object v0, p0
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-wide/from16 v9, p8
+
+    move/from16 v11, p10
+
+    move-object/from16 v12, p11
+
+    move/from16 v13, p12
+
+    invoke-direct/range {v0 .. v14}, Lsoe;-><init>(Ljava/lang/String;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;ZLnoe;)V
+
+    new-instance v1, Lzla;
+
+    invoke-direct {v1}, Lzla;-><init>()V
+
+    iput-object v1, p0, Lm3h;->t:Lzla;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final safelyCloseSocketWithCodeAndReason(ILjava/lang/String;)Z
+    .locals 1
 
-    check-cast p1, Lb54;
+    iget-object p2, p0, Lm3h;->u:Ld1d;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lm3h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object v0, p0, Lm3h;->u:Ld1d;
 
-    move-result-object p1
+    if-eqz p2, :cond_0
 
-    check-cast p1, Lm3h;
+    const-string v0, "dispose"
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-virtual {p2, p1, v0}, Ld1d;->b(ILjava/lang/String;)Z
 
-    invoke-virtual {p1, p2}, Lm3h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    return-object p2
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lm3h;
-
-    iget-object v0, p0, Lm3h;->X:Lo3h;
-
-    iget-object v1, p0, Lm3h;->Y:[B
-
-    invoke-direct {p1, v0, p2, v1}, Lm3h;-><init>(Lo3h;Lkotlin/coroutines/Continuation;[B)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final safelyCreateNewSocket(Ljava/lang/String;Lroe;)V
     .locals 10
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance v0, Lup6;
 
-    iget-object p1, p0, Lm3h;->X:Lo3h;
+    invoke-direct {v0}, Lup6;-><init>()V
 
-    invoke-virtual {p1}, Lo3h;->getWaveView()Lv60;
+    invoke-virtual {v0, p1}, Lup6;->k(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lup6;->c()Lvbd;
+
+    move-result-object v3
+
+    new-instance v4, Lkpf;
+
+    check-cast p2, Lyxe;
+
+    const/4 p1, 0x4
+
+    invoke-direct {v4, p1, p2}, Lkpf;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lm3h;->t:Lzla;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ld1d;
+
+    sget-object v2, Llpf;->h:Llpf;
+
+    new-instance v5, Ljava/util/Random;
+
+    invoke-direct {v5}, Ljava/util/Random;-><init>()V
+
+    const/4 p2, 0x0
+
+    int-to-long v6, p2
+
+    iget-wide v8, p1, Lzla;->H0:J
+
+    invoke-direct/range {v1 .. v9}, Ld1d;-><init>(Llpf;Lvbd;Lkpf;Ljava/util/Random;JJ)V
+
+    iget-object p2, v3, Lvbd;->d:Lix6;
+
+    const-string v0, "Sec-WebSocket-Extensions"
+
+    invoke-virtual {p2, v0}, Lix6;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    new-instance p1, Ljava/net/ProtocolException;
+
+    const-string p2, "Request header not permitted: \'Sec-WebSocket-Extensions\'"
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ld1d;->c(Ljava/lang/Exception;)V
+
+    goto/16 :goto_2
+
+    :cond_0
+    invoke-virtual {p1}, Lzla;->a()Lyla;
 
     move-result-object p1
 
-    iget v0, p1, Lv60;->o:F
+    sget-object p2, Lmig;->a:[B
 
-    iget-object v1, p1, Lv60;->z0:Landroid/graphics/Path;
+    new-instance p2, Lai4;
 
-    const/4 v2, 0x1
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v2, p1, Lv60;->t0:Z
+    iput-object p2, p1, Lyla;->e:Lai4;
 
-    invoke-virtual {v1}, Landroid/graphics/Path;->isEmpty()Z
+    sget-object p2, Ld1d;->x:Ljava/util/List;
 
-    move-result v2
+    new-instance v2, Ljava/util/ArrayList;
 
-    if-eqz v2, :cond_0
+    invoke-direct {v2, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object p2, Lpec;->Y:Lpec;
+
+    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    sget-object v4, Lpec;->c:Lpec;
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
-
-    :goto_0
-    iget-object v2, p0, Lm3h;->Y:[B
-
-    if-nez v2, :cond_1
-
-    goto :goto_3
-
     :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string p2, "protocols must contain h2_prior_knowledge or http/1.1: "
 
-    int-to-float v3, v3
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/high16 v4, 0x40000000    # 2.0f
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    div-float/2addr v3, v4
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
+    move-result-object p1
 
-    array-length v5, v2
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    if-nez v5, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    :goto_0
+    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result p2
 
-    int-to-float v5, v5
+    const/4 v4, 0x1
 
-    div-float v6, v0, v4
+    if-eqz p2, :cond_4
 
-    sub-float/2addr v5, v6
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    const/4 v6, 0x6
+    move-result p2
 
-    int-to-float v6, v6
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v7
-
-    invoke-static {v6}, Lagi;->d(F)I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    sub-float/2addr v5, v6
-
-    array-length v6, v2
-
-    add-int/lit8 v6, v6, -0x1
-
-    if-ltz v6, :cond_5
-
-    :goto_1
-    add-int/lit8 v7, v6, -0x1
-
-    aget-byte v6, v2, v6
-
-    int-to-float v6, v6
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v9, 0x42fe0000    # 127.0f
-
-    div-float/2addr v8, v9
-
-    mul-float/2addr v8, v6
-
-    iget v6, p1, Lv60;->b:F
-
-    cmpg-float v9, v8, v6
-
-    if-gez v9, :cond_3
-
-    move v8, v6
-
-    :cond_3
-    div-float/2addr v8, v4
-
-    sub-float v6, v3, v8
-
-    add-float/2addr v8, v3
-
-    invoke-virtual {v1, v5, v6}, Landroid/graphics/Path;->moveTo(FF)V
-
-    invoke-virtual {v1, v5, v8}, Landroid/graphics/Path;->lineTo(FF)V
-
-    sub-float/2addr v5, v0
-
-    iget v6, p1, Lv60;->c:F
-
-    sub-float/2addr v5, v6
-
-    if-gez v7, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move v6, v7
+    if-gt p2, v4, :cond_3
 
     goto :goto_1
 
+    :cond_3
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "protocols containing h2_prior_knowledge cannot use other protocols: "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_4
+    :goto_1
+    sget-object p2, Lpec;->b:Lpec;
+
+    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_7
+
+    const/4 p2, 0x0
+
+    invoke-virtual {v2, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    sget-object v5, Lpec;->o:Lpec;
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v5, p1, Lyla;->r:Ljava/util/List;
+
+    invoke-virtual {v2, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    iput-object p2, p1, Lyla;->z:Ltvi;
+
     :cond_5
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lyla;->r:Ljava/util/List;
+
+    new-instance p2, Lzla;
+
+    invoke-direct {p2, p1}, Lzla;-><init>(Lyla;)V
+
+    invoke-virtual {v3}, Lvbd;->a()Lup6;
+
+    move-result-object p1
+
+    iget-object v2, p1, Lup6;->c:Ljava/lang/Object;
+
+    check-cast v2, Lor6;
+
+    const-string v3, "Upgrade"
+
+    const-string v5, "websocket"
+
+    invoke-virtual {v2, v3, v5}, Lor6;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p1, Lup6;->c:Ljava/lang/Object;
+
+    check-cast v2, Lor6;
+
+    const-string v5, "Connection"
+
+    invoke-virtual {v2, v5, v3}, Lor6;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p1, Lup6;->c:Ljava/lang/Object;
+
+    check-cast v2, Lor6;
+
+    const-string v3, "Sec-WebSocket-Key"
+
+    iget-object v5, v1, Ld1d;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v5}, Lor6;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p1, Lup6;->c:Ljava/lang/Object;
+
+    check-cast v2, Lor6;
+
+    const-string v3, "Sec-WebSocket-Version"
+
+    const-string v5, "13"
+
+    invoke-virtual {v2, v3, v5}, Lor6;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p1, Lup6;->c:Ljava/lang/Object;
+
+    check-cast v2, Lor6;
+
+    const-string v3, "permessage-deflate"
+
+    invoke-virtual {v2, v0, v3}, Lor6;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lup6;->c()Lvbd;
+
+    move-result-object p1
+
+    new-instance v0, Ls0d;
+
+    invoke-direct {v0, p2, p1, v4}, Ls0d;-><init>(Lzla;Lvbd;Z)V
+
+    iput-object v0, v1, Ld1d;->b:Ls0d;
+
+    new-instance p2, Lzgd;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {p2, v1, v2, p1}, Lzgd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p2}, Ls0d;->e(Lbu1;)V
+
     :goto_2
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    iput-object v1, p0, Lm3h;->u:Ld1d;
 
-    :goto_3
-    sget-object p1, Lzag;->a:Lzag;
+    return-void
 
-    return-object p1
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "protocols must not contain null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "protocols must not contain http/1.0: "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final safelyDoIfSocketExists(Lli6;)V
+    .locals 1
+
+    iget-object v0, p0, Lm3h;->u:Ld1d;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ld1d;->r:Lvbd;
+
+    invoke-virtual {v0}, Lvbd;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final safelyResetSocketReference()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lm3h;->u:Ld1d;
+
+    return-void
+.end method
+
+.method public final safelySendSocketMessage(Ljava/lang/String;)Z
+    .locals 10
+
+    iget-object v0, p0, Lm3h;->u:Ld1d;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    new-instance v1, Lqx0;
+
+    sget-object v2, Lha2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lqx0;-><init>([B)V
+
+    iput-object p1, v1, Lqx0;->b:Ljava/lang/String;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean p1, v0, Ld1d;->o:Z
+
+    const/4 v3, 0x1
+
+    if-nez p1, :cond_3
+
+    iget-boolean p1, v0, Ld1d;->l:Z
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v4, v0, Ld1d;->k:J
+
+    array-length p1, v2
+
+    int-to-long v6, p1
+
+    add-long/2addr v6, v4
+
+    const-wide/32 v8, 0x1000000
+
+    cmp-long p1, v6, v8
+
+    if-lez p1, :cond_2
+
+    const/16 p1, 0x3e9
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Ld1d;->b(ILjava/lang/String;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v3
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_1
+    array-length p1, v2
+
+    int-to-long v6, p1
+
+    add-long/2addr v4, v6
+
+    iput-wide v4, v0, Ld1d;->k:J
+
+    iget-object p1, v0, Ld1d;->j:Ljava/util/ArrayDeque;
+
+    new-instance v2, La1d;
+
+    invoke-direct {v2, v1}, La1d;-><init>(Lqx0;)V
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Ld1d;->f()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return v3
+
+    :cond_3
+    :goto_0
+    monitor-exit v0
+
+    return v3
+
+    :goto_1
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method

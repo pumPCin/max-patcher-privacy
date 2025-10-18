@@ -1,111 +1,88 @@
-.class public final Lss6;
+.class public final synthetic Lss6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrma;
+.implements Ltma;
+.implements Lqma;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final synthetic a:Lws6;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public synthetic constructor <init>(Lws6;)V
     .locals 0
 
+    iput-object p1, p0, Lss6;->a:Lws6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lss6;->a:I
-
-    iput p2, p0, Lss6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public b()V
+    .locals 3
+
+    iget-object v0, p0, Lss6;->a:Lws6;
+
+    iget-object v1, v0, Lws6;->e:Ljava/lang/String;
+
+    const-string v2, "startRetriever: canceled"
+
+    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lws6;->h:Le2j;
+
+    return-void
+.end method
+
+.method public l(Lcom/google/android/gms/tasks/Task;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lss6;->a:Lws6;
 
-    goto :goto_1
+    iget-object v0, p1, Lws6;->e:Ljava/lang/String;
 
-    :cond_0
-    instance-of v0, p1, Lss6;
+    const-string v1, "retriever is complete"
 
-    if-nez v0, :cond_1
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lss6;
+    iput-object v0, p1, Lws6;->h:Le2j;
 
-    iget v0, p0, Lss6;->a:I
+    return-void
+.end method
 
-    iget v1, p1, Lss6;->a:I
+.method public onFailure(Ljava/lang/Exception;)V
+    .locals 4
 
-    if-eq v0, v1, :cond_2
+    iget-object v0, p0, Lss6;->a:Lws6;
 
-    goto :goto_0
+    iget-object v1, v0, Lws6;->e:Ljava/lang/String;
 
-    :cond_2
-    iget v0, p0, Lss6;->b:I
+    new-instance v2, Lw54;
 
-    iget p1, p1, Lss6;->b:I
+    const-string v3, "startRetriever: failed"
 
-    if-eq v0, p1, :cond_3
+    invoke-direct {v2, v3, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
+    new-array p1, p1, [Ljava/lang/Object;
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    const/4 v3, 0x0
 
-    return p1
-.end method
+    invoke-static {v1, v2, v3, p1}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 2
+    iput-object v3, v0, Lws6;->h:Le2j;
 
-    iget v0, p0, Lss6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lss6;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", transparent="
-
-    const-string v1, ")"
-
-    const-string v2, "GradientsLoadingIconThemedColors(filled="
-
-    iget v3, p0, Lss6;->a:I
-
-    iget v4, p0, Lss6;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

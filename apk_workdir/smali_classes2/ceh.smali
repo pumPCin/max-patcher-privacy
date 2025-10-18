@@ -1,127 +1,144 @@
 .class public final Lceh;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lueh;
 
 
 # instance fields
-.field public final synthetic X:Lmeh;
+.field public final a:I
+
+.field public final b:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmeh;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I[Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lceh;->X:Lmeh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Lceh;->a:I
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lceh;->b:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lceh;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    if-eqz p1, :cond_1
 
-    check-cast p1, Lceh;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lceh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lceh;
-
-    iget-object v0, p0, Lceh;->X:Lmeh;
-
-    invoke-direct {p1, v0, p2}, Lceh;-><init>(Lmeh;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lceh;->X:Lmeh;
-
-    iget-object v0, p1, Lmeh;->V0:Lgzc;
-
-    iget-object v0, v0, Lgzc;->a:Llze;
-
-    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lreh;
-
-    sget-object v1, Lzag;->a:Lzag;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lreh;->d:Ljava/lang/String;
-
-    if-nez v0, :cond_0
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v2, 0x1
+    :cond_1
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v2}, Lmeh;->w(Ljava/lang/String;Z)V
+    :goto_0
+    const-class v2, Lceh;
 
-    iget-object v0, p1, Lmeh;->X0:Lde5;
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget-object v2, Lfdh;->a:Lfdh;
+    move-result v1
 
-    invoke-static {v0, v2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    iget-object v0, p1, Lmeh;->w0:Llt7;
+    if-nez v1, :cond_2
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    return v2
+
+    :cond_2
+    check-cast p1, Lceh;
+
+    iget v1, p0, Lceh;->a:I
+
+    iget v3, p1, Lceh;->a:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lceh;->b:[Ljava/lang/String;
+
+    iget-object p1, p1, Lceh;->b:[Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lceh;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lceh;->b:[Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lceh;->b:[Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v2, v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast v2, Ly3h;
+    const-string v2, "OpenGallery(mode="
 
-    iget-object p1, p1, Lmeh;->F0:Lz3h;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p1, :cond_1
+    iget v2, p0, Lceh;->a:I
 
-    iget-wide v4, p1, Lz3h;->a:J
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v6, p1, Lz3h;->b:Ljava/lang/String;
+    const-string v2, ", mimeTypes="
 
-    iget-object v7, p1, Lz3h;->c:Lr3h;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v8, p1, Lz3h;->d:Lm92;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x3
+    const-string v0, ")"
 
-    invoke-virtual/range {v2 .. v8}, Ly3h;->a(IJLjava/lang/String;Lr3h;Lm92;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    return-object v1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

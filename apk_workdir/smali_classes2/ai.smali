@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final a:Ll8a;
+.field public static final a:Lp9a;
 
 .field public static final b:Z
 
@@ -17,9 +17,9 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    sget-object v0, Lxh;->a:Ll8a;
+    sget-object v0, Lxh;->a:Lp9a;
 
-    sput-object v0, Lai;->a:Ll8a;
+    sput-object v0, Lai;->a:Lp9a;
 
     const-string v0, "animoji.debug"
 
@@ -31,7 +31,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Ls9f;->a0(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-static {v0}, Lzaf;->h0(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 
     new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget-object v2, Lxrd;->c:Lqi;
+    sget-object v2, Letd;->c:Lqi;
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
@@ -85,7 +85,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     const-string p1, ""
 
     :cond_0
-    sget-object v0, Lai;->a:Ll8a;
+    sget-object v0, Lai;->a:Lp9a;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

@@ -2,47 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lizf;
-
 
 # instance fields
-.field public final a:Z
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lxr6;)V
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Lxr6;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lvw6;->a:Liu7;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iput-object p2, p0, Lvw6;->b:Liu7;
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :goto_0
-    iput-boolean p1, p0, Lvw6;->a:Z
+    iput-object p3, p0, Lvw6;->c:Liu7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lwv4;
-    .locals 1
-
-    sget-object v0, Ltuc;->a:Lwv4;
-
-    return-object v0
 .end method

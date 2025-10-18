@@ -1,28 +1,26 @@
 .class public final Lxp5;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
 .field public X:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Laq5;
+.field public final synthetic Y:Lyp5;
 
 
 # direct methods
-.method public constructor <init>(Laq5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lyp5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lxp5;->Z:Laq5;
+    iput-object p1, p0, Lxp5;->Y:Lyp5;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +40,7 @@
 
     check-cast p1, Lxp5;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lxp5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,21 +50,19 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lxp5;
+    new-instance p1, Lxp5;
 
-    iget-object v1, p0, Lxp5;->Z:Laq5;
+    iget-object v0, p0, Lxp5;->Y:Lyp5;
 
-    invoke-direct {v0, v1, p2}, Lxp5;-><init>(Laq5;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lxp5;-><init>(Lyp5;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lxp5;->Y:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
     iget v0, p0, Lxp5;->X:I
 
@@ -76,9 +72,23 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :try_start_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p1
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -90,26 +100,47 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lxp5;->Y:Ljava/lang/Object;
+    iget-object p1, p0, Lxp5;->Y:Lyp5;
 
-    check-cast p1, Lb54;
-
+    :try_start_1
     iput v1, p0, Lxp5;->X:I
 
-    iget-object v0, p0, Lxp5;->Z:Laq5;
+    iget-object v0, p1, Lyp5;->a:Lfgd;
 
-    invoke-virtual {v0, p1, p0}, Laq5;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lsj4;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, p1}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lexi;->b(Lfgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-object v0, Lc54;->a:Lc54;
+    sget-object v0, Lr54;->a:Lr54;
 
     if-ne p1, v0, :cond_2
 
     return-object v0
 
+    :goto_0
+    const-string v0, "FcmNotificationHistoryDao"
+
+    const-string v1, "onLogout: clear failed"
+
+    invoke-static {v0, v1, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_2
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
+
     return-object p1
+
+    :goto_2
+    throw p1
 .end method

@@ -1,286 +1,273 @@
-.class public Lth3;
-.super Landroid/app/Dialog;
+.class public final Lth3;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Liw7;
-.implements Lrld;
 
 
 # instance fields
-.field public a:Lkw7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lae;
+.field public final b:Ljava/util/Set;
 
-.field public final c:Lnla;
+.field public final c:Ljava/util/Set;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Lii3;
+
+.field public final g:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILii3;Ljava/util/Set;)V
+    .locals 0
 
-    invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lae;
+    iput-object p1, p0, Lth3;->a:Ljava/lang/String;
 
-    invoke-direct {p1, p0}, Lae;-><init>(Lrld;)V
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    iput-object p1, p0, Lth3;->b:Lae;
+    move-result-object p1
 
-    new-instance p1, Lnla;
+    iput-object p1, p0, Lth3;->b:Ljava/util/Set;
 
-    new-instance p2, Lsx1;
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    const/16 v0, 0x14
+    move-result-object p1
 
-    invoke-direct {p2, v0, p0}, Lsx1;-><init>(ILjava/lang/Object;)V
+    iput-object p1, p0, Lth3;->c:Ljava/util/Set;
 
-    invoke-direct {p1, p2}, Lnla;-><init>(Ljava/lang/Runnable;)V
+    iput p4, p0, Lth3;->d:I
 
-    iput-object p1, p0, Lth3;->c:Lnla;
+    iput p5, p0, Lth3;->e:I
+
+    iput-object p6, p0, Lth3;->f:Lii3;
+
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lth3;->g:Ljava/util/Set;
 
     return-void
 .end method
 
-.method public static a(Lth3;)V
-    .locals 0
+.method public static a(Lkhc;)Lsh3;
+    .locals 5
 
-    invoke-super {p0}, Landroid/app/Dialog;->onBackPressed()V
+    new-instance v0, Lsh3;
 
-    return-void
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lkhc;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lsh3;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v2, v0, Lsh3;->d:Ljava/lang/Object;
+
+    new-instance v3, Ljava/util/HashSet;
+
+    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v3, v0, Lsh3;->e:Ljava/io/Serializable;
+
+    const/4 v3, 0x0
+
+    iput v3, v0, Lsh3;->b:I
+
+    iput v3, v0, Lsh3;->c:I
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v4, v0, Lsh3;->f:Ljava/io/Serializable;
+
+    invoke-virtual {v2, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    array-length p0, v1
+
+    :goto_0
+    if-ge v3, p0, :cond_0
+
+    aget-object v2, v1, v3
+
+    const-string v4, "Null interface"
+
+    invoke-static {v2, v4}, Lbvi;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, v0, Lsh3;->d:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/HashSet;
+
+    invoke-static {p0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    return-object v0
+.end method
+
+.method public static b(Ljava/lang/Class;)Lsh3;
+    .locals 2
+
+    new-instance v0, Lsh3;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    invoke-direct {v0, p0, v1}, Lsh3;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
+
+    return-object v0
+.end method
+
+.method public static varargs c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lth3;
+    .locals 10
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    new-instance v9, Ljava/util/HashSet;
+
+    invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {p1}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    array-length p1, p2
+
+    const/4 v6, 0x0
+
+    move v2, v6
+
+    :goto_0
+    if-ge v2, p1, :cond_0
+
+    aget-object v3, p2, v2
+
+    const-string v4, "Null interface"
+
+    invoke-static {v3, v4}, Lbvi;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v3}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v8, Lj42;
+
+    const/16 p1, 0x10
+
+    invoke-direct {v8, p1, p0}, Lj42;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lth3;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v5, Ljava/util/HashSet;
+
+    invoke-direct {v5, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    const/4 v3, 0x0
+
+    move v7, v6
+
+    invoke-direct/range {v2 .. v9}, Lth3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILii3;Ljava/util/Set;)V
+
+    return-object v2
 .end method
 
 
 # virtual methods
-.method public addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lth3;->b()V
-
-    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public final b()V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Component<"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lth3;->b:Ljava/util/Set;
+
+    invoke-interface {v1}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ">{"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lth3;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lth3;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", deps="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lth3;->c:Ljava/util/Set;
+
+    invoke-interface {v1}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0, p0}, Lm8;->e(Landroid/view/View;Liw7;)V
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    sget v1, Lwoc;->view_tree_on_back_pressed_dispatcher_owner:I
-
-    invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0, p0}, Lpci;->i(Landroid/view/View;Lrld;)V
-
-    return-void
-.end method
-
-.method public final m()Lun;
-    .locals 1
-
-    iget-object v0, p0, Lth3;->b:Lae;
-
-    iget-object v0, v0, Lae;->o:Ljava/lang/Object;
-
-    check-cast v0, Lun;
-
-    return-object v0
-.end method
-
-.method public final onBackPressed()V
-    .locals 1
-
-    iget-object v0, p0, Lth3;->c:Lnla;
-
-    invoke-virtual {v0}, Lnla;->d()V
-
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x21
-
-    if-lt v0, v1, :cond_0
-
-    invoke-static {p0}, Ly4;->m(Lth3;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lth3;->c:Lnla;
-
-    iput-object v0, v1, Lnla;->e:Landroid/window/OnBackInvokedDispatcher;
-
-    iget-boolean v0, v1, Lnla;->g:Z
-
-    invoke-virtual {v1, v0}, Lnla;->e(Z)V
-
-    :cond_0
-    iget-object v0, p0, Lth3;->b:Lae;
-
-    invoke-virtual {v0, p1}, Lae;->p(Landroid/os/Bundle;)V
-
-    iget-object p1, p0, Lth3;->a:Lkw7;
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Lkw7;
-
-    invoke-direct {p1, p0}, Lkw7;-><init>(Liw7;)V
-
-    iput-object p1, p0, Lth3;->a:Lkw7;
-
-    :cond_1
-    sget-object v0, Ljv7;->ON_CREATE:Ljv7;
-
-    invoke-virtual {p1, v0}, Lkw7;->d(Ljv7;)V
-
-    return-void
-.end method
-
-.method public final onSaveInstanceState()Landroid/os/Bundle;
-    .locals 2
-
-    invoke-super {p0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lth3;->b:Lae;
-
-    invoke-virtual {v1, v0}, Lae;->q(Landroid/os/Bundle;)V
-
-    return-object v0
-.end method
-
-.method public onStart()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/app/Dialog;->onStart()V
-
-    iget-object v0, p0, Lth3;->a:Lkw7;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lkw7;
-
-    invoke-direct {v0, p0}, Lkw7;-><init>(Liw7;)V
-
-    iput-object v0, p0, Lth3;->a:Lkw7;
-
-    :cond_0
-    sget-object v1, Ljv7;->ON_RESUME:Ljv7;
-
-    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
-
-    return-void
-.end method
-
-.method public onStop()V
-    .locals 2
-
-    iget-object v0, p0, Lth3;->a:Lkw7;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lkw7;
-
-    invoke-direct {v0, p0}, Lkw7;-><init>(Liw7;)V
-
-    iput-object v0, p0, Lth3;->a:Lkw7;
-
-    :cond_0
-    sget-object v1, Ljv7;->ON_DESTROY:Ljv7;
-
-    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lth3;->a:Lkw7;
-
-    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
-
-    return-void
-.end method
-
-.method public setContentView(I)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lth3;->b()V
-
-    .line 2
-    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(I)V
-
-    return-void
-.end method
-
-.method public setContentView(Landroid/view/View;)V
-    .locals 0
-
-    .line 3
-    invoke-virtual {p0}, Lth3;->b()V
-
-    .line 4
-    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
-
-    .line 5
-    invoke-virtual {p0}, Lth3;->b()V
-
-    .line 6
-    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public final x()Lkw7;
-    .locals 1
-
-    iget-object v0, p0, Lth3;->a:Lkw7;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lkw7;
-
-    invoke-direct {v0, p0}, Lkw7;-><init>(Liw7;)V
-
-    iput-object v0, p0, Lth3;->a:Lkw7;
-
-    :cond_0
     return-object v0
 .end method

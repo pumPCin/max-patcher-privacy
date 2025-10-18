@@ -1,105 +1,53 @@
-.class public abstract Luac;
-.super Lpoe;
+.class public final Luac;
+.super Ly14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:J
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lxac;
+
+.field public o:Lxac;
+
+.field public q0:I
+
+
+# direct methods
+.method public constructor <init>(Lxac;Ly14;)V
+    .locals 0
+
+    iput-object p1, p0, Luac;->Z:Lxac;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final G()V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/16 v0, 0xc
+    iput-object p1, p0, Luac;->Y:Ljava/lang/Object;
 
-    int-to-float v0, v0
+    iget p1, p0, Luac;->q0:I
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    const/high16 v0, -0x80000000
 
-    move-result-object v1
+    or-int/2addr p1, v0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput p1, p0, Luac;->q0:I
 
-    move-result-object v1
+    iget-object p1, p0, Luac;->Z:Lxac;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    const-wide/16 v0, 0x0
 
-    mul-float/2addr v1, v0
+    invoke-virtual {p1, v0, v1, p0}, Lxac;->a(JLy14;)Ljava/lang/Object;
 
-    invoke-static {v1}, Lagi;->d(F)I
+    move-result-object p1
 
-    move-result v1
-
-    const/16 v2, 0xe
-
-    int-to-float v2, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    iget-object v4, p0, Lj6d;->a:Landroid/view/View;
-
-    invoke-virtual {v4, v1, v3, v0, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
-
-    return-void
-.end method
-
-.method public H(Lswe;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public I(Landroid/view/View$OnClickListener;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public J(Landroid/view/View$OnLongClickListener;)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

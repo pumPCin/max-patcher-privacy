@@ -1,154 +1,194 @@
-.class public Lx5b;
-.super Landroid/webkit/WebView;
+.class public final Lx5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:[Lewa;
+
+
 # instance fields
-.field public a:Landroid/webkit/ValueCallback;
+.field public final a:Lwif;
+
+.field public final b:Ljava/util/Map;
+
+.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 7
 
-    and-int/lit8 p2, p2, 0x4
+    sget-object v0, Lewa;->d:Lewa;
 
-    const/4 v0, 0x0
+    sget-object v1, Lewa;->d:Lewa;
 
-    if-eqz p2, :cond_0
+    sget-object v2, Lewa;->e:Lewa;
 
-    move p2, v0
+    sget-object v3, Lewa;->f:Lewa;
+
+    sget-object v4, Lewa;->h:Lewa;
+
+    sget-object v5, Lewa;->i:Lewa;
+
+    sget-object v6, Lewa;->g:Lewa;
+
+    filled-new-array/range {v1 .. v6}, [Lewa;
+
+    move-result-object v0
+
+    sput-object v0, Lx5b;->d:[Lewa;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwif;)V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lx5b;->a:Lwif;
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    sget-object v0, Lx5b;->d:[Lewa;
+
+    array-length v1, v0
+
+    invoke-direct {p1, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx5b;->b:Ljava/util/Map;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-direct {p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    iput-object p1, p0, Lx5b;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    array-length p1, v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p1, :cond_0
+
+    aget-object v2, v0, v1
+
+    iget-object v3, v2, Lewa;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, v3, v2}, Lx5b;->b(Ljava/lang/String;Lewa;)V
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const p2, 0x1010085
-
-    :goto_0
-    new-instance v1, Lg14;
-
-    invoke-direct {v1, p1, v0}, Lg14;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, v1, p1, p2, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    invoke-virtual {p0}, Lx5b;->b()V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final a(Ljava/lang/String;)Lewa;
+    .locals 3
 
-    sget-object v0, Lsz4;->t0:Lc82;
+    new-instance v0, Lla;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p0, v1, p1}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v1, Lri;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v1, v2, v0}, Lri;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lx5b;->b:Ljava/util/Map;
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lewa;
+
+    return-object p1
+.end method
+
+.method public final b(Ljava/lang/String;Lewa;)V
+    .locals 3
+
+    iget-object v0, p0, Lx5b;->b:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p2, Lewa;->b:Lv5b;
+
+    iget-object p2, p2, Lewa;->c:Lv5b;
+
+    invoke-interface {p2}, Lv5b;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc82;->c(Landroid/content/Context;)Lsz4;
+    iget-object v2, p0, Lx5b;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result-object v0
+    invoke-virtual {v2, v1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lsz4;->l()Lu4b;
+    invoke-interface {v0}, Lv5b;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-interface {v0}, Lu4b;->h()Lpb3;
+    invoke-virtual {v2, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    sget-object p2, Lx5b;->d:[Lewa;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    array-length v0, p2
 
-    move-result v0
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_2
+    :goto_0
+    if-ge v1, v0, :cond_1
 
-    const/4 v1, 0x1
+    aget-object v2, p2, v1
 
-    if-eq v0, v1, :cond_1
+    iget-object v2, v2, Lewa;->a:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-ne v0, v1, :cond_0
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-void
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
     :cond_1
-    sget v0, Llid;->a:I
+    iget-object p1, p0, Lx5b;->a:Lwif;
 
-    goto :goto_1
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
 
-    :cond_2
-    :goto_0
-    sget v0, Llid;->b:I
+    move-result-object p1
 
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast p1, Landroid/content/SharedPreferences;
 
-    move-result-object v1
+    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->setTheme(I)V
+    new-instance p1, Lgaa;
 
-    return-void
-.end method
+    const-string p2, "An operation is not implemented: ONEME-18754 \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u043a\u0430\u0441\u0442\u043e\u043c\u043d\u044b\u0445 \u0442\u0435\u043c"
 
-.method public final getFilePathCallback()Landroid/webkit/ValueCallback;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
+    invoke-direct {p1, p2}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lx5b;->a:Landroid/webkit/ValueCallback;
-
-    return-object v0
-.end method
-
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lx5b;->b()V
-
-    invoke-super {p0, p1}, Landroid/webkit/WebView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
-.method public final setFilePathCallback(Landroid/webkit/ValueCallback;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lx5b;->a:Landroid/webkit/ValueCallback;
-
-    return-void
+    throw p1
 .end method

@@ -4,24 +4,246 @@
 
 
 # instance fields
-.field public final a:J
+.field public a:J
 
-.field public final b:Ljava/lang/String;
+.field public b:J
 
-.field public final c:Ljava/lang/String;
+.field public c:J
+
+.field public d:J
+
+.field public final e:F
+
+.field public f:J
+
+.field public final g:Landroid/view/animation/AccelerateInterpolator;
+
+.field public h:F
+
+.field public i:F
+
+.field public j:F
+
+.field public final synthetic k:Lst5;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lst5;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqt5;->a:J
+    iput-object p1, p0, Lqt5;->k:Lst5;
 
-    iput-object p3, p0, Lqt5;->b:Ljava/lang/String;
+    const/4 p1, 0x0
 
-    iput-object p4, p0, Lqt5;->c:Ljava/lang/String;
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, p1
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    int-to-float v0, v0
+
+    int-to-float v1, v1
+
+    invoke-static {v0, v1}, Ljy5;->a(FF)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lqt5;->a:J
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, p1
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    int-to-float v0, v0
+
+    int-to-float v1, v1
+
+    invoke-static {v0, v1}, Ljy5;->a(FF)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lqt5;->b:J
+
+    const/16 v0, 0x8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, p1
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    int-to-float v1, v1
+
+    int-to-float v2, v2
+
+    invoke-static {v1, v2}, Ljy5;->a(FF)J
+
+    move-result-wide v1
+
+    iput-wide v1, p0, Lqt5;->c:J
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v1
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    int-to-float v0, v0
+
+    int-to-float p1, p1
+
+    invoke-static {v0, p1}, Ljy5;->a(FF)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lqt5;->d:J
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v0, 0x3fc00000    # 1.5f
+
+    mul-float/2addr p1, v0
+
+    iput p1, p0, Lqt5;->e:F
+
+    const/4 p1, -0x1
+
+    invoke-static {p1, p1}, Loi7;->a(II)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lqt5;->f:J
+
+    new-instance p1, Landroid/view/animation/AccelerateInterpolator;
+
+    invoke-direct {p1}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
+
+    iput-object p1, p0, Lqt5;->g:Landroid/view/animation/AccelerateInterpolator;
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Lqt5;->h:F
 
     return-void
 .end method
@@ -29,33 +251,33 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    iget-object v0, p0, Lqt5;->b:Ljava/lang/String;
+    iget v0, p0, Lqt5;->i:F
 
-    invoke-static {v0}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "FileUploadInfo{fileId="
-
-    const-string v2, ", token=\'"
-
-    iget-wide v3, p0, Lqt5;->a:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lwc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    const-string v1, "\', url=\'"
+    iget v1, p0, Lqt5;->j:F
 
-    const-string v2, "\'}"
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object v3, p0, Lqt5;->c:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-static {v0, v1, v3, v2}, Lfef;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget v2, p0, Lqt5;->h:F
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "(%.1f, %.1f, %.1f)"
+
+    invoke-static {v1, v0}, Lmig;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

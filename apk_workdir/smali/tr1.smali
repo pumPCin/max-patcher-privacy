@@ -1,68 +1,51 @@
-.class public final synthetic Ltr1;
-.super Ljava/lang/Object;
+.class public final Ltr1;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lwr1;
 
-.field public final synthetic b:Lzr1;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzr1;I)V
+.method public constructor <init>(Lwr1;Ly14;)V
     .locals 0
 
-    iput p2, p0, Ltr1;->a:I
+    iput-object p1, p0, Ltr1;->X:Lwr1;
 
-    iput-object p1, p0, Ltr1;->b:Lzr1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget p1, p0, Ltr1;->a:I
+    iput-object p1, p0, Ltr1;->o:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Ltr1;->Y:I
 
-    iget-object p1, p0, Ltr1;->b:Lzr1;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p1, Lzr1;->g1:Lxr1;
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Ltr1;->Y:I
 
-    iget-object p1, p1, Lzr1;->j1:Lei1;
+    const/4 p1, 0x0
 
-    invoke-interface {v0, p1}, Lxr1;->q(Lei1;)V
+    const/4 v0, 0x0
 
-    :cond_0
-    return-void
+    iget-object v1, p0, Ltr1;->X:Lwr1;
 
-    :pswitch_0
-    iget-object p1, p0, Ltr1;->b:Lzr1;
+    invoke-virtual {v1, p1, v0, p0}, Lwr1;->c(ILandroid/os/Bundle;Ly14;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lzr1;->g1:Lxr1;
+    move-result-object p1
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lxr1;->r()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -2,99 +2,93 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
-
 
 # instance fields
-.field public final a:Lw6e;
-
-.field public b:I
+.field public final a:Lhzf;
 
 
 # direct methods
-.method public constructor <init>(Lw6e;)V
+.method public constructor <init>(Lhzf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgzf;->a:Lw6e;
+    iput-object p1, p0, Lgzf;->a:Lhzf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 1
-
-    iget p1, p0, Lgzf;->b:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    sub-int/2addr p1, v0
+    if-ne p0, p1, :cond_0
 
-    iput p1, p0, Lgzf;->b:I
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lgzf;->a:Lw6e;
-
-    invoke-virtual {p1, v0}, Lw6e;->e(Z)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lgzf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgzf;
+
+    iget-object v1, p0, Lgzf;->a:Lhzf;
+
+    iget-object p1, p1, Lgzf;->a:Lhzf;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
+.method public final hashCode()I
     .locals 1
 
-    iget p1, p0, Lgzf;->b:I
+    iget-object v0, p0, Lgzf;->a:Lhzf;
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0}, Lhzf;->hashCode()I
 
-    iget-object p1, p0, Lgzf;->a:Lw6e;
+    move-result v0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lw6e;->e(Z)V
-
-    :cond_0
-    iget p1, p0, Lgzf;->b:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lgzf;->b:I
-
-    return-void
+    return v0
 .end method
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    const-string v1, "TopbarStrokeSeparatorColors(default="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    iget-object v1, p0, Lgzf;->a:Lhzf;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,125 +1,69 @@
 .class public final Lxq4;
-.super Lpka;
+.super Li6c;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lyq4;
-
-.field public final c:Ldjd;
-
-.field public final d:Lkoh;
-
-
 # direct methods
-.method public constructor <init>(Lkab;Lam3;Lrwf;Ljava/util/List;)V
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    invoke-direct {p0, p1}, Lpka;-><init>(Lkab;)V
+    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    new-instance v2, Lxl;
+    const/4 v1, 0x0
 
-    const/4 v0, 0x3
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-direct {v2, v0, p2}, Lxl;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, v0}, Lq7d;-><init>(Landroid/view/View;)V
 
-    new-instance v1, Lpdb;
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
 
-    new-instance p2, Lz1j;
+    const/4 v1, -0x1
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    const/4 v2, -0x2
 
-    invoke-direct {v1, p2}, Lpdb;-><init>(La47;)V
+    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    iget-object p2, p1, Lkab;->o:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    check-cast p2, Lpm;
+    sget-object p1, Lkqa;->c:Lkqa;
 
-    iput-object p2, v1, Lpdb;->Y:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lkqa;)V
 
-    new-instance p2, Ltv4;
+    sget-object p1, Ljqa;->c:Ljqa;
 
-    new-instance v0, Lj7;
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ljqa;)V
 
-    invoke-direct {v0, v2}, Lj7;-><init>(Ljava/lang/Object;)V
+    sget-object p1, Lhqa;->b:Lhqa;
 
-    invoke-direct {p2, v0}, Ltv4;-><init>(Lj7;)V
-
-    iget-object v0, v1, Lpdb;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxl;
-
-    iput-object p2, v0, Lxl;->c:Ljava/lang/Object;
-
-    new-instance v0, Lyq4;
-
-    iget-object p1, p1, Lkab;->c:Ljava/lang/Object;
-
-    move-object v4, p1
-
-    check-cast v4, Lihd;
-
-    move-object v3, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lyq4;-><init>(Lpdb;Lxl;Lrwf;Lihd;Ljava/util/List;)V
-
-    new-instance p1, Lkoh;
-
-    const/4 p2, 0x6
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lkoh;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput-object p1, p0, Lxq4;->d:Lkoh;
-
-    iput-object v0, p0, Lxq4;->b:Lyq4;
-
-    new-instance p1, Ldjd;
-
-    invoke-direct {p1, v0}, Ldjd;-><init>(Lsl;)V
-
-    iput-object p1, p0, Lxq4;->c:Ldjd;
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lhqa;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lsl;
-    .locals 1
-
-    iget-object v0, p0, Lxq4;->b:Lyq4;
-
-    return-object v0
-.end method
-
-.method public final e()Lqka;
-    .locals 1
-
-    iget-object v0, p0, Lxq4;->d:Lkoh;
-
-    return-object v0
-.end method
-
-.method public final f()Ldjd;
-    .locals 1
-
-    iget-object v0, p0, Lxq4;->c:Ldjd;
-
-    return-object v0
-.end method
-
-.method public final g()Lkab;
+.method public final A(Ly18;)V
     .locals 2
 
-    new-instance v0, Lkab;
+    check-cast p1, Lyq4;
 
-    const/4 v1, 0x3
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    invoke-direct {v0, v1}, Lkab;-><init>(I)V
+    move-object v1, v0
 
-    invoke-virtual {p0, v0}, Lpka;->a(Lkab;)V
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    return-object v0
+    iget-object p1, p1, Lyq4;->a:Lorf;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

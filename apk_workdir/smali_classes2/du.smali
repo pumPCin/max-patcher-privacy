@@ -10,34 +10,34 @@
 
 
 # instance fields
-.field public final a:Lyuc;
+.field public final a:Lfwc;
 
 
 # direct methods
-.method public constructor <init>(Lyuc;)V
+.method public constructor <init>(Lfwc;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldu;->a:Lyuc;
+    iput-object p1, p0, Ldu;->a:Lfwc;
 
     return-void
 .end method
 
-.method public constructor <init>(Lyuc;Lnqi;)V
+.method public constructor <init>(Lfwc;Lnri;)V
     .locals 0
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Ldu;->a:Lyuc;
+    iput-object p1, p0, Ldu;->a:Lfwc;
 
     return-void
 .end method
 
-.method public static a(Lorg/json/JSONObject;)Lx11;
+.method public static a(Lorg/json/JSONObject;)Lg21;
     .locals 4
 
     const-string v0, "initiatorId"
@@ -49,7 +49,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {v0}, Lzh1;->a(Ljava/lang/String;)Lzh1;
+    invoke-static {v0}, Lhi1;->a(Ljava/lang/String;)Lhi1;
 
     move-result-object v0
     :try_end_0
@@ -83,9 +83,9 @@
     move-result-object v1
 
     :cond_1
-    new-instance p0, Lx11;
+    new-instance p0, Lg21;
 
-    invoke-direct {p0, v0, v1}, Lx11;-><init>(Lzh1;Ljava/lang/Long;)V
+    invoke-direct {p0, v0, v1}, Lg21;-><init>(Lhi1;Ljava/lang/Long;)V
 
     return-object p0
 .end method
@@ -109,9 +109,9 @@
 
     const-string v0, "AudioRecordCallback"
 
-    iget-object v1, p0, Ldu;->a:Lyuc;
+    iget-object v1, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v1, v0, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -133,9 +133,9 @@
 
     const-string v0, "AudioRecordCallback"
 
-    iget-object v1, p0, Ldu;->a:Lyuc;
+    iget-object v1, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v1, v0, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -147,9 +147,9 @@
 
     const-string v1, "Audio record did start"
 
-    iget-object v2, p0, Ldu;->a:Lyuc;
+    iget-object v2, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v2, v0, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -177,9 +177,9 @@
 
     const-string p2, "AudioRecordCallback"
 
-    iget-object v0, p0, Ldu;->a:Lyuc;
+    iget-object v0, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v0, p2, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p2, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -191,9 +191,9 @@
 
     const-string v1, "Audio record did stop"
 
-    iget-object v2, p0, Ldu;->a:Lyuc;
+    iget-object v2, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v2, v0, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -215,9 +215,9 @@
 
     const-string v0, "AudioRecordCallback"
 
-    iget-object v1, p0, Ldu;->a:Lyuc;
+    iget-object v1, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v1, v0, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -239,9 +239,9 @@
 
     const-string v0, "AudioRecordCallback"
 
-    iget-object v1, p0, Ldu;->a:Lyuc;
+    iget-object v1, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v1, v0, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -253,9 +253,9 @@
 
     const-string v1, "Audio track did start"
 
-    iget-object v2, p0, Ldu;->a:Lyuc;
+    iget-object v2, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v2, v0, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -283,9 +283,9 @@
 
     const-string p2, "AudioRecordCallback"
 
-    iget-object v0, p0, Ldu;->a:Lyuc;
+    iget-object v0, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v0, p2, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p2, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -297,9 +297,9 @@
 
     const-string v1, "Audio track did stop"
 
-    iget-object v2, p0, Ldu;->a:Lyuc;
+    iget-object v2, p0, Ldu;->a:Lfwc;
 
-    invoke-interface {v2, v0, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

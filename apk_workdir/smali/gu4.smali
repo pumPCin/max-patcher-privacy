@@ -1,78 +1,82 @@
-.class public final synthetic Lgu4;
-.super Ljava/lang/Object;
+.class public final enum Lgu4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lgu4;
 
-.field public final synthetic b:Lju4;
+.field public static final synthetic b:[Lgu4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lju4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lgu4;->a:I
+    new-instance v0, Lgu4;
 
-    iput-object p1, p0, Lgu4;->b:Lju4;
+    const-string v1, "INSTANCE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lgu4;->a:Lgu4;
+
+    filled-new-array {v0}, [Lgu4;
+
+    move-result-object v0
+
+    sput-object v0, Lgu4;->b:[Lgu4;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lgu4;
+    .locals 1
+
+    const-class v0, Lgu4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lgu4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lgu4;
+    .locals 1
+
+    sget-object v0, Lgu4;->b:[Lgu4;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgu4;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget v0, p0, Lgu4;->a:I
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lgu4;->b:Lju4;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, v0, Lju4;->a:Lxd8;
-
-    iget-object v0, v0, Lju4;->f:Lcu4;
-
-    invoke-virtual {v1, v0}, Lxd8;->f(Lcu4;)Llu4;
-
-    move-result-object v0
+    const-string v0, "DirectExecutor"
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgu4;->b:Lju4;
-
-    iget-object v1, v0, Lju4;->a:Lxd8;
-
-    iget-object v0, v0, Lju4;->e:Lcu4;
-
-    invoke-virtual {v1, v0}, Lxd8;->f(Lcu4;)Llu4;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Liu4;
-
-    iget-object v1, p0, Lgu4;->b:Lju4;
-
-    invoke-direct {v0, v1}, Liu4;-><init>(Lju4;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

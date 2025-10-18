@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/wt/WTSignaling;
-.super Llne;
+.super Lsoe;
 .source "SourceFile"
 
 
@@ -17,29 +17,29 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/wt/WTSignaling;",
-        "Llne;",
-        "Lp37;",
+        "Lsoe;",
+        "Lj47;",
         "client",
         "",
         "timeoutMS",
         "Ljava/lang/Runnable;",
         "reconnectTimeoutAction",
-        "Lgne;",
+        "Looe;",
         "signalingStat",
         "Ljava/util/concurrent/ExecutorService;",
         "executor",
-        "Lyuc;",
+        "Lfwc;",
         "log",
-        "Lzuc;",
+        "Lgwc;",
         "logConfiguration",
         "serverPingTimeoutMs",
         "",
         "isFastRecoverEnabled",
-        "Lic5;",
+        "Lad5;",
         "endpointParameters",
         "isReplaceParametersInEndpointEnabled",
         "<init>",
-        "(Lp37;JLjava/lang/Runnable;Lgne;Ljava/util/concurrent/ExecutorService;Lyuc;Lzuc;JZLic5;Z)V",
+        "(Lj47;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;Z)V",
         "",
         "code",
         "",
@@ -47,21 +47,21 @@
         "safelyCloseSocketWithCodeAndReason",
         "(ILjava/lang/String;)Z",
         "endpoint",
-        "Lkne;",
+        "Lroe;",
         "listener",
-        "Lzag;",
+        "Lccg;",
         "safelyCreateNewSocket",
-        "(Ljava/lang/String;Lkne;)V",
+        "(Ljava/lang/String;Lroe;)V",
         "Lkotlin/Function1;",
         "action",
         "safelyDoIfSocketExists",
-        "(Lqh6;)V",
+        "(Lli6;)V",
         "safelyResetSocketReference",
         "()V",
         "cmd",
         "safelySendSocketMessage",
         "(Ljava/lang/String;)Z",
-        "Lp37;",
+        "Lj47;",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
         "socket",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;",
@@ -86,7 +86,7 @@
 
 
 # instance fields
-.field private final client:Lp37;
+.field private final client:Lj47;
 
 .field private socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
@@ -99,18 +99,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->Companion:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Companion;
 
     return-void
 .end method
 
-.method private constructor <init>(Lp37;JLjava/lang/Runnable;Lgne;Ljava/util/concurrent/ExecutorService;Lyuc;Lzuc;JZLic5;Z)V
+.method private constructor <init>(Lj47;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;Z)V
     .locals 15
 
     .line 2
-    new-instance v14, Lfne;
+    new-instance v14, Lnoe;
 
     .line 3
     const-string v5, "webtransport_failed_exception"
@@ -129,7 +129,7 @@
 
     move-object v0, v14
 
-    invoke-direct/range {v0 .. v6}, Lfne;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lnoe;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     const-string v1, "WT"
@@ -156,22 +156,22 @@
 
     move/from16 v13, p13
 
-    invoke-direct/range {v0 .. v14}, Llne;-><init>(Ljava/lang/String;JLjava/lang/Runnable;Lgne;Ljava/util/concurrent/ExecutorService;Lyuc;Lzuc;JZLic5;ZLfne;)V
+    invoke-direct/range {v0 .. v14}, Lsoe;-><init>(Ljava/lang/String;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;ZLnoe;)V
 
     move-object/from16 v1, p1
 
     .line 7
-    iput-object v1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lp37;
+    iput-object v1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lj47;
 
     .line 8
-    sget v1, Lsti;->a:I
+    sget v1, Luui;->a:I
 
     const/4 v2, 0x2
 
     if-nez v1, :cond_0
 
     .line 9
-    sput v2, Lsti;->a:I
+    sput v2, Luui;->a:I
 
     return-void
 
@@ -191,11 +191,19 @@
     throw v1
 .end method
 
-.method public synthetic constructor <init>(Lp37;JLjava/lang/Runnable;Lgne;Ljava/util/concurrent/ExecutorService;Lyuc;Lzuc;JZLic5;ZLvh4;)V
+.method public synthetic constructor <init>(Lj47;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;ZLki4;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p13}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lp37;JLjava/lang/Runnable;Lgne;Ljava/util/concurrent/ExecutorService;Lyuc;Lzuc;JZLic5;Z)V
+    invoke-direct/range {p0 .. p13}, Lru/ok/android/externcalls/sdk/wt/WTSignaling;-><init>(Lj47;JLjava/lang/Runnable;Looe;Ljava/util/concurrent/ExecutorService;Lfwc;Lgwc;JZLad5;Z)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$init(Lru/ok/android/externcalls/sdk/wt/WTSignaling;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lsoe;->init()V
 
     return-void
 .end method
@@ -249,44 +257,44 @@
     return p1
 .end method
 
-.method public safelyCreateNewSocket(Ljava/lang/String;Lkne;)V
+.method public safelyCreateNewSocket(Ljava/lang/String;Lroe;)V
     .locals 6
 
     new-instance v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
-    invoke-virtual {p0}, Llne;->getLog()Lyuc;
+    invoke-virtual {p0}, Lsoe;->getLog()Lfwc;
 
     move-result-object v2
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lp37;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->client:Lj47;
 
     new-instance v4, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;
 
-    invoke-virtual {p0}, Llne;->getLog()Lyuc;
+    invoke-virtual {p0}, Lsoe;->getLog()Lfwc;
 
     move-result-object v1
 
-    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Lyuc;)V
+    invoke-direct {v4, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportCompressorDecompressor;-><init>(Lfwc;)V
 
     new-instance v5, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;
 
-    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lkne;)V
+    invoke-direct {v5, p2}, Lru/ok/android/externcalls/sdk/wt/WTSignaling$safelyCreateNewSocket$1;-><init>(Lroe;)V
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lyuc;Lp37;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;-><init>(Ljava/lang/String;Lfwc;Lj47;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling;->socket:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
     return-void
 .end method
 
-.method public safelyDoIfSocketExists(Lqh6;)V
+.method public safelyDoIfSocketExists(Lli6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqh6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
@@ -299,7 +307,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

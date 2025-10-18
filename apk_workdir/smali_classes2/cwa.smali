@@ -1,118 +1,109 @@
-.class public final Lcwa;
-.super Llff;
+.class public abstract Lcwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public X:I
+.field public static final b:I
 
-.field public final synthetic Y:Lhe4;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Lhe4;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lcwa;->Y:Lhe4;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcwa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcwa;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lcwa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance p1, Lcwa;
+    sget v0, Ltsc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
-    iget-object v0, p0, Lcwa;->Y:Lhe4;
+    sput v0, Lcwa;->a:I
 
-    invoke-direct {p1, v0, p2}, Lcwa;-><init>(Lhe4;Lkotlin/coroutines/Continuation;)V
+    sget v0, Ltsc;->oneme_folder_list_recommended_folders_section_title:I
 
-    return-object p1
-.end method
+    sput v0, Lcwa;->b:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    sget v0, Ltsc;->oneme_folder_list_toolbar_title:I
 
-    iget v0, p0, Lcwa;->X:I
+    sput v0, Lcwa;->c:I
 
-    const/4 v1, 0x1
+    sget v0, Ltsc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    if-eqz v0, :cond_1
+    sput v0, Lcwa;->d:I
 
-    if-ne v0, v1, :cond_0
+    sget v0, Ltsc;->oneme_folders_delete_folder_bottom_sheet_description:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    sput v0, Lcwa;->e:I
 
-    goto :goto_0
+    sget v0, Ltsc;->oneme_folders_edit_add_chats_button:I
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sput v0, Lcwa;->f:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget v0, Ltsc;->oneme_folders_edit_create_button:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sput v0, Lcwa;->g:I
 
-    throw p1
+    sget v0, Ltsc;->oneme_folders_edit_delete_button:I
 
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    sput v0, Lcwa;->h:I
 
-    iput v1, p0, Lcwa;->X:I
+    sget v0, Ltsc;->oneme_folders_edit_name_hint:I
 
-    new-instance p1, Loua;
+    sput v0, Lcwa;->i:I
 
-    const/4 v0, 0x0
+    sget v0, Ltsc;->oneme_folders_edit_toolbar_title_creation:I
 
-    const/4 v2, 0x1
+    sput v0, Lcwa;->j:I
 
-    invoke-direct {p1, v1, v0, v2}, Loua;-><init>(ILkotlin/coroutines/Continuation;I)V
+    sget v0, Ltsc;->oneme_folders_edit_toolbar_title_edit:I
 
-    iget-object v0, p0, Lcwa;->Y:Lhe4;
+    sput v0, Lcwa;->k:I
 
-    invoke-virtual {v0, p1, p0}, Lhe4;->d(Lqh6;Lk14;)Ljava/lang/Object;
+    sget v0, Ltsc;->oneme_folders_list_create_folder:I
 
-    move-result-object p1
+    sput v0, Lcwa;->l:I
 
-    sget-object v0, Lc54;->a:Lc54;
+    sget v0, Ltsc;->oneme_folders_list_menu_action_change:I
 
-    if-ne p1, v0, :cond_2
+    sput v0, Lcwa;->m:I
 
-    return-object v0
+    sget v0, Ltsc;->oneme_folders_list_menu_action_delete_folder:I
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    sput v0, Lcwa;->n:I
 
-    return-object p1
+    sget v0, Ltsc;->oneme_folders_picker_empty_title:I
+
+    sput v0, Lcwa;->o:I
+
+    sget v0, Ltsc;->oneme_folders_picker_toolbar_title:I
+
+    sput v0, Lcwa;->p:I
+
+    return-void
 .end method

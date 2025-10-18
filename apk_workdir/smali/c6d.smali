@@ -1,77 +1,36 @@
 .class public final Lc6d;
-.super Lg0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lc6d;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Ld6d;
 
 
 # instance fields
-.field public c:Landroid/os/Parcelable;
+.field public final synthetic a:Lnb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lf0;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lf0;-><init>(I)V
-
-    sput-object v0, Lc6d;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Lnb0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-class p2, Landroidx/recyclerview/widget/a;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lc6d;->c:Landroid/os/Parcelable;
+    iput-object p1, p0, Lc6d;->a:Lnb0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+.method public final a(Lm90;Ljava/util/concurrent/Executor;)Lh60;
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
+    new-instance v0, Lh60;
 
-    iget-object p2, p0, Lc6d;->c:Landroid/os/Parcelable;
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    invoke-direct {v0, p1, p2, v1}, Lh60;-><init>(Lm90;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
 
-    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
+    return-object v0
 .end method

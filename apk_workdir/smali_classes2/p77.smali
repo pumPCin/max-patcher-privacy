@@ -3,14 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/IntSupplier;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # virtual methods
-.method public final getAsInt()I
-    .locals 1
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 0
 
-    const/4 v0, 0x0
+    sget p2, Lru/ok/tamtam/calls/ui/IconSwitch;->c:I
 
-    return v0
+    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
+
+    return-void
 .end method

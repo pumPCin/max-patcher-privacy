@@ -3,18 +3,20 @@
 
 
 # static fields
-.field public static oneme_layout_quick_camera_api_view:I = 0x7f0d00f1
+.field public static oneme_picker_bottom_button:I = 0x7f0a0767
 
-.field public static oneme_ll_chat_media_progress:I = 0x7f0d00f2
+.field public static oneme_picker_confirm_cancel:I = 0x7f0a0769
 
-.field public static oneme_media_bar_header_view:I = 0x7f0d00f4
+.field public static oneme_picker_confirm_close:I = 0x7f0a076a
 
-.field public static oneme_row_gallery_camera:I = 0x7f0d00f5
+.field public static oneme_picker_input_view:I = 0x7f0a076c
 
-.field public static oneme_row_gallery_media:I = 0x7f0d00f6
+.field public static oneme_picker_media_keyboard_container:I = 0x7f0a076e
 
-.field public static oneme_row_gallery_media_check_button_layout:I = 0x7f0d00f7
+.field public static oneme_picker_quote_view:I = 0x7f0a0770
 
-.field public static oneme_view_media_permissions:I = 0x7f0d00f8
+.field public static oneme_picker_toolbar:I = 0x7f0a0771
 
-.field public static row_media_bar_extra_actions:I = 0x7f0d013d
+.field public static oneme_picker_toolbar_action_cancel_selection:I = 0x7f0a0772
+
+.field public static oneme_picker_toolbar_action_select:I = 0x7f0a0773

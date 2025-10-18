@@ -1,79 +1,55 @@
-.class public final synthetic Lbz6;
+.class public final Lbz6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqh6;
 
+# static fields
+.field public static final synthetic a:Lbz6;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lsf3;
 
-.field public final synthetic b:Ljava/util/List;
+.field public static final c:Lhz4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Lbz6;->a:I
+    new-instance v0, Lbz6;
 
-    iput-object p2, p0, Lbz6;->b:Ljava/util/List;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lbz6;->a:Lbz6;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lli6;
+
+    sget-object v1, Lzy6;->a:Lzy6;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Laz6;->a:Laz6;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Lwui;->a([Lli6;)Lsf3;
+
+    move-result-object v0
+
+    sput-object v0, Lbz6;->b:Lsf3;
+
+    new-instance v0, Lhz4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lhz4;-><init>(I)V
+
+    sput-object v0, Lbz6;->c:Lhz4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lbz6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lf49;
-
-    iget-wide v0, p1, Lf49;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lbz6;->b:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lmy6;
-
-    invoke-interface {p1}, Lmy6;->l()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Lbz6;->b:Ljava/util/List;
-
-    invoke-static {v0, v1, p1}, Lloi;->a(JLjava/util/List;)Z
-
-    move-result p1
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,223 +1,526 @@
-.class public final Lvg5;
-.super Lwg5;
+.class public final synthetic Lvg5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lii3;
+.implements Lvi6;
+.implements Lu28;
+.implements Lv28;
+.implements Lt28;
+.implements Laj6;
+.implements Lsr3;
 
 
 # instance fields
-.field public final O0:Lq8c;
-
-.field public final P0:Landroid/media/metrics/LogSessionId;
-
-.field public Q0:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lq8c;Lu43;Liu;Landroid/media/metrics/LogSessionId;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 1
+    iput p1, p0, Lvg5;->a:I
 
-    invoke-direct {p0, v0, p2, p3}, Lwg5;-><init>(ILu43;Liu;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvg5;->O0:Lq8c;
+    return-void
+.end method
 
-    iput-object p4, p0, Lvg5;->P0:Landroid/media/metrics/LogSessionId;
+.method public synthetic constructor <init>(Lwi5;)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x7
+
+    iput p1, p0, Lvg5;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()Z
-    .locals 6
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lwg5;->D0:Lgkd;
+    iget v0, p0, Lvg5;->a:I
 
-    invoke-interface {v0}, Lgkd;->e()Lse4;
+    const-string v1, "go5"
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Throwable;
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    const-string v0, "load: failed"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_1
+    const-string v0, "clear: failed to clear fav stickers repository"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_2
+    const-string v0, "setFavoriteStickerSetMoved: failed"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_3
+    const-string v0, "onAssetsUpdate: failed to store fav sticker sets"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_4
+    const-string v0, "failed favorites obs"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x12
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lvg5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    check-cast p1, Lto5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lio5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lio5;-><init>(Lto5;I)V
+
+    new-instance p1, Ltka;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Lto5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lio5;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, p1, v1}, Lio5;-><init>(Lto5;I)V
 
-    goto :goto_1
+    new-instance p1, Ltka;
 
-    :cond_0
-    iget-boolean v2, p0, Lvg5;->Q0:Z
+    const/4 v1, 0x4
 
-    const/4 v3, 0x1
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
 
-    if-nez v2, :cond_4
+    return-object p1
 
-    iget-object v2, p0, Lwg5;->E0:Luh4;
+    :pswitch_2
+    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
 
-    invoke-virtual {v2}, Luh4;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lse4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v2}, Luy;->a(I)V
-
-    iget-object v0, p0, Lwg5;->D0:Lgkd;
-
-    invoke-interface {v0}, Lgkd;->g()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lwg5;->F0:Z
-
-    return v1
-
-    :cond_1
-    iget-object v2, p0, Lwg5;->E0:Luh4;
-
-    invoke-virtual {v2}, Luh4;->d()Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Lse4;->y(I)V
-
-    iget-object v4, v0, Lse4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    iget-object v2, p0, Lwg5;->E0:Luh4;
-
-    invoke-virtual {v2, v1}, Luh4;->g(Z)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    iget-object v2, v2, Luh4;->a:Landroid/media/MediaCodec$BufferInfo;
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v4, v2, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    iput-wide v4, v0, Lse4;->Z:J
-
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    iput v2, v0, Luy;->b:I
-
-    iget-object v0, p0, Lwg5;->E0:Luh4;
-
-    invoke-virtual {v0}, Luh4;->j()V
-
-    iput-boolean v3, p0, Lvg5;->Q0:Z
-
-    :cond_4
-    iget-object v0, p0, Lwg5;->D0:Lgkd;
-
-    invoke-interface {v0}, Lgkd;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    :goto_1
-    return v1
-
-    :cond_5
-    iput-boolean v1, p0, Lvg5;->Q0:Z
-
-    return v3
-.end method
-
-.method public final D(Lsa6;)V
-    .locals 2
-
-    iget-object v0, p0, Lvg5;->O0:Lq8c;
-
-    iget-object v1, p0, Lvg5;->P0:Landroid/media/metrics/LogSessionId;
-
-    invoke-virtual {v0, p1, v1}, Lq8c;->c(Lsa6;Landroid/media/metrics/LogSessionId;)Luh4;
+    invoke-virtual {p1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->A()Lto5;
 
     move-result-object p1
 
-    iput-object p1, p0, Lwg5;->E0:Luh4;
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Lto5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lsj4;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p1}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lzg3;
+
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Lmo5;
+
+    iget-object p1, p1, Lmo5;->a:Ljava/util/List;
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Llo5;
+
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
+
+    move-result-object p1
+
+    new-instance v0, Lvg5;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lvg5;-><init>(I)V
+
+    new-instance v1, Lxg3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2, v0}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_6
+    check-cast p1, Llo5;
+
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
+
+    move-result-object p1
+
+    new-instance v0, Lvg5;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lvg5;-><init>(I)V
+
+    new-instance v1, Lhqe;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v0, v2}, Lhqe;-><init>(Lwpe;Laj6;I)V
+
+    return-object v1
+
+    :pswitch_7
+    check-cast p1, Llo5;
+
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
+
+    move-result-object p1
+
+    new-instance v0, Lko5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lko5;-><init>(I)V
+
+    new-instance v1, Lck8;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p1, v0, v2}, Lck8;-><init>(Ljava/lang/Object;Laj6;I)V
+
+    return-object v1
+
+    :pswitch_8
+    check-cast p1, Llo5;
+
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
+
+    move-result-object p1
+
+    new-instance v0, Lvg5;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lvg5;-><init>(I)V
+
+    new-instance v1, Lhqe;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v0, v2}, Lhqe;-><init>(Lwpe;Laj6;I)V
+
+    return-object v1
+
+    :pswitch_9
+    check-cast p1, Lbp5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "SELECT id FROM favorite_stickers ORDER BY `index` ASC"
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lvgd;->c(ILjava/lang/String;)Lvgd;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lbp5;->a:Lfgd;
+
+    const-string v2, "favorite_stickers"
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lgi;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, p1, v4, v0}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v1, v2, v3}, Lh1i;->d(Lfgd;[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lria;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_a
+    check-cast p1, Lbp5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lsn5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lsn5;-><init>(Lbp5;I)V
+
+    new-instance p1, Ltka;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_b
+    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {p1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->B()Lbp5;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_c
+    check-cast p1, Lbp5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lsn5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lsn5;-><init>(Lbp5;I)V
+
+    new-instance p1, Ltka;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_d
+    check-cast p1, Lbp5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lsj4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p1}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lzg3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_e
+    new-instance v0, Ldh4;
+
+    check-cast p1, Lbjf;
+
+    invoke-direct {v0, p1}, Ldh4;-><init>(Lbjf;)V
+
+    return-object v0
+
+    :pswitch_f
+    new-instance v0, Leh4;
+
+    check-cast p1, Lcjf;
+
+    invoke-direct {v0, p1}, Leh4;-><init>(Lcjf;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_f
+        :pswitch_e
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_0
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public b(Ljava/lang/Object;Lyx5;)V
+    .locals 0
+
+    check-cast p1, Lmtb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
-.method public final L(Lse4;)Z
-    .locals 6
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Luy;->j(I)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    iget-wide v2, p1, Lse4;->Z:J
-
-    iget-wide v4, p0, Lwg5;->C0:J
-
-    sub-long/2addr v2, v4
-
-    iput-wide v2, p1, Lse4;->Z:J
-
-    iget-object v0, p0, Lwg5;->E0:Luh4;
-
-    if-eqz v0, :cond_1
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, v2, v4
-
-    if-gez v0, :cond_1
-
-    invoke-virtual {p1}, Lse4;->w()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v1
-.end method
-
-.method public final h()Ljava/lang/String;
+.method public h(Lcwc;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "ExoAssetLoaderAudioRenderer"
+    iget v0, p0, Lvg5;->a:I
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->d(Lcwc;)Ljava/util/concurrent/Executor;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->a(Lcwc;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->e(Lcwc;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->g(Lcwc;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 4
+
+    iget v0, p0, Lvg5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    check-cast p1, Lntb;
+
+    invoke-interface {p1}, Lntb;->c()V
+
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lmtb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_2
+    check-cast p1, Lmtb;
+
+    invoke-interface {p1}, Lmtb;->s()V
+
+    return-void
+
+    :pswitch_3
+    check-cast p1, Lntb;
+
+    new-instance v0, Landroidx/media3/exoplayer/ExoTimeoutException;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroidx/media3/exoplayer/ExoTimeoutException;-><init>(I)V
+
+    new-instance v1, Landroidx/media3/exoplayer/ExoPlaybackException;
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x3eb
+
+    invoke-direct {v1, v2, v0, v3}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(ILjava/lang/Exception;I)V
+
+    invoke-interface {p1, v1}, Lntb;->K0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_3
+        :pswitch_0
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

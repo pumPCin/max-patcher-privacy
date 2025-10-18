@@ -1,340 +1,539 @@
 .class public final Li97;
-.super Lri0;
+.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic H0:[Ltr7;
+
+.field public static final I0:Lma9;
+
+
 # instance fields
-.field public final synthetic a:I
+.field public final A0:Lh97;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final B0:Lh97;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public C0:Lji6;
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public final D0:Lh97;
+
+.field public E0:I
+
+.field public F0:I
+
+.field public final G0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lg32;Lr0;Lf8d;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Le1a;
+
+    const-string v1, "overlayDrawable"
+
+    const-string v2, "getOverlayDrawable()Landroid/graphics/drawable/Drawable;"
+
+    const-class v3, Li97;
+
+    invoke-direct {v0, v3, v1, v2}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lz7d;->a:La8d;
+
+    const-string v2, "imageAttach"
+
+    const-string v4, "getImageAttach()Lone/me/messages/list/loader/model/ImageAttachConfig;"
+
+    invoke-static {v1, v3, v2, v4}, Lu15;->h(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Le1a;
+
+    move-result-object v1
+
+    new-instance v2, Le1a;
+
+    const-string v4, "imageInfo"
+
+    const-string v5, "getImageInfo()Lcom/facebook/imagepipeline/image/ImageInfo;"
+
+    invoke-direct {v2, v3, v4, v5}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Ltr7;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
 
     const/4 v0, 0x1
 
-    iput v0, p0, Li97;->a:I
+    aput-object v1, v3, v0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    .line 2
-    iput-object p1, p0, Li97;->b:Ljava/lang/Object;
+    aput-object v2, v3, v0
 
-    iput-object p2, p0, Li97;->c:Ljava/lang/Object;
+    sput-object v3, Li97;->H0:[Ltr7;
 
-    iput-object p3, p0, Li97;->d:Ljava/lang/Object;
+    new-instance v0, Lma9;
+
+    invoke-direct {v0}, Lma9;-><init>()V
+
+    sput-object v0, Li97;->I0:Lma9;
 
     return-void
 .end method
 
-.method public constructor <init>(Lk97;Lj97;Lat5;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Lh97;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lh97;-><init>(Li97;I)V
+
+    iput-object v0, p0, Li97;->A0:Lh97;
+
+    sget-object v0, Lf97;->n:Lf97;
+
+    new-instance v1, Lh97;
+
+    invoke-direct {v1, v0, p0}, Lh97;-><init>(Ljava/lang/Object;Li97;)V
+
+    iput-object v1, p0, Li97;->B0:Lh97;
+
+    new-instance v0, Lbn5;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lbn5;-><init>(I)V
+
+    iput-object v0, p0, Li97;->C0:Lji6;
+
+    new-instance v0, Lh97;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lh97;-><init>(Li97;I)V
+
+    iput-object v0, p0, Li97;->D0:Lh97;
+
+    new-instance v0, La52;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v1}, La52;-><init>(Landroid/content/Context;I)V
+
+    const/4 p1, 0x3
+
+    invoke-static {p1, v0}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Li97;->G0:Ljava/lang/Object;
+
+    sget p1, Lkya;->M:I
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {p0}, Lq15;->getHierarchy()Ln15;
+
+    move-result-object p1
+
+    check-cast p1, Lnn6;
+
+    iget-object p1, p1, Lnn6;->e:Lkm5;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Li97;->a:I
+    iput v0, p1, Lkm5;->u0:I
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v1, p1, Lkm5;->t0:I
 
-    .line 4
-    iput-object p1, p0, Li97;->d:Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    iput-object p2, p0, Li97;->b:Ljava/lang/Object;
+    if-ne v1, v2, :cond_0
 
-    iput-object p3, p0, Li97;->c:Ljava/lang/Object;
+    iput v0, p1, Lkm5;->t0:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final synthetic j(Li97;Lf97;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Li97;->setup(Lf97;)V
+
+    return-void
+.end method
+
+.method private final setup(Lf97;)V
+    .locals 4
+
+    invoke-virtual {p0}, Lq15;->getHierarchy()Ln15;
+
+    move-result-object v0
+
+    check-cast v0, Lnn6;
+
+    iget-object v1, p1, Lf97;->j:Lhnd;
+
+    iget-object v2, p1, Lf97;->i:Lucd;
+
+    invoke-virtual {v0, v1}, Lnn6;->h(Lgnd;)V
+
+    iget-boolean v1, p1, Lf97;->g:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v3, p0, Li97;->G0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/graphics/drawable/Drawable;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Li97;->getOverlayDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-virtual {v0, v3}, Lnn6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    const/4 v0, 0x0
+
+    if-eqz v1, :cond_1
+
+    move-object v1, v0
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p1, Lf97;->b:Landroid/net/Uri;
+
+    invoke-static {v1}, Lbb7;->d(Landroid/net/Uri;)Lbb7;
+
+    move-result-object v1
+
+    iput-object v2, v1, Lbb7;->d:Lucd;
+
+    invoke-virtual {v1}, Lbb7;->a()Lab7;
+
+    move-result-object v1
+
+    :goto_1
+    iget-object p1, p1, Lf97;->h:Landroid/net/Uri;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p1}, Lbb7;->d(Landroid/net/Uri;)Lbb7;
+
+    move-result-object p1
+
+    iput-object v2, p1, Lbb7;->d:Lucd;
+
+    invoke-virtual {p1}, Lbb7;->a()Lab7;
+
+    move-result-object v0
+
+    :cond_2
+    invoke-virtual {p0, v1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lab7;Lab7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d()V
-    .locals 3
+.method public final getImageAttach()Lf97;
+    .locals 2
 
-    iget v0, p0, Li97;->a:I
+    sget-object v0, Li97;->H0:[Ltr7;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    return-void
+    aget-object v0, v0, v1
 
-    :pswitch_0
-    iget-object v0, p0, Li97;->b:Ljava/lang/Object;
+    iget-object v0, p0, Li97;->B0:Lh97;
 
-    check-cast v0, Lg32;
+    iget-object v0, v0, Lrdi;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lg32;->r()Z
+    check-cast v0, Lf97;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/Throwable;
-
-    const-string v2, "Cancelled with fresco pipeline"
-
-    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lg32;->h(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final e(Lr0;)V
+.method public final getImageInfo()Ly97;
+    .locals 2
+
+    sget-object v0, Li97;->H0:[Ltr7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Li97;->D0:Lh97;
+
+    iget-object v0, v0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly97;
+
+    return-object v0
+.end method
+
+.method public final getMeasuredLayoutHeight()I
     .locals 1
 
-    iget p1, p0, Li97;->a:I
+    iget v0, p0, Li97;->E0:I
 
-    packed-switch p1, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object p1, p0, Li97;->b:Ljava/lang/Object;
+.method public final getMeasuredLayoutWidth()I
+    .locals 1
 
-    check-cast p1, Lg32;
+    iget v0, p0, Li97;->F0:I
 
-    invoke-virtual {p1}, Lg32;->r()Z
+    return v0
+.end method
 
-    move-result v0
+.method public final getOnFinalImageSetCallback()Lji6;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lji6;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Li97;->C0:Lji6;
+
+    return-object v0
+.end method
+
+.method public final getOverlayDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    sget-object v0, Li97;->H0:[Ltr7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Li97;->A0:Lh97;
+
+    iget-object v0, v0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public final i(Ly97;Landroid/graphics/drawable/Animatable;)V
+    .locals 1
+
+    invoke-virtual {p0}, Li97;->getImageAttach()Lf97;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lf97;->e:Z
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p1, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {p2}, Landroid/graphics/drawable/Animatable;->start()V
 
     :cond_0
-    return-void
+    invoke-virtual {p0, p1}, Li97;->setImageInfo(Ly97;)V
 
-    :pswitch_0
-    iget-object p1, p0, Li97;->d:Ljava/lang/Object;
+    iget-object p1, p0, Li97;->C0:Lji6;
 
-    check-cast p1, Lk97;
-
-    iget-object v0, p0, Li97;->b:Ljava/lang/Object;
-
-    check-cast v0, Lj97;
-
-    invoke-virtual {p1, v0}, Lk97;->b(Lj97;)V
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final g(Landroid/graphics/Bitmap;)V
+.method public final onMeasure(II)V
     .locals 7
 
-    iget v0, p0, Li97;->a:I
-
-    iget-object v1, p0, Li97;->d:Ljava/lang/Object;
-
-    iget-object v2, p0, Li97;->c:Ljava/lang/Object;
-
-    iget-object v3, p0, Li97;->b:Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v3, Lg32;
-
-    invoke-virtual {v3}, Lg32;->r()Z
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    if-eqz p1, :cond_4
+    move-result p1
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    goto :goto_0
+    move-result v1
 
-    :cond_0
-    check-cast v2, Lr0;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    invoke-virtual {v2}, Lr0;->h()Z
+    move-result p2
 
-    move-result v0
+    const/high16 v2, 0x40000000    # 2.0f
 
-    if-nez v0, :cond_2
+    if-ne p1, v2, :cond_0
 
-    if-eqz p1, :cond_1
+    if-ne p2, v2, :cond_0
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
 
-    :cond_1
-    invoke-virtual {v3, v4}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    if-nez p1, :cond_3
-
-    invoke-virtual {v3, v4}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v0, Lcf6;
-
-    check-cast v1, Lf8d;
-
-    iget-object v1, v1, Lf8d;->c:Lbf6;
-
-    iget v2, v1, Lbf6;->b:I
-
-    iget v1, v1, Lbf6;->c:I
-
-    invoke-direct {v0, v2, v1, p1}, Lcf6;-><init>(IILandroid/graphics/Bitmap;)V
-
-    invoke-virtual {v3, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_4
-    :goto_0
     return-void
 
-    :pswitch_0
-    check-cast v3, Lj97;
+    :cond_0
+    invoke-virtual {p0}, Li97;->getImageAttach()Lf97;
 
-    check-cast v1, Lk97;
+    move-result-object p1
 
-    const-string v0, "k97"
+    iget p1, p1, Lf97;->c:I
 
-    if-nez p1, :cond_5
+    invoke-virtual {p0}, Li97;->getImageAttach()Lf97;
 
-    const-string p1, "onNewResultImpl: bitmap is null in shareWebpImage"
+    move-result-object p2
 
-    invoke-static {v0, p1, v4}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget p2, p2, Lf97;->d:I
 
-    invoke-virtual {v1, v3}, Lk97;->b(Lj97;)V
+    if-lez p1, :cond_2
 
-    goto :goto_3
-
-    :cond_5
-    :try_start_0
-    check-cast v2, Lat5;
-
-    const-string v5, "png"
-
-    invoke-interface {v2, v5}, Lat5;->a(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v5, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
-
-    :try_start_1
-    new-instance v6, Ljava/io/FileOutputStream;
-
-    invoke-direct {v6, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    const/16 v4, 0x64
-
-    :try_start_2
-    invoke-virtual {p1, v5, v4, v6}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    invoke-static {v6}, Lh0j;->a(Ljava/io/Closeable;)V
-
-    new-instance p1, Lwu5;
-
-    const/16 v4, 0xd
-
-    invoke-direct {p1, v3, v4, v2}, Lwu5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p1}, Lk97;->c(Ljava/lang/Runnable;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception p1
-
-    move-object v4, v6
-
-    goto :goto_2
-
-    :catch_0
-    move-exception p1
-
-    move-object v4, v6
+    if-gtz p2, :cond_1
 
     goto :goto_1
 
-    :catchall_1
-    move-exception p1
+    :cond_1
+    move v2, p1
+
+    :goto_0
+    move v3, p2
 
     goto :goto_2
 
-    :catch_1
-    move-exception p1
-
+    :cond_2
     :goto_1
-    :try_start_4
-    const-string v2, "saveBitmap failure!"
+    div-int/lit8 p2, v0, 0x2
 
-    invoke-static {v0, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move v2, v0
 
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    goto :goto_0
 
     :goto_2
-    :try_start_5
-    invoke-static {v4}, Lh0j;->a(Ljava/io/Closeable;)V
+    invoke-virtual {p0}, Li97;->getImageAttach()Lf97;
 
-    throw p1
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+    move-result-object p1
 
-    :catch_2
-    move-exception p1
+    iget v5, p1, Lf97;->f:I
 
-    const-string v2, "onNewResultImpl: failed to save webp image"
+    const/16 p1, 0x78
 
-    invoke-static {v0, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    int-to-float p1, p1
 
-    invoke-virtual {v1, v3}, Lk97;->b(Lj97;)V
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    :goto_3
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result v4
+
+    sget-object v6, Li97;->I0:Lma9;
+
+    move v1, v0
+
+    invoke-static/range {v0 .. v6}, Lhki;->b(IIIIIILma9;)V
+
+    iget p1, v6, Lma9;->b:I
+
+    iput p1, p0, Li97;->E0:I
+
+    iget p1, v6, Lma9;->a:I
+
+    iput p1, p0, Li97;->F0:I
+
+    iget p1, v6, Lma9;->c:I
+
+    iget p2, v6, Lma9;->d:I
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
     return-void
+.end method
 
-    nop
+.method public final setImageAttach(Lf97;)V
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object v0, Li97;->H0:[Ltr7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Li97;->B0:Lh97;
+
+    invoke-virtual {v1, p0, v0, p1}, Lrdi;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setImageInfo(Ly97;)V
+    .locals 2
+
+    sget-object v0, Li97;->H0:[Ltr7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Li97;->D0:Lh97;
+
+    invoke-virtual {v1, p0, v0, p1}, Lrdi;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setOnFinalImageSetCallback(Lji6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lji6;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Li97;->C0:Lji6;
+
+    return-void
+.end method
+
+.method public final setOverlayDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 2
+
+    sget-object v0, Li97;->H0:[Ltr7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Li97;->A0:Lh97;
+
+    invoke-virtual {v1, p0, v0, p1}, Lrdi;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    return-void
 .end method

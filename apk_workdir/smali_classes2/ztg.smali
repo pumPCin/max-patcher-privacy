@@ -1,87 +1,131 @@
-.class public final Lztg;
-.super Llff;
+.class public abstract Lztg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
+# static fields
+.field public static final a:Ljava/util/List;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public static final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    iput-object p2, p0, Lztg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const/4 v0, 0x0
 
-    const/4 p2, 0x2
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Ljy5;->a(FF)J
 
-    return-void
-.end method
+    move-result-wide v2
 
+    new-instance v4, Ljy5;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {v4, v2, v3}, Ljy5;-><init>(J)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/high16 v2, 0x44610000    # 900.0f
 
-    invoke-virtual {p0, p1, p2}, Lztg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v2, v1}, Ljy5;->a(FF)J
 
-    move-result-object p1
+    move-result-wide v5
 
-    check-cast p1, Lztg;
+    new-instance v3, Ljy5;
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-direct {v3, v5, v6}, Ljy5;-><init>(J)V
 
-    invoke-virtual {p1, p2}, Lztg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const v5, 0x44c1c000    # 1550.0f
 
-    return-object p2
-.end method
+    invoke-static {v5, v0}, Ljy5;->a(FF)J
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-wide v6
 
-    new-instance v0, Lztg;
+    new-instance v8, Ljy5;
 
-    iget-object v1, p0, Lztg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {v8, v6, v7}, Ljy5;-><init>(J)V
 
-    invoke-direct {v0, p2, v1}, Lztg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    const v6, 0x44dac000    # 1750.0f
 
-    iput-object p1, v0, Lztg;->X:Ljava/lang/Object;
+    invoke-static {v6, v1}, Ljy5;->a(FF)J
 
-    return-object v0
-.end method
+    move-result-wide v9
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    new-instance v7, Ljy5;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-direct {v7, v9, v10}, Ljy5;-><init>(J)V
 
-    iget-object p1, p0, Lztg;->X:Ljava/lang/Object;
+    const/high16 v9, 0x44fa0000    # 2000.0f
 
-    check-cast p1, Ljava/lang/String;
+    invoke-static {v9, v1}, Ljy5;->a(FF)J
 
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lwq7;
+    move-result-wide v10
 
-    iget-object v0, p0, Lztg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    new-instance v12, Ljy5;
 
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0()Landroid/widget/TextView;
+    invoke-direct {v12, v10, v11}, Ljy5;-><init>(J)V
+
+    filled-new-array {v4, v3, v8, v7, v12}, [Ljy5;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    sput-object v3, Lztg;->a:Ljava/util/List;
+
+    new-instance v3, Lms;
+
+    const v4, 0x3ba3d70a    # 0.005f
+
+    invoke-direct {v3, v0, v0, v4, v0}, Lms;-><init>(FFFF)V
+
+    new-instance v4, Lms;
+
+    const v7, 0x3f03d70a    # 0.515f
+
+    const/high16 v8, 0x43370000    # 183.0f
+
+    invoke-direct {v4, v2, v0, v7, v8}, Lms;-><init>(FFFF)V
+
+    new-instance v0, Lms;
+
+    const v2, 0x3f5be76d    # 0.859f
+
+    const/high16 v7, 0x43890000    # 274.0f
+
+    const v8, 0x3f05e354    # 0.523f
+
+    invoke-direct {v0, v5, v8, v2, v7}, Lms;-><init>(FFFF)V
+
+    new-instance v2, Lms;
+
+    const v5, 0x3f7020c5    # 0.938f
+
+    const v7, 0x43988000    # 305.0f
+
+    const v8, 0x3f445a1d    # 0.767f
+
+    invoke-direct {v2, v6, v8, v5, v7}, Lms;-><init>(FFFF)V
+
+    new-instance v5, Lms;
+
+    const v6, 0x3f7eb852    # 0.995f
+
+    const/high16 v7, 0x43b40000    # 360.0f
+
+    invoke-direct {v5, v9, v6, v1, v7}, Lms;-><init>(FFFF)V
+
+    filled-new-array {v3, v4, v0, v2, v5}, [Lms;
 
     move-result-object v0
 
-    if-eqz p1, :cond_0
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result-object v0
 
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
+    sput-object v0, Lztg;->b:Ljava/util/List;
 
-    return-object p1
+    return-void
 .end method

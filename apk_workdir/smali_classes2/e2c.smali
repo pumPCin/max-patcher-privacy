@@ -1,165 +1,89 @@
 .class public final Le2c;
-.super Lsyg;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic u0:[Lwq7;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Llt7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Lsze;
-
-.field public final Z:Lgzc;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Llt7;
-
-.field public final o:Llt7;
-
-.field public final r0:Lde5;
-
-.field public final s0:Lde5;
-
-.field public volatile t0:Lwwe;
+.field public final synthetic Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    .locals 0
 
-    new-instance v0, Lc0a;
+    iput-object p2, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    const-string v1, "loadInfoJob"
+    const/4 p2, 0x2
 
-    const-string v2, "getLoadInfoJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Le2c;
-
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Ls6d;->a:Lt6d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lwq7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Le2c;->u0:[Lwq7;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 5
 
-    sget-object v0, Ly5g;->a:Ly5g;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Le2c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-class v2, Ll83;
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    check-cast p1, Le2c;
 
-    move-result-object v1
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {v0}, Ly5g;->a()Llt7;
+    invoke-virtual {p1, p2}, Le2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    return-object p2
+.end method
 
-    invoke-virtual {v0}, Ly5g;->b()Llt7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Le2c;
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    iget-object v1, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    const-class v3, Le2c;
+    invoke-direct {v0, p2, v1}, Le2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p1, v0, Le2c;->X:Ljava/lang/Object;
 
-    move-result-object v3
+    return-object v0
+.end method
 
-    iput-object v3, p0, Le2c;->b:Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object v1, p0, Le2c;->c:Llt7;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-object v2, p0, Le2c;->o:Llt7;
+    iget-object p1, p0, Le2c;->X:Ljava/lang/Object;
 
-    iput-object v0, p0, Le2c;->X:Llt7;
+    check-cast p1, Le5a;
 
-    const/4 v1, 0x0
+    instance-of p1, p1, Ls93;
 
-    invoke-static {v1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    if-eqz p1, :cond_0
 
-    move-result-object v2
+    iget-object p1, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    iput-object v2, p0, Le2c;->Y:Lsze;
+    invoke-static {p1}, Lici;->b(Ll24;)V
 
-    new-instance v3, Lgzc;
-
-    invoke-direct {v3, v2}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v3, p0, Le2c;->Z:Lgzc;
-
-    new-instance v2, Lde5;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3}, Lde5;-><init>(I)V
-
-    iput-object v2, p0, Le2c;->r0:Lde5;
-
-    new-instance v2, Lde5;
-
-    invoke-direct {v2, v3}, Lde5;-><init>(I)V
-
-    iput-object v2, p0, Le2c;->s0:Lde5;
-
-    invoke-static {}, Lnvi;->a()Lpzd;
-
-    move-result-object v2
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ll24;->getRouter()Lqid;
 
     move-result-object v0
 
-    check-cast v0, Lqkf;
+    invoke-virtual {v0, p1}, Lqid;->B(Ll24;)Z
 
-    check-cast v0, Losa;
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {v0}, Losa;->b()Lv44;
-
-    move-result-object v0
-
-    new-instance v3, Lc2c;
-
-    invoke-direct {v3, p0, v1}, Lc2c;-><init>(Le2c;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v1, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v4, Le54;->b:Le54;
-
-    invoke-static {v1, v0, v4, v3}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
-
-    move-result-object v0
-
-    sget-object v1, Le2c;->u0:[Lwq7;
-
-    const/4 v3, 0x0
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {v2, p0, v1, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method

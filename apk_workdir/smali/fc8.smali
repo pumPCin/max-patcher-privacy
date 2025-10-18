@@ -1,38 +1,23 @@
-.class public final Lfc8;
+.class public abstract Lfc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/LoudnessCodecController$OnLoudnessCodecUpdateListener;
 
-
-# instance fields
-.field public final synthetic a:Lymi;
+# static fields
+.field public static final a:Lr0a;
 
 
 # direct methods
-.method public constructor <init>(Lymi;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr0a;
 
-    iput-object p1, p0, Lfc8;->a:Lymi;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lr0a;-><init>(I)V
+
+    sput-object v0, Lfc8;->a:Lr0a;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onLoudnessCodecUpdate(Landroid/media/MediaCodec;Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 0
-
-    iget-object p1, p0, Lfc8;->a:Lymi;
-
-    iget-object p1, p1, Lymi;->b:Ljava/lang/Object;
-
-    check-cast p1, Ley0;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p2
 .end method

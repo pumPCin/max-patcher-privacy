@@ -86,6 +86,7 @@
     <color name="gray_separator">#fff0f0f0</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="launch_background">@color/black</color>
     <color name="led_1">#fff0f0f0</color>
     <color name="led_2">#ffffff00</color>
     <color name="led_3">#ff00ff00</color>

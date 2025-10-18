@@ -1,51 +1,62 @@
 .class public final Lwe2;
-.super Lk14;
+.super Lvpe;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lef2;
-
-.field public Z:I
-
-.field public o:Ljava/util/concurrent/atomic/AtomicLong;
-
-
-# direct methods
-.method public constructor <init>(Lef2;Lk14;)V
+# virtual methods
+.method public final bridge synthetic A(Ly18;)V
     .locals 0
 
-    iput-object p1, p0, Lwe2;->Y:Lef2;
+    check-cast p1, Lxe2;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1}, Lwe2;->G(Lxe2;)V
 
     return-void
 .end method
 
+.method public final G(Lxe2;)V
+    .locals 7
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    iput-object p1, p0, Lwe2;->X:Ljava/lang/Object;
+    check-cast v0, Lve2;
 
-    iget p1, p0, Lwe2;->Z:I
+    iget-object v1, p1, Lxe2;->a:Ltrf;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, v1}, Lve2;->setTitle(Ltrf;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p1, Lxe2;->b:Ltrf;
 
-    iput p1, p0, Lwe2;->Z:I
+    invoke-virtual {v0, v1}, Lve2;->setSubtitle(Ltrf;)V
 
-    iget-object p1, p0, Lwe2;->Y:Lef2;
+    iget-object v1, p1, Lxe2;->c:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iget-object v2, p1, Lxe2;->o:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, v0, v0, p0}, Lef2;->h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-wide v3, p1, Lxe2;->X:J
 
-    move-result-object p1
+    iget-object v5, p1, Lxe2;->Y:Lee0;
 
-    return-object p1
+    iget-object v6, v0, Lve2;->a:Lyoa;
+
+    invoke-virtual {v6, v5}, Lyoa;->setCustomOverlay(Lee0;)V
+
+    iget-object v5, v0, Lve2;->a:Lyoa;
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    if-nez v2, :cond_0
+
+    const-string v2, ""
+
+    :cond_0
+    invoke-static {v5, v1, v3, v2}, Lyoa;->n(Lyoa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lxe2;->Z:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lve2;->setDescriptions(Ljava/util/List;)V
+
+    return-void
 .end method

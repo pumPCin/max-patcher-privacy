@@ -21,7 +21,7 @@
 
 .field private final flg:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
 
-.field private final streamHash:Ld9f;
+.field private final streamHash:Lkaf;
 
 
 # direct methods
@@ -49,7 +49,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lnph;->b()Lnph;
+    invoke-static {}, Loqh;->b()Loqh;
 
     const/4 p1, 0x0
 

@@ -29,22 +29,22 @@
         "Lru/ok/android/externcalls/sdk/config/ConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lyuc;",
+        "Lfwc;",
         "log",
         "",
         "configKey",
         "defaultConfig",
         "logTag",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V",
         "config",
         "parseConfig",
         "(Ljava/lang/String;)Ljava/lang/Object;",
-        "Lqoe;",
+        "Lwpe;",
         "getConfig",
-        "()Lqoe;",
+        "()Lwpe;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
-        "Lyuc;",
+        "Lfwc;",
         "Ljava/lang/String;",
         "Ljava/lang/Object;",
         "calls-sdk_release"
@@ -70,7 +70,7 @@
     .end annotation
 .end field
 
-.field private final log:Lyuc;
+.field private final log:Lfwc;
 
 .field private final logTag:Ljava/lang/String;
 
@@ -78,13 +78,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
-            "Lyuc;",
+            "Lfwc;",
             "Ljava/lang/String;",
             "TT;",
             "Ljava/lang/String;",
@@ -96,7 +96,7 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->settings:Lru/ok/android/externcalls/sdk/api/RemoteSettings;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->log:Lyuc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->log:Lfwc;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->configKey:Ljava/lang/String;
 
@@ -115,10 +115,10 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;)Lyuc;
+.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;)Lfwc;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->log:Lyuc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->log:Lfwc;
 
     return-object p0
 .end method
@@ -133,12 +133,12 @@
 
 
 # virtual methods
-.method public getConfig()Lqoe;
+.method public getConfig()Lwpe;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
@@ -146,7 +146,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->configKey:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lru/ok/android/externcalls/sdk/api/RemoteSettings;->get(Ljava/lang/String;)Lqoe;
+    invoke-interface {v0, v1}, Lru/ok/android/externcalls/sdk/api/RemoteSettings;->get(Ljava/lang/String;)Lwpe;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider$getConfig$1;-><init>(Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;)V
 
-    invoke-virtual {v0, v1}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 

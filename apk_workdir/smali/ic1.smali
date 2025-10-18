@@ -1,199 +1,64 @@
-.class public final synthetic Lic1;
+.class public final Lic1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lpc1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lic1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    iput p1, p0, Lic1;->a:I
+    new-instance v0, Lic1;
 
-    iput-object p2, p0, Lic1;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p3, p0, Lic1;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljc1;Lz31;Z)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    iput p1, p0, Lic1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lic1;->c:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Lic1;->b:Z
+    sput-object v0, Lic1;->a:Lic1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lic1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lic1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsw9;
-
-    check-cast p1, Ljf7;
-
-    iget-object v1, v0, Lsw9;->o:Ljava/lang/String;
-
-    iget-object v0, v0, Lsw9;->r0:Lqw0;
-
-    iget v2, v0, Lqw0;->a:I
-
-    iget v0, v0, Lqw0;->b:I
-
-    iget-boolean v3, p0, Lic1;->b:Z
-
-    invoke-static {p1, v1, v2, v0, v3}, Lwfi;->g(Ljf7;Ljava/lang/String;IIZ)V
-
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lic1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lzr1;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    iget-object p1, v0, Lzr1;->F0:Lvna;
-
-    iget-boolean v0, p0, Lic1;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    const/16 v0, 0x8
+    instance-of p1, p1, Lic1;
 
-    :goto_1
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    if-nez p1, :cond_1
 
-    goto :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Lic1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lz31;
-
-    check-cast p1, Landroid/content/Intent;
-
-    const-string v1, "action-accept-call"
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, v0, Lz31;->c:Ljava/lang/CharSequence;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_2
+    return p1
 
     :cond_1
-    move-object v1, v2
+    return v0
+.end method
 
-    :goto_2
-    if-nez v1, :cond_2
+.method public final hashCode()I
+    .locals 1
 
-    const-string v1, ""
+    const v0, -0xe84aa25
 
-    :cond_2
-    const-string v3, "incoming_param_name"
+    return v0
+.end method
 
-    invoke-virtual {p1, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, v0, Lz31;->d:Ljava/lang/String;
+    const-string v0, "DeclineCall"
 
-    if-eqz v1, :cond_3
-
-    sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_3
-    const-string v1, "incoming_param_avatar"
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v0, v0, Lz31;->a:Ljava/lang/Long;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    goto :goto_3
-
-    :cond_4
-    const-wide/16 v0, 0x0
-
-    :goto_3
-    const-string v2, "incoming_param_chat_id"
-
-    invoke-virtual {p1, v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    const-string v0, "incoming_param_is_video"
-
-    iget-boolean v1, p0, Lic1;->b:Z
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

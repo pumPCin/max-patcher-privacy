@@ -1,54 +1,25 @@
-.class public final Lfm9;
-.super Lk14;
+.class public abstract synthetic Lfm9;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public Y:Lwb2;
-
-.field public Z:Ljava/lang/Object;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public final synthetic r0:Lwb2;
-
-.field public s0:Lda2;
+# static fields
+.field public static final synthetic a:Lzd5;
 
 
 # direct methods
-.method public constructor <init>(Lwb2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lfm9;->r0:Lwb2;
+    invoke-static {}, Lgg3;->values()[Lgg3;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lfm9;->a:Lzd5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lfm9;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lfm9;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfm9;->X:I
-
-    iget-object p1, p0, Lfm9;->r0:Lwb2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lwb2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

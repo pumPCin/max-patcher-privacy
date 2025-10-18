@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final a:Loqf;
+.field public final a:Ltrf;
 
 .field public final b:Ljava/util/List;
 
@@ -19,23 +19,23 @@
 
     new-instance v0, Lsa;
 
-    sget-object v1, Loqf;->b:Lnqf;
+    sget-object v1, Ltrf;->b:Lsrf;
 
-    sget-object v2, Ls95;->a:Ls95;
+    sget-object v2, Lka5;->a:Lka5;
 
-    invoke-direct {v0, v1, v2}, Lsa;-><init>(Loqf;Ljava/util/List;)V
+    invoke-direct {v0, v1, v2}, Lsa;-><init>(Ltrf;Ljava/util/List;)V
 
     sput-object v0, Lsa;->c:Lsa;
 
     return-void
 .end method
 
-.method public constructor <init>(Loqf;Ljava/util/List;)V
+.method public constructor <init>(Ltrf;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsa;->a:Loqf;
+    iput-object p1, p0, Lsa;->a:Ltrf;
 
     iput-object p2, p0, Lsa;->b:Ljava/util/List;
 
@@ -65,11 +65,11 @@
     :cond_1
     check-cast p1, Lsa;
 
-    iget-object v1, p0, Lsa;->a:Loqf;
+    iget-object v1, p0, Lsa;->a:Ltrf;
 
-    iget-object v3, p1, Lsa;->a:Loqf;
+    iget-object v3, p1, Lsa;->a:Ltrf;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -82,7 +82,7 @@
 
     iget-object p1, p1, Lsa;->b:Ljava/util/List;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -97,7 +97,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lsa;->a:Loqf;
+    iget-object v0, p0, Lsa;->a:Ltrf;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -125,7 +125,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lsa;->a:Loqf;
+    iget-object v1, p0, Lsa;->a:Ltrf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

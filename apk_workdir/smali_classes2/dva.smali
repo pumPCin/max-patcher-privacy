@@ -1,71 +1,105 @@
-.class public abstract synthetic Ldva;
+.class public final Ldva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final synthetic d:Leva;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Leva;I)V
+    .locals 2
 
-    invoke-static {}, Lz00;->values()[Lz00;
+    iput p2, p0, Ldva;->a:I
 
-    move-result-object v0
+    packed-switch p2, :pswitch_data_0
 
-    array-length v0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Ldva;->d:Leva;
 
-    :try_start_0
-    sget-object v1, Lz00;->b:Lz00;
+    iget-object p1, p1, Leva;->a:Liz8;
 
-    const/16 v1, 0x9
+    iget-wide v0, p1, Liz8;->o:J
 
-    const/4 v2, 0x1
+    iput-wide v0, p0, Ldva;->b:J
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-wide p1, p1, Liz8;->c:J
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lz00;->b:Lz00;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Lz00;->b:Lz00;
-
-    const/16 v1, 0xa
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lz00;->b:Lz00;
-
-    const/4 v1, 0x4
-
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Ldva;->$EnumSwitchMapping$0:[I
+    iput-wide p1, p0, Ldva;->c:J
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldva;->d:Leva;
+
+    iget-object p1, p1, Leva;->a:Liz8;
+
+    iget-wide v0, p1, Liz8;->o:J
+
+    iput-wide v0, p0, Ldva;->b:J
+
+    iget-wide p1, p1, Liz8;->c:J
+
+    iput-wide p1, p0, Ldva;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/ArrayList;)V
+    .locals 1
+
+    iget v0, p0, Ldva;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ldva;->d:Leva;
+
+    iget-object v0, v0, Leva;->a:Liz8;
+
+    iget-object v0, v0, Liz8;->X:Ljava/lang/Object;
+
+    check-cast v0, Lli6;
+
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ldva;->d:Leva;
+
+    iget-object v0, v0, Leva;->a:Liz8;
+
+    iget-object v0, v0, Liz8;->X:Ljava/lang/Object;
+
+    check-cast v0, Lli6;
+
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

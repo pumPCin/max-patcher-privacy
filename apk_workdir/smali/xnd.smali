@@ -1,47 +1,57 @@
-.class public abstract Lxnd;
-.super Ljava/lang/Object;
+.class public final Lxnd;
+.super Ls0;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final a:Z
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final call()Ljava/lang/Object;
     .locals 3
 
-    const-string v0, "rx3.purge-enabled"
+    sget-object v0, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
-    const/4 v1, 0x1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
+
+    const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p0, Ls0;->a:Ljava/lang/Runnable;
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "true"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    goto :goto_0
+    :try_start_1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
+
+    return-object v1
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
+    goto :goto_0
+
+    :catchall_1
+    move-exception v2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
+
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    sput-boolean v1, Lxnd;->a:Z
+    invoke-static {v0}, Liyi;->a(Ljava/lang/Throwable;)V
 
-    return-void
+    throw v0
 .end method

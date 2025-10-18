@@ -1,91 +1,172 @@
 .class public final Loch;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final Companion:Lnch;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public final b:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Loch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    new-instance v0, Lnch;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Loch;->Companion:Lnch;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Loch;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Loch;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Loch;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/Boolean;)V
     .locals 2
 
-    new-instance v0, Loch;
+    and-int/lit8 v0, p1, 0x3
 
-    iget-object v1, p0, Loch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    const/4 v1, 0x3
 
-    invoke-direct {v0, p2, v1}, Loch;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    if-ne v1, v0, :cond_0
 
-    iput-object p1, v0, Loch;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object p2, p0, Loch;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Loch;->b:Ljava/lang/Boolean;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lmch;->a:Lmch;
+
+    invoke-virtual {p2}, Lmch;->d()Lb3e;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lwui;->c(IILb3e;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p0, Loch;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast p1, Ldgg;
+    if-ne p0, p1, :cond_0
 
-    iget-boolean v0, p1, Ldgg;->b:Z
+    return v0
 
-    if-nez v0, :cond_0
+    :cond_0
+    instance-of v1, p1, Loch;
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Loch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0()Lcrd;
+    return v2
+
+    :cond_1
+    check-cast p1, Loch;
+
+    iget-object v1, p0, Loch;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Loch;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Loch;->b:Ljava/lang/Boolean;
+
+    iget-object p1, p1, Loch;->b:Ljava/lang/Boolean;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Loch;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Loch;->b:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppOpenCodeReaderRequest(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Loch;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileSelect="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Loch;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object p1, p1, Ldgg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-object v0
 .end method

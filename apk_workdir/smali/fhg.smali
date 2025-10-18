@@ -1,130 +1,162 @@
-.class public abstract Lfhg;
-.super Ljava/lang/Object;
+.class public final Lfhg;
+.super Lf87;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+# instance fields
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p1}, Lf87;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p2, p0, Lfhg;->b:Ljava/lang/String;
 
-    sput-object v0, Lfhg;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p3, p0, Lfhg;->c:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a(Ljava/util/Calendar;)Ljava/util/Calendar;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {p0}, Lfhg;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    const/4 v0, 0x0
+    return v0
 
-    invoke-static {v0}, Lfhg;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    :cond_0
+    const/4 v1, 0x0
 
-    move-result-object v0
+    if-eqz p1, :cond_2
 
-    const/4 v1, 0x1
+    const-class v2, Lfhg;
 
-    invoke-virtual {p0, v1}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v1
+    move-result-object v3
 
-    const/4 v2, 0x2
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {p0, v2}, Ljava/util/Calendar;->get(I)I
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lfhg;
+
+    iget-object v2, p0, Lf87;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lf87;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    const/4 v3, 0x5
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
+    iget-object v2, p0, Lfhg;->b:Ljava/lang/String;
 
-    move-result p0
+    iget-object v3, p1, Lfhg;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2, p0}, Ljava/util/Calendar;->set(III)V
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfhg;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lfhg;->c:Ljava/lang/String;
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public static b()Ljava/util/Calendar;
-    .locals 3
+.method public final hashCode()I
+    .locals 4
 
-    sget-object v0, Lfhg;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    const/16 v0, 0x20f
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    move-result-object v0
+    iget-object v2, p0, Lf87;->a:Ljava/lang/String;
 
-    check-cast v0, Lauf;
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
 
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    const/16 v1, 0xb
+    move-result v0
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+    iget-object v3, p0, Lfhg;->b:Ljava/lang/String;
 
-    const/16 v1, 0xc
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    const/16 v1, 0xd
+    move-result v3
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v1, 0xe
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const-string v1, "UTC"
-
-    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/util/Calendar;)Ljava/util/Calendar;
-    .locals 3
-
-    const-string v0, "UTC"
-
-    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
-
-    move-result-object v0
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
+    move v3, v2
 
-    move-result-wide v1
+    :goto_0
+    add-int/2addr v0, v3
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lfhg;->c:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :cond_1
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lf87;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfhg;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

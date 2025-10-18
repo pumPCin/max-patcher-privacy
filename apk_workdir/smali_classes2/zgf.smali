@@ -1,71 +1,49 @@
-.class public final synthetic Lzgf;
-.super Ljava/lang/Object;
+.class public final Lzgf;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lohf;
 
-.field public final synthetic b:Lbhf;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbhf;I)V
+.method public constructor <init>(Lohf;Ly14;)V
     .locals 0
 
-    iput p2, p0, Lzgf;->a:I
+    iput-object p1, p0, Lzgf;->X:Lohf;
 
-    iput-object p1, p0, Lzgf;->b:Lbhf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lzgf;->a:I
+    iput-object p1, p0, Lzgf;->o:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Float;
+    iget p1, p0, Lzgf;->Y:I
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    const/high16 v0, -0x80000000
 
-    move-result p1
+    or-int/2addr p1, v0
 
-    check-cast p2, Ljava/lang/Float;
+    iput p1, p0, Lzgf;->Y:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lzgf;->X:Lohf;
 
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+    const/4 v0, 0x0
 
-    move-result p2
+    invoke-static {p1, v0, v0, p0}, Lohf;->c(Lohf;Ljava/lang/String;Ljava/lang/Throwable;Ly14;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lzgf;->b:Lbhf;
-
-    invoke-static {v0, p1, p2}, Lbhf;->b(Lbhf;FF)V
-
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p2, p0, Lzgf;->b:Lbhf;
-
-    invoke-static {p2, p1}, Lbhf;->a(Lbhf;F)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

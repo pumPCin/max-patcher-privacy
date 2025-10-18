@@ -1,57 +1,136 @@
 .class public final Lb98;
-.super Lof4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # static fields
+.field public static final X:Lb98;
+
+.field public static final Y:Lb98;
+
+.field public static final Z:Lb98;
+
 .field public static final b:Lb98;
 
-.field public static final c:Ljf4;
+.field public static final c:Lb98;
 
-.field public static final d:Ljf4;
+.field public static final o:Lb98;
+
+
+# instance fields
+.field public final a:Lzge;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
     new-instance v0, Lb98;
 
-    invoke-direct {v0}, Lof4;-><init>()V
+    sget-object v1, Lzge;->c:Lzge;
+
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
 
     sput-object v0, Lb98;->b:Lb98;
 
-    const/4 v1, 0x0
+    new-instance v0, Lb98;
 
-    new-array v1, v1, [Ljava/lang/String;
+    sget-object v1, Lzge;->o:Lzge;
 
-    const/16 v2, 0xa
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
 
-    const-string v3, ":login"
+    sput-object v0, Lb98;->c:Lb98;
 
-    const/4 v4, 0x0
+    new-instance v0, Lb98;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    sget-object v1, Lzge;->X:Lzge;
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
 
-    sput-object v1, Lb98;->c:Ljf4;
+    sput-object v0, Lb98;->o:Lb98;
 
-    const-string v1, "id"
+    new-instance v0, Lb98;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    sget-object v1, Lzge;->Y:Lzge;
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
 
-    const/16 v2, 0xe
+    sput-object v0, Lb98;->X:Lb98;
 
-    const-string v3, ":neuro-avatars"
+    new-instance v0, Lb98;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    sget-object v1, Lzge;->Z:Lzge;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
 
-    sput-object v0, Lb98;->d:Ljf4;
+    sput-object v0, Lb98;->Y:Lb98;
+
+    new-instance v0, Lb98;
+
+    sget-object v1, Lzge;->q0:Lzge;
+
+    invoke-direct {v0, v1}, Lb98;-><init>(Lzge;)V
+
+    sput-object v0, Lb98;->Z:Lb98;
 
     return-void
+.end method
+
+.method public constructor <init>(Lzge;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lb98;->a:Lzge;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lb98;
+
+    iget-object p1, p1, Lb98;->a:Lzge;
+
+    iget-object v0, p0, Lb98;->a:Lzge;
+
+    iget v0, v0, Lzge;->b:I
+
+    iget p1, p1, Lzge;->b:I
+
+    invoke-static {v0, p1}, Lh1i;->b(II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Lzge;
+
+    iget-object v0, v0, Lzge;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Lzge;
+
+    iget-object v0, v0, Lzge;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

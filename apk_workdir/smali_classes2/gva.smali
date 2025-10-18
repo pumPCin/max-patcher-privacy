@@ -1,79 +1,94 @@
-.class public abstract Lgva;
+.class public final synthetic Lgva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/FileFilter;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view:I
+    iput p1, p0, Lgva;->a:I
 
-    sput v0, Lgva;->a:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_icon:I
-
-    sput v0, Lgva;->b:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
-
-    sput v0, Lgva;->c:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
-
-    sput v0, Lgva;->d:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
-
-    sput v0, Lgva;->e:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
-
-    sput v0, Lgva;->f:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_rate_view_title:I
-
-    sput v0, Lgva;->g:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_thank_view:I
-
-    sput v0, Lgva;->h:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
-
-    sput v0, Lgva;->i:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_thank_view_icon:I
-
-    sput v0, Lgva;->j:I
-
-    sget v0, Lqmc;->fake_in_app_review_bottom_sheet_thank_view_title:I
-
-    sput v0, Lgva;->k:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/io/File;)Z
+    .locals 1
+
+    iget v0, p0, Lgva;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Ljv5;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "log"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    invoke-static {p1}, Ljv5;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "zip"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    invoke-static {p1}, Ljv5;->c(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "zip"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lzaf;->C(Ljava/lang/CharSequence;)C
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Character;->isLetter(C)Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

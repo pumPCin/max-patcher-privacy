@@ -1,125 +1,177 @@
 .class public final Luw6;
-.super Landroid/text/style/RelativeSizeSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lkg8;
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Luw6;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:F
+.field public final a:Liu7;
 
-.field public final b:I
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwc4;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
-
-    sput-object v0, Luw6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    const v0, 0x3fa66666    # 1.3f
-
-    .line 1
-    invoke-direct {p0, v0}, Luw6;-><init>(F)V
-
-    return-void
-.end method
-
-.method public constructor <init>(F)V
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput p1, p0, Luw6;->a:F
+    iput-object p1, p0, Luw6;->a:Liu7;
 
-    const/16 p1, 0x8
+    iput-object p2, p0, Luw6;->b:Liu7;
 
-    .line 4
-    iput p1, p0, Luw6;->b:I
+    iput-object p3, p0, Luw6;->c:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final copy()Lc44;
-    .locals 2
+.method public final a(Lpb9;)Z
+    .locals 5
 
-    new-instance v0, Luw6;
+    iget-object v0, p0, Luw6;->b:Liu7;
 
-    iget v1, p0, Luw6;->a:F
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Luw6;-><init>(F)V
+    move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ldq5;
 
-.method public final getType()I
-    .locals 1
+    check-cast v0, Ljq5;
 
-    iget v0, p0, Luw6;->b:I
+    invoke-virtual {v0}, Ljq5;->p()Z
 
-    return v0
-.end method
+    move-result v0
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    if-eqz v0, :cond_6
 
-    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    iget-object v0, p0, Luw6;->c:Liu7;
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    move-result-object v0
 
-    return-void
-.end method
+    check-cast v0, Lsq;
 
-.method public final updateMeasureState(Landroid/text/TextPaint;)V
-    .locals 1
+    check-cast v0, Lgig;
 
-    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateMeasureState(Landroid/text/TextPaint;)V
+    invoke-virtual {v0}, Lgig;->u()Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :cond_0
+    invoke-virtual {p1}, Lpb9;->u()Z
 
-    iget p2, p0, Luw6;->a:F
+    move-result v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    if-nez v0, :cond_1
 
-    return-void
+    goto :goto_2
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, Lpb9;->u()Z
+
+    move-result v0
+
+    iget-object v1, p1, Lpb9;->z0:Lpb9;
+
+    const/4 v2, 0x4
+
+    if-eqz v0, :cond_2
+
+    iget v0, v1, Lpb9;->R0:I
+
+    if-eq v0, v2, :cond_2
+
+    move-object p1, v1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lpb9;->u()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v0, p0, Luw6;->a:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld33;
+
+    iget-wide v3, p1, Lpb9;->y0:J
+
+    check-cast v0, Ld43;
+
+    invoke-virtual {v0, v3, v4}, Ld43;->O(J)Ln0d;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ln0d;->a:Lq0f;
+
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lla2;
+
+    invoke-virtual {p1}, Lpb9;->u()Z
+
+    move-result p1
+
+    const/4 v3, 0x1
+
+    if-eqz p1, :cond_4
+
+    iget p1, v1, Lpb9;->K0:I
+
+    and-int/2addr p1, v2
+
+    if-ne p1, v2, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    if-eqz v0, :cond_6
+
+    iget-object p1, v0, Lla2;->b:Lne2;
+
+    iget-object p1, p1, Lne2;->H:Lce2;
+
+    iget-boolean p1, p1, Lce2;->j:Z
+
+    if-ne p1, v3, :cond_6
+
+    :goto_1
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Lla2;->f0()Z
+
+    move-result p1
+
+    if-ne p1, v3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    return v3
+
+    :cond_6
+    :goto_2
+    const/4 p1, 0x0
+
+    return p1
 .end method

@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp44;
+.implements Le54;
 
 
 # instance fields
-.field public final a:Lp44;
+.field public final a:Le54;
 
 .field public final b:F
 
 
 # direct methods
-.method public constructor <init>(FLp44;)V
+.method public constructor <init>(FLe54;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +25,7 @@
 
     check-cast p2, Lea;
 
-    iget-object p2, p2, Lea;->a:Lp44;
+    iget-object p2, p2, Lea;->a:Le54;
 
     move-object v0, p2
 
@@ -38,7 +38,7 @@
     goto :goto_0
 
     :cond_0
-    iput-object p2, p0, Lea;->a:Lp44;
+    iput-object p2, p0, Lea;->a:Le54;
 
     iput p1, p0, Lea;->b:F
 
@@ -50,9 +50,9 @@
 .method public final a(Landroid/graphics/RectF;)F
     .locals 1
 
-    iget-object v0, p0, Lea;->a:Lp44;
+    iget-object v0, p0, Lea;->a:Le54;
 
-    invoke-interface {v0, p1}, Lp44;->a(Landroid/graphics/RectF;)F
+    invoke-interface {v0, p1}, Le54;->a(Landroid/graphics/RectF;)F
 
     move-result p1
 
@@ -90,9 +90,9 @@
     :cond_1
     check-cast p1, Lea;
 
-    iget-object v1, p0, Lea;->a:Lp44;
+    iget-object v1, p0, Lea;->a:Le54;
 
-    iget-object v3, p1, Lea;->a:Lp44;
+    iget-object v3, p1, Lea;->a:Le54;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -123,7 +123,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lea;->a:Lp44;
+    iget-object v1, p0, Lea;->a:Le54;
 
     filled-new-array {v1, v0}, [Ljava/lang/Object;
 

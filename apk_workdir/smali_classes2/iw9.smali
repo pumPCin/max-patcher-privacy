@@ -1,161 +1,184 @@
 .class public final Liw9;
-.super Lxm;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmmf;
 
 
 # instance fields
-.field public final X:J
+.field public final a:Ljava/lang/String;
 
-.field public final Y:Ljava/util/List;
+.field public final b:I
 
-.field public final o:J
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/util/List;)V
+.method public constructor <init>(ILjava/lang/String;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxm;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Liw9;->o:J
+    iput-object p2, p0, Liw9;->a:Ljava/lang/String;
 
-    iput-wide p5, p0, Liw9;->X:J
+    iput p1, p0, Liw9;->b:I
 
-    iput-object p7, p0, Liw9;->Y:Ljava/util/List;
+    iput p3, p0, Liw9;->c:I
+
+    iput p4, p0, Liw9;->d:I
+
+    invoke-static {p2}, Ldei;->n(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Liw9;->e:Landroid/net/Uri;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Required value was null."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final e(Lklf;)V
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ljw9;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lxm;->o()Lma9;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    iget-object v1, p1, Ljw9;->c:Ljava/util/Map;
-
-    iget-object v0, v0, Lma9;->a:Lac4;
-
-    check-cast v0, Lhb4;
-
-    iget-object v0, v0, Lhb4;->c:Lmfd;
-
-    iget-object v2, v0, Lmfd;->a:Lzed;
-
-    invoke-virtual {v2}, Lzed;->m()Lyed;
-
-    move-result-object v2
-
-    check-cast v2, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v3, Lcfd;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v1, v0, v4}, Lcfd;-><init>(Ljava/util/Map;Lmfd;I)V
-
-    invoke-virtual {v2, v3}, Lyed;->p(Ljava/lang/Runnable;)V
-
-    iget-object p1, p1, Ljw9;->c:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
+    return v0
 
     :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    instance-of v1, p1, Liw9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Liw9;
+
+    iget-object v1, p0, Liw9;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Liw9;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Liw9;->b:I
+
+    iget v3, p1, Liw9;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Liw9;->c:I
+
+    iget v3, p1, Liw9;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Liw9;->d:I
+
+    iget p1, p1, Liw9;->d:I
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Liw9;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    const/16 v1, 0x1f
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    move-result-object v0
+    iget v2, p0, Liw9;->b:I
 
-    check-cast v0, Ljava/lang/Long;
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    invoke-virtual {p0}, Lxm;->o()Lma9;
+    move-result v0
 
-    move-result-object v1
+    iget v2, p0, Liw9;->c:I
 
-    iget-wide v2, p0, Liw9;->o:J
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    move-result v0
 
-    move-result-wide v4
+    iget v1, p0, Liw9;->d:I
 
-    invoke-virtual {v1, v2, v3, v4, v5}, Lma9;->j(JJ)Loa9;
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    add-int/2addr v1, v0
 
-    invoke-virtual {p0}, Lxm;->l()Lgw0;
-
-    move-result-object v1
-
-    new-instance v2, Ladg;
-
-    iget-wide v6, v0, Lij0;->a:J
-
-    const/4 v3, 0x0
-
-    iget-wide v4, p0, Liw9;->o:J
-
-    invoke-direct/range {v2 .. v7}, Ladg;-><init>(IJJ)V
-
-    invoke-virtual {v1, v2}, Lgw0;->c(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return v1
 .end method
 
-.method public final f(Lukf;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lxm;->l()Lgw0;
-
-    move-result-object v0
-
-    new-instance v1, Lkj0;
-
-    iget-wide v2, p0, Lxm;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Lkj0;-><init>(JLukf;)V
-
-    invoke-virtual {v0, v1}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i()Lhlf;
+.method public final toString()Ljava/lang/String;
     .locals 5
 
-    new-instance v0, Lqv9;
+    const-string v0, ", width="
 
-    iget-object v1, p0, Liw9;->Y:Ljava/util/List;
+    const-string v1, ", height="
 
-    const/4 v2, 0x7
+    iget v2, p0, Liw9;->b:I
 
-    iget-wide v3, p0, Liw9;->X:J
+    const-string v3, "Item(url="
 
-    invoke-direct {v0, v2, v3, v4, v1}, Lqv9;-><init>(IJLjava/util/List;)V
+    iget-object v4, p0, Liw9;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", bitrate="
+
+    const-string v2, ")"
+
+    iget v3, p0, Liw9;->c:I
+
+    iget v4, p0, Liw9;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lfd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

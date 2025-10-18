@@ -1,166 +1,89 @@
-.class public final synthetic Lgy0;
+.class public final Lgy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/io/File;
 
-.field public final synthetic b:Ljy0;
+.field public final b:J
 
-.field public final synthetic c:Ljava/util/HashSet;
+.field public final c:J
+
+.field public final d:Lwy0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljy0;Ljava/util/HashSet;I)V
-    .locals 0
-
-    iput p3, p0, Lgy0;->a:I
-
-    iput-object p1, p0, Lgy0;->b:Ljy0;
-
-    iput-object p2, p0, Lgy0;->c:Ljava/util/HashSet;
+.method public constructor <init>(Ljava/io/File;Lwy0;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgy0;->a:Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->length()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lgy0;->b:J
+
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lgy0;->c:J
+
+    iput-object p2, p0, Lgy0;->d:Lwy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lgy0;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "CacheEntry{file="
 
-    iget-object v0, p0, Lgy0;->b:Ljy0;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lgy0;->c:Ljava/util/HashSet;
+    iget-object v1, p0, Lgy0;->a:Ljava/io/File;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Ljy0;->l:Ljava/util/LinkedHashSet;
+    const-string v1, ", length="
 
-    invoke-interface {v1, v2}, Ljava/util/Collection;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    iget-wide v1, p0, Lgy0;->b:J
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Ljy0;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v1, ", lastModified="
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iget-wide v1, p0, Lgy0;->c:J
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lgy0;->b:Ljy0;
+    const-string v1, ", cacheType="
 
-    iget-object v1, p0, Lgy0;->c:Ljava/util/HashSet;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lgy0;->d:Lwy0;
 
-    sget-object v2, Lny0;->t0:Lny0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    const/16 v1, 0x7d
 
-    move-result v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object v2, Lny0;->Y:Lny0;
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    iget-object v2, v0, Ljy0;->k:Lhy0;
-
-    iget-object v2, v2, Lhy0;->a:Lkoh;
-
-    if-eqz v2, :cond_4
-
-    iget-object v2, v0, Ljy0;->k:Lhy0;
-
-    sget-object v3, Lny0;->Z:Lny0;
-
-    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    sget-object v3, Lny0;->c:Lny0;
-
-    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    :cond_2
-    iget-object v3, v0, Ljy0;->b:Ll30;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v4, "l30"
-
-    const-string v5, "stop"
-
-    invoke-static {v4, v5}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ll30;->u()V
-
-    iget-object v4, v3, Ll30;->c:Lez9;
-
-    invoke-virtual {v4}, Lez9;->s()V
-
-    invoke-virtual {v3}, Ll30;->n()V
-
-    :cond_3
-    iget-object v2, v2, Lhy0;->a:Lkoh;
-
-    invoke-virtual {v2, v1}, Lkoh;->r(Ljava/util/Collection;)V
-
-    iget-object v0, v0, Ljy0;->c:Lsoh;
-
-    new-instance v2, Lm3e;
-
-    invoke-direct {v2, v1}, Lm3e;-><init>(Ljava/util/HashSet;)V
-
-    invoke-virtual {v0, v2}, Lsoh;->b(Lk3e;)V
-
-    goto :goto_0
-
-    :cond_4
-    const-string v0, "onClearCacheTypesPicked: already cleared all"
-
-    const/4 v1, 0x0
-
-    const-string v2, "jy0"
-
-    invoke-static {v2, v0, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

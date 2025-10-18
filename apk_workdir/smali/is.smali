@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzvb;
+.implements Lexb;

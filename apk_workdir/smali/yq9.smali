@@ -1,28 +1,30 @@
-.class public abstract Lyq9;
+.class public interface abstract Lyq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyq9;->a:I
-
-    iput p2, p0, Lyq9;->b:I
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # virtual methods
-.method public abstract a(Lzf6;)V
+.method public l()Lkb6;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public o()[B
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public p(Lku8;)V
+    .locals 0
+
+    return-void
 .end method

@@ -42,11 +42,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->I0:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->w0:Z
+    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->v0:Z
 
     return-void
 
@@ -71,9 +71,9 @@
     :pswitch_1
     iget-object v0, p0, Lu6;->b:Ljava/lang/Object;
 
-    check-cast v0, Lu2g;
+    check-cast v0, Lx3g;
 
-    invoke-virtual {v0}, Lu2g;->n()V
+    invoke-virtual {v0}, Lx3g;->n()V
 
     invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -114,15 +114,15 @@
     :pswitch_3
     iget-object p1, p0, Lu6;->b:Ljava/lang/Object;
 
-    check-cast p1, Llh8;
+    check-cast p1, Lmi8;
 
-    iget-object v0, p1, Lgh8;->b:Landroid/view/View;
+    iget-object v0, p1, Lhi8;->b:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-virtual {p1, v1}, Llh8;->b(F)V
+    invoke-virtual {p1, v1}, Lmi8;->b(F)V
 
     return-void
 
@@ -140,11 +140,11 @@
     :pswitch_5
     iget-object p1, p0, Lu6;->b:Ljava/lang/Object;
 
-    check-cast p1, Lm25;
+    check-cast p1, Lf35;
 
-    invoke-virtual {p1}, Lvb5;->q()V
+    invoke-virtual {p1}, Lnc5;->q()V
 
-    iget-object p1, p1, Lm25;->r:Landroid/animation/ValueAnimator;
+    iget-object p1, p1, Lf35;->r:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
@@ -187,9 +187,9 @@
 
     iget-object p1, p0, Lu6;->b:Ljava/lang/Object;
 
-    check-cast p1, Luk0;
+    check-cast p1, Ldl0;
 
-    invoke-static {p1}, Lsci;->b(Landroid/view/View;)Landroid/view/ViewGroup;
+    invoke-static {p1}, Ldei;->e(Landroid/view/View;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -200,14 +200,14 @@
     goto :goto_0
 
     :cond_2
-    new-instance v1, Lhzg;
+    new-instance v1, Locf;
 
-    invoke-direct {v1, v0}, Lhzg;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v1, v0}, Locf;-><init>(Landroid/view/ViewGroup;)V
 
     move-object v0, v1
 
     :goto_0
-    iget-object p1, p1, Luk0;->y0:Ljava/util/ArrayList;
+    iget-object p1, p1, Ldl0;->x0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -224,9 +224,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lixf;
+    check-cast v1, Lnyf;
 
-    iget-object v2, v0, Lhzg;->a:Ljava/lang/Object;
+    iget-object v2, v0, Locf;->a:Ljava/lang/Object;
 
     check-cast v2, Landroid/view/ViewOverlay;
 
@@ -279,11 +279,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->I0:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->w0:Z
+    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->v0:Z
 
     return-void
 
@@ -320,25 +320,25 @@
 
     iget-object p1, p0, Lu6;->b:Ljava/lang/Object;
 
-    check-cast p1, Lsw7;
+    check-cast p1, Lpx7;
 
-    iget v0, p1, Lsw7;->Z:I
+    iget v0, p1, Lpx7;->Z:I
 
     const/4 v1, 0x1
 
     add-int/2addr v0, v1
 
-    iget-object v2, p1, Lsw7;->Y:Lbx7;
+    iget-object v2, p1, Lpx7;->Y:Lyx7;
 
-    iget-object v2, v2, Lmk0;->c:[I
+    iget-object v2, v2, Lvk0;->c:[I
 
     array-length v2, v2
 
     rem-int/2addr v0, v2
 
-    iput v0, p1, Lsw7;->Z:I
+    iput v0, p1, Lpx7;->Z:I
 
-    iput-boolean v1, p1, Lsw7;->r0:Z
+    iput-boolean v1, p1, Lpx7;->q0:Z
 
     return-void
 

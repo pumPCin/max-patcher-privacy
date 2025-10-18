@@ -1,130 +1,96 @@
-.class public final Lan7;
-.super Ljava/lang/Object;
+.class public final enum Lan7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Iterator;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lan7;
 
-.field public final synthetic b:Lcn7;
+.field public static final synthetic b:[Lan7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcn7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lan7;->a:I
+    new-instance v0, Lan7;
 
-    iput-object p1, p0, Lan7;->b:Lcn7;
+    const-string v1, "INSTANCE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lan7;->a:Lan7;
+
+    filled-new-array {v0}, [Lan7;
+
+    move-result-object v0
+
+    sput-object v0, Lan7;->b:[Lan7;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lan7;
+    .locals 1
+
+    const-class v0, Lan7;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lan7;
+
+    return-object p0
+.end method
+
+.method public static values()[Lan7;
+    .locals 1
+
+    sget-object v0, Lan7;->b:[Lan7;
+
+    invoke-virtual {v0}, [Lan7;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lan7;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final hasNext()Z
+    .locals 1
 
-    iget v0, p0, Lan7;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lan7;->b:Lcn7;
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v1, v0, Lcn7;->a:Ljava/util/concurrent/Executor;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    iget-object v0, v0, Lcn7;->c:Lan7;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    throw v0
+.end method
 
-    return-void
+.method public final remove()V
+    .locals 2
 
-    :pswitch_0
-    iget-object v0, p0, Lan7;->b:Lcn7;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    const-string v1, "no calls to next() since the last call to remove()"
 
-    move-result-wide v1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v3, v0, Lcn7;->e:Lna5;
-
-    iget v4, v0, Lcn7;->f:I
-
-    const/4 v5, 0x0
-
-    iput-object v5, v0, Lcn7;->e:Lna5;
-
-    const/4 v5, 0x0
-
-    iput v5, v0, Lcn7;->f:I
-
-    const/4 v5, 0x3
-
-    iput v5, v0, Lcn7;->g:I
-
-    iput-wide v1, v0, Lcn7;->i:J
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-static {v3, v4}, Lcn7;->d(Lna5;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lcn7;->b:Lbn7;
-
-    invoke-interface {v1, v3, v4}, Lbn7;->e(Lna5;I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-static {v3}, Lna5;->d(Lna5;)V
-
-    invoke-virtual {v0}, Lcn7;->b()V
-
-    return-void
-
-    :goto_1
-    invoke-static {v3}, Lna5;->d(Lna5;)V
-
-    invoke-virtual {v0}, Lcn7;->b()V
-
-    throw v1
-
-    :catchall_1
-    move-exception v1
-
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

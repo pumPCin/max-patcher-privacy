@@ -31,14 +31,14 @@
 
     move-result-object p1
 
-    sget-object v1, Lwtc;->AspectRatioFrameLayout:[I
+    sget-object v1, Ldvc;->AspectRatioFrameLayout:[I
 
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     :try_start_0
-    sget p2, Lwtc;->AspectRatioFrameLayout_resize_mode:I
+    sget p2, Ldvc;->AspectRatioFrameLayout_resize_mode:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 

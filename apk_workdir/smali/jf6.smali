@@ -3,41 +3,25 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
-
-
 # instance fields
-.field public final a:Lhrb;
+.field public final a:J
 
-.field public final b:I
+.field public final b:Z
 
 .field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Ljf6;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhrb;II)V
+.method public constructor <init>(IJZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljf6;->a:Lhrb;
+    iput-wide p2, p0, Ljf6;->a:J
 
-    iput p2, p0, Ljf6;->b:I
+    iput-boolean p4, p0, Ljf6;->b:Z
 
-    iput p3, p0, Ljf6;->c:I
+    iput p1, p0, Ljf6;->c:I
 
     return-void
 .end method

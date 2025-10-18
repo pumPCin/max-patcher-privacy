@@ -3,138 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls55;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
+.field public final a:J
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:Ljava/lang/String;
 
-.field public c:I
-
-.field public d:I
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Rect;
+    iput-wide p1, p0, Lcf0;->a:J
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iput-object p3, p0, Lcf0;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Lcf0;->b:Landroid/graphics/Rect;
-
-    iput-object p1, p0, Lcf0;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v0
-
-    iput v0, p0, Lcf0;->c:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result p1
-
-    iput p1, p0, Lcf0;->d:I
-
-    return-void
-.end method
-
-.method public static a(Lcf0;IILandroid/graphics/Rect;)V
-    .locals 4
-
-    int-to-float v0, p1
-
-    iget v1, p0, Lcf0;->d:I
-
-    int-to-float v2, v1
-
-    iget p0, p0, Lcf0;->c:I
-
-    int-to-float v3, p0
-
-    div-float/2addr v2, v3
-
-    mul-float/2addr v2, v0
-
-    float-to-int v0, v2
-
-    if-le v0, p2, :cond_0
-
-    int-to-float v0, p2
-
-    int-to-float p0, p0
-
-    int-to-float v1, v1
-
-    div-float/2addr p0, v1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    move v0, p2
-
-    goto :goto_0
-
-    :cond_0
-    move p0, p1
-
-    :goto_0
-    sub-int/2addr p2, v0
-
-    int-to-float p2, p2
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr p2, v1
-
-    float-to-int p2, p2
-
-    sub-int/2addr p1, p0
-
-    int-to-float p1, p1
-
-    div-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    add-int/2addr p0, p1
-
-    add-int/2addr v0, p2
-
-    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
+    iput-object p4, p0, Lcf0;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+    const-string v0, "Background{id="
 
-    move-result v0
+    const-string v1, ", url="
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
+    iget-wide v2, p0, Lcf0;->a:J
 
-    move-result v1
+    iget-object v4, p0, Lcf0;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lcf0;->b:Landroid/graphics/Rect;
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v0, v1, v2}, Lcf0;->a(Lcf0;IILandroid/graphics/Rect;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lcf0;->a:Landroid/graphics/drawable/Drawable;
+    const-string v1, ", color="
 
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    const-string v2, "}"
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    iget-object v3, p0, Lcf0;->c:Ljava/lang/String;
 
-    return-void
+    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

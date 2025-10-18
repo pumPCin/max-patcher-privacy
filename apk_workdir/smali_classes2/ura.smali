@@ -1,66 +1,56 @@
-.class public final synthetic Lura;
+.class public final Lura;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lxra;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lcom/google/android/material/chip/Chip;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic e:Ljava/lang/CharSequence;
-
-.field public final synthetic f:Ljava/lang/String;
+.field public final synthetic b:Lji6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxra;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
+.method public synthetic constructor <init>(ILji6;)V
     .locals 0
 
+    iput p1, p0, Lura;->a:I
+
+    iput-object p2, p0, Lura;->b:Lji6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lura;->a:Lxra;
-
-    iput-object p2, p0, Lura;->b:Lcom/google/android/material/chip/Chip;
-
-    iput-wide p3, p0, Lura;->c:J
-
-    iput-wide p5, p0, Lura;->d:J
-
-    iput-object p7, p0, Lura;->e:Ljava/lang/CharSequence;
-
-    iput-object p8, p0, Lura;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 9
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    iget-object v7, p0, Lura;->e:Ljava/lang/CharSequence;
+    iget p1, p0, Lura;->a:I
 
-    iget-object v8, p0, Lura;->f:Ljava/lang/String;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lura;->a:Lxra;
+    iget-object p1, p0, Lura;->b:Lji6;
 
-    iget-object v1, p0, Lura;->b:Lcom/google/android/material/chip/Chip;
-
-    iget-wide v3, p0, Lura;->c:J
-
-    iget-wide v5, p0, Lura;->d:J
-
-    move v2, p2
-
-    invoke-virtual/range {v0 .. v8}, Lxra;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lura;->b:Lji6;
+
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

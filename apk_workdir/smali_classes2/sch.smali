@@ -1,80 +1,152 @@
-.class public final Lsch;
-.super Llff;
+.class public final synthetic Lsch;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lhn6;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Lsch;
 
-.field public final synthetic Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lsch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    new-instance v0, Lsch;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lsch;->a:Lsch;
+
+    new-instance v1, Levb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "url"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lsch;->descriptor:Lb3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v0, Lsch;->descriptor:Lb3e;
 
-    invoke-virtual {p0, p1, p2}, Lsch;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
 
     move-result-object p1
 
-    check-cast p1, Lsch;
+    const/4 v1, 0x1
 
-    sget-object p2, Lzag;->a:Lzag;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Lsch;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    return-object p2
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+
+    new-instance p1, Luch;
+
+    invoke-direct {p1, v5, v3}, Luch;-><init>(ILjava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b(Lo24;Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Lsch;
+    check-cast p2, Luch;
 
-    iget-object v1, p0, Lsch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    sget-object v0, Lsch;->descriptor:Lb3e;
 
-    invoke-direct {v0, p2, v1}, Lsch;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
 
-    iput-object p1, v0, Lsch;->X:Ljava/lang/Object;
+    move-result-object p1
+
+    iget-object p2, p2, Luch;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lur7;
+
+    sget-object v1, Lvaf;->a:Lvaf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d()Lb3e;
     .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    sget-object v0, Lsch;->descriptor:Lb3e;
 
-    iget-object p1, p0, Lsch;->X:Ljava/lang/Object;
-
-    check-cast p1, Lqdh;
-
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
-
-    iget-object v0, p0, Lsch;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    invoke-virtual {v0, p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->W0(Lqdh;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-object v0
 .end method

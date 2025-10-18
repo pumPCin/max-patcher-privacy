@@ -1,69 +1,91 @@
-.class public final Lgt2;
+.class public final synthetic Lgt2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lht2;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lev2;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Z
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(IJJLjava/lang/String;)V
-    .locals 3
+.method public synthetic constructor <init>(Lev2;JI)V
+    .locals 0
 
-    and-int/lit8 v0, p1, 0x1
+    iput p4, p0, Lgt2;->a:I
 
-    const-wide/16 v1, 0x0
+    iput-object p1, p0, Lgt2;->b:Lev2;
 
-    if-eqz v0, :cond_0
+    iput-wide p2, p0, Lgt2;->c:J
 
-    move-wide p2, v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    and-int/lit8 v0, p1, 0x2
+    return-void
+.end method
 
-    if-eqz v0, :cond_1
 
-    move-wide p4, v1
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    :cond_1
-    and-int/lit8 v0, p1, 0x4
+    iget v0, p0, Lgt2;->a:I
 
-    if-eqz v0, :cond_2
+    check-cast p1, Landroid/view/View;
 
-    const/4 p6, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_2
-    and-int/lit8 p1, p1, 0x8
+    iget-object p1, p0, Lgt2;->b:Lev2;
 
-    if-eqz p1, :cond_3
+    iget-object p1, p1, Lev2;->a1:Lxe5;
 
-    const/4 p1, 0x0
+    new-instance v0, Lqt2;
+
+    const/4 v6, 0x0
+
+    const/4 v1, 0x6
+
+    iget-wide v2, p0, Lgt2;->c:J
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lqt2;-><init>(IJJLjava/lang/String;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Lgt2;->b:Lev2;
+
+    iget-object p1, p1, Lev2;->a1:Lxe5;
+
+    new-instance v0, Lqt2;
+
+    const/4 v6, 0x0
+
+    const/16 v1, 0xe
+
+    iget-wide v2, p0, Lgt2;->c:J
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lqt2;-><init>(IJJLjava/lang/String;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_3
-    const/4 p1, 0x1
-
-    :goto_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p2, p0, Lgt2;->a:J
-
-    iput-wide p4, p0, Lgt2;->b:J
-
-    iput-object p6, p0, Lgt2;->c:Ljava/lang/String;
-
-    iput-boolean p1, p0, Lgt2;->d:Z
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

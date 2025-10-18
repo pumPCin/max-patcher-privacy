@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld1e;
+.implements Lk2e;
 
 
 # instance fields
@@ -26,7 +26,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lei6;)V
+.method public constructor <init>(Lzi6;)V
     .locals 1
 
     const/4 v0, 0x5
@@ -37,7 +37,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    check-cast p1, Lqcd;
+    check-cast p1, Lwdd;
 
     iput-object p1, p0, Llt;->b:Ljava/lang/Object;
 
@@ -75,9 +75,9 @@
     :pswitch_1
     iget-object v0, p0, Llt;->b:Ljava/lang/Object;
 
-    check-cast v0, Lqcd;
+    check-cast v0, Lwdd;
 
-    invoke-static {v0}, Lp1e;->a(Lei6;)Li1e;
+    invoke-static {v0}, Lw2e;->b(Lzi6;)Lp2e;
 
     move-result-object v0
 
@@ -97,9 +97,9 @@
     return-object v1
 
     :pswitch_3
-    new-instance v0, Lex7;
+    new-instance v0, Lby7;
 
-    invoke-direct {v0, p0}, Lex7;-><init>(Llt;)V
+    invoke-direct {v0, p0}, Lby7;-><init>(Llt;)V
 
     return-object v0
 

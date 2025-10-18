@@ -17,7 +17,7 @@
 
     new-instance v0, Lpqa;
 
-    const-string v1, "PRIMARY"
+    const-string v1, "ICON"
 
     const/4 v2, 0x0
 
@@ -27,7 +27,7 @@
 
     new-instance v1, Lpqa;
 
-    const-string v2, "SECONDARY"
+    const-string v2, "ICON_WITH_TEXT"
 
     const/4 v3, 0x1
 

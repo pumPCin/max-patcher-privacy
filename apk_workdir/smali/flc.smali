@@ -3,40 +3,40 @@
 
 
 # static fields
-.field public static ic_call_answer:I = 0x7f08054c
+.field public static mediarouter_chooser_list_item_padding_bottom:I = 0x7f0702d0
 
-.field public static ic_call_answer_low:I = 0x7f08054d
+.field public static mediarouter_chooser_list_item_padding_end:I = 0x7f0702d1
 
-.field public static ic_call_answer_video:I = 0x7f08054e
+.field public static mediarouter_chooser_list_item_padding_start:I = 0x7f0702d2
 
-.field public static ic_call_answer_video_low:I = 0x7f08054f
+.field public static mediarouter_chooser_list_item_padding_top:I = 0x7f0702d3
 
-.field public static ic_call_decline:I = 0x7f080551
+.field public static mr_cast_group_volume_seekbar_height:I = 0x7f0702d8
 
-.field public static ic_call_decline_low:I = 0x7f080552
+.field public static mr_cast_meta_art_size:I = 0x7f0702d9
 
-.field public static notification_action_background:I = 0x7f0808ef
+.field public static mr_cast_meta_subtitle_text_size:I = 0x7f0702da
 
-.field public static notification_bg:I = 0x7f0808f0
+.field public static mr_cast_route_volume_seekbar_height:I = 0x7f0702db
 
-.field public static notification_bg_low:I = 0x7f0808f1
+.field public static mr_cast_seekbar_thumb_size:I = 0x7f0702dc
 
-.field public static notification_bg_low_normal:I = 0x7f0808f2
+.field public static mr_controller_volume_group_list_item_height:I = 0x7f0702dd
 
-.field public static notification_bg_low_pressed:I = 0x7f0808f3
+.field public static mr_controller_volume_group_list_item_icon_size:I = 0x7f0702de
 
-.field public static notification_bg_normal:I = 0x7f0808f4
+.field public static mr_controller_volume_group_list_max_height:I = 0x7f0702df
 
-.field public static notification_bg_normal_pressed:I = 0x7f0808f5
+.field public static mr_controller_volume_group_list_padding_top:I = 0x7f0702e0
 
-.field public static notification_icon_background:I = 0x7f0808f6
+.field public static mr_dialog_fixed_width_major:I = 0x7f0702e1
 
-.field public static notification_oversize_large_icon_bg:I = 0x7f0808f9
+.field public static mr_dialog_fixed_width_minor:I = 0x7f0702e2
 
-.field public static notification_template_icon_bg:I = 0x7f0808fa
+.field public static mr_dynamic_dialog_header_text_size:I = 0x7f0702e3
 
-.field public static notification_template_icon_low_bg:I = 0x7f0808fb
+.field public static mr_dynamic_dialog_route_text_size:I = 0x7f0702e4
 
-.field public static notification_tile_bg:I = 0x7f0808fc
+.field public static mr_dynamic_dialog_row_height:I = 0x7f0702e5
 
-.field public static notify_panel_notification_icon_bg:I = 0x7f0808fd
+.field public static mr_dynamic_volume_group_list_item_height:I = 0x7f0702e6

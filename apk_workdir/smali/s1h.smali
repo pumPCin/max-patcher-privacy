@@ -1,23 +1,26 @@
-.class public abstract Ls1h;
+.class public final Ls1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/Long;
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Long;I)V
+# virtual methods
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 1
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    sget-object v0, Lhzg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p1}, Ltyg;->c(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Ls1h;->a:I
-
-    iput-object p1, p0, Ls1h;->b:Ljava/lang/Long;
 
     return-void
 .end method

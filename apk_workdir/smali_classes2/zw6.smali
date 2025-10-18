@@ -1,50 +1,64 @@
 .class public final Lzw6;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lzw6;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final b:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public b:Ll08;
 
-.field public static c:Landroid/content/Context;
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lzw6;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzw6;->a:Ljava/lang/String;
 
-    sput-object v0, Lzw6;->a:Lzw6;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    sput-object v0, Lzw6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput p2, p0, Lzw6;->c:I
 
     return-void
 .end method
 
-.method public static a(Ljava/io/File;)V
-    .locals 1
 
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    move-result v0
+    iget-object v0, p0, Lzw6;->b:Ll08;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, v0, Ll08;->a:Lq08;
 
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+    iget-object v0, v0, Ll08;->b:Ljava/lang/Object;
+
+    sget-object v2, Lr08;->b:Lr08;
+
+    check-cast v0, Landroid/text/style/ClickableSpan;
+
+    iget-object v3, p0, Lzw6;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v3, v2, v0}, Lq08;->b(Landroid/view/View;Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lzw6;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
     return-void
 .end method

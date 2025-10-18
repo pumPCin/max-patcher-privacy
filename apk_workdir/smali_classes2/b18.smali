@@ -1,54 +1,60 @@
-.class public interface abstract Lb18;
+.class public final synthetic Lb18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/Collection;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/util/Collection;)V
+    .locals 0
+
+    iput p1, p0, Lb18;->a:I
+
+    iput-object p2, p0, Lb18;->b:Ljava/util/Collection;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract getItemId()J
-.end method
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-.method public h(Lb18;)Z
-    .locals 4
+    iget v0, p0, Lb18;->a:I
 
-    invoke-interface {p0}, Lb18;->getItemId()J
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v0
+    iget-object v0, p0, Lb18;->b:Ljava/util/Collection;
 
-    invoke-interface {p1}, Lb18;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public k(Lb18;)Ljava/lang/Object;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public abstract m()I
-.end method
-
-.method public q(Lb18;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lb18;->b:Ljava/util/Collection;
+
+    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->a(Ljava/util/Collection;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

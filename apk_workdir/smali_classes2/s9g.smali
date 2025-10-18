@@ -1,248 +1,172 @@
-.class public final enum Ls9g;
-.super Ljava/lang/Enum;
+.class public final Ls9g;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ls9g;
-
-.field public static final enum Y:Ls9g;
-
-.field public static final enum Z:Ls9g;
-
-.field public static final b:Ljava/util/LinkedHashMap;
-
-.field public static final enum c:Ls9g;
-
-.field public static final enum o:Ls9g;
-
-.field public static final enum r0:Ls9g;
-
-.field public static final enum s0:Ls9g;
-
-.field public static final enum t0:Ls9g;
-
-.field public static final synthetic u0:[Ls9g;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:I
+.field public X:Lt9g;
+
+.field public Y:Lu18;
+
+.field public Z:Lu18;
+
+.field public q0:I
+
+.field public final synthetic r0:Lt9g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
-
-    new-instance v0, Ls9g;
-
-    const-string v1, "INTEGER"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Ls9g;->c:Ls9g;
-
-    new-instance v1, Ls9g;
-
-    const-string v2, "FLOAT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Ls9g;->o:Ls9g;
-
-    new-instance v2, Ls9g;
-
-    const-string v3, "LONG"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Ls9g;->X:Ls9g;
-
-    new-instance v3, Ls9g;
-
-    const-string v4, "STRING"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Ls9g;->Y:Ls9g;
-
-    new-instance v4, Ls9g;
-
-    const-string v5, "STRINGS_SET"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Ls9g;->Z:Ls9g;
-
-    new-instance v5, Ls9g;
-
-    const-string v6, "BOOLEAN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v7}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Ls9g;->r0:Ls9g;
-
-    new-instance v6, Ls9g;
-
-    const-string v7, "BIG_STRING"
-
-    const/4 v8, 0x6
-
-    const/16 v9, 0x10
-
-    invoke-direct {v6, v7, v8, v9}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Ls9g;->s0:Ls9g;
-
-    new-instance v7, Ls9g;
-
-    const/4 v8, 0x7
-
-    const/16 v10, 0x11
-
-    const-string v11, "BIG_STRINGS_SET"
-
-    invoke-direct {v7, v11, v8, v10}, Ls9g;-><init>(Ljava/lang/String;II)V
-
-    sput-object v7, Ls9g;->t0:Ls9g;
-
-    filled-new-array/range {v0 .. v7}, [Ls9g;
-
-    move-result-object v0
-
-    sput-object v0, Ls9g;->u0:[Ls9g;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    const/16 v0, 0xa
-
-    invoke-static {v1, v0}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v0
-
-    invoke-static {v0}, Lyf8;->e(I)I
-
-    move-result v0
-
-    if-ge v0, v9, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v9, v0
-
-    :goto_0
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0, v9}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    new-instance v2, Lf2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3, v1}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    :goto_1
-    invoke-virtual {v2}, Lf2;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Ls9g;
-
-    iget v3, v3, Ls9g;->a:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_1
-    sput-object v0, Ls9g;->b:Ljava/util/LinkedHashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lt9g;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Ls9g;->r0:Lt9g;
 
-    iput p3, p0, Ls9g;->a:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ls9g;
-    .locals 1
-
-    const-class v0, Ls9g;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ls9g;
-
-    return-object p0
-.end method
-
-.method public static values()[Ls9g;
-    .locals 1
-
-    sget-object v0, Ls9g;->u0:[Ls9g;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ls9g;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls9g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls9g;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ls9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Ls9g;->t0:Ls9g;
+    new-instance p1, Ls9g;
 
-    if-ne p0, v0, :cond_0
+    iget-object v0, p0, Ls9g;->r0:Lt9g;
 
-    sget-object v0, Ls9g;->s0:Ls9g;
+    invoke-direct {p1, v0, p2}, Ls9g;-><init>(Lt9g;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Ls9g;->a()I
+    return-object p1
+.end method
 
-    move-result v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    return v0
+    iget v0, p0, Ls9g;->q0:I
+
+    iget-object v1, p0, Ls9g;->r0:Lt9g;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Ls9g;->Z:Lu18;
+
+    iget-object v2, p0, Ls9g;->Y:Lu18;
+
+    iget-object v3, p0, Ls9g;->X:Lt9g;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    iget v0, p0, Ls9g;->a:I
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    invoke-static {}, Lob3;->b()Lu18;
+
+    move-result-object v0
+
+    iput-object v1, p0, Ls9g;->X:Lt9g;
+
+    iput-object v0, p0, Ls9g;->Y:Lu18;
+
+    iput-object v0, p0, Ls9g;->Z:Lu18;
+
+    iput v2, p0, Ls9g;->q0:I
+
+    invoke-static {v1, v0, p0}, Lt9g;->r(Lt9g;Lu18;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v2, Lr54;->a:Lr54;
+
+    if-ne p1, v2, :cond_2
+
+    return-object v2
+
+    :cond_2
+    move-object v2, v0
+
+    move-object v3, v1
+
+    :goto_0
+    sget-object p1, Lt9g;->w0:[Ltr7;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget p1, Lxtc;->oneme_settings_twofa_disable_password_title:I
+
+    new-instance v5, Lorf;
+
+    invoke-direct {v5, p1}, Lorf;-><init>(I)V
+
+    sget p1, Ljpc;->oneme_settings_twofa_configuration_setting_disable_twofa:I
+
+    int-to-long v7, p1
+
+    new-instance v3, Lf9g;
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x20
+
+    const/4 v4, 0x4
+
+    const/4 v6, 0x1
+
+    invoke-direct/range {v3 .. v10}, Lf9g;-><init>(ILorf;IJLsrf;I)V
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v2}, Lob3;->a(Ljava/util/List;)Lu18;
+
+    move-result-object p1
+
+    iget-object v0, v1, Lt9g;->Z:Lx0f;
+
+    invoke-virtual {v0, p1}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

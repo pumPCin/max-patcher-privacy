@@ -1,330 +1,127 @@
-.class public final enum Ltf3;
-.super Ljava/lang/Enum;
+.class public abstract Ltf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Ltf3;
-
-.field public static final enum Y:Ltf3;
-
-.field public static final enum Z:Ltf3;
-
-.field public static final enum b:Ltf3;
-
-.field public static final enum c:Ltf3;
-
-.field public static final enum o:Ltf3;
-
-.field public static final synthetic r0:[Ltf3;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public static a([B)Luf3;
+    .locals 12
 
-    new-instance v0, Ltf3;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Complain;
 
-    const-string v1, "SPAM"
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Complain;-><init>()V
 
-    const/4 v2, 0x0
+    :try_start_0
+    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
-    invoke-direct {v0, v1, v2, v1}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-result-object p0
 
-    sput-object v0, Ltf3;->b:Ltf3;
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Complain;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v1, Ltf3;
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$Complain;->requestId:J
 
-    const-string v2, "PORNO"
+    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->typeId:I
 
-    const/4 v3, 0x1
+    int-to-byte v0, v0
 
-    invoke-direct {v1, v2, v3, v2}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v3, Lf2;
 
-    sput-object v1, Ltf3;->c:Ltf3;
+    const/4 v4, 0x0
 
-    new-instance v2, Ltf3;
+    sget-object v5, Lfg3;->s0:Lzd5;
 
-    const-string v3, "EXTREMISM"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Ltf3;->o:Ltf3;
-
-    new-instance v3, Ltf3;
-
-    const-string v4, "FAKE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Ltf3;->X:Ltf3;
-
-    new-instance v4, Ltf3;
-
-    const-string v5, "THREAT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v5}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Ltf3;->Y:Ltf3;
-
-    new-instance v5, Ltf3;
-
-    const-string v6, "OTHER"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v6}, Ltf3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Ltf3;->Z:Ltf3;
-
-    filled-new-array/range {v0 .. v5}, [Ltf3;
-
-    move-result-object v0
-
-    sput-object v0, Ltf3;->r0:[Ltf3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Ltf3;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Ltf3;
-    .locals 3
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "PORNO"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    invoke-direct {v3, v4, v5}, Lf2;-><init>(ILjava/lang/Object;)V
 
     :cond_0
-    const/4 v1, 0x5
+    invoke-virtual {v3}, Lf2;->hasNext()Z
 
-    goto :goto_0
+    move-result v4
 
-    :sswitch_1
-    const-string v0, "OTHER"
+    const/4 v5, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_1
 
-    move-result v0
+    invoke-virtual {v3}, Lf2;->next()Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    move-result-object v4
+
+    move-object v6, v4
+
+    check-cast v6, Lfg3;
+
+    iget-byte v6, v6, Lfg3;->a:B
+
+    if-ne v6, v0, :cond_0
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x4
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "SPAM"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "FAKE"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "EXTREMISM"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v0, "THREAT"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    const/4 v1, 0x0
+    move-object v4, v5
 
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    move-object v3, v4
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    check-cast v3, Lfg3;
 
-    const-string v1, "No such value "
+    if-eqz v3, :cond_3
 
-    const-string v2, " for Complaint"
+    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->reasonId:I
 
-    invoke-static {v1, p0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    int-to-byte v4, v0
 
-    move-result-object p0
+    move-object v0, v5
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Complain;->ids:[J
+
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Complain;->serverIds:[J
+
+    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$Complain;->parentId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v7, v7, v10
+
+    if-eqz v7, :cond_2
+
+    move-object v7, v9
+
+    goto :goto_1
+
+    :cond_2
+    move-object v7, v0
+
+    :goto_1
+    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$Complain;->details:Ljava/lang/String;
+
+    new-instance v0, Luf3;
+
+    invoke-direct/range {v0 .. v8}, Luf3;-><init>(JLfg3;B[J[JLjava/lang/Long;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0
-
-    :pswitch_0
-    sget-object p0, Ltf3;->c:Ltf3;
-
-    return-object p0
-
-    :pswitch_1
-    sget-object p0, Ltf3;->Z:Ltf3;
-
-    return-object p0
-
-    :pswitch_2
-    sget-object p0, Ltf3;->b:Ltf3;
-
-    return-object p0
-
-    :pswitch_3
-    sget-object p0, Ltf3;->X:Ltf3;
-
-    return-object p0
-
-    :pswitch_4
-    sget-object p0, Ltf3;->o:Ltf3;
-
-    return-object p0
-
-    :pswitch_5
-    sget-object p0, Ltf3;->Y:Ltf3;
-
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x6c8bfde6 -> :sswitch_5
-        -0x68bd6116 -> :sswitch_4
-        0x20cf55 -> :sswitch_3
-        0x26ef49 -> :sswitch_2
-        0x48086f0 -> :sswitch_1
-        0x48c7f34 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ltf3;
-    .locals 1
-
-    const-class v0, Ltf3;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ltf3;
-
-    return-object p0
-.end method
-
-.method public static values()[Ltf3;
-    .locals 1
-
-    sget-object v0, Ltf3;->r0:[Ltf3;
-
-    invoke-virtual {v0}, [Ltf3;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ltf3;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "{value=\'"
-
-    const-string v1, "\'}"
-
-    iget-object v2, p0, Ltf3;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -30,9 +30,9 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->y1:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
 
-    iget-object p1, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
+    iget-object p1, p0, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
     if-nez p1, :cond_0
 
@@ -59,7 +59,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
+    iget-object v4, p0, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
     if-eqz v4, :cond_1
 
@@ -80,13 +80,13 @@
 
     const-string v5, ", but "
 
-    invoke-static {v0, v3, v4, v1, v5}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v4, v1, v5}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, " is null"
 
-    invoke-static {v0, v2, v1}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -99,7 +99,7 @@
 
     move-result-object p1
 
-    const-class v3, Lzg6;
+    const-class v3, Luh6;
 
     invoke-virtual {v3, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -117,7 +117,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
+    iget-object v5, p0, Landroidx/fragment/app/a;->F0:Landroidx/fragment/app/a;
 
     if-eqz v5, :cond_4
 
@@ -132,7 +132,7 @@
 
     const-string v5, " that implements "
 
-    invoke-static {v0, v4, v3, v1, v5}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v4, v3, v1, v5}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

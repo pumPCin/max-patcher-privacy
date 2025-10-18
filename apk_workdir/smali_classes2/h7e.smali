@@ -1,45 +1,31 @@
 .class public final Lh7e;
-.super Llj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/util/List;
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
+
+.field public final d:Liu7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
+.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lh7e;->b:Ljava/util/List;
+    iput-object p1, p0, Lh7e;->a:Liu7;
+
+    iput-object p2, p0, Lh7e;->b:Liu7;
+
+    iput-object p3, p0, Lh7e;->c:Liu7;
+
+    iput-object p4, p0, Lh7e;->d:Liu7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SessionsInfoEvent{sessions="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh7e;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

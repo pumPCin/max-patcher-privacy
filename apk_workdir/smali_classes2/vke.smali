@@ -1,102 +1,122 @@
 .class public final Lvke;
-.super Ljava/lang/Object;
+.super Lb0j;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcom/google/android/gms/maps/model/LatLng;
+.field public final a:Lorf;
 
-.field public final b:F
+.field public final b:Lorf;
 
-.field public final c:Landroid/graphics/Bitmap;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;FLandroid/graphics/Bitmap;)V
+.method public constructor <init>(Lorf;Lorf;Ljava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iput-object p1, p0, Lvke;->a:Lorf;
 
-    iput p2, p0, Lvke;->b:F
+    iput-object p2, p0, Lvke;->b:Lorf;
 
-    iput-object p3, p0, Lvke;->c:Landroid/graphics/Bitmap;
+    iput-object p3, p0, Lvke;->c:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Ltrf;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lvke;->b:Lorf;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lvke;->c:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lvke;
+    instance-of v0, p1, Lvke;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lvke;
 
-    iget-object v1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v0, p0, Lvke;->a:Lorf;
 
-    iget-object v3, p1, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v1, p1, Lvke;->a:Lorf;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_2
+    if-nez v0, :cond_2
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget v1, p0, Lvke;->b:F
+    iget-object v0, p0, Lvke;->b:Lorf;
 
-    iget v3, p1, Lvke;->b:F
+    iget-object v1, p1, Lvke;->b:Lorf;
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_3
+    if-nez v0, :cond_3
 
-    return v2
+    goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lvke;->c:Ljava/lang/Integer;
 
-    iget-object p1, p1, Lvke;->c:Landroid/graphics/Bitmap;
+    iget-object p1, p1, Lvke;->c:Ljava/lang/Integer;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
-    return v2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_4
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v0, p0, Lvke;->a:Lorf;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/LatLng;->hashCode()I
+    iget v0, v0, Lorf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -104,13 +124,15 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lvke;->b:F
+    iget-object v2, p0, Lvke;->b:Lorf;
 
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+    iget v2, v2, Lorf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
-    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lvke;->c:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -126,27 +148,27 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "MarkerModel(latLng="
+    const-string v1, "Button(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v1, p0, Lvke;->a:Lorf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", zoom="
+    const-string v1, ", hint="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lvke;->b:F
+    iget-object v1, p0, Lvke;->b:Lorf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", icon="
+    const-string v1, ", hintColor="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lvke;->c:Ljava/lang/Integer;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

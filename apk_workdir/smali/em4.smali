@@ -1,80 +1,134 @@
 .class public final Lem4;
-.super Lund;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luxd;
 
-# static fields
-.field public static final b:Lem4;
+
+# instance fields
+.field public final synthetic a:Lfm4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lfm4;)V
+    .locals 0
 
-    new-instance v0, Lem4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v5, Llof;->c:I
-
-    sget v6, Llof;->d:I
-
-    sget-wide v2, Llof;->e:J
-
-    sget-object v4, Llof;->a:Ljava/lang/String;
-
-    invoke-direct {v0}, Lv44;-><init>()V
-
-    new-instance v1, La54;
-
-    invoke-direct/range {v1 .. v6}, La54;-><init>(JLjava/lang/String;II)V
-
-    iput-object v1, v0, Lund;->a:La54;
-
-    sput-object v0, Lem4;->b:Lem4;
+    iput-object p1, p0, Lem4;->a:Lfm4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Dispatchers.Default cannot be closed"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final limitedParallelism(ILjava/lang/String;)Lv44;
+.method public final c()Z
     .locals 1
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+    const/4 v0, 0x1
 
-    sget v0, Llof;->c:I
-
-    if-lt p1, v0, :cond_0
-
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lv44;Ljava/lang/String;)Lv44;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final e(J)Lsxd;
+    .locals 13
 
-    const-string v0, "Dispatchers.Default"
+    iget-object v0, p0, Lem4;->a:Lfm4;
 
-    return-object v0
+    iget-object v1, v0, Lfm4;->v0:Ljava/lang/Object;
+
+    check-cast v1, Lcaf;
+
+    iget v1, v1, Lcaf;->f:I
+
+    int-to-long v1, v1
+
+    mul-long/2addr v1, p1
+
+    const-wide/32 v3, 0xf4240
+
+    div-long/2addr v1, v3
+
+    iget-wide v3, v0, Lfm4;->b:J
+
+    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    iget-wide v5, v0, Lfm4;->c:J
+
+    sub-long v7, v5, v3
+
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    iget-wide v7, v0, Lfm4;->X:J
+
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v1
+
+    add-long/2addr v1, v3
+
+    const-wide/16 v3, 0x7530
+
+    sub-long v7, v1, v3
+
+    iget-wide v9, v0, Lfm4;->b:J
+
+    const-wide/16 v0, 0x1
+
+    sub-long v11, v5, v0
+
+    invoke-static/range {v7 .. v12}, Lnig;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lsxd;
+
+    new-instance v3, Lyxd;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lyxd;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lsxd;-><init>(Lyxd;Lyxd;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 6
+
+    iget-object v0, p0, Lem4;->a:Lfm4;
+
+    iget-object v1, v0, Lfm4;->v0:Ljava/lang/Object;
+
+    check-cast v1, Lcaf;
+
+    iget-wide v2, v0, Lfm4;->X:J
+
+    const-wide/32 v4, 0xf4240
+
+    mul-long/2addr v2, v4
+
+    iget v0, v1, Lcaf;->f:I
+
+    int-to-long v0, v0
+
+    div-long/2addr v2, v0
+
+    return-wide v2
 .end method

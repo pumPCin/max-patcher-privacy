@@ -1,228 +1,120 @@
 .class public final Lk70;
-.super Ljava/lang/Object;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final c:Lj70;
 
 
 # direct methods
-.method public constructor <init>(Llt7;)V
+.method public constructor <init>(Lj70;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk70;->a:Llt7;
+    iput-object p1, p0, Lk70;->c:Lj70;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lf7d;Lk14;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    instance-of v0, p2, Lj70;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    move-object v0, p2
-
-    check-cast v0, Lj70;
-
-    iget v1, v0, Lj70;->Y:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lj70;->Y:I
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance v0, Lj70;
+    instance-of v1, p1, Lk70;
 
-    invoke-direct {v0, p0, p2}, Lj70;-><init>(Lk70;Lk14;)V
+    const/4 v2, 0x0
 
-    :goto_0
-    iget-object p2, v0, Lj70;->o:Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    iget v1, v0, Lj70;->Y:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p2}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_3
+    return v2
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lk70;
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v1, p0, Lk70;->c:Lj70;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lk70;->c:Lj70;
 
-    throw p1
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p2}, Lswi;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object p2, p0, Lk70;->a:Llt7;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lk70;->c:Lj70;
 
-    move-result-object p2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p2, Lfna;
+    move-result v0
 
-    iget-object v1, p1, Lf7d;->a:Ljava/lang/String;
+    return v0
+.end method
 
-    iget-object v3, p1, Lf7d;->c:Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object v4, p1, Lf7d;->o:Ljava/lang/String;
+    iget-object v0, p0, Lk70;->c:Lj70;
 
-    iget-object p1, p1, Lf7d;->X:Ljava/lang/Long;
+    iget-boolean v1, v0, Lj70;->a:Z
 
-    if-eqz p1, :cond_3
+    iget-object v2, v0, Lj70;->b:Ljava/lang/String;
 
-    move v5, v2
+    iget-object v0, v0, Lj70;->c:Ljava/lang/String;
 
-    goto :goto_1
+    invoke-static {v0}, Li79;->e(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    :cond_3
-    const/4 v5, 0x0
+    move-result-object v0
 
-    :goto_1
-    iput v2, v0, Lj70;->Y:I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v4, "Response(enabled="
 
-    new-instance v2, Lmu;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v6, Lk7b;->A0:Lk7b;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/16 v7, 0xa
+    const-string v1, ",\n                |hint=\'"
 
-    invoke-direct {v2, v6, v7}, Lmu;-><init>(Lk7b;I)V
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_a
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const-string v1, "\',\n                |email=\'"
 
-    move-result v6
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_a
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, "token"
+    const-string v0, "\')\n                |"
 
-    invoke-virtual {v2, v6, v1}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "tokenType"
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v6, "REGISTER"
+    move-result-object v0
 
-    invoke-virtual {v2, v1, v6}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Labf;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v3, :cond_9
+    move-result-object v0
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    const-string v1, "firstName"
-
-    invoke-virtual {v2, v1, v3}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const-string v1, "lastName"
-
-    invoke-virtual {v2, v1, v4}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_5
-    :goto_2
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    const-string p1, "photoId"
-
-    invoke-virtual {v2, v3, v4, p1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_6
-    if-eqz v5, :cond_7
-
-    const-string p1, "avatarType"
-
-    invoke-static {v5}, Lwc0;->b(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, p1, v1}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_7
-    iget-object p1, p2, Lfna;->a:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpmf;
-
-    invoke-virtual {p1, v2, v0}, Lpmf;->e(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    if-ne p2, p1, :cond_8
-
-    return-object p1
-
-    :cond_8
-    :goto_3
-    check-cast p2, Li70;
-
-    return-object p2
-
-    :cond_9
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "AuthConfirmCmd param \'firstName\' can\'t be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_a
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "AuthConfirmCmd param \'token\' can\'t be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

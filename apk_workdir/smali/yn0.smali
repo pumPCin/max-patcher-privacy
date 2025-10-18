@@ -1,57 +1,123 @@
-.class public abstract Lyn0;
+.class public final Lyn0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/CharSequence;
+
+
 # direct methods
-.method public static a(Landroid/hardware/biometrics/BiometricManager;)I
+.method public constructor <init>(ILjava/lang/CharSequence;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricManager;->canAuthenticate()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Lyn0;->a:I
 
-    return p0
+    iput-object p2, p0, Lyn0;->b:Ljava/lang/CharSequence;
+
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;)Landroid/hardware/biometrics/BiometricManager;
-    .locals 1
 
-    const-class v0, Landroid/hardware/biometrics/BiometricManager;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    instance-of v0, p1, Lyn0;
 
-    move-result-object p0
+    if-eqz v0, :cond_4
 
-    check-cast p0, Landroid/hardware/biometrics/BiometricManager;
+    check-cast p1, Lyn0;
 
-    return-object p0
-.end method
+    iget v0, p0, Lyn0;->a:I
 
-.method public static c()Ljava/lang/reflect/Method;
-    .locals 3
+    iget v1, p1, Lyn0;->a:I
 
-    :try_start_0
-    const-class v0, Landroid/hardware/biometrics/BiometricManager;
+    if-ne v0, v1, :cond_4
 
-    const-string v1, "canAuthenticate"
+    iget-object p1, p1, Lyn0;->b:Ljava/lang/CharSequence;
 
-    const-class v2, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    filled-new-array {v2}, [Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
     const/4 v0, 0x0
 
-    return-object v0
+    iget-object v1, p0, Lyn0;->b:Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    if-nez v1, :cond_2
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lyn0;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lyn0;->b:Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

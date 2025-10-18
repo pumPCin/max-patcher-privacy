@@ -4,8 +4,27 @@
 
 
 # virtual methods
-.method public abstract a(JLuy1;)V
+.method public d(Landroid/graphics/Matrix;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract clear()V
+.method public g()Landroid/util/Size;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public j()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract k(Lx8e;)V
 .end method

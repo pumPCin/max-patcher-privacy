@@ -32,7 +32,7 @@
 
 .field public n:Lru/ok/messages/views/dialogs/LoadMediaDialog;
 
-.field public o:Ls79;
+.field public o:Lu89;
 
 .field public p:[Ljava/lang/CharSequence;
 

@@ -1,49 +1,80 @@
-.class public final Lq33;
-.super Lk14;
+.class public final synthetic Lq33;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic X:Lu33;
+.field public final synthetic a:Ld43;
 
-.field public Y:I
+.field public final synthetic b:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lu33;Lk14;)V
+.method public synthetic constructor <init>(Ld43;JJ)V
     .locals 0
 
-    iput-object p1, p0, Lq33;->X:Lu33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq33;->a:Ld43;
+
+    iput-wide p2, p0, Lq33;->b:J
+
+    iput-wide p4, p0, Lq33;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    iput-object p1, p0, Lq33;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lq33;->a:Ld43;
 
-    iget p1, p0, Lq33;->Y:I
+    invoke-virtual {v0}, Ld43;->M()Lsd2;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput p1, p0, Lq33;->Y:I
+    iget-wide v1, p0, Lq33;->b:J
 
-    iget-object p1, p0, Lq33;->X:Lu33;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    move-result-object v3
 
-    invoke-virtual {p1, v0, p0}, Lu33;->P(Lqz9;Lk14;)Ljava/lang/Object;
+    iget-wide v4, p0, Lq33;->c:J
 
-    move-result-object p1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object p1
+    move-result-object v6
+
+    filled-new-array {v3, v6}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v6, "sd2"
+
+    const-string v7, "changeLastNotifMessageId, chatId = %d, lastNotifMessageId = %d"
+
+    invoke-static {v6, v7, v3}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance v3, Lb10;
+
+    const/16 v6, 0x8
+
+    invoke-direct {v3, v4, v5, v6}, Lb10;-><init>(JI)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v1, v2, v4, v3}, Lsd2;->h(JZLsr3;)Lla2;
+
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
 .end method

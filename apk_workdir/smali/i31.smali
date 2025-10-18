@@ -1,118 +1,143 @@
 .class public final Li31;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lfj6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public synthetic X:Z
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+.field public synthetic Y:Z
 
-.field public final synthetic Z:Lv21;
+.field public synthetic Z:Z
+
+.field public synthetic q0:Z
+
+.field public final synthetic r0:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lv21;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Liu7;Ly16;)V
     .locals 0
 
-    iput-object p1, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iput-object p1, p0, Li31;->r0:Liu7;
 
-    iput-object p2, p0, Li31;->Z:Lv21;
+    const/4 p1, 0x5
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ly16;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lb54;
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p0, p1, p2}, Li31;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    move-result-object p1
+    check-cast p2, Ljava/lang/Boolean;
 
-    check-cast p1, Li31;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sget-object p2, Lzag;->a:Lzag;
+    move-result p2
 
-    invoke-virtual {p1, p2}, Li31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p3, Ljava/lang/Boolean;
 
-    return-object p2
-.end method
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move-result p3
+
+    check-cast p4, Ljava/lang/Boolean;
+
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p4
 
     new-instance v0, Li31;
 
-    iget-object v1, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iget-object v1, p0, Li31;->r0:Liu7;
 
-    iget-object v2, p0, Li31;->Z:Lv21;
+    invoke-direct {v0, v1, p5}, Li31;-><init>(Liu7;Ly16;)V
 
-    invoke-direct {v0, v1, v2, p2}, Li31;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lv21;Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, v0, Li31;->X:Z
 
-    iput-object p1, v0, Li31;->X:Ljava/lang/Object;
+    iput-boolean p2, v0, Li31;->Y:Z
 
-    return-object v0
+    iput-boolean p3, v0, Li31;->Z:Z
+
+    iput-boolean p4, v0, Li31;->q0:Z
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Li31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    .locals 5
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Li31;->X:Ljava/lang/Object;
+    iget-boolean p1, p0, Li31;->X:Z
 
-    check-cast p1, Lb54;
+    iget-boolean v0, p0, Li31;->Y:Z
 
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lwq7;
+    iget-boolean v1, p0, Li31;->Z:Z
 
-    iget-object v0, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iget-boolean v2, p0, Li31;->q0:Z
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lh31;
+    iget-object v3, p0, Li31;->r0:Liu7;
 
-    move-result-object v0
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-object v0, v0, Lh31;->v0:Lzx5;
+    move-result-object v3
 
-    new-instance v1, Lmr0;
+    check-cast v3, Ldq5;
 
-    const/4 v7, 0x4
+    check-cast v3, Ljq5;
 
-    const/4 v8, 0x3
+    invoke-virtual {v3}, Ljq5;->q()Z
 
-    const/4 v2, 0x2
+    move-result v3
 
-    iget-object v3, p0, Li31;->Z:Lv21;
+    const/4 v4, 0x0
 
-    const-class v4, Lv21;
+    if-nez v3, :cond_0
 
-    const-string v5, "setVolumeMicrophone"
+    goto :goto_0
 
-    const-string v6, "setVolumeMicrophone(F)V"
+    :cond_0
+    if-nez v2, :cond_1
 
-    invoke-direct/range {v1 .. v8}, Lmr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    goto :goto_0
 
-    new-instance v2, Lh06;
+    :cond_1
+    if-eqz v1, :cond_2
 
-    const/4 v3, 0x1
+    goto :goto_0
 
-    invoke-direct {v2, v0, v1, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
+    :cond_2
+    if-eqz v0, :cond_3
 
-    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    if-eqz p1, :cond_3
 
-    sget-object p1, Lzag;->a:Lzag;
+    const/4 v4, 0x1
+
+    :cond_3
+    :goto_0
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
 .end method

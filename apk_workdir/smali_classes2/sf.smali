@@ -164,9 +164,9 @@
 
     packed-switch p1, :pswitch_data_0
 
-    check-cast v4, Ld1b;
+    check-cast v4, Lf2b;
 
-    iget-object p1, v4, Ld1b;->B0:Ljava/lang/Object;
+    iget-object p1, v4, Lf2b;->A0:Ljava/lang/Object;
 
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -184,7 +184,7 @@
 
     invoke-virtual {v4, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v3, v4, Ld1b;->s0:Lz0b;
+    iget-object v3, v4, Lf2b;->r0:Lb2b;
 
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
@@ -196,15 +196,15 @@
 
     if-ne v3, v5, :cond_1
 
-    iget-object v3, v4, Ld1b;->C0:Ljava/lang/Object;
+    iget-object v3, v4, Lf2b;->B0:Ljava/lang/Object;
 
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/View;
 
-    invoke-virtual {v4}, Ld1b;->getShouldShowSearchIcon()Z
+    invoke-virtual {v4}, Lf2b;->getShouldShowSearchIcon()Z
 
     move-result v5
 
@@ -228,15 +228,15 @@
     throw p1
 
     :cond_2
-    iget-object v3, v4, Ld1b;->D0:Ljava/lang/Object;
+    iget-object v3, v4, Lf2b;->C0:Ljava/lang/Object;
 
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/View;
 
-    invoke-virtual {v4}, Ld1b;->getShouldShowSearchIcon()Z
+    invoke-virtual {v4}, Lf2b;->getShouldShowSearchIcon()Z
 
     move-result v5
 
@@ -251,19 +251,9 @@
     invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
     :goto_2
-    iget-object v2, v4, Ld1b;->A0:Ljava/lang/Object;
+    iget-object v2, v4, Lf2b;->z0:Ljava/lang/Object;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/View;
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v2, v4, Ld1b;->E0:Ljava/lang/Object;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -271,7 +261,9 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object v2, v4, Lf2b;->D0:Ljava/lang/Object;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -279,7 +271,15 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -287,15 +287,15 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lb1b;->a:Lb1b;
+    sget-object p1, Ld2b;->a:Ld2b;
 
-    iput-object p1, v4, Ld1b;->z0:Lb1b;
+    iput-object p1, v4, Lf2b;->y0:Ld2b;
 
-    iget-object p1, v4, Ld1b;->t0:La1b;
+    iget-object p1, v4, Lf2b;->s0:Lc2b;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, La1b;->g0()V
+    invoke-interface {p1}, Lc2b;->g0()V
 
     :cond_4
     return-void
@@ -310,7 +310,7 @@
     throw p1
 
     :pswitch_0
-    check-cast v4, Lgg8;
+    check-cast v4, Lhh8;
 
     check-cast v3, Lvf;
 
@@ -327,15 +327,15 @@
     :pswitch_1
     check-cast v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
-    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->K0:[Lwq7;
+    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->J0:[Ltr7;
 
-    iget-object p1, v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->B0:Lazc;
+    iget-object p1, v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->A0:Lh0d;
 
-    sget-object v0, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->K0:[Lwq7;
+    sget-object v0, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->J0:[Ltr7;
 
     aget-object v0, v0, v2
 
-    invoke-interface {p1, v4, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-interface {p1, v4, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -345,7 +345,7 @@
 
     check-cast v3, Landroid/widget/FrameLayout;
 
-    iget-object p1, v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->I0:Lsi4;
+    iget-object p1, v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->H0:Lgj4;
 
     const-wide/16 v0, 0xbb8
 
@@ -393,11 +393,11 @@
 
     iget-object p1, p0, Lsf;->b:Ljava/lang/Object;
 
-    check-cast p1, Ld1b;
+    check-cast p1, Lf2b;
 
-    iget-object v0, p1, Ld1b;->B0:Ljava/lang/Object;
+    iget-object v0, p1, Lf2b;->A0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -413,7 +413,7 @@
 
     const-class v2, Landroid/view/inputmethod/InputMethodManager;
 
-    invoke-static {v1, v2}, Ln04;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lb14;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -421,7 +421,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -436,9 +436,9 @@
     invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
     :cond_0
-    sget-object v0, Lb1b;->b:Lb1b;
+    sget-object v0, Ld2b;->b:Ld2b;
 
-    iput-object v0, p1, Ld1b;->z0:Lb1b;
+    iput-object v0, p1, Lf2b;->y0:Ld2b;
 
     :pswitch_0
     return-void
@@ -446,13 +446,13 @@
     :pswitch_1
     iget-object p1, p0, Lsf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lej5;
+    check-cast p1, Lyj5;
 
     iget-object v0, p0, Lsf;->c:Ljava/lang/Object;
 
     check-cast v0, Landroid/text/Layout;
 
-    iput-object v0, p1, Lej5;->t0:Landroid/text/Layout;
+    iput-object v0, p1, Lyj5;->s0:Landroid/text/Layout;
 
     :pswitch_2
     return-void

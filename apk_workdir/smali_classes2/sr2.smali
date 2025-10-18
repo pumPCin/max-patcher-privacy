@@ -1,24 +1,26 @@
 .class public final Lsr2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
 .method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput-object p2, p0, Lsr2;->X:Lone/me/chatscreen/ChatScreen;
+    iput-object p2, p0, Lsr2;->Y:Lone/me/chatscreen/ChatScreen;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lpcf;
+    check-cast p1, Lry6;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +40,7 @@
 
     check-cast p1, Lsr2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lsr2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,117 +48,61 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lsr2;
+    new-instance v0, Lsr2;
 
-    iget-object v0, p0, Lsr2;->X:Lone/me/chatscreen/ChatScreen;
+    iget-object v1, p0, Lsr2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p1, p2, v0}, Lsr2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+    invoke-direct {v0, p2, v1}, Lsr2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lsr2;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    .locals 3
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lsr2;->X:Lone/me/chatscreen/ChatScreen;
+    iget-object p1, p0, Lsr2;->X:Ljava/lang/Object;
 
-    iget-object v0, p1, Lone/me/chatscreen/ChatScreen;->K0:Ljava/lang/String;
+    check-cast p1, Lry6;
 
-    sget-object v1, Lone/me/chatscreen/ChatScreen;->j1:[Lwq7;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->h1()Lx43;
+    const/4 p1, 0x0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lx43;->b()Lx14;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->h1()Lx43;
-
-    move-result-object v1
-
-    iget-object v2, v1, Lx43;->a:Ljhd;
-
-    invoke-virtual {v1}, Lx43;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "SuggestionsWidgetTag"
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v2, v4}, Ljhd;->Q(Z)V
-
-    new-instance v7, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    invoke-direct {v7, v0, v5}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;-><init>(Ljava/lang/String;Lvh4;)V
-
-    new-instance v6, Lmhd;
-
-    const/4 v11, 0x0
-
-    const/4 v12, -0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v6 .. v12}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
-
-    invoke-virtual {v6, v3}, Lmhd;->d(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v6}, Ljhd;->R(Lmhd;)V
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->g1()Landroid/view/ViewGroup;
+    iget-wide v0, p1, Lry6;->b:J
 
-    move-result-object v1
+    new-instance v2, Ljava/lang/Long;
 
-    invoke-virtual {p1, v1}, Lx14;->getChildRouter(Landroid/view/ViewGroup;)Ljhd;
+    invoke-direct {v2, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    move-result-object p1
+    iget-object p1, p1, Lry6;->d:Ljava/util/List;
 
-    const/4 v1, 0x1
+    new-instance v0, Ltcb;
 
-    iput v1, p1, Ljhd;->e:I
+    invoke-direct {v0, v2, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v4}, Ljhd;->Q(Z)V
+    move-object p1, v0
 
-    invoke-virtual {p1}, Ljhd;->n()Z
+    :goto_0
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
 
-    move-result v1
+    iget-object v0, p0, Lsr2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    if-nez v1, :cond_1
-
-    new-instance v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    invoke-direct {v1, v0, v5}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;-><init>(Ljava/lang/String;Lvh4;)V
-
-    invoke-static {v1, v5, v5}, Laxi;->a(Lx14;Lmh;Lmh;)Lmhd;
+    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->b1()Lzk9;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljhd;->R(Lmhd;)V
+    invoke-virtual {v0, p1}, Lzk9;->r(Ltcb;)V
 
-    :cond_1
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

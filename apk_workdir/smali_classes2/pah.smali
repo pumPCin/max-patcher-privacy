@@ -1,55 +1,160 @@
 .class public final Lpah;
-.super Lk14;
+.super Lsah;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Llah;
+.field public final c:Ljava/lang/String;
 
-.field public Y:Lq9h;
+.field public final d:Lvc7;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lvah;
-
-.field public final synthetic r0:Lvah;
-
-.field public s0:I
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lvah;Lk14;)V
+.method public constructor <init>(Ljava/lang/String;Lvc7;Z)V
     .locals 0
 
-    iput-object p1, p0, Lpah;->r0:Lvah;
+    invoke-direct {p0}, Ljp7;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpah;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lpah;->d:Lvc7;
+
+    iput-boolean p3, p0, Lpah;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpah;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpah;
+
+    iget-object v1, p0, Lpah;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lpah;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpah;->d:Lvc7;
+
+    iget-object v3, p1, Lpah;->d:Lvc7;
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lpah;->e:Z
+
+    iget-boolean p1, p1, Lpah;->e:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final f()Z
     .locals 1
 
-    iput-object p1, p0, Lpah;->Z:Ljava/lang/Object;
+    iget-boolean v0, p0, Lpah;->e:Z
 
-    iget p1, p0, Lpah;->s0:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final hashCode()I
+    .locals 2
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lpah;->c:Ljava/lang/String;
 
-    iput p1, p0, Lpah;->s0:I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-object p1, p0, Lpah;->r0:Lvah;
+    move-result v0
 
-    const/4 v0, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1, v0, p0}, Lvah;->h(Ljava/lang/String;Lk14;)Ljava/lang/Object;
+    iget-object v1, p0, Lpah;->d:Lvc7;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return-object p1
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lpah;->e:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Impact(queryId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpah;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", impactStyle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpah;->d:Lvc7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disableVibrationFallback="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lpah;->e:Z
+
+    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,88 +1,50 @@
-.class public final synthetic Lqu2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqh6;
+.class public final Lqu2;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Luu2;
+.field public Y:Lvy5;
+
+.field public final synthetic Z:Li40;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luu2;I)V
+.method public constructor <init>(Li40;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lqu2;->a:I
+    iput-object p1, p0, Lqu2;->Z:Li40;
 
-    iput-object p1, p0, Lqu2;->b:Luu2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lqu2;->a:I
+    iput-object p1, p0, Lqu2;->o:Ljava/lang/Object;
 
-    sget-object v1, Lbt2;->a:Lbt2;
+    iget p1, p0, Lqu2;->X:I
 
-    sget-object v2, Lzag;->a:Lzag;
+    const/high16 v0, -0x80000000
 
-    iget-object v3, p0, Lqu2;->b:Luu2;
+    or-int/2addr p1, v0
 
-    check-cast p1, Landroid/view/View;
+    iput p1, p0, Lqu2;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lqu2;->Z:Li40;
 
-    sget-object v0, Luu2;->f1:[Lwq7;
+    const/4 v0, 0x0
 
-    invoke-virtual {v3}, Luu2;->v()Lqkf;
+    invoke-virtual {p1, v0, p0}, Li40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Losa;
-
-    invoke-virtual {v0}, Losa;->b()Lv44;
-
-    move-result-object v0
-
-    new-instance v1, Lqt2;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v3, p1, v4}, Lqt2;-><init>(Luu2;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v3, v0, v1, p1}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
-
-    return-object v2
-
-    :pswitch_0
-    iget-object p1, v3, Luu2;->b1:Lde5;
-
-    invoke-static {p1, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    return-object v2
-
-    :pswitch_1
-    iget-object p1, v3, Luu2;->b1:Lde5;
-
-    invoke-static {p1, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

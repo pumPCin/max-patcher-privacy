@@ -1,69 +1,62 @@
-.class public final Lsui;
-.super Lf4;
+.class public abstract Lsui;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lsui;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:I
-
-.field public b:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final a(Lvy5;Lji6;Lbj6;Lkotlin/coroutines/Continuation;[Lty5;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Lqvh;
+    new-instance v0, Loc3;
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    invoke-direct {v0, v1}, Lqvh;-><init>(I)V
+    move-object v1, p0
 
-    sput-object v0, Lsui;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-object v2, p1
 
-    return-void
+    move-object v3, p2
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Loc3;-><init>(Lvy5;Lji6;Lbj6;Lkotlin/coroutines/Continuation;[Lty5;)V
+
+    new-instance p0, Lzy5;
+
+    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Li54;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Li54;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p0, p0, v0}, Lz0i;->b(Lkotlinx/coroutines/internal/ScopeCoroutine;Lkotlinx/coroutines/internal/ScopeCoroutine;Lzi6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lr54;->a:Lr54;
+
+    if-ne p0, p1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    sget-object p0, Lccg;->a:Lccg;
+
+    return-object p0
 .end method
 
+.method public static final b(Lzcg;)V
+    .locals 2
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    new-instance v0, Lgpa;
 
-    const/16 p2, 0x4f45
+    const/4 v1, 0x6
 
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
 
-    move-result p2
+    const-class v1, Luqb;
 
-    iget v0, p0, Lsui;->a:I
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v2, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x3
-
-    iget-object v1, p0, Lsui;->b:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
     return-void
 .end method

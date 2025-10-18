@@ -1,13 +1,10 @@
 .class public final Ltpi;
-.super Ljava/lang/Object;
+.super Lwpi;
 .source "SourceFile"
-
-# interfaces
-.implements Lrga;
 
 
 # static fields
-.field public static final a:Ltpi;
+.field public static final Z:Ltpi;
 
 
 # direct methods
@@ -16,35 +13,37 @@
 
     new-instance v0, Ltpi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "unusedTag"
 
-    sput-object v0, Ltpi;->a:Ltpi;
+    invoke-direct {v0, v1}, Lwpi;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    sput-object v0, Ltpi;->Z:Ltpi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final close()V
     .locals 0
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final bridge synthetic m()V
+    .locals 0
 
-    throw p1
+    return-void
+.end method
+
+.method public final n(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final o(J)V
+    .locals 0
+
+    return-void
 .end method

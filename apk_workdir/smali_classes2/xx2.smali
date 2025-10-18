@@ -1,106 +1,24 @@
 .class public final Lxx2;
-.super Lklf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public c:Ljava/util/List;
-
-.field public o:J
-
-
-# direct methods
-.method public constructor <init>(Loe9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
-
-    iget-object p1, p0, Lxx2;->c:Ljava/util/List;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lxx2;->c:Ljava/util/List;
-
-    :cond_0
-    return-void
-.end method
+# interfaces
+.implements Lh63;
 
 
 # virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide/16 v0, 0x1
 
-    const-string v0, "marker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "chats"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Loe9;->y()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lyz;->b(Loe9;)Lyz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxx2;->c:Ljava/util/List;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Loe9;->r0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lxx2;->o:J
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final c()J
+    .locals 2
 
-    iget-wide v0, p0, Lxx2;->o:J
+    const-wide v0, 0x7fffffffffffffffL
 
-    iget-object v2, p0, Lxx2;->c:Ljava/util/List;
-
-    invoke-static {v2}, Lwdi;->b(Ljava/util/Collection;)I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "marker="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", chats="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

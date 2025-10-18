@@ -1,21 +1,61 @@
-.class public final Lbp8;
-.super Lcq;
+.class public interface abstract Lbp8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbp8;
+# virtual methods
+.method public abstract d(JIII)V
+.end method
 
+.method public abstract e(ILr84;JI)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract f(I)V
+.end method
 
-    new-instance v0, Lbp8;
+.method public abstract flush()V
+.end method
 
-    invoke-direct {v0}, Lcq;-><init>()V
+.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    sput-object v0, Lbp8;->a:Lbp8;
+.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    return-void
+.method public abstract getOutputFormat()Landroid/media/MediaFormat;
+.end method
+
+.method public abstract h()V
+.end method
+
+.method public abstract i(IJ)V
+.end method
+
+.method public abstract j()I
+.end method
+
+.method public abstract k(Landroid/media/MediaCodec$BufferInfo;)I
+.end method
+
+.method public abstract l(I)V
+.end method
+
+.method public m(Lrs6;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract n(Landroid/view/Surface;)V
+.end method
+
+.method public abstract p(Lzp8;Landroid/os/Handler;)V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract setParameters(Landroid/os/Bundle;)V
 .end method

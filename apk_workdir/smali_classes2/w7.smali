@@ -44,9 +44,9 @@
 
     iget-object v3, p0, Lw7;->c:Ljava/lang/Object;
 
-    check-cast v3, Lvtf;
+    check-cast v3, Lavf;
 
-    invoke-interface {v3}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {v3}, Lavf;->getMsSinceBoot()J
 
     move-result-wide v3
 
@@ -54,13 +54,13 @@
 
     iget-object v1, p0, Lw7;->d:Ljava/io/Serializable;
 
-    check-cast v1, Luk9;
+    check-cast v1, Lvl9;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Luk9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Lvl9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

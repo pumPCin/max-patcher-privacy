@@ -1,93 +1,171 @@
 .class public final Ll3c;
-.super Lof4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln3c;
 
-# static fields
-.field public static final b:Ll3c;
 
-.field public static final c:Ljf4;
+# instance fields
+.field public final a:Ltrf;
 
-.field public static final d:Ljf4;
+.field public final b:Ltrf;
 
-.field public static final e:Ljf4;
-
-.field public static final f:Ljf4;
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ltrf;Lqrf;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Ll3c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lof4;-><init>()V
+    iput-object p1, p0, Ll3c;->a:Ltrf;
 
-    sput-object v0, Ll3c;->b:Ll3c;
+    iput-object p2, p0, Ll3c;->b:Ltrf;
 
-    const-string v1, "id"
+    iput-object p3, p0, Ll3c;->c:Ljava/util/List;
 
-    const-string v2, "type"
+    return-void
+.end method
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    move-result-object v3
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string v4, ":profile/edit"
+    const/4 v0, 0x1
 
-    const/4 v5, 0x0
+    if-ne p0, p1, :cond_0
 
-    const/16 v6, 0xe
+    return v0
 
-    invoke-static {v0, v4, v3, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    :cond_0
+    instance-of v1, p1, Ll3c;
 
-    move-result-object v3
+    const/4 v2, 0x0
 
-    sput-object v3, Ll3c;->c:Ljf4;
+    if-nez v1, :cond_1
 
-    const-string v3, ":profile/member_permissions"
+    return v2
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    :cond_1
+    check-cast p1, Ll3c;
 
-    move-result-object v4
+    iget-object v1, p0, Ll3c;->a:Ltrf;
 
-    invoke-static {v0, v3, v4, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    iget-object v3, p1, Ll3c;->a:Ltrf;
 
-    move-result-object v3
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sput-object v3, Ll3c;->d:Ljf4;
+    move-result v1
 
-    const-string v3, "flow"
+    if-nez v1, :cond_2
 
-    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
+    return v2
 
-    move-result-object v1
+    :cond_2
+    iget-object v1, p0, Ll3c;->b:Ltrf;
 
-    const-string v2, ":profile/edit/link"
+    iget-object v3, p1, Ll3c;->b:Ltrf;
 
-    invoke-static {v0, v2, v1, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v1
 
-    sput-object v1, Ll3c;->e:Ljf4;
+    if-nez v1, :cond_3
 
-    const-string v1, "contact_id"
+    return v2
 
-    const-string v2, "permissions_type"
+    :cond_3
+    iget-object v1, p0, Ll3c;->c:Ljava/util/List;
 
-    const-string v3, "chat_id"
+    iget-object p1, p1, Ll3c;->c:Ljava/util/List;
 
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p1
 
-    const-string v2, ":profile/edit/admin_permission"
+    if-nez p1, :cond_4
 
-    invoke-static {v0, v2, v1, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ll3c;->a:Ltrf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ll3c;->b:Ltrf;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ll3c;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll3c;->a:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll3c;->b:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ll3c;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ll3c;->f:Ljf4;
-
-    return-void
+    return-object v0
 .end method

@@ -1,24 +1,33 @@
 .class public final Lzb1;
-.super Ljava/lang/Object;
+.super Le5a;
 .source "SourceFile"
 
-# interfaces
-.implements Lhc1;
 
+# instance fields
+.field public final b:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lzb1;
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;ZZZ)V
     .locals 1
 
-    new-instance v0, Lzb1;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
-    sput-object v0, Lzb1;->a:Lzb1;
+    iput-object p1, p0, Lzb1;->b:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lzb1;->c:Z
+
+    iput-boolean p3, p0, Lzb1;->d:Z
+
+    iput-boolean p4, p0, Lzb1;->e:Z
 
     return-void
 .end method
@@ -26,7 +35,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -35,30 +44,132 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lzb1;
+    instance-of v1, p1, Lzb1;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lzb1;
+
+    iget-object v1, p0, Lzb1;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lzb1;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lzb1;->c:Z
+
+    iget-boolean v3, p1, Lzb1;->c:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lzb1;->d:Z
+
+    iget-boolean v3, p1, Lzb1;->d:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lzb1;->e:Z
+
+    iget-boolean p1, p1, Lzb1;->e:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 3
 
-    const v0, -0x1d91a224
+    iget-object v0, p0, Lzb1;->b:Ljava/lang/String;
 
-    return v0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lzb1;->c:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lzb1;->d:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lzb1;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 5
 
-    const-string v0, "ChangeMicrophoneStateCall"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenLink(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzb1;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideoEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lzb1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isAudioEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isFront="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lzb1;->d:Z
+
+    iget-boolean v4, p0, Lzb1;->e:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lfd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

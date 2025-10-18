@@ -1,40 +1,13 @@
-.class public final Lha3;
+.class public interface abstract Lha3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljk8;
-
-
-# instance fields
-.field public final a:[F
-
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Z
-
-
-# direct methods
-.method public constructor <init>([FLjava/util/ArrayList;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lha3;->a:[F
-
-    iput-object p2, p0, Lha3;->b:Ljava/util/ArrayList;
-
-    iput-boolean p3, p0, Lha3;->c:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final d()Z
-    .locals 1
+.method public t(Lpf9;)Lpmf;
+    .locals 0
 
-    iget-boolean v0, p0, Lha3;->c:Z
+    sget-object p1, Lpmf;->b:Lomf;
 
-    return v0
+    return-object p1
 .end method

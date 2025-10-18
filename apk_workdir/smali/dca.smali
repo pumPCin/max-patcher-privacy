@@ -1,35 +1,53 @@
-.class public abstract Ldca;
-.super Ljava/lang/Object;
+.class public final Ldca;
+.super Ly14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ljava/lang/String;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Leca;
+
+.field public o:Leca;
+
+.field public q0:I
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
+.method public constructor <init>(Leca;Ly14;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->addMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
+    iput-object p1, p0, Ldca;->Z:Leca;
 
-    move-result-object p0
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Landroid/app/Notification$MessagingStyle;
+    iput-object p1, p0, Ldca;->Y:Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Landroid/app/Notification$MessagingStyle;-><init>(Ljava/lang/CharSequence;)V
+    iget p1, p0, Ldca;->q0:I
 
-    return-object v0
-.end method
+    const/high16 v0, -0x80000000
 
-.method public static c(Landroid/app/Notification$MessagingStyle;Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
-    .locals 0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->setConversationTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
+    iput p1, p0, Ldca;->q0:I
 
-    move-result-object p0
+    iget-object p1, p0, Ldca;->Z:Leca;
 
-    return-object p0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Leca;->h(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,41 +1,59 @@
-.class public abstract Lia7;
-.super Ljava/lang/Object;
+.class public final Lia7;
+.super Lmj0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lje4;
+
+.field public c:J
+
+
 # direct methods
-.method public static a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
-    .locals 0
+.method public constructor <init>(Lje4;)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lia7;->b:Lje4;
 
-    return-object p0
-.end method
+    const-wide/16 v0, -0x1
 
-.method public static b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    iput-wide v0, p0, Lia7;->c:J
 
     return-void
 .end method
 
-.method public static d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+# virtual methods
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lia7;->c:J
+
+    sub-long/2addr p1, v0
+
+    iget-object p3, p0, Lia7;->b:Lje4;
+
+    iput-wide p1, p3, Lje4;->s:J
+
+    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/String;)V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lia7;->c:J
 
     return-void
 .end method

@@ -3,13 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Ltha;
 
 
 # static fields
 .field public static final a:Lqni;
-
-.field public static final b:Liq5;
 
 
 # direct methods
@@ -22,47 +20,111 @@
 
     sput-object v0, Lqni;->a:Lqni;
 
-    new-instance v0, Lq7i;
+    new-instance v0, Lr8i;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    const-class v1, Ll8i;
+    const-class v1, Lm9i;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v2, "errorCode"
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    sput-object v1, Lqni;->b:Liq5;
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast p1, Lnwi;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    check-cast p2, Lsga;
+    move-result-object p1
 
-    sget-object v0, Lqni;->b:Liq5;
-
-    iget-object p1, p1, Lnwi;->a:Lzvi;
-
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    return-void
+    throw p1
 .end method

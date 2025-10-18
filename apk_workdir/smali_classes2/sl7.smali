@@ -1,128 +1,48 @@
-.class public abstract Lsl7;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lsl7;
+.super Ly14;
 
 
 # instance fields
-.field public a:Lo5d;
+.field public X:I
 
-.field public b:Lm5d;
+.field public final synthetic Y:Ls3;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lsl7;->Y:Ls3;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lsl7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    iput-object p1, p0, Lsl7;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
+    iget p1, p0, Lsl7;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    if-eqz v0, :cond_0
+    or-int/2addr p1, v0
 
-    iput-object v0, p0, Lsl7;->b:Lm5d;
+    iput p1, p0, Lsl7;->X:I
 
-    invoke-virtual {p0, p1, v0}, Lsl7;->c(Landroidx/recyclerview/widget/RecyclerView;Lm5d;)Lo5d;
+    iget-object p1, p0, Lsl7;->Y:Ls3;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lsl7;->a:Lo5d;
-
-    invoke-virtual {v0, p1}, Lm5d;->z(Lo5d;)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "require not null adapter"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 4
-
-    iget-object v0, p0, Lsl7;->b:Lm5d;
-
-    if-nez v0, :cond_0
-
-    iget-object v1, p0, Lsl7;->a:Lo5d;
-
-    if-nez v1, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsl7;->b:Lm5d;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsl7;->b:Lm5d;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
+    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "adapter was changed! cached adapter = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recyclerView.adapter = "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "adapter was changed"
-
-    invoke-static {v1, v0, p1}, Lxx1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    iget-object p1, p0, Lsl7;->b:Lm5d;
-
-    iget-object v0, p0, Lsl7;->a:Lo5d;
-
-    if-eqz p1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1, v0}, Lm5d;->B(Lo5d;)V
-
-    :cond_2
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lsl7;->b:Lm5d;
-
-    iput-object p1, p0, Lsl7;->a:Lo5d;
-
-    return-void
-.end method
-
-.method public abstract c(Landroidx/recyclerview/widget/RecyclerView;Lm5d;)Lo5d;
+    return-object p1
 .end method

@@ -1,122 +1,331 @@
-.class public abstract Lhg6;
+.class public final Lhg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lep0;
 
-# static fields
-.field public static a:Lo97;
 
-.field public static volatile b:Z
+# instance fields
+.field public a:I
 
-.field public static c:Ljava/lang/String;
-
-.field public static final d:[Ljava/lang/String;
+.field public b:Lda3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILda3;)V
+    .locals 0
 
-    const-string v0, "com.sec.android.app.sbrowser"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    iput-object p2, p0, Lhg6;->b:Lda3;
 
-    move-result-object v0
-
-    sput-object v0, Lhg6;->d:[Ljava/lang/String;
+    iput p1, p0, Lhg6;->a:I
 
     return-void
 .end method
 
-.method public static synthetic a(Lcj6;Lt44;III)Lzx5;
+
+# virtual methods
+.method public declared-synchronized a()V
     .locals 1
 
-    and-int/lit8 v0, p4, 0x1
+    monitor-enter p0
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    iget-object v0, p0, Lhg6;->b:Lda3;
 
-    sget-object p1, Lm95;->a:Lm95;
+    invoke-static {v0}, Lda3;->P(Lda3;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lhg6;->b:Lda3;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lhg6;->a:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized clear()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lhg6;->a()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized e(I)Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Lhg6;->a:I
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Lhg6;->b:Lda3;
+
+    invoke-static {p1}, Lda3;->i0(Lda3;)Z
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    and-int/lit8 v0, p4, 0x2
+    const/4 p1, 0x0
+
+    :goto_0
+    monitor-exit p0
+
+    return p1
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public declared-synchronized k()Lda3;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lhg6;->b:Lda3;
+
+    invoke-static {v0}, Lda3;->o(Lda3;)Lda3;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized l(ILda3;)V
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lhg6;->b:Lda3;
 
     if-eqz v0, :cond_1
 
-    const/4 p2, -0x3
+    invoke-virtual {p2}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lhg6;->b:Lda3;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/Bitmap;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
 
     :cond_1
-    and-int/lit8 p4, p4, 0x4
+    :try_start_1
+    iget-object v0, p0, Lhg6;->b:Lda3;
 
-    if-eqz p4, :cond_2
+    invoke-static {v0}, Lda3;->P(Lda3;)V
 
-    const/4 p3, 0x1
+    invoke-virtual {p2}, Lda3;->n()Lda3;
 
-    :cond_2
-    invoke-interface {p0, p1, p2, p3}, Lcj6;->e(Lt44;II)Lzx5;
+    move-result-object p2
 
-    move-result-object p0
+    iput-object p2, p0, Lhg6;->b:Lda3;
 
-    return-object p0
+    iput p1, p0, Lhg6;->a:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method
 
-.method public static b()Lp97;
+.method public n(ILda3;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public declared-synchronized p()Lda3;
     .locals 1
 
-    invoke-static {}, Ls97;->g()Ls97;
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lhg6;->b:Lda3;
+
+    invoke-static {v0}, Lda3;->o(Lda3;)Lda3;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    invoke-virtual {v0}, Ls97;->f()Lp97;
+    :try_start_1
+    invoke-virtual {p0}, Lhg6;->a()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v0
+    monitor-exit p0
 
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_2
+    invoke-virtual {p0}, Lhg6;->a()V
+
+    throw v0
+
+    :goto_0
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method
 
-.method public static c(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lrnf;)V
+.method public declared-synchronized q(I)Lda3;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->b()Z
+    monitor-enter p0
 
-    move-result v0
+    :try_start_0
+    iget v0, p0, Lhg6;->a:I
 
-    if-eqz v0, :cond_0
+    if-ne v0, p1, :cond_0
 
-    invoke-virtual {p2, p1}, Lrnf;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lhg6;->b:Lda3;
 
-    return-void
+    invoke-static {p1}, Lda3;->o(Lda3;)Lda3;
 
-    :cond_0
-    invoke-static {p0}, Lfei;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p0
+    goto :goto_0
 
-    invoke-virtual {p2, p0}, Lrnf;->a(Ljava/lang/Exception;)V
+    :catchall_0
+    move-exception p1
 
-    return-void
-.end method
-
-.method public static d(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lrnf;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p2, Lrnf;->a:Ld1j;
-
-    invoke-virtual {p0, p1}, Ld1j;->q(Ljava/lang/Object;)Z
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    invoke-static {p0}, Lfei;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+    const/4 p1, 0x0
 
-    move-result-object p0
+    :goto_0
+    monitor-exit p0
 
-    invoke-virtual {p2, p0}, Lrnf;->c(Ljava/lang/Exception;)Z
+    return-object p1
 
-    return-void
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

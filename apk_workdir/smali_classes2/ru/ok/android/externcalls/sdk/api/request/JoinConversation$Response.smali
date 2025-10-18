@@ -57,10 +57,10 @@
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;
 
-.field private static final PARSER:Lsp7;
+.field private static final PARSER:Lpq7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lsp7;"
+            "Lpq7;"
         }
     .end annotation
 .end field
@@ -84,17 +84,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->Companion:Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;
 
-    new-instance v0, Lex6;
+    new-instance v0, Lyx6;
 
     const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lex6;-><init>(I)V
+    invoke-direct {v0, v1}, Lyx6;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lsp7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lpq7;
 
     return-void
 .end method
@@ -115,10 +115,10 @@
     return-void
 .end method
 
-.method private static final PARSER$lambda$0(Lyp7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+.method private static final PARSER$lambda$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
     .locals 6
 
-    invoke-interface {p0}, Lyp7;->s()V
+    invoke-interface {p0}, Lvq7;->s()V
 
     const/4 v0, 0x0
 
@@ -131,13 +131,13 @@
     move v1, v0
 
     :goto_0
-    invoke-interface {p0}, Lyp7;->hasNext()Z
+    invoke-interface {p0}, Lvq7;->hasNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    invoke-interface {p0}, Lyp7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->name()Ljava/lang/String;
 
     move-result-object v4
 
@@ -161,7 +161,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-interface {p0}, Lyp7;->B()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     move-result-object v2
 
@@ -179,7 +179,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {p0}, Lyp7;->B()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     move-result-object v3
 
@@ -197,7 +197,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-interface {p0}, Lyp7;->z()I
+    invoke-interface {p0}, Lvq7;->z()I
 
     move-result v1
 
@@ -212,7 +212,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-interface {p0}, Lyp7;->W()Z
+    invoke-interface {p0}, Lvq7;->W()Z
 
     move-result v0
 
@@ -220,12 +220,12 @@
 
     :cond_3
     :goto_1
-    invoke-interface {p0}, Lyp7;->B()Ljava/lang/String;
+    invoke-interface {p0}, Lvq7;->B()Ljava/lang/String;
 
     goto :goto_0
 
     :cond_4
-    invoke-interface {p0}, Lyp7;->q()V
+    invoke-interface {p0}, Lvq7;->q()V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
 
@@ -244,20 +244,20 @@
     .end sparse-switch
 .end method
 
-.method public static synthetic a(Lyp7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+.method public static synthetic a(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER$lambda$0(Lyp7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER$lambda$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getPARSER$cp()Lsp7;
+.method public static final synthetic access$getPARSER$cp()Lpq7;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lsp7;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lpq7;
 
     return-object v0
 .end method

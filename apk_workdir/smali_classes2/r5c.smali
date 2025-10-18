@@ -1,23 +1,25 @@
 .class public final Lr5c;
-.super Ljava/lang/Object;
+.super Lpd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final b:Ltrf;
 
-.field public final b:Loqf;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Loqf;)V
-    .locals 0
+.method public constructor <init>(Ltrf;Ljava/lang/Integer;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Lr5c;->a:Ljava/lang/Long;
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    iput-object p2, p0, Lr5c;->b:Loqf;
+    iput-object p1, p0, Lr5c;->b:Ltrf;
+
+    iput-object p2, p0, Lr5c;->c:Ljava/lang/Integer;
 
     return-void
 .end method
@@ -45,11 +47,11 @@
     :cond_1
     check-cast p1, Lr5c;
 
-    iget-object v1, p0, Lr5c;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lr5c;->b:Ltrf;
 
-    iget-object v3, p1, Lr5c;->a:Ljava/lang/Long;
+    iget-object v3, p1, Lr5c;->b:Ltrf;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -58,11 +60,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lr5c;->b:Loqf;
+    iget-object v1, p0, Lr5c;->c:Ljava/lang/Integer;
 
-    iget-object p1, p1, Lr5c;->b:Loqf;
+    iget-object p1, p1, Lr5c;->c:Ljava/lang/Integer;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -77,31 +79,31 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lr5c;->a:Ljava/lang/Long;
+    iget-object v0, p0, Lr5c;->b:Ltrf;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lr5c;->b:Loqf;
+    iget-object v1, p0, Lr5c;->c:Ljava/lang/Integer;
 
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    add-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -109,19 +111,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "UpdateError(requestId="
+    const-string v1, "ShowSnackbar(title="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lr5c;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lr5c;->b:Ltrf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", errorText="
+    const-string v1, ", icon="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lr5c;->b:Loqf;
+    iget-object v1, p0, Lr5c;->c:Ljava/lang/Integer;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,87 +1,45 @@
-.class public final Lnsh;
+.class public abstract synthetic Lnsh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lrhf;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Throwable;
+.field public static final synthetic a:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Litg;
+    const/4 v0, 0x2
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Litg;-><init>(I)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    sput-object v1, Lnsh;->c:Lrhf;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 3
-
-    const-string v0, "gleff"
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-class v1, Lnsh;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
     move-result-object v1
 
-    iput-object v1, p0, Lnsh;->a:Ljava/lang/String;
+    array-length v1, v1
 
-    sget-object v1, Lksh;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    new-array v1, v1, [I
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    sput-object v1, Lnsh;->a:[I
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    if-nez v1, :cond_0
+    const/4 v3, 0x0
 
     :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    aput v2, v1, v3
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x0
+    :catch_0
+    :try_start_1
+    sget-object v1, Lnsh;->a:[I
 
-    goto :goto_0
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lnsh;->a:Ljava/lang/String;
-
-    const-string v2, "failed to load gl-effects library with system loader"
-
-    invoke-static {v1, v2, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iput-object v0, p0, Lnsh;->b:Ljava/lang/Throwable;
-
+    :catch_1
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
 .end method

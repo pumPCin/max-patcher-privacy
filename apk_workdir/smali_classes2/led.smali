@@ -1,56 +1,219 @@
-.class public final synthetic Lled;
-.super Ljava/lang/Object;
+.class public final Lled;
+.super Leic;
 .source "SourceFile"
-
-# interfaces
-.implements Lqh6;
 
 
 # instance fields
-.field public final synthetic a:Lred;
-
-.field public final synthetic b:Leed;
-
-.field public final synthetic c:Lqz9;
-
-.field public final synthetic o:Z
+.field public a:I
 
 
-# direct methods
-.method public synthetic constructor <init>(Lred;Leed;Lqz9;Z)V
-    .locals 0
+# virtual methods
+.method public final a(Lcic;Lfic;Lfj;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Lcic;->P0:Lfp3;
 
-    iput-object p1, p0, Lled;->a:Lred;
+    invoke-virtual {p2}, Lfic;->k()[B
 
-    iput-object p2, p0, Lled;->b:Leed;
+    move-result-object p2
 
-    iput-object p3, p0, Lled;->c:Lqz9;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-boolean p4, p0, Lled;->o:Z
+    const/16 p3, 0xa
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p3
+
+    iget v0, p0, Lled;->a:I
+
+    iget-object v1, p1, Lfp3;->e:Lave;
+
+    iget-object v1, v1, Lgp3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Lhz4;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, v3}, Lhz4;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-le v0, v1, :cond_0
+
+    iget-object p1, p1, Lfp3;->d:Lzs3;
+
+    const-string p2, "invalid connection ID sequence number"
+
+    invoke-virtual {p1, p3, p2}, Lzs3;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Lled;->a:I
+
+    iget-object v1, p1, Lfp3;->e:Lave;
+
+    iget-object v1, v1, Lgp3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcp3;
+
+    iget-object v1, v1, Lcp3;->b:[B
+
+    invoke-static {v1, p2}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    iget-object p1, p1, Lfp3;->d:Lzs3;
+
+    const-string p2, "cannot retire current connection ID"
+
+    invoke-virtual {p1, p3, p2}, Lzs3;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    iget-object p2, p1, Lfp3;->e:Lave;
+
+    invoke-virtual {p2, v0}, Lgp3;->c(I)[B
+
+    move-result-object p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p1, Lfp3;->b:Lr55;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p1, Lfp3;->e:Lave;
+
+    invoke-virtual {p2}, Lgp3;->b()Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    iget p3, p1, Lfp3;->i:I
+
+    if-ge p2, p3, :cond_2
+
+    invoke-virtual {p1}, Lfp3;->a()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final c()I
+    .locals 2
+
+    iget v0, p0, Lled;->a:I
+
+    int-to-long v0, v0
+
+    invoke-static {v0, v1}, Lubi;->a(J)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lled;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lled;
+
+    iget p1, p1, Lled;->a:I
+
+    iget v0, p0, Lled;->a:I
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final f(Ljava/nio/ByteBuffer;)V
+    .locals 1
+
+    const/16 v0, 0x19
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget v0, p0, Lled;->a:I
+
+    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
 
     return-void
 .end method
 
+.method public final hashCode()I
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iget v0, p0, Lled;->a:I
 
-    iget-boolean v0, p0, Lled;->o:Z
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    check-cast p1, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    iget-object v1, p0, Lled;->a:Lred;
+    return v0
+.end method
 
-    iget-object v2, p0, Lled;->b:Leed;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v3, p0, Lled;->c:Lqz9;
+    iget v0, p0, Lled;->a:I
 
-    invoke-static {v1, v2, v3, v0, p1}, Lred;->j(Lred;Leed;Lqz9;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v1, "RetireConnectionIdFrame["
 
-    move-result-object p1
+    const-string v2, "]"
 
-    return-object p1
+    invoke-static {v0, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

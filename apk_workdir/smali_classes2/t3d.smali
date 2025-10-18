@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu3d;
+.implements Lx3d;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lt3d;->a:J
+    iput-boolean p1, p0, Lt3d;->a:Z
 
     return-void
 .end method
@@ -24,46 +24,46 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lt3d;
+    instance-of v0, p1, Lt3d;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lt3d;
 
-    iget-wide v3, p0, Lt3d;->a:J
+    iget-boolean v0, p0, Lt3d;->a:Z
 
-    iget-wide v5, p1, Lt3d;->a:J
+    iget-boolean p1, p1, Lt3d;->a:Z
 
-    cmp-long p1, v3, v5
+    if-eq v0, p1, :cond_2
 
-    if-eqz p1, :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_2
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Lt3d;->a:J
+    iget-boolean v0, p0, Lt3d;->a:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -71,15 +71,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "VideoMsg(duration="
+    const-string v0, "Pause(isForced="
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lt3d;->a:J
+    iget-boolean v2, p0, Lt3d;->a:Z
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lzdf;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

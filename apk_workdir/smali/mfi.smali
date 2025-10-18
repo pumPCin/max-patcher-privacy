@@ -1,60 +1,120 @@
 .class public final Lmfi;
-.super Lcom/google/android/gms/common/internal/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ltha;
 
 
-# virtual methods
-.method public final g()I
-    .locals 1
+# static fields
+.field public static final a:Lmfi;
 
-    const v0, 0xbdfcb8
 
-    return v0
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.method public final synthetic l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 2
+    new-instance v0, Lmfi;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    sput-object v0, Lmfi;->a:Lmfi;
 
-    return-object p1
+    new-instance v0, Lr8i;
 
-    :cond_0
-    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+    const/4 v1, 0x1
 
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    instance-of v1, v0, Lb8i;
+    const/4 v2, 0x2
 
-    if-eqz v1, :cond_1
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    check-cast v0, Lb8i;
+    move-result-object v0
 
-    return-object v0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    :cond_1
-    new-instance v0, Lb8i;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Lb8i;-><init>(Landroid/os/IBinder;)V
+    const/4 v2, 0x3
 
-    return-object v0
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public final p()Ljava/lang/String;
-    .locals 1
 
-    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    return-object v0
-.end method
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-.method public final q()Ljava/lang/String;
-    .locals 1
+    move-result-object p1
 
-    const-string v0, "com.google.android.gms.auth.api.phone.service.SmsRetrieverApiService.START"
-
-    return-object v0
+    throw p1
 .end method

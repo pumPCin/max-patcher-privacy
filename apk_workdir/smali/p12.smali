@@ -3,66 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lk12;
 
 
 # instance fields
-.field public final synthetic a:I
-
 .field public final synthetic b:Lq12;
-
-.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq12;Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Lq12;)V
     .locals 0
 
-    iput p3, p0, Lp12;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lp12;->b:Lq12;
-
-    iput-object p2, p0, Lp12;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Ljava/util/List;)Ljava/util/List;
+    .locals 3
 
-    iget v0, p0, Lp12;->a:I
+    iget-object v0, p0, Lp12;->b:Lq12;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lq12;->d()Ljava/lang/String;
 
-    iget-object v0, p0, Lp12;->c:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v1, p0, Lp12;->b:Lq12;
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, v1, Lq12;->b:Lux1;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lux1;->onCameraUnavailable(Ljava/lang/String;)V
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Lp12;->c:Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lp12;->b:Lq12;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v1, v1, Lq12;->b:Lux1;
+    move-result-object v1
 
-    invoke-virtual {v1, v0}, Lux1;->onCameraAvailable(Ljava/lang/String;)V
+    check-cast v1, Lq12;
 
-    return-void
+    instance-of v2, v1, Lq12;
 
-    nop
+    invoke-static {v2}, Ldvi;->b(Z)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-object v2, v1
+
+    check-cast v2, Lq12;
+
+    invoke-interface {v2}, Lq12;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Unable to find camera with id "
+
+    const-string v2, " from list of available cameras."
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,100 +1,61 @@
 .class public final Lind;
-.super Lvs7;
+.super Lnnd;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+# static fields
+.field public static final a:Lind;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lind;->a:I
+    new-instance v0, Lind;
 
-    iput-object p2, p0, Lind;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    sput-object v0, Lind;->a:Lind;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lind;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lind;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lind;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbzg;
-
-    instance-of v1, v0, Lyv6;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lyv6;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lind;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    if-nez p1, :cond_1
 
-    invoke-interface {v0}, Lyv6;->e()Lgz9;
+    const/4 p1, 0x0
 
-    move-result-object v0
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    sget-object v0, Lt64;->b:Lt64;
+    return v0
+.end method
 
-    :goto_1
-    return-object v0
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_1
-    iget-object v0, p0, Lind;->b:Ljava/lang/Object;
+    const v0, -0x1c165701
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast v0, Lbzg;
-
-    invoke-interface {v0}, Lbzg;->k()Lazg;
-
-    move-result-object v0
+    const-string v0, "CameraPermissionDenied"
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

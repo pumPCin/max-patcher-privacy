@@ -1,130 +1,110 @@
 .class public final Ldfa;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lfb8;
 
 
 # instance fields
-.field public final synthetic X:Lifa;
+.field public final a:Lfgd;
+
+.field public final b:Lei;
+
+.field public final c:Lej9;
+
+.field public final o:Lej9;
 
 
 # direct methods
-.method public constructor <init>(Lifa;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p1, p0, Ldfa;->X:Lifa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ldfa;->a:Lfgd;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lei;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ldfa;->b:Lei;
+
+    new-instance v0, Lej9;
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ldfa;->c:Lej9;
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ldfa;->o:Lej9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f()V
+    .locals 2
 
-    check-cast p1, Lb54;
+    new-instance v0, Lcfa;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Ldfa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, p0, v1}, Lcfa;-><init>(Ldfa;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Ltki;->g(Lzi6;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final w(JLqp5;)Ljava/lang/Object;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    const-string v1, "SELECT * FROM fcm_notifications where time > ? ORDER BY time ASC"
+
+    invoke-static {v0, v1}, Lvgd;->c(ILjava/lang/String;)Lvgd;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0, p1, p2}, Lvgd;->k(IJ)V
+
+    new-instance p1, Landroid/os/CancellationSignal;
+
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance p2, Lgi;
+
+    const/16 v0, 0x12
+
+    invoke-direct {p2, p0, v0, v1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v0, p0, Ldfa;->a:Lfgd;
+
+    invoke-static {v0, p1, p2, p3}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Ldfa;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Ldfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ldfa;
-
-    iget-object v0, p0, Ldfa;->X:Lifa;
-
-    invoke-direct {p1, v0, p2}, Ldfa;-><init>(Lifa;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lifa;->F0:[Lwq7;
-
-    iget-object p1, p0, Ldfa;->X:Lifa;
-
-    invoke-virtual {p1}, Lifa;->r()Lrq;
-
-    move-result-object v0
-
-    check-cast v0, Lchg;
-
-    iget-object v0, v0, Lw3;->h:Lot7;
-
-    const-string v1, "app.notification.show.text"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lot7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    xor-int/2addr v0, v2
-
-    invoke-virtual {p1}, Lifa;->r()Lrq;
-
-    move-result-object v3
-
-    check-cast v3, Lchg;
-
-    invoke-virtual {v3, v1, v0}, Lw3;->f(Ljava/lang/String;Z)V
-
-    iget-object v0, p1, Lifa;->Z:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwxa;
-
-    invoke-virtual {v0}, Lwxa;->c()V
-
-    iget-object p1, p1, Lifa;->y0:Lsze;
-
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    new-instance v1, Ljava/lang/Integer;
-
-    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

@@ -9,16 +9,20 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lt09;
+.field public final synthetic b:Lu09;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt09;I)V
+.method public synthetic constructor <init>(Lu09;II)V
     .locals 0
 
-    iput p2, p0, Ln09;->a:I
+    iput p3, p0, Ln09;->a:I
 
-    iput-object p1, p0, Ln09;->b:Lt09;
+    iput-object p1, p0, Ln09;->b:Lu09;
+
+    iput p2, p0, Ln09;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,50 +31,45 @@
 
 
 # virtual methods
-.method public final m(Liz8;Loy8;I)Ljava/lang/Object;
-    .locals 2
+.method public final b(Lqz8;)V
+    .locals 1
 
-    iget v0, p0, Ln09;->a:I
+    iget p1, p0, Ln09;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v0, Lmy1;
+    iget-object p1, p0, Ln09;->b:Lu09;
 
-    const/16 v1, 0x8
+    iget-object p1, p1, Lu09;->g:Lj09;
 
-    invoke-direct {v0, p1, p2, p3, v1}, Lmy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    iget-object p1, p1, Lj09;->t:Lwub;
 
-    iget-object v1, p0, Ln09;->b:Lt09;
+    iget v0, p0, Ln09;->c:I
 
-    invoke-static {p1, p2, p3, v1, v0}, Lu09;->W(Liz8;Loy8;ILt09;Ldr3;)Lo18;
+    invoke-static {v0}, Lhv7;->s(I)Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    invoke-virtual {p1, v0}, Lwub;->k0(Z)V
+
+    return-void
 
     :pswitch_0
-    if-nez p1, :cond_0
+    iget-object p1, p0, Ln09;->b:Lu09;
 
-    new-instance p1, Lyc0;
+    iget-object p1, p1, Lu09;->g:Lj09;
 
-    const/16 v0, 0xb
+    iget-object p1, p1, Lj09;->t:Lwub;
 
-    invoke-direct {p1, p2, p3, v0}, Lyc0;-><init>(Ljava/lang/Object;II)V
+    iget v0, p0, Ln09;->c:I
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lhv7;->q(I)I
 
-    iget-object v1, p0, Ln09;->b:Lt09;
+    move-result v0
 
-    invoke-static {v0, p2, p3, v1, p1}, Lu09;->W(Liz8;Loy8;ILt09;Ldr3;)Lo18;
+    invoke-virtual {p1, v0}, Lwub;->j0(I)V
 
-    throw v0
-
-    :cond_0
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
+    return-void
 
     nop
 

@@ -3,33 +3,33 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnm;
+.implements Lom;
 
 
 # virtual methods
 .method public getConfigExtractor()Lam;
     .locals 1
 
-    sget-object v0, Lam;->e:Lsnd;
+    sget-object v0, Lam;->e:Lfpd;
 
     return-object v0
 .end method
 
-.method public getFailParser()Lsp7;
+.method public getFailParser()Lpq7;
     .locals 1
 
-    sget-object v0, Lg93;->a:Lg93;
+    sget-object v0, Lzw3;->a:Lzw3;
 
     return-object v0
 .end method
 
-.method public abstract getOkParser()Lsp7;
+.method public abstract getOkParser()Lpq7;
 .end method
 
-.method public getScopeAfter()Ltm;
+.method public getScopeAfter()Lum;
     .locals 1
 
-    sget-object v0, Ltm;->a:Ltm;
+    sget-object v0, Lum;->a:Lum;
 
     return-object v0
 .end method

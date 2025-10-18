@@ -4,173 +4,151 @@
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Llt7;)V
+.method public synthetic constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxt4;->a:Llt7;
+    iput-wide p1, p0, Lxt4;->a:J
 
     return-void
 .end method
 
+.method public static a(IF)J
+    .locals 3
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr p0, v2
+
+    add-long/2addr v0, p0
+
+    return-wide v0
+.end method
+
+.method public static final b(JLandroid/content/Context;)F
+    .locals 0
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    invoke-static {p0, p1, p2}, Lxt4;->c(JLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final c(JLandroid/util/DisplayMetrics;)F
+    .locals 2
+
+    const/16 v0, 0x20
+
+    shr-long v0, p0, v0
+
+    long-to-int v0, v0
+
+    invoke-static {p0, p1}, Lxt4;->d(J)F
+
+    move-result p0
+
+    invoke-static {v0, p0, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final d(J)F
+    .locals 2
+
+    const-wide v0, 0xffffffffL
+
+    and-long/2addr p0, v0
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    return p0
+.end method
+
 
 # virtual methods
-.method public final a(JLjava/lang/Long;Ljava/lang/Long;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lxt4;
 
-    const-string v1, "execute: chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "xt4"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lxt4;->a:Llt7;
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x0
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    cmp-long v5, v5, v2
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lkd2;
-
-    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    invoke-virtual {p4, v5, v6}, Lkd2;->z(J)Lda2;
-
-    move-result-object p3
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz p4, :cond_1
+    check-cast p1, Lxt4;
 
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+    iget-wide v0, p1, Lxt4;->a:J
 
-    move-result-wide v5
+    iget-wide v2, p0, Lxt4;->a:J
 
-    cmp-long p3, v5, v2
+    cmp-long p1, v2, v0
 
-    if-eqz p3, :cond_1
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lkd2;
-
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    invoke-virtual {p3, v5, v6}, Lkd2;->F(J)Lda2;
-
-    move-result-object p3
-
-    goto :goto_0
-
-    :cond_1
-    move-object p3, v4
+    if-eqz p1, :cond_1
 
     :goto_0
-    if-nez p3, :cond_2
+    const/4 p1, 0x0
 
-    const-string p1, "Chat is null. Ignore"
+    return p1
 
-    invoke-static {v1, p1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_1
+    const/4 p1, 0x1
 
-    return-void
+    return p1
+.end method
 
-    :cond_2
-    iget-object p4, p3, Lda2;->b:Lfe2;
+.method public final hashCode()I
+    .locals 2
 
-    iget-object p4, p4, Lfe2;->c0:Lnta;
+    iget-wide v0, p0, Lxt4;->a:J
 
-    if-nez p4, :cond_3
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const-string p1, "draft is null, ignore"
+    move-result v0
 
-    invoke-static {v1, p1, v4}, Lndi;->n(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :cond_3
-    invoke-virtual {p4}, Lnta;->b()Ljava/lang/Long;
+    const-string v0, "Dimension(encodedValue="
 
-    move-result-object p4
+    const-string v1, ")"
 
-    if-eqz p4, :cond_4
+    iget-wide v2, p0, Lxt4;->a:J
 
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-wide v2
+    move-result-object v0
 
-    :cond_4
-    cmp-long p1, v2, p1
-
-    if-lez p1, :cond_5
-
-    const-string p1, "try to rewrite draft by old, ignore it!"
-
-    invoke-static {v1, p1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_5
-    const-string p1, "Discard server draft"
-
-    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkd2;
-
-    iget-wide p2, p3, Lda2;->a:J
-
-    invoke-virtual {p1, p2, p3}, Lkd2;->p(J)V
-
-    return-void
+    return-object v0
 .end method

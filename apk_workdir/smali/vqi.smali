@@ -1,235 +1,171 @@
 .class public final Lvqi;
-.super Li6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
 
 
 # static fields
-.field private static final zzb:Lvqi;
+.field public static j:Lg0j;
+
+.field public static final k:Lu5i;
 
 
 # instance fields
-.field private zzd:I
+.field public final a:Ljava/lang/String;
 
-.field private zze:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
-.field private zzf:Ljava/lang/String;
+.field public final c:Lpqi;
 
-.field private zzg:Ljava/lang/String;
+.field public final d:Lwje;
 
-.field private zzh:Ljava/lang/String;
+.field public final e:Le2j;
 
-.field private zzi:Ljava/lang/String;
+.field public final f:Le2j;
 
-.field private zzj:Lxmi;
+.field public final g:Ljava/lang/String;
 
-.field private zzk:Lxmi;
+.field public final h:I
+
+.field public final i:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lvqi;
+    const-string v0, "optional-module-barcode"
 
-    invoke-direct {v0}, Lvqi;-><init>()V
+    const-string v1, "com.google.android.gms.vision.barcode"
 
-    sput-object v0, Lvqi;->zzb:Lvqi;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    const-class v1, Lvqi;
+    move-result-object v0
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    const/4 v1, 0x0
+
+    aget-object v1, v0, v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    aget-object v1, v0, v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lu5i;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Lu5i;-><init>(I[Ljava/lang/Object;)V
+
+    sput-object v1, Lvqi;->k:Lu5i;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lwje;Lpqi;)V
+    .locals 3
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lvqi;->zze:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lvqi;->zzf:Ljava/lang/String;
+    iput-object v0, p0, Lvqi;->i:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lvqi;->zzg:Ljava/lang/String;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lvqi;->zzh:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lvqi;->zzi:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvqi;->a:Ljava/lang/String;
+
+    invoke-static {p1}, Lhf3;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvqi;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lvqi;->d:Lwje;
+
+    iput-object p3, p0, Lvqi;->c:Lpqi;
+
+    invoke-static {}, Lnri;->i()V
+
+    const-string p3, "vision-common"
+
+    iput-object p3, p0, Lvqi;->g:Ljava/lang/String;
+
+    invoke-static {}, Lrs6;->t()Lrs6;
+
+    move-result-object v0
+
+    new-instance v1, Lsj4;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v2, p0}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Lrs6;->J(Ljava/util/concurrent/Callable;)Le2j;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvqi;->e:Le2j;
+
+    invoke-static {}, Lrs6;->t()Lrs6;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lsqi;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p2, v2}, Lsqi;-><init>(Lwje;I)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Lrs6;->J(Ljava/util/concurrent/Callable;)Le2j;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lvqi;->f:Le2j;
+
+    sget-object p2, Lvqi;->k:Lu5i;
+
+    invoke-virtual {p2, p3}, Lu5i;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p2, p3}, Lu5i;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    const/4 p3, 0x0
+
+    invoke-static {p1, p2, p3}, Le55;->d(Landroid/content/Context;Ljava/lang/String;Z)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    iput p1, p0, Lvqi;->h:I
 
     return-void
-.end method
-
-.method public static p()Lvqi;
-    .locals 1
-
-    sget-object v0, Lvqi;->zzb:Lvqi;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 8
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lvqi;->zzb:Lvqi;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ldii;
-
-    sget-object p2, Lvqi;->zzb:Lvqi;
-
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lvqi;
-
-    invoke-direct {p1}, Lvqi;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string v6, "zzj"
-
-    const-string v7, "zzk"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v2, "zzf"
-
-    const-string v3, "zzg"
-
-    const-string v4, "zzh"
-
-    const-string v5, "zzi"
-
-    filled-new-array/range {v0 .. v7}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lvqi;->zzb:Lvqi;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0004\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u1008\u0003\u0005\u1008\u0004\u0006\u1009\u0005\u0007\u1009\u0006"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n()Lxmi;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzk:Lxmi;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lxmi;->t()Lxmi;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final o()Lxmi;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzj:Lxmi;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lxmi;->t()Lxmi;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzf:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final r()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzg:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final s()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzh:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final t()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zzi:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final u()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvqi;->zze:Ljava/lang/String;
-
-    return-object v0
 .end method

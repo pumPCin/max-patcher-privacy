@@ -1,125 +1,87 @@
-.class public abstract Lji8;
+.class public Lji8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
-
-.field public static final b:[I
+# instance fields
+.field public a:Landroid/window/OnBackInvokedCallback;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public a(Lii8;)Landroid/window/OnBackInvokedCallback;
     .locals 2
 
-    const/high16 v0, 0x1010000
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v1, Lzic;->theme:I
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lji8;->a:[I
-
-    sget v0, Lzic;->materialThemeOverlay:I
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lji8;->b:[I
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
-    .locals 2
-
-    sget-object v0, Lji8;->b:[I
-
-    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v0
-
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
-
-    instance-of p2, p0, Lg14;
+    new-instance v0, Lgo;
 
     const/4 v1, 0x1
 
-    if-eqz p2, :cond_0
+    invoke-direct {v0, v1, p1}, Lgo;-><init>(ILjava/lang/Object;)V
 
-    move-object p2, p0
+    return-object v0
+.end method
 
-    check-cast p2, Lg14;
+.method public b(Lii8;Landroid/view/View;Z)V
+    .locals 1
 
-    iget p2, p2, Lg14;->a:I
+    iget-object v0, p0, Lji8;->a:Landroid/window/OnBackInvokedCallback;
 
-    if-ne p2, v0, :cond_0
-
-    move p2, v1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p2, p3
+    invoke-static {p2}, Ly4;->o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
 
     :goto_0
-    if-eqz v0, :cond_4
-
-    if-eqz p2, :cond_1
-
-    goto :goto_2
+    return-void
 
     :cond_1
-    new-instance p2, Lg14;
+    invoke-virtual {p0, p1}, Lji8;->a(Lii8;)Landroid/window/OnBackInvokedCallback;
 
-    invoke-direct {p2, p0, v0}, Lg14;-><init>(Landroid/content/Context;I)V
+    move-result-object p1
 
-    sget-object v0, Lji8;->a:[I
+    iput-object p1, p0, Lji8;->a:Landroid/window/OnBackInvokedCallback;
 
-    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    if-eqz p3, :cond_2
 
-    move-result-object p0
-
-    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p3
-
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    if-eqz p1, :cond_2
+    const p3, 0xf4240
 
     goto :goto_1
 
     :cond_2
-    move p1, p3
+    const/4 p3, 0x0
 
     :goto_1
-    if-eqz p1, :cond_3
+    invoke-static {p2, p3, p1}, Ly4;->y(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
 
-    invoke-virtual {p2}, Lg14;->getTheme()Landroid/content/res/Resources$Theme;
+    return-void
+.end method
 
-    move-result-object p0
+.method public c(Landroid/view/View;)V
+    .locals 1
 
-    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+    invoke-static {p1}, Ly4;->o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
 
-    :cond_3
-    return-object p2
+    move-result-object p1
 
-    :cond_4
-    :goto_2
-    return-object p0
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lji8;->a:Landroid/window/OnBackInvokedCallback;
+
+    invoke-static {p1, v0}, Ly4;->A(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lji8;->a:Landroid/window/OnBackInvokedCallback;
+
+    return-void
 .end method

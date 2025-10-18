@@ -6,13 +6,13 @@
 # instance fields
 .field public final a:Ldi;
 
-.field public final b:Lsfd;
+.field public final b:Lyoh;
 
 .field public final c:Lpi;
 
-.field public final d:Lkab;
+.field public final d:Lnbb;
 
-.field public final e:Lng9;
+.field public final e:Loh9;
 
 .field public final f:Landroid/os/HandlerThread;
 
@@ -30,28 +30,28 @@
 
 .field public final m:Landroid/graphics/Point;
 
-.field public final n:Lyuc;
+.field public final n:Lfwc;
 
-.field public final o:Lgg1;
+.field public final o:Log1;
 
 .field public volatile p:Z
 
 
 # direct methods
-.method public constructor <init>(Ldi;Lsfd;Lpi;Lorg/webrtc/EglBase;Lkab;Lng9;)V
+.method public constructor <init>(Ldi;Lyoh;Lpi;Lorg/webrtc/EglBase;Lnbb;Loh9;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lij;->a:Ldi;
 
-    iput-object p2, p0, Lij;->b:Lsfd;
+    iput-object p2, p0, Lij;->b:Lyoh;
 
     iput-object p3, p0, Lij;->c:Lpi;
 
-    iput-object p5, p0, Lij;->d:Lkab;
+    iput-object p5, p0, Lij;->d:Lnbb;
 
-    iput-object p6, p0, Lij;->e:Lng9;
+    iput-object p6, p0, Lij;->e:Loh9;
 
     new-instance p2, Landroid/os/HandlerThread;
 
@@ -99,11 +99,11 @@
 
     iput-object p5, p0, Lij;->m:Landroid/graphics/Point;
 
-    iget-object p1, p1, Ldi;->b:Lyuc;
+    iget-object p1, p1, Ldi;->b:Lfwc;
 
-    iput-object p1, p0, Lij;->n:Lyuc;
+    iput-object p1, p0, Lij;->n:Lfwc;
 
-    new-instance p5, Lgg1;
+    new-instance p5, Log1;
 
     invoke-interface {p4}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
@@ -113,9 +113,9 @@
 
     const-string v0, "CallOpenGLAnimoji"
 
-    invoke-direct {p5, p1, p4, p6, v0}, Lgg1;-><init>(Lyuc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
+    invoke-direct {p5, p1, p4, p6, v0}, Log1;-><init>(Lfwc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
 
-    iput-object p5, p0, Lij;->o:Lgg1;
+    iput-object p5, p0, Lij;->o:Log1;
 
     invoke-virtual {p2}, Ljava/lang/Thread;->start()V
 
@@ -144,18 +144,18 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Integer;Lzh1;[F)V
+.method public final a(Ljava/lang/Integer;Lhi1;[F)V
     .locals 0
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p0, p2}, Lij;->b(Lzh1;)Ljj;
+    invoke-virtual {p0, p2}, Lij;->b(Lhi1;)Ljj;
 
     :cond_0
     return-void
 .end method
 
-.method public final b(Lzh1;)Ljj;
+.method public final b(Lhi1;)Ljj;
     .locals 1
 
     iget-object v0, p0, Lij;->i:Ljava/util/HashMap;

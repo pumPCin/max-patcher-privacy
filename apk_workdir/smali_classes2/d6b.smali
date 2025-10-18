@@ -1,19 +1,23 @@
-.class public abstract Ld6b;
+.class public final Ld6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li6b;
+.implements Lk6b;
 
-# static fields
-.field public static final a:I
+
+# instance fields
+.field public final a:Lli6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lli6;)V
+    .locals 0
 
-    sget v0, Lkoc;->webview:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Ld6b;->a:I
+    iput-object p1, p0, Ld6b;->a:Lli6;
 
     return-void
 .end method

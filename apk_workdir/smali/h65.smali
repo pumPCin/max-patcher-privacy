@@ -1,209 +1,242 @@
 .class public final Lh65;
-.super Ljfa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic Z:I
+.field public final a:Lat8;
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:J
+
+.field public final e:I
+
+.field public final f:Lv65;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Lat8;ZZJILv65;)V
+    .locals 4
 
-    iput p1, p0, Lh65;->Z:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0xe
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1}, Ljfa;-><init>(I)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    if-eqz p2, :cond_1
 
-
-# virtual methods
-.method public final d(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;Landroid/view/View;FLandroid/graphics/drawable/Drawable;)V
-    .locals 6
-
-    iget v0, p0, Lh65;->Z:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    cmpg-float v1, p4, v0
-
-    if-gez v1, :cond_0
+    if-nez p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object p2, p3
-
-    :goto_0
-    invoke-static {p1, p2}, Ljfa;->a(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/high16 p3, 0x3f800000    # 1.0f
-
-    if-gez v1, :cond_1
-
-    invoke-static {p3, p2, p2, v0, p4}, Lvg;->b(FFFFF)F
-
-    move-result p2
+    move v2, v1
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p2, p3, v0, p3, p4}, Lvg;->b(FFFFF)F
-
-    move-result p2
+    :goto_0
+    move v2, v0
 
     :goto_1
-    iget p3, p1, Landroid/graphics/RectF;->left:F
+    const-string v3, "Audio and video cannot both be removed"
 
-    float-to-int p3, p3
+    invoke-static {v3, v2}, Lsgi;->h(Ljava/lang/Object;Z)V
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-static {p1}, Lh65;->c(Lat8;)Z
 
-    move-result-object p4
+    move-result v2
 
-    iget p4, p4, Landroid/graphics/Rect;->top:I
+    if-eqz v2, :cond_4
 
-    iget p1, p1, Landroid/graphics/RectF;->right:F
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    float-to-int p1, p1
+    cmp-long v2, p4, v2
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    if-eqz v2, :cond_2
 
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {p5, p3, p4, p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    const/high16 p1, 0x437f0000    # 255.0f
-
-    mul-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    invoke-virtual {p5, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Ljfa;->a(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
-
-    move-result-object p2
-
-    invoke-static {p1, p3}, Ljfa;->a(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
-
-    move-result-object p1
-
-    iget p3, p2, Landroid/graphics/RectF;->left:F
-
-    iget v0, p1, Landroid/graphics/RectF;->left:F
-
-    cmpg-float p3, p3, v0
-
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
-
-    const-wide v2, 0x400921fb54442d18L    # Math.PI
-
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
-    if-gez p3, :cond_2
-
-    float-to-double p3, p4
-
-    mul-double/2addr p3, v2
-
-    div-double/2addr p3, v0
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v0
-
-    sub-double/2addr v4, v0
-
-    double-to-float v0, v4
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide p3
-
-    double-to-float p3, p3
+    move v2, v0
 
     goto :goto_2
 
     :cond_2
-    float-to-double p3, p4
-
-    mul-double/2addr p3, v2
-
-    div-double/2addr p3, v0
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    double-to-float v0, v0
-
-    invoke-static {p3, p4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide p3
-
-    sub-double/2addr v4, p3
-
-    double-to-float p3, v4
+    move v2, v1
 
     :goto_2
-    iget p4, p2, Landroid/graphics/RectF;->left:F
+    invoke-static {v2}, Lsgi;->d(Z)V
 
-    float-to-int p4, p4
+    if-nez p2, :cond_3
 
-    iget v1, p1, Landroid/graphics/RectF;->left:F
+    iget-object v2, p7, Lv65;->a:Lec7;
 
-    float-to-int v1, v1
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    invoke-static {p4, v0, v1}, Lvg;->c(IFI)I
+    move-result v2
 
-    move-result p4
+    if-eqz v2, :cond_3
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    goto :goto_3
+
+    :cond_3
+    move v0, v1
+
+    :goto_3
+    invoke-static {v0}, Lsgi;->d(Z)V
+
+    :cond_4
+    iput-object p1, p0, Lh65;->a:Lat8;
+
+    iput-boolean p2, p0, Lh65;->b:Z
+
+    iput-boolean p3, p0, Lh65;->c:Z
+
+    iput-wide p4, p0, Lh65;->d:J
+
+    iput p6, p0, Lh65;->e:I
+
+    iput-object p7, p0, Lh65;->f:Lv65;
+
+    return-void
+.end method
+
+.method public static c(Lat8;)Z
+    .locals 1
+
+    iget-object p0, p0, Lat8;->a:Ljava/lang/String;
+
+    const-string v0, "androidx-media3-GapMediaItem"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final a()Lg65;
+    .locals 3
+
+    new-instance v0, Lg65;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lh65;->a:Lat8;
+
+    iput-object v1, v0, Lg65;->a:Lat8;
+
+    iget-boolean v1, p0, Lh65;->b:Z
+
+    iput-boolean v1, v0, Lg65;->b:Z
+
+    iget-boolean v1, p0, Lh65;->c:Z
+
+    iput-boolean v1, v0, Lg65;->c:Z
+
+    iget-wide v1, p0, Lh65;->d:J
+
+    iput-wide v1, v0, Lg65;->d:J
+
+    iget v1, p0, Lh65;->e:I
+
+    iput v1, v0, Lg65;->e:I
+
+    iget-object v1, p0, Lh65;->f:Lv65;
+
+    iput-object v1, v0, Lg65;->f:Lv65;
+
+    return-object v0
+.end method
+
+.method public final b(J)J
+    .locals 8
+
+    iget-boolean v0, p0, Lh65;->b:Z
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lh65;->f:Lv65;
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-eqz v0, :cond_0
+
+    move-wide v5, v3
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, v2, Lv65;->a:Lec7;
+
+    invoke-virtual {v0, v1}, Lec7;->m(I)Lv36;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/graphics/Rect;->top:I
+    move-wide v5, p1
 
-    iget p2, p2, Landroid/graphics/RectF;->right:F
+    :goto_0
+    invoke-virtual {v0}, Lb2;->hasNext()Z
 
-    float-to-int p2, p2
+    move-result v7
 
-    iget p1, p1, Landroid/graphics/RectF;->right:F
+    if-eqz v7, :cond_1
 
-    float-to-int p1, p1
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
 
-    invoke-static {p2, p3, p1}, Lvg;->c(IFI)I
+    move-result-object v7
 
-    move-result p1
+    check-cast v7, Lt50;
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-interface {v7, v5, v6}, Lt50;->f(J)J
 
-    move-result-object p2
+    move-result-wide v5
 
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+    goto :goto_0
 
-    invoke-virtual {p5, p4, v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    :cond_1
+    :goto_1
+    iget-boolean v0, p0, Lh65;->c:Z
 
-    return-void
+    if-eqz v0, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-wide p1, v3
+
+    goto :goto_3
+
+    :cond_2
+    iget-object v0, v2, Lv65;->b:Lec7;
+
+    invoke-virtual {v0, v1}, Lec7;->m(I)Lv36;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-virtual {v0}, Lb2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lu65;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_2
+
+    :cond_3
+    :goto_3
+    invoke-static {v5, v6, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method

@@ -1,93 +1,49 @@
 .class public final Lzfc;
-.super Llff;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lbgc;
 
-.field public final synthetic Y:Lone/me/qrscanner/QrScannerWidget;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+.method public constructor <init>(Lbgc;Ly14;)V
     .locals 0
 
-    iput-object p2, p0, Lzfc;->Y:Lone/me/qrscanner/QrScannerWidget;
+    iput-object p1, p0, Lzfc;->X:Lbgc;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lzfc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzfc;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lzfc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lzfc;
-
-    iget-object v1, p0, Lzfc;->Y:Lone/me/qrscanner/QrScannerWidget;
-
-    invoke-direct {v0, p2, v1}, Lzfc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
-
-    iput-object p1, v0, Lzfc;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lzfc;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lzfc;->X:Ljava/lang/Object;
+    iget p1, p0, Lzfc;->Y:I
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    or-int/2addr p1, v0
 
-    move-result p1
+    iput p1, p0, Lzfc;->Y:I
 
-    if-eqz p1, :cond_0
+    iget-object p1, p0, Lzfc;->X:Lbgc;
 
-    sget-object p1, Lone/me/qrscanner/QrScannerWidget;->z0:[Lwq7;
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lzfc;->Y:Lone/me/qrscanner/QrScannerWidget;
-
-    invoke-virtual {p1}, Lone/me/qrscanner/QrScannerWidget;->E0()Lvfc;
+    invoke-static {p1, v0, v0, p0}, Lbgc;->w(Lbgc;Lwp5;Lip5;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
-
-    sget-object v0, Lfmd;->a:Lfmd;
-
-    invoke-virtual {p1, v0}, Lvfc;->r(Lgmd;)V
-
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

@@ -1,253 +1,136 @@
 .class public final Lgab;
-.super Landroid/widget/EdgeEffect;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public a:Lgve;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Lhab;
-
-.field public final synthetic d:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic X:Lhab;
 
 
 # direct methods
-.method public constructor <init>(ILhab;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
+.method public constructor <init>(Lhab;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lgab;->b:I
+    iput-object p1, p0, Lgab;->X:Lhab;
 
-    iput-object p2, p0, Lgab;->c:Lhab;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lgab;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-direct {p0, p4}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgve;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lgve;
+    check-cast p1, Lq54;
 
-    iget-object v1, p0, Lgab;->d:Landroidx/recyclerview/widget/RecyclerView;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lgve;->q:Lw35;
+    invoke-virtual {p0, p1, p2}, Lgab;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1, v2}, Lgve;-><init>(Ljava/lang/Object;Lz0j;)V
+    move-result-object p1
 
-    new-instance v1, Lhve;
+    check-cast p1, Lgab;
 
-    invoke-direct {v1}, Lhve;-><init>()V
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, p2}, Lgab;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    float-to-double v2, v2
-
-    iput-wide v2, v1, Lhve;->i:D
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, v2}, Lhve;->a(F)V
-
-    const/high16 v2, 0x43480000    # 200.0f
-
-    invoke-virtual {v1, v2}, Lhve;->b(F)V
-
-    iput-object v1, v0, Lgve;->m:Lhve;
-
-    return-object v0
+    return-object p2
 .end method
 
-.method public final b(F)V
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lgab;->b:I
+    new-instance p1, Lgab;
 
-    const/4 v1, 0x3
+    iget-object v0, p0, Lgab;->X:Lhab;
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {p1, v0, p2}, Lgab;-><init>(Lhab;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, -0x1
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :goto_0
-    iget-object v1, p0, Lgab;->c:Lhab;
+    sget-object p1, Lhab;->q0:[Ltr7;
 
-    iget v2, v1, Lhab;->a:I
+    iget-object p1, p0, Lgab;->X:Lhab;
 
-    mul-int/2addr v0, v2
+    iget-object v0, p1, Lhab;->c:Liu7;
 
-    int-to-float v0, v0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    mul-float/2addr v0, p1
+    move-result-object v1
 
-    iget p1, v1, Lhab;->b:F
+    check-cast v1, Lsq;
 
-    mul-float/2addr v0, p1
+    check-cast v1, Lgig;
 
-    iget-object p1, p0, Lgab;->d:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v1, v1, Lw3;->h:Llu7;
 
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
+    const-string v2, "app.notification.show.new.users"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Llu7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    add-float/2addr v1, v0
+    xor-int/2addr v1, v3
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
-
-    iget-object p1, p0, Lgab;->a:Lgve;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lgve;->b()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final isFinished()Z
-    .locals 1
-
-    iget-object v0, p0, Lgab;->a:Lgve;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, v0, Lgve;->f:Z
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final onAbsorb(I)V
-    .locals 2
-
-    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
-
-    iget v0, p0, Lgab;->b:I
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    mul-int/2addr v0, p1
-
-    int-to-float p1, v0
-
-    iget-object v0, p0, Lgab;->c:Lhab;
-
-    iget v0, v0, Lhab;->c:F
-
-    mul-float/2addr p1, v0
-
-    iget-object v0, p0, Lgab;->a:Lgve;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lgve;->b()V
-
-    :cond_1
-    invoke-virtual {p0}, Lgab;->a()Lgve;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput p1, v0, Lgve;->a:F
+    check-cast v0, Lsq;
 
-    invoke-virtual {v0}, Lgve;->g()V
+    check-cast v0, Lgig;
 
-    iput-object v0, p0, Lgab;->a:Lgve;
+    invoke-virtual {v0, v2, v1}, Lw3;->f(Ljava/lang/String;Z)V
 
-    return-void
-.end method
+    iget-object v0, p1, Lhab;->b:Liu7;
 
-.method public final onPull(F)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
-
-    .line 2
-    invoke-virtual {p0, p1}, Lgab;->b(F)V
-
-    return-void
-.end method
-
-.method public final onPull(FF)V
-    .locals 0
-
-    .line 3
-    invoke-super {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    .line 4
-    invoke-virtual {p0, p1}, Lgab;->b(F)V
-
-    return-void
-.end method
-
-.method public final onRelease()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    iget-object v0, p0, Lgab;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    cmpg-float v0, v0, v1
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lgab;->a()Lgve;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lgve;->g()V
+    check-cast v0, Lll;
 
-    iput-object v0, p0, Lgab;->a:Lgve;
+    new-instance v2, Lcig;
 
-    return-void
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v2, Lcig;->a:Ljava/lang/Boolean;
+
+    new-instance v1, Leig;
+
+    invoke-direct {v1, v2}, Leig;-><init>(Lcig;)V
+
+    invoke-interface {v0, v1}, Lll;->a(Leig;)J
+
+    iget-object v0, p1, Lhab;->X:Lx0f;
+
+    invoke-virtual {p1}, Lhab;->r()Lu18;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lx0f;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

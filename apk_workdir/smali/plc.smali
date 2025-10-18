@@ -3,4 +3,8 @@
 
 
 # static fields
-.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d16
+.field public static fast_forward_24:I = 0x7f0803ef
+
+.field public static fast_rewind_24:I = 0x7f0803f0
+
+.field public static save_to_gallery_24:I = 0x7f080968

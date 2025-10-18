@@ -1,3 +1,3 @@
 .class public final Loi;
-.super Ludi;
+.super Lvei;
 .source "SourceFile"

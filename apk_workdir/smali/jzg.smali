@@ -1,9 +1,25 @@
-.class public final Ljzg;
+.class public abstract Ljzg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# direct methods
+.method public static a(Landroid/view/ViewConfiguration;)I
+    .locals 0
 
-.field public b:F
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHoverSlop()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/view/ViewConfiguration;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->shouldShowMenuShortcutsWhenKeyboardPresent()Z
+
+    move-result p0
+
+    return p0
+.end method

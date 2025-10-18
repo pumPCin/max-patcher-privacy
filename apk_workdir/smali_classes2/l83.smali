@@ -1,60 +1,90 @@
-.class public interface abstract Ll83;
+.class public final Ll83;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltad;
+.implements Lxo3;
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public g:I
+
+.field public h:I
 
 
 # virtual methods
-.method public b()Z
-    .locals 4
+.method public final a()J
+    .locals 2
 
-    move-object v0, p0
+    iget-wide v0, p0, Ll83;->f:J
 
-    check-cast v0, Lg68;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0}, Lgsd;->s()J
+.method public final b()J
+    .locals 2
 
-    move-result-wide v1
+    const-wide v0, 0x7fffffffffffffffL
 
-    const-string v3, "app.pin_"
+    return-wide v0
+.end method
 
-    invoke-static {v1, v2, v3}, Lyy8;->d(JLjava/lang/String;)Ljava/lang/String;
+.method public final c()J
+    .locals 2
 
-    move-result-object v1
+    iget-wide v0, p0, Ll83;->e:J
 
-    const/4 v2, 0x0
+    return-wide v0
+.end method
 
-    iget-object v0, v0, Lw3;->h:Lot7;
+.method public final d()J
+    .locals 2
 
-    invoke-virtual {v0, v1, v2}, Lot7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-wide v0, 0x7fffffffffffffffL
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    const/4 v1, 0x1
+.method public final e()I
+    .locals 1
 
-    if-eqz v0, :cond_1
+    iget v0, p0, Ll83;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    return v0
+.end method
 
-    move-result v0
+.method public final f()I
+    .locals 1
 
-    if-nez v0, :cond_0
+    iget v0, p0, Ll83;->c:I
 
-    goto :goto_0
+    return v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public final g()J
+    .locals 2
 
-    goto :goto_1
+    iget-wide v0, p0, Ll83;->d:J
 
-    :cond_1
-    :goto_0
-    move v0, v1
+    return-wide v0
+.end method
 
-    :goto_1
-    xor-int/2addr v0, v1
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Ll83;->b:I
 
     return v0
 .end method

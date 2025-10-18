@@ -1,29 +1,89 @@
-.class public final Lg98;
-.super Lh98;
+.class public abstract synthetic Lg98;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Loqf;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final d:Loqf;
-
-.field public final e:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Loqf;Loqf;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x0
+    const/4 v0, 0x3
 
-    invoke-direct {p0, v0}, Lh98;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    iput-object p1, p0, Lg98;->c:Loqf;
+    move-result-object v1
 
-    iput-object p2, p0, Lg98;->d:Loqf;
+    array-length v1, v1
 
-    iput p3, p0, Lg98;->e:I
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v4, 0x2
+
+    :try_start_1
+    aput v4, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    aput v0, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v1, Lg98;->$EnumSwitchMapping$0:[I
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ldy1;->y(I)[I
+
+    move-result-object v5
+
+    array-length v5, v5
+
+    new-array v5, v5, [I
+
+    :try_start_3
+    aput v2, v5, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    aput v4, v5, v4
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    aput v0, v5, v0
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    aput v1, v5, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v5, Lg98;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

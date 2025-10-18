@@ -1,289 +1,128 @@
 .class public final Lb92;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:I
+.field public X:I
 
-.field public final b:I
+.field public final synthetic Y:Le92;
 
-.field public final c:[F
+.field public final synthetic Z:Lvy5;
 
-.field public final d:Z
-
-.field public final e:Z
+.field public final synthetic q0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(II[F)V
-    .locals 10
+.method public constructor <init>(Le92;Lvy5;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb92;->Y:Le92;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lb92;->Z:Lvy5;
 
-    const/4 v1, 0x1
+    iput-object p3, p0, Lb92;->q0:Ljava/lang/Object;
 
-    if-lez p1, :cond_0
+    const/4 p1, 0x2
 
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    const-string v3, "Input channel count must be positive."
-
-    invoke-static {v3, v2}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    if-lez p2, :cond_1
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v0
-
-    :goto_1
-    const-string v3, "Output channel count must be positive."
-
-    invoke-static {v3, v2}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    array-length v2, p3
-
-    mul-int v3, p1, p2
-
-    if-ne v2, v3, :cond_2
-
-    move v2, v1
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v0
-
-    :goto_2
-    const-string v3, "Coefficient array length is invalid."
-
-    invoke-static {v3, v2}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    iput p1, p0, Lb92;->a:I
-
-    iput p2, p0, Lb92;->b:I
-
-    move v2, v0
-
-    :goto_3
-    array-length v3, p3
-
-    const/4 v4, 0x0
-
-    if-ge v2, v3, :cond_4
-
-    aget v3, p3, v2
-
-    cmpg-float v3, v3, v4
-
-    if-ltz v3, :cond_3
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Coefficient at index "
-
-    const-string p3, " is negative."
-
-    invoke-static {v2, p2, p3}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    iput-object p3, p0, Lb92;->c:[F
-
-    move p3, v0
-
-    move v2, v1
-
-    move v3, v2
-
-    move v5, v3
-
-    :goto_4
-    if-ge p3, p1, :cond_9
-
-    move v6, v0
-
-    :goto_5
-    if-ge v6, p2, :cond_8
-
-    iget-object v7, p0, Lb92;->c:[F
-
-    iget v8, p0, Lb92;->b:I
-
-    mul-int/2addr v8, p3
-
-    add-int/2addr v8, v6
-
-    aget v7, v7, v8
-
-    if-ne p3, v6, :cond_5
-
-    move v8, v1
-
-    goto :goto_6
-
-    :cond_5
-    move v8, v0
-
-    :goto_6
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    cmpl-float v9, v7, v9
-
-    if-eqz v9, :cond_6
-
-    if-eqz v8, :cond_6
-
-    move v5, v0
-
-    :cond_6
-    cmpl-float v7, v7, v4
-
-    if-eqz v7, :cond_7
-
-    move v2, v0
-
-    if-nez v8, :cond_7
-
-    move v3, v2
-
-    :cond_7
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_5
-
-    :cond_8
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_4
-
-    :cond_9
-    iput-boolean v2, p0, Lb92;->d:Z
-
-    iget p1, p0, Lb92;->a:I
-
-    iget p2, p0, Lb92;->b:I
-
-    if-ne p1, p2, :cond_a
-
-    if-eqz v3, :cond_a
-
-    if-eqz v5, :cond_a
-
-    move v0, v1
-
-    :cond_a
-    iput-boolean v0, p0, Lb92;->e:Z
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(II)Lb92;
-    .locals 5
 
-    new-instance v0, Lb92;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lq54;
 
-    mul-int v1, p1, p1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-array v1, v1, [F
+    invoke-virtual {p0, p1, p2}, Lb92;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    :goto_0
-    if-ge v2, p1, :cond_2
+    check-cast p1, Lb92;
 
-    mul-int v3, p1, v2
+    sget-object p2, Lccg;->a:Lccg;
 
-    add-int/2addr v3, v2
+    invoke-virtual {p1, p2}, Lb92;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    move-result-object p1
 
-    aput v4, v1, v3
+    return-object p1
+.end method
 
-    add-int/lit8 v2, v2, 0x1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lb92;
+
+    iget-object v0, p0, Lb92;->Z:Lvy5;
+
+    iget-object v1, p0, Lb92;->q0:Ljava/lang/Object;
+
+    iget-object v2, p0, Lb92;->Y:Le92;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lb92;-><init>(Le92;Lvy5;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lb92;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v2, 0x1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-ne p0, v2, :cond_1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-ne p1, v1, :cond_1
-
-    new-array v1, v1, [F
-
-    fill-array-data v1, :array_0
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    if-ne p0, v1, :cond_3
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-ne p1, v2, :cond_3
+    iget-object p1, p0, Lb92;->Y:Le92;
 
-    new-array v1, v1, [F
+    iget-object p1, p1, Le92;->X:Lsgf;
 
-    fill-array-data v1, :array_1
+    iput v1, p0, Lb92;->X:I
 
-    :cond_2
-    :goto_1
-    invoke-direct {v0, p0, p1, v1}, Lb92;-><init>(II[F)V
+    iget-object v0, p0, Lb92;->Z:Lvy5;
+
+    iget-object v1, p0, Lb92;->q0:Ljava/lang/Object;
+
+    invoke-interface {p1, v0, v1, p0}, Lbj6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :cond_3
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v1, "->"
-
-    const-string v2, " are not yet implemented."
-
-    const-string v3, "Default channel mixing coefficients for "
-
-    invoke-static {v3, p0, v1, p1, v2}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3f000000    # 0.5f
-        0x3f000000    # 0.5f
-    .end array-data
+    return-object p1
 .end method

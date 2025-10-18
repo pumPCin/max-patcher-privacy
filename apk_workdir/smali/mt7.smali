@@ -3,96 +3,111 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvdc;
+.implements Ljava/lang/Comparable;
 
 
 # static fields
-.field public static final c:Ljava/lang/Object;
+.field public static final b:Lmt7;
 
 
 # instance fields
-.field public volatile a:Ljava/lang/Object;
-
-.field public volatile b:Lvdc;
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Lmt7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lmt7;-><init>()V
 
-    sput-object v0, Lmt7;->c:Ljava/lang/Object;
+    sput-object v0, Lmt7;->b:Lmt7;
 
     return-void
 .end method
 
-.method public constructor <init>(Lvdc;)V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lmt7;->c:Ljava/lang/Object;
+    const/high16 v0, 0x20000
 
-    iput-object v0, p0, Lmt7;->a:Ljava/lang/Object;
-
-    iput-object p1, p0, Lmt7;->b:Lvdc;
+    iput v0, p0, Lmt7;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object v0, p0, Lmt7;->a:Ljava/lang/Object;
+    check-cast p1, Lmt7;
 
-    sget-object v1, Lmt7;->c:Ljava/lang/Object;
+    iget v0, p0, Lmt7;->a:I
 
-    if-ne v0, v1, :cond_1
+    iget p1, p1, Lmt7;->a:I
 
-    monitor-enter p0
+    sub-int/2addr v0, p1
 
-    :try_start_0
-    iget-object v0, p0, Lmt7;->a:Ljava/lang/Object;
+    return v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lmt7;->b:Lvdc;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lvdc;->get()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    iput-object v0, p0, Lmt7;->a:Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lmt7;
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_1
 
-    iput-object v1, p0, Lmt7;->b:Lvdc;
+    check-cast p1, Lmt7;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
     :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_2
+
+    return v1
+
+    :cond_2
+    iget v2, p0, Lmt7;->a:I
+
+    iget p1, p1, Lmt7;->a:I
+
+    if-ne v2, p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lmt7;->a:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "2.0.0"
+
     return-object v0
 .end method

@@ -1,213 +1,78 @@
 .class public final Ldi9;
-.super Lf3;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyed;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    iput p2, p0, Ldi9;->o:I
+    iput-object p2, p0, Ldi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Lyed;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldi9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldi9;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ldi9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ldi9;
+
+    iget-object v1, p0, Ldi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {v0, p2, v1}, Ldi9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+
+    iput-object p1, v0, Ldi9;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ldi9;->o:I
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Ldi9;->X:Ljava/lang/Object;
 
-    const-string v0, "DELETE FROM folder_and_chats"
+    check-cast p1, Lkg9;
 
-    return-object v0
+    iget-object v0, p0, Ldi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    :pswitch_0
-    const-string v0, "INSERT OR REPLACE INTO folder_and_chats VALUES (?, ?)"
+    invoke-static {v0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0(Lone/me/sdk/messagewrite/MessageWriteWidget;Lkg9;)V
 
-    return-object v0
+    sget-object p1, Lccg;->a:Lccg;
 
-    :pswitch_1
-    const-string v0, "DELETE FROM folder_and_chats WHERE folderId = ?"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "DELETE FROM chat_folder"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "DELETE FROM recent"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "DELETE FROM reactions_section"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "DELETE FROM profile"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "DELETE FROM phones WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "DELETE FROM phones"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "UPDATE phones SET server_phone = ?, type = ? WHERE phone = ?"
-
-    return-object v0
-
-    :pswitch_9
-    const-string v0, "DELETE FROM notifications_tracker_messages"
-
-    return-object v0
-
-    :pswitch_a
-    const-string v0, "DELETE FROM notifications_tracker_messages WHERE time<=?"
-
-    return-object v0
-
-    :pswitch_b
-    const-string v0, "DELETE FROM notifications_read_marks"
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "DELETE FROM fcm_notifications WHERE chat_id = ?"
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "DELETE FROM fcm_notifications"
-
-    return-object v0
-
-    :pswitch_e
-    const-string v0, "DELETE FROM fcm_notifications WHERE time <= ? AND chat_id = ?"
-
-    return-object v0
-
-    :pswitch_f
-    const-string v0, "DELETE FROM fcm_notifications WHERE time <= ?"
-
-    return-object v0
-
-    :pswitch_10
-    const-string v0, "UPDATE messages SET delivery_status = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_11
-    const-string v0, "UPDATE messages SET chat_id = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_12
-    const-string v0, "DELETE FROM messages WHERE media_type = ?"
-
-    return-object v0
-
-    :pswitch_13
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND server_id = 0 AND time_local >= ? AND time_local <= ?"
-
-    return-object v0
-
-    :pswitch_14
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL"
-
-    return-object v0
-
-    :pswitch_15
-    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND time <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL"
-
-    return-object v0
-
-    :pswitch_16
-    const-string v0, "DELETE FROM messages"
-
-    return-object v0
-
-    :pswitch_17
-    const-string v0, "DELETE FROM messages WHERE chat_id = ?"
-
-    return-object v0
-
-    :pswitch_18
-    const-string v0, "UPDATE messages SET delayed_attrs_time_to_fire = ? AND delayed_attrs_notify_sender = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_19
-    const-string v0, "UPDATE messages SET reactions = ? WHERE server_id = ?"
-
-    return-object v0
-
-    :pswitch_1a
-    const-string v0, "UPDATE messages SET channel_views = ?, channel_forwards = ? WHERE server_id = ?"
-
-    return-object v0
-
-    :pswitch_1b
-    const-string v0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time >= ? AND time <= ?"
-
-    return-object v0
-
-    :pswitch_1c
-    const-string v0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time <= ?"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

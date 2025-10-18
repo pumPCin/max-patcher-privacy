@@ -1,153 +1,144 @@
 .class public final Lzge;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/lang/Comparable;
+
+
+# static fields
+.field public static final X:Lzge;
+
+.field public static final Y:Lzge;
+
+.field public static final Z:Lzge;
+
+.field public static final c:Lzge;
+
+.field public static final o:Lzge;
+
+.field public static final q0:Lzge;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ljic;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljic;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lzge;
+
+    const-string v1, "FATAL"
+
+    const/16 v2, 0x2328
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->c:Lzge;
+
+    new-instance v0, Lzge;
+
+    const-string v1, "ERROR"
+
+    const/16 v2, 0x1770
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->o:Lzge;
+
+    new-instance v0, Lzge;
+
+    const-string v1, "WARNING"
+
+    const/16 v2, 0x1388
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->X:Lzge;
+
+    new-instance v0, Lzge;
+
+    const-string v1, "NOTICE"
+
+    const/16 v2, 0xfa0
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->Y:Lzge;
+
+    new-instance v0, Lzge;
+
+    const-string v1, "INFO"
+
+    const/16 v2, 0xbb8
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->Z:Lzge;
+
+    new-instance v0, Lzge;
+
+    const-string v1, "DEBUG"
+
+    const/16 v2, 0x7d0
+
+    invoke-direct {v0, v1, v2}, Lzge;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzge;->q0:Lzge;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lzge;->Y:Ljic;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lzge;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lzge;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lnge;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lzge;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
     check-cast p1, Lzge;
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget v0, p0, Lzge;->b:I
 
-    invoke-virtual {p1, p2}, Lzge;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p1, Lzge;->b:I
 
-    return-object p2
+    invoke-static {v0, p1}, Lh1i;->b(II)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lzge;
+    iget-object v0, p0, Lzge;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lzge;->Y:Ljic;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, v1, p2}, Lzge;-><init>(Ljic;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lzge;->X:Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lzge;->a:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzge;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnge;
-
-    iget-object v0, p0, Lzge;->Y:Ljic;
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p1, Lnge;->a:Loqf;
-
-    iget-object v2, p1, Lnge;->b:Loqf;
-
-    move-object v3, v2
-
-    iget-object v2, p1, Lnge;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lnge;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0, v1}, Ljic;->setTitle(Ljava/lang/CharSequence;)V
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljic;->setBody(Ljava/lang/CharSequence;)V
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Ljic;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZ)V
-
-    invoke-virtual {v0, p1}, Ljic;->setCounter(Ljava/lang/Integer;)V
-
-    :goto_1
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

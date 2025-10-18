@@ -1,325 +1,275 @@
 .class public final Lujh;
-.super Landroid/widget/FrameLayout;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lxr6;
+.field public X:I
 
-.field public final b:Lsjh;
+.field public final synthetic Y:I
 
-.field public c:Z
+.field public final synthetic Z:Ljava/lang/Object;
 
-.field public o:Z
+.field public final synthetic q0:Lwjh;
 
-.field public r0:Lm3f;
+.field public final synthetic r0:Ljava/util/List;
+
+.field public s0:Lr6h;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(ILjava/lang/Object;Lkotlin/coroutines/Continuation;Lwjh;Ljava/util/List;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p1, p0, Lujh;->Y:I
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p2, p0, Lujh;->Z:Ljava/lang/Object;
 
-    new-instance v0, Lxr6;
+    iput-object p4, p0, Lujh;->q0:Lwjh;
 
-    const/16 v1, 0xf
+    iput-object p5, p0, Lujh;->r0:Ljava/util/List;
 
-    invoke-direct {v0, p1, v1}, Lxr6;-><init>(Landroid/content/Context;I)V
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Lujh;->a:Lxr6;
-
-    new-instance v1, Lsjh;
-
-    invoke-direct {v1, p1}, Lsjh;-><init>(Landroid/content/Context;)V
-
-    sget p1, Ls0b;->g:I
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setId(I)V
-
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {p1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v1, p0, Lujh;->b:Lsjh;
-
-    iget-object p1, v0, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld2f;I)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lujh;->r0:Lm3f;
+    check-cast p1, Lq54;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, p1}, Lm3f;->b(Ld2f;)V
-
-    :cond_0
-    iget-object v0, p1, Ld2f;->Y:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lujh;->a:Lxr6;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lujh;->b:Lsjh;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    new-instance v5, Ltjh;
-
-    invoke-direct {v5, v1, p0}, Ltjh;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v4, v5}, Lsjh;->setOnFirstFrameListener(Lrjh;)V
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iput-boolean v3, p0, Lujh;->c:Z
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {v4}, Lsjh;->c()V
-
-    :goto_0
-    move p2, v3
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v5, v4, Lsjh;->a:Ljava/lang/String;
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v5, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    move p2, v1
-
-    goto :goto_1
-
-    :cond_3
-    iput-boolean v3, v4, Lsjh;->b:Z
-
-    iput-object v0, v4, Lsjh;->a:Ljava/lang/String;
-
-    new-instance v5, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    invoke-direct {v5}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;-><init>()V
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setAutoStart(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setAutoRepeat(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object v5
-
-    new-instance v6, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
-
-    invoke-direct {v6}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;-><init>()V
-
-    invoke-virtual {v6, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->setUrl(Ljava/lang/String;)Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2, p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Builder;->setSize(II)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
-
-    invoke-virtual {p2, v3}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->setNetworkFetchEnabled(Z)Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url$Builder;->build()Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;
-
-    move-result-object p2
-
-    invoke-virtual {v5, p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->setWay(Lone/me/sdk/media/ffmpeg/WebmFactory$Way;)Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory$Config$Builder;->build()Lone/me/sdk/media/ffmpeg/WebmFactory$Config;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lone/me/sdk/media/ffmpeg/WebmFactory;->create(Lone/me/sdk/media/ffmpeg/WebmFactory$Config;)Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    move-result-object p2
-
-    invoke-virtual {p2, v4}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->addOnNextFrameRenderedListener(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable$OnNextFrameRenderedListener;)V
-
-    invoke-virtual {v4, p2}, Lsjh;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :goto_1
-    iput-boolean v1, p0, Lujh;->c:Z
-
-    if-eqz p2, :cond_4
-
-    iget-boolean p2, p0, Lujh;->o:Z
-
-    if-nez p2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move v3, v1
-
-    :goto_2
-    iput-boolean v1, p0, Lujh;->o:Z
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v4}, Lsjh;->c()V
-
-    const/16 p2, 0x8
-
-    invoke-virtual {v4, p2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p2, v2, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_4
-    if-eqz v3, :cond_6
-
-    iget-object p1, p1, Ld2f;->o:Ljava/lang/String;
-
-    iget-object p2, v2, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-static {p1}, Lda7;->b(Ljava/lang/String;)Lda7;
+    invoke-virtual {p0, p1, p2}, Lujh;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
+    check-cast p1, Lujh;
 
-    const/4 v0, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p2, p1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
+    invoke-virtual {p1, p2}, Lujh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p1
 
-    :cond_6
-    return-void
+    return-object p1
 .end method
 
-.method public final b(Lzb8;)V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget-object v0, p1, Lzb8;->a:Ljava/util/Set;
+    new-instance v0, Lujh;
 
-    if-nez v0, :cond_0
+    iget-object v4, p0, Lujh;->q0:Lwjh;
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    iget-object v5, p0, Lujh;->r0:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    iget v1, p0, Lujh;->Y:I
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    iget-object v2, p0, Lujh;->Z:Ljava/lang/Object;
 
-    move-result-object v0
+    move-object v3, p2
 
-    iput-object v0, p1, Lzb8;->a:Ljava/util/Set;
-
-    :cond_0
-    iget-object p1, p1, Lzb8;->a:Ljava/util/Set;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lujh;->b:Lsjh;
-
-    invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final getSizeConfigurator()Lm3f;
-    .locals 1
-
-    iget-object v0, p0, Lujh;->r0:Lm3f;
+    invoke-direct/range {v0 .. v5}, Lujh;-><init>(ILjava/lang/Object;Lkotlin/coroutines/Continuation;Lwjh;Ljava/util/List;)V
 
     return-object v0
 .end method
 
-.method public final onMeasure(II)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 21
 
-    iget-object v0, p0, Lujh;->r0:Lm3f;
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_0
+    iget v1, v0, Lujh;->X:I
 
-    invoke-virtual {v0, p1, p2}, Lm3f;->a(II)Lut;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, v0, Lujh;->t0:I
+
+    iget-object v3, v0, Lujh;->s0:Lr6h;
+
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    move v6, v1
+
+    move-object/from16 v1, p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget p1, v0, Lut;->b:I
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 
     :cond_1
-    if-eqz v0, :cond_2
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget p2, v0, Lut;->c:I
+    iget-object v1, v0, Lujh;->Z:Ljava/lang/Object;
+
+    move-object v3, v1
+
+    check-cast v3, Lr6h;
+
+    iget-object v1, v0, Lujh;->q0:Lwjh;
+
+    iget-object v1, v1, Lwjh;->o:Liu7;
+
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljq6;
+
+    iget-wide v4, v3, Lr6h;->c:J
+
+    iput-object v3, v0, Lujh;->s0:Lr6h;
+
+    iget v6, v0, Lujh;->Y:I
+
+    iput v6, v0, Lujh;->t0:I
+
+    iput v2, v0, Lujh;->X:I
+
+    sget-object v7, Lll0;->a:Lll0;
+
+    invoke-virtual {v1, v4, v5, v7, v0}, Ljq6;->a(JLll0;Ly14;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v4, Lr54;->a:Lr54;
+
+    if-ne v1, v4, :cond_2
+
+    return-object v4
 
     :cond_2
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+    :goto_0
+    check-cast v1, Lgq6;
 
-    return-void
-.end method
+    iget-object v4, v1, Lgq6;->a:Ljava/lang/String;
 
-.method public final setSizeConfigurator(Lm3f;)V
-    .locals 0
+    iget-object v5, v1, Lgq6;->b:Ljava/lang/String;
 
-    iput-object p1, p0, Lujh;->r0:Lm3f;
+    iget-object v1, v1, Lgq6;->c:Ltc0;
 
-    return-void
+    iget-wide v8, v3, Lr6h;->c:J
+
+    new-instance v11, Lsrf;
+
+    invoke-direct {v11, v4}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v14, Lru7;
+
+    invoke-direct {v14, v1, v5}, Lru7;-><init>(Ltc0;Ljava/lang/String;)V
+
+    new-instance v16, Ldde;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x198
+
+    const/4 v10, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    sget-object v15, Ljce;->a:Ljce;
+
+    move-object/from16 v7, v16
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v7 .. v18}, Ldde;-><init>(JILtrf;Lsce;Ltrf;Lsu7;Lqce;Lgce;Ltrf;I)V
+
+    iget-object v1, v0, Lujh;->r0:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_3
+
+    const/4 v2, 0x4
+
+    :goto_1
+    move/from16 v20, v2
+
+    goto :goto_2
+
+    :cond_3
+    if-nez v6, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {v1}, Lob3;->d(Ljava/util/List;)I
+
+    move-result v1
+
+    if-ne v6, v1, :cond_5
+
+    const/4 v2, 0x3
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v2, 0x2
+
+    goto :goto_1
+
+    :goto_2
+    new-instance v15, Lljh;
+
+    sget-object v1, Llch;->c:Llch;
+
+    iget-wide v4, v3, Lr6h;->c:J
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, ":settings/webapp?bot_id="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lwf4;
+
+    invoke-direct {v2, v1}, Lwf4;-><init>(Ljava/lang/String;)V
+
+    iget-wide v3, v3, Lr6h;->c:J
+
+    move-object/from16 v17, v2
+
+    move-wide/from16 v18, v3
+
+    move-object/from16 v16, v7
+
+    invoke-direct/range {v15 .. v20}, Lljh;-><init>(Ldde;Lwf4;JI)V
+
+    return-object v15
 .end method

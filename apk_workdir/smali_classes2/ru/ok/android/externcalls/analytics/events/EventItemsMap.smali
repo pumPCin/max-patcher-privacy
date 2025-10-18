@@ -18,9 +18,9 @@
         "Lru/ok/android/externcalls/analytics/events/EventItemValue;",
         "items",
         "(Ljava/util/Map;)V",
-        "Lqbb;",
+        "Ltcb;",
         "item",
-        "(Lqbb;)V",
+        "(Ltcb;)V",
         "key",
         "value",
         "set",
@@ -106,12 +106,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lqbb;)V
+.method public constructor <init>(Ltcb;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqbb;",
+            "Ltcb;",
             ")V"
         }
     .end annotation
@@ -120,13 +120,13 @@
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
 
     .line 6
-    iget-object v0, p1, Lqbb;->a:Ljava/lang/Object;
+    iget-object v0, p1, Ltcb;->a:Ljava/lang/Object;
 
     .line 7
     check-cast v0, Ljava/lang/String;
 
     .line 8
-    iget-object p1, p1, Lqbb;->b:Ljava/lang/Object;
+    iget-object p1, p1, Ltcb;->b:Ljava/lang/Object;
 
     .line 9
     check-cast p1, Lru/ok/android/externcalls/analytics/events/EventItemValue;

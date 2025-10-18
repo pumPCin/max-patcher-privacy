@@ -1,48 +1,73 @@
 .class public final Lfa8;
-.super Lk14;
+.super Luj0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final X:Ls0a;
 
-.field public final synthetic Y:Ll23;
+.field public final b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Ll23;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JZZZLs0a;)V
     .locals 0
 
-    iput-object p1, p0, Lfa8;->Y:Ll23;
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lfa8;->b:Z
+
+    iput-boolean p4, p0, Lfa8;->c:Z
+
+    iput-boolean p5, p0, Lfa8;->o:Z
+
+    iput-object p6, p0, Lfa8;->X:Ls0a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    iput-object p1, p0, Lfa8;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lfa8;->X:Ls0a;
 
-    iget p1, p0, Lfa8;->X:I
+    iget v0, v0, Ls0a;->d:I
 
-    const/high16 v0, -0x80000000
+    const-string v1, "LoginEvent(requestId="
 
-    or-int/2addr p1, v0
+    const-string v2, ", isFirstLogin="
 
-    iput p1, p0, Lfa8;->X:I
+    iget-wide v3, p0, Luj0;->a:J
 
-    iget-object p1, p0, Lfa8;->Y:Ll23;
+    iget-boolean v5, p0, Lfa8;->b:Z
 
-    const/4 v0, 0x0
+    invoke-static {v3, v4, v1, v2, v5}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Ll23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    const-string v2, ", hasNewMessages="
 
-    return-object p1
+    const-string v3, ", videoChatHistory="
+
+    iget-boolean v4, p0, Lfa8;->c:Z
+
+    iget-boolean v5, p0, Lfa8;->o:Z
+
+    invoke-static {v2, v3, v1, v4, v5}, Lzb3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v2, ", chats="
+
+    const-string v3, ")"
+
+    invoke-static {v1, v2, v0, v3}, Lzb3;->c(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

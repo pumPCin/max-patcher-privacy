@@ -25,11 +25,11 @@
     :cond_1
     check-cast p1, Ll9;
 
-    sget v1, Ltya;->a:I
+    sget v1, Lvza;->a:I
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget p1, Lvya;->a:I
+    sget p1, Lxza;->a:I
 
     return v0
 .end method
@@ -37,7 +37,7 @@
 .method public final hashCode()I
     .locals 3
 
-    sget v0, Ltya;->c:I
+    sget v0, Lvza;->c:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -47,15 +47,15 @@
 
     mul-int/2addr v0, v1
 
-    sget v2, Lvya;->R:I
+    sget v2, Lxza;->R:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    invoke-static {v1}, Lwx1;->v(I)I
+    invoke-static {v1}, Ldy1;->v(I)I
 
     move-result v1
 
@@ -67,9 +67,9 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    sget v0, Ltya;->c:I
+    sget v0, Lvza;->c:I
 
-    sget v1, Lvya;->R:I
+    sget v1, Lxza;->R:I
 
     const-string v2, ", title="
 
@@ -77,7 +77,7 @@
 
     const-string v4, "AddAdminsTabState(id="
 
-    invoke-static {v4, v0, v2, v1, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v0, v2, v1, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

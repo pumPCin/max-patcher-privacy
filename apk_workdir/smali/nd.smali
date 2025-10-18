@@ -6,19 +6,19 @@
 # instance fields
 .field public final a:J
 
-.field public final b:Louf;
+.field public final b:Ltvf;
 
 .field public final c:I
 
-.field public final d:Ly09;
+.field public final d:Lz19;
 
 .field public final e:J
 
-.field public final f:Louf;
+.field public final f:Ltvf;
 
 .field public final g:I
 
-.field public final h:Ly09;
+.field public final h:Lz19;
 
 .field public final i:J
 
@@ -26,26 +26,26 @@
 
 
 # direct methods
-.method public constructor <init>(JLouf;ILy09;JLouf;ILy09;JJ)V
+.method public constructor <init>(JLtvf;ILz19;JLtvf;ILz19;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lnd;->a:J
 
-    iput-object p3, p0, Lnd;->b:Louf;
+    iput-object p3, p0, Lnd;->b:Ltvf;
 
     iput p4, p0, Lnd;->c:I
 
-    iput-object p5, p0, Lnd;->d:Ly09;
+    iput-object p5, p0, Lnd;->d:Lz19;
 
     iput-wide p6, p0, Lnd;->e:J
 
-    iput-object p8, p0, Lnd;->f:Louf;
+    iput-object p8, p0, Lnd;->f:Ltvf;
 
     iput p9, p0, Lnd;->g:I
 
-    iput-object p10, p0, Lnd;->h:Ly09;
+    iput-object p10, p0, Lnd;->h:Lz19;
 
     iput-wide p11, p0, Lnd;->i:J
 
@@ -127,19 +127,9 @@
 
     if-nez v2, :cond_2
 
-    iget-object v2, p0, Lnd;->b:Louf;
+    iget-object v2, p0, Lnd;->b:Ltvf;
 
-    iget-object v3, p1, Lnd;->b:Louf;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lnd;->d:Ly09;
-
-    iget-object v3, p1, Lnd;->d:Ly09;
+    iget-object v3, p1, Lnd;->b:Ltvf;
 
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -147,9 +137,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lnd;->f:Louf;
+    iget-object v2, p0, Lnd;->d:Lz19;
 
-    iget-object v3, p1, Lnd;->f:Louf;
+    iget-object v3, p1, Lnd;->d:Lz19;
 
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -157,9 +147,19 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lnd;->h:Ly09;
+    iget-object v2, p0, Lnd;->f:Ltvf;
 
-    iget-object p1, p1, Lnd;->h:Ly09;
+    iget-object v3, p1, Lnd;->f:Ltvf;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lnd;->h:Lz19;
+
+    iget-object p1, p1, Lnd;->h:Lz19;
 
     invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -213,13 +213,13 @@
 
     move-result-object v11
 
-    iget-object v3, p0, Lnd;->b:Louf;
+    iget-object v3, p0, Lnd;->b:Ltvf;
 
-    iget-object v5, p0, Lnd;->d:Ly09;
+    iget-object v5, p0, Lnd;->d:Lz19;
 
-    iget-object v7, p0, Lnd;->f:Louf;
+    iget-object v7, p0, Lnd;->f:Ltvf;
 
-    iget-object v9, p0, Lnd;->h:Ly09;
+    iget-object v9, p0, Lnd;->h:Lz19;
 
     filled-new-array/range {v2 .. v11}, [Ljava/lang/Object;
 

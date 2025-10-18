@@ -1,93 +1,59 @@
-.class public final enum Lita;
-.super Ljava/lang/Enum;
+.class public final Lita;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lita;
+# instance fields
+.field public X:Lpb9;
 
-.field public static final enum b:Lita;
+.field public Y:Lsz;
 
-.field public static final enum c:Lita;
+.field public Z:Z
 
-.field public static final synthetic o:[Lita;
+.field public o:Lota;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lota;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lota;Ly14;)V
+    .locals 0
 
-    new-instance v0, Lita;
+    iput-object p1, p0, Lita;->r0:Lota;
 
-    const-string v1, "Themed"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lita;->a:Lita;
-
-    new-instance v1, Lita;
-
-    const-string v2, "ContrastPinned"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lita;
-
-    const-string v3, "NeutralFade"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lita;->b:Lita;
-
-    new-instance v3, Lita;
-
-    const-string v4, "AccentRed"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lita;->c:Lita;
-
-    filled-new-array {v0, v1, v2, v3}, [Lita;
-
-    move-result-object v0
-
-    sput-object v0, Lita;->o:[Lita;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lita;
-    .locals 1
 
-    const-class v0, Lita;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lita;->q0:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lita;->s0:I
 
-    check-cast p0, Lita;
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public static values()[Lita;
-    .locals 1
+    iput p1, p0, Lita;->s0:I
 
-    sget-object v0, Lita;->o:[Lita;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iget-object v1, p0, Lita;->r0:Lota;
 
-    check-cast v0, [Lita;
+    invoke-virtual {v1, p1, p1, v0, p0}, Lota;->d(Lpb9;Lsz;ZLy14;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

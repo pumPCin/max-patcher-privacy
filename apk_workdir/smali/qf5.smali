@@ -1,239 +1,81 @@
 .class public final Lqf5;
-.super Lqnd;
+.super Lp0;
 .source "SourceFile"
 
+# interfaces
+.implements Ll54;
 
-# instance fields
-.field public final c:Z
 
-.field public final d:Ljava/util/concurrent/Executor;
+# static fields
+.field public static final a:Lqf5;
+
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqf5;
 
-    iput-object p1, p0, Lqf5;->d:Ljava/util/concurrent/Executor;
+    sget-object v1, Lxea;->b:Lxea;
 
-    iput-boolean p2, p0, Lqf5;->c:Z
+    invoke-direct {v0, v1}, Lp0;-><init>(Lh54;)V
+
+    sput-object v0, Lqf5;->a:Lqf5;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lqf5;->b:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lond;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lof5;
+    instance-of v0, p1, Lqf5;
 
-    iget-object v1, p0, Lqf5;->d:Ljava/util/concurrent/Executor;
+    if-nez v0, :cond_1
 
-    iget-boolean v2, p0, Lqf5;->c:Z
+    instance-of p1, p1, Lrf5;
 
-    invoke-direct {v0, v1, v2}, Lof5;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/Runnable;)Lev4;
-    .locals 3
-
-    iget-object v0, p0, Lqf5;->d:Ljava/util/concurrent/Executor;
-
-    :try_start_0
-    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-boolean v2, p0, Lqf5;->c:Z
-
-    if-eqz v1, :cond_0
-
-    :try_start_1
-    new-instance v1, Lqmd;
-
-    invoke-direct {v1, p1, v2}, Ls0;-><init>(Ljava/lang/Runnable;Z)V
-
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ls0;->a(Ljava/util/concurrent/Future;)V
-
-    return-object v1
-
-    :catch_0
-    move-exception p1
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz v2, :cond_1
+    const/4 p1, 0x0
 
-    new-instance v1, Lnf5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lnf5;-><init>(Ljava/lang/Runnable;Lfv4;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-object v1
+    return p1
 
     :cond_1
-    new-instance v1, Lmf5;
-
-    invoke-direct {v1, p1}, Lmf5;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-object v1
-
     :goto_0
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+    const/4 p1, 0x1
 
-    sget-object p1, Ln95;->a:Ln95;
-
-    return-object p1
+    return p1
 .end method
 
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
-    .locals 4
+.method public final i(Li54;Ljava/lang/Throwable;)V
+    .locals 0
 
-    const-string v0, "run is null"
+    sget-object p1, Lqf5;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    monitor-enter p1
 
-    iget-object v0, p0, Lqf5;->d:Ljava/util/concurrent/Executor;
+    monitor-exit p1
 
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v1, :cond_0
-
-    :try_start_0
-    new-instance v1, Lqmd;
-
-    iget-boolean v2, p0, Lqf5;->c:Z
-
-    invoke-direct {v1, p1, v2}, Ls0;-><init>(Ljava/lang/Runnable;Z)V
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ls0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    :catch_0
-    move-exception p1
-
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    sget-object p1, Ln95;->a:Ln95;
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Llf5;
-
-    invoke-direct {v0, p1}, Llf5;-><init>(Ljava/lang/Runnable;)V
-
-    sget-object p1, Lpf5;->a:Lqnd;
-
-    new-instance v1, Lmj6;
-
-    const/4 v2, 0x7
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, v0, v3, v2}, Lmj6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p1, v1, p2, p3, p4}, Lqnd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
-
-    move-result-object p1
-
-    iget-object p2, v0, Llf5;->a:Li32;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p2, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-object v0
-.end method
-
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
-    .locals 9
-
-    iget-object v0, p0, Lqf5;->d:Ljava/util/concurrent/Executor;
-
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v1, :cond_0
-
-    :try_start_0
-    new-instance v3, Lpmd;
-
-    iget-boolean v1, p0, Lqf5;->c:Z
-
-    invoke-direct {v3, p1, v1}, Ls0;-><init>(Ljava/lang/Runnable;Z)V
-
-    move-object v2, v0
-
-    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-wide v4, p2
-
-    move-wide v6, p4
-
-    move-object v8, p6
-
-    invoke-interface/range {v2 .. v8}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    invoke-virtual {v3, p1}, Ls0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v3
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    sget-object p1, Ln95;->a:Ln95;
-
-    return-object p1
-
-    :cond_0
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-wide v3, p2
-
-    move-wide v5, p4
-
-    move-object v7, p6
-
-    invoke-super/range {v1 .. v7}, Lqnd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

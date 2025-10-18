@@ -1,73 +1,76 @@
-.class public abstract Lmwa;
+.class public final synthetic Lmwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Liu7;
 
-.field public static final d:I
+.field public final synthetic c:Liu7;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic o:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Liu7;Liu7;Liu7;I)V
+    .locals 0
 
-    sget v0, Lwmc;->oneme_main_bottom_bar:I
+    iput p4, p0, Lmwa;->a:I
 
-    sput v0, Lmwa;->a:I
+    iput-object p1, p0, Lmwa;->b:Liu7;
 
-    sget v0, Lwmc;->oneme_main_calls_bottom_item:I
+    iput-object p2, p0, Lmwa;->c:Liu7;
 
-    sput v0, Lmwa;->b:I
+    iput-object p3, p0, Lmwa;->o:Liu7;
 
-    sget v0, Lwmc;->oneme_main_calls_container:I
-
-    sput v0, Lmwa;->c:I
-
-    sget v0, Lwmc;->oneme_main_chats_bottom_item:I
-
-    sput v0, Lmwa;->d:I
-
-    sget v0, Lwmc;->oneme_main_chats_container:I
-
-    sput v0, Lmwa;->e:I
-
-    sget v0, Lwmc;->oneme_main_contacts_bottom_item:I
-
-    sput v0, Lmwa;->f:I
-
-    sget v0, Lwmc;->oneme_main_contacts_container:I
-
-    sput v0, Lmwa;->g:I
-
-    sget v0, Lwmc;->oneme_main_root:I
-
-    sput v0, Lmwa;->h:I
-
-    sget v0, Lwmc;->oneme_main_settings_bottom_item:I
-
-    sput v0, Lmwa;->i:I
-
-    sget v0, Lwmc;->oneme_main_settings_container:I
-
-    sput v0, Lmwa;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lmwa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lyrg;
+
+    iget-object v1, p0, Lmwa;->b:Liu7;
+
+    iget-object v2, p0, Lmwa;->c:Liu7;
+
+    iget-object v3, p0, Lmwa;->o:Liu7;
+
+    invoke-direct {v0, v1, v2, v3}, Lyrg;-><init>(Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lts9;
+
+    iget-object v1, p0, Lmwa;->b:Liu7;
+
+    iget-object v2, p0, Lmwa;->c:Liu7;
+
+    iget-object v3, p0, Lmwa;->o:Liu7;
+
+    invoke-direct {v0, v1, v2, v3}, Lts9;-><init>(Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

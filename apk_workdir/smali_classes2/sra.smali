@@ -1,115 +1,73 @@
-.class public abstract Lsra;
-.super Ljava/lang/Object;
+.class public final enum Lsra;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Lsra;
 
-.field public static final b:I
+.field public static final enum b:Lsra;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
+.field public static final synthetic c:[Lsra;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    sget v0, Lgrc;->contact_list_confirm_contact_block_action:I
+    new-instance v0, Lsra;
 
-    sput v0, Lsra;->a:I
+    const-string v1, "PRIMARY"
 
-    sget v0, Lgrc;->contact_list_confirm_contact_block_description:I
+    const/4 v2, 0x0
 
-    sput v0, Lsra;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lgrc;->contact_list_confirm_contact_block_title:I
+    sput-object v0, Lsra;->a:Lsra;
 
-    sput v0, Lsra;->c:I
+    new-instance v1, Lsra;
 
-    sget v0, Lgrc;->contact_list_confirm_contact_delete_action:I
+    const-string v2, "SECONDARY"
 
-    sput v0, Lsra;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lgrc;->contact_list_confirm_contact_delete_title:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lsra;->e:I
+    sput-object v1, Lsra;->b:Lsra;
 
-    sget v0, Lgrc;->contact_list_contact_block_snackbar_title:I
+    filled-new-array {v0, v1}, [Lsra;
 
-    sput v0, Lsra;->f:I
+    move-result-object v0
 
-    sget v0, Lgrc;->contact_list_contact_delete_snackbar_title:I
-
-    sput v0, Lsra;->g:I
-
-    sget v0, Lgrc;->contact_list_menu_item_add_contact:I
-
-    sput v0, Lsra;->h:I
-
-    sget v0, Lgrc;->contact_list_search_hint:I
-
-    sput v0, Lsra;->i:I
-
-    sget v0, Lgrc;->contact_list_search_hint_with_nick:I
-
-    sput v0, Lsra;->j:I
-
-    sget v0, Lgrc;->empty_contact_list_description:I
-
-    sput v0, Lsra;->k:I
-
-    sget v0, Lgrc;->empty_contact_list_title:I
-
-    sput v0, Lsra;->l:I
-
-    sget v0, Lgrc;->empty_search_contact_btn_title:I
-
-    sput v0, Lsra;->m:I
-
-    sget v0, Lgrc;->empty_search_contact_disabled_description:I
-
-    sput v0, Lsra;->n:I
-
-    sget v0, Lgrc;->empty_search_contact_enabled_description:I
-
-    sput v0, Lsra;->o:I
-
-    sget v0, Lgrc;->empty_search_contact_title:I
-
-    sput v0, Lsra;->p:I
-
-    sget v0, Lgrc;->snackbar_self_title:I
-
-    sput v0, Lsra;->q:I
+    sput-object v0, Lsra;->c:[Lsra;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lsra;
+    .locals 1
+
+    const-class v0, Lsra;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lsra;
+
+    return-object p0
+.end method
+
+.method public static values()[Lsra;
+    .locals 1
+
+    sget-object v0, Lsra;->c:[Lsra;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsra;
+
+    return-object v0
 .end method

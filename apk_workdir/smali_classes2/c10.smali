@@ -6,18 +6,60 @@
 # instance fields
 .field public a:J
 
-.field public b:Ljava/lang/String;
+.field public b:Ljava/lang/Object;
 
-.field public c:J
+.field public c:Ljava/lang/Object;
 
-.field public d:[B
+.field public d:Ljava/lang/Object;
 
-.field public e:Ljava/lang/String;
+.field public e:I
 
-.field public f:Ljava/lang/String;
+.field public f:J
 
-.field public g:J
+.field public g:Ljava/lang/Object;
 
-.field public h:J
 
-.field public i:I
+# direct methods
+.method public constructor <init>(Lc10;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v0, p1, Lc10;->a:J
+
+    iput-wide v0, p0, Lc10;->a:J
+
+    iget-object v0, p1, Lc10;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lc10;->b:Ljava/lang/Object;
+
+    iget-object v0, p1, Lc10;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lc10;->c:Ljava/lang/Object;
+
+    iget-object v0, p1, Lc10;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lc10;->d:Ljava/lang/Object;
+
+    iget v0, p1, Lc10;->e:I
+
+    iput v0, p0, Lc10;->e:I
+
+    iget-wide v0, p1, Lc10;->f:J
+
+    iput-wide v0, p0, Lc10;->f:J
+
+    iget-object p1, p1, Lc10;->g:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lc10;->g:Ljava/lang/Object;
+
+    return-void
+.end method

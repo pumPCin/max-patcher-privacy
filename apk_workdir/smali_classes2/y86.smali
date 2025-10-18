@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:La96;
-
-.field public final synthetic c:Lj4b;
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(La96;Lj4b;I)V
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
     .locals 0
 
-    iput p3, p0, Ly86;->a:I
+    iput p2, p0, Ly86;->a:I
 
-    iput-object p1, p0, Ly86;->b:La96;
-
-    iput-object p2, p0, Ly86;->c:Lj4b;
+    iput-object p1, p0, Ly86;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,72 +27,101 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    iget v0, p0, Ly86;->a:I
+    iget p1, p0, Ly86;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Ly86;->b:La96;
+    iget-object v1, p0, Ly86;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    iget-object v1, v0, La96;->X:Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast v1, Lz86;
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
 
-    if-eqz v1, :cond_0
+    invoke-static {v1}, Lhuh;->b(Ll24;)V
 
-    iget-object v2, p0, Ly86;->c:Lj4b;
+    sget-object p1, Lt66;->c:Lt66;
 
-    invoke-virtual {v2, v1}, Lcom/google/android/material/tabs/TabLayout;->k(Lkjf;)V
+    iget-object v2, v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lqs;
 
-    :cond_0
-    const/4 v1, 0x0
+    sget-object v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
 
-    iput-object v1, v0, La96;->X:Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    iput-object v1, v0, La96;->Y:Ljava/lang/Object;
+    aget-object v3, v3, v4
 
-    iget-object v2, v0, La96;->v0:Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    check-cast v2, Lsv;
+    move-result-object v1
 
-    iget-object v3, v2, Lsv;->f:Ljava/util/List;
+    check-cast v1, Ljava/lang/Number;
 
-    iput-object v3, v0, La96;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    invoke-virtual {v2, v1, v1}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    move-result-wide v1
 
-    :goto_0
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-virtual {p1}, Lrdi;->q0()Lag4;
 
-    return-object v0
+    move-result-object p1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, ":settings/folder/create?chat_id="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Ly86;->b:La96;
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
 
-    iget-object v1, v0, La96;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0()Ll96;
 
-    check-cast v1, Ljava/util/List;
+    move-result-object p1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v1, :cond_1
+    sget-object v2, Lu9a;->a:Lu9a;
 
-    iget-object v3, p0, Ly86;->c:Lj4b;
+    iget-object v3, p1, Ll96;->X:Lulf;
 
-    invoke-virtual {v3}, Lcom/google/android/material/tabs/TabLayout;->j()V
+    check-cast v3, Lqta;
 
-    iget-object v3, v0, La96;->v0:Ljava/lang/Object;
+    invoke-virtual {v3}, Lqta;->b()Lk54;
 
-    check-cast v3, Lsv;
+    move-result-object v3
 
-    invoke-virtual {v3, v1, v2}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v3}, Lp0;->plus(Li54;)Li54;
 
-    :cond_1
-    iput-object v2, v0, La96;->b:Ljava/lang/Object;
+    move-result-object v2
 
-    goto :goto_0
+    new-instance v3, Lj96;
+
+    invoke-direct {v3, p1, v0}, Lj96;-><init>(Ll96;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v0, Lt54;->c:Lt54;
+
+    iget-object p1, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, v2, v0, v3}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
+
+    invoke-virtual {v1}, Ll24;->getRouter()Lqid;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lqid;->C()Z
+
+    return-void
 
     nop
 

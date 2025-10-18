@@ -1,30 +1,27 @@
-.class public interface abstract Llsf;
+.class public final Llsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldzc;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final f0:Lq90;
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(IILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lq90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camerax.core.thread.backgroundExecutor"
+    iput p1, p0, Llsf;->a:I
 
-    const-class v2, Ljava/util/concurrent/Executor;
+    iput p2, p0, Llsf;->b:I
 
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Llsf;->f0:Lq90;
+    iput-object p3, p0, Llsf;->c:Ljava/lang/String;
 
     return-void
 .end method

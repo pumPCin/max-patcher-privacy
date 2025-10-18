@@ -1,39 +1,66 @@
 .class public final Lljh;
-.super Lof4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmjh;
 
-# static fields
-.field public static final b:Lljh;
 
-.field public static final c:Ljf4;
+# instance fields
+.field public final X:I
+
+.field public final a:Ldde;
+
+.field public final b:Lwf4;
+
+.field public final c:J
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ldde;Lwf4;JI)V
+    .locals 0
 
-    new-instance v0, Lljh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lof4;-><init>()V
+    iput-object p1, p0, Lljh;->a:Ldde;
 
-    sput-object v0, Lljh;->b:Lljh;
+    iput-object p2, p0, Lljh;->b:Lwf4;
 
-    const/4 v1, 0x0
+    iput-wide p3, p0, Lljh;->c:J
 
-    new-array v1, v1, [Ljava/lang/String;
+    iput p5, p0, Lljh;->o:I
 
-    const/4 v2, 0x0
+    sget p1, Lc7b;->k:I
 
-    const/4 v3, 0x2
-
-    const-string v4, ":webview/faq"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v0
-
-    sput-object v0, Lljh;->c:Ljf4;
+    iput p1, p0, Lljh;->X:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lljh;->o:I
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lljh;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lljh;->X:I
+
+    return v0
 .end method

@@ -1,50 +1,23 @@
-.class public abstract Lxgc;
-.super Ljava/lang/Object;
+.class public final Lxgc;
+.super Lrdi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lxgc;
+
+
 # direct methods
-.method public static e(Ljava/nio/ByteBuffer;)I
+.method static constructor <clinit>()V
     .locals 2
 
-    :try_start_0
-    invoke-static {p0}, Loai;->g(Ljava/nio/ByteBuffer;)I
+    new-instance v0, Lxgc;
 
-    move-result p0
-    :try_end_0
-    .catch Ltech/kwik/core/generic/IntegerTooLargeException; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v1, 0xb
 
-    return p0
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
 
-    :catch_0
-    new-instance p0, Ltech/kwik/core/impl/TransportError;
+    sput-object v0, Lxgc;->c:Lxgc;
 
-    const/4 v0, 0x2
-
-    const-string v1, "value too large"
-
-    invoke-direct {p0, v0, v1}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
-
-    throw p0
-.end method
-
-
-# virtual methods
-.method public abstract a(Lvgc;Lygc;Lfj;)V
-.end method
-
-.method public abstract b()I
-.end method
-
-.method public d()Z
-    .locals 1
-
-    instance-of v0, p0, Ly5;
-
-    xor-int/lit8 v0, v0, 0x1
-
-    return v0
-.end method
-
-.method public abstract g(Ljava/nio/ByteBuffer;)V
+    return-void
 .end method

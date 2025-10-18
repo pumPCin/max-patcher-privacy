@@ -18,117 +18,103 @@
     return-void
 .end method
 
-.method public static final a(II)V
-    .locals 3
+.method public static final a(Landroid/view/View;I)Ljava/lang/Object;
+    .locals 2
 
-    if-ltz p0, :cond_0
-
-    if-ge p0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index: "
-
-    const-string v2, ", size: "
-
-    invoke-static {v1, p0, p1, v2}, Lf67;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    instance-of v0, p0, Landroid/util/SparseArray;
 
-    throw v0
-.end method
+    const/4 v1, 0x0
 
-.method public static final b(II)V
-    .locals 3
+    if-eqz v0, :cond_0
 
-    if-ltz p0, :cond_0
+    check-cast p0, Landroid/util/SparseArray;
 
-    if-gt p0, p1, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    move-object p0, v1
 
-    const-string v1, "index: "
+    :goto_0
+    if-eqz p0, :cond_1
 
-    const-string v2, ", size: "
-
-    invoke-static {v1, p0, p1, v2}, Lf67;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static final c(III)V
-    .locals 4
-
-    const-string v0, "fromIndex: "
-
-    if-ltz p0, :cond_1
-
-    if-gt p1, p2, :cond_1
-
-    if-gt p0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, " > toIndex: "
-
-    invoke-static {v0, p0, p1, v1}, Lf67;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-object p0
 
     :cond_1
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, ", toIndex: "
-
-    const-string v3, ", size: "
-
-    invoke-static {v0, p0, v2, p1, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return-object v1
 .end method
 
-.method public static final e(Landroid/view/View;Liw7;)V
-    .locals 1
+.method public static final c(ILandroid/view/View;Ljava/lang/Object;)V
+    .locals 2
 
-    sget v0, Lloc;->view_tree_lifecycle_owner:I
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/util/SparseArray;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/util/SparseArray;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    :cond_1
+    invoke-virtual {v0, p0, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static final d(Lzcg;)V
+    .locals 2
+
+    new-instance v0, Lbs4;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lbs4;-><init>(I)V
+
+    const-class v1, Lc08;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lzu7;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lzu7;-><init>(I)V
+
+    const-class v1, Lmo6;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Landroid/content/Intent;I)Ljava/lang/Object;
+.method public final b(Landroid/content/Intent;I)Ljava/lang/Object;
     .locals 5
 
     iget v0, p0, Lm8;->a:I
@@ -218,15 +204,15 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {p2}, Ljt;->s([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {p2}, Ljt;->v([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lab3;->e0(Ljava/lang/Iterable;Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-static {p1, v0}, Lnb3;->e0(Ljava/lang/Iterable;Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-static {p1}, Lyf8;->j(Ljava/util/ArrayList;)Ljava/util/Map;
+    invoke-static {p1}, Lzg8;->m(Ljava/util/ArrayList;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -234,7 +220,7 @@
 
     :cond_5
     :goto_2
-    sget-object p1, Lt95;->a:Lt95;
+    sget-object p1, Lla5;->a:Lla5;
 
     :goto_3
     return-object p1

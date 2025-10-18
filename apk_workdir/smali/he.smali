@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final a:Ljv6;
+.field public static final a:Ldw6;
 
 
 # direct methods
@@ -15,17 +15,17 @@
 
     move-result-object v0
 
-    sget-object v1, Lie;->a:Lqnd;
+    sget-object v1, Lie;->a:Lxod;
 
-    new-instance v1, Ljv6;
+    new-instance v1, Ldw6;
 
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v1, v2}, Ljv6;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v2}, Ldw6;-><init>(Landroid/os/Handler;)V
 
-    sput-object v1, Lhe;->a:Ljv6;
+    sput-object v1, Lhe;->a:Ldw6;
 
     return-void
 .end method

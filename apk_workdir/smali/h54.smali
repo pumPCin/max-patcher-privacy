@@ -1,3 +1,3 @@
-.class public final Lh54;
-.super Ljava/lang/Error;
+.class public interface abstract Lh54;
+.super Ljava/lang/Object;
 .source "SourceFile"

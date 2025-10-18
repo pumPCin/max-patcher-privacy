@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic g(Landroid/media/Spatializer;Lju1;Lqn4;)V
+.method public static bridge synthetic g(Landroid/media/Spatializer;Lru1;Leo4;)V
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/media/Spatializer;->addOnSpatializerStateChangedListener(Ljava/util/concurrent/Executor;Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic h(Landroid/media/Spatializer;Lqn4;)V
+.method public static bridge synthetic h(Landroid/media/Spatializer;Leo4;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/media/Spatializer;->removeOnSpatializerStateChangedListener(Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V

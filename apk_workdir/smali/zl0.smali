@@ -1,166 +1,192 @@
-.class public final Lzl0;
-.super Lre4;
+.class public abstract Lzl0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lshc;
 
 
 # instance fields
-.field public s0:J
+.field public X:I
 
-.field public t0:I
+.field public final a:Lela;
 
-.field public u0:I
+.field public b:Lvv4;
+
+.field public c:Lshc;
+
+.field public o:Z
+
+
+# direct methods
+.method public constructor <init>(Lela;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzl0;->a:Lela;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final A(Lre4;)Z
-    .locals 5
+.method public b()V
+    .locals 1
 
-    const/high16 v0, 0x40000000    # 2.0f
+    iget-boolean v0, p0, Lzl0;->o:Z
 
-    invoke-virtual {p1, v0}, Luy;->j(I)Z
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lzl0;->o:Z
+
+    iget-object v0, p0, Lzl0;->a:Lela;
+
+    invoke-interface {v0}, Lela;->b()V
+
+    return-void
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget-object v0, p0, Lzl0;->b:Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_1
 
-    xor-int/2addr v0, v1
+    iput-object p1, p0, Lzl0;->b:Lvv4;
 
-    invoke-static {v0}, Lefi;->d(Z)V
+    instance-of v0, p1, Lshc;
 
-    const/high16 v0, 0x10000000
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Luy;->j(I)Z
+    check-cast p1, Lshc;
+
+    iput-object p1, p0, Lzl0;->c:Lshc;
+
+    :cond_0
+    iget-object p1, p0, Lzl0;->a:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public clear()V
+    .locals 1
+
+    iget-object v0, p0, Lzl0;->c:Lshc;
+
+    invoke-interface {v0}, Lope;->clear()V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lzl0;->b:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Lzl0;->b:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->h()Z
 
     move-result v0
 
-    xor-int/2addr v0, v1
+    return v0
+.end method
 
-    invoke-static {v0}, Lefi;->d(Z)V
+.method public final isEmpty()Z
+    .locals 1
 
-    const/4 v0, 0x4
+    iget-object v0, p0, Lzl0;->c:Lshc;
 
-    invoke-virtual {p1, v0}, Luy;->j(I)Z
+    invoke-interface {v0}, Lope;->isEmpty()Z
 
     move-result v0
 
-    xor-int/2addr v0, v1
+    return v0
+.end method
 
-    invoke-static {v0}, Lefi;->d(Z)V
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lzl0;->t0:I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/high16 v2, -0x80000000
+    const-string v0, "Should not be called!"
 
-    if-lez v0, :cond_2
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lzl0;->u0:I
+    throw p1
+.end method
 
-    if-lt v0, v3, :cond_0
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lzl0;->o:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lzl0;->o:Z
+
+    iget-object v0, p0, Lzl0;->a:Lela;
+
+    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public q(I)I
+    .locals 2
+
+    iget-object v0, p0, Lzl0;->c:Lshc;
+
+    if-eqz v0, :cond_0
+
+    and-int/lit8 v1, p1, 0x4
+
+    if-nez v1, :cond_0
+
+    invoke-interface {v0, p1}, Lthc;->q(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iput p1, p0, Lzl0;->X:I
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v2}, Luy;->j(I)Z
-
-    move-result v0
-
-    invoke-virtual {p0, v2}, Luy;->j(I)Z
-
-    move-result v3
-
-    if-eq v0, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p1, Lre4;->o:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_2
-
-    iget-object v3, p0, Lre4;->o:Ljava/nio/ByteBuffer;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    add-int/2addr v0, v3
-
-    const v3, 0x2ee000
-
-    if-le v0, v3, :cond_2
-
-    :goto_0
     const/4 p1, 0x0
 
+    :cond_1
+    :goto_0
     return p1
-
-    :cond_2
-    iget v0, p0, Lzl0;->t0:I
-
-    add-int/lit8 v3, v0, 0x1
-
-    iput v3, p0, Lzl0;->t0:I
-
-    if-nez v0, :cond_3
-
-    iget-wide v3, p1, Lre4;->Y:J
-
-    iput-wide v3, p0, Lre4;->Y:J
-
-    invoke-virtual {p1, v1}, Luy;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iput v1, p0, Luy;->b:I
-
-    :cond_3
-    invoke-virtual {p1, v2}, Luy;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iput v2, p0, Luy;->b:I
-
-    :cond_4
-    iget-object v0, p1, Lre4;->o:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v2
-
-    invoke-virtual {p0, v2}, Lre4;->y(I)V
-
-    iget-object v2, p0, Lre4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    :cond_5
-    iget-wide v2, p1, Lre4;->Y:J
-
-    iput-wide v2, p0, Lzl0;->s0:J
-
-    return v1
-.end method
-
-.method public final w()V
-    .locals 1
-
-    invoke-super {p0}, Lre4;->w()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lzl0;->t0:I
-
-    return-void
 .end method

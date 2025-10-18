@@ -1,88 +1,92 @@
 .class public final Lvyc;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic Y:Lwyc;
+.field public final synthetic b:Lp45;
+
+.field public final synthetic c:F
 
 
 # direct methods
-.method public constructor <init>(Lwyc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/view/View;Lp45;F)V
     .locals 0
 
-    iput-object p1, p0, Lvyc;->Y:Lwyc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lvyc;->a:Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lvyc;->b:Lp45;
+
+    iput p3, p0, Lvyc;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
     .locals 0
 
-    check-cast p1, Lda2;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvyc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvyc;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lvyc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 0
 
-    new-instance v0, Lvyc;
-
-    iget-object v1, p0, Lvyc;->Y:Lwyc;
-
-    invoke-direct {v0, v1, p2}, Lvyc;-><init>(Lwyc;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lvyc;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionStart(Landroid/transition/Transition;)V
     .locals 3
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance p1, Lnwe;
 
-    iget-object p1, p0, Lvyc;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lvyc;->a:Landroid/view/View;
 
-    check-cast p1, Lda2;
+    iget-object v1, p0, Lvyc;->b:Lp45;
 
-    iget-object v0, p0, Lvyc;->Y:Lwyc;
+    iget v2, p0, Lvyc;->c:F
 
-    invoke-virtual {v0}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-direct {p1, v0, v1, v2}, Lnwe;-><init>(Ljava/lang/Object;Ln2j;F)V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    iget-object p1, p1, Lda2;->b:Lfe2;
+    iput v0, p1, Lnwe;->a:F
 
-    iget-wide v1, p1, Lfe2;->i0:J
+    new-instance v0, Lowe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v2}, Lowe;-><init>(F)V
 
-    sget-object p1, Lzag;->a:Lzag;
+    const/high16 v1, 0x43c80000    # 400.0f
 
-    return-object p1
+    invoke-virtual {v0, v1}, Lowe;->b(F)V
+
+    const v1, 0x3f2e147b    # 0.68f
+
+    invoke-virtual {v0, v1}, Lowe;->a(F)V
+
+    iput-object v0, p1, Lnwe;->m:Lowe;
+
+    invoke-virtual {p1}, Lnwe;->g()V
+
+    return-void
 .end method

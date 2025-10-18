@@ -1,137 +1,69 @@
 .class public final Ll4c;
-.super Lgd0;
+.super Ldq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Loqf;
-
-.field public final c:Ljava/lang/Integer;
+# static fields
+.field public static final a:Ll4c;
 
 
 # direct methods
-.method public constructor <init>(Loqf;Ljava/lang/Integer;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0xd
+    new-instance v0, Ll4c;
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    iput-object p1, p0, Ll4c;->b:Loqf;
-
-    iput-object p2, p0, Ll4c;->c:Ljava/lang/Integer;
+    sput-object v0, Ll4c;->a:Ll4c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ll4c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ll4c;
-
-    iget-object v1, p0, Ll4c;->b:Loqf;
-
-    iget-object v3, p1, Ll4c;->b:Loqf;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ll4c;->c:Ljava/lang/Integer;
-
-    iget-object p1, p1, Ll4c;->c:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Liu7;
     .locals 2
 
-    iget-object v0, p0, Ll4c;->b:Loqf;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object v0
 
-    move-result v0
+    const-class v1, Lll;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget-object v1, p0, Ll4c;->c:Ljava/lang/Integer;
+    move-result-object v0
 
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final b()Liu7;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    const-string v1, "ShowSnackbar(title="
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-class v1, Ld33;
 
-    iget-object v1, p0, Ll4c;->b:Loqf;
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", icon="
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final c()Liu7;
+    .locals 2
 
-    iget-object v1, p0, Ll4c;->c:Ljava/lang/Integer;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ")"
+    const-class v1, Lulf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v0
 

@@ -1,20 +1,44 @@
-.class public interface abstract Lti9;
+.class public final Lti9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbj9;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:Lt00;
+
+
+# direct methods
+.method public constructor <init>(JLt00;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lti9;->a:J
+
+    iput-object p3, p0, Lti9;->b:Lt00;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final a()Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public b()V
-    .locals 0
+.method public final j()J
+    .locals 2
 
-    return-void
-.end method
+    iget-wide v0, p0, Lti9;->a:J
 
-.method public abstract getTag()Ljava/lang/String;
+    return-wide v0
 .end method

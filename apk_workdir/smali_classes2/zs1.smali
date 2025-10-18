@@ -4,16 +4,36 @@
 
 
 # instance fields
-.field public final a:Le81;
+.field public final a:Ltxg;
+
+.field public final b:Lhi1;
+
+.field public final c:Lhv9;
 
 
 # direct methods
-.method public constructor <init>(Le81;)V
-    .locals 0
+.method public constructor <init>(Lm75;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzs1;->a:Le81;
+    iget-object v0, p1, Lm75;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltxg;
+
+    iput-object v0, p0, Lzs1;->a:Ltxg;
+
+    iget-object v0, p1, Lm75;->a:Ljava/lang/Object;
+
+    check-cast v0, Lhi1;
+
+    iput-object v0, p0, Lzs1;->b:Lhi1;
+
+    iget-object p1, p1, Lm75;->c:Ljava/lang/Object;
+
+    check-cast p1, Lhv9;
+
+    iput-object p1, p0, Lzs1;->c:Lhv9;
 
     return-void
 .end method
@@ -21,7 +41,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -30,39 +50,70 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lzs1;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_2
 
-    if-nez v1, :cond_1
+    const-class v2, Lzs1;
 
-    return v2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lzs1;
 
-    iget-object v1, p0, Lzs1;->a:Le81;
+    iget-object v2, p0, Lzs1;->a:Ltxg;
 
-    iget-object p1, p1, Lzs1;->a:Le81;
+    iget-object v3, p1, Lzs1;->a:Ltxg;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lzs1;->b:Lhi1;
+
+    iget-object v3, p1, Lzs1;->b:Lhi1;
+
+    invoke-virtual {v2, v3}, Lhi1;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lzs1;->c:Lhv9;
+
+    iget-object p1, p1, Lzs1;->c:Lhv9;
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
-    return v2
+    return v0
 
     :cond_2
-    return v0
+    :goto_0
+    return v1
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 3
 
-    iget-object v0, p0, Lzs1;->a:Le81;
+    iget-object v0, p0, Lzs1;->b:Lhi1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v1, p0, Lzs1;->c:Lhv9;
+
+    iget-object v2, p0, Lzs1;->a:Ltxg;
+
+    filled-new-array {v2, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -74,15 +125,31 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Feedback(feedback="
+    const-string v1, "CallVideoTrackParticipantKey{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lzs1;->a:Le81;
+    iget-object v1, p0, Lzs1;->b:Lhi1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzs1;->a:Ltxg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzs1;->c:Lhv9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -54,6 +54,26 @@
 
 # virtual methods
 .method public a()I
+    .locals 3
+
+    iget-object v0, p0, Ldg;->a:[I
+
+    iget v1, p0, Ldg;->b:I
+
+    aget v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iput v1, p0, Ldg;->b:I
+
+    return v2
+.end method
+
+.method public b()I
     .locals 2
 
     iget v0, p0, Ldg;->b:I
@@ -76,7 +96,7 @@
     throw v0
 .end method
 
-.method public b()I
+.method public c()I
     .locals 2
 
     iget v0, p0, Ldg;->b:I
@@ -101,7 +121,7 @@
     throw v0
 .end method
 
-.method public c(I)V
+.method public d(I)V
     .locals 2
 
     iget v0, p0, Ldg;->b:I
@@ -122,26 +142,6 @@
     invoke-direct {p1}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw p1
-.end method
-
-.method public d()I
-    .locals 3
-
-    iget-object v0, p0, Ldg;->a:[I
-
-    iget v1, p0, Ldg;->b:I
-
-    aget v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    array-length v0, v0
-
-    rem-int/2addr v1, v0
-
-    iput v1, p0, Ldg;->b:I
-
-    return v2
 .end method
 
 .method public e(I)V

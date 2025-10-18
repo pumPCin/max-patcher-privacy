@@ -1,52 +1,23 @@
 .class public final Lm70;
-.super Lhlf;
+.super Lmmf;
 .source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lm8b;->I0:Lm8b;
 
-    if-eq p1, v0, :cond_1
+    invoke-direct {p0, v0}, Lmmf;-><init>(Lm8b;)V
 
-    const/4 v0, 0x2
+    const-string v0, "trackId"
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {p0, v0, p1}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    const-string p1, "verifyCode"
 
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object p1
-
-    new-instance v0, Lqbb;
-
-    const-string v1, "reason"
-
-    invoke-direct {v0, v1, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0}, [Lqbb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lmmd;->b([Lqbb;)Le0a;
-
-    move-result-object p1
-
-    const/4 v0, 0x3
-
-    const-string v1, "registration_failed"
-
-    invoke-direct {p0, v1, v0, p1}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

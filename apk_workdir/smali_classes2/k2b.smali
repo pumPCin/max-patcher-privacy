@@ -1,99 +1,169 @@
-.class public final Lk2b;
-.super Lm2b;
+.class public abstract Lk2b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lk2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
-.field public static final b:Lk2b;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lk2b;
-
-    const-wide/16 v1, 0xdac
-
-    invoke-direct {v0, v1, v2}, Lm2b;-><init>(J)V
-
-    sput-object v0, Lk2b;->b:Lk2b;
-
-    new-instance v0, Luj8;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
-
-    sput-object v0, Lk2b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lfpc;->oneme_settings_privacy_black_list_empty_state:I
 
-    return v0
-.end method
+    sput v0, Lk2b;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lfpc;->oneme_settings_privacy_black_list_rv:I
 
-    const/4 v0, 0x1
+    sput v0, Lk2b;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lfpc;->oneme_settings_privacy_black_list_toolbar:I
 
-    return v0
+    sput v0, Lk2b;->c:I
 
-    :cond_0
-    instance-of p1, p1, Lk2b;
+    sget v0, Lfpc;->oneme_settings_privacy_black_list_unblock_action:I
 
-    if-nez p1, :cond_1
+    sput v0, Lk2b;->d:I
 
-    const/4 p1, 0x0
+    sget v0, Lfpc;->oneme_settings_privacy_black_list_unblock_cancel_action:I
 
-    return p1
+    sput v0, Lk2b;->e:I
 
-    :cond_1
-    return v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_add_chat_button_all:I
 
-.method public final hashCode()I
-    .locals 1
+    sput v0, Lk2b;->f:I
 
-    const v0, -0x16da368a
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I
 
-    return v0
-.end method
+    sput v0, Lk2b;->g:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_call_button_all:I
 
-    const-string v0, "Standard"
+    sput v0, Lk2b;->h:I
 
-    return-object v0
-.end method
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_call_button_contacts:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    sput v0, Lk2b;->i:I
 
-    const/4 p2, 0x1
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_content_level_access_all:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Lk2b;->j:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_content_level_access_safe:I
+
+    sput v0, Lk2b;->k:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I
+
+    sput v0, Lk2b;->l:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I
+
+    sput v0, Lk2b;->m:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_online_button_contacts:I
+
+    sput v0, Lk2b;->n:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_online_button_nobody:I
+
+    sput v0, Lk2b;->o:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_online_never_accept_btn:I
+
+    sput v0, Lk2b;->p:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I
+
+    sput v0, Lk2b;->q:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_safe_file_no_btn:I
+
+    sput v0, Lk2b;->r:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I
+
+    sput v0, Lk2b;->s:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_search_by_phone_all:I
+
+    sput v0, Lk2b;->t:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I
+
+    sput v0, Lk2b;->u:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_list:I
+
+    sput v0, Lk2b;->v:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_settings_header_vh:I
+
+    sput v0, Lk2b;->w:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_settings_item_vh:I
+
+    sput v0, Lk2b;->x:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_settings_warning_vh:I
+
+    sput v0, Lk2b;->y:I
+
+    sget v0, Lfpc;->oneme_settings_privacy_screen_toolbar:I
+
+    sput v0, Lk2b;->z:I
 
     return-void
 .end method

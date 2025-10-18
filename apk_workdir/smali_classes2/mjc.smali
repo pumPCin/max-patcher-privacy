@@ -1,190 +1,354 @@
-.class public abstract Lmjc;
+.class public final synthetic Lmjc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Lji6;
 
-# static fields
-.field public static accent:I = 0x7f060019
 
-.field public static accent_highlighted:I = 0x7f06001a
+# instance fields
+.field public final synthetic a:I
 
-.field public static attach_send_file:I = 0x7f06001f
+.field public final synthetic b:Lnjc;
 
-.field public static auth_avatar_circle:I = 0x7f060020
 
-.field public static auth_background:I = 0x7f060021
+# direct methods
+.method public synthetic constructor <init>(Lnjc;I)V
+    .locals 0
 
-.field public static auth_background_selected:I = 0x7f060022
+    iput p2, p0, Lmjc;->a:I
 
-.field public static auth_button_gray:I = 0x7f060023
+    iput-object p1, p0, Lmjc;->b:Lnjc;
 
-.field public static auth_button_ripple:I = 0x7f060024
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static auth_button_text_secondary:I = 0x7f060025
+    return-void
+.end method
 
-.field public static auth_country:I = 0x7f060026
 
-.field public static auth_status_bar:I = 0x7f060027
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 17
 
-.field public static auth_text_confirm_description:I = 0x7f060028
+    move-object/from16 v0, p0
 
-.field public static auth_text_dark_blue:I = 0x7f060029
+    iget v1, v0, Lmjc;->a:I
 
-.field public static auth_text_gray:I = 0x7f06002a
+    const/16 v2, 0x18
 
-.field public static black:I = 0x7f060031
+    sget-object v3, Ll05;->s0:Lk82;
 
-.field public static black_10:I = 0x7f060032
+    const/high16 v4, 0x40800000    # 4.0f
 
-.field public static black_16:I = 0x7f060033
+    const/16 v5, 0x8
 
-.field public static black_30:I = 0x7f060034
+    const/4 v6, 0x0
 
-.field public static black_34:I = 0x7f060035
+    iget-object v7, v0, Lmjc;->b:Lnjc;
 
-.field public static black_50:I = 0x7f060036
+    const/4 v8, 0x0
 
-.field public static black_60:I = 0x7f060037
+    const/4 v9, 0x1
 
-.field public static black_70:I = 0x7f060038
+    const/4 v10, 0x2
 
-.field public static black_8:I = 0x7f060039
+    packed-switch v1, :pswitch_data_0
 
-.field public static black_80:I = 0x7f06003a
+    new-array v1, v5, [F
 
-.field public static black_85:I = 0x7f06003b
+    move v11, v8
 
-.field public static blue:I = 0x7f06003c
+    :goto_0
+    if-ge v11, v5, :cond_0
 
-.field public static blue_30:I = 0x7f06003d
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static blue_50:I = 0x7f06003e
+    move-result-object v12
 
-.field public static blue_dark:I = 0x7f06003f
+    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static call_swipe_hint_color:I = 0x7f06004e
+    move-result-object v12
 
-.field public static calls_green:I = 0x7f060053
+    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
 
-.field public static calls_notif_background:I = 0x7f060054
+    mul-float/2addr v12, v4
 
-.field public static calls_notif_button_text_primary:I = 0x7f060055
+    aput v12, v1, v11
 
-.field public static calls_notif_green:I = 0x7f060056
+    add-int/lit8 v11, v11, 0x1
 
-.field public static calls_notif_red:I = 0x7f060057
+    goto :goto_0
 
-.field public static calls_notif_text_primary:I = 0x7f060058
+    :cond_0
+    new-instance v4, Landroid/graphics/drawable/shapes/RoundRectShape;
 
-.field public static calls_notif_text_secondary:I = 0x7f060059
+    invoke-direct {v4, v1, v6, v6}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
 
-.field public static calls_red:I = 0x7f06005a
+    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
-.field public static chat_media_bg:I = 0x7f06005f
+    invoke-direct {v1, v4}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-.field public static common_bg_dark:I = 0x7f060060
+    invoke-virtual {v3, v7}, Lk82;->n(Landroid/view/View;)Lv5b;
 
-.field public static constructor_bg:I = 0x7f06006c
+    move-result-object v4
 
-.field public static contact_attach_stroke:I = 0x7f06006d
+    invoke-interface {v4}, Lv5b;->a()Lzv2;
 
-.field public static contact_attach_stub:I = 0x7f06006e
+    move-result-object v4
 
-.field public static control_bg:I = 0x7f06006f
+    invoke-interface {v4}, Lzv2;->g()Lvt0;
 
-.field public static control_bg_action:I = 0x7f060070
+    move-result-object v4
 
-.field public static control_border:I = 0x7f060071
+    iget-object v4, v4, Lvt0;->a:Lot0;
 
-.field public static dark_transparent_ripple:I = 0x7f060072
+    iget v4, v4, Lot0;->m:I
 
-.field public static divider_gray:I = 0x7f06009f
+    invoke-static {v1, v4}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
 
-.field public static gray_33:I = 0x7f0600b1
+    sget v4, Lpjd;->W:I
 
-.field public static gray_66:I = 0x7f0600b2
+    invoke-virtual {v3, v7}, Lk82;->n(Landroid/view/View;)Lv5b;
 
-.field public static gray_88:I = 0x7f0600b3
+    move-result-object v3
 
-.field public static gray_88_80:I = 0x7f0600b4
+    invoke-interface {v3}, Lv5b;->getIcon()Ld77;
 
-.field public static gray_99:I = 0x7f0600b5
+    move-result-object v3
 
-.field public static gray_aa:I = 0x7f0600b6
+    iget v3, v3, Ld77;->j:I
 
-.field public static gray_cc:I = 0x7f0600b7
+    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-.field public static gray_ec:I = 0x7f0600b8
+    move-result-object v5
 
-.field public static gray_separator:I = 0x7f0600b9
+    invoke-static {v5, v4}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static launch_background:I = 0x7f0600bd
+    move-result-object v4
 
-.field public static launch_logo_tint_color:I = 0x7f0600be
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-.field public static loading_bg:I = 0x7f0600c6
+    move-result-object v4
 
-.field public static music_player_primary:I = 0x7f060366
+    invoke-static {v4, v3}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
 
-.field public static orange:I = 0x7f06036f
+    new-instance v11, Landroid/graphics/drawable/LayerDrawable;
 
-.field public static orange_50:I = 0x7f060370
+    new-array v3, v10, [Landroid/graphics/drawable/Drawable;
 
-.field public static pip_trash_gradient_end:I = 0x7f060371
+    aput-object v1, v3, v8
 
-.field public static pip_trash_gradient_start:I = 0x7f060372
+    aput-object v4, v3, v9
 
-.field public static profile_bg:I = 0x7f06037d
+    invoke-direct {v11, v3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-.field public static quick_camera_take_button_selector:I = 0x7f06037e
+    iget v1, v7, Lnjc;->a:I
 
-.field public static quick_camera_take_button_selector_red:I = 0x7f06037f
+    int-to-float v1, v1
 
-.field public static range_seek_bar_border_shadow_color:I = 0x7f060380
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static read_status_dark_bg:I = 0x7f060381
+    move-result-object v3
 
-.field public static read_status_light_bg:I = 0x7f060382
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static red:I = 0x7f060383
+    move-result-object v3
 
-.field public static red_delete:I = 0x7f060384
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-.field public static ripple:I = 0x7f060385
+    mul-float/2addr v1, v3
 
-.field public static ripple_light:I = 0x7f060386
+    invoke-static {v1}, Lfhi;->b(F)I
 
-.field public static ripple_white:I = 0x7f060389
+    move-result v1
 
-.field public static status_bar_bg:I = 0x7f06038e
+    invoke-virtual {v11, v8, v1, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
 
-.field public static text_black:I = 0x7f060396
+    int-to-float v2, v2
 
-.field public static text_primary:I = 0x7f060397
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-.field public static text_primary_disabled:I = 0x7f060399
+    move-result-object v3
 
-.field public static text_secondary:I = 0x7f06039a
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static text_secondary_dark:I = 0x7f06039b
+    move-result-object v3
 
-.field public static text_white:I = 0x7f06039c
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-.field public static time_picker_on_surface_color_day:I = 0x7f06039d
+    mul-float/2addr v2, v3
 
-.field public static time_picker_on_surface_color_night:I = 0x7f06039e
+    invoke-static {v2}, Lfhi;->b(F)I
 
-.field public static time_picker_surface_color_night:I = 0x7f06039f
+    move-result v2
 
-.field public static transparent:I = 0x7f0603a3
+    invoke-virtual {v11, v9, v2, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
 
-.field public static white:I = 0x7f0603a4
+    div-int/2addr v1, v10
 
-.field public static white_30:I = 0x7f0603a5
+    div-int/2addr v2, v10
 
-.field public static white_50:I = 0x7f0603a6
+    sub-int v13, v1, v2
 
-.field public static white_70:I = 0x7f0603a7
+    const/4 v15, 0x0
 
-.field public static white_80:I = 0x7f0603a8
+    const/16 v16, 0x0
 
-.field public static white_95:I = 0x7f0603a9
+    const/4 v12, 0x1
+
+    move v14, v13
+
+    invoke-virtual/range {v11 .. v16}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
+
+    return-object v11
+
+    :pswitch_0
+    new-array v1, v5, [F
+
+    move v11, v8
+
+    :goto_1
+    if-ge v11, v5, :cond_1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v12
+
+    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v12, v4
+
+    aput v12, v1, v11
+
+    add-int/lit8 v11, v11, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v4, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    invoke-direct {v4, v1, v6, v6}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-direct {v1, v4}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v3, v7}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lv5b;->b()Lff0;
+
+    move-result-object v4
+
+    iget v4, v4, Lff0;->f:I
+
+    invoke-static {v1, v4}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    sget v4, Lpjd;->g1:I
+
+    invoke-virtual {v3, v7}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lv5b;->getIcon()Ld77;
+
+    move-result-object v3
+
+    iget v3, v3, Ld77;->b:I
+
+    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-static {v5, v4}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    invoke-static {v4, v3}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    new-instance v11, Landroid/graphics/drawable/LayerDrawable;
+
+    new-array v3, v10, [Landroid/graphics/drawable/Drawable;
+
+    aput-object v1, v3, v8
+
+    aput-object v4, v3, v9
+
+    invoke-direct {v11, v3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    iget v1, v7, Lnjc;->a:I
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    invoke-virtual {v11, v8, v1, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    invoke-virtual {v11, v9, v2, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    div-int/2addr v1, v10
+
+    div-int/2addr v2, v10
+
+    sub-int v13, v1, v2
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/4 v12, 0x1
+
+    move v14, v13
+
+    invoke-virtual/range {v11 .. v16}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
+
+    return-object v11
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

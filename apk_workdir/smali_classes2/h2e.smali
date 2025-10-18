@@ -2,276 +2,220 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvr4;
-
 
 # instance fields
-.field public final a:Lnqf;
+.field public final a:Landroid/view/ViewGroup;
 
-.field public final b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public final c:Z
-
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:J
-
-.field public final g:Lsze;
-
-.field public final h:Lgzc;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+.method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
 
-    .line 19
-    new-instance v0, Lnqf;
-
-    invoke-direct {v0, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 20
-    invoke-direct {p0, v0, p2, p3}, Lh2e;-><init>(Lnqf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lnqf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lh2e;->a:Lnqf;
+    iput-object p1, p0, Lh2e;->a:Landroid/view/ViewGroup;
 
-    .line 3
-    iput-object p2, p0, Lh2e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+    new-instance p1, Lxgd;
 
-    .line 4
-    iput-boolean p3, p0, Lh2e;->c:Z
+    const/16 v0, 0x9
 
-    .line 5
-    sget-object p1, Lgs4;->a:Lgs4;
+    invoke-direct {p1, v0, p0}, Lxgd;-><init>(ILjava/lang/Object;)V
 
-    .line 6
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+    const/4 v0, 0x3
 
-    move-result-object p2
-
-    const-class p3, Lnsd;
-
-    invoke-virtual {p2, p3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object p2
-
-    .line 7
-    iput-object p2, p0, Lh2e;->d:Llt7;
-
-    .line 8
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
 
     move-result-object p1
 
-    const-class p2, Lpsd;
-
-    invoke-virtual {p1, p2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object p1
-
-    .line 9
-    iput-object p1, p0, Lh2e;->e:Llt7;
-
-    .line 10
-    sget-object p1, Lkr4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 11
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide p1
-
-    .line 12
-    iput-wide p1, p0, Lh2e;->f:J
-
-    .line 13
-    invoke-virtual {p0}, Lh2e;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lh2e;->g:Lsze;
-
-    .line 14
-    new-instance p2, Lgzc;
-
-    invoke-direct {p2, p1}, Lgzc;-><init>(Lh0a;)V
-
-    .line 15
-    iput-object p2, p0, Lh2e;->h:Lgzc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
-    .locals 2
-
-    .line 16
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 17
-    new-instance v1, Lnqf;
-
-    invoke-direct {v1, v0}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v0, 0x0
-
-    .line 18
-    invoke-direct {p0, v1, p1, v0}, Lh2e;-><init>(Lnqf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    iput-object p1, p0, Lh2e;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Llze;
+.method public final a()I
     .locals 1
 
-    iget-object v0, p0, Lh2e;->h:Lgzc;
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
 
-    return-object v0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf2e;
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final d(Lce4;)V
-    .locals 4
+.method public final b()I
+    .locals 1
 
-    iget-wide v0, p1, Lce4;->a:J
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
 
-    iget-wide v2, p0, Lh2e;->f:J
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2, v3}, Lkr4;->a(JJ)Z
+    move-result-object v0
+
+    check-cast v0, Lf2e;
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(II)V
+    .locals 3
+
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xc
+
+    invoke-static {v0, p1, p2, v1, v2}, Lhei;->e(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 1
+
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf2e;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+
+    return-void
+.end method
+
+.method public final e(Landroid/text/Layout;)V
+    .locals 2
+
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
+
+    if-nez p1, :cond_1
+
+    invoke-interface {v0}, Liu7;->e()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lh2e;->d:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnsd;
-
-    iget-boolean v1, p0, Lh2e;->c:Z
-
-    iget-object v2, p0, Lh2e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v0, v2, v1}, Lnsd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lnsd;
+    check-cast p1, Lf2e;
 
-    xor-int/lit8 v0, v0, 0x1
+    const/16 v0, 0x8
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lw3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {p0}, Lh2e;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lh2e;->g:Lsze;
-
-    invoke-virtual {v1, v0, p1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
     return-void
+
+    :cond_1
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf2e;
+
+    iput-object p1, v0, Lf2e;->a:Landroid/text/Layout;
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget v1, v0, Lf2e;->b:I
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x2
+
+    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    iget-object v1, p0, Lh2e;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method
 
-.method public final e()Ljava/util/List;
-    .locals 7
+.method public final f(I)V
+    .locals 2
 
-    new-instance v6, Lbe4;
+    iget-object v0, p0, Lh2e;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lh2e;->d:Llt7;
+    invoke-interface {v0}, Liu7;->e()Z
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_1
 
-    check-cast v0, Lnsd;
-
-    iget-object v1, p0, Lh2e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    iget-boolean v2, p0, Lh2e;->c:Z
-
-    invoke-virtual {v0, v1, v2}, Lnsd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    invoke-direct {v6, v0}, Lbe4;-><init>(Z)V
-
-    iget-object v0, p0, Lh2e;->e:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lpsd;
+    check-cast v0, Lf2e;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iput p1, v0, Lf2e;->b:I
+
+    iget-object v1, v0, Lf2e;->a:Landroid/text/Layout;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
 
-    iget-object v0, v0, Lw3;->h:Lot7;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Lot7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result v0
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    const-string v1, "Server: "
-
-    invoke-static {v1, v0}, Lyy8;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v5, Lnqf;
-
-    invoke-direct {v5, v0}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v0, Lce4;
-
-    iget-wide v1, p0, Lh2e;->f:J
-
-    iget-object v3, p0, Lh2e;->a:Lnqf;
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lce4;-><init>(JLoqf;ILoqf;Lhxi;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_1
+    return-void
 .end method

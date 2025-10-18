@@ -1,176 +1,94 @@
 .class public final Ljv4;
-.super Ljava/lang/Object;
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
 .source "SourceFile"
 
-# interfaces
-.implements Lcka;
-.implements Lev4;
+
+# static fields
+.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public final a:Lcka;
-
-.field public final b:Ler3;
-
-.field public final c:Lr6;
-
-.field public o:Lev4;
+.field private volatile synthetic _decision$volatile:I
 
 
 # direct methods
-.method public constructor <init>(Lcka;Ler3;Lr6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Ljv4;
 
-    iput-object p1, p0, Ljv4;->a:Lcka;
+    const-string v1, "_decision$volatile"
 
-    iput-object p2, p0, Ljv4;->b:Ler3;
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    iput-object p3, p0, Ljv4;->c:Lr6;
+    move-result-object v0
+
+    sput-object v0, Ljv4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final afterCompletion(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Ljv4;->o:Lev4;
+    invoke-virtual {p0, p1}, Ljv4;->afterResume(Ljava/lang/Object;)V
 
-    sget-object v1, Liv4;->a:Liv4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Ljv4;->o:Lev4;
-
-    iget-object v0, p0, Ljv4;->a:Lcka;
-
-    invoke-interface {v0}, Lcka;->b()V
-
-    :cond_0
     return-void
 .end method
 
-.method public final c(Lev4;)V
-    .locals 2
+.method public final afterResume(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Ljv4;->a:Lcka;
+    :cond_0
+    sget-object v0, Ljv4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    :try_start_0
-    iget-object v1, p0, Ljv4;->b:Ler3;
-
-    invoke-interface {v1, p1}, Ler3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v1, p0, Ljv4;->o:Lev4;
-
-    invoke-static {v1, p1}, Liv4;->j(Lev4;Lev4;)Z
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x2
 
-    iput-object p1, p0, Ljv4;->o:Lev4;
+    if-eqz v1, :cond_2
 
-    invoke-interface {v0, p0}, Lcka;->c(Lev4;)V
+    const/4 v0, 0x1
 
-    :cond_0
-    return-void
+    if-ne v1, v0, :cond_1
 
-    :catchall_0
-    move-exception v1
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1}, Lev4;->g()V
+    move-result-object v0
 
-    sget-object p1, Liv4;->a:Liv4;
+    invoke-static {p1}, Lyui;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Ljv4;->o:Lev4;
+    move-result-object p1
 
-    invoke-static {v1, v0}, Ln95;->b(Ljava/lang/Throwable;Lcka;)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Ljv4;->a:Lcka;
-
-    invoke-interface {v0, p1}, Lcka;->d(Ljava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lli6;ILjava/lang/Object;)V
 
     return-void
-.end method
 
-.method public final g()V
-    .locals 2
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v0, p0, Ljv4;->o:Lev4;
+    const-string v0, "Already resumed"
 
-    sget-object v1, Liv4;->a:Liv4;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eq v0, v1, :cond_0
+    throw p1
 
-    iput-object v1, p0, Ljv4;->o:Lev4;
+    :cond_2
+    const/4 v1, 0x0
 
-    :try_start_0
-    iget-object v1, p0, Ljv4;->c:Lr6;
-
-    invoke-interface {v1}, Lr6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {v1}, Lnzi;->b(Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-interface {v0}, Lev4;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Ljv4;->o:Lev4;
-
-    invoke-interface {v0}, Lev4;->h()Z
+    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
 
     move-result v0
 
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget-object v0, p0, Ljv4;->o:Lev4;
-
-    sget-object v1, Liv4;->a:Liv4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Ljv4;->o:Lev4;
-
-    iget-object v0, p0, Ljv4;->a:Lcka;
-
-    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+    if-eqz v0, :cond_0
 
     return-void
 .end method

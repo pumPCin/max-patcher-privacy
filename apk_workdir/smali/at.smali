@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Llq7;
+.implements Lir7;
 
 
 # instance fields
@@ -43,7 +43,7 @@
     iput-object p1, p0, Lat;->X:Ljava/lang/Object;
 
     .line 7
-    iget p1, p1, Lsne;->c:I
+    iget p1, p1, Lzoe;->c:I
 
     .line 8
     invoke-direct {p0, p1}, Lat;-><init>(I)V
@@ -55,7 +55,7 @@
     iput-object p1, p0, Lat;->X:Ljava/lang/Object;
 
     .line 10
-    iget p1, p1, Lsne;->c:I
+    iget p1, p1, Lzoe;->c:I
 
     .line 11
     invoke-direct {p0, p1}, Lat;-><init>(I)V
@@ -140,7 +140,7 @@
 
     check-cast v1, Let;
 
-    invoke-virtual {v1, v0}, Lsne;->i(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lzoe;->i(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -151,7 +151,7 @@
 
     check-cast v1, Let;
 
-    invoke-virtual {v1, v0}, Lsne;->f(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lzoe;->f(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
 
     check-cast v1, Let;
 
-    invoke-virtual {v1, v0}, Lsne;->g(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lzoe;->g(I)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -221,7 +221,7 @@
 
     check-cast v1, Let;
 
-    invoke-virtual {v1, v0}, Lsne;->g(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lzoe;->g(I)Ljava/lang/Object;
 
     :goto_0
     iget v0, p0, Lat;->a:I

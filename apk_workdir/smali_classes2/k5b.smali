@@ -1,85 +1,213 @@
-.class public final enum Lk5b;
-.super Ljava/lang/Enum;
+.class public final Lk5b;
+.super Lcom/google/android/material/tabs/TabLayout;
 .source "SourceFile"
 
+# interfaces
+.implements Lwsf;
 
-# static fields
-.field public static final enum a:Lk5b;
 
-.field public static final enum b:Lk5b;
+# instance fields
+.field public final h1:Ll5b;
 
-.field public static final enum c:Lk5b;
-
-.field public static final synthetic o:[Lk5b;
+.field public final i1:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 3
 
-    new-instance v0, Lk5b;
+    const/4 p2, 0x0
 
-    const-string v1, "Compact"
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/tabs/TabLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 v2, 0x0
+    sget-object p1, Lm5b;->a:Lwif;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
 
-    sput-object v0, Lk5b;->a:Lk5b;
+    move-result-object p1
 
-    new-instance v1, Lk5b;
+    check-cast p1, Ll5b;
 
-    const-string v2, "Main"
+    iput-object p1, p0, Lk5b;->h1:Ll5b;
 
-    const/4 v3, 0x1
+    new-instance p1, Lpo7;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/16 v0, 0x1d
 
-    sput-object v1, Lk5b;->b:Lk5b;
+    invoke-direct {p1, v0, p0}, Lpo7;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Lk5b;
+    const/4 v0, 0x3
 
-    const-string v3, "Chat"
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
 
-    const/4 v4, 0x2
+    move-result-object p1
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lk5b;->i1:Ljava/lang/Object;
 
-    sput-object v2, Lk5b;->c:Lk5b;
+    invoke-direct {p0}, Lk5b;->getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
 
-    filled-new-array {v0, v1, v2}, [Lk5b;
+    move-result-object p1
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicator(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Ll05;->s0:Lk82;
+
+    invoke-virtual {p1, p0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lv5b;->i()Lkbf;
+
+    move-result-object p1
+
+    iget p1, p1, Lkbf;->h:I
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorFullWidth(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    invoke-virtual {p0, p2}, Lcom/google/android/material/tabs/TabLayout;->setTabRippleColor(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    const/4 p2, 0x4
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sput-object v0, Lk5b;->o:[Lk5b;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p2
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lfhi;->b(F)I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, p2, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    const-class p2, Lcom/google/android/material/tabs/TabLayout;
+
+    invoke-static {p2}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+
+    move-result-object p2
+
+    const-string v0, "requestedTabMinWidth"
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p2, p0, v0, p1}, Lixi;->b(Lh73;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lk5b;
+.method private final getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
     .locals 1
 
-    const-class v0, Lk5b;
+    iget-object v0, p0, Lk5b;->i1:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lk5b;
-
-    return-object p0
-.end method
-
-.method public static values()[Lk5b;
-    .locals 1
-
-    sget-object v0, Lk5b;->o:[Lk5b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lk5b;
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final onThemeChanged(Lv5b;)V
+    .locals 1
+
+    invoke-interface {p1}, Lv5b;->i()Lkbf;
+
+    move-result-object p1
+
+    iget p1, p1, Lkbf;->h:I
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+
+    sget-object p1, Ll05;->s0:Lk82;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
+
+    move-result-object p1
+
+    invoke-static {p1, p0}, Ll05;->e(Ll05;Landroid/view/ViewGroup;)V
+
+    return-void
+.end method
+
+.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    const/16 v0, 0x28
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
 .end method

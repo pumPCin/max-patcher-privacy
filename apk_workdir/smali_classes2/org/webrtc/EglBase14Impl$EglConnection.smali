@@ -138,11 +138,11 @@
     .line 9
     new-instance p1, Lorg/webrtc/RefCountDelegate;
 
-    new-instance p2, Lsi4;
+    new-instance p2, Lgj4;
 
     const/16 v0, 0x10
 
-    invoke-direct {p2, v0, p0}, Lsi4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lgj4;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p1, p2}, Lorg/webrtc/RefCountDelegate;-><init>(Ljava/lang/Runnable;)V
 

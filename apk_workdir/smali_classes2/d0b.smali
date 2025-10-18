@@ -1,25 +1,61 @@
-.class public abstract Ld0b;
-.super Ljava/lang/Object;
+.class public final Ld0b;
+.super Lf0b;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
+.field public static final a:Ld0b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ldkc;->attach_bar_thumbnail_size:I
+    new-instance v0, Ld0b;
 
-    sput v0, Ld0b;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Ldkc;->gallery_album_cover_size:I
-
-    sput v0, Ld0b;->b:I
+    sput-object v0, Ld0b;->a:Ld0b;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Ld0b;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x18624f91
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Stub"
+
+    return-object v0
 .end method

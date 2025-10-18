@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lui;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsjh;
+    check-cast v0, Ltkh;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
@@ -45,9 +45,9 @@
     :pswitch_0
     iget-object v0, p0, Lui;->b:Ljava/lang/Object;
 
-    check-cast v0, Lmxc;
+    check-cast v0, Ltyc;
 
-    iget-object v0, v0, Lj6d;->a:Landroid/view/View;
+    iget-object v0, v0, Lq7d;->a:Landroid/view/View;
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -58,7 +58,7 @@
     :pswitch_1
     iget-object v0, p0, Lui;->b:Ljava/lang/Object;
 
-    check-cast v0, Lme9;
+    check-cast v0, Lnf9;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
@@ -67,7 +67,7 @@
     :pswitch_2
     iget-object v0, p0, Lui;->b:Ljava/lang/Object;
 
-    check-cast v0, Lvc9;
+    check-cast v0, Lwd9;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
@@ -76,9 +76,9 @@
     :pswitch_3
     iget-object v0, p0, Lui;->b:Ljava/lang/Object;
 
-    check-cast v0, Ls65;
+    check-cast v0, Ll75;
 
-    iget-object v0, v0, Lj6d;->a:Landroid/view/View;
+    iget-object v0, v0, Lq7d;->a:Landroid/view/View;
 
     check-cast v0, Landroid/widget/ImageView;
 

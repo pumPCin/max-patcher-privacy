@@ -1,225 +1,195 @@
-.class public final synthetic Loz8;
+.class public final Loz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final e:Ll6e;
+
+.field public static final f:Lktb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ll6e;
 
-.field public final synthetic b:Lrtb;
+.field public final b:Lktb;
 
-.field public final synthetic c:I
+.field public final c:Lec7;
+
+.field public final d:Lec7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrtb;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput p3, p0, Loz8;->a:I
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p1, p0, Loz8;->b:Lrtb;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput p2, p0, Loz8;->c:I
+    sget-object v1, Lk6e;->d:Lz8d;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    iget v4, v1, Lz8d;->o:I
+
+    if-ge v3, v4, :cond_0
+
+    new-instance v4, Lk6e;
+
+    invoke-virtual {v1, v3}, Lz8d;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-direct {v4, v5}, Lk6e;-><init>(I)V
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v3, Ll6e;
+
+    invoke-direct {v3, v0}, Ll6e;-><init>(Ljava/util/HashSet;)V
+
+    sput-object v3, Loz8;->e:Ll6e;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    sget-object v3, Lk6e;->e:Lz8d;
+
+    move v4, v2
+
+    :goto_1
+    iget v5, v3, Lz8d;->o:I
+
+    if-ge v4, v5, :cond_1
+
+    new-instance v5, Lk6e;
+
+    invoke-virtual {v3, v4}, Lz8d;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Integer;
+
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    invoke-direct {v5, v6}, Lk6e;-><init>(I)V
+
+    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v2
+
+    :goto_2
+    iget v4, v1, Lz8d;->o:I
+
+    if-ge v3, v4, :cond_2
+
+    new-instance v4, Lk6e;
+
+    invoke-virtual {v1, v3}, Lz8d;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-direct {v4, v5}, Lk6e;-><init>(I)V
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v1, Ll6e;
+
+    invoke-direct {v1, v0}, Ll6e;-><init>(Ljava/util/HashSet;)V
+
+    new-instance v0, Landroid/util/SparseBooleanArray;
+
+    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    sget-object v1, Litb;->c:[I
+
+    array-length v3, v1
+
+    move v4, v2
+
+    :goto_3
+    const/4 v5, 0x1
+
+    if-ge v4, v3, :cond_3
+
+    aget v6, v1, v4
+
+    const/4 v7, 0x0
+
+    xor-int/2addr v7, v5
+
+    invoke-static {v7}, Lsgi;->i(Z)V
+
+    invoke-virtual {v0, v6, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v1, Lktb;
+
+    xor-int/2addr v2, v5
+
+    invoke-static {v2}, Lsgi;->i(Z)V
+
+    new-instance v2, Lzx5;
+
+    invoke-direct {v2, v0}, Lzx5;-><init>(Landroid/util/SparseBooleanArray;)V
+
+    invoke-direct {v1, v2}, Lktb;-><init>(Lzx5;)V
+
+    sput-object v1, Loz8;->f:Lktb;
 
     return-void
 .end method
 
+.method public constructor <init>(Ll6e;Lktb;Lec7;Lec7;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Loz8;->a:I
+    iput-object p1, p0, Loz8;->a:Ll6e;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p2, p0, Loz8;->b:Lktb;
 
-    const/16 v0, 0x1a
+    iput-object p3, p0, Loz8;->c:Lec7;
 
-    iget-object v1, p0, Loz8;->b:Lrtb;
+    iput-object p4, p0, Loz8;->d:Lec7;
 
-    invoke-virtual {v1, v0}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    const/16 v2, 0x22
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_0
-
-    :cond_0
-    const/16 v0, -0x64
-
-    iget v3, p0, Loz8;->c:I
-
-    const/4 v4, 0x1
-
-    if-eq v3, v0, :cond_9
-
-    const/4 v0, -0x1
-
-    if-eq v3, v0, :cond_7
-
-    if-eq v3, v4, :cond_5
-
-    const/16 v0, 0x64
-
-    if-eq v3, v0, :cond_3
-
-    const/16 v0, 0x65
-
-    if-eq v3, v0, :cond_1
-
-    const-string v0, "VolumeProviderCompat"
-
-    const-string v1, "onAdjustVolume: Ignoring unknown direction: "
-
-    invoke-static {v3, v1, v0}, Lxx1;->p(ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lrtb;->P()Z
-
-    invoke-virtual {v1, v4, v4}, Lrtb;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Lrtb;->P()Z
-
-    invoke-virtual {v1, v4}, Lrtb;->f0(Z)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v1, v4, v2}, Lrtb;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1, v2}, Lrtb;->f0(Z)V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v1, v4}, Lrtb;->N(I)V
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {v1}, Lrtb;->M()V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-virtual {v1, v4}, Lrtb;->p(I)V
-
-    goto :goto_0
-
-    :cond_8
-    invoke-virtual {v1}, Lrtb;->n()V
-
-    goto :goto_0
-
-    :cond_9
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {v1, v4, v4}, Lrtb;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_a
-    invoke-virtual {v1, v4}, Lrtb;->f0(Z)V
-
-    :goto_0
     return-void
-
-    :pswitch_0
-    const/16 v0, 0x19
-
-    iget-object v1, p0, Loz8;->b:Lrtb;
-
-    invoke-virtual {v1, v0}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    const/16 v2, 0x21
-
-    if-nez v0, :cond_b
-
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    goto :goto_1
-
-    :cond_b
-    invoke-virtual {v1, v2}, Lrtb;->T(I)Z
-
-    move-result v0
-
-    iget v2, p0, Loz8;->c:I
-
-    if-eqz v0, :cond_c
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v2, v0}, Lrtb;->h0(II)V
-
-    goto :goto_1
-
-    :cond_c
-    invoke-virtual {v1, v2}, Lrtb;->g0(I)V
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

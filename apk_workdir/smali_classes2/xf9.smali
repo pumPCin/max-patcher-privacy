@@ -1,55 +1,49 @@
 .class public final Lxf9;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lkf9;
+.field public final a:Lfgd;
 
-.field public Y:Lnf9;
+.field public final b:Lei;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final c:Lfi;
 
-.field public o:Lig9;
-
-.field public final synthetic r0:Lig9;
-
-.field public s0:I
+.field public final d:Lfi;
 
 
 # direct methods
-.method public constructor <init>(Lig9;Lk14;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p1, p0, Lxf9;->r0:Lig9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxf9;->a:Lfgd;
+
+    new-instance v0, Lei;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lxf9;->b:Lei;
+
+    new-instance v0, Lfi;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lxf9;->c:Lfi;
+
+    new-instance v0, Lfi;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lxf9;->d:Lfi;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lxf9;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lxf9;->s0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxf9;->s0:I
-
-    iget-object p1, p0, Lxf9;->r0:Lig9;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lig9;->s(Lig9;Lkf9;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

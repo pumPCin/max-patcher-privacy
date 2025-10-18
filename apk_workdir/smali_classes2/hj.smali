@@ -81,25 +81,25 @@
 
     iget-object v0, p0, Lhj;->c:Ljava/lang/Object;
 
-    check-cast v0, Ljrh;
+    check-cast v0, Lksh;
 
     iget-object v1, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v1, Lab4;
+    check-cast v1, Lpb4;
 
     iget-boolean v2, p0, Lhj;->b:Z
 
-    iget-object v0, v0, Ljrh;->a:Luhd;
+    iget-object v0, v0, Lksh;->a:Lbjd;
 
-    iget-object v3, v0, Luhd;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v3, v0, Lbjd;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lab4;
+    check-cast v3, Lpb4;
 
-    iget-object v4, v0, Luhd;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v4, v0, Lbjd;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -114,12 +114,12 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    invoke-virtual {v0}, Luhd;->b()V
+    invoke-virtual {v0}, Lbjd;->b()V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Luhd;->a()V
+    invoke-virtual {v0}, Lbjd;->a()V
 
     :cond_2
     :goto_0
@@ -128,23 +128,23 @@
     :pswitch_0
     iget-object v0, p0, Lhj;->c:Ljava/lang/Object;
 
-    check-cast v0, Lfx1;
+    check-cast v0, Lmx1;
 
     iget-boolean v1, p0, Lhj;->b:Z
 
     iget-object v2, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v2, Ling;
+    check-cast v2, Lnog;
 
     :try_start_0
-    iget-object v3, v0, Lfx1;->e:Ljava/lang/Object;
+    iget-object v3, v0, Lmx1;->e:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-boolean v4, v0, Lfx1;->b:Z
+    iget-boolean v4, v0, Lmx1;->b:Z
 
     if-eqz v4, :cond_3
 
@@ -166,14 +166,14 @@
 
     :goto_1
     :try_start_2
-    iget-object v1, v0, Lfx1;->e:Ljava/lang/Object;
+    iget-object v1, v0, Lmx1;->e:Ljava/lang/Object;
 
     monitor-enter v1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     :try_start_3
-    iget-object v3, v0, Lfx1;->g:Ljava/lang/Object;
+    iget-object v3, v0, Lmx1;->g:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/ArrayDeque;
 
@@ -181,7 +181,7 @@
 
     move-result-object v3
 
-    check-cast v3, Ling;
+    check-cast v3, Lnog;
 
     monitor-exit v1
     :try_end_3
@@ -190,7 +190,7 @@
     if-nez v3, :cond_4
 
     :try_start_4
-    invoke-interface {v2}, Ling;->run()V
+    invoke-interface {v2}, Lnog;->run()V
 
     goto :goto_4
 
@@ -200,7 +200,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-interface {v3}, Ling;->run()V
+    invoke-interface {v3}, Lnog;->run()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
@@ -231,7 +231,7 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
     :goto_3
-    invoke-virtual {v0, v1}, Lfx1;->b(Ljava/lang/Exception;)V
+    invoke-virtual {v0, v1}, Lmx1;->b(Ljava/lang/Exception;)V
 
     :goto_4
     return-void
@@ -239,22 +239,22 @@
     :pswitch_1
     iget-object v0, p0, Lhj;->c:Ljava/lang/Object;
 
-    check-cast v0, Lwyf;
+    check-cast v0, La0g;
 
     iget-object v1, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v1, Lyt1;
+    check-cast v1, Lgu1;
 
     iget-boolean v2, p0, Lhj;->b:Z
 
-    invoke-virtual {v0, v1, v2}, Lwyf;->a(Lyt1;Z)V
+    invoke-virtual {v0, v1, v2}, La0g;->a(Lgu1;Z)V
 
     return-void
 
     :pswitch_2
     iget-object v0, p0, Lhj;->c:Ljava/lang/Object;
 
-    check-cast v0, Lokf;
+    check-cast v0, Lslf;
 
     iget-object v1, p0, Lhj;->o:Ljava/lang/Object;
 
@@ -262,14 +262,14 @@
 
     iget-boolean v2, p0, Lhj;->b:Z
 
-    const-string v3, "okf"
+    const-string v3, "slf"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     :try_start_9
-    invoke-virtual {v0, v1, v2}, Lokf;->g(Ljava/util/Collection;Z)V
+    invoke-virtual {v0, v1, v2}, Lslf;->g(Ljava/util/Collection;Z)V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
 
@@ -280,17 +280,17 @@
 
     const-string v6, "sync exception"
 
-    invoke-static {v3, v6, v2}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v6, v2}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, v0, Lokf;->j:Lye5;
+    iget-object v0, v0, Lslf;->j:Lsf5;
 
     new-instance v6, Lru/ok/tamtam/util/HandledException;
 
     invoke-direct {v6, v2}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    check-cast v0, Lvta;
+    check-cast v0, Lxua;
 
-    invoke-virtual {v0, v6}, Lvta;->c(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v6}, Lxua;->c(Ljava/lang/Throwable;)V
 
     :goto_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -317,7 +317,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
@@ -330,7 +330,7 @@
 
     iget-object v3, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v3, Lrnf;
+    check-cast v3, Lvof;
 
     const-string v4, "com.google.android.gms"
 
@@ -380,7 +380,7 @@
 
     :cond_6
     :goto_6
-    invoke-virtual {v3, v6}, Lrnf;->d(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lvof;->d(Ljava/lang/Object;)V
 
     goto :goto_7
 
@@ -391,7 +391,7 @@
 
     :cond_7
     :try_start_b
-    invoke-static {v0}, Lbvi;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Ldwi;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -415,12 +415,12 @@
 
     if-eqz v2, :cond_8
 
-    invoke-static {v0}, Lh05;->p(Landroid/app/NotificationManager;)V
+    invoke-static {v0}, La15;->p(Landroid/app/NotificationManager;)V
 
     goto :goto_6
 
     :cond_8
-    invoke-static {v0}, Lh05;->k(Landroid/app/NotificationManager;)Ljava/lang/String;
+    invoke-static {v0}, La15;->k(Landroid/app/NotificationManager;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -430,7 +430,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-static {v0}, Lh05;->y(Landroid/app/NotificationManager;)V
+    invoke-static {v0}, La15;->y(Landroid/app/NotificationManager;)V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
@@ -440,36 +440,36 @@
     return-void
 
     :goto_8
-    invoke-virtual {v3, v6}, Lrnf;->d(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lvof;->d(Ljava/lang/Object;)V
 
     throw v0
 
     :pswitch_4
     iget-object v0, p0, Lhj;->c:Ljava/lang/Object;
 
-    check-cast v0, Ll36;
+    check-cast v0, Lf46;
 
     iget-boolean v1, p0, Lhj;->b:Z
 
     iget-object v2, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v2, Lyt1;
+    check-cast v2, Lgu1;
 
-    iget-object v3, v0, Ll36;->a:Lox1;
+    iget-object v3, v0, Lf46;->a:Lvx1;
 
-    iget-object v4, v0, Ll36;->u:Lk36;
+    iget-object v4, v0, Lf46;->u:Le46;
 
-    iget-object v3, v3, Lox1;->b:Lmx1;
+    iget-object v3, v3, Lvx1;->b:Ltx1;
 
-    iget-object v3, v3, Lmx1;->b:Ljava/lang/Object;
+    iget-object v3, v3, Ltx1;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/HashSet;
 
     invoke-virtual {v3, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    iput-boolean v1, v0, Ll36;->t:Z
+    iput-boolean v1, v0, Lf46;->t:Z
 
-    iget-boolean v1, v0, Ll36;->d:Z
+    iget-boolean v1, v0, Lf46;->d:Z
 
     if-nez v1, :cond_9
 
@@ -479,26 +479,26 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
+    invoke-virtual {v2, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
 
     goto :goto_9
 
     :cond_9
-    iget-object v1, v0, Ll36;->a:Lox1;
+    iget-object v1, v0, Lf46;->a:Lvx1;
 
-    invoke-virtual {v1}, Lox1;->A()J
+    invoke-virtual {v1}, Lvx1;->A()J
 
     move-result-wide v3
 
-    new-instance v1, Lk36;
+    new-instance v1, Le46;
 
-    invoke-direct {v1, v0, v3, v4, v2}, Lk36;-><init>(Ll36;JLyt1;)V
+    invoke-direct {v1, v0, v3, v4, v2}, Le46;-><init>(Lf46;JLgu1;)V
 
-    iput-object v1, v0, Ll36;->u:Lk36;
+    iput-object v1, v0, Lf46;->u:Le46;
 
-    iget-object v0, v0, Ll36;->a:Lox1;
+    iget-object v0, v0, Lf46;->a:Lvx1;
 
-    invoke-virtual {v0, v1}, Lox1;->p(Lnx1;)V
+    invoke-virtual {v0, v1}, Lvx1;->p(Lux1;)V
 
     :goto_9
     return-void
@@ -512,11 +512,11 @@
 
     iget-object v3, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v3, Lo77;
+    check-cast v3, Lk87;
 
-    sget-object v4, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Lwq7;
+    sget-object v4, Lone/me/chats/search/ChatsListSearchScreen;->H0:[Ltr7;
 
-    iget-object v4, v3, Lo77;->b:Ljava/util/List;
+    iget-object v4, v3, Lk87;->b:Ljava/util/List;
 
     if-eqz v0, :cond_a
 
@@ -525,27 +525,27 @@
     :cond_a
     invoke-virtual {v2, v1}, Lone/me/chats/search/ChatsListSearchScreen;->H0(Z)V
 
-    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->C0:Lai0;
+    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->B0:Lji0;
 
-    iget-object v1, v2, Lone/me/chats/search/ChatsListSearchScreen;->r0:Llt7;
+    iget-object v1, v2, Lone/me/chats/search/ChatsListSearchScreen;->q0:Liu7;
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lqh0;
+    check-cast v1, Lzh0;
 
-    iget-object v1, v1, Lqh0;->r0:Lgzc;
+    iget-object v1, v1, Lzh0;->q0:Ln0d;
 
-    iget-object v1, v1, Lgzc;->a:Llze;
+    iget-object v1, v1, Ln0d;->a:Lq0f;
 
-    invoke-interface {v1}, Llze;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lq0f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lu08;->E(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lr18;->E(Ljava/util/List;)V
 
     invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
@@ -553,7 +553,7 @@
 
     if-nez v0, :cond_b
 
-    sget-object v0, Ld1d;->a:Ld1d;
+    sget-object v0, Lk2d;->a:Lk2d;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -562,22 +562,22 @@
     goto :goto_a
 
     :cond_b
-    sget-object v0, Ls95;->a:Ls95;
+    sget-object v0, Lka5;->a:Lka5;
 
     :goto_a
-    iget-object v1, v2, Lone/me/chats/search/ChatsListSearchScreen;->v0:Lqih;
+    iget-object v1, v2, Lone/me/chats/search/ChatsListSearchScreen;->u0:Lqjh;
 
-    invoke-virtual {v1, v0}, Lu08;->E(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lr18;->E(Ljava/util/List;)V
 
-    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->w0:Lzx3;
+    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->v0:Lny3;
 
-    invoke-virtual {v0, v4}, Lu08;->E(Ljava/util/List;)V
+    invoke-virtual {v0, v4}, Lr18;->E(Ljava/util/List;)V
 
-    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->x0:Lqih;
+    iget-object v0, v2, Lone/me/chats/search/ChatsListSearchScreen;->w0:Lqjh;
 
-    iget-object v1, v3, Lo77;->c:Ljava/util/List;
+    iget-object v1, v3, Lk87;->c:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lu08;->E(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lr18;->E(Ljava/util/List;)V
 
     return-void
 
@@ -590,13 +590,13 @@
 
     iget-object v2, p0, Lhj;->o:Ljava/lang/Object;
 
-    check-cast v2, Lzh1;
+    check-cast v2, Lhi1;
 
     const-string v3, "AniRenderDispatch"
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {v1, v2}, Lij;->b(Lzh1;)Ljj;
+    invoke-virtual {v1, v2}, Lij;->b(Lhi1;)Ljj;
 
     iget-boolean v0, v1, Lij;->p:Z
 
@@ -605,7 +605,7 @@
     goto :goto_c
 
     :cond_c
-    iget-object v0, v1, Lij;->n:Lyuc;
+    iget-object v0, v1, Lij;->n:Lfwc;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -623,7 +623,7 @@
 
     move-result-object v4
 
-    invoke-interface {v0, v3, v4}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v3, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, v1, Lij;->l:Ljava/util/LinkedHashSet;
 
@@ -639,7 +639,7 @@
     goto :goto_b
 
     :cond_e
-    iget-object v0, v1, Lij;->n:Lyuc;
+    iget-object v0, v1, Lij;->n:Lfwc;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -657,7 +657,7 @@
 
     move-result-object v4
 
-    invoke-interface {v0, v3, v4}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v3, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, v1, Lij;->l:Ljava/util/LinkedHashSet;
 

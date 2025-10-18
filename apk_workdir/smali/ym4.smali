@@ -3,89 +3,93 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhr3;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lzm4;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lzef;
+.field public final synthetic b:Lhn4;
 
-.field public final synthetic c:Landroid/graphics/SurfaceTexture;
-
-.field public final synthetic d:Landroid/view/Surface;
+.field public final synthetic c:Lwve;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzm4;Lzef;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
+.method public synthetic constructor <init>(Lhn4;Lwve;I)V
     .locals 0
 
+    iput p3, p0, Lym4;->a:I
+
+    iput-object p1, p0, Lym4;->b:Lhn4;
+
+    iput-object p2, p0, Lym4;->c:Lwve;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lym4;->a:Lzm4;
-
-    iput-object p2, p0, Lym4;->b:Lzef;
-
-    iput-object p3, p0, Lym4;->c:Landroid/graphics/SurfaceTexture;
-
-    iput-object p4, p0, Lym4;->d:Landroid/view/Surface;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lym4;->a:Lzm4;
+    iget v0, p0, Lym4;->a:I
 
-    iget-object v1, p0, Lym4;->b:Lzef;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lym4;->c:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lym4;->b:Lhn4;
 
-    iget-object v3, p0, Lym4;->d:Landroid/view/Surface;
+    iget-object v1, v0, Lhn4;->b:Ljava/util/ArrayList;
 
-    check-cast p1, Lsb0;
+    iget-object v2, p0, Lym4;->c:Lwve;
 
-    iget-object p1, v1, Lzef;->a:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    monitor-enter p1
+    iget-object v0, v0, Lhn4;->c:Ljava/util/ArrayList;
 
-    const/4 v4, 0x0
-
-    :try_start_0
-    iput-object v4, v1, Lzef;->n:Lyef;
-
-    iput-object v4, v1, Lzef;->o:Ljava/util/concurrent/Executor;
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v2, v4}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
-
-    invoke-virtual {v3}, Landroid/view/Surface;->release()V
-
-    iget p1, v0, Lzm4;->s0:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, v0, Lzm4;->s0:I
-
-    invoke-virtual {v0}, Lzm4;->a()V
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :pswitch_0
+    iget-object v0, p0, Lym4;->b:Lhn4;
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v1, v0, Lhn4;->b:Ljava/util/ArrayList;
 
-    throw v0
+    iget-object v2, p0, Lym4;->c:Lwve;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, v2, Lwve;->a:I
+
+    iget-object v2, v2, Lwve;->c:Landroidx/fragment/app/a;
+
+    iget-object v2, v2, Landroidx/fragment/app/a;->R0:Landroid/view/View;
+
+    iget-object v0, v0, Lhn4;->a:Landroid/view/ViewGroup;
+
+    invoke-static {v1, v2, v0}, Labd;->a(ILandroid/view/View;Landroid/view/ViewGroup;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lym4;->b:Lhn4;
+
+    iget-object v1, p0, Lym4;->c:Lwve;
+
+    invoke-virtual {v0, v1}, Lhn4;->a(Lwve;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

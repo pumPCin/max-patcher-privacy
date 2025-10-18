@@ -1,272 +1,353 @@
 .class public final Laqe;
-.super Lqnd;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lijd;
-
-.field public static final e:Ljava/util/concurrent/ScheduledExecutorService;
+# interfaces
+.implements Leqe;
+.implements Lvv4;
+.implements Lgh3;
 
 
 # instance fields
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lfja;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
+    iput v0, p0, Laqe;->a:I
 
-    move-result-object v0
+    .line 3
+    iput-object p1, p0, Laqe;->b:Ljava/lang/Object;
 
-    sput-object v0, Laqe;->e:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    const-string v0, "rx3.single-priority"
-
-    const/4 v1, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    new-instance v2, Lijd;
-
-    const-string v3, "RxSingleScheduler"
-
-    invoke-direct {v2, v3, v0, v1}, Lijd;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v2, Laqe;->d:Lijd;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lsqe;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput v0, p0, Laqe;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object v0, p0, Laqe;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-boolean v1, Lxnd;->a:Z
-
-    new-instance v1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    const/4 v2, 0x1
-
-    sget-object v3, Laqe;->d:Lijd;
-
-    invoke-direct {v1, v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sget-boolean v2, Lxnd;->a:Z
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    .line 2
+    iput-object p1, p0, Laqe;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lond;
-    .locals 2
+.method public a(Ljava/lang/Object;)V
+    .locals 3
 
-    new-instance v0, Lzpe;
+    iget-object v0, p0, Laqe;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Laqe;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast v0, Lsqe;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+    sget-object v2, Lzv4;->a:Lzv4;
 
-    invoke-direct {v0, v1}, Lzpe;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
+    if-eq v1, v2, :cond_2
 
-    return-object v0
-.end method
+    invoke-virtual {p0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
-    .locals 3
+    move-result-object v1
 
-    new-instance v0, Lqmd;
+    check-cast v1, Lvv4;
 
-    const-string v1, "run is null"
+    if-eq v1, v2, :cond_2
 
-    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Ls0;-><init>(Ljava/lang/Runnable;Z)V
-
-    const-wide/16 v1, 0x0
-
-    cmp-long p1, p2, v1
-
-    iget-object v1, p0, Laqe;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    if-gtz p1, :cond_0
+    if-nez p1, :cond_0
 
     :try_start_0
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const-string p1, "onSuccess called with a null value."
+
+    invoke-static {p1}, Luf5;->b(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     move-result-object p1
 
-    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
+    invoke-interface {v0, p1}, Lsqe;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    :catch_0
+    :catchall_0
     move-exception p1
 
     goto :goto_1
 
     :cond_0
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {p1, v0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
+    invoke-interface {v0, p1}, Lsqe;->a(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
-    invoke-virtual {v0, p1}, Ls0;->a(Ljava/util/concurrent/Future;)V
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Lvv4;->g()V
+
+    return-void
+
+    :goto_1
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Lvv4;->g()V
+
+    :cond_1
+    throw p1
+
+    :cond_2
+    return-void
+.end method
+
+.method public b()V
+    .locals 2
+
+    iget-object v0, p0, Laqe;->b:Ljava/lang/Object;
+
+    check-cast v0, Lfja;
+
+    iget-object v1, v0, Lfja;->o:Lni3;
+
+    invoke-virtual {v1, p0}, Lni3;->c(Lvv4;)Z
+
+    invoke-virtual {v0}, Lfja;->b()V
+
+    return-void
+.end method
+
+.method public c(Lvv4;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Throwable;)Z
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const-string p1, "onError called with a null Throwable."
+
+    invoke-static {p1}, Luf5;->b(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lzv4;->a:Lzv4;
+
+    if-eq v0, v1, :cond_3
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    if-eq v0, v1, :cond_3
+
+    :try_start_0
+    iget-object v1, p0, Laqe;->b:Ljava/lang/Object;
+
+    check-cast v1, Lsqe;
+
+    invoke-interface {v1, p1}, Lsqe;->onError(Ljava/lang/Throwable;)V
     :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    :cond_2
+    throw p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Laqe;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Laqe;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvv4;
+
+    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget v0, p0, Laqe;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Laqe;->b:Ljava/lang/Object;
+
+    check-cast v0, Lfja;
+
+    iget-object v1, v0, Lfja;->o:Lni3;
+
+    invoke-virtual {v1, p0}, Lni3;->c(Lvv4;)Z
+
+    invoke-virtual {v0, p1}, Lfja;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0, p1}, Laqe;->d(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Laqe;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/util/concurrent/atomic/AtomicReference;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 
-    :goto_1
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+    :pswitch_0
+    const-class v0, Laqe;
 
-    sget-object p1, Ln95;->a:Ln95;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
-    .locals 8
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v1, p4, v4
-
-    sget-object v7, Ln95;->a:Ln95;
-
-    iget-object v6, p0, Laqe;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    if-gtz v1, :cond_1
-
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-super {p0}, Ljava/util/concurrent/atomic/AtomicReference;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v6, Lph7;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v6, p1, v1}, Lph7;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    cmp-long v0, p2, v4
+    const-string v0, "{"
 
-    if-gtz v0, :cond_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :try_start_0
-    invoke-interface {v1, v6}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v0, "}"
 
-    goto :goto_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v1, v6, p2, p3, p6}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-virtual {v6, v0}, Lph7;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
 
-    return-object v6
-
-    :goto_1
-    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    return-object v7
-
-    :cond_1
-    new-instance v1, Lpmd;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v1, p1, v5}, Ls0;-><init>(Ljava/lang/Runnable;Z)V
-
-    :try_start_1
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ls0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_1
-
-    return-object v1
-
-    :catch_1
-    move-exception v0
-
-    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    return-object v7
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

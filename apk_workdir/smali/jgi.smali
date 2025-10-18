@@ -1,170 +1,75 @@
-.class public final enum Ljgi;
-.super Ljava/lang/Enum;
+.class public abstract Ljgi;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcwh;
 
 
 # static fields
-.field public static final enum X:Ljgi;
-
-.field public static final enum Y:Ljgi;
-
-.field public static final enum Z:Ljgi;
-
-.field public static final enum b:Ljgi;
-
-.field public static final enum c:Ljgi;
-
-.field public static final enum o:Ljgi;
-
-.field public static final synthetic r0:[Ljgi;
-
-
-# instance fields
-.field public final a:I
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 5
 
-    new-instance v0, Ljgi;
+    new-instance v0, Ljava/util/HashSet;
 
-    const-string v1, "UNKNOWN_FORMAT"
+    const-string v1, "review"
 
-    const/4 v2, 0x0
+    const-string v2, "app_update"
 
-    invoke-direct {v0, v1, v2, v2}, Ljgi;-><init>(Ljava/lang/String;II)V
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    sput-object v0, Ljgi;->b:Ljgi;
+    move-result-object v1
 
-    new-instance v1, Ljgi;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    const-string v2, "NV16"
+    move-result-object v1
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v1, v2, v3, v3}, Ljgi;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Ljava/util/HashSet;
 
-    sput-object v1, Ljgi;->c:Ljgi;
+    const-string v1, "unity"
 
-    new-instance v2, Ljgi;
+    const-string v2, "native"
 
-    const-string v3, "NV21"
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    const/4 v4, 0x2
+    move-result-object v1
 
-    invoke-direct {v2, v3, v4, v4}, Ljgi;-><init>(Ljava/lang/String;II)V
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    sput-object v2, Ljgi;->o:Ljgi;
+    move-result-object v1
 
-    new-instance v3, Ljgi;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    const-string v4, "YV12"
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 v5, 0x3
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {v3, v4, v5, v5}, Ljgi;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Ljgi;->a:Ljava/util/HashMap;
 
-    sput-object v3, Ljgi;->X:Ljgi;
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    new-instance v4, Ljgi;
+    move-result v0
 
-    const-string v5, "YUV_420_888"
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    const/4 v6, 0x4
+    move-result v1
 
-    const/4 v7, 0x7
+    const-string v2, "]  PID: ["
 
-    invoke-direct {v4, v5, v6, v7}, Ljgi;-><init>(Ljava/lang/String;II)V
+    const-string v3, "] "
 
-    sput-object v4, Ljgi;->Y:Ljgi;
+    const-string v4, "UID: ["
 
-    new-instance v5, Ljgi;
-
-    const-string v8, "JPEG"
-
-    const/4 v9, 0x5
-
-    const/16 v10, 0x8
-
-    invoke-direct {v5, v8, v9, v10}, Ljgi;-><init>(Ljava/lang/String;II)V
-
-    move v8, v6
-
-    new-instance v6, Ljgi;
-
-    const-string v11, "BITMAP"
-
-    const/4 v12, 0x6
-
-    invoke-direct {v6, v11, v12, v8}, Ljgi;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Ljgi;->Z:Ljgi;
-
-    move v8, v7
-
-    new-instance v7, Ljgi;
-
-    const-string v11, "CM_SAMPLE_BUFFER_REF"
-
-    invoke-direct {v7, v11, v8, v9}, Ljgi;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Ljgi;
-
-    const-string v9, "UI_IMAGE"
-
-    invoke-direct {v8, v9, v10, v12}, Ljgi;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Ljgi;
-
-    const-string v10, "CV_PIXEL_BUFFER_REF"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v11}, Ljgi;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Ljgi;
+    invoke-static {v4, v0, v2, v1, v3}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ljgi;->r0:[Ljgi;
+    const-string v1, "PlayCoreVersion"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ljgi;->a:I
-
-    return-void
-.end method
-
-.method public static values()[Ljgi;
-    .locals 1
-
-    sget-object v0, Ljgi;->r0:[Ljgi;
-
-    invoke-virtual {v0}, [Ljgi;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljgi;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Ljgi;->a:I
-
-    return v0
 .end method

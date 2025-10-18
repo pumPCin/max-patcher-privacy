@@ -1,73 +1,129 @@
-.class public final enum Ltod;
-.super Ljava/lang/Enum;
+.class public final Ltod;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvv4;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Ltod;
 
-.field public static final enum b:Ltod;
+# instance fields
+.field public final a:Ljava/lang/Runnable;
 
-.field public static final synthetic c:[Ltod;
+.field public final b:Lvod;
+
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Runnable;Lvod;)V
+    .locals 0
 
-    new-instance v0, Ltod;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "PREVIEW_VIEW"
+    iput-object p1, p0, Ltod;->a:Ljava/lang/Runnable;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ltod;->a:Ltod;
-
-    new-instance v1, Ltod;
-
-    const-string v2, "SCREEN_FLASH_VIEW"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ltod;->b:Ltod;
-
-    filled-new-array {v0, v1}, [Ltod;
-
-    move-result-object v0
-
-    sput-object v0, Ltod;->c:[Ltod;
+    iput-object p2, p0, Ltod;->b:Lvod;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ltod;
-    .locals 1
 
-    const-class v0, Ltod;
+# virtual methods
+.method public final g()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Ltod;->c:Ljava/lang/Thread;
 
-    move-result-object p0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    check-cast p0, Ltod;
+    move-result-object v1
 
-    return-object p0
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Ltod;->b:Lvod;
+
+    instance-of v1, v0, Lw8a;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lw8a;
+
+    iget-boolean v1, v0, Lw8a;->b:Z
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lw8a;->b:Z
+
+    iget-object v0, v0, Lw8a;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Ltod;->b:Lvod;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
 .end method
 
-.method public static values()[Ltod;
+.method public final h()Z
     .locals 1
 
-    sget-object v0, Ltod;->c:[Ltod;
+    iget-object v0, p0, Ltod;->b:Lvod;
 
-    invoke-virtual {v0}, [Ltod;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Lvv4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    check-cast v0, [Ltod;
+    iput-object v0, p0, Ltod;->c:Ljava/lang/Thread;
 
-    return-object v0
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Ltod;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Ltod;->g()V
+
+    iput-object v0, p0, Ltod;->c:Ljava/lang/Thread;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0}, Ltod;->g()V
+
+    iput-object v0, p0, Ltod;->c:Ljava/lang/Thread;
+
+    throw v1
 .end method

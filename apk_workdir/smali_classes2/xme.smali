@@ -3,49 +3,41 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lxme;
+
+
 # instance fields
-.field public final a:Z
+.field public final a:Lwme;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lwme;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lxme;
+
+    sget-object v1, Lwme;->a:Lwme;
+
+    sget-object v2, Lka5;->a:Lka5;
+
+    invoke-direct {v0, v1, v2}, Lxme;-><init>(Lwme;Ljava/util/List;)V
+
+    sput-object v0, Lxme;->c:Lxme;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwme;Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p1, Lwme;->a:Z
+    iput-object p1, p0, Lxme;->a:Lwme;
 
-    iput-boolean v0, p0, Lxme;->a:Z
-
-    iget-boolean v0, p1, Lwme;->b:Z
-
-    iput-boolean v0, p0, Lxme;->b:Z
-
-    iget-boolean v0, p1, Lwme;->c:Z
-
-    iput-boolean v0, p0, Lxme;->c:Z
-
-    iget-boolean v0, p1, Lwme;->e:Z
-
-    iput-boolean v0, p0, Lxme;->e:Z
-
-    iget-boolean v0, p1, Lwme;->d:Z
-
-    iput-boolean v0, p0, Lxme;->d:Z
-
-    iget-boolean p1, p1, Lwme;->f:Z
-
-    iput-boolean p1, p0, Lxme;->f:Z
+    iput-object p2, p0, Lxme;->b:Ljava/util/List;
 
     return-void
 .end method
@@ -53,125 +45,101 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    if-eqz p1, :cond_7
+    instance-of v1, p1, Lxme;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    const-class v1, Lxme;
-
-    if-eq v1, v0, :cond_1
-
-    goto :goto_1
+    return v2
 
     :cond_1
     check-cast p1, Lxme;
 
-    iget-boolean v0, p0, Lxme;->a:Z
+    iget-object v1, p0, Lxme;->a:Lwme;
 
-    iget-boolean v1, p1, Lxme;->a:Z
+    iget-object v3, p1, Lxme;->a:Lwme;
 
-    if-eq v0, v1, :cond_2
+    if-eq v1, v3, :cond_2
 
-    goto :goto_1
+    return v2
 
     :cond_2
-    iget-boolean v0, p0, Lxme;->b:Z
+    iget-object v1, p0, Lxme;->b:Ljava/util/List;
 
-    iget-boolean v1, p1, Lxme;->b:Z
+    iget-object p1, p1, Lxme;->b:Ljava/util/List;
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_1
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
 
     :cond_3
-    iget-boolean v0, p0, Lxme;->c:Z
-
-    iget-boolean v1, p1, Lxme;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v0, p0, Lxme;->d:Z
-
-    iget-boolean v1, p1, Lxme;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-boolean v0, p0, Lxme;->f:Z
-
-    iget-boolean v1, p1, Lxme;->f:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    iget-boolean v0, p0, Lxme;->e:Z
-
-    iget-boolean p1, p1, Lxme;->e:Z
-
-    if-ne v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-boolean v0, p0, Lxme;->a:Z
+    iget-object v0, p0, Lxme;->a:Lwme;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v1, p0, Lxme;->b:Z
+    iget-object v1, p0, Lxme;->b:Ljava/util/List;
 
-    add-int/2addr v0, v1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result v1
 
-    iget-boolean v1, p0, Lxme;->c:Z
+    add-int/2addr v1, v0
 
-    add-int/2addr v0, v1
+    return v1
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-boolean v1, p0, Lxme;->e:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    add-int/2addr v0, v1
+    const-string v1, "ShowcaseState(state="
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v1, p0, Lxme;->d:Z
+    iget-object v1, p0, Lxme;->a:Lwme;
 
-    add-int/2addr v0, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-string v1, ", content="
 
-    iget-boolean v1, p0, Lxme;->f:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v0, v1
+    iget-object v1, p0, Lxme;->b:Ljava/util/List;
 
-    return v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

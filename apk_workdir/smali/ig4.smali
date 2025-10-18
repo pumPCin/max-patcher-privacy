@@ -1,177 +1,156 @@
-.class public final synthetic Lig4;
+.class public final Lig4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw18;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Ldwg;
+.field public final b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:[Lcd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldwg;)V
+.method public constructor <init>()V
     .locals 1
 
-    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     const/4 v0, 0x1
 
-    iput v0, p0, Lig4;->a:I
+    iput-boolean v0, p0, Lig4;->a:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v0, 0x10000
 
-    iput-object p1, p0, Lig4;->b:Ldwg;
+    iput v0, p0, Lig4;->b:I
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public synthetic constructor <init>(Lmd;Ldwg;)V
-    .locals 0
+    iput v0, p0, Lig4;->e:I
 
-    .line 1
-    const/4 p1, 0x0
+    const/16 v0, 0x64
 
-    iput p1, p0, Lig4;->a:I
+    new-array v0, v0, [Lcd;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lig4;->b:Ldwg;
+    iput-object v0, p0, Lig4;->f:[Lcd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 7
+.method public final declared-synchronized a(I)V
+    .locals 1
 
-    iget v0, p0, Lig4;->a:I
+    monitor-enter p0
 
-    iget-object v1, p0, Lig4;->b:Ldwg;
+    :try_start_0
+    iget v0, p0, Lig4;->c:I
 
-    packed-switch v0, :pswitch_data_0
+    if-ge p1, v0, :cond_0
 
-    check-cast p1, Lhsb;
-
-    invoke-interface {p1, v1}, Lhsb;->A(Ldwg;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Leh5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "videoDebugListener.onVideoSizeChanged: %s"
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "eh5"
-
-    invoke-static {v3, v0, v2}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget v0, v1, Ldwg;->c:I
-
-    iget v2, v1, Ldwg;->b:I
-
-    iget v1, v1, Ldwg;->a:I
-
-    const/16 v3, 0x5a
-
-    if-eq v0, v3, :cond_1
-
-    const/16 v3, 0x10e
-
-    if-ne v0, v3, :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    iput v1, p1, Leh5;->t0:I
+    const/4 v0, 0x0
 
-    iput v2, p1, Leh5;->u0:I
+    :goto_0
+    iput p1, p0, Lig4;->c:I
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lig4;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
     :cond_1
-    :goto_0
-    iput v2, p1, Leh5;->t0:I
-
-    iput v1, p1, Leh5;->u0:I
-
     :goto_1
-    iput v0, p1, Leh5;->v0:I
+    monitor-exit p0
 
-    iget-object v0, p1, Leh5;->Z:Lklg;
+    return-void
 
-    if-eqz v0, :cond_3
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    int-to-float v0, v1
+    throw p1
+.end method
 
-    int-to-float v3, v2
+.method public final declared-synchronized b()V
+    .locals 4
 
-    div-float/2addr v0, v3
+    monitor-enter p0
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    :try_start_0
+    iget v0, p0, Lig4;->c:I
 
-    div-float/2addr v3, v0
+    iget v1, p0, Lig4;->b:I
 
-    iget v0, p1, Leh5;->r0:F
-
-    sub-float/2addr v0, v3
-
-    const/4 v3, 0x0
-
-    cmpl-float v3, v0, v3
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v0, v1}, Llig;->f(II)I
 
     move-result v0
 
-    float-to-double v3, v0
+    iget v1, p0, Lig4;->d:I
 
-    const-wide v5, 0x3f1a36e2eb1c432dL    # 1.0E-4
+    sub-int/2addr v0, v1
 
-    cmpg-double v0, v3, v5
+    const/4 v1, 0x0
 
-    if-gtz v0, :cond_3
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
-    :cond_2
-    iput v2, p1, Leh5;->t0:I
+    move-result v0
 
-    iput v1, p1, Leh5;->u0:I
+    iget v1, p0, Lig4;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_3
-    iget-object v0, p1, Leh5;->Y:Lo58;
+    if-lt v0, v1, :cond_0
 
-    if-eqz v0, :cond_4
+    monitor-exit p0
 
-    iget v1, p1, Leh5;->t0:I
-
-    iget v2, p1, Leh5;->u0:I
-
-    iget p1, p1, Leh5;->v0:I
-
-    iget-object v0, v0, Lo58;->e:Lqci;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0, v1, v2, p1}, Llv8;->L(III)V
-
-    :cond_4
     return-void
 
-    nop
+    :cond_0
+    :try_start_1
+    iget-object v2, p0, Lig4;->f:[Lcd;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v3, 0x0
+
+    invoke-static {v2, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
+
+    iput v0, p0, Lig4;->e:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method

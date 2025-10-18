@@ -1,159 +1,121 @@
-.class public final Li51;
+.class public final synthetic Li51;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj51;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lfx0;
 
-.field public final b:Z
+.field public final synthetic a:Lhl;
 
-.field public final c:Z
+.field public final synthetic b:J
+
+.field public final synthetic c:Lk51;
+
+.field public final synthetic o:Lgv1;
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public synthetic constructor <init>(Lhl;JLk51;Lgv1;Lfx0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Li51;->a:J
+    iput-object p1, p0, Li51;->a:Lhl;
 
-    iput-boolean p3, p0, Li51;->b:Z
+    iput-wide p2, p0, Li51;->b:J
 
-    iput-boolean p4, p0, Li51;->c:Z
+    iput-object p4, p0, Li51;->c:Lk51;
+
+    iput-object p5, p0, Li51;->o:Lgv1;
+
+    iput-object p6, p0, Li51;->X:Lfx0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Li51;->b:Z
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Li51;->c:Z
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Li51;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Li51;
-
-    iget-wide v3, p0, Li51;->a:J
-
-    iget-wide v5, p1, Li51;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Li51;->b:Z
-
-    iget-boolean v3, p1, Li51;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Li51;->c:Z
-
-    iget-boolean p1, p1, Li51;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-wide v0, p0, Li51;->a:J
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Li51;->a:Lhl;
 
-    move-result v0
+    iget-wide v1, v0, Lhl;->a:J
 
-    const/16 v1, 0x1f
+    invoke-static {v1, v2}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    mul-int/2addr v0, v1
+    move-result-object v1
 
-    iget-boolean v2, p0, Li51;->b:Z
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+    move-result-object p1
 
-    move-result v0
+    iget-object v1, v0, Lhl;->c:Ljava/lang/String;
 
-    iget-boolean v1, p0, Li51;->c:Z
+    if-eqz v1, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    move-result v1
+    :cond_0
+    iget-object v0, v0, Lhl;->b:Ljava/lang/String;
 
-    add-int/2addr v1, v0
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    return v1
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-wide v0, p0, Li51;->b:J
 
-    const-string v0, "User(userId="
-
-    const-string v1, ", isVideoEnabled="
-
-    iget-wide v2, p0, Li51;->a:J
-
-    iget-boolean v4, p0, Li51;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lwc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v0
 
-    const-string v1, ", isAudioEnabled="
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    const-string v2, ")"
+    move-result-object p1
 
-    iget-boolean v3, p0, Li51;->c:Z
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    invoke-static {v0, v1, v3, v2}, Lf67;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Li51;->c:Lk51;
+
+    iget-object v0, v0, Lk51;->b:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lmw1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+
+    iget-object v0, p0, Li51;->o:Lgv1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+
+    iget-object v0, p0, Li51;->X:Lfx0;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+
+    move-result-object p1
+
+    return-object p1
 .end method

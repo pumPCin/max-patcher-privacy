@@ -1,191 +1,97 @@
 .class public final Lxx3;
-.super Lklf;
+.super Li6c;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# instance fields
-.field public c:I
-
-.field public o:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Loe9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 1
+.method public final A(Ly18;)V
+    .locals 5
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lvu3;
 
-    const-string v0, "verifyResult"
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v0, Lwra;
 
-    move-result v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_1
+    iget-object v1, p1, Lvu3;->Z:Ls3c;
 
-    const-string v0, "name"
+    sget-object v2, Ls3c;->c:Ls3c;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v2, :cond_1
 
-    move-result p2
+    const/16 v1, 0x40
 
-    if-nez p2, :cond_0
+    int-to-float v1, v1
 
-    invoke-virtual {p1}, Loe9;->y()V
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    return-void
+    move-result-object v2
 
-    :cond_0
-    invoke-static {p1}, Lfzh;->s(Loe9;)Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p1
+    move-result-object v2
 
-    iput-object p1, p0, Lxx3;->o:Ljava/lang/String;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    return-void
+    mul-float/2addr v1, v2
 
-    :cond_1
-    invoke-static {p1}, Lfzh;->s(Loe9;)Ljava/lang/String;
+    invoke-static {v1}, Lfhi;->b(F)I
 
-    move-result-object p1
+    const/16 v1, 0x50
 
-    if-eqz p1, :cond_5
+    int-to-float v1, v1
 
-    const-string p2, "GOOD"
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result p2
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eqz p2, :cond_2
+    move-result-object v2
 
-    const/4 p1, 0x1
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    goto :goto_0
+    mul-float/2addr v1, v2
 
-    :cond_2
-    const-string p2, "BAD"
+    invoke-static {v1}, Lfhi;->b(F)I
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result p2
+    iget v2, v0, Lwra;->K0:I
 
-    if-eqz p2, :cond_3
+    if-eq v2, v1, :cond_0
 
-    const/4 p1, 0x2
-
-    goto :goto_0
-
-    :cond_3
-    const-string p2, "UNDEFINED"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    const/4 p1, 0x3
-
-    :goto_0
-    iput p1, p0, Lxx3;->c:I
-
-    return-void
-
-    :cond_4
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "No enum constant ru.ok.tamtam.api.commands.ContactVerifyCmd.VerifyResult."
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_5
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Name is null"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget v0, p0, Lxx3;->c:I
-
-    iget-object v1, p0, Lxx3;->o:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "{verifyResult="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_2
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_0
-
-    const-string v0, "null"
-
-    goto :goto_0
+    iput v1, v0, Lwra;->K0:I
 
     :cond_0
-    const-string v0, "UNDEFINED"
-
-    goto :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     :cond_1
-    const-string v0, "BAD"
+    iget-wide v1, p1, Lvu3;->a:J
 
-    goto :goto_0
+    iget-object v3, p1, Lvu3;->Y:Ljava/lang/CharSequence;
 
-    :cond_2
-    const-string v0, "GOOD"
+    iget-object v4, p1, Lvu3;->o:Ljava/lang/String;
 
-    :goto_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    const-string v0, ", name=\'"
+    iget-object v1, p1, Lvu3;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lvu3;->c:Ltrf;
 
-    const-string v0, "\'}"
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lwra;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

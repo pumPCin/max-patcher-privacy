@@ -1,104 +1,131 @@
 .class public final Lao7;
-.super Lzv5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:Ltna;
+.field public final a:Ljava/lang/String;
 
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
+.field public final b:Lcye;
 
 
 # direct methods
-.method public constructor <init>(Ltna;ZZZLvtf;Lp71;Lyuc;)V
+.method public constructor <init>(Ljava/lang/String;Lcye;)V
     .locals 0
 
-    invoke-direct {p0, p5, p6, p7}, Lzv5;-><init>(Lvtf;Lp71;Lyuc;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lao7;->g:Ltna;
+    iput-object p1, p0, Lao7;->a:Ljava/lang/String;
 
-    iput-boolean p2, p0, Lao7;->h:Z
-
-    iput-boolean p3, p0, Lao7;->i:Z
-
-    iput-boolean p4, p0, Lao7;->j:Z
+    iput-object p2, p0, Lao7;->b:Lcye;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0}, Lzv5;->h()V
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public final d(Lu0f;)V
-    .locals 1
-
-    iget-object v0, p0, Lao7;->g:Ltna;
-
-    invoke-virtual {v0}, Ltna;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    :cond_0
+    instance-of v0, p1, Lao7;
 
     if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lao7;->h:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lao7;->i:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lao7;->j:Z
-
-    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :cond_0
-    invoke-super {p0, p1}, Lzv5;->d(Lu0f;)V
-
     :cond_1
+    check-cast p1, Lao7;
+
+    iget-object v0, p0, Lao7;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lao7;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lao7;->b:Lcye;
+
+    iget-object p1, p1, Lao7;->b:Lcye;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
     :goto_0
-    return-void
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final e()V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Lzv5;->h()V
+    iget-object v0, p0, Lao7;->a:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lao7;->b:Lcye;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final f()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x7
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v1, "JobWrapper(name="
 
-.method public final g()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "JoinP2PFirstDataStat"
+    iget-object v1, p0, Lao7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", job="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lao7;->b:Lcye;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

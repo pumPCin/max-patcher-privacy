@@ -1,57 +1,96 @@
 .class public final Lagh;
-.super Lk14;
+.super Le5a;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lfbh;
-
-.field public Y:Lzfh;
-
-.field public Z:Lsfh;
-
-.field public o:Lggh;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Lggh;
-
-.field public t0:I
+.field public final b:Lwf4;
 
 
 # direct methods
-.method public constructor <init>(Lggh;Lk14;)V
-    .locals 0
+.method public constructor <init>(Lwf4;)V
+    .locals 1
 
-    iput-object p1, p0, Lagh;->s0:Lggh;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lagh;->b:Lwf4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lagh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lagh;
+
+    iget-object v1, p0, Lagh;->b:Lwf4;
+
+    iget-object p1, p1, Lagh;->b:Lwf4;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lagh;->r0:Ljava/lang/Object;
+    iget-object v0, p0, Lagh;->b:Lwf4;
 
-    iget p1, p0, Lagh;->t0:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lagh;->t0:I
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p1, p0, Lagh;->s0:Lggh;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "OpenAndClose(linkEvent="
 
-    invoke-virtual {p1, v0, p0}, Lggh;->f(Ljava/lang/String;Lk14;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v1, p0, Lagh;->b:Lwf4;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

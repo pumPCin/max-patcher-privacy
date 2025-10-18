@@ -3,48 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Llqi;
 
 
-# static fields
-.field public static final a:Lpqi;
+# instance fields
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;Liqi;)V
     .locals 2
 
-    new-instance v0, Lpqi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayList;
 
-    sput-object v0, Lpqi;->a:Lpqi;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Lq7i;
+    iput-object v0, p0, Lpqi;->a:Ljava/util/ArrayList;
 
-    const/4 v1, 0x1
+    new-instance v1, Ldri;
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    invoke-direct {v1, p1, p2}, Ldri;-><init>(Landroid/content/Context;Liqi;)V
 
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Lfqf;)V
+    .locals 2
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lpqi;->a:Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    throw p1
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llqi;
+
+    invoke-interface {v1, p1}, Llqi;->a(Lfqf;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

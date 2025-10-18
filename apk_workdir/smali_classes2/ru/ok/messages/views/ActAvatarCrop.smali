@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxc0;
+.implements Lgd0;
 
 
 # annotations
@@ -12,29 +12,29 @@
 
 
 # static fields
-.field public static final synthetic d1:I
+.field public static final synthetic c1:I
 
 
 # instance fields
-.field public T0:Lru/ok/messages/views/widgets/AvatarCropView;
+.field public S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
-.field public U0:Landroid/view/View;
+.field public T0:Landroid/view/View;
+
+.field public U0:Landroid/widget/ImageView;
 
 .field public V0:Landroid/widget/ImageView;
 
 .field public W0:Landroid/widget/ImageView;
 
-.field public X0:Landroid/widget/ImageView;
+.field public X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-.field public Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public Y0:Landroid/widget/ImageView;
 
-.field public Z0:Landroid/widget/ImageView;
+.field public Z0:Landroid/graphics/Point;
 
-.field public a1:Landroid/graphics/Point;
+.field public final a1:Landroid/graphics/Matrix;
 
-.field public final b1:Landroid/graphics/Matrix;
-
-.field public c1:Z
+.field public b1:Z
 
 
 # direct methods
@@ -47,18 +47,18 @@
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->b1:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Matrix;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/ActAvatarCrop;->c1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/ActAvatarCrop;->b1:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final K()Ljava/lang/String;
+.method public final M()Ljava/lang/String;
     .locals 1
 
     const-string v0, "AVATAR_CROP"
@@ -66,7 +66,7 @@
     return-object v0
 .end method
 
-.method public final N()V
+.method public final P()V
     .locals 0
 
     return-void
@@ -81,7 +81,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lsz4;->t0:Lc82;
+    sget-object v0, Ll05;->s0:Lk82;
 
     if-eqz p1, :cond_0
 
@@ -97,7 +97,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/Window;->clearFlags(I)V
 
-    sget v1, Lmjc;->transparent:I
+    sget v1, Ltkc;->transparent:I
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -105,46 +105,46 @@
 
     invoke-virtual {p1, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-virtual {v0, p0}, Lc82;->c(Landroid/content/Context;)Lsz4;
+    invoke-virtual {v0, p0}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lsz4;->l()Lu4b;
+    invoke-virtual {v1}, Ll05;->l()Lv5b;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lu4b;->b()Lwe0;
+    invoke-interface {v1}, Lv5b;->b()Lff0;
 
     move-result-object v1
 
-    iget-object v1, v1, Lwe0;->a:Lve0;
+    iget-object v1, v1, Lff0;->a:Lef0;
 
-    iget v1, v1, Lve0;->k:I
+    iget v1, v1, Lef0;->k:I
 
     invoke-virtual {p1, v1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
     :cond_0
-    sget p1, Llpc;->act_avatar_crop:I
+    sget p1, Lsqc;->act_avatar_crop:I
 
     invoke-virtual {p0, p1}, Lh6;->setContentView(I)V
 
-    sget p1, Looc;->act_avatar_root:I
+    sget p1, Lvpc;->act_avatar_root:I
 
-    invoke-virtual {p0, p1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    new-instance v1, Ley0;
+    new-instance v1, Lny0;
 
     const/16 v2, 0xa
 
-    invoke-direct {v1, v2}, Ley0;-><init>(I)V
+    invoke-direct {v1, v2}, Lny0;-><init>(I)V
 
-    sget-object v2, Lcyg;->a:Ljava/util/WeakHashMap;
+    sget-object v2, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {p1, v1}, Lqxg;->u(Landroid/view/View;Ldla;)V
+    invoke-static {p1, v1}, Lvyg;->u(Landroid/view/View;Lfma;)V
 
-    invoke-static {p1}, Loxg;->c(Landroid/view/View;)V
+    invoke-static {p1}, Ltyg;->c(Landroid/view/View;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -158,41 +158,41 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    sget v1, Looc;->bottom_background:I
+    sget v1, Lvpc;->bottom_background:I
 
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->U0:Landroid/view/View;
+    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Landroid/view/View;
 
-    invoke-virtual {v0, p0}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lsz4;->l()Lu4b;
+    invoke-virtual {v0, p0}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lu4b;->b()Lwe0;
+    invoke-virtual {v2}, Ll05;->l()Lv5b;
 
     move-result-object v2
 
-    iget-object v2, v2, Lwe0;->a:Lve0;
+    invoke-interface {v2}, Lv5b;->b()Lff0;
 
-    iget v2, v2, Lve0;->k:I
+    move-result-object v2
+
+    iget-object v2, v2, Lff0;->a:Lef0;
+
+    iget v2, v2, Lef0;->k:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-virtual {v0, p0}, Lc82;->c(Landroid/content/Context;)Lsz4;
+    invoke-virtual {v0, p0}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lsz4;->l()Lu4b;
+    invoke-virtual {v0}, Ll05;->l()Lv5b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+    invoke-interface {v0}, Lv5b;->getIcon()Ld77;
 
     const/4 v0, -0x1
 
@@ -200,9 +200,31 @@
 
     move-result-object v0
 
-    sget v1, Looc;->rotate:I
+    sget v1, Lvpc;->rotate:I
 
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->U0:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->U0:Landroid/widget/ImageView;
+
+    new-instance v2, Lb6;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, v3}, Lb6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v1, Lvpc;->flip_horizontally:I
+
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -216,15 +238,15 @@
 
     new-instance v2, Lb6;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x1
 
-    invoke-direct {v2, p0, v3}, Lb6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
+    invoke-direct {v2, p0, v4}, Lb6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v1, Looc;->flip_horizontally:I
+    sget v1, Lvpc;->close:I
 
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -238,67 +260,45 @@
 
     new-instance v2, Lb6;
 
-    const/4 v4, 0x1
-
-    invoke-direct {v2, p0, v4}, Lb6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    sget v1, Looc;->close:I
-
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Landroid/widget/ImageView;
-
-    new-instance v2, Lb6;
-
     const/4 v5, 0x2
 
     invoke-direct {v2, p0, v5}, Lb6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v1, Looc;->reset:I
+    sget v1, Lvpc;->reset:I
 
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sget v2, Latc;->oneme_avatar_crop_reset:I
+    sget v2, Lhuc;->oneme_avatar_crop_reset:I
 
     invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sget-object v2, Lhpa;->a:Lhpa;
+    sget-object v2, Lkqa;->a:Lkqa;
 
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lhpa;)V
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lkqa;)V
 
-    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sget-object v2, Lgpa;->o:Lgpa;
+    sget-object v2, Ljqa;->o:Ljqa;
 
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lgpa;)V
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ljqa;)V
 
-    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sget-object v2, Lepa;->X:Lepa;
+    sget-object v2, Lhqa;->X:Lhqa;
 
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lepa;)V
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lhqa;)V
 
-    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
     new-instance v2, Lb6;
 
@@ -308,19 +308,19 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v1, Looc;->done:I
+    sget v1, Lvpc;->done:I
 
-    invoke-virtual {p0, v1}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Z0:Landroid/widget/ImageView;
+    iput-object v1, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->Z0:Landroid/widget/ImageView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Landroid/widget/ImageView;
 
     new-instance v1, Lb6;
 
@@ -330,15 +330,15 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v0, Looc;->crop:I
+    sget v0, Lvpc;->crop:I
 
-    invoke-virtual {p0, v0}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lru/ok/messages/views/widgets/AvatarCropView;
 
-    iput-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iput-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -352,7 +352,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
     invoke-virtual {v0, v4}, Lru/ok/messages/views/widgets/AvatarCropView;->setMode(I)V
 
@@ -378,62 +378,62 @@
     throw v0
 
     :cond_2
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
     invoke-virtual {v0, v3}, Lru/ok/messages/views/widgets/AvatarCropView;->setMode(I)V
 
     :goto_0
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
-    invoke-virtual {v0, v4}, Lqqh;->setZoomEnabled(Z)V
+    invoke-virtual {v0, v4}, Lrrh;->setZoomEnabled(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
-    new-instance v1, Ltm6;
+    new-instance v1, Lon6;
 
-    invoke-virtual {p0}, Lqn;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lrn;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Ltm6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {v1, v2}, Lon6;-><init>(Landroid/content/res/Resources;)V
 
-    sget-object v2, Lamd;->f:Lamd;
+    sget-object v2, Lhnd;->f:Lhnd;
 
-    iput-object v2, v1, Ltm6;->l:Lzld;
+    iput-object v2, v1, Lon6;->l:Lgnd;
 
-    iput v3, v1, Ltm6;->b:I
+    iput v3, v1, Lon6;->b:I
 
-    invoke-virtual {v1}, Ltm6;->a()Lsm6;
+    invoke-virtual {v1}, Lon6;->a()Lnn6;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lx05;->setHierarchy(Lu05;)V
+    invoke-virtual {v0, v1}, Lq15;->setHierarchy(Ln15;)V
 
-    sget-object v0, Lhg6;->a:Lo97;
+    sget-object v0, Lbh6;->a:Lla7;
 
-    invoke-virtual {v0}, Lo97;->a()Lsqb;
+    invoke-virtual {v0}, Lla7;->a()Lxrb;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lsqb;->c(Landroid/net/Uri;)V
+    invoke-virtual {v0, p1}, Lxrb;->c(Landroid/net/Uri;)V
 
     new-instance p1, Le6;
 
     invoke-direct {p1, v3, p0}, Le6;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, v0, Ly0;->e:Lj24;
+    iput-object p1, v0, Ly0;->e:Lx24;
 
-    invoke-virtual {v0}, Ly0;->a()Lrqb;
+    invoke-virtual {v0}, Ly0;->a()Lwrb;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
-    invoke-virtual {v0, p1}, Lqqh;->setController(Lr05;)V
+    invoke-virtual {v0, p1}, Lrrh;->setController(Lk15;)V
 
-    iget-object p1, p0, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object p1, p0, Lru/ok/messages/views/ActAvatarCrop;->S0:Lru/ok/messages/views/widgets/AvatarCropView;
 
-    invoke-virtual {p1, p0}, Lru/ok/messages/views/widgets/AvatarCropView;->setTransformChangeListener(Lxc0;)V
+    invoke-virtual {p1, p0}, Lru/ok/messages/views/widgets/AvatarCropView;->setTransformChangeListener(Lgd0;)V
 
     return-void
 .end method
@@ -443,25 +443,25 @@
 
     invoke-super {p0}, Lh6;->onResume()V
 
-    iget-object v0, p0, Lh6;->J0:Lsfd;
+    iget-object v0, p0, Lh6;->I0:Lyoh;
 
-    iget-object v0, v0, Lsfd;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lyoh;->b:Ljava/lang/Object;
 
-    check-cast v0, Lri3;
+    check-cast v0, Lej3;
 
-    check-cast v0, Lqra;
+    check-cast v0, Lssa;
 
-    invoke-virtual {v0}, Lqra;->i()Lf4a;
+    invoke-virtual {v0}, Lssa;->i()Li5a;
 
     move-result-object v0
 
-    sget-object v1, Lxbb;->g:Lxbb;
+    sget-object v1, Ladb;->g:Ladb;
 
-    sget-object v1, Lxbb;->g:Lxbb;
+    sget-object v1, Ladb;->g:Ladb;
 
-    sget-object v2, Lnod;->D0:Lnod;
+    sget-object v2, Lupd;->C0:Lupd;
 
-    invoke-virtual {v0, v2, v1}, Lf4a;->f(Lnod;Lxbb;)V
+    invoke-virtual {v0, v2, v1}, Li5a;->f(Lupd;Ladb;)V
 
     return-void
 .end method
@@ -469,7 +469,7 @@
 .method public final t()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v0, p0, Lru/ok/messages/views/ActAvatarCrop;->X0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
     const/4 v1, 0x0
 

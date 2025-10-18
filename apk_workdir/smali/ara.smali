@@ -1,98 +1,61 @@
-.class public final Lara;
+.class public abstract Lara;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf2;
 
+# static fields
+.field public static final a:J
 
-# instance fields
-.field public final a:Llt7;
+.field public static final b:J
 
-.field public final b:Leie;
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
 
 
 # direct methods
-.method public constructor <init>(Lqkf;Llt7;Lw44;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lgnc;->call_history_info_copy_link:I
 
-    iput-object p2, p0, Lara;->a:Llt7;
+    int-to-long v0, v0
 
-    check-cast p1, Losa;
+    sput-wide v0, Lara;->a:J
 
-    invoke-virtual {p1}, Losa;->a()Lv44;
+    sget v0, Lgnc;->call_history_info_open_chat_call:I
 
-    move-result-object p1
+    int-to-long v0, v0
 
-    const-string p2, "AnimojiVerifier"
+    sput-wide v0, Lara;->b:J
 
-    const/4 v0, 0x1
+    sget v0, Lgnc;->call_history_info_recreate:I
 
-    invoke-virtual {p1, v0, p2}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
+    int-to-long v0, v0
 
-    move-result-object p1
+    sput-wide v0, Lara;->c:J
 
-    invoke-virtual {p1, p3}, Lp0;->plus(Lt44;)Lt44;
+    sget v0, Lgnc;->call_history_info_send_to_chat:I
 
-    move-result-object p1
+    int-to-long v0, v0
 
-    invoke-static {p1}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+    sput-wide v0, Lara;->d:J
 
-    move-result-object p1
+    sget v0, Lgnc;->call_history_info_share_link:I
 
-    const/16 p2, 0xa
+    int-to-long v0, v0
 
-    const/4 p3, 0x5
+    sput-wide v0, Lara;->e:J
 
-    const/4 v1, 0x0
+    sget v0, Lgnc;->call_history_info_start_call:I
 
-    invoke-static {v1, p2, p3}, Lfie;->b(III)Leie;
+    int-to-long v0, v0
 
-    move-result-object p2
-
-    iput-object p2, p0, Lara;->b:Leie;
-
-    sget p3, Lb35;->o:I
-
-    sget-object p3, Lg35;->o:Lg35;
-
-    invoke-static {v0, p3}, Lsyi;->e(ILg35;)J
-
-    move-result-wide v1
-
-    invoke-static {p2, v1, v2}, La1j;->f(Lzx5;J)Ll82;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ly1j;->l(Lzx5;)Lzx5;
-
-    move-result-object p2
-
-    new-instance v1, Luk9;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x2
-
-    const/4 v2, 0x2
-
-    const-class v4, Lara;
-
-    const-string v5, "internalVerify"
-
-    const-string v6, "internalVerify(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    move-object v3, p0
-
-    invoke-direct/range {v1 .. v8}, Luk9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p3, Lh06;
-
-    invoke-direct {p3, p2, v1, v0}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    invoke-static {p3, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    sput-wide v0, Lara;->f:J
 
     return-void
 .end method

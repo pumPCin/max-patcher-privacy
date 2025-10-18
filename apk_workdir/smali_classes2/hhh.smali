@@ -1,240 +1,256 @@
-.class public final enum Lhhh;
-.super Ljava/lang/Enum;
+.class public final synthetic Lhhh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkbh;
+.implements Lhn6;
 
 
 # static fields
-.field public static final enum X:Lhhh;
+.field public static final a:Lhhh;
 
-.field public static final enum Y:Lhhh;
-
-.field public static final enum Z:Lhhh;
-
-.field public static final enum o:Lhhh;
-
-.field public static final enum r0:Lhhh;
-
-.field public static final enum s0:Lhhh;
-
-.field public static final synthetic t0:[Lhhh;
-
-.field public static final synthetic u0:Lfd5;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/Integer;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 4
 
     new-instance v0, Lhhh;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput-object v0, Lhhh;->a:Lhhh;
 
-    move-result-object v5
+    new-instance v1, Levb;
 
-    const-string v1, "SECURE_SAVE_KEY"
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.share.WebAppShareRequest"
+
+    const/4 v3, 0x3
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "requestId"
 
     const/4 v2, 0x0
 
-    const-string v3, "WebAppSecureStorageSaveKey"
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
 
-    const-string v4, "secure_storage_save_key"
+    const-string v0, "text"
 
-    invoke-direct/range {v0 .. v5}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    const/4 v2, 0x1
 
-    sput-object v0, Lhhh;->o:Lhhh;
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
 
-    new-instance v1, Lhhh;
+    const-string v0, "link"
 
-    const/4 v2, 0x2
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "SECURE_GET_KEY"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppSecureStorageGetKey"
-
-    const-string v5, "secure_storage_get_key"
-
-    invoke-direct/range {v1 .. v6}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lhhh;->X:Lhhh;
-
-    new-instance v2, Lhhh;
-
-    const/4 v3, 0x4
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "SECURE_CLEAR_KEYS"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppSecureStorageClear"
-
-    const-string v6, "secure_storage_clear"
-
-    invoke-direct/range {v2 .. v7}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Lhhh;->Y:Lhhh;
-
-    new-instance v3, Lhhh;
-
-    const/4 v4, 0x5
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v4, "SAVE_KEY"
-
-    const/4 v5, 0x3
-
-    const-string v6, "WebAppDeviceStorageSaveKey"
-
-    const-string v7, "device_storage_save_key"
-
-    invoke-direct/range {v3 .. v8}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v3, Lhhh;->Z:Lhhh;
-
-    new-instance v4, Lhhh;
-
-    const/4 v5, 0x6
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v5, "GET_KEY"
-
-    const/4 v6, 0x4
-
-    const-string v7, "WebAppDeviceStorageGetKey"
-
-    const-string v8, "device_storage_get_key"
-
-    invoke-direct/range {v4 .. v9}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v4, Lhhh;->r0:Lhhh;
-
-    new-instance v5, Lhhh;
-
-    const/4 v6, 0x7
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const-string v6, "CLEAR_KEYS"
-
-    const/4 v7, 0x5
-
-    const-string v8, "WebAppDeviceStorageClear"
-
-    const-string v9, "device_storage_clear"
-
-    invoke-direct/range {v5 .. v10}, Lhhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v5, Lhhh;->s0:Lhhh;
-
-    filled-new-array/range {v0 .. v5}, [Lhhh;
-
-    move-result-object v0
-
-    sput-object v0, Lhhh;->t0:[Lhhh;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lhhh;->u0:Lfd5;
+    sput-object v1, Lhhh;->descriptor:Lb3e;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lhhh;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Lhhh;->b:Ljava/lang/String;
-
-    iput-object p5, p0, Lhhh;->c:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lhhh;
-    .locals 1
-
-    const-class v0, Lhhh;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lhhh;
-
-    return-object p0
-.end method
-
-.method public static values()[Lhhh;
-    .locals 1
-
-    sget-object v0, Lhhh;->t0:[Lhhh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lhhh;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 10
 
-    iget-object v0, p0, Lhhh;->c:Ljava/lang/Integer;
+    sget-object v0, Lhhh;->descriptor:Lb3e;
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v6, v1
+
+    move v7, v2
+
+    move-object v4, v3
+
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v6, :cond_4
+
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
+
+    move-result v8
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_3
+
+    if-eqz v8, :cond_2
+
+    if-eq v8, v1, :cond_1
+
+    const/4 v9, 0x2
+
+    if-ne v8, v9, :cond_0
+
+    sget-object v8, Lvaf;->a:Lvaf;
+
+    invoke-virtual {p1, v0, v9, v8, v5}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    or-int/lit8 v7, v7, 0x4
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    sget-object v8, Lvaf;->a:Lvaf;
+
+    invoke-virtual {p1, v0, v1, v8, v4}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    or-int/lit8 v7, v7, 0x2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    move v6, v2
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+
+    new-instance p1, Llhh;
+
+    invoke-direct {p1, v3, v7, v4, v5}, Llhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lhhh;->a:Ljava/lang/String;
+    check-cast p2, Llhh;
 
-    return-object v0
+    sget-object v0, Lhhh;->descriptor:Lb3e;
+
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+
+    move-result-object p1
+
+    iget-object v1, p2, Llhh;->a:Ljava/lang/String;
+
+    iget-object v2, p2, Llhh;->c:Ljava/lang/String;
+
+    iget-object p2, p2, Llhh;->b:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lo24;->s()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    :goto_0
+    sget-object v1, Lvaf;->a:Lvaf;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p1, v0, v3, v1, p2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    :cond_1
+    invoke-virtual {p1}, Lo24;->s()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    :goto_1
+    sget-object p2, Lvaf;->a:Lvaf;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p1, v0, v1, p2, v2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    :cond_3
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
 .end method
 
-.method public final d()Ljava/lang/String;
+.method public final c()[Lur7;
+    .locals 5
+
+    sget-object v0, Lvaf;->a:Lvaf;
+
+    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+
+    move-result-object v1
+
+    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Lur7;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v3, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v3, v0
+
+    return-object v3
+.end method
+
+.method public final d()Lb3e;
     .locals 1
 
-    iget-object v0, p0, Lhhh;->b:Ljava/lang/String;
+    sget-object v0, Lhhh;->descriptor:Lb3e;
 
     return-object v0
 .end method

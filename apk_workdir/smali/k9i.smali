@@ -1,60 +1,63 @@
-.class public final Lk9i;
-.super Ljava/lang/Object;
+.class public final enum Lk9i;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lrga;
 
 
 # static fields
-.field public static final a:Lk9i;
+.field public static final enum a:Lk9i;
+
+.field public static final synthetic b:[Lk9i;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Lk9i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "DEFAULT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lk9i;->a:Lk9i;
 
-    new-instance v0, Lsvh;
+    new-instance v1, Lk9i;
 
-    const/4 v1, 0x1
+    const-string v2, "SIGNED"
 
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
+    const/4 v3, 0x1
 
-    const-class v1, Llwh;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
+    new-instance v2, Lk9i;
 
-    move-result-object v0
+    const-string v3, "FIXED"
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
+    filled-new-array {v0, v1, v2}, [Lk9i;
 
     move-result-object v0
 
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lk9i;->b:[Lk9i;
 
     return-void
 .end method
 
+.method public static values()[Lk9i;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    sget-object v0, Lk9i;->b:[Lk9i;
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {v0}, [Lk9i;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    check-cast v0, [Lk9i;
+
+    return-object v0
 .end method

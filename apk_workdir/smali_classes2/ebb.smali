@@ -1,223 +1,158 @@
 .class public final Lebb;
-.super Ljava/lang/Object;
+.super Lpk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/time/Instant;
+.field public final synthetic c:I
 
-.field public final b:Lygc;
-
-.field public final c:Ljava/util/function/Consumer;
-
-.field public d:Z
-
-.field public e:Z
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/time/Instant;Lygc;Ljava/util/function/Consumer;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Lebb;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lebb;->a:Ljava/time/Instant;
+    return-void
+.end method
 
-    iput-object p2, p0, Lebb;->b:Lygc;
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 1
 
-    iput-object p3, p0, Lebb;->c:Ljava/util/function/Consumer;
+    const/4 v0, 0x0
+
+    iput v0, p0, Lebb;->c:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lebb;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()Z
-    .locals 1
+.method public final b()Lmy0;
+    .locals 2
 
-    monitor-enter p0
+    iget v0, p0, Lebb;->c:I
 
-    :try_start_0
-    iget-boolean v0, p0, Lebb;->e:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lebb;->d:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v0, Lcpe;
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    new-instance v0, Lcpe;
 
-    goto :goto_0
+    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
 
-    :catchall_0
-    move-exception v0
+    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    iput-object v0, p0, Lebb;->d:Ljava/lang/Object;
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
 
-    :goto_0
-    monitor-exit p0
+    check-cast v0, Lcpe;
 
-    return v0
+    return-object v0
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :pswitch_0
+    new-instance v0, Lcpe;
 
-    throw v0
-.end method
+    iget-object v1, p0, Lebb;->d:Ljava/lang/Object;
 
-.method public final declared-synchronized b()Z
-    .locals 1
+    check-cast v1, Landroid/net/Uri;
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lebb;->e:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lebb;->d:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lebb;->d:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    monitor-exit p0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lebb;->b:Lygc;
-
-    invoke-virtual {v0}, Lygc;->l()Lqb5;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
     move-result v1
 
-    invoke-virtual {v0}, Lygc;->m()Ljava/lang/Long;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
 
-    move-result-wide v2
+    return-object v0
 
-    const-wide/16 v4, 0x0
+    nop
 
-    cmp-long v2, v2, v4
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-ltz v2, :cond_0
+.method public final c(Landroid/graphics/Bitmap;)V
+    .locals 3
 
-    invoke-virtual {v0}, Lygc;->m()Ljava/lang/Long;
+    iget v0, p0, Lebb;->c:I
 
-    move-result-object v2
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    const/4 v0, 0x1
 
-    :cond_0
-    const-string v2, "."
+    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
 
-    :goto_0
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return-void
 
-    move-result-object v2
+    :pswitch_0
+    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lygc;->o()I
+    check-cast v0, Landroid/net/Uri;
 
-    move-result v0
-
-    iget-boolean v3, p0, Lebb;->e:Z
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "Acked"
-
-    goto :goto_1
-
-    :cond_1
-    iget-boolean v3, p0, Lebb;->d:Z
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "Lost"
-
-    goto :goto_1
-
-    :cond_2
-    const-string v3, "Inflight"
-
-    :goto_1
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Packet "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v1, "|"
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "| |"
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lm0i;->c(Landroid/net/Uri;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    new-instance v1, Landroid/graphics/Canvas;
+
+    invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p1, v2
+
+    invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
+
+    const/4 p1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2, v2, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

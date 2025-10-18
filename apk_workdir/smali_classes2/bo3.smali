@@ -2,47 +2,100 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public volatile a:J
+.field public final synthetic a:I
 
-.field public volatile b:J
+.field public final synthetic b:Lco3;
 
-.field public volatile c:I
-
-.field public volatile d:J
-
-.field public volatile e:J
-
-.field public volatile f:J
-
-.field public volatile g:Ljava/lang/String;
-
-.field public volatile h:I
+.field public final synthetic c:Lzn3;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 2
+.method public synthetic constructor <init>(Lco3;Lzn3;I)V
+    .locals 0
+
+    iput p3, p0, Lbo3;->a:I
+
+    iput-object p1, p0, Lbo3;->b:Lco3;
+
+    iput-object p2, p0, Lbo3;->c:Lzn3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
+    return-void
+.end method
 
-    iput-object v0, p0, Lbo3;->g:Ljava/lang/String;
 
-    const/4 v0, -0x1
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput v0, p0, Lbo3;->h:I
+    iget v0, p0, Lbo3;->a:I
 
-    if-eqz p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-object v0, p0, Lbo3;->b:Lco3;
 
-    move-result-wide v0
+    invoke-virtual {v0}, Lco3;->K0()V
 
-    iput-wide v0, p0, Lbo3;->a:J
+    invoke-virtual {v0}, Lco3;->getOnAnimationEnded()Lli6;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lbo3;->c:Lzn3;
+
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    return-void
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lbo3;->b:Lco3;
+
+    invoke-virtual {v0}, Lco3;->getOnAnimationEnded()Lli6;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lbo3;->c:Lzn3;
+
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lbo3;->b:Lco3;
+
+    invoke-virtual {v0}, Lco3;->getOnAnimationEnded()Lli6;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lbo3;->c:Lzn3;
+
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    sget-object v0, Lccg;->a:Lccg;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

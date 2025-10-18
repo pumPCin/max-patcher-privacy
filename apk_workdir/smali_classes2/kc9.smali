@@ -3,36 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnc9;
+.implements Llc9;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Landroid/text/Layout;
-
-.field public final d:Landroid/net/Uri;
-
-.field public final e:Z
+.field public final a:Ljava/util/Collection;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILandroid/text/Layout;Landroid/net/Uri;Z)V
+.method public constructor <init>(Ljava/util/Collection;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkc9;->a:Ljava/lang/String;
-
-    iput p2, p0, Lkc9;->b:I
-
-    iput-object p3, p0, Lkc9;->c:Landroid/text/Layout;
-
-    iput-object p4, p0, Lkc9;->d:Landroid/net/Uri;
-
-    iput-boolean p5, p0, Lkc9;->e:Z
+    iput-object p1, p0, Lkc9;->a:Ljava/util/Collection;
 
     return-void
 .end method
@@ -40,190 +24,83 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v1, p1, Lkc9;
+    if-eqz p1, :cond_1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkc9;
-
-    iget-object v1, p0, Lkc9;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lkc9;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lkc9;->b:I
-
-    iget v3, p1, Lkc9;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lkc9;->c:Landroid/text/Layout;
-
-    iget-object v3, p1, Lkc9;->c:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lkc9;->d:Landroid/net/Uri;
-
-    iget-object v3, p1, Lkc9;->d:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lkc9;->e:Z
-
-    iget-boolean p1, p1, Lkc9;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lkc9;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
+    move-result-object v0
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_0
-    const/16 v2, 0x1f
+    const-class v1, Lkc9;
 
-    mul-int/2addr v1, v2
-
-    iget v3, p0, Lkc9;->b:I
-
-    invoke-static {v3, v1, v2}, Lfef;->m(III)I
-
-    move-result v1
-
-    iget-object v3, p0, Lkc9;->c:Landroid/text/Layout;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/2addr v3, v2
-
-    iget-object v1, p0, Lkc9;->d:Landroid/net/Uri;
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    :goto_1
-    add-int/2addr v3, v0
+    if-nez v0, :cond_2
 
-    mul-int/2addr v3, v2
+    const/4 p1, 0x0
 
-    iget-boolean v0, p0, Lkc9;->e:Z
+    return p1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    :cond_2
+    check-cast p1, Lkc9;
+
+    iget-object v0, p0, Lkc9;->a:Ljava/util/Collection;
+
+    iget-object p1, p1, Lkc9;->a:Ljava/util/Collection;
+
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lkc9;->a:Ljava/util/Collection;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
-
-    add-int/2addr v0, v3
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", attachCount="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", description="
+    const-string v1, "Update(messageIds="
 
-    iget v2, p0, Lkc9;->b:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "Media(url="
-
-    iget-object v4, p0, Lkc9;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4, v0, v1}, Llfb;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkc9;->c:Landroid/text/Layout;
+    iget-object v1, p0, Lkc9;->a:Ljava/util/Collection;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lowResPreviewUri="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkc9;->d:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRoundPreview="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-boolean v2, p0, Lkc9;->e:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,101 +1,70 @@
 .class public final Lon3;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpn3;
-
-.field public final synthetic c:Lmn3;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lpn3;Lmn3;I)V
-    .locals 0
-
-    iput p3, p0, Lon3;->a:I
-
-    iput-object p1, p0, Lon3;->b:Lpn3;
-
-    iput-object p2, p0, Lon3;->c:Lmn3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lon3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lon3;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lon3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lon3;->a:I
+    new-instance v0, Lon3;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Lon3;->b:Lpn3;
+    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Lpn3;->K0()V
-
-    invoke-virtual {v0}, Lpn3;->getOnAnimationEnded()Lqh6;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lon3;->c:Lmn3;
-
-    invoke-interface {v0, v1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    sget-object v0, Lzag;->a:Lzag;
+    iput-object p1, v0, Lon3;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lon3;->b:Lpn3;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0}, Lpn3;->getOnAnimationEnded()Lqh6;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lon3;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lccg;
 
-    iget-object v1, p0, Lon3;->c:Lmn3;
+    sget-object p1, Lsee;->c:Lsee;
 
-    invoke-interface {v0, v1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lrdi;->q0()Lag4;
 
-    :cond_1
-    sget-object v0, Lzag;->a:Lzag;
+    move-result-object p1
 
-    return-object v0
+    const-string v0, ":settings/privacy"
 
-    :pswitch_1
-    iget-object v0, p0, Lon3;->b:Lpn3;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lpn3;->getOnAnimationEnded()Lqh6;
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    move-result-object v0
+    sget-object p1, Lccg;->a:Lccg;
 
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lon3;->c:Lmn3;
-
-    invoke-interface {v0, v1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget-object v0, Lzag;->a:Lzag;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

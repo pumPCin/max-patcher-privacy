@@ -1,47 +1,88 @@
 .class public final Ly3g;
-.super Lw3g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw3g;
 
 
 # instance fields
-.field public final o:Lwhb;
+.field public final synthetic a:Landroid/view/ViewGroup;
+
+.field public final synthetic b:Lyxf;
+
+.field public final synthetic c:Lz3g;
 
 
 # direct methods
-.method public constructor <init>(Lwhb;)V
+.method public constructor <init>(Lz3g;Landroid/view/ViewGroup;Lyxf;)V
     .locals 0
 
-    invoke-direct {p0}, Lw3g;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly3g;->o:Lwhb;
+    iput-object p1, p0, Ly3g;->c:Lz3g;
+
+    iput-object p2, p0, Ly3g;->a:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, Ly3g;->b:Lyxf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 4
+.method public final a(Lx3g;)V
+    .locals 1
 
-    iget v0, p0, Lw3g;->c:I
+    iget-object p1, p0, Ly3g;->a:Landroid/view/ViewGroup;
 
-    add-int/lit8 v1, v0, 0x2
+    iget-object v0, p0, Ly3g;->b:Lyxf;
 
-    iput v1, p0, Lw3g;->c:I
+    invoke-virtual {p1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    new-instance v1, Lrz9;
+    return-void
+.end method
 
-    iget-object v2, p0, Lw3g;->a:[Ljava/lang/Object;
+.method public final b()V
+    .locals 0
 
-    aget-object v3, v2, v0
+    return-void
+.end method
 
-    add-int/lit8 v0, v0, 0x1
+.method public final c(Lx3g;)V
+    .locals 1
 
-    aget-object v0, v2, v0
+    iget-object p1, p0, Ly3g;->c:Lz3g;
 
-    iget-object v2, p0, Ly3g;->o:Lwhb;
+    iget-object v0, p1, Lz3g;->Y:Lo24;
 
-    invoke-direct {v1, v2, v3, v0}, Lrz9;-><init>(Lwhb;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lo24;->n()V
 
-    return-object v1
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lz3g;->Y:Lo24;
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final h(Lx3g;)V
+    .locals 1
+
+    iget-object p1, p0, Ly3g;->c:Lz3g;
+
+    iget-object v0, p1, Lz3g;->Y:Lo24;
+
+    invoke-virtual {v0}, Lo24;->n()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lz3g;->Y:Lo24;
+
+    return-void
 .end method

@@ -1,485 +1,178 @@
-.class public abstract Lqai;
+.class public final Lqai;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
+# instance fields
+.field public final a:Lzwi;
+
+.field public final b:Ljava/lang/Boolean;
+
+.field public final c:Ld2j;
+
+.field public final d:Lh5i;
+
+.field public final e:Lh5i;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lv3;)V
     .locals 1
 
-    const v0, 0x1010448
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [I
+    iget-object v0, p1, Lv3;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lzwi;
 
-    sput-object v0, Lqai;->a:[I
+    iput-object v0, p0, Lqai;->a:Lzwi;
 
-    return-void
-.end method
+    iget-object v0, p1, Lv3;->c:Ljava/lang/Object;
 
-.method public static a(Lnn;F)V
-    .locals 11
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    iput-object v0, p0, Lqai;->b:Ljava/lang/Boolean;
 
-    move-result-object v0
+    iget-object v0, p1, Lv3;->o:Ljava/lang/Object;
 
-    sget v1, Lyoc;->app_bar_elevation_anim_duration:I
+    check-cast v0, Ld2j;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    iput-object v0, p0, Lqai;->c:Ld2j;
 
-    move-result v0
+    iget-object v0, p1, Lv3;->X:Ljava/lang/Object;
 
-    new-instance v1, Landroid/animation/StateListAnimator;
+    check-cast v0, Lh5i;
 
-    invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
+    iput-object v0, p0, Lqai;->d:Lh5i;
 
-    sget v2, Lzic;->state_liftable:I
+    iget-object p1, p1, Lv3;->Y:Ljava/lang/Object;
 
-    sget v3, Lzic;->state_lifted:I
+    check-cast p1, Lh5i;
 
-    neg-int v3, v3
-
-    const v4, 0x101009e
-
-    filled-new-array {v4, v2, v3}, [I
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    new-array v5, v3, [F
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    aput v7, v5, v6
-
-    const-string v8, "elevation"
-
-    invoke-static {p0, v8, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    int-to-long v9, v0
-
-    invoke-virtual {v5, v9, v10}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
-
-    filled-new-array {v4}, [I
-
-    move-result-object v0
-
-    new-array v2, v3, [F
-
-    aput p1, v2, v6
-
-    invoke-static {p0, v8, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v9, v10}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {v1, v0, p1}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
-
-    new-array p1, v6, [I
-
-    new-array v0, v3, [F
-
-    aput v7, v0, v6
-
-    invoke-static {p0, v8, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v1, p1, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    iput-object p1, p0, Lqai;->e:Lh5i;
 
     return-void
 .end method
 
-.method public static b(Lop7;)V
-    .locals 6
 
-    invoke-virtual {p0}, Lop7;->j0()I
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-result v0
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_6
-
-    const/16 v2, 0x31
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x5b
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0x2c
-
-    const/4 v5, 0x1
-
-    if-eq v0, v2, :cond_3
-
-    const/16 v2, 0x62
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x6e
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x7b
-
-    if-ne v0, v2, :cond_2
-
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    :goto_0
-    invoke-virtual {p0}, Lop7;->j0()I
-
-    move-result v0
-
-    const/16 v2, 0x7d
-
-    if-eq v0, v2, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p0, v4}, Lop7;->n(I)V
-
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    :cond_0
-    invoke-virtual {p0, v1}, Lop7;->n(I)V
-
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    const/16 v0, 0x3a
-
-    invoke-virtual {p0, v0}, Lop7;->n(I)V
-
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    invoke-static {p0}, Lqai;->b(Lop7;)V
-
-    move v5, v3
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p0}, Lop7;->h0()V
+    :cond_0
+    instance-of v0, p1, Lqai;
 
-    return-void
-
-    :cond_2
-    invoke-virtual {p0}, Lop7;->j0()I
-
-    move-result v0
-
-    iget v1, p0, Lop7;->o:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {p0}, Lop7;->P()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, v2, p0, v0}, Lru/ok/android/api/json/JsonSyntaxException;->b(JLjava/lang/String;I)Lru/ok/android/api/json/JsonSyntaxException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_3
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    :goto_1
-    invoke-virtual {p0}, Lop7;->j0()I
-
-    move-result v0
-
-    const/16 v1, 0x5d
-
-    if-eq v0, v1, :cond_5
-
-    if-nez v5, :cond_4
-
-    invoke-virtual {p0, v4}, Lop7;->n(I)V
-
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    :cond_4
-    invoke-static {p0}, Lqai;->b(Lop7;)V
-
-    move v5, v3
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    return-void
-
-    :cond_6
-    invoke-virtual {p0}, Lop7;->h0()V
-
-    return-void
-.end method
-
-.method public static c(Lop7;Ljava/lang/Appendable;)V
-    .locals 6
-
-    invoke-virtual {p0}, Lop7;->j0()I
-
-    move-result v0
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_6
-
-    const/16 v2, 0x31
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x5b
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0x2c
-
-    const/4 v5, 0x1
-
-    if-eq v0, v2, :cond_3
-
-    const/16 v2, 0x62
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x6e
-
-    if-eq v0, v2, :cond_6
-
-    const/16 v2, 0x7b
-
-    if-ne v0, v2, :cond_2
-
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    :goto_0
-    invoke-virtual {p0}, Lop7;->j0()I
-
-    move-result v0
-
-    const/16 v2, 0x7d
-
-    if-eq v0, v2, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p0, v4}, Lop7;->n(I)V
-
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    :cond_0
-    invoke-virtual {p0, v1}, Lop7;->n(I)V
-
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    const/16 v0, 0x3a
-
-    invoke-virtual {p0, v0}, Lop7;->n(I)V
-
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    invoke-static {p0, p1}, Lqai;->c(Lop7;Ljava/lang/Appendable;)V
-
-    move v5, v3
-
-    goto :goto_0
-
     :cond_1
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
+    check-cast p1, Lqai;
 
-    return-void
+    iget-object v0, p0, Lqai;->a:Lzwi;
 
-    :cond_2
-    invoke-virtual {p0}, Lop7;->j0()I
+    iget-object v1, p1, Lqai;->a:Lzwi;
+
+    invoke-static {v0, v1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v0}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lqai;->b:Ljava/lang/Boolean;
+
+    iget-object v2, p1, Lqai;->b:Ljava/lang/Boolean;
+
+    invoke-static {v1, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v0, v0}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lqai;->c:Ld2j;
+
+    iget-object v1, p1, Lqai;->c:Ld2j;
+
+    invoke-static {v0, v1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lqai;->d:Lh5i;
+
+    iget-object v1, p1, Lqai;->d:Lh5i;
+
+    invoke-static {v0, v1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lqai;->e:Lh5i;
+
+    iget-object p1, p1, Lqai;->e:Lh5i;
+
+    invoke-static {v0, p1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget v0, p0, Lop7;->o:I
+    if-eqz p1, :cond_2
 
-    int-to-long v0, v0
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-virtual {p0}, Lop7;->P()Ljava/lang/String;
+    return p1
 
-    move-result-object p0
-
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/api/json/JsonSyntaxException;->b(JLjava/lang/String;I)Lru/ok/android/api/json/JsonSyntaxException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_3
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
+    :cond_2
     :goto_1
-    invoke-virtual {p0}, Lop7;->j0()I
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 7
+
+    iget-object v5, p0, Lqai;->d:Lh5i;
+
+    iget-object v6, p0, Lqai;->e:Lh5i;
+
+    iget-object v0, p0, Lqai;->a:Lzwi;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lqai;->b:Ljava/lang/Boolean;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lqai;->c:Ld2j;
+
+    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    const/16 v1, 0x5d
-
-    if-eq v0, v1, :cond_5
-
-    if-nez v5, :cond_4
-
-    invoke-virtual {p0, v4}, Lop7;->n(I)V
-
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    :cond_4
-    invoke-static {p0, p1}, Lqai;->c(Lop7;Ljava/lang/Appendable;)V
-
-    move v5, v3
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    return-void
-
-    :cond_6
-    invoke-virtual {p0, p1}, Lop7;->i(Ljava/lang/Appendable;)V
-
-    return-void
-.end method
-
-.method public static final d(Lwbg;)V
-    .locals 2
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lbpd;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lfjf;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lede;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lede;-><init>(I)V
-
-    const-class v1, Lha8;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lajg;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lp1h;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lhr;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lxr4;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lzr4;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    new-instance v0, Lmaf;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lmaf;-><init>(I)V
-
-    const-class v1, Lhgb;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
-
-    return-void
+    return v0
 .end method

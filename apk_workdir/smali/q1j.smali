@@ -1,348 +1,186 @@
-.class public final Lq1j;
+.class public abstract Lq1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static k:Lg4i;
-
-.field public static final l:Lt4i;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lo1j;
-
-.field public final d:Lnie;
-
-.field public final e:Ld1j;
-
-.field public final f:Ld1j;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Ljava/util/HashMap;
-
-.field public final j:Ljava/util/HashMap;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const-string v0, "optional-module-barcode"
-
-    const-string v1, "com.google.android.gms.vision.barcode"
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v1, v0, v1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    aget-object v1, v0, v1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Lt4i;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, v0}, Lt4i;-><init>(I[Ljava/lang/Object;)V
-
-    sput-object v1, Lq1j;->l:Lt4i;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lnie;Lo1j;Ljava/lang/String;)V
+.method public static final a(Ljava/io/File;Lli6;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lq1j;->i:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lq1j;->j:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lq1j;->a:Ljava/lang/String;
-
-    invoke-static {p1}, Lue3;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lq1j;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lq1j;->d:Lnie;
-
-    iput-object p3, p0, Lq1j;->c:Lo1j;
-
-    invoke-static {}, Lz1j;->g()V
-
-    iput-object p4, p0, Lq1j;->g:Ljava/lang/String;
-
-    invoke-static {}, Lxr6;->s()Lxr6;
-
-    move-result-object p3
-
-    new-instance v0, Lej4;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p0}, Lej4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lxr6;->I(Ljava/util/concurrent/Callable;)Ld1j;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lq1j;->e:Ld1j;
-
-    invoke-static {}, Lxr6;->s()Lxr6;
-
-    move-result-object p3
-
-    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Lrpi;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p2, v1}, Lrpi;-><init>(Lnie;I)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lxr6;->I(Ljava/util/concurrent/Callable;)Ld1j;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lq1j;->f:Ld1j;
-
-    sget-object p2, Lq1j;->l:Lt4i;
-
-    invoke-virtual {p2, p4}, Lt4i;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p2, p4}, Lt4i;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    const/4 p3, 0x0
-
-    invoke-static {p1, p2, p3}, Ll45;->d(Landroid/content/Context;Ljava/lang/String;Z)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, -0x1
-
-    :goto_0
-    iput p1, p0, Lq1j;->h:I
+    :try_start_0
+    invoke-static {p0}, Lhv5;->b(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public static a(Ljava/util/ArrayList;D)J
-    .locals 4
+    :catch_0
+    move-exception p0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    int-to-double v0, v0
-
-    const-wide/high16 v2, 0x4059000000000000L    # 100.0
-
-    div-double/2addr p1, v2
-
-    mul-double/2addr p1, v0
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide p1
-
-    double-to-int p1, p1
-
-    add-int/lit8 p1, p1, -0x1
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/Long;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    const-string v1, "Exception during file deleting: "
 
-    move-result-wide p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-wide p0
-.end method
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-# virtual methods
-.method public final b(Lp1j;Lawi;)V
-    .locals 10
+    move-result-object p0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p2, v0, v1}, Lq1j;->d(Lawi;J)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v2, p0, Lq1j;->i:Ljava/util/HashMap;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {v2, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {p1}, Lp1j;->b()Lvf6;
-
-    move-result-object v6
-
-    invoke-virtual {p0}, Lq1j;->c()Ljava/lang/String;
-
-    move-result-object v8
-
-    new-instance v3, Lroh;
-
-    const/16 v4, 0x9
-
-    const/4 v9, 0x0
-
-    move-object v5, p0
-
-    move-object v7, p2
-
-    invoke-direct/range {v3 .. v9}, Lroh;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    sget-object p1, Lwci;->a:Lwci;
-
-    invoke-virtual {p1, v3}, Lwci;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p1, p0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 2
+.method public static final b(Ljava/io/File;)V
+    .locals 3
 
-    iget-object v0, p0, Lq1j;->e:Ld1j;
-
-    invoke-virtual {v0}, Ld1j;->h()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ld1j;->f()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
 
     :cond_0
-    iget-object v0, p0, Lq1j;->g:Ljava/lang/String;
+    new-instance v0, Ljava/io/IOException;
 
-    sget-object v1, Lgv7;->c:Lgv7;
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lgv7;->a(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object v0
+    const-string v1, "Can not create directories for "
 
-    return-object v0
+    invoke-static {v1, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "File "
+
+    const-string v2, " does not have a parent"
+
+    invoke-static {v1, p0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final d(Lawi;J)Z
-    .locals 2
+.method public static c(Landroid/content/Context;)I
+    .locals 4
 
-    iget-object v0, p0, Lq1j;->i:Ljava/util/HashMap;
+    const/16 v0, 0x51
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    int-to-float v0, v0
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    goto :goto_0
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lfhi;->b(F)I
+
+    move-result v0
+
+    const/16 v1, 0xc
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lfhi;->b(F)I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lfhi;->b(F)I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    mul-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr p0, v1
+
+    add-int/2addr v0, v2
+
+    div-int/2addr p0, v0
+
+    const/4 v0, 0x1
+
+    if-ge p0, v0, :cond_0
+
+    return v0
 
     :cond_0
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    sub-long/2addr p2, v0
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v0, 0x1e
-
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    cmp-long p1, p2, v0
-
-    if-lez p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return p0
 .end method

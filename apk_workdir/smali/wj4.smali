@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lyj4;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lxj4;
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxj4;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    iput p2, p0, Lwj4;->a:I
+    iput p3, p0, Lwj4;->a:I
 
-    iput-object p1, p0, Lwj4;->b:Lxj4;
+    iput-object p1, p0, Lwj4;->b:Ljava/lang/String;
+
+    iput p2, p0, Lwj4;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,247 +31,83 @@
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 8
+.method public final a(Landroid/media/MediaCodecInfo;)I
+    .locals 3
 
     iget v0, p0, Lwj4;->a:I
 
+    iget v1, p0, Lwj4;->c:I
+
+    iget-object v2, p0, Lwj4;->b:Ljava/lang/String;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lwj4;->b:Lxj4;
+    sget-object v0, Lgc5;->a:Lws;
 
-    monitor-enter v0
+    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    :try_start_0
-    iget-object v1, v0, Lxj4;->a:Lyh3;
+    move-result-object p1
 
-    invoke-virtual {v1}, Lyh3;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getEncoderCapabilities()Landroid/media/MediaCodecInfo$EncoderCapabilities;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Ldx6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Ldx6;->c()Ljava/util/ArrayList;
+    invoke-virtual {p1, v1}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->isBitrateModeSupported(I)Z
 
-    move-result-object v2
+    move-result p1
 
-    invoke-virtual {v1}, Ldx6;->b()V
+    if-eqz p1, :cond_0
 
-    new-instance v1, Lorg/json/JSONArray;
-
-    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
-
-    const/4 v3, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_0
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lea0;
-
-    new-instance v5, Lorg/json/JSONObject;
-
-    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v6, "agent"
-
-    iget-object v7, v4, Lea0;->a:Ljava/lang/String;
-
-    invoke-virtual {v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v6, "dates"
-
-    new-instance v7, Lorg/json/JSONArray;
-
-    iget-object v4, v4, Lea0;->b:Ljava/util/ArrayList;
-
-    invoke-direct {v7, v4}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    invoke-virtual {v1, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    add-int/lit8 v3, v3, 0x1
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_4
-
     :cond_0
-    new-instance v2, Lorg/json/JSONObject;
+    const p1, 0x7fffffff
 
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v3, "heartbeats"
-
-    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "version"
-
-    const-string v3, "2"
-
-    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    new-instance v3, Landroid/util/Base64OutputStream;
-
-    const/16 v4, 0xb
-
-    invoke-direct {v3, v1, v4}, Landroid/util/Base64OutputStream;-><init>(Ljava/io/OutputStream;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    new-instance v4, Ljava/util/zip/GZIPOutputStream;
-
-    invoke-direct {v4, v3}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, "UTF-8"
-
-    invoke-virtual {v2, v5}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2}, Ljava/io/OutputStream;->write([B)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :try_start_3
-    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    invoke-virtual {v3}, Landroid/util/Base64OutputStream;->close()V
-
-    const-string v2, "UTF-8"
-
-    invoke-virtual {v1, v2}, Ljava/io/ByteArrayOutputStream;->toString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    return-object v1
-
-    :catchall_1
-    move-exception v1
-
-    goto :goto_2
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_5
-    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    goto :goto_1
-
-    :catchall_3
-    move-exception v2
-
-    :try_start_6
-    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    :goto_2
-    :try_start_7
-    invoke-virtual {v3}, Landroid/util/Base64OutputStream;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_4
-
-    goto :goto_3
-
-    :catchall_4
-    move-exception v2
-
-    :try_start_8
-    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_3
-    throw v1
-
-    :goto_4
-    monitor-exit v0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
-    throw v1
+    :goto_0
+    return p1
 
     :pswitch_0
-    iget-object v0, p0, Lwj4;->b:Lxj4;
+    sget-object v0, Lgc5;->a:Lws;
 
-    monitor-enter v0
+    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    :try_start_9
-    iget-object v1, v0, Lxj4;->a:Lyh3;
+    move-result-object p1
 
-    invoke-virtual {v1}, Lyh3;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Ldx6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getBitrateRange()Landroid/util/Range;
 
-    move-result-wide v2
+    move-result-object p1
 
-    iget-object v4, v0, Lxj4;->c:Lvdc;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {v4}, Lvdc;->get()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v4
+    invoke-virtual {p1, v0}, Landroid/util/Range;->clamp(Ljava/lang/Comparable;)Ljava/lang/Comparable;
 
-    check-cast v4, Lco4;
+    move-result-object p1
 
-    invoke-virtual {v4}, Lco4;->a()Ljava/lang/String;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object v4
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {v1, v2, v3, v4}, Ldx6;->h(JLjava/lang/String;)V
+    move-result p1
 
-    monitor-exit v0
+    sub-int/2addr p1, v1
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
-    return-object v0
+    move-result p1
 
-    :catchall_5
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_5
-
-    throw v1
+    return p1
 
     nop
 

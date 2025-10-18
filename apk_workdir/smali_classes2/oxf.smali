@@ -1,66 +1,89 @@
-.class public final Loxf;
-.super Lsl7;
+.class public final enum Loxf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum b:Loxf;
+
+.field public static final enum c:Loxf;
+
+.field public static final synthetic o:[Loxf;
+
+
+# instance fields
+.field public final a:B
+
+
 # direct methods
-.method public static final d(Loxf;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    new-instance v0, Loxf;
 
-    move-result-object p0
+    const-string v1, "psk_ke"
 
-    instance-of v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, v2, v2}, Loxf;-><init>(Ljava/lang/String;II)V
 
-    check-cast p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    sput-object v0, Loxf;->b:Loxf;
 
-    goto :goto_0
+    new-instance v1, Loxf;
 
-    :cond_0
-    const/4 p0, 0x0
+    const-string v2, "psk_dhe_ke"
 
-    :goto_0
-    if-nez p0, :cond_1
+    const/4 v3, 0x1
 
-    const/4 p0, -0x1
+    invoke-direct {v1, v2, v3, v3}, Loxf;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->canScrollVertically(I)Z
+    sput-object v1, Loxf;->c:Loxf;
 
-    move-result p0
+    filled-new-array {v0, v1}, [Loxf;
 
-    if-nez p0, :cond_2
+    move-result-object v0
 
-    goto :goto_1
+    sput-object v0, Loxf;->o:[Loxf;
 
-    :cond_1
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result p0
-
-    if-gtz p0, :cond_2
-
-    :goto_1
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
-
-    :cond_2
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final c(Landroidx/recyclerview/widget/RecyclerView;Lm5d;)Lo5d;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    int-to-byte p1, p3
+
+    iput-byte p1, p0, Loxf;->a:B
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Loxf;
     .locals 1
 
-    new-instance p2, Lk7f;
+    const-class v0, Loxf;
 
-    const/4 v0, 0x2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p2, p0, v0, p1}, Lk7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object p0
 
-    return-object p2
+    check-cast p0, Loxf;
+
+    return-object p0
+.end method
+
+.method public static values()[Loxf;
+    .locals 1
+
+    sget-object v0, Loxf;->o:[Loxf;
+
+    invoke-virtual {v0}, [Loxf;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loxf;
+
+    return-object v0
 .end method

@@ -1,109 +1,75 @@
-.class public abstract Lyua;
-.super Ljava/lang/Object;
+.class public final Lyua;
+.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
     .locals 1
 
-    sget v0, Lpmc;->oneme_folders_chats_picker_toolbar:I
+    if-nez p1, :cond_0
 
-    sput v0, Lyua;->a:I
+    const/4 v0, 0x1
 
-    sget v0, Lpmc;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
+    goto :goto_0
 
-    sput v0, Lyua;->b:I
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    sget v0, Lpmc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
+    :goto_0
+    if-nez v0, :cond_1
 
-    sput v0, Lyua;->c:I
+    const/4 p1, 0x0
 
-    sget v0, Lpmc;->oneme_folders_edit_create_button:I
+    return p1
 
-    sput v0, Lyua;->d:I
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
 
-    sget v0, Lpmc;->oneme_folders_edit_members_list:I
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
 
-    sput v0, Lyua;->e:I
+    move-result p1
 
-    sget v0, Lpmc;->oneme_folders_edit_screen:I
+    return p1
+.end method
 
-    sput v0, Lyua;->f:I
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 0
 
-    sget v0, Lpmc;->oneme_folders_edit_toolbar:I
+    check-cast p1, Ljava/lang/Runnable;
 
-    sput v0, Lyua;->g:I
+    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
 
-    sget v0, Lpmc;->oneme_folders_list_all_folder_view_type:I
+    move-result p1
 
-    sput v0, Lyua;->h:I
+    return p1
+.end method
 
-    sget v0, Lpmc;->oneme_folders_list_create_folder_view_type:I
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
 
-    sput v0, Lyua;->i:I
+    if-nez p1, :cond_0
 
-    sget v0, Lpmc;->oneme_folders_list_menu_action_change:I
+    const/4 v0, 0x1
 
-    sput v0, Lyua;->j:I
+    goto :goto_0
 
-    sget v0, Lpmc;->oneme_folders_list_menu_action_delete_folder:I
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    sput v0, Lyua;->k:I
+    :goto_0
+    if-nez v0, :cond_1
 
-    sget v0, Lpmc;->oneme_folders_list_recommended_folder_view_type:I
+    const/4 p1, 0x0
 
-    sput v0, Lyua;->l:I
+    return p1
 
-    sget v0, Lpmc;->oneme_folders_list_recycler_view:I
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
 
-    sput v0, Lyua;->m:I
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
 
-    sget v0, Lpmc;->oneme_folders_list_screen:I
+    move-result p1
 
-    sput v0, Lyua;->n:I
-
-    sget v0, Lpmc;->oneme_folders_list_toolbar:I
-
-    sput v0, Lyua;->o:I
-
-    sget v0, Lpmc;->oneme_folders_list_user_folder_view_type:I
-
-    sput v0, Lyua;->p:I
-
-    return-void
+    return p1
 .end method

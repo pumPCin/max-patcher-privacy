@@ -1,210 +1,144 @@
-.class public final Lco5;
+.class public final synthetic Lco5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic h:I
+# interfaces
+.implements Lr6;
 
 
 # instance fields
-.field public final a:Lll;
+.field public final synthetic a:I
 
-.field public final b:Lgmf;
-
-.field public final c:Lqnd;
-
-.field public final d:Lqnd;
-
-.field public final e:Lfof;
-
-.field public final f:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final g:Lai3;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lll;Lgmf;Lqnd;Lqnd;Lgw0;Lfof;)V
-    .locals 1
+.method public synthetic constructor <init>(JI)V
+    .locals 0
+
+    iput p3, p0, Lco5;->a:I
+
+    iput-wide p1, p0, Lco5;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance v0, Lai3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lco5;->g:Lai3;
-
-    iput-object p1, p0, Lco5;->a:Lll;
-
-    iput-object p2, p0, Lco5;->b:Lgmf;
-
-    iput-object p3, p0, Lco5;->c:Lqnd;
-
-    iput-object p4, p0, Lco5;->d:Lqnd;
-
-    iput-object p6, p0, Lco5;->e:Lfof;
-
-    invoke-virtual {p5, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onEvent(Lbv;)V
-    .locals 2
-    .annotation runtime Lsaf;
-    .end annotation
+.method public final run()V
+    .locals 6
 
-    .line 3
-    iget-wide v0, p1, Llj0;->a:J
+    iget v0, p0, Lco5;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v1, "go5"
+
+    const-string v2, "loadFromMarker: success marker=d"
+
+    const-string v3, "ap5"
+
+    iget-wide v4, p0, Lco5;->b:J
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfqe;
+    const-string v1, "p2a"
 
-    if-eqz v0, :cond_0
+    const-string v2, "Update track for message %d: track is empty"
 
-    .line 4
-    invoke-virtual {v0, p1}, Lfqe;->a(Ljava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_0
     return-void
-.end method
 
-.method public onEvent(Lkj0;)V
-    .locals 2
-    .annotation runtime Lsaf;
-    .end annotation
-
-    .line 9
-    iget-wide v0, p1, Llj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :pswitch_0
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfqe;
+    invoke-static {v3, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    .line 10
-    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p1, p1, Lkj0;->b:Lukf;
-
-    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lukf;)V
-
-    invoke-virtual {v0, v1}, Lfqe;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
     return-void
-.end method
 
-.method public onEvent(Lou;)V
-    .locals 2
-    .annotation runtime Lsaf;
-    .end annotation
-
-    .line 1
-    iget-wide v0, p1, Llj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :pswitch_1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfqe;
+    const-string v1, "onNotifAdded: added sticker %d to cache"
 
-    if-eqz v0, :cond_0
+    invoke-static {v3, v1, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
-    invoke-virtual {v0, p1}, Lfqe;->a(Ljava/lang/Object;)V
-
-    :cond_0
     return-void
-.end method
 
-.method public onEvent(Lvu;)V
-    .locals 2
-    .annotation runtime Lsaf;
-    .end annotation
-
-    .line 5
-    iget-wide v0, p1, Llj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :pswitch_2
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfqe;
+    const-string v1, "so5"
 
-    if-eqz v0, :cond_0
+    const-string v2, "assetsUpdate: queued on api, sync=%d"
 
-    .line 6
-    invoke-virtual {v0, p1}, Lfqe;->a(Ljava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_0
     return-void
-.end method
 
-.method public onEvent(Lyu;)V
-    .locals 2
-    .annotation runtime Lsaf;
-    .end annotation
-
-    .line 7
-    iget-wide v0, p1, Llj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :pswitch_3
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfqe;
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    .line 8
-    invoke-virtual {v0, p1}, Lfqe;->a(Ljava/lang/Object;)V
-
-    :cond_0
     return-void
+
+    :pswitch_4
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v2, "onNotifAdded: added sticker set %d to cache"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

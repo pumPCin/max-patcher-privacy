@@ -1,184 +1,68 @@
-.class public final Lyp2;
-.super Llff;
+.class public final synthetic Lyp2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lht;
-
-.field public final synthetic r0:Ldq2;
+.field public final synthetic b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
 
 # direct methods
-.method public constructor <init>(Lht;Ldq2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;I)V
     .locals 0
 
-    iput-object p1, p0, Lyp2;->Z:Lht;
+    iput p2, p0, Lyp2;->a:I
 
-    iput-object p2, p0, Lyp2;->r0:Ldq2;
+    iput-object p1, p0, Lyp2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    check-cast p1, Lb54;
+    iget p1, p0, Lyp2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v0, "ru.ok.messages.messages.widgets.ChatMsgSearchResultView"
 
-    invoke-virtual {p0, p1, p2}, Lyp2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lyp2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
-    move-result-object p1
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p1, Lyp2;
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->J0:I
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, Lyp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p1, "Click bottom button"
 
-    move-result-object p1
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object p1
-.end method
+    return-void
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    :pswitch_0
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->J0:I
 
-    new-instance v0, Lyp2;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lyp2;->Z:Lht;
+    const-string p1, "Click top button"
 
-    iget-object v2, p0, Lyp2;->r0:Ldq2;
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v0, v1, v2, p2}, Lyp2;-><init>(Lht;Ldq2;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    iput-object p1, v0, Lyp2;->Y:Ljava/lang/Object;
+    nop
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lyp2;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyp2;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lb54;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "getFcmHistory: chats="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lyp2;->Z:Lht;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, "dq2"
-
-    invoke-static {v3, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Lht;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lq95;->a:Lq95;
-
-    return-object p1
-
-    :cond_2
-    new-instance v0, Lxp2;
-
-    iget-object v3, p0, Lyp2;->r0:Ldq2;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v2, v3, v4}, Lxp2;-><init>(Lht;Ldq2;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v2, Ltjd;
-
-    invoke-direct {v2, v0}, Ltjd;-><init>(Lei6;)V
-
-    iput v1, p0, Lyp2;->X:I
-
-    invoke-static {v2, v1}, Lq40;->a(Lzx5;I)Lss0;
-
-    move-result-object v0
-
-    new-instance v1, Log3;
-
-    invoke-direct {v1}, Log3;-><init>()V
-
-    iget-object v2, v0, Lss0;->d:Ljava/lang/Object;
-
-    check-cast v2, Lt44;
-
-    iget-object v0, v0, Lss0;->c:Ljava/lang/Object;
-
-    check-cast v0, Lzx5;
-
-    new-instance v3, Lx06;
-
-    invoke-direct {v3, v0, v1, v4}, Lx06;-><init>(Lzx5;Log3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v2, v4, v3, v0}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    invoke-virtual {v1, p0}, Lon7;->awaitInternal(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

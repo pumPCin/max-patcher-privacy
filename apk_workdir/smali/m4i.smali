@@ -1,124 +1,138 @@
 .class public final Lm4i;
-.super La3i;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lm4i;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final transient X:I
-
-.field public final transient c:Lt4i;
-
-.field public final transient o:[Ljava/lang/Object;
+.field public final a:Landroid/os/Messenger;
 
 
 # direct methods
-.method public constructor <init>(Lt4i;[Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Lnwh;
 
-    iput-object p1, p0, Lm4i;->c:Lt4i;
+    const/16 v1, 0x19
 
-    iput-object p2, p0, Lm4i;->o:[Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
 
-    const/4 p1, 0x1
+    sput-object v0, Lm4i;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput p1, p0, Lm4i;->X:I
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/os/Messenger;
+
+    invoke-direct {v0, p1}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
+
+    iput-object v0, p0, Lm4i;->a:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[Ljava/lang/Object;)I
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, La3i;->b:Lu2i;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lk4i;
-
-    invoke-direct {v0, p0}, Lk4i;-><init>(Lm4i;)V
-
-    iput-object v0, p0, La3i;->b:Lu2i;
-
-    :cond_0
-    invoke-virtual {v0, p1, p2}, Lu2i;->a(I[Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    return v0
 .end method
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    instance-of v0, p1, Ljava/util/Map$Entry;
+    if-nez p1, :cond_0
 
-    const/4 v1, 0x0
+    goto :goto_0
 
-    if-eqz v0, :cond_0
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lm4i;->a:Landroid/os/Messenger;
 
-    check-cast p1, Ljava/util/Map$Entry;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast p1, Lm4i;
+
+    iget-object p1, p1, Lm4i;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
-
-    iget-object v2, p0, Lm4i;->c:Lt4i;
-
-    invoke-virtual {v2, v0}, Lt4i;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     return p1
 
-    :cond_0
-    return v1
+    :catch_0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, La3i;->b:Lu2i;
+    iget-object v0, p0, Lm4i;->a:Landroid/os/Messenger;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lk4i;
-
-    invoke-direct {v0, p0}, Lk4i;-><init>(Lm4i;)V
-
-    iput-object v0, p0, La3i;->b:Lu2i;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lu2i;->g(I)Lp2i;
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lm4i;->X:I
+    move-result v0
 
     return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Lm4i;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    return-void
 .end method

@@ -1,9 +1,9 @@
 .class public abstract Ls5;
-.super Llth;
+.super Lmuh;
 .source "SourceFile"
 
 # interfaces
-.implements Lk57;
+.implements Lh67;
 
 
 # static fields

@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;
-.super Lvs7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lji6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lvs7;",
-        "Loh6;"
+        "Lst7;",
+        "Lji6;"
     }
 .end annotation
 
@@ -58,7 +58,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;->$file:Ljava/io/File;
 
-    invoke-static {v2}, Lnu5;->d(Ljava/io/File;)J
+    invoke-static {v2}, Lhv5;->d(Ljava/io/File;)J
 
     move-result-wide v2
 
@@ -141,11 +141,11 @@
     :cond_1
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getOkApi()Lpka;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getOkApi()Lrla;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lpka;->b()Lsl;
+    invoke-virtual {v1}, Lrla;->b()Lsl;
 
     move-result-object v1
 
@@ -158,7 +158,7 @@
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;->$file:Ljava/io/File;
 
     .line 7
-    invoke-static {v1}, Lnu5;->b(Ljava/io/File;)V
+    invoke-static {v1}, Lhv5;->b(Ljava/io/File;)V
 
     return-object v0
 
@@ -198,7 +198,7 @@
     :try_start_1
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;->$file:Ljava/io/File;
 
-    invoke-static {v1}, Lnu5;->b(Ljava/io/File;)V
+    invoke-static {v1}, Lhv5;->b(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

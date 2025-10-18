@@ -1,128 +1,58 @@
-.class public Lb09;
+.class public final Lb09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lb09;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:I
+.field public a:Landroid/os/ResultReceiver;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvk8;
 
-    iput-object p1, p0, Lb09;->a:Ljava/lang/String;
+    const/4 v1, 0x5
 
-    iput p2, p0, Lb09;->b:I
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
 
-    iput p3, p0, Lb09;->c:I
+    sput-object v0, Lb09;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final describeContents()I
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x0
 
     return v0
-
-    :cond_0
-    instance-of v1, p1, Lb09;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lb09;
-
-    iget v1, p0, Lb09;->c:I
-
-    iget-object v3, p0, Lb09;->a:Ljava/lang/String;
-
-    iget v4, p0, Lb09;->b:I
-
-    if-ltz v4, :cond_4
-
-    iget v5, p1, Lb09;->b:I
-
-    if-gez v5, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v5, p1, Lb09;->a:Ljava/lang/String;
-
-    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget v3, p1, Lb09;->b:I
-
-    if-ne v4, v3, :cond_3
-
-    iget p1, p1, Lb09;->c:I
-
-    if-ne v1, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-
-    :cond_4
-    :goto_0
-    iget-object v4, p1, Lb09;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget p1, p1, Lb09;->c:I
-
-    if-ne v1, p1, :cond_5
-
-    return v0
-
-    :cond_5
-    return v2
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    iget v0, p0, Lb09;->c:I
+    iget-object v0, p0, Lb09;->a:Landroid/os/ResultReceiver;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lb09;->a:Ljava/lang/String;
-
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

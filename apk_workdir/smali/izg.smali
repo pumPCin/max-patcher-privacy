@@ -1,12 +1,25 @@
-.class public interface abstract annotation Lizg;
+.class public abstract Lizg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
+# direct methods
+.method public static a(Landroid/view/ViewConfiguration;)F
+    .locals 0
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHorizontalScrollFactor()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/view/ViewConfiguration;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledVerticalScrollFactor()F
+
+    move-result p0
+
+    return p0
+.end method

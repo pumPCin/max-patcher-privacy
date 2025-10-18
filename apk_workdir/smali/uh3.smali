@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvdc;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
     .locals 0
 
-    iput p1, p0, Luh3;->a:I
+    iput p2, p0, Luh3;->a:I
 
-    iput-object p2, p0, Luh3;->b:Ljava/lang/Object;
+    iput-object p1, p0, Luh3;->b:Landroidx/fragment/app/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,200 +27,75 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
+.method public final run()V
+    .locals 3
 
     iget v0, p0, Luh3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Luh3;->b:Ljava/lang/Object;
-
-    check-cast v0, Loh6;
-
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Luh3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lnv5;
-
-    new-instance v1, Lr77;
-
-    invoke-direct {v1, v0}, Lr77;-><init>(Lnv5;)V
-
-    return-object v1
-
-    :pswitch_1
-    iget-object v0, p0, Luh3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/firebase/components/ComponentRegistrar;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Luh3;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    const-string v1, "."
-
-    const-string v2, "Could not instantiate "
-
-    const-string v3, " is not an instance of com.google.firebase.components.ComponentRegistrar"
-
-    const-string v4, "Class "
-
-    const/4 v5, 0x0
+    iget-object v0, p0, Luh3;->b:Landroidx/fragment/app/b;
 
     :try_start_0
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v6
-
-    const-class v7, Lcom/google/firebase/components/ComponentRegistrar;
-
-    invoke-virtual {v7, v6}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-virtual {v6, v5}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v5}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/google/firebase/components/ComponentRegistrar;
-
-    move-object v5, v3
-
-    goto :goto_4
-
-    :catch_0
-    move-exception v1
+    invoke-static {v0}, Lei3;->s(Landroidx/fragment/app/b;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :catch_1
-    move-exception v1
+    :catch_0
+    move-exception v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    :catch_2
-    move-exception v3
+    move-result-object v1
 
-    goto :goto_2
+    const-string v2, "Attempt to invoke virtual method \'android.os.Handler android.app.FragmentHostCallback.getHandler()\' on a null object reference"
 
-    :catch_3
-    move-exception v3
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_3
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v6, Lcom/google/firebase/components/InvalidRegistrarException;
+    throw v0
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    :catch_1
+    move-exception v0
 
-    invoke-direct {v7, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "Can not perform this action after onSaveInstanceState"
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v1
 
-    invoke-direct {v6, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v6
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v1, :cond_1
 
     :goto_0
-    new-instance v3, Lcom/google/firebase/components/InvalidRegistrarException;
+    return-void
 
-    invoke-static {v2, v0}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :cond_1
+    throw v0
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Luh3;->b:Landroidx/fragment/app/b;
 
-    invoke-direct {v3, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    throw v3
+    return-void
 
-    :goto_1
-    new-instance v3, Lcom/google/firebase/components/InvalidRegistrarException;
-
-    invoke-static {v2, v0}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v3
-
-    :goto_2
-    new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
-
-    invoke-static {v2, v0, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v4, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v4
-
-    :goto_3
-    new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
-
-    invoke-static {v2, v0, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v4, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v4
-
-    :catch_4
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " is not an found."
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ComponentDiscovery"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_4
-    return-object v5
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

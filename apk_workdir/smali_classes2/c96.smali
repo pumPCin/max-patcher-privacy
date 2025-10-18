@@ -1,160 +1,138 @@
 .class public final Lc96;
-.super Lklf;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # instance fields
-.field public final X:Lzz9;
+.field public final synthetic X:I
 
-.field public final c:Lrf2;
+.field public synthetic Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-.field public final o:J
+.field public synthetic Z:Lv5b;
 
 
 # direct methods
-.method public constructor <init>(Lrf2;JLzz9;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lc96;->X:I
 
-    iput-object p1, p0, Lc96;->c:Lrf2;
-
-    iput-wide p2, p0, Lc96;->o:J
-
-    iput-object p4, p0, Lc96;->X:Lzz9;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lc96;->X:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    return v0
+    check-cast p2, Lv5b;
 
-    :cond_0
-    instance-of v1, p1, Lc96;
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lc96;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lc96;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lc96;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    iput-object p2, v0, Lc96;->Z:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Lc96;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lc96;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p3, v2}, Lc96;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-object p1, v0, Lc96;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    :cond_1
-    check-cast p1, Lc96;
+    iput-object p2, v0, Lc96;->Z:Lv5b;
 
-    iget-object v1, p0, Lc96;->c:Lrf2;
+    sget-object p1, Lccg;->a:Lccg;
 
-    iget-object v3, p1, Lc96;->c:Lrf2;
+    invoke-virtual {v0, p1}, Lc96;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result v1
+    nop
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lc96;->o:J
-
-    iget-wide v5, p1, Lc96;->o:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lc96;->X:Lzz9;
-
-    iget-object p1, p1, Lc96;->X:Lzz9;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lc96;->c:Lrf2;
+    iget v0, p0, Lc96;->X:I
 
-    invoke-virtual {v0}, Lrf2;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/16 v1, 0x1f
+    iget-object p1, p0, Lc96;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    mul-int/2addr v0, v1
+    iget-object v0, p0, Lc96;->Z:Lv5b;
 
-    iget-wide v2, p0, Lc96;->o:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lc96;->X:Lzz9;
-
-    invoke-virtual {v1}, Lzz9;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Response(folder="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lc96;->c:Lrf2;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", folderSync="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lc96;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", foldersOrder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lc96;->X:Lzz9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lff0;->m:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lc96;->Y:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    iget-object v0, p0, Lc96;->Z:Lv5b;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

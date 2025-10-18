@@ -1,470 +1,128 @@
 .class public final Lz64;
-.super Lxo4;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final l:I
+.field public X:I
 
-.field public m:Landroid/graphics/Rect;
+.field public final synthetic Y:Lb74;
 
-.field public final n:Landroid/graphics/RectF;
-
-.field public o:Z
-
-.field public p:F
+.field public final synthetic Z:Lo82;
 
 
 # direct methods
-.method public constructor <init>(Lshf;I)V
+.method public constructor <init>(Lb74;Lo82;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxo4;-><init>(Lshf;)V
+    iput-object p1, p0, Lz64;->Y:Lb74;
 
-    new-instance p1, Landroid/graphics/RectF;
+    iput-object p2, p0, Lz64;->Z:Lo82;
 
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lz64;->n:Landroid/graphics/RectF;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lz64;->p:F
-
-    iput p2, p0, Lz64;->l:I
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(FF)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lq54;
 
-.method public final b()V
-    .locals 8
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lz64;->m:Landroid/graphics/Rect;
+    invoke-virtual {p0, p1, p2}, Lz64;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_5
+    move-result-object p1
 
-    iget-object v0, p0, Lxo4;->h:Landroid/graphics/RectF;
+    check-cast p1, Lz64;
 
-    iget-object v1, p0, Lxo4;->k:Landroid/graphics/Matrix;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object v2, p0, Lz64;->n:Landroid/graphics/RectF;
+    invoke-virtual {p1, p2}, Lz64;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
-
-    iget v0, v2, Landroid/graphics/RectF;->top:F
-
-    iget-object v3, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    iget v4, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v5, v4
-
-    cmpl-float v5, v0, v5
-
-    const/4 v6, 0x0
-
-    if-lez v5, :cond_0
-
-    :goto_0
-    int-to-float v4, v4
-
-    sub-float/2addr v4, v0
-
-    goto :goto_1
-
-    :cond_0
-    iget v0, v2, Landroid/graphics/RectF;->bottom:F
-
-    iget v4, v3, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v5, v4
-
-    cmpg-float v5, v0, v5
-
-    if-gez v5, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v6
-
-    :goto_1
-    iget v0, v2, Landroid/graphics/RectF;->left:F
-
-    iget v5, v3, Landroid/graphics/Rect;->left:I
-
-    int-to-float v7, v5
-
-    cmpl-float v7, v0, v7
-
-    if-lez v7, :cond_2
-
-    int-to-float v2, v5
-
-    :goto_2
-    sub-float/2addr v2, v0
-
-    goto :goto_3
-
-    :cond_2
-    iget v0, v2, Landroid/graphics/RectF;->right:F
-
-    iget v2, v3, Landroid/graphics/Rect;->right:I
-
-    int-to-float v3, v2
-
-    cmpg-float v3, v0, v3
-
-    if-gez v3, :cond_3
-
-    int-to-float v2, v2
-
-    goto :goto_2
-
-    :cond_3
-    move v2, v6
-
-    :goto_3
-    cmpl-float v0, v2, v6
-
-    if-nez v0, :cond_4
-
-    cmpl-float v0, v4, v6
-
-    if-eqz v0, :cond_5
-
-    :cond_4
-    invoke-virtual {v1, v2, v4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    iget-object v0, p0, Lxo4;->a:Lshf;
-
-    invoke-virtual {v0}, Lshf;->o()V
-
-    :cond_5
-    return-void
-.end method
-
-.method public final c(I)Landroid/graphics/Rect;
-    .locals 7
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
-
-    iget-object v1, p0, Lxo4;->k:Landroid/graphics/Matrix;
-
-    iget-object v2, p0, Lxo4;->h:Landroid/graphics/RectF;
-
-    invoke-virtual {v1, v0, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
-
-    iget-object v1, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    if-eqz v1, :cond_2
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
-
-    move-result v1
-
-    div-float/2addr p1, v1
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    iget v3, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float v3, v3
-
-    iget v4, v0, Landroid/graphics/RectF;->left:F
-
-    sub-float/2addr v3, v4
-
-    mul-float v4, v3, p1
-
-    float-to-int v4, v4
-
-    iget v5, v2, Landroid/graphics/Rect;->top:I
-
-    int-to-float v5, v5
-
-    iget v6, v0, Landroid/graphics/RectF;->top:F
-
-    sub-float/2addr v5, v6
-
-    mul-float/2addr v5, p1
-
-    float-to-int v5, v5
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    add-float/2addr v3, v2
-
-    mul-float/2addr v3, p1
-
-    float-to-int v2, v3
-
-    iget-object v3, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    iget v6, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v6, v6
-
-    iget v0, v0, Landroid/graphics/RectF;->top:F
-
-    sub-float/2addr v6, v0
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    add-float/2addr v6, v0
-
-    mul-float/2addr v6, p1
-
-    float-to-int p1, v6
-
-    invoke-direct {v1, v4, v5, v2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    iget-boolean p1, p0, Lz64;->o:Z
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result p1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v0
-
-    if-eq p1, v0, :cond_1
-
-    const-string p1, "z64"
-
-    const-string v0, "cropped rect is not square: square it"
-
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result p1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    if-le p1, v0, :cond_0
-
-    iget p1, v1, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v0
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    sub-int/2addr p1, v0
-
-    iput p1, v1, Landroid/graphics/Rect;->right:I
-
-    return-object v1
-
-    :cond_0
-    iget p1, v1, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    sub-int/2addr p1, v0
-
-    iput p1, v1, Landroid/graphics/Rect;->bottom:I
-
-    :cond_1
-    return-object v1
-
-    :cond_2
-    const/4 p1, 0x0
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final d(I)V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lz64;->c(I)Landroid/graphics/Rect;
+    new-instance p1, Lz64;
 
-    move-result-object p1
+    iget-object v0, p0, Lz64;->Y:Lb74;
 
-    if-eqz p1, :cond_0
+    iget-object v1, p0, Lz64;->Z:Lo82;
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+    invoke-direct {p1, v0, v1, p2}, Lz64;-><init>(Lb74;Lo82;Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
-
-    int-to-float p1, p1
-
-    iget v0, p0, Lz64;->l:I
-
-    int-to-float v0, v0
-
-    div-float/2addr p1, v0
-
-    const v0, 0x3d4ccccd    # 0.05f
-
-    sub-float/2addr p1, v0
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    cmpl-float v0, p1, v0
-
-    if-lez v0, :cond_0
-
-    iput p1, p0, Lxo4;->f:F
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final e()V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Lxo4;->h:Landroid/graphics/RectF;
+    iget v0, p0, Lz64;->X:I
 
-    if-eqz v0, :cond_3
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lz64;->m:Landroid/graphics/Rect;
+    if-eqz v0, :cond_1
 
-    if-nez v1, :cond_0
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v2
-
-    const/4 v3, 0x0
-
-    cmpl-float v4, v1, v3
-
-    if-lez v4, :cond_3
-
-    cmpl-float v3, v2, v3
-
-    if-lez v3, :cond_3
-
-    iget-object v3, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v3, v1
-
-    iget-object v4, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    div-float/2addr v4, v2
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->max(FF)F
-
-    move-result v3
-
-    iput v3, p0, Lxo4;->e:F
-
-    iget-object v3, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    cmpg-float v1, v1, v3
-
-    if-ltz v1, :cond_1
-
-    iget-object v1, p0, Lz64;->m:Landroid/graphics/Rect;
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    cmpg-float v1, v2, v1
-
-    if-gez v1, :cond_2
+    throw p1
 
     :cond_1
-    iget v1, p0, Lxo4;->e:F
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+    iget-object p1, p0, Lz64;->Y:Lb74;
 
-    move-result v2
+    iget-object p1, p1, Lb74;->a:Lnje;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
+    new-instance v0, Lx64;
 
-    move-result v0
+    iget-object v2, p0, Lz64;->Z:Lo82;
 
-    iget-object v3, p0, Lxo4;->k:Landroid/graphics/Matrix;
+    iget-wide v3, v2, Luj0;->a:J
 
-    invoke-virtual {v3, v1, v1, v2, v0}, Landroid/graphics/Matrix;->setScale(FFFF)V
+    iget-wide v5, v2, Lo82;->b:J
+
+    invoke-direct {v0, v3, v4, v5, v6}, Lx64;-><init>(JJ)V
+
+    iput v1, p0, Lz64;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-virtual {p0}, Lz64;->b()V
-
-    :cond_3
     :goto_0
-    return-void
-.end method
+    sget-object p1, Lccg;->a:Lccg;
 
-.method public final reset()V
-    .locals 1
-
-    invoke-super {p0}, Lxo4;->reset()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lz64;->p:F
-
-    return-void
+    return-object p1
 .end method

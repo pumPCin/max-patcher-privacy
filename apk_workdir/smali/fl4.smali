@@ -1,134 +1,99 @@
-.class public final synthetic Lfl4;
-.super Ljava/lang/Object;
+.class public final Lfl4;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lodf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lq7d;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:I
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:I
+
+.field public final synthetic e:Landroid/view/ViewPropertyAnimator;
+
+.field public final synthetic f:Ljl4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljl4;Lq7d;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
     .locals 0
 
-    iput p1, p0, Lfl4;->a:I
+    iput-object p1, p0, Lfl4;->f:Ljl4;
 
-    iput-object p2, p0, Lfl4;->b:Ljava/lang/Object;
+    iput-object p2, p0, Lfl4;->a:Lq7d;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lfl4;->b:I
+
+    iput-object p4, p0, Lfl4;->c:Landroid/view/View;
+
+    iput p5, p0, Lfl4;->d:I
+
+    iput-object p6, p0, Lfl4;->e:Landroid/view/ViewPropertyAnimator;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    iget v0, p0, Lfl4;->a:I
+    iget p1, p0, Lfl4;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lfl4;->c:Landroid/view/View;
 
-    check-cast v0, Lj6b;
+    if-eqz p1, :cond_0
 
-    return-object v0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    :pswitch_0
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    :cond_0
+    iget p1, p0, Lfl4;->d:I
 
-    check-cast v0, Lao4;
+    if-eqz p1, :cond_1
 
-    return-object v0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    :pswitch_1
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    :cond_1
+    return-void
+.end method
 
-    check-cast v0, Lb38;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    return-object v0
+    iget-object p1, p0, Lfl4;->e:Landroid/view/ViewPropertyAnimator;
 
-    :pswitch_2
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Lk0e;
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    return-object v0
+    iget-object p1, p0, Lfl4;->f:Ljl4;
 
-    :pswitch_3
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lfl4;->a:Lq7d;
 
-    check-cast v0, Lzn4;
+    invoke-virtual {p1, v0}, Ly6d;->c(Lq7d;)V
 
-    return-object v0
+    iget-object v1, p1, Ljl4;->p:Ljava/util/ArrayList;
 
-    :pswitch_4
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    check-cast v0, Lk9d;
+    invoke-virtual {p1}, Ljl4;->j()V
 
-    return-object v0
+    return-void
+.end method
 
-    :pswitch_5
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    check-cast v0, Lw09;
+    iget-object p1, p0, Lfl4;->f:Ljl4;
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_6
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lbl4;
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lfl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lw09;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

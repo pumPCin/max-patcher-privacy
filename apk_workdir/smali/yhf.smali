@@ -2,36 +2,137 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsng;
 
-# static fields
-.field public static final a:Lyhf;
+
+# instance fields
+.field public final a:Lsng;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lsng;)V
     .locals 1
 
-    new-instance v0, Lyhf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Lsng;->M()Z
 
-    sput-object v0, Lyhf;->a:Lyhf;
+    move-result v0
+
+    invoke-static {v0}, Ldvi;->b(Z)V
+
+    iput-object p1, p0, Lyhf;->a:Lsng;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lgif;
-    .locals 2
+.method public final H()I
+    .locals 1
 
-    new-instance v0, Lgif;
+    iget-object v0, p0, Lyhf;->a:Lsng;
 
-    new-instance v1, Landroid/os/Handler;
+    invoke-interface {v0}, Lsng;->V()I
 
-    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    move-result v0
 
-    invoke-direct {v0, v1}, Lgif;-><init>(Landroid/os/Handler;)V
+    return v0
+.end method
+
+.method public final I()Landroid/util/Range;
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0}, Lsng;->I()Landroid/util/Range;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final M()Z
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0}, Lsng;->M()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final R(I)Landroid/util/Range;
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0, p1}, Lsng;->U(I)Landroid/util/Range;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final U(I)Landroid/util/Range;
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0, p1}, Lsng;->R(I)Landroid/util/Range;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final V()I
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0}, Lsng;->H()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final W()Landroid/util/Range;
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0}, Lsng;->Z()Landroid/util/Range;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final X(II)Z
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0, p2, p1}, Lsng;->X(II)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final Z()Landroid/util/Range;
+    .locals 1
+
+    iget-object v0, p0, Lyhf;->a:Lsng;
+
+    invoke-interface {v0}, Lsng;->W()Landroid/util/Range;
+
+    move-result-object v0
 
     return-object v0
 .end method

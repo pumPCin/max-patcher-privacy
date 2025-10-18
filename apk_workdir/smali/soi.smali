@@ -1,49 +1,60 @@
 .class public final Lsoi;
-.super Lvoi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltha;
 
 
 # static fields
-.field public static final Z:Lsoi;
+.field public static final a:Lsoi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lsoi;
 
-    const-string v1, "unusedTag"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lvoi;-><init>(Ljava/lang/String;)V
+    sput-object v0, Lsoi;->a:Lsoi;
 
-    sput-object v0, Lsoi;->Z:Lsoi;
+    new-instance v0, Lr8i;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-.method public final bridge synthetic m()V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public final n(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final o(J)V
-    .locals 0
-
-    return-void
+    throw p1
 .end method

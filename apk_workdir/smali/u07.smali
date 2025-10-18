@@ -1,34 +1,27 @@
-.class public abstract Lu07;
-.super Ljava/lang/Object;
+.class public final Lu07;
+.super La17;
 .source "SourceFile"
-
-# interfaces
-.implements Lsu5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final u0:Z
 
-.field public final b:Ljava/util/List;
-
-.field public final c:Z
+.field public final v0:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
+.method public constructor <init>(Ljava/lang/String;Ly07;JIJLz15;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p15}, La17;-><init>(Ljava/lang/String;Ly07;JIJLz15;Ljava/lang/String;Ljava/lang/String;JJZ)V
 
-    iput-object p1, p0, Lu07;->a:Ljava/lang/String;
+    move/from16 p1, p16
 
-    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    iput-boolean p1, p0, Lu07;->u0:Z
 
-    move-result-object p1
+    move/from16 p1, p17
 
-    iput-object p1, p0, Lu07;->b:Ljava/util/List;
-
-    iput-boolean p3, p0, Lu07;->c:Z
+    iput-boolean p1, p0, Lu07;->v0:Z
 
     return-void
 .end method

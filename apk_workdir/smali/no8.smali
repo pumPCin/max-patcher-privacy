@@ -2,128 +2,78 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmo8;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Z
-
-.field public final c:Z
+.field public final a:Landroid/os/Messenger;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZ)V
+.method public constructor <init>(Landroid/os/Messenger;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lno8;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lno8;->b:Z
-
-    iput-boolean p3, p0, Lno8;->c:Z
+    iput-object p1, p0, Lno8;->a:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Landroid/os/Bundle;
 
-    goto :goto_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    :cond_0
-    if-eqz p1, :cond_2
+    const-string v1, "data_media_item_id"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1, p1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string p1, "data_options"
 
-    const-class v1, Lno8;
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    if-eq v0, v1, :cond_1
+    const-string p1, "data_notify_children_changed_options"
 
-    goto :goto_1
+    const/4 p3, 0x0
 
-    :cond_1
-    check-cast p1, Lno8;
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lno8;->a:Ljava/lang/String;
+    if-eqz p2, :cond_0
 
-    iget-object v1, p1, Lno8;->a:Ljava/lang/String;
+    sget-object p1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {p2, p1}, Llv7;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_2
+    const-string p2, "data_media_item_list"
 
-    iget-boolean v0, p0, Lno8;->b:Z
-
-    iget-boolean v1, p1, Lno8;->b:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lno8;->c:Z
-
-    iget-boolean p1, p1, Lno8;->c:Z
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-object v0, p0, Lno8;->a:Ljava/lang/String;
-
-    const/16 v1, 0x1f
-
-    invoke-static {v1, v1, v0}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lno8;->b:Z
-
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
+    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     :cond_0
-    move v2, v3
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
-    :goto_0
-    add-int/2addr v0, v2
+    move-result-object p1
 
-    mul-int/2addr v0, v1
+    const/4 p2, 0x3
 
-    iget-boolean v1, p0, Lno8;->c:Z
+    iput p2, p1, Landroid/os/Message;->what:I
 
-    if-eqz v1, :cond_1
+    const/4 p2, 0x2
 
-    move v3, v4
+    iput p2, p1, Landroid/os/Message;->arg1:I
 
-    :cond_1
-    add-int/2addr v0, v3
+    invoke-virtual {p1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    return v0
+    iget-object p2, p0, Lno8;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p2, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    return-void
 .end method

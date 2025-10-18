@@ -1,101 +1,87 @@
-.class public final Lym2;
+.class public final synthetic Lym2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public final a:Loqf;
+.field public final synthetic X:J
+
+.field public final synthetic Y:J
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpo2;
+
+.field public final synthetic c:Lir5;
+
+.field public final synthetic o:Lzs8;
 
 
 # direct methods
-.method public constructor <init>(Loqf;)V
+.method public synthetic constructor <init>(Lpo2;Lir5;Lzs8;JJI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p8, p0, Lym2;->a:I
 
-    iput-object p1, p0, Lym2;->a:Loqf;
+    iput-object p1, p0, Lym2;->b:Lpo2;
+
+    iput-object p2, p0, Lym2;->c:Lir5;
+
+    iput-object p3, p0, Lym2;->o:Lzs8;
+
+    iput-wide p4, p0, Lym2;->X:J
+
+    iput-wide p6, p0, Lym2;->Y:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iget v0, p0, Lym2;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-wide v4, p0, Lym2;->X:J
 
-    return v0
+    iget-wide v6, p0, Lym2;->Y:J
 
-    :cond_0
-    instance-of v1, p1, Lym2;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lym2;->b:Lpo2;
 
-    if-nez v1, :cond_1
+    iget-object v2, p0, Lym2;->c:Lir5;
 
-    return v2
+    iget-object v3, p0, Lym2;->o:Lzs8;
 
-    :cond_1
-    check-cast p1, Lym2;
+    invoke-virtual/range {v1 .. v7}, Lpo2;->y(Lir5;Lzs8;JJ)V
 
-    iget-object v1, p0, Lym2;->a:Loqf;
-
-    iget-object p1, p1, Lym2;->a:Loqf;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lym2;->a:Loqf;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ToolbarState(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lym2;->a:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    sget-object v0, Lccg;->a:Lccg;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v1, p0, Lym2;->b:Lpo2;
+
+    iget-object v2, p0, Lym2;->c:Lir5;
+
+    iget-object v3, p0, Lym2;->o:Lzs8;
+
+    invoke-virtual/range {v1 .. v7}, Lpo2;->z(Lir5;Lzs8;JJ)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

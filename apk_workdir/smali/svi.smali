@@ -1,205 +1,69 @@
 .class public final Lsvi;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lsvi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:Lrnf;
-
-.field public final c:I
-
-.field public final d:Landroid/os/Bundle;
-
-.field public final synthetic e:I
+.field public b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IILandroid/os/Bundle;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p4, p0, Lsvi;->e:I
+    new-instance v0, Lnwh;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x1
 
-    new-instance p4, Lrnf;
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
 
-    invoke-direct {p4}, Lrnf;-><init>()V
-
-    iput-object p4, p0, Lsvi;->b:Lrnf;
-
-    iput p1, p0, Lsvi;->a:I
-
-    iput p2, p0, Lsvi;->c:I
-
-    iput-object p3, p0, Lsvi;->d:Landroid/os/Bundle;
+    sput-object v0, Lsvi;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget v0, p0, Lsvi;->e:I
+    const/16 p2, 0x4f45
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    const/4 v0, 0x0
+    move-result p2
 
-    return v0
+    iget v0, p0, Lsvi;->a:I
 
-    :pswitch_0
-    const/4 v0, 0x1
+    const/4 v1, 0x4
 
-    return v0
+    const/4 v2, 0x2
 
-    nop
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Lcom/google/android/gms/cloudmessaging/zzt;)V
-    .locals 5
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v0, 0x3
 
-    const-string v1, "MessengerIpcClient"
+    iget-object v1, p0, Lsvi;->b:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lsvi;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failing "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " with "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lsvi;->b:Lrnf;
-
-    invoke-virtual {v0, p1}, Lrnf;->a(Ljava/lang/Exception;)V
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
-.end method
-
-.method public final c(Landroid/os/Bundle;)V
-    .locals 5
-
-    const/4 v0, 0x3
-
-    const-string v1, "MessengerIpcClient"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lsvi;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Finishing "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " with "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lsvi;->b:Lrnf;
-
-    invoke-virtual {v0, p1}, Lrnf;->b(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Request { what="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lsvi;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lsvi;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " oneWay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lsvi;->a()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

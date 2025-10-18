@@ -1,64 +1,64 @@
-.class public final synthetic Lnnb;
+.class public final Lnnb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lpnb;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static final a:Lnnb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lnnb;->a:I
+    new-instance v0, Lnnb;
 
-    iput-object p1, p0, Lnnb;->b:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnnb;->a:Lnnb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lnnb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lnnb;->b:Landroidx/recyclerview/widget/RecyclerView;
+    return v0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    :cond_0
+    instance-of p1, p1, Lnnb;
 
-    return-void
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Lnnb;->b:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    return p1
 
-    return-void
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lnnb;->b:Landroidx/recyclerview/widget/RecyclerView;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    const v0, 0x1e302f13
 
-    return-void
+    return v0
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "ClearSearch"
+
+    return-object v0
 .end method

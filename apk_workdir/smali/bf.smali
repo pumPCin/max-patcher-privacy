@@ -43,7 +43,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lefi;->d(Z)V
+    invoke-static {v0}, Lzg8;->c(Z)V
 
     const/4 v0, 0x7
 
@@ -82,7 +82,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lyf8;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lggi;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

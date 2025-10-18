@@ -1,48 +1,23 @@
 .class public final Lfg7;
-.super Lk14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:Ljava/util/ArrayList;
 
-.field public final synthetic Y:Ll23;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ll23;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lfg7;->Y:Ll23;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, Lfg7;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lfg7;->X:I
+    const-string v0, ""
 
-    const/high16 v0, -0x80000000
+    iput-object v0, p0, Lfg7;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfg7;->X:I
-
-    iget-object p1, p0, Lfg7;->Y:Ll23;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ll23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

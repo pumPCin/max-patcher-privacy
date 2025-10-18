@@ -1,28 +1,26 @@
 .class public final Lcob;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lfob;
+.field public final synthetic Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lfob;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lcob;->Z:Lfob;
+    iput-object p2, p0, Lcob;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lcob;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -42,13 +38,11 @@
 
     check-cast p1, Lcob;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lcob;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -56,113 +50,48 @@
 
     new-instance v0, Lcob;
 
-    iget-object v1, p0, Lcob;->Z:Lfob;
+    iget-object v1, p0, Lcob;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    invoke-direct {v0, v1, p2}, Lcob;-><init>(Lfob;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lcob;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
 
-    iput-object p1, v0, Lcob;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lcob;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 3
 
-    iget v0, p0, Lcob;->X:I
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    sget-object v1, Lzag;->a:Lzag;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcob;->Y:Ljava/lang/Object;
+    iget-object p1, p0, Lcob;->X:Ljava/lang/Object;
 
     check-cast p1, Ljava/util/List;
 
-    sget-object v0, Lfob;->r0:[Lwq7;
+    iget-object v0, p0, Lcob;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    iget-object v0, p0, Lcob;->Z:Lfob;
+    invoke-static {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0(Lone/me/chats/picker/chats/PickerChatsListWidget;)Z
 
-    iget-wide v3, v0, Lfob;->b:J
+    move-result v1
 
-    const-wide/16 v5, 0x0
+    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->v0:Lgnb;
 
-    cmp-long v5, v3, v5
+    invoke-virtual {v2, p1}, Lr18;->E(Ljava/util/List;)V
 
-    if-lez v5, :cond_2
-
-    iget-object v5, v0, Lfob;->X:Llt7;
-
-    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lt23;
-
-    check-cast v5, Lu33;
-
-    invoke-virtual {v5, v3, v4}, Lu33;->N(J)Lgzc;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lgzc;->a:Llze;
-
-    invoke-interface {v3}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lda2;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3}, Lda2;->l()Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v3
-
-    xor-int/2addr v3, v2
-
-    if-ne v3, v2, :cond_2
-
-    invoke-static {v0, p1}, Lfob;->r(Lfob;Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ll24;->getView()Landroid/view/View;
 
     move-result-object p1
 
-    :cond_2
-    iget-object v0, v0, Lfob;->Y:Lsze;
+    if-eqz p1, :cond_0
 
-    iput v2, p0, Lcob;->X:I
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-virtual {v0, p1}, Lsze;->setValue(Ljava/lang/Object;)V
+    move-result-object p1
 
-    sget-object p1, Lc54;->a:Lc54;
+    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
 
-    if-ne v1, p1, :cond_3
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-
-    :cond_3
-    return-object v1
 .end method

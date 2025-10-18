@@ -1,115 +1,90 @@
 .class public final synthetic Lwmb;
-.super Lti6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lli6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
-    .locals 12
+.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+    .locals 0
 
     iput p2, p0, Lwmb;->a:I
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lwmb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    iput-object p1, p0, Lwmb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    const-string v4, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Lbj7;
-
-    const-string v3, "isChatItem"
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    move-object v0, p0
-
-    iput-object p1, v0, Lwmb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    const-string v10, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
-
-    const/4 v11, 0x0
-
-    const/4 v7, 0x1
-
-    const-class v8, Lbj7;
-
-    const-string v9, "isChatItem"
-
-    move-object v6, v0
-
-    invoke-direct/range {v6 .. v11}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 5
 
     iget v0, p0, Lwmb;->a:I
 
+    sget-object v1, Lccg;->a:Lccg;
+
+    iget-object v2, p0, Lwmb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast p1, Laze;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {p1}, Laze;->T0()V
 
-    move-result p1
+    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->y0:[Ltr7;
 
-    iget-object v0, p0, Lwmb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iget-object v0, v2, Lone/me/startconversation/channel/PickSubscribersScreen;->t0:Lqs;
 
-    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+    sget-object v3, Lone/me/startconversation/channel/PickSubscribersScreen;->y0:[Ltr7;
 
-    move-result p1
+    const/4 v4, 0x1
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aget-object v3, v3, v4
 
-    move-result-object p1
+    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-virtual {p1, v2, v3}, Laze;->S0(J)Lwf4;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lrdi;->t0(Lwf4;)V
+
+    return-object v1
 
     :pswitch_0
-    check-cast p1, Ljava/lang/Number;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->y0:[Ltr7;
 
-    move-result p1
-
-    iget-object v0, p0, Lwmb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v2}, Ll24;->getOnBackPressedDispatcher()Lpma;
 
     move-result-object p1
 
-    return-object p1
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lpma;->d()V
+
+    :cond_0
+    return-object v1
 
     nop
 

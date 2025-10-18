@@ -1,104 +1,72 @@
 .class public final Lece;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
-
-
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lece;->Y:Lone/me/settings/SettingsListScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Ltce;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ltrf;
+    .locals 1
 
-    check-cast p1, Liee;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lece;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lece;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lece;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lece;
-
-    iget-object v1, p0, Lece;->Y:Lone/me/settings/SettingsListScreen;
-
-    invoke-direct {v0, p2, v1}, Lece;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-
-    iput-object p1, v0, Lece;->X:Ljava/lang/Object;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final b()Lice;
+    .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lece;->X:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast p1, Liee;
+.method public final c()Ltrf;
+    .locals 1
 
-    sget-object v0, Lone/me/settings/SettingsListScreen;->A0:[Lwq7;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lece;->Y:Lone/me/settings/SettingsListScreen;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lone/me/settings/SettingsListScreen;->F0()Lmfe;
+.method public final d()Lqce;
+    .locals 1
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, p1}, Lmfe;->setTopBarContent(Liee;)V
+    return-object v0
+.end method
 
-    iget-object v1, v0, Lone/me/settings/SettingsListScreen;->s0:Lazc;
+.method public final e()Lsu7;
+    .locals 1
 
-    sget-object v2, Lone/me/settings/SettingsListScreen;->A0:[Lwq7;
+    const/4 v0, 0x0
 
-    const/4 v3, 0x1
+    return-object v0
+.end method
 
-    aget-object v2, v2, v3
+.method public final getItemId()J
+    .locals 2
 
-    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    check-cast v0, Ls5b;
+.method public final getTitle()Ltrf;
+    .locals 1
 
-    iget-object p1, p1, Liee;->c:Ljava/lang/String;
+    sget-object v0, Ltrf;->b:Lsrf;
 
-    invoke-virtual {v0, p1}, Ls5b;->setTitle(Ljava/lang/CharSequence;)V
+    return-object v0
+.end method
 
-    sget-object p1, Lzag;->a:Lzag;
+.method public final t()I
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return v0
 .end method

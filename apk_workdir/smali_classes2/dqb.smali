@@ -1,76 +1,80 @@
 .class public final Ldqb;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/ComponentCallbacks;
-.implements Lxx5;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lmqb;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/pinbars/PinBarsWidget;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Liu7;Lzr4;Ldh;Lma9;Lcz8;Lmqb;Lgw0;Lkd2;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ldqb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    new-instance p2, Ljava/util/HashSet;
+    const/4 p2, 0x2
 
-    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p7, p0, Ldqb;->a:Lmqb;
-
-    new-instance p2, Laqb;
-
-    invoke-direct {p2, p1, p0}, Laqb;-><init>(Landroid/content/Context;Ldqb;)V
-
-    invoke-static {}, Lft4;->a()Lft4;
-
-    invoke-virtual {p1, p0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lwf4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldqb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldqb;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ldqb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public onEvent(Li43;)V
-    .locals 0
-    .annotation runtime Lsaf;
-    .end annotation
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    .line 3
-    return-void
+    new-instance v0, Ldqb;
+
+    iget-object v1, p0, Ldqb;->Y:Lone/me/pinbars/PinBarsWidget;
+
+    invoke-direct {v0, p2, v1}, Ldqb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+
+    iput-object p1, v0, Ldqb;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public onEvent(Lpg2;)V
-    .locals 0
-    .annotation runtime Lsaf;
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    return-void
-.end method
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-.method public onEvent(Lvv9;)V
-    .locals 0
-    .annotation runtime Lsaf;
-    .end annotation
+    iget-object p1, p0, Ldqb;->X:Ljava/lang/Object;
 
-    .line 1
-    return-void
-.end method
+    check-cast p1, Lwf4;
 
-.method public final onLowMemory()V
-    .locals 0
+    sget-object v0, Lfqb;->c:Lfqb;
 
-    return-void
+    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

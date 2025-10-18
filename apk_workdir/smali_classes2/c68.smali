@@ -4,32 +4,38 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Liu7;
 
-.field public b:Z
+.field public final b:Liu7;
 
-.field public c:Z
 
-.field public d:Z
+# direct methods
+.method public constructor <init>(Liu7;Liu7;)V
+    .locals 0
 
-.field public e:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Z
+    iput-object p1, p0, Lc68;->a:Liu7;
 
-.field public g:Z
+    iput-object p2, p0, Lc68;->b:Liu7;
 
-.field public h:Z
+    return-void
+.end method
 
-.field public i:Legc;
 
-.field public j:Z
+# virtual methods
+.method public final a(JZ)Ltka;
+    .locals 1
 
-.field public k:I
+    new-instance v0, Lb68;
 
-.field public l:Z
+    invoke-direct {v0, p0, p1, p2, p3}, Lb68;-><init>(Lc68;JZ)V
 
-.field public m:Z
+    new-instance p1, Ltka;
 
-.field public n:Z
+    const/4 p2, 0x4
 
-.field public o:Z
+    invoke-direct {p1, p2, v0}, Ltka;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method

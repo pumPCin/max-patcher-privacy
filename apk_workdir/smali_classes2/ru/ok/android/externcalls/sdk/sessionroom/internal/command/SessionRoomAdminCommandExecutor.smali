@@ -14,28 +14,28 @@
         "Lr7;",
         "params",
         "Lkotlin/Function0;",
-        "Lzag;",
+        "Lccg;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "activateRooms",
-        "(Lr7;Loh6;Lqh6;)V",
-        "Ledg;",
+        "(Lr7;Lji6;Lli6;)V",
+        "Lheg;",
         "updateRooms",
-        "(Ledg;Loh6;Lqh6;)V",
-        "Lfhf;",
+        "(Lheg;Lji6;Lli6;)V",
+        "Llif;",
         "switchRoom",
-        "(Lfhf;Loh6;Lqh6;)V",
-        "Lu8d;",
+        "(Llif;Lji6;Lli6;)V",
+        "Lbad;",
         "removeRooms",
-        "(Lu8d;Loh6;Lqh6;)V",
+        "(Lbad;Lji6;Lli6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "assignParticipantsToRooms",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Loh6;Lqh6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lji6;Lli6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
         "moveParticipant",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Loh6;Lqh6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lji6;Lli6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -49,73 +49,73 @@
 
 
 # virtual methods
-.method public abstract activateRooms(Lr7;Loh6;Lqh6;)V
+.method public abstract activateRooms(Lr7;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lr7;",
-            "Loh6;",
-            "Lqh6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Loh6;Lqh6;)V
+.method public abstract assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
-            "Loh6;",
-            "Lqh6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Loh6;Lqh6;)V
+.method public abstract moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-            "Loh6;",
-            "Lqh6;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract removeRooms(Lu8d;Loh6;Lqh6;)V
+.method public abstract removeRooms(Lbad;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu8d;",
-            "Loh6;",
-            "Lqh6;",
+            "Lbad;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract switchRoom(Lfhf;Loh6;Lqh6;)V
+.method public abstract switchRoom(Llif;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lfhf;",
-            "Loh6;",
-            "Lqh6;",
+            "Llif;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract updateRooms(Ledg;Loh6;Lqh6;)V
+.method public abstract updateRooms(Lheg;Lji6;Lli6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ledg;",
-            "Loh6;",
-            "Lqh6;",
+            "Lheg;",
+            "Lji6;",
+            "Lli6;",
             ")V"
         }
     .end annotation

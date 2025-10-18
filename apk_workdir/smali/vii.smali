@@ -1,131 +1,59 @@
-.class public final Lvii;
-.super Li6i;
+.class public abstract Lvii;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
 
 
 # static fields
-.field private static final zzb:Lvii;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:Ljava/lang/String;
-
-.field private zzf:Ljava/lang/String;
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lvii;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {v0}, Lvii;-><init>()V
+    const-string v1, "unity"
 
-    sput-object v0, Lvii;->zzb:Lvii;
+    const-string v2, "native"
 
-    const-class v1, Lvii;
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lvii;->a:Ljava/util/HashMap;
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v0
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    const-string v2, "]  PID: ["
+
+    const-string v3, "] "
+
+    const-string v4, "UID: ["
+
+    invoke-static {v4, v0, v2, v1, v3}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PlayCoreVersion"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Li6i;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lvii;->zze:Ljava/lang/String;
-
-    iput-object v0, p0, Lvii;->zzf:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 2
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lvii;->zzb:Lvii;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ldii;
-
-    sget-object p2, Lvii;->zzb:Lvii;
-
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lvii;
-
-    invoke-direct {p1}, Lvii;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "zze"
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lvii;->zzb:Lvii;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
 .end method

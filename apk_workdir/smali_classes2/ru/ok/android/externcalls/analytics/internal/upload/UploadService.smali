@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/upload/UploadService;
-.super Lzjd;
+.super Lgld;
 .source "SourceFile"
 
 
@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lxm7;-><init>()V
+    invoke-direct {p0}, Lun7;-><init>()V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Luei;->b()Landroid/app/Application;
+    invoke-static {}, Lxfi;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -151,7 +151,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Luei;->b()Landroid/app/Application;
+    invoke-static {}, Lxfi;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -171,7 +171,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Luei;->b()Landroid/app/Application;
+    invoke-static {}, Lxfi;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -188,7 +188,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2, p0}, Lxm7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {v0, v1, v2, p0}, Lun7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -42,7 +42,7 @@
 
     const-class v2, Landroid/view/inputmethod/InputMethodManager;
 
-    invoke-static {v1, v2}, Ln04;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lb14;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 

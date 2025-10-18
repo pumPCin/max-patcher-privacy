@@ -4,52 +4,64 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final d:J
+.field public static final d:I
 
-.field public static final e:J
+.field public static final e:I
 
-.field public static final synthetic f:I
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lznc;->oneme_settings_ringtone_section_bottom_vh:I
+    sget v0, Lptc;->permissions_allow_access:I
 
-    int-to-long v0, v0
+    sput v0, Lp1b;->a:I
 
-    sput-wide v0, Lp1b;->a:J
+    sget v0, Lptc;->permissions_audio_denied_title:I
 
-    sget v0, Lznc;->oneme_settings_ringtone_section_custom_add:I
+    sput v0, Lp1b;->b:I
 
-    int-to-long v0, v0
+    sget v0, Lptc;->permissions_audio_request_denied:I
 
-    sput-wide v0, Lp1b;->b:J
+    sput v0, Lp1b;->c:I
 
-    sget v0, Lznc;->oneme_settings_ringtone_section_default:I
+    sget v0, Lptc;->permissions_audio_title:I
 
-    int-to-long v0, v0
+    sput v0, Lp1b;->d:I
 
-    sput-wide v0, Lp1b;->c:J
+    sget v0, Lptc;->permissions_dialog_open_setting:I
 
-    sget v0, Lznc;->oneme_settings_ringtone_section_header_vh:I
+    sput v0, Lp1b;->e:I
 
-    int-to-long v0, v0
+    sget v0, Lptc;->permissions_dialog_yes:I
 
-    sput-wide v0, Lp1b;->d:J
+    sput v0, Lp1b;->f:I
 
-    sget v0, Lznc;->oneme_settings_ringtone_section_system:I
+    sget v0, Lptc;->permissions_video_message_request:I
 
-    int-to-long v0, v0
+    sput v0, Lp1b;->g:I
 
-    sput-wide v0, Lp1b;->e:J
+    sget v0, Lptc;->permissions_video_message_request_only_camera_title:I
+
+    sput v0, Lp1b;->h:I
+
+    sget v0, Lptc;->permissions_video_message_request_title:I
+
+    sput v0, Lp1b;->i:I
 
     return-void
 .end method

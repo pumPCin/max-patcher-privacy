@@ -1,226 +1,118 @@
 .class public final Lstb;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lbtb;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
-
-.field public final b:Lye5;
-
-.field public final c:Lah5;
-
-.field public final d:Llt7;
-
-.field public final e:Litb;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Llt7;
-
-.field public final h:Lht;
+.field public final synthetic X:La76;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lye5;Lah5;Llt7;Litb;Llt7;)V
+.method public constructor <init>(La76;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lstb;->X:La76;
 
-    iput-object p1, p0, Lstb;->a:Landroid/app/Application;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lstb;->b:Lye5;
-
-    iput-object p3, p0, Lstb;->c:Lah5;
-
-    iput-object p4, p0, Lstb;->d:Llt7;
-
-    iput-object p5, p0, Lstb;->e:Litb;
-
-    const-class p1, Lstb;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lstb;->f:Ljava/lang/String;
-
-    iput-object p6, p0, Lstb;->g:Llt7;
-
-    new-instance p1, Lht;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lht;-><init>(I)V
-
-    iput-object p1, p0, Lstb;->h:Lht;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpug;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lstb;->f:Ljava/lang/String;
+    check-cast p1, Lvy5;
 
-    sget-object v1, Lndi;->a:Lkwa;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, p1, p2}, Lstb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    goto :goto_0
+    check-cast p1, Lstb;
 
-    :cond_0
-    sget-object v3, Lf88;->o:Lf88;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {v1, v3}, Lkwa;->b(Lf88;)Z
+    invoke-virtual {p1, p2}, Lstb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Players pool. Free player, "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v3, v0, v4, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    invoke-interface {p1}, Lpug;->stop()V
-
-    invoke-interface {p1, v2}, Lpug;->a0(Landroid/view/Surface;)V
-
-    iget-object v0, p0, Lstb;->h:Lht;
-
-    invoke-virtual {v0, p1}, Lht;->add(Ljava/lang/Object;)Z
-
-    return-void
+    return-object p2
 .end method
 
-.method public final get()Lpug;
-    .locals 10
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lstb;->h:Lht;
+    new-instance p1, Lstb;
 
-    invoke-virtual {v0}, Lht;->isEmpty()Z
+    iget-object v0, p0, Lstb;->X:La76;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lstb;-><init>(La76;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v0, :cond_1
+    return-object p1
+.end method
 
-    iget-object v0, p0, Lstb;->f:Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const-string v1, "Players pool. Pool is empty create new player"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p1, p0, Lstb;->X:La76;
 
-    iget-object v0, p0, Lstb;->g:Llt7;
+    iget-object p1, p1, La76;->a:Ljava/lang/Object;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    check-cast p1, Ln50;
 
-    move-result-object v0
+    iget-object v0, p1, Ln50;->c:Lqz9;
 
-    check-cast v0, Lkp5;
+    iget-object v1, p1, Ln50;->t0:Lp95;
 
-    check-cast v0, Lqp5;
+    check-cast v0, Lg0a;
 
-    invoke-virtual {v0}, Lqp5;->o()Z
+    invoke-virtual {v0, v1}, Lg0a;->d(Loz9;)V
 
-    move-result v0
+    iget-object v0, p1, Ln50;->o:Lq54;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Lq54;->getCoroutineContext()Li54;
 
-    new-instance v0, Lz6b;
+    move-result-object v1
 
-    iget-object v1, p0, Lstb;->a:Landroid/app/Application;
+    invoke-static {v1}, Ldbi;->f(Li54;)Ljn7;
 
-    iget-object v2, p0, Lstb;->b:Lye5;
+    move-result-object v1
 
-    iget-object v3, p0, Lstb;->e:Litb;
+    new-instance v2, Ll;
 
-    invoke-direct {v0, v1, v2, v3}, Lz6b;-><init>(Landroid/content/Context;Lye5;Litb;)V
+    const/16 v3, 0xb
 
-    return-object v0
+    invoke-direct {v2, v3, p1}, Ll;-><init>(ILjava/lang/Object;)V
 
-    :cond_0
-    new-instance v4, Lqug;
+    invoke-interface {v1, v2}, Ljn7;->invokeOnCompletion(Lli6;)Lyv4;
 
-    iget-object v5, p0, Lstb;->a:Landroid/app/Application;
+    iget-object v1, p1, Ln50;->a:Lulf;
 
-    iget-object v6, p0, Lstb;->b:Lye5;
+    check-cast v1, Lqta;
 
-    iget-object v7, p0, Lstb;->c:Lah5;
+    invoke-virtual {v1}, Lqta;->a()Lk54;
 
-    iget-object v8, p0, Lstb;->d:Llt7;
+    move-result-object v1
 
-    iget-object v9, p0, Lstb;->e:Litb;
+    new-instance v2, Ll50;
 
-    invoke-direct/range {v4 .. v9}, Lqug;-><init>(Landroid/content/Context;Lye5;Lah5;Llt7;Litb;)V
+    const/4 v3, 0x0
 
-    return-object v4
+    invoke-direct {v2, p1, v3}, Ll50;-><init>(Ln50;Lkotlin/coroutines/Continuation;)V
 
-    :cond_1
-    iget-object v0, p0, Lstb;->h:Lht;
+    const/4 p1, 0x2
 
-    iget v1, v0, Lht;->c:I
+    invoke-static {v0, v1, v3, v2, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    add-int/lit8 v1, v1, -0x1
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1}, Lht;->e(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpug;
-
-    iget-object v1, p0, Lstb;->f:Ljava/lang/String;
-
-    sget-object v2, Lndi;->a:Lkwa;
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v3, Lf88;->o:Lf88;
-
-    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Players pool. Pool has player, "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_0
-    return-object v0
+    return-object p1
 .end method

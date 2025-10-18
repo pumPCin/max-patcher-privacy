@@ -1,106 +1,60 @@
 .class public final Lapi;
-.super Lvhi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final synthetic b:Lrnf;
 
-.field public final synthetic c:Lu7i;
-
-.field public final synthetic o:Leyi;
+# static fields
+.field public static final a:Lapi;
 
 
 # direct methods
-.method public constructor <init>(Leyi;Lrnf;Lrnf;Lu7i;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p3, p0, Lapi;->b:Lrnf;
+    new-instance v0, Lapi;
 
-    iput-object p4, p0, Lapi;->c:Lu7i;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lapi;->o:Leyi;
+    sput-object v0, Lapi;->a:Lapi;
 
-    invoke-direct {p0, p2}, Lvhi;-><init>(Lrnf;)V
+    new-instance v0, Lr8i;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lapi;->o:Leyi;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget-object v0, v0, Leyi;->f:Ljava/lang/Object;
+    move-result-object p1
 
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lapi;->o:Leyi;
-
-    iget-object v2, p0, Lapi;->b:Lrnf;
-
-    iget-object v3, v1, Leyi;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v2, Lrnf;->a:Ld1j;
-
-    new-instance v4, Lpwe;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v1, v2, v5}, Lpwe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    invoke-virtual {v3, v4}, Ld1j;->i(Lpla;)Ld1j;
-
-    iget-object v1, p0, Lapi;->o:Leyi;
-
-    iget-object v1, v1, Leyi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lapi;->o:Leyi;
-
-    iget-object v1, v1, Leyi;->b:Ltt8;
-
-    const-string v2, "Already connected to the service."
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Ltt8;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lapi;->o:Leyi;
-
-    iget-object v2, p0, Lapi;->c:Lu7i;
-
-    invoke-static {v1, v2}, Leyi;->b(Leyi;Lu7i;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    throw p1
 .end method

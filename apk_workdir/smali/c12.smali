@@ -1,200 +1,86 @@
-.class public final Lc12;
+.class public final synthetic Lc12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static final c:Lo30;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public b:Ljava/util/concurrent/ThreadPoolExecutor;
+.field public final synthetic b:Lay1;
+
+.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lay1;Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
 
-    new-instance v0, Lo30;
+    iput p3, p0, Lc12;->a:I
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lc12;->b:Lay1;
 
-    invoke-direct {v0, v1}, Lo30;-><init>(I)V
-
-    sput-object v0, Lc12;->c:Lo30;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 9
+    iput-object p2, p0, Lc12;->c:Landroid/hardware/camera2/CameraDevice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lc12;->a:Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    sget-object v8, Lc12;->c:Lo30;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    new-instance v0, Lb12;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2}, Lb12;-><init>(I)V
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
-
-    iput-object v1, p0, Lc12;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmk2;)V
-    .locals 10
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p0, Lc12;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v0, p0, Lc12;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v8, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    sget-object v9, Lc12;->c:Lo30;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x1
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    new-instance v0, Lb12;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v3}, Lb12;-><init>(I)V
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
-
-    iput-object v2, p0, Lc12;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lc12;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v1, Ljava/util/LinkedHashSet;
-
-    iget-object p1, p1, Lmk2;->g:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-interface {v1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setMaximumPoolSize(I)V
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final run()V
     .locals 2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lc12;->a:I
 
-    iget-object v0, p0, Lc12;->a:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    monitor-enter v0
+    iget-object v0, p0, Lc12;->b:Lay1;
 
-    :try_start_0
-    iget-object v1, p0, Lc12;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object v0, v0, Lay1;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    monitor-exit v0
+    iget-object v1, p0, Lc12;->c:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    :catchall_0
-    move-exception p1
+    :pswitch_0
+    iget-object v0, p0, Lc12;->b:Lay1;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, v0, Lay1;->b:Ljava/lang/Object;
 
-    throw p1
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    iget-object v1, p0, Lc12;->c:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lc12;->b:Lay1;
+
+    iget-object v0, v0, Lay1;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    iget-object v1, p0, Lc12;->c:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

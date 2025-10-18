@@ -1,237 +1,114 @@
 .class public final Lmq3;
-.super Ljava/lang/Object;
+.super Lkq3;
 .source "SourceFile"
+
+# interfaces
+.implements Lcyd;
 
 
 # instance fields
-.field public a:[I
+.field public final q0:J
 
-.field public b:[I
+.field public final r0:I
 
-.field public c:I
+.field public final s0:I
 
-.field public d:[I
+.field public final t0:Z
 
-.field public e:[F
+.field public final u0:J
 
-.field public f:I
 
-.field public g:[I
+# direct methods
+.method public constructor <init>(JJIIZ)V
+    .locals 1
 
-.field public h:[Ljava/lang/String;
+    invoke-direct/range {p0 .. p7}, Lkq3;-><init>(JJIIZ)V
 
-.field public i:I
+    move v0, p7
 
-.field public j:[I
+    move p7, p6
 
-.field public k:[Z
+    move p6, p5
 
-.field public l:I
+    move-wide p4, p3
+
+    move-wide p2, p1
+
+    move-object p1, p0
+
+    iput-wide p4, p1, Lmq3;->q0:J
+
+    iput p6, p1, Lmq3;->r0:I
+
+    iput p7, p1, Lmq3;->s0:I
+
+    iput-boolean v0, p1, Lmq3;->t0:Z
+
+    const-wide/16 p4, -0x1
+
+    cmp-long p6, p2, p4
+
+    if-eqz p6, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide p2, p4
+
+    :goto_0
+    iput-wide p2, p1, Lmq3;->u0:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(IF)V
-    .locals 3
+.method public final a()J
+    .locals 2
 
-    iget v0, p0, Lmq3;->f:I
+    iget-wide v0, p0, Lmq3;->u0:J
 
-    iget-object v1, p0, Lmq3;->d:[I
-
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_0
-
-    array-length v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->d:[I
-
-    iget-object v0, p0, Lmq3;->e:[F
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->e:[F
-
-    :cond_0
-    iget-object v0, p0, Lmq3;->d:[I
-
-    iget v1, p0, Lmq3;->f:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lmq3;->e:[F
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lmq3;->f:I
-
-    aput p2, p1, v1
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final b(II)V
-    .locals 3
+.method public final b(J)J
+    .locals 4
 
-    iget v0, p0, Lmq3;->c:I
+    const-wide/16 v0, 0x0
 
-    iget-object v1, p0, Lmq3;->a:[I
+    iget-wide v2, p0, Lkq3;->b:J
 
-    array-length v2, v1
+    sub-long/2addr p1, v2
 
-    if-lt v0, v2, :cond_0
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
 
-    array-length v0, v1
+    move-result-wide p1
 
-    mul-int/lit8 v0, v0, 0x2
+    const-wide/32 v0, 0x7a1200
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    mul-long/2addr p1, v0
 
-    move-result-object v0
+    iget v0, p0, Lkq3;->X:I
 
-    iput-object v0, p0, Lmq3;->a:[I
+    int-to-long v0, v0
 
-    iget-object v0, p0, Lmq3;->b:[I
+    div-long/2addr p1, v0
 
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->b:[I
-
-    :cond_0
-    iget-object v0, p0, Lmq3;->a:[I
-
-    iget v1, p0, Lmq3;->c:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lmq3;->b:[I
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lmq3;->c:I
-
-    aput p2, p1, v1
-
-    return-void
+    return-wide p1
 .end method
 
-.method public final c(ILjava/lang/String;)V
-    .locals 3
+.method public final g()J
+    .locals 2
 
-    iget v0, p0, Lmq3;->i:I
+    iget-wide v0, p0, Lmq3;->q0:J
 
-    iget-object v1, p0, Lmq3;->g:[I
-
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_0
-
-    array-length v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->g:[I
-
-    iget-object v0, p0, Lmq3;->h:[Ljava/lang/String;
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    iput-object v0, p0, Lmq3;->h:[Ljava/lang/String;
-
-    :cond_0
-    iget-object v0, p0, Lmq3;->g:[I
-
-    iget v1, p0, Lmq3;->i:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lmq3;->h:[Ljava/lang/String;
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lmq3;->i:I
-
-    aput-object p2, p1, v1
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final d(IZ)V
-    .locals 3
+.method public final h()I
+    .locals 1
 
-    iget v0, p0, Lmq3;->l:I
+    iget v0, p0, Lmq3;->r0:I
 
-    iget-object v1, p0, Lmq3;->j:[I
-
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_0
-
-    array-length v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->j:[I
-
-    iget-object v0, p0, Lmq3;->k:[Z
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([ZI)[Z
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmq3;->k:[Z
-
-    :cond_0
-    iget-object v0, p0, Lmq3;->j:[I
-
-    iget v1, p0, Lmq3;->l:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lmq3;->k:[Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lmq3;->l:I
-
-    aput-boolean p2, p1, v1
-
-    return-void
+    return v0
 .end method

@@ -1,51 +1,80 @@
-.class public abstract Lgo;
+.class public final synthetic Lgo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/window/OnBackInvokedCallback;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-static {p0}, Ly4;->n(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+    iput p1, p0, Lgo;->a:I
 
-    move-result-object p0
+    iput-object p2, p0, Lgo;->b:Ljava/lang/Object;
 
-    return-object p0
-.end method
-
-.method public static b(Ljava/lang/Object;Lmo;)Landroid/window/OnBackInvokedCallback;
-    .locals 2
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Lfo;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p1}, Lfo;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0}, Ly4;->p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    invoke-static {p0, v0}, Ly4;->z(Landroid/window/OnBackInvokedDispatcher;Lfo;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Ly4;->l(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
-
-    move-result-object p1
-
-    invoke-static {p0}, Ly4;->p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Ly4;->A(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onBackInvoked()V
+    .locals 1
+
+    iget v0, p0, Lgo;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lji6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lii8;
+
+    invoke-interface {v0}, Lii8;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lno;
+
+    invoke-virtual {v0}, Lno;->D()Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

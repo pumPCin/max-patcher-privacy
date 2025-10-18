@@ -2,179 +2,75 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwzg;
+
 
 # instance fields
-.field public final a:[B
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Lji6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[B)V
+.method public synthetic constructor <init>(ILji6;)V
     .locals 0
 
+    iput p1, p0, Lyfh;->a:I
+
+    iput-object p2, p0, Lyfh;->b:Lji6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Lyfh;->a:[B
-
-    iput-object p1, p0, Lyfh;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lyfh;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ljava/lang/Class;)Lxzg;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyfh;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lyfh;->b:Lji6;
 
-    :cond_0
-    instance-of v1, p1, Lyfh;
+    check-cast v0, Llsg;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyfh;
-
-    iget-object v1, p0, Lyfh;->a:[B
-
-    iget-object v3, p1, Lyfh;->a:[B
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyfh;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lyfh;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lyfh;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lyfh;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lyfh;->a:[B
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lyfh;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lyfh;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lyfh;->a:[B
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+    invoke-virtual {v0}, Llsg;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", fileName="
+    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v2, ", fileMimeType="
+    move-result-object p1
 
-    const-string v3, "WebAppShareFileInfo(file="
+    check-cast p1, Lxzg;
 
-    iget-object v4, p0, Lyfh;->b:Ljava/lang/String;
+    return-object p1
 
-    invoke-static {v3, v0, v1, v4, v2}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lyfh;->b:Lji6;
 
-    move-result-object v0
+    check-cast v0, Lij1;
 
-    const-string v1, ")"
-
-    iget-object v2, p0, Lyfh;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lij1;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxzg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

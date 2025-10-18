@@ -1,256 +1,329 @@
-.class public abstract Lqi0;
-.super Ljava/lang/Object;
+.class public final Lqi0;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements Ls50;
+.implements Lbai;
+
+
+# static fields
+.field private static final zzb:Lqi0;
 
 
 # instance fields
-.field public b:Lp50;
+.field private zzd:I
 
-.field public c:Lp50;
+.field private zze:Lx7i;
 
-.field public d:Lp50;
+.field private zzf:I
 
-.field public e:Lp50;
+.field private zzg:Ljava/lang/String;
 
-.field public f:Ljava/nio/ByteBuffer;
+.field private zzh:Lb5i;
 
-.field public g:Ljava/nio/ByteBuffer;
-
-.field public h:Z
+.field private zzi:B
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqi0;
+
+    invoke-direct {v0}, Lqi0;-><init>()V
+
+    sput-object v0, Lqi0;->zzb:Lqi0;
+
+    const-class v1, Lqi0;
+
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lj7i;-><init>()V
 
-    sget-object v0, Ls50;->a:Ljava/nio/ByteBuffer;
+    const/4 v0, 0x2
 
-    iput-object v0, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
+    iput-byte v0, p0, Lqi0;->zzi:B
 
-    iput-object v0, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
+    sget-object v0, Ltai;->o:Ltai;
 
-    sget-object v0, Lp50;->e:Lp50;
+    iput-object v0, p0, Lqi0;->zze:Lx7i;
 
-    iput-object v0, p0, Lqi0;->d:Lp50;
+    const-string v0, ""
 
-    iput-object v0, p0, Lqi0;->e:Lp50;
+    iput-object v0, p0, Lqi0;->zzg:Ljava/lang/String;
 
-    iput-object v0, p0, Lqi0;->b:Lp50;
+    sget-object v0, Lb5i;->b:Lx4i;
 
-    iput-object v0, p0, Lqi0;->c:Lp50;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Z
-    .locals 2
-
-    iget-boolean v0, p0, Lqi0;->h:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Ls50;->a:Ljava/nio/ByteBuffer;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b()Ljava/nio/ByteBuffer;
-    .locals 2
-
-    iget-object v0, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Ls50;->a:Ljava/nio/ByteBuffer;
-
-    iput-object v1, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
-
-    return-object v0
-.end method
-
-.method public final d()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lqi0;->h:Z
-
-    invoke-virtual {p0}, Lqi0;->i()V
+    iput-object v0, p0, Lqi0;->zzh:Lb5i;
 
     return-void
 .end method
 
-.method public final e(Lp50;)Lp50;
-    .locals 0
+.method public static n([BLy5i;)Lqi0;
+    .locals 7
 
-    iput-object p1, p0, Lqi0;->d:Lp50;
+    sget-object v0, Lqi0;->zzb:Lqi0;
 
-    invoke-virtual {p0, p1}, Lqi0;->g(Lp50;)Lp50;
+    array-length v5, p0
 
-    move-result-object p1
-
-    iput-object p1, p0, Lqi0;->e:Lp50;
-
-    invoke-virtual {p0}, Lqi0;->isActive()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lqi0;->e:Lp50;
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lp50;->e:Lp50;
-
-    return-object p1
-.end method
-
-.method public final flush()V
-    .locals 1
-
-    sget-object v0, Ls50;->a:Ljava/nio/ByteBuffer;
-
-    iput-object v0, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lqi0;->h:Z
-
-    iget-object v0, p0, Lqi0;->d:Lp50;
-
-    iput-object v0, p0, Lqi0;->b:Lp50;
-
-    iget-object v0, p0, Lqi0;->e:Lp50;
-
-    iput-object v0, p0, Lqi0;->c:Lp50;
-
-    invoke-virtual {p0}, Lqi0;->h()V
-
-    return-void
-.end method
-
-.method public abstract g(Lp50;)Lp50;
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public isActive()Z
-    .locals 2
-
-    iget-object v0, p0, Lqi0;->e:Lp50;
-
-    sget-object v1, Lp50;->e:Lp50;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public j()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final k(I)Ljava/nio/ByteBuffer;
-    .locals 1
-
-    iget-object v0, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v0
-
-    if-ge v0, p1, :cond_0
-
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
+    if-nez v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
+    const/4 v1, 0x4
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lqi0;->m(ILj7i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lj7i;
+
+    :try_start_0
+    sget-object v0, Lsai;->c:Lsai;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lsai;->a(Ljava/lang/Class;)Lvbi;
+
+    move-result-object v1
+
+    new-instance v6, Lz3i;
+
+    invoke-direct {v6, p1}, Lz3i;-><init>(Ly5i;)V
+
+    const/4 v4, 0x0
+
+    move-object v3, p0
+
+    invoke-interface/range {v1 .. v6}, Lvbi;->e(Ljava/lang/Object;[BIILz3i;)V
+
+    invoke-interface {v1, v2}, Lvbi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgr; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v2
 
     :goto_0
-    iget-object p1, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
+    if-eqz v0, :cond_2
 
-    iput-object p1, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
+    const/4 p0, 0x1
+
+    invoke-static {v0, p0}, Lj7i;->j(Lj7i;Z)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgr;
+
+    invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgr;-><init>()V
+
+    new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_1
+    check-cast v0, Lqi0;
+
+    return-object v0
+
+    :catch_0
+    new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    const-string p1, "While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either that the input has been truncated or that an embedded message misreported its own length."
+
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catch_1
+    move-exception v0
+
+    move-object p0, v0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    throw p0
+
+    :cond_3
+    new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_2
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzer;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :catch_3
+    move-exception v0
+
+    move-object p0, v0
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 7
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-eqz p1, :cond_5
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x5
+
+    if-eq p1, v0, :cond_1
+
+    if-nez p2, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    :goto_0
+    iput-byte p1, p0, Lqi0;->zzi:B
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    sget-object p1, Lqi0;->zzb:Lqi0;
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lali;
+
+    sget-object p2, Lqi0;->zzb:Lqi0;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
+
+    return-object p1
+
+    :cond_3
+    new-instance p1, Lqi0;
+
+    invoke-direct {p1}, Lqi0;-><init>()V
+
+    return-object p1
+
+    :cond_4
+    sget-object v4, Lcxh;->c:Lcxh;
+
+    const-string v5, "zzg"
+
+    const-string v6, "zzh"
+
+    const-string v0, "zzd"
+
+    const-string v1, "zze"
+
+    const-class v2, Lh2i;
+
+    const-string v3, "zzf"
+
+    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lqi0;->zzb:Lqi0;
+
+    new-instance v0, Lwai;
+
+    const-string v1, "\u0004\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0002\u0001\u041b\u0002\u1d0c\u0000\u0003\u1008\u0001\u0004\u100a\u0002"
+
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_5
+    iget-byte p1, p0, Lqi0;->zzi:B
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final reset()V
-    .locals 2
+.method public final o()Lx7i;
+    .locals 1
 
-    sget-object v0, Ls50;->a:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lqi0;->zze:Lx7i;
 
-    iput-object v0, p0, Lqi0;->g:Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lqi0;->h:Z
-
-    iput-object v0, p0, Lqi0;->f:Ljava/nio/ByteBuffer;
-
-    sget-object v0, Lp50;->e:Lp50;
-
-    iput-object v0, p0, Lqi0;->d:Lp50;
-
-    iput-object v0, p0, Lqi0;->e:Lp50;
-
-    iput-object v0, p0, Lqi0;->b:Lp50;
-
-    iput-object v0, p0, Lqi0;->c:Lp50;
-
-    invoke-virtual {p0}, Lqi0;->j()V
-
-    return-void
+    return-object v0
 .end method

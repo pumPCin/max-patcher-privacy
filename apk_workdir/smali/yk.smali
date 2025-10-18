@@ -55,7 +55,7 @@
     goto/16 :goto_1
 
     :cond_0
-    const-class v5, Lsaf;
+    const-class v5, Lzbf;
 
     invoke-virtual {v4, v5}, Ljava/lang/reflect/AccessibleObject;->isAnnotationPresent(Ljava/lang/Class;)Z
 
@@ -179,7 +179,7 @@
 
     const-string v0, " arguments.  Methods must require a single argument."
 
-    invoke-static {p1, p2, v0}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2, v0}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -188,7 +188,7 @@
     throw p0
 
     :cond_5
-    const-class v5, Lryb;
+    const-class v5, Lxzb;
 
     invoke-virtual {v4, v5}, Ljava/lang/reflect/AccessibleObject;->isAnnotationPresent(Ljava/lang/Class;)Z
 
@@ -380,7 +380,7 @@
 
     const-string v0, " arguments.  Methods must require zero arguments."
 
-    invoke-static {p1, p2, v0}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2, v0}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

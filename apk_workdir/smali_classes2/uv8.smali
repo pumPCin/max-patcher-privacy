@@ -2,68 +2,163 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmy9;
-
 
 # instance fields
-.field public final synthetic a:Lbw8;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Landroid/graphics/RectF;
+
+.field public final c:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Lbw8;)V
+.method public constructor <init>(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luv8;->a:Lbw8;
+    iput-object p1, p0, Luv8;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    iput-object p3, p0, Luv8;->c:Landroid/graphics/Rect;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w(J)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p0, Luv8;->a:Lbw8;
+    const/4 v0, 0x1
 
-    iget-object p2, p1, Lbw8;->a:Loy9;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lez9;
-
-    invoke-virtual {p2}, Lez9;->m()Lny9;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, Lny9;->c:Ljava/lang/Object;
-
-    const-string v1, "MediaMetadata.Extra.MESSAGE_ID"
-
-    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object p2, v0
+    instance-of v1, p1, Luv8;
 
-    :goto_0
-    instance-of v1, p2, Ljava/lang/Long;
+    const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
-    move-object v0, p2
-
-    check-cast v0, Ljava/lang/Long;
+    return v2
 
     :cond_1
-    invoke-static {p1, v0}, Lbw8;->a(Lbw8;Ljava/lang/Long;)V
+    check-cast p1, Luv8;
 
-    return-void
+    iget-object v1, p0, Luv8;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Luv8;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    iget-object v3, p1, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    iget-object p1, p1, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Luv8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnCropSuccess(path="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Luv8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", relativeCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luv8;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", absoluteCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luv8;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

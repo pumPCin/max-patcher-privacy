@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Liig;->a:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
 
     .line 5
     iget-object v2, v0, Lzf;->Y:Lwf;
@@ -216,7 +216,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Liig;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
 
     .line 10
     iget-object v1, v0, Lzf;->Y:Lwf;
@@ -266,7 +266,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Liig;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
 
     .line 14
     iget-object p2, v0, Lzf;->Y:Lwf;

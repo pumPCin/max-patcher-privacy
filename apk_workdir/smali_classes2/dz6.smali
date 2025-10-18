@@ -1,52 +1,104 @@
-.class public final synthetic Ldz6;
-.super Lti6;
+.class public interface abstract Ldz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqh6;
 
 
 # static fields
-.field public static final a:Ldz6;
+.field public static final a:Lbz6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    new-instance v0, Ldz6;
+    sget-object v0, Lbz6;->a:Lbz6;
 
-    const-string v4, "getId()J"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Lmy6;
-
-    const-string v3, "getId"
-
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ldz6;->a:Ldz6;
+    sput-object v0, Ldz6;->a:Lbz6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public a()Z
+    .locals 1
 
-    check-cast p1, Lmy6;
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Lmy6;->getId()J
+    return v0
+.end method
 
-    move-result-wide v0
+.method public b()V
+    .locals 0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-void
+.end method
+
+.method public c()Ljava/util/Comparator;
+    .locals 1
+
+    sget-object v0, Ldz6;->a:Lbz6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lbz6;->b:Lsf3;
+
+    return-object v0
+.end method
+
+.method public d(J)Lh63;
+    .locals 1
+
+    invoke-interface {p0}, Ldz6;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {p1, p2, v0}, Lnpi;->c(JLjava/util/List;)Lh63;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public e()Ljava/util/Comparator;
+    .locals 1
+
+    sget-object v0, Ldz6;->a:Lbz6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lbz6;->c:Lhz4;
+
+    return-object v0
+.end method
+
+.method public f(J)Lh63;
+    .locals 1
+
+    invoke-interface {p0}, Ldz6;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {p1, p2, v0}, Lnpi;->d(JLjava/util/List;)Lh63;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract g()J
+.end method
+
+.method public abstract h()J
+.end method
+
+.method public i()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public abstract j()Ljava/util/List;
 .end method

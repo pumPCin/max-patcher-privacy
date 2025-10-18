@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfi6;
+.implements Laj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Lqoe;
+    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -50,28 +50,28 @@
     .line 2
     check-cast p1, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$1;->apply(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$1;->apply(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final apply(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+.method public final apply(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;",
             ")",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
     .line 1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$1;->$tmp0:Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->access$downloadModel(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->access$downloadModel(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
 
     move-result-object p1
 

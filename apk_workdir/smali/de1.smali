@@ -6,66 +6,111 @@
 .implements Lee1;
 
 
-# instance fields
-.field public final a:Lnqf;
+# static fields
+.field public static final X:Lsce;
+
+.field public static final a:Lde1;
+
+.field public static final b:J
+
+.field public static final c:Lorf;
+
+.field public static final o:Lqu7;
 
 
 # direct methods
-.method public constructor <init>(Lnqf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lde1;
 
-    iput-object p1, p0, Lde1;->a:Lnqf;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lde1;->a:Lde1;
+
+    sget-wide v0, Lara;->e:J
+
+    sput-wide v0, Lde1;->b:J
+
+    sget v0, Lcra;->j:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    sput-object v1, Lde1;->c:Lorf;
+
+    new-instance v0, Lqu7;
+
+    sget v1, Lyqa;->j:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v1, v2, v3}, Lqu7;-><init>(III)V
+
+    sput-object v0, Lde1;->o:Lqu7;
+
+    sget-object v0, Lsce;->a:Lsce;
+
+    sput-object v0, Lde1;->X:Lsce;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final e()Lsu7;
+    .locals 1
+
+    sget-object v0, Lde1;->o:Lqu7;
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lde1;
+    instance-of p1, p1, Lde1;
 
-    if-nez v0, :cond_1
+    if-nez p1, :cond_1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lde1;
-
-    iget-object v0, p0, Lde1;->a:Lnqf;
-
-    iget-object p1, p1, Lde1;->a:Lnqf;
-
-    invoke-virtual {v0, p1}, Lnqf;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    :cond_1
+    return v0
 .end method
 
-.method public final getText()Loqf;
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lde1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Ltrf;
     .locals 1
 
-    iget-object v0, p0, Lde1;->a:Lnqf;
+    sget-object v0, Lde1;->c:Lorf;
+
+    return-object v0
+.end method
+
+.method public final getType()Lsce;
+    .locals 1
+
+    sget-object v0, Lde1;->X:Lsce;
 
     return-object v0
 .end method
@@ -73,35 +118,39 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lde1;->a:Lnqf;
+    const v0, 0x1553d49d
 
-    invoke-virtual {v0}, Lnqf;->hashCode()I
+    return v0
+.end method
 
-    move-result v0
+.method public final m()I
+    .locals 1
+
+    sget v0, Lzqa;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Success(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lde1;->a:Lnqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ShareLink"
 
     return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
 .end method

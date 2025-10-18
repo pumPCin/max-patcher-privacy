@@ -1,61 +1,65 @@
 .class public final Lss5;
-.super Lus5;
+.super Landroid/graphics/drawable/DrawableWrapper;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lss5;
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lss5;
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v1, Limc;->ic_file_extension:I
 
-    sput-object v0, Lss5;->a:Lss5;
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Lrs5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lrs5;-><init>(Lss5;I)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->a:Ljava/lang/Object;
+
+    new-instance p1, Lrs5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, p0, v1}, Lrs5;-><init>(Lss5;I)V
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->b:Ljava/lang/Object;
+
+    new-instance p1, Lrs5;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, p0, v1}, Lrs5;-><init>(Lss5;I)V
+
+    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lss5;->c:Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lss5;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x443b70c7
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Failed"
-
-    return-object v0
 .end method

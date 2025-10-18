@@ -1,89 +1,53 @@
-.class public final enum Lkwf;
-.super Ljava/lang/Enum;
+.class public final Lkwf;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lkwf;
-
-.field public static final enum c:Lkwf;
-
-.field public static final synthetic o:[Lkwf;
-
-
 # instance fields
-.field public final a:B
+.field public X:Ljava/nio/ByteBuffer;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lzwf;
+
+.field public o:Lzwf;
+
+.field public q0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lkwf;
-
-    const-string v1, "psk_ke"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lkwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lkwf;->b:Lkwf;
-
-    new-instance v1, Lkwf;
-
-    const-string v2, "psk_dhe_ke"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lkwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lkwf;->c:Lkwf;
-
-    filled-new-array {v0, v1}, [Lkwf;
-
-    move-result-object v0
-
-    sput-object v0, Lkwf;->o:[Lkwf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lzwf;Ly14;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lkwf;->Z:Lzwf;
 
-    int-to-byte p1, p3
-
-    iput-byte p1, p0, Lkwf;->a:B
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkwf;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lkwf;
+    iput-object p1, p0, Lkwf;->Y:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lkwf;->q0:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lkwf;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lkwf;->q0:I
 
-.method public static values()[Lkwf;
-    .locals 1
+    iget-object p1, p0, Lkwf;->Z:Lzwf;
 
-    sget-object v0, Lkwf;->o:[Lkwf;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Lkwf;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lzwf;->b(Ljava/nio/ByteBuffer;Ly14;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lkwf;
-
-    return-object v0
+    return-object p1
 .end method

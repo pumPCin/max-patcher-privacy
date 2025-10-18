@@ -1,27 +1,41 @@
-.class public abstract Lwfa;
-.super Ljava/lang/Object;
+.class public final Lwfa;
+.super Ldq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
+# static fields
+.field public static final a:Lwfa;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwfa;
 
-    iput-wide p1, p0, Lwfa;->a:J
+    invoke-direct {v0}, Ldq;-><init>()V
 
-    iput-wide p3, p0, Lwfa;->b:J
-
-    iput-wide p5, p0, Lwfa;->c:J
+    sput-object v0, Lwfa;->a:Lwfa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getExecutors()Leva;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Leva;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leva;
+
+    return-object v0
 .end method

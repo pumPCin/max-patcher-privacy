@@ -1,5 +1,5 @@
 .class public abstract Lb2;
-.super Ljbg;
+.super Lmcg;
 .source "SourceFile"
 
 # interfaces
@@ -18,9 +18,9 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Ljbg;-><init>(I)V
+    invoke-direct {p0, v0}, Lmcg;-><init>(I)V
 
-    invoke-static {p2, p1}, Lyti;->f(II)V
+    invoke-static {p2, p1}, Lavi;->f(II)V
 
     iput p1, p0, Lb2;->b:I
 

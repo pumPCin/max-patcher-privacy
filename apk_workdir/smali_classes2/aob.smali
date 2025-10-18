@@ -1,78 +1,120 @@
-.class public final Laob;
-.super Llff;
+.class public final synthetic Laob;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lli6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 12
 
-    iput-object p1, p0, Laob;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    iput p2, p0, Laob;->a:I
 
-    const/4 p1, 0x2
+    packed-switch p2, :pswitch_data_0
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    const-string v4, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lxj7;
+
+    const-string v3, "isChatItem"
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
+
+    :pswitch_0
+    move-object v0, p0
+
+    iput-object p1, v0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    const-string v10, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v11, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v8, Lxj7;
+
+    const-string v9, "isChatItem"
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Laob;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Laob;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Laob;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance p1, Laob;
+    iget v0, p0, Laob;->a:I
 
-    iget-object v0, p0, Laob;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Laob;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Ljava/lang/Number;
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result p1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    sget-object p1, Lone/me/chats/picker/members/PickerMembersListWidget;->y0:[Lwq7;
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
 
-    iget-object p1, p0, Laob;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    move-result p1
 
-    invoke-virtual {p1}, Lone/me/chats/picker/members/PickerMembersListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    return-object p1
 
-    sget-object p1, Lzag;->a:Lzag;
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Laob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

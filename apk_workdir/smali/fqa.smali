@@ -1,37 +1,21 @@
-.class public abstract Lfqa;
+.class public final Lfqa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+.field public static final a:Lfqa;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lzqc;->call_share_message_failed_create_p2p_invite_link:I
+    new-instance v0, Lfqa;
 
-    sput v0, Lfqa;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lzqc;->call_share_picker_confirm_p2p_invite_cancel:I
-
-    sput v0, Lfqa;->b:I
-
-    sget v0, Lzqc;->call_share_picker_confirm_p2p_invite_retry:I
-
-    sput v0, Lfqa;->c:I
-
-    sget v0, Lzqc;->call_share_search_hint:I
-
-    sput v0, Lfqa;->d:I
+    sput-object v0, Lfqa;->a:Lfqa;
 
     return-void
 .end method

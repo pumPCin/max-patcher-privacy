@@ -1,105 +1,108 @@
 .class public final Lwyc;
-.super Lsyg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:Z
 
-.field public final c:Lrhf;
+.field public final synthetic b:Lyyc;
+
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 3
+.method public constructor <init>(ZLyyc;Landroid/view/View;)V
+    .locals 0
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lwyc;->b:J
+    iput-boolean p1, p0, Lwyc;->a:Z
 
-    new-instance v0, Li4b;
+    iput-object p2, p0, Lwyc;->b:Lyyc;
 
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1, p0}, Li4b;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    iput-object v1, p0, Lwyc;->c:Lrhf;
-
-    sget-object v0, Lci9;->a:Lci9;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lt23;
-
-    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt23;
-
-    check-cast v1, Lu33;
-
-    invoke-virtual {v1, p1, p2}, Lu33;->N(J)Lgzc;
-
-    move-result-object p1
-
-    new-instance p2, Ln23;
-
-    const/16 v1, 0x9
-
-    invoke-direct {p2, p1, v1}, Ln23;-><init>(Lzx5;I)V
-
-    new-instance p1, Lvyc;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v1}, Lvyc;-><init>(Lwyc;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lh06;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p2, p1, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    invoke-virtual {v0}, Lci9;->getDispatchers()Lqkf;
-
-    move-result-object p1
-
-    check-cast p1, Losa;
-
-    invoke-virtual {p1}, Losa;->a()Lv44;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p1, p2}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    iput-object p3, p0, Lwyc;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r()Lru/ok/onechat/reactions/ReactionsViewModel;
-    .locals 1
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lwyc;->c:Lrhf;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    move-result-object v0
+    iget-boolean p1, p0, Lwyc;->a:Z
 
-    check-cast v0, Lru/ok/onechat/reactions/ReactionsViewModel;
+    if-eqz p1, :cond_2
 
-    return-object v0
+    iget-object p1, p0, Lwyc;->b:Lyyc;
+
+    iget-object p1, p1, Lyyc;->a:Ljyc;
+
+    invoke-virtual {p1}, Ljyc;->invoke()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lwyc;->c:Landroid/view/View;
+
+    if-eqz p1, :cond_1
+
+    instance-of p1, v0, Liyc;
+
+    if-eqz p1, :cond_0
+
+    move-object p1, v0
+
+    check-cast p1, Liyc;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Liyc;->b()Z
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_2
+
+    :cond_1
+    sget-object p1, Lpw6;->Y:Lpw6;
+
+    invoke-static {v0, p1}, Lzpe;->h(Landroid/view/View;Lrw6;)Z
+
+    :cond_2
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
 .end method

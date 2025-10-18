@@ -1,105 +1,87 @@
-.class public final Loyb;
-.super Ljava/lang/Object;
+.class public final enum Loyb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+
+# static fields
+.field public static final enum b:Loyb;
+
+.field public static final enum c:Loyb;
+
+.field public static final synthetic o:[Loyb;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:Landroid/graphics/Rect;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Landroid/graphics/Matrix;
-
-.field public final f:Lbbd;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/util/ArrayList;
-
-.field public final i:Lo18;
-
-.field public j:I
-
 
 # direct methods
-.method public constructor <init>(Lw32;Landroid/graphics/Rect;IILandroid/graphics/Matrix;Lbbd;Lo18;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loyb;
 
-    const/4 v0, -0x1
+    const-string v1, "PERFORMANCE"
 
-    iput v0, p0, Loyb;->j:I
+    const/4 v2, 0x0
 
-    iput p8, p0, Loyb;->a:I
+    invoke-direct {v0, v1, v2, v2}, Loyb;-><init>(Ljava/lang/String;II)V
 
-    iput p4, p0, Loyb;->d:I
+    sput-object v0, Loyb;->b:Loyb;
 
-    iput p3, p0, Loyb;->c:I
+    new-instance v1, Loyb;
 
-    iput-object p2, p0, Loyb;->b:Landroid/graphics/Rect;
+    const-string v2, "COMPATIBLE"
 
-    iput-object p5, p0, Loyb;->e:Landroid/graphics/Matrix;
+    const/4 v3, 0x1
 
-    iput-object p6, p0, Loyb;->f:Lbbd;
+    invoke-direct {v1, v2, v3, v3}, Loyb;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    sput-object v1, Loyb;->c:Loyb;
 
-    move-result p2
+    filled-new-array {v0, v1}, [Loyb;
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p2
-
-    iput-object p2, p0, Loyb;->g:Ljava/lang/String;
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p2, p0, Loyb;->h:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lw32;->a:Ljava/util/List;
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Li42;
-
-    iget-object p3, p0, Loyb;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iput-object p7, p0, Loyb;->i:Lo18;
+    sput-object v0, Loyb;->o:[Loyb;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Loyb;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Loyb;
+    .locals 1
+
+    const-class v0, Loyb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Loyb;
+
+    return-object p0
+.end method
+
+.method public static values()[Loyb;
+    .locals 1
+
+    sget-object v0, Loyb;->o:[Loyb;
+
+    invoke-virtual {v0}, [Loyb;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loyb;
+
+    return-object v0
 .end method

@@ -1,135 +1,109 @@
 .class public final Ln5h;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lfgd;
 
-.field public final synthetic Y:Lq5h;
+.field public final b:Lymg;
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final c:Lrj4;
+
+.field public final d:Lxfd;
+
+.field public final e:Lxfd;
 
 
 # direct methods
-.method public constructor <init>(Lq5h;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p1, p0, Ln5h;->Y:Lq5h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln5h;->Z:Ljava/lang/String;
+    iput-object p1, p0, Ln5h;->a:Lfgd;
 
-    const/4 p1, 0x2
+    new-instance v0, Lymg;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lymg;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln5h;->b:Lymg;
+
+    new-instance v0, Lrj4;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1}, Lrj4;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln5h;->c:Lrj4;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln5h;->d:Lxfd;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln5h;->e:Lxfd;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JJLsgf;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "SELECT * FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
 
-    invoke-virtual {p0, p1, p2}, Ln5h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, v1}, Lvgd;->c(ILjava/lang/String;)Lvgd;
 
-    move-result-object p1
+    move-result-object v1
 
-    check-cast p1, Ln5h;
+    const/4 v2, 0x1
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-virtual {v1, v2, p1, p2}, Lvgd;->k(IJ)V
 
-    invoke-virtual {p1, p2}, Ln5h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p3, p4}, Lvgd;->k(IJ)V
 
-    move-result-object p1
+    new-instance p1, Landroid/os/CancellationSignal;
 
-    return-object p1
-.end method
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance p2, Ll5h;
 
-    new-instance p1, Ln5h;
+    const/4 p3, 0x1
 
-    iget-object v0, p0, Ln5h;->Y:Lq5h;
+    invoke-direct {p2, p0, v1, p3}, Ll5h;-><init>(Ln5h;Lvgd;I)V
 
-    iget-object v1, p0, Ln5h;->Z:Ljava/lang/String;
+    iget-object p3, p0, Ln5h;->a:Lfgd;
 
-    invoke-direct {p1, v0, v1, p2}, Ln5h;-><init>(Lq5h;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Ln5h;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ln5h;->Y:Lq5h;
-
-    iget-object v0, p1, Lq5h;->h:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Ln4h;
-
-    iget-wide v5, p1, Lq5h;->a:J
-
-    iget-wide v7, p1, Lq5h;->b:J
-
-    iput v1, p0, Ln5h;->X:I
-
-    iget-object p1, v3, Ln4h;->a:Lyed;
-
-    new-instance v2, Lue9;
-
-    iget-object v4, p0, Ln5h;->Z:Ljava/lang/String;
-
-    invoke-direct/range {v2 .. v8}, Lue9;-><init>(Ln4h;Ljava/lang/String;JJ)V
-
-    invoke-static {p1, v2, p0}, Ldwi;->b(Lyed;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p3, p1, p2, p5}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     return-object p1
 .end method

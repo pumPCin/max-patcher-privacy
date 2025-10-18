@@ -1,160 +1,189 @@
-.class public final La7h;
+.class public final synthetic La7h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhn6;
+
 
 # static fields
-.field public static final Companion:Lz6h;
+.field public static final a:La7h;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    new-instance v0, Lz6h;
+    new-instance v0, La7h;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, La7h;->Companion:Lz6h;
+    sput-object v0, La7h;->a:La7h;
+
+    new-instance v1, Levb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryGetInfoRequest"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "queryId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "requestId"
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, La7h;->descriptor:Lb3e;
 
     return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, La7h;->a:Ljava/lang/String;
-
-    iput-object p3, p0, La7h;->b:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Ly6h;->a:Ly6h;
-
-    invoke-virtual {p2}, Ly6h;->d()Lu1e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Luti;->b(IILu1e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 9
 
-    const/4 v0, 0x1
+    sget-object v0, La7h;->descriptor:Lb3e;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, La7h;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    move v5, v1
 
-    :cond_1
-    check-cast p1, La7h;
+    move v6, v2
 
-    iget-object v1, p0, La7h;->a:Ljava/lang/String;
+    move-object v4, v3
 
-    iget-object v3, p1, La7h;->a:Ljava/lang/String;
+    :goto_0
+    if-eqz v5, :cond_3
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
 
-    move-result v1
+    move-result v7
 
-    if-nez v1, :cond_2
+    const/4 v8, -0x1
 
-    return v2
+    if-eq v7, v8, :cond_2
 
-    :cond_2
-    iget-object v1, p0, La7h;->b:Ljava/lang/String;
+    if-eqz v7, :cond_1
 
-    iget-object p1, p1, La7h;->b:Ljava/lang/String;
+    if-ne v7, v1, :cond_0
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0, v1}, Ld9;->w(Lb3e;I)Ljava/lang/String;
 
-    move-result p1
+    move-result-object v4
 
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, La7h;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    or-int/lit8 v6, v6, 0x2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    move-result v0
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    throw p1
 
-    iget-object v1, p0, La7h;->b:Ljava/lang/String;
+    :cond_1
+    sget-object v7, Lvaf;->a:Lvaf;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p1, v0, v2, v7, v3}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v3
 
-    add-int/2addr v1, v0
+    check-cast v3, Ljava/lang/String;
 
-    return v1
+    or-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+
+    new-instance p1, Lc7h;
+
+    invoke-direct {p1, v6, v3, v4}, Lc7h;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 4
 
-    const-string v0, ", requestId="
+    check-cast p2, Lc7h;
 
-    const-string v1, ")"
+    sget-object v0, La7h;->descriptor:Lb3e;
 
-    const-string v2, "WebAppBiometryOpenSettingsRequest(queryId="
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
 
-    iget-object v3, p0, La7h;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v4, p0, La7h;->b:Ljava/lang/String;
+    sget-object v1, Lvaf;->a:Lvaf;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p2, Lc7h;->a:Ljava/lang/String;
 
-    move-result-object v0
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    iget-object p2, p2, Lc7h;->b:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
+    .locals 4
+
+    sget-object v0, Lvaf;->a:Lvaf;
+
+    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lur7;
+
+    const/4 v3, 0x0
+
+    aput-object v1, v2, v3
+
+    const/4 v1, 0x1
+
+    aput-object v0, v2, v1
+
+    return-object v2
+.end method
+
+.method public final d()Lb3e;
+    .locals 1
+
+    sget-object v0, La7h;->descriptor:Lb3e;
 
     return-object v0
 .end method

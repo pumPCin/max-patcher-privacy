@@ -1,123 +1,139 @@
-.class public final Lof9;
-.super Ljava/lang/Object;
+.class public final enum Lof9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lr1d;
+# static fields
+.field public static final enum X:Lof9;
 
-.field public final b:Landroid/view/MotionEvent;
+.field public static final enum Y:Lof9;
+
+.field public static final synthetic Z:[Lof9;
+
+.field public static final enum b:Lof9;
+
+.field public static final enum c:Lof9;
+
+.field public static final enum o:Lof9;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lr1d;Landroid/view/MotionEvent;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lof9;
 
-    iput-object p1, p0, Lof9;->a:Lr1d;
+    const-string v1, "UNKNOWN"
 
-    iput-object p2, p0, Lof9;->b:Landroid/view/MotionEvent;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Lof9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lof9;->b:Lof9;
+
+    new-instance v1, Lof9;
+
+    const-string v2, "USER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lof9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lof9;->c:Lof9;
+
+    new-instance v2, Lof9;
+
+    const-string v3, "GROUP"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lof9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lof9;->o:Lof9;
+
+    new-instance v3, Lof9;
+
+    const-string v4, "CHANNEL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lof9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lof9;->X:Lof9;
+
+    new-instance v4, Lof9;
+
+    const-string v5, "CHANNEL_ADMIN"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lof9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lof9;->Y:Lof9;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lof9;
+
+    move-result-object v0
+
+    sput-object v0, Lof9;->Z:[Lof9;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lof9;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lof9;
+    .locals 1
+
+    const-class v0, Lof9;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lof9;
+
+    return-object p0
+.end method
+
+.method public static values()[Lof9;
+    .locals 1
+
+    sget-object v0, Lof9;->Z:[Lof9;
+
+    invoke-virtual {v0}, [Lof9;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lof9;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lof9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lof9;
-
-    iget-object v1, p0, Lof9;->a:Lr1d;
-
-    iget-object v3, p1, Lof9;->a:Lr1d;
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lof9;->b:Landroid/view/MotionEvent;
-
-    iget-object p1, p1, Lof9;->b:Landroid/view/MotionEvent;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lof9;->a:Lr1d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lof9;->b:Landroid/view/MotionEvent;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "{value=\'"
 
-    const-string v1, "RecordControlMotionEvent(type="
+    const-string v1, "\'}"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lof9;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lof9;->a:Lr1d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", motionEvent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lof9;->b:Landroid/view/MotionEvent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

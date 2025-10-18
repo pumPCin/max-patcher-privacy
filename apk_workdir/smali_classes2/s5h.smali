@@ -1,3 +1,3 @@
-.class public final Ls5h;
-.super Lz5h;
+.class public interface abstract Ls5h;
+.super Ljava/lang/Object;
 .source "SourceFile"

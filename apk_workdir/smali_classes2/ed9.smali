@@ -2,682 +2,232 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public final d:Ljava/lang/Long;
-
-.field public final e:J
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:J
-
-.field public final h:Landroid/graphics/Bitmap;
-
-.field public final i:J
-
-.field public final j:Lge9;
-
-.field public final k:Lhp5;
-
-.field public final l:Lyca;
-
-.field public final m:Z
-
-.field public final n:Z
-
-.field public final o:Z
+.field public final synthetic b:Lgd9;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;JLjava/lang/Long;JLjava/lang/String;JLandroid/graphics/Bitmap;JLge9;Lhp5;Lyca;ZI)V
-    .locals 23
+.method public synthetic constructor <init>(Lgd9;I)V
+    .locals 0
 
-    move/from16 v0, p19
+    iput p2, p0, Led9;->a:I
 
-    and-int/lit16 v1, v0, 0x800
+    iput-object p1, p0, Led9;->b:Lgd9;
 
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    move-object/from16 v19, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object/from16 v19, p17
-
-    :goto_0
-    and-int/lit16 v1, v0, 0x1000
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_1
-
-    move/from16 v20, v3
-
-    goto :goto_1
-
-    :cond_1
-    move/from16 v20, v2
-
-    :goto_1
-    and-int/lit16 v1, v0, 0x2000
-
-    if-eqz v1, :cond_2
-
-    move/from16 v21, v3
-
-    goto :goto_2
-
-    :cond_2
-    move/from16 v21, v2
-
-    :goto_2
-    and-int/lit16 v0, v0, 0x4000
-
-    if-eqz v0, :cond_3
-
-    move/from16 v22, v3
-
-    move-object/from16 v2, p0
-
-    move-object/from16 v5, p3
-
-    move-wide/from16 v6, p4
-
-    move-object/from16 v8, p6
-
-    move-wide/from16 v9, p7
-
-    move-object/from16 v11, p9
-
-    move-wide/from16 v12, p10
-
-    move-object/from16 v14, p12
-
-    move-wide/from16 v15, p13
-
-    move-object/from16 v17, p15
-
-    move-object/from16 v18, p16
-
-    move-wide/from16 v3, p1
-
-    goto :goto_3
-
-    :cond_3
-    move/from16 v22, p18
-
-    move-object/from16 v2, p0
-
-    move-wide/from16 v3, p1
-
-    move-object/from16 v5, p3
-
-    move-wide/from16 v6, p4
-
-    move-object/from16 v8, p6
-
-    move-wide/from16 v9, p7
-
-    move-object/from16 v11, p9
-
-    move-wide/from16 v12, p10
-
-    move-object/from16 v14, p12
-
-    move-wide/from16 v15, p13
-
-    move-object/from16 v17, p15
-
-    move-object/from16 v18, p16
-
-    .line 1
-    :goto_3
-    invoke-direct/range {v2 .. v22}, Led9;-><init>(JLjava/lang/String;JLjava/lang/Long;JLjava/lang/String;JLandroid/graphics/Bitmap;JLge9;Lhp5;Lyca;ZZZ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(JLjava/lang/String;JLjava/lang/Long;JLjava/lang/String;JLandroid/graphics/Bitmap;JLge9;Lhp5;Lyca;ZZZ)V
+.method private final a(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    .line 3
-    iput-wide p1, p0, Led9;->a:J
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 4
-    iput-object p3, p0, Led9;->b:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 5
-    iput-wide p4, p0, Led9;->c:J
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 6
-    iput-object p6, p0, Led9;->d:Ljava/lang/Long;
+    return-void
+.end method
 
-    .line 7
-    iput-wide p7, p0, Led9;->e:J
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 8
-    iput-object p9, p0, Led9;->f:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 9
-    iput-wide p10, p0, Led9;->g:J
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 10
-    iput-object p12, p0, Led9;->h:Landroid/graphics/Bitmap;
+    return-void
+.end method
 
-    .line 11
-    iput-wide p13, p0, Led9;->i:J
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 12
-    iput-object p15, p0, Led9;->j:Lge9;
+    return-void
+.end method
 
-    move-object/from16 p1, p16
+.method private final g(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 13
-    iput-object p1, p0, Led9;->k:Lhp5;
+    return-void
+.end method
 
-    move-object/from16 p1, p17
+.method private final h(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 14
-    iput-object p1, p0, Led9;->l:Lyca;
+    return-void
+.end method
 
-    move/from16 p1, p18
+.method private final i(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 15
-    iput-boolean p1, p0, Led9;->m:Z
+    return-void
+.end method
 
-    move/from16 p1, p19
+.method private final j(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 16
-    iput-boolean p1, p0, Led9;->n:Z
+    return-void
+.end method
 
-    move/from16 p1, p20
+.method private final k(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 17
-    iput-boolean p1, p0, Led9;->o:Z
+    return-void
+.end method
+
+.method private final l(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final m(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final n(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final o(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Led9;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Led9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Led9;
-
-    iget-wide v3, p0, Led9;->a:J
-
-    iget-wide v5, p1, Led9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Led9;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Led9;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Led9;->c:J
-
-    iget-wide v5, p1, Led9;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Led9;->d:Ljava/lang/Long;
-
-    iget-object v3, p1, Led9;->d:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-wide v3, p0, Led9;->e:J
-
-    iget-wide v5, p1, Led9;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Led9;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Led9;->f:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-wide v3, p0, Led9;->g:J
-
-    iget-wide v5, p1, Led9;->g:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Led9;->h:Landroid/graphics/Bitmap;
-
-    iget-object v3, p1, Led9;->h:Landroid/graphics/Bitmap;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-wide v3, p0, Led9;->i:J
-
-    iget-wide v5, p1, Led9;->i:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-object v1, p0, Led9;->j:Lge9;
-
-    iget-object v3, p1, Led9;->j:Lge9;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_b
-
-    return v2
-
-    :cond_b
-    iget-object v1, p0, Led9;->k:Lhp5;
-
-    iget-object v3, p1, Led9;->k:Lhp5;
-
-    if-eq v1, v3, :cond_c
-
-    return v2
-
-    :cond_c
-    iget-object v1, p0, Led9;->l:Lyca;
-
-    iget-object v3, p1, Led9;->l:Lyca;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_d
-
-    return v2
-
-    :cond_d
-    iget-boolean v1, p0, Led9;->m:Z
-
-    iget-boolean v3, p1, Led9;->m:Z
-
-    if-eq v1, v3, :cond_e
-
-    return v2
-
-    :cond_e
-    iget-boolean v1, p0, Led9;->n:Z
-
-    iget-boolean v3, p1, Led9;->n:Z
-
-    if-eq v1, v3, :cond_f
-
-    return v2
-
-    :cond_f
-    iget-boolean v1, p0, Led9;->o:Z
-
-    iget-boolean p1, p1, Led9;->o:Z
-
-    if-eq v1, p1, :cond_10
-
-    return v2
-
-    :cond_10
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    iget-wide v0, p0, Led9;->a:J
+    iget p1, p0, Led9;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    packed-switch p1, :pswitch_data_0
 
-    move-result v0
+    return-void
 
-    const/16 v1, 0x1f
+    :pswitch_0
+    iget-object p1, p0, Led9;->b:Lgd9;
 
-    mul-int/2addr v0, v1
+    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    const/4 v2, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iget-object v3, p0, Led9;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    if-nez v3, :cond_0
+    return-void
 
-    move v3, v2
+    :pswitch_1
+    iget-object p1, p0, Led9;->b:Lgd9;
 
-    goto :goto_0
+    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result v3
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    :goto_0
-    add-int/2addr v0, v3
+    :pswitch_2
+    return-void
 
-    mul-int/2addr v0, v1
+    :pswitch_3
+    iget-object p1, p0, Led9;->b:Lgd9;
 
-    iget-wide v3, p0, Led9;->c:J
+    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result v0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object v3, p0, Led9;->d:Ljava/lang/Long;
+    return-void
 
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Led9;->e:J
-
-    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v3, p0, Led9;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-wide v3, p0, Led9;->g:J
-
-    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v3, p0, Led9;->h:Landroid/graphics/Bitmap;
-
-    if-nez v3, :cond_2
-
-    move v3, v2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Led9;->i:J
-
-    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v3, p0, Led9;->j:Lge9;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v3, v0
-
-    mul-int/2addr v3, v1
-
-    iget-object v0, p0, Led9;->k:Lhp5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Led9;->l:Lyca;
-
-    if-nez v3, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Lyca;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Led9;->m:Z
-
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Led9;->n:Z
-
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Led9;->o:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p1, p0, Led9;->a:I
 
-    const-string v1, "MessageNotification(pushId="
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget-wide v1, p0, Led9;->a:J
+    iget p1, p0, Led9;->a:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    packed-switch p1, :pswitch_data_0
 
-    const-string v1, ", eventKey="
+    iget-object p1, p0, Led9;->b:Lgd9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Led9;->b:Ljava/lang/String;
+    const/4 v0, 0x4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const-string v1, ", chatServerId="
+    :pswitch_0
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_1
+    iget-object p1, p0, Led9;->b:Lgd9;
 
-    iget-wide v1, p0, Led9;->c:J
+    iget-object v0, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, ", chatId="
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Led9;->d:Ljava/lang/Long;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const-string v1, ", messageId="
+    :pswitch_2
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget-wide v1, p0, Led9;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', senderUserId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Led9;->g:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", time="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Led9;->i:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Led9;->j:Lge9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fcmNotificationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Led9;->k:Lhp5;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", image="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Led9;->l:Lyca;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fcmSource="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Led9;->m:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isScheduledMessage="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Led9;->n:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasAnyError="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Led9;->o:Z
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

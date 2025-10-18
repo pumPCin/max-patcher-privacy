@@ -1,231 +1,139 @@
-.class public final Lw87;
+.class public final synthetic Lw87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/net/URL;
+.field public final synthetic X:Landroid/graphics/Rect;
 
-.field public volatile b:Ljava/util/concurrent/Future;
+.field public final synthetic Y:Lp87;
 
-.field public c:Ld1j;
+.field public final synthetic Z:Lgu1;
+
+.field public final synthetic a:Lx87;
+
+.field public final synthetic b:Lsa7;
+
+.field public final synthetic c:Landroid/graphics/Matrix;
+
+.field public final synthetic o:Lsa7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/net/URL;)V
+.method public synthetic constructor <init>(Lx87;Lsa7;Landroid/graphics/Matrix;Lsa7;Landroid/graphics/Rect;Lp87;Lgu1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw87;->a:Ljava/net/URL;
+    iput-object p1, p0, Lw87;->a:Lx87;
+
+    iput-object p2, p0, Lw87;->b:Lsa7;
+
+    iput-object p3, p0, Lw87;->c:Landroid/graphics/Matrix;
+
+    iput-object p4, p0, Lw87;->o:Lsa7;
+
+    iput-object p5, p0, Lw87;->X:Landroid/graphics/Rect;
+
+    iput-object p6, p0, Lw87;->Y:Lp87;
+
+    iput-object p7, p0, Lw87;->Z:Lgu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
+.method public final run()V
+    .locals 12
 
-    iget-object v0, p0, Lw87;->b:Ljava/util/concurrent/Future;
+    iget-object v0, p0, Lw87;->a:Lx87;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lw87;->b:Lsa7;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    iget-object v7, p0, Lw87;->c:Landroid/graphics/Matrix;
 
-    return-void
-.end method
+    iget-object v8, p0, Lw87;->o:Lsa7;
 
-.method public final m()Landroid/graphics/Bitmap;
-    .locals 6
+    iget-object v9, p0, Lw87;->X:Landroid/graphics/Rect;
 
-    const/4 v0, 0x4
+    iget-object v10, p0, Lw87;->Y:Lp87;
 
-    const-string v1, "FirebaseMessaging"
+    iget-object v11, p0, Lw87;->Z:Lgu1;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    iget-boolean v2, v0, Lx87;->B0:Z
 
-    move-result v0
+    if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lw87;->a:Ljava/net/URL;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v3, "Starting download of: "
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/net/URLConnection;->getContentLength()I
-
-    move-result v3
-
-    const/high16 v4, 0x100000
-
-    if-gt v3, v4, :cond_7
-
-    invoke-virtual {v0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    :try_start_0
-    new-instance v3, Lfx0;
-
-    invoke-direct {v3, v0}, Lfx0;-><init>(Ljava/io/InputStream;)V
-
-    invoke-static {v3}, Lkki;->d(Lfx0;)[B
-
-    move-result-object v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v5, "Downloaded "
-
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    array-length v5, v3
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v5, " bytes from "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    array-length v0, v3
-
-    if-gt v0, v4, :cond_5
-
-    const/4 v0, 0x0
-
-    array-length v4, v3
-
-    invoke-static {v3, v0, v4}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    const/4 v3, 0x3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Successfully downloaded image: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1}, Lsa7;->getImageInfo()Lz97;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-interface {v2}, Lz97;->d()Lalf;
 
-    :cond_3
-    return-object v0
+    move-result-object v3
 
-    :cond_4
-    new-instance v0, Ljava/io/IOException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to decode image: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1}, Lsa7;->getImageInfo()Lz97;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v1}, Lz97;->getTimestamp()J
 
-    throw v0
+    move-result-wide v4
 
-    :cond_5
-    new-instance v0, Ljava/io/IOException;
+    iget-boolean v1, v0, Lx87;->X:Z
 
-    const-string v1, "Image exceeds max size of 1048576"
+    if-eqz v1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw v0
+    :goto_0
+    move v6, v0
 
-    :catchall_0
-    move-exception v1
+    goto :goto_1
 
-    if-eqz v0, :cond_6
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :cond_0
+    iget v0, v0, Lx87;->b:I
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :goto_1
+    new-instance v2, Lqa0;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-direct/range {v2 .. v7}, Lqa0;-><init>(Lalf;JILandroid/graphics/Matrix;)V
 
-    :cond_6
-    :goto_0
-    throw v1
+    new-instance v0, Lx8e;
 
-    :cond_7
-    new-instance v0, Ljava/io/IOException;
+    const/4 v1, 0x0
 
-    const-string v1, "Content-Length exceeds max size of 1048576"
+    invoke-direct {v0, v8, v1, v2}, Lx8e;-><init>(Lsa7;Landroid/util/Size;Lz97;)V
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v9}, Landroid/graphics/Rect;->isEmpty()Z
 
-    throw v0
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0, v9}, Lx8e;->d(Landroid/graphics/Rect;)V
+
+    :cond_1
+    invoke-interface {v10, v0}, Lp87;->k(Lx8e;)V
+
+    invoke-virtual {v11, v1}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_2
+    new-instance v0, Landroidx/core/os/OperationCanceledException;
+
+    const-string v1, "ImageAnalysis is detached"
+
+    invoke-direct {v0, v1}, Landroidx/core/os/OperationCanceledException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
 .end method

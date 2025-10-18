@@ -36,14 +36,14 @@
 
     iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
     return-void
 
     :pswitch_0
     iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
+    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -79,12 +79,12 @@
 
     if-nez v1, :cond_1
 
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->H0:Z
+    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->G0:Z
 
     if-eqz v1, :cond_2
 
     :cond_1
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Landroid/view/View;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->i1:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
@@ -96,7 +96,7 @@
     :pswitch_1
     iget-object v0, p0, Lff;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->W0:Z
+    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->V0:Z
 
     if-nez v1, :cond_3
 

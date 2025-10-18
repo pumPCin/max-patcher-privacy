@@ -63,19 +63,19 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
     :goto_0
-    sget-object p1, Lqra;->a:Lqra;
+    sget-object p1, Lssa;->a:Lssa;
 
     invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    const-class v0, Lc01;
+    const-class v0, Ll01;
 
     invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lc01;
+    check-cast p1, Ll01;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -83,7 +83,7 @@
 
     const-string v1, "CallNotifierFixActivity"
 
-    invoke-virtual {p1, p0, v0, v1}, Lc01;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {p1, p0, v0, v1}, Ll01;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

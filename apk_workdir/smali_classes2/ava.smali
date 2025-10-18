@@ -1,109 +1,80 @@
-.class public abstract Lava;
+.class public final Lava;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+# instance fields
+.field public final a:Ldgd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ldgd;)V
+    .locals 0
 
-    sget v0, Lmrc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lava;->a:I
-
-    sget v0, Lmrc;->oneme_folder_list_recommended_folders_section_title:I
-
-    sput v0, Lava;->b:I
-
-    sget v0, Lmrc;->oneme_folder_list_toolbar_title:I
-
-    sput v0, Lava;->c:I
-
-    sget v0, Lmrc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
-
-    sput v0, Lava;->d:I
-
-    sget v0, Lmrc;->oneme_folders_delete_folder_bottom_sheet_description:I
-
-    sput v0, Lava;->e:I
-
-    sget v0, Lmrc;->oneme_folders_edit_add_chats_button:I
-
-    sput v0, Lava;->f:I
-
-    sget v0, Lmrc;->oneme_folders_edit_create_button:I
-
-    sput v0, Lava;->g:I
-
-    sget v0, Lmrc;->oneme_folders_edit_delete_button:I
-
-    sput v0, Lava;->h:I
-
-    sget v0, Lmrc;->oneme_folders_edit_name_hint:I
-
-    sput v0, Lava;->i:I
-
-    sget v0, Lmrc;->oneme_folders_edit_toolbar_title_creation:I
-
-    sput v0, Lava;->j:I
-
-    sget v0, Lmrc;->oneme_folders_edit_toolbar_title_edit:I
-
-    sput v0, Lava;->k:I
-
-    sget v0, Lmrc;->oneme_folders_list_create_folder:I
-
-    sput v0, Lava;->l:I
-
-    sget v0, Lmrc;->oneme_folders_list_menu_action_change:I
-
-    sput v0, Lava;->m:I
-
-    sget v0, Lmrc;->oneme_folders_list_menu_action_delete_folder:I
-
-    sput v0, Lava;->n:I
-
-    sget v0, Lmrc;->oneme_folders_picker_empty_title:I
-
-    sput v0, Lava;->o:I
-
-    sget v0, Lmrc;->oneme_folders_picker_toolbar_title:I
-
-    sput v0, Lava;->p:I
+    iput-object p1, p0, Lava;->a:Ldgd;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(ILjava/lang/String;)Ltv5;
+    .locals 9
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x23
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lyua;
+
+    invoke-direct {v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;-><init>()V
+
+    :goto_0
+    move-object v7, v0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v0, Lzua;
+
+    invoke-direct {v0}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
+
+    goto :goto_0
+
+    :goto_1
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v0, p0, Lava;->a:Ldgd;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p2, p1}, Ldgd;->q(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
+
+    move-result-object v8
+
+    new-instance v1, Ltv5;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    new-instance p1, Li12;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Li12;-><init>(I)V
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    return-object v1
 .end method

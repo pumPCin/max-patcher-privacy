@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lneh;
+.implements Lueh;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x294c79ad
+    const v0, 0x3ec512d9
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ShowError"
+    const-string v0, "ShowPhoneConfirmationDialog"
 
     return-object v0
 .end method

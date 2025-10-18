@@ -1,126 +1,100 @@
 .class public final Lqy7;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lkz7;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqy7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lfz7;
-
-.field public final synthetic r0:Landroid/net/Uri;
+.field public static final a:Lqy7;
 
 
 # direct methods
-.method public constructor <init>(Lfz7;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lqy7;->Z:Lfz7;
+    new-instance v0, Lqy7;
 
-    iput-object p2, p0, Lqy7;->r0:Landroid/net/Uri;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lqy7;->a:Lqy7;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Ldu7;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+
+    sput-object v0, Lqy7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lby5;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqy7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqy7;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lqy7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lqy7;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lqy7;->Z:Lfz7;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lqy7;->r0:Landroid/net/Uri;
-
-    invoke-direct {v0, v1, v2, p2}, Lqy7;-><init>(Lfz7;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqy7;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lqy7;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p1, Lqy7;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object p1, p0, Lqy7;->Y:Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    check-cast p1, Lby5;
+    const v0, 0x1269e0f3
 
-    iput v1, p0, Lqy7;->X:I
+    return v0
+.end method
 
-    iget-object v0, p0, Lqy7;->Z:Lfz7;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p0, Lqy7;->r0:Landroid/net/Uri;
-
-    invoke-static {v0, p1, v1, p0}, Lfz7;->a(Lfz7;Lby5;Landroid/net/Uri;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
+    const-string v0, "Error"
 
     return-object v0
+.end method
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return-object p1
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

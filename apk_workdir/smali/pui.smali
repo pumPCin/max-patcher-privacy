@@ -1,137 +1,188 @@
-.class public final Lpui;
-.super Lfth;
+.class public abstract Lpui;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final Z(Luga;Ljava/lang/String;I)Lc67;
-    .locals 1
+# direct methods
+.method public static a(Landroid/content/Context;Ljava/lang/String;)I
+    .locals 6
 
-    invoke-virtual {p0}, Lfth;->W()Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-static {v0, p1}, Lw0i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    const/4 p1, 0x2
+    move-result-object v2
 
-    invoke-virtual {p0, v0, p1}, Lfth;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-virtual {p0, p1, v0, v1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
+
+    move-result v0
+
+    const/4 v3, -0x1
+
+    if-ne v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lqq;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    const/4 v0, 0x0
 
-    move-result-object p2
+    if-nez p1, :cond_1
 
-    invoke-static {p2}, Luga;->Z(Landroid/os/IBinder;)Lc67;
+    goto :goto_3
 
-    move-result-object p2
+    :cond_1
+    if-nez v2, :cond_4
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    return-object p2
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    array-length v4, v2
+
+    if-gtz v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    aget-object v2, v2, v0
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    return v3
+
+    :cond_4
+    :goto_1
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-class v5, Landroid/app/AppOpsManager;
+
+    if-ne v3, v1, :cond_7
+
+    invoke-static {v4, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1d
+
+    if-lt v3, v4, :cond_6
+
+    invoke-static {p0}, Lrq;->c(Landroid/content/Context;)Landroid/app/AppOpsManager;
+
+    move-result-object v3
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v4
+
+    invoke-static {v3, p1, v4, v2}, Lrq;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    invoke-static {p0}, Lrq;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, p1, v1, p0}, Lrq;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {p0, v5}, Lqq;->a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/AppOpsManager;
+
+    invoke-static {p0, p1, v2}, Lqq;->c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {p0, v5}, Lqq;->a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/AppOpsManager;
+
+    invoke-static {p0, p1, v2}, Lqq;->c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    :goto_2
+    if-nez v2, :cond_8
+
+    :goto_3
+    return v0
+
+    :cond_8
+    const/4 p0, -0x2
+
+    return p0
 .end method
 
-.method public final a0(Luga;Ljava/lang/String;ILuga;)Lc67;
-    .locals 1
+.method public static final b(IF)I
+    .locals 2
 
-    invoke-virtual {p0}, Lfth;->W()Landroid/os/Parcel;
+    const/high16 v0, 0x437f0000    # 255.0f
 
-    move-result-object v0
+    mul-float/2addr p1, v0
 
-    invoke-static {v0, p1}, Lw0i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-result p1
 
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
-    invoke-static {v0, p4}, Lw0i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    move-result v0
 
-    const/16 p1, 0x8
+    invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
-    invoke-virtual {p0, v0, p1}, Lfth;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    move-result v1
 
-    move-result-object p1
+    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    move-result p0
 
-    move-result-object p2
+    invoke-static {p1, v0, v1, p0}, Landroid/graphics/Color;->argb(IIII)I
 
-    invoke-static {p2}, Luga;->Z(Landroid/os/IBinder;)Lc67;
+    move-result p0
 
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final b0(Luga;Ljava/lang/String;I)Lc67;
-    .locals 1
-
-    invoke-virtual {p0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lw0i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, v0, p1}, Lfth;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Luga;->Z(Landroid/os/IBinder;)Lc67;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final c0(Luga;Ljava/lang/String;ZJ)Lc67;
-    .locals 1
-
-    invoke-virtual {p0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lw0i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v0, p4, p5}, Landroid/os/Parcel;->writeLong(J)V
-
-    const/4 p1, 0x7
-
-    invoke-virtual {p0, v0, p1}, Lfth;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Luga;->Z(Landroid/os/IBinder;)Lc67;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
+    return p0
 .end method

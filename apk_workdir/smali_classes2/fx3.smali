@@ -1,47 +1,68 @@
-.class public final Lfx3;
-.super Lk14;
+.class public final synthetic Lfx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic X:Lgx3;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Landroid/content/Context;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Lgx3;
 
 
 # direct methods
-.method public constructor <init>(Lgx3;Lk14;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lgx3;I)V
     .locals 0
 
-    iput-object p1, p0, Lfx3;->X:Lgx3;
+    iput p3, p0, Lfx3;->a:I
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfx3;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Lfx3;->c:Lgx3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lfx3;->o:Ljava/lang/Object;
+    iget v0, p0, Lfx3;->a:I
 
-    iget p1, p0, Lfx3;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lfx3;->b:Landroid/content/Context;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lfx3;->c:Lgx3;
 
-    iput p1, p0, Lfx3;->Y:I
+    invoke-static {v0, v1}, Lgx3;->b(Landroid/content/Context;Lgx3;)Landroidx/appcompat/widget/AppCompatImageView;
 
-    iget-object p1, p0, Lfx3;->X:Lgx3;
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lgx3;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Lfx3;->b:Landroid/content/Context;
 
-    return-object p1
+    iget-object v1, p0, Lfx3;->c:Lgx3;
+
+    invoke-static {v0, v1}, Lgx3;->a(Landroid/content/Context;Lgx3;)Landroidx/appcompat/widget/AppCompatImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,31 +1,33 @@
 .class public final Leb7;
-.super Lxa7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final c(Ljava/lang/Object;)Lxa7;
-    .locals 0
+# static fields
+.field public static final a:Lu1f;
 
-    invoke-virtual {p0, p1}, Lxa7;->a(Ljava/lang/Object;)V
+.field public static final b:Leb7;
 
-    return-object p0
-.end method
 
-.method public final i()Ls7d;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lu1f;
 
-    iput-boolean v0, p0, Lxa7;->a:Z
+    const-string v1, "MLKitImageUtils"
 
-    iget-object v0, p0, Lxa7;->c:[Ljava/lang/Object;
+    const-string v2, ""
 
-    iget v1, p0, Lxa7;->b:I
+    invoke-direct {v0, v1, v2}, Lu1f;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lhb7;->i(I[Ljava/lang/Object;)Ls7d;
+    sput-object v0, Leb7;->a:Lu1f;
 
-    move-result-object v0
+    new-instance v0, Leb7;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Leb7;->b:Leb7;
+
+    return-void
 .end method

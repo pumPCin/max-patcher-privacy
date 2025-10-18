@@ -1,90 +1,41 @@
-.class public final Lfb7;
-.super Li2;
+.class public abstract Lfb7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lib7;
-
-
-# instance fields
-.field public final a:Lh3;
-
-.field public final b:I
-
-.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lh3;II)V
+.method public static a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
 
-    iput-object p1, p0, Lfb7;->a:Lh3;
+    move-result-object p0
 
-    iput p2, p0, Lfb7;->b:I
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Lk0;->getSize()I
+.method public static b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
 
-    move-result p1
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p2, p3, p1}, Lm8;->c(III)V
+    move-result-object p0
 
-    sub-int/2addr p3, p2
+    return-object p0
+.end method
 
-    iput p3, p0, Lfb7;->c:I
+.method public static c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
+.method public static d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
 
-# virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    iget v0, p0, Lfb7;->c:I
-
-    invoke-static {p1, v0}, Lm8;->a(II)V
-
-    iget v0, p0, Lfb7;->b:I
-
-    add-int/2addr v0, p1
-
-    iget-object p1, p0, Lfb7;->a:Lh3;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getSize()I
-    .locals 1
-
-    iget v0, p0, Lfb7;->c:I
-
-    return v0
-.end method
-
-.method public final subList(II)Ljava/util/List;
-    .locals 2
-
-    iget v0, p0, Lfb7;->c:I
-
-    invoke-static {p1, p2, v0}, Lm8;->c(III)V
-
-    new-instance v0, Lfb7;
-
-    iget v1, p0, Lfb7;->b:I
-
-    add-int/2addr p1, v1
-
-    add-int/2addr v1, p2
-
-    iget-object p2, p0, Lfb7;->a:Lh3;
-
-    invoke-direct {v0, p2, p1, v1}, Lfb7;-><init>(Lh3;II)V
-
-    return-object v0
+    return-void
 .end method

@@ -1,173 +1,169 @@
 .class public final Ltu6;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final g:[B
-
-.field public static final h:[B
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltu6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lcom/google/android/gms/maps/model/LatLngBounds;
 
-.field public b:Z
+.field public Y:F
 
-.field public c:I
+.field public Z:F
 
-.field public d:I
+.field public a:Lbp0;
 
-.field public e:I
+.field public b:Lcom/google/android/gms/maps/model/LatLng;
 
-.field public f:[B
+.field public c:F
+
+.field public o:F
+
+.field public q0:Z
+
+.field public r0:F
+
+.field public s0:F
+
+.field public t0:F
+
+.field public u0:Z
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Lp0i;
 
-    new-array v1, v0, [B
+    const/16 v1, 0x17
 
-    fill-array-data v1, :array_0
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    sput-object v1, Ltu6;->g:[B
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Ltu6;->h:[B
-
-    return-void
-
-    :array_0
-    .array-data 1
-        0x0t
-        0x0t
-        0x1t
-    .end array-data
-
-    :array_1
-    .array-data 1
-        0x0t
-        0x0t
-        0x1t
-    .end array-data
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Ltu6;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ltu6;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[BI)V
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    iget v0, p0, Ltu6;->a:I
+    const/16 v0, 0x4f45
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    iget-boolean v0, p0, Ltu6;->b:Z
+    move-result v0
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Ltu6;->a:Lbp0;
 
-    goto :goto_0
+    iget-object v1, v1, Lbp0;->a:Lz67;
 
-    :cond_0
-    sub-int/2addr p3, p1
+    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    iget-object v0, p0, Ltu6;->f:[B
+    move-result-object v1
 
-    array-length v1, v0
+    const/4 v2, 0x2
 
-    iget v2, p0, Ltu6;->d:I
+    invoke-static {p1, v2, v1}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    add-int/2addr v2, p3
+    const/4 v1, 0x3
 
-    if-ge v1, v2, :cond_1
+    iget-object v2, p0, Ltu6;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    mul-int/lit8 v2, v2, 0x2
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+    iget v1, p0, Ltu6;->c:F
 
-    move-result-object v0
+    const/4 v2, 0x4
 
-    iput-object v0, p0, Ltu6;->f:[B
+    invoke-static {p1, v2, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    :cond_1
-    iget-object v0, p0, Ltu6;->f:[B
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget v1, p0, Ltu6;->d:I
+    iget v1, p0, Ltu6;->o:F
 
-    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    const/4 v3, 0x5
 
-    iget p1, p0, Ltu6;->d:I
+    invoke-static {p1, v3, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    add-int/2addr p1, p3
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iput p1, p0, Ltu6;->d:I
+    const/4 v1, 0x6
 
-    :goto_0
+    iget-object v3, p0, Ltu6;->X:Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    invoke-static {p1, v1, v3, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    iget p2, p0, Ltu6;->Y:F
+
+    const/4 v1, 0x7
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Ltu6;->Z:F
+
+    const/16 v1, 0x8
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-boolean p2, p0, Ltu6;->q0:Z
+
+    const/16 v1, 0x9
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Ltu6;->r0:F
+
+    const/16 v1, 0xa
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Ltu6;->s0:F
+
+    const/16 v1, 0xb
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Ltu6;->t0:F
+
+    const/16 v1, 0xc
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-boolean p2, p0, Ltu6;->u0:Z
+
+    const/16 v1, 0xd
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+
     return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Ltu6;->b:Z
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    sub-int/2addr p3, p1
-
-    iget-object v0, p0, Ltu6;->f:[B
-
-    array-length v1, v0
-
-    iget v2, p0, Ltu6;->d:I
-
-    add-int/2addr v2, p3
-
-    if-ge v1, v2, :cond_3
-
-    mul-int/lit8 v2, v2, 0x2
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Ltu6;->f:[B
-
-    :cond_3
-    iget-object v0, p0, Ltu6;->f:[B
-
-    iget v1, p0, Ltu6;->d:I
-
-    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget p1, p0, Ltu6;->d:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Ltu6;->d:I
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

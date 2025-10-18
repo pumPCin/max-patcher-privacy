@@ -1,23 +1,24 @@
 .class public final Lip1;
-.super Lgd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llp1;
 
 
 # static fields
-.field public static final b:Lip1;
+.field public static final a:Lip1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Lip1;
 
-    sget-object v1, Lzag;->a:Lzag;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lb4a;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Lip1;->b:Lip1;
+    sput-object v0, Lip1;->a:Lip1;
 
     return-void
 .end method
@@ -49,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x34cc058a    # -1.1795062E7f
+    const v0, -0x42bf222b
 
     return v0
 .end method
@@ -57,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
+    const-string v0, "Hide"
 
     return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Llj6;
 
 
 # instance fields
@@ -32,13 +32,13 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lji6;
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
 
     move-result-object v0
 
-    check-cast p1, Lqi6;
+    check-cast p1, Llj6;
 
-    invoke-interface {p1}, Lqi6;->getFunctionDelegate()Lji6;
+    invoke-interface {p1}, Llj6;->getFunctionDelegate()Lej6;
 
     move-result-object p1
 
@@ -54,10 +54,10 @@
     return p1
 .end method
 
-.method public final getFunctionDelegate()Lji6;
+.method public final getFunctionDelegate()Lej6;
     .locals 7
 
-    new-instance v0, Lti6;
+    new-instance v0, Loj6;
 
     const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
@@ -71,7 +71,7 @@
 
     const-string v5, "selectTheme"
 
-    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -79,7 +79,7 @@
 .method public final hashCode()I
     .locals 1
 
-    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lji6;
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
 
     move-result-object v0
 

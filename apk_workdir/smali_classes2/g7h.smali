@@ -1,178 +1,218 @@
-.class public final Lg7h;
-.super Ljava/lang/Object;
+.class public final enum Lg7h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lkch;
 
 
 # static fields
-.field public static final Companion:Lf7h;
+.field public static final enum X:Lg7h;
+
+.field public static final enum Y:Lg7h;
+
+.field public static final enum Z:Lg7h;
+
+.field public static final enum o:Lg7h;
+
+.field public static final enum q0:Lg7h;
+
+.field public static final synthetic r0:[Lg7h;
+
+.field public static final synthetic s0:Lzd5;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Z
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 10
 
-    new-instance v0, Lf7h;
+    new-instance v0, Lg7h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x12
 
-    sput-object v0, Lg7h;->Companion:Lf7h;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-string v1, "GET_INFO"
+
+    const/4 v2, 0x0
+
+    const-string v3, "WebAppBiometryGetInfo"
+
+    const-string v4, "biometry_get_info"
+
+    invoke-direct/range {v0 .. v5}, Lg7h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v0, Lg7h;->o:Lg7h;
+
+    new-instance v1, Lg7h;
+
+    const/16 v2, 0x9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v2, "REQUEST_ACCESS"
+
+    const/4 v3, 0x1
+
+    const-string v4, "WebAppBiometryRequestAccess"
+
+    const-string v5, "biometry_request_access"
+
+    invoke-direct/range {v1 .. v6}, Lg7h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v1, Lg7h;->X:Lg7h;
+
+    new-instance v2, Lg7h;
+
+    const/16 v3, 0xa
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const-string v3, "UPDATE_TOKEN"
+
+    const/4 v4, 0x2
+
+    const-string v5, "WebAppBiometryUpdateToken"
+
+    const-string v6, "biometry_update_token"
+
+    invoke-direct/range {v2 .. v7}, Lg7h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v2, Lg7h;->Y:Lg7h;
+
+    new-instance v3, Lg7h;
+
+    const/16 v4, 0xb
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const-string v4, "REQUEST_AUTH"
+
+    const/4 v5, 0x3
+
+    const-string v6, "WebAppBiometryRequestAuth"
+
+    const-string v7, "biometry_request_auth"
+
+    invoke-direct/range {v3 .. v8}, Lg7h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v3, Lg7h;->Z:Lg7h;
+
+    new-instance v4, Lg7h;
+
+    const/16 v5, 0xd
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const-string v5, "OPEN_SETTINGS"
+
+    const/4 v6, 0x4
+
+    const-string v7, "WebAppBiometryOpenSettings"
+
+    const-string v8, "biometry_open_settings"
+
+    invoke-direct/range {v4 .. v9}, Lg7h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v4, Lg7h;->q0:Lg7h;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lg7h;
+
+    move-result-object v0
+
+    sput-object v0, Lg7h;->r0:[Lg7h;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lg7h;->s0:Lzd5;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
-    iput-object p1, p0, Lg7h;->a:Ljava/lang/String;
+    iput-object p3, p0, Lg7h;->a:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    iput-object p4, p0, Lg7h;->b:Ljava/lang/String;
 
-    .line 4
-    iput-boolean p1, p0, Lg7h;->b:Z
+    iput-object p5, p0, Lg7h;->c:Ljava/lang/Integer;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lg7h;
+    .locals 1
 
-    and-int/lit8 v0, p2, 0x3
+    const-class v0, Lg7h;
 
-    const/4 v1, 0x3
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne v1, v0, :cond_0
+    move-result-object p0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Lg7h;
 
-    iput-object p1, p0, Lg7h;->a:Ljava/lang/String;
+    return-object p0
+.end method
 
-    iput-boolean p3, p0, Lg7h;->b:Z
+.method public static values()[Lg7h;
+    .locals 1
 
-    return-void
+    sget-object v0, Lg7h;->r0:[Lg7h;
 
-    :cond_0
-    sget-object p1, Le7h;->a:Le7h;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Le7h;->d()Lu1e;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, [Lg7h;
 
-    invoke-static {p2, v1, p1}, Luti;->b(IILu1e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Ljava/lang/Integer;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lg7h;->c:Ljava/lang/Integer;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lg7h;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lg7h;
-
-    iget-object v1, p0, Lg7h;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lg7h;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lg7h;->b:Z
-
-    iget-boolean p1, p1, Lg7h;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final c()Ljava/lang/String;
+    .locals 1
 
     iget-object v0, p0, Lg7h;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lg7h;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppBiometryUnavailableResponse(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg7h;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", available="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lg7h;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lg7h;->b:Ljava/lang/String;
 
     return-object v0
 .end method

@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILvh4;)V
+.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILki4;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x4
@@ -350,7 +350,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -443,13 +443,13 @@
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
 
     move-result v0
 
@@ -473,7 +473,7 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
 
     move-result v0
 
@@ -509,7 +509,7 @@
 
     const-string v8, "ConversationAnalyticsUploadConfig(maxLocalFileSizeKb="
 
-    invoke-static {v8, v0, v6, v1, v7}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v6, v1, v7}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -529,7 +529,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, v2, v0, v4, v5}, Lwc0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+    invoke-static {v1, v2, v0, v4, v5}, Lfd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
     move-result-object v0
 

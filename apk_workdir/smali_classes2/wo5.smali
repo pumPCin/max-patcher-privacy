@@ -1,310 +1,92 @@
-.class public final Lwo5;
-.super Llff;
+.class public final synthetic Lwo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lsr3;
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Lap5;
 
-.field public final synthetic Z:Lbp5;
-
-.field public final synthetic r0:J
-
-.field public final synthetic s0:Lqz9;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lbp5;JLqz9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lap5;Ljava/util/List;I)V
     .locals 0
 
-    iput-object p1, p0, Lwo5;->Z:Lbp5;
+    iput p3, p0, Lwo5;->a:I
 
-    iput-wide p2, p0, Lwo5;->r0:J
+    iput-object p1, p0, Lwo5;->b:Lap5;
 
-    iput-object p4, p0, Lwo5;->s0:Lqz9;
+    iput-object p2, p0, Lwo5;->c:Ljava/util/List;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    check-cast p1, Lb54;
+    iget v0, p0, Lwo5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "ap5"
 
-    invoke-virtual {p0, p1, p2}, Lwo5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lwo5;->c:Ljava/util/List;
 
-    move-result-object p1
+    iget-object v3, p0, Lwo5;->b:Lap5;
 
-    check-cast p1, Lwo5;
+    check-cast p1, Ljava/lang/Throwable;
 
-    sget-object p2, Lzag;->a:Lzag;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Lwo5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    move-result-object p1
+    const-string v4, "onListUpdated: failed to store stickers %s"
 
-    return-object p1
-.end method
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+    move-result-object v2
 
-    new-instance v0, Lwo5;
-
-    iget-wide v2, p0, Lwo5;->r0:J
-
-    iget-object v4, p0, Lwo5;->s0:Lqz9;
-
-    iget-object v1, p0, Lwo5;->Z:Lbp5;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lwo5;-><init>(Lbp5;JLqz9;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget v0, p0, Lwo5;->Y:I
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lwo5;->Z:Lbp5;
-
-    sget-object v5, Lc54;->a:Lc54;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lwo5;->X:Ljava/util/List;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_6
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Lwo5;->X:Ljava/util/List;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iput v3, p0, Lwo5;->Y:I
-
-    iget-object p1, v4, Lbp5;->X:Lqkf;
-
-    check-cast p1, Losa;
-
-    invoke-virtual {p1}, Losa;->b()Lv44;
-
-    move-result-object p1
-
-    new-instance v0, Lxo5;
-
-    const/4 v3, 0x0
-
-    iget-wide v6, p0, Lwo5;->r0:J
-
-    invoke-direct {v0, v4, v6, v7, v3}, Lxo5;-><init>(Lbp5;JLkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v0, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_4
-
-    goto/16 :goto_5
-
-    :cond_4
-    :goto_0
-    move-object v0, p1
-
-    check-cast v0, Ljava/util/List;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {v0, v3}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {p1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ldp5;
-
-    iget-wide v6, v6, Ldp5;->a:J
-
-    new-instance v8, Ljava/lang/Long;
-
-    invoke-direct {v8, v6, v7}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {p1}, Lpei;->e(Ljava/util/Collection;)Lqz9;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lpei;->b(Lqz9;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object v0, p0, Lwo5;->X:Ljava/util/List;
-
-    iput v2, p0, Lwo5;->Y:I
-
-    invoke-static {v4, p1, p0}, Lbp5;->T0(Lbp5;Ljava/util/List;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    :goto_2
-    check-cast p1, Loz9;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_7
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v3
+    invoke-virtual {v3}, Lap5;->I()V
 
-    if-eqz v3, :cond_9
+    return-void
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    move-result-object v3
+    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
 
-    move-object v6, v3
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    check-cast v6, Ldp5;
+    move-result-object v2
 
-    iget-wide v7, v6, Ldp5;->a:J
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {p1, v7, v8}, Loz9;->b(J)I
+    move-result-object v0
 
-    move-result v7
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-ltz v7, :cond_8
+    invoke-virtual {v3}, Lap5;->I()V
 
-    iget-object v8, p1, Loz9;->c:[J
+    return-void
 
-    aget-wide v7, v8, v7
+    nop
 
-    goto :goto_4
-
-    :cond_8
-    const-wide/high16 v7, -0x8000000000000000L
-
-    :goto_4
-    iget-wide v9, v6, Ldp5;->g:J
-
-    cmp-long v6, v7, v9
-
-    if-gez v6, :cond_7
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_9
-    iput-object v2, p0, Lwo5;->X:Ljava/util/List;
-
-    iput v1, p0, Lwo5;->Y:I
-
-    iget-object p1, p0, Lwo5;->s0:Lqz9;
-
-    invoke-static {v4, v2, p1, p0}, Lbp5;->S0(Lbp5;Ljava/util/ArrayList;Lqz9;Lk14;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_a
-
-    :goto_5
-    return-object v5
-
-    :cond_a
-    move-object v0, v2
-
-    :goto_6
-    check-cast p1, Ljava/util/Map;
-
-    new-instance v1, Ltp2;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-direct {v1, v0, p1}, Ltp2;-><init>(ILjava/util/Map;)V
-
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

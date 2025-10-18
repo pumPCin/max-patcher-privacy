@@ -1,49 +1,77 @@
 .class public final Lj9c;
-.super Lk14;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Ll9c;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ll9c;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lj9c;->X:Ll9c;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le5a;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj9c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj9c;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lj9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lj9c;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lj9c;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lj9c;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget p1, p0, Lj9c;->Y:I
+    iget-object p1, p0, Lj9c;->X:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Le5a;
 
-    or-int/2addr p1, v0
+    sget-object v0, Ls93;->b:Ls93;
 
-    iput p1, p0, Lj9c;->Y:I
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lj9c;->X:Ll9c;
+    move-result p1
 
-    const/4 v0, 0x0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Ll9c;->i(Ljava/lang/Long;Lk14;)Ljava/lang/Object;
+    sget-object p1, Le5c;->c:Le5c;
+
+    invoke-virtual {p1}, Lrdi;->q0()Lag4;
 
     move-result-object p1
+
+    invoke-virtual {p1}, Lag4;->d()Z
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

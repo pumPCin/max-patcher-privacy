@@ -3,7 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Laj6;
+.implements Lhv;
 
 
 # instance fields
@@ -11,110 +12,153 @@
 
 .field public final synthetic b:J
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(IIJ)V
     .locals 0
 
-    iput p4, p0, Lun5;->a:I
+    .line 1
+    iput p2, p0, Lun5;->a:I
 
-    iput-object p1, p0, Lun5;->c:Ljava/lang/Object;
+    iput-wide p3, p0, Lun5;->b:J
 
-    iput-wide p2, p0, Lun5;->b:J
+    iput p1, p0, Lun5;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(IJ)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x3
+
+    iput v0, p0, Lun5;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lun5;->c:I
+
+    iput-wide p2, p0, Lun5;->b:J
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
     iget v0, p0, Lun5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lun5;->c:Ljava/lang/Object;
+    move-object v2, p1
 
-    check-cast v0, Lho5;
+    check-cast v2, Lto5;
 
-    iget-object v0, v0, Lho5;->b:Lyv4;
+    .line 1
+    new-instance v1, Lvn5;
 
-    invoke-virtual {v0}, Lyv4;->get()Ljava/lang/Object;
+    const/4 v6, 0x1
 
-    move-result-object v0
+    iget-wide v3, p0, Lun5;->b:J
 
-    check-cast v0, Ls1f;
+    iget v5, p0, Lun5;->c:I
 
-    iget-wide v1, p0, Lun5;->b:J
+    invoke-direct/range {v1 .. v6}, Lvn5;-><init>(Ljava/lang/Object;JII)V
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 2
+    new-instance p1, Lzg3;
 
-    move-result-object v1
+    const/4 v0, 0x1
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {p1, v0, v1}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v1
+    return-object p1
 
-    invoke-virtual {v0, v1}, Ls1f;->d(Ljava/util/List;)Ljpe;
-
-    move-result-object v0
-
-    return-object v0
-
+    .line 3
     :pswitch_0
-    iget-object v0, p0, Lun5;->c:Ljava/lang/Object;
+    check-cast p1, Llo5;
 
-    check-cast v0, Lzn5;
+    .line 4
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
 
-    iget-object v0, v0, Lzn5;->a:Lll;
+    move-result-object p1
 
-    check-cast v0, Lkma;
+    new-instance v0, Lun5;
 
-    new-instance v1, Llu;
+    const/4 v1, 0x2
 
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
+    iget v2, p0, Lun5;->c:I
 
-    move-result-object v2
+    iget-wide v3, p0, Lun5;->b:J
 
-    check-cast v2, Llwb;
+    invoke-direct {v0, v2, v1, v3, v4}, Lun5;-><init>(IIJ)V
 
-    iget-object v2, v2, Llwb;->a:Lg68;
+    .line 5
+    new-instance v1, Lxg3;
 
-    invoke-virtual {v2}, Lgsd;->k()J
+    const/4 v2, 0x2
 
-    move-result-wide v3
+    invoke-direct {v1, p1, v2, v0}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v2, 0x5
+    return-object v1
+
+    .line 6
+    :pswitch_1
+    move-object v4, p1
+
+    check-cast v4, Lbp5;
+
+    .line 7
+    new-instance v3, Lvn5;
+
+    const/4 v8, 0x0
 
     iget-wide v5, p0, Lun5;->b:J
 
-    invoke-direct/range {v1 .. v6}, Llu;-><init>(IJJ)V
+    iget v7, p0, Lun5;->c:I
 
-    invoke-virtual {v0}, Lkma;->y()Lpmf;
+    invoke-direct/range {v3 .. v8}, Lvn5;-><init>(Ljava/lang/Object;JII)V
 
-    move-result-object v0
+    .line 8
+    new-instance p1, Lzg3;
 
-    const/16 v2, 0xc
+    const/4 v0, 0x1
 
-    const/4 v3, 0x0
+    invoke-direct {p1, v0, v3}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v0, v1, v3, v2}, Lpmf;->d(Lpmf;Lxm;ZI)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ll28;
+    .locals 4
+
+    check-cast p1, Ljava/util/List;
+
+    .line 9
+    new-instance v0, Lrz8;
+
+    iget v1, p0, Lun5;->c:I
+
+    iget-wide v2, p0, Lun5;->b:J
+
+    invoke-direct {v0, v1, v2, v3, p1}, Lrz8;-><init>(IJLjava/util/List;)V
+
+    invoke-static {v0}, Lxj7;->g(Ljava/lang/Object;)Ljb7;
+
+    move-result-object p1
+
+    return-object p1
 .end method

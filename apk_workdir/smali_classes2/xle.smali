@@ -1,59 +1,156 @@
-.class public final Lxle;
+.class public final synthetic Lxle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public A:I
+.field public final synthetic a:I
 
-.field public a:Leme;
+.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
 
-.field public b:F
 
-.field public c:F
+# direct methods
+.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+    .locals 0
 
-.field public d:Z
+    iput p2, p0, Lxle;->a:I
 
-.field public e:Z
+    iput-object p1, p0, Lxle;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-.field public f:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public g:Z
+    return-void
+.end method
 
-.field public h:I
 
-.field public i:I
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-.field public j:I
+    iget v0, p0, Lxle;->a:I
 
-.field public k:Z
+    const/4 v1, 0x1
 
-.field public l:I
+    iget-object v2, p0, Lxle;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-.field public m:Z
+    packed-switch v0, :pswitch_data_0
 
-.field public n:J
+    new-instance v3, Ljme;
 
-.field public o:Z
+    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
 
-.field public p:[Ljava/lang/String;
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->a:Lqs;
 
-.field public q:F
+    sget-object v5, Lone/me/location/map/show/ShowLocationScreen;->z0:[Ltr7;
 
-.field public r:F
+    const/4 v6, 0x0
 
-.field public s:Z
+    aget-object v6, v5, v6
 
-.field public t:Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-.field public u:I
+    move-result-object v0
 
-.field public v:I
+    check-cast v0, Ljava/lang/Number;
 
-.field public w:I
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
 
-.field public x:I
+    move-result-wide v6
 
-.field public y:Z
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->b:Lqs;
 
-.field public z:Z
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v0
+
+    invoke-direct {v4, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->c:Lqs;
+
+    const/4 v1, 0x2
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->o:Lqs;
+
+    const/4 v6, 0x3
+
+    aget-object v6, v5, v6
+
+    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v6, v1
+
+    check-cast v6, Ljava/lang/Long;
+
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->X:Lqs;
+
+    const/4 v7, 0x4
+
+    aget-object v7, v5, v7
+
+    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v7, v1
+
+    check-cast v7, Ljava/lang/Long;
+
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->Y:Lqs;
+
+    const/4 v8, 0x5
+
+    aget-object v5, v5, v8
+
+    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Ljava/lang/Long;
+
+    move v5, v0
+
+    invoke-direct/range {v3 .. v8}, Ljme;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    return-object v3
+
+    :pswitch_0
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->z0:[Ltr7;
+
+    new-instance v0, Ljmh;
+
+    invoke-direct {v0, v2, v1}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

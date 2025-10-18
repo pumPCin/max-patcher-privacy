@@ -1,119 +1,121 @@
 .class public final Lxq0;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/CountDownLatch;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lxq0;
+# interfaces
+.implements Lsqe;
+.implements Lgh3;
+.implements Lnk8;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public a:Ljava/lang/Object;
 
-.field public final b:Ljava/util/concurrent/ScheduledExecutorService;
+.field public b:Ljava/lang/Throwable;
 
-.field public final c:Lp30;
+.field public c:Lvv4;
+
+.field public volatile o:Z
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lxq0;
+    iput-object p1, p0, Lxq0;->a:Ljava/lang/Object;
 
-    invoke-direct {v0}, Lxq0;-><init>()V
-
-    sput-object v0, Lxq0;->d:Lxq0;
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 8
+.method public final b()V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    const-string v0, "java.runtime.name"
+    return-void
+.end method
 
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+.method public final c(Lvv4;)V
+    .locals 1
 
-    move-result-object v0
+    iput-object p1, p0, Lxq0;->c:Lvv4;
 
-    if-nez v0, :cond_0
+    iget-boolean v0, p0, Lxq0;->o:Z
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lvv4;->g()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d()Ljava/lang/Object;
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lxq0;->o:Z
+
+    iget-object v1, p0, Lxq0;->c:Lvv4;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Lvv4;->g()V
+
     :cond_0
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-static {v0}, Luf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 
-    const-string v1, "android"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    goto :goto_1
+    throw v0
 
     :cond_1
-    sget-object v0, Ltd;->b:Ltd;
+    :goto_0
+    iget-object v0, p0, Lxq0;->b:Ljava/lang/Throwable;
 
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+    if-nez v0, :cond_2
 
-    sget v2, Ltd;->c:I
+    iget-object v0, p0, Lxq0;->a:Ljava/lang/Object;
 
-    sget v3, Ltd;->d:I
+    return-object v0
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    const-wide/16 v4, 0x1
-
-    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
-
-    move-object v0, v1
-
-    :goto_1
-    iput-object v0, p0, Lxq0;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
+    :cond_2
+    invoke-static {v0}, Luf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 
-    iput-object v0, p0, Lxq0;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    throw v0
+.end method
 
-    new-instance v0, Lp30;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 0
 
-    const/4 v1, 0x2
+    iput-object p1, p0, Lxq0;->b:Ljava/lang/Throwable;
 
-    invoke-direct {v0, v1}, Lp30;-><init>(I)V
-
-    new-instance v1, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
-
-    iput-object v1, v0, Lp30;->b:Ljava/lang/Object;
-
-    iput-object v0, p0, Lxq0;->c:Lp30;
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 .end method

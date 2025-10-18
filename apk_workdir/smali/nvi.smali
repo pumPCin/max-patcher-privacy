@@ -1,27 +1,43 @@
-.class public abstract Lnvi;
-.super Ljava/lang/Object;
+.class public final Lnvi;
+.super Lmuh;
 .source "SourceFile"
 
 
+# instance fields
+.field public final d:Low4;
+
+.field public final e:Lvof;
+
+.field public final synthetic f:Lowi;
+
+.field public final synthetic g:Lowi;
+
+
 # direct methods
-.method public static final a()Lpzd;
-    .locals 3
+.method public constructor <init>(Lowi;Lvof;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lpzd;
+    iput-object p1, p0, Lnvi;->g:Lowi;
 
-    const/16 v1, 0xb
+    new-instance p3, Low4;
 
-    const/4 v2, 0x0
+    const-string v0, "OnRequestInstallCallback"
 
-    invoke-direct {v0, v1, v2}, Lpzd;-><init>(IZ)V
+    invoke-direct {p3, v0}, Low4;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lnvi;->f:Lowi;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x3
 
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Lmuh;-><init>(I)V
 
-    iput-object v1, v0, Lpzd;->b:Ljava/lang/Object;
+    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
 
-    return-object v0
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    iput-object p3, p0, Lnvi;->d:Low4;
+
+    iput-object p2, p0, Lnvi;->e:Lvof;
+
+    return-void
 .end method

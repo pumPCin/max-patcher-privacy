@@ -1,33 +1,22 @@
-.class public abstract Lme5;
+.class public final Lme5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve5;
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+# instance fields
+.field public final a:Lzs8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lzs8;)V
+    .locals 0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "REMOVED_TASK"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lme5;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSED_EMPTY"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lme5;->b:Lkotlinx/coroutines/internal/Symbol;
+    iput-object p1, p0, Lme5;->a:Lzs8;
 
     return-void
 .end method

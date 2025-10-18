@@ -1,263 +1,131 @@
-.class public final enum Llwf;
-.super Ljava/lang/Enum;
+.class public final Llwf;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Llwf;
-
-.field public static final enum Y:Llwf;
-
-.field public static final enum Z:Llwf;
-
-.field public static final enum b:Llwf;
-
-.field public static final enum c:Llwf;
-
-.field public static final enum o:Llwf;
-
-.field public static final synthetic r0:[Llwf;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:S
+.field public X:I
+
+.field public final synthetic Y:Lzwf;
+
+.field public final synthetic Z:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 19
-
-    new-instance v1, Llwf;
-
-    const/4 v0, 0x0
-
-    const/16 v2, 0x401
-
-    const-string v3, "rsa_pkcs1_sha256"
-
-    invoke-direct {v1, v3, v0, v2}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Llwf;
-
-    const/4 v0, 0x1
-
-    const/16 v3, 0x501
-
-    const-string v4, "rsa_pkcs1_sha384"
-
-    invoke-direct {v2, v4, v0, v3}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Llwf;
-
-    const/4 v0, 0x2
-
-    const/16 v4, 0x601
-
-    const-string v5, "rsa_pkcs1_sha512"
-
-    invoke-direct {v3, v5, v0, v4}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Llwf;
-
-    const/4 v0, 0x3
-
-    const/16 v5, 0x403
-
-    const-string v6, "ecdsa_secp256r1_sha256"
-
-    invoke-direct {v4, v6, v0, v5}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Llwf;->b:Llwf;
-
-    new-instance v5, Llwf;
-
-    const/4 v0, 0x4
-
-    const/16 v6, 0x503
-
-    const-string v7, "ecdsa_secp384r1_sha384"
-
-    invoke-direct {v5, v7, v0, v6}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Llwf;->c:Llwf;
-
-    new-instance v6, Llwf;
-
-    const/4 v0, 0x5
-
-    const/16 v7, 0x603
-
-    const-string v8, "ecdsa_secp521r1_sha512"
-
-    invoke-direct {v6, v8, v0, v7}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Llwf;->o:Llwf;
-
-    new-instance v7, Llwf;
-
-    const/4 v0, 0x6
-
-    const/16 v8, 0x804
-
-    const-string v9, "rsa_pss_rsae_sha256"
-
-    invoke-direct {v7, v9, v0, v8}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v7, Llwf;->X:Llwf;
-
-    new-instance v8, Llwf;
-
-    const/4 v0, 0x7
-
-    const/16 v9, 0x805
-
-    const-string v10, "rsa_pss_rsae_sha384"
-
-    invoke-direct {v8, v10, v0, v9}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v8, Llwf;->Y:Llwf;
-
-    new-instance v9, Llwf;
-
-    const/16 v0, 0x8
-
-    const/16 v10, 0x806
-
-    const-string v11, "rsa_pss_rsae_sha512"
-
-    invoke-direct {v9, v11, v0, v10}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v9, Llwf;->Z:Llwf;
-
-    new-instance v10, Llwf;
-
-    const/16 v0, 0x9
-
-    const/16 v11, 0x807
-
-    const-string v12, "ed25519"
-
-    invoke-direct {v10, v12, v0, v11}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v11, Llwf;
-
-    const/16 v0, 0xa
-
-    const/16 v12, 0x808
-
-    const-string v13, "ed448"
-
-    invoke-direct {v11, v13, v0, v12}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v12, Llwf;
-
-    const/16 v0, 0xb
-
-    const/16 v13, 0x809
-
-    const-string v14, "rsa_pss_pss_sha256"
-
-    invoke-direct {v12, v14, v0, v13}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v13, Llwf;
-
-    const/16 v0, 0xc
-
-    const/16 v14, 0x80a
-
-    const-string v15, "rsa_pss_pss_sha384"
-
-    invoke-direct {v13, v15, v0, v14}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v14, Llwf;
-
-    const/16 v0, 0xd
-
-    const/16 v15, 0x80b
-
-    move-object/from16 v16, v1
-
-    const-string v1, "rsa_pss_pss_sha512"
-
-    invoke-direct {v14, v1, v0, v15}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v15, Llwf;
-
-    const/16 v0, 0xe
-
-    const/16 v1, 0x201
-
-    move-object/from16 v17, v2
-
-    const-string v2, "rsa_pkcs1_sha1"
-
-    invoke-direct {v15, v2, v0, v1}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v0, Llwf;
-
-    const/16 v1, 0xf
-
-    const/16 v2, 0x203
-
-    move-object/from16 v18, v3
-
-    const-string v3, "ecdsa_sha1"
-
-    invoke-direct {v0, v3, v1, v2}, Llwf;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v3, v18
-
-    move-object/from16 v16, v0
-
-    filled-new-array/range {v1 .. v16}, [Llwf;
-
-    move-result-object v0
-
-    sput-object v0, Llwf;->r0:[Llwf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lzwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Llwf;->Y:Lzwf;
 
-    int-to-short p1, p3
+    iput-object p2, p0, Llwf;->Z:Ljava/nio/ByteBuffer;
 
-    iput-short p1, p0, Llwf;->a:S
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llwf;
-    .locals 1
 
-    const-class v0, Llwf;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lq54;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Llwf;
+    invoke-virtual {p0, p1, p2}, Llwf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Llwf;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Llwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Llwf;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Llwf;->r0:[Llwf;
+    new-instance p1, Llwf;
 
-    invoke-virtual {v0}, [Llwf;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Llwf;->Y:Lzwf;
 
-    move-result-object v0
+    iget-object v1, p0, Llwf;->Z:Ljava/nio/ByteBuffer;
 
-    check-cast v0, [Llwf;
+    invoke-direct {p1, v0, v1, p2}, Llwf;-><init>(Lzwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Llwf;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llwf;->Y:Lzwf;
+
+    iget-object p1, p1, Lzwf;->b:Ljava/nio/channels/AsynchronousByteChannel;
+
+    iput v1, p0, Llwf;->X:I
+
+    new-instance v0, Lo32;
+
+    invoke-static {p0}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {v0}, Lo32;->o()V
+
+    sget-object v1, Lpv;->b:Lpv;
+
+    iget-object v2, p0, Llwf;->Z:Ljava/nio/ByteBuffer;
+
+    invoke-interface {p1, v2, v0, v1}, Ljava/nio/channels/AsynchronousByteChannel;->write(Ljava/nio/ByteBuffer;Ljava/lang/Object;Ljava/nio/channels/CompletionHandler;)V
+
+    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

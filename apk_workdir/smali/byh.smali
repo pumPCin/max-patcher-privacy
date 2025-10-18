@@ -1,108 +1,107 @@
-.class public abstract Lbyh;
-.super Ljava/lang/Object;
+.class public final Lbyh;
+.super Lbxh;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/Object;
+.field public static final X:Lbyh;
+
+
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
+
+.field public final transient o:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Lbyh;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lbyh;->a:Ljava/lang/Object;
+    new-array v2, v1, [Ljava/lang/Object;
+
+    invoke-direct {v0, v1, v2}, Lbyh;-><init>(I[Ljava/lang/Object;)V
+
+    sput-object v0, Lbyh;->X:Lbyh;
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
-    .locals 1
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    move-result v0
+    iput-object p2, p0, Lbyh;->c:[Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Lbyh;->o:I
 
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-    .locals 2
+
+# virtual methods
+.method public final a([Ljava/lang/Object;)I
+    .locals 3
+
+    iget-object v0, p0, Lbyh;->c:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lbyh;->o:I
+
+    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return v2
+.end method
+
+.method public final b()I
+    .locals 1
+
+    iget v0, p0, Lbyh;->o:I
+
+    return v0
+.end method
+
+.method public final d()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return v0
 .end method
 
-.method public static c(Lzi5;)Ly85;
-    .locals 8
+.method public final e()[Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object v0, p0, Lbyh;->c:[Ljava/lang/Object;
 
-    move-result-wide v0
+    return-object v0
+.end method
 
-    invoke-interface {p0}, Lzi5;->length()I
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    move-result v5
+    iget v0, p0, Lbyh;->o:I
 
-    const/4 v4, 0x0
+    invoke-static {p1, v0}, Lbki;->e(II)V
 
-    move v2, v4
+    iget-object v0, p0, Lbyh;->c:[Ljava/lang/Object;
 
-    move v6, v2
+    aget-object p1, v0, p1
 
-    :goto_0
-    if-ge v2, v5, :cond_1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p0, v2, v0, v1}, Lzi5;->s(IJ)Z
+    return-object p1
+.end method
 
-    move-result v3
+.method public final size()I
+    .locals 1
 
-    if-eqz v3, :cond_0
+    iget v0, p0, Lbyh;->o:I
 
-    add-int/lit8 v6, v6, 0x1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Ly85;
-
-    const/4 v7, 0x2
-
-    const/4 v3, 0x1
-
-    invoke-direct/range {v2 .. v7}, Ly85;-><init>(IIIII)V
-
-    return-object v2
+    return v0
 .end method

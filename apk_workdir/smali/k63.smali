@@ -2,118 +2,219 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltxd;
+
 
 # instance fields
-.field public final a:Lyqi;
+.field public final a:I
+
+.field public final b:[I
+
+.field public final c:[J
+
+.field public final d:[J
+
+.field public final e:[J
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Lyqi;)V
-    .locals 0
+.method public constructor <init>([I[J[J[J)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lbi3;->i(Ljava/lang/Object;)V
+    iput-object p1, p0, Lk63;->b:[I
 
-    iput-object p1, p0, Lk63;->a:Lyqi;
+    iput-object p2, p0, Lk63;->c:[J
+
+    iput-object p3, p0, Lk63;->d:[J
+
+    iput-object p4, p0, Lk63;->e:[J
+
+    array-length p1, p1
+
+    iput p1, p0, Lk63;->a:I
+
+    if-lez p1, :cond_0
+
+    add-int/lit8 p2, p1, -0x1
+
+    aget-wide p2, p3, p2
+
+    add-int/lit8 p1, p1, -0x1
+
+    aget-wide v0, p4, p1
+
+    add-long/2addr p2, v0
+
+    iput-wide p2, p0, Lk63;->f:J
+
+    return-void
+
+    :cond_0
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lk63;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final c()Z
+    .locals 1
 
-    instance-of v0, p1, Lk63;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    if-nez v0, :cond_0
+.method public final e(J)Lrxd;
+    .locals 9
 
-    return v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lk63;->a:Lyqi;
-
-    check-cast p1, Lk63;
-
-    iget-object p1, p1, Lk63;->a:Lyqi;
-
-    check-cast v0, Lbni;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0x11
-
-    invoke-virtual {v0, v2, p1}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lk63;->e:[J
 
     const/4 v1, 0x1
 
+    invoke-static {v0, p1, p2, v1}, Llig;->e([JJZ)I
+
+    move-result v2
+
+    new-instance v3, Lxxd;
+
+    aget-wide v4, v0, v2
+
+    iget-object v6, p0, Lk63;->c:[J
+
+    aget-wide v7, v6, v2
+
+    invoke-direct {v3, v4, v5, v7, v8}, Lxxd;-><init>(JJ)V
+
+    cmp-long p1, v4, p1
+
+    if-gez p1, :cond_1
+
+    iget p1, p0, Lk63;->a:I
+
+    sub-int/2addr p1, v1
+
+    if-ne v2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lxxd;
+
+    add-int/2addr v2, v1
+
+    aget-wide v4, v0, v2
+
+    aget-wide v0, v6, v2
+
+    invoke-direct {p1, v4, v5, v0, v1}, Lxxd;-><init>(JJ)V
+
+    new-instance p2, Lrxd;
+
+    invoke-direct {p2, v3, p1}, Lrxd;-><init>(Lxxd;Lxxd;)V
+
+    return-object p2
+
     :cond_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_0
+    new-instance p1, Lrxd;
 
-    return v1
+    invoke-direct {p1, v3, v3}, Lrxd;-><init>(Lxxd;Lxxd;)V
 
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final f()J
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lk63;->a:Lyqi;
+    iget-wide v0, p0, Lk63;->f:J
 
-    check-cast v0, Lbni;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    move-result-object v1
+    iget-object v0, p0, Lk63;->b:[I
 
-    const/16 v2, 0x12
-
-    invoke-virtual {v0, v1, v2}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+    iget-object v1, p0, Lk63;->c:[J
 
-    move-result v1
+    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v1
 
-    return v1
+    iget-object v2, p0, Lk63;->e:[J
 
-    :catch_0
-    move-exception v0
+    invoke-static {v2}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
 
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    move-result-object v2
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iget-object v3, p0, Lk63;->d:[J
 
-    throw v1
+    invoke-static {v3}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/16 v4, 0x47
+
+    invoke-static {v4, v0}, Lu15;->e(ILjava/lang/String;)I
+
+    move-result v4
+
+    invoke-static {v4, v1}, Lu15;->e(ILjava/lang/String;)I
+
+    move-result v4
+
+    invoke-static {v4, v2}, Lu15;->e(ILjava/lang/String;)I
+
+    move-result v4
+
+    invoke-static {v4, v3}, Lu15;->e(ILjava/lang/String;)I
+
+    move-result v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v4, "ChunkIndex(length="
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v4, p0, Lk63;->a:I
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ", sizes="
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", offsets="
+
+    const-string v4, ", timeUs="
+
+    invoke-static {v5, v0, v1, v4, v2}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, ", durationsUs="
+
+    const-string v1, ")"
+
+    invoke-static {v5, v0, v3, v1}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

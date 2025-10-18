@@ -1,102 +1,93 @@
-.class public abstract Lg07;
+.class public final Lg07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
 
 # instance fields
-.field public final X:J
+.field public final a:J
 
-.field public final Y:Lg15;
+.field public final b:I
 
-.field public final Z:Ljava/lang/String;
+.field public final c:Z
 
-.field public final a:Ljava/lang/String;
-
-.field public final b:Le07;
-
-.field public final c:J
-
-.field public final o:I
-
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:J
-
-.field public final t0:J
-
-.field public final u0:Z
+.field public final d:Ljava/lang/Comparable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Le07;JIJLg15;Ljava/lang/String;Ljava/lang/String;JJZ)V
+.method public constructor <init>(La17;JI)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg07;->a:Ljava/lang/String;
+    .line 2
+    iput-object p1, p0, Lg07;->d:Ljava/lang/Comparable;
 
-    iput-object p2, p0, Lg07;->b:Le07;
+    .line 3
+    iput-wide p2, p0, Lg07;->a:J
 
-    iput-wide p3, p0, Lg07;->c:J
+    .line 4
+    iput p4, p0, Lg07;->b:I
 
-    iput p5, p0, Lg07;->o:I
+    .line 5
+    instance-of p2, p1, Lu07;
 
-    iput-wide p6, p0, Lg07;->X:J
+    if-eqz p2, :cond_0
 
-    iput-object p8, p0, Lg07;->Y:Lg15;
+    check-cast p1, Lu07;
 
-    iput-object p9, p0, Lg07;->Z:Ljava/lang/String;
+    iget-boolean p1, p1, Lu07;->v0:Z
 
-    iput-object p10, p0, Lg07;->r0:Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    iput-wide p11, p0, Lg07;->s0:J
+    const/4 p1, 0x1
 
-    iput-wide p13, p0, Lg07;->t0:J
+    goto :goto_0
 
-    iput-boolean p15, p0, Lg07;->u0:Z
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lg07;->c:Z
 
     return-void
 .end method
 
+.method public constructor <init>(Lb17;JI)V
+    .locals 0
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Ljava/lang/Long;
+    .line 7
+    iput-object p1, p0, Lg07;->d:Ljava/lang/Comparable;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    .line 8
+    iput-wide p2, p0, Lg07;->a:J
 
-    move-result-wide v0
+    .line 9
+    iput p4, p0, Lg07;->b:I
 
-    iget-wide v2, p0, Lg07;->X:J
+    .line 10
+    instance-of p2, p1, Lv07;
 
-    cmp-long v0, v2, v0
+    if-eqz p2, :cond_0
 
-    if-lez v0, :cond_0
+    check-cast p1, Lv07;
+
+    iget-boolean p1, p1, Lv07;->v0:Z
+
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    cmp-long p1, v2, v0
-
-    if-gez p1, :cond_1
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_1
     const/4 p1, 0x0
 
-    return p1
+    :goto_0
+    iput-boolean p1, p0, Lg07;->c:Z
+
+    return-void
 .end method

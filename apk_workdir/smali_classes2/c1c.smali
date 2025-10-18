@@ -1,84 +1,51 @@
 .class public final Lc1c;
-.super Li1c;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Ldh8;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ldh8;
+
+.field public o:Ldh8;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ldh8;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Li1c;-><init>()V
+    iput-object p1, p0, Lc1c;->Z:Ldh8;
 
-    iput-wide p1, p0, Lc1c;->b:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lc1c;->Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lc1c;->q0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lc1c;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lc1c;->q0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lc1c;->Z:Ldh8;
 
-    return v2
+    invoke-virtual {p1, p0}, Ldh8;->b(Ly14;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lc1c;
+    move-result-object p1
 
-    iget-wide v3, p0, Lc1c;->b:J
-
-    iget-wide v5, p1, Lc1c;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lc1c;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenAddSubscribersAndUpdateBackstack(id="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lc1c;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

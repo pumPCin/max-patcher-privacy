@@ -1,109 +1,88 @@
-.class public final enum Lag0;
-.super Ljava/lang/Enum;
+.class public final Lag0;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final enum X:Lag0;
 
-.field public static final synthetic Y:[Lag0;
-
-.field public static final enum a:Lag0;
-
-.field public static final enum b:Lag0;
-
-.field public static final enum c:Lag0;
-
-.field public static final enum o:Lag0;
+# instance fields
+.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lag0;
+    iput-object p1, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    const-string v1, "REMOTE"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lag0;->a:Lag0;
-
-    new-instance v1, Lag0;
-
-    const-string v2, "LOCAL_RTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lag0;->b:Lag0;
-
-    new-instance v2, Lag0;
-
-    const-string v3, "LOCAL_LOSS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lag0;->c:Lag0;
-
-    new-instance v3, Lag0;
-
-    const-string v4, "REMOTE_RTT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lag0;->o:Lag0;
-
-    new-instance v4, Lag0;
-
-    const-string v5, "REMOTE_LOSS"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lag0;->X:Lag0;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lag0;
-
-    move-result-object v0
-
-    sput-object v0, Lag0;->Y:[Lag0;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lag0;
-    .locals 1
 
-    const-class v0, Lag0;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lq54;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lag0;
+    invoke-virtual {p0, p1, p2}, Lag0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lag0;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lag0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lag0;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lag0;->Y:[Lag0;
+    new-instance p1, Lag0;
 
-    invoke-virtual {v0}, [Lag0;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lag0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lag0;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Lwoh;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lwoh;->g()Landroidx/work/impl/model/WorkersQueueDao;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->count(I)I
+
+    move-result p1
+
+    new-instance v0, Ljava/lang/Integer;
+
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
 
     return-object v0
 .end method

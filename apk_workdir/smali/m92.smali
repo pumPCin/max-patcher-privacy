@@ -1,68 +1,126 @@
-.class public abstract Lm92;
+.class public final Lm92;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final b:Ll92;
 
-.field public b:Ljava/lang/Object;
+
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ll92;
 
-    .line 5
-    iput p1, p0, Lm92;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lm92;->b:Ll92;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Long;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p2, p0, Lm92;->a:I
-
-    .line 3
-    iput-object p1, p0, Lm92;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lm92;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Long;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lm92;->b:Ljava/lang/Object;
+    instance-of v0, p1, Lm92;
 
-    check-cast v0, Ljava/lang/Long;
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lm92;
+
+    iget-object p1, p1, Lm92;->a:Ljava/lang/Object;
+
+    iget-object v0, p0, Lm92;->a:Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lm92;->a:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lm92;->a:Ljava/lang/Object;
+
+    instance-of v1, v0, Lk92;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lk92;
+
+    invoke-virtual {v0}, Lk92;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public b(Limh;)V
-    .locals 0
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v2, "Value("
 
-.method public abstract c(Limh;)V
-.end method
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public abstract d(Lwmh;Ljava/util/List;)Lwmh;
-.end method
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public e(Limh;Lvve;)Lvve;
-    .locals 0
+    const/16 v0, 0x29
 
-    return-object p2
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

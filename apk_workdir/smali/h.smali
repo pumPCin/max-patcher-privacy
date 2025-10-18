@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqf4;
+.implements Lfg4;
 
 
 # instance fields
@@ -172,14 +172,14 @@
     :pswitch_13
     new-instance v0, Lone/me/contactlist/ContactListWidget;
 
-    sget-object v1, Lbw3;->a:Lbw3;
+    sget-object v1, Lpw3;->a:Lpw3;
 
-    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Lbw3;)V
+    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Lpw3;)V
 
     return-object v0
 
     :pswitch_14
-    new-instance v0, Lmy3;
+    new-instance v0, Laz3;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 

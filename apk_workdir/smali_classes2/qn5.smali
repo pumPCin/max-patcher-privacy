@@ -3,26 +3,27 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lr6;
+.implements Laj6;
+.implements Lsr3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lao5;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lao5;Ljava/util/List;I)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput p3, p0, Lqn5;->a:I
+    iput p1, p0, Lqn5;->a:I
 
-    iput-object p1, p0, Lqn5;->b:Lao5;
+    iput-wide p2, p0, Lqn5;->b:J
 
-    iput-object p2, p0, Lqn5;->c:Ljava/util/List;
+    iput-boolean p4, p0, Lqn5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,114 +32,158 @@
 
 
 # virtual methods
-.method public final run()V
+.method public accept(Ljava/lang/Object;)V
     .locals 6
 
     iget v0, p0, Lqn5;->a:I
 
+    const-string v1, " favorite="
+
+    iget-boolean v2, p0, Lqn5;->c:Z
+
+    iget-wide v3, p0, Lqn5;->b:J
+
+    check-cast p1, Ljava/lang/Throwable;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lqn5;->c:Ljava/util/List;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    iget-object v1, p0, Lqn5;->b:Lao5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, v1, Lao5;->a:Lyed;
+    const-string v5, "markAsFavorite: failed for stickerId="
 
-    invoke-virtual {v2}, Lyed;->c()V
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    const-string v3, "SELECT MAX(`index`) FROM favorite_sticker_sets"
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v3}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, v1, Lao5;->a:Lyed;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lyed;->b()V
+    const-string v1, "ap5"
 
-    invoke-virtual {v1, v3}, Lyed;->n(Ldef;)Landroid/database/Cursor;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    :try_start_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v3}, Lpfd;->o()V
-
-    add-int/lit8 v4, v4, 0x1
-
-    int-to-long v3, v4
-
-    invoke-static {v3, v4, v0}, Lao5;->b(JLjava/util/List;)Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Lyed;->q()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-virtual {v2}, Lyed;->k()V
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
-    :catchall_1
-    move-exception v0
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_3
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v3}, Lpfd;->o()V
-
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :goto_2
-    invoke-virtual {v2}, Lyed;->k()V
-
-    throw v0
-
     :pswitch_0
-    iget-object v0, p0, Lqn5;->b:Lao5;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    iget-object v1, p0, Lqn5;->c:Ljava/util/List;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lao5;->a(Ljava/util/List;)V
+    const-string v5, "markAsFavorite: failed for setId="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "go5"
+
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     nop
 
     :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lqn5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Lto5;
+
+    new-instance v1, Lrn5;
+
+    const/4 v4, 0x1
+
+    iget-boolean v3, p0, Lqn5;->c:Z
+
+    iget-wide v5, p0, Lqn5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lrn5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lzg3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v1}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Llo5;
+
+    invoke-virtual {p1}, Llo5;->a()Lhqe;
+
+    move-result-object p1
+
+    new-instance v0, Lqn5;
+
+    const/4 v1, 0x3
+
+    iget-wide v2, p0, Lqn5;->b:J
+
+    iget-boolean v4, p0, Lqn5;->c:Z
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lqn5;-><init>(IJZ)V
+
+    new-instance v1, Lxg3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2, v0}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_1
+    move-object v4, p1
+
+    check-cast v4, Lbp5;
+
+    new-instance v3, Lrn5;
+
+    const/4 v6, 0x0
+
+    iget-boolean v5, p0, Lqn5;->c:Z
+
+    iget-wide v7, p0, Lqn5;->b:J
+
+    invoke-direct/range {v3 .. v8}, Lrn5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lzg3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v3}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

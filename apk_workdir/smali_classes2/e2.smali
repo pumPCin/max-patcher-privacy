@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfq7;
+.implements Lcr7;
 
 
 # virtual methods
@@ -25,7 +25,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p0, p1}, Lfq7;->h(Ljava/lang/String;)V
+    invoke-interface {p0, p1}, Lcr7;->h(Ljava/lang/String;)V
 
     return-void
 

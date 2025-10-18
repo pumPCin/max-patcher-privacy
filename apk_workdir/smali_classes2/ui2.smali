@@ -1,87 +1,63 @@
 .class public final Lui2;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi2;
 
 
 # instance fields
-.field public final a:J
+.field public X:Ljava/lang/String;
+
+.field public Y:Ln10;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lbj2;
+
+.field public final synthetic q0:Lbj2;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lbj2;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lui2;->q0:Lbj2;
 
-    iput-wide p1, p0, Lui2;->a:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lui2;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lui2;->r0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lui2;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lui2;->r0:I
 
-    if-nez v1, :cond_1
+    const-wide/16 v4, 0x0
 
-    return v2
+    const/4 v6, 0x0
 
-    :cond_1
-    check-cast p1, Lui2;
+    iget-object v0, p0, Lui2;->q0:Lbj2;
 
-    iget-wide v3, p0, Lui2;->a:J
+    const/4 v1, 0x0
 
-    iget-wide v5, p1, Lui2;->a:J
+    const-wide/16 v2, 0x0
 
-    cmp-long p1, v3, v5
+    move-object v7, p0
 
-    if-eqz p1, :cond_2
+    invoke-virtual/range {v0 .. v7}, Lbj2;->u(Ljava/lang/String;JJLn10;Ly14;)Ljava/lang/Object;
 
-    return v2
+    move-result-object p1
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lui2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Add(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lui2;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

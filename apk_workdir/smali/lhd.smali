@@ -1,336 +1,130 @@
 .class public final Llhd;
-.super Ljava/lang/Object;
+.super Lgd6;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Llhd;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public X:Landroid/graphics/drawable/Drawable;
 
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Ljava/util/List;
-
-.field public final o:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lv2b;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
-
-    sput-object v0, Llhd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llhd;->a:Ljava/util/ArrayList;
-
-    iput-object p2, p0, Llhd;->b:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Llhd;->c:Ljava/util/List;
-
-    iput p4, p0, Llhd;->o:I
-
-    return-void
-.end method
+.field public Y:Lo15;
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Llhd;->Y:Lo15;
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v1, v0, Lo15;->a:Z
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lo15;->e:Lk15;
+
+    invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lo15;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-class v2, Lm15;
+
+    const-string v3, "%x: Draw requested for a non-attached controller %x. %s"
+
+    invoke-static {v2, v3, v1}, Lem5;->j(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lo15;->b:Z
+
+    iput-boolean v1, v0, Lo15;->c:Z
+
+    invoke-virtual {v0}, Lo15;->b()V
+
+    :cond_2
+    :goto_0
+    invoke-super {p0, p1}, Lgd6;->draw(Landroid/graphics/Canvas;)V
+
+    iget-object v0, p0, Llhd;->X:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Llhd;->X:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method public final getIntrinsicHeight()I
     .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, -0x1
 
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, -0x1
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Llhd;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Llhd;
-
-    iget-object v0, p0, Llhd;->a:Ljava/util/ArrayList;
-
-    iget-object v1, p1, Llhd;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Llhd;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p1, Llhd;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Llhd;->c:Ljava/util/List;
-
-    iget-object v1, p1, Llhd;->c:Ljava/util/List;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Llhd;->o:I
-
-    iget p1, p1, Llhd;->o:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final setVisible(ZZ)Z
+    .locals 1
 
-    iget-object v0, p0, Llhd;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Llhd;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Llhd;->c:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lfef;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget v1, p0, Llhd;->o:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SavedState(savedPagesKeys="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Llhd;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", savedPagesValues="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llhd;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", savedPageHistory="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llhd;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxPagesToStateSave="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Llhd;->o:I
-
-    const/16 v2, 0x29
-
-    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-object p2, p0, Llhd;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    iget-object v0, p0, Llhd;->Y:Lo15;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lo15;->h(Z)V
 
     :cond_0
-    iget-object p2, p0, Llhd;->b:Ljava/util/ArrayList;
+    invoke-super {p0, p1, p2}, Lgd6;->setVisible(ZZ)Z
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+    move-result p1
 
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Bundle;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p2, p0, Llhd;->c:Ljava/util/List;
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_2
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    goto :goto_2
-
-    :cond_2
-    iget p2, p0, Llhd;->o:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return p1
 .end method

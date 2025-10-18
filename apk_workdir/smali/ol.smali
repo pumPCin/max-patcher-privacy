@@ -44,7 +44,7 @@
     return v0
 .end method
 
-.method public static e(Landroid/media/AudioRecord;Lt1e;Li60;)V
+.method public static e(Landroid/media/AudioRecord;La3e;Lj60;)V
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioRecord;->registerAudioRecordingCallback(Ljava/util/concurrent/Executor;Landroid/media/AudioManager$AudioRecordingCallback;)V
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public static g(Landroid/media/AudioRecord;Li60;)V
+.method public static g(Landroid/media/AudioRecord;Lj60;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/media/AudioRecord;->unregisterAudioRecordingCallback(Landroid/media/AudioManager$AudioRecordingCallback;)V

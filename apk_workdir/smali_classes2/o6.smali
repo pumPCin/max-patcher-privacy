@@ -54,7 +54,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    invoke-static {p1, v0}, Ltai;->d(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-static {p1, v0}, Lubi;->e(Landroid/graphics/Rect;Landroid/view/View;)V
 
     goto :goto_0
 
@@ -75,7 +75,7 @@
 
     iget-object p1, p0, Lo6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Landroidx/viewpager2/widget/ViewPager2;
 
     new-instance v0, Lk3;
 

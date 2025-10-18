@@ -1,106 +1,48 @@
-.class public final Lm4c;
+.class public final synthetic Lm4c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq4c;
+.implements Lfg4;
 
 
 # instance fields
-.field public final a:Lec3;
+.field public final synthetic a:J
+
+.field public final synthetic b:Lq4c;
+
+.field public final synthetic c:Lp4c;
 
 
 # direct methods
-.method public constructor <init>(Lec3;)V
+.method public synthetic constructor <init>(JLq4c;Lp4c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm4c;->a:Lec3;
+    iput-wide p1, p0, Lm4c;->a:J
+
+    iput-object p3, p0, Lm4c;->b:Lq4c;
+
+    iput-object p4, p0, Lm4c;->c:Lp4c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    if-ne p0, p1, :cond_0
+    iget-wide v1, p0, Lm4c;->a:J
 
-    return v0
+    iget-object v3, p0, Lm4c;->b:Lq4c;
 
-    :cond_0
-    instance-of v1, p1, Lm4c;
+    iget-object v4, p0, Lm4c;->c:Lp4c;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lm4c;
-
-    iget-object v1, p0, Lm4c;->a:Lec3;
-
-    iget-object p1, p1, Lm4c;->a:Lec3;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lm4c;->a:Lec3;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    iget-object v0, v0, Lec3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatNamePayload(errorText="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lm4c;->a:Lec3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(JLq4c;Lp4c;)V
 
     return-object v0
 .end method

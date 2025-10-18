@@ -1,70 +1,31 @@
-.class public final Lbkd;
-.super Llff;
+.class public abstract Lbkd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
+    sget v0, Ldrc;->max_attach_count_error:I
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sput v0, Lbkd;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget v0, Ldrc;->to_chats:I
 
-    invoke-virtual {p0, p1, p2}, Lbkd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sput v0, Lbkd;->b:I
 
-    move-result-object p1
+    sget v0, Ldrc;->you_sent_messages:I
 
-    check-cast p1, Lbkd;
+    sput v0, Lbkd;->c:I
 
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lbkd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lbkd;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lbkd;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbkd;->X:Ljava/lang/Object;
-
-    check-cast p1, Lzag;
-
-    sget-object p1, Ljde;->c:Ljde;
-
-    invoke-virtual {p1}, Lqci;->q0()Llf4;
-
-    move-result-object p1
-
-    const-string v0, ":settings/privacy"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-void
 .end method

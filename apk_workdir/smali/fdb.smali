@@ -1,860 +1,2636 @@
-.class public final Lfdb;
-.super Llff;
+.class public abstract Lfdb;
+.super Lqq7;
 .source "SourceFile"
 
-# interfaces
-.implements Lqh6;
+
+# static fields
+.field public static final H0:[B
+
+.field public static final I0:Ljava/math/BigInteger;
+
+.field public static final J0:Ljava/math/BigInteger;
+
+.field public static final K0:Ljava/math/BigInteger;
+
+.field public static final L0:Ljava/math/BigInteger;
+
+.field public static final M0:Ljava/math/BigDecimal;
+
+.field public static final N0:Ljava/math/BigDecimal;
+
+.field public static final O0:Ljava/math/BigDecimal;
+
+.field public static final P0:Ljava/math/BigDecimal;
 
 
 # instance fields
-.field public X:Ltcb;
+.field public A0:I
 
-.field public Y:Ljava/util/Map;
+.field public B0:J
 
-.field public Z:Ljava/lang/Object;
+.field public C0:D
 
-.field public r0:Ljava/util/Map;
+.field public D0:Ljava/math/BigInteger;
 
-.field public s0:Lhdb;
+.field public E0:Ljava/math/BigDecimal;
 
-.field public t0:Ljava/util/Iterator;
+.field public F0:Z
 
-.field public u0:J
+.field public G0:I
 
-.field public v0:I
+.field public X:I
 
-.field public final synthetic w0:Lhdb;
+.field public Y:I
 
-.field public final synthetic x0:Ljava/util/List;
+.field public Z:J
 
-.field public final synthetic y0:Lgi1;
+.field public b:Lzq7;
+
+.field public final c:La6;
+
+.field public o:Z
+
+.field public q0:I
+
+.field public r0:I
+
+.field public s0:I
+
+.field public t0:I
+
+.field public u0:Ltq7;
+
+.field public v0:Lzq7;
+
+.field public final w0:Lcqf;
+
+.field public x0:[C
+
+.field public y0:Z
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Lhdb;Ljava/util/List;Lgi1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lfdb;->w0:Lhdb;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lfdb;->x0:Ljava/util/List;
+    new-array v0, v0, [B
 
-    iput-object p3, p0, Lfdb;->y0:Lgi1;
+    sput-object v0, Lfdb;->H0:[B
 
-    const/4 p1, 0x1
+    const-wide/32 v0, -0x80000000
 
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lfdb;->I0:Ljava/math/BigInteger;
+
+    const-wide/32 v1, 0x7fffffff
+
+    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    sput-object v1, Lfdb;->J0:Ljava/math/BigInteger;
+
+    const-wide/high16 v2, -0x8000000000000000L
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v2
+
+    sput-object v2, Lfdb;->K0:Ljava/math/BigInteger;
+
+    const-wide v3, 0x7fffffffffffffffL
+
+    invoke-static {v3, v4}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v3
+
+    sput-object v3, Lfdb;->L0:Ljava/math/BigInteger;
+
+    new-instance v4, Ljava/math/BigDecimal;
+
+    invoke-direct {v4, v2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
+
+    sput-object v4, Lfdb;->M0:Ljava/math/BigDecimal;
+
+    new-instance v2, Ljava/math/BigDecimal;
+
+    invoke-direct {v2, v3}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
+
+    sput-object v2, Lfdb;->N0:Ljava/math/BigDecimal;
+
+    new-instance v2, Ljava/math/BigDecimal;
+
+    invoke-direct {v2, v0}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
+
+    sput-object v2, Lfdb;->O0:Ljava/math/BigDecimal;
+
+    new-instance v0, Ljava/math/BigDecimal;
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
+
+    sput-object v0, Lfdb;->P0:Ljava/math/BigDecimal;
 
     return-void
 .end method
 
+.method public constructor <init>(La6;I)V
+    .locals 6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lkotlin/coroutines/Continuation;
+    iput p2, p0, Lqq7;->a:I
 
-    new-instance v0, Lfdb;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lfdb;->x0:Ljava/util/List;
+    iput v0, p0, Lfdb;->q0:I
 
-    iget-object v2, p0, Lfdb;->y0:Lgi1;
+    iput v0, p0, Lfdb;->s0:I
 
-    iget-object v3, p0, Lfdb;->w0:Lhdb;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v3, v1, v2, p1}, Lfdb;-><init>(Lhdb;Ljava/util/List;Lgi1;Lkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lfdb;->z0:I
 
-    sget-object p1, Lzag;->a:Lzag;
+    iput-object p1, p0, Lfdb;->c:La6;
 
-    invoke-virtual {v0, p1}, Lfdb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Lcqf;
 
-    move-result-object p1
+    iget-object p1, p1, La6;->d:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast p1, Lbv0;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 27
+    invoke-direct {v0, p1}, Lcqf;-><init>(Lbv0;)V
 
-    move-object/from16 v0, p0
+    iput-object v0, p0, Lfdb;->w0:Lcqf;
 
-    iget-object v1, v0, Lfdb;->w0:Lhdb;
+    sget-object p1, Loq7;->x0:Loq7;
 
-    iget-object v2, v1, Lhdb;->y0:Lsze;
+    invoke-virtual {p1, p2}, Loq7;->a(I)Z
 
-    iget-object v3, v1, Lhdb;->b:Les1;
+    move-result p1
 
-    iget v4, v0, Lfdb;->v0:I
+    if-eqz p1, :cond_0
 
-    iget-object v5, v0, Lfdb;->y0:Lgi1;
+    new-instance p1, Li66;
 
-    iget-object v6, v0, Lfdb;->x0:Ljava/util/List;
+    invoke-direct {p1, p0}, Li66;-><init>(Ljava/lang/Object;)V
 
-    const/4 v7, 0x3
+    :goto_0
+    move-object v2, p1
 
-    const/4 v8, 0x2
-
-    const/4 v9, 0x1
-
-    sget-object v11, Lc54;->a:Lc54;
-
-    if-eqz v4, :cond_3
-
-    if-eq v4, v9, :cond_2
-
-    if-eq v4, v8, :cond_1
-
-    if-ne v4, v7, :cond_0
-
-    iget-object v4, v0, Lfdb;->Z:Ljava/lang/Object;
-
-    check-cast v4, Ljcb;
-
-    iget-object v7, v0, Lfdb;->Y:Ljava/util/Map;
-
-    iget-object v8, v0, Lfdb;->X:Ltcb;
-
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    move-object/from16 v9, p1
-
-    goto/16 :goto_8
+    goto :goto_1
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    goto :goto_0
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    new-instance v0, Ltq7;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v5}, Ltq7;-><init>(Ltq7;Li66;III)V
+
+    iput-object v0, p0, Lfdb;->u0:Ltq7;
+
+    return-void
+.end method
+
+.method public static I0(I[I)[I
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    new-array p0, p0, [I
+
+    return-object p0
+
+    :cond_0
+    array-length v0, p1
+
+    add-int/2addr v0, p0
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final i0(I)Ljava/lang/String;
+    .locals 5
+
+    int-to-char v0, p0
+
+    invoke-static {v0}, Ljava/lang/Character;->isISOControl(C)Z
+
+    move-result v1
+
+    const-string v2, ")"
+
+    if-eqz v1, :cond_0
+
+    const-string v0, "(CTRL-CHAR, code "
+
+    invoke-static {p0, v0, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/16 v1, 0xff
+
+    const-string v3, "\' (code "
+
+    const-string v4, "\'"
+
+    if-le p0, v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " / 0x"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static m0(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v1, 0x3e8
+
+    if-ge v0, v1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const-string v1, "-"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    add-int/lit8 v0, v0, -0x1
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "[Integer with %d digits]"
+
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n0(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v1, 0x3e8
+
+    if-ge v0, v1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const-string v1, "-"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    add-int/lit8 v0, v0, -0x1
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "[number with %d characters]"
+
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final A0()Ljava/math/BigInteger;
+    .locals 4
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x4
+
+    if-nez v1, :cond_5
+
+    const/4 v1, 0x4
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Lfdb;->o0(I)V
+
+    :cond_0
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v2, v0, 0x4
+
+    if-nez v2, :cond_5
+
+    and-int/lit8 v2, v0, 0x10
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->toBigInteger()Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    goto :goto_0
+
+    :cond_1
+    and-int/lit8 v2, v0, 0x2
+
+    if-eqz v2, :cond_2
+
+    iget-wide v2, p0, Lfdb;->B0:J
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    goto :goto_0
+
+    :cond_2
+    and-int/lit8 v2, v0, 0x1
+
+    if-eqz v2, :cond_3
+
+    iget v0, p0, Lfdb;->A0:I
+
+    int-to-long v2, v0
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    goto :goto_0
+
+    :cond_3
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_4
+
+    iget-wide v2, p0, Lfdb;->C0:D
+
+    invoke-static {v2, v3}, Ljava/math/BigDecimal;->valueOf(D)Ljava/math/BigDecimal;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->toBigInteger()Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    :goto_0
+    iget v0, p0, Lfdb;->z0:I
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Lfdb;->z0:I
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {}, Lokg;->a()V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_5
+    :goto_1
+    iget-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    return-object v0
+.end method
+
+.method public final B0()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lfdb;->b:Lzq7;
+
+    sget-object v1, Lzq7;->q0:Lzq7;
+
+    if-eq v0, v1, :cond_0
+
+    sget-object v1, Lzq7;->s0:Lzq7;
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lfdb;->u0:Ltq7;
+
+    iget-object v0, v0, Ltq7;->c:Ltq7;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Ltq7;->f:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_1
+    iget-object v0, p0, Lfdb;->u0:Ltq7;
+
+    iget-object v0, v0, Ltq7;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final C0()Ljava/math/BigDecimal;
+    .locals 4
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x10
+
+    if-nez v1, :cond_5
+
+    const/16 v1, 0x10
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Lfdb;->o0(I)V
+
+    :cond_0
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v2, v0, 0x10
+
+    if-nez v2, :cond_5
+
+    and-int/lit8 v2, v0, 0x8
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Liha;->a:Ljava/lang/String;
+
+    :try_start_0
+    new-instance v2, Ljava/math/BigDecimal;
+
+    invoke-direct {v2, v0}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iput-object v2, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    goto :goto_0
+
+    :catch_0
+    new-instance v1, Ljava/lang/NumberFormatException;
+
+    const-string v2, "Value \""
+
+    const-string v3, "\" can not be represented as BigDecimal"
+
+    invoke-static {v2, v0, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    iget-wide v12, v0, Lfdb;->u0:J
+    and-int/lit8 v2, v0, 0x4
 
-    iget-object v4, v0, Lfdb;->t0:Ljava/util/Iterator;
+    if-eqz v2, :cond_2
 
-    iget-object v14, v0, Lfdb;->s0:Lhdb;
+    new-instance v0, Ljava/math/BigDecimal;
 
-    iget-object v15, v0, Lfdb;->r0:Ljava/util/Map;
+    iget-object v2, p0, Lfdb;->D0:Ljava/math/BigInteger;
 
-    iget-object v7, v0, Lfdb;->Z:Ljava/lang/Object;
+    invoke-direct {v0, v2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
 
-    check-cast v7, Lht;
-
-    iget-object v10, v0, Lfdb;->Y:Ljava/util/Map;
-
-    check-cast v10, Let;
-
-    iget-object v8, v0, Lfdb;->X:Ltcb;
-
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    move-object/from16 v9, p1
-
-    move-object/from16 v17, v15
-
-    move-object v15, v14
-
-    move-wide v13, v12
-
-    move-object v12, v10
-
-    move-object v10, v8
-
-    move-object v8, v7
-
-    move-object v7, v4
-
-    const/4 v4, 0x2
-
-    goto/16 :goto_5
-
-    :cond_2
-    iget-object v4, v0, Lfdb;->Z:Ljava/lang/Object;
-
-    check-cast v4, Lht;
-
-    iget-object v7, v0, Lfdb;->Y:Ljava/util/Map;
-
-    check-cast v7, Let;
-
-    iget-object v8, v0, Lfdb;->X:Ltcb;
-
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    move-object v10, v4
-
-    move-object/from16 v4, p1
-
-    goto/16 :goto_3
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    invoke-virtual {v2}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v8, v4
-
-    check-cast v8, Ltcb;
-
-    iget-object v4, v8, Ltcb;->b:Ljava/util/Map;
-
-    new-instance v7, Let;
-
-    const/4 v10, 0x0
-
-    invoke-direct {v7, v10}, Lsne;-><init>(I)V
-
-    invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_4
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_5
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/util/Map$Entry;
-
-    invoke-interface {v12}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Lkr1;
-
-    invoke-interface {v13}, Lkr1;->c()Z
-
-    move-result v13
-
-    if-nez v13, :cond_4
-
-    invoke-interface {v12}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v13
-
-    invoke-interface {v12}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    invoke-virtual {v7, v13, v12}, Lsne;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
 
     goto :goto_0
 
-    :cond_5
-    new-instance v4, Lht;
+    :cond_2
+    and-int/lit8 v2, v0, 0x2
 
-    invoke-direct {v4, v10}, Lht;-><init>(I)V
+    if-eqz v2, :cond_3
 
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-wide v2, p0, Lfdb;->B0:J
 
-    move-result-object v10
+    invoke-static {v2, v3}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
 
-    :cond_6
-    :goto_1
-    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v0
 
-    move-result v12
+    iput-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
 
-    if-eqz v12, :cond_8
+    goto :goto_0
 
-    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_3
+    and-int/lit8 v0, v0, 0x1
 
-    move-result-object v12
+    if-eqz v0, :cond_4
 
-    check-cast v12, Lgi1;
+    iget v0, p0, Lfdb;->A0:I
 
-    invoke-interface {v12}, Lgi1;->getId()Lei1;
+    int-to-long v2, v0
 
-    move-result-object v12
+    invoke-static {v2, v3}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
 
-    iget-wide v12, v12, Lei1;->a:J
+    move-result-object v0
 
-    new-instance v14, Ljava/lang/Long;
+    iput-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
 
-    invoke-direct {v14, v12, v13}, Ljava/lang/Long;-><init>(J)V
+    :goto_0
+    iget v0, p0, Lfdb;->z0:I
 
-    invoke-virtual {v7, v14}, Lsne;->containsKey(Ljava/lang/Object;)Z
+    or-int/2addr v0, v1
 
-    move-result v14
-
-    if-nez v14, :cond_7
-
-    new-instance v14, Ljava/lang/Long;
-
-    invoke-direct {v14, v12, v13}, Ljava/lang/Long;-><init>(J)V
-
-    goto :goto_2
-
-    :cond_7
-    const/4 v14, 0x0
-
-    :goto_2
-    if-eqz v14, :cond_6
-
-    invoke-virtual {v4, v14}, Lht;->add(Ljava/lang/Object;)Z
+    iput v0, p0, Lfdb;->z0:I
 
     goto :goto_1
 
+    :cond_4
+    invoke-static {}, Lokg;->a()V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_5
+    :goto_1
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    return-object v0
+.end method
+
+.method public final D0()D
+    .locals 4
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x8
+
+    if-nez v1, :cond_5
+
+    const/16 v1, 0x8
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Lfdb;->o0(I)V
+
+    :cond_0
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v2, v0, 0x8
+
+    if-nez v2, :cond_5
+
+    and-int/lit8 v2, v0, 0x10
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->doubleValue()D
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lfdb;->C0:D
+
+    goto :goto_0
+
+    :cond_1
+    and-int/lit8 v2, v0, 0x4
+
+    if-eqz v2, :cond_2
+
+    iget-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->doubleValue()D
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lfdb;->C0:D
+
+    goto :goto_0
+
+    :cond_2
+    and-int/lit8 v2, v0, 0x2
+
+    if-eqz v2, :cond_3
+
+    iget-wide v2, p0, Lfdb;->B0:J
+
+    long-to-double v2, v2
+
+    iput-wide v2, p0, Lfdb;->C0:D
+
+    goto :goto_0
+
+    :cond_3
+    and-int/lit8 v0, v0, 0x1
+
+    if-eqz v0, :cond_4
+
+    iget v0, p0, Lfdb;->A0:I
+
+    int-to-double v2, v0
+
+    iput-wide v2, p0, Lfdb;->C0:D
+
+    :goto_0
+    iget v0, p0, Lfdb;->z0:I
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Lfdb;->z0:I
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {}, Lokg;->a()V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_5
+    :goto_1
+    iget-wide v0, p0, Lfdb;->C0:D
+
+    return-wide v0
+.end method
+
+.method public final E0()I
+    .locals 3
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x1
+
+    if-nez v1, :cond_4
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lfdb;->o:Z
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lfdb;->b:Lzq7;
+
+    sget-object v1, Lzq7;->w0:Lzq7;
+
+    const/4 v2, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lfdb;->G0:I
+
+    const/16 v1, 0x9
+
+    if-gt v0, v1, :cond_0
+
+    iget-object v0, p0, Lfdb;->w0:Lcqf;
+
+    iget-boolean v1, p0, Lfdb;->F0:Z
+
+    invoke-virtual {v0, v1}, Lcqf;->k(Z)I
+
+    move-result v0
+
+    iput v0, p0, Lfdb;->A0:I
+
+    iput v2, p0, Lfdb;->z0:I
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0, v2}, Lfdb;->o0(I)V
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/2addr v0, v2
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lfdb;->y0()V
+
+    :cond_1
+    iget v0, p0, Lfdb;->A0:I
+
+    return v0
+
+    :cond_2
+    const-string v0, "Internal error: _parseNumericValue called when parser instance closed"
+
+    invoke-virtual {p0, v0}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    invoke-virtual {p0}, Lfdb;->y0()V
+
+    :cond_4
+    iget v0, p0, Lfdb;->A0:I
+
+    return v0
+.end method
+
+.method public final F0()J
+    .locals 8
+
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x2
+
+    if-nez v1, :cond_8
+
+    const/4 v1, 0x2
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Lfdb;->o0(I)V
+
+    :cond_0
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v2, v0, 0x2
+
+    if-nez v2, :cond_8
+
+    and-int/lit8 v2, v0, 0x1
+
+    if-eqz v2, :cond_1
+
+    iget v0, p0, Lfdb;->A0:I
+
+    int-to-long v2, v0
+
+    iput-wide v2, p0, Lfdb;->B0:J
+
+    goto :goto_0
+
+    :cond_1
+    and-int/lit8 v2, v0, 0x4
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_3
+
+    sget-object v0, Lfdb;->K0:Ljava/math/BigInteger;
+
+    iget-object v2, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v2}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    sget-object v0, Lfdb;->L0:Ljava/math/BigInteger;
+
+    iget-object v2, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v2}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_2
+
+    iget-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lfdb;->B0:J
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lfdb;->J0(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_3
+    and-int/lit8 v2, v0, 0x8
+
+    if-eqz v2, :cond_5
+
+    iget-wide v4, p0, Lfdb;->C0:D
+
+    const-wide/high16 v6, -0x3c20000000000000L    # -9.223372036854776E18
+
+    cmpg-double v0, v4, v6
+
+    if-ltz v0, :cond_4
+
+    const-wide/high16 v6, 0x43e0000000000000L    # 9.223372036854776E18
+
+    cmpl-double v0, v4, v6
+
+    if-gtz v0, :cond_4
+
+    double-to-long v2, v4
+
+    iput-wide v2, p0, Lfdb;->B0:J
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lfdb;->J0(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_5
+    and-int/lit8 v0, v0, 0x10
+
+    if-eqz v0, :cond_7
+
+    sget-object v0, Lfdb;->M0:Ljava/math/BigDecimal;
+
+    iget-object v2, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0, v2}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_6
+
+    sget-object v0, Lfdb;->N0:Ljava/math/BigDecimal;
+
+    iget-object v2, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0, v2}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_6
+
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->longValue()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lfdb;->B0:J
+
+    :goto_0
+    iget v0, p0, Lfdb;->z0:I
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Lfdb;->z0:I
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lfdb;->J0(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_7
+    invoke-static {}, Lokg;->a()V
+
+    throw v3
+
     :cond_8
-    new-instance v10, Lht;
+    :goto_1
+    iget-wide v0, p0, Lfdb;->B0:J
 
-    invoke-direct {v10, v4}, Lht;-><init>(Lht;)V
+    return-wide v0
+.end method
 
-    iput-object v8, v0, Lfdb;->X:Ltcb;
+.method public final G0()I
+    .locals 2
 
-    iput-object v7, v0, Lfdb;->Y:Ljava/util/Map;
+    iget v0, p0, Lfdb;->z0:I
 
-    iput-object v10, v0, Lfdb;->Z:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    iput v9, v0, Lfdb;->v0:I
+    const/4 v0, 0x0
 
-    invoke-virtual {v3, v4, v0}, Les1;->b(Ljava/util/Set;Lk14;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lfdb;->o0(I)V
 
-    move-result-object v4
+    :cond_0
+    iget-object v0, p0, Lfdb;->b:Lzq7;
 
-    if-ne v4, v11, :cond_9
+    sget-object v1, Lzq7;->w0:Lzq7;
 
-    goto/16 :goto_7
+    if-ne v0, v1, :cond_3
 
-    :cond_9
-    :goto_3
-    check-cast v4, Ljava/util/Map;
+    iget v0, p0, Lfdb;->z0:I
 
-    invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    and-int/lit8 v1, v0, 0x1
 
-    move-result-object v12
+    if-eqz v1, :cond_1
 
-    invoke-interface {v12}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x1
 
-    move-result-object v12
+    return v0
 
-    move-object v14, v10
+    :cond_1
+    const/4 v1, 0x2
 
-    move-object v10, v7
+    and-int/2addr v0, v1
 
-    move-object v7, v14
+    if-eqz v0, :cond_2
 
-    move-object v14, v1
+    return v1
 
-    move-object v15, v4
+    :cond_2
+    const/4 v0, 0x3
 
-    move-object v4, v12
+    return v0
 
-    :goto_4
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    :cond_3
+    iget v0, p0, Lfdb;->z0:I
 
-    move-result v12
+    and-int/lit8 v0, v0, 0x10
 
-    if-eqz v12, :cond_c
+    if-eqz v0, :cond_4
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x6
 
-    move-result-object v12
+    return v0
 
-    check-cast v12, Ljava/lang/Number;
+    :cond_4
+    const/4 v0, 0x5
 
-    invoke-virtual {v12}, Ljava/lang/Number;->longValue()J
+    return v0
+.end method
 
-    move-result-wide v12
+.method public final H0()Ljava/lang/Number;
+    .locals 3
 
-    iget-object v9, v14, Lhdb;->b:Les1;
+    iget v0, p0, Lfdb;->z0:I
 
-    iput-object v8, v0, Lfdb;->X:Ltcb;
+    if-nez v0, :cond_0
 
-    iput-object v10, v0, Lfdb;->Y:Ljava/util/Map;
+    const/4 v0, 0x0
 
-    iput-object v7, v0, Lfdb;->Z:Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lfdb;->o0(I)V
 
-    iput-object v15, v0, Lfdb;->r0:Ljava/util/Map;
+    :cond_0
+    iget-object v0, p0, Lfdb;->b:Lzq7;
 
-    iput-object v14, v0, Lfdb;->s0:Lhdb;
+    sget-object v1, Lzq7;->w0:Lzq7;
 
-    iput-object v4, v0, Lfdb;->t0:Ljava/util/Iterator;
+    const/4 v2, 0x0
 
-    iput-wide v12, v0, Lfdb;->u0:J
+    if-ne v0, v1, :cond_4
 
-    move-object/from16 p1, v4
+    iget v0, p0, Lfdb;->z0:I
 
-    const/4 v4, 0x2
+    and-int/lit8 v1, v0, 0x1
 
-    iput v4, v0, Lfdb;->v0:I
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v9, v12, v13, v0}, Les1;->c(JLk14;)Ljava/lang/Object;
+    iget v0, p0, Lfdb;->A0:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    and-int/lit8 v1, v0, 0x2
+
+    if-eqz v1, :cond_2
+
+    iget-wide v0, p0, Lfdb;->B0:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_2
+    and-int/lit8 v0, v0, 0x4
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    return-object v0
+
+    :cond_3
+    invoke-static {}, Lokg;->a()V
+
+    throw v2
+
+    :cond_4
+    iget v0, p0, Lfdb;->z0:I
+
+    and-int/lit8 v1, v0, 0x10
+
+    if-eqz v1, :cond_5
+
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    return-object v0
+
+    :cond_5
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_6
+
+    iget-wide v0, p0, Lfdb;->C0:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_6
+    invoke-static {}, Lokg;->a()V
+
+    throw v2
+.end method
+
+.method public final J0(Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {p1}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    filled-new-array {p1, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "Numeric value (%s) out of range of long (%d - %s)"
+
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final K0(ILjava/lang/String;)V
+    .locals 2
+
+    invoke-static {p1}, Lfdb;->i0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Unexpected character ("
+
+    const-string v1, ") in numeric value"
+
+    invoke-static {v0, p1, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ": "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final L0(Ljava/lang/String;D)Lzq7;
+    .locals 3
+
+    iget-object v0, p0, Lfdb;->w0:Lcqf;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lcqf;->r0:Ljava/lang/Object;
+
+    const/4 v2, -0x1
+
+    iput v2, v0, Lcqf;->o:I
+
+    const/4 v2, 0x0
+
+    iput v2, v0, Lcqf;->X:I
+
+    iput-object p1, v0, Lcqf;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lcqf;->t0:Ljava/lang/Object;
+
+    iget-boolean p1, v0, Lcqf;->b:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lcqf;->c()V
+
+    :cond_0
+    iput v2, v0, Lcqf;->Z:I
+
+    iput-wide p2, p0, Lfdb;->C0:D
+
+    const/16 p1, 0x8
+
+    iput p1, p0, Lfdb;->z0:I
+
+    sget-object p1, Lzq7;->x0:Lzq7;
+
+    return-object p1
+.end method
+
+.method public final M0(IZ)Lzq7;
+    .locals 0
+
+    iput-boolean p2, p0, Lfdb;->F0:Z
+
+    iput p1, p0, Lfdb;->G0:I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lfdb;->z0:I
+
+    sget-object p1, Lzq7;->w0:Lzq7;
+
+    return-object p1
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-boolean v0, p0, Lfdb;->o:Z
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lfdb;->X:I
+
+    iget v1, p0, Lfdb;->Y:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lfdb;->X:I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lfdb;->o:Z
+
+    :try_start_0
+    invoke-virtual {p0}, Lfdb;->h0()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Lfdb;->p0()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p0}, Lfdb;->p0()V
+
+    throw v0
+
+    :cond_0
+    return-void
+.end method
+
+.method public abstract h0()V
+.end method
+
+.method public final j0()Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Loq7;->y0:Loq7;
+
+    iget v1, p0, Lqq7;->a:I
+
+    invoke-virtual {v0, v1}, Loq7;->a(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lfdb;->c:La6;
+
+    iget-object v0, v0, La6;->c:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final k0()V
+    .locals 10
+
+    iget-object v0, p0, Lfdb;->u0:Ltq7;
+
+    invoke-virtual {v0}, Lxq7;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lfdb;->u0:Ltq7;
+
+    invoke-virtual {v0}, Lxq7;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Array"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "Object"
+
+    :goto_0
+    iget-object v1, p0, Lfdb;->u0:Ltq7;
+
+    invoke-virtual {p0}, Lfdb;->j0()Ljava/lang/Object;
 
     move-result-object v9
 
-    if-ne v9, v11, :cond_a
+    new-instance v2, Lmq7;
 
-    goto/16 :goto_7
+    iget v3, v1, Ltq7;->g:I
 
-    :cond_a
-    move-object/from16 v17, v15
+    iget v4, v1, Ltq7;->h:I
 
-    move-object v15, v14
+    const-wide/16 v5, -0x1
 
-    move-wide v13, v12
+    const-wide/16 v7, -0x1
 
-    move-object v12, v10
+    invoke-direct/range {v2 .. v9}, Lmq7;-><init>(IIJJLjava/lang/Object;)V
 
-    move-object v10, v8
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-object v8, v7
+    const-string v3, ": expected close marker for "
 
-    move-object/from16 v7, p1
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_5
-    check-cast v9, Ljava/lang/Boolean;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v0, " (start marker at "
 
-    move-result v9
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v9, :cond_b
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance v9, Ljava/lang/Long;
+    const-string v0, ")"
 
-    invoke-direct {v9, v13, v14}, Ljava/lang/Long;-><init>(J)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v9}, Lht;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_b
-    move-object v4, v7
+    move-result-object v0
 
-    move-object v7, v8
+    invoke-virtual {p0, v0}, Lfdb;->r0(Ljava/lang/String;)V
 
-    move-object v8, v10
+    const/4 v0, 0x0
 
-    move-object v10, v12
+    throw v0
 
-    move-object v14, v15
+    :cond_1
+    return-void
+.end method
 
-    move-object/from16 v15, v17
+.method public final l0(C)V
+    .locals 2
 
-    const/4 v9, 0x1
+    sget-object v0, Loq7;->r0:Loq7;
+
+    iget v1, p0, Lqq7;->a:I
+
+    invoke-virtual {v0, v1}, Loq7;->a(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x27
+
+    if-ne p1, v0, :cond_1
+
+    sget-object v0, Loq7;->Z:Loq7;
+
+    invoke-virtual {v0, v1}, Loq7;->a(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Unrecognized character escape "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lfdb;->i0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final o0(I)V
+    .locals 17
+
+    move-object/from16 v1, p0
+
+    move/from16 v0, p1
+
+    iget-boolean v2, v1, Lfdb;->o:Z
+
+    if-nez v2, :cond_19
+
+    iget-object v2, v1, Lfdb;->b:Lzq7;
+
+    sget-object v4, Lzq7;->w0:Lzq7;
+
+    const-string v7, "2.2250738585072012e-308"
+
+    const-string v8, ")"
+
+    const-string v9, "Malformed numeric value ("
+
+    const/16 v10, 0x8
+
+    iget-object v11, v1, Lfdb;->w0:Lcqf;
+
+    if-ne v2, v4, :cond_15
+
+    iget v2, v1, Lfdb;->G0:I
+
+    const/16 v4, 0x9
+
+    const/4 v12, 0x1
+
+    if-gt v2, v4, :cond_0
+
+    iget-boolean v0, v1, Lfdb;->F0:Z
+
+    invoke-virtual {v11, v0}, Lcqf;->k(Z)I
+
+    move-result v0
+
+    iput v0, v1, Lfdb;->A0:I
+
+    iput v12, v1, Lfdb;->z0:I
+
+    return-void
+
+    :cond_0
+    const/16 v4, 0x12
+
+    const/4 v13, 0x2
+
+    const/4 v14, 0x0
+
+    if-gt v2, v4, :cond_6
+
+    iget-boolean v0, v1, Lfdb;->F0:Z
+
+    iget v3, v11, Lcqf;->o:I
+
+    if-ltz v3, :cond_2
+
+    iget-object v4, v11, Lcqf;->r0:Ljava/lang/Object;
+
+    check-cast v4, [C
+
+    if-eqz v4, :cond_2
+
+    if-eqz v0, :cond_1
+
+    add-int/2addr v3, v12
+
+    iget v0, v11, Lcqf;->X:I
+
+    sub-int/2addr v0, v12
+
+    invoke-static {v4, v3, v0}, Liha;->c([CII)J
+
+    move-result-wide v3
+
+    :goto_0
+    neg-long v3, v3
+
+    goto :goto_1
+
+    :cond_1
+    iget v0, v11, Lcqf;->X:I
+
+    invoke-static {v4, v3, v0}, Liha;->c([CII)J
+
+    move-result-wide v3
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    iget-object v0, v11, Lcqf;->s0:Ljava/lang/Object;
+
+    check-cast v0, [C
+
+    iget v3, v11, Lcqf;->Z:I
+
+    sub-int/2addr v3, v12
+
+    invoke-static {v0, v12, v3}, Liha;->c([CII)J
+
+    move-result-wide v3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, v11, Lcqf;->s0:Ljava/lang/Object;
+
+    check-cast v0, [C
+
+    iget v3, v11, Lcqf;->Z:I
+
+    invoke-static {v0, v14, v3}, Liha;->c([CII)J
+
+    move-result-wide v3
+
+    :goto_1
+    const/16 v0, 0xa
+
+    if-ne v2, v0, :cond_5
+
+    iget-boolean v0, v1, Lfdb;->F0:Z
+
+    if-eqz v0, :cond_4
+
+    const-wide/32 v5, -0x80000000
+
+    cmp-long v0, v3, v5
+
+    if-ltz v0, :cond_5
+
+    long-to-int v0, v3
+
+    iput v0, v1, Lfdb;->A0:I
+
+    iput v12, v1, Lfdb;->z0:I
+
+    return-void
+
+    :cond_4
+    const-wide/32 v5, 0x7fffffff
+
+    cmp-long v0, v3, v5
+
+    if-gtz v0, :cond_5
+
+    long-to-int v0, v3
+
+    iput v0, v1, Lfdb;->A0:I
+
+    iput v12, v1, Lfdb;->z0:I
+
+    return-void
+
+    :cond_5
+    iput-wide v3, v1, Lfdb;->B0:J
+
+    iput v13, v1, Lfdb;->z0:I
+
+    return-void
+
+    :cond_6
+    invoke-virtual {v11}, Lcqf;->l()Ljava/lang/String;
+
+    move-result-object v2
+
+    :try_start_0
+    iget v4, v1, Lfdb;->G0:I
+
+    invoke-virtual {v11}, Lcqf;->r()[C
+
+    move-result-object v15
+
+    iget v11, v11, Lcqf;->o:I
+
+    if-ltz v11, :cond_7
+
+    :goto_2
+    const/16 v16, 0x0
+
+    goto :goto_3
+
+    :cond_7
+    move v11, v14
+
+    goto :goto_2
+
+    :goto_3
+    iget-boolean v3, v1, Lfdb;->F0:Z
+
+    if-eqz v3, :cond_8
+
+    add-int/lit8 v11, v11, 0x1
+
+    :cond_8
+    if-eqz v3, :cond_9
+
+    sget-object v3, Liha;->a:Ljava/lang/String;
 
     goto :goto_4
 
-    :cond_c
-    invoke-virtual {v7}, Lht;->isEmpty()Z
+    :cond_9
+    sget-object v3, Liha;->b:Ljava/lang/String;
 
-    move-result v4
-
-    if-nez v4, :cond_d
-
-    iget-object v4, v1, Lhdb;->a:Lwu1;
-
-    new-instance v9, Ledb;
-
-    const/4 v12, 0x0
-
-    invoke-direct {v9, v1, v7, v12}, Ledb;-><init>(Lhdb;Lht;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v7, 0x3
-
-    invoke-static {v4, v12, v12, v9, v7}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    :cond_d
-    new-instance v7, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v7, v10}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v7, v15}, Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V
-
-    iget-object v4, v8, Ltcb;->a:Ljcb;
-
-    sget-object v9, Ljcb;->c:Lfi1;
-
-    invoke-static {v5, v9}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_e
-
-    sget-object v9, Ljcb;->d:Lvgg;
-
-    :goto_6
-    move-object/from16 v26, v9
-
-    move-object v9, v7
-
-    move-object/from16 v7, v26
-
-    goto :goto_9
-
-    :cond_e
-    iget-object v9, v4, Ljcb;->b:Lkr1;
-
-    sget-object v10, Ljcb;->d:Lvgg;
-
-    invoke-static {v9, v10}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_10
-
-    iput-object v8, v0, Lfdb;->X:Ltcb;
-
-    iput-object v7, v0, Lfdb;->Y:Ljava/util/Map;
-
-    iput-object v4, v0, Lfdb;->Z:Ljava/lang/Object;
-
-    const/4 v12, 0x0
-
-    iput-object v12, v0, Lfdb;->r0:Ljava/util/Map;
-
-    iput-object v12, v0, Lfdb;->s0:Lhdb;
-
-    iput-object v12, v0, Lfdb;->t0:Ljava/util/Iterator;
-
-    const/4 v9, 0x3
-
-    iput v9, v0, Lfdb;->v0:I
-
-    iget-object v9, v3, Les1;->c:Llt7;
-
-    invoke-interface {v9}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lqkf;
-
-    check-cast v9, Losa;
-
-    invoke-virtual {v9}, Losa;->b()Lv44;
-
-    move-result-object v9
-
-    new-instance v10, Lbs1;
-
-    invoke-direct {v10, v3, v12}, Lbs1;-><init>(Les1;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v9, v10, v0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v9
-
-    if-ne v9, v11, :cond_f
-
-    :goto_7
-    return-object v11
-
-    :cond_f
-    :goto_8
-    check-cast v9, Lkr1;
-
-    goto :goto_6
-
-    :cond_10
-    iget-object v9, v4, Ljcb;->b:Lkr1;
-
-    goto :goto_6
-
-    :goto_9
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object v4, v8
-
-    new-instance v8, Ljcb;
-
-    invoke-direct {v8, v5, v7}, Ljcb;-><init>(Lgi1;Lkr1;)V
-
-    new-instance v13, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v13}, Ljava/util/LinkedHashMap;-><init>()V
-
-    new-instance v14, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v14}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-interface {v5}, Lgi1;->l()Z
+    :goto_4
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    const/16 v7, 0xa
-
-    invoke-static {v6, v7}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v7
-
-    invoke-static {v7}, Lyf8;->e(I)I
-
-    move-result v7
-
-    const/16 v10, 0x10
-
-    if-ge v7, v10, :cond_11
-
-    move v7, v10
-
-    :cond_11
-    new-instance v10, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v10, v7}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    move v15, v5
-
-    const/4 v11, 0x0
-
-    :goto_a
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1b
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lgi1;
-
-    invoke-interface {v5}, Lgi1;->getId()Lei1;
-
-    move-result-object v7
-
-    move-object/from16 p1, v11
-
-    iget-wide v11, v7, Lei1;->a:J
-
-    invoke-interface {v5}, Lgi1;->g()Z
-
-    move-result v16
-
-    if-eqz v16, :cond_12
-
-    invoke-interface {v5}, Lgi1;->getId()Lei1;
-
-    move-result-object v16
-
-    goto :goto_b
-
-    :cond_12
-    move-object/from16 v16, p1
-
-    :goto_b
-    invoke-interface {v5}, Lgi1;->l()Z
-
-    move-result v17
-
-    if-eqz v17, :cond_13
-
-    if-nez v15, :cond_13
-
-    const/4 v15, 0x1
-
-    :cond_13
-    new-instance v0, Ljcb;
-
-    move-object/from16 v17, v4
-
-    new-instance v4, Ljava/lang/Long;
-
-    invoke-direct {v4, v11, v12}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-interface {v9, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lkr1;
-
-    if-nez v4, :cond_15
-
-    iget-object v4, v3, Les1;->b:Llt7;
-
-    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lgz3;
-
-    invoke-virtual {v4, v11, v12}, Lgz3;->a(J)Lir3;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lir3;->e()Ljava/lang/String;
-
-    move-result-object v18
-
-    if-nez v18, :cond_14
-
-    const-string v18, ""
-
-    :cond_14
-    move-object/from16 v22, v18
-
-    invoke-virtual {v4}, Lir3;->p()J
-
-    move-result-wide v20
-
-    invoke-virtual {v4}, Lir3;->o()Ljava/lang/CharSequence;
-
-    move-result-object v23
-
-    move-object/from16 v18, v3
-
-    sget-object v3, Lcl0;->o:Lcl0;
-
-    invoke-virtual {v4, v3}, Lir3;->r(Lcl0;)Ljava/lang/String;
-
-    move-result-object v25
-
-    invoke-virtual {v4}, Lir3;->z()Z
-
-    move-result v24
-
-    new-instance v19, Lvgg;
-
-    invoke-direct/range {v19 .. v25}, Lvgg;-><init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
-
-    move-object/from16 v4, v19
-
-    goto :goto_c
-
-    :cond_15
-    move-object/from16 v18, v3
-
-    :goto_c
-    invoke-direct {v0, v5, v4}, Ljcb;-><init>(Lgi1;Lkr1;)V
-
-    invoke-interface {v5}, Lgi1;->isScreenCaptureEnabled()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_16
-
-    invoke-interface {v13, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_16
-    invoke-interface {v5}, Lgi1;->h()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1a
-
-    sget-object v3, Lhdb;->A0:[Lwq7;
-
-    iget-object v3, v1, Lhdb;->o:Llt7;
-
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lj34;
-
-    invoke-virtual {v3}, Lj34;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_17
-
-    invoke-interface {v3}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantStatesManager()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
-
-    move-result-object v3
-
-    goto :goto_d
-
-    :cond_17
-    const/4 v3, 0x0
-
-    :goto_d
-    if-eqz v3, :cond_18
-
-    invoke-static {v11, v12}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v4
-
-    invoke-interface {v3, v4}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->getHandRaiseTime(Lru/ok/android/externcalls/sdk/id/ParticipantId;)J
-
-    move-result-wide v3
-
-    new-instance v12, Ljava/lang/Long;
-
-    invoke-direct {v12, v3, v4}, Ljava/lang/Long;-><init>(J)V
-
-    goto :goto_e
-
-    :cond_18
-    const/4 v12, 0x0
-
-    :goto_e
-    if-nez v12, :cond_19
-
-    goto :goto_f
-
-    :cond_19
-    invoke-virtual {v12}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    const-wide/16 v19, 0x0
-
-    cmp-long v3, v3, v19
-
-    if-eqz v3, :cond_1a
-
-    :goto_f
-    if-eqz v12, :cond_1a
-
-    invoke-interface {v14, v7, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1a
-    invoke-interface {v10, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v11, v16
-
-    move-object/from16 v4, v17
-
-    move-object/from16 v3, v18
+    if-ge v4, v5, :cond_a
 
     goto/16 :goto_a
 
-    :cond_1b
-    move-object/from16 v17, v4
+    :cond_a
+    if-le v4, v5, :cond_b
 
-    move-object/from16 p1, v11
+    goto :goto_6
 
-    invoke-virtual {v10}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+    :cond_b
+    :goto_5
+    if-ge v14, v5, :cond_14
+
+    add-int v4, v11, v14
+
+    aget-char v4, v15, v4
+
+    invoke-virtual {v3, v14}, Ljava/lang/String;->charAt(I)C
+
+    move-result v6
+
+    sub-int/2addr v4, v6
+
+    if-eqz v4, :cond_13
+
+    if-gez v4, :cond_c
+
+    goto :goto_a
+
+    :cond_c
+    :goto_6
+    if-eq v0, v12, :cond_11
+
+    if-ne v0, v13, :cond_d
+
+    goto :goto_9
+
+    :cond_d
+    if-eq v0, v10, :cond_f
+
+    const/16 v3, 0x20
+
+    if-ne v0, v3, :cond_e
+
+    goto :goto_7
+
+    :cond_e
+    new-instance v0, Ljava/math/BigInteger;
+
+    invoke-direct {v0, v2}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, v1, Lfdb;->D0:Ljava/math/BigInteger;
+
+    const/4 v0, 0x4
+
+    iput v0, v1, Lfdb;->z0:I
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_b
+
+    :cond_f
+    :goto_7
+    sget-object v0, Liha;->a:Ljava/lang/String;
+
+    invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    const-wide/16 v5, 0x1
+
+    goto :goto_8
+
+    :cond_10
+    invoke-static {v2}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v5
+
+    :goto_8
+    iput-wide v5, v1, Lfdb;->C0:D
+
+    iput v10, v1, Lfdb;->z0:I
+
+    return-void
+
+    :cond_11
+    :goto_9
+    if-ne v0, v12, :cond_12
+
+    const-string v0, "Numeric value (%s) out of range of int (%d - %s)"
+
+    invoke-static {v2}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/high16 v4, -0x80000000
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const v5, 0x7fffffff
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    filled-new-array {v3, v4, v5}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lab3;->C(Ljava/lang/Iterable;)Ljava/lang/Object;
+    new-instance v3, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v3, v1, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_12
+    invoke-virtual {v1, v2}, Lfdb;->J0(Ljava/lang/String;)V
+
+    throw v16
+
+    :cond_13
+    add-int/lit8 v14, v14, 0x1
+
+    goto :goto_5
+
+    :cond_14
+    :goto_a
+    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    iput-wide v3, v1, Lfdb;->B0:J
+
+    iput v13, v1, Lfdb;->z0:I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :goto_b
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2}, Lfdb;->n0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    invoke-virtual {v1}, Lqq7;->m()Lmq7;
+
+    move-result-object v4
+
+    invoke-direct {v3, v2, v4, v0}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lmq7;Ljava/lang/NumberFormatException;)V
+
+    throw v3
+
+    :cond_15
+    sget-object v3, Lzq7;->x0:Lzq7;
+
+    if-ne v2, v3, :cond_18
+
+    const/16 v2, 0x10
+
+    if-ne v0, v2, :cond_16
+
+    :try_start_1
+    invoke-virtual {v11}, Lcqf;->j()Ljava/math/BigDecimal;
 
     move-result-object v0
 
-    move-object v12, v0
+    iput-object v0, v1, Lfdb;->E0:Ljava/math/BigDecimal;
 
-    check-cast v12, Lei1;
+    iput v2, v1, Lfdb;->z0:I
 
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    new-instance v7, Ltcb;
+    :catch_1
+    move-exception v0
 
-    invoke-direct/range {v7 .. v15}, Ltcb;-><init>(Ljcb;Ljava/util/Map;Ljava/util/Map;Lei1;Lei1;Ljava/util/Map;Ljava/util/Map;Z)V
+    goto :goto_d
 
-    const/4 v12, 0x0
+    :cond_16
+    invoke-virtual {v11}, Lcqf;->l()Ljava/lang/String;
 
-    invoke-virtual {v2, v12, v7}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    sget-object v0, Lzag;->a:Lzag;
+    sget-object v2, Liha;->a:Ljava/lang/String;
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_17
+
+    const-wide/16 v5, 0x1
+
+    goto :goto_c
+
+    :cond_17
+    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v5
+
+    :goto_c
+    iput-wide v5, v1, Lfdb;->C0:D
+
+    iput v10, v1, Lfdb;->z0:I
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-void
+
+    :goto_d
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11}, Lcqf;->l()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lfdb;->n0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    invoke-virtual {v1}, Lqq7;->m()Lmq7;
+
+    move-result-object v4
+
+    invoke-direct {v3, v2, v4, v0}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lmq7;Ljava/lang/NumberFormatException;)V
+
+    throw v3
+
+    :cond_18
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "Current token ("
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ") not numeric, can not use numeric value accessors"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    invoke-direct {v2, v1, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_19
+    const/16 v16, 0x0
+
+    const-string v0, "Internal error: _parseNumericValue called when parser instance closed"
+
+    invoke-virtual {v1, v0}, Lfdb;->q0(Ljava/lang/String;)V
+
+    throw v16
+.end method
+
+.method public p0()V
+    .locals 5
+
+    const/4 v0, -0x1
+
+    iget-object v1, p0, Lfdb;->w0:Lcqf;
+
+    iput v0, v1, Lcqf;->o:I
+
+    const/4 v0, 0x0
+
+    iput v0, v1, Lcqf;->Z:I
+
+    iput v0, v1, Lcqf;->X:I
+
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Lcqf;->r0:Ljava/lang/Object;
+
+    iput-object v0, v1, Lcqf;->t0:Ljava/lang/Object;
+
+    iget-boolean v2, v1, Lcqf;->b:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Lcqf;->c()V
+
+    :cond_0
+    iget-object v2, v1, Lcqf;->q0:Ljava/lang/Object;
+
+    check-cast v2, Lbv0;
+
+    iget-object v3, v1, Lcqf;->s0:Ljava/lang/Object;
+
+    check-cast v3, [C
+
+    if-eqz v3, :cond_1
+
+    iput-object v0, v1, Lcqf;->s0:Ljava/lang/Object;
+
+    const/4 v1, 0x2
+
+    iget-object v2, v2, Lbv0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v2, v1, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    :cond_1
+    iget-object v1, p0, Lfdb;->x0:[C
+
+    if-eqz v1, :cond_4
+
+    iput-object v0, p0, Lfdb;->x0:[C
+
+    iget-object v2, p0, Lfdb;->c:La6;
+
+    iget-object v3, v2, La6;->h:Ljava/lang/Object;
+
+    check-cast v3, [C
+
+    if-eq v1, v3, :cond_3
+
+    array-length v4, v1
+
+    array-length v3, v3
+
+    if-lt v4, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Trying to release buffer smaller than original"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    :goto_0
+    iput-object v0, v2, La6;->h:Ljava/lang/Object;
+
+    iget-object v0, v2, La6;->d:Ljava/lang/Object;
+
+    check-cast v0, Lbv0;
+
+    const/4 v2, 0x3
+
+    iget-object v0, v0, Lbv0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    :cond_4
+    return-void
+.end method
+
+.method public final q0(Ljava/lang/String;)V
+    .locals 1
+
+    new-instance v0, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final r0(Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v0, Lcom/fasterxml/jackson/core/io/JsonEOFException;
+
+    const-string v1, "Unexpected end-of-input"
+
+    invoke-static {v1, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final s0(Lzq7;)V
+    .locals 1
+
+    sget-object v0, Lzq7;->v0:Lzq7;
+
+    if-eq p1, v0, :cond_2
+
+    sget-object v0, Lzq7;->w0:Lzq7;
+
+    if-eq p1, v0, :cond_1
+
+    sget-object v0, Lzq7;->x0:Lzq7;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, " in a value"
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const-string p1, " in a Number value"
+
+    goto :goto_1
+
+    :cond_2
+    const-string p1, " in a String value"
+
+    :goto_1
+    invoke-virtual {p0, p1}, Lfdb;->r0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final t0(CI)V
+    .locals 10
+
+    iget-object v0, p0, Lfdb;->u0:Ltq7;
+
+    int-to-char p2, p2
+
+    invoke-static {p2}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p2
+
+    invoke-static {p1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lxq7;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lfdb;->j0()Ljava/lang/Object;
+
+    move-result-object v9
+
+    new-instance v2, Lmq7;
+
+    iget v3, v0, Ltq7;->g:I
+
+    iget v4, v0, Ltq7;->h:I
+
+    const-wide/16 v5, -0x1
+
+    const-wide/16 v7, -0x1
+
+    invoke-direct/range {v2 .. v9}, Lmq7;-><init>(IIJJLjava/lang/Object;)V
+
+    filled-new-array {p2, p1, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string p2, "Unexpected close marker \'%s\': expected \'%c\' (for %s starting at %s)"
+
+    invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final u0(ILjava/lang/String;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-ltz p1, :cond_1
+
+    invoke-static {p1}, Lfdb;->i0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "Unexpected character ("
+
+    const-string v2, ")"
+
+    invoke-static {v1, p1, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p2, :cond_0
+
+    const-string v1, ": "
+
+    invoke-static {p1, v1, p2}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, " in "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lfdb;->b:Lzq7;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->r0(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final v0(I)V
+    .locals 2
+
+    int-to-char p1, p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Illegal character ("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lfdb;->i0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "): only regular white space (\\r, \\n, \\t) is allowed between tokens"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final w0(ILjava/lang/String;)V
+    .locals 2
+
+    sget-object v0, Loq7;->q0:Loq7;
+
+    iget v1, p0, Lqq7;->a:I
+
+    invoke-virtual {v0, v1}, Loq7;->a(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x20
+
+    if-gt p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    int-to-char p1, p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Illegal unquoted character ("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lfdb;->i0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "): has to be escaped using backslash to be included in "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lfdb;->q0(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final x0()Ljava/lang/String;
+    .locals 2
+
+    sget-object v0, Loq7;->u0:Loq7;
+
+    iget v1, p0, Lqq7;->a:I
+
+    invoke-virtual {v0, v1}, Loq7;->a(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "(JSON String, Number (or \'NaN\'/\'INF\'/\'+INF\'), Array, Object or token \'null\', \'true\' or \'false\')"
 
     return-object v0
+
+    :cond_0
+    const-string v0, "(JSON String, Number, Array, Object or token \'null\', \'true\' or \'false\')"
+
+    return-object v0
+.end method
+
+.method public final y0()V
+    .locals 8
+
+    const v0, 0x7fffffff
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const/high16 v1, -0x80000000
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget v2, p0, Lfdb;->z0:I
+
+    and-int/lit8 v3, v2, 0x2
+
+    const-string v4, "Numeric value (%s) out of range of int (%d - %s)"
+
+    if-eqz v3, :cond_1
+
+    iget-wide v2, p0, Lfdb;->B0:J
+
+    long-to-int v5, v2
+
+    int-to-long v6, v5
+
+    cmp-long v2, v6, v2
+
+    if-nez v2, :cond_0
+
+    iput v5, p0, Lfdb;->A0:I
+
+    goto/16 :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v1, p0, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    and-int/lit8 v3, v2, 0x4
+
+    if-eqz v3, :cond_3
+
+    sget-object v2, Lfdb;->I0:Ljava/math/BigInteger;
+
+    iget-object v3, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v2, v3}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v2
+
+    if-gtz v2, :cond_2
+
+    sget-object v2, Lfdb;->J0:Ljava/math/BigInteger;
+
+    iget-object v3, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v2, v3}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v2
+
+    if-ltz v2, :cond_2
+
+    iget-object v0, p0, Lfdb;->D0:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->intValue()I
+
+    move-result v0
+
+    iput v0, p0, Lfdb;->A0:I
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v1, p0, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_3
+    and-int/lit8 v3, v2, 0x8
+
+    if-eqz v3, :cond_5
+
+    iget-wide v2, p0, Lfdb;->C0:D
+
+    const-wide/high16 v5, -0x3e20000000000000L    # -2.147483648E9
+
+    cmpg-double v5, v2, v5
+
+    if-ltz v5, :cond_4
+
+    const-wide v5, 0x41dfffffffc00000L    # 2.147483647E9
+
+    cmpl-double v5, v2, v5
+
+    if-gtz v5, :cond_4
+
+    double-to-int v0, v2
+
+    iput v0, p0, Lfdb;->A0:I
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v1, p0, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_5
+    and-int/lit8 v2, v2, 0x10
+
+    if-eqz v2, :cond_7
+
+    sget-object v2, Lfdb;->O0:Ljava/math/BigDecimal;
+
+    iget-object v3, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v2, v3}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+
+    move-result v2
+
+    if-gtz v2, :cond_6
+
+    sget-object v2, Lfdb;->P0:Ljava/math/BigDecimal;
+
+    iget-object v3, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v2, v3}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+
+    move-result v2
+
+    if-ltz v2, :cond_6
+
+    iget-object v0, p0, Lfdb;->E0:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->intValue()I
+
+    move-result v0
+
+    iput v0, p0, Lfdb;->A0:I
+
+    :goto_0
+    iget v0, p0, Lfdb;->z0:I
+
+    or-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lfdb;->z0:I
+
+    return-void
+
+    :cond_6
+    invoke-virtual {p0}, Lqq7;->n()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lfdb;->m0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/fasterxml/jackson/core/exc/InputCoercionException;
+
+    invoke-direct {v1, p0, v0}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lqq7;Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_7
+    invoke-static {}, Lokg;->a()V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public final z0()I
+    .locals 1
+
+    iget-object v0, p0, Lfdb;->b:Lzq7;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    iget v0, v0, Lzq7;->o:I
+
+    return v0
 .end method

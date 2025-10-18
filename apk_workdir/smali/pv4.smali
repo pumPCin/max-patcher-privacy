@@ -2,127 +2,98 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld1e;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final a:Landroid/view/DisplayCutout;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld1e;Ljava/lang/Object;I)V
+.method public constructor <init>(Landroid/view/DisplayCutout;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lpv4;->a:I
-
-    iput-object p1, p0, Lpv4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lpv4;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(Loh6;Lqh6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lpv4;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Lvs7;
-
-    iput-object p1, p0, Lpv4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lpv4;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lpv4;->a:Landroid/view/DisplayCutout;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lpv4;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Lpv4;->b:Ljava/lang/Object;
+    return p1
 
-    check-cast v0, Luu5;
+    :cond_0
+    if-eqz p1, :cond_2
 
-    new-instance v1, Ljava/util/ArrayList;
+    const-class v0, Lpv4;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, v1}, Lo1e;->k(Ld1e;Ljava/util/Collection;)V
+    move-result-object v1
 
-    iget-object v0, p0, Lpv4;->c:Ljava/lang/Object;
+    if-eq v0, v1, :cond_1
 
-    check-cast v0, Ljava/util/Comparator;
+    goto :goto_0
 
-    invoke-static {v0, v1}, Lfb3;->n(Ljava/util/Comparator;Ljava/util/List;)V
+    :cond_1
+    check-cast p1, Lpv4;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lpv4;->a:Landroid/view/DisplayCutout;
+
+    iget-object p1, p1, Lpv4;->a:Landroid/view/DisplayCutout;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lpv4;->a:Landroid/view/DisplayCutout;
+
+    invoke-static {v0}, Lv4;->d(Landroid/view/DisplayCutout;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DisplayCutoutCompat{"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpv4;->a:Landroid/view/DisplayCutout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lz89;
-
-    invoke-direct {v0, p0}, Lz89;-><init>(Lpv4;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lom6;
-
-    invoke-direct {v0, p0}, Lom6;-><init>(Lpv4;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lov4;
-
-    iget-object v1, p0, Lpv4;->b:Ljava/lang/Object;
-
-    check-cast v1, Llt;
-
-    iget-object v1, v1, Llt;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lpv4;->c:Ljava/lang/Object;
-
-    check-cast v2, Lb23;
-
-    invoke-direct {v0, v1, v2}, Lov4;-><init>(Ljava/util/Iterator;Lb23;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

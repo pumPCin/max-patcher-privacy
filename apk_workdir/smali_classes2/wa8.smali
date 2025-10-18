@@ -1,48 +1,55 @@
 .class public final Lwa8;
-.super Lk14;
+.super Lxzg;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final b:Lx0f;
 
-.field public final synthetic Y:Lqa8;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ln0d;
 
 
 # direct methods
-.method public constructor <init>(Lqa8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Liu7;)V
+    .locals 2
 
-    iput-object p1, p0, Lwa8;->Y:Lqa8;
+    invoke-direct {p0}, Lxzg;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    return-void
-.end method
+    invoke-static {v0}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
+    move-result-object v0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iput-object v0, p0, Lwa8;->b:Lx0f;
 
-    iput-object p1, p0, Lwa8;->o:Ljava/lang/Object;
+    new-instance v1, Ln0d;
 
-    iget p1, p0, Lwa8;->X:I
+    invoke-direct {v1, v0}, Ln0d;-><init>(Lj1a;)V
 
-    const/high16 v0, -0x80000000
+    iput-object v1, p0, Lwa8;->c:Ln0d;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwa8;->X:I
-
-    iget-object p1, p0, Lwa8;->Y:Lqa8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lqa8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lrib;
+
+    sget-object v1, Lrib;->f:[Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Lrib;->c([Ljava/lang/String;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
 .end method

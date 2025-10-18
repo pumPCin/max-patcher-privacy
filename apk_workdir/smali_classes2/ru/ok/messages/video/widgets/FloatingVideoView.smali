@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lxx5;
+.field public a:Lry5;
 
 .field public b:Landroid/view/VelocityTracker;
 
@@ -29,17 +29,17 @@
 .method public getTopMargin()I
     .locals 1
 
-    invoke-static {}, Len;->b()Lri3;
+    invoke-static {}, Lfn;->b()Lej3;
 
     move-result-object v0
 
-    check-cast v0, Lqra;
+    check-cast v0, Lssa;
 
-    invoke-virtual {v0}, Lqra;->c()Lzr4;
+    invoke-virtual {v0}, Lssa;->c()Lqs4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lzr4;->j()I
+    invoke-virtual {v0}, Lqs4;->j()I
 
     move-result v0
 
@@ -115,7 +115,7 @@
 
     const-string v1, "ru.ok.messages.video.widgets.FloatingVideoView"
 
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -247,10 +247,10 @@
     throw v3
 .end method
 
-.method public setListener(Lxx5;)V
+.method public setListener(Lry5;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/video/widgets/FloatingVideoView;->a:Lxx5;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/FloatingVideoView;->a:Lry5;
 
     return-void
 .end method

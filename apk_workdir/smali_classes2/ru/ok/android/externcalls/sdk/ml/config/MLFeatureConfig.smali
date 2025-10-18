@@ -54,7 +54,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ILvh4;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ILki4;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ILvh4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ILki4;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1
@@ -176,7 +176,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;->url:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -189,7 +189,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;->checksum:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -252,7 +252,7 @@
 
     const-string v4, "MLFeatureConfig(url="
 
-    invoke-static {v4, v0, v2, v1, v3}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v0, v2, v1, v3}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

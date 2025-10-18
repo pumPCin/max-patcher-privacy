@@ -15,7 +15,7 @@
         "()V",
         "",
         "apiMethod",
-        "Lzag;",
+        "Lccg;",
         "startUpload",
         "(Ljava/lang/String;)V",
         "resumeUpload",
@@ -160,11 +160,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Ldma;
+    new-instance v1, Lfna;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v2}, Ldma;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, p1, v2}, Lfna;-><init>(Ljava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -191,11 +191,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Ldma;
+    new-instance v1, Lfna;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p1, v2}, Ldma;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, p1, v2}, Lfna;-><init>(Ljava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

@@ -1,206 +1,195 @@
 .class public final Ls4e;
-.super Lk3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final A:Liu7;
 
-.field public final c:J
+.field public final B:Liu7;
+
+.field public final C:Liu7;
+
+.field public final D:Liu7;
+
+.field public final E:Liu7;
+
+.field public final F:Liu7;
+
+.field public final G:Liu7;
+
+.field public final H:Liu7;
+
+.field public final I:Liu7;
+
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
+
+.field public final d:Liu7;
+
+.field public final e:Liu7;
+
+.field public final f:Liu7;
+
+.field public final g:Liu7;
+
+.field public final h:Liu7;
+
+.field public final i:Liu7;
+
+.field public final j:Liu7;
+
+.field public final k:Liu7;
+
+.field public final l:Liu7;
+
+.field public final m:Liu7;
+
+.field public final n:Liu7;
+
+.field public final o:Liu7;
+
+.field public final p:Liu7;
+
+.field public final q:Liu7;
+
+.field public final r:Liu7;
+
+.field public final s:Liu7;
+
+.field public final t:Liu7;
+
+.field public final u:Liu7;
+
+.field public final v:Liu7;
+
+.field public final w:Liu7;
+
+.field public final x:Liu7;
+
+.field public final y:Liu7;
+
+.field public final z:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lxp0;)V
-    .locals 2
+.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lxp0;->b:J
+    iput-object p1, p0, Ls4e;->a:Liu7;
 
-    iput-wide v0, p0, Ls4e;->b:J
+    iput-object p2, p0, Ls4e;->b:Liu7;
 
-    iget-wide v0, p1, Lxp0;->c:J
+    iput-object p3, p0, Ls4e;->c:Liu7;
 
-    iput-wide v0, p0, Ls4e;->c:J
+    iput-object p4, p0, Ls4e;->d:Liu7;
 
-    return-void
-.end method
+    iput-object p5, p0, Ls4e;->e:Liu7;
 
+    iput-object p6, p0, Ls4e;->f:Liu7;
 
-# virtual methods
-.method public final w()V
-    .locals 15
+    iput-object p7, p0, Ls4e;->g:Liu7;
 
-    const-class v0, Ls4e;
+    iput-object p8, p0, Ls4e;->h:Liu7;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p9, p0, Ls4e;->i:Liu7;
 
-    move-result-object v0
+    iput-object p10, p0, Ls4e;->j:Liu7;
 
-    iget-wide v1, p0, Ls4e;->b:J
+    iput-object p11, p0, Ls4e;->k:Liu7;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p12, p0, Ls4e;->l:Liu7;
 
-    move-result-object v3
+    iput-object p13, p0, Ls4e;->m:Liu7;
 
-    iget-wide v4, p0, Ls4e;->c:J
+    iput-object p14, p0, Ls4e;->n:Liu7;
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p15, p0, Ls4e;->o:Liu7;
 
-    move-result-object v6
+    move-object/from16 p1, p16
 
-    sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iput-object p1, p0, Ls4e;->p:Liu7;
 
-    filled-new-array {v3, v6, v7}, [Ljava/lang/Object;
+    move-object/from16 p1, p17
 
-    move-result-object v3
+    iput-object p1, p0, Ls4e;->q:Liu7;
 
-    const-string v6, "process, chatId = %d, botId = %d, suspend = %b"
+    move-object/from16 p1, p18
 
-    invoke-static {v0, v6, v3}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iput-object p1, p0, Ls4e;->r:Liu7;
 
-    invoke-virtual {p0}, Lk3e;->f()Lkd2;
+    move-object/from16 p1, p19
 
-    move-result-object v0
+    iput-object p1, p0, Ls4e;->s:Liu7;
 
-    invoke-virtual {v0, v1, v2}, Lkd2;->C(J)Lda2;
+    move-object/from16 p1, p20
 
-    move-result-object v0
+    iput-object p1, p0, Ls4e;->t:Liu7;
 
-    if-nez v0, :cond_0
+    move-object/from16 p1, p21
 
-    return-void
+    iput-object p1, p0, Ls4e;->u:Liu7;
 
-    :cond_0
-    invoke-virtual {p0}, Lk3e;->f()Lkd2;
+    move-object/from16 p1, p22
 
-    move-result-object v0
+    iput-object p1, p0, Ls4e;->v:Liu7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object/from16 p1, p23
 
-    new-instance v3, Lw11;
+    iput-object p1, p0, Ls4e;->w:Liu7;
 
-    const/4 v6, 0x1
+    move-object/from16 p1, p24
 
-    const/4 v7, 0x1
+    iput-object p1, p0, Ls4e;->x:Liu7;
 
-    invoke-direct {v3, v7, v6}, Lw11;-><init>(ZI)V
+    move-object/from16 p1, p25
 
-    const/4 v6, 0x0
+    iput-object p1, p0, Ls4e;->y:Liu7;
 
-    invoke-virtual {v0, v1, v2, v6, v3}, Lkd2;->h(JZLer3;)Lda2;
+    move-object/from16 p1, p26
 
-    invoke-virtual {p0}, Lk3e;->f()Lkd2;
+    iput-object p1, p0, Ls4e;->z:Liu7;
 
-    move-result-object v0
+    move-object/from16 p1, p27
 
-    invoke-virtual {v0, v1, v2}, Lkd2;->p(J)V
+    iput-object p1, p0, Ls4e;->A:Liu7;
 
-    invoke-virtual {p0}, Lk3e;->a()Lll;
+    move-object/from16 p1, p28
 
-    move-result-object v0
+    iput-object p1, p0, Ls4e;->B:Liu7;
 
-    check-cast v0, Lkma;
+    move-object/from16 p1, p29
 
-    iget-wide v10, p0, Ls4e;->b:J
+    iput-object p1, p0, Ls4e;->C:Liu7;
 
-    invoke-virtual {v0, v10, v11}, Lkma;->n(J)Z
+    move-object/from16 p1, p30
 
-    move-result v3
+    iput-object p1, p0, Ls4e;->D:Liu7;
 
-    if-nez v3, :cond_1
+    move-object/from16 p1, p31
 
-    const-wide/16 v6, 0x0
+    iput-object p1, p0, Ls4e;->E:Liu7;
 
-    goto :goto_0
+    move-object/from16 p1, p32
 
-    :cond_1
-    new-instance v7, Leff;
+    iput-object p1, p0, Ls4e;->F:Liu7;
 
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
+    move-object/from16 p1, p33
 
-    move-result-object v3
+    iput-object p1, p0, Ls4e;->G:Liu7;
 
-    check-cast v3, Llwb;
+    move-object/from16 p1, p34
 
-    iget-object v3, v3, Llwb;->a:Lg68;
+    iput-object p1, p0, Ls4e;->H:Liu7;
 
-    invoke-virtual {v3}, Lgsd;->k()J
+    move-object/from16 p1, p35
 
-    move-result-wide v8
-
-    const/4 v12, 0x1
-
-    iget-wide v13, p0, Ls4e;->c:J
-
-    invoke-direct/range {v7 .. v14}, Leff;-><init>(JJZJ)V
-
-    invoke-virtual {v0}, Lkma;->y()Lpmf;
-
-    move-result-object v0
-
-    const/16 v3, 0xc
-
-    invoke-static {v0, v7, v6, v3}, Lpmf;->d(Lpmf;Lxm;ZI)J
-
-    move-result-wide v6
-
-    :goto_0
-    invoke-virtual {p0}, Lk3e;->s()Lgw0;
-
-    move-result-object v0
-
-    new-instance v8, Li43;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v9
-
-    const/4 v13, 0x0
-
-    const/16 v14, 0x7c
-
-    const/4 v10, 0x1
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v8 .. v14}, Li43;-><init>(Ljava/util/Collection;ZZLpp4;Lzxb;I)V
-
-    invoke-virtual {v0, v8}, Lgw0;->c(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lk3e;->s()Lgw0;
-
-    move-result-object v0
-
-    new-instance v3, Lqz3;
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-direct {v3, v6, v7, v4}, Lqz3;-><init>(JLjava/util/Collection;)V
-
-    invoke-virtual {v0, v3}, Lgw0;->c(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lk3e;->s()Lgw0;
-
-    move-result-object v0
-
-    new-instance v3, Lfff;
-
-    invoke-direct {v3, v1, v2}, Lfff;-><init>(J)V
-
-    invoke-virtual {v0, v3}, Lgw0;->c(Ljava/lang/Object;)V
+    iput-object p1, p0, Ls4e;->I:Liu7;
 
     return-void
 .end method

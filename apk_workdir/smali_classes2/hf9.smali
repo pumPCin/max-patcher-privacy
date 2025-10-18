@@ -4,209 +4,138 @@
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final b:Z
 
-.field public final c:Lnf9;
-
-.field public final d:Z
-
-.field public final e:Z
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/CharSequence;Lnf9;ZZ)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;ZI)V
+    .locals 2
 
+    iput p3, p0, Lhf9;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    .line 1
+    new-instance p3, Lgf9;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p1, v0}, Lgf9;-><init>(Ljava/lang/String;I)V
+
+    .line 2
+    new-instance v0, Lgf9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lgf9;-><init>(Ljava/lang/String;I)V
+
+    .line 3
+    iput v1, p0, Lhf9;->a:I
+
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lhf9;->a:J
+    .line 5
+    iput-object p1, p0, Lhf9;->c:Ljava/lang/String;
 
-    iput-object p3, p0, Lhf9;->b:Ljava/lang/CharSequence;
+    .line 6
+    iput-boolean p2, p0, Lhf9;->b:Z
 
-    iput-object p4, p0, Lhf9;->c:Lnf9;
+    const/4 p1, 0x3
 
-    iput-boolean p5, p0, Lhf9;->d:Z
+    .line 7
+    invoke-static {p1, p3}, Lrci;->b(ILji6;)Liu7;
 
-    iput-boolean p6, p0, Lhf9;->e:Z
+    .line 8
+    invoke-static {p1, v0}, Lrci;->b(ILji6;)Liu7;
+
+    return-void
+
+    .line 9
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhf9;->c:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lhf9;->b:Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(ZLjava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lhf9;->a:I
+
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    iput-boolean p1, p0, Lhf9;->b:Z
+
+    .line 12
+    iput-object p2, p0, Lhf9;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lhf9;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhf9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhf9;
-
-    iget-wide v3, p0, Lhf9;->a:J
-
-    iget-wide v5, p1, Lhf9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lhf9;->b:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lhf9;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhf9;->c:Lnf9;
-
-    iget-object v3, p1, Lhf9;->c:Lnf9;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lhf9;->d:Z
-
-    iget-boolean v3, p1, Lhf9;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lhf9;->e:Z
-
-    iget-boolean p1, p1, Lhf9;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lhf9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lhf9;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Ld15;->f(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhf9;->c:Lnf9;
-
-    invoke-virtual {v2}, Lnf9;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lhf9;->d:Z
-
-    invoke-static {v2, v1, v0}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lhf9;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "EditMessageData(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lhf9;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhf9;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", quoteData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhf9;->c:Lnf9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMediaAttaches="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhf9;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", shouldInsertOriginalText="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lhf9;->e:Z
-
-    invoke-static {v0, v1, v3, v2}, Lf67;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MessageText(text=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "***"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', bundled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lhf9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,3 +1,3 @@
 .class public final Lave;
-.super Luue;
+.super Lgp3;
 .source "SourceFile"

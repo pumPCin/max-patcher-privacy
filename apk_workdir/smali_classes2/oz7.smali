@@ -1,44 +1,48 @@
-.class public final synthetic Loz7;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lmz7;
+.class public final Loz7;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:Ltz7;
+.field public X:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Li00;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltz7;Ljava/lang/Object;)V
+.method public constructor <init>(Li00;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Loz7;->a:Ltz7;
+    iput-object p1, p0, Loz7;->Y:Li00;
 
-    iput-object p2, p0, Loz7;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/view/View;Ljava/lang/String;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Luz7;->Y:Luz7;
+    iput-object p1, p0, Loz7;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Loz7;->b:Ljava/lang/Object;
+    iget p1, p0, Loz7;->X:I
 
-    check-cast v1, Landroid/text/style/ClickableSpan;
+    const/high16 v0, -0x80000000
 
-    iget-object v2, p0, Loz7;->a:Ltz7;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v2, p1, p2, v0, v1}, Ltz7;->b(Landroid/view/View;Ljava/lang/String;Luz7;Landroid/text/style/ClickableSpan;)V
+    iput p1, p0, Loz7;->X:I
 
-    return-void
+    iget-object p1, p0, Loz7;->Y:Li00;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Li00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

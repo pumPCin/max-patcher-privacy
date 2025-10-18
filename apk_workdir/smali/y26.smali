@@ -1,79 +1,85 @@
 .class public final Ly26;
-.super Ll16;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lgcf;
 
 
 # instance fields
-.field public final b:Lqnd;
+.field public final a:Lecf;
 
-.field public final c:J
+.field public b:Lvv4;
 
 
 # direct methods
-.method public constructor <init>(JLqnd;)V
-    .locals 1
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+.method public constructor <init>(Lecf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ly26;->c:J
-
-    iput-object p3, p0, Ly26;->b:Lqnd;
+    iput-object p1, p0, Ly26;->a:Lecf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lw26;)V
-    .locals 4
+.method public final b()V
+    .locals 1
 
-    new-instance v0, Lx26;
+    iget-object v0, p0, Ly26;->a:Lecf;
 
-    invoke-direct {v0, p1}, Lx26;-><init>(Lxaf;)V
+    invoke-interface {v0}, Lecf;->b()V
 
-    invoke-interface {p1, v0}, Lxaf;->f(Lzaf;)V
+    return-void
+.end method
 
-    iget-wide v1, p0, Ly26;->c:J
+.method public final c(Lvv4;)V
+    .locals 0
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Ly26;->b:Lvv4;
 
-    iget-object v3, p0, Ly26;->b:Lqnd;
+    iget-object p1, p0, Ly26;->a:Lecf;
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lqnd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
+    invoke-interface {p1, p0}, Lecf;->e(Lgcf;)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    :cond_0
-    const/4 v1, 0x0
+.method public final cancel()V
+    .locals 1
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Ly26;->b:Lvv4;
 
-    move-result v1
+    invoke-interface {v0}, Lvv4;->g()V
 
-    if-eqz v1, :cond_1
+    return-void
+.end method
 
-    goto :goto_0
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v0, p0, Ly26;->a:Lecf;
 
-    move-result-object v1
+    invoke-interface {v0, p1}, Lecf;->d(Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+.method public final i(J)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    sget-object v1, Liv4;->a:Liv4;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    if-ne v0, v1, :cond_2
+    iget-object v0, p0, Ly26;->a:Lecf;
 
-    invoke-interface {p1}, Lev4;->g()V
+    invoke-interface {v0, p1}, Lecf;->onError(Ljava/lang/Throwable;)V
 
-    :cond_2
-    :goto_0
     return-void
 .end method

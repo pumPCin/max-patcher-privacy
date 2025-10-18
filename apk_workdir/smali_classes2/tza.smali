@@ -15,15 +15,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lesc;->oneme_too_many_requests_bottomsheet_positive_button:I
+    sget v0, Lxqc;->inactive_ttl:I
 
     sput v0, Ltza;->a:I
 
-    sget v0, Lesc;->oneme_too_many_requests_bottomsheet_subtitle:I
+    sget v0, Lxqc;->inactive_ttl_item:I
 
     sput v0, Ltza;->b:I
 
-    sget v0, Lesc;->oneme_too_many_requests_bottomsheet_title:I
+    sget v0, Lxqc;->profile_delete_dates_days_left:I
 
     sput v0, Ltza;->c:I
 

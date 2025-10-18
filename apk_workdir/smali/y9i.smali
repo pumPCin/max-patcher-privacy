@@ -1,115 +1,122 @@
-.class public final Ly9i;
-.super Ljbg;
+.class public abstract Ly9i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ltzh;
-
-.field public c:Ljbg;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lrai;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x3
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {p0, v0}, Ljbg;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ltzh;
-
-    invoke-direct {v0, p1}, Ltzh;-><init>(La4i;)V
-
-    iput-object v0, p0, Ly9i;->b:Ltzh;
-
-    invoke-virtual {p0}, Ly9i;->b()Le3i;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ly9i;->c:Ljbg;
+    sput-object v0, Ly9i;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a(Landroid/net/Uri;Landroid/net/Uri;)Z
+    .locals 6
 
-# virtual methods
-.method public final a()B
-    .locals 2
+    if-eqz p0, :cond_1
 
-    iget-object v0, p0, Ly9i;->c:Ljbg;
+    if-nez p1, :cond_0
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljbg;->a()B
-
-    move-result v0
-
-    iget-object v1, p0, Ly9i;->c:Ljbg;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Ly9i;->b()Le3i;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ly9i;->c:Ljbg;
+    goto :goto_0
 
     :cond_0
-    return v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final b()Le3i;
-    .locals 2
-
-    iget-object v0, p0, Ly9i;->b:Ltzh;
-
-    invoke-virtual {v0}, Ltzh;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ltzh;->a()Lw3i;
+    invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    new-instance v1, Le3i;
+    const/4 v4, 0x0
 
-    invoke-direct {v1, v0}, Le3i;-><init>(La4i;)V
+    const/16 v5, 0x3e
 
-    return-object v1
+    const-string v1, "/"
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    return-object v0
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public final hasNext()Z
-    .locals 1
+.method public static final b()Ljava/util/List;
+    .locals 5
 
-    iget-object v0, p0, Ly9i;->c:Ljbg;
+    new-instance v0, Lmk7;
 
-    if-eqz v0, :cond_0
+    sget v1, Luwa;->e:I
 
-    const/4 v0, 0x1
+    new-instance v2, Lorf;
 
-    return v0
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
 
-    :cond_0
-    const/4 v0, 0x0
+    sget v1, Lpjd;->c1:I
 
-    return v0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v3, Llk7;->b:Llk7;
+
+    invoke-direct {v0, v3, v2, v1}, Lmk7;-><init>(Llk7;Lorf;Ljava/lang/Integer;)V
+
+    new-instance v1, Lmk7;
+
+    sget v2, Luwa;->f:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v2}, Lorf;-><init>(I)V
+
+    sget v2, Lpjd;->e0:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget-object v4, Llk7;->a:Llk7;
+
+    invoke-direct {v1, v4, v3, v2}, Lmk7;-><init>(Llk7;Lorf;Ljava/lang/Integer;)V
+
+    filled-new-array {v0, v1}, [Lmk7;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method

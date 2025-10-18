@@ -1,24 +1,24 @@
-.class public final synthetic Lrb8;
+.class public final Lrb8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Lty5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ltb8;
+.field public final synthetic b:Lx23;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltb8;I)V
+.method public synthetic constructor <init>(Lx23;I)V
     .locals 0
 
     iput p2, p0, Lrb8;->a:I
 
-    iput-object p1, p0, Lrb8;->b:Ltb8;
+    iput-object p1, p0, Lrb8;->b:Lx23;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,60 +27,86 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lrb8;->a:I
 
-    check-cast p1, Lebb;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lrb8;->b:Ltb8;
+    new-instance v0, Ldb8;
 
-    iget-object v0, v0, Ltb8;->g:Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 v1, 0x7
 
-    iget-object p1, p1, Lebb;->b:Lygc;
+    invoke-direct {v0, p1, v1}, Ldb8;-><init>(Lvy5;I)V
 
-    invoke-virtual {p1}, Lygc;->m()Ljava/lang/Long;
+    iget-object p1, p0, Lrb8;->b:Lx23;
+
+    invoke-virtual {p1, v0, p2}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p2, Lr54;->a:Lr54;
 
-    return-void
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lrb8;->b:Ltb8;
+    new-instance v0, Ldb8;
 
-    iget-object v0, v0, Ltb8;->g:Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 v1, 0x6
 
-    iget-object p1, p1, Lebb;->b:Lygc;
+    invoke-direct {v0, p1, v1}, Ldb8;-><init>(Lvy5;I)V
 
-    invoke-virtual {p1}, Lygc;->m()Ljava/lang/Long;
+    iget-object p1, p0, Lrb8;->b:Lx23;
+
+    invoke-virtual {p1, v0, p2}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p2, Lr54;->a:Lr54;
 
-    return-void
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_1
+    return-object p1
 
     :pswitch_1
-    iget-object v0, p1, Lebb;->c:Ljava/util/function/Consumer;
+    new-instance v0, Ldb8;
 
-    iget-object p1, p1, Lebb;->b:Lygc;
+    const/4 v1, 0x2
 
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v1}, Ldb8;-><init>(Lvy5;I)V
 
-    iget-object p1, p0, Lrb8;->b:Ltb8;
+    iget-object p1, p0, Lrb8;->b:Lx23;
 
-    iget-object p1, p1, Ltb8;->f:Lxec;
+    invoke-virtual {p1, v0, p2}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p2, Lr54;->a:Lr54;
 
-    return-void
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Lccg;->a:Lccg;
+
+    :goto_2
+    return-object p1
 
     nop
 

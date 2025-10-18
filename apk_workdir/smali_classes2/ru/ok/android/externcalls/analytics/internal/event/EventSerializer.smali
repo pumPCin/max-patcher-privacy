@@ -13,17 +13,17 @@
         "",
         "<init>",
         "()V",
-        "Lfq7;",
+        "Lcr7;",
         "writer",
         "Lru/ok/android/externcalls/analytics/events/EventItemValue;",
         "value",
-        "Lzag;",
+        "Lccg;",
         "writeValue",
-        "(Lfq7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
+        "(Lcr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
         "event",
         "serialize",
-        "(Lfq7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
+        "(Lcr7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
         "calls-sdk-analytics_release"
     }
     k = 0x1
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method private final writeValue(Lfq7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+.method private final writeValue(Lcr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
     .locals 2
 
     instance-of v0, p2, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;
@@ -141,7 +141,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lfq7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcr7;->h(Ljava/lang/String;)V
 
     :cond_3
     return-void
@@ -149,10 +149,10 @@
 
 
 # virtual methods
-.method public final serialize(Lfq7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+.method public final serialize(Lcr7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     .locals 2
 
-    invoke-interface {p1}, Lfq7;->s()V
+    invoke-interface {p1}, Lcr7;->s()V
 
     invoke-virtual {p2}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getItems()Ljava/util/Map;
 
@@ -185,7 +185,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-interface {p1, v1}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
+    invoke-interface {p1, v1}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -193,12 +193,12 @@
 
     check-cast v0, Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Lfq7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Lcr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lfq7;->q()V
+    invoke-interface {p1}, Lcr7;->q()V
 
     return-void
 .end method

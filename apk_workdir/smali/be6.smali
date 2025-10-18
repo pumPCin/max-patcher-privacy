@@ -1,71 +1,115 @@
 .class public final Lbe6;
-.super Ljava/lang/Object;
+.super Lvvf;
 .source "SourceFile"
-
-# interfaces
-.implements Lae6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final synthetic c:Landroidx/fragment/app/c;
+.field public e:Lvvf;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/c;II)V
+.method public constructor <init>(Lvvf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbe6;->c:Landroidx/fragment/app/c;
-
-    iput p2, p0, Lbe6;->a:I
-
-    iput p3, p0, Lbe6;->b:I
+    iput-object p1, p0, Lbe6;->e:Lvvf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
-    .locals 5
+.method public final a()Lvvf;
+    .locals 1
 
-    iget-object v0, p0, Lbe6;->c:Landroidx/fragment/app/c;
+    iget-object v0, p0, Lbe6;->e:Lvvf;
 
-    iget-object v1, v0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
+    invoke-virtual {v0}, Lvvf;->a()Lvvf;
 
-    iget v2, p0, Lbe6;->a:I
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    return-object v0
+.end method
 
-    if-gez v2, :cond_0
+.method public final b()Lvvf;
+    .locals 1
 
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->D()Landroidx/fragment/app/c;
+    iget-object v0, p0, Lbe6;->e:Lvvf;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lvvf;->b()Lvvf;
 
-    const/4 v3, -0x1
+    move-result-object v0
 
-    const/4 v4, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v3, v4}, Landroidx/fragment/app/c;->U(II)Z
+.method public final c()J
+    .locals 2
 
-    move-result v1
+    iget-object v0, p0, Lbe6;->e:Lvvf;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Lvvf;->c()J
 
-    return v4
+    move-result-wide v0
 
-    :cond_0
-    iget v1, p0, Lbe6;->b:I
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, p1, p2, v2, v1}, Landroidx/fragment/app/c;->V(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
+.method public final d(J)Lvvf;
+    .locals 1
 
-    move-result p1
+    iget-object v0, p0, Lbe6;->e:Lvvf;
 
-    return p1
+    invoke-virtual {v0, p1, p2}, Lvvf;->d(J)Lvvf;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->f()V
+
+    return-void
+.end method
+
+.method public final g(JLjava/util/concurrent/TimeUnit;)Lvvf;
+    .locals 1
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0, p1, p2, p3}, Lvvf;->g(JLjava/util/concurrent/TimeUnit;)Lvvf;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-object v0, p0, Lbe6;->e:Lvvf;
+
+    invoke-virtual {v0}, Lvvf;->h()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

@@ -3,14 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/rlottie/NativeLibraryLoader;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # virtual methods
-.method public final load(Ljava/lang/String;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-static {p1}, Lone/me/rlottie/NativeLibraryLoader$Companion;->a(Ljava/lang/String;)V
+    sget p1, Lm3a;->w0:I
 
-    return-void
+    const/4 p1, 0x1
+
+    return p1
 .end method

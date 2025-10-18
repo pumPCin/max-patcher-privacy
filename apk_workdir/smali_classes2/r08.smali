@@ -1,106 +1,137 @@
-.class public final Lr08;
-.super Ljava/lang/Object;
+.class public final enum Lr08;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final enum X:Lr08;
 
-.field public final b:Z
+.field public static final enum Y:Lr08;
+
+.field public static final synthetic Z:[Lr08;
+
+.field public static final enum a:Lr08;
+
+.field public static final enum b:Lr08;
+
+.field public static final enum c:Lr08;
+
+.field public static final enum o:Lr08;
+
+.field public static final synthetic q0:Lzd5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr08;
 
-    iput-object p1, p0, Lr08;->a:Ljava/lang/String;
+    const-string v1, "URL"
 
-    iput-boolean p2, p0, Lr08;->b:Z
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lr08;->a:Lr08;
+
+    new-instance v1, Lr08;
+
+    const-string v2, "HASH_TAG"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lr08;->b:Lr08;
+
+    new-instance v2, Lr08;
+
+    const-string v3, "BOT_COMMAND"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lr08;->c:Lr08;
+
+    new-instance v3, Lr08;
+
+    const-string v4, "PROFILE_TAG"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lr08;->o:Lr08;
+
+    new-instance v4, Lr08;
+
+    const-string v5, "MENTION"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lr08;->X:Lr08;
+
+    new-instance v5, Lr08;
+
+    const-string v6, "ML_ENTRY"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v6, Lr08;
+
+    const-string v7, "MARKDOWN_LINK"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lr08;->Y:Lr08;
+
+    filled-new-array/range {v0 .. v6}, [Lr08;
+
+    move-result-object v0
+
+    sput-object v0, Lr08;->Z:[Lr08;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lr08;->q0:Lzd5;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lr08;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
+    const-class v0, Lr08;
 
-    instance-of v0, p1, Lr08;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    if-nez v0, :cond_0
+    check-cast p0, Lr08;
 
-    goto :goto_0
+    return-object p0
+.end method
 
-    :cond_0
-    check-cast p1, Lr08;
+.method public static values()[Lr08;
+    .locals 1
 
-    iget-object v5, p0, Lr08;->a:Ljava/lang/String;
+    sget-object v0, Lr08;->Z:[Lr08;
 
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_3
+    check-cast v0, [Lr08;
 
-    iget-object v2, p1, Lr08;->a:Ljava/lang/String;
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-boolean p1, p0, Lr08;->b:Z
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    sget-object p1, Ljrf;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-ne p1, v0, :cond_3
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v2 .. v7}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    return v1
+    return-object v0
 .end method

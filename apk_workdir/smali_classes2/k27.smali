@@ -1,204 +1,465 @@
 .class public final Lk27;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lqmg;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ll27;
+.field public final b:Lyy;
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Landroid/net/Uri;
+
+.field public final k:J
+
+.field public final l:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll27;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIJJJLyy;Ljava/lang/String;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lk27;->X:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lk27;->Y:Ll27;
+    iput-object p10, p0, Lk27;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput-object p9, p0, Lk27;->b:Lyy;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lk27;->c:J
+
+    iput-wide p5, p0, Lk27;->d:J
+
+    iput-wide p7, p0, Lk27;->e:J
+
+    iput-boolean p11, p0, Lk27;->f:Z
+
+    iput-boolean p12, p0, Lk27;->g:Z
+
+    iput p1, p0, Lk27;->h:I
+
+    iput p2, p0, Lk27;->i:I
+
+    invoke-static {p10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk27;->j:Landroid/net/Uri;
+
+    iput-wide p5, p0, Lk27;->k:J
+
+    const-string p1, "video/hls"
+
+    iput-object p1, p0, Lk27;->l:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk27;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lk27;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lk27;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()J
     .locals 2
 
-    new-instance p1, Lk27;
+    iget-wide v0, p0, Lk27;->k:J
 
-    iget-object v0, p0, Lk27;->X:Ljava/lang/String;
-
-    iget-object v1, p0, Lk27;->Y:Ll27;
-
-    invoke-direct {p1, v0, v1, p2}, Lk27;-><init>(Ljava/lang/String;Ll27;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-wide v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final c(J)Lqmg;
+    .locals 13
 
-    iget-object v0, p0, Lk27;->Y:Ll27;
+    new-instance v0, Lk27;
 
-    iget-object v1, v0, Ll27;->o:Llt7;
+    iget v1, p0, Lk27;->h:I
 
-    iget-object v2, v0, Ll27;->r0:Lde5;
+    iget v2, p0, Lk27;->i:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-wide v3, p0, Lk27;->c:J
 
-    const/4 p1, 0x0
+    iget-wide v5, p0, Lk27;->d:J
 
-    iget-object v3, p0, Lk27;->X:Ljava/lang/String;
+    iget-object v9, p0, Lk27;->b:Lyy;
 
-    const-string v4, "Custom"
+    iget-object v10, p0, Lk27;->a:Ljava/lang/String;
 
-    invoke-static {v3, v4, p1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
+    iget-boolean v11, p0, Lk27;->f:Z
 
-    move-result p1
+    iget-boolean v12, p0, Lk27;->g:Z
 
-    sget-object v5, Lzag;->a:Lzag;
+    move-wide v7, p1
 
-    if-eqz p1, :cond_0
+    invoke-direct/range {v0 .. v12}, Lk27;-><init>(IIJJJLyy;Ljava/lang/String;ZZ)V
 
-    new-instance p1, Lh27;
+    return-object v0
+.end method
 
-    iget-object v0, v0, Ll27;->X:Landroid/content/SharedPreferences;
+.method public final d()Lyy;
+    .locals 1
 
-    const-string v1, ""
+    iget-object v0, p0, Lk27;->b:Lyy;
 
-    invoke-interface {v0, v4, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final e()Z
+    .locals 1
 
-    invoke-direct {p1, v0}, Lh27;-><init>(Ljava/lang/String;)V
+    iget-boolean v0, p0, Lk27;->f:Z
 
-    invoke-static {v2, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v0
+.end method
 
-    return-object v5
-
-    :cond_0
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgna;
-
-    invoke-virtual {p1}, Lgna;->d()Z
-
-    move-result p1
-
-    invoke-virtual {v0}, Ll27;->r()Ljwb;
-
-    move-result-object v4
-
-    check-cast v4, Llwb;
-
-    iget-object v6, v4, Llwb;->a:Lg68;
-
-    invoke-virtual {v6}, Lg68;->c()V
-
-    iget-object v6, v4, Llwb;->b:Lbub;
-
-    invoke-virtual {v6}, Lw3;->c()V
-
-    iget-object v6, v4, Llwb;->c:Lchg;
-
-    invoke-virtual {v6}, Lw3;->c()V
-
-    iget-object v6, v4, Llwb;->d:Lu70;
-
-    invoke-virtual {v6}, Lu70;->c()V
-
-    iget-object v4, v4, Llwb;->e:Lqp5;
-
-    invoke-virtual {v4}, Lw3;->c()V
-
-    invoke-virtual {v0}, Ll27;->r()Ljwb;
-
-    move-result-object v4
-
-    check-cast v4, Llwb;
-
-    iget-object v4, v4, Llwb;->a:Lg68;
-
-    iget-object v6, v4, Lg68;->l0:Lj3e;
-
-    sget-object v7, Lg68;->M0:[Lwq7;
-
-    const/4 v8, 0x3
-
-    aget-object v7, v7, v8
-
-    invoke-virtual {v6, v4, v7, v3}, Lj3e;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Ll27;->r()Ljwb;
-
-    move-result-object v3
-
-    check-cast v3, Llwb;
-
-    iget-object v3, v3, Llwb;->a:Lg68;
-
-    const-string v4, "443"
-
-    invoke-virtual {v3, v4}, Lg68;->P(Ljava/lang/String;)V
-
-    iget-object v3, v0, Ll27;->Z:Lsze;
-
-    invoke-virtual {v0}, Ll27;->s()Lx08;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lsze;->setValue(Ljava/lang/Object;)V
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Li27;->a:Li27;
-
-    invoke-static {v2, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgna;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lgna;->g(Z)V
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lk27;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    sget-object p1, Lg27;->a:Lg27;
+    check-cast p1, Lk27;
 
-    invoke-static {v2, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    iget-object v1, p0, Lk27;->a:Ljava/lang/String;
 
-    return-object v5
+    iget-object v3, p1, Lk27;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lk27;->b:Lyy;
+
+    iget-object v3, p1, Lk27;->b:Lyy;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lk27;->c:J
+
+    iget-wide v5, p1, Lk27;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lk27;->d:J
+
+    iget-wide v5, p1, Lk27;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lk27;->e:J
+
+    iget-wide v5, p1, Lk27;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lk27;->f:Z
+
+    iget-boolean v3, p1, Lk27;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lk27;->g:Z
+
+    iget-boolean v3, p1, Lk27;->g:Z
+
+    if-eq v1, v3, :cond_8
+
+    return v2
+
+    :cond_8
+    iget v1, p0, Lk27;->h:I
+
+    iget v3, p1, Lk27;->h:I
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget v1, p0, Lk27;->i:I
+
+    iget p1, p1, Lk27;->i:I
+
+    if-eq v1, p1, :cond_a
+
+    return v2
+
+    :cond_a
+    return v0
+.end method
+
+.method public final f()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lk27;->j:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final g()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final getContentType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lk27;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDuration()J
+    .locals 2
+
+    iget-wide v0, p0, Lk27;->d:J
+
+    return-wide v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Lk27;->i:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lk27;->h:I
+
+    return v0
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-wide v0, p0, Lk27;->e:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lk27;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lk27;->b:Lyy;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lk27;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lk27;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lk27;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lk27;->f:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lk27;->g:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget v2, p0, Lk27;->h:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lk27;->i:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lk27;->c:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "HlsVideoContent(url="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk27;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoCollage="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk27;->b:Lyy;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lk27;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    const-string v2, ", initSeekPos="
+
+    iget-wide v3, p0, Lk27;->d:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-wide v1, p0, Lk27;->e:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isLive="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk27;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMute="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk27;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", width="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lk27;->h:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", height="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lk27;->i:I
+
+    invoke-static {v0, v1, v3, v2}, Lzb3;->c(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

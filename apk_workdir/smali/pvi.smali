@@ -1,193 +1,137 @@
 .class public final Lpvi;
-.super Lsqi;
+.super Lguh;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
+# virtual methods
+.method public final Z(Lwha;Ljava/lang/String;I)Lz67;
+    .locals 1
 
-.field public final synthetic c:Ljava/lang/Object;
+    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
 
+    move-result-object v0
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    iput p1, p0, Lpvi;->b:I
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lpvi;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {p0}, Lsqi;-><init>()V
+    const/4 p1, 0x2
 
-    return-void
+    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object p2
 .end method
 
+.method public final a0(Lwha;Ljava/lang/String;ILwha;)Lz67;
+    .locals 1
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
 
-    iget v0, p0, Lpvi;->b:I
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    iget-object v0, p0, Lpvi;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    check-cast v0, Lqvi;
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, v0, Lqvi;->b:Ljava/lang/Object;
+    invoke-static {v0, p4}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    check-cast v0, Lw1j;
+    const/16 p1, 0x8
 
-    iget-object v1, v0, Lw1j;->b:Lwv4;
+    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    const-string v2, "unlinkToDeath"
+    move-result-object p1
 
-    const/4 v3, 0x0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    new-array v4, v3, [Ljava/lang/Object;
+    move-result-object p2
 
-    invoke-virtual {v1, v2, v4}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
 
-    iget-object v1, v0, Lw1j;->m:Lt7i;
+    move-result-object p2
 
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    move-result-object v1
+    return-object p2
+.end method
 
-    iget-object v2, v0, Lw1j;->j:Loki;
+.method public final b0(Lwha;Ljava/lang/String;I)Lz67;
+    .locals 1
 
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
+    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    iput-object v1, v0, Lw1j;->m:Lt7i;
+    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    iput-boolean v3, v0, Lw1j;->g:Z
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    return-void
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    :pswitch_0
-    iget-object v0, p0, Lpvi;->c:Ljava/lang/Object;
+    const/4 p1, 0x4
 
-    check-cast v0, Lw1j;
+    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    iget-object v0, v0, Lw1j;->f:Ljava/lang/Object;
+    move-result-object p1
 
-    monitor-enter v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    :try_start_0
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
+    move-result-object p2
 
-    check-cast v1, Lw1j;
+    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
 
-    iget-object v1, v1, Lw1j;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object p2
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    move-result v1
+    return-object p2
+.end method
 
-    const/4 v2, 0x0
+.method public final c0(Lwha;Ljava/lang/String;ZJ)Lz67;
+    .locals 1
 
-    if-lez v1, :cond_1
+    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
 
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Lw1j;
+    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    iget-object v1, v1, Lw1j;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v1
+    invoke-virtual {v0, p4, p5}, Landroid/os/Parcel;->writeLong(J)V
 
-    if-gtz v1, :cond_0
+    const/4 p1, 0x7
 
-    goto :goto_0
+    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    :cond_0
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Lw1j;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    iget-object v1, v1, Lw1j;->b:Lwv4;
+    move-result-object p2
 
-    const-string v3, "Leaving the connection open for other ongoing calls."
+    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    move-result-object p2
 
-    invoke-virtual {v1, v3, v2}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    monitor-exit v0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :cond_1
-    :goto_0
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
-
-    check-cast v1, Lw1j;
-
-    iget-object v3, v1, Lw1j;->m:Lt7i;
-
-    if-eqz v3, :cond_2
-
-    iget-object v1, v1, Lw1j;->b:Lwv4;
-
-    const-string v3, "Unbind from service."
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v4}, Lwv4;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
-
-    check-cast v1, Lw1j;
-
-    iget-object v3, v1, Lw1j;->a:Landroid/content/Context;
-
-    iget-object v1, v1, Lw1j;->l:Lqvi;
-
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
-
-    check-cast v1, Lw1j;
-
-    iput-boolean v2, v1, Lw1j;->g:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lw1j;->m:Lt7i;
-
-    iput-object v2, v1, Lw1j;->l:Lqvi;
-
-    :cond_2
-    iget-object v1, p0, Lpvi;->c:Ljava/lang/Object;
-
-    check-cast v1, Lw1j;
-
-    invoke-virtual {v1}, Lw1j;->d()V
-
-    monitor-exit v0
-
-    :goto_1
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method

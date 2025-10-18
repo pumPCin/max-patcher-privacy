@@ -1,100 +1,200 @@
-.class public abstract Lqcb;
-.super Ljava/lang/Object;
+.class public final Lqcb;
+.super Lzx7;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic q:I
+
+.field public final synthetic r:Luc4;
+
+
 # direct methods
-.method public static final a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lei1;
-    .locals 4
+.method public synthetic constructor <init>(Luc4;Landroid/content/Context;I)V
+    .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
+    iput p3, p0, Lqcb;->q:I
 
-    const-string v0, ":"
+    iput-object p1, p0, Lqcb;->r:Luc4;
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    invoke-direct {p0, p2}, Lzx7;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Landroid/util/DisplayMetrics;)F
+    .locals 1
+
+    iget v0, p0, Lqcb;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    :goto_0
+    int-to-float p1, p1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, p1
+
+    return v0
+
+    :pswitch_0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(I)I
+    .locals 1
+
+    iget v0, p0, Lqcb;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lzx7;->f(I)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const/16 v0, 0x64
+
+    invoke-super {p0, p1}, Lzx7;->f(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Landroid/view/View;Lm7d;Lk7d;)V
+    .locals 2
+
+    iget p2, p0, Lqcb;->q:I
+
+    packed-switch p2, :pswitch_data_0
+
+    iget-object p2, p0, Lqcb;->r:Luc4;
+
+    iget-object v0, p2, Luc4;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object v0
 
-    const/4 v1, 0x6
+    invoke-virtual {p2, v0, p1}, Luc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
 
-    invoke-static {p0, v0, v1}, Ls9f;->R(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+    move-result-object p1
 
-    move-result-object p0
+    const/4 p2, 0x0
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-le v0, v2, :cond_0
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Lz9f;->f(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
-    :cond_0
-    new-instance v0, Lei1;
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
-    invoke-static {p0}, Lab3;->B(Ljava/util/List;)Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p0
+    invoke-virtual {p0, v0}, Lzx7;->e(I)I
 
-    check-cast p0, Ljava/lang/String;
+    move-result v0
 
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    if-lez v0, :cond_1
 
-    move-result-wide v2
+    iget-object v1, p0, Lzx7;->j:Landroid/view/animation/DecelerateInterpolator;
 
-    invoke-direct {v0, v2, v3, v1}, Lei1;-><init>(JI)V
+    invoke-virtual {p3, p2, p1, v0, v1}, Lk7d;->b(IIILandroid/view/animation/BaseInterpolator;)V
 
-    return-object v0
-.end method
+    :cond_1
+    :goto_0
+    return-void
 
-.method public static final b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 0
+    :pswitch_0
+    iget-object p2, p0, Lqcb;->r:Luc4;
 
-    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iget-object v0, p2, Luc4;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->authorized(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-virtual {p2, v0, p1}, Luc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public static final c(Lei1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 3
+    const/4 p2, 0x0
 
-    new-instance v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    aget p2, p1, p2
 
-    iget-wide v1, p0, Lei1;->a:J
+    const/4 v0, 0x1
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    aget p1, p1, v0
 
-    move-result-object v1
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    const/4 v2, 0x0
+    move-result v0
 
-    iget p0, p0, Lei1;->b:I
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
-    invoke-direct {v0, v1, v2, p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;-><init>(Ljava/lang/String;ZI)V
+    move-result v1
 
-    return-object v0
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lzx7;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    iget-object v1, p0, Lzx7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lk7d;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

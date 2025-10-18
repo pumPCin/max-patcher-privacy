@@ -1,180 +1,259 @@
 .class public final Lod5;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lkd5;
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lnd5;
+.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lkd5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lod5;->Companion:Lkd5;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Lnd5;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lod5;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lod5;->b:Lnd5;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Ljd5;->a:Ljd5;
-
-    invoke-virtual {p2}, Ljd5;->d()Lu1e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Luti;->b(IILu1e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lnd5;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lod5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    .line 3
-    iput-object p1, p0, Lod5;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    .line 4
-    iput-object p2, p0, Lod5;->b:Lnd5;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lod5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lod5;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lod5;
 
-    iget-object v1, p0, Lod5;->a:Ljava/lang/String;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object v3, p1, Lod5;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lod5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lod5;->b:Lnd5;
-
-    iget-object p1, p1, Lod5;->b:Lnd5;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lod5;->a:Ljava/lang/String;
+    new-instance v0, Lod5;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Lod5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lod5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, v0, Lod5;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lod5;->b:Lnd5;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "ErrorResponse(requestId="
+    iget-object p1, p0, Lod5;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ltd5;
 
-    iget-object v1, p0, Lod5;->a:Ljava/lang/String;
+    iget-object v0, p0, Lod5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->o:Lh0d;
 
-    const-string v1, ", error="
+    invoke-virtual {v0}, Ll24;->getTargetController()Ll24;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    iget-object v1, p0, Lod5;->b:Lnd5;
+    instance-of v3, v2, Lnd5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    const-string v1, ")"
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v2, Lnd5;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v4
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v6, :cond_1
+
+    sget-object v3, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->X:[Ltr7;
+
+    aget-object v3, v3, v5
+
+    invoke-interface {v1, v0, v3}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Leqb;
+
+    sget-object v1, Lzn3;->c:Lzn3;
+
+    invoke-virtual {v0, v1}, Leqb;->setState(Lzn3;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    sget-object v3, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->X:[Ltr7;
+
+    aget-object v3, v3, v5
+
+    invoke-interface {v1, v0, v3}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leqb;
+
+    sget-object v1, Lzn3;->b:Lzn3;
+
+    invoke-virtual {v0, v1}, Leqb;->setState(Lzn3;)V
+
+    :goto_1
+    if-eqz v2, :cond_a
+
+    check-cast v2, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+    invoke-virtual {v2}, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->C0()Lqfe;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lqfe;->N0:Lnje;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    if-ne p1, v6, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    iget-wide v1, v0, Lqfe;->M0:J
+
+    sget-wide v5, Ll2b;->i:J
+
+    cmp-long p1, v1, v5
+
+    if-nez p1, :cond_5
+
+    iget-object p1, v0, Lqfe;->o:Lulf;
+
+    check-cast p1, Lqta;
+
+    invoke-virtual {p1}, Lqta;->a()Lk54;
+
+    move-result-object p1
+
+    new-instance v1, Lhfe;
+
+    invoke-direct {v1, v0, v4}, Lhfe;-><init>(Lqfe;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, p1, v1, v2}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
+
+    goto :goto_2
+
+    :cond_5
+    sget-wide v3, Ll2b;->j:J
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_6
+
+    sget-object p1, Lwae;->i:Lwae;
+
+    invoke-virtual {v0, p1}, Lqfe;->y(Le5a;)V
+
+    goto :goto_2
+
+    :cond_6
+    sget-wide v3, Ll2b;->f:J
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_7
+
+    sget-object p1, Lwae;->h:Lwae;
+
+    invoke-virtual {v0, p1}, Lqfe;->y(Le5a;)V
+
+    goto :goto_2
+
+    :cond_7
+    sget-wide v3, Ll2b;->d:J
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_8
+
+    sget-object p1, Lwae;->j:Lwae;
+
+    invoke-virtual {v0, p1}, Lqfe;->y(Le5a;)V
+
+    goto :goto_2
+
+    :cond_8
+    sget-wide v3, Ll2b;->c:J
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_9
+
+    sget-object p1, Lwae;->l:Lwae;
+
+    invoke-virtual {v0, p1}, Lqfe;->y(Le5a;)V
+
+    :cond_9
+    :goto_2
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lqfe;->M0:J
+
+    :cond_a
+    :goto_3
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

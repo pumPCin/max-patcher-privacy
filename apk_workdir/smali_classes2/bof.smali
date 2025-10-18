@@ -1,99 +1,102 @@
 .class public final Lbof;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzvb;
-.implements Lfi6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+.field public final synthetic X:Lq14;
+
+.field public final synthetic Y:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;)V
+.method public constructor <init>(Lq14;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lbof;->a:Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+    iput-object p1, p0, Lbof;->X:Lq14;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbof;->Y:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lynf;
 
-    iget-object v0, p0, Lbof;->a:Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lt18;->getId()Ljava/util/UUID;
+    invoke-virtual {p0, p1, p2}, Lbof;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast p1, Lbof;
 
-    const-string v2, "work "
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbof;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p2
+.end method
 
-    const-string v0, " on error"
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lbof;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lbof;->X:Lq14;
 
-    move-result-object v0
+    iget-object v1, p0, Lbof;->Y:Landroid/view/View;
 
-    const-string v1, "cof"
-
-    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-direct {p1, v0, v1, p2}, Lbof;-><init>(Lq14;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public test(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lbof;->a:Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+    iget-object p1, p0, Lbof;->Y:Landroid/view/View;
 
-    invoke-virtual {p1}, Lt18;->getId()Ljava/util/UUID;
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
 
-    move-result-object v0
+    move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    const-string v2, "work "
+    sget-object p1, Lqn4;->e0:Lqn4;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const-string v0, " Receive task remove callback"
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lynf;->a0:Lwif;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Laa4;->c(Landroid/content/Context;)Lynf;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "cof"
+    :goto_0
+    iget-object v0, p0, Lbof;->X:Lq14;
 
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lq14;->n(Lynf;)V
 
-    invoke-virtual {p1}, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;->b()Z
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result p1
-
-    return p1
+    return-object p1
 .end method

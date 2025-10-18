@@ -1,58 +1,77 @@
 .class public final Ldh2;
-.super Ljava/lang/Object;
+.super Lccc;
 .source "SourceFile"
-
-# interfaces
-.implements Lb41;
-
-
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ldh2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final onNewMessage(Lpd7;)V
-    .locals 2
+.method public final A(Ly18;)V
+    .locals 6
 
-    iget-object v0, p0, Ldh2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    check-cast p1, Lm8c;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    move-result-object v0
+    check-cast v0, Lah2;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object p1, p1, Lm8c;->a:Lrg2;
 
-    move-result v1
+    iget-object v1, p1, Lrg2;->e:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Lah2;->setLink(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-boolean v1, p1, Lrg2;->f:Z
+
+    invoke-virtual {v0, v1}, Lah2;->setLoading(Z)V
+
+    iget-object v1, p1, Lrg2;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lah2;->setChatTitle(Ljava/lang/String;)V
+
+    iget-wide v1, p1, Lrg2;->b:J
+
+    iget-object v3, p1, Lrg2;->a:Ljava/lang/String;
+
+    iget-object v4, p1, Lrg2;->c:Ljava/lang/CharSequence;
+
+    iget-object v5, v0, Lah2;->G0:Lyoa;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    check-cast v1, Lb41;
+    invoke-static {v5, v3, v1, v4}, Lyoa;->n(Lyoa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
 
-    invoke-interface {v1, p1}, Lb41;->onNewMessage(Lpd7;)V
+    iget-boolean v1, p1, Lrg2;->g:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-boolean p1, p1, Lrg2;->h:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
+    move p1, v2
+
+    :goto_0
+    iget-object v1, v0, Lah2;->J0:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v2, 0x8
+
+    :goto_1
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lah2;->v()V
+
     return-void
 .end method

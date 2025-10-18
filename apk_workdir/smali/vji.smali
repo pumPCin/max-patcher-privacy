@@ -1,9 +1,9 @@
 .class public final Lvji;
-.super Li6i;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements La9i;
+.implements Lbai;
 
 
 # static fields
@@ -13,11 +13,9 @@
 # instance fields
 .field private zzd:I
 
-.field private zze:I
+.field private zze:Ljava/lang/String;
 
-.field private zzf:I
-
-.field private zzg:Ljava/lang/String;
+.field private zzf:Ljava/lang/String;
 
 
 # direct methods
@@ -32,7 +30,7 @@
 
     const-class v1, Lvji;
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
 .end method
@@ -40,19 +38,21 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    invoke-direct {p0}, Lj7i;-><init>()V
 
     const-string v0, ""
 
-    iput-object v0, p0, Lvji;->zzg:Ljava/lang/String;
+    iput-object v0, p0, Lvji;->zze:Ljava/lang/String;
+
+    iput-object v0, p0, Lvji;->zzf:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 3
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 2
 
     add-int/lit8 p1, p1, -0x1
 
@@ -84,11 +84,11 @@
     return-object p1
 
     :cond_1
-    new-instance p1, Ldii;
+    new-instance p1, Leji;
 
     sget-object p2, Lvji;->zzb:Lvji;
 
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
+    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
 
     return-object p1
 
@@ -100,27 +100,23 @@
     return-object p1
 
     :cond_3
-    sget-object p1, Lbwh;->A:Lbwh;
+    const-string p1, "zze"
 
-    const-string p2, "zzg"
+    const-string p2, "zzf"
 
     const-string v0, "zzd"
 
-    const-string v1, "zze"
-
-    const-string v2, "zzf"
-
-    filled-new-array {v0, v1, v2, p1, p2}, [Ljava/lang/Object;
+    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
 
     move-result-object p1
 
     sget-object p2, Lvji;->zzb:Lvji;
 
-    new-instance v0, Lv9i;
+    new-instance v0, Lwai;
 
-    const-string v1, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1004\u0000\u0002\u180c\u0001\u0003\u1008\u0002"
+    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001"
 
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v0
 

@@ -1,287 +1,95 @@
 .class public final Lr52;
-.super Luy;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldbf;
+
+# static fields
+.field public static final c:Lw00;
 
 
 # instance fields
-.field public X:J
+.field public final a:Lz84;
 
-.field public final synthetic Y:I
-
-.field public Z:Ljava/lang/Object;
-
-.field public c:J
-
-.field public o:Ldbf;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lr52;->Y:I
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Luy;-><init>(I)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lfbf;I)V
-    .locals 0
-
-    .line 2
-    iput p2, p0, Lr52;->Y:I
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p2}, Luy;-><init>(I)V
-
-    iput-object p1, p0, Lr52;->Z:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(J)I
-    .locals 3
-
-    iget-object v0, p0, Lr52;->o:Ldbf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v1, p0, Lr52;->X:J
-
-    sub-long/2addr p1, v1
-
-    invoke-interface {v0, p1, p2}, Ldbf;->d(J)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final g(I)J
-    .locals 4
-
-    iget-object v0, p0, Lr52;->o:Ldbf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0, p1}, Ldbf;->g(I)J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lr52;->X:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final m(J)Ljava/util/List;
-    .locals 3
-
-    iget-object v0, p0, Lr52;->o:Ldbf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v1, p0, Lr52;->X:J
-
-    sub-long/2addr p1, v1
-
-    invoke-interface {v0, p1, p2}, Ldbf;->m(J)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final s()I
-    .locals 1
-
-    iget-object v0, p0, Lr52;->o:Ldbf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0}, Ldbf;->s()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final w()V
-    .locals 5
-
-    iget v0, p0, Lr52;->Y:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lr52;->Z:Ljava/lang/Object;
-
-    check-cast v0, Lmoe;
-
-    iget-object v1, v0, Lmoe;->b:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    iput v2, p0, Luy;->b:I
-
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lr52;->o:Ldbf;
-
-    iget-object v2, v0, Lmoe;->f:[Lr52;
-
-    iget v3, v0, Lmoe;->h:I
-
-    add-int/lit8 v4, v3, 0x1
-
-    iput v4, v0, Lmoe;->h:I
-
-    aput-object p0, v2, v3
-
-    iget-object v2, v0, Lmoe;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v2}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget v2, v0, Lmoe;->h:I
-
-    if-lez v2, :cond_0
-
-    iget-object v0, v0, Lmoe;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
-
-    :cond_0
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lr52;->Z:Ljava/lang/Object;
-
-    check-cast v0, Les0;
-
-    iget-object v0, v0, Les0;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-ge v1, v2, :cond_1
-
-    move v1, v4
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v3
-
-    :goto_0
-    invoke-static {v1}, Lefi;->f(Z)V
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/2addr v1, v4
-
-    invoke-static {v1}, Lefi;->d(Z)V
-
-    iput v3, p0, Luy;->b:I
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lr52;->o:Ldbf;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lr52;->Z:Ljava/lang/Object;
-
-    check-cast v0, Lb42;
-
-    iget-object v0, v0, Lb42;->b:Ljava/lang/Object;
-
-    check-cast v0, Lt52;
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Luy;->b:I
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lr52;->o:Ldbf;
-
-    iget-object v0, v0, Lt52;->b:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final x(JLdbf;J)V
+.method static constructor <clinit>()V
     .locals 2
 
-    iput-wide p1, p0, Lr52;->c:J
+    new-instance v0, Lw00;
 
-    iput-object p3, p0, Lr52;->o:Ldbf;
+    const/16 v1, 0x8
 
-    const-wide v0, 0x7fffffffffffffffL
+    invoke-direct {v0, v1}, Lw00;-><init>(I)V
 
-    cmp-long p3, p4, v0
+    sput-object v0, Lr52;->c:Lw00;
 
-    if-nez p3, :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
+    .locals 21
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p7, :cond_0
+
+    move/from16 v17, p8
 
     goto :goto_0
 
     :cond_0
-    move-wide p1, p4
+    const/high16 v1, -0x1000000
+
+    move/from16 v17, v1
 
     :goto_0
-    iput-wide p1, p0, Lr52;->X:J
+    new-instance v2, Lz84;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v8, 0x0
+
+    const/high16 v12, -0x80000000
+
+    const v13, -0x800001
+
+    const v14, -0x800001
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    move v15, v13
+
+    move/from16 v18, v12
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p2
+
+    move/from16 v7, p3
+
+    move/from16 v9, p4
+
+    move/from16 v10, p5
+
+    move/from16 v11, p6
+
+    move/from16 v16, p7
+
+    invoke-direct/range {v2 .. v20}, Lz84;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
+
+    iput-object v2, v0, Lr52;->a:Lz84;
+
+    move/from16 v1, p9
+
+    iput v1, v0, Lr52;->b:I
 
     return-void
 .end method

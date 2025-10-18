@@ -1,5 +1,5 @@
 .class public final Lvl1;
-.super Lim1;
+.super Lqm1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lvl1;
 
-    invoke-direct {v0}, Lim1;-><init>()V
+    invoke-direct {v0}, Lqm1;-><init>()V
 
     sput-object v0, Lvl1;->D:Lvl1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x78c1725f
+    const v0, -0x4e8c3b89
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "OpenMoreAction"
+    const-string v0, "CollapseCall"
 
     return-object v0
 .end method

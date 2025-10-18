@@ -1,36 +1,24 @@
-.class public final Lhdc;
+.class public final synthetic Lhdc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyhg;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Liq5;
-
-.field public final e:Lsga;
+.field public final synthetic b:Lqdc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsga;I)V
+.method public synthetic constructor <init>(Lqdc;I)V
     .locals 0
 
     iput p2, p0, Lhdc;->a:I
 
-    const/4 p2, 0x0
-
-    iput-boolean p2, p0, Lhdc;->b:Z
-
-    iput-boolean p2, p0, Lhdc;->c:Z
-
-    iput-object p1, p0, Lhdc;->e:Lsga;
+    iput-object p1, p0, Lhdc;->b:Lqdc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,208 +27,37 @@
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;)Lyhg;
-    .locals 3
+.method public final run()V
+    .locals 2
 
     iget v0, p0, Lhdc;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Lhdc;->b:Z
+    iget-object v0, p0, Lhdc;->b:Lqdc;
 
-    if-nez v0, :cond_0
+    iget-boolean v1, v0, Lqdc;->T0:Z
 
-    const/4 v0, 0x1
+    if-nez v1, :cond_0
 
-    iput-boolean v0, p0, Lhdc;->b:Z
+    iget-object v1, v0, Lqdc;->y0:Lev8;
 
-    iget-object v0, p0, Lhdc;->e:Lsga;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Lp8i;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lp8i;->b(Liq5;Ljava/lang/Object;Z)V
-
-    return-object p0
+    invoke-interface {v1, v0}, Lq2e;->b(Ls2e;)V
 
     :cond_0
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     :pswitch_0
-    iget-boolean v0, p0, Lhdc;->b:Z
+    iget-object v0, p0, Lhdc;->b:Lqdc;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Lqdc;->s()V
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lhdc;->b:Z
-
-    iget-object v0, p0, Lhdc;->e:Lsga;
-
-    check-cast v0, Lvwh;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lvwh;->b(Liq5;Ljava/lang/Object;Z)V
-
-    return-object p0
-
-    :cond_1
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_1
-    iget-boolean v0, p0, Lhdc;->b:Z
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lhdc;->b:Z
-
-    iget-object v0, p0, Lhdc;->e:Lsga;
-
-    check-cast v0, Lgdc;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lgdc;->c(Liq5;Ljava/lang/Object;Z)V
-
-    return-object p0
-
-    :cond_2
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Z)Lyhg;
-    .locals 3
-
-    iget v0, p0, Lhdc;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lhdc;->b:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lhdc;->b:Z
-
-    iget-object v0, p0, Lhdc;->e:Lsga;
-
-    check-cast v0, Lp8i;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lp8i;->c(Liq5;IZ)V
-
-    return-object p0
-
-    :cond_0
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    iget-boolean v0, p0, Lhdc;->b:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lhdc;->b:Z
-
-    iget-object v0, p0, Lhdc;->e:Lsga;
-
-    check-cast v0, Lvwh;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lvwh;->c(Liq5;IZ)V
-
-    return-object p0
-
-    :cond_1
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_1
-    iget-boolean v0, p0, Lhdc;->b:Z
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lhdc;->b:Z
-
-    iget-object v0, p0, Lhdc;->e:Lsga;
-
-    check-cast v0, Lgdc;
-
-    iget-object v1, p0, Lhdc;->d:Liq5;
-
-    iget-boolean v2, p0, Lhdc;->c:Z
-
-    invoke-virtual {v0, v1, p1, v2}, Lgdc;->b(Liq5;IZ)V
-
-    return-object p0
-
-    :cond_2
-    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
-
-    const-string v0, "Cannot encode a second value in the ValueEncoderContext"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -12,7 +12,7 @@
 
 .field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public static final e:Lrhf;
+.field public static final e:Lwif;
 
 .field public static final f:Lqc;
 
@@ -55,11 +55,11 @@
 
     invoke-direct {v0, v1}, Lm;-><init>(I)V
 
-    new-instance v1, Lrhf;
+    new-instance v1, Lwif;
 
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    sput-object v1, Lgg;->e:Lrhf;
+    sput-object v1, Lgg;->e:Lwif;
 
     new-instance v0, Lqc;
 
@@ -77,7 +77,7 @@
 
     sput-object v2, Lgg;->g:Lqc;
 
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -85,7 +85,7 @@
 
     invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -96,12 +96,12 @@
     return-void
 .end method
 
-.method public static a(Lkf6;I)V
+.method public static a(Leg6;I)V
     .locals 4
 
-    iget v0, p0, Lkf6;->a:I
+    iget v0, p0, Leg6;->a:I
 
-    iget-object p0, p0, Lkf6;->b:Lyof;
+    iget-object p0, p0, Leg6;->b:Lcqf;
 
     int-to-float v1, v0
 
@@ -120,15 +120,15 @@
     :cond_0
     float-to-int v1, v1
 
-    iget v2, p0, Lyof;->Z:I
+    iget v2, p0, Lcqf;->Z:I
 
     add-int/2addr v2, p1
 
-    invoke-static {v2, v1, v0}, Ljvi;->c(III)I
+    invoke-static {v2, v1, v0}, Llwi;->c(III)I
 
     move-result p1
 
-    iget v0, p0, Lyof;->Z:I
+    iget v0, p0, Lcqf;->Z:I
 
     if-eq p1, v0, :cond_1
 
@@ -136,23 +136,23 @@
 
     const/4 v0, 0x1
 
-    iget v1, p0, Lyof;->Y:I
+    iget v1, p0, Lcqf;->Y:I
 
-    invoke-static {p1, v0, v1}, Ljvi;->c(III)I
+    invoke-static {p1, v0, v1}, Llwi;->c(III)I
 
     move-result p1
 
-    iput p1, p0, Lyof;->Z:I
+    iput p1, p0, Lcqf;->Z:I
 
-    invoke-virtual {p0}, Lyof;->q()Llu0;
+    invoke-virtual {p0}, Lcqf;->q()Luu0;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    iget p0, p0, Lyof;->Z:I
+    iget p0, p0, Lcqf;->Z:I
 
-    invoke-virtual {p1, p0}, Llu0;->a(I)V
+    invoke-virtual {p1, p0}, Luu0;->a(I)V
 
     :cond_1
     return-void

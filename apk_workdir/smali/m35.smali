@@ -1,31 +1,47 @@
 .class public final Lm35;
-.super Ljava/lang/Object;
+.super Ljava/util/HashMap;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:[B
-
-.field public final d:[B
-
-
 # direct methods
-.method public constructor <init>(IZ[B[B)V
-    .locals 0
+.method public static a(Lpf9;)Lm35;
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Lg0i;->n(Lpf9;)I
 
-    iput p1, p0, Lm35;->a:I
+    move-result v0
 
-    iput-boolean p2, p0, Lm35;->b:Z
+    new-instance v1, Lm35;
 
-    iput-object p3, p0, Lm35;->c:[B
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p4, p0, Lm35;->d:[B
+    const/4 v2, 0x0
 
-    return-void
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    invoke-virtual {p0}, Lpf9;->r0()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lpf9;->r0()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method

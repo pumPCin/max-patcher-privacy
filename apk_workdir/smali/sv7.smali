@@ -1,138 +1,255 @@
 .class public final Lsv7;
-.super Llff;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Luv7;
-
-.field public final synthetic Z:Lqv7;
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Luv7;Lqv7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lsv7;->Y:Luv7;
+    iput p1, p0, Lsv7;->a:I
 
-    iput-object p2, p0, Lsv7;->Z:Lqv7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final write(I)V
+    .locals 4
 
-    check-cast p1, Lb54;
+    iget p1, p0, Lsv7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lsv7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .line 1
+    iget-wide v0, p0, Lsv7;->b:J
 
-    move-result-object p1
+    const-wide/16 v2, 0x1
 
-    check-cast p1, Lsv7;
+    add-long/2addr v0, v2
 
-    sget-object p2, Lzag;->a:Lzag;
+    iput-wide v0, p0, Lsv7;->b:J
 
-    invoke-virtual {p1, p2}, Lsv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    .line 2
+    :pswitch_0
+    iget-wide v0, p0, Lsv7;->b:J
 
-    return-object p1
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 3
+    :pswitch_1
+    iget-wide v0, p0, Lsv7;->b:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final write([B)V
+    .locals 4
+
+    iget v0, p0, Lsv7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 6
+    :pswitch_1
+    iget-wide v0, p0, Lsv7;->b:J
+
+    array-length p1, p1
+
+    int-to-long v2, p1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lsv7;->b:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final write([BII)V
     .locals 2
 
-    new-instance p1, Lsv7;
+    iget v0, p0, Lsv7;->a:I
 
-    iget-object v0, p0, Lsv7;->Y:Luv7;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lsv7;->Z:Lqv7;
+    if-ltz p2, :cond_0
 
-    invoke-direct {p1, v0, v1, p2}, Lsv7;-><init>(Luv7;Lqv7;Lkotlin/coroutines/Continuation;)V
+    .line 7
+    array-length p1, p1
 
-    return-object p1
-.end method
+    if-gt p2, p1, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    if-ltz p3, :cond_0
 
-    iget v0, p0, Lsv7;->X:I
+    add-int/2addr p2, p3
 
-    const/4 v1, 0x1
+    if-gt p2, p1, :cond_0
 
-    if-eqz v0, :cond_1
+    if-ltz p2, :cond_0
 
-    if-ne v0, v1, :cond_0
+    .line 8
+    iget-wide p1, p0, Lsv7;->b:J
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    int-to-long v0, p3
 
-    goto :goto_0
+    add-long/2addr p1, v0
 
+    iput-wide p1, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 9
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 10
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw p1
 
+    :pswitch_0
+    if-ltz p2, :cond_1
+
+    .line 11
+    array-length p1, p1
+
+    if-gt p2, p1, :cond_1
+
+    if-ltz p3, :cond_1
+
+    add-int/2addr p2, p3
+
+    if-gt p2, p1, :cond_1
+
+    if-ltz p2, :cond_1
+
+    .line 12
+    iget-wide p1, p0, Lsv7;->b:J
+
+    int-to-long v0, p3
+
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lsv7;->b:J
+
+    return-void
+
+    .line 13
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    iget-object p1, p0, Lsv7;->Y:Luv7;
+    .line 14
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    check-cast p1, Lwv7;
+    throw p1
 
-    iget-object p1, p1, Lwv7;->a:Lkw7;
+    :pswitch_1
+    if-ltz p2, :cond_2
 
-    iput v1, p0, Lsv7;->X:I
+    .line 15
+    array-length v0, p1
 
-    sget-object v0, Lvu4;->a:Lem4;
+    if-gt p2, v0, :cond_2
 
-    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lfd8;
+    if-ltz p3, :cond_2
 
-    invoke-virtual {v0}, Lfd8;->getImmediate()Lfd8;
+    add-int/2addr p2, p3
 
-    move-result-object v0
+    array-length p1, p1
 
-    new-instance v1, Lieb;
+    if-gt p2, p1, :cond_2
 
-    const/4 v2, 0x0
+    if-ltz p2, :cond_2
 
-    sget-object v3, Lkv7;->c:Lkv7;
+    .line 16
+    iget-wide p1, p0, Lsv7;->b:J
 
-    iget-object v4, p0, Lsv7;->Z:Lqv7;
+    int-to-long v0, p3
 
-    invoke-direct {v1, p1, v3, v4, v2}, Lieb;-><init>(Lkw7;Lkv7;Lei6;Lkotlin/coroutines/Continuation;)V
+    add-long/2addr p1, v0
 
-    invoke-static {v0, v1, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-wide p1, p0, Lsv7;->b:J
 
-    move-result-object p1
+    return-void
 
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
+    .line 17
     :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    return-object p1
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

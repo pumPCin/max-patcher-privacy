@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IInterface;
+
 
 # virtual methods
-.method public abstract b(Ljava/lang/Class;)Lv9i;
-.end method
-
-.method public abstract u(Ljava/lang/Class;)Z
+.method public abstract A(Ljava/lang/String;Landroid/os/Bundle;Lnvi;)V
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lndf;
+.implements Lvef;
 
 
 # instance fields

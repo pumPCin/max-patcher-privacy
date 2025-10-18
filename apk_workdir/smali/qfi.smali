@@ -1,141 +1,249 @@
-.class public final Lqfi;
-.super Li6i;
+.class public abstract Lqfi;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
 
 
 # static fields
-.field private static final zzb:Lqfi;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:I
-
-.field private zzf:I
-
-.field private zzg:Lw6i;
-
-.field private zzh:I
+.field public static a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static final a(Lhph;)Lloh;
     .locals 2
 
-    new-instance v0, Lqfi;
+    new-instance v0, Lloh;
 
-    invoke-direct {v0}, Lqfi;-><init>()V
+    iget-object v1, p0, Lhph;->a:Ljava/lang/String;
 
-    sput-object v0, Lqfi;->zzb:Lqfi;
+    iget p0, p0, Lhph;->t:I
 
-    const-class v1, Lqfi;
-
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Li6i;-><init>()V
-
-    sget-object v0, Ls9i;->o:Ls9i;
-
-    iput-object v0, p0, Lqfi;->zzg:Lw6i;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 6
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lqfi;->zzb:Lqfi;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Laki;
-
-    sget-object p2, Lqfi;->zzb:Lqfi;
-
-    const/16 v0, 0x15
-
-    invoke-direct {p1, v0, p2}, Laki;-><init>(ILi6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lqfi;
-
-    invoke-direct {p1}, Lqfi;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    sget-object v2, Lbwh;->l:Lbwh;
-
-    const-string v4, "zzg"
-
-    const-string v5, "zzh"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v3, "zzf"
-
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lqfi;->zzb:Lqfi;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0001\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u180c\u0000\u0002\u1004\u0001\u0003\u001a\u0004\u1004\u0002"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lloh;-><init>(Ljava/lang/String;I)V
 
     return-object v0
+.end method
 
-    :cond_4
-    const/4 p1, 0x1
+.method public static final b(Lzcg;)V
+    .locals 3
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    new-instance v0, Lt5;
 
-    move-result-object p1
+    const/16 v1, 0x8
 
-    return-object p1
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lck9;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lflb;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lvkb;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Ldlg;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lyz;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lva9;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Llm;-><init>(I)V
+
+    const-class v1, Lcrf;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lota;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Ldx8;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lt5;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lt5;-><init>(I)V
+
+    const-class v1, Lzub;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Llm;-><init>(I)V
+
+    const-class v1, Laub;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Llm;-><init>(I)V
+
+    const-class v1, Lm00;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Llm;-><init>(I)V
+
+    const-class v1, Lv80;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lf;-><init>(I)V
+
+    const-class v1, Lms4;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lf;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lf;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Llm;-><init>(I)V
+
+    const-class v2, Ljsg;
+
+    invoke-virtual {p0, v2, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Llm;-><init>(I)V
+
+    const-class v2, Lyo6;
+
+    invoke-virtual {p0, v2, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2}, Llm;-><init>(I)V
+
+    const-class v2, Liqg;
+
+    invoke-virtual {p0, v2, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Llm;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Llm;-><init>(I)V
+
+    const-class v2, Lxqg;
+
+    invoke-virtual {p0, v2, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lf;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lf;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lf;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Lf;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    return-void
 .end method

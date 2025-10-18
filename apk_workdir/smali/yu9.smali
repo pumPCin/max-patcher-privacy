@@ -1,21 +1,23 @@
 .class public final Lyu9;
-.super Luy;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lbcb;
+.field public final a:J
+
+.field public final b:Lz8d;
 
 
 # direct methods
-.method public constructor <init>(ILbcb;)V
-    .locals 1
+.method public synthetic constructor <init>(JLz8d;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput-wide p1, p0, Lyu9;->a:J
 
-    invoke-direct {p0, p1, v0}, Luy;-><init>(II)V
+    iput-object p3, p0, Lyu9;->b:Lz8d;
 
-    iput-object p2, p0, Lyu9;->c:Lbcb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

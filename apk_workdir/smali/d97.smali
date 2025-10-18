@@ -1,80 +1,72 @@
-.class public interface abstract Ld97;
+.class public final synthetic Ld97;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldzc;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final x:Lq90;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final y:Lq90;
+.field public final synthetic b:Le97;
+
+.field public final synthetic c:Landroid/graphics/Bitmap;
+
+.field public final synthetic o:Lmb6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Le97;Landroid/graphics/Bitmap;Lmb6;I)V
+    .locals 0
 
-    new-instance v0, Lq90;
+    iput p4, p0, Ld97;->a:I
 
-    const-string v1, "camerax.core.imageInput.inputFormat"
+    iput-object p1, p0, Ld97;->b:Le97;
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput-object p2, p0, Ld97;->c:Landroid/graphics/Bitmap;
 
-    const/4 v3, 0x0
+    iput-object p3, p0, Ld97;->o:Lmb6;
 
-    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Ld97;->x:Lq90;
-
-    new-instance v0, Lq90;
-
-    const-string v1, "camerax.core.imageInput.inputDynamicRange"
-
-    const-class v2, Lc45;
-
-    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Ld97;->y:Lq90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getInputFormat()I
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    sget-object v0, Ld97;->x:Lq90;
+    iget v0, p0, Ld97;->a:I
 
-    invoke-interface {p0, v0}, Ldzc;->h(Lq90;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Ld97;->c:Landroid/graphics/Bitmap;
 
-    check-cast v0, Ljava/lang/Integer;
+    iget-object v1, p0, Ld97;->o:Lmb6;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    iget-object v2, p0, Ld97;->b:Le97;
 
-    move-result v0
+    invoke-virtual {v2, v0, v1}, Le97;->a(Landroid/graphics/Bitmap;Lmb6;)V
 
-    return v0
-.end method
+    return-void
 
-.method public o()Lc45;
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Ld97;->c:Landroid/graphics/Bitmap;
 
-    sget-object v0, Ld97;->y:Lq90;
+    iget-object v1, p0, Ld97;->o:Lmb6;
 
-    sget-object v1, Lc45;->c:Lc45;
+    iget-object v2, p0, Ld97;->b:Le97;
 
-    invoke-interface {p0, v0, v1}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1}, Le97;->a(Landroid/graphics/Bitmap;Lmb6;)V
 
-    move-result-object v0
+    return-void
 
-    check-cast v0, Lc45;
+    nop
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

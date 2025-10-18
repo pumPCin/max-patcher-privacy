@@ -4,52 +4,52 @@
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final a:Liu7;
 
-.field public final b:Llt7;
+.field public final b:Liu7;
 
-.field public final c:Llt7;
+.field public final c:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lhd;->a:Llt7;
+    iput-object p3, p0, Lhd;->a:Liu7;
 
-    iput-object p1, p0, Lhd;->b:Llt7;
+    iput-object p1, p0, Lhd;->b:Liu7;
 
-    iput-object p2, p0, Lhd;->c:Llt7;
+    iput-object p2, p0, Lhd;->c:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ly78;
+.method public final a()Lv88;
     .locals 1
 
-    iget-object v0, p0, Lhd;->b:Llt7;
+    iget-object v0, p0, Lhd;->b:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ly78;
+    check-cast v0, Lv88;
 
     return-object v0
 .end method
 
 .method public final b(Ljava/lang/String;Ljava/util/Map;)V
-    .locals 3
+    .locals 15
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -58,45 +58,93 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwi7;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-wide v0
+
+    invoke-static/range {p2 .. p2}, Lzg8;->n(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v2, 0x0
+
+    move-object v14, v2
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Let;
+
+    invoke-interface {v2}, Ljava/util/Map;->size()I
+
+    move-result v4
+
+    invoke-direct {v3, v4}, Lzoe;-><init>(I)V
+
+    invoke-virtual {v3, v2}, Let;->putAll(Ljava/util/Map;)V
+
+    move-object v14, v3
+
+    :goto_0
+    invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_2
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    iput-wide v1, v0, Lwi7;->a:J
+    :cond_2
+    move-wide v6, v0
 
-    const-string v1, "PUSH"
+    new-instance v5, Lx88;
 
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
+    const-wide/16 v8, 0x0
 
-    iput-object p1, v0, Lwi7;->o:Ljava/lang/String;
+    const-wide/16 v10, 0x0
 
-    invoke-static {p2}, Lyf8;->k(Ljava/util/Map;)Ljava/util/Map;
+    const-string v12, "PUSH"
 
-    move-result-object p1
+    move-object/from16 v13, p1
 
-    invoke-virtual {v0, p1}, Lwi7;->c(Ljava/util/Map;)V
+    invoke-direct/range {v5 .. v14}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-virtual {v0}, Lwi7;->d()La88;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    invoke-virtual {p0, v5}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type or event can\'t be empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final c(Ly88;Ll83;Lxr4;)V
+.method public final c(Lv98;Ly83;Los4;)V
     .locals 10
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -105,13 +153,13 @@
     goto/16 :goto_1
 
     :cond_0
-    check-cast p3, Lzr4;
+    check-cast p3, Lqs4;
 
-    iget-object p3, p3, Lzr4;->g:Lb8f;
+    iget-object p3, p3, Lqs4;->g:Lk9f;
 
-    check-cast p3, Lds6;
+    check-cast p3, Lxs6;
 
-    invoke-virtual {p3}, Lds6;->a()Z
+    invoke-virtual {p3}, Lxs6;->a()Z
 
     move-result p3
 
@@ -124,17 +172,17 @@
 
     move-result-wide v0
 
-    check-cast p2, Lgsd;
+    check-cast p2, Lntd;
 
-    iget-object p3, p2, Lgsd;->K:Lj3e;
+    iget-object p3, p2, Lntd;->K:Lq4e;
 
-    sget-object v2, Lgsd;->h0:[Lwq7;
+    sget-object v2, Lntd;->k0:[Ltr7;
 
     const/16 v3, 0x1b
 
     aget-object v4, v2, v3
 
-    invoke-virtual {p3, p2, v4}, Lj3e;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-virtual {p3, p2, v4}, Lq4e;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object p3
 
@@ -150,7 +198,7 @@
 
     if-nez p3, :cond_2
 
-    iget-object p1, p2, Lgsd;->K:Lj3e;
+    iget-object p1, p2, Lntd;->K:Lq4e;
 
     aget-object p3, v2, v3
 
@@ -158,7 +206,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, p3, v0}, Lj3e;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    invoke-virtual {p1, p2, p3, v0}, Lq4e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
     return-void
 
@@ -174,7 +222,7 @@
     goto :goto_1
 
     :cond_3
-    iget-object p1, p1, Ly88;->o:Ljava/util/List;
+    iget-object p1, p1, Lv98;->o:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -194,20 +242,20 @@
 
     move-result-object p3
 
-    check-cast p3, Lea2;
+    check-cast p3, Lma2;
 
-    iget v6, p3, Lea2;->v0:I
+    iget v6, p3, Lma2;->u0:I
 
     if-eqz v6, :cond_4
 
-    iget-object p3, p3, Lea2;->s0:Lb99;
+    iget-object p3, p3, Lma2;->r0:Lda9;
 
     if-nez p3, :cond_5
 
     goto :goto_0
 
     :cond_5
-    iget-wide v6, p3, Lb99;->b:J
+    iget-wide v6, p3, Lda9;->b:J
 
     cmp-long p3, v6, v4
 
@@ -256,13 +304,13 @@
 .end method
 
 .method public final d(ILjava/lang/String;)V
-    .locals 2
+    .locals 10
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -271,41 +319,64 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwi7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-string v1, "ACTION"
-
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
-
-    iput-object p2, v0, Lwi7;->o:Ljava/lang/String;
-
-    const-string p2, "value"
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p2}, Lwi7;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    new-instance v9, Let;
 
-    invoke-virtual {v0}, Lwi7;->d()La88;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    invoke-direct {v9, v0}, Lzoe;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    const-string v0, "value"
+
+    invoke-virtual {v9, v0, p1}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    new-instance v0, Lx88;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    const-string v7, "ACTION"
+
+    move-object v8, p2
+
+    invoke-direct/range {v0 .. v9}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {p0, v0}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public final e(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    .locals 10
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -314,48 +385,71 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwi7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-string v1, "ACTION"
-
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
-
-    iput-object p3, v0, Lwi7;->o:Ljava/lang/String;
-
-    const-string p3, "duration"
-
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p3}, Lwi7;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    new-instance v9, Let;
+
+    const/4 p2, 0x1
+
+    invoke-direct {v9, p2}, Lzoe;-><init>(I)V
+
+    const-string p2, "duration"
+
+    invoke-virtual {v9, p2, p1}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p4, :cond_1
 
     const-string p1, "value"
 
-    invoke-virtual {v0, p4, p1}, Lwi7;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v9, p1, p4}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    invoke-virtual {v0}, Lwi7;->d()La88;
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
 
-    move-result-object p1
+    move-result p1
 
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    if-eqz p1, :cond_2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    new-instance v0, Lx88;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    const-string v7, "ACTION"
+
+    move-object v8, p3
+
+    invoke-direct/range {v0 .. v9}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {p0, v0}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public final f(Ljava/lang/String;)V
     .locals 11
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -374,7 +468,7 @@
 
     move-result-wide v2
 
-    new-instance v1, La88;
+    new-instance v1, Lx88;
 
     const-wide/16 v4, 0x0
 
@@ -386,9 +480,9 @@
 
     move-object v9, p1
 
-    invoke-direct/range {v1 .. v10}, La88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct/range {v1 .. v10}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-virtual {p0, v1}, Lhd;->i(La88;)Z
+    invoke-virtual {p0, v1}, Lhd;->i(Lx88;)Z
 
     return-void
 
@@ -403,13 +497,13 @@
 .end method
 
 .method public final g(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    .locals 11
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -418,37 +512,60 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwi7;
+    new-instance v10, Let;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    const-string v1, "ACTION"
+    invoke-direct {v10, v0}, Lzoe;-><init>(I)V
 
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
+    const-string v0, "value"
 
-    iput-object p1, v0, Lwi7;->o:Ljava/lang/String;
+    invoke-virtual {v10, v0, p2}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "value"
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0, p2, p1}, Lwi7;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result p2
 
-    invoke-virtual {v0}, Lwi7;->d()La88;
+    if-eqz p2, :cond_1
 
-    move-result-object p1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    move-result-wide v2
+
+    new-instance v1, Lx88;
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    const-string v8, "ACTION"
+
+    move-object v9, p1
+
+    invoke-direct/range {v1 .. v10}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {p0, v1}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public final h(Ljava/lang/String;Ljava/util/HashMap;)V
-    .locals 2
+    .locals 12
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -457,28 +574,69 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwi7;
+    invoke-virtual {p2}, Ljava/util/HashMap;->isEmpty()Z
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    const-string v1, "ACTION"
+    if-eqz v0, :cond_1
 
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
+    const/4 p2, 0x0
 
-    iput-object p1, v0, Lwi7;->o:Ljava/lang/String;
+    move-object v11, p2
 
-    invoke-virtual {v0, p2}, Lwi7;->c(Ljava/util/Map;)V
+    goto :goto_0
 
-    invoke-virtual {v0}, Lwi7;->d()La88;
+    :cond_1
+    new-instance v0, Let;
 
-    move-result-object p1
+    invoke-virtual {p2}, Ljava/util/HashMap;->size()I
 
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    move-result v1
+
+    invoke-direct {v0, v1}, Lzoe;-><init>(I)V
+
+    invoke-virtual {v0, p2}, Let;->putAll(Ljava/util/Map;)V
+
+    move-object v11, v0
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    new-instance v2, Lx88;
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const-string v9, "ACTION"
+
+    move-object v10, p1
+
+    invoke-direct/range {v2 .. v11}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {p0, v2}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final i(La88;)Z
+.method public final i(Lx88;)Z
     .locals 1
 
     const/4 p1, 0x0
@@ -487,13 +645,13 @@
 .end method
 
 .method public final j(JLjava/lang/String;)V
-    .locals 2
+    .locals 10
 
-    invoke-virtual {p0}, Lhd;->a()Ly78;
+    invoke-virtual {p0}, Lhd;->a()Lv88;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ly78;->e()Z
+    invoke-virtual {v0}, Lv88;->e()Z
 
     move-result v0
 
@@ -512,29 +670,52 @@
     return-void
 
     :cond_1
-    new-instance v0, Lwi7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-string v1, "SCREEN"
-
-    iput-object v1, v0, Lwi7;->c:Ljava/lang/String;
-
-    iput-object p3, v0, Lwi7;->o:Ljava/lang/String;
-
-    const-string p3, "duration"
-
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p3}, Lwi7;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    new-instance v9, Let;
 
-    invoke-virtual {v0}, Lwi7;->d()La88;
+    const/4 p2, 0x1
 
-    move-result-object p1
+    invoke-direct {v9, p2}, Lzoe;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Lhd;->i(La88;)Z
+    const-string p2, "duration"
+
+    invoke-virtual {v9, p2, p1}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    new-instance v0, Lx88;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    const-string v7, "SCREEN"
+
+    move-object v8, p3
+
+    invoke-direct/range {v0 .. v9}, Lx88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {p0, v0}, Lhd;->i(Lx88;)Z
 
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

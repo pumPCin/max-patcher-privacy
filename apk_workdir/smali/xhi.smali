@@ -1,299 +1,130 @@
-.class public final synthetic Lxhi;
-.super Ljava/lang/Object;
+.class public final enum Lxhi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ldxh;
+
+
+# static fields
+.field public static final enum X:Lxhi;
+
+.field public static final enum Y:Lxhi;
+
+.field public static final synthetic Z:[Lxhi;
+
+.field public static final enum b:Lxhi;
+
+.field public static final enum c:Lxhi;
+
+.field public static final enum o:Lxhi;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnti;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnti;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput p2, p0, Lxhi;->a:I
+    new-instance v0, Lxhi;
 
-    iput-object p1, p0, Lxhi;->b:Lnti;
+    const-string v1, "SOURCE_UNKNOWN"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lxhi;
+
+    const-string v2, "BITMAP"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lxhi;->b:Lxhi;
+
+    new-instance v2, Lxhi;
+
+    const-string v3, "BYTEARRAY"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lxhi;->c:Lxhi;
+
+    new-instance v3, Lxhi;
+
+    const-string v4, "BYTEBUFFER"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lxhi;->o:Lxhi;
+
+    new-instance v4, Lxhi;
+
+    const-string v5, "FILEPATH"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lxhi;->X:Lxhi;
+
+    new-instance v5, Lxhi;
+
+    const-string v6, "ANDROID_MEDIA_IMAGE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Lxhi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lxhi;->Y:Lxhi;
+
+    filled-new-array/range {v0 .. v5}, [Lxhi;
+
+    move-result-object v0
+
+    sput-object v0, Lxhi;->Z:[Lxhi;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lxhi;->a:I
+
+    return-void
+.end method
+
+.method public static values()[Lxhi;
+    .locals 1
+
+    sget-object v0, Lxhi;->Z:[Lxhi;
+
+    invoke-virtual {v0}, [Lxhi;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxhi;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final c()I
+    .locals 1
 
     iget v0, p0, Lxhi;->a:I
 
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "Service disconnected"
-
-    iget-object v1, p0, Lxhi;->b:Lnti;
-
-    invoke-virtual {v1, v0}, Lnti;->a(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxhi;->b:Lnti;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget v1, v0, Lnti;->a:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    const-string v1, "Timed out while binding"
-
-    invoke-virtual {v0, v1}, Lnti;->a(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :goto_0
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-
-    :goto_2
-    :pswitch_1
-    iget-object v0, p0, Lxhi;->b:Lnti;
-
-    monitor-enter v0
-
-    :try_start_2
-    iget v1, v0, Lnti;->a:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_1
-
-    monitor-exit v0
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception v1
-
-    goto/16 :goto_4
-
-    :cond_1
-    iget-object v1, v0, Lnti;->o:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lnti;->c()V
-
-    monitor-exit v0
-
-    :goto_3
-    return-void
-
-    :cond_2
-    iget-object v1, v0, Lnti;->o:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsvi;
-
-    iget-object v2, v0, Lnti;->X:Landroid/util/SparseArray;
-
-    iget v3, v1, Lsvi;->a:I
-
-    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    iget-object v2, v0, Lnti;->Y:Lc0j;
-
-    iget-object v2, v2, Lc0j;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v3, Lf5g;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v3, v0, v4, v1}, Lf5g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v5, 0x1e
-
-    invoke-interface {v2, v3, v5, v6, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    const-string v2, "MessengerIpcClient"
-
-    const/4 v3, 0x3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "Sending "
-
-    const-string v4, "MessengerIpcClient"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    iget-object v2, v0, Lnti;->Y:Lc0j;
-
-    iget-object v3, v0, Lnti;->b:Landroid/os/Messenger;
-
-    iget v4, v1, Lsvi;->c:I
-
-    iget-object v2, v2, Lc0j;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/content/Context;
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v5
-
-    iput v4, v5, Landroid/os/Message;->what:I
-
-    iget v4, v1, Lsvi;->a:I
-
-    iput v4, v5, Landroid/os/Message;->arg1:I
-
-    iput-object v3, v5, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {v1}, Lsvi;->a()Z
-
-    move-result v4
-
-    const-string v6, "oneWay"
-
-    invoke-virtual {v3, v6, v4}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "pkg"
-
-    invoke-virtual {v3, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v1, Lsvi;->d:Landroid/os/Bundle;
-
-    const-string v2, "data"
-
-    invoke-virtual {v3, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-virtual {v5, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    :try_start_3
-    iget-object v1, v0, Lnti;->c:Lshf;
-
-    iget-object v2, v1, Lshf;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/os/Messenger;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-
-    goto/16 :goto_2
-
-    :cond_4
-    iget-object v1, v1, Lshf;->c:Ljava/lang/Object;
-
-    check-cast v1, Ll3i;
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, v1, Ll3i;->a:Landroid/os/Messenger;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-
-    goto/16 :goto_2
-
-    :cond_5
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "Both messengers are null"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-    :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lnti;->a(Ljava/lang/String;)V
-
-    goto/16 :goto_2
-
-    :goto_4
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

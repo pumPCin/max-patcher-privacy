@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcl5;
+.implements Lvl5;
 
 
 # static fields
@@ -37,11 +37,11 @@
 
 .field public i:J
 
-.field public j:Lgl5;
+.field public j:Lzl5;
 
-.field public k:Ls0g;
+.field public k:Lv1g;
 
-.field public l:Lmwd;
+.field public l:Ltxd;
 
 .field public m:Z
 
@@ -64,9 +64,9 @@
 
     sput-object v0, Lfd;->o:[I
 
-    sget v1, Lhhg;->a:I
+    sget v1, Llig;->a:I
 
-    sget-object v1, Laa2;->c:Ljava/nio/charset/Charset;
+    sget-object v1, Lia2;->c:Ljava/nio/charset/Charset;
 
     const-string v2, "#!AMR\n"
 
@@ -155,10 +155,10 @@
 
 
 # virtual methods
-.method public final a(Lel5;)I
+.method public final a(Lxl5;)I
     .locals 4
 
-    invoke-interface {p1}, Lel5;->y()V
+    invoke-interface {p1}, Lxl5;->y()V
 
     const/4 v0, 0x1
 
@@ -166,7 +166,7 @@
 
     iget-object v2, p0, Lfd;->a:[B
 
-    invoke-interface {p1, v1, v2, v0}, Lel5;->i(I[BI)V
+    invoke-interface {p1, v1, v2, v0}, Lxl5;->d(I[BI)V
 
     aget-byte p1, v2, v1
 
@@ -297,10 +297,10 @@
     throw p1
 .end method
 
-.method public final b(Lel5;)Z
+.method public final b(Lxl5;)Z
     .locals 5
 
-    invoke-interface {p1}, Lel5;->y()V
+    invoke-interface {p1}, Lxl5;->y()V
 
     sget-object v0, Lfd;->p:[B
 
@@ -312,7 +312,7 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {p1, v3, v1, v2}, Lel5;->i(I[BI)V
+    invoke-interface {p1, v3, v1, v2}, Lxl5;->d(I[BI)V
 
     invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -326,12 +326,12 @@
 
     array-length v0, v0
 
-    invoke-interface {p1, v0}, Lel5;->z(I)V
+    invoke-interface {p1, v0}, Lxl5;->z(I)V
 
     return v2
 
     :cond_0
-    invoke-interface {p1}, Lel5;->y()V
+    invoke-interface {p1}, Lxl5;->y()V
 
     sget-object v0, Lfd;->q:[B
 
@@ -341,7 +341,7 @@
 
     array-length v4, v0
 
-    invoke-interface {p1, v3, v1, v4}, Lel5;->i(I[BI)V
+    invoke-interface {p1, v3, v1, v4}, Lxl5;->d(I[BI)V
 
     invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -353,7 +353,7 @@
 
     array-length v0, v0
 
-    invoke-interface {p1, v0}, Lel5;->z(I)V
+    invoke-interface {p1, v0}, Lxl5;->z(I)V
 
     return v2
 
@@ -378,17 +378,17 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lfd;->l:Lmwd;
+    iget-object v0, p0, Lfd;->l:Ltxd;
 
-    instance-of v1, v0, Lxp3;
+    instance-of v1, v0, Llq3;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lxp3;
+    check-cast v0, Llq3;
 
-    iget-wide v1, v0, Lxp3;->b:J
+    iget-wide v1, v0, Llq3;->b:J
 
-    iget v0, v0, Lxp3;->e:I
+    iget v0, v0, Llq3;->e:I
 
     sub-long/2addr p1, v1
 
@@ -414,50 +414,50 @@
     return-void
 .end method
 
-.method public final g(Lgl5;)V
+.method public final g(Lzl5;)V
     .locals 2
 
-    iput-object p1, p0, Lfd;->j:Lgl5;
+    iput-object p1, p0, Lfd;->j:Lzl5;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v0, v1}, Lgl5;->B(II)Ls0g;
+    invoke-interface {p1, v0, v1}, Lzl5;->B(II)Lv1g;
 
     move-result-object v0
 
-    iput-object v0, p0, Lfd;->k:Ls0g;
+    iput-object v0, p0, Lfd;->k:Lv1g;
 
-    invoke-interface {p1}, Lgl5;->w()V
+    invoke-interface {p1}, Lzl5;->w()V
 
     return-void
 .end method
 
-.method public final h(Lel5;)Z
+.method public final h(Lxl5;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lfd;->b(Lel5;)Z
+    invoke-virtual {p0, p1}, Lfd;->b(Lxl5;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final i(Lel5;Lq7;)I
+.method public final i(Lxl5;Lq7;)I
     .locals 9
 
-    iget-object p2, p0, Lfd;->k:Ls0g;
+    iget-object p2, p0, Lfd;->k:Lv1g;
 
-    invoke-static {p2}, Lefi;->g(Ljava/lang/Object;)V
+    invoke-static {p2}, Lzg8;->f(Ljava/lang/Object;)V
 
-    sget p2, Lhhg;->a:I
+    sget p2, Llig;->a:I
 
     move-object p2, p1
 
-    check-cast p2, Loj4;
+    check-cast p2, Lck4;
 
-    iget-wide v0, p2, Loj4;->o:J
+    iget-wide v0, p2, Lck4;->o:J
 
     const-wide/16 v2, 0x0
 
@@ -465,7 +465,7 @@
 
     if-nez p2, :cond_1
 
-    invoke-virtual {p0, p1}, Lfd;->b(Lel5;)Z
+    invoke-virtual {p0, p1}, Lfd;->b(Lxl5;)Z
 
     move-result p2
 
@@ -516,27 +516,27 @@
     const/16 p2, 0x1f40
 
     :goto_2
-    iget-object v2, p0, Lfd;->k:Ls0g;
+    iget-object v2, p0, Lfd;->k:Lv1g;
 
-    new-instance v3, Loa6;
+    new-instance v3, Lib6;
 
-    invoke-direct {v3}, Loa6;-><init>()V
+    invoke-direct {v3}, Lib6;-><init>()V
 
-    iput-object v1, v3, Loa6;->k:Ljava/lang/String;
+    iput-object v1, v3, Lib6;->k:Ljava/lang/String;
 
     sget v1, Lfd;->r:I
 
-    iput v1, v3, Loa6;->l:I
+    iput v1, v3, Lib6;->l:I
 
-    iput v0, v3, Loa6;->x:I
+    iput v0, v3, Lib6;->x:I
 
-    iput p2, v3, Loa6;->y:I
+    iput p2, v3, Lib6;->y:I
 
-    new-instance p2, Lqa6;
+    new-instance p2, Lkb6;
 
-    invoke-direct {p2, v3}, Lqa6;-><init>(Loa6;)V
+    invoke-direct {p2, v3}, Lkb6;-><init>(Lib6;)V
 
-    invoke-interface {v2, p2}, Ls0g;->d(Lqa6;)V
+    invoke-interface {v2, p2}, Lv1g;->d(Lkb6;)V
 
     :cond_4
     iget p2, p0, Lfd;->e:I
@@ -546,7 +546,7 @@
     if-nez p2, :cond_6
 
     :try_start_0
-    invoke-virtual {p0, p1}, Lfd;->a(Lel5;)I
+    invoke-virtual {p0, p1}, Lfd;->a(Lxl5;)I
 
     move-result p2
 
@@ -562,9 +562,9 @@
 
     move-object v2, p1
 
-    check-cast v2, Loj4;
+    check-cast v2, Lck4;
 
-    iget-wide v2, v2, Loj4;->o:J
+    iget-wide v2, v2, Lck4;->o:J
 
     iput p2, p0, Lfd;->g:I
 
@@ -580,11 +580,11 @@
     iput p2, p0, Lfd;->h:I
 
     :cond_6
-    iget-object p2, p0, Lfd;->k:Ls0g;
+    iget-object p2, p0, Lfd;->k:Lv1g;
 
     iget v2, p0, Lfd;->e:I
 
-    invoke-interface {p2, p1, v2, v0}, Ls0g;->a(Lib4;IZ)I
+    invoke-interface {p2, p1, v2, v0}, Lv1g;->a(Lxb4;IZ)I
 
     move-result p1
 
@@ -606,7 +606,7 @@
     goto :goto_3
 
     :cond_8
-    iget-object v2, p0, Lfd;->k:Ls0g;
+    iget-object v2, p0, Lfd;->k:Lv1g;
 
     iget-wide p1, p0, Lfd;->i:J
 
@@ -622,7 +622,7 @@
 
     const/4 v5, 0x1
 
-    invoke-interface/range {v2 .. v8}, Ls0g;->b(JIIILq0g;)V
+    invoke-interface/range {v2 .. v8}, Lv1g;->b(JIIILt1g;)V
 
     iget-wide p1, p0, Lfd;->c:J
 
@@ -641,17 +641,17 @@
     goto :goto_4
 
     :cond_9
-    new-instance p1, Lbx5;
+    new-instance p1, Lvx5;
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {p1, v2, v3}, Lbx5;-><init>(J)V
+    invoke-direct {p1, v2, v3}, Lvx5;-><init>(J)V
 
-    iput-object p1, p0, Lfd;->l:Lmwd;
+    iput-object p1, p0, Lfd;->l:Ltxd;
 
-    iget-object p2, p0, Lfd;->j:Lgl5;
+    iget-object p2, p0, Lfd;->j:Lzl5;
 
-    invoke-interface {p2, p1}, Lgl5;->N(Lmwd;)V
+    invoke-interface {p2, p1}, Lzl5;->N(Ltxd;)V
 
     iput-boolean v0, p0, Lfd;->f:Z
 

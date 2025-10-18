@@ -1,46 +1,14 @@
-.class public final Lzi8;
-.super Lti8;
+.class public interface abstract Lzi8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvld;
-
-
-# static fields
-.field public static final a:Lzi8;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lzi8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzi8;->a:Lzi8;
-
-    return-void
-.end method
+.implements Landroid/widget/Checkable;
 
 
 # virtual methods
-.method public final f(Lmj8;)V
-    .locals 1
-
-    sget-object v0, Ln95;->a:Ln95;
-
-    invoke-interface {p1, v0}, Lmj8;->c(Lev4;)V
-
-    invoke-interface {p1}, Lmj8;->b()V
-
-    return-void
+.method public abstract getId()I
 .end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract setInternalOnCheckedChangeListener(Lyi8;)V
 .end method

@@ -1,66 +1,51 @@
-.class public final synthetic Ljva;
-.super Ljava/lang/Object;
+.class public final Ljva;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic X:Llt7;
+.field public X:Ln1a;
 
-.field public final synthetic Y:Llt7;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic a:Llt7;
+.field public final synthetic Z:Luva;
 
-.field public final synthetic b:Llt7;
+.field public o:Luva;
 
-.field public final synthetic c:Llt7;
-
-.field public final synthetic o:Llt7;
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Luva;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljva;->Z:Luva;
 
-    iput-object p1, p0, Ljva;->a:Llt7;
-
-    iput-object p2, p0, Ljva;->b:Llt7;
-
-    iput-object p3, p0, Ljva;->c:Llt7;
-
-    iput-object p4, p0, Ljva;->o:Llt7;
-
-    iput-object p5, p0, Ljva;->X:Llt7;
-
-    iput-object p6, p0, Ljva;->Y:Llt7;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljr9;
+    iput-object p1, p0, Ljva;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Ljva;->a:Llt7;
+    iget p1, p0, Ljva;->q0:I
 
-    iget-object v2, p0, Ljva;->b:Llt7;
+    const/high16 v0, -0x80000000
 
-    iget-object v3, p0, Ljva;->c:Llt7;
+    or-int/2addr p1, v0
 
-    iget-object v4, p0, Ljva;->o:Llt7;
+    iput p1, p0, Ljva;->q0:I
 
-    iget-object v5, p0, Ljva;->X:Llt7;
+    iget-object p1, p0, Ljva;->Z:Luva;
 
-    iget-object v6, p0, Ljva;->Y:Llt7;
+    invoke-virtual {p1, p0}, Luva;->d(Ly14;)Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v6}, Ljr9;-><init>(Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;)V
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

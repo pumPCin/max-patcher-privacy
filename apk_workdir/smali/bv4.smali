@@ -1,48 +1,26 @@
-.class public final Lbv4;
-.super Lk14;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ll23;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ll23;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lbv4;->Y:Ll23;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Lbv4;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a(Ljava/lang/Object;Ljava/lang/String;)Lrr5;
+.end method
 
-    iput-object p1, p0, Lbv4;->o:Ljava/lang/Object;
+.method public abstract b()V
+.end method
 
-    iget p1, p0, Lbv4;->X:I
+.method public abstract c(Lxi4;)J
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract d()Ljava/util/Collection;
+.end method
 
-    or-int/2addr p1, v0
+.method public abstract e(Ljava/lang/String;Lcpe;)Lo39;
+.end method
 
-    iput p1, p0, Lbv4;->X:I
+.method public abstract f()V
+.end method
 
-    iget-object p1, p0, Lbv4;->Y:Ll23;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ll23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract isExternal()Z
 .end method

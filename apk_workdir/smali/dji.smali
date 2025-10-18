@@ -1,241 +1,169 @@
-.class public abstract Ldji;
-.super Ljava/lang/Object;
+.class public final Ldji;
+.super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic k:I
+
+
 # direct methods
-.method public static a(Landroid/content/Context;)I
-    .locals 7
-
-    const-string v0, "window"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/WindowManager;
-
-    new-instance v0, Landroid/graphics/Point;
-
-    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
-
-    :cond_0
-    iget p0, v0, Landroid/graphics/Point;->x:I
-
-    iget v0, v0, Landroid/graphics/Point;->y:I
-
-    int-to-double v1, p0
-
-    const-wide/high16 v3, 0x4000000000000000L    # 2.0
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    int-to-double v5, v0
-
-    invoke-static {v5, v6, v3, v4}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v3
-
-    add-double/2addr v3, v1
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    double-to-int p0, v0
-
-    new-instance v0, Landroid/graphics/Canvas;
-
-    invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
-
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->getMaximumBitmapWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->getMaximumBitmapHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    :cond_1
-    :try_start_0
-    invoke-static {}, Lbu7;->c()I
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "EglUtils"
-
-    const-string v2, "getMaxTextureSize: "
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-lez v0, :cond_2
-
-    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    :cond_2
-    const-string v0, "BitmapLoadUtils"
-
-    const-string v1, "maxBitmapSize: "
-
-    invoke-static {p0, v1, v0}, Ld15;->o(ILjava/lang/String;Ljava/lang/String;)V
-
-    return p0
-.end method
-
-.method public static b(Ljava/io/Closeable;)V
+.method public constructor <init>(Lquh;I)V
     .locals 0
 
-    if-eqz p0, :cond_0
+    iput p2, p0, Ldji;->k:I
 
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string p2, "GoogleApiClient must not be null"
 
-    :catch_0
-    :cond_0
-    return-void
-.end method
+    invoke-static {p1, p2}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public static c(IIIIIILk99;)V
-    .locals 4
+    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lquh;)V
 
-    invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
+    const-string p1, "Api must not be null"
 
-    move-result p0
+    sget-object p2, Ll70;->a:Lkxb;
 
-    div-int/lit8 p1, p0, 0x2
-
-    int-to-float v0, p0
-
-    int-to-float v1, p3
-
-    int-to-float v2, p2
-
-    div-float v3, v1, v2
-
-    mul-float/2addr v3, v0
-
-    float-to-int v0, v3
-
-    if-lt p0, p1, :cond_0
-
-    if-lt v0, p4, :cond_0
-
-    if-gt v0, p5, :cond_0
-
-    invoke-static {p0, v0, p2, p3, p6}, Ldji;->d(IIIILk99;)V
-
-    return-void
-
-    :cond_0
-    if-ge v0, p4, :cond_1
-
-    invoke-static {p0, p4, p2, p3, p6}, Ldji;->d(IIIILk99;)V
-
-    return-void
-
-    :cond_1
-    int-to-float p0, p5
-
-    div-float/2addr v2, v1
-
-    mul-float/2addr v2, p0
-
-    float-to-int p0, v2
-
-    if-lt p0, p1, :cond_2
-
-    if-lt p5, p4, :cond_2
-
-    invoke-static {p0, p5, p2, p3, p6}, Ldji;->d(IIIILk99;)V
-
-    return-void
-
-    :cond_2
-    invoke-static {p1, p5, p2, p3, p6}, Ldji;->d(IIIILk99;)V
+    invoke-static {p2, p1}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static d(IIIILk99;)V
+
+# virtual methods
+.method public final synthetic h(Lcom/google/android/gms/common/api/Status;)Lfed;
     .locals 1
 
-    if-le p2, p3, :cond_0
+    iget v0, p0, Ldji;->k:I
 
-    int-to-float v0, p0
+    return-object p1
+.end method
 
-    int-to-float p3, p3
+.method public final l(Lkl;)V
+    .locals 6
 
-    int-to-float p2, p2
+    iget v0, p0, Ldji;->k:I
 
-    div-float/2addr p3, p2
+    const/4 v1, 0x0
 
-    mul-float/2addr p3, v0
+    const/4 v2, 0x1
 
-    float-to-int p2, p3
+    packed-switch v0, :pswitch_data_0
 
-    move p3, p2
+    check-cast p1, Ld9i;
 
-    move p2, p0
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+
+    move-result-object v0
+
+    check-cast v0, Lm2j;
+
+    new-instance v3, Lhqi;
+
+    invoke-direct {v3, p0, v2}, Lhqi;-><init>(Ldji;I)V
+
+    iget-object p1, p1, Ld9i;->H0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v4
+
+    iget-object v5, v0, Lguh;->e:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v5, Lb9i;->a:I
+
+    invoke-virtual {v4, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
     :cond_0
-    int-to-float v0, p1
+    invoke-virtual {v4, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    int-to-float p2, p2
-
-    int-to-float p3, p3
-
-    div-float/2addr p2, p3
-
-    mul-float/2addr p2, v0
-
-    float-to-int p2, p2
-
-    move p3, p1
+    invoke-interface {p1, v4, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
     :goto_0
-    iput p0, p4, Lk99;->a:I
+    const/16 p1, 0x67
 
-    iput p1, p4, Lk99;->b:I
+    invoke-virtual {v0, v4, p1}, Lguh;->Y(Landroid/os/Parcel;I)V
 
-    iput p2, p4, Lk99;->c:I
+    return-void
 
-    iput p3, p4, Lk99;->d:I
+    :pswitch_0
+    check-cast p1, Ld9i;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+
+    move-result-object v0
+
+    check-cast v0, Lm2j;
+
+    new-instance v3, Lhqi;
+
+    invoke-direct {v3, p0, v1}, Lhqi;-><init>(Ldji;I)V
+
+    iget-object p1, p1, Ld9i;->H0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v4
+
+    iget-object v5, v0, Lguh;->e:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v5, Lb9i;->a:I
+
+    invoke-virtual {v4, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v4, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, v4, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    :goto_1
+    const/16 p1, 0x66
+
+    invoke-virtual {v0, v4, p1}, Lguh;->Y(Landroid/os/Parcel;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m(Lcom/google/android/gms/common/api/Status;)V
+    .locals 2
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "Failed result must not be success"
+
+    invoke-static {v1, v0}, Lzui;->b(Ljava/lang/String;Z)V
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->h(Lcom/google/android/gms/common/api/Status;)Lfed;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->k(Lfed;)V
 
     return-void
 .end method

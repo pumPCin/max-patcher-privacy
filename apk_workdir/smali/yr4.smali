@@ -1,101 +1,39 @@
 .class public final Lyr4;
-.super Ljava/lang/Object;
+.super Ln2j;
 .source "SourceFile"
-
-# interfaces
-.implements Lyv0;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-
-# direct methods
-.method public constructor <init>(III)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyr4;->a:I
-
-    iput p2, p0, Lyr4;->b:I
-
-    iput p3, p0, Lyr4;->c:I
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b(Ljava/lang/Object;)F
+    .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Lzr4;
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p1, Lzr4;->x0:Lr15;
 
-    return v0
+    iget p1, p1, Lr15;->b:F
 
-    :cond_0
-    instance-of v1, p1, Lyr4;
+    const v0, 0x461c4000    # 10000.0f
 
-    const/4 v2, 0x0
+    mul-float/2addr p1, v0
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyr4;
-
-    iget v1, p0, Lyr4;->a:I
-
-    iget v3, p1, Lyr4;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lyr4;->b:I
-
-    iget v3, p1, Lyr4;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lyr4;->c:I
-
-    iget p1, p1, Lyr4;->c:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final c(Ljava/lang/Object;F)V
+    .locals 1
 
-    const/16 v0, 0x20f
+    check-cast p1, Lzr4;
 
-    iget v1, p0, Lyr4;->a:I
+    const v0, 0x461c4000    # 10000.0f
 
-    add-int/2addr v0, v1
+    div-float/2addr p2, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v0, p1, Lzr4;->x0:Lr15;
 
-    iget v1, p0, Lyr4;->b:I
+    iput p2, v0, Lr15;->b:F
 
-    add-int/2addr v0, v1
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lyr4;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method

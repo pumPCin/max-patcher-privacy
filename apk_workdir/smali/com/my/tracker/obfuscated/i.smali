@@ -297,11 +297,11 @@
 
     .line 27
     :try_start_0
-    new-instance v2, Lpkg;
+    new-instance v2, Ltlg;
 
     const/16 v3, 0x18
 
-    invoke-direct {v2, p1, v3, v0}, Lpkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v0}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0

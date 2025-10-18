@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpdf;
-.implements Lfi6;
+.implements Lxef;
+.implements Laj6;
 
 
 # static fields

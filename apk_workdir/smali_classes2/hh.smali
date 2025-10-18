@@ -1,5 +1,5 @@
 .class public final Lhh;
-.super Lhlf;
+.super Lmmf;
 .source "SourceFile"
 
 
@@ -21,7 +21,7 @@
 
     sget-object v3, Lfh;->b:Lfh;
 
-    invoke-direct {v0, v3, v2, v1}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v3, v2, v1}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     sput-object v0, Lhh;->o:Lhh;
 
@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final C(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+.method public final D(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
     .locals 1
 
     const/4 v0, 0x0

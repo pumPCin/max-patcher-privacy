@@ -1,224 +1,111 @@
 .class public final Lm3f;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
-
-.field public b:I
-
-.field public c:I
-
-.field public final d:Lut;
-
-.field public e:Ld2f;
+.field public final synthetic X:Ls3f;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Ls3f;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm3f;->X:Ls3f;
 
-    iput-object p1, p0, Lm3f;->a:Landroid/view/View;
+    const/4 p1, 0x2
 
-    new-instance p1, Lut;
-
-    const/16 v0, 0x9
-
-    invoke-direct {p1, v0}, Lut;-><init>(I)V
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Lut;->b:I
-
-    iput v0, p1, Lut;->c:I
-
-    iput-object p1, p0, Lm3f;->d:Lut;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lut;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lm3f;->d:Lut;
+    check-cast p1, Lq54;
 
-    iput p1, v0, Lut;->b:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput p2, v0, Lut;->c:I
+    invoke-virtual {p0, p1, p2}, Lm3f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lm3f;->e:Ld2f;
+    move-result-object p1
+
+    check-cast p1, Lm3f;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lm3f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lm3f;
+
+    iget-object v0, p0, Lm3f;->X:Ls3f;
+
+    invoke-direct {p1, v0, p2}, Lm3f;-><init>(Ls3f;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    sget-object v0, Lccg;->a:Lccg;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lm3f;->X:Ls3f;
+
+    iget-object p1, p1, Ls3f;->q0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ld33;
+
+    iget-object v1, p0, Lm3f;->X:Ls3f;
+
+    iget-wide v1, v1, Ls3f;->b:J
+
+    check-cast p1, Ld43;
+
+    invoke-virtual {p1, v1, v2}, Ld43;->N(J)Ln0d;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ln0d;->a:Lq0f;
+
+    invoke-interface {p1}, Lq0f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lla2;
 
     if-nez p1, :cond_0
 
     return-object v0
 
     :cond_0
-    iget v1, p1, Ld2f;->r0:I
+    iget-object v1, p0, Lm3f;->X:Ls3f;
 
-    iget v2, p0, Lm3f;->b:I
+    iget-object v1, v1, Ls3f;->x0:Lx0f;
 
-    if-ge v1, v2, :cond_1
+    invoke-virtual {p1}, Lla2;->n0()V
 
-    goto :goto_0
+    iget-object p1, p1, Lla2;->s0:Ljava/lang/CharSequence;
 
-    :cond_1
-    iget v2, p0, Lm3f;->c:I
-
-    if-le v1, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
-
-    :goto_0
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result v3
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    iget-object v5, p0, Lm3f;->a:Landroid/view/View;
-
-    if-ne v3, v4, :cond_3
-
-    int-to-double v2, v2
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p2
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v6
-
-    sub-int/2addr p2, v6
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v6
-
-    sub-int/2addr p2, v6
-
-    int-to-double v6, p2
-
-    invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v2
-
-    double-to-int v2, v2
-
-    :cond_3
-    int-to-float p2, v2
-
-    iget p1, p1, Ld2f;->Z:I
-
-    int-to-float p1, p1
-
-    int-to-float v1, v1
-
-    div-float/2addr p1, v1
-
-    mul-float/2addr p1, p2
-
-    float-to-int p1, p1
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingRight()I
-
-    move-result p1
-
-    add-int/2addr p1, p2
-
-    invoke-static {p1, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    iput p1, v0, Lut;->b:I
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingTop()I
-
-    move-result p1
-
-    add-int/2addr p1, v2
-
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    invoke-static {p2, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    iput p1, v0, Lut;->c:I
+    invoke-virtual {v1, p1}, Lx0f;->setValue(Ljava/lang/Object;)V
 
     return-object v0
-.end method
-
-.method public final b(Ld2f;)V
-    .locals 0
-
-    iput-object p1, p0, Lm3f;->e:Ld2f;
-
-    invoke-virtual {p0}, Lm3f;->c()V
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    const/16 v0, 0xaa
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    iput v1, p0, Lm3f;->b:I
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    iput v0, p0, Lm3f;->c:I
-
-    return-void
 .end method

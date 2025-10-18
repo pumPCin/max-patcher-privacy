@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld9a;
+.implements Lfaa;
 
 
 # static fields

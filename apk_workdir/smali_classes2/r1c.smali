@@ -1,51 +1,85 @@
-.class public abstract synthetic Lr1c;
+.class public final Lr1c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt1c;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lr1c;->a:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    invoke-static {}, Lt1c;->values()[Lt1c;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    array-length v0, v0
+    return v0
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
+    :cond_0
+    instance-of v1, p1, Lr1c;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v2
 
-    :try_start_1
-    aput v2, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Lr1c;
 
-    :catch_1
-    const/4 v2, 0x3
+    iget v1, p0, Lr1c;->a:I
 
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget p1, p1, Lr1c;->a:I
 
-    :catch_2
-    sput-object v0, Lr1c;->$EnumSwitchMapping$0:[I
+    if-eq v1, p1, :cond_2
 
-    return-void
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lr1c;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShowPhoto(index="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lr1c;->a:I
+
+    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

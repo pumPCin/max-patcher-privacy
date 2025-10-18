@@ -3,166 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lni1;
+.implements Lp81;
 
 
 # instance fields
-.field public final a:Loh6;
-
-.field public final b:Lbw5;
-
-.field public c:Z
-
-.field public d:Z
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Loh6;Lbw5;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyv5;->a:Loh6;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object p2, p0, Lyv5;->b:Lbw5;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lyv5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzh1;Ljava/util/List;)V
-    .locals 3
+.method public final onCallParticipantFingerprint(Lli1;J)V
+    .locals 2
 
-    iget-boolean v0, p0, Lyv5;->c:Z
+    iget-object v0, p0, Lyv5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lyv5;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_1
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Ldi1;
-
-    invoke-virtual {v0}, Ldi1;->b()Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    iget-object v0, v0, Ldi1;->a:Lzh1;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v0
+    check-cast v1, Lp81;
 
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lyv5;->b:Lbw5;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Lyv5;->c:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v2}, Lbw5;->e()V
-
-    iput-boolean v1, p0, Lyv5;->c:Z
+    invoke-interface {v1, p1, p2, p3}, Lp81;->onCallParticipantFingerprint(Lli1;J)V
 
     goto :goto_0
 
-    :cond_2
-    iget-boolean v0, p0, Lyv5;->d:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v2}, Lbw5;->b()V
-
-    iput-boolean v1, p0, Lyv5;->d:Z
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-void
-.end method
-
-.method public final onCallParticipantsAdded(Lji1;)V
-    .locals 1
-
-    iget-object v0, p0, Lyv5;->a:Loh6;
-
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzh1;
-
-    iget-object p1, p1, Lji1;->b:Ljava/util/List;
-
-    invoke-virtual {p0, v0, p1}, Lyv5;->a(Lzh1;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public final onCallParticipantsChanged(Lki1;)V
-    .locals 1
-
-    iget-object v0, p0, Lyv5;->a:Loh6;
-
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzh1;
-
-    iget-object p1, p1, Lki1;->a:Ljava/util/List;
-
-    invoke-virtual {p0, v0, p1}, Lyv5;->a(Lzh1;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public final onCallParticipantsDeAnonimized(Lli1;)V
-    .locals 1
-
-    iget-object v0, p0, Lyv5;->a:Loh6;
-
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzh1;
-
-    iget-object p1, p1, Lli1;->a:Ljava/util/List;
-
-    invoke-virtual {p0, v0, p1}, Lyv5;->a(Lzh1;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public final onCallParticipantsRemoved(Lmi1;)V
-    .locals 0
-
+    :cond_0
     return-void
 .end method

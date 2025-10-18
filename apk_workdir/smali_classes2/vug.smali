@@ -1,127 +1,154 @@
 .class public final Lvug;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Z
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field public final c:Z
+.field public final synthetic Z:Lw7d;
 
-.field public final d:Z
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
-
-.field public final h:Lklg;
-
-.field public final i:Z
-
-.field public final j:Z
+.field public final synthetic q0:Lzpg;
 
 
 # direct methods
-.method public constructor <init>(Luug;)V
-    .locals 2
+.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lw7d;Lzpg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iget-boolean v0, p1, Luug;->a:Z
+    iput-object p2, p0, Lvug;->Z:Lw7d;
 
-    iput-boolean v0, p0, Lvug;->a:Z
+    iput-object p3, p0, Lvug;->q0:Lzpg;
 
-    iget-boolean v0, p1, Luug;->b:Z
+    const/4 p1, 0x2
 
-    iput-boolean v0, p0, Lvug;->b:Z
-
-    iget-boolean v0, p1, Luug;->c:Z
-
-    iput-boolean v0, p0, Lvug;->c:Z
-
-    iget-boolean v0, p1, Luug;->d:Z
-
-    iput-boolean v0, p0, Lvug;->d:Z
-
-    iget-wide v0, p1, Luug;->e:J
-
-    iput-wide v0, p0, Lvug;->e:J
-
-    iget-wide v0, p1, Luug;->f:J
-
-    iput-wide v0, p0, Lvug;->f:J
-
-    iget-wide v0, p1, Luug;->g:J
-
-    iput-wide v0, p0, Lvug;->g:J
-
-    iget-object v0, p1, Luug;->h:Lklg;
-
-    iput-object v0, p0, Lvug;->h:Lklg;
-
-    iget-boolean v0, p1, Luug;->i:Z
-
-    iput-boolean v0, p0, Lvug;->i:Z
-
-    iget-boolean p1, p1, Luug;->j:Z
-
-    iput-boolean p1, p0, Lvug;->j:Z
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Luug;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvug;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvug;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lvug;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    new-instance v0, Luug;
+    new-instance p1, Lvug;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lvug;->Z:Lw7d;
 
-    iget-boolean v1, p0, Lvug;->a:Z
+    iget-object v1, p0, Lvug;->q0:Lzpg;
 
-    iput-boolean v1, v0, Luug;->a:Z
+    iget-object v2, p0, Lvug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iget-boolean v1, p0, Lvug;->b:Z
+    invoke-direct {p1, v2, v0, v1, p2}, Lvug;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lw7d;Lzpg;Lkotlin/coroutines/Continuation;)V
 
-    iput-boolean v1, v0, Luug;->b:Z
+    return-object p1
+.end method
 
-    iget-boolean v1, p0, Lvug;->c:Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iput-boolean v1, v0, Luug;->c:Z
+    iget v0, p0, Lvug;->X:I
 
-    iget-boolean v1, p0, Lvug;->d:Z
+    sget-object v1, Lccg;->a:Lccg;
 
-    iput-boolean v1, v0, Luug;->d:Z
+    const/4 v2, 0x1
 
-    iget-wide v1, p0, Lvug;->e:J
+    if-eqz v0, :cond_1
 
-    iput-wide v1, v0, Luug;->e:J
+    if-ne v0, v2, :cond_0
 
-    iget-wide v1, p0, Lvug;->f:J
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-wide v1, v0, Luug;->f:J
+    goto :goto_1
 
-    iget-wide v1, p0, Lvug;->g:J
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iput-wide v1, v0, Luug;->g:J
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v1, p0, Lvug;->h:Lklg;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, v0, Luug;->h:Lklg;
+    throw p1
 
-    iget-boolean v1, p0, Lvug;->i:Z
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iput-boolean v1, v0, Luug;->i:Z
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:[Ltr7;
 
-    iget-boolean v1, p0, Lvug;->j:Z
+    iget-object p1, p0, Lvug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-boolean v1, v0, Luug;->j:Z
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()Lpug;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/util/Size;
+
+    iget-object v3, p0, Lvug;->Z:Lw7d;
+
+    iget v3, v3, Lw7d;->a:I
+
+    invoke-direct {v0, v3, v3}, Landroid/util/Size;-><init>(II)V
+
+    iget-object v3, p0, Lvug;->q0:Lzpg;
+
+    invoke-virtual {v3}, Lzpg;->getSurfaceProvider()Lhyb;
+
+    move-result-object v3
+
+    iput v2, p0, Lvug;->X:I
+
+    iget-object p1, p1, Lpug;->b:Lwpg;
+
+    check-cast p1, Lhtg;
+
+    invoke-virtual {p1, v0, v3, p0}, Lhtg;->m(Landroid/util/Size;Lhyb;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
 
     return-object v0
+
+    :cond_3
+    :goto_1
+    return-object v1
 .end method

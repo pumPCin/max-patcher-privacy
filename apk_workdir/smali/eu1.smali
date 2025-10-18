@@ -1,134 +1,51 @@
 .class public final Leu1;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/audio/Logger;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lfu1;
+
+.field public Z:I
+
+.field public o:Le0c;
+
+
+# direct methods
+.method public constructor <init>(Lfu1;Ly14;)V
+    .locals 0
+
+    iput-object p1, p0, Leu1;->Y:Lfu1;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lndi;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Leu1;->X:Ljava/lang/Object;
+
+    iget p1, p0, Leu1;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Leu1;->Z:I
+
+    iget-object p1, p0, Leu1;->Y:Lfu1;
 
     const/4 v0, 0x0
 
-    .line 2
-    invoke-static {p1, p2, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0, p0}, Lfu1;->j(Le0c;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2, p3}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p1, p2, v0}, Lndi;->n(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    return-void
-.end method
-
-.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    const/4 p3, 0x0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lndi;->n(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lndi;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
-
-    .line 2
-    sget-object v0, Lndi;->a:Lkwa;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lf88;->c:Lf88;
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x8
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v6}, Lkwa;->f(Lkwa;Lf88;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lndi;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 3
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

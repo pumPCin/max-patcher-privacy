@@ -123,13 +123,13 @@
 
     iget v2, p0, Lms;->b:F
 
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
 
     move-result v0
 
     iget v2, p0, Lms;->c:F
 
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
 
     move-result v0
 

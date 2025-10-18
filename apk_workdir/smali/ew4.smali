@@ -1,72 +1,61 @@
-.class public final synthetic Lew4;
+.class public final Lew4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lty5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lty5;
 
-.field public final synthetic b:Lgw4;
-
-.field public final synthetic c:Landroid/content/Context;
+.field public final b:Lzi6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgw4;Landroid/content/Context;I)V
+.method public constructor <init>(Lty5;Lzi6;)V
     .locals 0
 
-    iput p3, p0, Lew4;->a:I
-
-    iput-object p1, p0, Lew4;->b:Lgw4;
-
-    iput-object p2, p0, Lew4;->c:Landroid/content/Context;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lew4;->a:Lty5;
+
+    iput-object p2, p0, Lew4;->b:Lzi6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lew4;->a:I
+    new-instance v0, Ly7d;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lew4;->c:Landroid/content/Context;
+    sget-object v1, Lgha;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    const/4 v1, 0x0
+    iput-object v1, v0, Ly7d;->a:Ljava/lang/Object;
 
-    iget-object v2, p0, Lew4;->b:Lgw4;
+    new-instance v1, Li40;
 
-    invoke-virtual {v2, v0, v1}, Lgw4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+    invoke-direct {v1, p0, v0, p1}, Li40;-><init>(Lew4;Ly7d;Lvy5;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lew4;->a:Lty5;
 
-    return-object v0
+    invoke-interface {p1, v1, p2}, Lty5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lew4;->c:Landroid/content/Context;
+    move-result-object p1
 
-    const/4 v1, 0x1
+    sget-object p2, Lr54;->a:Lr54;
 
-    iget-object v2, p0, Lew4;->b:Lgw4;
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {v2, v0, v1}, Lgw4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+    return-object p1
 
-    move-result-object v0
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

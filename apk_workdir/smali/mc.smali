@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lob4;
+.implements Ldc4;
 
 
 # instance fields
-.field public final a:Lob4;
+.field public final a:Ldc4;
 
 .field public final b:[B
 
@@ -17,12 +17,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lob4;[B[B)V
+.method public constructor <init>(Ldc4;[B[B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmc;->a:Lob4;
+    iput-object p1, p0, Lmc;->a:Ldc4;
 
     iput-object p2, p0, Lmc;->b:[B
 
@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method public final R(Lwb4;)J
+.method public final R(Llc4;)J
     .locals 4
 
     :try_start_0
@@ -68,11 +68,11 @@
     .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_0
 
-    new-instance v1, Ltb4;
+    new-instance v1, Lic4;
 
-    iget-object v2, p0, Lmc;->a:Lob4;
+    iget-object v2, p0, Lmc;->a:Ldc4;
 
-    invoke-direct {v1, v2, p1}, Ltb4;-><init>(Lob4;Lwb4;)V
+    invoke-direct {v1, v2, p1}, Lic4;-><init>(Ldc4;Llc4;)V
 
     new-instance p1, Ljavax/crypto/CipherInputStream;
 
@@ -80,7 +80,7 @@
 
     iput-object p1, p0, Lmc;->o:Ljavax/crypto/CipherInputStream;
 
-    invoke-virtual {v1}, Ltb4;->m()V
+    invoke-virtual {v1}, Lic4;->m()V
 
     const-wide/16 v0, -0x1
 
@@ -117,14 +117,14 @@
     throw v0
 .end method
 
-.method public final S(Ly1g;)V
+.method public final S(Lb3g;)V
     .locals 1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lmc;->a:Lob4;
+    iget-object v0, p0, Lmc;->a:Ldc4;
 
-    invoke-interface {v0, p1}, Lob4;->S(Ly1g;)V
+    invoke-interface {v0, p1}, Ldc4;->S(Lb3g;)V
 
     return-void
 .end method
@@ -140,9 +140,9 @@
 
     iput-object v0, p0, Lmc;->o:Ljavax/crypto/CipherInputStream;
 
-    iget-object v0, p0, Lmc;->a:Lob4;
+    iget-object v0, p0, Lmc;->a:Ldc4;
 
-    invoke-interface {v0}, Lob4;->close()V
+    invoke-interface {v0}, Ldc4;->close()V
 
     :cond_0
     return-void
@@ -151,9 +151,9 @@
 .method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lmc;->a:Lob4;
+    iget-object v0, p0, Lmc;->a:Ldc4;
 
-    invoke-interface {v0}, Lob4;->getUri()Landroid/net/Uri;
+    invoke-interface {v0}, Ldc4;->getUri()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -184,9 +184,9 @@
 .method public final x()Ljava/util/Map;
     .locals 1
 
-    iget-object v0, p0, Lmc;->a:Lob4;
+    iget-object v0, p0, Lmc;->a:Ldc4;
 
-    invoke-interface {v0}, Lob4;->x()Ljava/util/Map;
+    invoke-interface {v0}, Ldc4;->x()Ljava/util/Map;
 
     move-result-object v0
 

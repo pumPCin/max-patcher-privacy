@@ -1,144 +1,132 @@
 .class public final Lcvh;
-.super Lqdd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public final a:Landroid/app/PendingIntent;
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Landroid/content/Intent;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/PendingIntent;Z)V
+.method public synthetic constructor <init>(Landroid/content/Intent;Ljava/lang/Object;I)V
     .locals 0
+
+    iput p3, p0, Lcvh;->a:I
+
+    iput-object p1, p0, Lcvh;->b:Landroid/content/Intent;
+
+    iput-object p2, p0, Lcvh;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Lcvh;->a:Landroid/app/PendingIntent;
-
-    iput-boolean p2, p0, Lcvh;->b:Z
-
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null pendingIntent"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcvh;->a:I
 
-    if-ne p1, p0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lcvh;->b:Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcvh;->c:Ljava/lang/Object;
+
+    const/4 v2, 0x2
+
+    invoke-interface {v1, v0, v2}, Lyw7;->b(Landroid/content/Intent;I)V
 
     :cond_0
-    instance-of v1, p1, Lqdd;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lcvh;->b:Landroid/content/Intent;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    check-cast p1, Lqdd;
+    iget-object v1, p0, Lcvh;->c:Ljava/lang/Object;
 
-    move-object v1, p1
+    check-cast v1, Lcom/google/android/gms/common/api/GoogleApiActivity;
 
-    check-cast v1, Lcvh;
+    const/4 v2, 0x2
 
-    iget-object v1, v1, Lcvh;->a:Landroid/app/PendingIntent;
-
-    iget-object v3, p0, Lcvh;->a:Landroid/app/PendingIntent;
-
-    invoke-virtual {v3, v1}, Landroid/app/PendingIntent;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lcvh;
-
-    iget-boolean p1, p1, Lcvh;->b:Z
-
-    iget-boolean v1, p0, Lcvh;->b:Z
-
-    if-ne v1, p1, :cond_1
-
-    return v0
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     :cond_1
-    return v2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 4
 
-    iget-object v0, p0, Lcvh;->a:Landroid/app/PendingIntent;
-
-    invoke-virtual {v0}, Landroid/app/PendingIntent;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    iget-boolean v3, p0, Lcvh;->b:Z
-
-    if-eq v2, v3, :cond_0
-
-    const/16 v2, 0x4d5
+    :try_start_0
+    invoke-virtual {p0}, Lcvh;->a()V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    const-string v0, "Failed to start resolution intent."
+
+    const-string v1, "Failed to start resolution intent. This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
+
+    sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    const-string v3, "generic"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v3, v2, :cond_0
+
+    move-object v0, v1
+
     :cond_0
-    const/16 v2, 0x4cf
+    const-string v1, "DialogRedirect"
+
+    invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    mul-int/2addr v0, v1
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    xor-int/2addr v0, v2
+    return-void
 
-    return v0
-.end method
+    :goto_1
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lcvh;->a:Landroid/app/PendingIntent;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ReviewInfo{pendingIntent="
-
-    const-string v2, ", isNoOp="
-
-    invoke-static {v1, v0, v2}, Lwx1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcvh;->b:Z
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p2
 .end method

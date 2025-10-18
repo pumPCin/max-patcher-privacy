@@ -45,7 +45,7 @@
 
     iget-wide v5, p1, Lbl;->a:J
 
-    invoke-static {v3, v4, v5, v6}, Lb35;->e(JJ)Z
+    invoke-static {v3, v4, v5, v6}, Lu35;->e(JJ)Z
 
     move-result p1
 
@@ -60,7 +60,7 @@
 .method public final hashCode()I
     .locals 2
 
-    sget v0, Lb35;->o:I
+    sget v0, Lu35;->o:I
 
     iget-wide v0, p0, Lbl;->a:J
 
@@ -76,7 +76,7 @@
 
     iget-wide v0, p0, Lbl;->a:J
 
-    invoke-static {v0, v1}, Lb35;->l(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lu35;->l(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

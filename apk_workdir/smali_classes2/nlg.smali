@@ -3,63 +3,25 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJJ)V
+    .locals 0
 
-    new-instance v0, Landroid/util/LruCache;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x3e8
+    iput-wide p1, p0, Lnlg;->a:J
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+    iput-wide p3, p0, Lnlg;->b:J
 
-    sput-object v0, Lnlg;->a:Landroid/util/LruCache;
+    iput-wide p5, p0, Lnlg;->c:J
 
     return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Lllg;
-    .locals 7
-
-    sget-object v0, Lnlg;->a:Landroid/util/LruCache;
-
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmlg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    return-object v2
-
-    :cond_0
-    iget-wide v3, v1, Lmlg;->b:J
-
-    const-wide/32 v5, 0x36ee80
-
-    add-long/2addr v3, v5
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_1
-
-    iget-object p0, v1, Lmlg;->a:Lllg;
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
 .end method

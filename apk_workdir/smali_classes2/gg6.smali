@@ -1,115 +1,190 @@
 .class public final Lgg6;
-.super Ljava/lang/Object;
+.super Lpk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final c:Lqmg;
 
-.field public final b:J
+.field public final d:J
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IJ)V
+.method public constructor <init>(Lqmg;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgg6;->a:I
+    iput-object p1, p0, Lgg6;->c:Lqmg;
 
-    iput-wide p2, p0, Lgg6;->b:J
+    iput-wide p2, p0, Lgg6;->d:J
+
+    const-class p1, Lgg6;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgg6;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Landroid/graphics/Bitmap;Lmsb;)Lda3;
+    .locals 9
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lgg6;->c:Lqmg;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Lqmg;->d()Lyy;
 
-    return v0
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, p0, Lgg6;->e:Ljava/lang/String;
+
+    const-string v1, "No video collage"
+
+    invoke-static {v0, v1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v6
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v7
+
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v3, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v2 .. v8}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    instance-of v1, p1, Lgg6;
+    move-object v3, p1
 
-    const/4 v2, 0x0
+    move-object v2, p2
 
-    if-nez v1, :cond_1
+    iget p1, v1, Lyy;->o:I
 
-    return v2
+    iget p2, v1, Lyy;->X:I
 
-    :cond_1
-    check-cast p1, Lgg6;
+    invoke-interface {v0}, Lqmg;->getDuration()J
 
-    iget v1, p0, Lgg6;->a:I
+    move-result-wide v4
 
-    iget v3, p1, Lgg6;->a:I
+    long-to-int v0, v4
 
-    if-eq v1, v3, :cond_2
+    div-int/2addr v0, p2
 
-    return v2
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
-    :cond_2
-    iget-wide v3, p0, Lgg6;->b:J
+    move-result v4
 
-    iget-wide v5, p1, Lgg6;->b:J
+    div-int/2addr v4, p1
 
-    cmp-long p1, v3, v5
+    iget-wide v5, p0, Lgg6;->d:J
 
-    if-eqz p1, :cond_3
+    long-to-int v5, v5
 
-    return v2
+    div-int/2addr v5, v0
 
-    :cond_3
-    return v0
-.end method
+    add-int/lit8 p2, p2, -0x1
 
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lgg6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    rem-int/2addr v0, v4
 
-    iget-wide v1, p0, Lgg6;->b:J
+    mul-int/2addr v0, p1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
 
-    move-result v1
+    move-result p1
 
-    add-int/2addr v1, v0
+    div-int/2addr p1, v4
 
-    return v1
+    iget v5, v1, Lyy;->c:I
+
+    mul-int/2addr p1, v5
+
+    iget v4, v1, Lyy;->o:I
+
+    const/4 v6, 0x0
+
+    move-object v1, v2
+
+    move v2, v0
+
+    move-object v0, v1
+
+    move-object v1, v3
+
+    move v3, p1
+
+    invoke-virtual/range {v0 .. v6}, Lmsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lhi4;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final b()Lmy0;
     .locals 5
 
-    const-string v0, "FreezeStat(freezeCount="
+    new-instance v0, Lcpe;
 
-    const-string v1, ", totalFreezeDuration="
+    iget-object v1, p0, Lgg6;->c:Lqmg;
 
-    iget v2, p0, Lgg6;->a:I
+    invoke-interface {v1}, Lqmg;->i()J
 
-    iget-wide v3, p0, Lgg6;->b:J
+    move-result-wide v1
 
-    invoke-static {v2, v3, v4, v0, v1}, Ld15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "videoId="
 
-    move-result-object v0
+    const-string v4, ", millis="
 
-    const-string v1, ")"
+    invoke-static {v1, v2, v3, v4}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v2, p0, Lgg6;->d:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final getName()Ljava/lang/String;
+    .locals 1
+
+    const-class v0, Lgg6;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 

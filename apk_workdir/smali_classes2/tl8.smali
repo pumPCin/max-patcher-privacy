@@ -1,120 +1,128 @@
 .class public final Ltl8;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lwl8;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lp0e;
 
-.field public final synthetic Y:Lam8;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lam8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lp0e;I)V
     .locals 0
 
-    iput-object p1, p0, Ltl8;->Y:Lam8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltl8;->a:Lp0e;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Ltl8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltl8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltl8;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Ltl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ltl8;
-
-    iget-object v0, p0, Ltl8;->Y:Lam8;
-
-    invoke-direct {p1, v0, p2}, Ltl8;-><init>(Lam8;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Ltl8;->X:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Ltl8;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    check-cast p1, Ltl8;
 
-    iget-object p1, p0, Ltl8;->Y:Lam8;
+    iget-object v1, p0, Ltl8;->a:Lp0e;
 
-    iget-object v0, p1, Lam8;->s0:Lsze;
+    iget-object v3, p1, Ltl8;->a:Lp0e;
 
-    new-instance v2, Lbx;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v3, 0x7
+    move-result v1
 
-    invoke-direct {v2, v3, p1}, Lbx;-><init>(ILjava/lang/Object;)V
+    if-nez v1, :cond_2
 
-    iput v1, p0, Ltl8;->X:I
+    return v2
 
-    new-instance p1, Lp6d;
+    :cond_2
+    iget v1, p0, Ltl8;->b:I
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iget p1, p1, Ltl8;->b:I
 
-    new-instance v1, Ls3;
+    if-eq v1, p1, :cond_3
 
-    const/16 v3, 0x17
+    return v2
 
-    invoke-direct {v1, p1, v2, v3}, Ls3;-><init>(Ljava/io/Serializable;Lby5;I)V
+    :cond_3
+    return v0
+.end method
 
-    invoke-interface {v0, v1, p0}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 2
 
-    sget-object p1, Lc54;->a:Lc54;
+    iget-object v0, p0, Ltl8;->a:Lp0e;
 
-    return-object p1
+    invoke-virtual {v0}, Lp0e;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ltl8;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowMediaItem(item="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltl8;->a:Lp0e;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", uiPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltl8;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

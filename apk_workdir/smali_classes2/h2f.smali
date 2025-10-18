@@ -1,52 +1,104 @@
-.class public final synthetic Lh2f;
-.super Lb9;
+.class public final Lh2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgi6;
+.implements Lyi1;
 
 
-# static fields
-.field public static final r0:Lh2f;
+# instance fields
+.field public final a:Lx0f;
+
+.field public final b:Ln0d;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lh2f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    sget-object v0, Lg2f;->a:Lg2f;
 
-    const/4 v2, 0x4
+    invoke-static {v0}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
-    const/4 v3, 0x3
+    move-result-object v0
 
-    const-class v4, Lqbb;
+    iput-object v0, p0, Lh2f;->a:Lx0f;
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+    new-instance v1, Ln0d;
 
-    sput-object v0, Lh2f;->r0:Lh2f;
+    invoke-direct {v1, v0}, Ln0d;-><init>(Lj1a;)V
+
+    iput-object v1, p0, Lh2f;->b:Ln0d;
+
+    sget-object v0, Ly1f;->a:Ly1f;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v1, Lcx1;
+
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lh2f;->c:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/String;Z)V
+    .locals 11
 
-    check-cast p1, Lq2f;
+    iget-object v0, p0, Lh2f;->c:Liu7;
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    sget-object p3, Lm2f;->G0:[Lwq7;
+    move-object v1, v0
 
-    new-instance p3, Lqbb;
+    check-cast v1, Lcx1;
 
-    invoke-direct {p3, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz p2, :cond_0
 
-    return-object p3
+    const-wide/16 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x1f4
+
+    const-string v2, "PIP_ENABLED"
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    move-object v3, p1
+
+    invoke-static/range {v1 .. v10}, Lcx1;->d(Lcx1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLyw1;I)V
+
+    return-void
 .end method

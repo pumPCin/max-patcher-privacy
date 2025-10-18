@@ -3,254 +3,180 @@
 
 
 # static fields
-.field public static oneme_action_complaint:I = 0x7f0a05fd
+.field public static profile_avatar_select_screen:I = 0x7f0a090a
 
-.field public static oneme_bottom_bar_item_counter:I = 0x7f0a05ff
+.field public static profile_change_inactive_ttl_delete_1_month:I = 0x7f0a090e
 
-.field public static oneme_bottom_bar_item_dot:I = 0x7f0a0600
+.field public static profile_change_inactive_ttl_delete_3_month:I = 0x7f0a090f
 
-.field public static oneme_bottom_bar_item_icon:I = 0x7f0a0601
+.field public static profile_change_inactive_ttl_delete_6_month:I = 0x7f0a0910
 
-.field public static oneme_bottom_bar_item_label:I = 0x7f0a0602
+.field public static profile_confirmation_sheet_cancel:I = 0x7f0a091b
 
-.field public static oneme_button_counter_id:I = 0x7f0a0607
+.field public static profile_delete_contact_confirmation_sheet_confirm:I = 0x7f0a0929
 
-.field public static oneme_button_end_imageview_id:I = 0x7f0a0608
+.field public static profile_edit_admin_channel_type:I = 0x7f0a092b
 
-.field public static oneme_button_progress_bar_id:I = 0x7f0a0609
+.field public static profile_edit_admin_chat_type:I = 0x7f0a092c
 
-.field public static oneme_button_start_imageview_id:I = 0x7f0a060a
+.field public static profile_edit_admin_clear_channel_history:I = 0x7f0a092d
 
-.field public static oneme_button_text_promo_progress_bar_id:I = 0x7f0a060b
+.field public static profile_edit_admin_clear_channel_history_cancel:I = 0x7f0a092e
 
-.field public static oneme_button_text_promo_textview_id:I = 0x7f0a060c
+.field public static profile_edit_admin_clear_channel_history_confirm:I = 0x7f0a092f
 
-.field public static oneme_button_textview_id:I = 0x7f0a060d
+.field public static profile_edit_admin_clear_chat_history:I = 0x7f0a0930
 
-.field public static oneme_buttonstack_more_btn:I = 0x7f0a060e
+.field public static profile_edit_admin_clear_chat_history_cancel:I = 0x7f0a0931
 
-.field public static oneme_cell_simple_alias:I = 0x7f0a0610
+.field public static profile_edit_admin_clear_chat_history_confirm:I = 0x7f0a0932
 
-.field public static oneme_cell_simple_audio:I = 0x7f0a0611
+.field public static profile_edit_admin_close_channel:I = 0x7f0a0933
 
-.field public static oneme_cell_simple_avatar:I = 0x7f0a0612
+.field public static profile_edit_admin_close_channel_cancel:I = 0x7f0a0934
 
-.field public static oneme_cell_simple_button:I = 0x7f0a0613
+.field public static profile_edit_admin_close_channel_certain_confirm:I = 0x7f0a0935
 
-.field public static oneme_cell_simple_checkbox:I = 0x7f0a0614
+.field public static profile_edit_admin_close_channel_confirm:I = 0x7f0a0936
 
-.field public static oneme_cell_simple_first_trailing_icon:I = 0x7f0a0615
+.field public static profile_edit_admin_close_chat:I = 0x7f0a0937
 
-.field public static oneme_cell_simple_icon_info:I = 0x7f0a0616
+.field public static profile_edit_admin_close_chat_cancel:I = 0x7f0a0938
 
-.field public static oneme_cell_simple_message:I = 0x7f0a0617
+.field public static profile_edit_admin_close_chat_certain_confirm:I = 0x7f0a0939
 
-.field public static oneme_cell_simple_name:I = 0x7f0a0618
+.field public static profile_edit_admin_close_chat_confirm:I = 0x7f0a093a
 
-.field public static oneme_cell_simple_second_trailing_icon:I = 0x7f0a0619
+.field public static profile_edit_admin_leave_channel:I = 0x7f0a093b
 
-.field public static oneme_cell_simple_video:I = 0x7f0a061a
+.field public static profile_edit_admin_leave_channel_and_change_owner_confirm:I = 0x7f0a093c
 
-.field public static oneme_compact_banner_background:I = 0x7f0a0646
+.field public static profile_edit_admin_leave_channel_cancel:I = 0x7f0a093d
 
-.field public static oneme_compact_banner_close_button:I = 0x7f0a0647
+.field public static profile_edit_admin_leave_channel_confirm:I = 0x7f0a093e
 
-.field public static oneme_compact_banner_image:I = 0x7f0a0648
+.field public static profile_edit_admin_leave_chat:I = 0x7f0a093f
 
-.field public static oneme_compact_banner_image_container:I = 0x7f0a0649
+.field public static profile_edit_admin_leave_chat_and_change_owner_confirm:I = 0x7f0a0940
 
-.field public static oneme_compact_banner_subtitle:I = 0x7f0a064a
+.field public static profile_edit_admin_leave_chat_cancel:I = 0x7f0a0941
 
-.field public static oneme_compact_banner_title:I = 0x7f0a064b
+.field public static profile_edit_admin_leave_chat_confirm:I = 0x7f0a0942
 
-.field public static oneme_confirmation_sheet_cancel:I = 0x7f0a0656
+.field public static profile_edit_admin_move_rights:I = 0x7f0a0943
 
-.field public static oneme_contact_call_cell_avatar:I = 0x7f0a0657
+.field public static profile_edit_admin_participants_permission:I = 0x7f0a0944
 
-.field public static oneme_contact_call_cell_description:I = 0x7f0a0658
+.field public static profile_edit_admin_permissions_change_chat_info:I = 0x7f0a0945
 
-.field public static oneme_contact_call_cell_stub_audio_call_button:I = 0x7f0a0659
+.field public static profile_edit_admin_permissions_change_owner_cancel_action:I = 0x7f0a0946
 
-.field public static oneme_contact_call_cell_stub_time_text:I = 0x7f0a065a
+.field public static profile_edit_admin_permissions_change_owner_change_action:I = 0x7f0a0947
 
-.field public static oneme_contact_call_cell_stub_video_call_button:I = 0x7f0a065b
+.field public static profile_edit_admin_permissions_control_admin:I = 0x7f0a0948
 
-.field public static oneme_contact_call_cell_title:I = 0x7f0a065c
+.field public static profile_edit_admin_permissions_delete_from_admins_cancel_action:I = 0x7f0a0949
 
-.field public static oneme_contact_cell_shimmer:I = 0x7f0a065d
+.field public static profile_edit_admin_permissions_delete_from_admins_delete_action:I = 0x7f0a094a
 
-.field public static oneme_contact_cell_shimmer_avatar:I = 0x7f0a065e
+.field public static profile_edit_admin_permissions_delete_messages:I = 0x7f0a094b
 
-.field public static oneme_contact_cell_shimmer_container:I = 0x7f0a065f
+.field public static profile_edit_admin_permissions_edit_chat_link:I = 0x7f0a094c
 
-.field public static oneme_contact_cell_shimmer_content_container:I = 0x7f0a0660
+.field public static profile_edit_admin_permissions_edit_chat_members:I = 0x7f0a094d
 
-.field public static oneme_contact_cell_shimmer_subtitle:I = 0x7f0a0661
+.field public static profile_edit_admin_permissions_edit_messages:I = 0x7f0a094e
 
-.field public static oneme_contact_cell_shimmer_title:I = 0x7f0a0662
+.field public static profile_edit_admin_permissions_pin_messages:I = 0x7f0a094f
 
-.field public static oneme_description_field_with_limit:I = 0x7f0a067c
+.field public static profile_edit_admin_permissions_recycler_view:I = 0x7f0a0950
 
-.field public static oneme_empty_view_icon:I = 0x7f0a0683
+.field public static profile_edit_admin_permissions_send_messages:I = 0x7f0a0951
 
-.field public static oneme_empty_view_main_action:I = 0x7f0a0684
+.field public static profile_edit_admin_permissions_superadmin:I = 0x7f0a0952
 
-.field public static oneme_empty_view_subtitle:I = 0x7f0a0685
+.field public static profile_edit_admin_permissions_toolbar_view:I = 0x7f0a0953
 
-.field public static oneme_empty_view_title:I = 0x7f0a0686
+.field public static profile_edit_appbar_layout:I = 0x7f0a0954
 
-.field public static oneme_full_banner_action_button:I = 0x7f0a06ae
+.field public static profile_edit_avatar:I = 0x7f0a0955
 
-.field public static oneme_full_banner_background:I = 0x7f0a06af
+.field public static profile_edit_change_avatar_cancel:I = 0x7f0a0956
 
-.field public static oneme_full_banner_image:I = 0x7f0a06b0
+.field public static profile_edit_change_avatar_remove_current:I = 0x7f0a0957
 
-.field public static oneme_full_banner_subtitle:I = 0x7f0a06b1
+.field public static profile_edit_change_avatar_select_neuro_avatar:I = 0x7f0a0958
 
-.field public static oneme_full_banner_title:I = 0x7f0a06b2
+.field public static profile_edit_change_avatar_upload_from_camera:I = 0x7f0a0959
 
-.field public static oneme_left_icon_button:I = 0x7f0a06c3
+.field public static profile_edit_change_avatar_upload_from_gallery:I = 0x7f0a095a
 
-.field public static oneme_login_country_codes:I = 0x7f0a06d5
+.field public static profile_edit_collapsible_container_layout:I = 0x7f0a095b
 
-.field public static oneme_login_input_field_name:I = 0x7f0a06d9
+.field public static profile_edit_confirm_exit_button:I = 0x7f0a095c
 
-.field public static oneme_login_input_field_surname:I = 0x7f0a06da
+.field public static profile_edit_confirm_save_button:I = 0x7f0a095d
 
-.field public static oneme_login_phone_edit_text:I = 0x7f0a06ff
+.field public static profile_edit_contact_delete_action:I = 0x7f0a095e
 
-.field public static oneme_message_input_container:I = 0x7f0a0727
+.field public static profile_edit_delete_profile_button:I = 0x7f0a095f
 
-.field public static oneme_message_input_edit_text:I = 0x7f0a0728
+.field public static profile_edit_delete_profile_cancel_button:I = 0x7f0a0960
 
-.field public static oneme_message_input_left_inner_icon:I = 0x7f0a0729
+.field public static profile_edit_description_field:I = 0x7f0a0961
 
-.field public static oneme_message_input_left_outer_icon:I = 0x7f0a072a
+.field public static profile_edit_first_name_field:I = 0x7f0a0962
 
-.field public static oneme_message_input_right_inner_icon:I = 0x7f0a072b
+.field public static profile_edit_invite_by_link:I = 0x7f0a0963
 
-.field public static oneme_message_input_right_outer_icon:I = 0x7f0a072c
+.field public static profile_edit_last_name_field:I = 0x7f0a0964
 
-.field public static oneme_message_input_right_video_msg_icon:I = 0x7f0a072d
+.field public static profile_edit_link_private:I = 0x7f0a0965
 
-.field public static oneme_message_input_view_id:I = 0x7f0a072e
+.field public static profile_edit_link_public:I = 0x7f0a0966
 
-.field public static oneme_middle_banner_background:I = 0x7f0a0731
+.field public static profile_edit_logout_confirm_action:I = 0x7f0a0967
 
-.field public static oneme_middle_banner_close_button:I = 0x7f0a0732
+.field public static profile_edit_member_permissions_add_user:I = 0x7f0a0968
 
-.field public static oneme_middle_banner_image:I = 0x7f0a0733
+.field public static profile_edit_member_permissions_call_to_chat:I = 0x7f0a0969
 
-.field public static oneme_middle_banner_image_container:I = 0x7f0a0734
+.field public static profile_edit_member_permissions_change_photo:I = 0x7f0a096a
 
-.field public static oneme_middle_banner_subtitle:I = 0x7f0a0735
+.field public static profile_edit_member_permissions_pin_message:I = 0x7f0a096b
 
-.field public static oneme_middle_banner_title:I = 0x7f0a0736
+.field public static profile_edit_member_permissions_see_private_link:I = 0x7f0a096c
 
-.field public static oneme_mini_player_close:I = 0x7f0a0737
+.field public static profile_edit_oneme_toolbar:I = 0x7f0a096d
 
-.field public static oneme_mini_player_playback:I = 0x7f0a0738
+.field public static profile_edit_recycler_view:I = 0x7f0a096e
 
-.field public static oneme_mini_player_progress:I = 0x7f0a0739
+.field public static profile_edit_selectable_item_checkbox:I = 0x7f0a096f
 
-.field public static oneme_mini_player_speed:I = 0x7f0a073a
+.field public static profile_edit_selectable_item_subtitle:I = 0x7f0a0970
 
-.field public static oneme_mini_player_subtitle:I = 0x7f0a073b
+.field public static profile_edit_selectable_item_title:I = 0x7f0a0971
 
-.field public static oneme_mini_player_title:I = 0x7f0a073c
+.field public static profile_edit_short_link:I = 0x7f0a0972
 
-.field public static oneme_notification_stack__counter_id:I = 0x7f0a073d
+.field public static profile_edit_short_link_input_button:I = 0x7f0a0973
 
-.field public static oneme_notification_stack__mention_id:I = 0x7f0a073e
+.field public static profile_edit_short_link_recycler:I = 0x7f0a0974
 
-.field public static oneme_notification_stack__reaction_id:I = 0x7f0a073f
+.field public static profile_edit_short_link_toolbar:I = 0x7f0a0975
 
-.field public static oneme_notifications_confirmation_sheet_1_day:I = 0x7f0a0740
+.field public static profile_edit_shortlink_action_copy:I = 0x7f0a0976
 
-.field public static oneme_notifications_confirmation_sheet_1_hour:I = 0x7f0a0741
+.field public static profile_edit_shortlink_action_qr_code:I = 0x7f0a0977
 
-.field public static oneme_notifications_confirmation_sheet_4_hour:I = 0x7f0a0742
+.field public static profile_edit_shortlink_action_refresh_link:I = 0x7f0a0978
 
-.field public static oneme_notifications_confirmation_sheet_forever:I = 0x7f0a0743
+.field public static profile_edit_shortlink_action_share:I = 0x7f0a0979
 
-.field public static oneme_picker_confirm_cancel:I = 0x7f0a0768
+.field public static profile_edit_shortlink_action_share_external:I = 0x7f0a097a
 
-.field public static oneme_picker_confirm_close:I = 0x7f0a0769
+.field public static profile_edit_shortlink_confirm_button:I = 0x7f0a097b
 
-.field public static oneme_right_primary_icon_button:I = 0x7f0a0773
+.field public static profile_edit_shortlink_confirm_update:I = 0x7f0a097c
 
-.field public static oneme_right_secondary_icon_button:I = 0x7f0a0774
-
-.field public static oneme_right_third_icon_button:I = 0x7f0a0775
-
-.field public static oneme_search_view_back_button:I = 0x7f0a0777
-
-.field public static oneme_search_view_edit_text:I = 0x7f0a0778
-
-.field public static oneme_search_view_erase_button:I = 0x7f0a0779
-
-.field public static oneme_search_view_icon:I = 0x7f0a077a
-
-.field public static oneme_search_view_search_button:I = 0x7f0a077b
-
-.field public static oneme_tab_item__start_imageview_id:I = 0x7f0a08a1
-
-.field public static oneme_tab_item_end_imageview_id:I = 0x7f0a08a2
-
-.field public static oneme_tab_item_textview_id:I = 0x7f0a08a3
-
-.field public static oneme_text_input_edit_text:I = 0x7f0a08a4
-
-.field public static oneme_theme_attach_listener:I = 0x7f0a08a5
-
-.field public static oneme_theme_textview_for_span_attach_listener:I = 0x7f0a08a6
-
-.field public static oneme_toolbar:I = 0x7f0a08a8
-
-.field public static oneme_toolbar_close_button:I = 0x7f0a08a9
-
-.field public static oneme_toolbar_menu_button:I = 0x7f0a08aa
-
-.field public static oneme_toolbar_more_action_add_to_folder:I = 0x7f0a08ab
-
-.field public static oneme_toolbar_more_action_complain_channel:I = 0x7f0a08ac
-
-.field public static oneme_toolbar_more_action_notifications_disabled:I = 0x7f0a08ad
-
-.field public static oneme_toolbar_more_action_notifications_enabled:I = 0x7f0a08ae
-
-.field public static oneme_toolbar_more_action_search:I = 0x7f0a08af
-
-.field public static oneme_toolbar_more_action_send_logs:I = 0x7f0a08b0
-
-.field public static oneme_toolbar_more_action_share_channel:I = 0x7f0a08b1
-
-.field public static oneme_toolbar_overflow_menu_button:I = 0x7f0a08b2
-
-.field public static oneme_toolbar_popup:I = 0x7f0a08b3
-
-.field public static oneme_toolbar_primary_right_button:I = 0x7f0a08b4
-
-.field public static oneme_toolbar_selection_view:I = 0x7f0a08b5
-
-.field public static oneme_toolbar_subtitle:I = 0x7f0a08b6
-
-.field public static oneme_toolbar_title:I = 0x7f0a08b7
-
-.field public static oneme_toolbar_title_avatar:I = 0x7f0a08b8
-
-.field public static oneme_toolbar_title_dropdown:I = 0x7f0a08b9
-
-.field public static oneme_tooltip_animation_fade:I = 0x7f0a08ba
-
-.field public static oneme_tooltip_view_close:I = 0x7f0a08bb
-
-.field public static oneme_tooltip_view_icon:I = 0x7f0a08bc
-
-.field public static oneme_tooltip_view_subtitle:I = 0x7f0a08bd
-
-.field public static oneme_tooltip_view_title:I = 0x7f0a08be
-
-.field public static oneme_viewpager2_recyclerview:I = 0x7f0a08bf
-
-.field public static tag_tab_item:I = 0x7f0a0bec
+.field public static profile_selectable_item_tag:I = 0x7f0a09e0

@@ -1,97 +1,93 @@
-.class public final enum Lpgg;
-.super Ljava/lang/Enum;
+.class public abstract synthetic Lpgg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lpgg;
-
-.field public static final enum a:Lpgg;
-
-.field public static final enum b:Lpgg;
-
-.field public static final enum c:Lpgg;
-
-.field public static final enum o:Lpgg;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lpgg;
+    const/16 v0, 0x9
 
-    const-string v1, "ALL"
+    invoke-static {v0}, Ldy1;->y(I)[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sput-object v0, Lpgg;->a:Lpgg;
+    :catch_0
+    const/4 v2, 0x2
 
-    new-instance v1, Lpgg;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    const-string v2, "USER_FOLDER"
+    :catch_1
+    const/4 v1, 0x3
 
-    const/4 v3, 0x1
+    const/16 v3, 0x8
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_2
+    aput v1, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    sput-object v1, Lpgg;->b:Lpgg;
+    :catch_2
+    const/4 v1, 0x4
 
-    new-instance v2, Lpgg;
+    const/4 v4, 0x6
 
-    const-string v3, "CREATE_FOLDER"
+    :try_start_3
+    aput v1, v0, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    const/4 v4, 0x2
+    :catch_3
+    const/4 v5, 0x5
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_4
+    aput v5, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    sput-object v2, Lpgg;->c:Lpgg;
+    :catch_4
+    :try_start_5
+    aput v4, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    new-instance v3, Lpgg;
+    :catch_5
+    const/4 v1, 0x7
 
-    const-string v4, "RECOMMENDED_FOLDER"
+    :try_start_6
+    aput v1, v0, v5
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    const/4 v5, 0x3
+    :catch_6
+    :try_start_7
+    aput v3, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpgg;->o:Lpgg;
-
-    filled-new-array {v0, v1, v2, v3}, [Lpgg;
-
-    move-result-object v0
-
-    sput-object v0, Lpgg;->X:[Lpgg;
+    :catch_7
+    sput-object v0, Lpgg;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lpgg;
-    .locals 1
-
-    const-class v0, Lpgg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lpgg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lpgg;
-    .locals 1
-
-    sget-object v0, Lpgg;->X:[Lpgg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lpgg;
-
-    return-object v0
 .end method

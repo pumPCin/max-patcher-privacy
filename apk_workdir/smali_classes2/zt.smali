@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements La21;
+.implements Lj21;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final onAsrRecordStarted(Ly11;)V
+.method public final onAsrRecordStarted(Lh21;)V
     .locals 2
 
     iget-object v0, p0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -47,9 +47,9 @@
 
     move-result-object v1
 
-    check-cast v1, La21;
+    check-cast v1, Lj21;
 
-    invoke-interface {v1, p1}, La21;->onAsrRecordStarted(Ly11;)V
+    invoke-interface {v1, p1}, Lj21;->onAsrRecordStarted(Lh21;)V
 
     goto :goto_0
 
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public final onAsrRecordStopped(Lz11;)V
+.method public final onAsrRecordStopped(Li21;)V
     .locals 2
 
     iget-object v0, p0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -77,9 +77,9 @@
 
     move-result-object v1
 
-    check-cast v1, La21;
+    check-cast v1, Lj21;
 
-    invoke-interface {v1, p1}, La21;->onAsrRecordStopped(Lz11;)V
+    invoke-interface {v1, p1}, Lj21;->onAsrRecordStopped(Li21;)V
 
     goto :goto_0
 

@@ -1,325 +1,337 @@
-.class public final synthetic Lnob;
+.class public final Lnob;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lrf2;
 
-.field public final synthetic b:Lone/me/pinbars/PinBarsWidget;
+.field public final b:Liu7;
+
+.field public final c:Liu7;
+
+.field public final d:Liu7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/pinbars/PinBarsWidget;I)V
+.method public constructor <init>(Liu7;Liu7;Liu7;Lrf2;)V
     .locals 0
 
-    iput p2, p0, Lnob;->a:I
-
-    iput-object p1, p0, Lnob;->b:Lone/me/pinbars/PinBarsWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p4, p0, Lnob;->a:Lrf2;
+
+    iput-object p1, p0, Lnob;->b:Liu7;
+
+    iput-object p2, p0, Lnob;->c:Liu7;
+
+    iput-object p3, p0, Lnob;->d:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a(Lwr3;)Linb;
     .locals 20
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lnob;->a:I
+    move-object/from16 v1, p1
 
-    iget-object v2, v0, Lnob;->b:Lone/me/pinbars/PinBarsWidget;
+    iget-object v2, v0, Lnob;->d:Liu7;
 
-    packed-switch v1, :pswitch_data_0
-
-    sget v1, Lone/me/pinbars/PinBarsWidget;->s0:I
-
-    new-instance v1, Loi1;
-
-    new-instance v3, Lnob;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v4}, Lnob;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
-
-    new-instance v4, Lrhf;
-
-    invoke-direct {v4, v3}, Lrhf;-><init>(Loh6;)V
-
-    new-instance v3, Lilh;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v2, v5}, Lilh;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-direct {v1, v4, v3}, Loi1;-><init>(Lrhf;Lilh;)V
-
-    return-object v1
-
-    :pswitch_0
-    sget v1, Lone/me/pinbars/PinBarsWidget;->s0:I
-
-    sget-object v1, Lkob;->a:Lkob;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lqkf;
-
-    invoke-virtual {v3, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v5, v3
-
-    check-cast v5, Lqkf;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lnv2;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v6
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lnq2;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v7
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lsw2;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Loy9;
-
-    invoke-virtual {v3, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object/from16 v16, v3
-
-    check-cast v16, Loy9;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, La2b;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v17
-
-    iget-object v2, v2, Lone/me/pinbars/PinBarsWidget;->b:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    move-object/from16 v19, v2
+    check-cast v2, Lxxb;
 
-    check-cast v19, Llob;
+    invoke-virtual {v1}, Lwr3;->p()J
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    move-result-wide v3
 
-    move-result-object v2
+    iget-object v5, v1, Lwr3;->a:Lkt3;
 
-    const-class v3, Lgz3;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v9
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {v2, v3, v4}, Lxxb;->w(J)Ltxb;
 
     move-result-object v2
 
-    const-class v3, Lqr3;
+    iget v2, v2, Ltxb;->a:I
 
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    const/16 v3, 0xa
 
-    move-result-object v10
+    const/4 v4, 0x0
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    const/4 v6, 0x1
 
-    move-result-object v2
+    if-eq v2, v3, :cond_0
 
-    const-class v3, Lmr3;
+    const/16 v3, 0x14
 
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    if-eq v2, v3, :cond_0
 
-    move-result-object v11
+    const/16 v3, 0x28
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    if-eq v2, v3, :cond_0
 
-    move-result-object v2
-
-    const-class v3, Ll83;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v14
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lkp5;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v15
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lrs9;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v13
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lxu1;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v12
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lutb;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v18
-
-    new-instance v4, Lmob;
-
-    invoke-direct/range {v4 .. v19}, Lmob;-><init>(Lqkf;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Loy9;Llt7;Llt7;Llob;)V
-
-    return-object v4
-
-    :pswitch_1
-    sget v1, Lone/me/pinbars/PinBarsWidget;->s0:I
-
-    invoke-virtual {v2}, Lx14;->getRouter()Ljhd;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_2
-    sget v1, Lone/me/pinbars/PinBarsWidget;->s0:I
-
-    invoke-virtual {v2}, Lone/me/pinbars/PinBarsWidget;->C0()Lmob;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lmob;->Y:Lfu6;
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, v1, Lfu6;->a:Llze;
-
-    invoke-interface {v2}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lda2;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Lda2;->t()Lf10;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Lf10;->c:Ljava/io/Serializable;
-
-    check-cast v2, Ljava/lang/String;
+    move v15, v4
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    move v15, v6
 
     :goto_0
-    if-eqz v2, :cond_2
+    sget-object v2, Lll0;->c:Lll0;
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v2}, Lwr3;->r(Lll0;)Ljava/lang/String;
 
-    move-result v3
+    move-result-object v2
 
-    if-nez v3, :cond_1
+    iget-object v3, v0, Lnob;->b:Liu7;
 
-    goto :goto_1
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    iget-object v1, v1, Lfu6;->g:Leie;
+    move-result-object v7
 
-    new-instance v3, Lku6;
+    check-cast v7, Ldq5;
 
-    invoke-direct {v3, v2}, Lku6;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v7}, Lwr3;->x(Ldq5;)Z
 
-    invoke-virtual {v1, v3}, Leie;->h(Ljava/lang/Object;)Z
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    sget v7, Ldkd;->E:I
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    :goto_1
+    move-object v13, v8
 
     goto :goto_2
 
+    :cond_1
+    invoke-virtual {v1}, Lwr3;->v()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v1}, Lwr3;->y()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    sget v7, Ldkd;->I2:I
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    goto :goto_1
+
     :cond_2
-    :goto_1
-    const-class v1, Lfu6;
+    invoke-virtual {v1}, Lwr3;->v()Z
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result v7
 
-    move-result-object v1
+    if-eqz v7, :cond_3
 
-    const-string v2, "Can\'t join to group call in chat because joinLink is empty"
+    sget v7, Ldkd;->n:I
 
-    invoke-static {v1, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    goto :goto_1
 
     :cond_3
+    iget-object v7, v0, Lnob;->c:Liu7;
+
+    invoke-interface {v7}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lzxb;
+
+    invoke-virtual {v7, v1}, Lzxb;->b(Lwr3;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    sget v7, Llsa;->D:I
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v8, Lsrf;
+
+    invoke-direct {v8, v7}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
     :goto_2
-    sget-object v1, Lzag;->a:Lzag;
+    iget-object v7, v0, Lnob;->a:Lrf2;
 
-    return-object v1
+    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v7
+
+    const/4 v8, 0x2
+
+    if-eq v7, v6, :cond_7
+
+    if-eq v7, v8, :cond_5
+
+    const/4 v9, 0x3
+
+    if-eq v7, v9, :cond_5
+
+    :goto_3
+    move/from16 v19, v6
+
+    goto :goto_4
+
+    :cond_5
+    iget-object v5, v5, Lkt3;->b:Ljt3;
+
+    iget-object v5, v5, Ljt3;->n:Ljava/util/List;
+
+    sget-object v7, Lft3;->X:Lft3;
+
+    invoke-interface {v5, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    move/from16 v19, v4
+
+    goto :goto_4
+
+    :cond_7
+    iget-object v5, v5, Lkt3;->b:Ljt3;
+
+    iget-object v5, v5, Ljt3;->n:Ljava/util/List;
+
+    sget-object v7, Lft3;->Y:Lft3;
+
+    invoke-interface {v5, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    goto :goto_3
+
+    :goto_4
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ldq5;
+
+    invoke-virtual {v1, v3}, Lwr3;->x(Ldq5;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    const/4 v8, 0x5
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v1}, Lwr3;->v()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    const/4 v8, 0x4
+
+    :cond_9
+    :goto_5
+    invoke-virtual {v1}, Lwr3;->p()J
+
+    move-result-wide v3
+
+    invoke-virtual {v1}, Lwr3;->p()J
+
+    move-result-wide v10
+
+    invoke-virtual {v1}, Lwr3;->e()Ljava/lang/String;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_b
+
+    if-eqz v2, :cond_a
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    :goto_6
+    move-object v14, v2
+
+    goto :goto_7
+
+    :cond_a
+    const/4 v2, 0x0
+
+    goto :goto_6
+
+    :goto_7
+    invoke-virtual {v1}, Lwr3;->w()Z
+
+    move-result v16
+
+    new-instance v2, Lapb;
+
+    invoke-virtual/range {p1 .. p1}, Lwr3;->p()J
+
+    move-result-wide v0
+
+    invoke-direct {v2, v6, v8, v0, v1}, Lapb;-><init>(IIJ)V
+
+    invoke-virtual/range {p1 .. p1}, Lwr3;->o()Ljava/lang/CharSequence;
+
+    move-result-object v18
+
+    new-instance v7, Linb;
+
+    move-object/from16 v17, v2
+
+    move-wide v8, v3
+
+    invoke-direct/range {v7 .. v19}, Linb;-><init>(JJLjava/lang/CharSequence;Ltrf;Landroid/net/Uri;ZZLapb;Ljava/lang/CharSequence;Z)V
+
+    return-object v7
+
+    :cond_b
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

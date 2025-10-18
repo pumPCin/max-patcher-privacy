@@ -477,11 +477,11 @@
 
     invoke-direct {p1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance v0, Lqie;
+    new-instance v0, Lzje;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1, p1}, Lqie;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lzje;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lorg/webrtc/EglRenderer;->releaseEglSurface(Ljava/lang/Runnable;)V
 

@@ -1,51 +1,85 @@
 .class public final Lux4;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwx4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lyx4;
-
-.field public Z:I
-
-.field public o:Lyx4;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lyx4;Lk14;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lux4;->Y:Lyx4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lux4;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lux4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lux4;
+
+    iget v1, p0, Lux4;->a:I
+
+    iget p1, p1, Lux4;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lux4;->X:Ljava/lang/Object;
+    iget v0, p0, Lux4;->a:I
 
-    iget p1, p0, Lux4;->Z:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lux4;->Z:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Lux4;->Y:Lyx4;
+    const-string v0, "DownloadFailed(textFailRes="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0, v0, p0}, Lyx4;->j(Lxr6;Lww4;Lk14;)Ljava/lang/Object;
+    iget v2, p0, Lux4;->a:I
 
-    move-result-object p1
+    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

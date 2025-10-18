@@ -1,140 +1,93 @@
-.class public final Lkua;
-.super Llff;
+.class public final enum Lkua;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
+# static fields
+.field public static final enum a:Lkua;
 
-# instance fields
-.field public X:I
+.field public static final enum b:Lkua;
 
-.field public final synthetic Y:[Ljava/io/File;
+.field public static final enum c:Lkua;
 
-.field public final synthetic Z:Lsua;
+.field public static final synthetic o:[Lkua;
 
 
 # direct methods
-.method public constructor <init>([Ljava/io/File;Lsua;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lkua;->Y:[Ljava/io/File;
+    new-instance v0, Lkua;
 
-    iput-object p2, p0, Lkua;->Z:Lsua;
+    const-string v1, "Themed"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkua;->a:Lkua;
+
+    new-instance v1, Lkua;
+
+    const-string v2, "ContrastPinned"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lkua;
+
+    const-string v3, "NeutralFade"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkua;->b:Lkua;
+
+    new-instance v3, Lkua;
+
+    const-string v4, "AccentRed"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lkua;->c:Lkua;
+
+    filled-new-array {v0, v1, v2, v3}, [Lkua;
+
+    move-result-object v0
+
+    sput-object v0, Lkua;->o:[Lkua;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lkua;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lkua;
 
-    check-cast p1, Lb54;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lkua;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lkua;
 
-    move-result-object p1
-
-    check-cast p1, Lkua;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lkua;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lkua;
+    .locals 1
 
-    new-instance p1, Lkua;
+    sget-object v0, Lkua;->o:[Lkua;
 
-    iget-object v0, p0, Lkua;->Y:[Ljava/io/File;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v1, p0, Lkua;->Z:Lsua;
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, p2}, Lkua;-><init>([Ljava/io/File;Lsua;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lkua;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkua;->Z:Lsua;
-
-    iget-object v0, p0, Lkua;->Y:[Ljava/io/File;
-
-    if-eqz v0, :cond_2
-
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_2
-
-    aget-object v4, v0, v3
-
-    invoke-virtual {v4}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
-
-    move-result-object v4
-
-    invoke-static {p1, v4}, Lsua;->c(Lsua;Ljava/nio/file/Path;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput v1, p0, Lkua;->X:I
-
-    invoke-static {p1, p0}, Lsua;->a(Lsua;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_3
+    check-cast v0, [Lkua;
 
     return-object v0
-
-    :cond_3
-    :goto_1
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

@@ -1,127 +1,123 @@
 .class public final Lyeb;
-.super Lxxi;
+.super Leic;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbfb;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lbfb;I)V
-    .locals 0
-
-    iput p2, p0, Lyeb;->a:I
-
-    iput-object p1, p0, Lyeb;->b:Lbfb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public a:[B
 
 
 # virtual methods
-.method public final onCreateFailure(Ljava/lang/String;)V
-    .locals 5
+.method public final a(Lcic;Lfic;Lfj;)V
+    .locals 2
 
-    iget v0, p0, Lyeb;->a:I
+    new-instance p2, Lgfb;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p3, p1, Lcic;->a:Le8e;
 
-    iget-object v0, p0, Lyeb;->b:Lbfb;
+    iget-object p3, p3, Le8e;->b:Ljava/lang/Object;
 
-    iget-object v1, v0, Lbfb;->D:Lwh1;
+    iget-object p3, p0, Lyeb;->a:[B
 
-    iget-boolean v1, v1, Lwh1;->B:Z
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v1, :cond_0
+    array-length v0, p3
 
-    new-instance v1, Lj4a;
+    const/16 v1, 0x8
 
-    sget-object v2, Li4a;->b:Li4a;
+    if-ne v0, v1, :cond_0
 
-    iget-object v3, v0, Lbfb;->N:Lorg/webrtc/PeerConnection;
+    iput-object p3, p2, Lgfb;->a:[B
 
-    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
+    new-instance p3, Lb93;
 
-    move-result-object v3
+    const/4 v0, 0x4
 
-    const/4 v4, 0x0
+    invoke-direct {p3, v0}, Lb93;-><init>(I)V
 
-    invoke-direct {v1, v2, p1, v4, v3}, Lj4a;-><init>(Li4a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lbfb;->h(Lj4a;)V
+    invoke-virtual {p1, p2, p3, v0}, Lcic;->k(Leic;Ljava/util/function/Consumer;Z)V
 
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {v0, p1}, Lbfb;->i(Ljava/lang/String;)V
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
-    return-void
+    const-string p2, "Path Response Frame must contain 8 bytes data"
 
-    :pswitch_0
-    iget-object v0, p0, Lyeb;->b:Lbfb;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Lbfb;->D:Lwh1;
-
-    iget-boolean v1, v1, Lwh1;->B:Z
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Lj4a;
-
-    sget-object v2, Li4a;->a:Li4a;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, p1, v3, v3}, Lj4a;-><init>(Li4a;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
-
-    invoke-virtual {v0, v1}, Lbfb;->h(Lj4a;)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, p1}, Lbfb;->i(Ljava/lang/String;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method
 
-.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
+.method public final c()I
     .locals 1
 
-    iget v0, p0, Lyeb;->a:I
+    const/16 v0, 0x9
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lyeb;->b:Lbfb;
+.method public final f(Ljava/nio/ByteBuffer;)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Lbfb;->n(Lorg/webrtc/SessionDescription;)V
+    const/16 v0, 0x1a
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Lyeb;->a:[B
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    return-void
+.end method
+
+.method public final g(Ljava/nio/ByteBuffer;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    const/16 v1, 0x1a
+
+    if-ne v0, v1, :cond_0
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lyeb;->a:[B
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lyeb;->b:Lbfb;
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v0, p1}, Lbfb;->n(Lorg/webrtc/SessionDescription;)V
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
 
-    return-void
+    throw p1
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lyeb;->a:[B
+
+    invoke-static {v0}, Lami;->a([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PathChallengeFrame["
+
+    const-string v2, "]"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

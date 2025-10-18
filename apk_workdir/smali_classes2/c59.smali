@@ -1,99 +1,76 @@
 .class public final Lc59;
-.super Ljava/lang/Object;
+.super Lvpe;
 .source "SourceFile"
 
-# interfaces
-.implements Le59;
 
-
-# instance fields
-.field public final a:Ljava/util/List;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/List;)V
+# virtual methods
+.method public final bridge synthetic A(Ly18;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lb59;
 
-    iput-object p1, p0, Lc59;->a:Ljava/util/List;
+    invoke-virtual {p0, p1}, Lc59;->G(Lb59;)V
 
     return-void
 .end method
 
+.method public final G(Lb59;)V
+    .locals 13
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    check-cast v0, Lcde;
+
+    iget-wide v2, p1, Lb59;->Y:J
+
+    iget-object v5, p1, Lb59;->b:Ltrf;
+
+    iget-object v6, p1, Lb59;->c:Lsce;
+
+    iget-object v1, p1, Lb59;->o:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    new-instance v4, Lqu7;
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x6
+
+    invoke-direct {v4, v1, v7, v8}, Lqu7;-><init>(III)V
+
+    :goto_0
+    move-object v8, v4
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lc59;
-
-    if-nez v0, :cond_1
+    const/4 v4, 0x0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lc59;
-
-    iget-object v0, p0, Lc59;->a:Ljava/util/List;
-
-    iget-object p1, p1, Lc59;->a:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
     :goto_1
-    const/4 p1, 0x1
+    iget-object v9, p1, Lb59;->X:Lqce;
 
-    return p1
-.end method
+    new-instance v1, Ldde;
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v4, 0x0
 
-    iget-object v0, p0, Lc59;->a:Ljava/util/List;
+    const/4 v7, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v10, 0x0
 
-    move-result v0
+    const/4 v11, 0x0
 
-    return v0
-.end method
+    const/16 v12, 0x190
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct/range {v1 .. v12}, Ldde;-><init>(JILtrf;Lsce;Ltrf;Lsu7;Lqce;Lgce;Ltrf;I)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lcde;->setModelItem(Ltce;)V
 
-    const-string v1, "LocalDeleteMembers(ids="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lc59;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

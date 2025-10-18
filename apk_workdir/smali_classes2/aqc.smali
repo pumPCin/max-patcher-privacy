@@ -3,10 +3,6 @@
 
 
 # static fields
-.field public static picker_chats_list_forward_messages:I = 0x7f110030
+.field public static text_change_is_programmatic_tag:I = 0x7f0a0c00
 
-.field public static picker_chats_list_share_files:I = 0x7f110031
-
-.field public static picker_chats_list_share_images:I = 0x7f110032
-
-.field public static picker_chats_list_share_videos:I = 0x7f110033
+.field public static view_custom_attach_lifecycle_owner:I = 0x7f0a0c9a

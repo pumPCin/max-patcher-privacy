@@ -1,26 +1,30 @@
 .class public final Lg23;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/chats/list/ChatsListWidget;
+.field public final synthetic Y:Li23;
+
+.field public final synthetic Z:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+.method public constructor <init>(Li23;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lg23;->Y:Lone/me/chats/list/ChatsListWidget;
+    iput-object p1, p0, Lg23;->Y:Li23;
 
-    const/4 p2, 0x2
+    iput-wide p2, p0, Lg23;->Z:J
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +34,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lq54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lg23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,89 +44,83 @@
 
     check-cast p1, Lg23;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lg23;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lg23;
+    new-instance p1, Lg23;
 
-    iget-object v1, p0, Lg23;->Y:Lone/me/chats/list/ChatsListWidget;
+    iget-object v0, p0, Lg23;->Y:Li23;
 
-    invoke-direct {v0, p2, v1}, Lg23;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+    iget-wide v1, p0, Lg23;->Z:J
 
-    iput-object p1, v0, Lg23;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, v2, p2}, Lg23;-><init>(Li23;JLkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lg23;->X:I
 
-    iget-object p1, p0, Lg23;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne v0, v1, :cond_0
 
-    move-result p1
-
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->K0:[Lwq7;
-
-    iget-object v0, p0, Lg23;->Y:Lone/me/chats/list/ChatsListWidget;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Lone/me/chats/list/ChatsListWidget;->D0()Luta;
-
-    move-result-object p1
-
-    iget-object p1, p1, Luta;->I0:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/chats/list/ChatsListWidget;->D0()Luta;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg23;->Y:Li23;
+
+    iget-object p1, p1, Li23;->D0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    check-cast p1, Logf;
 
-    move-result-object v1
+    iput v1, p0, Lg23;->X:I
 
-    sget v2, Lerc;->chats_list_empty_state_action:I
+    iget-wide v0, p0, Lg23;->Z:J
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0, v1, p0}, Logf;->a(JLy14;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    new-instance v2, Lm6;
+    sget-object v0, Lr54;->a:Lr54;
 
-    const/16 v3, 0xe
+    if-ne p1, v0, :cond_2
 
-    invoke-direct {v2, v3, v0}, Lm6;-><init>(ILjava/lang/Object;)V
+    return-object v0
 
-    invoke-virtual {p1, v1, v2}, Luta;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
+    :cond_2
     :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

@@ -1,61 +1,54 @@
-.class public final Lhza;
-.super Liza;
+.class public final synthetic Lhza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
-# static fields
-.field public static final a:Lhza;
+
+# instance fields
+.field public final synthetic a:Ljza;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljza;)V
+    .locals 0
 
-    new-instance v0, Lhza;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lhza;->a:Lhza;
+    iput-object p1, p0, Lhza;->a:Ljza;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    if-ne p0, p1, :cond_0
+    move-result p1
 
-    return v0
+    const/4 p3, 0x0
+
+    if-nez p1, :cond_0
+
+    const/16 p1, 0x43
+
+    if-ne p2, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lhza;
+    move p1, p3
 
-    if-nez p1, :cond_1
+    :goto_0
+    iget-object p2, p0, Lhza;->a:Ljza;
 
-    const/4 p1, 0x0
+    iput-boolean p1, p2, Ljza;->q0:Z
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x7e6ebce
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Stub"
-
-    return-object v0
+    return p3
 .end method

@@ -1,258 +1,373 @@
-.class public final synthetic Ls5e;
-.super Ljava/lang/Object;
+.class public final Ls5e;
+.super Lr5e;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final s0:Ljava/util/Queue;
+
+.field public t0:Lr5e;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Lv4e;)V
+    .locals 10
 
-    iput p1, p0, Ls5e;->a:I
+    iget-wide v1, p1, Lq5e;->a:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lv4e;->h:Ljava/lang/Object;
+
+    move-object v9, v0
+
+    check-cast v9, Ljava/util/Queue;
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    iget-object v3, v0, Lr5e;->o:Lqd9;
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v4, p1, Lq5e;->c:J
+
+    iget-boolean v6, p1, Lq5e;->d:Z
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v7, p1, Lq5e;->e:Ljava/lang/String;
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr5e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v8, p1, Lq5e;->f:Leq4;
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v8}, Lr5e;-><init>(JLqd9;JZLjava/lang/String;Leq4;)V
+
+    iput-object v9, v0, Ls5e;->s0:Ljava/util/Queue;
+
+    invoke-interface {v9}, Ljava/util/Queue;->poll()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lr5e;
+
+    iput-object p1, v0, Ls5e;->t0:Lr5e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
-    .locals 1
+.method public final w()V
+    .locals 5
 
-    iget v0, p0, Ls5e;->a:I
+    invoke-super {p0}, Lr5e;->w()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Ls5e;->s0:Ljava/util/Queue;
 
-    check-cast p1, Lpj5;
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    check-cast p1, Lhr7;
+    move-result v1
 
-    iget-object p1, p1, Lhr7;->b:Ljava/util/ArrayList;
+    if-nez v1, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+    new-instance v1, Lv4e;
 
-    move-result p1
+    const/4 v2, 0x2
 
-    xor-int/lit8 p1, p1, 0x1
+    iget-wide v3, p0, Lr5e;->c:J
 
-    return p1
+    invoke-direct {v1, v3, v4, v0, v2}, Lv4e;-><init>(JLjava/lang/Object;I)V
 
-    :pswitch_0
-    check-cast p1, Lpj5;
+    iget-wide v2, p0, Lr5e;->q0:J
 
-    instance-of p1, p1, Lhr7;
+    iput-wide v2, v1, Lq5e;->c:J
 
-    return p1
+    iget-boolean v0, p0, Lr5e;->Y:Z
 
-    :pswitch_1
-    check-cast p1, Lpj5;
+    iput-boolean v0, v1, Lq5e;->d:Z
 
-    instance-of v0, p1, Lhef;
+    iget-object v0, p0, Lr5e;->Z:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    iput-object v0, v1, Lq5e;->e:Ljava/lang/String;
 
-    instance-of v0, p1, Luvb;
+    iget-object v0, p0, Lr5e;->r0:Leq4;
 
-    if-nez v0, :cond_0
+    iput-object v0, v1, Lq5e;->f:Leq4;
 
-    instance-of p1, p1, Lhr7;
+    new-instance v0, Ls5e;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0, v1}, Ls5e;-><init>(Lv4e;)V
 
-    const/4 p1, 0x1
+    invoke-virtual {p0}, Lr4e;->t()Ltph;
 
-    goto :goto_0
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ltph;->b(Lr4e;)V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    :goto_0
-    return p1
+.method public final x()Lob9;
+    .locals 2
 
-    :pswitch_2
-    check-cast p1, Lpj5;
+    iget-object v0, p0, Ls5e;->t0:Lr5e;
 
-    instance-of p1, p1, Lhef;
+    iget-object v1, p0, Lr4e;->a:Ls4e;
 
-    return p1
+    iput-object v1, v0, Lr4e;->a:Ls4e;
 
-    :pswitch_3
-    check-cast p1, Lpj5;
+    invoke-virtual {v0}, Lr5e;->x()Lob9;
 
-    instance-of v0, p1, Luvb;
+    move-result-object v0
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, Ls5e;->t0:Lr5e;
 
-    instance-of p1, p1, Lhr7;
+    iget-object v1, v1, Lr5e;->r0:Leq4;
 
-    if-eqz p1, :cond_1
+    iput-object v1, v0, Lob9;->F:Leq4;
 
-    goto :goto_1
+    return-object v0
+.end method
+
+.method public final y(Lla2;J)J
+    .locals 7
+
+    iget-wide v0, p1, Lla2;->a:J
+
+    iget-object v2, p0, Ls5e;->t0:Lr5e;
+
+    iget-object v3, p0, Lr4e;->a:Ls4e;
+
+    iput-object v3, v2, Lr4e;->a:Ls4e;
+
+    instance-of v3, v2, Lx5e;
+
+    iget-object v4, p0, Lr5e;->r0:Leq4;
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Lx5e;
+
+    new-instance v3, Lw5e;
+
+    iget-object v5, v2, Lp5e;->u0:Ljava/util/List;
+
+    const/4 v6, 0x0
+
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, La3;
+
+    invoke-direct {v3, v0, v1, v5}, Lw5e;-><init>(JLa3;)V
+
+    iget-object v0, v2, Lx5e;->w0:Lir4;
+
+    iput-object v0, v3, Lw5e;->k:Lir4;
+
+    iget-object v0, v2, Lp5e;->s0:Ljava/lang/String;
+
+    iget-object v1, v2, Lp5e;->t0:Ljava/util/List;
+
+    iput-object v0, v3, Lo5e;->h:Ljava/lang/String;
+
+    iput-object v1, v3, Lo5e;->i:Ljava/util/List;
+
+    iget-object v0, v2, Lr5e;->o:Lqd9;
+
+    iput-object v0, v3, Lq5e;->b:Lqd9;
+
+    iget-boolean v0, v2, Lr5e;->Y:Z
+
+    iput-boolean v0, v3, Lq5e;->d:Z
+
+    iget-boolean v0, v2, Lp5e;->v0:Z
+
+    iput-boolean v0, v3, Lo5e;->j:Z
+
+    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
+
+    iput-object v0, v3, Lq5e;->e:Ljava/lang/String;
+
+    iget-wide v0, v2, Lr5e;->X:J
+
+    iput-wide v0, v3, Lq5e;->c:J
+
+    iput-object v4, v3, Lq5e;->f:Leq4;
+
+    invoke-virtual {v3}, Lw5e;->b()Lp5e;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ls5e;->t0:Lr5e;
+
+    iget-object v1, p0, Lr4e;->a:Ls4e;
+
+    iput-object v1, v0, Lr4e;->a:Ls4e;
+
+    invoke-virtual {v0, p1, p2, p3}, Lp5e;->y(Lla2;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :cond_0
+    instance-of v3, v2, Lp5e;
+
+    if-eqz v3, :cond_1
+
+    check-cast v2, Lp5e;
+
+    iget-object v3, v2, Lp5e;->u0:Ljava/util/List;
+
+    new-instance v5, Lo5e;
+
+    invoke-direct {v5, v0, v1, v3}, Lo5e;-><init>(JLjava/util/List;)V
+
+    iget-object v0, v2, Lp5e;->s0:Ljava/lang/String;
+
+    iget-object v1, v2, Lp5e;->t0:Ljava/util/List;
+
+    iput-object v0, v5, Lo5e;->h:Ljava/lang/String;
+
+    iput-object v1, v5, Lo5e;->i:Ljava/util/List;
+
+    iget-object v0, v2, Lr5e;->o:Lqd9;
+
+    iput-object v0, v5, Lq5e;->b:Lqd9;
+
+    iget-boolean v0, v2, Lr5e;->Y:Z
+
+    iput-boolean v0, v5, Lq5e;->d:Z
+
+    iget-boolean v0, v2, Lp5e;->v0:Z
+
+    iput-boolean v0, v5, Lo5e;->j:Z
+
+    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
+
+    iput-object v0, v5, Lq5e;->e:Ljava/lang/String;
+
+    iget-wide v0, v2, Lr5e;->X:J
+
+    iput-wide v0, v5, Lq5e;->c:J
+
+    iput-object v4, v5, Lq5e;->f:Leq4;
+
+    new-instance v0, Lp5e;
+
+    invoke-direct {v0, v5}, Lp5e;-><init>(Lo5e;)V
+
+    iput-object v0, p0, Ls5e;->t0:Lr5e;
+
+    iget-object v1, p0, Lr4e;->a:Ls4e;
+
+    iput-object v1, v0, Lr4e;->a:Ls4e;
+
+    invoke-virtual {v0, p1, p2, p3}, Lp5e;->y(Lla2;J)J
+
+    move-result-wide p1
+
+    return-wide p1
 
     :cond_1
-    const/4 p1, 0x0
+    instance-of v3, v2, Lu5e;
 
-    goto :goto_2
+    if-eqz v3, :cond_2
+
+    check-cast v2, Lu5e;
+
+    iget-object v3, v2, Lu5e;->s0:Ljava/lang/String;
+
+    iget-object v5, v2, Lu5e;->t0:Le20;
+
+    new-instance v6, Lt5e;
+
+    invoke-direct {v6, v0, v1, v3, v5}, Lt5e;-><init>(JLjava/lang/String;Le20;)V
+
+    iget-object v0, v2, Lr5e;->o:Lqd9;
+
+    iput-object v0, v6, Lq5e;->b:Lqd9;
+
+    iget-boolean v0, v2, Lr5e;->Y:Z
+
+    iput-boolean v0, v6, Lq5e;->d:Z
+
+    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
+
+    iput-object v0, v6, Lq5e;->e:Ljava/lang/String;
+
+    iget-wide v0, v2, Lr5e;->X:J
+
+    iput-wide v0, v6, Lq5e;->c:J
+
+    iget-boolean v0, v2, Lu5e;->u0:Z
+
+    iput-boolean v0, v6, Lt5e;->i:Z
+
+    iput-object v4, v6, Lq5e;->f:Leq4;
+
+    new-instance v0, Lu5e;
+
+    invoke-direct {v0, v6}, Lu5e;-><init>(Lt5e;)V
+
+    iput-object v0, p0, Ls5e;->t0:Lr5e;
+
+    iget-object v1, p0, Lr4e;->a:Ls4e;
+
+    iput-object v1, v0, Lr4e;->a:Ls4e;
+
+    invoke-virtual {v0, p1, p2, p3}, Lu5e;->y(Lla2;J)J
+
+    move-result-wide p1
+
+    return-wide p1
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-super {p0, p1, p2, p3}, Lr5e;->y(Lla2;J)J
 
-    :goto_2
-    return p1
+    move-result-wide p1
 
-    :pswitch_4
-    check-cast p1, Lpj5;
-
-    instance-of p1, p1, Lz2e;
-
-    return p1
-
-    :pswitch_5
-    check-cast p1, Llwf;
-
-    sget-object v0, Lyvf;->A:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
-
-    :pswitch_6
-    check-cast p1, Lpj5;
-
-    instance-of p1, p1, Lgbg;
-
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
-
-    :pswitch_7
-    check-cast p1, Lpj5;
-
-    instance-of p1, p1, Lhef;
-
-    return p1
-
-    :pswitch_8
-    check-cast p1, Lpj5;
-
-    instance-of p1, p1, Ly52;
-
-    return p1
-
-    :pswitch_9
-    check-cast p1, Lpj5;
-
-    instance-of p1, p1, Lnne;
-
-    return p1
-
-    :pswitch_a
-    check-cast p1, Lpo3;
-
-    iget p1, p1, Lpo3;->c:I
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lwx1;->c(II)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_b
-    check-cast p1, Lv5e;
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_c
-    check-cast p1, Lv5e;
-
-    sget-object v0, Lv5e;->c:Lv5e;
-
-    if-eq p1, v0, :cond_4
-
-    sget-object v0, Lv5e;->o:Lv5e;
-
-    if-ne p1, v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    goto :goto_4
-
-    :cond_4
-    :goto_3
-    const/4 p1, 0x1
-
-    :goto_4
-    return p1
-
-    :pswitch_d
-    check-cast p1, Lv5e;
-
-    sget-object v0, Lv5e;->b:Lv5e;
-
-    if-ne p1, v0, :cond_5
-
-    const/4 p1, 0x1
-
-    goto :goto_5
-
-    :cond_5
-    const/4 p1, 0x0
-
-    :goto_5
-    return p1
-
-    :pswitch_e
-    check-cast p1, Lv5e;
-
-    sget-object v0, Lv5e;->b:Lv5e;
-
-    if-ne p1, v0, :cond_6
-
-    const/4 p1, 0x1
-
-    goto :goto_6
-
-    :cond_6
-    const/4 p1, 0x0
-
-    :goto_6
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide p1
 .end method

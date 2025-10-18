@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyv0;
+.implements Lhw0;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 .field public static final Z:Lv8;
 
-.field public static final r0:Ley0;
+.field public static final q0:Lny0;
 
 
 # instance fields
@@ -96,13 +96,13 @@
 
     sput-object v8, Lx8;->Z:Lv8;
 
-    new-instance v0, Ley0;
+    new-instance v0, Lny0;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, v1}, Ley0;-><init>(I)V
+    invoke-direct {v0, v1}, Lny0;-><init>(I)V
 
-    sput-object v0, Lx8;->r0:Ley0;
+    sput-object v0, Lx8;->q0:Lny0;
 
     return-void
 .end method
@@ -175,7 +175,7 @@
     :cond_1
     check-cast p1, Lx8;
 
-    sget v0, Lhhg;->a:I
+    sget v0, Llig;->a:I
 
     iget v0, p0, Lx8;->a:I
 

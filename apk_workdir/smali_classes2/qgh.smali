@@ -4,22 +4,16 @@
 
 
 # virtual methods
-.method public final serializer()Lxq7;
+.method public final serializer()Lur7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lxq7;"
+            "Lur7;"
         }
     .end annotation
 
-    sget-object v0, Lrgh;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxq7;
+    sget-object v0, Lpgh;->a:Lpgh;
 
     return-object v0
 .end method

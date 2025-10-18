@@ -1,13 +1,15 @@
-.class public final Lxdi;
-.super Ljava/lang/Object;
+.class public final enum Lxdi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final a:Lxdi;
+.field public static final enum a:Lxdi;
+
+.field public static final synthetic b:[Lxdi;
 
 
 # direct methods
@@ -16,75 +18,51 @@
 
     new-instance v0, Lxdi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lxdi;->a:Lxdi;
 
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    filled-new-array {v0}, [Lxdi;
 
     move-result-object v0
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lxdi;->b:[Lxdi;
 
     return-void
 .end method
 
+.method public static values()[Lxdi;
+    .locals 1
+
+    sget-object v0, Lxdi;->b:[Lxdi;
+
+    invoke-virtual {v0}, [Lxdi;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxdi;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {}, Lrs6;->t()Lrs6;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    iget-object v0, v0, Lrs6;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhu9;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

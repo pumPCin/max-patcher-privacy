@@ -3,10 +3,10 @@
 
 
 # static fields
-.field public static ic_row_10:I = 0x7f080776
+.field public static calls_circle_1:I = 0x7f06004f
 
-.field public static icon_document_24:I = 0x7f08080b
+.field public static calls_circle_2:I = 0x7f060050
 
-.field public static lock:I = 0x7f080829
+.field public static calls_circle_3:I = 0x7f060051
 
-.field public static voice_to_trash:I = 0x7f08098a
+.field public static calls_circle_4:I = 0x7f060052

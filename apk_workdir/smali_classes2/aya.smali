@@ -1,73 +1,37 @@
-.class public final enum Laya;
-.super Ljava/lang/Enum;
+.class public abstract Laya;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Laya;
+.field public static final a:I
 
-.field public static final enum b:Laya;
+.field public static final b:I
 
-.field public static final synthetic c:[Laya;
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Laya;
+    sget v0, Lfoc;->members_list_action_view_type:I
 
-    const-string v1, "FILED"
+    sput v0, Laya;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lfoc;->members_list_empty_search_view_type:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Laya;->b:I
 
-    sput-object v0, Laya;->a:Laya;
+    sget v0, Lfoc;->members_list_rv:I
 
-    new-instance v1, Laya;
+    sput v0, Laya;->c:I
 
-    const-string v2, "PLAIN"
+    sget v0, Lfoc;->members_list_shimmer_view_type:I
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Laya;->b:Laya;
-
-    filled-new-array {v0, v1}, [Laya;
-
-    move-result-object v0
-
-    sput-object v0, Laya;->c:[Laya;
+    sput v0, Laya;->d:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Laya;
-    .locals 1
-
-    const-class v0, Laya;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Laya;
-
-    return-object p0
-.end method
-
-.method public static values()[Laya;
-    .locals 1
-
-    sget-object v0, Laya;->c:[Laya;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Laya;
-
-    return-object v0
 .end method

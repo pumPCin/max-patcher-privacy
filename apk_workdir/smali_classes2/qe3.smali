@@ -1,188 +1,170 @@
 .class public final Lqe3;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:I
 
-.field public final b:I
+.field public synthetic Y:Lwra;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+.field public synthetic Z:Lv5b;
 
 
 # direct methods
-.method public constructor <init>(IIIII)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lqe3;->X:I
 
-    iput p1, p0, Lqe3;->a:I
-
-    iput p2, p0, Lqe3;->b:I
-
-    iput p3, p0, Lqe3;->c:I
-
-    iput p4, p0, Lqe3;->d:I
-
-    iput p5, p0, Lqe3;->e:I
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lqe3;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lqe3;
-
-    iget v0, p0, Lqe3;->a:I
-
-    iget v1, p1, Lqe3;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lqe3;->b:I
-
-    iget v1, p1, Lqe3;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lqe3;->c:I
-
-    iget v1, p1, Lqe3;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lqe3;->d:I
-
-    iget v1, p1, Lqe3;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lqe3;->e:I
-
-    iget p1, p1, Lqe3;->e:I
-
-    if-eq v0, p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lqe3;->a:I
+    iget v0, p0, Lqe3;->X:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    check-cast p1, Lwra;
 
-    move-result v0
+    check-cast p2, Lv5b;
 
-    const/16 v1, 0x1f
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    mul-int/2addr v0, v1
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Lqe3;->b:I
+    new-instance v0, Lqe3;
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    const/4 v1, 0x3
 
-    move-result v0
+    const/4 v2, 0x1
 
-    iget v2, p0, Lqe3;->c:I
+    invoke-direct {v0, v1, p3, v2}, Lqe3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    iput-object p1, v0, Lqe3;->Y:Lwra;
 
-    move-result v0
+    iput-object p2, v0, Lqe3;->Z:Lv5b;
 
-    iget v2, p0, Lqe3;->d:I
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    invoke-virtual {v0, p1}, Lqe3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    return-object p1
 
-    iget v1, p0, Lqe3;->e:I
+    :pswitch_0
+    new-instance v0, Lqe3;
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    const/4 v1, 0x3
 
-    move-result v1
+    const/4 v2, 0x0
 
-    add-int/2addr v1, v0
+    invoke-direct {v0, v1, p3, v2}, Lqe3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v1
+    iput-object p1, v0, Lqe3;->Y:Lwra;
+
+    iput-object p2, v0, Lqe3;->Z:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Lqe3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const-string v0, ", contrastStatic="
+    iget v0, p0, Lqe3;->X:I
 
-    const-string v1, ", negative="
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "CommonStatesTextDisabledColors(contrast="
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget v3, p0, Lqe3;->a:I
+    iget-object p1, p0, Lqe3;->Y:Lwra;
 
-    iget v4, p0, Lqe3;->b:I
+    iget-object v0, p0, Lqe3;->Z:Lv5b;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", primary="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Lqe3;->c:I
-
-    iget v4, p0, Lqe3;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget v2, p0, Lqe3;->e:I
-
-    invoke-static {v0, v2, v1}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lff0;->l:I
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    const/high16 v2, -0x10000
+
+    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lqe3;->Y:Lwra;
+
+    iget-object v0, p0, Lqe3;->Z:Lv5b;
+
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->l:I
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    const/high16 v2, -0x10000
+
+    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

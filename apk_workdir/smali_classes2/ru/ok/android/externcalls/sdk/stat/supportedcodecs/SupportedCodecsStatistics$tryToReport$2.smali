@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
+.implements Lsr3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiService;Lgwb;Lyuc;)V
+    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiService;Llxb;Lfwc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Ler3;"
+        "Lsr3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "it",
-        "Lzag;",
+        "Lccg;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -48,14 +48,14 @@
 
 
 # instance fields
-.field final synthetic $rtcLog:Lyuc;
+.field final synthetic $rtcLog:Lfwc;
 
 
 # direct methods
-.method public constructor <init>(Lyuc;)V
+.method public constructor <init>(Lfwc;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lyuc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lfwc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,7 +79,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lfwc;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
@@ -99,7 +99,7 @@
 
     const-string v1, "SupportedCodecsStatistics"
 
-    invoke-interface {v0, v1, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

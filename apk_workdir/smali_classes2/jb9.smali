@@ -1,108 +1,134 @@
-.class public final Ljb9;
+.class public final synthetic Ljb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkb9;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Ljava/util/Collection;
+.field public final synthetic a:I
+
+.field public final synthetic b:Le5a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Collection;)V
+.method public synthetic constructor <init>(Le5a;I)V
     .locals 0
+
+    .line 1
+    iput p2, p0, Ljb9;->a:I
+
+    iput-object p1, p0, Ljb9;->b:Le5a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljb9;->a:Ljava/util/Collection;
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Le5a;)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Ljb9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Ljb9;->b:Le5a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Ljb9;->a:I
 
-    const/4 p1, 0x1
+    const/4 v1, 0x0
 
-    return p1
+    sget-object v2, Lccg;->a:Lccg;
 
-    :cond_0
-    if-eqz p1, :cond_1
+    iget-object v3, p0, Ljb9;->b:Le5a;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Ltr7;
 
-    goto :goto_0
+    sget-object v0, Lmk9;->c:Lmk9;
 
-    :cond_1
-    const/4 v0, 0x0
+    check-cast v3, Lo8b;
 
-    :goto_0
-    const-class v1, Ljb9;
+    iget-object v3, v3, Lo8b;->d:Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    check-cast p1, Ljb9;
-
-    iget-object v0, p0, Ljb9;->a:Ljava/util/Collection;
-
-    iget-object p1, p1, Ljb9;->a:Ljava/util/Collection;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ljb9;->a:Ljava/util/Collection;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Update(messageIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljb9;->a:Ljava/util/Collection;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
 
     move-result-object v0
 
-    return-object v0
+    const-string v4, ":call-join-link?link="
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v2
+
+    :pswitch_0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Ltr7;
+
+    sget-object v0, Lmk9;->c:Lmk9;
+
+    check-cast v3, La9b;
+
+    iget-wide v4, v3, La9b;->b:J
+
+    iget-boolean v3, v3, La9b;->c:Z
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
+
+    move-result-object v0
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, ":call-user?opponent_id="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, "&video_enabled="
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
+
+    sget-object v0, Lmk9;->c:Lmk9;
+
+    check-cast v3, Lwf4;
+
+    invoke-virtual {v0, v3}, Lrdi;->t0(Lwf4;)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

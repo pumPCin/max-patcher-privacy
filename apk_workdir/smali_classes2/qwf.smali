@@ -1,141 +1,49 @@
 .class public final Lqwf;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lem;
 
 
 # instance fields
-.field public final a:Ljavax/inject/Provider;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lzwf;
+
+.field public Z:I
+
+.field public o:Lzwf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljavax/inject/Provider;)V
+.method public constructor <init>(Lzwf;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqwf;->Y:Lzwf;
 
-    iput-object p1, p0, Lqwf;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lqwf;->a:Ljavax/inject/Provider;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOkParser()Lsp7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lc82;->b:Lc82;
+    iput-object p1, p0, Lqwf;->X:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iget p1, p0, Lqwf;->Z:I
 
-.method public final getScope()Lsm;
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    sget-object v0, Lsm;->b:Lsm;
+    or-int/2addr p1, v0
 
-    return-object v0
-.end method
+    iput p1, p0, Lqwf;->Z:I
 
-.method public final getScopeAfter()Ltm;
-    .locals 1
+    iget-object p1, p0, Lqwf;->Y:Lzwf;
 
-    sget-object v0, Ltm;->b:Ltm;
+    invoke-virtual {p1, p0}, Lzwf;->g(Ly14;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    const-string v0, "auth.anonymLogin"
-
-    invoke-static {v0}, Lbn;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeParams(Lfq7;)V
-    .locals 2
-
-    const-string v0, "session_data"
-
-    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    invoke-interface {p1}, Lfq7;->s()V
-
-    iget-object v0, p0, Lqwf;->a:Ljavax/inject/Provider;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "auth_token"
-
-    invoke-interface {p1, v1}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Lfq7;->h(Ljava/lang/String;)V
-
-    :cond_0
-    const-string v0, "version"
-
-    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    check-cast v0, Le2;
-
-    invoke-virtual {v0, v1}, Le2;->m(I)V
-
-    const-string v0, "device_id"
-
-    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqwf;->b:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lfq7;->h(Ljava/lang/String;)V
-
-    const-string v0, "client_version"
-
-    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    check-cast v0, Le2;
-
-    invoke-virtual {v0, v1}, Le2;->m(I)V
-
-    const-string v0, "client_type"
-
-    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
-
-    move-result-object v0
-
-    const-string v1, "SDK_ANDROID"
-
-    invoke-interface {v0, v1}, Lfq7;->h(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lfq7;->q()V
-
-    return-void
+    return-object p1
 .end method

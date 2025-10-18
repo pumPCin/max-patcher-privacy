@@ -3,158 +3,219 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljava/lang/Object;
-
-.field public static d:Ljava/lang/String;
-
-.field public static e:Ljava/util/HashSet;
-
-.field public static final f:Ljava/lang/Object;
-
-.field public static g:Ljda;
-
-
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final b:Landroid/app/NotificationManager;
+.field public final b:J
+
+.field public final c:Lljb;
+
+.field public final d:Landroid/os/Bundle;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkda;->c:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lkda;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkda;->f:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/lang/CharSequence;JLljb;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkda;->a:Landroid/content/Context;
+    new-instance v0, Landroid/os/Bundle;
 
-    const-string v0, "notification"
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-object v0, p0, Lkda;->d:Landroid/os/Bundle;
 
-    move-result-object p1
+    iput-object p1, p0, Lkda;->a:Ljava/lang/CharSequence;
 
-    check-cast p1, Landroid/app/NotificationManager;
+    iput-wide p2, p0, Lkda;->b:J
 
-    iput-object p1, p0, Lkda;->b:Landroid/app/NotificationManager;
+    iput-object p4, p0, Lkda;->c:Lljb;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/ArrayList;)[Landroid/os/Bundle;
+    .locals 9
 
-# virtual methods
-.method public final a(Ljava/lang/String;ILandroid/app/Notification;)V
-    .locals 4
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
-    iget-object v0, p0, Lkda;->b:Landroid/app/NotificationManager;
+    move-result v0
 
-    iget-object v1, p3, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+    new-array v0, v0, [Landroid/os/Bundle;
 
-    if-eqz v1, :cond_1
-
-    const-string v2, "android.support.useSideChannel"
-
-    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    const/4 v2, 0x0
 
-    new-instance v1, Lgda;
+    :goto_0
+    if-ge v2, v1, :cond_6
 
-    iget-object v2, p0, Lkda;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, p2, p1, p3}, Lgda;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
-
-    sget-object v2, Lkda;->f:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget-object p3, Lkda;->g:Ljda;
-
-    if-nez p3, :cond_0
-
-    new-instance p3, Ljda;
-
-    iget-object v3, p0, Lkda;->a:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-direct {p3, v3}, Ljda;-><init>(Landroid/content/Context;)V
+    check-cast v3, Lkda;
 
-    sput-object p3, Lkda;->g:Ljda;
+    iget-object v4, v3, Lkda;->c:Lljb;
 
-    goto :goto_0
+    new-instance v5, Landroid/os/Bundle;
 
-    :catchall_0
-    move-exception p1
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v6, v3, Lkda;->a:Ljava/lang/CharSequence;
+
+    if-eqz v6, :cond_0
+
+    const-string v7, "text"
+
+    invoke-virtual {v5, v7, v6}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    const-string v6, "time"
+
+    iget-wide v7, v3, Lkda;->b:J
+
+    invoke-virtual {v5, v6, v7, v8}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+
+    if-eqz v4, :cond_2
+
+    const-string v6, "sender"
+
+    iget-object v7, v4, Lljb;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v7, 0x1c
+
+    if-lt v6, v7, :cond_1
+
+    invoke-static {v4}, Lkjb;->b(Lljb;)Landroid/app/Person;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljda;->a(Landroid/app/Person;)Landroid/os/Parcelable;
+
+    move-result-object v4
+
+    const-string v6, "sender_person"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    sget-object p3, Lkda;->g:Ljda;
+    :cond_1
+    const-string v6, "person"
 
-    iget-object p3, p3, Ljda;->b:Landroid/os/Handler;
+    invoke-virtual {v4}, Lljb;->b()Landroid/os/Bundle;
 
-    const/4 v3, 0x0
+    move-result-object v4
 
-    invoke-virtual {p3, v3, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, p1, p2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    return-void
-
+    :cond_2
     :goto_1
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v4, v3, Lkda;->e:Ljava/lang/String;
 
-    throw p1
+    if-eqz v4, :cond_3
+
+    const-string v6, "type"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object v4, v3, Lkda;->f:Landroid/net/Uri;
+
+    if-eqz v4, :cond_4
+
+    const-string v6, "uri"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :cond_4
+    iget-object v3, v3, Lkda;->d:Landroid/os/Bundle;
+
+    if-eqz v3, :cond_5
+
+    const-string v4, "extras"
+
+    invoke-virtual {v5, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_5
+    aput-object v5, v0, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final b()Landroid/app/Notification$MessagingStyle$Message;
+    .locals 7
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    const/4 v2, 0x0
+
+    iget-wide v3, p0, Lkda;->b:J
+
+    iget-object v5, p0, Lkda;->a:Ljava/lang/CharSequence;
+
+    iget-object v6, p0, Lkda;->c:Lljb;
+
+    if-lt v0, v1, :cond_1
+
+    if-nez v6, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v6}, Lkjb;->b(Lljb;)Landroid/app/Person;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-static {v5, v3, v4, v2}, Ljda;->b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
+
+    move-result-object v0
+
+    goto :goto_2
 
     :cond_1
-    invoke-virtual {v0, p1, p2, p3}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
+    if-nez v6, :cond_2
 
-    return-void
+    goto :goto_1
+
+    :cond_2
+    iget-object v2, v6, Lljb;->a:Ljava/lang/CharSequence;
+
+    :goto_1
+    invoke-static {v5, v3, v4, v2}, Lida;->a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;
+
+    move-result-object v0
+
+    :goto_2
+    iget-object v1, p0, Lkda;->e:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    iget-object v2, p0, Lkda;->f:Landroid/net/Uri;
+
+    invoke-static {v0, v1, v2}, Lida;->b(Landroid/app/Notification$MessagingStyle$Message;Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
+
+    :cond_3
+    return-object v0
 .end method

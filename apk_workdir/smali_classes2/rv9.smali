@@ -1,46 +1,31 @@
 .class public final Lrv9;
-.super Lklf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lsd9;
+.field public final a:Lhi1;
+
+.field public final b:Ls7e;
+
+.field public final c:Lhv9;
+
+.field public final d:Lmv9;
 
 
-# virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lhi1;Ls7e;Lhv9;Lmv9;)V
+    .locals 0
 
-    const-string v0, "reactionInfo"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p2, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p1, p0, Lrv9;->a:Lhi1;
 
-    move-result p2
+    iput-object p2, p0, Lrv9;->b:Ls7e;
 
-    if-eqz p2, :cond_0
+    iput-object p3, p0, Lrv9;->c:Lhv9;
 
-    invoke-static {p1}, Lrji;->e(Loe9;)Lsd9;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lrv9;->c:Lsd9;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Loe9;->y()V
+    iput-object p4, p0, Lrv9;->d:Lmv9;
 
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lrv9;->c:Lsd9;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

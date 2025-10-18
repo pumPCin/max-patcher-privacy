@@ -1,215 +1,185 @@
-.class public final Lbl4;
+.class public abstract Lbl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltf4;
+# static fields
+.field public static final a:Lv97;
 
-.field public final b:J
+.field public static final b:Lv97;
 
-.field public final c:J
+.field public static final c:Lv97;
 
-.field public final d:J
+.field public static final d:Lv97;
 
-.field public final e:J
+.field public static final e:Lv97;
 
-.field public final f:I
+.field public static final f:Lv97;
 
-.field public final g:J
+.field public static final g:Lv97;
 
-.field public h:I
+.field public static final h:Lv97;
 
-.field public i:Z
+.field public static final i:Lv97;
+
+.field public static final j:Lv97;
+
+.field public static final k:Lv97;
+
+.field public static final l:Lv97;
+
+.field public static final m:Lv97;
+
+.field public static final n:Lv97;
 
 
 # direct methods
-.method public constructor <init>(Ltf4;IIII)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv97;
 
-    const-string v0, "bufferForPlaybackMs"
+    const-string v1, "JPEG"
 
-    const/4 v1, 0x0
+    const-string v2, "jpeg"
 
-    const-string v2, "0"
+    invoke-direct {v0, v1, v2}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, p4, v1, v2}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    sput-object v0, Lbl4;->a:Lv97;
 
-    const-string v3, "bufferForPlaybackAfterRebufferMs"
+    new-instance v1, Lv97;
 
-    invoke-static {v3, p5, v1, v2}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    const-string v2, "PNG"
 
-    const-string v4, "minBufferMs"
+    const-string v3, "png"
 
-    invoke-static {v4, p2, p4, v0}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v4, p2, p5, v3}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    sput-object v1, Lbl4;->b:Lv97;
 
-    const-string v0, "maxBufferMs"
+    new-instance v2, Lv97;
 
-    invoke-static {v0, p3, p2, v4}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    const-string v3, "GIF"
 
-    const-string v0, "backBufferDurationMs"
+    const-string v4, "gif"
 
-    invoke-static {v0, v1, v1, v2}, Lbl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v2, v3, v4}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lbl4;->a:Ltf4;
+    sput-object v2, Lbl4;->c:Lv97;
 
-    int-to-long p1, p2
+    new-instance v3, Lv97;
 
-    invoke-static {p1, p2}, Lhhg;->B(J)J
+    const-string v4, "BMP"
 
-    move-result-wide p1
+    const-string v5, "bmp"
 
-    iput-wide p1, p0, Lbl4;->b:J
+    invoke-direct {v3, v4, v5}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    int-to-long p1, p3
+    sput-object v3, Lbl4;->d:Lv97;
 
-    invoke-static {p1, p2}, Lhhg;->B(J)J
+    new-instance v4, Lv97;
 
-    move-result-wide p1
+    const-string v5, "ICO"
 
-    iput-wide p1, p0, Lbl4;->c:J
+    const-string v6, "ico"
 
-    int-to-long p1, p4
+    invoke-direct {v4, v5, v6}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lhhg;->B(J)J
+    sput-object v4, Lbl4;->e:Lv97;
 
-    move-result-wide p1
+    new-instance v5, Lv97;
 
-    iput-wide p1, p0, Lbl4;->d:J
+    const-string v6, "WEBP_SIMPLE"
 
-    int-to-long p1, p5
+    const-string v7, "webp"
 
-    invoke-static {p1, p2}, Lhhg;->B(J)J
+    invoke-direct {v5, v6, v7}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-wide p1
+    sput-object v5, Lbl4;->f:Lv97;
 
-    iput-wide p1, p0, Lbl4;->e:J
+    new-instance v6, Lv97;
 
-    const/4 p1, -0x1
+    const-string v8, "WEBP_LOSSLESS"
 
-    iput p1, p0, Lbl4;->f:I
+    invoke-direct {v6, v8, v7}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/high16 p1, 0xc80000
+    sput-object v6, Lbl4;->g:Lv97;
 
-    iput p1, p0, Lbl4;->h:I
+    move-object v8, v7
 
-    int-to-long p1, v1
+    new-instance v7, Lv97;
 
-    invoke-static {p1, p2}, Lhhg;->B(J)J
+    const-string v9, "WEBP_EXTENDED"
 
-    move-result-wide p1
+    invoke-direct {v7, v9, v8}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-wide p1, p0, Lbl4;->g:J
+    sput-object v7, Lbl4;->h:Lv97;
 
-    return-void
-.end method
+    move-object v9, v8
 
-.method public static a(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 1
+    new-instance v8, Lv97;
 
-    if-lt p1, p2, :cond_0
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
 
-    const/4 p1, 0x1
+    invoke-direct {v8, v10, v9}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    sput-object v8, Lbl4;->i:Lv97;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-object v10, v9
 
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    new-instance v9, Lv97;
 
-    move-result p2
+    const-string v11, "WEBP_ANIMATED"
 
-    add-int/lit8 p2, p2, 0x15
+    invoke-direct {v9, v11, v10}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Ljava/lang/String;->length()I
+    sput-object v9, Lbl4;->j:Lv97;
 
-    move-result v0
+    new-instance v10, Lv97;
 
-    add-int/2addr v0, p2
+    const-string v11, "HEIF"
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string v12, "heif"
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v10, v11, v12}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v10, Lbl4;->k:Lv97;
 
-    const-string p0, " cannot be less than "
+    new-instance v11, Lv97;
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v12, "DNG"
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v13, "dng"
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v11, v12, v13}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    sput-object v11, Lbl4;->l:Lv97;
 
-    invoke-static {p0, p1}, Lefi;->c(Ljava/lang/String;Z)V
+    new-instance v11, Lv97;
 
-    return-void
-.end method
+    const-string v12, "BINARY_XML"
 
+    const-string v13, "xml"
 
-# virtual methods
-.method public final b(Z)V
-    .locals 2
+    invoke-direct {v11, v12, v13}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, p0, Lbl4;->f:I
+    sput-object v11, Lbl4;->m:Lv97;
 
-    const/4 v1, -0x1
+    new-instance v12, Lv97;
 
-    if-ne v0, v1, :cond_0
+    const-string v13, "AVIF"
 
-    const/high16 v0, 0xc80000
+    const-string v14, "avif"
 
-    :cond_0
-    iput v0, p0, Lbl4;->h:I
+    invoke-direct {v12, v13, v14}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    sput-object v12, Lbl4;->n:Lv97;
 
-    iput-boolean v0, p0, Lbl4;->i:Z
+    filled-new-array/range {v0 .. v12}, [Lv97;
 
-    if-eqz p1, :cond_2
+    move-result-object v0
 
-    iget-object p1, p0, Lbl4;->a:Ltf4;
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
-    monitor-enter p1
-
-    :try_start_0
-    iget-boolean v1, p1, Ltf4;->a:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1, v0}, Ltf4;->a(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit p1
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_2
     return-void
 .end method

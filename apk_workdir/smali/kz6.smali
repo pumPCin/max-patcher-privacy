@@ -1,81 +1,64 @@
 .class public final Lkz6;
-.super Lwk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llz6;
 
-# instance fields
-.field public g:I
+
+# static fields
+.field public static final a:Lkz6;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lkz6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkz6;->a:Lkz6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lkz6;->g:I
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
 
     return v0
-.end method
-
-.method public final k()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final t(JJJLjava/util/List;[Lrn8;)V
-    .locals 0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    iget p3, p0, Lkz6;->g:I
-
-    invoke-virtual {p0, p3, p1, p2}, Lwk0;->s(IJ)Z
-
-    move-result p3
-
-    if-nez p3, :cond_0
-
-    return-void
 
     :cond_0
-    iget p3, p0, Lwk0;->b:I
+    instance-of p1, p1, Lkz6;
 
-    add-int/lit8 p3, p3, -0x1
+    if-nez p1, :cond_1
 
-    :goto_0
-    if-ltz p3, :cond_2
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, p3, p1, p2}, Lwk0;->s(IJ)Z
-
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Lkz6;->g:I
-
-    return-void
+    return p1
 
     :cond_1
-    add-int/lit8 p3, p3, -0x1
+    return v0
+.end method
 
-    goto :goto_0
+.method public final hashCode()I
+    .locals 1
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const v0, 0x40e923ca
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    return v0
+.end method
 
-    throw p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Unknown"
+
+    return-object v0
 .end method

@@ -3,10 +3,6 @@
 
 
 # static fields
-.field public static oneme_file_download_warning_confirm_btn:I = 0x7f13082a
+.field public static oneme_in_app_review_rating_bar_accessibility:I = 0x7f110027
 
-.field public static oneme_file_download_warning_deny_btn:I = 0x7f13082b
-
-.field public static oneme_file_download_warning_description:I = 0x7f13082c
-
-.field public static oneme_file_download_warning_title:I = 0x7f13082d
+.field public static oneme_in_app_review_rating_star_accessibility:I = 0x7f110028

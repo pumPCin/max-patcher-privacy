@@ -4,145 +4,186 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Z
 
-.field public final b:[B
+.field public final b:Z
 
 .field public final c:I
 
+.field public final d:I
+
+.field public final e:Ly78;
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:J
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
+
+.field public final m:Z
+
+.field public final n:Z
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:Z
+
 
 # direct methods
-.method public constructor <init>(J[B)V
-    .locals 0
+.method public constructor <init>(Lx78;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lz78;->a:J
+    iget-boolean v0, p1, Lx78;->a:Z
 
-    iput-object p3, p0, Lz78;->b:[B
+    iput-boolean v0, p0, Lz78;->a:Z
 
-    array-length p1, p3
+    iget-boolean v0, p1, Lx78;->b:Z
 
-    add-int/lit8 p1, p1, 0x1e
+    iput-boolean v0, p0, Lz78;->b:Z
 
-    iput p1, p0, Lz78;->c:I
+    iget v0, p1, Lx78;->c:I
+
+    iput v0, p0, Lz78;->c:I
+
+    iget v0, p1, Lx78;->d:I
+
+    iput v0, p0, Lz78;->d:I
+
+    iget-object v0, p1, Lx78;->e:Ly78;
+
+    iput-object v0, p0, Lz78;->e:Ly78;
+
+    iget-boolean v0, p1, Lx78;->f:Z
+
+    iput-boolean v0, p0, Lz78;->f:Z
+
+    iget-boolean v0, p1, Lx78;->g:Z
+
+    iput-boolean v0, p0, Lz78;->g:Z
+
+    iget-wide v0, p1, Lx78;->h:J
+
+    iput-wide v0, p0, Lz78;->h:J
+
+    iget-boolean v0, p1, Lx78;->i:Z
+
+    iput-boolean v0, p0, Lz78;->i:Z
+
+    iget-boolean v0, p1, Lx78;->j:Z
+
+    iput-boolean v0, p0, Lz78;->j:Z
+
+    iget-boolean v0, p1, Lx78;->k:Z
+
+    iput-boolean v0, p0, Lz78;->k:Z
+
+    iget-boolean v0, p1, Lx78;->l:Z
+
+    iput-boolean v0, p0, Lz78;->l:Z
+
+    iget-boolean v0, p1, Lx78;->m:Z
+
+    iput-boolean v0, p0, Lz78;->m:Z
+
+    iget-boolean v0, p1, Lx78;->n:Z
+
+    iput-boolean v0, p0, Lz78;->n:Z
+
+    iget-wide v0, p1, Lx78;->o:J
+
+    iput-wide v0, p0, Lz78;->o:J
+
+    iget-wide v0, p1, Lx78;->p:J
+
+    iput-wide v0, p0, Lz78;->p:J
+
+    iget-wide v0, p1, Lx78;->q:J
+
+    iput-wide v0, p0, Lz78;->q:J
+
+    iget-boolean p1, p1, Lx78;->r:Z
+
+    iput-boolean p1, p0, Lz78;->r:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/io/OutputStream;I)V
-    .locals 2
+.method public final a(Ljava/util/ArrayList;)Lrh8;
+    .locals 6
 
-    const/16 v0, 0x23
+    const-wide/16 v0, -0x1
 
-    invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lqdi;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
-
-    const/16 p2, 0x20
-
-    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
-
-    iget-wide v0, p0, Lz78;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lqdi;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
-
-    const-string p2, " | "
-
-    invoke-static {p1, p2}, Lqdi;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
-
-    iget-object p2, p0, Lz78;->b:[B
-
-    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
-
-    const/16 p2, 0xa
-
-    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    instance-of v0, p1, Lz78;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lz78;
-
-    iget-wide v0, p1, Lz78;->a:J
-
-    iget-wide v2, p0, Lz78;->a:J
+    iget-wide v2, p0, Lz78;->h:J
 
     cmp-long v0, v2, v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lz78;->b:[B
-
-    iget-object p1, p1, Lz78;->b:[B
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lz78;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    iget-object v1, p0, Lz78;->b:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lz78;->a(Ljava/io/OutputStream;I)V
-
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    return-object v0
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lrh8;
+
+    iget-wide v4, v1, Lrh8;->c:J
+
+    cmp-long v4, v4, v2
+
+    if-nez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    if-nez v1, :cond_2
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrh8;
+
+    return-object p1
+
+    :cond_2
+    return-object v1
 .end method

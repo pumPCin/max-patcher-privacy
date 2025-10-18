@@ -53,7 +53,7 @@
 
     iget-object v3, p1, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -66,7 +66,7 @@
 
     iget-object v3, p1, Lag;->b:Ljava/util/ArrayList;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -79,7 +79,7 @@
 
     iget-object p1, p1, Lag;->c:Landroid/util/ArrayMap;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

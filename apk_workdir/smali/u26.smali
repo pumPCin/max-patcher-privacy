@@ -1,248 +1,187 @@
 .class public final Lu26;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super La1;
 .source "SourceFile"
-
-# interfaces
-.implements Lw26;
-.implements Lzaf;
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:Z
+.field public final X:Laj6;
 
-.field public Y:Loec;
+.field public final synthetic c:I
 
-.field public final a:Lxaf;
-
-.field public final b:Lond;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lxaf;Lond;Loec;Z)V
-    .locals 0
+.method public constructor <init>(Lf26;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lu26;->a:Lxaf;
+    iput v0, p0, Lu26;->c:I
 
-    iput-object p2, p0, Lu26;->b:Lond;
+    .line 4
+    invoke-direct {p0, p1}, La1;-><init>(Lf26;)V
 
-    iput-object p3, p0, Lu26;->Y:Loec;
+    .line 5
+    sget-object p1, Louf;->a:Lux6;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lu26;->X:Laj6;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const p1, 0x7fffffff
 
-    iput-object p1, p0, Lu26;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 6
+    iput p1, p0, Lu26;->o:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+    return-void
+.end method
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+.method public constructor <init>(Lxj8;Law9;I)V
+    .locals 1
 
-    iput-object p1, p0, Lu26;->o:Ljava/util/concurrent/atomic/AtomicLong;
+    const/4 v0, 0x1
 
-    xor-int/lit8 p1, p4, 0x1
+    iput v0, p0, Lu26;->c:I
 
-    iput-boolean p1, p0, Lu26;->X:Z
+    .line 1
+    invoke-direct {p0, p1}, La1;-><init>(Lf26;)V
+
+    .line 2
+    iput-object p2, p0, Lu26;->X:Laj6;
+
+    .line 3
+    iput p3, p0, Lu26;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLzaf;)V
-    .locals 2
+.method public final g(Lq36;)V
+    .locals 4
 
-    iget-boolean v0, p0, Lu26;->X:Z
+    iget v0, p0, Lu26;->c:I
 
-    if-nez v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget-object v0, p0, Lu26;->X:Laj6;
 
-    move-result-object v0
+    check-cast v0, Law9;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v1, p0, La1;->b:Lf26;
+
+    instance-of v2, v1, Lxef;
+
+    if-eqz v2, :cond_2
+
+    :try_start_0
+    check-cast v1, Lxef;
+
+    invoke-interface {v1}, Lxef;->get()Ljava/lang/Object;
 
     move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    if-ne v0, v1, :cond_0
+    if-nez v1, :cond_0
+
+    invoke-static {p1}, Lab5;->a(Lecf;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lt26;
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, p1, p2, p3}, Lt26;-><init>(JLzaf;)V
+    check-cast v1, Ljava/util/List;
 
-    iget-object p1, p0, Lu26;->b:Lond;
-
-    invoke-virtual {p1, v0}, Lond;->b(Ljava/lang/Runnable;)Lev4;
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-interface {p3, p1, p2}, Lzaf;->j(J)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lu26;->a:Lxaf;
-
-    invoke-interface {v0}, Lxaf;->b()V
-
-    iget-object v0, p0, Lu26;->b:Lond;
-
-    invoke-interface {v0}, Lev4;->g()V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    iget-object v0, p0, Lu26;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0}, Lcbf;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    iget-object v0, p0, Lu26;->b:Lond;
-
-    invoke-interface {v0}, Lev4;->g()V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lu26;->a:Lxaf;
-
-    invoke-interface {v0, p1}, Lxaf;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final f(Lzaf;)V
-    .locals 5
-
-    iget-object v0, p0, Lu26;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Lcbf;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzaf;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lu26;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v3
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v3, v4, p1}, Lu26;->a(JLzaf;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final j(J)V
-    .locals 4
-
-    invoke-static {p1, p2}, Lcbf;->e(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lu26;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzaf;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, p1, p2, v1}, Lu26;->a(JLzaf;)V
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lu26;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v1, p1, p2}, Leii;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzaf;
-
-    if-eqz p1, :cond_1
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v0
-
-    cmp-long p2, v0, v2
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p0, v0, v1, p1}, Lu26;->a(JLzaf;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lu26;->a:Lxaf;
-
-    invoke-interface {v0, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lu26;->b:Lond;
-
-    invoke-interface {p1}, Lev4;->g()V
-
-    return-void
-.end method
-
-.method public final run()V
-    .locals 2
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    :try_start_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v0, p0, Lu26;->Y:Loec;
+    move-result v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const/4 v1, 0x0
+    if-nez v1, :cond_1
 
-    iput-object v1, p0, Lu26;->Y:Loec;
+    invoke-static {p1}, Lab5;->a(Lecf;)V
 
-    check-cast v0, Ll16;
+    goto :goto_0
 
-    invoke-virtual {v0, p0}, Ll16;->e(Lxaf;)V
+    :cond_1
+    new-instance v1, Lx26;
+
+    invoke-direct {v1, p1, v0}, Lx26;-><init>(Lecf;Ljava/util/Iterator;)V
+
+    invoke-interface {p1, v1}, Lecf;->e(Lgcf;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v2, Lv26;
+
+    iget v3, p0, Lu26;->o:I
+
+    invoke-direct {v2, p1, v0, v3}, Lv26;-><init>(Lecf;Law9;I)V
+
+    invoke-virtual {v1, v2}, Lf26;->c(Lq36;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lt26;
+
+    iget-object v1, p0, Lu26;->X:Laj6;
+
+    check-cast v1, Lux6;
+
+    iget v2, p0, Lu26;->o:I
+
+    invoke-direct {v0, p1, v1, v2}, Lt26;-><init>(Lecf;Lux6;I)V
+
+    iget-object p1, p0, La1;->b:Lf26;
+
+    invoke-virtual {p1, v0}, Lf26;->c(Lq36;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

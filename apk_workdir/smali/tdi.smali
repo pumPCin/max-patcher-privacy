@@ -1,80 +1,130 @@
-.class public final Ltdi;
+.class public abstract Ltdi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Ltdi;
-
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static final a(II)V
     .locals 3
 
-    new-instance v0, Ltdi;
+    if-ltz p0, :cond_0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ltdi;->a:Ltdi;
-
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    if-ge p0, p1, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "index: "
+
+    const-string v2, ", size: "
+
+    invoke-static {v1, p0, p1, v2}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
+.method public static final b(II)V
+    .locals 3
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-ltz p0, :cond_0
+
+    if-gt p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "index: "
+
+    const-string v2, ", size: "
+
+    invoke-static {v1, p0, p1, v2}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final c(III)V
+    .locals 4
+
+    const-string v0, "fromIndex: "
+
+    if-ltz p0, :cond_1
+
+    if-gt p1, p2, :cond_1
+
+    if-gt p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, " > toIndex: "
+
+    invoke-static {v0, p0, p1, v1}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_1
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v2, ", toIndex: "
+
+    const-string v3, ", size: "
+
+    invoke-static {v0, p0, v2, p1, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static final d(II)Z
     .locals 0
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    and-int/2addr p0, p1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    throw p1
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final e(Landroid/view/View;Lfx7;)V
+    .locals 1
+
+    sget v0, Lspc;->view_tree_lifecycle_owner:I
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
 .end method

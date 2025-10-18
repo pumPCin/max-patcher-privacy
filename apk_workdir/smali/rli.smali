@@ -1,330 +1,83 @@
 .class public final Lrli;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
-
-# interfaces
-.implements Lrga;
 
 
 # static fields
-.field public static final a:Lrli;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrli;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Liq5;
 
-.field public static final c:Liq5;
+# instance fields
+.field public a:Landroid/os/Bundle;
 
-.field public static final d:Liq5;
+.field public b:[Lcq5;
 
-.field public static final e:Liq5;
+.field public c:I
 
-.field public static final f:Liq5;
-
-.field public static final g:Liq5;
-
-.field public static final h:Liq5;
-
-.field public static final i:Liq5;
-
-.field public static final j:Liq5;
-
-.field public static final k:Liq5;
+.field public o:Lyp3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lrli;
+    new-instance v0, Lp0i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x18
 
-    sput-object v0, Lrli;->a:Lrli;
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "durationMs"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->b:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "errorCode"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->c:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "isColdCall"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->d:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "autoManageModelOnBackground"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->e:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "autoManageModelOnLowMemory"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->f:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "isNnApiEnabled"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->g:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "eventsCount"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->h:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "otherErrors"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->i:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "remoteConfigValueForAcceleration"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lrli;->j:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "isAccelerated"
-
-    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lrli;->k:Liq5;
+    sput-object v0, Lrli;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    check-cast p1, Levi;
+    const/16 v0, 0x4f45
 
-    check-cast p2, Lsga;
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    sget-object v0, Lrli;->b:Liq5;
+    move-result v0
 
-    iget-object v1, p1, Levi;->a:Ljava/lang/Long;
+    const/4 v1, 0x1
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    iget-object v2, p0, Lrli;->a:Landroid/os/Bundle;
 
-    sget-object v0, Lrli;->c:Liq5;
+    invoke-static {p1, v1, v2}, Llyi;->k(Landroid/os/Parcel;ILandroid/os/Bundle;)V
 
-    iget-object v1, p1, Levi;->b:Lzvi;
+    const/4 v1, 0x2
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    iget-object v2, p0, Lrli;->b:[Lcq5;
 
-    sget-object v0, Lrli;->d:Liq5;
+    invoke-static {p1, v1, v2, p2}, Llyi;->r(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
-    iget-object v1, p1, Levi;->c:Ljava/lang/Boolean;
+    iget v1, p0, Lrli;->c:I
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    const/4 v2, 0x3
 
-    sget-object v0, Lrli;->e:Liq5;
+    const/4 v3, 0x4
 
-    iget-object v1, p1, Levi;->d:Ljava/lang/Boolean;
+    invoke-static {p1, v2, v3}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget-object v0, Lrli;->f:Liq5;
+    iget-object v1, p0, Lrli;->o:Lyp3;
 
-    iget-object p1, p1, Levi;->e:Ljava/lang/Boolean;
+    invoke-static {p1, v3, v1, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object p1, Lrli;->g:Liq5;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object p1, Lrli;->h:Liq5;
-
-    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object p1, Lrli;->i:Liq5;
-
-    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object p1, Lrli;->j:Liq5;
-
-    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object p1, Lrli;->k:Liq5;
-
-    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
 .end method

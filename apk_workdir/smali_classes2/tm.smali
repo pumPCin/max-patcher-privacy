@@ -4,11 +4,15 @@
 
 
 # static fields
+.field public static final synthetic X:[Ltm;
+
 .field public static final enum a:Ltm;
 
 .field public static final enum b:Ltm;
 
-.field public static final synthetic c:[Ltm;
+.field public static final enum c:Ltm;
+
+.field public static final enum o:Ltm;
 
 
 # direct methods
@@ -17,7 +21,7 @@
 
     new-instance v0, Ltm;
 
-    const-string v1, "SAME"
+    const-string v1, "NONE"
 
     const/4 v2, 0x0
 
@@ -27,21 +31,23 @@
 
     new-instance v1, Ltm;
 
-    const-string v2, "NO_SESSION"
+    const-string v2, "APPLICATION"
 
     const/4 v3, 0x1
 
     invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    sput-object v1, Ltm;->b:Ltm;
+
     new-instance v2, Ltm;
 
-    const-string v3, "ANONYMOUS_SESSION"
+    const-string v3, "OPT_SESSION"
 
     const/4 v4, 0x2
 
     invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v2, Ltm;->b:Ltm;
+    sput-object v2, Ltm;->c:Ltm;
 
     new-instance v3, Ltm;
 
@@ -51,11 +57,13 @@
 
     invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    sput-object v3, Ltm;->o:Ltm;
+
     filled-new-array {v0, v1, v2, v3}, [Ltm;
 
     move-result-object v0
 
-    sput-object v0, Ltm;->c:[Ltm;
+    sput-object v0, Ltm;->X:[Ltm;
 
     return-void
 .end method
@@ -77,7 +85,7 @@
 .method public static values()[Ltm;
     .locals 1
 
-    sget-object v0, Ltm;->c:[Ltm;
+    sget-object v0, Ltm;->X:[Ltm;
 
     invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 

@@ -1,60 +1,102 @@
-.class public final Lroi;
+.class public abstract Lroi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Lroi;
-
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static final a(Lv5b;)[I
     .locals 3
 
-    new-instance v0, Lroi;
+    invoke-interface {p0}, Lv5b;->h()Lcc3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lroi;->a:Lroi;
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    new-instance v0, Lq7i;
+    move-result p0
 
-    const/4 v1, 0x1
+    const/4 v0, -0x1
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    const/4 v1, 0x0
 
-    const-class v1, Ll8i;
+    if-eqz p0, :cond_2
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    if-eq p0, v2, :cond_1
 
     const/4 v2, 0x2
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    if-ne p0, v2, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v0
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    throw p0
 
-    return-void
+    :cond_1
+    const p0, 0x3e4ccccd    # 0.2f
+
+    invoke-static {v0, p0}, Lqui;->b(IF)I
+
+    move-result p0
+
+    filled-new-array {p0, v1}, [I
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    :goto_0
+    const/high16 p0, 0x3f000000    # 0.5f
+
+    invoke-static {v0, p0}, Lqui;->b(IF)I
+
+    move-result p0
+
+    filled-new-array {p0, v1}, [I
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static final b(Lo1e;Ljava/lang/Object;)V
+    .locals 2
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    invoke-interface {p0, p1}, Lo1e;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-result-object v0
 
-    move-result-object p1
+    instance-of v1, v0, Ll92;
 
-    throw p1
+    if-nez v1, :cond_0
+
+    check-cast v0, Lccg;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lo92;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lo92;-><init>(Lo1e;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+
+    sget-object p0, Lea5;->a:Lea5;
+
+    invoke-static {p0, v0}, Ltki;->f(Li54;Lzi6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lm92;
+
+    iget-object p0, p0, Lm92;->a:Ljava/lang/Object;
+
+    return-void
 .end method

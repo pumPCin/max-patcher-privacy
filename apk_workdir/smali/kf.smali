@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lpzd;Lhrb;Z)V
+.method public constructor <init>(Lw0e;Lmsb;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,78 +65,78 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lu87;Lcom/facebook/animated/gif/GifImage;)Ll93;
+.method public static a(Ljava/lang/String;Lr97;Lcom/facebook/animated/gif/GifImage;)Ly93;
     .locals 1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p1, Lo56;
+    new-instance p1, Li66;
 
-    invoke-direct {p1, p2}, Lo56;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p2}, Li66;-><init>(Ljava/lang/Object;)V
 
     const/4 p2, 0x0
 
-    iput-object p2, p1, Lo56;->c:Ljava/lang/Object;
+    iput-object p2, p1, Li66;->c:Ljava/lang/Object;
 
-    iput-object p2, p1, Lo56;->o:Ljava/lang/Object;
+    iput-object p2, p1, Li66;->o:Ljava/lang/Object;
 
-    iput-object p0, p1, Lo56;->a:Ljava/lang/Object;
+    iput-object p0, p1, Li66;->a:Ljava/lang/Object;
 
     const/4 p0, 0x0
 
     :try_start_0
-    new-instance p2, Lznh;
+    new-instance p2, Laph;
 
-    invoke-direct {p2, p1}, Lznh;-><init>(Lo56;)V
+    invoke-direct {p2, p1}, Laph;-><init>(Li66;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p1, Lo56;->c:Ljava/lang/Object;
+    iget-object v0, p1, Li66;->c:Ljava/lang/Object;
 
-    check-cast v0, Lq93;
+    check-cast v0, Lda3;
 
-    invoke-static {v0}, Lq93;->P(Lq93;)V
+    invoke-static {v0}, Lda3;->P(Lda3;)V
 
-    iput-object p0, p1, Lo56;->c:Ljava/lang/Object;
+    iput-object p0, p1, Li66;->c:Ljava/lang/Object;
 
-    iget-object v0, p1, Lo56;->o:Ljava/lang/Object;
+    iget-object v0, p1, Li66;->o:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lq93;->Q(Ljava/util/ArrayList;)V
+    invoke-static {v0}, Lda3;->Q(Ljava/util/ArrayList;)V
 
-    iput-object p0, p1, Lo56;->o:Ljava/lang/Object;
+    iput-object p0, p1, Li66;->o:Ljava/lang/Object;
 
-    new-instance p0, Ll93;
+    new-instance p0, Ly93;
 
-    invoke-direct {p0}, Lzi0;-><init>()V
+    invoke-direct {p0}, Lij0;-><init>()V
 
-    iput-object p2, p0, Ll93;->o:Lznh;
+    iput-object p2, p0, Ly93;->o:Laph;
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Ll93;->X:Z
+    iput-boolean p1, p0, Ly93;->X:Z
 
     return-object p0
 
     :catchall_0
     move-exception p2
 
-    iget-object v0, p1, Lo56;->c:Ljava/lang/Object;
+    iget-object v0, p1, Li66;->c:Ljava/lang/Object;
 
-    check-cast v0, Lq93;
+    check-cast v0, Lda3;
 
-    invoke-static {v0}, Lq93;->P(Lq93;)V
+    invoke-static {v0}, Lda3;->P(Lda3;)V
 
-    iput-object p0, p1, Lo56;->c:Ljava/lang/Object;
+    iput-object p0, p1, Li66;->c:Ljava/lang/Object;
 
-    iget-object v0, p1, Lo56;->o:Ljava/lang/Object;
+    iget-object v0, p1, Li66;->o:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lq93;->Q(Ljava/util/ArrayList;)V
+    invoke-static {v0}, Lda3;->Q(Ljava/util/ArrayList;)V
 
-    iput-object p0, p1, Lo56;->o:Ljava/lang/Object;
+    iput-object p0, p1, Li66;->o:Ljava/lang/Object;
 
     throw p2
 .end method

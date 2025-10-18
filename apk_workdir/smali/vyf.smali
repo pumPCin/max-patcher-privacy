@@ -1,81 +1,109 @@
-.class public final synthetic Lvyf;
-.super Ljava/lang/Object;
+.class public final Lvyf;
+.super Lryh;
 .source "SourceFile"
-
-# interfaces
-.implements Lnx1;
 
 
 # instance fields
-.field public final synthetic a:Lwyf;
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwyf;)V
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvyf;->a:Lwyf;
+    iput-object p1, p0, Lvyf;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+.method public final b()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lvyf;->b:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lvyf;->a:Lwyf;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lwyf;->f:Lyt1;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvyf;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
+    return v2
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Lvyf;
 
-    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
+    iget-object v1, p0, Lvyf;->b:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
+    iget-object p1, p1, Lvyf;->b:Ljava/lang/CharSequence;
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    const/4 v1, 0x2
+    if-nez p1, :cond_2
 
-    if-ne p1, v1, :cond_0
+    return v2
 
-    const/4 p1, 0x1
+    :cond_2
+    return v0
+.end method
 
-    goto :goto_0
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lvyf;->b:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
 
     :cond_0
-    move p1, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :goto_0
-    iget-boolean v1, v0, Lwyf;->g:Z
+    move-result v0
 
-    if-ne p1, v1, :cond_1
+    return v0
+.end method
 
-    iget-object p1, v0, Lwyf;->f:Lyt1;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v1, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Lyt1;->b(Ljava/lang/Object;)Z
+    const-string v1, "Connected(text="
 
-    iput-object v1, v0, Lwyf;->f:Lyt1;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    return v2
+    iget-object v1, p0, Lvyf;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

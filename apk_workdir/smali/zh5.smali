@@ -2,106 +2,146 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfng;
-.implements Lltb;
-
 
 # instance fields
-.field public a:Lfng;
+.field public final a:Landroid/content/Context;
 
-.field public b:Lzh5;
+.field public final b:Lbjf;
+
+.field public final c:Ltl4;
+
+.field public final d:Ls30;
+
+.field public e:Lwef;
+
+.field public f:Lwef;
+
+.field public final g:Ls30;
+
+.field public final h:Landroid/os/Looper;
+
+.field public final i:Lr20;
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Lvxd;
+
+.field public final m:Lnl4;
+
+.field public final n:J
+
+.field public o:Z
 
 
-# virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lq4e;)V
+    .locals 6
 
-    const/4 v0, 0x7
+    new-instance v0, Ltl4;
 
-    if-eq p1, v0, :cond_3
+    const/4 v1, 0x5
 
-    const/16 v0, 0x8
+    invoke-direct {v0, v1, p2}, Ltl4;-><init>(ILjava/lang/Object;)V
 
-    if-eq p1, v0, :cond_2
+    new-instance p2, Ls30;
 
-    const/16 v0, 0x2710
+    const/4 v1, 0x4
 
-    if-eq p1, v0, :cond_0
+    invoke-direct {p2, p1, v1}, Ls30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Ls30;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, v2}, Ls30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v2, Lgc4;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3}, Lgc4;-><init>(I)V
+
+    new-instance v3, Ls30;
+
+    const/16 v4, 0x8
+
+    invoke-direct {v3, p1, v4}, Ls30;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzh5;->a:Landroid/content/Context;
+
+    iput-object v0, p0, Lzh5;->c:Ltl4;
+
+    iput-object p2, p0, Lzh5;->d:Ls30;
+
+    iput-object v1, p0, Lzh5;->e:Lwef;
+
+    iput-object v2, p0, Lzh5;->f:Lwef;
+
+    iput-object v3, p0, Lzh5;->g:Ls30;
+
+    sget p1, Llig;->a:I
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-nez p2, :cond_1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
 
     :goto_0
-    return-void
+    iput-object p1, p0, Lzh5;->h:Landroid/os/Looper;
 
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
+    sget-object p1, Lr20;->Z:Lr20;
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+    iput-object p1, p0, Lzh5;->i:Lr20;
 
-    throw p1
+    const/4 p1, 0x1
 
-    :cond_2
-    check-cast p2, Lzh5;
+    iput p1, p0, Lzh5;->j:I
 
-    iput-object p2, p0, Lzh5;->b:Lzh5;
+    iput-boolean p1, p0, Lzh5;->k:Z
 
-    return-void
+    sget-object p1, Lvxd;->c:Lvxd;
 
-    :cond_3
-    check-cast p2, Lfng;
+    iput-object p1, p0, Lzh5;->l:Lvxd;
 
-    iput-object p2, p0, Lzh5;->a:Lfng;
+    const-wide/16 p1, 0x14
 
-    return-void
-.end method
+    invoke-static {p1, p2}, Llig;->B(J)J
 
-.method public final b(JJLsa6;Landroid/media/MediaFormat;)V
-    .locals 7
+    move-result-wide v2
 
-    iget-object v0, p0, Lzh5;->a:Lfng;
+    const-wide/16 p1, 0x1f4
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, p2}, Llig;->B(J)J
 
-    move-wide v1, p1
+    move-result-wide v4
 
-    move-wide v3, p3
+    new-instance v0, Lnl4;
 
-    move-object v5, p5
+    const/4 v1, 0x0
 
-    move-object v6, p6
+    invoke-direct/range {v0 .. v5}, Lnl4;-><init>(IJJ)V
 
-    invoke-interface/range {v0 .. v6}, Lfng;->b(JJLsa6;Landroid/media/MediaFormat;)V
+    iput-object v0, p0, Lzh5;->m:Lnl4;
 
-    :cond_0
-    return-void
-.end method
+    sget-object p1, Lbjf;->a:Lbjf;
 
-.method public final c()V
-    .locals 1
+    iput-object p1, p0, Lzh5;->b:Lbjf;
 
-    iget-object v0, p0, Lzh5;->b:Lzh5;
+    const-wide/16 p1, 0x7d0
 
-    if-eqz v0, :cond_0
+    iput-wide p1, p0, Lzh5;->n:J
 
-    invoke-virtual {v0}, Lzh5;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Lzh5;->b:Lzh5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lzh5;->d()V
-
-    :cond_0
     return-void
 .end method

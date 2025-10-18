@@ -1,9 +1,9 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$unzipModel$1;
-.super Lti6;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lli6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lti6;",
-        "Lqh6;"
+        "Loj6;",
+        "Lli6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$unzipModel$1;->invoke(Ljava/lang/String;)V
 
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lau1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;
 

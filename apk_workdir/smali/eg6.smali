@@ -1,84 +1,25 @@
-.class public Leg6;
+.class public final Leg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcef;
-
 
 # instance fields
-.field public final a:Landroid/database/sqlite/SQLiteProgram;
+.field public final a:I
+
+.field public final synthetic b:Lcqf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/database/sqlite/SQLiteProgram;)V
+.method public constructor <init>(Lcqf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
+    iput-object p1, p0, Leg6;->b:Lcqf;
 
-    return-void
-.end method
+    iget p1, p1, Lcqf;->Y:I
 
-
-# virtual methods
-.method public final D(I[B)V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
-
-    return-void
-.end method
-
-.method public final S(I)V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
-
-    return-void
-.end method
-
-.method public final f(ILjava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final g(ID)V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
-
-    return-void
-.end method
-
-.method public final k(IJ)V
-    .locals 1
-
-    iget-object v0, p0, Leg6;->a:Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    iput p1, p0, Leg6;->a:I
 
     return-void
 .end method

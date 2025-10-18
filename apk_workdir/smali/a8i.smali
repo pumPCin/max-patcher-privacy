@@ -1,42 +1,110 @@
-.class public abstract La8i;
+.class public final La8i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
 
 # static fields
-.field public static final synthetic a:I
+.field public static final a:La8i;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-class v0, La8i;
+    new-instance v0, La8i;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, La8i;->a:La8i;
+
+    new-instance v0, Ltwh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+
+    const-class v1, Lmxh;
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result v0
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    return-object p0
+    throw p1
 .end method

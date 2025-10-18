@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj49;
+.implements Li49;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0xe3efc7
+    const v0, -0x73235df3
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "UpdateParticipants"
+    const-string v0, "Money"
 
     return-object v0
 .end method

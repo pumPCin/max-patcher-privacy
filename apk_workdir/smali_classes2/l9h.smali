@@ -1,35 +1,31 @@
 .class public final Ll9h;
-.super Lm9h;
+.super Ljp7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljp7;-><init>()V
 
-    iput-wide p1, p0, Ll9h;->a:J
+    iput-object p1, p0, Ll9h;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Ll9h;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Ll9h;->a:J
-
-    return-wide v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -49,42 +45,71 @@
     :cond_1
     check-cast p1, Ll9h;
 
-    iget-wide v3, p0, Ll9h;->a:J
+    iget-object v1, p0, Ll9h;->c:Ljava/lang/String;
 
-    iget-wide v5, p1, Ll9h;->a:J
+    iget-object v3, p1, Ll9h;->c:Ljava/lang/String;
 
-    cmp-long p1, v3, v5
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Ll9h;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Ll9h;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Ll9h;->a:J
+    iget-object v0, p0, Ll9h;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ll9h;->d:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "Error(requestId="
+    const-string v0, ", fileName="
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Ll9h;->a:J
+    const-string v2, "DownloadFile(url="
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p0, Ll9h;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Ll9h;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

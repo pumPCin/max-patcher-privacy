@@ -1,53 +1,49 @@
-.class public abstract synthetic Lou1;
+.class public final Lou1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Lgfc;
+
+.field public final d:Liu7;
+
+.field public final e:Liu7;
+
+.field public final f:Lwif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Liu7;Liu7;Lgfc;Liu7;Liu7;)V
+    .locals 0
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->values()[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lou1;->a:Liu7;
 
-    array-length v0, v0
+    iput-object p2, p0, Lou1;->b:Liu7;
 
-    new-array v0, v0, [I
+    iput-object p3, p0, Lou1;->c:Lgfc;
 
-    :try_start_0
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->EARPIECE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    iput-object p4, p0, Lou1;->d:Liu7;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iput-object p5, p0, Lou1;->e:Liu7;
 
-    move-result v1
+    new-instance p1, Lvk1;
 
-    const/4 v2, 0x1
+    const/16 p2, 0xf
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p1, p2}, Lvk1;-><init>(I)V
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->SPEAKER_PHONE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    new-instance p2, Lwif;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lou1;->$EnumSwitchMapping$0:[I
+    iput-object p2, p0, Lou1;->f:Lwif;
 
     return-void
 .end method

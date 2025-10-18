@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb18;
+.implements Ly18;
 
 
 # instance fields
@@ -11,11 +11,11 @@
 
 .field public final b:Ljava/lang/Boolean;
 
-.field public final c:Ljqf;
+.field public final c:Lorf;
 
 
 # direct methods
-.method public constructor <init>(Lir;Ljava/lang/Boolean;Ljqf;)V
+.method public constructor <init>(Lir;Ljava/lang/Boolean;Lorf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Lkr;->b:Ljava/lang/Boolean;
 
-    iput-object p3, p0, Lkr;->c:Ljqf;
+    iput-object p3, p0, Lkr;->c:Lorf;
 
     return-void
 .end method
@@ -70,11 +70,11 @@
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lkr;->c:Ljqf;
+    iget-object v0, p0, Lkr;->c:Lorf;
 
-    iget-object p1, p1, Lkr;->c:Ljqf;
+    iget-object p1, p1, Lkr;->c:Lorf;
 
-    invoke-virtual {v0, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lorf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -106,14 +106,14 @@
     return-wide v0
 .end method
 
-.method public final h(Lb18;)Z
+.method public final h(Ly18;)Z
     .locals 4
 
     invoke-virtual {p0}, Lkr;->getItemId()J
 
     move-result-wide v0
 
-    invoke-interface {p1}, Lb18;->getItemId()J
+    invoke-interface {p1}, Ly18;->getItemId()J
 
     move-result-wide v2
 
@@ -152,9 +152,9 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v0, p0, Lkr;->c:Ljqf;
+    iget-object v0, p0, Lkr;->c:Lorf;
 
-    iget v0, v0, Ljqf;->c:I
+    iget v0, v0, Lorf;->c:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -165,7 +165,7 @@
     return v0
 .end method
 
-.method public final k(Lb18;)Ljava/lang/Object;
+.method public final k(Ly18;)Ljava/lang/Object;
     .locals 2
 
     instance-of v0, p1, Lkr;
@@ -241,7 +241,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lkr;->c:Ljqf;
+    iget-object v1, p0, Lkr;->c:Lorf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

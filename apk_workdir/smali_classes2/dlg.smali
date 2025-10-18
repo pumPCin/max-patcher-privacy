@@ -1,113 +1,233 @@
-.class public final enum Ldlg;
-.super Ljava/lang/Enum;
+.class public final Ldlg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Ldlg;
-
-.field public static final synthetic Y:Lfd5;
-
-.field public static final enum b:Ldlg;
-
-.field public static final enum c:Ldlg;
-
-.field public static final enum o:Ldlg;
-
-
 # instance fields
-.field public final a:Legc;
+.field public final a:Lflb;
+
+.field public final b:Liu7;
+
+.field public final c:Lwif;
+
+.field public final d:Lwif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ldlg;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Legc;->Z:Legc;
-
-    const-string v3, "WITHOUT_COMPRESS"
-
-    invoke-direct {v0, v3, v1, v2}, Ldlg;-><init>(Ljava/lang/String;ILegc;)V
-
-    sput-object v0, Ldlg;->b:Ldlg;
-
-    new-instance v1, Ldlg;
-
-    const/4 v2, 0x1
-
-    sget-object v3, Legc;->r0:Legc;
-
-    const-string v4, "OPTIMAL"
-
-    invoke-direct {v1, v4, v2, v3}, Ldlg;-><init>(Ljava/lang/String;ILegc;)V
-
-    sput-object v1, Ldlg;->c:Ldlg;
-
-    new-instance v2, Ldlg;
-
-    const/4 v3, 0x2
-
-    sget-object v4, Legc;->s0:Legc;
-
-    const-string v5, "MAXIMUM"
-
-    invoke-direct {v2, v5, v3, v4}, Ldlg;-><init>(Ljava/lang/String;ILegc;)V
-
-    sput-object v2, Ldlg;->o:Ldlg;
-
-    filled-new-array {v0, v1, v2}, [Ldlg;
-
-    move-result-object v0
-
-    sput-object v0, Ldlg;->X:[Ldlg;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ldlg;->Y:Lfd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILegc;)V
+.method public constructor <init>(Landroid/content/Context;Liu7;Liu7;Lflb;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ldlg;->a:Legc;
+    iput-object p4, p0, Ldlg;->a:Lflb;
+
+    iput-object p3, p0, Ldlg;->b:Liu7;
+
+    new-instance p3, Lelb;
+
+    const/4 p4, 0x2
+
+    invoke-direct {p3, p2, p1, p4}, Lelb;-><init>(Liu7;Landroid/content/Context;I)V
+
+    new-instance p1, Lwif;
+
+    invoke-direct {p1, p3}, Lwif;-><init>(Lji6;)V
+
+    iput-object p1, p0, Ldlg;->c:Lwif;
+
+    new-instance p1, Lduf;
+
+    const/4 p2, 0x7
+
+    invoke-direct {p1, p2, p0}, Lduf;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lwif;
+
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
+
+    iput-object p2, p0, Ldlg;->d:Lwif;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ldlg;
-    .locals 1
 
-    const-class v0, Ldlg;
+# virtual methods
+.method public final a(Ld20;Le20;Ljava/lang/String;)Lclg;
+    .locals 20
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-object/from16 v0, p0
 
-    move-result-object p0
+    move-object/from16 v1, p1
 
-    check-cast p0, Ldlg;
+    move-object/from16 v2, p2
 
-    return-object p0
-.end method
+    iget v3, v1, Ld20;->f:I
 
-.method public static values()[Ldlg;
-    .locals 1
+    iget v4, v1, Ld20;->e:I
 
-    sget-object v0, Ldlg;->X:[Ldlg;
+    iget-wide v5, v1, Ld20;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v7, v2, Le20;->o:Lx10;
 
-    move-result-object v0
+    iget-object v8, v2, Le20;->s:Ljava/lang/String;
 
-    check-cast v0, [Ldlg;
+    invoke-static {v8}, Ln0i;->g(Ljava/lang/String;)Landroid/net/Uri;
 
-    return-object v0
+    move-result-object v8
+
+    iget-object v9, v1, Ld20;->d:Ljava/lang/String;
+
+    invoke-static {v9}, Ln0i;->g(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v9
+
+    iget-object v10, v0, Ldlg;->b:Liu7;
+
+    invoke-interface {v10}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lu00;
+
+    const/4 v11, 0x1
+
+    check-cast v10, Lh20;
+
+    invoke-virtual {v10, v2, v11}, Lh20;->b(Le20;Z)Landroid/net/Uri;
+
+    move-result-object v17
+
+    if-nez v9, :cond_0
+
+    if-eqz v8, :cond_0
+
+    :goto_0
+    move-object v10, v8
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz v9, :cond_1
+
+    move-object v10, v9
+
+    goto :goto_1
+
+    :cond_1
+    if-eqz v17, :cond_2
+
+    move-object/from16 v10, v17
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v8, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v2, v0, Ldlg;->d:Lwif;
+
+    iget-object v8, v0, Ldlg;->a:Lflb;
+
+    if-nez v10, :cond_3
+
+    sget-object v9, Lclg;->k:Lclg;
+
+    iget-wide v10, v1, Ld20;->a:J
+
+    move-wide v12, v10
+
+    iget v11, v1, Ld20;->e:I
+
+    move-wide v13, v12
+
+    iget v12, v1, Ld20;->f:I
+
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    sget v2, Lu35;->o:I
+
+    sget-object v2, Lz35;->c:Lz35;
+
+    invoke-static {v5, v6, v2}, Ltzi;->e(JLz35;)J
+
+    move-result-wide v5
+
+    invoke-virtual {v8, v4, v3}, Lflb;->a(II)Lucd;
+
+    move-result-object v18
+
+    iget-object v10, v9, Lclg;->b:Landroid/net/Uri;
+
+    move-object/from16 v19, v7
+
+    new-instance v7, Lclg;
+
+    move-object/from16 v16, p3
+
+    move-wide v8, v13
+
+    move v13, v1
+
+    move-wide v14, v5
+
+    invoke-direct/range {v7 .. v19}, Lclg;-><init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lucd;Lx10;)V
+
+    return-object v7
+
+    :cond_3
+    move-object/from16 v19, v7
+
+    new-instance v7, Lclg;
+
+    iget-wide v11, v1, Ld20;->a:J
+
+    move-wide v12, v11
+
+    iget v11, v1, Ld20;->e:I
+
+    iget v1, v1, Ld20;->f:I
+
+    invoke-virtual {v2}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    sget v9, Lu35;->o:I
+
+    sget-object v9, Lz35;->c:Lz35;
+
+    invoke-static {v5, v6, v9}, Ltzi;->e(JLz35;)J
+
+    move-result-wide v14
+
+    invoke-virtual {v8, v4, v3}, Lflb;->a(II)Lucd;
+
+    move-result-object v18
+
+    move-object/from16 v16, p3
+
+    move-wide v8, v12
+
+    move v12, v1
+
+    move v13, v2
+
+    invoke-direct/range {v7 .. v19}, Lclg;-><init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lucd;Lx10;)V
+
+    return-object v7
 .end method

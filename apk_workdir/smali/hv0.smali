@@ -2,284 +2,446 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln3h;
+
 
 # instance fields
-.field public final a:Lzq5;
+.field public a:Ljava/lang/Object;
 
-.field public final b:Lar8;
+.field public b:Lo32;
 
-.field public final c:Lfj;
-
-.field public final d:Ljava/util/concurrent/Executor;
-
-.field public final e:Ljava/util/concurrent/Executor;
-
-.field public final f:Ll8a;
-
-.field public final g:Lswe;
+.field public final synthetic c:Lmv0;
 
 
 # direct methods
-.method public constructor <init>(Lzq5;Lar8;Lfj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Ll8a;)V
+.method public constructor <init>(Lmv0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhv0;->a:Lzq5;
+    iput-object p1, p0, Lhv0;->c:Lmv0;
 
-    iput-object p2, p0, Lhv0;->b:Lar8;
+    sget-object p1, Lov0;->p:Lkotlinx/coroutines/internal/Symbol;
 
-    iput-object p3, p0, Lhv0;->c:Lfj;
-
-    iput-object p4, p0, Lhv0;->d:Ljava/util/concurrent/Executor;
-
-    iput-object p5, p0, Lhv0;->e:Ljava/util/concurrent/Executor;
-
-    iput-object p6, p0, Lhv0;->f:Ll8a;
-
-    new-instance p1, Lswe;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lswe;-><init>(I)V
-
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p1, Lswe;->b:Ljava/lang/Object;
-
-    iput-object p1, p0, Lhv0;->g:Lswe;
+    iput-object p1, p0, Lhv0;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(Lkotlinx/coroutines/internal/Segment;I)V
+    .locals 1
 
-    iget-object v0, p0, Lhv0;->g:Lswe;
+    iget-object v0, p0, Lhv0;->b:Lo32;
 
-    invoke-virtual {v0}, Lswe;->e()V
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    new-instance v0, Lc6;
+    invoke-virtual {v0, p1, p2}, Lo32;->a(Lkotlinx/coroutines/internal/Segment;I)V
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lc6;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lhv0;->e:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lbolts/Task;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const-string v2, "Failed to schedule disk-cache clear"
-
-    invoke-static {v0, v2, v1}, Lll5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
-
+    :cond_0
     return-void
 .end method
 
-.method public final b(Lvne;)Lj79;
-    .locals 7
+.method public final b(Ly14;)Ljava/lang/Object;
+    .locals 13
 
-    iget-object v0, p1, Lvne;->a:Ljava/lang/String;
+    iget-object v0, p0, Lhv0;->a:Ljava/lang/Object;
 
-    iget-object v1, p0, Lhv0;->f:Ll8a;
+    sget-object v1, Lov0;->p:Lkotlinx/coroutines/internal/Symbol;
 
-    const-class v2, Lhv0;
+    const/4 v2, 0x1
 
-    :try_start_0
-    const-string v3, "Disk cache read for %s"
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v2, v0, v3}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    sget-object v1, Lov0;->l:Lkotlinx/coroutines/internal/Symbol;
 
-    iget-object v3, p0, Lhv0;->a:Lzq5;
+    if-eq v0, v1, :cond_0
 
-    check-cast v3, Llu4;
+    goto/16 :goto_5
 
-    invoke-virtual {v3, p1}, Llu4;->b(Ldy0;)Lyq5;
+    :cond_0
+    sget-object v0, Lmv0;->Z:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    move-result-object p1
+    iget-object v6, p0, Lhv0;->c:Lmv0;
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "Disk cache miss for %s"
+    move-result-object v0
 
-    invoke-static {v2, v0, p1}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    check-cast v0, Ln92;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    invoke-virtual {v6}, Lmv0;->v()Z
 
-    const/4 p1, 0x0
+    move-result v1
 
-    return-object p1
+    if-eqz v1, :cond_2
 
-    :catch_0
-    move-exception p1
+    sget-object v0, Lov0;->l:Lkotlinx/coroutines/internal/Symbol;
+
+    iput-object v0, p0, Lhv0;->a:Ljava/lang/Object;
+
+    invoke-virtual {v6}, Lmv0;->p()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const/4 v2, 0x0
+
+    goto/16 :goto_5
+
+    :cond_1
+    invoke-static {v0}, Lkotlinx/coroutines/internal/StackTraceRecoveryKt;->recoverStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_2
+    sget-object v1, Lmv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    invoke-virtual {v1, v6}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+
+    move-result-wide v3
+
+    sget v1, Lov0;->b:I
+
+    int-to-long v7, v1
+
+    div-long v9, v3, v7
+
+    rem-long v7, v3, v7
+
+    long-to-int v8, v7
+
+    iget-wide v11, v0, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    cmp-long v1, v11, v9
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v6, v9, v10, v0}, Lmv0;->o(JLn92;)Ln92;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
 
     goto :goto_0
 
-    :cond_0
-    const-string v3, "Found entry in disk cache for %s"
+    :cond_3
+    move-object v1, v0
 
-    invoke-static {v2, v0, v3}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :cond_4
+    const/4 v11, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v7, v1
 
-    new-instance v3, Ljava/io/FileInputStream;
+    move-wide v9, v3
 
-    iget-object v4, p1, Lyq5;->a:Ljava/io/File;
-
-    invoke-direct {v3, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v4, p0, Lhv0;->b:Lar8;
-
-    iget-object p1, p1, Lyq5;->a:Ljava/io/File;
-
-    invoke-virtual {p1}, Ljava/io/File;->length()J
-
-    move-result-wide v5
-
-    long-to-int p1, v5
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lk79;
-
-    iget-object v6, v4, Lar8;->c:Ljava/lang/Object;
-
-    check-cast v6, Li79;
-
-    invoke-direct {v5, v6, p1}, Lk79;-><init>(Li79;I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    iget-object p1, v4, Lar8;->b:Ljava/lang/Object;
-
-    check-cast p1, Lfj;
-
-    invoke-virtual {p1, v3, v5}, Lfj;->e(Ljava/io/InputStream;Ljava/io/OutputStream;)V
-
-    invoke-virtual {v5}, Lk79;->n()Lj79;
-
-    move-result-object p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    invoke-virtual {v5}, Lk79;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    const-string v3, "Successful read from disk cache for %s"
-
-    invoke-static {v2, v0, v3}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_5
-    invoke-virtual {v5}, Lk79;->close()V
-
-    throw p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_6
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    throw p1
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
-
-    :goto_0
-    const-string v2, "Exception reading from cache for %s"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-virtual/range {v6 .. v11}, Lmv0;->G(Ln92;IJLjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {p1, v2, v0}, Lll5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    sget-object v7, Lov0;->m:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq v0, v7, :cond_13
 
-    throw p1
-.end method
+    sget-object v9, Lov0;->o:Lkotlinx/coroutines/internal/Symbol;
 
-.method public final c(Lvne;Lna5;)V
-    .locals 5
+    if-ne v0, v9, :cond_6
 
-    iget-object v0, p1, Lvne;->a:Ljava/lang/String;
+    invoke-virtual {v6}, Lmv0;->s()J
 
-    const-class v1, Lhv0;
+    move-result-wide v7
 
-    const-string v2, "About to write to disk-cache for key %s"
+    cmp-long v0, v3, v7
 
-    invoke-static {v1, v0, v2}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    if-gez v0, :cond_5
+
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    :cond_5
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_6
+    sget-object v10, Lov0;->n:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v0, v10, :cond_12
+
+    iget-object v0, p0, Lhv0;->c:Lmv0;
+
+    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lhni;->b(Lkotlin/coroutines/Continuation;)Lo32;
+
+    move-result-object v10
 
     :try_start_0
-    iget-object v2, p0, Lhv0;->a:Lzq5;
+    iput-object v10, p0, Lhv0;->b:Lo32;
 
-    new-instance v3, Lo00;
+    move-object v5, p0
 
-    const/4 v4, 0x3
+    move v2, v8
 
-    invoke-direct {v3, p2, v4, p0}, Lo00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual/range {v0 .. v5}, Lmv0;->G(Ln92;IJLjava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v2, Llu4;
+    move-result-object v8
 
-    invoke-virtual {v2, p1, v3}, Llu4;->d(Lvne;Lo00;)Lyq5;
+    if-ne v8, v7, :cond_7
 
-    iget-object p1, p0, Lhv0;->f:Ll8a;
+    invoke-virtual {p0, v1, v2}, Lhv0;->a(Lkotlinx/coroutines/internal/Segment;I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto/16 :goto_3
 
-    const-string p1, "Successful disk-cache write for key %s"
+    :catchall_0
+    move-exception v0
 
-    invoke-static {v1, v0, p1}, Lll5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    goto/16 :goto_4
+
+    :cond_7
+    const/4 v7, 0x0
+
+    if-ne v8, v9, :cond_11
+
+    invoke-virtual {v0}, Lmv0;->s()J
+
+    move-result-wide v8
+
+    cmp-long v2, v3, v8
+
+    if-gez v2, :cond_8
+
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    :cond_8
+    sget-object v1, Lmv0;->Z:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ln92;
+
+    :cond_9
+    :goto_1
+    invoke-virtual {v0}, Lmv0;->v()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    iget-object v0, p0, Lhv0;->b:Lo32;
+
+    iput-object v7, p0, Lhv0;->b:Lo32;
+
+    sget-object v1, Lov0;->l:Lkotlinx/coroutines/internal/Symbol;
+
+    iput-object v1, p0, Lhv0;->a:Ljava/lang/Object;
+
+    invoke-virtual {v6}, Lmv0;->p()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-nez v1, :cond_a
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Lo32;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_a
+    new-instance v2, Lbed;
+
+    invoke-direct {v2, v1}, Lbed;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v2}, Lo32;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_b
+    sget-object v2, Lmv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+
+    move-result-wide v3
+
+    sget v2, Lov0;->b:I
+
+    int-to-long v8, v2
+
+    div-long v11, v3, v8
+
+    rem-long v8, v3, v8
+
+    long-to-int v2, v8
+
+    iget-wide v8, v1, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    cmp-long v8, v8, v11
+
+    if-eqz v8, :cond_d
+
+    invoke-virtual {v0, v11, v12, v1}, Lmv0;->o(JLn92;)Ln92;
+
+    move-result-object v8
+
+    if-nez v8, :cond_c
+
+    goto :goto_1
+
+    :cond_c
+    move-object v1, v8
+
+    :cond_d
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lmv0;->G(Ln92;IJLjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    sget-object v9, Lov0;->m:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v8, v9, :cond_e
+
+    invoke-virtual {p0, v1, v2}, Lhv0;->a(Lkotlinx/coroutines/internal/Segment;I)V
+
+    goto :goto_3
+
+    :cond_e
+    sget-object v2, Lov0;->o:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v8, v2, :cond_f
+
+    invoke-virtual {v0}, Lmv0;->s()J
+
+    move-result-wide v8
+
+    cmp-long v2, v3, v8
+
+    if-gez v2, :cond_9
+
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    goto :goto_1
+
+    :cond_f
+    sget-object v0, Lov0;->n:Lkotlinx/coroutines/internal/Symbol;
+
+    if-eq v8, v0, :cond_10
+
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    iput-object v8, p0, Lhv0;->a:Ljava/lang/Object;
+
+    iput-object v7, p0, Lhv0;->b:Lo32;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    :goto_2
+    invoke-virtual {v10, v0, v7}, Lo32;->f(Ljava/lang/Object;Lbj6;)V
+
+    goto :goto_3
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "unexpected"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_11
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    iput-object v8, p0, Lhv0;->a:Ljava/lang/Object;
+
+    iput-object v7, p0, Lhv0;->b:Lo32;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    goto :goto_2
 
-    :catch_0
-    move-exception p1
-
-    const-string p2, "Failed to write to disk-cache for key %s"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
+    :goto_3
+    invoke-virtual {v10}, Lo32;->n()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {p1, p2, v0}, Lll5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-object v0
 
-    return-void
+    :goto_4
+    invoke-virtual {v10}, Lo32;->v()V
+
+    throw v0
+
+    :cond_12
+    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    iput-object v0, p0, Lhv0;->a:Ljava/lang/Object;
+
+    :goto_5
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_13
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "unreachable"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final c()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lhv0;->a:Ljava/lang/Object;
+
+    sget-object v1, Lov0;->p:Lkotlinx/coroutines/internal/Symbol;
+
+    if-eq v0, v1, :cond_1
+
+    iput-object v1, p0, Lhv0;->a:Ljava/lang/Object;
+
+    sget-object v1, Lov0;->l:Lkotlinx/coroutines/internal/Symbol;
+
+    if-eq v0, v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lhv0;->c:Lmv0;
+
+    invoke-virtual {v0}, Lmv0;->q()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlinx/coroutines/internal/StackTraceRecoveryKt;->recoverStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "`hasNext()` has not been invoked"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

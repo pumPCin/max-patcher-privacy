@@ -2,7 +2,5 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract getFunctionDelegate()Lji6;
-.end method
+# interfaces
+.implements Lej6;

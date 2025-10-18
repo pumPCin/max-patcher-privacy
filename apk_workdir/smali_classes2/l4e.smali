@@ -1,373 +1,133 @@
 .class public final Ll4e;
-.super Lk4e;
+.super Ltw5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final t0:Ljava/util/Queue;
+.field public final g:Z
 
-.field public u0:Lk4e;
+.field public final h:Lji6;
+
+.field public final i:Lwoa;
 
 
 # direct methods
-.method public constructor <init>(Lo3e;)V
-    .locals 10
+.method public constructor <init>(ZLji6;Lwoa;Lavf;Lx71;Lfwc;)V
+    .locals 0
 
-    iget-wide v1, p1, Lj4e;->a:J
+    invoke-direct {p0, p4, p5, p6}, Ltw5;-><init>(Lavf;Lx71;Lfwc;)V
 
-    iget-object v0, p1, Lo3e;->h:Ljava/lang/Object;
+    iput-boolean p1, p0, Ll4e;->g:Z
 
-    move-object v9, v0
+    iput-object p2, p0, Ll4e;->h:Lji6;
 
-    check-cast v9, Ljava/util/Queue;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    iget-object v3, v0, Lk4e;->o:Lpc9;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v4, p1, Lj4e;->c:J
-
-    iget-boolean v6, p1, Lj4e;->d:Z
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v7, p1, Lj4e;->e:Ljava/lang/String;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lk4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v8, p1, Lj4e;->f:Lqp4;
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v8}, Lk4e;-><init>(JLpc9;JZLjava/lang/String;Lqp4;)V
-
-    iput-object v9, v0, Ll4e;->t0:Ljava/util/Queue;
-
-    invoke-interface {v9}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lk4e;
-
-    iput-object p1, v0, Ll4e;->u0:Lk4e;
+    iput-object p3, p0, Ll4e;->i:Lwoa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w()V
-    .locals 5
+.method public final b()V
+    .locals 1
 
-    invoke-super {p0}, Lk4e;->w()V
+    iget-boolean v0, p0, Ll4e;->g:Z
 
-    iget-object v0, p0, Ll4e;->t0:Ljava/util/Queue;
+    if-nez v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lo3e;
-
-    const/4 v2, 0x2
-
-    iget-wide v3, p0, Lk4e;->c:J
-
-    invoke-direct {v1, v3, v4, v0, v2}, Lo3e;-><init>(JLjava/lang/Object;I)V
-
-    iget-wide v2, p0, Lk4e;->r0:J
-
-    iput-wide v2, v1, Lj4e;->c:J
-
-    iget-boolean v0, p0, Lk4e;->Y:Z
-
-    iput-boolean v0, v1, Lj4e;->d:Z
-
-    iget-object v0, p0, Lk4e;->Z:Ljava/lang/String;
-
-    iput-object v0, v1, Lj4e;->e:Ljava/lang/String;
-
-    iget-object v0, p0, Lk4e;->s0:Lqp4;
-
-    iput-object v0, v1, Lj4e;->f:Lqp4;
-
-    new-instance v0, Ll4e;
-
-    invoke-direct {v0, v1}, Ll4e;-><init>(Lo3e;)V
-
-    invoke-virtual {p0}, Lk3e;->t()Lsoh;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lsoh;->b(Lk3e;)V
+    return-void
 
     :cond_0
+    invoke-virtual {p0}, Ltw5;->h()V
+
+    const/4 v0, 0x6
+
+    iput v0, p0, Ltw5;->e:I
+
     return-void
 .end method
 
-.method public final x()Lna9;
-    .locals 2
+.method public final c()V
+    .locals 1
 
-    iget-object v0, p0, Ll4e;->u0:Lk4e;
+    invoke-virtual {p0}, Ltw5;->h()V
 
-    iget-object v1, p0, Lk3e;->a:Ll3e;
+    const/4 v0, 0x5
 
-    iput-object v1, v0, Lk3e;->a:Ll3e;
+    iput v0, p0, Ltw5;->e:I
 
-    invoke-virtual {v0}, Lk4e;->x()Lna9;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll4e;->u0:Lk4e;
-
-    iget-object v1, v1, Lk4e;->s0:Lqp4;
-
-    iput-object v1, v0, Lna9;->F:Lqp4;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final y(Lda2;J)J
-    .locals 7
+.method public final d(La2f;)V
+    .locals 1
 
-    iget-wide v0, p1, Lda2;->a:J
+    iget-object v0, p0, Ll4e;->i:Lwoa;
 
-    iget-object v2, p0, Ll4e;->u0:Lk4e;
-
-    iget-object v3, p0, Lk3e;->a:Ll3e;
-
-    iput-object v3, v2, Lk3e;->a:Ll3e;
-
-    instance-of v3, v2, Lq4e;
-
-    iget-object v4, p0, Lk4e;->s0:Lqp4;
-
-    if-eqz v3, :cond_0
-
-    check-cast v2, Lq4e;
-
-    new-instance v3, Lp4e;
-
-    iget-object v5, v2, Li4e;->v0:Ljava/util/List;
-
-    const/4 v6, 0x0
-
-    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, La3;
-
-    invoke-direct {v3, v0, v1, v5}, Lp4e;-><init>(JLa3;)V
-
-    iget-object v0, v2, Lq4e;->x0:Lxnh;
-
-    iput-object v0, v3, Lp4e;->k:Lxnh;
-
-    iget-object v0, v2, Li4e;->t0:Ljava/lang/String;
-
-    iget-object v1, v2, Li4e;->u0:Ljava/util/List;
-
-    iput-object v0, v3, Lh4e;->h:Ljava/lang/String;
-
-    iput-object v1, v3, Lh4e;->i:Ljava/util/List;
-
-    iget-object v0, v2, Lk4e;->o:Lpc9;
-
-    iput-object v0, v3, Lj4e;->b:Lpc9;
-
-    iget-boolean v0, v2, Lk4e;->Y:Z
-
-    iput-boolean v0, v3, Lj4e;->d:Z
-
-    iget-boolean v0, v2, Li4e;->w0:Z
-
-    iput-boolean v0, v3, Lh4e;->j:Z
-
-    iget-object v0, v2, Lk4e;->Z:Ljava/lang/String;
-
-    iput-object v0, v3, Lj4e;->e:Ljava/lang/String;
-
-    iget-wide v0, v2, Lk4e;->X:J
-
-    iput-wide v0, v3, Lj4e;->c:J
-
-    iput-object v4, v3, Lj4e;->f:Lqp4;
-
-    invoke-virtual {v3}, Lp4e;->b()Li4e;
+    invoke-virtual {v0}, Lwoa;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Ll4e;->u0:Lk4e;
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lk3e;->a:Ll3e;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-object v1, v0, Lk3e;->a:Ll3e;
+    move-result v0
 
-    invoke-virtual {v0, p1, p2, p3}, Li4e;->y(Lda2;J)J
+    if-nez v0, :cond_0
 
-    move-result-wide p1
-
-    return-wide p1
+    return-void
 
     :cond_0
-    instance-of v3, v2, Li4e;
+    iget-object v0, p0, Ll4e;->h:Lji6;
 
-    if-eqz v3, :cond_1
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    check-cast v2, Li4e;
+    move-result-object v0
 
-    iget-object v3, v2, Li4e;->v0:Ljava/util/List;
+    check-cast v0, Ljava/lang/Number;
 
-    new-instance v5, Lh4e;
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    invoke-direct {v5, v0, v1, v3}, Lh4e;-><init>(JLjava/util/List;)V
+    move-result v0
 
-    iget-object v0, v2, Li4e;->t0:Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    iget-object v1, v2, Li4e;->u0:Ljava/util/List;
+    const/4 p1, 0x1
 
-    iput-object v0, v5, Lh4e;->h:Ljava/lang/String;
+    iput-boolean p1, p0, Ltw5;->d:Z
 
-    iput-object v1, v5, Lh4e;->i:Ljava/util/List;
-
-    iget-object v0, v2, Lk4e;->o:Lpc9;
-
-    iput-object v0, v5, Lj4e;->b:Lpc9;
-
-    iget-boolean v0, v2, Lk4e;->Y:Z
-
-    iput-boolean v0, v5, Lj4e;->d:Z
-
-    iget-boolean v0, v2, Li4e;->w0:Z
-
-    iput-boolean v0, v5, Lh4e;->j:Z
-
-    iget-object v0, v2, Lk4e;->Z:Ljava/lang/String;
-
-    iput-object v0, v5, Lj4e;->e:Ljava/lang/String;
-
-    iget-wide v0, v2, Lk4e;->X:J
-
-    iput-wide v0, v5, Lj4e;->c:J
-
-    iput-object v4, v5, Lj4e;->f:Lqp4;
-
-    new-instance v0, Li4e;
-
-    invoke-direct {v0, v5}, Li4e;-><init>(Lh4e;)V
-
-    iput-object v0, p0, Ll4e;->u0:Lk4e;
-
-    iget-object v1, p0, Lk3e;->a:Ll3e;
-
-    iput-object v1, v0, Lk3e;->a:Ll3e;
-
-    invoke-virtual {v0, p1, p2, p3}, Li4e;->y(Lda2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
+    return-void
 
     :cond_1
-    instance-of v3, v2, Ln4e;
+    invoke-super {p0, p1}, Ltw5;->d(La2f;)V
 
-    if-eqz v3, :cond_2
+    return-void
+.end method
 
-    check-cast v2, Ln4e;
+.method public final e()V
+    .locals 1
 
-    iget-object v3, v2, Ln4e;->t0:Ljava/lang/String;
+    iget-boolean v0, p0, Ll4e;->g:Z
 
-    iget-object v5, v2, Ln4e;->u0:Ld20;
+    if-eqz v0, :cond_0
 
-    new-instance v6, Lm4e;
+    return-void
 
-    invoke-direct {v6, v0, v1, v3, v5}, Lm4e;-><init>(JLjava/lang/String;Ld20;)V
+    :cond_0
+    invoke-virtual {p0}, Ltw5;->h()V
 
-    iget-object v0, v2, Lk4e;->o:Lpc9;
+    const/4 v0, 0x4
 
-    iput-object v0, v6, Lj4e;->b:Lpc9;
+    iput v0, p0, Ltw5;->e:I
 
-    iget-boolean v0, v2, Lk4e;->Y:Z
+    return-void
+.end method
 
-    iput-boolean v0, v6, Lj4e;->d:Z
+.method public final g()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, v2, Lk4e;->Z:Ljava/lang/String;
+    const-string v0, "ServerTopologyFirstDataStat"
 
-    iput-object v0, v6, Lj4e;->e:Ljava/lang/String;
-
-    iget-wide v0, v2, Lk4e;->X:J
-
-    iput-wide v0, v6, Lj4e;->c:J
-
-    iget-boolean v0, v2, Ln4e;->v0:Z
-
-    iput-boolean v0, v6, Lm4e;->i:Z
-
-    iput-object v4, v6, Lj4e;->f:Lqp4;
-
-    new-instance v0, Ln4e;
-
-    invoke-direct {v0, v6}, Ln4e;-><init>(Lm4e;)V
-
-    iput-object v0, p0, Ll4e;->u0:Lk4e;
-
-    iget-object v1, p0, Lk3e;->a:Ll3e;
-
-    iput-object v1, v0, Lk3e;->a:Ll3e;
-
-    invoke-virtual {v0, p1, p2, p3}, Ln4e;->y(Lda2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_2
-    invoke-super {p0, p1, p2, p3}, Lk4e;->y(Lda2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
+    return-object v0
 .end method

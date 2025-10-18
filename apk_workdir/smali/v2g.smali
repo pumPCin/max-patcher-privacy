@@ -1,88 +1,76 @@
 .class public final Lv2g;
-.super Ljava/lang/Object;
+.super Lxod;
 .source "SourceFile"
 
-# interfaces
-.implements Lt2g;
 
-
-# instance fields
-.field public final synthetic a:Landroid/view/ViewGroup;
-
-.field public final synthetic b:Luwf;
-
-.field public final synthetic c:Lw2g;
+# static fields
+.field public static final c:Lv2g;
 
 
 # direct methods
-.method public constructor <init>(Lw2g;Landroid/view/ViewGroup;Luwf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv2g;
 
-    iput-object p1, p0, Lv2g;->c:Lw2g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lv2g;->a:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Lv2g;->b:Luwf;
+    sput-object v0, Lv2g;->c:Lv2g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu2g;)V
+.method public final a()Lvod;
     .locals 1
 
-    iget-object p1, p0, Lv2g;->a:Landroid/view/ViewGroup;
+    new-instance v0, Lu2g;
 
-    iget-object v0, p0, Lv2g;->b:Luwf;
+    invoke-direct {v0}, Lu2g;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object v0
 .end method
 
-.method public final b()V
+.method public final b(Ljava/lang/Runnable;)Lvv4;
     .locals 0
 
-    return-void
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    sget-object p1, Lfa5;->a:Lfa5;
+
+    return-object p1
 .end method
 
-.method public final c(Lu2g;)V
-    .locals 1
-
-    iget-object p1, p0, Lv2g;->c:Lw2g;
-
-    iget-object v0, p1, Lw2g;->Y:La24;
-
-    invoke-virtual {v0}, La24;->n()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lw2g;->Y:La24;
-
-    return-void
-.end method
-
-.method public final f()V
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
     .locals 0
 
-    return-void
-.end method
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->sleep(J)V
 
-.method public final h(Lu2g;)V
-    .locals 1
+    const-string p2, "run is null"
 
-    iget-object p1, p0, Lv2g;->c:Lw2g;
+    invoke-static {p1, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v0, p1, Lw2g;->Y:La24;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, La24;->n()V
+    goto :goto_0
 
-    const/4 v0, 0x0
+    :catch_0
+    move-exception p1
 
-    iput-object v0, p1, Lw2g;->Y:La24;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    return-void
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    sget-object p1, Lfa5;->a:Lfa5;
+
+    return-object p1
 .end method

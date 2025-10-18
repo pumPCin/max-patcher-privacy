@@ -1,174 +1,115 @@
 .class public final Ljz1;
-.super Liz1;
+.super Lor6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static final X:Lz90;
+
+.field public static final Y:Lz90;
+
+.field public static final Z:Lz90;
+
+.field public static final q0:Lz90;
+
+.field public static final r0:Lz90;
+
+.field public static final s0:Lz90;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz90;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v1, "camera2.captureRequest.templateType"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    iput-object v0, p0, Ljz1;->a:Ljava/util/ArrayList;
+    const/4 v3, 0x0
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    move-result-object p1
+    sput-object v0, Ljz1;->X:Lz90;
 
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Lz90;
 
-    move-result v0
+    const-string v1, "camera2.cameraCaptureSession.streamUseCase"
 
-    if-eqz v0, :cond_1
+    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    move-result-object v0
+    sput-object v0, Ljz1;->Y:Lz90;
 
-    check-cast v0, Liz1;
+    new-instance v0, Lz90;
 
-    instance-of v1, v0, Lkz1;
+    const-string v1, "camera2.cameraDevice.stateCallback"
 
-    if-nez v1, :cond_0
+    const-class v2, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    iget-object v1, p0, Ljz1;->a:Ljava/util/ArrayList;
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sput-object v0, Ljz1;->Z:Lz90;
 
-    goto :goto_0
+    new-instance v0, Lz90;
 
-    :cond_1
+    const-string v1, "camera2.cameraCaptureSession.stateCallback"
+
+    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ljz1;->q0:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camera2.cameraCaptureSession.captureCallback"
+
+    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ljz1;->r0:Lz90;
+
+    new-instance v0, Lz90;
+
+    const-string v1, "camera2.cameraCaptureSession.physicalCameraId"
+
+    const-class v2, Ljava/lang/String;
+
+    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ljz1;->s0:Lz90;
+
     return-void
 .end method
 
+.method public static U(Landroid/hardware/camera2/CaptureRequest$Key;)Lz90;
+    .locals 3
 
-# virtual methods
-.method public final a(I)V
-    .locals 2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ljz1;->a:Ljava/util/ArrayList;
+    const-string v1, "camera2.captureRequest.option."
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Liz1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Liz1;->a(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(ILpz1;)V
-    .locals 2
-
-    iget-object v0, p0, Ljz1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v1, Lz90;
 
-    move-result v1
+    const-class v2, Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v1, v0, v2, p0}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liz1;
-
-    invoke-virtual {v1, p1, p2}, Liz1;->b(ILpz1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(ILnqi;)V
-    .locals 2
-
-    iget-object v0, p0, Ljz1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liz1;
-
-    invoke-virtual {v1, p1, p2}, Liz1;->c(ILnqi;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(I)V
-    .locals 2
-
-    iget-object v0, p0, Ljz1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liz1;
-
-    invoke-virtual {v1, p1}, Liz1;->d(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v1
 .end method

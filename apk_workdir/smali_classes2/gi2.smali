@@ -1,83 +1,113 @@
-.class public abstract synthetic Lgi2;
+.class public final Lgi2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lwif;
+
+.field public final b:Lwif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-static {}, Lzw4;->values()[Lzw4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lnb2;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lnb2;-><init>(I)V
+
+    new-instance v1, Lwif;
+
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
+
+    iput-object v1, p0, Lgi2;->a:Lwif;
+
+    new-instance v0, Lnb2;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lnb2;-><init>(I)V
+
+    new-instance v1, Lwif;
+
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
+
+    iput-object v1, p0, Lgi2;->b:Lwif;
+
+    return-void
+.end method
+
+.method public static a(I)Lj14;
+    .locals 6
+
+    new-instance v0, Lj14;
+
+    sget v1, Lvza;->a0:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, p0}, Lorf;-><init>(I)V
+
+    sget p0, Ly0b;->j:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x14
+
+    invoke-direct/range {v0 .. v5}, Lj14;-><init>(ILtrf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final b()Lu18;
+    .locals 2
+
+    invoke-static {}, Lob3;->b()Lu18;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lgi2;->b:Lwif;
 
-    new-array v0, v0, [I
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    const/4 v2, 0x0
+    check-cast v1, Lj14;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
 
-    :catch_0
-    const/4 v2, 0x2
+    sget v1, Lxza;->r1:I
 
-    :try_start_1
-    aput v2, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {v1}, Lgi2;->a(I)Lj14;
 
-    :catch_1
-    const/4 v2, 0x3
+    move-result-object v1
 
-    const/4 v3, 0x4
+    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
 
-    :try_start_2
-    aput v2, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v1, p0, Lgi2;->a:Lwif;
 
-    :catch_2
-    :try_start_3
-    aput v3, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
-    :catch_3
-    const/4 v1, 0x5
+    move-result-object v1
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    check-cast v1, Lj14;
 
-    :catch_4
-    const/4 v2, 0x6
+    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-static {v0}, Lob3;->a(Ljava/util/List;)Lu18;
 
-    :catch_5
-    const/4 v1, 0x7
+    move-result-object v0
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lgi2;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

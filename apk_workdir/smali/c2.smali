@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Llq7;
+.implements Lir7;
 
 
 # instance fields

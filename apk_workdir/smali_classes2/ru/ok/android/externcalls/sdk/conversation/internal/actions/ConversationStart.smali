@@ -42,7 +42,7 @@
         "appKeyProvider",
         "Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;",
         "startConversationDelegate",
-        "Lk34;",
+        "Ly34;",
         "conversationIdProvider",
         "",
         "isStartCallByExternalIdsEnabled",
@@ -51,7 +51,7 @@
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "me",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Lk34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
+        "(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Ly34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
         "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
         "startCallApiParams",
         "",
@@ -62,25 +62,25 @@
         "servers",
         "parseTurnServers",
         "(Ljava/util/List;)Ljava/lang/String;",
-        "Lzh1;",
+        "Lhi1;",
         "myId",
         "",
         "collectOpponentInternalIds",
-        "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lzh1;)Ljava/util/List;",
+        "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lhi1;)Ljava/util/List;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "collectOpponentExternalIds",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/List;",
         "isFastStartEnabled",
         "()Z",
         "params",
-        "Lqoe;",
+        "Lwpe;",
         "execute",
-        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lqoe;",
+        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lwpe;",
         "Lru/ok/android/externcalls/sdk/api/OkApiService;",
         "Ldm;",
         "Lrl;",
         "Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;",
-        "Lk34;",
+        "Ly34;",
         "Z",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -110,7 +110,7 @@
 # instance fields
 .field private final appKeyProvider:Lrl;
 
-.field private final conversationIdProvider:Lk34;
+.field private final conversationIdProvider:Ly34;
 
 .field private final deviceIdProvider:Ldm;
 
@@ -133,14 +133,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->Companion:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Lk34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Ly34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -153,7 +153,7 @@
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->startConversationDelegate:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Lk34;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Ly34;
 
     iput-boolean p6, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->isStartCallByExternalIdsEnabled:Z
 
@@ -220,7 +220,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -240,13 +240,13 @@
     return-object v0
 .end method
 
-.method private final collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lzh1;)Ljava/util/List;
+.method private final collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lhi1;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
-            "Lzh1;",
+            "Lhi1;",
             ")",
             "Ljava/util/List<",
             "Ljava/lang/Long;",
@@ -276,27 +276,27 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v1
 
-    iget-wide v1, v1, Lzh1;->a:J
+    iget-wide v1, v1, Lhi1;->a:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -335,23 +335,23 @@
 
     if-eqz v1, :cond_1
 
-    check-cast v1, Lihd;
+    check-cast v1, Lpid;
 
-    iget-object v1, v1, Lihd;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lpid;->b:Ljava/lang/Object;
 
-    check-cast v1, Lr5e;
+    check-cast v1, Ly6e;
 
-    iget-object v1, v1, Lr5e;->c:Ljava/lang/Object;
+    iget-object v1, v1, Ly6e;->c:Ljava/lang/Object;
 
-    check-cast v1, Llt7;
+    check-cast v1, Liu7;
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lxr4;
+    check-cast v1, Los4;
 
-    invoke-virtual {v1}, Lxr4;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Los4;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -385,7 +385,7 @@
 
     const-string v1, "ANDROID"
 
-    const-string v2, "125.1.0.70"
+    const-string v2, "125.1.0.70.6"
 
     invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Z)V
 
@@ -403,11 +403,11 @@
 
     new-instance v1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -511,7 +511,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v3, v4}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v2, v3, v4}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v2
 
@@ -532,7 +532,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v5}, Lab3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqh6;I)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -546,27 +546,27 @@
 
 
 # virtual methods
-.method public bridge synthetic execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lqoe;
+.method public bridge synthetic execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lwpe;
     .locals 0
 
     .line 1
     check-cast p1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lqoe;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lwpe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lqoe;
+.method public execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lwpe;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;",
             ")",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
@@ -576,23 +576,23 @@
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lr34;
+    new-instance v0, Lf44;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1, p1}, Lr34;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 4
-    new-instance p1, Lrja;
+    new-instance p1, Ltka;
 
     const/4 v1, 0x4
 
-    invoke-direct {p1, v1, v0}, Lrja;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
 
     .line 5
     sget-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;
 
-    invoke-virtual {p1, v0}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {p1, v0}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object p1
 
@@ -624,12 +624,12 @@
     move-result-object v3
 
     .line 9
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Lk34;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Ly34;
 
-    check-cast v0, Ll34;
+    check-cast v0, Lz34;
 
     .line 10
-    iget-object v4, v0, Ll34;->a:Ljava/lang/String;
+    iget-object v4, v0, Lz34;->a:Ljava/lang/String;
 
     .line 11
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;->getCreateLink()Z
@@ -660,7 +660,7 @@
     move-result-object v8
 
     .line 15
-    invoke-virtual/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversationWithExternalIds(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lqoe;
+    invoke-virtual/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversationWithExternalIds(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lwpe;
 
     move-result-object p1
 
@@ -685,12 +685,12 @@
     move-result-object v1
 
     .line 18
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->conversationIdProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
     .line 19
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
     .line 20
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;->getCreateLink()Z
@@ -707,11 +707,11 @@
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lzh1;)Ljava/util/List;
+    invoke-direct {p0, v5, v6}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lhi1;)Ljava/util/List;
 
     move-result-object v5
 
@@ -721,7 +721,7 @@
     move-result-object v6
 
     .line 24
-    invoke-virtual/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversation(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lqoe;
+    invoke-virtual/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversation(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lwpe;
 
     move-result-object p1
 
@@ -729,7 +729,7 @@
     :goto_0
     sget-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$3;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$3;
 
-    invoke-virtual {p1, v0}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {p1, v0}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object p1
 

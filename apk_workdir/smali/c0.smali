@@ -1,5 +1,5 @@
 .class public final Lc0;
-.super Lqci;
+.super Lrdi;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
     const/16 v1, 0xb
 
-    invoke-direct {v0, v1}, Lqci;-><init>(I)V
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
 
     sput-object v0, Lc0;->c:Lc0;
 

@@ -24,7 +24,7 @@
     if-lt v2, v3, :cond_0
 
     .line 4
-    invoke-static {v1}, Lzod;->d(Landroid/content/pm/PackageInfo;)J
+    invoke-static {v1}, Lgqd;->e(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v2
 
@@ -304,11 +304,11 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lyrb;
+    new-instance v0, Ldtb;
 
     const/16 v1, 0x17
 
-    invoke-direct {v0, p2, p0, p1, v1}, Lyrb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v0, p2, p0, p1, v1}, Ldtb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

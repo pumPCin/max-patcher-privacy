@@ -2,135 +2,98 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/SdpObserver;
-
 
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/String;Ldh8;Z)V
-    .locals 3
+.method public static a(Lubd;Ljava/lang/String;Lwwc;I)Lmc4;
+    .locals 15
 
-    sget-object v0, Ltmf;->a0:Lrhf;
+    move-object/from16 v0, p2
 
-    invoke-static {p0}, Lnw3;->g(Landroid/content/Context;)Ltmf;
+    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    move-result-object v0
+    iget-object v1, v0, Lwwc;->c:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-object/from16 v2, p1
 
-    if-eqz p3, :cond_0
+    invoke-static {v2, v1}, Lgai;->i(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    move-result-object v3
 
-    move-result-object p0
+    iget-wide v9, v0, Lwwc;->a:J
 
-    sget v2, Llpc;->dialog_progress_with_text:I
+    iget-wide v11, v0, Lwwc;->b:J
 
-    invoke-virtual {p0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p0
-
-    sget v2, Llpc;->dialog_progress_horizontal:I
-
-    invoke-virtual {p0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p0
-
-    :goto_0
-    if-eqz p3, :cond_1
-
-    sget v1, Looc;->dialog_progress__text:I
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Lubd;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/appcompat/widget/AppCompatTextView;
+    if-eqz v1, :cond_0
 
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget p1, v0, Ltmf;->J:I
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/high16 p1, 0x41500000    # 13.0f
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextSize(F)V
+    :goto_0
+    move-object v13, v1
 
     goto :goto_1
 
-    :cond_1
-    iget-object v1, p2, Lyc;->a:Luc;
+    :cond_0
+    iget-object p0, p0, Lubd;->b:Lec7;
 
-    iput-object p1, v1, Luc;->f:Ljava/lang/CharSequence;
+    const/4 v1, 0x0
 
-    :cond_2
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lnl0;
+
+    iget-object p0, p0, Lnl0;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lwwc;->c:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Lgai;->i(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
     :goto_1
-    sget p1, Looc;->dialog_progress__progress:I
+    const-string p0, "The uri must be set."
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v3, p0}, Lsgi;->k(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object p1
+    new-instance v2, Lmc4;
 
-    check-cast p1, Landroid/widget/ProgressBar;
+    const-wide/16 v4, 0x0
 
-    if-eqz p1, :cond_3
+    const/4 v6, 0x1
 
-    invoke-virtual {p1, p3}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
+    const/4 v7, 0x0
 
-    const/16 p3, 0x64
+    sget-object v8, Le9d;->Z:Le9d;
 
-    invoke-virtual {p1, p3}, Landroid/widget/ProgressBar;->setMax(I)V
+    move/from16 v14, p3
 
-    iget p3, v0, Ltmf;->k:I
+    invoke-direct/range {v2 .. v14}, Lmc4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-    invoke-static {p1, p3}, Lgma;->k(Landroid/widget/ProgressBar;I)V
-
-    :cond_3
-    invoke-virtual {p2, p0}, Ldh8;->e(Landroid/view/View;)Ldh8;
-
-    return-void
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public onCreateFailure(Ljava/lang/String;)V
+.method public static final b(Ljava/lang/Object;)V
     .locals 1
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    instance-of v0, p0, Lbed;
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public onCreateSuccess(Lorg/webrtc/SessionDescription;)V
-    .locals 0
+    if-nez v0, :cond_0
 
     return-void
-.end method
 
-.method public onSetFailure(Ljava/lang/String;)V
-    .locals 1
+    :cond_0
+    check-cast p0, Lbed;
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    iget-object p0, p0, Lbed;->a:Ljava/lang/Throwable;
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public onSetSuccess()V
-    .locals 0
-
-    return-void
+    throw p0
 .end method

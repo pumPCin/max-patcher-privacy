@@ -1,34 +1,58 @@
-.class public final synthetic Lfwg;
+.class public final Lfwg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/VideoSink;
+.implements Lys1;
 
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/VideoSource;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/VideoSource;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfwg;->a:Lorg/webrtc/VideoSource;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lfwg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 1
+.method public final b(Ltvi;)V
+    .locals 2
 
-    iget-object v0, p0, Lfwg;->a:Lorg/webrtc/VideoSource;
+    iget-object v0, p0, Lfwg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-static {v0, p1}, Lorg/webrtc/VideoSource;->b(Lorg/webrtc/VideoSource;Lorg/webrtc/VideoFrame;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lys1;
+
+    invoke-interface {v1, p1}, Lys1;->b(Ltvi;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

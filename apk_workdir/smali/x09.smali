@@ -1,87 +1,112 @@
 .class public final Lx09;
-.super Lju8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Lc19;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 7
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 2
 
-    const/4 v3, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v6, -0x1
+    if-eqz p1, :cond_2
 
-    const/4 v2, -0x1
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-wide/16 v4, -0x1
+    move-result v0
 
-    move-object v0, p0
+    if-nez v0, :cond_1
 
-    move-object v1, p1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 1
-    invoke-direct/range {v0 .. v6}, Lju8;-><init>(Ljava/lang/Object;IIJI)V
+    const/16 v1, 0x1c
 
-    return-void
-.end method
+    if-lt v0, v1, :cond_0
 
-.method public constructor <init>(Ljava/lang/Object;JI)V
-    .locals 7
+    new-instance v0, Lb19;
 
-    const/4 v2, -0x1
+    invoke-direct {v0, p1, p2, p3}, Lc19;-><init>(Ljava/lang/String;II)V
 
-    const/4 v3, -0x1
+    invoke-static {p2, p3, p1}, Lv4;->r(IILjava/lang/String;)V
 
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v4, p2
-
-    move v6, p4
-
-    .line 2
-    invoke-direct/range {v0 .. v6}, Lju8;-><init>(Ljava/lang/Object;IIJI)V
+    iput-object v0, p0, Lx09;->a:Lc19;
 
     return-void
+
+    :cond_0
+    new-instance v0, Lc19;
+
+    invoke-direct {v0, p1, p2, p3}, Lc19;-><init>(Ljava/lang/String;II)V
+
+    iput-object v0, p0, Lx09;->a:Lc19;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "packageName should be nonempty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "package shouldn\'t be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)Lx09;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lx09;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lju8;->a:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    move-object v2, p0
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    new-instance v2, Lju8;
+    instance-of v0, p1, Lx09;
 
-    iget-wide v6, p0, Lju8;->d:J
+    if-nez v0, :cond_1
 
-    iget v8, p0, Lju8;->e:I
+    const/4 p1, 0x0
 
-    iget v4, p0, Lju8;->b:I
+    return p1
 
-    iget v5, p0, Lju8;->c:I
+    :cond_1
+    iget-object v0, p0, Lx09;->a:Lc19;
 
-    move-object v3, p1
+    check-cast p1, Lx09;
 
-    invoke-direct/range {v2 .. v8}, Lju8;-><init>(Ljava/lang/Object;IIJI)V
+    iget-object p1, p1, Lx09;->a:Lc19;
 
-    :goto_0
-    invoke-direct {v0, v2}, Lju8;-><init>(Lju8;)V
+    invoke-virtual {v0, p1}, Lc19;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lx09;->a:Lc19;
+
+    invoke-virtual {v0}, Lc19;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

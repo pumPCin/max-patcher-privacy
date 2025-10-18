@@ -1,125 +1,158 @@
 .class public final Lkg1;
-.super Lmg1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Z
-
-.field public final b:Lei1;
+# interfaces
+.implements Lqm;
 
 
-# direct methods
-.method public constructor <init>(Lei1;Z)V
-    .locals 0
+# virtual methods
+.method public final debugApiException(Lyl;Lom;Lru/ok/android/api/core/ApiException;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
 
-    iput-boolean p2, p0, Lkg1;->a:Z
+    move-result-object p1
 
-    iput-object p1, p0, Lkg1;->b:Lei1;
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "debugApiException: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1, p3}, Ltei;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
+.method public final debugApiRequest(Lyl;Lom;Lzl;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    return v0
+    const-string p3, "debugApiRequest: "
 
-    :cond_0
-    instance-of v1, p1, Lkg1;
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez v1, :cond_1
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return v2
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Lkg1;
+    const-string p2, "ApiProviderTag"
 
-    iget-boolean v1, p0, Lkg1;->a:Z
+    invoke-static {p2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-boolean v3, p1, Lkg1;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lkg1;->b:Lei1;
-
-    iget-object p1, p1, Lkg1;->b:Lei1;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final debugApiResponseFail(Lyl;Lom;Lvq7;)Lvq7;
+    .locals 1
 
-    iget-boolean v0, p0, Lkg1;->a:Z
+    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    move-result-object p1
 
-    move-result v0
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-string v0, "debugApiResponseFail: "
 
-    iget-object v1, p0, Lkg1;->b:Lei1;
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lei1;->hashCode()I
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    add-int/2addr v1, v0
+    move-result-object p1
 
-    return v1
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final debugApiResponseOk(Lyl;Lom;Lvq7;)Lvq7;
+    .locals 1
+
+    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "debugApiResponseOk: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+.end method
+
+.method public final debugIoException(Lyl;Lom;Ljava/io/IOException;)V
     .locals 2
+
+    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "HasOpenAction(hasAction="
+    const-string v1, "debugIoException: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v1, p0, Lkg1;->a:Z
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string p1, " "
 
-    const-string v1, ", opponentId="
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkg1;->b:Lei1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1, p3}, Ltei;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

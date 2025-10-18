@@ -1,167 +1,205 @@
 .class public final Lg92;
-.super Llff;
+.super Lyi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public i:[I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lh0e;
-
-.field public final synthetic r0:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lh0e;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lg92;->Z:Lh0e;
-
-    iput-object p2, p0, Lg92;->r0:Ljava/lang/Object;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public j:[I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 7
 
-    check-cast p1, Lb54;
+    iget-object v0, p0, Lg92;->j:[I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1, p2}, Lg92;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Lg92;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    sget-object p2, Lzag;->a:Lzag;
+    move-result v2
 
-    invoke-virtual {p1, p2}, Lg92;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sub-int v3, v2, v1
 
-    move-result-object p1
+    iget-object v4, p0, Lyi0;->b:Lp50;
 
-    return-object p1
-.end method
+    iget v4, v4, Lp50;->d:I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    div-int/2addr v3, v4
 
-    new-instance v0, Lg92;
+    iget-object v4, p0, Lyi0;->c:Lp50;
 
-    iget-object v1, p0, Lg92;->Z:Lh0e;
+    iget v4, v4, Lp50;->d:I
 
-    iget-object v2, p0, Lg92;->r0:Ljava/lang/Object;
+    mul-int/2addr v3, v4
 
-    invoke-direct {v0, v1, v2, p2}, Lg92;-><init>(Lh0e;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, v3}, Lyi0;->j(I)Ljava/nio/ByteBuffer;
 
-    iput-object p1, v0, Lg92;->Y:Ljava/lang/Object;
+    move-result-object v3
 
-    return-object v0
-.end method
+    :goto_0
+    if-ge v1, v2, :cond_1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    array-length v4, v0
 
-    iget v0, p0, Lg92;->X:I
+    const/4 v5, 0x0
 
-    sget-object v1, Lzag;->a:Lzag;
+    :goto_1
+    if-ge v5, v4, :cond_0
 
-    const/4 v2, 0x1
+    aget v6, v0, v5
 
-    if-eqz v0, :cond_1
+    mul-int/lit8 v6, v6, 0x2
 
-    if-ne v0, v2, :cond_0
+    add-int/2addr v6, v1
 
-    :try_start_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
 
-    goto :goto_0
+    move-result v6
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {v3, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v4, p0, Lyi0;->b:Lp50;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget v4, v4, Lp50;->d:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    add-int/2addr v1, v4
 
-    throw p1
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    iget-object p1, p0, Lg92;->Y:Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    check-cast p1, Lb54;
+    return-void
+.end method
 
-    iget-object p1, p0, Lg92;->Z:Lh0e;
+.method public final f(Lp50;)Lp50;
+    .locals 8
 
-    iget-object v0, p0, Lg92;->r0:Ljava/lang/Object;
+    iget-object v0, p0, Lg92;->i:[I
 
-    :try_start_1
-    iput v2, p0, Lg92;->X:I
+    if-nez v0, :cond_0
 
-    invoke-interface {p1, v0, p0}, Lh0e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sget-object p1, Lp50;->e:Lp50;
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
+    :cond_0
+    iget v1, p1, Lp50;->c:I
 
-    if-ne p1, v0, :cond_2
+    iget v2, p1, Lp50;->b:I
 
-    return-object v0
+    const/4 v3, 0x2
 
-    :cond_2
+    if-ne v1, v3, :cond_6
+
+    array-length v1, v0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eq v2, v1, :cond_1
+
+    move v1, v5
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v4
+
     :goto_0
-    move-object v0, v1
+    move v6, v4
+
+    :goto_1
+    array-length v7, v0
+
+    if-ge v6, v7, :cond_4
+
+    aget v7, v0, v6
+
+    if-ge v7, v2, :cond_3
+
+    if-eq v7, v6, :cond_2
+
+    move v7, v5
 
     goto :goto_2
 
-    :goto_1
-    new-instance v0, Lvcd;
-
-    invoke-direct {v0, p1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+    :cond_2
+    move v7, v4
 
     :goto_2
-    instance-of p1, v0, Lvcd;
+    or-int/2addr v1, v7
 
-    if-nez p1, :cond_3
+    add-int/lit8 v6, v6, 0x1
 
-    goto :goto_3
+    goto :goto_1
 
     :cond_3
-    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    move-result-object p1
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lp50;)V
 
-    new-instance v1, Lc92;
+    throw v0
 
-    invoke-direct {v1, p1}, Lc92;-><init>(Ljava/lang/Throwable;)V
+    :cond_4
+    if-eqz v1, :cond_5
 
-    :goto_3
-    new-instance p1, Le92;
+    new-instance v1, Lp50;
 
-    invoke-direct {p1, v1}, Le92;-><init>(Ljava/lang/Object;)V
+    iget p1, p1, Lp50;->a:I
+
+    array-length v0, v0
+
+    invoke-direct {v1, p1, v0, v3}, Lp50;-><init>(III)V
+
+    return-object v1
+
+    :cond_5
+    sget-object p1, Lp50;->e:Lp50;
 
     return-object p1
+
+    :cond_6
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lp50;)V
+
+    throw v0
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lg92;->i:[I
+
+    iput-object v0, p0, Lg92;->j:[I
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lg92;->j:[I
+
+    iput-object v0, p0, Lg92;->i:[I
+
+    return-void
 .end method

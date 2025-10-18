@@ -3,154 +3,75 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwd1;
+.implements Lrs1;
 
 
-# static fields
-.field public static final X:Ljbe;
-
-.field public static final a:Lud1;
-
-.field public static final b:J
-
-.field public static final c:Ljqf;
-
-.field public static final o:Ltt7;
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+    .locals 0
 
-    new-instance v0, Lud1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lud1;->a:Lud1;
-
-    sget-wide v0, Lxpa;->d:J
-
-    sput-wide v0, Lud1;->b:J
-
-    sget v0, Lwid;->M2:I
-
-    new-instance v1, Ljqf;
-
-    invoke-direct {v1, v0}, Ljqf;-><init>(I)V
-
-    sput-object v1, Lud1;->c:Ljqf;
-
-    new-instance v0, Ltt7;
-
-    sget v1, Lvpa;->i:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Ltt7;-><init>(III)V
-
-    sput-object v0, Lud1;->o:Ltt7;
-
-    sget-object v0, Ljbe;->a:Ljbe;
-
-    sput-object v0, Lud1;->X:Ljbe;
+    iput-object p1, p0, Lud1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Lvt7;
-    .locals 1
+.method public final L()V
+    .locals 11
 
-    sget-object v0, Lud1;->o:Ltt7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lud1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    iget-object v0, v0, Lqd1;->u0:Lx0f;
 
     :cond_0
-    instance-of p1, p1, Lud1;
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
 
-    if-nez p1, :cond_1
+    move-result-object v1
 
-    const/4 p1, 0x0
+    move-object v2, v1
 
-    return p1
+    check-cast v2, Ljd1;
 
-    :cond_1
-    return v0
-.end method
+    iget-boolean v3, v2, Ljd1;->d:Z
 
-.method public final getItemId()J
-    .locals 2
+    xor-int/lit8 v6, v3, 0x1
 
-    sget-wide v0, Lud1;->b:J
+    const/4 v9, 0x0
 
-    return-wide v0
-.end method
+    const/16 v10, 0x77
 
-.method public final getTitle()Loqf;
-    .locals 1
+    const/4 v3, 0x0
 
-    sget-object v0, Lud1;->c:Ljqf;
+    const/4 v4, 0x0
 
-    return-object v0
-.end method
+    const/4 v5, 0x0
 
-.method public final getType()Ljbe;
-    .locals 1
+    const/4 v7, 0x0
 
-    sget-object v0, Lud1;->X:Ljbe;
+    const/4 v8, 0x0
 
-    return-object v0
-.end method
+    invoke-static/range {v2 .. v10}, Ljd1;->a(Ljd1;Lce0;Lzk8;Lzk8;ZLtrf;Ljava/util/ArrayList;Ltrf;I)Ljd1;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v2
 
-    const v0, 0x1f0af277
+    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v0
-.end method
+    move-result v1
 
-.method public final m()I
-    .locals 1
+    if-eqz v1, :cond_0
 
-    sget v0, Lwpa;->m:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "SendToChat"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x2
-
-    return v0
+    return-void
 .end method

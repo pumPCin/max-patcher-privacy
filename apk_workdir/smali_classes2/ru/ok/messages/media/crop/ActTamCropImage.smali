@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final synthetic U0:I
+.field public static final synthetic T0:I
 
 
 # instance fields
-.field public T0:La29;
+.field public S0:Lb39;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public final K()Ljava/lang/String;
+.method public final M()Ljava/lang/String;
     .locals 1
 
     const/4 v0, 0x0
@@ -30,19 +30,19 @@
     return-object v0
 .end method
 
-.method public final i()Ltmf;
+.method public final i()Lynf;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:La29;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lb39;
 
     if-nez v0, :cond_0
 
-    sget-object v0, La29;->e0:La29;
+    sget-object v0, Lb39;->e0:Lb39;
 
-    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:La29;
+    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lb39;
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:La29;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lb39;
 
     return-object v0
 .end method
@@ -52,47 +52,47 @@
 
     invoke-super {p0, p1}, Lh6;->onCreate(Landroid/os/Bundle;)V
 
-    sget v0, Llpc;->act_tam_crop_image:I
+    sget v0, Lsqc;->act_tam_crop_image:I
 
     invoke-virtual {p0, v0}, Lh6;->setContentView(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:La29;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->S0:Lb39;
 
-    iget v0, v0, Ltmf;->L:I
+    iget v0, v0, Lynf;->L:I
 
-    invoke-virtual {p0, v0}, Lh6;->Q(I)V
+    invoke-virtual {p0, v0}, Lh6;->S(I)V
 
-    sget v0, Looc;->act_tam_crop_image__root:I
+    sget v0, Lvpc;->act_tam_crop_image__root:I
 
-    invoke-virtual {p0, v0}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->i()Ltmf;
+    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->i()Lynf;
 
     move-result-object v1
 
-    iget v1, v1, Ltmf;->m:I
+    iget v1, v1, Lynf;->m:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget v0, Looc;->act_tam_crop_image__root:I
+    sget v0, Lvpc;->act_tam_crop_image__root:I
 
-    invoke-virtual {p0, v0}, Lqn;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lrn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Ley0;
+    new-instance v1, Lny0;
 
     const/16 v2, 0xb
 
-    invoke-direct {v1, v2}, Ley0;-><init>(I)V
+    invoke-direct {v1, v2}, Lny0;-><init>(I)V
 
-    sget-object v2, Lcyg;->a:Ljava/util/WeakHashMap;
+    sget-object v2, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {v0, v1}, Lqxg;->u(Landroid/view/View;Ldla;)V
+    invoke-static {v0, v1}, Lvyg;->u(Landroid/view/View;Lfma;)V
 
-    invoke-static {v0}, Loxg;->c(Landroid/view/View;)V
+    invoke-static {v0}, Ltyg;->c(Landroid/view/View;)V
 
     if-nez p1, :cond_0
 
@@ -130,7 +130,7 @@
 
     move-result-object v3
 
-    check-cast v3, Ly64;
+    check-cast v3, Ln74;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -162,15 +162,15 @@
 
     invoke-virtual {p1, v6}, Landroidx/fragment/app/a;->w0(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lde6;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lxe6;
 
     move-result-object v0
 
-    sget v1, Looc;->act_tam_crop_image__container:I
+    sget v1, Lvpc;->act_tam_crop_image__container:I
 
     const-string v2, "ru.ok.messages.media.crop.FrgTamCropImage"
 
-    invoke-static {v0, v1, p1, v2}, Leb4;->a(Lde6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1, v2}, Lyk5;->a(Lxe6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
 
     :cond_0
     return-void

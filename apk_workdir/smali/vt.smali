@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ltp2;Ltp2;)V
+.method public constructor <init>(Ldq2;Ldq2;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -264,9 +264,9 @@
 
     iget-object p2, p0, Lvt;->b:Ljava/lang/Object;
 
-    check-cast p2, Ltp2;
+    check-cast p2, Ldq2;
 
-    iget-object v2, p2, Ltp2;->a:Ljava/util/Map;
+    iget-object v2, p2, Ldq2;->a:Ljava/util/Map;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -276,13 +276,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lrp2;
+    check-cast v2, Lbq2;
 
     iget-object v3, p0, Lvt;->c:Ljava/lang/Object;
 
-    check-cast v3, Ltp2;
+    check-cast v3, Ldq2;
 
-    iget-object v4, v3, Ltp2;->a:Ljava/util/Map;
+    iget-object v4, v3, Ldq2;->a:Ljava/util/Map;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -292,13 +292,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lrp2;
+    check-cast v0, Lbq2;
 
     const-wide/16 v4, 0x0
 
     if-eqz v2, :cond_0
 
-    iget-wide v6, v2, Lrp2;->l:J
+    iget-wide v6, v2, Lbq2;->l:J
 
     goto :goto_0
 
@@ -308,7 +308,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    iget-wide v8, v0, Lrp2;->l:J
+    iget-wide v8, v0, Lbq2;->l:J
 
     goto :goto_1
 
@@ -322,7 +322,7 @@
 
     if-eqz v2, :cond_2
 
-    iget-wide v0, v2, Lrp2;->l:J
+    iget-wide v0, v2, Lbq2;->l:J
 
     goto :goto_2
 
@@ -339,7 +339,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-wide v0, v0, Lrp2;->l:J
+    iget-wide v0, v0, Lbq2;->l:J
 
     goto :goto_3
 
@@ -358,7 +358,7 @@
 
     move-result-wide v1
 
-    iget-object p1, p2, Ltp2;->a:Ljava/util/Map;
+    iget-object p1, p2, Ldq2;->a:Ljava/util/Map;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -368,9 +368,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lrp2;
+    check-cast p1, Lbq2;
 
-    iget-object p2, v3, Ltp2;->a:Ljava/util/Map;
+    iget-object p2, v3, Ldq2;->a:Ljava/util/Map;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -380,11 +380,11 @@
 
     move-result-object p2
 
-    check-cast p2, Lrp2;
+    check-cast p2, Lbq2;
 
     if-eqz p1, :cond_5
 
-    iget-wide v1, p1, Lrp2;->l:J
+    iget-wide v1, p1, Lbq2;->l:J
 
     goto :goto_5
 
@@ -394,7 +394,7 @@
     :goto_5
     if-eqz p2, :cond_6
 
-    iget-wide v6, p2, Lrp2;->l:J
+    iget-wide v6, p2, Lbq2;->l:J
 
     goto :goto_6
 
@@ -408,7 +408,7 @@
 
     if-eqz p1, :cond_7
 
-    iget-wide v4, p1, Lrp2;->l:J
+    iget-wide v4, p1, Lbq2;->l:J
 
     :cond_7
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -420,7 +420,7 @@
     :cond_8
     if-eqz p2, :cond_9
 
-    iget-wide v4, p2, Lrp2;->l:J
+    iget-wide v4, p2, Lbq2;->l:J
 
     :cond_9
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -428,7 +428,7 @@
     move-result-object p1
 
     :goto_7
-    invoke-static {v0, p1}, Lvti;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+    invoke-static {v0, p1}, Lwui;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p1
 

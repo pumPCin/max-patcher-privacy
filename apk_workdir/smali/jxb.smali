@@ -1,127 +1,137 @@
-.class public final enum Ljxb;
-.super Ljava/lang/Enum;
+.class public final Ljxb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Ljxb;
-
-.field public static final synthetic Y:[Ljxb;
-
-.field public static final enum b:Ljxb;
-
-.field public static final enum c:Ljxb;
-
-.field public static final enum o:Ljxb;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/Long;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
+    .locals 0
 
-    new-instance v0, Ljxb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "FILL_START"
+    iput-object p1, p0, Ljxb;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Ljxb;->b:Ljava/lang/Long;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljxb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Ljxb;-><init>(Ljava/lang/String;II)V
+    if-nez v1, :cond_1
 
-    new-instance v1, Ljxb;
+    return v2
 
-    const-string v2, "FILL_CENTER"
+    :cond_1
+    check-cast p1, Ljxb;
 
-    const/4 v3, 0x1
+    iget-object v1, p0, Ljxb;->a:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3, v3}, Ljxb;-><init>(Ljava/lang/String;II)V
+    iget-object v3, p1, Ljxb;->a:Ljava/lang/String;
 
-    sput-object v1, Ljxb;->b:Ljxb;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v2, Ljxb;
+    move-result v1
 
-    const-string v3, "FILL_END"
+    if-nez v1, :cond_2
 
-    const/4 v4, 0x2
+    return v2
 
-    invoke-direct {v2, v3, v4, v4}, Ljxb;-><init>(Ljava/lang/String;II)V
+    :cond_2
+    iget-object v1, p0, Ljxb;->b:Ljava/lang/Long;
 
-    new-instance v3, Ljxb;
+    iget-object p1, p1, Ljxb;->b:Ljava/lang/Long;
 
-    const-string v4, "FIT_START"
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v5, 0x3
+    move-result p1
 
-    invoke-direct {v3, v4, v5, v5}, Ljxb;-><init>(Ljava/lang/String;II)V
+    if-nez p1, :cond_3
 
-    sput-object v3, Ljxb;->c:Ljxb;
+    return v2
 
-    new-instance v4, Ljxb;
+    :cond_3
+    return v0
+.end method
 
-    const-string v5, "FIT_CENTER"
+.method public final hashCode()I
+    .locals 2
 
-    const/4 v6, 0x4
+    iget-object v0, p0, Ljxb;->a:Ljava/lang/String;
 
-    invoke-direct {v4, v5, v6, v6}, Ljxb;-><init>(Ljava/lang/String;II)V
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    sput-object v4, Ljxb;->o:Ljxb;
+    move-result v0
 
-    new-instance v5, Ljxb;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v6, "FIT_END"
+    iget-object v1, p0, Ljxb;->b:Ljava/lang/Long;
 
-    const/4 v7, 0x5
+    if-nez v1, :cond_0
 
-    invoke-direct {v5, v6, v7, v7}, Ljxb;-><init>(Ljava/lang/String;II)V
+    const/4 v1, 0x0
 
-    sput-object v5, Ljxb;->X:Ljxb;
+    goto :goto_0
 
-    filled-new-array/range {v0 .. v5}, [Ljxb;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Preference(key="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljxb;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", value="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljxb;->b:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    sput-object v0, Ljxb;->Y:[Ljxb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ljxb;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ljxb;
-    .locals 1
-
-    const-class v0, Ljxb;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljxb;
-
-    return-object p0
-.end method
-
-.method public static values()[Ljxb;
-    .locals 1
-
-    sget-object v0, Ljxb;->Y:[Ljxb;
-
-    invoke-virtual {v0}, [Ljxb;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljxb;
 
     return-object v0
 .end method

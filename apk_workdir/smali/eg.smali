@@ -29,7 +29,7 @@
 
     iput-object v0, p0, Leg;->d:Ljava/lang/Object;
 
-    sget-object v0, Ljw0;->b:Ljw0;
+    sget-object v0, Lsw0;->b:Lsw0;
 
     iput-object v0, p0, Leg;->e:Ljava/lang/Object;
 
@@ -43,11 +43,11 @@
 
     iget-object v0, p0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget-object v0, v0, Lpo0;->c:Ldsb;
+    iget-object v0, v0, Lyo0;->c:Litb;
 
-    invoke-virtual {v0}, Ldsb;->B()I
+    invoke-virtual {v0}, Litb;->B()I
 
     move-result v0
 
@@ -59,15 +59,15 @@
 
     iget-object v0, p0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget-object v0, v0, Lpo0;->c:Ldsb;
+    iget-object v0, v0, Lyo0;->c:Litb;
 
-    iget-object v0, v0, Ldsb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Litb;->b:Ljava/lang/Object;
 
-    check-cast v0, Lep3;
+    check-cast v0, Lsp3;
 
-    iget-object v0, v0, Lep3;->g:Ljava/lang/Object;
+    iget-object v0, v0, Lsp3;->g:Ljava/lang/Object;
 
     check-cast v0, [I
 
@@ -81,11 +81,11 @@
 
     iget-object v0, p0, Leg;->c:Ljava/lang/Object;
 
-    check-cast v0, Lpo0;
+    check-cast v0, Lyo0;
 
-    iget-object v0, v0, Lpo0;->c:Ldsb;
+    iget-object v0, v0, Lyo0;->c:Litb;
 
-    invoke-virtual {v0}, Ldsb;->C()I
+    invoke-virtual {v0}, Litb;->C()I
 
     move-result v0
 

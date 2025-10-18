@@ -1,315 +1,77 @@
-.class public final synthetic Lsvg;
-.super Ljava/lang/Object;
+.class public final Lsvg;
+.super Luj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lpj8;
-.implements Ler3;
 
 
 # instance fields
-.field public final synthetic a:Ltvg;
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Ld20;
+.field public final b:Ljava/util/Map;
 
-.field public final synthetic c:Lc20;
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltvg;Lc20;Ld20;)V
+.method public constructor <init>(JJJLjava/lang/String;Ljava/util/Map;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    iput-object p1, p0, Lsvg;->a:Ltvg;
+    iput-object p8, p0, Lsvg;->b:Ljava/util/Map;
 
-    iput-object p2, p0, Lsvg;->c:Lc20;
+    iput-wide p3, p0, Lsvg;->c:J
 
-    iput-object p3, p0, Lsvg;->b:Ld20;
+    iput-wide p5, p0, Lsvg;->o:J
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ltvg;Ld20;Lc20;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsvg;->a:Ltvg;
-
-    iput-object p2, p0, Lsvg;->b:Ld20;
-
-    iput-object p3, p0, Lsvg;->c:Lc20;
+    iput-object p7, p0, Lsvg;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ldq5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lsvg;->a:Ltvg;
+    const-string v1, "VideoPlayEvent{urls="
 
-    iget-object v1, v0, Ltvg;->a:Lumg;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lsvg;->b:Ld20;
+    iget-object v1, p0, Lsvg;->b:Ljava/util/Map;
 
-    iget-object v2, v2, Ld20;->r:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, ", videoId="
 
-    sget-object v1, Lumg;->a:Ljava/util/Map;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ltmg;
+    iget-wide v1, p0, Lsvg;->c:J
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-wide v4
+    const-string v1, ", messageId="
 
-    invoke-direct {v3, p1, v4, v5}, Ltmg;-><init>(Ldq5;J)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v1, p0, Lsvg;->o:J
 
-    iget-object p1, v0, Ltvg;->c:Liu7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Liu7;->get()Ljava/lang/Object;
+    const-string v1, ", attachLocalId=\'"
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lhd;
+    iget-object v1, p0, Lsvg;->X:Ljava/lang/String;
 
-    if-eqz p1, :cond_1
+    const-string v2, "\'}"
 
-    iget-object v0, p0, Lsvg;->c:Lc20;
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, v0, Lc20;->i:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    const-string v2, "ACTION_VIDEO_FETCH_OK"
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v2}, Lhd;->f(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, v0, Lc20;->i:Ljava/lang/String;
-
-    invoke-virtual {p1, v2, v0}, Lhd;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public b(Lxi8;)V
-    .locals 8
-
-    iget-object v0, p0, Lsvg;->c:Lc20;
-
-    iget-object v1, v0, Lc20;->h:Ljava/lang/String;
-
-    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {v1}, Laqh;->b(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {v1}, Lf1h;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const/4 v1, 0x5
-
-    const-string v2, "Video hosting in black list"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lxi8;->d(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    iget-boolean v1, v0, Lc20;->g:Z
-
-    iget-object v2, p0, Lsvg;->a:Ltvg;
-
-    if-eqz v1, :cond_2
-
-    iget-wide v0, v0, Lc20;->k:J
-
-    iget-object v3, v2, Ltvg;->g:Llwb;
-
-    iget-object v3, v3, Llwb;->a:Lg68;
-
-    invoke-virtual {v3}, Lgsd;->j()J
-
-    move-result-wide v3
-
-    cmp-long v0, v0, v3
-
-    if-lez v0, :cond_2
-
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const/4 v1, 0x7
-
-    const-string v2, "live stream not started"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lxi8;->d(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lsvg;->b:Ld20;
-
-    invoke-virtual {v2, v0}, Ltvg;->a(Ld20;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    iget-object v1, v2, Ltvg;->a:Lumg;
-
-    iget-object v0, v0, Ld20;->r:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lumg;->a:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltmg;
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-wide v4, v2, Ltmg;->b:J
-
-    const-wide/32 v6, 0x36ee80
-
-    add-long/2addr v4, v6
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    cmp-long v4, v4, v6
-
-    if-lez v4, :cond_4
-
-    iget-object v3, v2, Ltmg;->a:Ldq5;
-
-    goto :goto_1
-
-    :cond_4
-    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_1
-    if-nez v3, :cond_5
-
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    invoke-virtual {p1}, Lxi8;->b()V
-
-    return-void
-
-    :cond_5
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    invoke-virtual {p1, v3}, Lxi8;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_6
-    const-string v0, "getVideoContent: local path = %s"
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "VideoRipper"
-
-    invoke-static {v2, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    invoke-virtual {p1}, Lxi8;->b()V
-
-    :cond_7
-    return-void
+    return-object v0
 .end method

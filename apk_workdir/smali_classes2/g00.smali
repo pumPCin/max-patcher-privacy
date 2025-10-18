@@ -1,48 +1,69 @@
 .class public final Lg00;
-.super Lk14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final synthetic Y:Lh00;
+.field public final b:Lnje;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lm0d;
 
 
 # direct methods
-.method public constructor <init>(Lh00;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lulf;)V
+    .locals 1
 
-    iput-object p1, p0, Lg00;->Y:Lh00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Lqta;
+
+    invoke-virtual {p1}, Lqta;->a()Lk54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg00;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x7
+
+    invoke-static {p1, p1, v0}, Loje;->b(III)Lnje;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg00;->b:Lnje;
+
+    new-instance v0, Lm0d;
+
+    invoke-direct {v0, p1}, Lm0d;-><init>(Li1a;)V
+
+    iput-object v0, p0, Lg00;->c:Lm0d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lzxc;)V
+    .locals 3
 
-    iput-object p1, p0, Lg00;->o:Ljava/lang/Object;
+    new-instance v0, Lf00;
 
-    iget p1, p0, Lg00;->X:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, p0, p1, v1}, Lf00;-><init>(Lg00;Lzxc;Lkotlin/coroutines/Continuation;)V
 
-    or-int/2addr p1, v0
+    const/4 p1, 0x3
 
-    iput p1, p0, Lg00;->X:I
+    iget-object v2, p0, Lg00;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object p1, p0, Lg00;->Y:Lh00;
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

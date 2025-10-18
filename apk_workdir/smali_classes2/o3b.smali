@@ -2,30 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 0
 
-    sget v0, Lzkc;->dragger_24:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lo3b;->a:I
-
-    sget v0, Lzkc;->draw_sticker_24_gradient:I
-
-    sput v0, Lo3b;->b:I
-
-    sget v0, Lzkc;->recent_24:I
-
-    sput v0, Lo3b;->c:I
+    iput-wide p1, p0, Lo3b;->a:J
 
     return-void
 .end method

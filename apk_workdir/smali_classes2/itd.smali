@@ -1,202 +1,400 @@
 .class public final Litd;
-.super Lsyg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final X:Lu14;
+.field public final synthetic a:I
 
-.field public final Y:Lgzc;
-
-.field public final Z:Lgzc;
-
-.field public final b:J
-
-.field public final c:Lie2;
-
-.field public final o:Lfp2;
-
-.field public final r0:Lde5;
+.field public final synthetic b:Lr5;
 
 
 # direct methods
-.method public constructor <init>(Lftd;JLie2;Lfp2;)V
-    .locals 1
+.method public synthetic constructor <init>(Lr5;I)V
+    .locals 0
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    iput p2, p0, Litd;->a:I
 
-    iput-wide p2, p0, Litd;->b:J
+    iput-object p1, p0, Litd;->b:Lr5;
 
-    iput-object p4, p0, Litd;->c:Lie2;
-
-    iput-object p5, p0, Litd;->o:Lfp2;
-
-    new-instance p2, Lu14;
-
-    const/16 p3, 0xb
-
-    invoke-direct {p2, p3, p0}, Lu14;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Litd;->X:Lu14;
-
-    iget-object p2, p5, Lfp2;->i:Ljava/lang/Object;
-
-    check-cast p2, Lgzc;
-
-    iput-object p2, p0, Litd;->Y:Lgzc;
-
-    iget-object p2, p5, Lfp2;->j:Ljava/lang/Object;
-
-    check-cast p2, Lgzc;
-
-    iput-object p2, p0, Litd;->Z:Lgzc;
-
-    new-instance p3, Lde5;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p3, p4}, Lde5;-><init>(I)V
-
-    iput-object p3, p0, Litd;->r0:Lde5;
-
-    iget-object p1, p1, Lftd;->a:Leie;
-
-    new-instance p3, Lfzc;
-
-    invoke-direct {p3, p1}, Lfzc;-><init>(Lg0a;)V
-
-    new-instance p1, Lgtd;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p1, p0, p4}, Lgtd;-><init>(Litd;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p5, Lh06;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p5, p3, p1, v0}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    iget-object p1, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p5, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
-
-    new-instance p1, Ln23;
-
-    const/16 p3, 0x9
-
-    invoke-direct {p1, p2, p3}, Ln23;-><init>(Lzx5;I)V
-
-    new-instance p2, Lhtd;
-
-    invoke-direct {p2, p0, p4}, Lhtd;-><init>(Litd;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lh06;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p1, p2, p4}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    iget-object p1, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r()V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Litd;->X:Lu14;
+    iget v0, p0, Litd;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Lfla;->f(Z)V
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    iget-object v0, p0, Litd;->o:Lfp2;
+    const-class v1, Lat3;
 
-    iget-object v1, v0, Lfp2;->a:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    check-cast v1, Lip2;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    return-object v0
 
-    iput-object v2, v1, Lip2;->g:Lfp2;
+    :pswitch_0
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    invoke-virtual {v1}, Lip2;->a()V
+    const-class v1, Ldq5;
 
-    invoke-virtual {v1}, Lip2;->a()V
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget-object v1, v0, Lfp2;->h:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Lsze;
+    return-object v0
 
-    invoke-virtual {v1, v2}, Lsze;->setValue(Ljava/lang/Object;)V
+    :pswitch_1
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    iget-object v0, v0, Lfp2;->g:Ljava/lang/Object;
+    const-class v1, Lsf5;
 
-    check-cast v0, Lsze;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    sget-object v1, Liud;->a:Liud;
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_2
+    iget-object v0, p0, Litd;->b:Lr5;
 
-.method public final s(Z)V
-    .locals 5
+    const-class v1, Lhd;
 
-    iget-object v0, p0, Litd;->X:Lu14;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lfla;->f(Z)V
+    return-object v0
 
-    iget-object v0, p0, Litd;->o:Lfp2;
+    :pswitch_3
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    iget-object v1, v0, Lfp2;->a:Ljava/lang/Object;
+    const-class v1, Los4;
 
-    check-cast v1, Lip2;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v2, Ljud;
+    move-result-object v0
 
-    invoke-direct {v2, p1}, Ljud;-><init>(Z)V
+    return-object v0
 
-    iget-object p1, v0, Lfp2;->g:Ljava/lang/Object;
+    :pswitch_4
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    check-cast p1, Lsze;
+    const-class v1, Lzo3;
 
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static {v3, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result v3
+    :pswitch_5
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    if-eqz v3, :cond_0
+    const-class v1, Le05;
 
-    return-void
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 v3, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v3, v2}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
-    iget-object p1, v1, Lip2;->e:Lkotlinx/coroutines/internal/ContextScope;
+    :pswitch_6
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    new-instance v2, Lhp2;
+    const-class v1, Lat3;
 
-    invoke-direct {v2, v1, v3}, Lhp2;-><init>(Lip2;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v4, 0x3
+    move-result-object v0
 
-    invoke-static {p1, v3, v3, v2, v4}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    return-object v0
 
-    iput-object v0, v1, Lip2;->g:Lfp2;
+    :pswitch_7
+    iget-object v0, p0, Litd;->b:Lr5;
 
-    return-void
+    const-class v1, Lsd2;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Llnf;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lll;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_a
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lnb9;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lp05;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Ljoa;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lqr5;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_e
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lsx4;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_f
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lou4;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_10
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lpxb;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_11
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lap5;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_12
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lgo5;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_13
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Ly2f;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_14
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lp2d;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_15
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lll;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_16
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Ly83;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_17
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lm38;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_18
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lsd2;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_19
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lnb9;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1a
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lsd2;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1b
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lu73;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1c
+    iget-object v0, p0, Litd;->b:Lr5;
+
+    const-class v1, Lyya;
+
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

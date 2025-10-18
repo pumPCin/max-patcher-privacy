@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo1;
+.implements Lt81;
 
 
 # instance fields

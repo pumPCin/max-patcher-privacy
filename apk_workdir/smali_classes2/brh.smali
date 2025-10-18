@@ -1,198 +1,114 @@
 .class public final Lbrh;
-.super Ljava/lang/Object;
+.super Lql0;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final c:Lc8d;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Llne;
+.field public final b:Larh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llne;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lbrh;->a:I
+    new-instance v0, Lc8d;
 
-    iput-object p1, p0, Lbrh;->b:Llne;
+    const-string v1, "\\p{Graph}+?"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lc8d;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lbrh;->c:Lc8d;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lbrh;->a:I
+    iput-object p2, p0, Lbrh;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance p2, Larh;
 
-    iget-object v0, p0, Lbrh;->b:Llne;
+    invoke-direct {p2, p1}, Larh;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Llne;->getSocketLock()Ljava/lang/Object;
+    iput-object p2, p0, Lbrh;->b:Larh;
+
+    return-void
+.end method
+
+.method public static final b(Ljava/lang/String;)Z
+    .locals 1
+
+    sget-object v0, Larh;->j:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    iget-object v1, p0, Lbrh;->b:Llne;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {v1}, Llne;->getSignalingLogger()Lvme;
-
-    move-result-object v2
-
-    const-string v3, "transport.DISCONNECT"
-
-    invoke-virtual {v2, v3}, Lvme;->a(Ljava/lang/String;)V
-
-    const-string v2, "dispose"
-
-    const/16 v3, 0x3e9
-
-    invoke-virtual {v1, v3, v2}, Llne;->safelyCloseSocketWithCodeAndReason(ILjava/lang/String;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-
-    :pswitch_0
-    invoke-static {}, Landroid/os/Process;->myTid()I
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
 
-    invoke-static {v0}, Landroid/os/Process;->getThreadPriority(I)I
+    if-nez v0, :cond_1
+
+    sget-object v0, Larh;->k:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
 
-    const/16 v1, 0xa
+    if-nez v0, :cond_1
 
-    :try_start_1
-    invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
+    sget-object v0, Lbrh;->c:Lc8d;
 
-    iget-object v1, p0, Lbrh;->b:Llne;
+    invoke-virtual {v0, p0}, Lc8d;->a(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v1}, Llne;->getSocketLock()Ljava/lang/Object;
+    move-result p0
 
-    move-result-object v1
-
-    iget-object v2, p0, Lbrh;->b:Llne;
-
-    monitor-enter v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    new-instance v3, Lzrh;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v2, v4}, Lzrh;-><init>(Llne;I)V
-
-    invoke-virtual {v2, v3}, Llne;->safelyDoIfSocketExists(Lqh6;)V
-
-    invoke-virtual {v2}, Llne;->getSignalingLogger()Lvme;
-
-    move-result-object v3
-
-    invoke-static {v2}, Llne;->access$getEndpoint$p(Llne;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, v3, Lvme;->c:Lzuc;
-
-    invoke-interface {v5}, Lzuc;->shouldHideSensitiveInformation()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-static {v4}, Lbzi;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_0
-    iget-object v5, v3, Lvme;->b:Lyuc;
-
-    iget-object v3, v3, Lvme;->a:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "Connect to "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v5, v3, v4}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v2}, Llne;->access$getEndpoint$p(Llne;)Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Lswe;
-
-    const/16 v5, 0x1b
-
-    invoke-direct {v4, v5, v2}, Lswe;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v3, v4}, Llne;->safelyCreateNewSocket(Ljava/lang/String;Lkne;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    return-void
-
-    :catchall_1
-    move-exception v1
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
-    :catchall_2
-    move-exception v2
+    :cond_0
+    const/4 p0, 0x0
 
-    :try_start_4
-    monitor-exit v1
+    return p0
 
-    throw v2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
+    :cond_1
     :goto_0
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+    const/4 p0, 0x1
 
-    throw v1
+    return p0
+.end method
 
-    nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+# virtual methods
+.method public final a()Lwpe;
+    .locals 3
+
+    new-instance v0, Lukh;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, p0}, Lukh;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Ltka;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Ltka;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
 .end method

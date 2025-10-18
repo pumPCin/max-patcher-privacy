@@ -1,97 +1,104 @@
 .class public final Ljx3;
-.super Lc5c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lix3;
+
+.field public final c:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lix3;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljx3;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Ljx3;->b:Lix3;
+
+    iput-object p3, p0, Ljx3;->c:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final A(Lb18;)V
-    .locals 5
+.method public final a()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Lhu3;
+    sget-object v0, Lix3;->b:Lix3;
 
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+    iget-object v1, p0, Ljx3;->a:Ljava/lang/String;
 
-    check-cast v0, Ltqa;
+    iget-object v2, p0, Ljx3;->b:Lix3;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq v2, v0, :cond_0
 
-    iget-object v1, p1, Lhu3;->Z:Lm2c;
+    sget-object v0, Lix3;->a:Lix3;
 
-    sget-object v2, Lm2c;->c:Lm2c;
-
-    if-ne v1, v2, :cond_1
-
-    const/16 v1, 0x40
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    const/16 v1, 0x50
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    iget v2, v0, Ltqa;->L0:I
-
-    if-eq v2, v1, :cond_0
-
-    iput v1, v0, Ltqa;->L0:I
+    if-ne v2, v0, :cond_1
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    iget-object v0, p0, Ljx3;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Li79;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, " "
+
+    invoke-static {v1, v2, v0}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_1
-    iget-wide v1, p1, Lhu3;->a:J
+    return-object v1
+.end method
 
-    iget-object v3, p1, Lhu3;->Y:Ljava/lang/CharSequence;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v4, p1, Lhu3;->o:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Ltqa;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    const-string v1, "{firstName=\'"
 
-    iget-object v1, p1, Lhu3;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ltqa;->setTitle(Ljava/lang/CharSequence;)V
+    iget-object v1, p0, Ljx3;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Lhu3;->c:Loqf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v1, "\', type="
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object v1, p0, Ljx3;->b:Lix3;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ltqa;->setSubtitle(Ljava/lang/CharSequence;)V
+    const-string v1, "\', lastName="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    iget-object v2, p0, Ljx3;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

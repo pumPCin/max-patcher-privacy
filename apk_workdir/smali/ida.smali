@@ -1,39 +1,25 @@
-.class public final Lida;
+.class public abstract Lida;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/ComponentName;
-
-.field public b:Z
-
-.field public c:Landroid/support/v4/app/INotificationSideChannel;
-
-.field public final d:Ljava/util/ArrayDeque;
-
-.field public e:I
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/ComponentName;)V
-    .locals 2
+.method public static a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/app/Notification$MessagingStyle$Message;
 
-    const/4 v0, 0x0
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)V
 
-    iput-boolean v0, p0, Lida;->b:Z
+    return-object v0
+.end method
 
-    new-instance v1, Ljava/util/ArrayDeque;
+.method public static b(Landroid/app/Notification$MessagingStyle$Message;Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
+    .locals 0
 
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$MessagingStyle$Message;->setData(Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
 
-    iput-object v1, p0, Lida;->d:Ljava/util/ArrayDeque;
+    move-result-object p0
 
-    iput v0, p0, Lida;->e:I
-
-    iput-object p1, p0, Lida;->a:Landroid/content/ComponentName;
-
-    return-void
+    return-object p0
 .end method

@@ -16,7 +16,7 @@
         "",
         "<init>",
         "()V",
-        "Lzag;",
+        "Lccg;",
         "release",
         "",
         "oesTexName",
@@ -28,12 +28,12 @@
         "",
         "tag",
         "Ljava/lang/String;",
-        "Lpsh;",
+        "Lqth;",
         "program",
-        "Lpsh;",
-        "Lyrh;",
+        "Lqth;",
+        "Lzsh;",
         "frame",
-        "Lyrh;",
+        "Lzsh;",
         "gl-effects_release"
     }
     k = 0x1
@@ -47,9 +47,9 @@
 
 
 # instance fields
-.field private final frame:Lyrh;
+.field private final frame:Lzsh;
 
-.field private final program:Lpsh;
+.field private final program:Lqth;
 
 .field private final tag:Ljava/lang/String;
 
@@ -68,38 +68,38 @@
 
     iput-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->tag:Ljava/lang/String;
 
-    new-instance v1, Lpsh;
+    new-instance v1, Lqth;
 
     const-string v2, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n   gl_FragColor = texture2D(sTexture, vTextureCoord);\n}"
 
-    invoke-direct {v1, v2}, Lgsh;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lhth;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iput-object v1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    new-instance v2, Lyrh;
+    new-instance v2, Lzsh;
 
-    invoke-virtual {v1}, Lgsh;->getVertexCoordLoc()I
+    invoke-virtual {v1}, Lhth;->getVertexCoordLoc()I
 
     move-result v3
 
-    invoke-virtual {v1}, Lgsh;->getTextureCoordLoc()I
+    invoke-virtual {v1}, Lhth;->getTextureCoordLoc()I
 
     move-result v1
 
-    invoke-direct {v2, v3, v1}, Lyrh;-><init>(II)V
+    invoke-direct {v2, v3, v1}, Lzsh;-><init>(II)V
 
-    iput-object v2, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lyrh;
+    iput-object v2, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lzsh;
 
-    sget-object v1, Lndi;->a:Lkwa;
+    sget-object v1, Ltei;->a:Lmxa;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lf88;->o:Lf88;
+    sget-object v2, Lc98;->o:Lc98;
 
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
 
     move-result v3
 
@@ -109,7 +109,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v0, v3, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
@@ -149,17 +149,17 @@
 
     const-string v1, "release"
 
-    invoke-static {v0, v1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lyrh;
+    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lzsh;
 
-    iget-object v0, v0, Lyrh;->a:Lesh;
+    iget-object v0, v0, Lzsh;->a:Lfth;
 
-    invoke-interface {v0}, Lesh;->a()V
+    invoke-interface {v0}, Lfth;->a()V
 
-    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {v0}, Lgsh;->release()V
+    invoke-virtual {v0}, Lhth;->release()V
 
     return-void
 .end method
@@ -167,31 +167,31 @@
 .method public final render(I[F[F)V
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object v0, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {v0, p1}, Lgsh;->setTextureId(I)V
+    invoke-virtual {v0, p1}, Lhth;->setTextureId(I)V
 
-    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {p1, p2}, Lgsh;->setTexMat([F)V
+    invoke-virtual {p1, p2}, Lhth;->setTexMat([F)V
 
-    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {p1, p3}, Lgsh;->setMVPMat([F)V
+    invoke-virtual {p1, p3}, Lhth;->setMVPMat([F)V
 
-    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {p1}, Lgsh;->use()V
+    invoke-virtual {p1}, Lhth;->use()V
 
-    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lyrh;
+    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->frame:Lzsh;
 
-    iget-object p1, p1, Lyrh;->a:Lesh;
+    iget-object p1, p1, Lzsh;->a:Lfth;
 
-    invoke-interface {p1}, Lesh;->b()V
+    invoke-interface {p1}, Lfth;->b()V
 
-    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lpsh;
+    iget-object p1, p0, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->program:Lqth;
 
-    invoke-virtual {p1}, Lgsh;->unUse()V
+    invoke-virtual {p1}, Lhth;->unUse()V
 
     return-void
 .end method

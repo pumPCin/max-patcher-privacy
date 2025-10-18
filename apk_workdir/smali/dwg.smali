@@ -1,120 +1,141 @@
 .class public final Ldwg;
-.super Ljava/lang/Object;
+.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 .source "SourceFile"
-
-# interfaces
-.implements Lyv0;
 
 
 # instance fields
-.field public final a:I
+.field public final A0:[I
 
-.field public final b:I
+.field public B0:Lclg;
 
-.field public final c:I
-
-.field public final o:F
+.field public C0:F
 
 
 # direct methods
-.method public constructor <init>(FIII)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
 
-    iput p2, p0, Ldwg;->a:I
+    const/4 p1, 0x2
 
-    iput p3, p0, Ldwg;->b:I
+    new-array p1, p1, [I
 
-    iput p4, p0, Ldwg;->c:I
-
-    iput p1, p0, Ldwg;->o:F
+    iput-object p1, p0, Ldwg;->A0:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final j(Lclg;F)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ldwg;->B0:Lclg;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Lclg;->equals(Ljava/lang/Object;)Z
 
-    return v0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Ldwg;->C0:F
+
+    cmpg-float v0, p2, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Ldwg;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    :goto_0
+    iput-object p1, p0, Ldwg;->B0:Lclg;
 
-    if-eqz v1, :cond_1
+    iput p2, p0, Ldwg;->C0:F
 
-    check-cast p1, Ldwg;
+    if-eqz v0, :cond_1
 
-    iget v1, p0, Ldwg;->a:I
+    iget-object p2, p1, Lclg;->b:Landroid/net/Uri;
 
-    iget v3, p1, Ldwg;->a:I
+    invoke-static {p2}, Lab7;->a(Landroid/net/Uri;)Lab7;
 
-    if-ne v1, v3, :cond_1
+    move-result-object p2
 
-    iget v1, p0, Ldwg;->b:I
+    iget-object p1, p1, Lclg;->h:Landroid/net/Uri;
 
-    iget v3, p1, Ldwg;->b:I
+    invoke-static {p1}, Lab7;->a(Landroid/net/Uri;)Lab7;
 
-    if-ne v1, v3, :cond_1
+    move-result-object p1
 
-    iget v1, p0, Ldwg;->c:I
-
-    iget v3, p1, Ldwg;->c:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Ldwg;->o:F
-
-    iget p1, p1, Ldwg;->o:F
-
-    cmpl-float p1, v1, p1
-
-    if-nez p1, :cond_1
-
-    return v0
+    invoke-virtual {p0, p2, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lab7;Lab7;)V
 
     :cond_1
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final onMeasure(II)V
+    .locals 4
 
-    const/16 v0, 0xd9
+    iget-object v0, p0, Ldwg;->B0:Lclg;
 
-    iget v1, p0, Ldwg;->a:I
+    if-eqz v0, :cond_1
 
-    add-int/2addr v0, v1
+    iget v1, v0, Lclg;->d:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v0, v0, Lclg;->c:I
 
-    iget v1, p0, Ldwg;->b:I
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    add-int/2addr v0, v1
+    move-result v2
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/high16 v3, 0x40000000    # 2.0f
 
-    iget v1, p0, Ldwg;->c:I
+    if-eq v2, v3, :cond_1
 
-    add-int/2addr v0, v1
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result p1
 
-    iget v1, p0, Ldwg;->o:F
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    move-result p2
 
-    move-result v1
+    iget v2, p0, Ldwg;->C0:F
 
-    add-int/2addr v1, v0
+    const/high16 v3, 0x42b40000    # 90.0f
 
-    return v1
+    cmpg-float v2, v2, v3
+
+    iget-object v3, p0, Ldwg;->A0:[I
+
+    if-nez v2, :cond_0
+
+    invoke-static {p2, p1, v0, v1, v3}, Lidi;->a(IIII[I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1, p2, v0, v1, v3}, Lidi;->a(IIII[I)V
+
+    :goto_0
+    const/4 p1, 0x0
+
+    aget p1, v3, p1
+
+    const/4 p2, 0x1
+
+    aget p2, v3, p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Lq15;->onMeasure(II)V
+
+    return-void
 .end method

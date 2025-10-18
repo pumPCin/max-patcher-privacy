@@ -3,276 +3,272 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lcq5;
+
+.field public static final b:[Lcq5;
+
+
 # direct methods
-.method public static final a([Ljava/lang/Object;IILc3;)Ljava/lang/String;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lcq5;
 
-    mul-int/lit8 v1, p2, 0x3
+    const-string v1, "moduleinstall"
 
-    add-int/lit8 v1, v1, 0x2
+    const-wide/16 v2, 0x7
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, v1, v2, v3}, Lcq5;-><init>(Ljava/lang/String;J)V
 
-    const-string v1, "["
+    sput-object v0, Lkci;->a:Lcq5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    filled-new-array {v0}, [Lcq5;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-ge v1, p2, :cond_2
+    sput-object v0, Lkci;->b:[Lcq5;
 
-    if-lez v1, :cond_0
-
-    const-string v2, ", "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    add-int v2, p1, v1
-
-    aget-object v2, p0, v2
-
-    if-ne v2, p3, :cond_1
-
-    const-string v2, "(this Collection)"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    const-string p0, "]"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final f(Landroid/view/View;)Ljava/lang/String;
-    .locals 2
+.method public static a(Lltg;)Lusg;
+    .locals 5
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    iget-object v0, p0, Lltg;->b:Ljava/lang/String;
 
-    move-result-object v0
+    new-instance v1, Lf2;
 
-    invoke-virtual {p0}, Landroid/view/View;->getId()I
+    const/4 v2, 0x0
 
-    move-result v1
+    sget-object v3, Llhc;->v0:Lzd5;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+    invoke-direct {v1, v2, v3}, Lf2;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    invoke-virtual {v1}, Lf2;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Llhc;
+
+    iget-object v3, v3, Llhc;->a:Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    invoke-static {v3, v0, v4}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
+    :cond_1
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    check-cast v2, Llhc;
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Llhc;->r0:Llhc;
+
+    :cond_2
+    iget v1, p0, Lltg;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    iget p0, p0, Lltg;->d:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
+
+    move-result-object p0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    sparse-switch v1, :sswitch_data_0
 
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :sswitch_0
+    const-string v1, "2160"
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v0, Lmb0;->g:Lmb0;
+
+    goto :goto_2
+
+    :sswitch_1
+    const-string v1, "1080"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    sget-object v0, Lmb0;->f:Lmb0;
+
+    goto :goto_2
+
+    :sswitch_2
+    const-string v1, "720"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    sget-object v0, Lmb0;->e:Lmb0;
+
+    goto :goto_2
+
+    :sswitch_3
+    const-string v1, "480"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
 
     :goto_1
-    check-cast v0, Ljava/lang/String;
+    sget-object v0, Lmb0;->d:Lmb0;
 
-    return-object v0
+    goto :goto_2
+
+    :cond_6
+    sget-object v0, Lmb0;->d:Lmb0;
+
+    :goto_2
+    new-instance v1, Lusg;
+
+    invoke-direct {v1, p0, v2, v0}, Lusg;-><init>(Landroid/util/Range;Llhc;Lmb0;)V
+
+    return-object v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0xca2c -> :sswitch_3
+        0xd4b5 -> :sswitch_2
+        0x170157 -> :sswitch_1
+        0x177939 -> :sswitch_0
+    .end sparse-switch
 .end method
 
-.method public static final m(Lgi6;Landroid/view/View;)V
+.method public static final b(Landroid/app/Activity;)V
     .locals 2
 
-    sget v0, Lmoc;->oneme_theme_attach_listener:I
+    if-nez p0, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroid/view/View$OnAttachStateChangeListener;
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    check-cast v0, Landroid/view/View$OnAttachStateChangeListener;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     if-eqz v0, :cond_1
 
-    invoke-static {p1}, Lkci;->f(Landroid/view/View;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+
+    :try_start_0
+    const-string v1, "input_method"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
 
-    const-string v0, "try to observe onThemeChanged more than once for "
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p0
-
-    const-string p1, "ViewThemeUtils"
-
-    invoke-static {p1, p0}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
+    :catchall_0
     :cond_1
-    new-instance v0, Li0h;
-
-    invoke-direct {v0, p0, p1}, Li0h;-><init>(Lgi6;Landroid/view/View;)V
-
-    sget p0, Lmoc;->oneme_theme_attach_listener:I
-
-    invoke-virtual {p1, p0, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {v0, p1}, Li0h;->onViewAttachedToWindow(Landroid/view/View;)V
-
-    :cond_2
-    invoke-virtual {p1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
+    :goto_0
     return-void
 .end method
 
-.method public static final o(II[Ljava/lang/Object;)V
-    .locals 1
+.method public static final c(Landroid/view/View;)V
+    .locals 2
 
-    :goto_0
-    if-ge p0, p1, :cond_0
-
-    const/4 v0, 0x0
-
-    aput-object v0, p2, p0
-
-    add-int/lit8 p0, p0, 0x1
+    if-nez p0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
+
+    :try_start_0
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :goto_0
     return-void
-.end method
-
-
-# virtual methods
-.method public b()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d(Z)V
-.end method
-
-.method public abstract e()I
-.end method
-
-.method public abstract g()Landroid/content/Context;
-.end method
-
-.method public h()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract i()V
-.end method
-
-.method public j()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract k(ILandroid/view/KeyEvent;)Z
-.end method
-
-.method public l(Landroid/view/KeyEvent;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public n()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract p(Z)V
-.end method
-
-.method public abstract q(Z)V
-.end method
-
-.method public abstract r(Ljava/lang/CharSequence;)V
-.end method
-
-.method public s(Lo0f;)Lo7;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
 .end method

@@ -1,187 +1,183 @@
-.class public final Luaf;
+.class public abstract Luaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lby5;
 
+# static fields
+.field public static final a:[Ljava/lang/String;
 
-# instance fields
-.field public final a:Lby5;
-
-.field public final b:Lms2;
+.field public static final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lby5;Lms2;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x5d
 
-    iput-object p1, p0, Luaf;->a:Lby5;
+    new-array v1, v0, [Ljava/lang/String;
 
-    iput-object p2, p0, Luaf;->b:Lms2;
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    move v3, v2
 
+    :goto_0
+    const/16 v4, 0x20
 
-# virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+    if-ge v3, v4, :cond_0
 
-    iget-object v0, p0, Luaf;->a:Lby5;
+    shr-int/lit8 v4, v3, 0xc
 
-    invoke-interface {v0, p1, p2}, Lby5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v4}, Luaf;->a(I)C
 
-    move-result-object p1
+    move-result v4
 
-    return-object p1
-.end method
+    shr-int/lit8 v5, v3, 0x8
 
-.method public final b(Lk14;)Ljava/lang/Object;
-    .locals 7
+    invoke-static {v5}, Luaf;->a(I)C
 
-    instance-of v0, p1, Ltaf;
+    move-result v5
 
-    if-eqz v0, :cond_0
+    shr-int/lit8 v6, v3, 0x4
 
-    move-object v0, p1
+    invoke-static {v6}, Luaf;->a(I)C
 
-    check-cast v0, Ltaf;
+    move-result v6
 
-    iget v1, v0, Ltaf;->r0:I
+    invoke-static {v3}, Luaf;->a(I)C
 
-    const/high16 v2, -0x80000000
+    move-result v7
 
-    and-int v3, v1, v2
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_0
+    const-string v9, "\\u"
 
-    sub-int/2addr v1, v2
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput v1, v0, Ltaf;->r0:I
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ltaf;
+    const-string v3, "\\\""
 
-    invoke-direct {v0, p0, p1}, Ltaf;-><init>(Luaf;Lk14;)V
+    const/16 v5, 0x22
 
-    :goto_0
-    iget-object p1, v0, Ltaf;->Y:Ljava/lang/Object;
+    aput-object v3, v1, v5
 
-    iget v1, v0, Ltaf;->r0:I
+    const-string v3, "\\\\"
 
-    sget-object v2, Lzag;->a:Lzag;
+    const/16 v6, 0x5c
 
-    const/4 v3, 0x2
+    aput-object v3, v1, v6
 
-    const/4 v4, 0x1
+    const-string v3, "\\t"
 
-    sget-object v5, Lc54;->a:Lc54;
+    const/16 v7, 0x9
 
-    if-eqz v1, :cond_3
+    aput-object v3, v1, v7
 
-    if-eq v1, v4, :cond_2
+    const-string v3, "\\b"
 
-    if-ne v1, v3, :cond_1
+    const/16 v8, 0x8
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    aput-object v3, v1, v8
 
-    return-object v2
+    const-string v3, "\\n"
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/16 v9, 0xa
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    aput-object v3, v1, v9
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v3, "\\r"
 
-    throw p1
+    const/16 v10, 0xd
 
-    :cond_2
-    iget-object v1, v0, Ltaf;->X:Lpjd;
+    aput-object v3, v1, v10
 
-    iget-object v4, v0, Ltaf;->o:Luaf;
+    const-string v3, "\\f"
 
-    :try_start_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/16 v11, 0xc
+
+    aput-object v3, v1, v11
+
+    sput-object v1, Luaf;->a:[Ljava/lang/String;
+
+    new-array v0, v0, [B
+
+    :goto_1
+    if-ge v2, v4, :cond_1
+
+    const/4 v1, 0x1
+
+    aput-byte v1, v0, v2
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    aput-byte v5, v0, v5
 
-    goto :goto_3
+    aput-byte v6, v0, v6
 
-    :cond_3
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/16 v1, 0x74
 
-    new-instance v1, Lpjd;
+    aput-byte v1, v0, v7
 
-    iget-object p1, p0, Luaf;->a:Lby5;
+    const/16 v1, 0x62
 
-    iget-object v6, v0, Lk14;->b:Lt44;
+    aput-byte v1, v0, v8
 
-    invoke-direct {v1, p1, v6}, Lpjd;-><init>(Lby5;Lt44;)V
+    const/16 v1, 0x6e
 
-    :try_start_1
-    iget-object p1, p0, Luaf;->b:Lms2;
+    aput-byte v1, v0, v9
 
-    iput-object p0, v0, Ltaf;->o:Luaf;
+    const/16 v1, 0x72
 
-    iput-object v1, v0, Ltaf;->X:Lpjd;
+    aput-byte v1, v0, v10
 
-    iput v4, v0, Ltaf;->r0:I
+    const/16 v1, 0x66
 
-    invoke-virtual {p1, v1, v0}, Lms2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    aput-byte v1, v0, v11
 
-    if-ne v2, v5, :cond_4
+    sput-object v0, Luaf;->b:[B
 
-    goto :goto_2
+    return-void
+.end method
 
-    :cond_4
-    move-object v4, p0
+.method public static final a(I)C
+    .locals 1
 
-    :goto_1
-    invoke-virtual {v1}, Lk14;->o()V
+    and-int/lit8 p0, p0, 0xf
 
-    iget-object p1, v4, Luaf;->a:Lby5;
+    const/16 v0, 0xa
 
-    instance-of v1, p1, Luaf;
+    if-ge p0, v0, :cond_0
 
-    if-eqz v1, :cond_5
+    add-int/lit8 p0, p0, 0x30
 
-    check-cast p1, Luaf;
+    :goto_0
+    int-to-char p0, p0
 
-    const/4 v1, 0x0
+    return p0
 
-    iput-object v1, v0, Ltaf;->o:Luaf;
+    :cond_0
+    add-int/lit8 p0, p0, 0x57
 
-    iput-object v1, v0, Ltaf;->X:Lpjd;
-
-    iput v3, v0, Ltaf;->r0:I
-
-    invoke-virtual {p1, v0}, Luaf;->b(Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_5
-
-    :goto_2
-    return-object v5
-
-    :cond_5
-    return-object v2
-
-    :goto_3
-    invoke-virtual {v1}, Lk14;->o()V
-
-    throw p1
+    goto :goto_0
 .end method

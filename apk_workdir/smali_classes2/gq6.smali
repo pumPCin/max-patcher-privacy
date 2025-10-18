@@ -4,44 +4,24 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:J
+.field public final b:Ljava/lang/String;
 
-.field public final c:J
-
-.field public final d:F
-
-.field public final e:Z
+.field public final c:Ltc0;
 
 
 # direct methods
-.method public constructor <init>(IJJFI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ltc0;)V
     .locals 0
 
-    and-int/lit8 p7, p7, 0x20
-
-    if-eqz p7, :cond_0
-
-    const/4 p7, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p7, 0x0
-
-    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgq6;->a:I
+    iput-object p1, p0, Lgq6;->a:Ljava/lang/String;
 
-    iput-wide p2, p0, Lgq6;->b:J
+    iput-object p2, p0, Lgq6;->b:Ljava/lang/String;
 
-    iput-wide p4, p0, Lgq6;->c:J
-
-    iput p6, p0, Lgq6;->d:F
-
-    iput-boolean p7, p0, Lgq6;->e:Z
+    iput-object p3, p0, Lgq6;->c:Ltc0;
 
     return-void
 .end method
@@ -51,99 +31,72 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lgq6;
+    instance-of v1, p1, Lgq6;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lgq6;
 
-    iget v0, p0, Lgq6;->a:I
+    iget-object v1, p0, Lgq6;->a:Ljava/lang/String;
 
-    iget v1, p1, Lgq6;->a:I
+    iget-object v3, p1, Lgq6;->a:Ljava/lang/String;
 
-    if-eq v0, v1, :cond_2
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget-wide v0, p0, Lgq6;->b:J
+    iget-object v1, p0, Lgq6;->b:Ljava/lang/String;
 
-    iget-wide v2, p1, Lgq6;->b:J
+    iget-object v3, p1, Lgq6;->b:Ljava/lang/String;
 
-    cmp-long v0, v0, v2
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_3
+    move-result v1
 
-    goto :goto_0
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    iget-wide v0, p0, Lgq6;->c:J
+    iget-object v1, p0, Lgq6;->c:Ltc0;
 
-    iget-wide v2, p1, Lgq6;->c:J
+    iget-object p1, p1, Lgq6;->c:Ltc0;
 
-    cmp-long v0, v0, v2
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_4
+    move-result p1
 
-    goto :goto_0
+    if-nez p1, :cond_4
+
+    return v2
 
     :cond_4
-    iget v0, p0, Lgq6;->d:F
-
-    iget v1, p1, Lgq6;->d:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    const v0, 0x3f19999a    # 0.6f
-
-    invoke-static {v0, v0}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Lgq6;->e:Z
-
-    iget-boolean p1, p1, Lgq6;->e:Z
-
-    if-eq v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 3
 
-    iget v0, p0, Lgq6;->a:I
+    iget-object v0, p0, Lgq6;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -151,33 +104,15 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lgq6;->b:J
+    iget-object v2, p0, Lgq6;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lgq6;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
 
     move-result v0
 
-    iget v2, p0, Lgq6;->d:F
+    iget-object v1, p0, Lgq6;->c:Ltc0;
 
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    const v2, 0x3f19999a    # 0.6f
-
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lgq6;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ltc0;->hashCode()I
 
     move-result v1
 
@@ -189,37 +124,23 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, "AnimationConfig(repeatCount="
+    const-string v0, ", avatarUrl="
 
-    const-string v1, ", startDelay="
+    const-string v1, ", abbreviationModel="
 
-    iget v2, p0, Lgq6;->a:I
+    const-string v2, "WebAppContactData(displayName="
 
-    iget-wide v3, p0, Lgq6;->b:J
+    iget-object v3, p0, Lgq6;->a:Ljava/lang/String;
 
-    invoke-static {v2, v3, v4, v0, v1}, Ld15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lgq6;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", duration="
+    iget-object v1, p0, Lgq6;->c:Ltc0;
 
-    const-string v2, ", tiltDegrees="
-
-    iget-wide v3, p0, Lgq6;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget v1, p0, Lgq6;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", shineWidthFraction=0.6, startOnAttach="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lgq6;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

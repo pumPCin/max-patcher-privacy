@@ -1,5 +1,5 @@
 .class public final Ln9;
-.super Llj0;
+.super Luj0;
 .source "SourceFile"
 
 
@@ -11,7 +11,7 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0}, Llj0;-><init>()V
+    invoke-direct {p0}, Luj0;-><init>()V
 
     iput-wide p1, p0, Ln9;->b:J
 

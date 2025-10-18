@@ -1,12 +1,12 @@
 .class public Lru/ok/messages/stickers/AboveBottomSheetBehavior;
-.super Lw34;
+.super Ll44;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lw34;"
+        "Ll44;"
     }
 .end annotation
 
@@ -43,9 +43,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lz34;
+    check-cast p1, Lo44;
 
-    iget-object p1, p1, Lz34;->a:Lw34;
+    iget-object p1, p1, Lo44;->a:Ll44;
 
     instance-of p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
@@ -81,7 +81,7 @@
     :cond_1
     invoke-virtual/range {p3 .. p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lft4;->a()Lft4;
+    invoke-static {}, Lwt4;->a()Lwt4;
 
     move-result-object v3
 
@@ -188,7 +188,7 @@
     goto :goto_2
 
     :cond_6
-    iget v1, v3, Lft4;->n:I
+    iget v1, v3, Lwt4;->n:I
 
     int-to-float v1, v1
 

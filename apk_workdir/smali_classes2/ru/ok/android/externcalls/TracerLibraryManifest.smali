@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltzf;
+.implements Lx0g;
 
 
 # direct methods
@@ -60,7 +60,7 @@
 .method public versionName()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "125.1.0.70"
+    const-string v0, "125.1.0.70.6"
 
     return-object v0
 .end method

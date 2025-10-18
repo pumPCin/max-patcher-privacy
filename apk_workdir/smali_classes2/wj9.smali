@@ -2,21 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxj9;
-
 
 # instance fields
-.field public final a:J
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lla2;Lca9;Z)V
     .locals 0
 
+    invoke-virtual {p2, p1}, Lca9;->c(Lla2;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    iget-object p2, p2, Lca9;->a:Lpb9;
+
+    iget-object p2, p2, Lpb9;->M0:Ljava/util/List;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
+
+    move-result p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lwj9;->a:J
+    iput p1, p0, Lwj9;->a:I
+
+    iput p2, p0, Lwj9;->b:I
+
+    iput-boolean p3, p0, Lwj9;->c:Z
 
     return-void
 .end method
@@ -24,62 +53,110 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lwj9;
+    instance-of v0, p1, Lwj9;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lwj9;
 
-    iget-wide v3, p0, Lwj9;->a:J
+    iget v0, p0, Lwj9;->a:I
 
-    iget-wide v5, p1, Lwj9;->a:J
+    iget v1, p1, Lwj9;->a:I
 
-    cmp-long p1, v3, v5
+    if-eq v0, v1, :cond_2
 
-    if-eqz p1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    return v0
+    iget v0, p0, Lwj9;->b:I
+
+    iget v1, p1, Lwj9;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lwj9;->c:Z
+
+    iget-boolean p1, p1, Lwj9;->c:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Lwj9;->a:J
+    iget v0, p0, Lwj9;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    return v0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lwj9;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lwj9;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "SetRepliedMessage(messageId="
+    const-string v0, ", messageElementsHash="
+
+    const-string v1, ", isChild="
+
+    const-string v2, "Key(textHash="
+
+    iget v3, p0, Lwj9;->a:I
+
+    iget v4, p0, Lwj9;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lwj9;->a:J
+    iget-boolean v2, p0, Lwj9;->c:Z
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -4,286 +4,125 @@
 
 
 # direct methods
-.method public static final a(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 3
+.method public static a(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;II)V
+    .locals 6
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    const/16 v3, 0x21
+
+    if-ge v2, v1, :cond_1
+
+    aget-object v4, v0, v2
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, p2, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, p3, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, v3, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {p0, p1, p2, p3, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    return-void
+.end method
+
+.method public static final b(Landroid/graphics/Bitmap;)Ljava/lang/String;
+    .locals 7
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    const-string v1, "@"
 
-    const/4 p0, 0x0
+    invoke-static {v0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_0
-    const-string v0, "file:"
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "http"
-
-    invoke-static {p0, v2, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "content"
-
-    invoke-static {p0, v2, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "android.resource"
-
-    invoke-static {p0, v2, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "data"
-
-    invoke-static {p0, v2, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "res:/"
-
-    invoke-static {p0, v2, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    goto :goto_0
+    move-result v2
 
-    :cond_1
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    move-result-object p0
+    move-result v3
 
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    if-eqz v3, :cond_0
 
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Lfl5;Z)Laq9;
-    .locals 9
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    move-object p1, v0
+    const-string v3, "|recycled"
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lh77;->b:Lex6;
+    const-string v3, ""
 
     :goto_0
-    new-instance v1, Lbcb;
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGenerationId()I
 
-    const/16 v2, 0xa
+    move-result p0
 
-    invoke-direct {v1, v2}, Lbcb;-><init>(I)V
+    const-string v4, "("
 
-    const/4 v3, 0x0
+    const-string v5, "x"
 
-    move-object v4, v0
+    const-string v6, "Bitmap"
 
-    move v5, v3
+    invoke-static {v1, v6, v0, v4, v5}, Laab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    :try_start_0
-    iget-object v6, v1, Lbcb;->a:[B
+    move-result-object v0
 
-    invoke-interface {p0, v3, v6, v2}, Lfl5;->i(I[BI)V
-    :try_end_0
-    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Lbcb;->J(I)V
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lbcb;->A()I
+    const-string v1, "|genId="
 
-    move-result v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v7, 0x494433
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eq v6, v7, :cond_1
+    const-string p0, ")"
 
-    goto :goto_3
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 v6, 0x3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Lbcb;->K(I)V
-
-    invoke-virtual {v1}, Lbcb;->w()I
-
-    move-result v6
-
-    add-int/lit8 v7, v6, 0xa
-
-    if-nez v4, :cond_2
-
-    new-array v4, v7, [B
-
-    iget-object v8, v1, Lbcb;->a:[B
-
-    invoke-static {v8, v3, v4, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-interface {p0, v2, v4, v6}, Lfl5;->i(I[BI)V
-
-    new-instance v6, Lh77;
-
-    invoke-direct {v6, p1}, Lh77;-><init>(Le77;)V
-
-    invoke-virtual {v6, v7, v4}, Lh77;->i(I[B)Laq9;
-
-    move-result-object v4
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p0, v6}, Lfl5;->q(I)V
-
-    :goto_2
-    add-int/2addr v5, v7
-
-    goto :goto_1
-
-    :catch_0
-    :goto_3
-    invoke-interface {p0}, Lfl5;->y()V
-
-    invoke-interface {p0, v5}, Lfl5;->q(I)V
-
-    if-eqz v4, :cond_4
-
-    iget-object p0, v4, Laq9;->a:[Lyp9;
-
-    array-length p0, p0
-
-    if-nez p0, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    return-object v4
-
-    :cond_4
-    :goto_4
-    return-object v0
-.end method
-
-.method public static c(Lbcb;)Lcz8;
-    .locals 10
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lbcb;->K(I)V
-
-    invoke-virtual {p0}, Lbcb;->A()I
-
-    move-result v0
-
-    iget v1, p0, Lbcb;->b:I
-
-    int-to-long v1, v1
-
-    int-to-long v3, v0
-
-    add-long/2addr v1, v3
-
-    div-int/lit8 v0, v0, 0x12
-
-    new-array v3, v0, [J
-
-    new-array v4, v0, [J
-
-    const/4 v5, 0x0
-
-    :goto_0
-    if-ge v5, v0, :cond_1
-
-    invoke-virtual {p0}, Lbcb;->r()J
-
-    move-result-wide v6
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v8, v6, v8
-
-    if-nez v8, :cond_0
-
-    invoke-static {v3, v5}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object v3
-
-    invoke-static {v4, v5}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object v4
-
-    goto :goto_1
-
-    :cond_0
-    aput-wide v6, v3, v5
-
-    invoke-virtual {p0}, Lbcb;->r()J
-
-    move-result-wide v6
-
-    aput-wide v6, v4, v5
-
-    const/4 v6, 0x2
-
-    invoke-virtual {p0, v6}, Lbcb;->K(I)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iget v0, p0, Lbcb;->b:I
-
-    int-to-long v5, v0
-
-    sub-long/2addr v1, v5
-
-    long-to-int v0, v1
-
-    invoke-virtual {p0, v0}, Lbcb;->K(I)V
-
-    new-instance p0, Lcz8;
-
-    const/16 v0, 0xf
-
-    invoke-direct {p0, v3, v0, v4}, Lcz8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object p0
 
     return-object p0
 .end method

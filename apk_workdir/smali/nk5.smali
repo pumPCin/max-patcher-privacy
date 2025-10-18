@@ -1,111 +1,170 @@
 .class public final Lnk5;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Luk5;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p2, p0, Lnk5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lnk5;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lnk5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Lnk5;
 
-    check-cast p1, Lnk5;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lnk5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lnk5;
-
-    iget-object v1, p0, Lnk5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
-
-    invoke-direct {v0, p2, v1}, Lnk5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
-
-    iput-object p1, v0, Lnk5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnk5;->X:Ljava/lang/Object;
-
-    check-cast p1, Lb4a;
-
-    instance-of v0, p1, Lhf4;
-
-    iget-object v1, p0, Lnk5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Ldd8;->c:Ldd8;
-
-    check-cast p1, Lhf4;
-
-    invoke-virtual {v0, p1}, Lqci;->t0(Lhf4;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    instance-of v0, p1, Lik5;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, La2b;
-
-    invoke-direct {v0, v1}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    check-cast p1, Lik5;
-
-    iget-object p1, p1, Lik5;->b:Ljqf;
-
-    invoke-virtual {v0, p1}, La2b;->g(Loqf;)V
-
-    invoke-virtual {v0}, La2b;->i()Lz1b;
-
     :cond_1
+    check-cast p1, Lnk5;
+
+    iget v0, p0, Lnk5;->a:I
+
+    iget p1, p1, Lnk5;->a:I
+
+    if-eq v0, p1, :cond_2
+
     :goto_0
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
+    return p1
 
-    sget-object p1, Lzag;->a:Lzag;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lnk5;->a:I
+
+    invoke-static {v0}, Ldy1;->v(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Failed(reason="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lnk5;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "FAILED_JOIN"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "REJECT_CALL"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "CALL_WAIT_ADMIN"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "TARGET_USER_NOT_IN_CHAT"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "REMOVE_FROM_WAITING_ROOM"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "REMOVE_FROM_CALL"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "CONNECTION_ERROR"
+
+    goto :goto_0
+
+    :pswitch_7
+    const-string v1, "FAILED"
+
+    goto :goto_0
+
+    :pswitch_8
+    const-string v1, "PRIVACY"
+
+    goto :goto_0
+
+    :pswitch_9
+    const-string v1, "BUSY"
+
+    goto :goto_0
+
+    :pswitch_a
+    const-string v1, "UNAVAILABLE"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

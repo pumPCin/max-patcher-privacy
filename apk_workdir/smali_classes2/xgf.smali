@@ -1,76 +1,53 @@
-.class public final synthetic Lxgf;
-.super Ljava/lang/Object;
+.class public final Lxgf;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Loeg;
 
-.field public final synthetic b:Lygf;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lohf;
+
+.field public o:Lohf;
+
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lygf;I)V
+.method public constructor <init>(Lohf;Ly14;)V
     .locals 0
 
-    iput p2, p0, Lxgf;->a:I
+    iput-object p1, p0, Lxgf;->Z:Lohf;
 
-    iput-object p1, p0, Lxgf;->b:Lygf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lxgf;->a:I
+    iput-object p1, p0, Lxgf;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lxgf;->q0:I
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
 
-    check-cast p1, Ljava/lang/Float;
+    iput p1, p0, Lxgf;->q0:I
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    iget-object p1, p0, Lxgf;->Z:Lohf;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lxgf;->b:Lygf;
-
-    invoke-virtual {v0, p1}, Lygf;->d(F)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lohf;->b(Lohf;Loeg;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lxgf;->b:Lygf;
-
-    invoke-virtual {v0, p1}, Lygf;->d(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

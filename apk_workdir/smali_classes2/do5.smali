@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
+.implements Lr6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lho5;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lho5;Ljava/util/List;I)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput p3, p0, Ldo5;->a:I
+    iput p1, p0, Ldo5;->a:I
 
-    iput-object p1, p0, Ldo5;->b:Lho5;
+    iput-wide p2, p0, Ldo5;->b:J
 
-    iput-object p2, p0, Ldo5;->c:Ljava/util/List;
+    iput-boolean p4, p0, Ldo5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,55 +31,55 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Ldo5;->a:I
 
-    const-string v1, "ho5"
+    iget-boolean v1, p0, Ldo5;->c:Z
 
-    iget-object v2, p0, Ldo5;->c:Ljava/util/List;
-
-    iget-object v3, p0, Ldo5;->b:Lho5;
-
-    check-cast p1, Ljava/lang/Throwable;
+    iget-wide v2, p0, Ldo5;->b:J
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    const-string v4, "onListUpdated: failed to store stickers %s"
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v3}, Lho5;->I()V
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "ap5"
+
+    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v3}, Lho5;->I()V
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "go5"
+
+    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
+
+    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 

@@ -1,104 +1,90 @@
 .class public final Lfi0;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic X:Lth0;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Lth0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfi0;->X:Lth0;
 
-    iput p1, p0, Lfi0;->a:I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lfi0;->b:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p1, p0, :cond_0
+    check-cast p1, Lq54;
 
-    goto :goto_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lfi0;
+    invoke-virtual {p0, p1, p2}, Lfi0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_1
-
-    :cond_1
     check-cast p1, Lfi0;
 
-    iget v0, p0, Lfi0;->a:I
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget v1, p1, Lfi0;->a:I
+    invoke-virtual {p1, p2}, Lfi0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_2
+    move-result-object p1
 
-    iget-object v0, p0, Lfi0;->b:Ljava/util/concurrent/ExecutorService;
-
-    iget-object p1, p1, Lfi0;->b:Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {v0, p1}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lfi0;->a:I
+    new-instance p1, Lfi0;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lfi0;->X:Lth0;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lfi0;-><init>(Lth0;Lkotlin/coroutines/Continuation;)V
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    return-object p1
+.end method
 
-    iget-object v2, p0, Lfi0;->b:Ljava/util/concurrent/ExecutorService;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v3, 0x0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+    iget-object p1, p0, Lfi0;->X:Lth0;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lth0;->c()Lji6;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    move-result-object p1
 
-    move-result v0
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

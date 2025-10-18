@@ -1,77 +1,129 @@
-.class public final Lqg4;
+.class public final synthetic Lqg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu28;
+.implements Lyj4;
+.implements Lhu1;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public final b:Lp50;
+.field public final synthetic b:I
 
-.field public final c:Lb92;
-
-.field public final synthetic d:Lrg4;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lrg4;Lp50;Lb92;J)V
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
+    iput-object p1, p0, Lqg4;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lqg4;->a:I
+
+    iput p3, p0, Lqg4;->b:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqg4;->d:Lrg4;
-
-    iput-object p2, p0, Lqg4;->b:Lp50;
-
-    iput-wide p4, p0, Lqg4;->a:J
-
-    iput-object p3, p0, Lqg4;->c:Lb92;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)V
+.method public a(Landroid/media/MediaCodecInfo;)I
     .locals 3
 
-    iget-wide v0, p0, Lqg4;->a:J
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
 
-    cmp-long v0, p1, v0
+    check-cast v0, Ljava/lang/String;
 
-    if-ltz v0, :cond_0
+    iget v1, p0, Lqg4;->a:I
 
-    const/4 v0, 0x1
+    iget v2, p0, Lqg4;->b:I
 
-    goto :goto_0
+    invoke-static {p1, v0, v1, v2}, Lgc5;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const p1, 0x7fffffff
+
+    return p1
 
     :cond_0
-    const/4 v0, 0x0
+    mul-int/2addr v1, v2
 
-    :goto_0
-    invoke-static {v0}, Lgfi;->b(Z)V
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    iget-wide v0, p0, Lqg4;->a:J
+    move-result v0
 
-    sub-long v0, p1, v0
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    long-to-int v0, v0
+    move-result p1
 
-    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
+    mul-int/2addr p1, v0
 
-    move-result v1
+    sub-int/2addr v1, p1
 
-    iget-object v2, p0, Lqg4;->b:Lp50;
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    iget v2, v2, Lp50;->d:I
+    move-result p1
 
-    mul-int/2addr v0, v2
+    return p1
+.end method
 
-    add-int/2addr v0, v1
+.method public invoke(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
 
-    iput-wide p1, p0, Lqg4;->a:J
+    check-cast v0, Lnd;
+
+    iget v1, p0, Lqg4;->b:I
+
+    check-cast p1, Lod;
+
+    iget v2, p0, Lqg4;->a:I
+
+    invoke-interface {p1, v0, v2, v1}, Lod;->M(Lnd;II)V
 
     return-void
+.end method
+
+.method public o(Lgu1;)Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lqg4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lnn4;
+
+    new-instance v1, Lba0;
+
+    iget v2, p0, Lqg4;->a:I
+
+    iget v3, p0, Lqg4;->b:I
+
+    invoke-direct {v1, v2, v3, p1}, Lba0;-><init>(IILgu1;)V
+
+    new-instance v2, Lqx1;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, v0, v3, v1}, Lqx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v1, Ljn4;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p1, v3}, Ljn4;-><init>(Lgu1;I)V
+
+    invoke-virtual {v0, v2, v1}, Lnn4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+
+    const-string p1, "DefaultSurfaceProcessor#snapshot"
+
+    return-object p1
 .end method

@@ -1,3 +1,8 @@
-.class public final Lxef;
-.super Ljava/lang/RuntimeException;
+.class public interface abstract Lxef;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract get()Ljava/lang/Object;
+.end method

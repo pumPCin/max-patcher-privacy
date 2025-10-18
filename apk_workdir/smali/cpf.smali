@@ -1,31 +1,33 @@
-.class public final Lcpf;
-.super Lqci;
+.class public abstract Lcpf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Z
+# static fields
+.field public static final a:Lq30;
+
+.field public static final b:Lju4;
 
 
 # direct methods
-.method public constructor <init>(Lbpf;Z)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/16 v0, 0x10
+    new-instance v0, Lq30;
 
-    invoke-direct {p0, v0, p1}, Lqci;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x4
 
-    iput-boolean p2, p0, Lcpf;->c:Z
+    invoke-direct {v0, v1}, Lq30;-><init>(I)V
+
+    sput-object v0, Lcpf;->a:Lq30;
+
+    new-instance v0, Lju4;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lju4;-><init>(I)V
+
+    sput-object v0, Lcpf;->b:Lju4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final j0()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcpf;->c:Z
-
-    return v0
 .end method

@@ -1,31 +1,17 @@
 .class public final Lq55;
-.super Ljava/lang/Object;
+.super Lp55;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/AutoCloseable;
-
-
-# instance fields
-.field public a:Landroid/media/metrics/EditingSession;
-
-.field public b:Z
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public a(Landroid/view/Window;)V
+    .locals 0
 
-    iget-object v0, p0, Lq55;->a:Landroid/media/metrics/EditingSession;
+    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    invoke-static {v0}, Ly4;->x(Landroid/media/metrics/EditingSession;)V
+    invoke-static {p1}, Lv4;->C(Landroid/view/WindowManager$LayoutParams;)V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lq55;->a:Landroid/media/metrics/EditingSession;
-
-    :cond_0
     return-void
 .end method

@@ -413,7 +413,7 @@
 
     if-lt v0, v3, :cond_4
 
-    invoke-static {}, Lv4;->o()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    invoke-static {}, Lv4;->n()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     move-result-object v4
 

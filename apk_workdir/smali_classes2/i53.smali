@@ -1,48 +1,193 @@
 .class public final Li53;
-.super Lk14;
+.super Ld2;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lj53;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lvq7;
 
 
 # direct methods
-.method public constructor <init>(Lj53;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lvq7;)V
+    .locals 1
 
-    iput-object p1, p0, Li53;->Y:Lj53;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Li53;->a:Lvq7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final B()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Li53;->o:Ljava/lang/Object;
+    iget-object v0, p0, Li53;->a:Lvq7;
 
-    iget p1, p0, Li53;->X:I
+    invoke-interface {v0}, Lvq7;->B()Ljava/lang/String;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    return-object v0
+.end method
 
-    iput p1, p0, Li53;->X:I
+.method public final R()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, p0, Li53;->Y:Lj53;
+    iget-object v0, p0, Li53;->a:Lvq7;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lvq7;->R()Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lj53;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    return-object p1
+.method public final W()Z
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->W()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final a0()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->a0()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    return-void
+.end method
+
+.method public final hasNext()Z
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->hasNext()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final name()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final peek()I
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->peek()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->q()V
+
+    return-void
+.end method
+
+.method public final s()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->s()V
+
+    return-void
+.end method
+
+.method public final t()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->t()V
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->u()V
+
+    return-void
+.end method
+
+.method public final w()J
+    .locals 2
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->w()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final y()V
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->y()V
+
+    return-void
+.end method
+
+.method public final z()I
+    .locals 1
+
+    iget-object v0, p0, Li53;->a:Lvq7;
+
+    invoke-interface {v0}, Lvq7;->z()I
+
+    move-result v0
+
+    return v0
 .end method

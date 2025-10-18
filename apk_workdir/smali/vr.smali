@@ -1,11 +1,11 @@
 .class public final Lvr;
-.super Lk14;
+.super Ly14;
 
 
 # instance fields
 .field public X:I
 
-.field public Y:Lby5;
+.field public Y:Lvy5;
 
 .field public final synthetic Z:Ls3;
 
@@ -18,7 +18,7 @@
 
     iput-object p1, p0, Lvr;->Z:Ls3;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method

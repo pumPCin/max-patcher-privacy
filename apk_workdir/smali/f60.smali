@@ -1,110 +1,156 @@
-.class public final Lf60;
+.class public final synthetic Lf60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvga;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lfb5;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lg60;
+.field public final synthetic b:Lh60;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lg60;Lfb5;)V
+.method public synthetic constructor <init>(Lh60;ZI)V
     .locals 0
 
+    iput p3, p0, Lf60;->a:I
+
+    iput-object p1, p0, Lf60;->b:Lh60;
+
+    iput-boolean p2, p0, Lf60;->c:Z
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf60;->b:Lg60;
-
-    iput-object p2, p0, Lf60;->a:Lfb5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    check-cast p1, Lru0;
+    iget v0, p0, Lf60;->a:I
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lf60;->b:Lg60;
+    iget-object v0, p0, Lf60;->b:Lh60;
 
-    iget-object v1, v0, Lg60;->l:Lfb5;
+    iget v1, v0, Lh60;->g:I
 
-    iget-object v2, p0, Lf60;->a:Lfb5;
+    invoke-static {v1}, Ldy1;->v(I)I
 
-    if-ne v1, v2, :cond_0
+    move-result v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x2
 
-    const-string v2, "Receive BufferProvider state change: "
+    if-eqz v1, :cond_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v3, 0x1
 
-    iget-object v2, v0, Lg60;->h:Lru0;
+    if-eq v1, v3, :cond_1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eq v1, v2, :cond_0
 
-    const-string v2, " to "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "AudioSource"
-
-    invoke-static {v2, v1}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lg60;->h:Lru0;
-
-    if-eq v1, p1, :cond_0
-
-    iput-object p1, v0, Lg60;->h:Lru0;
-
-    invoke-virtual {v0}, Lg60;->f()V
+    goto :goto_0
 
     :cond_0
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "AudioSource is released"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_1
+    iget-boolean v1, v0, Lh60;->r:Z
+
+    iget-boolean v3, p0, Lf60;->c:Z
+
+    if-ne v1, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iput-boolean v3, v0, Lh60;->r:Z
+
+    iget v1, v0, Lh60;->g:I
+
+    if-ne v1, v2, :cond_3
+
+    invoke-virtual {v0}, Lh60;->a()V
+
+    :cond_3
+    :goto_0
     return-void
-.end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
+    :pswitch_0
+    iget-object v0, p0, Lf60;->b:Lh60;
 
-    iget-object v0, p0, Lf60;->b:Lg60;
+    iget v1, v0, Lh60;->g:I
 
-    iget-object v1, v0, Lg60;->l:Lfb5;
+    invoke-static {v1}, Ldy1;->v(I)I
 
-    iget-object v2, p0, Lf60;->a:Lfb5;
+    move-result v1
 
-    if-ne v1, v2, :cond_0
+    const/4 v2, 0x2
 
-    iget-object v1, v0, Lg60;->j:Ljava/util/concurrent/Executor;
+    if-eqz v1, :cond_5
 
-    iget-object v0, v0, Lg60;->k:Lsfd;
+    if-eq v1, v2, :cond_4
 
-    if-eqz v1, :cond_0
+    goto :goto_1
 
-    if-eqz v0, :cond_0
+    :cond_4
+    new-instance v0, Ljava/lang/AssertionError;
 
-    new-instance v2, Lzd;
+    const-string v1, "AudioSource is released"
 
-    const/16 v3, 0x9
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v0, v3, p1}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    throw v0
 
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :cond_5
+    iget-object v1, v0, Lh60;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :cond_0
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lh60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {v0, v2}, Lh60;->d(I)V
+
+    iget-object v1, v0, Lh60;->a:La3e;
+
+    new-instance v2, Lf60;
+
+    const/4 v3, 0x1
+
+    iget-boolean v4, p0, Lf60;->c:Z
+
+    invoke-direct {v2, v0, v4, v3}, Lf60;-><init>(Lh60;ZI)V
+
+    invoke-virtual {v1, v2}, La3e;->execute(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Lh60;->f()V
+
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

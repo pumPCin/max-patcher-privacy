@@ -1,74 +1,66 @@
 .class public final Lqqf;
-.super Lhlf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpr8;
 
 
 # instance fields
-.field public final o:Z
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Llpf;)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const/16 v0, 0xb
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object p1, p0, Lqqf;->a:Ljava/lang/String;
 
-    iget-object p1, p2, Llpf;->a:Ljava/lang/String;
+    iput-object p2, p0, Lqqf;->b:Ljava/lang/String;
 
-    const/4 p2, 0x0
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    const-string v1, "auto"
-
-    const/4 v2, 0x6
-
-    invoke-static {p1, v1, p2, p2, v2}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
-
-    move-result p1
-
-    const/4 v1, -0x1
-
-    if-ne p1, v1, :cond_0
-
-    move p2, v0
-
-    :cond_0
-    xor-int/lit8 p1, p2, 0x1
-
-    iput-boolean p1, p0, Lqqf;->o:Z
+    iput-object p3, p0, Lqqf;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lqqf;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+    const-string v0, ", sampleMimeType: "
 
-    check-cast v0, Loq8;
+    const-string v1, ", language: "
 
-    check-cast v0, Llpf;
+    const-string v2, "TextFormat(id: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lqqf;->a:Ljava/lang/String;
 
-    const-string v2, "TextTrack(format: "
+    iget-object v4, p0, Lqqf;->b:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v0, ")"
+    const-string v1, ")"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lqqf;->c:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

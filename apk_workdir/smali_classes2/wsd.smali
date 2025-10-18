@@ -1,516 +1,1007 @@
-.class public final synthetic Lwsd;
-.super Ljava/lang/Object;
+.class public final Lwsd;
+.super Lpqe;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lwsd;->a:I
+    iput p1, p0, Lwsd;->b:I
 
-    iput-object p1, p0, Lwsd;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lpqe;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final b(Lr5;)Ljava/lang/Object;
+    .locals 12
 
-    iget v0, p0, Lwsd;->a:I
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x4
-
-    const/16 v3, 0x20
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lsz4;->t0:Lc82;
-
-    iget-object v7, p0, Lwsd;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+    iget v0, p0, Lwsd;->b:I
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->r0:[Lwq7;
+    const-class v0, Ljoa;
 
-    new-instance v0, Landroid/view/View;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v7}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-object v2
 
-    move-result-object v1
+    const-class v0, Lnqb;
 
-    invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    sget v1, Llra;->f:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Liq3;
-
-    int-to-float v2, v5
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-class v0, Lzxb;
 
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    const/16 v3, 0x12
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-class v0, Lckb;
 
-    move-result-object v4
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    move-result-object v5
 
-    mul-float/2addr v3, v4
+    const-class v0, Lrab;
 
-    invoke-static {v3}, Lagi;->d(F)I
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result v3
+    move-result-object v6
 
-    invoke-direct {v1, v2, v3}, Liq3;-><init>(II)V
+    const-class v0, Ltmf;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+    move-result-object v7
 
-    move-result-object v1
+    const-class v0, Lur5;
 
-    invoke-interface {v1}, Lu4b;->a()Lpv2;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object v1
+    move-result-object v8
 
-    invoke-interface {v1}, Lpv2;->j()Lhph;
+    const-class v0, Lcnf;
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget-object v1, v1, Lhph;->d:Lkph;
+    move-result-object v11
 
-    iget v1, v1, Lkph;->g:I
+    const-class v0, Lip3;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return-object v0
+    move-result-object v9
+
+    const-class v0, Lfv1;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    new-instance v1, Lt2h;
+
+    invoke-direct/range {v1 .. v11}, Lt2h;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v1
 
     :pswitch_0
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->r0:[Lwq7;
+    new-instance v2, Lnqb;
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatImageView;
+    const-class v0, Lll;
 
-    invoke-virtual {v7}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v0, Los4;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Ljoa;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v5
 
-    invoke-direct {v0, v5, v4}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const-class v0, Ltph;
 
-    sget v5, Llra;->e:I
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-virtual {v0, v5}, Landroid/view/View;->setId(I)V
+    move-result-object v6
 
-    new-instance v5, Liq3;
+    new-instance v0, Lx21;
 
-    int-to-float v3, v3
+    const/16 v1, 0x15
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-direct {v0, p1, v1}, Lx21;-><init>(Lr5;I)V
 
-    move-result-object v8
+    new-instance v7, Lwif;
 
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v7, v0}, Lwif;-><init>(Lji6;)V
 
-    move-result-object v8
+    invoke-direct/range {v2 .. v7}, Lnqb;-><init>(Liu7;Liu7;Liu7;Liu7;Lwif;)V
 
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v3
-
-    invoke-static {v8}, Lagi;->d(F)I
-
-    move-result v8
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v9
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-direct {v5, v8, v3}, Liq3;-><init>(II)V
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v3, Lkra;->c:I
-
-    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
-
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lu4b;->a()Lpv2;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lpv2;->j()Lhph;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lhph;->d:Lkph;
-
-    iget v3, v3, Lkph;->g:I
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    sget v5, Lmra;->e:I
-
-    invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    int-to-float v2, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v2, Lxsd;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v7, v3}, Lxsd;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
-
-    invoke-static {v0, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lu4b;->c()Le0f;
-
-    move-result-object v2
-
-    iget-object v2, v2, Le0f;->a:Lc0f;
-
-    iget-object v2, v2, Lc0f;->a:Lb0f;
-
-    iget v2, v2, Lb0f;->i:I
-
-    new-instance v3, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v3, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v4, v3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    return-object v0
+    return-object v2
 
     :pswitch_1
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->r0:[Lwq7;
+    new-instance v0, Lhd;
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatImageView;
+    const-class v1, Lv88;
 
-    invoke-virtual {v7}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result-object v8
+    move-result-object v1
 
-    invoke-direct {v0, v8, v4}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const-class v2, Lkd;
 
-    sget v8, Llra;->g:I
-
-    invoke-virtual {v0, v8}, Landroid/view/View;->setId(I)V
-
-    new-instance v8, Liq3;
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v9, v3
-
-    invoke-static {v9}, Lagi;->d(F)I
-
-    move-result v9
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v10
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-direct {v8, v9, v3}, Liq3;-><init>(II)V
-
-    invoke-virtual {v0, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v3, Lkra;->d:I
-
-    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
-
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lu4b;->a()Lpv2;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lpv2;->j()Lhph;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lhph;->d:Lkph;
-
-    iget v3, v3, Lkph;->g:I
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    sget v8, Lmra;->h:I
-
-    invoke-virtual {v3, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    int-to-float v2, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v2, Lxsd;
-
-    invoke-direct {v2, v7, v5}, Lxsd;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
-
-    invoke-static {v0, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lu4b;->c()Le0f;
+    const-class v3, Ly83;
 
-    move-result-object v2
+    invoke-virtual {p1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget-object v2, v2, Le0f;->a:Lc0f;
+    move-result-object p1
 
-    iget-object v2, v2, Lc0f;->a:Lb0f;
-
-    iget v2, v2, Lb0f;->i:I
-
-    new-instance v3, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v3, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v4, v3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v1, v2, p1}, Lhd;-><init>(Liu7;Liu7;Liu7;)V
 
     return-object v0
 
     :pswitch_2
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->r0:[Lwq7;
+    new-instance v3, Lby6;
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
+    const-class v0, Ljoa;
 
-    invoke-virtual {v7}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Los4;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    const-class v0, Lpxb;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Lgpf;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v0, Lzo3;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Lll;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v0, Ltph;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    const-class v0, Lv88;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v11
+
+    invoke-direct/range {v3 .. v11}, Lby6;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v3
+
+    :pswitch_3
+    const-class v0, Ly83;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    const-class v0, Lsf5;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Lulf;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Lulf;
+
+    const-class v0, Lf2f;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Lhr;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lhr;
+
+    const-class v0, Ldq5;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v0, Lll;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Lunf;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v0, Lcnf;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    new-instance v1, Lv88;
+
+    invoke-direct/range {v1 .. v10}, Lv88;-><init>(Lhr;Lulf;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v1
+
+    :pswitch_4
+    new-instance v2, Lq0b;
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Landroid/content/Context;
+
+    const-class v0, Lru/ok/tamtam/logout/a;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Lru/ok/tamtam/logout/a;
+
+    const-class v0, Le05;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Le05;
+
+    const-class v0, Leva;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Leva;
+
+    const-class v0, Lxe9;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    invoke-direct/range {v2 .. v7}, Lq0b;-><init>(Landroid/content/Context;Lru/ok/tamtam/logout/a;Le05;Leva;Liu7;)V
+
+    return-object v2
+
+    :pswitch_5
+    sget-object p1, Lftd;->a:Lftd;
+
+    return-object p1
+
+    :pswitch_6
+    sget-object p1, Letd;->b:Letd;
+
+    return-object p1
+
+    :pswitch_7
+    sget-object p1, Ldtd;->a:Ldtd;
+
+    return-object p1
+
+    :pswitch_8
+    const-class v0, Lwb4;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpc4;
+
+    return-object p1
+
+    :pswitch_9
+    new-instance v0, Lwb4;
+
+    const-class v1, Lq0b;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, v4}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    check-cast v1, Lq0b;
 
-    sget v1, Llra;->d:I
+    const-class v2, Lsf5;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setMaxLines(I)V
+    move-result-object v2
 
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    check-cast v2, Lsf5;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    const-class v3, Ldtd;
 
-    sget-object v1, Ldag;->p:Lpqf;
+    invoke-virtual {p1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+    move-result-object v3
 
-    invoke-virtual {v6, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+    check-cast v3, Ldtd;
 
-    move-result-object v1
+    const-class v4, Ly83;
 
-    invoke-interface {v1}, Lu4b;->a()Lpv2;
+    invoke-virtual {p1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-interface {v1}, Lpv2;->j()Lhph;
+    check-cast v4, Ly83;
 
-    move-result-object v1
+    const-class v5, Lxe9;
 
-    iget-object v1, v1, Lhph;->d:Lkph;
+    invoke-virtual {p1, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    iget v1, v1, Lkph;->g:I
+    move-result-object v5
 
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    const-class v6, Lll;
 
-    move-result-object v1
+    invoke-virtual {p1, v6}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+    move-result-object v6
 
-    sget v1, Lmra;->f:I
+    check-cast v6, Lll;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    const-class v7, Lulf;
 
-    new-instance v1, Liq3;
+    invoke-virtual {p1, v7}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v2, -0x2
+    move-result-object v7
 
-    invoke-direct {v1, v2, v2}, Liq3;-><init>(II)V
+    check-cast v7, Lulf;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const-class v8, Llk;
+
+    invoke-virtual {p1, v8}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Llk;
+
+    const-class v9, Lctd;
+
+    invoke-virtual {p1, v9}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    const-class v10, Los4;
+
+    invoke-virtual {p1, v10}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v10
+
+    invoke-direct/range {v0 .. v10}, Lwb4;-><init>(Lq0b;Lsf5;Ldtd;Ly83;Liu7;Lll;Lulf;Llk;Liu7;Liu7;)V
 
     return-object v0
 
-    nop
+    :pswitch_a
+    new-instance p1, Lv94;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    return-object p1
+
+    :pswitch_b
+    new-instance v0, Lxac;
+
+    const-class v1, Lq0b;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lq0b;
+
+    invoke-virtual {v1}, Lggd;->m()Lfgd;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->K()Lt2c;
+
+    move-result-object v1
+
+    const-class v2, Lulf;
+
+    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Luz3;
+
+    invoke-virtual {p1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Lsf5;
+
+    invoke-virtual {p1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsf5;
+
+    invoke-direct {v0, v1, v2, v3, p1}, Lxac;-><init>(Lt2c;Liu7;Liu7;Lsf5;)V
+
+    return-object v0
+
+    :pswitch_c
+    new-instance v0, Lg00;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    invoke-direct {v0, p1}, Lg00;-><init>(Lulf;)V
+
+    return-object v0
+
+    :pswitch_d
+    new-instance v0, Lco6;
+
+    const-class v1, Luz3;
+
+    invoke-virtual {p1, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    const-class v2, Lst9;
+
+    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Lulf;
+
+    invoke-virtual {p1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, p1}, Lco6;-><init>(Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_e
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    invoke-static {v0, p1}, Lru/ok/tamtam/chats/a;->a(Lpw0;Lulf;)Lgj0;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_f
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    invoke-static {v0, p1}, Lru/ok/tamtam/logout/c;->a(Lpw0;Lulf;)Lru/ok/tamtam/logout/a;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_10
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    invoke-static {v0, p1}, Lru/ok/tamtam/login/b;->a(Lpw0;Lulf;)Lga8;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_11
+    new-instance v0, Lfu7;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lulf;
+
+    const-class v2, Lsf5;
+
+    invoke-virtual {p1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsf5;
+
+    invoke-direct {v0, v1, p1}, Lfu7;-><init>(Lulf;Lsf5;)V
+
+    return-object v0
+
+    :pswitch_12
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    new-instance v1, Lvg2;
+
+    invoke-direct {v1, v0, p1}, Lvg2;-><init>(Lpw0;Lulf;)V
+
+    return-object v1
+
+    :pswitch_13
+    new-instance v2, Ltph;
+
+    const-class v0, Ljpf;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v0, Lsf5;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v4
+
+    const-class v0, Leva;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v5
+
+    const-class v0, Ltmf;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v6
+
+    const-class v0, Lip3;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v7
+
+    const-class v0, Ls4e;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v8
+
+    const-class v0, Lzm;
+
+    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v9
+
+    invoke-direct/range {v2 .. v9}, Ltph;-><init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v2
+
+    :pswitch_14
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    new-instance v1, Lly7;
+
+    invoke-direct {v1, v0, p1}, Lly7;-><init>(Lpw0;Lulf;)V
+
+    return-object v1
+
+    :pswitch_15
+    const-class v0, Lpw0;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpw0;
+
+    const-class v1, Lulf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lulf;
+
+    new-instance v1, Ljg2;
+
+    invoke-direct {v1, v0, p1}, Ljg2;-><init>(Lpw0;Lulf;)V
+
+    return-object v1
+
+    :pswitch_16
+    const-class v0, Lpxb;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpxb;
+
+    new-instance v1, Lktd;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, p1, v2}, Lktd;-><init>(Lr5;I)V
+
+    invoke-static {v1}, Lsxi;->a(Lji6;)Lpw4;
+
+    move-result-object v1
+
+    new-instance v2, Lktd;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v2, p1, v3}, Lktd;-><init>(Lr5;I)V
+
+    invoke-static {v2}, Lsxi;->a(Lji6;)Lpw4;
+
+    move-result-object p1
+
+    new-instance v2, Lkzb;
+
+    invoke-direct {v2, v0, v1, p1}, Lkzb;-><init>(Lpxb;Lpw4;Lpw4;)V
+
+    return-object v2
+
+    :pswitch_17
+    new-instance v0, Lc68;
+
+    const-class v1, Lnb9;
+
+    invoke-virtual {p1, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    const-class v2, Lmc9;
+
+    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lc68;-><init>(Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_18
+    new-instance v0, Lh44;
+
+    const-class v1, Lsq;
+
+    invoke-virtual {p1, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    const-class v2, Lhng;
+
+    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v2
+
+    const-class v3, Lex8;
+
+    invoke-virtual {p1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v3
+
+    const-class v4, Ly2g;
+
+    invoke-virtual {p1, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, v3, p1}, Lh44;-><init>(Liu7;Liu7;Liu7;Liu7;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v0, La3f;
+
+    const-class v1, Lll;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lll;
+
+    const-class v2, Ly2f;
+
+    invoke-virtual {p1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ly2f;
+
+    const-class v3, Lqmf;
+
+    invoke-virtual {p1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lqmf;
+
+    check-cast v3, Lrmf;
+
+    invoke-virtual {v3}, Lrmf;->a()Lxod;
+
+    move-result-object v3
+
+    const-class v4, Llnf;
+
+    invoke-virtual {p1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llnf;
+
+    invoke-direct {v0, v1, v2, v3, p1}, La3f;-><init>(Lll;Ly2f;Lxod;Llnf;)V
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v0, Lnx3;
+
+    const-class v1, Lat3;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lat3;
+
+    const-class v1, Lwu3;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwu3;
+
+    const-class v1, Lll;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lll;
+
+    const-class v1, Lqmf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqmf;
+
+    check-cast v1, Lrmf;
+
+    invoke-virtual {v1}, Lrmf;->a()Lxod;
+
+    const-class v1, Llnf;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llnf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
+
+    :pswitch_1b
+    new-instance v0, Lw49;
+
+    const-class v1, Lj4e;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj4e;
+
+    invoke-direct {v0, p1}, Lw49;-><init>(Lj4e;)V
+
+    return-object v0
+
+    :pswitch_1c
+    new-instance v0, Lk82;
+
+    const-class v1, Lpxb;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpxb;
+
+    const-class v1, Lat3;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lat3;
+
+    const-class v1, Lpw0;
+
+    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpw0;
+
+    const/4 p1, 0x0
+
+    invoke-direct {v0, p1}, Lk82;-><init>(I)V
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

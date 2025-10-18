@@ -1,74 +1,55 @@
-.class public interface abstract Lt88;
-.super Ljava/lang/Object;
+.class public final Lt88;
+.super Ly14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ljava/util/List;
+
+.field public Y:Ljava/lang/Exception;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lv88;
+
+.field public final synthetic q0:Lv88;
+
+.field public r0:I
+
+
+# direct methods
+.method public constructor <init>(Lv88;Ly14;)V
+    .locals 0
+
+    iput-object p1, p0, Lt88;->q0:Lv88;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract cc(Ljava/lang/String;)V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract debug(Ljava/lang/String;)V
-.end method
+    iput-object p1, p0, Lt88;->Z:Ljava/lang/Object;
 
-.method public abstract debug(Ljava/lang/String;Ljava/lang/Exception;)V
-.end method
+    iget p1, p0, Lt88;->r0:I
 
-.method public abstract debug(Ljava/lang/String;[B)V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract decrypted(Ljava/lang/String;)V
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract decrypted(Ljava/lang/String;[B)V
-.end method
+    iput p1, p0, Lt88;->r0:I
 
-.method public abstract encrypted(Ljava/lang/String;[B)V
-.end method
+    iget-object p1, p0, Lt88;->q0:Lv88;
 
-.method public abstract error(Ljava/lang/String;)V
-.end method
+    const/4 v0, 0x0
 
-.method public abstract error(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    invoke-static {p1, v0, v0, v0, p0}, Lv88;->a(Lv88;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Ly14;)Ljava/lang/Object;
 
-.method public abstract getQLog()Lxec;
-.end method
+    move-result-object p1
 
-.method public abstract info(Ljava/lang/String;)V
-.end method
-
-.method public abstract logRecovery()Z
-.end method
-
-.method public abstract raw(Ljava/lang/String;Ljava/nio/ByteBuffer;II)V
-.end method
-
-.method public abstract raw(Ljava/lang/String;[B)V
-.end method
-
-.method public abstract received(Ljava/time/Instant;ILygc;)V
-.end method
-
-.method public abstract receivedPacketInfo(Ljava/lang/String;)V
-.end method
-
-.method public abstract recovery(Ljava/lang/String;)V
-.end method
-
-.method public abstract recovery(Ljava/lang/String;Ljava/time/Instant;)V
-.end method
-
-.method public abstract secret(Ljava/lang/String;[B)V
-.end method
-
-.method public abstract sent(Ljava/time/Instant;Ljava/util/List;)V
-.end method
-
-.method public abstract sentPacketInfo(Ljava/lang/String;)V
-.end method
-
-.method public abstract stream(Ljava/lang/String;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;)V
+    return-object p1
 .end method

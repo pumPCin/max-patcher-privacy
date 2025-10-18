@@ -1,136 +1,91 @@
 .class public final Lx88;
-.super Lhlf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/Map;
+
+.field public final f:J
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
-    .locals 17
+.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-wide/from16 v1, p3
+    iput-wide p1, p0, Lx88;->a:J
 
-    move-wide/from16 v3, p5
+    iput-wide p3, p0, Lx88;->b:J
 
-    move-wide/from16 v5, p7
+    iput-object p7, p0, Lx88;->c:Ljava/lang/String;
 
-    move-object/from16 v7, p9
+    iput-object p8, p0, Lx88;->d:Ljava/lang/String;
 
-    move-wide/from16 v8, p10
+    iput-object p9, p0, Lx88;->e:Ljava/util/Map;
 
-    move-wide/from16 v10, p12
+    iput-wide p5, p0, Lx88;->f:J
 
-    move-wide/from16 v12, p14
-
-    sget-object v14, Lk7b;->w0:Lk7b;
-
-    invoke-direct {v0, v14}, Lhlf;-><init>(Lk7b;)V
-
-    const-string v14, "token"
-
-    move-object/from16 v15, p1
-
-    invoke-virtual {v0, v14, v15}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v14, "interactive"
-
-    move/from16 v15, p2
-
-    invoke-virtual {v0, v14, v15}, Lhlf;->i(Ljava/lang/String;Z)V
-
-    const-wide/16 v14, 0x0
-
-    cmp-long v16, v1, v14
-
-    move-wide/from16 p1, v14
-
-    if-lez v16, :cond_0
-
-    const-string v14, "chatsSync"
-
-    invoke-virtual {v0, v1, v2, v14}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_0
-    cmp-long v1, v3, p1
-
-    if-lez v1, :cond_1
-
-    const-string v1, "contactsSync"
-
-    invoke-virtual {v0, v3, v4, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_1
-    cmp-long v1, v5, p1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "presenceSync"
-
-    invoke-virtual {v0, v5, v6, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_2
-    if-eqz v7, :cond_4
-
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "configHash"
-
-    invoke-virtual {v0, v1, v7}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    :goto_0
-    cmp-long v1, v8, p1
-
-    if-lez v1, :cond_5
-
-    const-string v1, "callsSync"
-
-    invoke-virtual {v0, v8, v9, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_5
-    cmp-long v1, v10, p1
-
-    if-lez v1, :cond_6
-
-    const-string v1, "lastLogin"
-
-    invoke-virtual {v0, v10, v11, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_6
-    cmp-long v1, v12, p1
-
-    if-lez v1, :cond_7
-
-    const-string v1, "draftsSync"
-
-    invoke-virtual {v0, v12, v13, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_7
     return-void
 .end method
 
 
 # virtual methods
-.method public final Q()Lilf;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sget-object v0, Ly45;->t0:Ly45;
+    const-string v0, "LogEntry{time="
+
+    const-string v1, ", userId="
+
+    iget-wide v2, p0, Lx88;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lx88;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sessionId="
+
+    const-string v2, ", type=\'"
+
+    iget-wide v3, p0, Lx88;->f:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, "\', event=\'"
+
+    const-string v2, "\', params="
+
+    iget-object v3, p0, Lx88;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lx88;->d:Ljava/lang/String;
+
+    invoke-static {v0, v3, v1, v4, v2}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lx88;->e:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final W()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

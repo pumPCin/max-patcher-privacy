@@ -1,57 +1,149 @@
 .class public final Lcy4;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ley4;
 
 
 # instance fields
-.field public X:Lp6d;
+.field public final a:I
 
-.field public Y:Lq6d;
+.field public final b:J
 
-.field public Z:Lq6d;
-
-.field public o:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-.field public r0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-.field public u0:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;Lk14;)V
+.method public constructor <init>(IJJ)V
     .locals 0
 
-    iput-object p1, p0, Lcy4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lcy4;->a:I
+
+    iput-wide p2, p0, Lcy4;->b:J
+
+    iput-wide p4, p0, Lcy4;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Lcy4;->s0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lcy4;->u0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lcy4;
 
-    iput p1, p0, Lcy4;->u0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lcy4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Lcy4;
 
-    return-object p1
+    iget v1, p0, Lcy4;->a:I
+
+    iget v3, p1, Lcy4;->a:I
+
+    if-ne v1, v3, :cond_4
+
+    iget-wide v3, p0, Lcy4;->b:J
+
+    iget-wide v5, p1, Lcy4;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lcy4;->c:J
+
+    iget-wide v5, p1, Lcy4;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+
+    :cond_4
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lcy4;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lcy4;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lcy4;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget v0, p0, Lcy4;->a:I
+
+    invoke-static {v0}, Lza6;->a(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Loading(progress="
+
+    const-string v2, ", time="
+
+    iget-wide v3, p0, Lcy4;->b:J
+
+    invoke-static {v1, v3, v4, v0, v2}, Lzdf;->u(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", chatId="
+
+    const-string v2, ")"
+
+    iget-wide v3, p0, Lcy4;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lu15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

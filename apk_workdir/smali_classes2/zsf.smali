@@ -1,95 +1,58 @@
-.class public final synthetic Lzsf;
+.class public final Lzsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqh6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+# static fields
+.field public static final a:Landroid/util/LruCache;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lzsf;->a:I
+    new-instance v0, Landroid/util/LruCache;
 
-    iput-object p1, p0, Lzsf;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    const/4 v1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+
+    sput-object v0, Lzsf;->a:Landroid/util/LruCache;
 
     return-void
 .end method
 
+.method public static a(Lsf0;Letf;)V
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    if-nez p0, :cond_0
 
-    iget v0, p0, Lzsf;->a:I
+    return-void
 
-    sget-object v1, Lzag;->a:Lzag;
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lzsf;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    const-string v1, "Save theme "
 
-    check-cast p1, Landroid/view/View;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->X:[Lwq7;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, " to cache."
 
-    iget-object p1, v2, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->c:Llt7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxsf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lwsf;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v2}, Lwsf;-><init>(Lxsf;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x1
-
-    invoke-static {p1, v2, v0, v3}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v2, p1, Lxsf;->c:Lpzd;
+    const-string v1, "ThemeBackgroundCache"
 
-    sget-object v3, Lxsf;->X:[Lwq7;
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v4, 0x0
+    sget-object v0, Lzsf;->a:Landroid/util/LruCache;
 
-    aget-object v3, v3, v4
+    invoke-virtual {v0, p0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, p1, v3, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_0
-    invoke-virtual {v2}, Lx14;->getOnBackPressedDispatcher()Lnla;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lnla;->d()V
-
-    :cond_0
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyv0;
+.implements Lhw0;
 
 
 # static fields
-.field public static final r0:Ley0;
+.field public static final q0:Lny0;
 
 
 # instance fields
@@ -30,13 +30,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ley0;
+    new-instance v0, Lny0;
 
     const/16 v1, 0xd
 
-    invoke-direct {v0, v1}, Ley0;-><init>(I)V
+    invoke-direct {v0, v1}, Lny0;-><init>(I)V
 
-    sput-object v0, Lv8;->r0:Ley0;
+    sput-object v0, Lv8;->q0:Lny0;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lefi;->d(Z)V
+    invoke-static {v0}, Lzg8;->c(Z)V
 
     iput-wide p1, p0, Lv8;->a:J
 

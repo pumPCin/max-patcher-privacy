@@ -1,86 +1,80 @@
 .class public final Lvbg;
-.super Ljava/lang/Object;
+.super Lk54;
 .source "SourceFile"
 
-# interfaces
-.implements Llt7;
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final a:Lvbg;
 
 
-# instance fields
-.field public a:Loh6;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public b:Ljava/lang/Object;
+    new-instance v0, Lvbg;
+
+    invoke-direct {v0}, Lk54;-><init>()V
+
+    sput-object v0, Lvbg;->a:Lvbg;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final e()Z
-    .locals 2
+.method public final dispatch(Li54;Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget-object v0, p0, Lvbg;->b:Ljava/lang/Object;
+    sget-object p2, Lyqh;->b:Llga;
 
-    sget-object v1, Ljfa;->Y:Ljfa;
+    invoke-interface {p1, p2}, Li54;->get(Lh54;)Lg54;
 
-    if-eq v0, v1, :cond_0
+    move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Lyqh;
 
-    return v0
+    if-eqz p1, :cond_0
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p1, Lyqh;->a:Z
+
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    return v0
+    const-string p2, "Dispatchers.Unconfined.dispatch function can only be used by the yield function. If you wrap Unconfined dispatcher in your code, make sure you properly delegate isDispatchNeeded and dispatch calls."
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
+.method public final isDispatchNeeded(Li54;)Z
+    .locals 0
 
-    iget-object v0, p0, Lvbg;->b:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    sget-object v1, Ljfa;->Y:Ljfa;
+    return p1
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final limitedParallelism(ILjava/lang/String;)Lk54;
+    .locals 0
 
-    iget-object v0, p0, Lvbg;->a:Loh6;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
+    const-string p2, "limitedParallelism is not supported for Dispatchers.Unconfined"
 
-    move-result-object v0
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lvbg;->b:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lvbg;->a:Loh6;
-
-    :cond_0
-    iget-object v0, p0, Lvbg;->b:Ljava/lang/Object;
-
-    return-object v0
+    throw p1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Lvbg;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lvbg;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Lazy value not initialized yet."
+    const-string v0, "Dispatchers.Unconfined"
 
     return-object v0
 .end method

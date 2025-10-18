@@ -2,69 +2,74 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lzw7;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public a:I
+.field public final a:Z
 
-.field public b:I
+.field public b:Landroid/app/Activity;
 
 .field public c:Z
 
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Landroid/util/SparseArray;
+
+.field public h:Landroid/util/SparseArray;
+
+.field public i:Ljava/util/ArrayList;
+
+.field public final j:Ljava/util/LinkedHashMap;
+
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Z)V
+    .locals 4
 
-    new-instance v0, Lgt7;
+    new-instance v0, Landroid/util/SparseArray;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-direct {v0, v1}, Lgt7;-><init>(I)V
+    new-instance v1, Landroid/util/SparseArray;
 
-    sput-object v0, Lzw7;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    return-void
-.end method
+    new-instance v2, Ljava/util/ArrayList;
 
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    new-instance v3, Ljava/util/LinkedHashMap;
 
-    const/4 v0, 0x0
+    invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
 
-    return v0
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    iput-boolean p1, p0, Lzw7;->a:Z
 
-    iget p2, p0, Lzw7;->a:I
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iput-object p1, p0, Lzw7;->b:Landroid/app/Activity;
 
-    iget p2, p0, Lzw7;->b:I
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iput-boolean p1, p0, Lzw7;->c:Z
 
-    iget-boolean p2, p0, Lzw7;->c:Z
+    iput-boolean p1, p0, Lzw7;->d:Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iput-boolean p1, p0, Lzw7;->e:Z
+
+    iput-boolean p1, p0, Lzw7;->f:Z
+
+    iput-object v0, p0, Lzw7;->g:Landroid/util/SparseArray;
+
+    iput-object v1, p0, Lzw7;->h:Landroid/util/SparseArray;
+
+    iput-object v2, p0, Lzw7;->i:Ljava/util/ArrayList;
+
+    iput-object v3, p0, Lzw7;->j:Ljava/util/LinkedHashMap;
 
     return-void
 .end method

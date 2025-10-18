@@ -1,6 +1,6 @@
 .class public final Lwzh;
-.super Lx2;
+.super Ly6i;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
+.implements Lbai;

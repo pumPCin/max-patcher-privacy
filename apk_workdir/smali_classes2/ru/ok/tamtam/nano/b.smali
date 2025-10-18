@@ -17,11 +17,11 @@
 
     sput-object v0, Lru/ok/tamtam/nano/b;->a:[B
 
-    new-instance v0, Llw3;
+    new-instance v0, Lzw3;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lfyh;->a:Lye8;
+    sput-object v0, Lgzh;->a:Lzf8;
 
     return-void
 .end method
@@ -64,29 +64,29 @@
 
     check-cast v3, Lru/ok/tamtam/nano/Protos$Chat$AdminParticipant;
 
-    new-instance v4, Lnd2;
+    new-instance v4, Lvd2;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
     iget-wide v5, v3, Lru/ok/tamtam/nano/Protos$Chat$AdminParticipant;->id:J
 
-    iput-wide v5, v4, Lnd2;->b:J
+    iput-wide v5, v4, Lvd2;->b:J
 
     iget v5, v3, Lru/ok/tamtam/nano/Protos$Chat$AdminParticipant;->permissions:I
 
-    iput v5, v4, Lnd2;->a:I
+    iput v5, v4, Lvd2;->a:I
 
     iget-wide v5, v3, Lru/ok/tamtam/nano/Protos$Chat$AdminParticipant;->inviterId:J
 
-    iput-wide v5, v4, Lnd2;->c:J
+    iput-wide v5, v4, Lvd2;->c:J
 
     iget-object v3, v3, Lru/ok/tamtam/nano/Protos$Chat$AdminParticipant;->alias:Ljava/lang/String;
 
-    iput-object v3, v4, Lnd2;->d:Ljava/io/Serializable;
+    iput-object v3, v4, Lvd2;->d:Ljava/io/Serializable;
 
-    new-instance v3, Lod2;
+    new-instance v3, Lwd2;
 
-    invoke-direct {v3, v4}, Lod2;-><init>(Lnd2;)V
+    invoke-direct {v3, v4}, Lwd2;-><init>(Lvd2;)V
 
     invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -139,20 +139,20 @@
     return v0
 .end method
 
-.method public static c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Ld20;
+.method public static c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Le20;
     .locals 30
 
     move-object/from16 v0, p0
 
-    sget v1, Ld20;->B:I
+    sget v1, Le20;->B:I
 
-    new-instance v1, Le10;
+    new-instance v1, Lf10;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->lastErrorTime:J
 
-    iput-wide v2, v1, Le10;->j:J
+    iput-wide v2, v1, Lf10;->j:J
 
     iget v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->progressFloat:F
 
@@ -170,43 +170,43 @@
     int-to-float v2, v2
 
     :goto_0
-    iput v2, v1, Le10;->k:F
+    iput v2, v1, Lf10;->k:F
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->localId:Ljava/lang/String;
 
-    iput-object v2, v1, Le10;->l:Ljava/lang/String;
+    iput-object v2, v1, Lf10;->l:Ljava/lang/String;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->localPath:Ljava/lang/String;
 
-    iput-object v2, v1, Le10;->m:Ljava/lang/String;
+    iput-object v2, v1, Lf10;->m:Ljava/lang/String;
 
     iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->isDeleted:Z
 
-    iput-boolean v2, v1, Le10;->n:Z
+    iput-boolean v2, v1, Lf10;->n:Z
 
     iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->totalBytes:J
 
-    iput-wide v2, v1, Le10;->o:J
+    iput-wide v2, v1, Lf10;->o:J
 
     iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->bytesDownloaded:J
 
-    iput-wide v2, v1, Le10;->p:J
+    iput-wide v2, v1, Lf10;->p:J
 
     iget-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->lastModified:J
 
-    iput-wide v2, v1, Le10;->u:J
+    iput-wide v2, v1, Lf10;->u:J
 
     iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sensitiveContentUnlocked:Z
 
-    iput-boolean v2, v1, Le10;->y:Z
+    iput-boolean v2, v1, Lf10;->y:Z
 
     iget-boolean v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sensitive:Z
 
-    iput-boolean v2, v1, Le10;->z:Z
+    iput-boolean v2, v1, Lf10;->z:Z
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->appVersion:Ljava/lang/String;
 
-    invoke-static {v2}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -220,88 +220,88 @@
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->appVersion:Ljava/lang/String;
 
     :goto_1
-    iput-object v2, v1, Le10;->A:Ljava/lang/String;
+    iput-object v2, v1, Lf10;->A:Ljava/lang/String;
 
     iget v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->type:I
 
     packed-switch v2, :pswitch_data_0
 
     :pswitch_0
-    sget-object v2, Lz10;->a:Lz10;
+    sget-object v2, La20;->a:La20;
 
     goto :goto_2
 
     :pswitch_1
-    sget-object v2, Lz10;->x0:Lz10;
+    sget-object v2, La20;->w0:La20;
 
     goto :goto_2
 
     :pswitch_2
-    sget-object v2, Lz10;->w0:Lz10;
+    sget-object v2, La20;->v0:La20;
 
     goto :goto_2
 
     :pswitch_3
-    sget-object v2, Lz10;->v0:Lz10;
+    sget-object v2, La20;->u0:La20;
 
     goto :goto_2
 
     :pswitch_4
-    sget-object v2, Lz10;->u0:Lz10;
+    sget-object v2, La20;->t0:La20;
 
     goto :goto_2
 
     :pswitch_5
-    sget-object v2, Lz10;->t0:Lz10;
+    sget-object v2, La20;->s0:La20;
 
     goto :goto_2
 
     :pswitch_6
-    sget-object v2, Lz10;->r0:Lz10;
+    sget-object v2, La20;->q0:La20;
 
     goto :goto_2
 
     :pswitch_7
-    sget-object v2, Lz10;->s0:Lz10;
+    sget-object v2, La20;->r0:La20;
 
     goto :goto_2
 
     :pswitch_8
-    sget-object v2, Lz10;->Z:Lz10;
+    sget-object v2, La20;->Z:La20;
 
     goto :goto_2
 
     :pswitch_9
-    sget-object v2, Lz10;->Y:Lz10;
+    sget-object v2, La20;->Y:La20;
 
     goto :goto_2
 
     :pswitch_a
-    sget-object v2, Lz10;->X:Lz10;
+    sget-object v2, La20;->X:La20;
 
     goto :goto_2
 
     :pswitch_b
-    sget-object v2, Lz10;->o:Lz10;
+    sget-object v2, La20;->o:La20;
 
     goto :goto_2
 
     :pswitch_c
-    sget-object v2, Lz10;->c:Lz10;
+    sget-object v2, La20;->c:La20;
 
     goto :goto_2
 
     :pswitch_d
-    sget-object v2, Lz10;->b:Lz10;
+    sget-object v2, La20;->b:La20;
 
     :goto_2
-    iput-object v2, v1, Le10;->a:Lz10;
+    iput-object v2, v1, Lf10;->a:La20;
 
     iget v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->status:I
 
     const/4 v4, 0x1
 
-    sget-object v5, Lw10;->a:Lw10;
+    sget-object v5, Lx10;->a:Lx10;
 
     const/4 v6, 0x3
 
@@ -322,36 +322,36 @@
     goto :goto_3
 
     :cond_2
-    sget-object v5, Lw10;->X:Lw10;
+    sget-object v5, Lx10;->X:Lx10;
 
     goto :goto_3
 
     :cond_3
-    sget-object v5, Lw10;->o:Lw10;
+    sget-object v5, Lx10;->o:Lx10;
 
     goto :goto_3
 
     :cond_4
-    sget-object v5, Lw10;->c:Lw10;
+    sget-object v5, Lx10;->c:Lx10;
 
     goto :goto_3
 
     :cond_5
-    sget-object v5, Lw10;->b:Lw10;
+    sget-object v5, Lx10;->b:Lx10;
 
     :cond_6
     :goto_3
-    iput-object v5, v1, Le10;->i:Lw10;
+    iput-object v5, v1, Lf10;->i:Lx10;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->photo:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     if-eqz v2, :cond_7
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Lr10;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Ls10;
 
     move-result-object v2
 
-    iput-object v2, v1, Le10;->b:Lr10;
+    iput-object v2, v1, Lf10;->b:Ls10;
 
     :cond_7
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->control:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;
@@ -360,9 +360,9 @@
 
     if-eqz v2, :cond_d
 
-    sget v9, Lk10;->p:I
+    sget v9, Ll10;->p:I
 
-    new-instance v9, Li10;
+    new-instance v9, Lj10;
 
     invoke-direct {v9}, Ljava/lang/Object;-><init>()V
 
@@ -370,94 +370,94 @@
 
     packed-switch v10, :pswitch_data_1
 
-    sget-object v10, Lj10;->a:Lj10;
+    sget-object v10, Lk10;->a:Lk10;
 
     goto :goto_4
 
     :pswitch_e
-    sget-object v10, Lj10;->u0:Lj10;
+    sget-object v10, Lk10;->t0:Lk10;
 
     goto :goto_4
 
     :pswitch_f
-    sget-object v10, Lj10;->t0:Lj10;
+    sget-object v10, Lk10;->s0:Lk10;
 
     goto :goto_4
 
     :pswitch_10
-    sget-object v10, Lj10;->s0:Lj10;
+    sget-object v10, Lk10;->r0:Lk10;
 
     goto :goto_4
 
     :pswitch_11
-    sget-object v10, Lj10;->r0:Lj10;
+    sget-object v10, Lk10;->q0:Lk10;
 
     goto :goto_4
 
     :pswitch_12
-    sget-object v10, Lj10;->Z:Lj10;
+    sget-object v10, Lk10;->Z:Lk10;
 
     goto :goto_4
 
     :pswitch_13
-    sget-object v10, Lj10;->Y:Lj10;
+    sget-object v10, Lk10;->Y:Lk10;
 
     goto :goto_4
 
     :pswitch_14
-    sget-object v10, Lj10;->X:Lj10;
+    sget-object v10, Lk10;->X:Lk10;
 
     goto :goto_4
 
     :pswitch_15
-    sget-object v10, Lj10;->o:Lj10;
+    sget-object v10, Lk10;->o:Lk10;
 
     goto :goto_4
 
     :pswitch_16
-    sget-object v10, Lj10;->c:Lj10;
+    sget-object v10, Lk10;->c:Lk10;
 
     goto :goto_4
 
     :pswitch_17
-    sget-object v10, Lj10;->b:Lj10;
+    sget-object v10, Lk10;->b:Lk10;
 
     :goto_4
-    iput-object v10, v9, Li10;->a:Lj10;
+    iput-object v10, v9, Lj10;->a:Lk10;
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->userId:J
 
-    iput-wide v10, v9, Li10;->b:J
+    iput-wide v10, v9, Lj10;->b:J
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->userIds:[J
 
-    invoke-static {v2}, Lpci;->c([J)Ljava/util/ArrayList;
+    invoke-static {v2}, Lwdi;->b([J)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    iput-object v2, v9, Li10;->c:Ljava/util/Collection;
+    iput-object v2, v9, Lj10;->c:Ljava/util/Collection;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->control:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;
 
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->title:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->d:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->d:Ljava/lang/String;
 
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->iconToken:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->e:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->e:Ljava/lang/String;
 
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->url:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->f:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->f:Ljava/lang/String;
 
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->fullUrl:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->g:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->g:Ljava/lang/String;
 
     iget-boolean v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->showHistory:Z
 
-    iput-boolean v10, v9, Li10;->k:Z
+    iput-boolean v10, v9, Lj10;->k:Z
 
     iget v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->chatType:I
 
@@ -469,34 +469,34 @@
 
     if-eq v10, v7, :cond_8
 
-    iput v4, v9, Li10;->l:I
+    iput v4, v9, Lj10;->l:I
 
     goto :goto_5
 
     :cond_8
-    iput v8, v9, Li10;->l:I
+    iput v8, v9, Lj10;->l:I
 
     goto :goto_5
 
     :cond_9
-    iput v5, v9, Li10;->l:I
+    iput v5, v9, Lj10;->l:I
 
     goto :goto_5
 
     :cond_a
-    iput v7, v9, Li10;->l:I
+    iput v7, v9, Lj10;->l:I
 
     goto :goto_5
 
     :cond_b
-    iput v6, v9, Li10;->l:I
+    iput v6, v9, Lj10;->l:I
 
     :goto_5
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->crop:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;
 
     if-eqz v10, :cond_c
 
-    new-instance v11, Lu10;
+    new-instance v11, Lv10;
 
     iget v12, v10, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;->left:F
 
@@ -508,36 +508,36 @@
 
     const/16 v16, 0x0
 
-    invoke-direct/range {v11 .. v16}, Lu10;-><init>(FFFFI)V
+    invoke-direct/range {v11 .. v16}, Lv10;-><init>(FFFFI)V
 
-    iput-object v11, v9, Li10;->h:Lu10;
+    iput-object v11, v9, Lj10;->h:Lv10;
 
     :cond_c
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->message:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->i:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->i:Ljava/lang/String;
 
     iget-object v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->shortMessage:Ljava/lang/String;
 
-    iput-object v10, v9, Li10;->j:Ljava/lang/String;
+    iput-object v10, v9, Lj10;->j:Ljava/lang/String;
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->pinnedMessageId:J
 
-    iput-wide v10, v9, Li10;->m:J
+    iput-wide v10, v9, Lj10;->m:J
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->pinnedMessageServerId:J
 
-    iput-wide v10, v9, Li10;->n:J
+    iput-wide v10, v9, Lj10;->n:J
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->startPayload:Ljava/lang/String;
 
-    iput-object v2, v9, Li10;->o:Ljava/lang/String;
+    iput-object v2, v9, Lj10;->o:Ljava/lang/String;
 
-    invoke-virtual {v9}, Li10;->a()Lk10;
+    invoke-virtual {v9}, Lj10;->a()Ll10;
 
     move-result-object v2
 
-    iput-object v2, v1, Le10;->c:Lk10;
+    iput-object v2, v1, Lf10;->c:Ll10;
 
     :cond_d
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->video:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
@@ -546,19 +546,19 @@
 
     if-eqz v2, :cond_13
 
-    sget-object v10, Lc20;->r:Lc20;
+    sget-object v10, Ld20;->r:Ld20;
 
-    new-instance v10, La20;
+    new-instance v10, Lb20;
 
-    invoke-direct {v10}, La20;-><init>()V
+    invoke-direct {v10}, Lb20;-><init>()V
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoId:J
 
-    iput-wide v11, v10, La20;->a:J
+    iput-wide v11, v10, Lb20;->a:J
 
     iget v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoType:I
 
-    invoke-static {v8}, Lwx1;->y(I)[I
+    invoke-static {v8}, Ldy1;->y(I)[I
 
     move-result-object v11
 
@@ -571,7 +571,7 @@
 
     aget v14, v11, v13
 
-    invoke-static {v14}, Lwx1;->v(I)I
+    invoke-static {v14}, Ldy1;->v(I)I
 
     move-result v15
 
@@ -588,7 +588,7 @@
     move v14, v4
 
     :goto_7
-    iput v14, v10, La20;->q:I
+    iput v14, v10, Lb20;->q:I
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->video:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
 
@@ -596,81 +596,81 @@
 
     int-to-long v11, v11
 
-    iput-wide v11, v10, La20;->b:J
+    iput-wide v11, v10, Lb20;->b:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->thumbnail:Ljava/lang/String;
 
-    iput-object v11, v10, La20;->c:Ljava/lang/String;
+    iput-object v11, v10, Lb20;->c:Ljava/lang/String;
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->width:I
 
-    iput v11, v10, La20;->d:I
+    iput v11, v10, Lb20;->d:I
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->height:I
 
-    iput v11, v10, La20;->e:I
+    iput v11, v10, Lb20;->e:I
 
     iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->live:Z
 
-    iput-boolean v11, v10, La20;->f:Z
+    iput-boolean v11, v10, Lb20;->f:Z
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
 
-    iput-object v11, v10, La20;->g:Ljava/lang/String;
+    iput-object v11, v10, Lb20;->g:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalSiteName:Ljava/lang/String;
 
-    iput-object v11, v10, La20;->h:Ljava/lang/String;
+    iput-object v11, v10, Lb20;->h:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
-    iput-object v11, v10, La20;->i:[B
+    iput-object v11, v10, Lb20;->i:[B
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->startTime:J
 
-    iput-wide v11, v10, La20;->j:J
+    iput-wide v11, v10, Lb20;->j:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->token:Ljava/lang/String;
 
-    iput-object v11, v10, La20;->l:Ljava/lang/String;
+    iput-object v11, v10, Lb20;->l:Ljava/lang/String;
 
     iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->ignoreAutoplay:Z
 
-    iput-boolean v11, v10, La20;->n:Z
+    iput-boolean v11, v10, Lb20;->n:Z
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioTrackIndex:I
 
-    iput v11, v10, La20;->o:I
+    iput v11, v10, Lb20;->o:I
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioGroupIndex:I
 
-    iput v11, v10, La20;->p:I
+    iput v11, v10, Lb20;->p:I
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->convertOptions:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
 
     if-eqz v2, :cond_11
 
-    new-instance v11, Lb20;
+    new-instance v11, Lc20;
 
-    invoke-direct {v11, v9}, Lb20;-><init>(I)V
+    invoke-direct {v11, v9}, Lc20;-><init>(I)V
 
     iget v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->startTrimPosition:F
 
-    iput v12, v11, Lb20;->a:F
+    iput v12, v11, Lc20;->a:F
 
     iget v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->endTrimPosition:F
 
-    iput v12, v11, Lb20;->b:F
+    iput v12, v11, Lc20;->b:F
 
     iget-boolean v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mute:Z
 
-    iput-boolean v12, v11, Lb20;->d:Z
+    iput-boolean v12, v11, Lc20;->d:Z
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->quality:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$Quality;
 
     if-eqz v2, :cond_10
 
-    invoke-static {}, Legc;->values()[Legc;
+    invoke-static {}, Llhc;->values()[Llhc;
 
     move-result-object v2
 
@@ -684,12 +684,12 @@
 
     aget-object v2, v2, v12
 
-    iput-object v2, v11, Lb20;->c:Legc;
+    iput-object v2, v11, Lc20;->c:Llhc;
 
     goto :goto_8
 
     :cond_10
-    invoke-static {}, Legc;->values()[Legc;
+    invoke-static {}, Llhc;->values()[Llhc;
 
     move-result-object v2
 
@@ -701,14 +701,14 @@
 
     aget-object v2, v2, v12
 
-    iput-object v2, v11, Lb20;->c:Legc;
+    iput-object v2, v11, Lc20;->c:Llhc;
 
     :goto_8
-    new-instance v2, Lb20;
+    new-instance v2, Lc20;
 
-    invoke-direct {v2, v11}, Lb20;-><init>(Lb20;)V
+    invoke-direct {v2, v11}, Lc20;-><init>(Lc20;)V
 
-    iput-object v2, v10, La20;->k:Lb20;
+    iput-object v2, v10, Lb20;->k:Lc20;
 
     :cond_11
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->video:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
@@ -717,7 +717,7 @@
 
     if-eqz v2, :cond_12
 
-    new-instance v11, Lxy;
+    new-instance v11, Lyy;
 
     iget-object v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->url:Ljava/lang/String;
 
@@ -731,16 +731,16 @@
 
     iget v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->count:I
 
-    invoke-direct/range {v11 .. v16}, Lxy;-><init>(IIIILjava/lang/String;)V
+    invoke-direct/range {v11 .. v16}, Lyy;-><init>(IIIILjava/lang/String;)V
 
-    iput-object v11, v10, La20;->m:Lxy;
+    iput-object v11, v10, Lb20;->m:Lyy;
 
     :cond_12
-    new-instance v2, Lc20;
+    new-instance v2, Ld20;
 
-    invoke-direct {v2, v10}, Lc20;-><init>(La20;)V
+    invoke-direct {v2, v10}, Ld20;-><init>(Lb20;)V
 
-    iput-object v2, v1, Le10;->d:Lc20;
+    iput-object v2, v1, Lf10;->d:Ld20;
 
     :cond_13
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->audio:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;
@@ -783,86 +783,86 @@
     move v10, v8
 
     :goto_9
-    sget-object v11, Ld10;->j:Ld10;
+    sget-object v11, Le10;->j:Le10;
 
-    new-instance v11, Lc10;
+    new-instance v11, Ld10;
 
     invoke-direct {v11}, Ljava/lang/Object;-><init>()V
 
     iget-wide v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->audioId:J
 
-    iput-wide v12, v11, Lc10;->a:J
+    iput-wide v12, v11, Ld10;->a:J
 
     iget-object v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->url:Ljava/lang/String;
 
-    iput-object v12, v11, Lc10;->b:Ljava/lang/String;
+    iput-object v12, v11, Ld10;->b:Ljava/lang/String;
 
     iget-wide v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->duration:J
 
-    iput-wide v12, v11, Lc10;->c:J
+    iput-wide v12, v11, Ld10;->c:J
 
     iget-wide v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->startTime:J
 
-    iput-wide v12, v11, Lc10;->g:J
+    iput-wide v12, v11, Ld10;->g:J
 
     iget-wide v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->lastStartTimeUpdateTimestamp:J
 
-    iput-wide v12, v11, Lc10;->h:J
+    iput-wide v12, v11, Ld10;->h:J
 
     iget-object v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->wave:[B
 
-    iput-object v12, v11, Lc10;->d:[B
+    iput-object v12, v11, Ld10;->d:[B
 
     iget-object v12, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->transcription:Ljava/lang/String;
 
-    iput-object v12, v11, Lc10;->f:Ljava/lang/String;
+    iput-object v12, v11, Ld10;->f:Ljava/lang/String;
 
-    iput v10, v11, Lc10;->i:I
+    iput v10, v11, Ld10;->i:I
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->token:Ljava/lang/String;
 
-    iput-object v2, v11, Lc10;->e:Ljava/lang/String;
+    iput-object v2, v11, Ld10;->e:Ljava/lang/String;
 
-    new-instance v2, Ld10;
+    new-instance v2, Le10;
 
-    invoke-direct {v2, v11}, Ld10;-><init>(Lc10;)V
+    invoke-direct {v2, v11}, Le10;-><init>(Ld10;)V
 
-    iput-object v2, v1, Le10;->e:Ld10;
+    iput-object v2, v1, Lf10;->e:Le10;
 
     :cond_19
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sticker:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
 
     if-eqz v2, :cond_1f
 
-    sget-object v10, Ly10;->p:Ly10;
+    sget-object v10, Lz10;->p:Lz10;
 
-    new-instance v10, Lx10;
+    new-instance v10, Ly10;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->stickerId:J
 
-    iput-wide v11, v10, Lx10;->a:J
+    iput-wide v11, v10, Ly10;->a:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->url:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->d:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->d:Ljava/lang/String;
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->width:I
 
-    iput v11, v10, Lx10;->b:I
+    iput v11, v10, Ly10;->b:I
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->height:I
 
-    iput v11, v10, Lx10;->c:I
+    iput v11, v10, Ly10;->c:I
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mp4Url:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->f:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->f:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->g:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->g:Ljava/lang/String;
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->tags:[Ljava/lang/String;
 
@@ -872,33 +872,33 @@
 
     invoke-static {v11, v2}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    iput-object v11, v10, Lx10;->i:Ljava/util/List;
+    iput-object v11, v10, Ly10;->i:Ljava/util/List;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sticker:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->previewUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->h:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->h:Ljava/lang/String;
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->updateTime:J
 
-    iput-wide v11, v10, Lx10;->e:J
+    iput-wide v11, v10, Ly10;->e:J
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->setId:J
 
-    iput-wide v11, v10, Lx10;->k:J
+    iput-wide v11, v10, Ly10;->k:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->lottieUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->l:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->l:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->videoUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lx10;->o:Ljava/lang/String;
+    iput-object v11, v10, Ly10;->o:Ljava/lang/String;
 
     iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->audio:Z
 
-    iput-boolean v11, v10, Lx10;->m:Z
+    iput-boolean v11, v10, Ly10;->m:Z
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->stickerType:I
 
@@ -908,22 +908,22 @@
 
     if-eq v11, v7, :cond_1a
 
-    iput v4, v10, Lx10;->j:I
+    iput v4, v10, Ly10;->j:I
 
     goto :goto_a
 
     :cond_1a
-    iput v7, v10, Lx10;->j:I
+    iput v7, v10, Ly10;->j:I
 
     goto :goto_a
 
     :cond_1b
-    iput v6, v10, Lx10;->j:I
+    iput v6, v10, Ly10;->j:I
 
     goto :goto_a
 
     :cond_1c
-    iput v8, v10, Lx10;->j:I
+    iput v8, v10, Ly10;->j:I
 
     :goto_a
     iget v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->authorType:I
@@ -932,63 +932,63 @@
 
     if-eq v2, v8, :cond_1d
 
-    iput v4, v10, Lx10;->n:I
+    iput v4, v10, Ly10;->n:I
 
     goto :goto_b
 
     :cond_1d
-    iput v6, v10, Lx10;->n:I
+    iput v6, v10, Ly10;->n:I
 
     goto :goto_b
 
     :cond_1e
-    iput v8, v10, Lx10;->n:I
+    iput v8, v10, Ly10;->n:I
 
     :goto_b
-    invoke-virtual {v10}, Lx10;->a()Ly10;
+    invoke-virtual {v10}, Ly10;->a()Lz10;
 
     move-result-object v2
 
-    iput-object v2, v1, Le10;->f:Ly10;
+    iput-object v2, v1, Lf10;->f:Lz10;
 
     :cond_1f
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->share:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;
 
     if-eqz v2, :cond_22
 
-    new-instance v10, Lv10;
+    new-instance v10, Lw10;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->shareId:J
 
-    iput-wide v11, v10, Lv10;->a:J
+    iput-wide v11, v10, Lw10;->a:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->url:Ljava/lang/String;
 
-    iput-object v11, v10, Lv10;->b:Ljava/lang/String;
+    iput-object v11, v10, Lw10;->b:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->title:Ljava/lang/String;
 
-    iput-object v11, v10, Lv10;->c:Ljava/lang/String;
+    iput-object v11, v10, Lw10;->c:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->description:Ljava/lang/String;
 
-    iput-object v11, v10, Lv10;->d:Ljava/lang/String;
+    iput-object v11, v10, Lw10;->d:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->host:Ljava/lang/String;
 
-    iput-object v11, v10, Lv10;->e:Ljava/lang/String;
+    iput-object v11, v10, Lw10;->e:Ljava/lang/String;
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->image:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     if-eqz v2, :cond_20
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Lr10;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Ls10;
 
     move-result-object v2
 
-    iput-object v2, v10, Lv10;->f:Lr10;
+    iput-object v2, v10, Lw10;->f:Ls10;
 
     :cond_20
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->share:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;
@@ -997,71 +997,71 @@
 
     if-eqz v2, :cond_21
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Ld20;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Le20;
 
     move-result-object v2
 
-    iput-object v2, v10, Lv10;->g:Ld20;
+    iput-object v2, v10, Lw10;->g:Le20;
 
     :cond_21
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->share:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;
 
     iget-boolean v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->deleted:Z
 
-    iput-boolean v11, v10, Lv10;->h:Z
+    iput-boolean v11, v10, Lw10;->h:Z
 
     iget-boolean v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->contentLevel:Z
 
-    iput-boolean v2, v10, Lv10;->i:Z
+    iput-boolean v2, v10, Lw10;->i:Z
 
-    new-instance v2, Lv10;
+    new-instance v2, Lw10;
 
-    invoke-direct {v2, v10}, Lv10;-><init>(Lv10;)V
+    invoke-direct {v2, v10}, Lw10;-><init>(Lw10;)V
 
-    iput-object v2, v1, Le10;->g:Lv10;
+    iput-object v2, v1, Lf10;->g:Lw10;
 
     :cond_22
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->app:Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;
 
     if-eqz v2, :cond_23
 
-    new-instance v10, Lb10;
+    new-instance v10, Lc10;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->appId:J
 
-    iput-wide v11, v10, Lb10;->a:J
+    iput-wide v11, v10, Lc10;->a:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->name:Ljava/lang/String;
 
-    iput-object v11, v10, Lb10;->b:Ljava/lang/Object;
+    iput-object v11, v10, Lc10;->b:Ljava/lang/Object;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->message:Ljava/lang/String;
 
-    iput-object v11, v10, Lb10;->d:Ljava/lang/Object;
+    iput-object v11, v10, Lc10;->d:Ljava/lang/Object;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->icon:Ljava/lang/String;
 
-    iput-object v11, v10, Lb10;->c:Ljava/lang/Object;
+    iput-object v11, v10, Lc10;->c:Ljava/lang/Object;
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->timeout:J
 
-    iput-wide v11, v10, Lb10;->f:J
+    iput-wide v11, v10, Lc10;->f:J
 
     iget v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->state:I
 
-    iput v11, v10, Lb10;->e:I
+    iput v11, v10, Lc10;->e:I
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->appState:Ljava/lang/String;
 
-    iput-object v2, v10, Lb10;->g:Ljava/lang/Object;
+    iput-object v2, v10, Lc10;->g:Ljava/lang/Object;
 
-    new-instance v2, Lb10;
+    new-instance v2, Lc10;
 
-    invoke-direct {v2, v10}, Lb10;-><init>(Lb10;)V
+    invoke-direct {v2, v10}, Lc10;-><init>(Lc10;)V
 
-    iput-object v2, v1, Le10;->h:Lb10;
+    iput-object v2, v1, Lf10;->h:Lc10;
 
     :cond_23
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->call:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;
@@ -1136,65 +1136,65 @@
     int-to-long v12, v12
 
     :goto_e
-    new-instance v14, Lf10;
+    new-instance v14, Lg10;
 
-    invoke-direct {v14}, Lf10;-><init>()V
+    invoke-direct {v14}, Lg10;-><init>()V
 
     iget-object v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->conversationId:Ljava/lang/String;
 
-    iput-object v15, v14, Lf10;->a:Ljava/io/Serializable;
+    iput-object v15, v14, Lg10;->a:Ljava/io/Serializable;
 
     iget-object v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->joinLink:Ljava/lang/String;
 
-    iput-object v15, v14, Lf10;->c:Ljava/io/Serializable;
+    iput-object v15, v14, Lg10;->c:Ljava/io/Serializable;
 
-    iput v10, v14, Lf10;->d:I
+    iput v10, v14, Lg10;->d:I
 
-    iput v11, v14, Lf10;->f:I
+    iput v11, v14, Lg10;->f:I
 
-    iput-wide v12, v14, Lf10;->b:J
+    iput-wide v12, v14, Lg10;->b:J
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->contactIds:[J
 
-    invoke-static {v2}, Lpci;->c([J)Ljava/util/ArrayList;
+    invoke-static {v2}, Lwdi;->b([J)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    iput-object v2, v14, Lf10;->e:Ljava/lang/Object;
+    iput-object v2, v14, Lg10;->e:Ljava/lang/Object;
 
     if-nez v2, :cond_2b
 
     sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput-object v2, v14, Lf10;->e:Ljava/lang/Object;
+    iput-object v2, v14, Lg10;->e:Ljava/lang/Object;
 
     :cond_2b
-    new-instance v2, Lg10;
+    new-instance v2, Lh10;
 
-    invoke-direct {v2, v14}, Lg10;-><init>(Lf10;)V
+    invoke-direct {v2, v14}, Lh10;-><init>(Lg10;)V
 
-    iput-object v2, v1, Le10;->q:Lg10;
+    iput-object v2, v1, Lf10;->q:Lh10;
 
     :cond_2c
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->file:Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;
 
     if-eqz v2, :cond_30
 
-    new-instance v10, Ll10;
+    new-instance v10, Lm10;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->fileId:J
 
-    iput-wide v11, v10, Ll10;->a:J
+    iput-wide v11, v10, Lm10;->a:J
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->size:J
 
-    iput-wide v11, v10, Ll10;->b:J
+    iput-wide v11, v10, Lm10;->b:J
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->name:Ljava/lang/String;
 
-    invoke-static {v2}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result v11
 
@@ -1223,7 +1223,7 @@
     move-result-object v2
 
     :goto_f
-    iput-object v2, v10, Ll10;->c:Ljava/lang/Object;
+    iput-object v2, v10, Lm10;->c:Ljava/lang/Object;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->file:Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;
 
@@ -1231,7 +1231,7 @@
 
     if-eqz v2, :cond_2f
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Ld20;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Le20;
 
     move-result-object v2
 
@@ -1241,66 +1241,66 @@
     const/4 v2, 0x0
 
     :goto_10
-    iput-object v2, v10, Ll10;->e:Ljava/lang/Object;
+    iput-object v2, v10, Lm10;->e:Ljava/lang/Object;
 
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->file:Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->token:Ljava/lang/String;
 
-    iput-object v2, v10, Ll10;->d:Ljava/lang/Object;
+    iput-object v2, v10, Lm10;->d:Ljava/lang/Object;
 
-    new-instance v2, Lm10;
+    new-instance v2, Ln10;
 
-    invoke-direct {v2, v10}, Lm10;-><init>(Ll10;)V
+    invoke-direct {v2, v10}, Ln10;-><init>(Lm10;)V
 
-    iput-object v2, v1, Le10;->r:Lm10;
+    iput-object v2, v1, Lf10;->r:Ln10;
 
     :cond_30
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->contact:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;
 
     if-eqz v2, :cond_31
 
-    new-instance v10, Lh10;
+    new-instance v10, Li10;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->vcfBody:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->a:Ljava/lang/String;
+    iput-object v11, v10, Li10;->a:Ljava/lang/String;
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->contactId:J
 
-    iput-wide v11, v10, Lh10;->b:J
+    iput-wide v11, v10, Li10;->b:J
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->name:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->c:Ljava/lang/String;
+    iput-object v11, v10, Li10;->c:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->phone:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->f:Ljava/lang/String;
+    iput-object v11, v10, Li10;->f:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->photoUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->g:Ljava/lang/String;
+    iput-object v11, v10, Li10;->g:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->localPhotoUrl:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->h:Ljava/lang/String;
+    iput-object v11, v10, Li10;->h:Ljava/lang/String;
 
     iget-object v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->firstName:Ljava/lang/String;
 
-    iput-object v11, v10, Lh10;->d:Ljava/lang/String;
+    iput-object v11, v10, Li10;->d:Ljava/lang/String;
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->lastName:Ljava/lang/String;
 
-    iput-object v2, v10, Lh10;->e:Ljava/lang/String;
+    iput-object v2, v10, Li10;->e:Ljava/lang/String;
 
-    new-instance v2, Lh10;
+    new-instance v2, Li10;
 
-    invoke-direct {v2, v10}, Lh10;-><init>(Lh10;)V
+    invoke-direct {v2, v10}, Li10;-><init>(Li10;)V
 
-    iput-object v2, v1, Le10;->s:Lh10;
+    iput-object v2, v1, Lf10;->s:Li10;
 
     :cond_31
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->present:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;
@@ -1343,48 +1343,48 @@
 
     :cond_36
     :goto_11
-    new-instance v5, Ls10;
+    new-instance v5, Lt10;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->presentId:J
 
-    iput-wide v10, v5, Ls10;->a:J
+    iput-wide v10, v5, Lt10;->a:J
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->metadataId:J
 
-    iput-wide v10, v5, Ls10;->b:J
+    iput-wide v10, v5, Lt10;->b:J
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->senderId:J
 
-    iput-wide v10, v5, Ls10;->c:J
+    iput-wide v10, v5, Lt10;->c:J
 
     iget-wide v10, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->receiverId:J
 
-    iput-wide v10, v5, Ls10;->d:J
+    iput-wide v10, v5, Lt10;->d:J
 
-    iput v6, v5, Ls10;->e:I
+    iput v6, v5, Lt10;->e:I
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->presentJson:Ljava/lang/String;
 
-    iput-object v2, v5, Ls10;->f:Ljava/lang/Object;
+    iput-object v2, v5, Lt10;->f:Ljava/lang/Object;
 
-    new-instance v2, Ls10;
+    new-instance v2, Lt10;
 
-    invoke-direct {v2, v5}, Ls10;-><init>(Ls10;)V
+    invoke-direct {v2, v5}, Lt10;-><init>(Lt10;)V
 
-    iput-object v2, v1, Le10;->t:Ls10;
+    iput-object v2, v1, Lf10;->t:Lt10;
 
     :cond_37
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->location:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;
 
     if-eqz v2, :cond_3b
 
-    new-instance v5, Ln10;
+    new-instance v5, Lo10;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    new-instance v10, Lt68;
+    new-instance v10, Lq78;
 
     iget-wide v11, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->latitude:D
 
@@ -1406,21 +1406,21 @@
 
     move-wide v15, v6
 
-    invoke-direct/range {v10 .. v19}, Lt68;-><init>(DDDFFF)V
+    invoke-direct/range {v10 .. v19}, Lq78;-><init>(DDDFFF)V
 
-    iput-object v10, v5, Ln10;->a:Lt68;
+    iput-object v10, v5, Lo10;->a:Lq78;
 
     iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->livePeriod:J
 
-    iput-wide v6, v5, Ln10;->b:J
+    iput-wide v6, v5, Lo10;->b:J
 
     iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->startTime:J
 
-    iput-wide v6, v5, Ln10;->c:J
+    iput-wide v6, v5, Lo10;->c:J
 
     iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->endTime:J
 
-    iput-wide v6, v5, Ln10;->d:J
+    iput-wide v6, v5, Lo10;->d:J
 
     iget-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->track:[Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
@@ -1446,9 +1446,9 @@
 
     aget-object v10, v3, v9
 
-    new-instance v11, Lp10;
+    new-instance v11, Lq10;
 
-    new-instance v20, Lt68;
+    new-instance v20, Lq78;
 
     iget-wide v12, v10, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->latitude:D
 
@@ -1478,13 +1478,13 @@
 
     move-wide/from16 v23, v14
 
-    invoke-direct/range {v20 .. v29}, Lt68;-><init>(DDDFFF)V
+    invoke-direct/range {v20 .. v29}, Lq78;-><init>(DDDFFF)V
 
     move-object/from16 v3, v20
 
     iget-wide v8, v10, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->time:J
 
-    invoke-direct {v11, v3, v8, v9}, Lp10;-><init>(Lt68;J)V
+    invoke-direct {v11, v3, v8, v9}, Lq10;-><init>(Lq78;J)V
 
     invoke-virtual {v6, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1502,27 +1502,27 @@
     move-object v3, v6
 
     :goto_13
-    iput-object v3, v5, Ln10;->e:Ljava/util/List;
+    iput-object v3, v5, Lo10;->e:Ljava/util/List;
 
     iget-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->deviceId:Ljava/lang/String;
 
-    iput-object v3, v5, Ln10;->f:Ljava/lang/String;
+    iput-object v3, v5, Lo10;->f:Ljava/lang/String;
 
     iget v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->zoom:F
 
-    iput v3, v5, Ln10;->g:F
+    iput v3, v5, Lo10;->g:F
 
     iget-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->corrupted:Z
 
-    iput-boolean v3, v5, Ln10;->h:Z
+    iput-boolean v3, v5, Lo10;->h:Z
 
     iget-object v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->lastLocation:Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     if-eqz v2, :cond_3a
 
-    new-instance v3, Lp10;
+    new-instance v3, Lq10;
 
-    new-instance v6, Lt68;
+    new-instance v6, Lq78;
 
     iget-wide v7, v2, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->latitude:D
 
@@ -1536,20 +1536,20 @@
 
     iget v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->speed:F
 
-    invoke-direct/range {v6 .. v15}, Lt68;-><init>(DDDFFF)V
+    invoke-direct/range {v6 .. v15}, Lq78;-><init>(DDDFFF)V
 
     iget-wide v7, v2, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->time:J
 
-    invoke-direct {v3, v6, v7, v8}, Lp10;-><init>(Lt68;J)V
+    invoke-direct {v3, v6, v7, v8}, Lq10;-><init>(Lq78;J)V
 
-    iput-object v3, v5, Ln10;->i:Lp10;
+    iput-object v3, v5, Lo10;->i:Lq10;
 
     :cond_3a
-    invoke-virtual {v5}, Ln10;->a()Lo10;
+    invoke-virtual {v5}, Lo10;->a()Lp10;
 
     move-result-object v2
 
-    iput-object v2, v1, Le10;->v:Lo10;
+    iput-object v2, v1, Lf10;->v:Lp10;
 
     :cond_3b
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->widget:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget;
@@ -1582,32 +1582,32 @@
     goto :goto_15
 
     :pswitch_18
-    sget-object v5, Lalh;->Y:Lalh;
+    sget-object v5, Lbmh;->Y:Lbmh;
 
     goto :goto_15
 
     :pswitch_19
-    sget-object v5, Lalh;->X:Lalh;
+    sget-object v5, Lbmh;->X:Lbmh;
 
     goto :goto_15
 
     :pswitch_1a
-    sget-object v5, Lalh;->o:Lalh;
+    sget-object v5, Lbmh;->o:Lbmh;
 
     goto :goto_15
 
     :pswitch_1b
-    sget-object v5, Lalh;->c:Lalh;
+    sget-object v5, Lbmh;->c:Lbmh;
 
     goto :goto_15
 
     :pswitch_1c
-    sget-object v5, Lalh;->b:Lalh;
+    sget-object v5, Lbmh;->b:Lbmh;
 
     goto :goto_15
 
     :pswitch_1d
-    sget-object v5, Lalh;->a:Lalh;
+    sget-object v5, Lbmh;->a:Lbmh;
 
     :goto_15
     if-nez v5, :cond_3c
@@ -1625,7 +1625,7 @@
 
     if-lez v8, :cond_3d
 
-    invoke-static {v7}, Lza9;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
+    invoke-static {v7}, Lac9;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
 
     move-result-object v7
 
@@ -1641,11 +1641,11 @@
 
     if-nez v8, :cond_3e
 
-    new-instance v8, Lfwb;
+    new-instance v8, Lkxb;
 
     const/4 v10, 0x1
 
-    invoke-direct {v8, v6, v10, v7}, Lfwb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v8, v6, v10, v7}, Lkxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     goto :goto_17
 
@@ -1657,7 +1657,7 @@
 
     if-eqz v6, :cond_3f
 
-    invoke-static {v6}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lkf7;
+    invoke-static {v6}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lgg7;
 
     move-result-object v6
 
@@ -1700,9 +1700,9 @@
     goto :goto_1a
 
     :cond_41
-    new-instance v4, Lblh;
+    new-instance v4, Lcmh;
 
-    invoke-direct {v4, v5, v8, v6, v7}, Lblh;-><init>(Lalh;Lfwb;Lkf7;Le;)V
+    invoke-direct {v4, v5, v8, v6, v7}, Lcmh;-><init>(Lbmh;Lkxb;Lgg7;Le;)V
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1723,14 +1723,14 @@
     goto :goto_1b
 
     :cond_43
-    new-instance v2, Lglh;
+    new-instance v2, Lhmh;
 
-    invoke-direct {v2, v3}, Lglh;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {v2, v3}, Lhmh;-><init>(Ljava/util/ArrayList;)V
 
     move-object v3, v2
 
     :goto_1b
-    iput-object v3, v1, Le10;->w:Lglh;
+    iput-object v3, v1, Lf10;->w:Lhmh;
 
     :cond_44
     iget v0, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->processingOnServerStatus:I
@@ -1743,22 +1743,22 @@
 
     if-eq v0, v2, :cond_45
 
-    sget-object v0, Lt10;->a:Lt10;
+    sget-object v0, Lu10;->a:Lu10;
 
     goto :goto_1c
 
     :cond_45
-    sget-object v0, Lt10;->c:Lt10;
+    sget-object v0, Lu10;->c:Lu10;
 
     goto :goto_1c
 
     :cond_46
-    sget-object v0, Lt10;->b:Lt10;
+    sget-object v0, Lu10;->b:Lu10;
 
     :goto_1c
-    iput-object v0, v1, Le10;->x:Lt10;
+    iput-object v0, v1, Lf10;->x:Lu10;
 
-    invoke-virtual {v1}, Le10;->a()Ld20;
+    invoke-virtual {v1}, Lf10;->a()Le20;
 
     move-result-object v0
 
@@ -1810,7 +1810,7 @@
     .end packed-switch
 .end method
 
-.method public static d(Ld20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+.method public static d(Le20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
     .locals 18
 
     move-object/from16 v0, p0
@@ -1819,31 +1819,31 @@
 
     invoke-direct {v1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach;-><init>()V
 
-    iget-wide v2, v0, Ld20;->p:J
+    iget-wide v2, v0, Le20;->p:J
 
-    iget-object v4, v0, Ld20;->m:Lo10;
+    iget-object v4, v0, Le20;->m:Lp10;
 
-    iget-object v5, v0, Ld20;->f:Ly10;
+    iget-object v5, v0, Le20;->f:Lz10;
 
-    iget-object v6, v0, Ld20;->l:Ls10;
+    iget-object v6, v0, Le20;->l:Lt10;
 
-    iget-object v7, v0, Ld20;->j:Lm10;
+    iget-object v7, v0, Le20;->j:Ln10;
 
-    iget-object v8, v0, Ld20;->h:Lb10;
+    iget-object v8, v0, Le20;->h:Lc10;
 
-    iget-object v9, v0, Ld20;->e:Ld10;
+    iget-object v9, v0, Le20;->e:Le10;
 
-    iget-object v10, v0, Ld20;->g:Lv10;
+    iget-object v10, v0, Le20;->g:Lw10;
 
-    iget-object v11, v0, Ld20;->d:Lc20;
+    iget-object v11, v0, Le20;->d:Ld20;
 
-    iget-object v12, v0, Ld20;->i:Lg10;
+    iget-object v12, v0, Le20;->i:Lh10;
 
-    iget-object v13, v0, Ld20;->c:Lk10;
+    iget-object v13, v0, Le20;->c:Ll10;
 
     iput-wide v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->lastErrorTime:J
 
-    iget v2, v0, Ld20;->q:F
+    iget v2, v0, Le20;->q:F
 
     iput v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->progressFloat:F
 
@@ -1851,9 +1851,9 @@
 
     iput v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->progress:I
 
-    iget-object v3, v0, Ld20;->r:Ljava/lang/String;
+    iget-object v3, v0, Le20;->r:Ljava/lang/String;
 
-    invoke-static {v3}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
@@ -1870,7 +1870,7 @@
     :cond_0
     iput-object v3, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->localId:Ljava/lang/String;
 
-    iget-object v3, v0, Ld20;->s:Ljava/lang/String;
+    iget-object v3, v0, Le20;->s:Ljava/lang/String;
 
     const-string v14, ""
 
@@ -1881,31 +1881,31 @@
     :cond_1
     iput-object v3, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->localPath:Ljava/lang/String;
 
-    iget-boolean v3, v0, Ld20;->t:Z
+    iget-boolean v3, v0, Le20;->t:Z
 
     iput-boolean v3, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->isDeleted:Z
 
-    iget-wide v2, v0, Ld20;->u:J
+    iget-wide v2, v0, Le20;->u:J
 
     iput-wide v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->totalBytes:J
 
-    iget-wide v2, v0, Ld20;->v:J
+    iget-wide v2, v0, Le20;->v:J
 
     iput-wide v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->bytesDownloaded:J
 
-    iget-wide v2, v0, Ld20;->w:J
+    iget-wide v2, v0, Le20;->w:J
 
     iput-wide v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->lastModified:J
 
-    iget-boolean v2, v0, Ld20;->y:Z
+    iget-boolean v2, v0, Le20;->y:Z
 
     iput-boolean v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sensitiveContentUnlocked:Z
 
-    iget-boolean v2, v0, Ld20;->z:Z
+    iget-boolean v2, v0, Le20;->z:Z
 
     iput-boolean v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sensitive:Z
 
-    iget-object v2, v0, Ld20;->A:Ljava/lang/String;
+    iget-object v2, v0, Le20;->A:Ljava/lang/String;
 
     if-nez v2, :cond_2
 
@@ -1914,7 +1914,7 @@
     :cond_2
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->appVersion:Ljava/lang/String;
 
-    iget-object v2, v0, Ld20;->a:Lz10;
+    iget-object v2, v0, Le20;->a:La20;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
@@ -2000,7 +2000,7 @@
     :goto_0
     iput v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->type:I
 
-    iget-object v2, v0, Ld20;->o:Lw10;
+    iget-object v2, v0, Le20;->o:Lx10;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
@@ -2046,15 +2046,15 @@
     :goto_1
     iput v15, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->status:I
 
-    invoke-virtual {v0}, Ld20;->e()Z
+    invoke-virtual {v0}, Le20;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    iget-object v2, v0, Ld20;->b:Lr10;
+    iget-object v2, v0, Le20;->b:Ls10;
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->o(Lr10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->o(Ls10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     move-result-object v2
 
@@ -2063,13 +2063,13 @@
     :cond_8
     if-eqz v13, :cond_16
 
-    iget-object v2, v13, Lk10;->h:Lu10;
+    iget-object v2, v13, Ll10;->h:Lv10;
 
     new-instance v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;
 
     invoke-direct {v15}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;-><init>()V
 
-    iget-object v3, v13, Lk10;->a:Lj10;
+    iget-object v3, v13, Ll10;->a:Lk10;
 
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
@@ -2134,19 +2134,19 @@
 
     move-object/from16 v16, v4
 
-    iget-wide v3, v13, Lk10;->b:J
+    iget-wide v3, v13, Ll10;->b:J
 
     iput-wide v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->userId:J
 
-    iget-object v3, v13, Lk10;->c:Ljava/util/ArrayList;
+    iget-object v3, v13, Ll10;->c:Ljava/util/ArrayList;
 
-    invoke-static {v3}, Lpci;->d(Ljava/util/List;)[J
+    invoke-static {v3}, Lwdi;->c(Ljava/util/List;)[J
 
     move-result-object v3
 
     iput-object v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->userIds:[J
 
-    iget-object v3, v13, Lk10;->d:Ljava/lang/String;
+    iget-object v3, v13, Ll10;->d:Ljava/lang/String;
 
     if-nez v3, :cond_9
 
@@ -2155,7 +2155,7 @@
     :cond_9
     iput-object v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->title:Ljava/lang/String;
 
-    iget-object v3, v13, Lk10;->e:Ljava/lang/String;
+    iget-object v3, v13, Ll10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_a
 
@@ -2164,7 +2164,7 @@
     :cond_a
     iput-object v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->iconToken:Ljava/lang/String;
 
-    iget-object v3, v13, Lk10;->f:Ljava/lang/String;
+    iget-object v3, v13, Ll10;->f:Ljava/lang/String;
 
     if-nez v3, :cond_b
 
@@ -2173,7 +2173,7 @@
     :cond_b
     iput-object v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->url:Ljava/lang/String;
 
-    iget-object v3, v13, Lk10;->g:Ljava/lang/String;
+    iget-object v3, v13, Ll10;->g:Ljava/lang/String;
 
     if-nez v3, :cond_c
 
@@ -2190,24 +2190,24 @@
 
     iput-object v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->crop:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;
 
-    iget v4, v2, Lu10;->b:F
+    iget v4, v2, Lv10;->b:F
 
     iput v4, v3, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;->left:F
 
-    iget v4, v2, Lu10;->c:F
+    iget v4, v2, Lv10;->c:F
 
     iput v4, v3, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;->top:F
 
-    iget v4, v2, Lu10;->d:F
+    iget v4, v2, Lv10;->d:F
 
     iput v4, v3, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;->right:F
 
-    iget v2, v2, Lu10;->e:F
+    iget v2, v2, Lv10;->e:F
 
     iput v2, v3, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Rect;->bottom:F
 
     :cond_d
-    iget-object v2, v13, Lk10;->i:Ljava/lang/String;
+    iget-object v2, v13, Ll10;->i:Ljava/lang/String;
 
     if-nez v2, :cond_e
 
@@ -2216,7 +2216,7 @@
     :cond_e
     iput-object v2, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->message:Ljava/lang/String;
 
-    iget-object v2, v13, Lk10;->j:Ljava/lang/String;
+    iget-object v2, v13, Ll10;->j:Ljava/lang/String;
 
     if-nez v2, :cond_f
 
@@ -2225,15 +2225,15 @@
     :cond_f
     iput-object v2, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->shortMessage:Ljava/lang/String;
 
-    iget-boolean v2, v13, Lk10;->k:Z
+    iget-boolean v2, v13, Ll10;->k:Z
 
     iput-boolean v2, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->showHistory:Z
 
-    iget v2, v13, Lk10;->l:I
+    iget v2, v13, Ll10;->l:I
 
     if-eqz v2, :cond_14
 
-    invoke-static {v2}, Lwx1;->v(I)I
+    invoke-static {v2}, Ldy1;->v(I)I
 
     move-result v2
 
@@ -2287,15 +2287,15 @@
 
     :cond_14
     :goto_3
-    iget-wide v3, v13, Lk10;->m:J
+    iget-wide v3, v13, Ll10;->m:J
 
     iput-wide v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->pinnedMessageId:J
 
-    iget-wide v3, v13, Lk10;->n:J
+    iget-wide v3, v13, Ll10;->n:J
 
     iput-wide v3, v15, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Control;->pinnedMessageServerId:J
 
-    iget-object v3, v13, Lk10;->o:Ljava/lang/String;
+    iget-object v3, v13, Ll10;->o:Ljava/lang/String;
 
     if-nez v3, :cond_15
 
@@ -2312,7 +2312,7 @@
     move-object/from16 v16, v4
 
     :goto_4
-    invoke-virtual {v0}, Ld20;->g()Z
+    invoke-virtual {v0}, Le20;->h()Z
 
     move-result v3
 
@@ -2324,29 +2324,29 @@
 
     move-object v4, v3
 
-    iget-wide v2, v11, Lc20;->a:J
+    iget-wide v2, v11, Ld20;->a:J
 
-    iget-object v13, v11, Lc20;->n:Lxy;
+    iget-object v13, v11, Ld20;->n:Lyy;
 
-    iget-object v15, v11, Lc20;->l:Lb20;
+    iget-object v15, v11, Ld20;->l:Lc20;
 
     iput-wide v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoId:J
 
-    iget v2, v11, Lc20;->b:I
+    iget v2, v11, Ld20;->b:I
 
-    invoke-static {v2}, Lwx1;->v(I)I
+    invoke-static {v2}, Ldy1;->v(I)I
 
     move-result v2
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoType:I
 
-    iget-wide v2, v11, Lc20;->c:J
+    iget-wide v2, v11, Ld20;->c:J
 
     long-to-int v2, v2
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->duration:I
 
-    iget-object v2, v11, Lc20;->d:Ljava/lang/String;
+    iget-object v2, v11, Ld20;->d:Ljava/lang/String;
 
     if-nez v2, :cond_17
 
@@ -2355,19 +2355,19 @@
     :cond_17
     iput-object v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->thumbnail:Ljava/lang/String;
 
-    iget v2, v11, Lc20;->e:I
+    iget v2, v11, Ld20;->e:I
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->width:I
 
-    iget v2, v11, Lc20;->f:I
+    iget v2, v11, Ld20;->f:I
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->height:I
 
-    iget-boolean v2, v11, Lc20;->g:Z
+    iget-boolean v2, v11, Ld20;->g:Z
 
     iput-boolean v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->live:Z
 
-    iget-object v2, v11, Lc20;->h:Ljava/lang/String;
+    iget-object v2, v11, Ld20;->h:Ljava/lang/String;
 
     if-nez v2, :cond_18
 
@@ -2376,7 +2376,7 @@
     :cond_18
     iput-object v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
 
-    iget-object v2, v11, Lc20;->i:Ljava/lang/String;
+    iget-object v2, v11, Ld20;->i:Ljava/lang/String;
 
     if-nez v2, :cond_19
 
@@ -2385,18 +2385,18 @@
     :cond_19
     iput-object v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalSiteName:Ljava/lang/String;
 
-    iget-object v2, v11, Lc20;->j:[B
+    iget-object v2, v11, Ld20;->j:[B
 
     if-eqz v2, :cond_1a
 
     iput-object v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
     :cond_1a
-    iget-wide v2, v11, Lc20;->k:J
+    iget-wide v2, v11, Ld20;->k:J
 
     iput-wide v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->startTime:J
 
-    iget-object v2, v11, Lc20;->m:Ljava/lang/String;
+    iget-object v2, v11, Ld20;->m:Ljava/lang/String;
 
     if-nez v2, :cond_1b
 
@@ -2405,15 +2405,15 @@
     :cond_1b
     iput-object v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->token:Ljava/lang/String;
 
-    iget-boolean v2, v11, Lc20;->o:Z
+    iget-boolean v2, v11, Ld20;->o:Z
 
     iput-boolean v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->ignoreAutoplay:Z
 
-    iget v2, v11, Lc20;->p:I
+    iget v2, v11, Ld20;->p:I
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioTrackIndex:I
 
-    iget v2, v11, Lc20;->q:I
+    iget v2, v11, Ld20;->q:I
 
     iput v2, v4, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioGroupIndex:I
 
@@ -2423,21 +2423,21 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;-><init>()V
 
-    iget v3, v15, Lb20;->a:F
+    iget v3, v15, Lc20;->a:F
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->startTrimPosition:F
 
-    iget v3, v15, Lb20;->b:F
+    iget v3, v15, Lc20;->b:F
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->endTrimPosition:F
 
-    iget-object v3, v15, Lb20;->c:Legc;
+    iget-object v3, v15, Lc20;->c:Llhc;
 
-    iget v3, v3, Legc;->b:I
+    iget v3, v3, Llhc;->b:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->qualityValue:I
 
-    iget-boolean v3, v15, Lb20;->d:Z
+    iget-boolean v3, v15, Lc20;->d:Z
 
     iput-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;->mute:Z
 
@@ -2450,25 +2450,25 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;-><init>()V
 
-    iget-object v3, v13, Lxy;->Y:Ljava/lang/Object;
+    iget-object v3, v13, Lyy;->Y:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->url:Ljava/lang/String;
 
-    iget v3, v13, Lxy;->b:I
+    iget v3, v13, Lyy;->b:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->frequency:I
 
-    iget v3, v13, Lxy;->c:I
+    iget v3, v13, Lyy;->c:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->height:I
 
-    iget v3, v13, Lxy;->o:I
+    iget v3, v13, Lyy;->o:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->width:I
 
-    iget v3, v13, Lxy;->X:I
+    iget v3, v13, Lyy;->X:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;->count:I
 
@@ -2478,7 +2478,7 @@
     iput-object v4, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->video:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
 
     :cond_1e
-    invoke-virtual {v0}, Ld20;->a()Z
+    invoke-virtual {v0}, Le20;->b()Z
 
     move-result v2
 
@@ -2488,11 +2488,11 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;-><init>()V
 
-    iget-wide v3, v9, Ld10;->a:J
+    iget-wide v3, v9, Le10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->audioId:J
 
-    iget-object v3, v9, Ld10;->b:Ljava/lang/String;
+    iget-object v3, v9, Le10;->b:Ljava/lang/String;
 
     if-nez v3, :cond_1f
 
@@ -2501,29 +2501,29 @@
     :cond_1f
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->url:Ljava/lang/String;
 
-    iget-wide v3, v9, Ld10;->c:J
+    iget-wide v3, v9, Le10;->c:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->duration:J
 
-    iget-object v3, v9, Ld10;->d:[B
+    iget-object v3, v9, Le10;->d:[B
 
     if-eqz v3, :cond_20
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->wave:[B
 
     :cond_20
-    iget-object v3, v9, Ld10;->f:Ljava/lang/String;
+    iget-object v3, v9, Le10;->f:Ljava/lang/String;
 
     if-eqz v3, :cond_21
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->transcription:Ljava/lang/String;
 
     :cond_21
-    iget v3, v9, Ld10;->i:I
+    iget v3, v9, Le10;->i:I
 
     if-eqz v3, :cond_27
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -2586,7 +2586,7 @@
 
     :cond_27
     :goto_5
-    iget-object v3, v9, Ld10;->e:Ljava/lang/String;
+    iget-object v3, v9, Le10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_28
 
@@ -2595,11 +2595,11 @@
     :cond_28
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->token:Ljava/lang/String;
 
-    iget-wide v3, v9, Ld10;->g:J
+    iget-wide v3, v9, Le10;->g:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->startTime:J
 
-    iget-wide v3, v9, Ld10;->h:J
+    iget-wide v3, v9, Le10;->h:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Audio;->lastStartTimeUpdateTimestamp:J
 
@@ -2612,11 +2612,11 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;-><init>()V
 
-    iget-wide v3, v5, Ly10;->a:J
+    iget-wide v3, v5, Lz10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->stickerId:J
 
-    iget-object v3, v5, Ly10;->b:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->b:Ljava/lang/String;
 
     if-nez v3, :cond_2a
 
@@ -2625,15 +2625,15 @@
     :cond_2a
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->url:Ljava/lang/String;
 
-    iget v3, v5, Ly10;->c:I
+    iget v3, v5, Lz10;->c:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->width:I
 
-    iget v3, v5, Ly10;->d:I
+    iget v3, v5, Lz10;->d:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->height:I
 
-    iget-object v3, v5, Ly10;->e:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_2b
 
@@ -2642,7 +2642,7 @@
     :cond_2b
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->mp4Url:Ljava/lang/String;
 
-    iget-object v3, v5, Ly10;->f:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->f:Ljava/lang/String;
 
     if-nez v3, :cond_2c
 
@@ -2651,7 +2651,7 @@
     :cond_2c
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->firstUrl:Ljava/lang/String;
 
-    iget-object v3, v5, Ly10;->g:Ljava/util/List;
+    iget-object v3, v5, Lz10;->g:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -2667,7 +2667,7 @@
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->tags:[Ljava/lang/String;
 
-    iget-object v3, v5, Ly10;->h:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->h:Ljava/lang/String;
 
     if-nez v3, :cond_2d
 
@@ -2676,15 +2676,15 @@
     :cond_2d
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->previewUrl:Ljava/lang/String;
 
-    iget-wide v3, v5, Ly10;->i:J
+    iget-wide v3, v5, Lz10;->i:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->updateTime:J
 
-    iget v3, v5, Ly10;->j:I
+    iget v3, v5, Lz10;->j:I
 
     if-eqz v3, :cond_31
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -2721,11 +2721,11 @@
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->stickerType:I
 
     :cond_31
-    iget-wide v3, v5, Ly10;->k:J
+    iget-wide v3, v5, Lz10;->k:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->setId:J
 
-    iget-object v3, v5, Ly10;->l:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->l:Ljava/lang/String;
 
     if-nez v3, :cond_32
 
@@ -2734,15 +2734,15 @@
     :cond_32
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->lottieUrl:Ljava/lang/String;
 
-    iget-boolean v3, v5, Ly10;->m:Z
+    iget-boolean v3, v5, Lz10;->m:Z
 
     iput-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->audio:Z
 
-    iget v3, v5, Ly10;->n:I
+    iget v3, v5, Lz10;->n:I
 
     if-eqz v3, :cond_35
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -2770,7 +2770,7 @@
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;->authorType:I
 
     :cond_35
-    iget-object v3, v5, Ly10;->o:Ljava/lang/String;
+    iget-object v3, v5, Lz10;->o:Ljava/lang/String;
 
     if-nez v3, :cond_36
 
@@ -2782,7 +2782,7 @@
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->sticker:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Sticker;
 
     :cond_37
-    invoke-virtual {v0}, Ld20;->f()Z
+    invoke-virtual {v0}, Le20;->g()Z
 
     move-result v2
 
@@ -2792,11 +2792,11 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;-><init>()V
 
-    iget-wide v3, v10, Lv10;->a:J
+    iget-wide v3, v10, Lw10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->shareId:J
 
-    iget-object v3, v10, Lv10;->b:Ljava/lang/String;
+    iget-object v3, v10, Lw10;->b:Ljava/lang/String;
 
     if-nez v3, :cond_38
 
@@ -2805,7 +2805,7 @@
     :cond_38
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->url:Ljava/lang/String;
 
-    iget-object v3, v10, Lv10;->c:Ljava/lang/String;
+    iget-object v3, v10, Lw10;->c:Ljava/lang/String;
 
     if-nez v3, :cond_39
 
@@ -2814,7 +2814,7 @@
     :cond_39
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->title:Ljava/lang/String;
 
-    iget-object v3, v10, Lv10;->d:Ljava/lang/String;
+    iget-object v3, v10, Lw10;->d:Ljava/lang/String;
 
     if-nez v3, :cond_3a
 
@@ -2823,7 +2823,7 @@
     :cond_3a
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->description:Ljava/lang/String;
 
-    iget-object v3, v10, Lv10;->e:Ljava/lang/String;
+    iget-object v3, v10, Lw10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_3b
 
@@ -2832,33 +2832,33 @@
     :cond_3b
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->host:Ljava/lang/String;
 
-    iget-object v3, v10, Lv10;->f:Lr10;
+    iget-object v3, v10, Lw10;->f:Ls10;
 
     if-eqz v3, :cond_3c
 
-    invoke-static {v3}, Lru/ok/tamtam/nano/b;->o(Lr10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
+    invoke-static {v3}, Lru/ok/tamtam/nano/b;->o(Ls10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     move-result-object v3
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->image:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     :cond_3c
-    iget-object v3, v10, Lv10;->g:Ld20;
+    iget-object v3, v10, Lw10;->g:Le20;
 
     if-eqz v3, :cond_3d
 
-    invoke-static {v3}, Lru/ok/tamtam/nano/b;->d(Ld20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+    invoke-static {v3}, Lru/ok/tamtam/nano/b;->d(Le20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
     move-result-object v3
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->media:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
     :cond_3d
-    iget-boolean v3, v10, Lv10;->h:Z
+    iget-boolean v3, v10, Lw10;->h:Z
 
     iput-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->deleted:Z
 
-    iget-boolean v3, v10, Lv10;->i:Z
+    iget-boolean v3, v10, Lw10;->i:Z
 
     iput-boolean v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Share;->contentLevel:Z
 
@@ -2871,11 +2871,11 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;-><init>()V
 
-    iget-wide v3, v8, Lb10;->a:J
+    iget-wide v3, v8, Lc10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->appId:J
 
-    iget-object v3, v8, Lb10;->b:Ljava/lang/Object;
+    iget-object v3, v8, Lc10;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
@@ -2884,7 +2884,7 @@
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->name:Ljava/lang/String;
 
     :cond_3f
-    iget-object v3, v8, Lb10;->c:Ljava/lang/Object;
+    iget-object v3, v8, Lc10;->c:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
@@ -2893,7 +2893,7 @@
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->icon:Ljava/lang/String;
 
     :cond_40
-    iget-object v3, v8, Lb10;->d:Ljava/lang/Object;
+    iget-object v3, v8, Lc10;->d:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
@@ -2902,15 +2902,15 @@
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->message:Ljava/lang/String;
 
     :cond_41
-    iget v3, v8, Lb10;->e:I
+    iget v3, v8, Lc10;->e:I
 
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->state:I
 
-    iget-wide v3, v8, Lb10;->f:J
+    iget-wide v3, v8, Lc10;->f:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$App;->timeout:J
 
-    iget-object v3, v8, Lb10;->g:Ljava/lang/Object;
+    iget-object v3, v8, Lc10;->g:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
@@ -2928,15 +2928,15 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;-><init>()V
 
-    iget-object v3, v12, Lg10;->a:Ljava/lang/String;
+    iget-object v3, v12, Lh10;->a:Ljava/lang/String;
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->conversationId:Ljava/lang/String;
 
-    iget v3, v12, Lg10;->c:I
+    iget v3, v12, Lh10;->c:I
 
     if-eqz v3, :cond_46
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -2980,11 +2980,11 @@
     iput v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->callType:I
 
     :goto_8
-    iget v3, v12, Lg10;->d:I
+    iget v3, v12, Lh10;->d:I
 
     if-eqz v3, :cond_4b
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -3028,19 +3028,19 @@
     iput v15, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->hangupType:I
 
     :goto_9
-    iget-wide v3, v12, Lg10;->e:J
+    iget-wide v3, v12, Lh10;->e:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->durationLong:J
 
-    iget-object v3, v12, Lg10;->f:Ljava/util/List;
+    iget-object v3, v12, Lh10;->f:Ljava/util/List;
 
-    invoke-static {v3}, Lpci;->d(Ljava/util/List;)[J
+    invoke-static {v3}, Lwdi;->c(Ljava/util/List;)[J
 
     move-result-object v3
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Call;->contactIds:[J
 
-    iget-object v3, v12, Lg10;->b:Ljava/lang/String;
+    iget-object v3, v12, Lh10;->b:Ljava/lang/String;
 
     if-nez v3, :cond_4c
 
@@ -3057,7 +3057,7 @@
     const/4 v15, 0x0
 
     :goto_a
-    invoke-virtual {v0}, Ld20;->c()Z
+    invoke-virtual {v0}, Le20;->d()Z
 
     move-result v2
 
@@ -3067,15 +3067,15 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;-><init>()V
 
-    iget-wide v3, v7, Lm10;->a:J
+    iget-wide v3, v7, Ln10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->fileId:J
 
-    iget-wide v3, v7, Lm10;->b:J
+    iget-wide v3, v7, Ln10;->b:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->size:J
 
-    iget-object v3, v7, Lm10;->c:Ljava/lang/String;
+    iget-object v3, v7, Ln10;->c:Ljava/lang/String;
 
     if-nez v3, :cond_4e
 
@@ -3084,18 +3084,18 @@
     :cond_4e
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->name:Ljava/lang/String;
 
-    iget-object v3, v7, Lm10;->d:Ld20;
+    iget-object v3, v7, Ln10;->d:Le20;
 
     if-eqz v3, :cond_4f
 
-    invoke-static {v3}, Lru/ok/tamtam/nano/b;->d(Ld20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+    invoke-static {v3}, Lru/ok/tamtam/nano/b;->d(Le20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
     move-result-object v3
 
     iput-object v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;->preview:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
     :cond_4f
-    iget-object v3, v7, Lm10;->e:Ljava/lang/String;
+    iget-object v3, v7, Ln10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_50
 
@@ -3107,7 +3107,7 @@
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->file:Lru/ok/tamtam/nano/Protos$Attaches$Attach$File;
 
     :cond_51
-    invoke-virtual {v0}, Ld20;->b()Z
+    invoke-virtual {v0}, Le20;->c()Z
 
     move-result v2
 
@@ -3117,9 +3117,9 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;-><init>()V
 
-    iget-object v3, v0, Ld20;->k:Lh10;
+    iget-object v3, v0, Le20;->k:Li10;
 
-    iget-object v4, v3, Lh10;->a:Ljava/lang/String;
+    iget-object v4, v3, Li10;->a:Ljava/lang/String;
 
     if-nez v4, :cond_52
 
@@ -3128,11 +3128,11 @@
     :cond_52
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->vcfBody:Ljava/lang/String;
 
-    iget-wide v4, v3, Lh10;->b:J
+    iget-wide v4, v3, Li10;->b:J
 
     iput-wide v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->contactId:J
 
-    iget-object v4, v3, Lh10;->c:Ljava/lang/String;
+    iget-object v4, v3, Li10;->c:Ljava/lang/String;
 
     if-nez v4, :cond_53
 
@@ -3141,7 +3141,7 @@
     :cond_53
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->name:Ljava/lang/String;
 
-    iget-object v4, v3, Lh10;->f:Ljava/lang/String;
+    iget-object v4, v3, Li10;->f:Ljava/lang/String;
 
     if-nez v4, :cond_54
 
@@ -3150,7 +3150,7 @@
     :cond_54
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->phone:Ljava/lang/String;
 
-    iget-object v4, v3, Lh10;->g:Ljava/lang/String;
+    iget-object v4, v3, Li10;->g:Ljava/lang/String;
 
     if-nez v4, :cond_55
 
@@ -3159,7 +3159,7 @@
     :cond_55
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->photoUrl:Ljava/lang/String;
 
-    iget-object v4, v3, Lh10;->h:Ljava/lang/String;
+    iget-object v4, v3, Li10;->h:Ljava/lang/String;
 
     if-nez v4, :cond_56
 
@@ -3168,7 +3168,7 @@
     :cond_56
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->localPhotoUrl:Ljava/lang/String;
 
-    iget-object v4, v3, Lh10;->d:Ljava/lang/String;
+    iget-object v4, v3, Li10;->d:Ljava/lang/String;
 
     if-nez v4, :cond_57
 
@@ -3177,7 +3177,7 @@
     :cond_57
     iput-object v4, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Contact;->firstName:Ljava/lang/String;
 
-    iget-object v3, v3, Lh10;->e:Ljava/lang/String;
+    iget-object v3, v3, Li10;->e:Ljava/lang/String;
 
     if-nez v3, :cond_58
 
@@ -3195,25 +3195,25 @@
 
     invoke-direct {v2}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;-><init>()V
 
-    iget-wide v3, v6, Ls10;->a:J
+    iget-wide v3, v6, Lt10;->a:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->presentId:J
 
-    iget-wide v3, v6, Ls10;->b:J
+    iget-wide v3, v6, Lt10;->b:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->metadataId:J
 
-    iget-wide v3, v6, Ls10;->c:J
+    iget-wide v3, v6, Lt10;->c:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->senderId:J
 
-    iget-wide v3, v6, Ls10;->d:J
+    iget-wide v3, v6, Lt10;->d:J
 
     iput-wide v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->receiverId:J
 
-    iget v3, v6, Ls10;->e:I
+    iget v3, v6, Lt10;->e:I
 
-    invoke-static {v3}, Lwx1;->v(I)I
+    invoke-static {v3}, Ldy1;->v(I)I
 
     move-result v3
 
@@ -3275,7 +3275,7 @@
     :goto_b
     iput v3, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Present;->status:I
 
-    iget-object v3, v6, Ls10;->f:Ljava/lang/Object;
+    iget-object v3, v6, Lt10;->f:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
@@ -3302,45 +3302,45 @@
 
     move-object/from16 v3, v16
 
-    iget-object v5, v3, Lo10;->a:Lt68;
+    iget-object v5, v3, Lp10;->a:Lq78;
 
-    iget-wide v6, v5, Lt68;->a:D
+    iget-wide v6, v5, Lq78;->a:D
 
     iput-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->latitude:D
 
-    iget-wide v6, v5, Lt68;->b:D
+    iget-wide v6, v5, Lq78;->b:D
 
     iput-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->longitude:D
 
-    iget-wide v6, v5, Lt68;->c:D
+    iget-wide v6, v5, Lq78;->c:D
 
     iput-wide v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->altitude:D
 
-    iget v6, v5, Lt68;->o:F
+    iget v6, v5, Lq78;->o:F
 
     iput v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->accuracy:F
 
-    iget v6, v5, Lt68;->X:F
+    iget v6, v5, Lq78;->X:F
 
     iput v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->bearing:F
 
-    iget v5, v5, Lt68;->Y:F
+    iget v5, v5, Lq78;->Y:F
 
     iput v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->speed:F
 
-    iget-wide v5, v3, Lo10;->b:J
+    iget-wide v5, v3, Lp10;->b:J
 
     iput-wide v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->livePeriod:J
 
-    iget-wide v5, v3, Lo10;->c:J
+    iget-wide v5, v3, Lp10;->c:J
 
     iput-wide v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->startTime:J
 
-    iget-wide v5, v3, Lo10;->d:J
+    iget-wide v5, v3, Lp10;->d:J
 
     iput-wide v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->endTime:J
 
-    iget-object v5, v3, Lo10;->e:Ljava/util/List;
+    iget-object v5, v3, Lp10;->e:Ljava/util/List;
 
     if-eqz v5, :cond_62
 
@@ -3363,9 +3363,9 @@
 
     move-result-object v8
 
-    check-cast v8, Lp10;
+    check-cast v8, Lq10;
 
-    invoke-static {v8}, Lru/ok/tamtam/nano/b;->m(Lp10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+    invoke-static {v8}, Lru/ok/tamtam/nano/b;->m(Lq10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     move-result-object v8
 
@@ -3379,7 +3379,7 @@
     iput-object v6, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->track:[Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     :cond_62
-    iget-object v5, v3, Lo10;->f:Ljava/lang/String;
+    iget-object v5, v3, Lp10;->f:Ljava/lang/String;
 
     if-nez v5, :cond_63
 
@@ -3388,19 +3388,19 @@
     :cond_63
     iput-object v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->deviceId:Ljava/lang/String;
 
-    iget v5, v3, Lo10;->g:F
+    iget v5, v3, Lp10;->g:F
 
     iput v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->zoom:F
 
-    iget-boolean v5, v3, Lo10;->h:Z
+    iget-boolean v5, v3, Lp10;->h:Z
 
     iput-boolean v5, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;->corrupted:Z
 
-    iget-object v3, v3, Lo10;->i:Lp10;
+    iget-object v3, v3, Lp10;->i:Lq10;
 
     if-eqz v3, :cond_64
 
-    invoke-static {v3}, Lru/ok/tamtam/nano/b;->m(Lp10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+    invoke-static {v3}, Lru/ok/tamtam/nano/b;->m(Lq10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     move-result-object v3
 
@@ -3410,11 +3410,11 @@
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->location:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Location;
 
     :cond_65
-    iget-object v2, v0, Ld20;->n:Lglh;
+    iget-object v2, v0, Le20;->n:Lhmh;
 
     if-eqz v2, :cond_74
 
-    iget-object v2, v2, Lglh;->a:Ljava/util/ArrayList;
+    iget-object v2, v2, Lhmh;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -3435,9 +3435,9 @@
 
     move-result-object v6
 
-    check-cast v6, Lblh;
+    check-cast v6, Lcmh;
 
-    iget-object v7, v6, Lblh;->a:Lalh;
+    iget-object v7, v6, Lcmh;->a:Lbmh;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -3533,17 +3533,17 @@
 
     iput v7, v10, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget$Content;->type:I
 
-    invoke-virtual {v6}, Lblh;->a()Ljava/lang/String;
+    invoke-virtual {v6}, Lcmh;->a()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, v10, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget$Content;->text:Ljava/lang/String;
 
-    iget-object v7, v6, Lblh;->b:Lfwb;
+    iget-object v7, v6, Lcmh;->b:Lkxb;
 
     if-eqz v7, :cond_6d
 
-    iget-object v7, v7, Lfwb;->c:Ljava/lang/Object;
+    iget-object v7, v7, Lkxb;->c:Ljava/lang/Object;
 
     check-cast v7, Ljava/util/List;
 
@@ -3555,7 +3555,7 @@
     :goto_10
     if-nez v7, :cond_6e
 
-    sget-object v7, Ls95;->a:Ls95;
+    sget-object v7, Lka5;->a:Lka5;
 
     :cond_6e
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
@@ -3564,7 +3564,7 @@
 
     if-nez v12, :cond_6f
 
-    invoke-static {v7}, Lza9;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
+    invoke-static {v7}, Lac9;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
 
     move-result-object v7
 
@@ -3573,9 +3573,9 @@
     iput-object v7, v10, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget$Content;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
 
     :cond_6f
-    iget-object v7, v6, Lblh;->c:Lkf7;
+    iget-object v7, v6, Lcmh;->c:Lgg7;
 
-    invoke-virtual {v6}, Lblh;->b()Z
+    invoke-virtual {v6}, Lcmh;->b()Z
 
     move-result v12
 
@@ -3583,14 +3583,14 @@
 
     if-eqz v7, :cond_70
 
-    invoke-static {v7}, Lru/ok/tamtam/nano/b;->l(Lkf7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+    invoke-static {v7}, Lru/ok/tamtam/nano/b;->l(Lgg7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     move-result-object v7
 
     iput-object v7, v10, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget$Content;->keyboard:Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     :cond_70
-    iget-object v6, v6, Lblh;->d:Le;
+    iget-object v6, v6, Lcmh;->d:Le;
 
     if-eqz v6, :cond_72
 
@@ -3629,7 +3629,7 @@
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach;->widget:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Widget;
 
     :cond_74
-    iget-object v0, v0, Ld20;->x:Lt10;
+    iget-object v0, v0, Le20;->x:Lu10;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -3692,12 +3692,12 @@
     .end packed-switch
 .end method
 
-.method public static e(Lru/ok/tamtam/nano/Protos$Attaches;)Lk68;
+.method public static e(Lru/ok/tamtam/nano/Protos$Attaches;)Lh78;
     .locals 22
 
     move-object/from16 v0, p0
 
-    new-instance v1, Le20;
+    new-instance v1, Lf20;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
@@ -3705,11 +3705,11 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lkf7;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lgg7;
 
     move-result-object v2
 
-    iput-object v2, v1, Le20;->b:Lkf7;
+    iput-object v2, v1, Lf20;->b:Lgg7;
 
     :cond_0
     iget-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches;->replyKeyboard:Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyKeyboard;
@@ -3735,9 +3735,9 @@
 
     if-eqz v6, :cond_a
 
-    new-instance v7, Lx9d;
+    new-instance v7, Ldbd;
 
-    invoke-direct {v7}, Lx9d;-><init>()V
+    invoke-direct {v7}, Ldbd;-><init>()V
 
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3758,7 +3758,7 @@
 
     move-result-object v9
 
-    check-cast v9, Lx9d;
+    check-cast v9, Ldbd;
 
     iget v10, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->type:I
 
@@ -3833,7 +3833,7 @@
 
     if-eqz v10, :cond_8
 
-    invoke-static {v10}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Lr10;
+    invoke-static {v10}, Lru/ok/tamtam/nano/b;->n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Ls10;
 
     move-result-object v10
 
@@ -3848,7 +3848,7 @@
     goto :goto_4
 
     :goto_5
-    new-instance v15, Lv9d;
+    new-instance v15, Lbbd;
 
     iget-object v10, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->text:Ljava/lang/String;
 
@@ -3858,7 +3858,7 @@
 
     move-wide/from16 v20, v11
 
-    invoke-direct/range {v15 .. v21}, Lv9d;-><init>(IILjava/lang/String;Lr10;J)V
+    invoke-direct/range {v15 .. v21}, Lbbd;-><init>(IILjava/lang/String;Ls10;J)V
 
     invoke-virtual {v9, v15}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
@@ -3873,13 +3873,13 @@
     goto :goto_0
 
     :cond_b
-    new-instance v5, Ly9d;
+    new-instance v5, Lebd;
 
     iget-boolean v2, v2, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyKeyboard;->defaultInputDisabled:Z
 
-    invoke-direct {v5, v4, v2}, Ly9d;-><init>(Ljava/util/ArrayList;Z)V
+    invoke-direct {v5, v4, v2}, Lebd;-><init>(Ljava/util/ArrayList;Z)V
 
-    iput-object v5, v1, Le20;->c:Ly9d;
+    iput-object v5, v1, Lf20;->c:Lebd;
 
     :cond_c
     iget-object v0, v0, Lru/ok/tamtam/nano/Protos$Attaches;->attach:[Lru/ok/tamtam/nano/Protos$Attaches$Attach;
@@ -3891,7 +3891,7 @@
 
     aget-object v4, v0, v3
 
-    iget-object v5, v1, Le20;->b:Lkf7;
+    iget-object v5, v1, Lf20;->b:Lgg7;
 
     if-nez v5, :cond_d
 
@@ -3899,20 +3899,20 @@
 
     if-eqz v5, :cond_d
 
-    invoke-static {v5}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lkf7;
+    invoke-static {v5}, Lru/ok/tamtam/nano/b;->k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lgg7;
 
     move-result-object v4
 
-    iput-object v4, v1, Le20;->b:Lkf7;
+    iput-object v4, v1, Lf20;->b:Lgg7;
 
     goto :goto_7
 
     :cond_d
-    invoke-static {v4}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Ld20;
+    invoke-static {v4}, Lru/ok/tamtam/nano/b;->c(Lru/ok/tamtam/nano/Protos$Attaches$Attach;)Le20;
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Le20;->a(Ld20;)V
+    invoke-virtual {v1, v4}, Lf20;->a(Le20;)V
 
     :goto_7
     add-int/lit8 v3, v3, 0x1
@@ -3920,21 +3920,21 @@
     goto :goto_6
 
     :cond_e
-    invoke-virtual {v1}, Le20;->c()Lk68;
+    invoke-virtual {v1}, Lf20;->c()Lh78;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static f(Lk68;)Lru/ok/tamtam/nano/Protos$Attaches;
+.method public static f(Lh78;)Lru/ok/tamtam/nano/Protos$Attaches;
     .locals 13
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches;-><init>()V
 
-    iget-object v1, p0, Lk68;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lh78;->a:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/List;
 
@@ -3951,11 +3951,11 @@
     :goto_0
     if-ge v4, v1, :cond_0
 
-    invoke-virtual {p0, v4}, Lk68;->j(I)Ld20;
+    invoke-virtual {p0, v4}, Lh78;->t(I)Le20;
 
     move-result-object v5
 
-    invoke-static {v5}, Lru/ok/tamtam/nano/b;->d(Ld20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+    invoke-static {v5}, Lru/ok/tamtam/nano/b;->d(Le20;)Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
     move-result-object v5
 
@@ -3968,22 +3968,22 @@
     :cond_0
     iput-object v2, v0, Lru/ok/tamtam/nano/Protos$Attaches;->attach:[Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
-    iget-object v1, p0, Lk68;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lh78;->b:Ljava/lang/Object;
 
-    check-cast v1, Lkf7;
+    check-cast v1, Lgg7;
 
     if-eqz v1, :cond_1
 
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->l(Lkf7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+    invoke-static {v1}, Lru/ok/tamtam/nano/b;->l(Lgg7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     move-result-object v1
 
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches;->keyboard:Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     :cond_1
-    iget-object p0, p0, Lk68;->o:Ljava/lang/Object;
+    iget-object p0, p0, Lh78;->c:Ljava/lang/Object;
 
-    check-cast p0, Ly9d;
+    check-cast p0, Lebd;
 
     if-eqz p0, :cond_d
 
@@ -3991,7 +3991,7 @@
 
     invoke-direct {v1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyKeyboard;-><init>()V
 
-    iget-object v2, p0, Ly9d;->a:Ljava/util/ArrayList;
+    iget-object v2, p0, Lebd;->a:Ljava/util/ArrayList;
 
     new-instance v4, Ljava/util/ArrayList;
 
@@ -4035,15 +4035,15 @@
 
     move-result-object v7
 
-    check-cast v7, Lv9d;
+    check-cast v7, Lbbd;
 
     new-instance v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;
 
     invoke-direct {v8}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;-><init>()V
 
-    iget v9, v7, Lv9d;->b:I
+    iget v9, v7, Lbbd;->b:I
 
-    invoke-static {v9}, Lwx1;->v(I)I
+    invoke-static {v9}, Ldy1;->v(I)I
 
     move-result v9
 
@@ -4079,9 +4079,9 @@
     :goto_2
     iput v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->intent:I
 
-    iget v9, v7, Lv9d;->a:I
+    iget v9, v7, Lbbd;->a:I
 
-    invoke-static {v9}, Lwx1;->v(I)I
+    invoke-static {v9}, Ldy1;->v(I)I
 
     move-result v9
 
@@ -4107,7 +4107,7 @@
     :goto_3
     iput v10, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->type:I
 
-    iget-object v9, v7, Lv9d;->c:Ljava/lang/String;
+    iget-object v9, v7, Lbbd;->c:Ljava/lang/String;
 
     if-nez v9, :cond_9
 
@@ -4116,15 +4116,15 @@
     :cond_9
     iput-object v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->text:Ljava/lang/String;
 
-    iget-wide v9, v7, Lv9d;->e:J
+    iget-wide v9, v7, Lbbd;->e:J
 
     iput-wide v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButton;->outgoingMessageId:J
 
-    iget-object v7, v7, Lv9d;->d:Lr10;
+    iget-object v7, v7, Lbbd;->d:Ls10;
 
     if-eqz v7, :cond_a
 
-    invoke-static {v7}, Lru/ok/tamtam/nano/b;->o(Lr10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
+    invoke-static {v7}, Lru/ok/tamtam/nano/b;->o(Ls10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     move-result-object v7
 
@@ -4178,7 +4178,7 @@
     :cond_c
     iput-object v2, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyKeyboard;->buttons:[Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyButtons;
 
-    iget-boolean p0, p0, Ly9d;->b:Z
+    iget-boolean p0, p0, Lebd;->b:Z
 
     iput-boolean p0, v1, Lru/ok/tamtam/nano/Protos$Attaches$Attach$ReplyKeyboard;->defaultInputDisabled:Z
 
@@ -4188,7 +4188,7 @@
     return-object v0
 .end method
 
-.method public static g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lsd2;
+.method public static g(Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;)Lae2;
     .locals 10
 
     iget v2, p0, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;->totalCount:I
@@ -4203,7 +4203,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lru/ok/tamtam/nano/b;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lyd2;
+    invoke-static {v0}, Lru/ok/tamtam/nano/b;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lge2;
 
     move-result-object v0
 
@@ -4230,7 +4230,7 @@
 
     aget-object v9, p0, v8
 
-    invoke-static {v9}, Lru/ok/tamtam/nano/b;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lyd2;
+    invoke-static {v9}, Lru/ok/tamtam/nano/b;->i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lge2;
 
     move-result-object v9
 
@@ -4257,39 +4257,39 @@
 
     move-object v1, v0
 
-    new-instance v0, Lsd2;
+    new-instance v0, Lae2;
 
-    invoke-direct/range {v0 .. v7}, Lsd2;-><init>(Lyd2;IJJLjava/util/List;)V
+    invoke-direct/range {v0 .. v7}, Lae2;-><init>(Lge2;IJJLjava/util/List;)V
 
     return-object v0
 .end method
 
-.method public static h(Lsd2;)Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
+.method public static h(Lae2;)Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
     .locals 4
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;-><init>()V
 
-    iget-wide v1, p0, Lsd2;->c:J
+    iget-wide v1, p0, Lae2;->c:J
 
-    iget-object v3, p0, Lsd2;->e:Ljava/util/List;
+    iget-object v3, p0, Lae2;->e:Ljava/util/List;
 
     iput-wide v1, v0, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;->firstMessageId:J
 
-    iget-wide v1, p0, Lsd2;->d:J
+    iget-wide v1, p0, Lae2;->d:J
 
     iput-wide v1, v0, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;->lastMessageId:J
 
-    iget v1, p0, Lsd2;->b:I
+    iget v1, p0, Lae2;->b:I
 
     iput v1, v0, Lru/ok/tamtam/nano/Protos$Chat$ChatMedia;->totalCount:I
 
-    iget-object p0, p0, Lsd2;->a:Lyd2;
+    iget-object p0, p0, Lae2;->a:Lge2;
 
     if-eqz p0, :cond_0
 
-    invoke-static {p0}, Lru/ok/tamtam/nano/b;->j(Lyd2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
+    invoke-static {p0}, Lru/ok/tamtam/nano/b;->j(Lge2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
 
     move-result-object p0
 
@@ -4325,9 +4325,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lyd2;
+    check-cast v2, Lge2;
 
-    invoke-static {v2}, Lru/ok/tamtam/nano/b;->j(Lyd2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
+    invoke-static {v2}, Lru/ok/tamtam/nano/b;->j(Lge2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
 
     move-result-object v2
 
@@ -4341,7 +4341,7 @@
     return-object v0
 .end method
 
-.method public static i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lyd2;
+.method public static i(Lru/ok/tamtam/nano/Protos$Chat$Chunk;)Lge2;
     .locals 9
 
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Chat$Chunk;->startTime:J
@@ -4358,7 +4358,7 @@
 
     const-string v4, "start time is -1"
 
-    invoke-static {v4, v6, v5}, Lxx1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v6, v5}, Ley1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget-wide v7, p0, Lru/ok/tamtam/nano/Protos$Chat$Chunk;->endTime:J
@@ -4369,35 +4369,35 @@
 
     const-string p0, "end time is -1"
 
-    invoke-static {p0, v6, v5}, Lxx1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v6, v5}, Ley1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    new-instance p0, Lyd2;
+    new-instance p0, Lge2;
 
-    invoke-direct {p0, v0, v1, v7, v8}, Lyd2;-><init>(JJ)V
+    invoke-direct {p0, v0, v1, v7, v8}, Lge2;-><init>(JJ)V
 
     return-object p0
 .end method
 
-.method public static j(Lyd2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
+.method public static j(Lge2;)Lru/ok/tamtam/nano/Protos$Chat$Chunk;
     .locals 3
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Chat$Chunk;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Chat$Chunk;-><init>()V
 
-    iget-wide v1, p0, Lyd2;->a:J
+    iget-wide v1, p0, Lge2;->a:J
 
     iput-wide v1, v0, Lru/ok/tamtam/nano/Protos$Chat$Chunk;->startTime:J
 
-    iget-wide v1, p0, Lyd2;->b:J
+    iget-wide v1, p0, Lge2;->b:J
 
     iput-wide v1, v0, Lru/ok/tamtam/nano/Protos$Chat$Chunk;->endTime:J
 
     return-object v0
 .end method
 
-.method public static k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lkf7;
+.method public static k(Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;)Lgg7;
     .locals 16
 
     move-object/from16 v0, p0
@@ -4417,7 +4417,7 @@
 
     aget-object v4, v4, v3
 
-    new-instance v5, Lrw0;
+    new-instance v5, Lax0;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
@@ -4438,7 +4438,7 @@
 
     move-result-object v7
 
-    check-cast v7, Lrw0;
+    check-cast v7, Lax0;
 
     iget v8, v6, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->type:I
 
@@ -4468,42 +4468,42 @@
 
     if-eq v8, v12, :cond_0
 
-    sget-object v8, Ltw0;->s0:Ltw0;
+    sget-object v8, Lcx0;->r0:Lcx0;
 
     goto :goto_2
 
     :cond_0
-    sget-object v8, Ltw0;->Z:Ltw0;
+    sget-object v8, Lcx0;->Z:Lcx0;
 
     goto :goto_2
 
     :cond_1
-    sget-object v8, Ltw0;->r0:Ltw0;
+    sget-object v8, Lcx0;->q0:Lcx0;
 
     goto :goto_2
 
     :cond_2
-    sget-object v8, Ltw0;->Y:Ltw0;
+    sget-object v8, Lcx0;->Y:Lcx0;
 
     goto :goto_2
 
     :cond_3
-    sget-object v8, Ltw0;->X:Ltw0;
+    sget-object v8, Lcx0;->X:Lcx0;
 
     goto :goto_2
 
     :cond_4
-    sget-object v8, Ltw0;->o:Ltw0;
+    sget-object v8, Lcx0;->o:Lcx0;
 
     goto :goto_2
 
     :cond_5
-    sget-object v8, Ltw0;->c:Ltw0;
+    sget-object v8, Lcx0;->c:Lcx0;
 
     goto :goto_2
 
     :cond_6
-    sget-object v8, Ltw0;->b:Ltw0;
+    sget-object v8, Lcx0;->b:Lcx0;
 
     :goto_2
     iget v12, v6, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->intent:I
@@ -4540,23 +4540,23 @@
 
     iget-boolean v6, v6, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->showLoading:Z
 
-    new-instance v2, Liw0;
+    new-instance v2, Lrw0;
 
-    invoke-direct {v2, v10, v8, v9}, Liw0;-><init>(Ljava/lang/String;Ltw0;I)V
+    invoke-direct {v2, v10, v8, v9}, Lrw0;-><init>(Ljava/lang/String;Lcx0;I)V
 
-    iput-object v11, v2, Liw0;->d:Ljava/lang/String;
+    iput-object v11, v2, Lrw0;->d:Ljava/lang/String;
 
-    iput-object v12, v2, Liw0;->e:Ljava/lang/String;
+    iput-object v12, v2, Lrw0;->e:Ljava/lang/String;
 
-    iput-wide v14, v2, Liw0;->h:J
+    iput-wide v14, v2, Lrw0;->h:J
 
-    iput-boolean v13, v2, Liw0;->f:Z
+    iput-boolean v13, v2, Lrw0;->f:Z
 
-    iput-boolean v6, v2, Liw0;->g:Z
+    iput-boolean v6, v2, Lrw0;->g:Z
 
-    new-instance v6, Llw0;
+    new-instance v6, Luw0;
 
-    invoke-direct {v6, v2}, Llw0;-><init>(Liw0;)V
+    invoke-direct {v6, v2}, Luw0;-><init>(Lrw0;)V
 
     invoke-virtual {v7, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
@@ -4570,31 +4570,31 @@
     goto :goto_0
 
     :cond_b
-    new-instance v2, Ljf7;
+    new-instance v2, Lfg7;
 
-    invoke-direct {v2}, Ljf7;-><init>()V
+    invoke-direct {v2}, Lfg7;-><init>()V
 
-    iput-object v1, v2, Ljf7;->a:Ljava/util/ArrayList;
+    iput-object v1, v2, Lfg7;->a:Ljava/util/ArrayList;
 
     iget-object v0, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->callbackId:Ljava/lang/String;
 
-    iput-object v0, v2, Ljf7;->b:Ljava/lang/String;
+    iput-object v0, v2, Lfg7;->b:Ljava/lang/String;
 
-    new-instance v0, Lkf7;
+    new-instance v0, Lgg7;
 
-    invoke-direct {v0, v2}, Lkf7;-><init>(Ljf7;)V
+    invoke-direct {v0, v2}, Lgg7;-><init>(Lfg7;)V
 
     return-object v0
 .end method
 
-.method public static l(Lkf7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+.method public static l(Lgg7;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
     .locals 13
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;-><init>()V
 
-    iget-object v1, p0, Lkf7;->a:Ljava/util/ArrayList;
+    iget-object v1, p0, Lgg7;->a:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/util/ArrayList;
 
@@ -4642,15 +4642,15 @@
 
     move-result-object v7
 
-    check-cast v7, Llw0;
+    check-cast v7, Luw0;
 
     new-instance v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
 
     invoke-direct {v8}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;-><init>()V
 
-    iget v9, v7, Llw0;->c:I
+    iget v9, v7, Luw0;->c:I
 
-    invoke-static {v9}, Lwx1;->v(I)I
+    invoke-static {v9}, Ldy1;->v(I)I
 
     move-result v9
 
@@ -4686,7 +4686,7 @@
     :goto_1
     iput v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->intent:I
 
-    iget-object v9, v7, Llw0;->b:Ltw0;
+    iget-object v9, v7, Luw0;->b:Lcx0;
 
     invoke-virtual {v9}, Ljava/lang/Enum;->ordinal()I
 
@@ -4730,7 +4730,7 @@
     :pswitch_6
     iput v10, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->type:I
 
-    iget-object v9, v7, Llw0;->a:Ljava/lang/String;
+    iget-object v9, v7, Luw0;->a:Ljava/lang/String;
 
     if-nez v9, :cond_4
 
@@ -4739,7 +4739,7 @@
     :cond_4
     iput-object v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->title:Ljava/lang/String;
 
-    iget-object v9, v7, Llw0;->o:Ljava/lang/String;
+    iget-object v9, v7, Luw0;->o:Ljava/lang/String;
 
     if-nez v9, :cond_5
 
@@ -4748,7 +4748,7 @@
     :cond_5
     iput-object v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->url:Ljava/lang/String;
 
-    iget-object v9, v7, Llw0;->X:Ljava/lang/String;
+    iget-object v9, v7, Luw0;->X:Ljava/lang/String;
 
     if-nez v9, :cond_6
 
@@ -4757,15 +4757,15 @@
     :cond_6
     iput-object v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->payload:Ljava/lang/String;
 
-    iget-boolean v9, v7, Llw0;->r0:Z
+    iget-boolean v9, v7, Luw0;->q0:Z
 
     iput-boolean v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->showLoading:Z
 
-    iget-boolean v9, v7, Llw0;->Y:Z
+    iget-boolean v9, v7, Luw0;->Y:Z
 
     iput-boolean v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->quickLocation:Z
 
-    iget-wide v9, v7, Llw0;->Z:J
+    iget-wide v9, v7, Luw0;->Z:J
 
     iput-wide v9, v8, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->contactId:J
 
@@ -4816,7 +4816,7 @@
     :cond_8
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->buttons:[Lru/ok/tamtam/nano/Protos$Attaches$Attach$Buttons;
 
-    iget-object p0, p0, Lkf7;->b:Ljava/lang/String;
+    iget-object p0, p0, Lgg7;->b:Ljava/lang/String;
 
     if-nez p0, :cond_9
 
@@ -4842,94 +4842,94 @@
     .end packed-switch
 .end method
 
-.method public static m(Lp10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+.method public static m(Lq10;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
     .locals 4
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;-><init>()V
 
-    iget-object v1, p0, Lp10;->a:Lt68;
+    iget-object v1, p0, Lq10;->a:Lq78;
 
-    iget-wide v2, v1, Lt68;->a:D
+    iget-wide v2, v1, Lq78;->a:D
 
     iput-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->latitude:D
 
-    iget-wide v2, v1, Lt68;->b:D
+    iget-wide v2, v1, Lq78;->b:D
 
     iput-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->longitude:D
 
-    iget-wide v2, v1, Lt68;->c:D
+    iget-wide v2, v1, Lq78;->c:D
 
     iput-wide v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->altitude:D
 
-    iget v2, v1, Lt68;->o:F
+    iget v2, v1, Lq78;->o:F
 
     iput v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->accuracy:F
 
-    iget v2, v1, Lt68;->X:F
+    iget v2, v1, Lq78;->X:F
 
     iput v2, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->bearing:F
 
-    iget v1, v1, Lt68;->Y:F
+    iget v1, v1, Lq78;->Y:F
 
     iput v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->speed:F
 
-    iget-wide v1, p0, Lp10;->b:J
+    iget-wide v1, p0, Lq10;->b:J
 
     iput-wide v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->time:J
 
     return-object v0
 .end method
 
-.method public static n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Lr10;
+.method public static n(Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;)Ls10;
     .locals 3
 
-    sget-object v0, Lr10;->v0:Lr10;
+    sget-object v0, Ls10;->u0:Ls10;
 
-    new-instance v0, Lq10;
+    new-instance v0, Lr10;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->baseUrl:Ljava/lang/String;
 
-    iput-object v1, v0, Lq10;->a:Ljava/lang/String;
+    iput-object v1, v0, Lr10;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoUrl:Ljava/lang/String;
 
-    iput-object v1, v0, Lq10;->b:Ljava/lang/String;
+    iput-object v1, v0, Lr10;->b:Ljava/lang/String;
 
     iget v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->width:I
 
-    iput v1, v0, Lq10;->c:I
+    iput v1, v0, Lr10;->c:I
 
     iget v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->height:I
 
-    iput v1, v0, Lq10;->d:I
+    iput v1, v0, Lr10;->d:I
 
     iget-boolean v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->gif:Z
 
-    iput-boolean v1, v0, Lq10;->e:Z
+    iput-boolean v1, v0, Lr10;->e:Z
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->previewData:[B
 
-    iput-object v1, v0, Lq10;->f:[B
+    iput-object v1, v0, Lr10;->f:[B
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoToken:Ljava/lang/String;
 
-    iput-object v1, v0, Lq10;->g:Ljava/lang/String;
+    iput-object v1, v0, Lr10;->g:Ljava/lang/String;
 
     iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoId:J
 
-    iput-wide v1, v0, Lq10;->h:J
+    iput-wide v1, v0, Lr10;->h:J
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->mp4Url:Ljava/lang/String;
 
-    iput-object v1, v0, Lq10;->i:Ljava/lang/String;
+    iput-object v1, v0, Lr10;->i:Ljava/lang/String;
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->previewUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -4943,27 +4943,27 @@
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->previewUrl:Ljava/lang/String;
 
     :goto_0
-    iput-object v1, v0, Lq10;->k:Ljava/lang/String;
+    iput-object v1, v0, Lr10;->k:Ljava/lang/String;
 
     iget-object p0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->externalGifId:Ljava/lang/String;
 
-    iput-object p0, v0, Lq10;->j:Ljava/lang/String;
+    iput-object p0, v0, Lr10;->j:Ljava/lang/String;
 
-    new-instance p0, Lr10;
+    new-instance p0, Ls10;
 
-    invoke-direct {p0, v0}, Lr10;-><init>(Lq10;)V
+    invoke-direct {p0, v0}, Ls10;-><init>(Lr10;)V
 
     return-object p0
 .end method
 
-.method public static o(Lr10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
+.method public static o(Ls10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
     .locals 5
 
     new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;-><init>()V
 
-    iget-object v1, p0, Lr10;->a:Ljava/lang/String;
+    iget-object v1, p0, Ls10;->a:Ljava/lang/String;
 
     const-string v2, ""
 
@@ -4974,7 +4974,7 @@
     :cond_0
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->baseUrl:Ljava/lang/String;
 
-    iget-object v1, p0, Lr10;->b:Ljava/lang/String;
+    iget-object v1, p0, Ls10;->b:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
@@ -4983,26 +4983,26 @@
     :cond_1
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoUrl:Ljava/lang/String;
 
-    iget v1, p0, Lr10;->c:I
+    iget v1, p0, Ls10;->c:I
 
     iput v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->width:I
 
-    iget v1, p0, Lr10;->o:I
+    iget v1, p0, Ls10;->o:I
 
     iput v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->height:I
 
-    iget-boolean v1, p0, Lr10;->X:Z
+    iget-boolean v1, p0, Ls10;->X:Z
 
     iput-boolean v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->gif:Z
 
-    iget-object v1, p0, Lr10;->Y:[B
+    iget-object v1, p0, Ls10;->Y:[B
 
     if-eqz v1, :cond_2
 
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->previewData:[B
 
     :cond_2
-    iget-object v1, p0, Lr10;->u0:Ljava/lang/String;
+    iget-object v1, p0, Ls10;->t0:Ljava/lang/String;
 
     if-nez v1, :cond_3
 
@@ -5011,7 +5011,7 @@
     :cond_3
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->previewUrl:Ljava/lang/String;
 
-    iget-object v1, p0, Lr10;->Z:Ljava/lang/String;
+    iget-object v1, p0, Ls10;->Z:Ljava/lang/String;
 
     if-nez v1, :cond_4
 
@@ -5020,11 +5020,11 @@
     :cond_4
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoToken:Ljava/lang/String;
 
-    iget-wide v3, p0, Lr10;->r0:J
+    iget-wide v3, p0, Ls10;->q0:J
 
     iput-wide v3, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->photoId:J
 
-    iget-object v1, p0, Lr10;->s0:Ljava/lang/String;
+    iget-object v1, p0, Ls10;->r0:Ljava/lang/String;
 
     if-nez v1, :cond_5
 
@@ -5033,7 +5033,7 @@
     :cond_5
     iput-object v1, v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;->mp4Url:Ljava/lang/String;
 
-    iget-object p0, p0, Lr10;->t0:Ljava/lang/String;
+    iget-object p0, p0, Ls10;->s0:Ljava/lang/String;
 
     if-nez p0, :cond_6
 
@@ -5051,7 +5051,7 @@
 .method public static p(I)I
     .locals 1
 
-    invoke-static {p0}, Lwx1;->v(I)I
+    invoke-static {p0}, Ldy1;->v(I)I
 
     move-result p0
 

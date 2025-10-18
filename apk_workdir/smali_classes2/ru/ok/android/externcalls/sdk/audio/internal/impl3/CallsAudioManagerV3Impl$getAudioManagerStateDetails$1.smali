@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$getAudioManagerStateDetails$1;
-.super Lvs7;
+.super Lst7;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lli6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lvs7;",
-        "Lqh6;"
+        "Lst7;",
+        "Lli6;"
     }
 .end annotation
 
@@ -57,7 +57,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    invoke-direct {p0, p1}, Lst7;-><init>(I)V
 
     return-void
 .end method

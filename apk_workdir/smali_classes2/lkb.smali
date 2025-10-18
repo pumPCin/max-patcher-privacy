@@ -1,146 +1,77 @@
-.class public final Llkb;
-.super Llff;
+.class public final synthetic Llkb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lsze;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public final synthetic Z:Lmkb;
+.field public final synthetic b:Lmkb;
 
 
 # direct methods
-.method public constructor <init>(Lmkb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lmkb;I)V
     .locals 0
 
-    iput-object p1, p0, Llkb;->Z:Lmkb;
+    iput p2, p0, Llkb;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Llkb;->b:Lmkb;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lb54;
+    iget v0, p0, Llkb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Llkb;->b:Lmkb;
 
-    invoke-virtual {p0, p1, p2}, Llkb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
-
-    check-cast p1, Llkb;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Llkb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Llkb;
-
-    iget-object v0, p0, Llkb;->Z:Lmkb;
-
-    invoke-direct {p1, v0, p2}, Llkb;-><init>(Lmkb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Llkb;->Y:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Llkb;->X:Lsze;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :try_start_0
+    invoke-virtual {v1}, Lmkb;->d()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catch_0
+    move-exception v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v2, "mkb"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v3, "syncInternal: exception"
 
-    throw p1
+    invoke-static {v2, v3, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object v1, v1, Lmkb;->h:Lsf5;
 
-    iget-object p1, p0, Llkb;->Z:Lmkb;
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    iget-object v0, p1, Lmkb;->d:Lsze;
+    invoke-direct {v2, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    iget-object p1, p1, Lmkb;->a:Llt7;
+    check-cast v1, Lxua;
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lxua;->c(Ljava/lang/Throwable;)V
 
-    move-result-object p1
-
-    check-cast p1, Lgz3;
-
-    iput-object v0, p0, Llkb;->X:Lsze;
-
-    iput v1, p0, Llkb;->Y:I
-
-    invoke-virtual {p1}, Lgz3;->d()Ljava/lang/Integer;
-
-    move-result-object p1
-
-    sget-object v2, Lc54;->a:Lc54;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
     :goto_0
-    check-cast p1, Ljava/lang/Number;
+    return-void
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    :pswitch_0
+    invoke-virtual {v1}, Lmkb;->d()V
 
-    move-result p1
+    return-void
 
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Lh0a;->setValue(Ljava/lang/Object;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

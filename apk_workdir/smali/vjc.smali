@@ -3,6 +3,14 @@
 
 
 # static fields
-.field public static browser_actions_context_menu_max_width:I = 0x7f07005e
+.field public static fragment_close_enter:I = 0x7f020005
 
-.field public static browser_actions_context_menu_min_padding:I = 0x7f07005f
+.field public static fragment_close_exit:I = 0x7f020006
+
+.field public static fragment_fade_enter:I = 0x7f020007
+
+.field public static fragment_fade_exit:I = 0x7f020008
+
+.field public static fragment_open_enter:I = 0x7f020009
+
+.field public static fragment_open_exit:I = 0x7f02000a

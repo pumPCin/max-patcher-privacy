@@ -1,199 +1,159 @@
-.class public final Lzy3;
-.super Llff;
+.class public final synthetic Lzy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgi6;
+.implements Ld8;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Landroid/view/View;
+.field public final synthetic a:Lbz3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(Lbz3;)V
     .locals 0
 
-    iput p3, p0, Lzy3;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzy3;->a:Lbz3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(Lqid;)V
+    .locals 6
 
-    iget v0, p0, Lzy3;->X:I
+    iget-object v0, p0, Lzy3;->a:Lbz3;
 
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lu4b;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lzy3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lzy3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p2, Lzy3;
-
-    const/4 v0, 0x3
+    iget-object v0, v0, Lbz3;->b:Liu7;
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    :try_start_0
+    invoke-virtual {p1}, Lqid;->d()Landroid/app/Activity;
 
-    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
+    move-result-object p1
 
-    sget-object p1, Lzag;->a:Lzag;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Lq4e;
 
-    return-object p1
+    const/16 v3, 0xb
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-direct {v2, p1, v3}, Lq4e;-><init>(Landroid/content/Context;I)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-object v3, v2, Lq4e;->o:Ljava/lang/Object;
 
-    iget v0, p0, Lzy3;->X:I
+    check-cast v3, Landroid/content/Intent;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    move-result-object v4
 
-    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
+    check-cast v4, Lj4e;
 
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    check-cast v4, Lwtd;
 
-    move-result-object v0
+    const-string v5, "invite-header"
 
-    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
+    iget-object v4, v4, Lw3;->h:Llu7;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v4, v5, v1}, Llu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+    move-result-object v4
+
+    if-eqz v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    sget v4, Lwjd;->C:I
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
 
     :goto_0
-    if-eqz v0, :cond_1
+    iput-object v4, v2, Lq4e;->b:Ljava/lang/Object;
 
-    sget-object v1, Lsz4;->t0:Lc82;
+    const-string v4, "text/plain"
 
-    invoke-virtual {v1, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object p1
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-interface {p1}, Lu4b;->getText()Lapf;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lj4e;
 
-    iget p1, p1, Lapf;->b:I
+    check-cast v0, Lwtd;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    const-string v4, "invite-long"
+
+    iget-object v5, v0, Lw3;->h:Llu7;
+
+    invoke-virtual {v5, v4, v1}, Llu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    sget-object p1, Lzag;->a:Lzag;
+    sget v4, Lwjd;->J:I
 
-    return-object p1
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    :pswitch_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
-
-    sget-object v0, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+    invoke-virtual {v0}, Lwtd;->l()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lu4b;->i()Ldaf;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Ldaf;->b:Liaf;
+    const/4 v4, 0x1
 
-    iget v0, v0, Liaf;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
-
-    sget-object v0, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+    invoke-static {v0, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lu4b;->b()Lwe0;
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
-    iget v0, v0, Lwe0;->l:I
+    :goto_1
+    const-string p1, "android.intent.extra.TEXT"
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v3, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v2}, Lq4e;->A()V
 
-    return-object p1
+    return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    const-string p1, "Required value was null."
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const-string p1, "ContactsDeepLinkFactory"
+
+    const-string v0, "shareInvite: failed, no activity found"
+
+    invoke-static {p1, v0, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

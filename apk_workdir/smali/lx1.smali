@@ -1,283 +1,189 @@
-.class public final Llx1;
-.super Liz1;
+.class public final synthetic Llx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Ljava/lang/Object;
+.field public final synthetic b:Lmx1;
 
-.field public c:Ljava/lang/Object;
+.field public final synthetic c:Lgu1;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lmx1;Lgu1;I)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    iput p3, p0, Llx1;->a:I
 
-    iput v0, p0, Llx1;->a:I
+    iput-object p1, p0, Llx1;->b:Lmx1;
+
+    iput-object p2, p0, Llx1;->c:Lgu1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lyt1;Lj12;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Llx1;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Llx1;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Llx1;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 5
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Llx1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    return-void
+    const/4 v0, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Llx1;->b:Ljava/lang/Object;
+    iget-object v1, p0, Llx1;->b:Lmx1;
 
-    check-cast v0, Ljava/util/HashSet;
+    iput-boolean v0, v1, Lmx1;->b:Z
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v2, "Camera2CameraControl was updated with new options."
+
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, v1, Lmx1;->g:Ljava/lang/Object;
+
+    check-cast v2, Lgu1;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    :cond_0
+    iget-object v0, p0, Llx1;->c:Lgu1;
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    iget-boolean v0, v1, Lmx1;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v1, Lmx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvx1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lpid;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, v3, v0}, Lpid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2}, Lomi;->a(Lhu1;)Lju1;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liz1;
-
-    :try_start_0
-    iget-object v2, p0, Llx1;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/util/ArrayMap;
-
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/concurrent/Executor;
-
-    new-instance v3, Ls30;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, v1, p1, v4}, Ls30;-><init>(Ljava/lang/Object;II)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "Camera2CameraControlImp"
-
-    const-string v3, "Executor rejected to invoke onCaptureCancelled."
-
-    invoke-static {v2, v3, v1}, Lgth;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(ILpz1;)V
-    .locals 5
-
-    iget v0, p0, Llx1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Llx1;->b:Ljava/lang/Object;
-
-    check-cast p1, Lyt1;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lyt1;->b(Ljava/lang/Object;)Z
-
-    iget-object p1, p0, Llx1;->c:Ljava/lang/Object;
-
-    check-cast p1, Lj12;
-
-    check-cast p1, Lj12;
-
-    invoke-interface {p1, p0}, Lj12;->r(Liz1;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Llx1;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v2, Lk3;
 
-    move-result v1
+    const/16 v3, 0x1c
 
-    if-eqz v1, :cond_0
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v3, v1, Lmx1;->d:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast v3, La3e;
 
-    check-cast v1, Liz1;
+    invoke-interface {v0, v2, v3}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    :try_start_0
-    iget-object v2, p0, Llx1;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v2, Landroid/util/ArrayMap;
+    iput-boolean v0, v1, Lmx1;->b:Z
 
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    return-void
 
-    move-result-object v2
+    :pswitch_0
+    const/4 v0, 0x1
 
-    check-cast v2, Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Llx1;->b:Lmx1;
 
-    new-instance v3, Lqm1;
+    iput-boolean v0, v1, Lmx1;->b:Z
 
-    const/4 v4, 0x2
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
 
-    invoke-direct {v3, v1, p1, p2, v4}, Lqm1;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+    const-string v2, "Camera2CameraControl was updated with new options."
 
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-object v2, v1, Lmx1;->g:Ljava/lang/Object;
 
-    :catch_0
-    move-exception v1
+    check-cast v2, Lgu1;
 
-    const-string v2, "Camera2CameraControlImp"
+    if-eqz v2, :cond_2
 
-    const-string v3, "Executor rejected to invoke onCaptureCompleted."
+    invoke-virtual {v2, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
 
-    invoke-static {v2, v3, v1}, Lgth;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, 0x0
 
-    goto :goto_0
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
 
-    :cond_0
+    :cond_2
+    iget-object v0, p0, Llx1;->c:Lgu1;
+
+    iput-object v0, v1, Lmx1;->g:Ljava/lang/Object;
+
+    iget-boolean v0, v1, Lmx1;->a:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lmx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvx1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lpid;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, v3, v0}, Lpid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object v0
+
+    new-instance v2, Lk3;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v1, Lmx1;->d:Ljava/lang/Object;
+
+    check-cast v3, La3e;
+
+    invoke-interface {v0, v2, v3}, Ll28;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v1, Lmx1;->b:Z
+
+    :cond_3
     return-void
 
     nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c(ILnqi;)V
-    .locals 5
-
-    iget v0, p0, Llx1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Llx1;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liz1;
-
-    :try_start_0
-    iget-object v2, p0, Llx1;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/util/ArrayMap;
-
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/concurrent/Executor;
-
-    new-instance v3, Lqm1;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v1, p1, p2, v4}, Lqm1;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "Camera2CameraControlImp"
-
-    const-string v3, "Executor rejected to invoke onCaptureFailed."
-
-    invoke-static {v2, v3, v1}, Lgth;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

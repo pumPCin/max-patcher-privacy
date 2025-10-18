@@ -1,174 +1,180 @@
-.class public final enum Lt98;
-.super Ljava/lang/Enum;
+.class public final Lt98;
+.super Lym;
 .source "SourceFile"
 
 # interfaces
-.implements Lofb;
-
-
-# static fields
-.field public static final enum X:Lt98;
-
-.field public static final enum Y:Lt98;
-
-.field public static final enum Z:Lt98;
-
-.field public static final enum b:Lt98;
-
-.field public static final enum c:Lt98;
-
-.field public static final enum o:Lt98;
-
-.field public static final enum r0:Lt98;
-
-.field public static final synthetic s0:[Lt98;
+.implements Lrnf;
 
 
 # instance fields
-.field public final a:I
+.field public final X:J
+
+.field public final Y:J
+
+.field public final Z:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final q0:Ljava/lang/String;
+
+.field public final r0:J
+
+.field public final s0:J
+
+.field public final t0:J
+
+.field public final u0:Ljava/lang/String;
+
+.field public final v0:Lqnf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Lt98;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x64
-
-    const-string v3, "SOCKET_CLOSED"
-
-    invoke-direct {v0, v3, v1, v2}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lt98;->b:Lt98;
-
-    new-instance v1, Lt98;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0x6e
-
-    const-string v4, "SESSION_FORCE_UPDATE"
-
-    invoke-direct {v1, v4, v2, v3}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lt98;->c:Lt98;
-
-    new-instance v2, Lt98;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x6f
-
-    const-string v5, "SESSION_RESTART"
-
-    invoke-direct {v2, v5, v3, v4}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lt98;->o:Lt98;
-
-    new-instance v3, Lt98;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x78
-
-    const-string v6, "LOGIN_DROP_CACHE"
-
-    invoke-direct {v3, v6, v4, v5}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lt98;->X:Lt98;
-
-    new-instance v4, Lt98;
-
-    const/4 v5, 0x4
-
-    const/16 v6, 0x79
-
-    const-string v7, "LOGIN_BACK_BLOCKED"
-
-    invoke-direct {v4, v7, v5, v6}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lt98;->Y:Lt98;
-
-    new-instance v5, Lt98;
-
-    const/4 v6, 0x5
-
-    const/16 v7, 0x7a
-
-    const-string v8, "LOGIN_RESTART"
-
-    invoke-direct {v5, v8, v6, v7}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lt98;->Z:Lt98;
-
-    new-instance v6, Lt98;
-
-    const/4 v7, 0x6
-
-    const/16 v8, 0x7b
-
-    const-string v9, "LOGIN_UNKNOWN"
-
-    invoke-direct {v6, v9, v7, v8}, Lt98;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lt98;->r0:Lt98;
-
-    filled-new-array/range {v0 .. v6}, [Lt98;
-
-    move-result-object v0
-
-    sput-object v0, Lt98;->s0:[Lt98;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(JLjava/lang/String;JJJLjava/lang/String;JJJ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct/range {p0 .. p2}, Lym;-><init>(J)V
 
-    iput p3, p0, Lt98;->a:I
+    iput-object p3, p0, Lt98;->o:Ljava/lang/String;
+
+    iput-wide p4, p0, Lt98;->X:J
+
+    iput-wide p6, p0, Lt98;->Y:J
+
+    iput-wide p8, p0, Lt98;->Z:J
+
+    iput-object p10, p0, Lt98;->q0:Ljava/lang/String;
+
+    iput-wide p11, p0, Lt98;->r0:J
+
+    iput-wide p13, p0, Lt98;->s0:J
+
+    move-wide p1, p15
+
+    iput-wide p1, p0, Lt98;->t0:J
+
+    const-class p1, Lt98;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lt98;->u0:Ljava/lang/String;
+
+    new-instance p1, Lqnf;
+
+    invoke-direct {p1}, Lqnf;-><init>()V
+
+    iput-object p1, p0, Lt98;->v0:Lqnf;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lt98;
-    .locals 1
-
-    const-class v0, Lt98;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lt98;
-
-    return-object p0
-.end method
-
-.method public static values()[Lt98;
-    .locals 1
-
-    sget-object v0, Lt98;->s0:[Lt98;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lt98;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final b()Lqnf;
     .locals 1
 
-    iget v0, p0, Lt98;->a:I
+    iget-object v0, p0, Lt98;->v0:Lqnf;
 
-    return v0
+    return-object v0
+.end method
+
+.method public final d(Lpmf;)V
+    .locals 2
+
+    check-cast p1, Lv98;
+
+    sget-object v0, Lra8;->j:Lra8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lra8;->n()V
+
+    new-instance v0, Ls98;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ls98;-><init>(Lt98;Lv98;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Ltki;->g(Lzi6;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final e(Lzlf;)V
+    .locals 1
+
+    iget-object v0, p0, Lym;->c:Lzm;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v0, v0, Lzm;->l:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lia8;
+
+    invoke-virtual {v0, p1}, Lia8;->a(Lzlf;)V
+
+    return-void
+.end method
+
+.method public final i()Lmmf;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lu98;
+
+    iget-object v2, v0, Lym;->c:Lzm;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-object v2, v2, Lzm;->b:Liu7;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Los4;
+
+    invoke-virtual {v2}, Los4;->d()Z
+
+    move-result v3
+
+    iget-wide v13, v0, Lt98;->s0:J
+
+    iget-wide v4, v0, Lt98;->t0:J
+
+    iget-object v2, v0, Lt98;->o:Ljava/lang/String;
+
+    move-wide v15, v4
+
+    iget-wide v4, v0, Lt98;->X:J
+
+    iget-wide v6, v0, Lt98;->Y:J
+
+    iget-wide v8, v0, Lt98;->Z:J
+
+    iget-object v10, v0, Lt98;->q0:Ljava/lang/String;
+
+    iget-wide v11, v0, Lt98;->r0:J
+
+    invoke-direct/range {v1 .. v16}, Lu98;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
+
+    return-object v1
 .end method

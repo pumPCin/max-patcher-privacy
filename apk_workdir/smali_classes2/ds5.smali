@@ -1,25 +1,19 @@
 .class public final Lds5;
-.super Leoe;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
-
-.field public final o:Ljava/lang/String;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 0
 
-    const/4 v0, 0x7
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    invoke-direct {p0, v0, p3}, Leoe;-><init>(ILjava/lang/String;)V
-
-    iput-wide p1, p0, Lds5;->c:J
-
-    iput-object p4, p0, Lds5;->o:Ljava/lang/String;
+    iput-wide p1, p0, Lds5;->b:J
 
     return-void
 .end method

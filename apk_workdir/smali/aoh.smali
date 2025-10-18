@@ -3,39 +3,46 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Landroidx/work/impl/WorkDatabase;
-
-.field public final b:Lxnf;
+.field public final a:Ljfi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "WorkProgressUpdater"
-
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Laoh;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/work/impl/WorkDatabase;Ln1c;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/Window;Landroid/view/View;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laoh;->a:Landroidx/work/impl/WorkDatabase;
+    new-instance v0, Litb;
 
-    iput-object p2, p0, Laoh;->b:Lxnf;
+    invoke-direct {v0, p2}, Litb;-><init>(Landroid/view/View;)V
+
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt p2, v1, :cond_0
+
+    new-instance p2, Lznh;
+
+    invoke-static {p1}, Lnnh;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+
+    move-result-object v1
+
+    invoke-direct {p2, v1, v0}, Lznh;-><init>(Landroid/view/WindowInsetsController;Litb;)V
+
+    iput-object p1, p2, Lznh;->c:Landroid/view/Window;
+
+    iput-object p2, p0, Laoh;->a:Ljfi;
+
+    return-void
+
+    :cond_0
+    new-instance p2, Lynh;
+
+    invoke-direct {p2, p1, v0}, Lynh;-><init>(Landroid/view/Window;Litb;)V
+
+    iput-object p2, p0, Laoh;->a:Ljfi;
 
     return-void
 .end method

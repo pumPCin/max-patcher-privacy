@@ -1,108 +1,70 @@
 .class public final Ltw7;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lrw7;
 .source "SourceFile"
+
+# interfaces
+.implements Lxw7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhx7;
 
-.field public final synthetic b:Luw7;
+.field public final b:Li54;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luw7;I)V
-    .locals 0
+.method public constructor <init>(Lhx7;Li54;)V
+    .locals 1
 
-    iput p2, p0, Ltw7;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltw7;->b:Luw7;
+    iput-object p1, p0, Ltw7;->a:Lhx7;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p2, p0, Ltw7;->b:Li54;
 
+    iget-object p1, p1, Lhx7;->d:Lhw7;
+
+    sget-object v0, Lhw7;->a:Lhw7;
+
+    if-ne p1, v0, :cond_0
+
+    invoke-static {p2}, Ldbi;->b(Li54;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public final d(Lfx7;Lgw7;)V
     .locals 1
 
-    iget v0, p0, Ltw7;->a:I
+    iget-object p1, p0, Ltw7;->a:Lhx7;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p2, p1, Lhx7;->d:Lhw7;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    sget-object v0, Lhw7;->a:Lhw7;
 
-    return-void
+    invoke-virtual {p2, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    move-result p2
 
-    iget-object p1, p0, Ltw7;->b:Luw7;
+    if-gtz p2, :cond_0
 
-    invoke-virtual {p1}, Luw7;->A()V
+    invoke-virtual {p1, p0}, Lhx7;->f(Lbx7;)V
 
-    iget-object v0, p1, Luw7;->u0:Lre;
+    iget-object p1, p0, Ltw7;->b:Li54;
 
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lhlf;->b:Ljava/lang/Object;
-
-    check-cast p1, Lzd7;
-
-    invoke-virtual {v0, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1}, Ldbi;->b(Li54;)V
 
     :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 3
+.method public final getCoroutineContext()Li54;
+    .locals 1
 
-    iget v0, p0, Ltw7;->a:I
+    iget-object v0, p0, Ltw7;->b:Li54;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Ltw7;->b:Luw7;
-
-    iget v0, p1, Luw7;->r0:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iget-object v2, p1, Luw7;->Z:Lbx7;
-
-    iget-object v2, v2, Lmk0;->c:[I
-
-    array-length v2, v2
-
-    rem-int/2addr v0, v2
-
-    iput v0, p1, Luw7;->r0:I
-
-    iput-boolean v1, p1, Luw7;->s0:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,84 +1,65 @@
 .class public final Lj76;
-.super Lklf;
+.super Lwua;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lj76;->c:J
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onMeasure(II)V
+    .locals 3
 
-    const/4 v0, 0x1
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    if-ne p0, p1, :cond_0
+    move-result p2
 
-    return v0
+    const/16 v0, 0x8
 
-    :cond_0
-    instance-of v1, p1, Lj76;
+    int-to-float v0, v0
 
-    const/4 v2, 0x0
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    check-cast p1, Lj76;
+    move-result-object v1
 
-    iget-wide v3, p0, Lj76;->c:J
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    iget-wide v5, p1, Lj76;->c:J
+    const/4 v2, 0x2
 
-    cmp-long p1, v3, v5
+    invoke-static {v0, v1, v2, p2}, Ley1;->d(FFII)I
 
-    if-eqz p1, :cond_2
+    move-result p2
 
-    return v2
+    const/16 v0, 0x80
 
-    :cond_2
-    return v0
-.end method
+    int-to-float v0, v0
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
-    iget-wide v0, p0, Lj76;->c:J
+    move-result-object v1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lfhi;->b(F)I
 
     move-result v0
 
-    return v0
-.end method
+    sub-int/2addr p2, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    const/high16 v0, 0x40000000    # 2.0f
 
-    const-string v0, "Response(folderSync="
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    const-string v1, ")"
+    move-result p2
 
-    iget-wide v2, p0, Lj76;->c:J
+    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

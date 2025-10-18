@@ -1,92 +1,139 @@
 .class public final Lruf;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lruf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:J
+.field public X:F
+
+.field public a:Lszh;
+
+.field public b:Z
+
+.field public c:F
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(JLk14;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lnwh;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
+
+    sput-object v0, Lruf;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 1
 
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lt44;Lkotlin/coroutines/Continuation;)V
+    iput-boolean v0, p0, Lruf;->b:Z
 
-    iput-wide p1, p0, Lruf;->a:J
+    iput-boolean v0, p0, Lruf;->o:Z
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lruf;->X:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final nameString$kotlinx_coroutines_core()Ljava/lang/String;
-    .locals 4
+.method public final b(Lsuf;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Loxh;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0, p1}, Loxh;-><init>(Lsuf;)V
 
-    invoke-super {p0}, Lo0;->nameString$kotlinx_coroutines_core()Ljava/lang/String;
+    iput-object v0, p0, Lruf;->a:Lszh;
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "(timeMillis="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lruf;->a:J
-
-    const/16 v3, 0x29
-
-    invoke-static {v0, v1, v2, v3}, Llfb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public final run()V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    invoke-virtual {p0}, Lo0;->getContext()Lt44;
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-object v0, p0, Lruf;->a:Lszh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lpxi;->d(Lt44;)Lkp4;
+    :goto_0
+    const/4 v1, 0x2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1, v1, v0}, Llyi;->n(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    const-string v1, "Timed out waiting for "
+    iget-boolean v0, p0, Lruf;->b:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x3
 
-    iget-wide v1, p0, Lruf;->a:J
+    const/4 v2, 0x4
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    const-string v1, " ms"
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lruf;->c:F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v2, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    new-instance v1, Lkotlinx/coroutines/TimeoutCancellationException;
+    iget-boolean v0, p0, Lruf;->o:Z
 
-    invoke-direct {v1, v0, p0}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lmm7;)V
+    const/4 v1, 0x5
 
-    invoke-virtual {p0, v1}, Lon7;->cancelCoroutine(Ljava/lang/Throwable;)Z
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lruf;->X:F
+
+    const/4 v1, 0x6
+
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
 .end method

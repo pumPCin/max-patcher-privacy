@@ -23,7 +23,7 @@
         "",
         "w",
         "h",
-        "Lzag;",
+        "Lccg;",
         "onTextureSizeChanged",
         "(II)V",
         "onFrameSizeChanged",

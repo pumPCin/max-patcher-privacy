@@ -2,58 +2,56 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Iterable;
+.implements Lir7;
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
 
-.field public static final b:Ljava/nio/charset/Charset;
+# instance fields
+.field public final a:C
 
-.field public static final c:Ljava/nio/charset/Charset;
+.field public final b:C
 
-.field public static volatile d:Ljava/nio/charset/Charset;
-
-.field public static volatile e:Ljava/nio/charset/Charset;
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(CC)V
     .locals 1
 
-    const-string v0, "UTF-8"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    iput-char p1, p0, Lz92;->a:C
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    sput-object v0, Lz92;->a:Ljava/nio/charset/Charset;
+    invoke-static {p1, p2, v0}, Lyvi;->a(III)I
 
-    const-string v0, "UTF-16"
+    move-result p1
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    int-to-char p1, p1
 
-    move-result-object v0
+    iput-char p1, p0, Lz92;->b:C
 
-    sput-object v0, Lz92;->b:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16BE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Lz92;->c:Ljava/nio/charset/Charset;
+    iput v0, p0, Lz92;->c:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 4
+
+    new-instance v0, Laa2;
+
+    iget-char v1, p0, Lz92;->b:C
+
+    iget v2, p0, Lz92;->c:I
+
+    iget-char v3, p0, Lz92;->a:C
+
+    invoke-direct {v0, v3, v1, v2}, Laa2;-><init>(CCI)V
+
+    return-object v0
 .end method

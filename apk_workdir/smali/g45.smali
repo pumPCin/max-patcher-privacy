@@ -1,14 +1,27 @@
-.class public interface abstract Lg45;
+.class public final Lg45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-.end method
+.field public final b:I
 
-.method public abstract c(Lc45;)Ljava/util/Set;
+.field public final c:Landroid/util/SparseArray;
+
+
+# direct methods
+.method public synthetic constructor <init>(IILandroid/util/SparseArray;)V
+    .locals 0
+
+    iput p1, p0, Lg45;->a:I
+
+    iput p2, p0, Lg45;->b:I
+
+    iput-object p3, p0, Lg45;->c:Landroid/util/SparseArray;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

@@ -3,65 +3,90 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnx1;
+.implements Lvz1;
 
 
 # instance fields
-.field public a:Lyt1;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Lbu1;
+.field public final b:Lwy1;
 
-.field public final c:Lry1;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lry1;)V
-    .locals 2
+.method public constructor <init>(Lwy1;La3e;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lihd;
+    iput-object p1, p0, Lsy1;->b:Lwy1;
 
-    const/16 v1, 0x1c
+    iput-object p2, p0, Lsy1;->a:Ljava/util/concurrent/Executor;
 
-    invoke-direct {v0, v1, p0}, Lihd;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lmli;->a(Lzt1;)Lbu1;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsy1;->b:Lbu1;
-
-    iput-object p1, p0, Lsy1;->c:Lry1;
+    iput p3, p0, Lsy1;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 1
+.method public final a()Ll28;
+    .locals 4
 
-    iget-object v0, p0, Lsy1;->c:Lry1;
+    const-string v0, "Camera2CapturePipeline"
 
-    if-eqz v0, :cond_0
+    const-string v1, "invokePreCapture"
 
-    invoke-interface {v0, p1}, Lry1;->b(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    invoke-static {v0, v1}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    iget-object v0, p0, Lsy1;->b:Lwy1;
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lsy1;->c:I
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Lwy1;->a(I)Ll28;
 
-    return p1
+    move-result-object v0
 
-    :cond_0
-    iget-object v0, p0, Lsy1;->a:Lyt1;
+    invoke-static {v0}, Lak6;->a(Ll28;)Lak6;
 
-    invoke-virtual {v0, p1}, Lyt1;->b(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    const/4 p1, 0x1
+    new-instance v1, Lpy1;
 
-    return p1
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lpy1;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Ls9d;
+
+    const/16 v3, 0xe
+
+    invoke-direct {v2, v3, v1}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    iget-object v1, p0, Lsy1;->a:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v2, v1}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Ll28;
+    .locals 2
+
+    new-instance v0, Lpid;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1, p0}, Lpid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -18,7 +18,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;",
         "",
-        "Lsc8;",
+        "Lpd8;",
         "mlFeaturesInfoDataSource",
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;",
         "mlFeaturesConfigProvider",
@@ -30,26 +30,26 @@
         "type",
         "",
         "actualModelVersion",
-        "Lyuc;",
+        "Lfwc;",
         "logger",
         "Landroid/content/Context;",
         "context",
         "<init>",
-        "(Lsc8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Lyuc;Landroid/content/Context;)V",
+        "(Lpd8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Lfwc;Landroid/content/Context;)V",
         "downloadDir",
         "()Ljava/lang/String;",
         "fileName",
         "Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$MLModelValidationResult;",
         "validateCurrentModel",
         "()Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$MLModelValidationResult;",
-        "Lqoe;",
+        "Lwpe;",
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;",
         "fetchConfig",
-        "()Lqoe;",
+        "()Lwpe;",
         "config",
         "Lru/ok/android/externcalls/sdk/ml/stage/DownloadStage;",
         "downloadModel",
-        "(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;",
+        "(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;",
         "stage",
         "Lru/ok/android/externcalls/sdk/ml/stage/UnzipStage;",
         "unzipModel",
@@ -57,7 +57,7 @@
         "Lru/ok/android/externcalls/sdk/ml/stage/SaveNewModelInfoStage;",
         "saveNewModelInfo",
         "(Lru/ok/android/externcalls/sdk/ml/stage/UnzipStage;)Lru/ok/android/externcalls/sdk/ml/stage/SaveNewModelInfoStage;",
-        "Lzag;",
+        "Lccg;",
         "clearDir",
         "()V",
         "removeCurrentModel",
@@ -72,17 +72,17 @@
         "Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;",
         "checkModel",
         "dispose",
-        "Lsc8;",
+        "Lpd8;",
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;",
         "Lru/ok/android/externcalls/sdk/net/DownloadService;",
         "Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;",
         "Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;",
         "Ljava/lang/String;",
-        "Lyuc;",
+        "Lfwc;",
         "Landroid/content/Context;",
-        "Lai3;",
+        "Lni3;",
         "disposables",
-        "Lai3;",
+        "Lni3;",
         "Companion",
         "MLModelValidationResult",
         "calls-sdk_release"
@@ -112,17 +112,17 @@
 
 .field private final context:Landroid/content/Context;
 
-.field private final disposables:Lai3;
+.field private final disposables:Lni3;
 
 .field private final downloadService:Lru/ok/android/externcalls/sdk/net/DownloadService;
 
-.field private final logger:Lyuc;
+.field private final logger:Lfwc;
 
 .field private final mlDownloadStat:Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;
 
 .field private final mlFeaturesConfigProvider:Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;
 
-.field private final mlFeaturesInfoDataSource:Lsc8;
+.field private final mlFeaturesInfoDataSource:Lpd8;
 
 .field private final type:Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;
 
@@ -135,19 +135,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$Companion;-><init>(Lvh4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$Companion;-><init>(Lki4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->Companion:Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lsc8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Lyuc;Landroid/content/Context;)V
+.method public constructor <init>(Lpd8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Lfwc;Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lsc8;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lpd8;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesConfigProvider:Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;
 
@@ -159,23 +159,23 @@
 
     iput-object p6, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->actualModelVersion:Ljava/lang/String;
 
-    iput-object p7, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->logger:Lyuc;
+    iput-object p7, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->logger:Lfwc;
 
     iput-object p8, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->context:Landroid/content/Context;
 
-    new-instance p1, Lai3;
+    new-instance p1, Lni3;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->disposables:Lai3;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->disposables:Lni3;
 
     return-void
 .end method
 
-.method public static final synthetic access$downloadModel(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+.method public static final synthetic access$downloadModel(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
 
     move-result-object p0
 
@@ -264,7 +264,7 @@
 
     invoke-direct {v4, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$clearDir$1$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {v3, v4}, Ln0j;->a(Ljava/io/File;Lqh6;)V
+    invoke-static {v3, v4}, Lq1j;->a(Ljava/io/File;Lli6;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -308,14 +308,14 @@
     return-object v0
 .end method
 
-.method private final downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lqoe;
+.method private final downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lwpe;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;",
             ")",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
@@ -333,7 +333,7 @@
 
     const-string v3, " model file. url = "
 
-    invoke-static {v2, v0, v3, v1}, Lwc0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v3, v1}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -363,11 +363,11 @@
 
     move-result-object p1
 
-    sget-object v4, Lew6;->b:Lew6;
+    sget-object v4, Lyw6;->b:Lyw6;
 
-    invoke-direct {v3, p1, v4}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;-><init>(Ljava/lang/String;Lew6;)V
+    invoke-direct {v3, p1, v4}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;-><init>(Ljava/lang/String;Lyw6;)V
 
-    invoke-interface {v1, v2, v0, v3}, Lru/ok/android/externcalls/sdk/net/DownloadService;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lqoe;
+    invoke-interface {v1, v2, v0, v3}, Lru/ok/android/externcalls/sdk/net/DownloadService;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lwpe;
 
     move-result-object p1
 
@@ -377,61 +377,61 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of v0, p1, Laj6;
+    instance-of v0, p1, Lvj6;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Laj6;
+    check-cast p1, Lvj6;
 
-    invoke-interface {p1}, Laj6;->b()Ll16;
+    invoke-interface {p1}, Lvj6;->b()Lf26;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lv16;
+    new-instance v0, Lp26;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, v2, p1}, Lv16;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, p1}, Lp26;-><init>(ILjava/lang/Object;)V
 
     move-object p1, v0
 
     :goto_0
-    new-instance v0, Lm26;
+    new-instance v0, Lg36;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Lm26;-><init>(Ll16;Ljava/lang/Object;I)V
+    invoke-direct {v0, p1, v1, v2}, Lg36;-><init>(Lf26;Ljava/lang/Object;I)V
 
-    new-instance p1, Ls26;
+    new-instance p1, Lm36;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v0, v1}, Ls26;-><init>(La1;I)V
+    invoke-direct {p1, v0, v1}, Lm36;-><init>(La1;I)V
 
     sget-object v0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$downloadModel$2;->INSTANCE:Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$downloadModel$2;
 
-    invoke-virtual {p1, v0}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {p1, v0}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final fetchConfig()Lqoe;
+.method private final fetchConfig()Lwpe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesConfigProvider:Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Lqoe;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Lwpe;
 
     move-result-object v0
 
@@ -445,7 +445,7 @@
 
     const-string v1, ".zip"
 
-    invoke-static {v0, v1}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -455,11 +455,11 @@
 .method private final log(Ljava/lang/String;)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->logger:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->logger:Lfwc;
 
     const-string v1, "MLFeatureDelegate"
 
-    invoke-interface {v0, v1, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -467,7 +467,7 @@
 .method private final removeCurrentModel()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lsc8;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lpd8;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->type:Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;
 
@@ -475,9 +475,9 @@
 
     move-result-object v1
 
-    check-cast v0, Luq4;
+    check-cast v0, Lcs8;
 
-    iget-object v0, v0, Luq4;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lcs8;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/SharedPreferences;
 
@@ -509,7 +509,7 @@
 
     const-string v2, " model info"
 
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -531,7 +531,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/ml/model/AvailableMLFeatureInfo;-><init>(Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lsc8;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lpd8;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->type:Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;
 
@@ -539,9 +539,9 @@
 
     move-result-object v2
 
-    check-cast v1, Luq4;
+    check-cast v1, Lcs8;
 
-    iget-object v3, v1, Luq4;->c:Ljava/lang/Object;
+    iget-object v3, v1, Lcs8;->b:Ljava/lang/Object;
 
     check-cast v3, Landroid/content/SharedPreferences;
 
@@ -612,7 +612,7 @@
     move-exception v7
 
     :try_start_6
-    invoke-static {v5, v6}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v5, v6}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v7
     :try_end_6
@@ -628,16 +628,16 @@
     move-exception v6
 
     :try_start_8
-    invoke-static {v4, v5}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v4, v5}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v6
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
     :goto_1
-    iget-object v1, v1, Luq4;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lcs8;->c:Ljava/lang/Object;
 
-    check-cast v1, Lyuc;
+    check-cast v1, Lfwc;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -653,7 +653,7 @@
 
     const-string v5, "PersistentDataSourceImpl"
 
-    invoke-interface {v1, v5, v0, v4}, Lyuc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v5, v0, v4}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v5, 0x0
 
@@ -725,11 +725,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lnu5;->h(Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;
+    invoke-static {v0, v1}, Lhv5;->h(Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-static {v0}, Lab3;->D(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v0}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -780,7 +780,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$unzipModel$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {p1, v0}, Ln0j;->a(Ljava/io/File;Lqh6;)V
+    invoke-static {p1, v0}, Lq1j;->a(Ljava/io/File;Lli6;)V
 
     return-object v1
 
@@ -805,7 +805,7 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$unzipModel$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {p1, v1}, Ln0j;->a(Ljava/io/File;Lqh6;)V
+    invoke-static {p1, v1}, Lq1j;->a(Ljava/io/File;Lli6;)V
 
     throw v0
 .end method
@@ -813,7 +813,7 @@
 .method private final validateCurrentModel()Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$MLModelValidationResult;
     .locals 7
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lsc8;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->mlFeaturesInfoDataSource:Lpd8;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->type:Lru/ok/android/externcalls/sdk/ml/model/MLFeatureType;
 
@@ -821,9 +821,9 @@
 
     move-result-object v1
 
-    check-cast v0, Luq4;
+    check-cast v0, Lcs8;
 
-    iget-object v2, v0, Luq4;->c:Ljava/lang/Object;
+    iget-object v2, v0, Lcs8;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/content/SharedPreferences;
 
@@ -900,7 +900,7 @@
     move-exception v6
 
     :try_start_6
-    invoke-static {v2, v5}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v2, v5}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v6
     :try_end_6
@@ -916,16 +916,16 @@
     move-exception v5
 
     :try_start_8
-    invoke-static {v4, v2}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v4, v2}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v5
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
     :goto_1
-    iget-object v0, v0, Luq4;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lcs8;->c:Ljava/lang/Object;
 
-    check-cast v0, Lyuc;
+    check-cast v0, Lfwc;
 
     const-string v4, "Error during deserializing string "
 
@@ -935,7 +935,7 @@
 
     const-string v4, "PersistentDataSourceImpl"
 
-    invoke-interface {v0, v4, v1, v2}, Lyuc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v4, v1, v2}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_2
@@ -958,7 +958,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->actualModelVersion:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1005,12 +1005,12 @@
 
 
 # virtual methods
-.method public final checkModel()Lqoe;
+.method public final checkModel()Lwpe;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
@@ -1038,7 +1038,7 @@
 
     const-string v3, " model is invalid, the update is starting now. Reason: "
 
-    invoke-static {v2, v1, v3, v0}, Lwc0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v3, v0}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1046,15 +1046,15 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->removeCurrentModel()V
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->fetchConfig()Lqoe;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->fetchConfig()Lwpe;
 
     move-result-object v0
 
-    invoke-static {}, Ldod;->b()Lqnd;
+    invoke-static {}, Lkpd;->b()Lxod;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lqoe;->m(Lqnd;)Ljpe;
+    invoke-virtual {v0, v1}, Lwpe;->m(Lxod;)Lrqe;
 
     move-result-object v0
 
@@ -1062,17 +1062,17 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$1;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    new-instance v2, Lape;
+    new-instance v2, Lhqe;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v0, v1, v3}, Lape;-><init>(Lqoe;Lfi6;I)V
+    invoke-direct {v2, v0, v1, v3}, Lhqe;-><init>(Lwpe;Laj6;I)V
 
     new-instance v0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$2;
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$2;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    invoke-virtual {v2, v0}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {v2, v0}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 
@@ -1080,15 +1080,15 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$3;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    invoke-virtual {v0, v1}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {v0, v1}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object v0
 
@@ -1096,7 +1096,7 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$4;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    invoke-virtual {v0, v1}, Lqoe;->h(Lfi6;)Lape;
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 
@@ -1104,21 +1104,21 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$5;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    new-instance v2, Lxoe;
+    new-instance v2, Ldqe;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v0, v1, v3}, Lxoe;-><init>(Lqoe;Ler3;I)V
+    invoke-direct {v2, v0, v1, v3}, Ldqe;-><init>(Lwpe;Lsr3;I)V
 
     new-instance v0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$6;
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$checkModel$6;-><init>(Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;)V
 
-    new-instance v1, Lxoe;
+    new-instance v1, Ldqe;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v0, v3}, Lxoe;-><init>(Lqoe;Ler3;I)V
+    invoke-direct {v1, v2, v0, v3}, Ldqe;-><init>(Lwpe;Lsr3;I)V
 
     return-object v1
 
@@ -1135,7 +1135,7 @@
 
     const-string v3, " model is up to date"
 
-    invoke-static {v2, v1, v3}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1151,7 +1151,7 @@
 
     invoke-direct {v1, v0}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$ExistentModel;-><init>(Ljava/io/File;)V
 
-    invoke-static {v1}, Lqoe;->g(Ljava/lang/Object;)Lrja;
+    invoke-static {v1}, Lwpe;->g(Ljava/lang/Object;)Ltka;
 
     move-result-object v0
 
@@ -1168,9 +1168,9 @@
 .method public final dispose()V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->disposables:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->disposables:Lni3;
 
-    invoke-virtual {v0}, Lai3;->g()V
+    invoke-virtual {v0}, Lni3;->g()V
 
     return-void
 .end method

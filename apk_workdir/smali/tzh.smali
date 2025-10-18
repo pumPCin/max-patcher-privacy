@@ -1,323 +1,66 @@
-.class public final Ltzh;
-.super Ljava/lang/Object;
+.class public abstract Ltzh;
+.super Landroid/os/Binder;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.implements Landroid/os/IInterface;
 
 
 # direct methods
-.method public constructor <init>(La4i;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ltzh;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    instance-of v0, p1, Lrai;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lrai;
-
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    .line 3
-    iget v1, p1, Lrai;->Z:I
-
-    .line 4
-    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
-
-    iput-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    .line 5
-    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
-
-    .line 6
-    iget-object p1, p1, Lrai;->o:La4i;
-
-    .line 7
-    :goto_0
-    instance-of v0, p1, Lrai;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lrai;
-
-    iget-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayDeque;
-
-    .line 8
-    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
-
-    .line 9
-    iget-object p1, p1, Lrai;->o:La4i;
-
-    goto :goto_0
-
-    .line 10
-    :cond_0
-    check-cast p1, Lw3i;
-
-    .line 11
-    iput-object p1, p0, Ltzh;->c:Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    .line 12
-    check-cast p1, Lw3i;
-
-    iput-object p1, p0, Ltzh;->c:Ljava/lang/Object;
-
-    :goto_1
-    return-void
-.end method
-
-.method public constructor <init>(Lnzh;Ljava/util/Iterator;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    iput p1, p0, Ltzh;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Ltzh;->c:Ljava/lang/Object;
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lw3i;
-    .locals 4
+.method public asBinder()Landroid/os/IBinder;
+    .locals 0
 
-    iget-object v0, p0, Ltzh;->b:Ljava/lang/Object;
+    return-object p0
+.end method
 
-    check-cast v0, Ljava/util/ArrayDeque;
+.method public abstract k(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+.end method
 
-    iget-object v1, p0, Ltzh;->c:Ljava/lang/Object;
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
-    check-cast v1, Lw3i;
+    const v0, 0xffffff
 
-    if-eqz v1, :cond_4
+    if-le p1, v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    move-result-object p4
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    goto :goto_1
+    invoke-virtual {p2, p4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, p3}, Ltzh;->k(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
 
-    move-result-object v2
+    move-result p1
 
-    check-cast v2, Lrai;
-
-    iget-object v2, v2, Lrai;->X:La4i;
-
-    :goto_0
-    instance-of v3, v2, Lrai;
-
-    if-eqz v3, :cond_2
-
-    check-cast v2, Lrai;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
-
-    iget-object v2, v2, Lrai;->o:La4i;
-
-    goto :goto_0
-
-    :cond_2
-    check-cast v2, Lw3i;
-
-    invoke-virtual {v2}, Lw3i;->e()I
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    :cond_3
-    :goto_1
-    iput-object v2, p0, Ltzh;->c:Ljava/lang/Object;
-
-    return-object v1
-
-    :cond_4
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    iget v0, p0, Ltzh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltzh;->c:Ljava/lang/Object;
-
-    check-cast v0, Lw3i;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ltzh;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ltzh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ltzh;->a()Lw3i;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ltzh;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    iput-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    iget v0, p0, Ltzh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const-string v1, "no calls to next() since the last call to remove()"
-
-    invoke-static {v1, v0}, Lggi;->g(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Collection;
-
-    iget-object v1, p0, Ltzh;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/Iterator;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ltzh;->b:Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

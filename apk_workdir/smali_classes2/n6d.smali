@@ -1,97 +1,72 @@
-.class public final Ln6d;
+.class public final synthetic Ln6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls44;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ll0a;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lp6d;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ll0a;)V
+.method public synthetic constructor <init>(Lp6d;Ljava/util/List;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ln6d;->a:I
 
-    iput-object p1, p0, Ln6d;->a:Ll0a;
+    iput-object p1, p0, Ln6d;->b:Lp6d;
+
+    iput-object p2, p0, Ln6d;->c:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Ln6d;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Ln6d;->b:Lp6d;
 
-    :cond_0
-    instance-of v1, p1, Ln6d;
+    iget-object v0, v0, Lp6d;->f:Lc2e;
 
-    const/4 v2, 0x0
+    sget-object v1, Lic5;->c:Lic5;
 
-    if-nez v1, :cond_1
+    iget-object v2, p0, Ln6d;->c:Ljava/util/List;
 
-    return v2
+    invoke-virtual {v0, v2, v1}, Lc2e;->i(Ljava/util/List;Lic5;)V
 
-    :cond_1
-    check-cast p1, Ln6d;
+    return-void
 
-    iget-object v1, p0, Ln6d;->a:Ll0a;
+    :pswitch_0
+    iget-object v0, p0, Ln6d;->b:Lp6d;
 
-    iget-object p1, p1, Ln6d;->a:Ll0a;
+    iget-object v0, v0, Lp6d;->f:Lc2e;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v1, Lic5;->a:Lic5;
 
-    move-result p1
+    iget-object v2, p0, Ln6d;->c:Ljava/util/List;
 
-    if-nez p1, :cond_2
+    invoke-virtual {v0, v2, v1}, Lc2e;->i(Ljava/util/List;Lic5;)V
 
-    return v2
+    return-void
 
-    :cond_2
-    return v0
-.end method
+    nop
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ln6d;->a:Ll0a;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReentrantMutexContextKey(mutex="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ln6d;->a:Ll0a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

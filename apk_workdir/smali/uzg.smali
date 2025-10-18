@@ -1,119 +1,51 @@
-.class public final Luzg;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.class public abstract synthetic Luzg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic U1:Landroidx/viewpager2/widget/ViewPager2;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Luzg;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getAccessibilityClassName()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Luzg;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lo56;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAccessibilityClassName()Ljava/lang/CharSequence;
+    invoke-static {}, Lvzg;->values()[Lvzg;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    array-length v0, v0
 
-.method public final onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 2
+    new-array v0, v0, [I
 
-    invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Luzg;->U1:Landroidx/viewpager2/widget/ViewPager2;
+    const/4 v2, 0x0
 
-    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setFromIndex(I)V
+    :catch_0
+    const/4 v2, 0x2
 
-    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setToIndex(I)V
+    :catch_1
+    const/4 v1, 0x3
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lo56;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v0, v0, Lo56;->o:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setSource(Landroid/view/View;)V
-
-    const-string v0, "androidx.viewpager.widget.ViewPager"
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
+    :catch_2
+    sput-object v0, Luzg;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Luzg;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-boolean v0, v0, Landroidx/viewpager2/widget/ViewPager2;->E0:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Luzg;->U1:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-boolean v0, v0, Landroidx/viewpager2/widget/ViewPager2;->E0:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
 .end method

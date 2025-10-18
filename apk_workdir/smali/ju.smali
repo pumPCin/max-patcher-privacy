@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract d(Lqw5;)I
+.method public abstract f(Lkx5;)I
 .end method
 
-.method public abstract j()Llb7;
+.method public abstract j()Lic7;
 .end method
 
 .method public abstract release()V

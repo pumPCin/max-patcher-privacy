@@ -1,76 +1,28 @@
-.class public final Ljvc;
-.super Lkvc;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
+.class public abstract Ljvc;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final a(I)I
-    .locals 1
+# static fields
+.field public static PreviewView:[I = null
 
-    sget-object v0, Lkvc;->b:Lp3;
+.field public static PreviewView_implementationMode:I = 0x0
 
-    invoke-virtual {v0, p1}, Lp3;->a(I)I
+.field public static PreviewView_scaleType:I = 0x1
 
-    move-result p1
 
-    return p1
-.end method
-
-.method public final b()I
-    .locals 1
-
-    sget-object v0, Lkvc;->b:Lp3;
-
-    invoke-virtual {v0}, Lp3;->b()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c(I)I
-    .locals 1
-
-    sget-object v0, Lkvc;->b:Lp3;
-
-    invoke-virtual {v0, p1}, Lp3;->c(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d()J
+# direct methods
+.method public static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lkvc;->b:Lp3;
+    const v0, 0x7f040553
 
-    invoke-virtual {v0}, Lp3;->d()J
+    const v1, 0x7f040736
 
-    move-result-wide v0
+    filled-new-array {v0, v1}, [I
 
-    return-wide v0
-.end method
+    move-result-object v0
 
-.method public final e(J)J
-    .locals 0
+    sput-object v0, Ljvc;->PreviewView:[I
 
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public final f(JJ)J
-    .locals 1
-
-    sget-object v0, Lkvc;->b:Lp3;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lkvc;->f(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
+    return-void
 .end method

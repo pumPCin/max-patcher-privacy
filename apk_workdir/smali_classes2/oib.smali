@@ -1,224 +1,73 @@
-.class public final Loib;
-.super Lklf;
+.class public final enum Loib;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Long;
+# static fields
+.field public static final enum a:Loib;
 
-.field public Y:I
+.field public static final enum b:Loib;
 
-.field public c:Ljava/lang/String;
-
-.field public o:Ldu3;
+.field public static final synthetic c:[Loib;
 
 
 # direct methods
-.method public constructor <init>(Loe9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
+    new-instance v0, Loib;
+
+    const-string v1, "GRANTED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Loib;->a:Loib;
+
+    new-instance v1, Loib;
+
+    const-string v2, "DENIED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Loib;->b:Loib;
+
+    filled-new-array {v0, v1}, [Loib;
+
+    move-result-object v0
+
+    sput-object v0, Loib;->c:[Loib;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Loib;
+    .locals 1
 
-# virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 2
+    const-class v0, Loib;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Loib;
 
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "tokenType"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "token"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "phone"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "profile"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Loe9;->y()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lfzh;->s(Loe9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Llfb;->t(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Loib;->Y:I
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lfzh;->s(Loe9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loib;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_2
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lfzh;->p(Loe9;J)J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loib;->X:Ljava/lang/Long;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Ldu3;->g(Loe9;)Ldu3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loib;->o:Ldu3;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x12717657 -> :sswitch_3
-        0x65b3d6e -> :sswitch_2
-        0x696b9f9 -> :sswitch_1
-        0x86f18d3 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public static values()[Loib;
+    .locals 1
 
-    iget-object v0, p0, Loib;->c:Ljava/lang/String;
+    sget-object v0, Loib;->c:[Loib;
 
-    iget-object v1, p0, Loib;->o:Ldu3;
-
-    iget-object v2, p0, Loib;->X:Ljava/lang/Long;
-
-    iget v3, p0, Loib;->Y:I
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "{token=\'"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', profile="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", phone="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", tokenType="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v3}, Llfb;->q(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Loib;
 
     return-object v0
 .end method

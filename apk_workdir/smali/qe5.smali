@@ -3,284 +3,174 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpkd;
+.implements Lve5;
 
 
 # instance fields
-.field public X:Lte5;
+.field public final a:Ltrf;
 
-.field public Y:Z
-
-.field public Z:I
-
-.field public final a:Lqa6;
-
-.field public final b:Lo0f;
-
-.field public c:[J
-
-.field public o:Z
-
-.field public r0:J
+.field public final b:Lqrf;
 
 
 # direct methods
-.method public constructor <init>(Lte5;Lqa6;Z)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lqe5;->a:Lqa6;
-
-    iput-object p1, p0, Lqe5;->X:Lte5;
-
-    new-instance p2, Lo0f;
-
-    const/16 v0, 0xd
-
-    invoke-direct {p2, v0}, Lo0f;-><init>(I)V
-
-    iput-object p2, p0, Lqe5;->b:Lo0f;
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lqe5;->r0:J
-
-    iget-object p2, p1, Lte5;->b:[J
-
-    iput-object p2, p0, Lqe5;->c:[J
-
-    invoke-virtual {p0, p1, p3}, Lqe5;->a(Lte5;Z)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lte5;Z)V
-    .locals 9
-
-    iget v0, p0, Lqe5;->Z:I
-
-    const/4 v1, 0x1
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    if-nez v0, :cond_0
-
-    move-wide v5, v2
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v4, p0, Lqe5;->c:[J
-
-    sub-int/2addr v0, v1
-
-    aget-wide v5, v4, v0
-
-    :goto_0
-    iput-boolean p2, p0, Lqe5;->o:Z
-
-    iput-object p1, p0, Lqe5;->X:Lte5;
-
-    iget-object p1, p1, Lte5;->b:[J
-
-    iput-object p1, p0, Lqe5;->c:[J
-
-    iget-wide v7, p0, Lqe5;->r0:J
-
-    cmp-long p2, v7, v2
-
-    if-eqz p2, :cond_2
-
-    invoke-static {p1, v7, v8, v1}, Lhhg;->b([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lqe5;->Z:I
-
-    iget-boolean p2, p0, Lqe5;->o:Z
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p0, Lqe5;->c:[J
-
-    array-length p2, p2
-
-    if-ne p1, p2, :cond_1
-
-    move-wide v2, v7
-
-    :cond_1
-    iput-wide v2, p0, Lqe5;->r0:J
-
-    return-void
-
-    :cond_2
-    cmp-long p2, v5, v2
-
-    if-eqz p2, :cond_3
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, v5, v6, p2}, Lhhg;->b([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lqe5;->Z:I
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final h(J)I
-    .locals 3
-
-    iget v0, p0, Lqe5;->Z:I
-
-    iget-object v1, p0, Lqe5;->c:[J
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, p1, p2, v2}, Lhhg;->b([JJZ)I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iget p2, p0, Lqe5;->Z:I
-
-    sub-int p2, p1, p2
-
-    iput p1, p0, Lqe5;->Z:I
-
-    return p2
-.end method
-
-.method public final n(Lfwb;Lre4;I)I
+.method public constructor <init>(Lzs8;Ljava/util/ArrayList;)V
     .locals 6
 
-    iget v0, p0, Lqe5;->Z:I
+    instance-of v0, p1, Lrs8;
 
-    iget-object v1, p0, Lqe5;->c:[J
+    if-eqz v0, :cond_0
 
-    array-length v1, v1
+    sget p1, Ljsc;->oneme_chatmedia_viewer_save_single_photo:I
 
-    const/4 v2, 0x1
+    new-instance v0, Lorf;
 
-    if-ne v0, v1, :cond_0
-
-    move v1, v2
+    invoke-direct {v0, p1}, Lorf;-><init>(I)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v0, p1, Lxs8;
 
-    :goto_0
-    const/4 v3, -0x4
+    if-eqz v0, :cond_1
 
-    const/4 v4, 0x4
+    sget p1, Ljsc;->oneme_chatmedia_viewer_save_single_video:I
 
-    if-eqz v1, :cond_1
+    new-instance v0, Lorf;
 
-    iget-boolean v5, p0, Lqe5;->o:Z
+    invoke-direct {v0, p1}, Lorf;-><init>(I)V
 
-    if-nez v5, :cond_1
-
-    iput v4, p2, Luy;->b:I
-
-    return v3
+    goto :goto_0
 
     :cond_1
-    and-int/lit8 v5, p3, 0x2
+    instance-of p1, p1, Lks8;
 
-    if-nez v5, :cond_6
+    if-eqz p1, :cond_9
 
-    iget-boolean v5, p0, Lqe5;->Y:Z
+    sget-object v0, Ltrf;->b:Lsrf;
 
-    if-nez v5, :cond_2
+    :goto_0
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lra3;
+
+    instance-of v5, v4, Lf97;
+
+    if-eqz v5, :cond_2
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_2
-    if-eqz v1, :cond_3
+    instance-of v4, v4, Lclg;
 
-    const/4 p1, -0x3
+    if-eqz v4, :cond_3
 
-    return p1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
 
     :cond_3
-    and-int/lit8 p1, p3, 0x1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    if-nez p1, :cond_4
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    add-int/lit8 p1, v0, 0x1
-
-    iput p1, p0, Lqe5;->Z:I
+    throw p1
 
     :cond_4
-    and-int/lit8 p1, p3, 0x4
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    if-nez p1, :cond_5
+    move-result p1
 
-    iget-object p1, p0, Lqe5;->X:Lte5;
+    const/4 v4, 0x2
 
-    iget-object p1, p1, Lte5;->a:[Lne5;
+    const/4 v5, 0x1
 
-    aget-object p1, p1, v0
+    if-ne v2, p1, :cond_5
 
-    iget-object p3, p0, Lqe5;->b:Lo0f;
+    move v1, v5
 
-    invoke-virtual {p3, p1}, Lo0f;->n(Lne5;)[B
-
-    move-result-object p1
-
-    array-length p3, p1
-
-    invoke-virtual {p2, p3}, Lre4;->y(I)V
-
-    iget-object p3, p2, Lre4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    goto :goto_2
 
     :cond_5
-    iget-object p1, p0, Lqe5;->c:[J
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    aget-wide v0, p1, v0
+    move-result p1
 
-    iput-wide v0, p2, Lre4;->Y:J
+    if-ne v3, p1, :cond_6
 
-    iput v2, p2, Luy;->b:I
-
-    return v3
+    move v1, v4
 
     :cond_6
-    :goto_1
-    iget-object p2, p0, Lqe5;->a:Lqa6;
+    :goto_2
+    if-eq v1, v5, :cond_8
 
-    iput-object p2, p1, Lfwb;->c:Ljava/lang/Object;
+    if-eq v1, v4, :cond_7
 
-    iput-boolean v2, p0, Lqe5;->Y:Z
+    sget p1, Ljsc;->oneme_chatmedia_viewer_save_all_medias:I
 
-    const/4 p1, -0x5
+    goto :goto_3
 
-    return p1
+    :cond_7
+    sget p1, Ljsc;->oneme_chatmedia_viewer_save_all_videos:I
+
+    goto :goto_3
+
+    :cond_8
+    sget p1, Ljsc;->oneme_chatmedia_viewer_save_all_photos:I
+
+    :goto_3
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    new-instance v1, Lqrf;
+
+    invoke-static {p2}, Ljt;->F([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-direct {v1, p1, p2}, Lqrf;-><init>(ILjava/util/List;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lqe5;->a:Ltrf;
+
+    iput-object v1, p0, Lqe5;->b:Lqrf;
+
+    return-void
+
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

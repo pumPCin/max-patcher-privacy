@@ -1,49 +1,61 @@
-.class public abstract Le0b;
-.super Ljava/lang/Object;
+.class public final Le0b;
+.super Lf0b;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+.field public static final a:Le0b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lonc;->check_button:I
+    new-instance v0, Le0b;
 
-    sput v0, Le0b;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lonc;->check_button_parent:I
-
-    sput v0, Le0b;->b:I
-
-    sget v0, Lonc;->check_button_view_stub:I
-
-    sput v0, Le0b;->c:I
-
-    sget v0, Lonc;->select_album_content_container:I
-
-    sput v0, Le0b;->d:I
-
-    sget v0, Lonc;->simple_drawee_view:I
-
-    sput v0, Le0b;->e:I
-
-    sget v0, Lonc;->video_info:I
-
-    sput v0, Le0b;->f:I
+    sput-object v0, Le0b;->a:Le0b;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Le0b;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x77f7ff3c
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Themed"
+
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public abstract Ljj;
-.super Lfg1;
+.super Lng1;
 .source "SourceFile"
 
 

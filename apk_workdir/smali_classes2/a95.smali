@@ -1,52 +1,31 @@
-.class public final synthetic La95;
-.super Lb9;
+.class public final La95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lii6;
 
+# instance fields
+.field public final a:Lu85;
 
-# static fields
-.field public static final r0:La95;
+.field public final b:Ld95;
+
+.field public final c:Lg95;
+
+.field public final d:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, La95;
-
-    const-class v1, Ld4g;
-
-    const-string v2, "<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v3, 0x4
-
-    invoke-direct {v0, v3, v1, v2, v3}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, La95;->r0:La95;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lu85;Ld95;Lg95;Lwif;)V
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/util/List;
+    iput-object p1, p0, La95;->a:Lu85;
 
-    check-cast p3, Ljava/util/List;
+    iput-object p2, p0, La95;->b:Ld95;
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, La95;->c:Lg95;
 
-    sget-object p4, Lf95;->u0:[Lwq7;
+    iput-object p4, p0, La95;->d:Liu7;
 
-    new-instance p4, Ld4g;
-
-    invoke-direct {p4, p1, p2, p3}, Ld4g;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p4
+    return-void
 .end method

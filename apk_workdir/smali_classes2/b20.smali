@@ -4,90 +4,56 @@
 
 
 # instance fields
-.field public a:F
+.field public a:J
 
-.field public b:F
+.field public b:J
 
-.field public c:Legc;
+.field public c:Ljava/lang/String;
 
-.field public d:Z
+.field public d:I
+
+.field public e:I
+
+.field public f:Z
+
+.field public g:Ljava/lang/String;
+
+.field public h:Ljava/lang/String;
+
+.field public i:[B
+
+.field public j:J
+
+.field public k:Lc20;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Lyy;
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    sget-object p1, Legc;->Y:Legc;
-
-    iput-object p1, p0, Lb20;->c:Legc;
-
-    return-void
-
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    sget-object p1, Legc;->Y:Legc;
-
-    iput-object p1, p0, Lb20;->c:Legc;
-
-    const/4 p1, 0x0
-
-    .line 10
-    iput p1, p0, Lb20;->a:F
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 11
-    iput p1, p0, Lb20;->b:F
-
-    const/4 p1, 0x0
-
-    .line 12
-    iput-boolean p1, p0, Lb20;->d:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lb20;)V
+.method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iget v0, p1, Lb20;->a:F
+    const/4 v0, -0x1
 
-    iput v0, p0, Lb20;->a:F
+    iput v0, p0, Lb20;->o:I
 
-    .line 3
-    iget v0, p1, Lb20;->b:F
+    iput v0, p0, Lb20;->p:I
 
-    iput v0, p0, Lb20;->b:F
+    const/4 v0, 0x1
 
-    .line 4
-    iget-object v0, p1, Lb20;->c:Legc;
-
-    iput-object v0, p0, Lb20;->c:Legc;
-
-    .line 5
-    iget-boolean p1, p1, Lb20;->d:Z
-
-    iput-boolean p1, p0, Lb20;->d:Z
+    iput v0, p0, Lb20;->q:I
 
     return-void
 .end method

@@ -1,64 +1,43 @@
-.class public final Lyq5;
+.class public abstract Lyq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/io/File;
+.field public final a:Ljj0;
+
+.field public final b:La0c;
+
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
+.method public constructor <init>(Ljj0;La0c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyq5;->a:Ljava/io/File;
+    iput-object p1, p0, Lyq5;->a:Ljj0;
+
+    iput-object p2, p0, Lyq5;->b:La0c;
+
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lyq5;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Ld0c;
     .locals 1
 
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lyq5;->b:La0c;
 
-    instance-of v0, p1, Lyq5;
+    check-cast v0, Lqk0;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lqk0;->c:Ld0c;
 
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lyq5;
-
-    iget-object p1, p1, Lyq5;->a:Ljava/io/File;
-
-    iget-object v0, p0, Lyq5;->a:Ljava/io/File;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lyq5;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

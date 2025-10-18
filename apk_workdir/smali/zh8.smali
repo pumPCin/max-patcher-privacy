@@ -1,170 +1,151 @@
 .class public final Lzh8;
-.super Luo;
+.super Lsvf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final t0:I
-
-.field public static final u0:[[I
-
-
 # instance fields
-.field public r0:Landroid/content/res/ColorStateList;
-
-.field public s0:Z
+.field public final b:Lys8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lys8;)V
+    .locals 0
 
-    sget v0, Lltc;->Widget_MaterialComponents_CompoundButton_RadioButton:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lzh8;->t0:I
-
-    const v0, 0x101009e
-
-    const v1, 0x10100a0
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v2
-
-    const v3, -0x10100a0
-
-    filled-new-array {v0, v3}, [I
-
-    move-result-object v0
-
-    const v4, -0x101009e
-
-    filled-new-array {v4, v1}, [I
-
-    move-result-object v1
-
-    filled-new-array {v4, v3}, [I
-
-    move-result-object v3
-
-    filled-new-array {v2, v0, v1, v3}, [[I
-
-    move-result-object v0
-
-    sput-object v0, Lzh8;->u0:[[I
+    iput-object p1, p0, Lzh8;->b:Lys8;
 
     return-void
-.end method
-
-.method private getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
-    .locals 6
-
-    iget-object v0, p0, Lzh8;->r0:Landroid/content/res/ColorStateList;
-
-    if-nez v0, :cond_0
-
-    sget v0, Lzic;->colorControlActivated:I
-
-    invoke-static {p0, v0}, Ltfi;->h(Landroid/view/View;I)I
-
-    move-result v0
-
-    sget v1, Lzic;->colorOnSurface:I
-
-    invoke-static {p0, v1}, Ltfi;->h(Landroid/view/View;I)I
-
-    move-result v1
-
-    sget v2, Lzic;->colorSurface:I
-
-    invoke-static {p0, v2}, Ltfi;->h(Landroid/view/View;I)I
-
-    move-result v2
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-static {v2, v3, v0}, Ltfi;->j(IFI)I
-
-    move-result v0
-
-    const v3, 0x3f0a3d71    # 0.54f
-
-    invoke-static {v2, v3, v1}, Ltfi;->j(IFI)I
-
-    move-result v3
-
-    const v4, 0x3ec28f5c    # 0.38f
-
-    invoke-static {v2, v4, v1}, Ltfi;->j(IFI)I
-
-    move-result v5
-
-    invoke-static {v2, v4, v1}, Ltfi;->j(IFI)I
-
-    move-result v1
-
-    filled-new-array {v0, v3, v5, v1}, [I
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/res/ColorStateList;
-
-    sget-object v2, Lzh8;->u0:[[I
-
-    invoke-direct {v1, v2, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    iput-object v1, p0, Lzh8;->r0:Landroid/content/res/ColorStateList;
-
-    :cond_0
-    iget-object v0, p0, Lzh8;->r0:Landroid/content/res/ColorStateList;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onAttachedToWindow()V
+.method public final b(Ljava/lang/Object;)I
     .locals 1
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    sget-object v0, Lxh8;->X:Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lzh8;->s0:Z
+    if-ne p1, v0, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x0
 
-    invoke-static {p0}, Lsi3;->a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final f(ILnvf;Z)Lnvf;
+    .locals 11
+
+    const/4 p1, 0x0
+
+    if-eqz p3, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, p1
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget-object p1, Lxh8;->X:Ljava/lang/Object;
+
+    :cond_1
+    move-object v3, p1
+
+    sget-object v9, Lx8;->Y:Lx8;
+
+    const/4 v10, 0x1
+
+    const/4 v4, 0x0
+
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v7, 0x0
+
+    move-object v1, p2
+
+    invoke-virtual/range {v1 .. v10}, Lnvf;->g(Ljava/lang/Object;Ljava/lang/Object;IJJLx8;Z)V
+
+    return-object v1
+.end method
+
+.method public final h()I
+    .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lzh8;->setUseMaterialThemeColors(Z)V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public setUseMaterialThemeColors(Z)V
+.method public final l(I)Ljava/lang/Object;
     .locals 0
 
-    iput-boolean p1, p0, Lzh8;->s0:Z
+    sget-object p1, Lxh8;->X:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    return-object p1
+.end method
 
-    invoke-direct {p0}, Lzh8;->getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
+.method public final m(ILqvf;J)Lqvf;
+    .locals 21
 
-    move-result-object p1
+    sget-object v1, Lqvf;->A0:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lsi3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+    const/16 v18, 0x0
 
-    return-void
+    const-wide/16 v19, 0x0
 
-    :cond_0
-    const/4 p1, 0x0
+    move-object/from16 v0, p0
 
-    invoke-static {p0, p1}, Lsi3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+    iget-object v2, v0, Lzh8;->b:Lys8;
 
-    return-void
+    const/4 v3, 0x0
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Lqvf;->b(Ljava/lang/Object;Lys8;Ljava/lang/Object;JJJZZLos8;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lqvf;->u0:Z
+
+    return-object v0
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

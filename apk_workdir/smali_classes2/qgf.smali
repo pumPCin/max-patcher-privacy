@@ -1,35 +1,46 @@
-.class public abstract synthetic Lqgf;
+.class public interface abstract Lqgf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public abstract a(FJJLy14;)Ljava/lang/Object;
+.end method
 
+.method public b(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    sget-object p1, Lccg;->a:Lccg;
 
-    const/4 v0, 0x1
+    return-object p1
+.end method
 
-    invoke-static {v0}, Lwx1;->y(I)[I
+.method public c(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object v1
+    sget-object p1, Lccg;->a:Lccg;
 
-    array-length v1, v1
+    return-object p1
+.end method
 
-    new-array v1, v1, [I
+.method public d(Ly14;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v2, 0x0
+    sget-object p1, Lccg;->a:Lccg;
 
-    :try_start_0
-    aput v0, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return-object p1
+.end method
 
-    :catch_0
-    sput-object v1, Lqgf;->$EnumSwitchMapping$0:[I
+.method public abstract e(Ljava/io/File;Ly14;)Ljava/lang/Object;
+.end method
 
-    return-void
+.method public f(ZZLy14;)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+.end method
+
+.method public abstract getDownloadContext()Ljava/lang/String;
 .end method

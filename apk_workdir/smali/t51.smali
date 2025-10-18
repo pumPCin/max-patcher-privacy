@@ -3,66 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lu51;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:I
+# static fields
+.field public static final a:Lt51;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lt51;->a:I
+    new-instance v0, Lt51;
 
-    iput p1, p0, Lt51;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lt51;->a:Lt51;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lt51;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Ly31;
+    return v0
 
-    const/4 v1, 0x1
+    :cond_0
+    instance-of p1, p1, Lt51;
 
-    const/4 v2, 0x4
+    if-nez p1, :cond_1
 
-    iget v3, p0, Lt51;->b:I
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v3, v2, v1}, Ly31;-><init>(IIZ)V
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x35b676d9
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Finished"
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Ly31;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x4
-
-    iget v3, p0, Lt51;->b:I
-
-    invoke-direct {v0, v3, v2, v1}, Ly31;-><init>(IIZ)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

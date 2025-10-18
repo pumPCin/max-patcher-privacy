@@ -3,122 +3,135 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final j:Le10;
+
+
 # instance fields
-.field public A:Ljava/lang/String;
+.field public final a:J
 
-.field public a:Lz10;
+.field public final b:Ljava/lang/String;
 
-.field public b:Lr10;
+.field public final c:J
 
-.field public c:Lk10;
+.field public final d:[B
 
-.field public d:Lc20;
+.field public final e:Ljava/lang/String;
 
-.field public e:Ld10;
+.field public final f:Ljava/lang/String;
 
-.field public f:Ly10;
+.field public final g:J
 
-.field public g:Lv10;
+.field public final h:J
 
-.field public h:Lb10;
+.field public final i:I
 
-.field public i:Lw10;
 
-.field public j:J
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public k:F
+    new-instance v0, Ld10;
 
-.field public l:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public m:Ljava/lang/String;
+    new-instance v1, Le10;
 
-.field public n:Z
+    invoke-direct {v1, v0}, Le10;-><init>(Ld10;)V
 
-.field public o:J
+    sput-object v1, Le10;->j:Le10;
 
-.field public p:J
+    return-void
+.end method
 
-.field public q:Lg10;
+.method public constructor <init>(Ld10;)V
+    .locals 2
 
-.field public r:Lm10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public s:Lh10;
+    iget-wide v0, p1, Ld10;->a:J
 
-.field public t:Ls10;
+    iput-wide v0, p0, Le10;->a:J
 
-.field public u:J
+    iget-object v0, p1, Ld10;->b:Ljava/lang/String;
 
-.field public v:Lo10;
+    iput-object v0, p0, Le10;->b:Ljava/lang/String;
 
-.field public w:Lglh;
+    iget-wide v0, p1, Ld10;->c:J
 
-.field public x:Lt10;
+    iput-wide v0, p0, Le10;->c:J
 
-.field public y:Z
+    iget-object v0, p1, Ld10;->d:[B
 
-.field public z:Z
+    iput-object v0, p0, Le10;->d:[B
+
+    iget-object v0, p1, Ld10;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Le10;->e:Ljava/lang/String;
+
+    iget-object v0, p1, Ld10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Le10;->f:Ljava/lang/String;
+
+    iget-wide v0, p1, Ld10;->g:J
+
+    iput-wide v0, p0, Le10;->g:J
+
+    iget-wide v0, p1, Ld10;->h:J
+
+    iput-wide v0, p0, Le10;->h:J
+
+    iget p1, p1, Ld10;->i:I
+
+    iput p1, p0, Le10;->i:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ld20;
-    .locals 1
+.method public final a()Ld10;
+    .locals 3
 
-    iget-object v0, p0, Le10;->a:Lz10;
+    new-instance v0, Ld10;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lz10;->a:Lz10;
+    iget-wide v1, p0, Le10;->a:J
 
-    iput-object v0, p0, Le10;->a:Lz10;
+    iput-wide v1, v0, Ld10;->a:J
 
-    :cond_0
-    iget-object v0, p0, Le10;->i:Lw10;
+    iget-object v1, p0, Le10;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    iput-object v1, v0, Ld10;->b:Ljava/lang/String;
 
-    sget-object v0, Lw10;->a:Lw10;
+    iget-wide v1, p0, Le10;->c:J
 
-    iput-object v0, p0, Le10;->i:Lw10;
+    iput-wide v1, v0, Ld10;->c:J
 
-    :cond_1
-    iget-object v0, p0, Le10;->x:Lt10;
+    iget-object v1, p0, Le10;->d:[B
 
-    if-nez v0, :cond_2
+    iput-object v1, v0, Ld10;->d:[B
 
-    sget-object v0, Lt10;->a:Lt10;
+    iget-object v1, p0, Le10;->f:Ljava/lang/String;
 
-    iput-object v0, p0, Le10;->x:Lt10;
+    iput-object v1, v0, Ld10;->f:Ljava/lang/String;
 
-    :cond_2
-    new-instance v0, Ld20;
+    iget-object v1, p0, Le10;->e:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Ld20;-><init>(Le10;)V
+    iput-object v1, v0, Ld10;->e:Ljava/lang/String;
 
-    return-object v0
-.end method
+    iget-wide v1, p0, Le10;->g:J
 
-.method public final b()Lm10;
-    .locals 1
+    iput-wide v1, v0, Ld10;->g:J
 
-    iget-object v0, p0, Le10;->r:Lm10;
+    iget-wide v1, p0, Le10;->h:J
 
-    if-nez v0, :cond_0
+    iput-wide v1, v0, Ld10;->h:J
 
-    sget-object v0, Lm10;->f:Lm10;
+    iget v1, p0, Le10;->i:I
 
-    :cond_0
-    return-object v0
-.end method
+    iput v1, v0, Ld10;->i:I
 
-.method public final c()Lc20;
-    .locals 1
-
-    iget-object v0, p0, Le10;->d:Lc20;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lc20;->r:Lc20;
-
-    :cond_0
     return-object v0
 .end method

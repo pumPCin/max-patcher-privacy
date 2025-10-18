@@ -3,62 +3,77 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsq5;
-
-
-# static fields
-.field public static final c:Lrq5;
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lkq5;
+.field public final synthetic b:Lr0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lrq5;
-
-    const-string v1, "file"
-
-    invoke-direct {v0, v1}, Lrq5;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lrq5;->c:Lrq5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lr0;I)V
     .locals 0
 
+    iput p2, p0, Lrq5;->a:I
+
+    iput-object p1, p0, Lrq5;->b:Lr0;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrq5;->a:Ljava/lang/String;
-
-    sget-object p1, Lkq5;->Y:Lkq5;
-
-    iput-object p1, p0, Lrq5;->b:Lkq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lrq5;->a:Ljava/lang/String;
+    iget v0, p0, Lrq5;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()Lkq5;
-    .locals 1
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v0, p0, Lrq5;->b:Lkq5;
+    iget-object p1, p0, Lrq5;->b:Lr0;
 
-    return-object v0
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lrq5;->b:Lr0;
+
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Throwable;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lrq5;->b:Lr0;
+
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

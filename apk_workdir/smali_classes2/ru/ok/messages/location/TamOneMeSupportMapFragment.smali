@@ -26,9 +26,9 @@
 
 
 # instance fields
-.field public o1:Landroid/widget/FrameLayout;
+.field public n1:Landroid/widget/FrameLayout;
 
-.field public p1:Lzyf;
+.field public o1:Ld0g;
 
 
 # direct methods
@@ -45,7 +45,7 @@
 .method public final K()Landroid/view/View;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->n1:Landroid/widget/FrameLayout;
 
     return-object v0
 .end method
@@ -59,9 +59,9 @@
 
     check-cast p1, Landroid/widget/FrameLayout;
 
-    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
+    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->n1:Landroid/widget/FrameLayout;
 
-    new-instance p1, Lzyf;
+    new-instance p1, Ld0g;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
 
@@ -69,11 +69,11 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iget-object p2, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Landroid/widget/FrameLayout;
+    iget-object p2, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->n1:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->p1:Lzyf;
+    iput-object p1, p0, Lru/ok/messages/location/TamOneMeSupportMapFragment;->o1:Ld0g;
 
     return-object p1
 .end method

@@ -3,178 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Llc9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/Set;
 
-.field public final synthetic b:Lfc9;
-
-.field public final synthetic c:Llt7;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfc9;Llt7;I)V
+.method public constructor <init>(Ljava/util/Set;Z)V
     .locals 0
-
-    iput p3, p0, Lec9;->a:I
-
-    iput-object p1, p0, Lec9;->b:Lfc9;
-
-    iput-object p2, p0, Lec9;->c:Llt7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lec9;->a:Ljava/util/Set;
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+    iput-boolean p2, p0, Lec9;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget p1, p0, Lec9;->a:I
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lec9;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lec9;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget p1, p0, Lec9;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lec9;->b:Lfc9;
-
-    iget-object v0, p1, Lfc9;->o:Lcc9;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
-
-    iget-object v0, p1, Lfc9;->b:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
-
-    iget-object v0, p0, Lec9;->c:Llt7;
-
-    invoke-interface {v0}, Llt7;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvye;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+    goto :goto_1
 
     :cond_0
-    iget-object p1, p1, Lfc9;->v0:Landroid/widget/ImageView;
+    instance-of v0, p1, Lec9;
 
-    const/4 v0, 0x0
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    goto :goto_0
 
-    return-void
+    :cond_1
+    check-cast p1, Lec9;
 
-    :pswitch_0
-    iget-object p1, p0, Lec9;->b:Lfc9;
+    iget-object v0, p0, Lec9;->a:Ljava/util/Set;
 
-    iget-object v0, p1, Lfc9;->v0:Landroid/widget/ImageView;
+    iget-object v1, p1, Lec9;->a:Ljava/util/Set;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p1, Lfc9;->b:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
-
-    iget-object p1, p0, Lec9;->c:Llt7;
-
-    invoke-interface {p1}, Llt7;->e()Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_2
+    iget-boolean v0, p0, Lec9;->b:Z
 
-    check-cast p1, Lvye;
+    iget-boolean p1, p1, Lec9;->b:Z
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
+    if-eq v0, p1, :cond_3
 
-    :cond_1
-    return-void
+    :goto_0
+    const/4 p1, 0x0
 
-    nop
+    return p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lec9;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lec9;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Add(messageIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lec9;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelf="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lec9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

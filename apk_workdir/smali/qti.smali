@@ -1,62 +1,50 @@
-.class public abstract Lqti;
+.class public final Lqti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lqti;
+
 
 # direct methods
-.method public static final a(I)I
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    const v0, 0xffffff
-
-    and-int/2addr p0, v0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string v0, "#%06X"
-
-    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final b(Lwbg;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ldoa;
+    new-instance v0, Lqti;
 
-    const/4 v1, 0x5
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ldoa;-><init>(I)V
+    sput-object v0, Lqti;->a:Lqti;
 
-    const-class v1, Lqpb;
+    new-instance v0, Lr8i;
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

@@ -2,21 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbd3;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lyc3;
+
+.field public final b:Lad3;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lyc3;Lad3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lzc3;->a:J
+    iput-object p1, p0, Lzc3;->a:Lyc3;
+
+    iput-object p2, p0, Lzc3;->b:Lad3;
 
     return-void
 .end method
@@ -24,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -44,42 +45,83 @@
     :cond_1
     check-cast p1, Lzc3;
 
-    iget-wide v3, p0, Lzc3;->a:J
+    iget-object v1, p0, Lzc3;->a:Lyc3;
 
-    iget-wide v5, p1, Lzc3;->a:J
+    iget-object v3, p1, Lzc3;->a:Lyc3;
 
-    cmp-long p1, v3, v5
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Lzc3;->b:Lad3;
+
+    iget-object p1, p1, Lzc3;->b:Lad3;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lzc3;->a:J
+    iget-object v0, p0, Lzc3;->a:Lyc3;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Lyc3;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzc3;->b:Lad3;
+
+    invoke-virtual {v1}, Lad3;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    const-string v0, "Add(chatId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CommonActionColors(background="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzc3;->a:Lyc3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzc3;->b:Lad3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lzc3;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

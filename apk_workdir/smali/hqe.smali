@@ -1,53 +1,89 @@
 .class public final Lhqe;
-.super Lqoe;
+.super Lwpe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lqnd;
+.field public final b:Lwpe;
+
+.field public final c:Laj6;
 
 
 # direct methods
-.method public constructor <init>(JLqnd;)V
-    .locals 1
+.method public synthetic constructor <init>(Lwpe;Laj6;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p3, p0, Lhqe;->a:I
+
+    iput-object p2, p0, Lhqe;->c:Laj6;
+
+    iput-object p1, p0, Lhqe;->b:Lwpe;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lhqe;->a:J
-
-    iput-object p3, p0, Lhqe;->b:Lqnd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lkpe;)V
-    .locals 4
+.method public final l(Lsqe;)V
+    .locals 3
 
-    new-instance v0, Lzja;
+    iget v0, p0, Lhqe;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p1}, Lzja;-><init>(ILjava/lang/Object;)V
+    new-instance v0, Lgqe;
 
-    invoke-interface {p1, v0}, Lkpe;->c(Lev4;)V
+    iget-object v1, p0, Lhqe;->c:Laj6;
 
-    iget-wide v1, p0, Lhqe;->a:J
+    const/4 v2, 0x1
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0, p1, v1, v2}, Lgqe;-><init>(Lsqe;Laj6;I)V
 
-    iget-object v3, p0, Lhqe;->b:Lqnd;
+    iget-object p1, p0, Lhqe;->b:Lwpe;
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lqnd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+    invoke-virtual {p1, v0}, Lwpe;->k(Lsqe;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Lqqe;
+
+    iget-object v1, p0, Lhqe;->c:Laj6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v2, v1}, Lqqe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lhqe;->b:Lwpe;
+
+    invoke-virtual {p1, v0}, Lwpe;->k(Lsqe;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lgqe;
+
+    iget-object v1, p0, Lhqe;->c:Laj6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Lgqe;-><init>(Lsqe;Laj6;I)V
+
+    iget-object p1, p0, Lhqe;->b:Lwpe;
+
+    invoke-virtual {p1, v0}, Lwpe;->k(Lsqe;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

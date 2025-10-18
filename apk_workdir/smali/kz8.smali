@@ -1,72 +1,41 @@
-.class public final synthetic Lkz8;
-.super Ljava/lang/Object;
+.class public final Lkz8;
+.super Landroid/media/MediaRouter$VolumeCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lsz8;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltz8;
-
-.field public final synthetic c:J
+.field public final a:Ljz8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltz8;JI)V
+.method public constructor <init>(Ljz8;)V
     .locals 0
 
-    iput p4, p0, Lkz8;->a:I
+    invoke-direct {p0}, Landroid/media/MediaRouter$VolumeCallback;-><init>()V
 
-    iput-object p1, p0, Lkz8;->b:Ltz8;
-
-    iput-wide p2, p0, Lkz8;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkz8;->a:Ljz8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Loy8;)V
-    .locals 2
+.method public final onVolumeSetRequest(Landroid/media/MediaRouter$RouteInfo;I)V
+    .locals 1
 
-    iget p1, p0, Lkz8;->a:I
+    iget-object v0, p0, Lkz8;->a:Ljz8;
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lkz8;->b:Ltz8;
-
-    iget-object p1, p1, Ltz8;->g:Liz8;
-
-    iget-object p1, p1, Liz8;->t:Lrtb;
-
-    iget-wide v0, p0, Lkz8;->c:J
-
-    invoke-virtual {p1, v0, v1}, Lrtb;->Y(J)V
+    invoke-interface {v0, p1, p2}, Ljz8;->a(Landroid/media/MediaRouter$RouteInfo;I)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Lkz8;->b:Ltz8;
+.method public final onVolumeUpdateRequest(Landroid/media/MediaRouter$RouteInfo;I)V
+    .locals 1
 
-    iget-object p1, p1, Ltz8;->g:Liz8;
+    iget-object v0, p0, Lkz8;->a:Ljz8;
 
-    iget-object p1, p1, Liz8;->t:Lrtb;
-
-    iget-wide v0, p0, Lkz8;->c:J
-
-    long-to-int v0, v0
-
-    invoke-virtual {p1, v0}, Lrtb;->Z(I)V
+    invoke-interface {v0, p1, p2}, Ljz8;->b(Landroid/media/MediaRouter$RouteInfo;I)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

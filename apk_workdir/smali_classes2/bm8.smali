@@ -1,92 +1,87 @@
-.class public final synthetic Lbm8;
-.super Ljava/lang/Object;
+.class public final Lbm8;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lbj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public synthetic Y:Lv5b;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic Z:Landroid/graphics/drawable/GradientDrawable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p2, p0, Lbm8;->a:I
+    iput p3, p0, Lbm8;->X:I
 
-    iput-object p1, p0, Lbm8;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lbm8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    iput-object p3, p0, Lbm8;->c:Ljava/lang/Object;
+    const/4 p1, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget p1, p0, Lbm8;->a:I
+    iget v0, p0, Lbm8;->X:I
 
-    iget-object p2, p0, Lbm8;->c:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p3, p0, Lbm8;->b:Ljava/lang/Object;
+    check-cast p1, Lpr0;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lv5b;
 
-    check-cast p3, Landroid/os/Handler;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lr6d;
+    new-instance p1, Lbm8;
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lbm8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {p3, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p2, Lr6d;->a:Ljava/lang/Object;
+    invoke-direct {p1, v0, p3, v1}, Lbm8;-><init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
 
-    check-cast p1, Ljava/lang/Runnable;
+    iput-object p2, p1, Lbm8;->Y:Lv5b;
 
-    const-wide/16 p4, 0x12c
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p3, p1, p4, p5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, p2}, Lbm8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p2
 
     :pswitch_0
-    check-cast p3, Ldvb;
+    check-cast p1, Landroid/widget/FrameLayout;
 
-    check-cast p2, Lone/me/chatscreen/mediabar/MediaBarWidget;
+    check-cast p2, Lv5b;
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lwq7;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-eq p5, p9, :cond_0
+    new-instance p1, Lbm8;
 
-    invoke-virtual {p3}, Ldvb;->getCallback()Lxub;
+    iget-object v0, p0, Lbm8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p1, v0, p3, v1}, Lbm8;-><init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {p2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->J0()Landroid/widget/LinearLayout;
+    iput-object p2, p1, Lbm8;->Y:Lv5b;
 
-    move-result-object p2
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+    invoke-virtual {p1, p2}, Lbm8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lxub;->m(I)V
-
-    :cond_0
-    return-void
+    return-object p2
 
     nop
 
@@ -94,4 +89,95 @@
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lbm8;->X:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    iget-object v2, p0, Lbm8;->Z:Landroid/graphics/drawable/GradientDrawable;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbm8;->Y:Lv5b;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1d
+
+    if-lt v0, v3, :cond_0
+
+    invoke-interface {p1}, Lv5b;->a()Lzv2;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzv2;->r()Lle3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lle3;->b:Lcd3;
+
+    iget-object p1, p1, Lcd3;->d:Lld3;
+
+    iget-object p1, p1, Lld3;->a:[I
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    invoke-static {v2, p1, v0}, La15;->q(Landroid/graphics/drawable/GradientDrawable;[I[F)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Lv5b;->a()Lzv2;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzv2;->r()Lle3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lle3;->b:Lcd3;
+
+    iget-object p1, p1, Lcd3;->d:Lld3;
+
+    iget-object p1, p1, Lld3;->a:[I
+
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/GradientDrawable;->setColors([I)V
+
+    :goto_0
+    return-object v1
+
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbm8;->Y:Lv5b;
+
+    invoke-interface {p1}, Lv5b;->b()Lff0;
+
+    const/high16 p1, -0x67000000
+
+    invoke-static {v2, p1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3ecccccd    # 0.4f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

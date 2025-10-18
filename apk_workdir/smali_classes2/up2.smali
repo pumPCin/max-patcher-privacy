@@ -1,49 +1,156 @@
-.class public final Lup2;
-.super Lk14;
+.class public final enum Lup2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lup2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final b:Lftd;
+
+.field public static final enum c:Lup2;
+
+.field public static final synthetic o:[Lup2;
 
 
 # instance fields
-.field public final synthetic X:Ldq2;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Ldq2;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lup2;->X:Ldq2;
+    new-instance v0, Lup2;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v1, Ldq4;->o:Lxo6;
+
+    const-string v1, "DEFAULT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lup2;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lup2;->c:Lup2;
+
+    new-instance v1, Lup2;
+
+    const-string v2, "SCHEDULED_SEND"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Lup2;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1}, [Lup2;
+
+    move-result-object v0
+
+    sput-object v0, Lup2;->o:[Lup2;
+
+    new-instance v0, Lftd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lup2;->b:Lftd;
+
+    new-instance v0, Lh8;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+
+    sput-object v0, Lup2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lup2;->o:Ljava/lang/Object;
+    new-instance p1, Ljj1;
 
-    iget p1, p0, Lup2;->Y:I
+    const/16 p2, 0xc
 
-    const/high16 v0, -0x80000000
+    invoke-direct {p1, p2, p0}, Ljj1;-><init>(ILjava/lang/Object;)V
 
-    or-int/2addr p1, v0
+    new-instance p2, Lwif;
 
-    iput p1, p0, Lup2;->Y:I
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iget-object p1, p0, Lup2;->X:Ldq2;
+    iput-object p2, p0, Lup2;->a:Lwif;
 
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Ldq2;->a(JLk14;)Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    const/4 p2, 0x0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, p2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lup2;
+    .locals 1
+
+    const-class v0, Lup2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lup2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lup2;
+    .locals 1
+
+    sget-object v0, Lup2;->o:[Lup2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lup2;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

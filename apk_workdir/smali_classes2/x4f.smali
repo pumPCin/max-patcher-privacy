@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic b:Lru/ok/messages/stickers/widgets/StickerView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
     .locals 0
 
     iput p2, p0, Lx4f;->a:I
 
-    iput-object p1, p0, Lx4f;->b:Ljava/lang/String;
+    iput-object p1, p0, Lx4f;->b:Lru/ok/messages/stickers/widgets/StickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,42 +27,53 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Lx4f;->a:I
 
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lx4f;->b:Lru/ok/messages/stickers/widgets/StickerView;
+
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lj5f;
+    sget v0, Lru/ok/messages/stickers/widgets/StickerView;->u0:I
 
-    new-instance p1, Lj5f;
+    const-string v0, "ru.ok.messages.stickers.widgets.StickerView"
 
-    const/4 v0, 0x1
+    const-string v3, "startAnimation"
 
-    iget-object v1, p0, Lx4f;->b:Ljava/lang/String;
+    invoke-static {v0, v3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p1, v1, v0}, Lj5f;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
 
-    return-object p1
+    iput-boolean v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->q0:Z
+
+    throw v1
 
     :pswitch_0
-    check-cast p1, Lu4f;
+    iget-boolean v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->q0:Z
 
-    new-instance p1, Lu4f;
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x2
+    return-void
 
-    iget-object v1, p0, Lx4f;->b:Ljava/lang/String;
+    :cond_0
+    throw v1
 
-    invoke-direct {p1, v1, v0}, Lu4f;-><init>(Ljava/lang/String;I)V
+    :pswitch_1
+    iget-object v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->o:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    return-object p1
+    const/4 v1, 0x1
 
-    nop
+    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

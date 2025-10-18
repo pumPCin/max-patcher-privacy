@@ -1,65 +1,101 @@
 .class public final Ld5b;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lg5b;
-.implements Li5b;
 
+# instance fields
+.field public A0:[B
 
-# static fields
-.field public static final a:Ld5b;
+.field public B0:Ljava/util/Iterator;
+
+.field public C0:Z
+
+.field public D0:J
+
+.field public E0:J
+
+.field public F0:I
+
+.field public synthetic G0:Ljava/lang/Object;
+
+.field public final synthetic H0:Lf5b;
+
+.field public I0:I
+
+.field public X:Ljdd;
+
+.field public Y:Ly4b;
+
+.field public Z:Ljava/io/File;
+
+.field public o:Lf5b;
+
+.field public q0:Ljava/io/Serializable;
+
+.field public r0:Ljava/lang/Object;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Lx7d;
+
+.field public u0:Lx7d;
+
+.field public v0:Ljava/io/File;
+
+.field public w0:Ljava/io/Closeable;
+
+.field public x0:Ljava/io/InputStream;
+
+.field public y0:Ljava/io/Closeable;
+
+.field public z0:Ljava/io/OutputStream;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lf5b;Ly14;)V
+    .locals 0
 
-    new-instance v0, Ld5b;
+    iput-object p1, p0, Ld5b;->H0:Lf5b;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ld5b;->a:Ld5b;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ld5b;->G0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ld5b;->I0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Ld5b;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Ld5b;->I0:I
 
-    const/4 p1, 0x0
+    const/4 v5, 0x0
 
-    return p1
+    const/4 v6, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Ld5b;->H0:Lf5b;
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v1, 0x0
 
-    const v0, -0x1e39b9c2
+    const/4 v2, 0x0
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 v4, 0x0
 
-    const-string v0, "Empty"
+    move-object v7, p0
 
-    return-object v0
+    invoke-virtual/range {v0 .. v7}, Lf5b;->i(Ljdd;Ly4b;Ljava/io/File;Ljava/io/File;ZLjava/lang/String;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

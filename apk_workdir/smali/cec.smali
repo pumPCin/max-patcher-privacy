@@ -1,123 +1,72 @@
-.class public final synthetic Lcec;
-.super Ljava/lang/Object;
+.class public abstract Lcec;
+.super Lfec;
 .source "SourceFile"
 
 # interfaces
-.implements Lzla;
-.implements Lrdf;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(ILandroid/content/Context;Z)V
-    .locals 0
-
-    iput p1, p0, Lcec;->a:I
-
-    iput-object p2, p0, Lcec;->b:Landroid/content/Context;
-
-    iput-boolean p3, p0, Lcec;->c:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lrr7;
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 2
+.method public computeReflected()Ler7;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Void;
+    sget-object v0, Lz7d;->a:La8d;
 
-    iget-object p1, p0, Lcec;->b:Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Lbvi;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    const-string v0, "proxy_retention"
-
-    iget-boolean v1, p0, Lcec;->c:Z
-
-    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public get()Ljava/lang/Object;
-    .locals 3
+.method public getDelegate()Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lcec;->a:I
+    invoke-virtual {p0}, Lfec;->getReflected()Ltr7;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcec;->b:Landroid/content/Context;
+    check-cast v0, Lrr7;
 
-    iget-boolean v1, p0, Lcec;->c:Z
-
-    invoke-static {v0, v1}, Lirf;->r(Landroid/content/Context;Z)Ljava/lang/String;
+    invoke-interface {v0}, Lrr7;->getDelegate()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-boolean v0, p0, Lcec;->c:Z
+.method public bridge synthetic getGetter()Lpr7;
+    .locals 1
 
-    const/4 v1, 0x1
+    .line 1
+    invoke-virtual {p0}, Lcec;->getGetter()Lqr7;
 
-    iget-object v2, p0, Lcec;->b:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-static {v2, v1, v0}, Lirf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
+    return-object v0
+.end method
+
+.method public getGetter()Lqr7;
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lfec;->getReflected()Ltr7;
+
+    move-result-object v0
+
+    check-cast v0, Lrr7;
+
+    invoke-interface {v0}, Lrr7;->getGetter()Lqr7;
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-interface {p0}, Lrr7;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_1
-    iget-boolean v0, p0, Lcec;->c:Z
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lcec;->b:Landroid/content/Context;
-
-    invoke-static {v2, v1, v0}, Lirf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-boolean v0, p0, Lcec;->c:Z
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcec;->b:Landroid/content/Context;
-
-    invoke-static {v2, v0, v1}, Lirf;->g(Landroid/content/Context;ZZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

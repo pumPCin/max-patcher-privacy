@@ -1,87 +1,98 @@
-.class public final Lzch;
-.super Ljava/lang/Object;
+.class public final enum Lzch;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ludh;
+.implements Lkch;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final enum a:Lzch;
+
+.field public static final synthetic b:[Lzch;
+
+.field public static final synthetic c:Lzd5;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzch;
 
-    iput-boolean p1, p0, Lzch;->a:Z
+    const-string v1, "REQUEST_PHONE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzch;->a:Lzch;
+
+    filled-new-array {v0}, [Lzch;
+
+    move-result-object v0
+
+    sput-object v0, Lzch;->b:[Lzch;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lzch;->c:Lzd5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)Lzch;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    const-class v0, Lzch;
 
-    goto :goto_1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :cond_0
-    instance-of v0, p1, Lzch;
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    check-cast p0, Lzch;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzch;
-
-    iget-boolean v0, p0, Lzch;->a:Z
-
-    iget-boolean p1, p1, Lzch;->a:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[Lzch;
     .locals 1
 
-    iget-boolean v0, p0, Lzch;->a:Z
+    sget-object v0, Lzch;->b:[Lzch;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "CloseScreen(isFromBridge="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lzch;->a:Z
-
-    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lzch;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "WebAppRequestPhone"
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "request_phone"
 
     return-object v0
 .end method

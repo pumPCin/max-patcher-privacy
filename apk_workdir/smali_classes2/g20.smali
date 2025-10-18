@@ -2,304 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt00;
-
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lw00;
-
-.field public final c:Lwrd;
-
-.field public final d:Ljava/util/Map;
-
-.field public final e:Landroid/util/LruCache;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lw00;Lwrd;)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg20;->a:Landroid/content/Context;
+    iput-object p1, p0, Lg20;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lg20;->b:Lw00;
-
-    iput-object p3, p0, Lg20;->c:Lwrd;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    new-instance p1, Lpi8;
-
-    const/4 p2, 0x0
-
-    const/16 p3, 0xc8
-
-    invoke-direct {p1, p3, p2}, Lpi8;-><init>(II)V
-
-    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lg20;->d:Ljava/util/Map;
-
-    new-instance p1, Landroid/util/LruCache;
-
-    invoke-direct {p1, p3}, Landroid/util/LruCache;-><init>(I)V
-
-    iput-object p1, p0, Lg20;->e:Landroid/util/LruCache;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+    iput-boolean p2, p0, Lg20;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld20;)Landroid/net/Uri;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-object v0, p1, Ld20;->j:Lm10;
+    const/4 v0, 0x1
 
-    iget-object v1, p1, Ld20;->g:Lv10;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lg20;->b:Lw00;
-
-    iget-object v2, v2, Lw00;->c:Lpi8;
-
-    iget-object v3, p1, Ld20;->r:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/net/Uri;
-
-    if-nez v2, :cond_8
-
-    invoke-virtual {p1}, Ld20;->g()Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    invoke-static {p1}, Lyfi;->h(Ld20;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_3
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Ld20;->e()Z
+    instance-of v1, p1, Lg20;
 
-    move-result v3
+    const/4 v2, 0x0
 
-    if-nez v3, :cond_4
+    if-nez v1, :cond_1
 
-    invoke-static {p1}, Lyfi;->g(Ld20;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    invoke-virtual {p1}, Ld20;->f()Z
+    check-cast p1, Lg20;
 
-    move-result p1
+    iget-object v1, p0, Lg20;->a:Ljava/lang/String;
 
-    if-eqz p1, :cond_8
+    iget-object v3, p1, Lg20;->a:Ljava/lang/String;
 
-    iget-object p1, v1, Lv10;->f:Lr10;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_3
+    move-result v1
 
-    if-eqz p1, :cond_2
+    if-nez v1, :cond_2
 
-    invoke-virtual {p1}, Lr10;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    const/4 p1, 0x0
+    iget-boolean v1, p0, Lg20;->b:Z
 
-    :goto_0
-    invoke-static {p1}, Lkzh;->e(Ljava/lang/String;)Landroid/net/Uri;
+    iget-boolean p1, p1, Lg20;->b:Z
 
-    move-result-object p1
+    if-eq v1, p1, :cond_3
 
-    return-object p1
+    return v2
 
     :cond_3
-    return-object v2
-
-    :cond_4
-    :goto_1
-    invoke-static {p1}, Lyfi;->g(Ld20;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    iget-object p1, v0, Lm10;->d:Ld20;
-
-    iget-object p1, p1, Ld20;->b:Lr10;
-
-    goto :goto_2
-
-    :cond_5
-    iget-object p1, p1, Ld20;->b:Lr10;
-
-    :goto_2
-    invoke-virtual {p1}, Lr10;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lkzh;->e(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_6
-    :goto_3
-    invoke-static {p1}, Lyfi;->h(Ld20;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    iget-object p1, v0, Lm10;->d:Ld20;
-
-    iget-object p1, p1, Ld20;->d:Lc20;
-
-    goto :goto_4
-
-    :cond_7
-    iget-object p1, p1, Ld20;->d:Lc20;
-
-    :goto_4
-    iget-object p1, p1, Lc20;->d:Ljava/lang/String;
-
-    invoke-static {p1}, Lkzh;->e(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_8
-    return-object v2
+    return v0
 .end method
 
-.method public final b(Ld20;Z)Landroid/net/Uri;
-    .locals 4
+.method public final hashCode()I
+    .locals 2
 
-    new-instance v0, Lf20;
+    iget-object v0, p0, Lg20;->a:Ljava/lang/String;
 
-    iget-object v1, p1, Ld20;->r:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, v1, p2}, Lf20;-><init>(Ljava/lang/String;Z)V
+    move-result v0
 
-    iget-object v1, p0, Lg20;->e:Landroid/util/LruCache;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1, v0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p0, Lg20;->b:Z
 
-    move-result-object v2
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast v2, Landroid/net/Uri;
+    move-result v1
 
-    if-eqz v2, :cond_0
+    add-int/2addr v1, v0
 
-    return-object v2
+    return v1
+.end method
 
-    :cond_0
-    iget-object v2, p1, Ld20;->j:Lm10;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    if-eqz v2, :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, v2, Lm10;->d:Ld20;
+    const-string v1, "PreviewCacheKey(attachId="
 
-    if-eqz v2, :cond_1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object p1, v2
+    iget-object v1, p0, Lg20;->a:Ljava/lang/String;
 
-    :cond_1
-    invoke-static {p1}, Lyfi;->d(Ld20;)[B
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", blurred="
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    array-length v2, p1
+    iget-boolean v1, p0, Lg20;->b:Z
 
-    if-nez v2, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, ")"
 
-    :cond_2
-    if-eqz p2, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :try_start_0
-    iget-object p2, p0, Lg20;->c:Lwrd;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
-    goto :goto_0
-
-    :catch_0
-    move-exception p2
-
-    const-string v2, "g20"
-
-    const-string v3, "AttachmentsPreviewCache:"
-
-    invoke-static {v2, v3, p2}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_0
-    const/4 p2, 0x2
-
-    invoke-static {p1, p2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v2, "data:image/png;base64,"
-
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {v1, v0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object v0
 .end method

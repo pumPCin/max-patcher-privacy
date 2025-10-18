@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfr3;
+.implements Ltr3;
 
 
 # instance fields

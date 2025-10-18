@@ -1,21 +1,23 @@
 .class public final Llj4;
-.super Ldg8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lrmg;
+.field public final a:I
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/MediaCodecInfo;Lsa6;Lrmg;)V
-    .locals 1
+.method public constructor <init>(IJ)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Ldg8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput p1, p0, Llj4;->a:I
 
-    iput-object p3, p0, Llj4;->X:Lrmg;
+    iput-wide p2, p0, Llj4;->b:J
 
     return-void
 .end method

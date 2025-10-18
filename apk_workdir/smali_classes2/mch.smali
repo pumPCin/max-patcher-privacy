@@ -3,178 +3,189 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lhn6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lmch;
 
-.field public final synthetic b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lmch;->a:I
+    new-instance v0, Lmch;
 
-    iput-object p1, p0, Lmch;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lmch;->a:Lmch;
+
+    new-instance v1, Levb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.codereader.WebAppOpenCodeReaderRequest"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "fileSelect"
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lmch;->descriptor:Lb3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lmch;->a:I
+    sget-object v0, Lmch;->descriptor:Lb3e;
 
-    iget-object v1, p0, Lmch;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
+    const/4 v1, 0x1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v2, 0x0
 
-    const/16 v2, 0x1f
+    const/4 v3, 0x0
 
-    if-lt v0, v2, :cond_0
+    move v5, v1
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move v6, v2
 
-    move-result-object v0
+    move-object v4, v3
 
-    const-string v1, "vibrator_manager"
+    :goto_0
+    if-eqz v5, :cond_3
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
 
-    move-result-object v0
+    move-result v7
 
-    invoke-static {v0}, Lkch;->c(Ljava/lang/Object;)Landroid/os/VibratorManager;
+    const/4 v8, -0x1
 
-    move-result-object v0
+    if-eq v7, v8, :cond_2
 
-    invoke-static {v0}, Lkch;->b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
+    if-eqz v7, :cond_1
 
-    move-result-object v0
+    if-ne v7, v1, :cond_0
+
+    sget-object v7, Lir0;->a:Lir0;
+
+    invoke-virtual {p1, v0, v1, v7, v4}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    or-int/lit8 v6, v6, 0x2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    move-result-object v0
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
-    const-string v1, "vibrator"
+    throw p1
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    :cond_1
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, Landroid/os/Vibrator;
+    or-int/lit8 v6, v6, 0x1
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    :pswitch_0
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
+    :cond_2
+    move v5, v2
 
-    new-instance v0, Lmjh;
+    goto :goto_0
 
-    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0()Lcrd;
+    :cond_3
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
 
-    move-result-object v1
+    new-instance p1, Loch;
 
-    invoke-direct {v0, v1}, Lmjh;-><init>(Lcrd;)V
+    invoke-direct {p1, v6, v3, v4}, Loch;-><init>(ILjava/lang/String;Ljava/lang/Boolean;)V
 
-    return-object v0
+    return-object p1
+.end method
 
-    :pswitch_1
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 3
 
-    new-instance v0, Lmch;
+    check-cast p2, Loch;
 
-    const/4 v2, 0x2
+    sget-object v0, Lmch;->descriptor:Lb3e;
 
-    invoke-direct {v0, v1, v2}, Lmch;-><init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
 
-    new-instance v10, Lrhf;
+    move-result-object p1
 
-    invoke-direct {v10, v0}, Lrhf;-><init>(Loh6;)V
-
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->w0:Lqs;
-
-    sget-object v3, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
-
-    const/4 v4, 0x1
-
-    aget-object v4, v3, v4
-
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->x0:Lqs;
-
-    aget-object v2, v3, v2
-
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lr3h;
-
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->v0:Lqs;
+    iget-object v1, p2, Loch;->a:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    aget-object v2, v3, v2
+    invoke-virtual {p1, v0, v2, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    sget-object v1, Lir0;->a:Lir0;
+
+    iget-object p2, p2, Loch;->b:Ljava/lang/Boolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v0, v2, v1, p2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
+    .locals 4
+
+    sget-object v0, Lir0;->a:Lir0;
+
+    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
 
     move-result-object v0
 
-    move-object v7, v0
+    const/4 v1, 0x2
 
-    check-cast v7, Ljava/lang/Long;
+    new-array v1, v1, [Lur7;
 
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->y0:Lqs;
+    sget-object v2, Lvaf;->a:Lvaf;
 
-    const/4 v2, 0x3
+    const/4 v3, 0x0
 
-    aget-object v2, v3, v2
+    aput-object v2, v1, v3
 
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    aput-object v0, v1, v2
 
-    move-object v8, v0
+    return-object v1
+.end method
 
-    check-cast v8, Ljava/lang/String;
+.method public final d()Lb3e;
+    .locals 1
 
-    iget-object v9, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0:Lreh;
+    sget-object v0, Lmch;->descriptor:Lb3e;
 
-    new-instance v3, Lmeh;
-
-    invoke-direct/range {v3 .. v10}, Lmeh;-><init>(JLr3h;Ljava/lang/Long;Ljava/lang/String;Lreh;Lrhf;)V
-
-    return-object v3
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

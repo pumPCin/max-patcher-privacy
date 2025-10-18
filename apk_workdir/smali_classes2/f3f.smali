@@ -1,50 +1,22 @@
-.class public final synthetic Lf3f;
+.class public final Lf3f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lt00;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lj3f;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lj3f;)V
     .locals 0
-
-    iput p1, p0, Lf3f;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lf3f;->a:Lj3f;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lf3f;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

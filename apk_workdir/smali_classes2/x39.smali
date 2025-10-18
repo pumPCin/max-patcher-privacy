@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz39;
+
 
 # static fields
 .field public static final a:Lx39;
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x388508e4
+    const v0, -0x5ca6eb28
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "InvalidateAll"
+    const-string v0, "SelectFileMode"
 
     return-object v0
 .end method

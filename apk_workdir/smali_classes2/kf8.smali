@@ -1,113 +1,154 @@
 .class public final Lkf8;
-.super Ljava/lang/Object;
+.super Lpw0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lda2;
-
-.field public b:I
-
-.field public c:Loa9;
-
-.field public d:Lone/me/messages/list/loader/MessageModel;
-
-.field public e:Lrvb;
-
-.field public f:Ljava/util/List;
+.field public final i:Landroid/os/Handler;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lpw0;-><init>()V
 
-    sget-object v0, Ls95;->a:Ls95;
+    new-instance v0, Landroid/os/Handler;
 
-    iput-object v0, p0, Lkf8;->f:Ljava/util/List;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lkf8;->i:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public static synthetic g(Lkf8;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lpw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static synthetic h(Lkf8;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lpw0;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static synthetic i(Lkf8;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lpw0;->f(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqh6;)Llf8;
-    .locals 3
+.method public final c(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-interface {p1, p0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    iget-object p1, p0, Lkf8;->a:Lda2;
+    move-result-object v0
 
-    const-string v0, "Required value was null."
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    if-eqz p1, :cond_3
+    move-result-object v1
 
-    iget v1, p0, Lkf8;->b:I
+    if-ne v0, v1, :cond_0
 
-    iget-object v2, p0, Lkf8;->e:Lrvb;
+    invoke-super {p0, p1}, Lpw0;->c(Ljava/lang/Object;)V
 
-    if-eqz v2, :cond_2
-
-    new-instance v0, Llf8;
-
-    invoke-direct {v0, p1, v2, v1}, Llf8;-><init>(Lda2;Lrvb;I)V
-
-    iget-object p1, p0, Lkf8;->c:Loa9;
-
-    if-eqz p1, :cond_0
-
-    sget-object v1, Llf8;->h:[Lwq7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Llf8;->d:Le5;
-
-    iput-object p1, v1, Le5;->b:Ljava/lang/Object;
+    return-void
 
     :cond_0
-    iget-object p1, p0, Lkf8;->d:Lone/me/messages/list/loader/MessageModel;
+    new-instance v0, Ljf8;
 
-    if-eqz p1, :cond_1
+    const/4 v1, 0x0
 
-    sget-object v1, Llf8;->h:[Lwq7;
+    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
 
-    const/4 v2, 0x1
+    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
 
-    aget-object v1, v1, v2
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v1, v0, Llf8;->e:Le5;
+    return-void
+.end method
 
-    iput-object p1, v1, Le5;->b:Ljava/lang/Object;
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    :cond_1
-    iget-object p1, p0, Lkf8;->f:Ljava/util/List;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    sget-object v1, Llf8;->h:[Lwq7;
+    move-result-object v0
 
-    const/4 v2, 0x3
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    aget-object v1, v1, v2
+    move-result-object v1
 
-    iget-object v1, v0, Llf8;->g:Le5;
+    if-ne v0, v1, :cond_0
 
-    iput-object p1, v1, Le5;->b:Ljava/lang/Object;
+    :try_start_0
+    invoke-super {p0, p1}, Lpw0;->d(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    :catch_0
+    return-void
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :cond_0
+    new-instance v0, Ljf8;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x1
 
-    throw p1
+    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
 
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    throw p1
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-super {p0, p1}, Lpw0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+
+    :cond_0
+    new-instance v0, Ljf8;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
+
+    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

@@ -1,20 +1,3 @@
-.class public abstract Lvl0;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.class public final Lvl0;
+.super Lzt4;
 .source "SourceFile"
-
-# interfaces
-.implements Lngc;
-
-
-# virtual methods
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method

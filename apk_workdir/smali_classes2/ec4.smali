@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract createSocket()Ljava/net/DatagramSocket;
+.method public abstract a(JLgz6;IIJJ)Ljava/util/List;
 .end method

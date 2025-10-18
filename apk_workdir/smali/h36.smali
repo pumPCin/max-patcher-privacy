@@ -1,170 +1,111 @@
-.class public final synthetic Lh36;
-.super Ljava/lang/Object;
+.class public final Lh36;
+.super Lhcf;
 .source "SourceFile"
 
 # interfaces
-.implements Lnx1;
+.implements Lq36;
 
 
 # instance fields
-.field public final synthetic a:Ll36;
+.field public final q0:Lm3e;
 
-.field public final synthetic b:Z
+.field public final r0:Lj3e;
 
-.field public final synthetic c:J
+.field public final s0:Le36;
+
+.field public t0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll36;ZJ)V
+.method public constructor <init>(Lm3e;Lj3e;Le36;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lhcf;-><init>()V
 
-    iput-object p1, p0, Lh36;->a:Ll36;
+    iput-object p1, p0, Lh36;->q0:Lm3e;
 
-    iput-boolean p2, p0, Lh36;->b:Z
+    iput-object p2, p0, Lh36;->r0:Lj3e;
 
-    iput-wide p3, p0, Lh36;->c:J
+    iput-object p3, p0, Lh36;->s0:Le36;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 7
+.method public final b()V
+    .locals 1
 
-    iget-object v0, p0, Lh36;->a:Ll36;
+    iget-object v0, p0, Lh36;->s0:Le36;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Le36;->cancel()V
 
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+    iget-object v0, p0, Lh36;->q0:Lm3e;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lm3e;->b()V
 
-    move-result-object v1
+    return-void
+.end method
 
-    check-cast v1, Ljava/lang/Integer;
+.method public final cancel()V
+    .locals 1
 
-    iget-object v2, v0, Ll36;->p:[Landroid/hardware/camera2/params/MeteringRectangle;
+    invoke-super {p0}, Lhcf;->cancel()V
 
-    array-length v2, v2
+    iget-object v0, p0, Lh36;->s0:Le36;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Le36;->cancel()V
 
-    const/4 v4, 0x1
+    return-void
+.end method
 
-    if-lez v2, :cond_3
+.method public final d(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-boolean v2, p0, Lh36;->b:Z
+    iget-wide v0, p0, Lh36;->t0:J
 
-    if-eqz v2, :cond_2
+    const-wide/16 v2, 0x1
 
-    if-nez v1, :cond_0
+    add-long/2addr v0, v2
 
-    goto :goto_0
+    iput-wide v0, p0, Lh36;->t0:J
+
+    iget-object v0, p0, Lh36;->q0:Lm3e;
+
+    invoke-virtual {v0, p1}, Lm3e;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 5
+
+    sget-object v0, Lab5;->a:Lab5;
+
+    invoke-virtual {p0, v0}, Lhcf;->g(Lgcf;)V
+
+    iget-wide v0, p0, Lh36;->t0:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iput-wide v2, p0, Lh36;->t0:J
+
+    invoke-virtual {p0, v0, v1}, Lhcf;->f(J)V
 
     :cond_0
-    iget-object v2, v0, Ll36;->h:Ljava/lang/Integer;
+    iget-object v0, p0, Lh36;->s0:Le36;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    const-wide/16 v1, 0x1
 
-    move-result v2
+    invoke-virtual {v0, v1, v2}, Le36;->i(J)V
 
-    const/4 v5, 0x3
+    iget-object v0, p0, Lh36;->r0:Lj3e;
 
-    if-ne v2, v5, :cond_3
+    invoke-virtual {v0, p1}, Lj3e;->d(Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/4 v5, 0x4
-
-    if-ne v2, v5, :cond_1
-
-    iput-boolean v4, v0, Ll36;->m:Z
-
-    iput-boolean v4, v0, Ll36;->l:Z
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/4 v5, 0x5
-
-    if-ne v2, v5, :cond_3
-
-    iput-boolean v3, v0, Ll36;->m:Z
-
-    iput-boolean v4, v0, Ll36;->l:Z
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    iput-boolean v4, v0, Ll36;->m:Z
-
-    iput-boolean v4, v0, Ll36;->l:Z
-
-    :cond_3
-    :goto_1
-    iget-boolean v2, v0, Ll36;->l:Z
-
-    if-eqz v2, :cond_6
-
-    iget-wide v5, p0, Lh36;->c:J
-
-    invoke-static {p1, v5, v6}, Lox1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    iget-boolean p1, v0, Ll36;->m:Z
-
-    iget-object v1, v0, Ll36;->j:Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v2, v0, Ll36;->j:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_4
-    iget-object v1, v0, Ll36;->s:Lyt1;
-
-    if-eqz v1, :cond_5
-
-    new-instance v3, Lm36;
-
-    invoke-direct {v3, p1}, Lm36;-><init>(Z)V
-
-    invoke-virtual {v1, v3}, Lyt1;->b(Ljava/lang/Object;)Z
-
-    iput-object v2, v0, Ll36;->s:Lyt1;
-
-    :cond_5
-    return v4
-
-    :cond_6
-    iget-object p1, v0, Ll36;->h:Ljava/lang/Integer;
-
-    invoke-virtual {p1, v1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    if-eqz v1, :cond_7
-
-    iput-object v1, v0, Ll36;->h:Ljava/lang/Integer;
-
-    :cond_7
-    return v3
+    return-void
 .end method

@@ -1,43 +1,48 @@
 .class public final Lkrb;
-.super Lp3;
-.source "SourceFile"
+.super Ly14;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Ls3a;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lkrb;->Y:Ls3a;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final e(J)J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+    iput-object p1, p0, Lkrb;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lkrb;->X:I
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(J)J
+    const/high16 v0, -0x80000000
 
-    move-result-wide p1
+    or-int/2addr p1, v0
 
-    return-wide p1
-.end method
+    iput p1, p0, Lkrb;->X:I
 
-.method public final f(JJ)J
-    .locals 1
+    iget-object p1, p0, Lkrb;->Y:Ls3a;
 
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(JJ)J
+    move-result-object p1
 
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final g()Ljava/util/Random;
-    .locals 1
-
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

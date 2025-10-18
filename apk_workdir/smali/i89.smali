@@ -4,26 +4,11 @@
 
 
 # virtual methods
-.method public abstract b(Loaf;)Z
+.method public abstract H(Lmy0;)V
 .end method
 
-.method public abstract c()Z
+.method public abstract a(Ljava/lang/Object;)V
 .end method
 
-.method public abstract d(Lv79;)Z
-.end method
-
-.method public abstract e(Lh89;)V
-.end method
-
-.method public abstract g(Lv79;)Z
-.end method
-
-.method public abstract h()V
-.end method
-
-.method public abstract j(Landroid/content/Context;Lr79;)V
-.end method
-
-.method public abstract l(Lr79;Z)V
+.method public abstract z(Ljava/lang/Object;)V
 .end method

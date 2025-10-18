@@ -2,23 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lieg;
 
+# instance fields
+.field public final a:Lr7e;
 
-# static fields
-.field public static final a:Lgeg;
+.field public final b:Ljava/util/Collection;
+
+.field public final c:Ljava/util/Collection;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lr7e;Ljava/util/Collection;Ljava/util/Collection;)V
+    .locals 0
 
-    new-instance v0, Lgeg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgeg;->a:Lr7e;
 
-    sput-object v0, Lgeg;->a:Lgeg;
+    iput-object p2, p0, Lgeg;->b:Ljava/util/Collection;
+
+    iput-object p3, p0, Lgeg;->c:Ljava/util/Collection;
 
     return-void
 .end method

@@ -1,266 +1,153 @@
-.class public final Lppf;
-.super Lt4;
+.class public abstract Lppf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lcom/google/android/material/textfield/TextInputLayout;
+# static fields
+.field public static final a:Ljava/lang/String;
+
+.field public static final b:J
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:J
+
+.field public static final f:Lpc9;
+
+.field public static final g:Lkx5;
+
+.field public static final h:Lkx5;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Lt4;-><init>()V
+    const-string v0, "kotlinx.coroutines.scheduler.default.name"
 
-    iput-object p1, p0, Lppf;->d:Lcom/google/android/material/textfield/TextInputLayout;
+    const-string v1, "DefaultDispatcher"
 
-    return-void
-.end method
+    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    move-result-object v0
 
-# virtual methods
-.method public final d(Landroid/view/View;Lg5;)V
-    .locals 17
+    sput-object v0, Lppf;->a:Ljava/lang/String;
 
-    move-object/from16 v0, p0
+    const/16 v8, 0xc
 
-    move-object/from16 v1, p2
+    const/4 v9, 0x0
 
-    iget-object v2, v1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    const-string v1, "kotlinx.coroutines.scheduler.resolution.ns"
 
-    iget-object v3, v0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+    const-wide/32 v2, 0x186a0
 
-    move-object/from16 v4, p1
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v3, v4, v2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    const-wide/16 v6, 0x0
 
-    iget-object v3, v0, Lppf;->d:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-static/range {v1 .. v9}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;JJJILjava/lang/Object;)J
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    move-result-wide v0
 
-    move-result-object v4
+    sput-wide v0, Lppf;->b:J
 
-    if-eqz v4, :cond_0
+    invoke-static {}, Lkotlinx/coroutines/internal/SystemPropsKt;->getAVAILABLE_PROCESSORS()I
 
-    invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    move-result v0
 
-    move-result-object v4
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_0
+
+    move v3, v1
 
     goto :goto_0
 
     :cond_0
-    const/4 v4, 0x0
+    move v3, v0
 
     :goto_0
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getHint()Ljava/lang/CharSequence;
+    const/16 v6, 0x8
 
-    move-result-object v5
+    const/4 v7, 0x0
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getError()Ljava/lang/CharSequence;
+    const-string v2, "kotlinx.coroutines.scheduler.core.pool.size"
 
-    move-result-object v6
+    const/4 v4, 0x1
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getPlaceholderText()Ljava/lang/CharSequence;
+    const/4 v5, 0x0
 
-    move-result-object v7
+    invoke-static/range {v2 .. v7}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterMaxLength()I
+    move-result v0
 
-    move-result v8
+    sput v0, Lppf;->c:I
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterOverflowDescription()Ljava/lang/CharSequence;
+    const/4 v5, 0x4
 
-    move-result-object v9
+    const/4 v6, 0x0
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const-string v1, "kotlinx.coroutines.scheduler.max.pool.size"
 
-    move-result v10
+    const v2, 0x1ffffe
 
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const/4 v3, 0x0
 
-    move-result v11
+    const v4, 0x1ffffe
 
-    iget-boolean v12, v3, Lcom/google/android/material/textfield/TextInputLayout;->E1:Z
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
 
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result v0
 
-    move-result v13
+    sput v0, Lppf;->d:I
 
-    if-eqz v13, :cond_2
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const/16 v8, 0xc
 
-    move-result v14
+    const/4 v9, 0x0
 
-    if-nez v14, :cond_1
+    const-string v1, "kotlinx.coroutines.scheduler.keep.alive.sec"
 
-    goto :goto_1
+    const-wide/16 v2, 0x3c
 
-    :cond_1
-    const/4 v14, 0x0
+    const-wide/16 v4, 0x0
 
-    goto :goto_2
+    const-wide/16 v6, 0x0
 
-    :cond_2
-    :goto_1
-    const/4 v14, 0x1
+    invoke-static/range {v1 .. v9}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;JJJILjava/lang/Object;)J
 
-    :goto_2
-    if-nez v11, :cond_3
+    move-result-wide v1
 
-    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    move-result-object v5
+    move-result-wide v0
 
-    goto :goto_3
+    sput-wide v0, Lppf;->e:J
 
-    :cond_3
-    const-string v5, ""
+    sget-object v0, Lpc9;->X:Lpc9;
 
-    :goto_3
-    iget-object v11, v3, Lcom/google/android/material/textfield/TextInputLayout;->b:Lnxe;
+    sput-object v0, Lppf;->f:Lpc9;
 
-    iget-object v15, v11, Lnxe;->b:Landroidx/appcompat/widget/AppCompatTextView;
+    new-instance v0, Lkx5;
 
-    invoke-virtual {v15}, Landroid/view/View;->getVisibility()I
+    const/4 v1, 0x0
 
-    move-result v16
+    const/16 v2, 0xc
 
-    if-nez v16, :cond_4
+    invoke-direct {v0, v1, v2}, Lkx5;-><init>(II)V
 
-    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
+    sput-object v0, Lppf;->g:Lkx5;
 
-    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
+    new-instance v0, Lkx5;
 
-    goto :goto_4
+    const/4 v1, 0x1
 
-    :cond_4
-    iget-object v11, v11, Lnxe;->o:Lcom/google/android/material/internal/CheckableImageButton;
+    invoke-direct {v0, v1, v2}, Lkx5;-><init>(II)V
 
-    invoke-virtual {v2, v11}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
-
-    :goto_4
-    if-nez v10, :cond_5
-
-    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_5
-
-    :cond_5
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_6
-
-    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    if-nez v12, :cond_7
-
-    if-eqz v7, :cond_7
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v12, ", "
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_7
-    :goto_5
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_8
-
-    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHintText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2, v10}, Landroid/view/accessibility/AccessibilityNodeInfo;->setShowingHintText(Z)V
-
-    :cond_8
-    if-eqz v4, :cond_9
-
-    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-ne v4, v8, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    const/4 v8, -0x1
-
-    :goto_6
-    invoke-virtual {v2, v8}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMaxTextLength(I)V
-
-    if-eqz v14, :cond_b
-
-    if-nez v13, :cond_a
-
-    goto :goto_7
-
-    :cond_a
-    move-object v6, v9
-
-    :goto_7
-    invoke-virtual {v2, v6}, Landroid/view/accessibility/AccessibilityNodeInfo;->setError(Ljava/lang/CharSequence;)V
-
-    :cond_b
-    iget-object v4, v3, Lcom/google/android/material/textfield/TextInputLayout;->w0:Lhe7;
-
-    iget-object v4, v4, Lhe7;->y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz v4, :cond_c
-
-    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
-
-    :cond_c
-    iget-object v2, v3, Lcom/google/android/material/textfield/TextInputLayout;->c:Lub5;
-
-    invoke-virtual {v2}, Lub5;->b()Lvb5;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lvb5;->n(Lg5;)V
-
-    return-void
-.end method
-
-.method public final e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Lt4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    iget-object p1, p0, Lppf;->d:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iget-object p1, p1, Lcom/google/android/material/textfield/TextInputLayout;->c:Lub5;
-
-    invoke-virtual {p1}, Lub5;->b()Lvb5;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Lvb5;->o(Landroid/view/accessibility/AccessibilityEvent;)V
+    sput-object v0, Lppf;->h:Lkx5;
 
     return-void
 .end method

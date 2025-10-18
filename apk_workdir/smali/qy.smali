@@ -10,9 +10,9 @@
 
 .field public c:Landroid/os/Handler;
 
-.field public final d:Lp63;
+.field public final d:Lyy;
 
-.field public final e:Lp63;
+.field public final e:Lyy;
 
 .field public final f:Ljava/util/ArrayDeque;
 
@@ -24,20 +24,16 @@
 
 .field public j:Landroid/media/MediaCodec$CodecException;
 
-.field public k:Landroid/media/MediaCodec$CryptoException;
+.field public k:J
 
-.field public l:J
+.field public l:Z
 
-.field public m:Z
-
-.field public n:Ljava/lang/IllegalStateException;
-
-.field public o:Lxr6;
+.field public m:Ljava/lang/IllegalStateException;
 
 
 # direct methods
 .method public constructor <init>(Landroid/os/HandlerThread;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
 
@@ -49,17 +45,21 @@
 
     iput-object p1, p0, Lqy;->b:Landroid/os/HandlerThread;
 
-    new-instance p1, Lp63;
+    new-instance p1, Lyy;
 
-    invoke-direct {p1}, Lp63;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lqy;->d:Lp63;
+    const/4 v1, 0x0
 
-    new-instance p1, Lp63;
+    invoke-direct {p1, v0, v1}, Lyy;-><init>(IB)V
 
-    invoke-direct {p1}, Lp63;-><init>()V
+    iput-object p1, p0, Lqy;->d:Lyy;
 
-    iput-object p1, p0, Lqy;->e:Lp63;
+    new-instance p1, Lyy;
+
+    invoke-direct {p1, v0, v1}, Lyy;-><init>(IB)V
+
+    iput-object p1, p0, Lqy;->e:Lyy;
 
     new-instance p1, Ljava/util/ArrayDeque;
 
@@ -78,8 +78,50 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(Landroid/media/MediaCodec;)V
+    .locals 5
+
+    iget-object v0, p0, Lqy;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-wide v1, p0, Lqy;->k:J
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lqy;->k:J
+
+    iget-object v1, p0, Lqy;->c:Landroid/os/Handler;
+
+    sget v2, Llig;->a:I
+
+    new-instance v2, Lzd;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, p0, v3, p1}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final b()V
+    .locals 4
 
     iget-object v0, p0, Lqy;->g:Ljava/util/ArrayDeque;
 
@@ -98,17 +140,25 @@
     iput-object v1, p0, Lqy;->i:Landroid/media/MediaFormat;
 
     :cond_0
-    iget-object v1, p0, Lqy;->d:Lp63;
+    iget-object v1, p0, Lqy;->d:Lyy;
 
-    iget v2, v1, Lp63;->a:I
+    const/4 v2, 0x0
 
-    iput v2, v1, Lp63;->b:I
+    iput v2, v1, Lyy;->b:I
 
-    iget-object v1, p0, Lqy;->e:Lp63;
+    const/4 v3, -0x1
 
-    iget v2, v1, Lp63;->a:I
+    iput v3, v1, Lyy;->c:I
 
-    iput v2, v1, Lp63;->b:I
+    iput v2, v1, Lyy;->o:I
+
+    iget-object v1, p0, Lqy;->e:Lyy;
+
+    iput v2, v1, Lyy;->b:I
+
+    iput v3, v1, Lyy;->c:I
+
+    iput v2, v1, Lyy;->o:I
 
     iget-object v1, p0, Lqy;->f:Ljava/util/ArrayDeque;
 
@@ -116,31 +166,11 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final onCryptoError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CryptoException;)V
-    .locals 0
-
-    iget-object p1, p0, Lqy;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iput-object p2, p0, Lqy;->k:Landroid/media/MediaCodec$CryptoException;
-
-    monitor-exit p1
+    iput-object v0, p0, Lqy;->j:Landroid/media/MediaCodec$CodecException;
 
     return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
 .end method
 
 .method public final onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
@@ -175,25 +205,10 @@
     monitor-enter p1
 
     :try_start_0
-    iget-object v0, p0, Lqy;->d:Lp63;
+    iget-object v0, p0, Lqy;->d:Lyy;
 
-    invoke-virtual {v0, p2}, Lp63;->a(I)V
+    invoke-virtual {v0, p2}, Lyy;->d(I)V
 
-    iget-object p2, p0, Lqy;->o:Lxr6;
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljo8;
-
-    iget-object p2, p2, Ljo8;->R0:Lhi5;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Lhi5;->a()V
-
-    :cond_0
     monitor-exit p1
 
     return-void
@@ -220,11 +235,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lqy;->e:Lp63;
+    iget-object v1, p0, Lqy;->e:Lyy;
 
     const/4 v2, -0x2
 
-    invoke-virtual {v1, v2}, Lp63;->a(I)V
+    invoke-virtual {v1, v2}, Lyy;->d(I)V
 
     iget-object v1, p0, Lqy;->g:Ljava/util/ArrayDeque;
 
@@ -243,29 +258,14 @@
 
     :cond_0
     :goto_0
-    iget-object v0, p0, Lqy;->e:Lp63;
+    iget-object v0, p0, Lqy;->e:Lyy;
 
-    invoke-virtual {v0, p2}, Lp63;->a(I)V
+    invoke-virtual {v0, p2}, Lyy;->d(I)V
 
     iget-object p2, p0, Lqy;->f:Ljava/util/ArrayDeque;
 
     invoke-virtual {p2, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    iget-object p2, p0, Lqy;->o:Lxr6;
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p2, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljo8;
-
-    iget-object p2, p2, Ljo8;->R0:Lhi5;
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Lhi5;->a()V
-
-    :cond_1
     monitor-exit p1
 
     return-void
@@ -286,11 +286,11 @@
     monitor-enter p1
 
     :try_start_0
-    iget-object v0, p0, Lqy;->e:Lp63;
+    iget-object v0, p0, Lqy;->e:Lyy;
 
     const/4 v1, -0x2
 
-    invoke-virtual {v0, v1}, Lp63;->a(I)V
+    invoke-virtual {v0, v1}, Lyy;->d(I)V
 
     iget-object v0, p0, Lqy;->g:Ljava/util/ArrayDeque;
 

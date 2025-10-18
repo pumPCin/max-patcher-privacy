@@ -1,81 +1,66 @@
 .class public final Ltk0;
-.super Landroid/view/View$BaseSavedState;
+.super Lre;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ltk0;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public X:Z
+.field public final synthetic b:I
 
-.field public a:F
-
-.field public b:F
-
-.field public c:Ljava/util/ArrayList;
-
-.field public o:F
+.field public final synthetic c:Luk0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Luk0;I)V
+    .locals 0
 
-    new-instance v0, Lh8;
+    iput p2, p0, Ltk0;->b:I
 
-    const/16 v1, 0x8
+    iput-object p1, p0, Ltk0;->c:Luk0;
 
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, Ltk0;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final a(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    iget p1, p0, Ltk0;->b:I
 
-    iget p2, p0, Ltk0;->a:F
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    iget-object p1, p0, Ltk0;->c:Luk0;
 
-    iget p2, p0, Ltk0;->b:F
+    iget-boolean v0, p1, Luk0;->r0:Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    if-nez v0, :cond_0
 
-    iget-object p2, p0, Ltk0;->c:Ljava/util/ArrayList;
+    iget v0, p1, Luk0;->s0:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget p2, p0, Ltk0;->o:F
+    :cond_0
+    return-void
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    :pswitch_0
+    const/4 p1, 0x0
 
-    iget-boolean p2, p0, Ltk0;->X:Z
+    iget-object v0, p0, Ltk0;->c:Luk0;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, p1}, Luk0;->setIndeterminate(Z)V
 
-    new-array v0, v0, [Z
+    iget p1, v0, Luk0;->b:I
 
-    const/4 v1, 0x0
-
-    aput-boolean p2, v0, v1
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
+    invoke-virtual {v0, p1}, Luk0;->b(I)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

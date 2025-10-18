@@ -1,93 +1,104 @@
 .class public final Lemb;
-.super Lpoe;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# virtual methods
-.method public final bridge synthetic A(Lb18;)V
+
+# instance fields
+.field public final synthetic X:Lhmb;
+
+
+# direct methods
+.method public constructor <init>(Lhmb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    check-cast p1, Ldmb;
+    iput-object p1, p0, Lemb;->X:Lhmb;
 
-    invoke-virtual {p0, p1}, Lemb;->G(Ldmb;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final G(Ldmb;)V
-    .locals 5
 
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast v0, Ltqa;
+    check-cast p1, Lq54;
 
-    iget-wide v1, p1, Ldmb;->u0:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p0, p1, p2}, Lemb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v1
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    check-cast p1, Lemb;
 
-    iget-boolean v1, p1, Ldmb;->t0:Z
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {v0, v1}, Ltqa;->setActivated(Z)V
+    invoke-virtual {p1, p2}, Lemb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p1, Ldmb;->c:Ljava/lang/CharSequence;
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1}, Ltqa;->setTitle(Ljava/lang/CharSequence;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v1, p1, Ldmb;->o:Loqf;
+    new-instance p1, Lemb;
+
+    iget-object v0, p0, Lemb;->X:Lhmb;
+
+    invoke-direct {p1, v0, p2}, Lemb;-><init>(Lhmb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lemb;->X:Lhmb;
+
+    iget-object p1, p1, Lhmb;->Z:Lx0f;
+
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lzlb;
+
+    const/4 v8, 0x1
+
+    const/16 v9, 0x3f
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v4, 0x0
 
-    move-result-object v3
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v3}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v6, 0x0
 
-    move-result-object v1
+    const/4 v7, 0x0
 
-    goto :goto_0
+    invoke-static/range {v1 .. v9}, Lzlb;->a(Lzlb;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lorf;Ljava/lang/String;ZI)Lzlb;
 
-    :cond_0
-    move-object v1, v2
+    move-result-object v0
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ltqa;->setSubtitle(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Ltqa;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v1, v0}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-wide v1, p1, Ldmb;->b:J
+    sget-object p1, Lccg;->a:Lccg;
 
-    iget-object v3, p1, Ldmb;->s0:Ljava/lang/CharSequence;
-
-    iget-object v4, p1, Ldmb;->X:Landroid/net/Uri;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-nez v4, :cond_2
-
-    :cond_1
-    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_2
-    invoke-virtual {v0, v1, v2, v3, v4}, Ltqa;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    iget-boolean p1, p1, Ldmb;->Z:Z
-
-    invoke-virtual {v0, p1}, Ltqa;->setVerified(Z)V
-
-    return-void
+    return-object p1
 .end method

@@ -1,79 +1,52 @@
 .class public final Lua9;
-.super Ljava/io/OutputStream;
+.super Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Lyv2;
 
 
 # instance fields
-.field public final a:Lzfg;
-
-.field public final b:Ljava/security/MessageDigest;
+.field public final synthetic a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lzfg;Ljava/security/MessageDigest;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    iput-object p1, p0, Lua9;->a:Landroid/graphics/drawable/Drawable;
 
-    iput-object p1, p0, Lua9;->a:Lzfg;
+    const/16 v5, 0xe
 
-    iput-object p2, p0, Lua9;->b:Ljava/security/MessageDigest;
+    const/4 v6, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lzw5;ZZILki4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final a(Lvt0;)V
     .locals 1
 
-    iget-object v0, p0, Lua9;->a:Lzfg;
+    iget-object p1, p1, Lvt0;->b:Lwt0;
 
-    invoke-virtual {v0}, Lzfg;->close()V
+    iget p1, p1, Lwt0;->i:I
 
-    return-void
-.end method
+    iget-object v0, p0, Lua9;->a:Landroid/graphics/drawable/Drawable;
 
-.method public final flush()V
-    .locals 1
-
-    iget-object v0, p0, Lua9;->a:Lzfg;
-
-    invoke-virtual {v0}, Lzfg;->flush()V
-
-    return-void
-.end method
-
-.method public final write(I)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lua9;->a:Lzfg;
-
-    invoke-virtual {v0, p1}, Lzfg;->write(I)V
-
-    .line 2
-    iget-object v0, p0, Lua9;->b:Ljava/security/MessageDigest;
-
-    int-to-byte p1, p1
-
-    invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    .line 3
-    iget-object v0, p0, Lua9;->a:Lzfg;
-
-    invoke-virtual {v0, p1, p2, p3}, Lzfg;->write([BII)V
-
-    .line 4
-    iget-object v0, p0, Lua9;->b:Ljava/security/MessageDigest;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V
+    invoke-static {v0, p1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
 
     return-void
 .end method

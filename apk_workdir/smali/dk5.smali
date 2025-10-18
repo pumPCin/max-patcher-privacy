@@ -1,21 +1,35 @@
 .class public final Ldk5;
-.super Lcq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ldk5;
+# instance fields
+.field public final a:J
+
+.field public final b:Lmb6;
+
+.field public final c:Lmb6;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLmb6;Lmb6;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ldk5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcq;-><init>()V
+    iput-wide p1, p0, Ldk5;->a:J
 
-    sput-object v0, Ldk5;->a:Ldk5;
+    iput-object p3, p0, Ldk5;->b:Lmb6;
+
+    iput-object p4, p0, Ldk5;->c:Lmb6;
+
+    iput-object p5, p0, Ldk5;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Ldk5;->e:Ljava/lang/String;
 
     return-void
 .end method

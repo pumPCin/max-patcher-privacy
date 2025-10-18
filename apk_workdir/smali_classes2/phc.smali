@@ -1,397 +1,167 @@
-.class public final synthetic Lphc;
+.class public final Lphc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lphc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvhc;
+.field public final a:Lnhc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvhc;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lx3b;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
+
+    sput-object v0, Lphc;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnhc;)V
     .locals 0
 
-    iput p2, p0, Lphc;->a:I
-
-    iput-object p1, p0, Lphc;->b:Lvhc;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lphc;->a:Lnhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
-
-    iget p1, p0, Lphc;->a:I
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    sget-object v1, Ljhc;->a:Ljhc;
+    return v0
+.end method
 
-    const/4 v2, 0x1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    iget-object v4, p0, Lphc;->b:Lvhc;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, v4, Lvhc;->o:Lyhc;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v3, p1
+    instance-of v1, p1, Lphc;
 
-    :goto_0
-    iget-object p1, v3, Lyhc;->s0:Lsze;
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    check-cast p1, Lphc;
 
-    move-result-object v0
+    iget-object v1, p0, Lphc;->a:Lnhc;
 
-    move-object v2, v0
+    iget-object p1, p1, Lphc;->a:Lnhc;
 
-    check-cast v2, Lkhc;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    instance-of v3, v2, Lghc;
+    move-result p1
 
-    if-eqz v3, :cond_2
+    if-nez p1, :cond_2
 
-    move-object v2, v1
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    instance-of v3, v2, Ljhc;
+    return v0
+.end method
 
-    if-eqz v3, :cond_3
+.method public final hashCode()I
+    .locals 1
 
-    sget-object v2, Lghc;->a:Lghc;
+    iget-object v0, p0, Lphc;->a:Lnhc;
 
-    goto :goto_1
-
-    :cond_3
-    instance-of v3, v2, Lihc;
-
-    if-nez v3, :cond_5
-
-    instance-of v3, v2, Lhhc;
-
-    if-eqz v3, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_5
-    :goto_1
-    invoke-virtual {p1, v0, v2}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lnhc;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :pswitch_0
-    invoke-virtual {v4}, Lvhc;->getCameraApi()Lhz1;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "QualityParc(value="
 
-    invoke-virtual {v4}, Lvhc;->getCameraApi()Lhz1;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-object v1, p0, Lphc;->a:Lnhc;
 
-    check-cast v1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lnv7;
+    const-string v1, ")"
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Ltwc;->a()V
-
-    iget-object v1, v1, Lu02;->p:Lmv7;
-
-    if-nez v1, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v1, v1, Lmv7;->c:Lk22;
-
-    iget-object v3, v1, Lk22;->B0:Lncd;
-
-    :goto_2
-    if-eqz v3, :cond_7
-
-    iget-object v1, v3, Lkc6;->a:Lj12;
-
-    invoke-interface {v1}, Lj12;->h()I
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    move v0, v2
-
-    :cond_7
-    check-cast p1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
-
-    iget-object p1, p1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lnv7;
-
-    if-nez v0, :cond_8
-
-    sget-object v0, Ld22;->b:Ld22;
-
-    goto :goto_3
-
-    :cond_8
-    sget-object v0, Ld22;->c:Ld22;
-
-    :goto_3
-    invoke-virtual {p1, v0}, Lu02;->l(Ld22;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, v4, Lvhc;->o:Lyhc;
-
-    if-nez p1, :cond_9
-
-    move-object p1, v3
-
-    :cond_9
-    iget-object v0, p1, Lyhc;->u0:Lde5;
-
-    const-string v2, "QuickCameraViewModel"
-
-    const-string v4, "onClickTake()"
-
-    invoke-static {v2, v4}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, p1, Lyhc;->s0:Lsze;
-
-    invoke-virtual {v2}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lkhc;
-
-    instance-of v5, v4, Lghc;
-
-    if-eqz v5, :cond_a
-
-    sget-object p1, Lhhc;->a:Lhhc;
-
-    invoke-virtual {v2, v3, p1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Ldhc;->a:Ldhc;
-
-    invoke-static {v0, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_a
-    instance-of v5, v4, Lhhc;
-
-    if-nez v5, :cond_e
-
-    instance-of v5, v4, Ljhc;
-
-    if-eqz v5, :cond_c
-
-    iget-object v1, p1, Lyhc;->w0:Lmhb;
-
-    invoke-virtual {v1}, Lmhb;->l()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    new-instance v1, Lihc;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    invoke-direct {v1, v4, v5}, Lihc;-><init>(J)V
-
-    invoke-virtual {v2, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iget-object v1, p1, Lyhc;->X:Lat5;
-
-    iget-object p1, p1, Lyhc;->Y:Llod;
-
-    invoke-interface {p1}, Llod;->c()Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast v1, Lou5;
-
-    invoke-virtual {v1, p1}, Lou5;->l(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p1
-
-    new-instance v1, Lbhc;
-
-    invoke-direct {v1, p1}, Lbhc;-><init>(Ljava/io/File;)V
-
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_b
-    iget-object p1, p1, Lyhc;->v0:Lde5;
-
-    sget-object v0, Lmhc;->a:Lmhc;
-
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_c
-    instance-of p1, v4, Lihc;
-
-    if-eqz p1, :cond_d
-
-    invoke-virtual {v2, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lchc;->a:Lchc;
-
-    invoke-static {v0, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_d
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_e
-    :goto_4
-    return-void
-
-    :pswitch_2
-    iget-object p1, v4, Lvhc;->o:Lyhc;
-
-    if-nez p1, :cond_f
-
-    goto :goto_5
-
-    :cond_f
-    move-object v3, p1
-
-    :goto_5
-    iget-object p1, v3, Lyhc;->t0:Lsze;
-
-    :cond_10
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v1, v0
+    return-object v0
+.end method
 
-    check-cast v1, Lgz1;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object p2, p0, Lphc;->a:Lnhc;
 
-    move-result v1
+    iget-object v0, p2, Lnhc;->a:Llhc;
 
-    if-eqz v1, :cond_13
+    iget-object v0, v0, Llhc;->a:Ljava/lang/String;
 
-    if-eq v1, v2, :cond_12
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    const/4 v3, 0x2
+    iget v0, p2, Lnhc;->b:I
 
-    sget-object v4, Lgz1;->a:Lgz1;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eq v1, v3, :cond_14
+    iget v0, p2, Lnhc;->c:I
 
-    const/4 v3, 0x3
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-ne v1, v3, :cond_11
+    iget v0, p2, Lnhc;->d:I
 
-    goto :goto_6
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_11
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-wide v0, p2, Lnhc;->e:J
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    throw p1
+    iget-boolean p2, p2, Lnhc;->f:Z
 
-    :cond_12
-    sget-object v4, Lgz1;->c:Lgz1;
+    int-to-byte p2, p2
 
-    goto :goto_6
-
-    :cond_13
-    sget-object v4, Lgz1;->b:Lgz1;
-
-    :cond_14
-    :goto_6
-    invoke-virtual {p1, v0, v4}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_10
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
     return-void
-
-    :pswitch_3
-    iget-object p1, v4, Lvhc;->s0:Lpzd;
-
-    if-eqz p1, :cond_15
-
-    iget-object p1, p1, Lpzd;->b:Ljava/lang/Object;
-
-    check-cast p1, Ln02;
-
-    sget v1, Ln02;->z0:I
-
-    invoke-virtual {p1, v0, v2}, Ln02;->a(ZZ)V
-
-    invoke-virtual {p1}, Ln02;->getListener()Lm02;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_15
-
-    check-cast p1, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    iget-object p1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->o:Lf4a;
-
-    sget-object v0, Lnod;->O0:Lnod;
-
-    invoke-static {p1, v0}, Lf4a;->g(Lf4a;Lnod;)V
-
-    :cond_15
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,182 +3,154 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
-.implements Lp1j;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:F
+
+.field public final synthetic g:Lji6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZFLji6;)V
+    .locals 1
 
-    iput-object p1, p0, Lryf;->a:Ljava/lang/Object;
+    sget v0, Lqjd;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lryf;->a:Landroid/view/View;
+
+    iput-object p2, p0, Lryf;->b:Ljava/lang/String;
+
+    iput p3, p0, Lryf;->c:F
+
+    iput p4, p0, Lryf;->d:F
+
+    iput-boolean p5, p0, Lryf;->e:Z
+
+    iput p6, p0, Lryf;->f:F
+
+    iput-object p7, p0, Lryf;->g:Lji6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 7
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget-object v0, p0, Lryf;->a:Ljava/lang/Object;
+    iget-boolean p1, p0, Lryf;->e:Z
 
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
+    if-eqz p1, :cond_0
 
-    sget-object v1, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->u0:[Lwq7;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->E0()Ldxg;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    check-cast v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->S0()Lfo2;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->Q0()Lpug;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lpug;->d()Z
-
-    move-result v0
-
-    iget-object v1, v1, Lfo2;->a1:Lsze;
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
+    const/16 p1, 0x8
 
-    move-result-object v2
+    :goto_0
+    iget-object v0, p0, Lryf;->a:Landroid/view/View;
 
-    move-object v3, v2
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    check-cast v3, Ls24;
+    iget-object p1, p0, Lryf;->g:Lji6;
 
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    if-eqz p1, :cond_1
 
-    move-result v3
-
-    sget-object v4, Ls24;->b:Ls24;
-
-    if-eqz v3, :cond_5
-
-    const/4 v5, 0x1
-
-    sget-object v6, Ls24;->a:Ls24;
-
-    if-eq v3, v5, :cond_3
-
-    const/4 v5, 0x2
-
-    if-eq v3, v5, :cond_2
-
-    const/4 v5, 0x3
-
-    if-ne v3, v5, :cond_1
-
-    goto :goto_1
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     :cond_1
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    sget p1, Lqjd;->V0:I
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const/4 v1, 0x0
 
-    throw v0
-
-    :cond_2
-    :goto_0
-    move-object v4, v6
-
-    goto :goto_1
-
-    :cond_3
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    sget-object v4, Ls24;->o:Ls24;
-
-    :cond_5
-    :goto_1
-    invoke-virtual {v1, v2, v4}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :cond_6
-    return-void
-.end method
-
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Lte9;
-
-    iget-object v0, p0, Lryf;->a:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-virtual {v0, p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->g(Lte9;)V
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public b()Lvf6;
-    .locals 3
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    new-instance v0, Ll66;
+    iget p1, p0, Lryf;->d:F
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lryf;->a:Landroid/view/View;
 
-    invoke-static {}, Lwyh;->c()Z
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    move-result v1
+    iget-boolean p1, p0, Lryf;->e:Z
 
-    if-eqz v1, :cond_0
+    if-eqz p1, :cond_0
 
-    sget-object v1, Lyvi;->c:Lyvi;
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lyvi;->b:Lyvi;
+    const/16 p1, 0x8
 
     :goto_0
-    iget-object v2, p0, Lryf;->a:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    check-cast v2, Lzvi;
+    iget p1, p0, Lryf;->f:F
 
-    iput-object v1, v0, Ll66;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    new-instance v1, Ldte;
+    iget-object p1, p0, Lryf;->g:Lji6;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_1
 
-    iput-object v2, v1, Ldte;->a:Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
-    new-instance v2, Lnwi;
+    :cond_1
+    sget p1, Lqjd;->V0:I
 
-    invoke-direct {v2, v1}, Lnwi;-><init>(Ldte;)V
+    const/4 v1, 0x0
 
-    iput-object v2, v0, Ll66;->e:Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    new-instance v1, Lvf6;
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-direct {v1, v0, v2}, Lvf6;-><init>(Ll66;I)V
+    return-void
+.end method
 
-    return-object v1
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
+
+    sget p1, Lqjd;->V0:I
+
+    iget-object v0, p0, Lryf;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lryf;->a:Landroid/view/View;
+
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    iget p1, p0, Lryf;->c:F
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method

@@ -1,75 +1,26 @@
-.class public interface abstract Lgkd;
+.class public final Lgkd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvt7;
 
-# virtual methods
-.method public b()Landroid/view/Surface;
-    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+.field public final b:I
 
-    throw v0
-.end method
 
-.method public c()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public d(Landroid/graphics/Bitmap;Laq3;)I
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iput-object p1, p0, Lgkd;->a:Ljava/lang/String;
 
-    throw p1
-.end method
+    iput p2, p0, Lgkd;->b:I
 
-.method public e()Lse4;
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public f()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public h(J)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-void
 .end method

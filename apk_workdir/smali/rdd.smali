@@ -1,76 +1,97 @@
 .class public final Lrdd;
-.super Lc2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lz7e;
+.implements Lfb8;
 
 
 # instance fields
-.field public final synthetic X:Lsdd;
+.field public final X:Ljava/lang/String;
 
-.field public c:I
+.field public final a:Liu7;
 
-.field public o:I
+.field public final b:Liu7;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final o:Lx0f;
 
 
 # direct methods
-.method public constructor <init>(Lsdd;)V
-    .locals 1
+.method public constructor <init>(Liu7;Liu7;Lulf;Ll54;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrdd;->X:Lsdd;
+    iput-object p1, p0, Lrdd;->a:Liu7;
 
-    iget v0, p1, Lsdd;->o:I
+    iput-object p2, p0, Lrdd;->b:Liu7;
 
-    iput v0, p0, Lrdd;->c:I
+    check-cast p3, Lqta;
 
-    iget p1, p1, Lsdd;->c:I
+    invoke-virtual {p3}, Lqta;->a()Lk54;
 
-    iput p1, p0, Lrdd;->o:I
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    const-string p3, "restore-tasks-on-connect"
+
+    invoke-virtual {p1, p2, p3}, Lk54;->limitedParallelism(ILjava/lang/String;)Lk54;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p4}, Lp0;->plus(Li54;)Li54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrdd;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrdd;->o:Lx0f;
+
+    const-string p1, "RestoreScheduledTaskExecutor"
+
+    iput-object p1, p0, Lrdd;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
-
-    iget v0, p0, Lrdd;->c:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lc2;->a:I
+.method public final f()V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_0
-    iget-object v1, p0, Lrdd;->X:Lsdd;
+.method public final w(I)V
+    .locals 2
 
-    iget-object v2, v1, Lsdd;->a:[Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v3, p0, Lrdd;->o:I
+    move-result-object p1
 
-    aget-object v2, v2, v3
+    const/4 v0, 0x0
 
-    iput-object v2, p0, Lc2;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lrdd;->o:Lx0f;
 
-    const/4 v2, 0x1
-
-    iput v2, p0, Lc2;->a:I
-
-    add-int/2addr v3, v2
-
-    iget v1, v1, Lsdd;->b:I
-
-    rem-int/2addr v3, v1
-
-    iput v3, p0, Lrdd;->o:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lrdd;->c:I
+    invoke-virtual {v1, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
 .end method

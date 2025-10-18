@@ -1,5 +1,5 @@
 .class public final Lcs;
-.super Lk14;
+.super Ly14;
 .source "SourceFile"
 
 
@@ -14,12 +14,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lgs;Lk14;)V
+.method public constructor <init>(Lgs;Ly14;)V
     .locals 0
 
     iput-object p1, p0, Lcs;->Y:Lgs;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     iget-object p1, p0, Lcs;->Y:Lgs;
 
-    invoke-virtual {p1, p0}, Lgs;->t(Lk14;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lgs;->t(Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 

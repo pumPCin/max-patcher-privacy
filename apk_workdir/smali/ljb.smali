@@ -1,1074 +1,374 @@
-.class public Lljb;
+.class public final Lljb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Externalizable;
-
 
 # instance fields
-.field public A0:Z
+.field public a:Ljava/lang/CharSequence;
 
-.field public B0:Lmjb;
+.field public b:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public C0:Z
+.field public c:Ljava/lang/String;
 
-.field public D0:Lmjb;
+.field public d:Ljava/lang/String;
 
-.field public E0:Z
+.field public e:Z
 
-.field public F0:Lmjb;
-
-.field public G0:Z
-
-.field public H0:Lmjb;
-
-.field public I0:Z
-
-.field public J0:Lmjb;
-
-.field public K0:Z
-
-.field public L0:Lmjb;
-
-.field public M0:Z
-
-.field public N0:Lmjb;
-
-.field public O0:Z
-
-.field public P0:Lmjb;
-
-.field public Q0:Z
-
-.field public R0:Lmjb;
-
-.field public S0:Ljava/lang/String;
-
-.field public T0:I
-
-.field public U0:Ljava/lang/String;
-
-.field public V0:Z
-
-.field public W0:Ljava/lang/String;
-
-.field public X:Z
-
-.field public X0:Z
-
-.field public Y:Lmjb;
-
-.field public Y0:Ljava/lang/String;
-
-.field public Z:Z
-
-.field public Z0:Z
-
-.field public a:Z
-
-.field public a1:Ljava/lang/String;
-
-.field public b:Lmjb;
-
-.field public b1:Z
-
-.field public c:Z
-
-.field public c1:Ljava/lang/String;
-
-.field public d1:Z
-
-.field public e1:Ljava/lang/String;
-
-.field public f1:Z
-
-.field public final g1:Ljava/util/ArrayList;
-
-.field public final h1:Ljava/util/ArrayList;
-
-.field public i1:Z
-
-.field public j1:Z
-
-.field public k1:Ljava/lang/String;
-
-.field public l1:Z
-
-.field public o:Lmjb;
-
-.field public r0:Lmjb;
-
-.field public s0:Z
-
-.field public t0:Lmjb;
-
-.field public u0:Z
-
-.field public v0:Lmjb;
-
-.field public w0:Z
-
-.field public x0:Lmjb;
-
-.field public y0:Z
-
-.field public z0:Lmjb;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lljb;->b:Lmjb;
-
-    iput-object v0, p0, Lljb;->o:Lmjb;
-
-    iput-object v0, p0, Lljb;->Y:Lmjb;
-
-    iput-object v0, p0, Lljb;->r0:Lmjb;
-
-    iput-object v0, p0, Lljb;->t0:Lmjb;
-
-    iput-object v0, p0, Lljb;->v0:Lmjb;
-
-    iput-object v0, p0, Lljb;->x0:Lmjb;
-
-    iput-object v0, p0, Lljb;->z0:Lmjb;
-
-    iput-object v0, p0, Lljb;->B0:Lmjb;
-
-    iput-object v0, p0, Lljb;->D0:Lmjb;
-
-    iput-object v0, p0, Lljb;->F0:Lmjb;
-
-    iput-object v0, p0, Lljb;->H0:Lmjb;
-
-    iput-object v0, p0, Lljb;->J0:Lmjb;
-
-    iput-object v0, p0, Lljb;->L0:Lmjb;
-
-    iput-object v0, p0, Lljb;->N0:Lmjb;
-
-    iput-object v0, p0, Lljb;->P0:Lmjb;
-
-    iput-object v0, p0, Lljb;->R0:Lmjb;
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lljb;->S0:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lljb;->T0:I
-
-    iput-object v0, p0, Lljb;->U0:Ljava/lang/String;
-
-    iput-object v0, p0, Lljb;->W0:Ljava/lang/String;
-
-    iput-object v0, p0, Lljb;->Y0:Ljava/lang/String;
-
-    iput-object v0, p0, Lljb;->a1:Ljava/lang/String;
-
-    iput-object v0, p0, Lljb;->c1:Ljava/lang/String;
-
-    iput-object v0, p0, Lljb;->e1:Ljava/lang/String;
-
-    iput-boolean v1, p0, Lljb;->f1:Z
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lljb;->g1:Ljava/util/ArrayList;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lljb;->h1:Ljava/util/ArrayList;
-
-    iput-boolean v1, p0, Lljb;->i1:Z
-
-    iput-object v0, p0, Lljb;->k1:Ljava/lang/String;
-
-    iput-boolean v1, p0, Lljb;->l1:Z
-
-    return-void
-.end method
+.field public f:Z
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
+.method public final a()Lxk;
+    .locals 2
 
-    iput-object p1, p0, Lljb;->S0:Ljava/lang/String;
+    new-instance v0, Lxk;
 
-    return-void
+    invoke-direct {v0}, Lxk;-><init>()V
+
+    iget-object v1, p0, Lljb;->a:Ljava/lang/CharSequence;
+
+    iput-object v1, v0, Lxk;->o:Ljava/lang/Object;
+
+    iget-object v1, p0, Lljb;->b:Landroidx/core/graphics/drawable/IconCompat;
+
+    iput-object v1, v0, Lxk;->X:Ljava/lang/Object;
+
+    iget-object v1, p0, Lljb;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lxk;->Y:Ljava/lang/Object;
+
+    iget-object v1, p0, Lljb;->d:Ljava/lang/String;
+
+    iput-object v1, v0, Lxk;->Z:Ljava/lang/Object;
+
+    iget-boolean v1, p0, Lljb;->e:Z
+
+    iput-boolean v1, v0, Lxk;->b:Z
+
+    iget-boolean v1, p0, Lljb;->f:Z
+
+    iput-boolean v1, v0, Lxk;->c:Z
+
+    return-object v0
 .end method
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lljb;->U0:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final readExternal(Ljava/io/ObjectInput;)V
-    .locals 6
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->a:Z
-
-    iput-object v0, p0, Lljb;->b:Lmjb;
-
-    :cond_0
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->c:Z
-
-    iput-object v0, p0, Lljb;->o:Lmjb;
-
-    :cond_1
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->X:Z
-
-    iput-object v0, p0, Lljb;->Y:Lmjb;
-
-    :cond_2
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->Z:Z
-
-    iput-object v0, p0, Lljb;->r0:Lmjb;
-
-    :cond_3
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->s0:Z
-
-    iput-object v0, p0, Lljb;->t0:Lmjb;
-
-    :cond_4
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->u0:Z
-
-    iput-object v0, p0, Lljb;->v0:Lmjb;
-
-    :cond_5
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->w0:Z
-
-    iput-object v0, p0, Lljb;->x0:Lmjb;
-
-    :cond_6
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->y0:Z
-
-    iput-object v0, p0, Lljb;->z0:Lmjb;
-
-    :cond_7
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->A0:Z
-
-    iput-object v0, p0, Lljb;->B0:Lmjb;
-
-    :cond_8
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->C0:Z
-
-    iput-object v0, p0, Lljb;->D0:Lmjb;
-
-    :cond_9
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->E0:Z
-
-    iput-object v0, p0, Lljb;->F0:Lmjb;
-
-    :cond_a
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->G0:Z
-
-    iput-object v0, p0, Lljb;->H0:Lmjb;
-
-    :cond_b
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->I0:Z
-
-    iput-object v0, p0, Lljb;->J0:Lmjb;
-
-    :cond_c
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->K0:Z
-
-    iput-object v0, p0, Lljb;->L0:Lmjb;
-
-    :cond_d
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->M0:Z
-
-    iput-object v0, p0, Lljb;->N0:Lmjb;
-
-    :cond_e
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_f
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->O0:Z
-
-    iput-object v0, p0, Lljb;->P0:Lmjb;
-
-    :cond_f
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_10
-
-    new-instance v0, Lmjb;
-
-    invoke-direct {v0}, Lmjb;-><init>()V
-
-    invoke-virtual {v0, p1}, Lmjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iput-boolean v1, p0, Lljb;->Q0:Z
-
-    iput-object v0, p0, Lljb;->R0:Lmjb;
-
-    :cond_10
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lljb;->a(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lljb;->T0:I
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lljb;->b(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_11
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->V0:Z
-
-    iput-object v0, p0, Lljb;->W0:Ljava/lang/String;
-
-    :cond_11
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->X0:Z
-
-    iput-object v0, p0, Lljb;->Y0:Ljava/lang/String;
-
-    :cond_12
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->Z0:Z
-
-    iput-object v0, p0, Lljb;->a1:Ljava/lang/String;
-
-    :cond_13
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->b1:Z
-
-    iput-object v0, p0, Lljb;->c1:Ljava/lang/String;
-
-    :cond_14
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_15
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->d1:Z
-
-    iput-object v0, p0, Lljb;->e1:Ljava/lang/String;
-
-    :cond_15
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lljb;->f1:Z
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v3, v0, :cond_16
-
-    new-instance v4, Ljjb;
-
-    invoke-direct {v4}, Ljjb;-><init>()V
-
-    invoke-virtual {v4, p1}, Ljjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iget-object v5, p0, Lljb;->g1:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_16
-    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
-
-    move-result v0
-
-    :goto_1
-    if-ge v2, v0, :cond_17
-
-    new-instance v3, Ljjb;
-
-    invoke-direct {v3}, Ljjb;-><init>()V
-
-    invoke-virtual {v3, p1}, Ljjb;->readExternal(Ljava/io/ObjectInput;)V
-
-    iget-object v4, p0, Lljb;->h1:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_17
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lljb;->i1:Z
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lljb;->j1:Z
-
-    iput-object v0, p0, Lljb;->k1:Ljava/lang/String;
-
-    :cond_18
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lljb;->l1:Z
-
-    return-void
-.end method
-
-.method public final writeExternal(Ljava/io/ObjectOutput;)V
+.method public final b()Landroid/os/Bundle;
     .locals 5
 
-    iget-boolean v0, p0, Lljb;->a:Z
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    iget-boolean v0, p0, Lljb;->a:Z
+    const-string v1, "name"
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lljb;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lljb;->b:Lmjb;
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
+    iget-object v1, p0, Lljb;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    :cond_0
-    iget-boolean v0, p0, Lljb;->c:Z
+    if-eqz v1, :cond_1
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    new-instance v2, Landroid/os/Bundle;
 
-    iget-boolean v0, p0, Lljb;->c:Z
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    if-eqz v0, :cond_1
+    iget v3, v1, Landroidx/core/graphics/drawable/IconCompat;->a:I
 
-    iget-object v0, p0, Lljb;->o:Lmjb;
+    const-string v4, "obj"
 
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
+    packed-switch v3, :pswitch_data_0
 
-    :cond_1
-    iget-boolean v0, p0, Lljb;->X:Z
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    const-string v1, "Invalid icon"
 
-    iget-boolean v0, p0, Lljb;->X:Z
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
+    throw v0
 
-    iget-object v0, p0, Lljb;->Y:Lmjb;
+    :pswitch_1
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
+    check-cast v3, [B
 
-    :cond_2
-    iget-boolean v0, p0, Lljb;->Z:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->Z:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lljb;->r0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_3
-    iget-boolean v0, p0, Lljb;->s0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->s0:Z
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lljb;->t0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_4
-    iget-boolean v0, p0, Lljb;->u0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->u0:Z
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lljb;->v0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_5
-    iget-boolean v0, p0, Lljb;->w0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->w0:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lljb;->x0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_6
-    iget-boolean v0, p0, Lljb;->y0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->y0:Z
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lljb;->z0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_7
-    iget-boolean v0, p0, Lljb;->A0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->A0:Z
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lljb;->B0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_8
-    iget-boolean v0, p0, Lljb;->C0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->C0:Z
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Lljb;->D0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_9
-    iget-boolean v0, p0, Lljb;->E0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->E0:Z
-
-    if-eqz v0, :cond_a
-
-    iget-object v0, p0, Lljb;->F0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_a
-    iget-boolean v0, p0, Lljb;->G0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->G0:Z
-
-    if-eqz v0, :cond_b
-
-    iget-object v0, p0, Lljb;->H0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_b
-    iget-boolean v0, p0, Lljb;->I0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->I0:Z
-
-    if-eqz v0, :cond_c
-
-    iget-object v0, p0, Lljb;->J0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_c
-    iget-boolean v0, p0, Lljb;->K0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->K0:Z
-
-    if-eqz v0, :cond_d
-
-    iget-object v0, p0, Lljb;->L0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_d
-    iget-boolean v0, p0, Lljb;->M0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->M0:Z
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, p0, Lljb;->N0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_e
-    iget-boolean v0, p0, Lljb;->O0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->O0:Z
-
-    if-eqz v0, :cond_f
-
-    iget-object v0, p0, Lljb;->P0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_f
-    iget-boolean v0, p0, Lljb;->Q0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->Q0:Z
-
-    if-eqz v0, :cond_10
-
-    iget-object v0, p0, Lljb;->R0:Lmjb;
-
-    invoke-virtual {v0, p1}, Lmjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    :cond_10
-    iget-object v0, p0, Lljb;->S0:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    iget v0, p0, Lljb;->T0:I
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
-
-    iget-object v0, p0, Lljb;->U0:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Lljb;->V0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->V0:Z
-
-    if-eqz v0, :cond_11
-
-    iget-object v0, p0, Lljb;->W0:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    :cond_11
-    iget-boolean v0, p0, Lljb;->X0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->X0:Z
-
-    if-eqz v0, :cond_12
-
-    iget-object v0, p0, Lljb;->Y0:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    :cond_12
-    iget-boolean v0, p0, Lljb;->Z0:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->Z0:Z
-
-    if-eqz v0, :cond_13
-
-    iget-object v0, p0, Lljb;->a1:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    :cond_13
-    iget-boolean v0, p0, Lljb;->b1:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->b1:Z
-
-    if-eqz v0, :cond_14
-
-    iget-object v0, p0, Lljb;->c1:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    :cond_14
-    iget-boolean v0, p0, Lljb;->d1:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-boolean v0, p0, Lljb;->d1:Z
-
-    if-eqz v0, :cond_15
-
-    iget-object v0, p0, Lljb;->e1:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    :cond_15
-    iget-boolean v0, p0, Lljb;->f1:Z
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
-
-    iget-object v0, p0, Lljb;->g1:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-interface {p1, v1}, Ljava/io/DataOutput;->writeInt(I)V
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v3, v1, :cond_16
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljjb;
-
-    invoke-virtual {v4, p1}, Ljjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
     goto :goto_0
 
-    :cond_16
-    iget-object v0, p0, Lljb;->h1:Ljava/util/ArrayList;
+    :pswitch_2
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    check-cast v3, Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v2, v4, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    goto :goto_0
 
-    :goto_1
-    if-ge v2, v0, :cond_17
+    :pswitch_3
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lljb;->h1:Ljava/util/ArrayList;
+    check-cast v3, Landroid/graphics/Bitmap;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    goto :goto_0
+
+    :pswitch_4
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Landroid/os/Parcelable;
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :goto_0
+    const-string v3, "type"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->a:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "int1"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->e:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "int2"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->f:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "string1"
+
+    iget-object v4, v1, Landroidx/core/graphics/drawable/IconCompat;->j:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+
+    if-eqz v3, :cond_0
+
+    const-string v4, "tint_list"
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :cond_0
+    iget-object v1, v1, Landroidx/core/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+
+    sget-object v3, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
+
+    if-eq v1, v3, :cond_2
+
+    const-string v3, "tint_mode"
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljjb;
-
-    invoke-virtual {v1, p1}, Ljjb;->writeExternal(Ljava/io/ObjectOutput;)V
-
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v2, v3, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_17
-    iget-boolean v0, p0, Lljb;->i1:Z
+    :cond_1
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    :cond_2
+    :goto_1
+    const-string v1, "icon"
 
-    iget-boolean v0, p0, Lljb;->j1:Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    const-string v1, "uri"
 
-    iget-boolean v0, p0, Lljb;->j1:Z
+    iget-object v2, p0, Lljb;->c:Ljava/lang/String;
 
-    if-eqz v0, :cond_18
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lljb;->k1:Ljava/lang/String;
+    const-string v1, "key"
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    iget-object v2, p0, Lljb;->d:Ljava/lang/String;
 
-    :cond_18
-    iget-boolean v0, p0, Lljb;->l1:Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    const-string v1, "isBot"
 
-    return-void
+    iget-boolean v2, p0, Lljb;->e:Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string v1, "isImportant"
+
+    iget-boolean v2, p0, Lljb;->f:Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_4
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lljb;
+
+    if-nez v1, :cond_1
+
+    return v0
+
+    :cond_1
+    check-cast p1, Lljb;
+
+    iget-object v1, p0, Lljb;->d:Ljava/lang/String;
+
+    iget-object v2, p1, Lljb;->d:Ljava/lang/String;
+
+    if-nez v1, :cond_4
+
+    if-eqz v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lljb;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lljb;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v2}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lljb;->c:Ljava/lang/String;
+
+    iget-object v2, p1, Lljb;->c:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lljb;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-boolean v2, p1, Lljb;->e:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lljb;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-boolean p1, p1, Lljb;->f:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :goto_0
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lljb;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lljb;->a:Ljava/lang/CharSequence;
+
+    iget-object v1, p0, Lljb;->c:Ljava/lang/String;
+
+    iget-boolean v2, p0, Lljb;->e:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lljb;->f:Z
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

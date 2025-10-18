@@ -2,39 +2,24 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyyg;
 
+# instance fields
+.field public final a:Ljava/util/ArrayDeque;
 
-# static fields
-.field public static final a:Lvo4;
+.field public b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lvo4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    sput-object v0, Lvo4;->a:Lvo4;
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lvo4;->a:Ljava/util/ArrayDeque;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final c(Lv63;Lgz9;)Ltyg;
-    .locals 0
-
-    invoke-interface {p1}, Lt63;->a()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lwai;->c(Ljava/lang/Class;)Ltyg;
-
-    move-result-object p1
-
-    return-object p1
 .end method

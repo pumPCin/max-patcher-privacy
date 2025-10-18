@@ -1,19 +1,59 @@
 .class public final Limg;
-.super Landroid/widget/FrameLayout;
+.super Llmg;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lhmg;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Limg;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Limg;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Limg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Limg;->a:Limg;
+
+    new-instance v0, Lo0e;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
+
+    sput-object v0, Limg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final setPlayer(Ly6b;)V
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Limg;->a:Lhmg;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Lhmg;->setPlayer(Ly6b;)V
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

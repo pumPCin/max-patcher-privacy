@@ -1,79 +1,85 @@
-.class public final Lov4;
-.super Lc2;
+.class public abstract Lov4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/util/HashSet;
-
-.field public final c:Ljava/util/Iterator;
-
-.field public final o:Lb23;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;Lb23;)V
-    .locals 0
+.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/Rect;",
+            "Ljava/util/List<",
+            "Landroid/graphics/Rect;",
+            ">;)",
+            "Landroid/view/DisplayCutout;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/view/DisplayCutout;
 
-    iput-object p1, p0, Lov4;->c:Ljava/util/Iterator;
+    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
 
-    iput-object p2, p0, Lov4;->o:Lb23;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Lov4;->X:Ljava/util/HashSet;
-
-    return-void
+    return-object v0
 .end method
 
+.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/DisplayCutout;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/graphics/Rect;",
+            ">;"
+        }
+    .end annotation
 
-# virtual methods
-.method public final a()V
-    .locals 3
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
 
-    :cond_0
-    iget-object v0, p0, Lov4;->c:Ljava/util/Iterator;
+    move-result-object p0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object p0
+.end method
 
-    move-result v1
+.method public static c(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result p0
 
-    move-result-object v0
+    return p0
+.end method
 
-    iget-object v1, p0, Lov4;->o:Lb23;
+.method public static d(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    invoke-virtual {v1, v0}, Lb23;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
 
-    move-result-object v1
+    move-result p0
 
-    iget-object v2, p0, Lov4;->X:Ljava/util/HashSet;
+    return p0
+.end method
 
-    invoke-virtual {v2, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+.method public static e(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    move-result v1
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
 
-    if-eqz v1, :cond_0
+    move-result p0
 
-    iput-object v0, p0, Lc2;->b:Ljava/lang/Object;
+    return p0
+.end method
 
-    const/4 v0, 0x1
+.method public static f(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    iput v0, p0, Lc2;->a:I
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
 
-    return-void
+    move-result p0
 
-    :cond_1
-    const/4 v0, 0x2
-
-    iput v0, p0, Lc2;->a:I
-
-    return-void
+    return p0
 .end method

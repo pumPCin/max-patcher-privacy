@@ -3,83 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwoa;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:J
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyoa;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p6, p0, Lvoa;->a:I
 
-    iput p1, p0, Lvoa;->a:I
+    iput-object p1, p0, Lvoa;->b:Lyoa;
+
+    iput-object p2, p0, Lvoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lvoa;->o:Ljava/lang/Runnable;
+
+    iput-wide p4, p0, Lvoa;->X:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvoa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvoa;
-
-    iget v1, p0, Lvoa;->a:I
-
-    iget p1, p1, Lvoa;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
+.method public final run()V
+    .locals 5
 
     iget v0, p0, Lvoa;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lvoa;->o:Ljava/lang/Runnable;
 
-    return v0
-.end method
+    iget-wide v1, p0, Lvoa;->X:J
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget-object v3, p0, Lvoa;->b:Lyoa;
 
-    const-string v0, "Resource(iconRes="
+    iget-object v4, p0, Lvoa;->c:Landroid/graphics/drawable/Drawable;
 
-    const-string v1, ")"
+    invoke-static {v3, v4, v0, v1, v2}, Lyoa;->c(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
-    iget v2, p0, Lvoa;->a:I
+    return-void
 
-    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Lvoa;->o:Ljava/lang/Runnable;
 
-    move-result-object v0
+    iget-wide v1, p0, Lvoa;->X:J
 
-    return-object v0
+    iget-object v3, p0, Lvoa;->b:Lyoa;
+
+    iget-object v4, p0, Lvoa;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v3, v4, v0, v1, v2}, Lyoa;->c(Lyoa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

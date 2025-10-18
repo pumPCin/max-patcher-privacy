@@ -3,124 +3,275 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lpzd;
+.field public final a:Ljava/util/UUID;
 
-.field public final b:Ljava/util/HashMap;
+.field public final b:Lmoh;
 
-.field public final c:Ljava/util/HashMap;
+.field public final c:Lnb4;
 
-.field public final d:Ljava/lang/Object;
+.field public final d:Ljava/util/HashSet;
+
+.field public final e:Lnb4;
+
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "WorkTimer"
-
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnoh;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpzd;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/UUID;Lmoh;Lnb4;Ljava/util/ArrayList;Lnb4;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lnoh;->a:Ljava/util/UUID;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p2, p0, Lnoh;->b:Lmoh;
 
-    iput-object v0, p0, Lnoh;->b:Ljava/util/HashMap;
+    iput-object p3, p0, Lnoh;->c:Lnb4;
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance p1, Ljava/util/HashSet;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p1, p4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lnoh;->c:Ljava/util/HashMap;
+    iput-object p1, p0, Lnoh;->d:Ljava/util/HashSet;
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p5, p0, Lnoh;->e:Lnb4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p6, p0, Lnoh;->f:I
 
-    iput-object v0, p0, Lnoh;->d:Ljava/lang/Object;
-
-    iput-object p1, p0, Lnoh;->a:Lpzd;
+    iput p7, p0, Lnoh;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lknh;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const-string v0, "Stopping timer for "
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lnoh;->d:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    monitor-enter v1
+    return p1
 
-    :try_start_0
-    iget-object v2, p0, Lnoh;->b:Ljava/util/HashMap;
+    :cond_0
+    if-eqz p1, :cond_8
 
-    invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    const-class v0, Lnoh;
 
-    move-result-object v2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v2, Lmoh;
+    move-result-object v1
 
-    if-eqz v2, :cond_0
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v2
-
-    sget-object v3, Lnoh;->e:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v3, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lnoh;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    check-cast p1, Lnoh;
 
-    goto :goto_1
+    iget v0, p0, Lnoh;->f:I
 
-    :cond_0
+    iget v1, p1, Lnoh;->f:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lnoh;->g:I
+
+    iget v1, p1, Lnoh;->g:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lnoh;->a:Ljava/util/UUID;
+
+    iget-object v1, p1, Lnoh;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lnoh;->b:Lmoh;
+
+    iget-object v1, p1, Lnoh;->b:Lmoh;
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lnoh;->c:Lnb4;
+
+    iget-object v1, p1, Lnoh;->c:Lnb4;
+
+    invoke-virtual {v0, v1}, Lnb4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lnoh;->d:Ljava/util/HashSet;
+
+    iget-object v1, p1, Lnoh;->d:Ljava/util/HashSet;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lnoh;->e:Lnb4;
+
+    iget-object p1, p1, Lnoh;->e:Lnb4;
+
+    invoke-virtual {v0, p1}, Lnb4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_8
     :goto_0
-    monitor-exit v1
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+.end method
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final hashCode()I
+    .locals 2
 
-    throw p1
+    iget-object v0, p0, Lnoh;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnoh;->b:Lmoh;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lnoh;->c:Lnb4;
+
+    invoke-virtual {v0}, Lnb4;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnoh;->d:Ljava/util/HashSet;
+
+    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lnoh;->e:Lnb4;
+
+    invoke-virtual {v0}, Lnb4;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lnoh;->f:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lnoh;->g:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WorkInfo{mId=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnoh;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', mState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnoh;->b:Lmoh;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mOutputData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnoh;->c:Lnb4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mTags="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnoh;->d:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mProgress="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnoh;->e:Lnb4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,80 +1,27 @@
-.class public final Limi;
+.class public abstract Limi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Limi;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Ljoe;)Lgk1;
+    .locals 9
 
-    new-instance v0, Limi;
+    new-instance v0, Lgk1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-wide v1, p0, Ljoe;->a:J
 
-    sput-object v0, Limi;->a:Limi;
+    iget-object v3, p0, Ljoe;->b:Lu5d;
 
-    new-instance v0, Lq7i;
+    iget-object v4, p0, Ljoe;->c:Lhi1;
 
-    const/4 v1, 0x1
+    iget-wide v5, p0, Ljoe;->d:J
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    iget-object v7, p0, Ljoe;->e:Ljava/lang/String;
 
-    const-class v1, Ll8i;
+    iget-object v8, p0, Ljoe;->f:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-direct/range {v0 .. v8}, Lgk1;-><init>(JLu5d;Lhi1;JLjava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
+    return-object v0
 .end method

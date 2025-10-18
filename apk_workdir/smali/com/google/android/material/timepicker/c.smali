@@ -29,7 +29,7 @@
 
     invoke-virtual {v1, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    sget v1, Lslc;->material_value_index:I
+    sget v1, Lzmc;->material_value_index:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -45,7 +45,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/timepicker/c;->d:Lcom/google/android/material/timepicker/ClockFaceView;
 
-    iget-object v2, v2, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Landroid/util/SparseArray;
+    iget-object v2, v2, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/util/SparseArray;
 
     add-int/lit8 v3, v1, -0x1
 
@@ -94,11 +94,11 @@
 
     iget-object p2, p0, Lcom/google/android/material/timepicker/c;->d:Lcom/google/android/material/timepicker/ClockFaceView;
 
-    iget-object p3, p2, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/Rect;
+    iget-object p3, p2, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/Rect;
+    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
 
@@ -106,7 +106,7 @@
 
     int-to-float v6, p1
 
-    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/Rect;
+    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
 
@@ -114,7 +114,7 @@
 
     int-to-float v7, p1
 
-    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->H0:Lcom/google/android/material/timepicker/ClockHandView;
 
     const/4 v5, 0x0
 
@@ -128,7 +128,7 @@
 
     invoke-virtual {p1, p3}, Lcom/google/android/material/timepicker/ClockHandView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object p1, p2, Lcom/google/android/material/timepicker/ClockFaceView;->H0:Lcom/google/android/material/timepicker/ClockHandView;
 
     const/4 v5, 0x1
 

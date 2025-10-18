@@ -1,19 +1,13 @@
 .class public final Luqi;
-.super Li6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La9i;
+.implements Ltha;
 
 
 # static fields
-.field private static final zzb:Luqi;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:Ljava/lang/Object;
+.field public static final a:Luqi;
 
 
 # direct methods
@@ -22,110 +16,35 @@
 
     new-instance v0, Luqi;
 
-    invoke-direct {v0}, Luqi;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Luqi;->zzb:Luqi;
+    sput-object v0, Luqi;->a:Luqi;
 
-    const-class v1, Luqi;
+    new-instance v0, Lr8i;
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-.method public constructor <init>()V
-    .locals 1
+    const-class v1, Lm9i;
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput v0, p0, Luqi;->zzd:I
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 3
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Luqi;->zzb:Luqi;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ldii;
-
-    sget-object p2, Luqi;->zzb:Luqi;
-
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Luqi;
-
-    invoke-direct {p1}, Luqi;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-class p1, Lu2j;
-
-    const-class p2, Lf1j;
-
-    const-string v0, "zze"
-
-    const-string v1, "zzd"
-
-    const-class v2, Lfyi;
-
-    filled-new-array {v0, v1, v2, p1, p2}, [Ljava/lang/Object;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    sget-object p2, Luqi;->zzb:Luqi;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0001\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<\u0000\u0003<\u0000"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method

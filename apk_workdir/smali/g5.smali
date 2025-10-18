@@ -887,7 +887,7 @@
 
     if-lt v3, v1, :cond_3
 
-    invoke-static {v2}, Lv4;->p(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
+    invoke-static {v2}, Lv4;->o(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
 
     move-result-object v1
 

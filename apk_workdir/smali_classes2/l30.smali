@@ -1,1309 +1,192 @@
 .class public final Ll30;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/MediaRecorder$OnInfoListener;
-.implements Lqy9;
-
-
-# static fields
-.field public static final synthetic m:I
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public X:I
 
-.field public final b:Lgw0;
+.field public final synthetic Y:Lm30;
 
-.field public final c:Lez9;
+.field public final synthetic Z:J
 
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:Llt7;
-
-.field public final g:Llt7;
-
-.field public final h:Lrhf;
-
-.field public final i:Lrhf;
-
-.field public final j:Lrhf;
-
-.field public volatile k:J
-
-.field public volatile l:J
+.field public final synthetic q0:Lbt8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lgw0;Llt7;Lez9;Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Lm30;JLbt8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll30;->Y:Lm30;
 
-    iput-object p1, p0, Ll30;->a:Landroid/content/Context;
+    iput-wide p2, p0, Ll30;->Z:J
 
-    iput-object p2, p0, Ll30;->b:Lgw0;
+    iput-object p4, p0, Ll30;->q0:Lbt8;
 
-    iput-object p4, p0, Ll30;->c:Lez9;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Ll30;->d:Llt7;
+    invoke-direct {p0, p1, p5}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p5, p0, Ll30;->e:Llt7;
-
-    iput-object p6, p0, Ll30;->f:Llt7;
-
-    iput-object p7, p0, Ll30;->g:Llt7;
-
-    new-instance p1, Ltz;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p1, p7, p3}, Ltz;-><init>(Llt7;I)V
-
-    new-instance p3, Lrhf;
-
-    invoke-direct {p3, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p3, p0, Ll30;->h:Lrhf;
-
-    new-instance p1, Lg30;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p0, p3}, Lg30;-><init>(Ll30;I)V
-
-    new-instance p3, Lrhf;
-
-    invoke-direct {p3, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p3, p0, Ll30;->i:Lrhf;
-
-    new-instance p1, Lg30;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p1, p0, p3}, Lg30;-><init>(Ll30;I)V
-
-    new-instance p3, Lrhf;
-
-    invoke-direct {p3, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p3, p0, Ll30;->j:Lrhf;
-
-    const-wide/16 p5, -0x1
-
-    iput-wide p5, p0, Ll30;->k:J
-
-    iput-wide p5, p0, Ll30;->l:J
-
-    iget-object p1, p4, Lez9;->o:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object p3, p4, Lez9;->o:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p3, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    invoke-virtual {p2, p0}, Lgw0;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-
-    throw p2
-.end method
-
-.method public static o(Landroid/os/PowerManager$WakeLock;I)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Releasing "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Landroid/os/PowerManager$WakeLock;->release(I)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLzr8;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final b(JLzr8;)V
-    .locals 9
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onError "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const-string v2, "l30"
-
-    invoke-static {v2, v0, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const-wide/16 v7, 0x0
-
-    move-object v3, p0
-
-    move-wide v4, p1
-
-    move-object v6, p3
-
-    invoke-virtual/range {v3 .. v8}, Ll30;->t(JLzr8;J)V
-
-    return-void
-.end method
-
-.method public final c(JLzr8;JLzr8;)V
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onAudioChanged prev="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " prevType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", curr="
-
-    const-string v2, " currType="
-
-    invoke-static {p4, p5, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p4
-
-    const-string p5, "l30"
-
-    invoke-static {p5, p4}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p4, p0, Ll30;->c:Lez9;
-
-    iget-boolean p4, p4, Lez9;->A:Z
-
-    const-wide/16 p5, -0x1
-
-    cmp-long p5, p1, p5
-
-    if-eqz p5, :cond_0
-
-    sget-object p5, Lzr8;->b:Lzr8;
-
-    if-ne p3, p5, :cond_0
-
-    if-nez p4, :cond_0
-
-    const-wide/16 p4, 0x0
-
-    invoke-virtual {p0, p1, p2, p4, p5}, Ll30;->q(JJ)V
-
-    :cond_0
-    const/4 p4, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final d(JLzr8;)V
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onBuffering "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ll30;->u()V
-
-    sget-object v0, Lzr8;->b:Lzr8;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Ll30;->j:Lrhf;
-
-    if-ne p3, v0, :cond_0
-
-    invoke-virtual {p0}, Ll30;->l()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v2}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ll30;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v2}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    invoke-static {v0, v1}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p1, p2, p3, v1}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final e(JLzr8;J)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onStop "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual/range {p0 .. p5}, Ll30;->t(JLzr8;J)V
-
-    return-void
-.end method
-
-.method public final f(JLzr8;)V
-    .locals 7
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onEnd "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ll30;->c:Lez9;
-
-    iget-object v0, v0, Lez9;->s:Lsze;
-
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v5
-
-    move-object v1, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    invoke-virtual/range {v1 .. v6}, Ll30;->t(JLzr8;J)V
-
-    return-void
-.end method
-
-.method public final g(JLzr8;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onSkipToPrevious "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final h(JLzr8;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onPlay "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ll30;->u()V
-
-    sget-object v0, Lzr8;->b:Lzr8;
-
-    iget-object v1, p0, Ll30;->j:Lrhf;
-
-    if-ne p3, v0, :cond_0
-
-    invoke-virtual {p0}, Ll30;->l()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ll30;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final i(JLzr8;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onPause "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
-
-    sget-object v1, Lzr8;->b:Lzr8;
-
-    if-ne p3, v1, :cond_1
-
-    invoke-virtual {p0}, Ll30;->l()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    iget-object p3, p0, Ll30;->j:Lrhf;
-
-    invoke-virtual {p3}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/os/PowerManager$WakeLock;
-
-    invoke-static {p3, v0}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-
-    :cond_0
-    iget-object p3, p0, Ll30;->c:Lez9;
-
-    iget-object p3, p3, Lez9;->s:Lsze;
-
-    invoke-virtual {p3}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p1, p2, v0, v1}, Ll30;->q(JJ)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final j(JLzr8;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onSkipToNext "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " type "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
-
-    return-void
-.end method
-
-.method public final k()Z
-    .locals 4
-
-    iget-object v0, p0, Ll30;->i:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->e()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_0
-    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Ll30;->e:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lye5;
-
-    new-instance v3, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v3, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    check-cast v2, Lvta;
-
-    invoke-virtual {v2, v3}, Lvta;->c(Ljava/lang/Throwable;)V
-
-    :cond_1
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    instance-of v2, v0, Lvcd;
-
-    if-eqz v2, :cond_2
-
-    move-object v0, v1
-
-    :cond_2
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final l()Z
-    .locals 4
-
-    iget-object v0, p0, Ll30;->j:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->e()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_0
-    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Ll30;->e:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lye5;
-
-    new-instance v3, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v3, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    check-cast v2, Lvta;
-
-    invoke-virtual {v2, v3}, Lvta;->c(Ljava/lang/Throwable;)V
-
-    :cond_1
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    instance-of v2, v0, Lvcd;
-
-    if-eqz v2, :cond_2
-
-    move-object v0, v1
-
-    :cond_2
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()V
-    .locals 3
-
-    const-string v0, "l30"
-
-    const-string v1, "onDeviceAwayFromEar"
-
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ll30;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ll30;->i:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-
-    :cond_1
-    iget-object v0, p0, Ll30;->c:Lez9;
-
-    iget-boolean v1, v0, Lez9;->x:Z
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lez9;->l()Lzr8;
-
-    move-result-object v1
-
-    sget-object v2, Lzr8;->b:Lzr8;
-
-    if-ne v1, v2, :cond_2
-
-    invoke-virtual {v0}, Lez9;->o()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final n()V
-    .locals 3
-
-    iget-object v0, p0, Ll30;->i:Lrhf;
-
-    iget-object v1, p0, Ll30;->j:Lrhf;
-
-    :try_start_0
-    invoke-virtual {v1}, Lrhf;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/PowerManager$WakeLock;
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v0}, Lrhf;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Ll30;->o(Landroid/os/PowerManager$WakeLock;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    return-void
-
-    :goto_1
-    iget-object v1, p0, Ll30;->e:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lye5;
-
-    new-instance v2, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v2, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    check-cast v1, Lvta;
-
-    invoke-virtual {v1, v2}, Lvta;->c(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lvv9;)V
-    .locals 3
-    .annotation runtime Lsaf;
-    .end annotation
-
-    iget-object p1, p1, Lvv9;->X:Ljava/util/List;
-
-    iget-object v0, p0, Ll30;->c:Lez9;
-
-    invoke-virtual {v0}, Lez9;->k()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v0, Lez9;->C:Lyr8;
-
-    if-nez p1, :cond_0
-
-    const-string p1, "l30"
-
-    const-string v1, "stop"
-
-    invoke-static {p1, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ll30;->u()V
-
-    invoke-virtual {v0}, Lez9;->s()V
-
-    invoke-virtual {p0}, Ll30;->n()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onInfo(Landroid/media/MediaRecorder;II)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/16 p1, 0x320
+    check-cast p1, Lq54;
 
-    if-eq p2, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/16 p1, 0x321
-
-    if-eq p2, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Lev;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Lev;-><init>(I)V
-
-    iget-object p2, p0, Ll30;->b:Lgw0;
-
-    invoke-virtual {p2, p1}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final q(JJ)V
-    .locals 8
-
-    const-wide/16 v0, -0x1
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_1
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p3, v0
-
-    if-gez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ll30;->h:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lb54;
-
-    new-instance v1, Li30;
-
-    const/4 v7, 0x0
-
-    move-object v2, p0
-
-    move-wide v5, p1
-
-    move-wide v3, p3
-
-    invoke-direct/range {v1 .. v7}, Li30;-><init>(Ll30;JJLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    const/4 p2, 0x0
-
-    invoke-static {v0, p2, p2, v1, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final r(JLzr8;Z)V
-    .locals 11
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "sendEvent "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p4
-
-    const-string v0, "l30"
-
-    invoke-static {v0, p4}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-wide/16 v1, -0x1
-
-    cmp-long p4, p1, v1
-
-    if-nez p4, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-wide v3, p0, Ll30;->k:J
-
-    cmp-long p4, p1, v3
-
-    if-nez p4, :cond_1
-
-    iget-wide v3, p0, Ll30;->l:J
-
-    cmp-long p4, v3, v1
-
-    if-nez p4, :cond_2
-
-    :cond_1
-    move-object v3, p0
-
-    move-wide v4, p1
-
-    move-object v6, p3
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v7, p0, Ll30;->l:J
-
-    move-object v3, p0
-
-    move-wide v4, p1
-
-    move-object v6, p3
-
-    invoke-virtual/range {v3 .. v8}, Ll30;->s(JLzr8;J)V
-
-    return-void
-
-    :goto_0
-    const-string p1, "track changed, should update chatId"
-
-    invoke-static {v0, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-wide p1, v3, Ll30;->k:J
-
-    cmp-long p1, v4, p1
-
-    if-nez p1, :cond_3
-
-    iget-wide p1, v3, Ll30;->l:J
-
-    cmp-long p1, p1, v1
-
-    if-eqz p1, :cond_3
-
-    move-wide v1, v4
-
-    iget-wide v4, v3, Ll30;->l:J
-
-    move-object v0, v3
-
-    move-object v3, v6
-
-    invoke-virtual/range {v0 .. v5}, Ll30;->s(JLzr8;J)V
-
-    move-object v3, v0
-
-    return-void
-
-    :cond_3
-    move-wide v1, v4
-
-    iget-object p1, v3, Ll30;->h:Lrhf;
-
-    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ll30;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lb54;
+    check-cast p1, Ll30;
 
-    new-instance v0, Lk30;
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v5, 0x0
+    invoke-virtual {p1, p2}, Ll30;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-wide v9, v1
+    move-result-object p1
 
-    move-object v1, v3
-
-    move-wide v2, v9
-
-    move-object v4, v6
-
-    invoke-direct/range {v0 .. v5}, Lk30;-><init>(Ll30;JLzr8;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x3
-
-    const/4 p3, 0x0
-
-    invoke-static {p1, p3, p3, v0, p2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final s(JLzr8;J)V
-    .locals 8
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Ll30;
 
-    const-string v1, "send event internal trackId="
+    iget-wide v2, p0, Ll30;->Z:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v4, p0, Ll30;->q0:Lbt8;
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Ll30;->Y:Lm30;
 
-    const-string v1, " trackType="
+    move-object v5, p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v0 .. v5}, Ll30;-><init>(Lm30;JLbt8;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " chatId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "l30"
-
-    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Li50;
-
-    invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    move-wide v4, p1
-
-    move-wide v6, p4
-
-    invoke-direct/range {v2 .. v7}, Li50;-><init>(IJJ)V
-
-    iget-object p1, p0, Ll30;->b:Lgw0;
-
-    invoke-virtual {p1, v2}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final t(JLzr8;J)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
 
-    invoke-virtual {p0}, Ll30;->u()V
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x0
+    sget-object v1, Lr54;->a:Lr54;
 
-    invoke-virtual {p0, p1, p2, p3, v0}, Ll30;->r(JLzr8;Z)V
+    iget v2, v0, Ll30;->X:I
 
-    invoke-virtual {p0}, Ll30;->n()V
+    const/4 v3, 0x1
 
-    sget-object v0, Lzr8;->b:Lzr8;
+    if-eqz v2, :cond_1
 
-    if-ne p3, v0, :cond_0
+    if-ne v2, v3, :cond_0
 
-    invoke-virtual {p0, p1, p2, p4, p5}, Ll30;->q(JJ)V
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v2, p1
+
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Ll30;->c:Lez9;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Lez9;->q()V
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
-.end method
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final u()V
-    .locals 3
+    throw v1
 
-    const-string v0, "l30"
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "unsubscribe sensors controller"
+    iget-object v2, v0, Ll30;->Y:Lm30;
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, v2, Lm30;->g:Liu7;
 
-    iget-object v0, p0, Ll30;->d:Llt7;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Lulf;
 
-    check-cast v0, Lc1e;
+    check-cast v2, Lqta;
 
-    iget-object v1, v0, Lc1e;->c:Ljava/util/Set;
+    invoke-virtual {v2}, Lqta;->b()Lk54;
 
-    invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v2
+    new-instance v4, Lk30;
 
-    if-eqz v2, :cond_0
+    iget-object v5, v0, Ll30;->Y:Lm30;
 
-    invoke-interface {v1}, Ljava/util/Set;->size()I
+    iget-wide v6, v0, Ll30;->Z:J
 
-    move-result v1
+    const/4 v8, 0x0
 
-    if-nez v1, :cond_0
+    invoke-direct {v4, v5, v6, v7, v8}, Lk30;-><init>(Lm30;JLkotlin/coroutines/Continuation;)V
 
-    iget-object v1, v0, Lc1e;->b:Landroid/hardware/Sensor;
+    iput v3, v0, Ll30;->X:I
 
-    if-eqz v1, :cond_0
+    invoke-static {v2, v4, v0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v1, v0, Lc1e;->a:Landroid/hardware/SensorManager;
+    move-result-object v2
 
-    invoke-virtual {v1, v0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+    if-ne v2, v1, :cond_2
 
-    :cond_0
-    return-void
+    return-object v1
+
+    :cond_2
+    :goto_0
+    check-cast v2, Lpb9;
+
+    if-eqz v2, :cond_3
+
+    iget-object v1, v0, Ll30;->Y:Lm30;
+
+    iget-wide v3, v0, Ll30;->Z:J
+
+    iput-wide v3, v1, Lm30;->k:J
+
+    iget-object v1, v0, Ll30;->Y:Lm30;
+
+    iget-wide v2, v2, Lpb9;->q0:J
+
+    iput-wide v2, v1, Lm30;->l:J
+
+    iget-object v4, v0, Ll30;->Y:Lm30;
+
+    iget-wide v5, v0, Ll30;->Z:J
+
+    iget-object v7, v0, Ll30;->q0:Lbt8;
+
+    iget-wide v8, v4, Lm30;->l:J
+
+    invoke-virtual/range {v4 .. v9}, Lm30;->s(JLbt8;J)V
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v10, v0, Ll30;->Y:Lm30;
+
+    iget-wide v11, v0, Ll30;->Z:J
+
+    iget-object v13, v0, Ll30;->q0:Lbt8;
+
+    const-wide/16 v14, -0x1
+
+    invoke-virtual/range {v10 .. v15}, Lm30;->s(JLbt8;J)V
+
+    :goto_1
+    sget-object v1, Lccg;->a:Lccg;
+
+    return-object v1
 .end method

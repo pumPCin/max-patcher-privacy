@@ -1,5 +1,5 @@
 .class public final Lgu;
-.super Lfj0;
+.super Loj0;
 .source "SourceFile"
 
 
@@ -10,9 +10,9 @@
 
 .field public Z:Ljava/io/InputStream;
 
-.field public r0:J
+.field public q0:J
 
-.field public s0:Z
+.field public r0:Z
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lfj0;-><init>(Z)V
+    invoke-direct {p0, v0}, Loj0;-><init>(Z)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method public final H(Lxb4;)J
+.method public final H(Lmc4;)J
     .locals 7
 
     :try_start_0
-    iget-object v0, p1, Lxb4;->a:Landroid/net/Uri;
+    iget-object v0, p1, Lmc4;->a:Landroid/net/Uri;
 
-    iget-wide v1, p1, Lxb4;->f:J
+    iget-wide v1, p1, Lmc4;->f:J
 
     iput-object v0, p0, Lgu;->Y:Landroid/net/Uri;
 
@@ -93,7 +93,7 @@
 
     :cond_1
     :goto_0
-    invoke-virtual {p0, p1}, Lfj0;->d(Lxb4;)V
+    invoke-virtual {p0, p1}, Loj0;->e(Lmc4;)V
 
     iget-object v3, p0, Lgu;->X:Landroid/content/res/AssetManager;
 
@@ -111,7 +111,7 @@
 
     if-ltz v0, :cond_4
 
-    iget-wide v0, p1, Lxb4;->g:J
+    iget-wide v0, p1, Lmc4;->g:J
 
     const-wide/16 v2, -0x1
 
@@ -119,7 +119,7 @@
 
     if-eqz v5, :cond_2
 
-    iput-wide v0, p0, Lgu;->r0:J
+    iput-wide v0, p0, Lgu;->q0:J
 
     goto :goto_1
 
@@ -132,7 +132,7 @@
 
     int-to-long v0, v0
 
-    iput-wide v0, p0, Lgu;->r0:J
+    iput-wide v0, p0, Lgu;->q0:J
 
     const-wide/32 v5, 0x7fffffff
 
@@ -140,18 +140,18 @@
 
     if-nez v0, :cond_3
 
-    iput-wide v2, p0, Lgu;->r0:J
+    iput-wide v2, p0, Lgu;->q0:J
     :try_end_0
     .catch Landroidx/media3/datasource/AssetDataSource$AssetDataSourceException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_3
     :goto_1
-    iput-boolean v4, p0, Lgu;->s0:Z
+    iput-boolean v4, p0, Lgu;->r0:Z
 
-    invoke-virtual {p0, p1}, Lfj0;->e(Lxb4;)V
+    invoke-virtual {p0, p1}, Loj0;->f(Lmc4;)V
 
-    iget-wide v0, p0, Lgu;->r0:J
+    iget-wide v0, p0, Lgu;->q0:J
 
     return-wide v0
 
@@ -228,13 +228,13 @@
     :goto_0
     iput-object v0, p0, Lgu;->Z:Ljava/io/InputStream;
 
-    iget-boolean v0, p0, Lgu;->s0:Z
+    iget-boolean v0, p0, Lgu;->r0:Z
 
     if-eqz v0, :cond_1
 
-    iput-boolean v1, p0, Lgu;->s0:Z
+    iput-boolean v1, p0, Lgu;->r0:Z
 
-    invoke-virtual {p0}, Lfj0;->c()V
+    invoke-virtual {p0}, Loj0;->c()V
 
     :cond_1
     return-void
@@ -254,13 +254,13 @@
     :goto_2
     iput-object v0, p0, Lgu;->Z:Ljava/io/InputStream;
 
-    iget-boolean v0, p0, Lgu;->s0:Z
+    iget-boolean v0, p0, Lgu;->r0:Z
 
     if-eqz v0, :cond_2
 
-    iput-boolean v1, p0, Lgu;->s0:Z
+    iput-boolean v1, p0, Lgu;->r0:Z
 
-    invoke-virtual {p0}, Lfj0;->c()V
+    invoke-virtual {p0}, Loj0;->c()V
 
     :cond_2
     throw v2
@@ -284,7 +284,7 @@
     return p1
 
     :cond_0
-    iget-wide v0, p0, Lgu;->r0:J
+    iget-wide v0, p0, Lgu;->q0:J
 
     const-wide/16 v2, 0x0
 
@@ -318,7 +318,7 @@
     :goto_0
     iget-object v0, p0, Lgu;->Z:Ljava/io/InputStream;
 
-    sget-object v1, Ljhg;->a:Ljava/lang/String;
+    sget-object v1, Lnig;->a:Ljava/lang/String;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
@@ -332,7 +332,7 @@
     return v3
 
     :cond_3
-    iget-wide p2, p0, Lgu;->r0:J
+    iget-wide p2, p0, Lgu;->q0:J
 
     cmp-long v0, p2, v4
 
@@ -342,10 +342,10 @@
 
     sub-long/2addr p2, v0
 
-    iput-wide p2, p0, Lgu;->r0:J
+    iput-wide p2, p0, Lgu;->q0:J
 
     :cond_4
-    invoke-virtual {p0, p1}, Lfj0;->b(I)V
+    invoke-virtual {p0, p1}, Loj0;->b(I)V
 
     return p1
 

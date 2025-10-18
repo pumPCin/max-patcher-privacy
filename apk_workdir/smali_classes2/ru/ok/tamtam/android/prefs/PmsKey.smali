@@ -17,7 +17,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0015\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0003\u0008\u00b3\u0001\u0008\u0087\u0081\u0002\u0018\u0000 \t2\u0008\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\nB\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u000f\u0010\u0008\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0006j\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001ej\u0002\u0008\u001fj\u0002\u0008 j\u0002\u0008!j\u0002\u0008\"j\u0002\u0008#j\u0002\u0008$j\u0002\u0008%j\u0002\u0008&j\u0002\u0008\'j\u0002\u0008(j\u0002\u0008)j\u0002\u0008*j\u0002\u0008+j\u0002\u0008,j\u0002\u0008-j\u0002\u0008.j\u0002\u0008/j\u0002\u00080j\u0002\u00081j\u0002\u00082j\u0002\u00083j\u0002\u00084j\u0002\u00085j\u0002\u00086j\u0002\u00087j\u0002\u00088j\u0002\u00089j\u0002\u0008:j\u0002\u0008;j\u0002\u0008<j\u0002\u0008=j\u0002\u0008>j\u0002\u0008?j\u0002\u0008@j\u0002\u0008Aj\u0002\u0008Bj\u0002\u0008Cj\u0002\u0008Dj\u0002\u0008Ej\u0002\u0008Fj\u0002\u0008Gj\u0002\u0008Hj\u0002\u0008Ij\u0002\u0008Jj\u0002\u0008Kj\u0002\u0008Lj\u0002\u0008Mj\u0002\u0008Nj\u0002\u0008Oj\u0002\u0008Pj\u0002\u0008Qj\u0002\u0008Rj\u0002\u0008Sj\u0002\u0008Tj\u0002\u0008Uj\u0002\u0008Vj\u0002\u0008Wj\u0002\u0008Xj\u0002\u0008Yj\u0002\u0008Zj\u0002\u0008[j\u0002\u0008\\j\u0002\u0008]j\u0002\u0008^j\u0002\u0008_j\u0002\u0008`j\u0002\u0008aj\u0002\u0008bj\u0002\u0008cj\u0002\u0008dj\u0002\u0008ej\u0002\u0008fj\u0002\u0008gj\u0002\u0008hj\u0002\u0008ij\u0002\u0008jj\u0002\u0008kj\u0002\u0008lj\u0002\u0008mj\u0002\u0008nj\u0002\u0008oj\u0002\u0008pj\u0002\u0008qj\u0002\u0008rj\u0002\u0008sj\u0002\u0008tj\u0002\u0008uj\u0002\u0008vj\u0002\u0008wj\u0002\u0008xj\u0002\u0008yj\u0002\u0008zj\u0002\u0008{j\u0002\u0008|j\u0002\u0008}j\u0002\u0008~j\u0002\u0008\u007fj\u0003\u0008\u0080\u0001j\u0003\u0008\u0081\u0001j\u0003\u0008\u0082\u0001j\u0003\u0008\u0083\u0001j\u0003\u0008\u0084\u0001j\u0003\u0008\u0085\u0001j\u0003\u0008\u0086\u0001j\u0003\u0008\u0087\u0001j\u0003\u0008\u0088\u0001j\u0003\u0008\u0089\u0001j\u0003\u0008\u008a\u0001j\u0003\u0008\u008b\u0001j\u0003\u0008\u008c\u0001j\u0003\u0008\u008d\u0001j\u0003\u0008\u008e\u0001j\u0003\u0008\u008f\u0001j\u0003\u0008\u0090\u0001j\u0003\u0008\u0091\u0001j\u0003\u0008\u0092\u0001j\u0003\u0008\u0093\u0001j\u0003\u0008\u0094\u0001j\u0003\u0008\u0095\u0001j\u0003\u0008\u0096\u0001j\u0003\u0008\u0097\u0001j\u0003\u0008\u0098\u0001j\u0003\u0008\u0099\u0001j\u0003\u0008\u009a\u0001j\u0003\u0008\u009b\u0001j\u0003\u0008\u009c\u0001j\u0003\u0008\u009d\u0001j\u0003\u0008\u009e\u0001j\u0003\u0008\u009f\u0001j\u0003\u0008\u00a0\u0001j\u0003\u0008\u00a1\u0001j\u0003\u0008\u00a2\u0001j\u0003\u0008\u00a3\u0001j\u0003\u0008\u00a4\u0001j\u0003\u0008\u00a5\u0001j\u0003\u0008\u00a6\u0001j\u0003\u0008\u00a7\u0001j\u0003\u0008\u00a8\u0001j\u0003\u0008\u00a9\u0001j\u0003\u0008\u00aa\u0001j\u0003\u0008\u00ab\u0001j\u0003\u0008\u00ac\u0001j\u0003\u0008\u00ad\u0001j\u0003\u0008\u00ae\u0001j\u0003\u0008\u00af\u0001j\u0003\u0008\u00b0\u0001j\u0003\u0008\u00b1\u0001j\u0003\u0008\u00b2\u0001j\u0003\u0008\u00b3\u0001j\u0003\u0008\u00b4\u0001j\u0003\u0008\u00b5\u0001j\u0003\u0008\u00b6\u0001\u00a8\u0006\u00b7\u0001"
+        "\u0000\u0015\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0003\u0008\u00b2\u0001\u0008\u0087\u0081\u0002\u0018\u0000 \t2\u0008\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\nB\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u000f\u0010\u0008\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0006j\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001ej\u0002\u0008\u001fj\u0002\u0008 j\u0002\u0008!j\u0002\u0008\"j\u0002\u0008#j\u0002\u0008$j\u0002\u0008%j\u0002\u0008&j\u0002\u0008\'j\u0002\u0008(j\u0002\u0008)j\u0002\u0008*j\u0002\u0008+j\u0002\u0008,j\u0002\u0008-j\u0002\u0008.j\u0002\u0008/j\u0002\u00080j\u0002\u00081j\u0002\u00082j\u0002\u00083j\u0002\u00084j\u0002\u00085j\u0002\u00086j\u0002\u00087j\u0002\u00088j\u0002\u00089j\u0002\u0008:j\u0002\u0008;j\u0002\u0008<j\u0002\u0008=j\u0002\u0008>j\u0002\u0008?j\u0002\u0008@j\u0002\u0008Aj\u0002\u0008Bj\u0002\u0008Cj\u0002\u0008Dj\u0002\u0008Ej\u0002\u0008Fj\u0002\u0008Gj\u0002\u0008Hj\u0002\u0008Ij\u0002\u0008Jj\u0002\u0008Kj\u0002\u0008Lj\u0002\u0008Mj\u0002\u0008Nj\u0002\u0008Oj\u0002\u0008Pj\u0002\u0008Qj\u0002\u0008Rj\u0002\u0008Sj\u0002\u0008Tj\u0002\u0008Uj\u0002\u0008Vj\u0002\u0008Wj\u0002\u0008Xj\u0002\u0008Yj\u0002\u0008Zj\u0002\u0008[j\u0002\u0008\\j\u0002\u0008]j\u0002\u0008^j\u0002\u0008_j\u0002\u0008`j\u0002\u0008aj\u0002\u0008bj\u0002\u0008cj\u0002\u0008dj\u0002\u0008ej\u0002\u0008fj\u0002\u0008gj\u0002\u0008hj\u0002\u0008ij\u0002\u0008jj\u0002\u0008kj\u0002\u0008lj\u0002\u0008mj\u0002\u0008nj\u0002\u0008oj\u0002\u0008pj\u0002\u0008qj\u0002\u0008rj\u0002\u0008sj\u0002\u0008tj\u0002\u0008uj\u0002\u0008vj\u0002\u0008wj\u0002\u0008xj\u0002\u0008yj\u0002\u0008zj\u0002\u0008{j\u0002\u0008|j\u0002\u0008}j\u0002\u0008~j\u0002\u0008\u007fj\u0003\u0008\u0080\u0001j\u0003\u0008\u0081\u0001j\u0003\u0008\u0082\u0001j\u0003\u0008\u0083\u0001j\u0003\u0008\u0084\u0001j\u0003\u0008\u0085\u0001j\u0003\u0008\u0086\u0001j\u0003\u0008\u0087\u0001j\u0003\u0008\u0088\u0001j\u0003\u0008\u0089\u0001j\u0003\u0008\u008a\u0001j\u0003\u0008\u008b\u0001j\u0003\u0008\u008c\u0001j\u0003\u0008\u008d\u0001j\u0003\u0008\u008e\u0001j\u0003\u0008\u008f\u0001j\u0003\u0008\u0090\u0001j\u0003\u0008\u0091\u0001j\u0003\u0008\u0092\u0001j\u0003\u0008\u0093\u0001j\u0003\u0008\u0094\u0001j\u0003\u0008\u0095\u0001j\u0003\u0008\u0096\u0001j\u0003\u0008\u0097\u0001j\u0003\u0008\u0098\u0001j\u0003\u0008\u0099\u0001j\u0003\u0008\u009a\u0001j\u0003\u0008\u009b\u0001j\u0003\u0008\u009c\u0001j\u0003\u0008\u009d\u0001j\u0003\u0008\u009e\u0001j\u0003\u0008\u009f\u0001j\u0003\u0008\u00a0\u0001j\u0003\u0008\u00a1\u0001j\u0003\u0008\u00a2\u0001j\u0003\u0008\u00a3\u0001j\u0003\u0008\u00a4\u0001j\u0003\u0008\u00a5\u0001j\u0003\u0008\u00a6\u0001j\u0003\u0008\u00a7\u0001j\u0003\u0008\u00a8\u0001j\u0003\u0008\u00a9\u0001j\u0003\u0008\u00aa\u0001j\u0003\u0008\u00ab\u0001j\u0003\u0008\u00ac\u0001j\u0003\u0008\u00ad\u0001j\u0003\u0008\u00ae\u0001j\u0003\u0008\u00af\u0001j\u0003\u0008\u00b0\u0001j\u0003\u0008\u00b1\u0001j\u0003\u0008\u00b2\u0001j\u0003\u0008\u00b3\u0001j\u0003\u0008\u00b4\u0001j\u0003\u0008\u00b5\u0001\u00a8\u0006\u00b6\u0001"
     }
     d2 = {
         "Lru/ok/tamtam/android/prefs/PmsKey;",
@@ -30,7 +30,7 @@
         "fullContentString$prefs_release",
         "fullContentString",
         "Companion",
-        "aub",
+        "fvb",
         "set-unread-timeout",
         "proxy",
         "video-preview",
@@ -192,10 +192,9 @@
         "webview-cache-enabled",
         "heartbeat-constraint",
         "content-level-access",
-        "lebedev-theme-enabled",
         "quotes-enabled",
         "search-loader-v2-enabled",
-        "host-reachability",
+        "devnull",
         "server-side-complains-enabled",
         "channels-complaint-enabled",
         "landscape",
@@ -216,11 +215,11 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Led5;
+.field private static final synthetic $ENTRIES:Lyd5;
 
 .field private static final synthetic $VALUES:[Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final Companion:Laub;
+.field public static final Companion:Lfvb;
 
 .field public static final enum account-nickname-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -290,6 +289,8 @@
 
 .field public static final enum default-sticker-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum devnull:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum disconnect-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum double-tap-reaction:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -342,8 +343,6 @@
 
 .field public static final enum heartbeat-constraint:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum image-height:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum image-quality:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -366,17 +365,15 @@
 
 .field public static final enum keep-connection:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field private static final keys$delegate:Llt7;
+.field private static final keys$delegate:Liu7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Llt7;"
+            "Liu7;"
         }
     .end annotation
 .end field
 
 .field public static final enum landscape:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum lebedev-theme-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum live-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -577,7 +574,7 @@
 
 # direct methods
 .method private static final synthetic $values()[Lru/ok/tamtam/android/prefs/PmsKey;
-    .locals 173
+    .locals 172
 
     sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->set-unread-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -901,29 +898,27 @@
 
     sget-object v161, Lru/ok/tamtam/android/prefs/PmsKey;->content-level-access:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v162, Lru/ok/tamtam/android/prefs/PmsKey;->lebedev-theme-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v162, Lru/ok/tamtam/android/prefs/PmsKey;->quotes-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v163, Lru/ok/tamtam/android/prefs/PmsKey;->quotes-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v163, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v164, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v164, Lru/ok/tamtam/android/prefs/PmsKey;->devnull:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v165, Lru/ok/tamtam/android/prefs/PmsKey;->host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v165, Lru/ok/tamtam/android/prefs/PmsKey;->server-side-complains-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v166, Lru/ok/tamtam/android/prefs/PmsKey;->server-side-complains-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v166, Lru/ok/tamtam/android/prefs/PmsKey;->channels-complaint-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v167, Lru/ok/tamtam/android/prefs/PmsKey;->channels-complaint-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v167, Lru/ok/tamtam/android/prefs/PmsKey;->landscape:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v168, Lru/ok/tamtam/android/prefs/PmsKey;->landscape:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v168, Lru/ok/tamtam/android/prefs/PmsKey;->location-map-widget-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v169, Lru/ok/tamtam/android/prefs/PmsKey;->location-map-widget-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v169, Lru/ok/tamtam/android/prefs/PmsKey;->utm-tag-for-trigger-link-share:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v170, Lru/ok/tamtam/android/prefs/PmsKey;->utm-tag-for-trigger-link-share:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v170, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v171, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v171, Lru/ok/tamtam/android/prefs/PmsKey;->miui-menu-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v172, Lru/ok/tamtam/android/prefs/PmsKey;->miui-menu-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    filled-new-array/range {v1 .. v172}, [Lru/ok/tamtam/android/prefs/PmsKey;
+    filled-new-array/range {v1 .. v171}, [Lru/ok/tamtam/android/prefs/PmsKey;
 
     move-result-object v0
 
@@ -2545,19 +2540,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "lebedev-theme-enabled"
-
-    const/16 v2, 0xa1
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->lebedev-theme-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "quotes-enabled"
 
-    const/16 v2, 0xa2
+    const/16 v2, 0xa1
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2567,7 +2552,7 @@
 
     const-string v1, "search-loader-v2-enabled"
 
-    const/16 v2, 0xa3
+    const/16 v2, 0xa2
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2575,19 +2560,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "host-reachability"
+    const-string v1, "devnull"
 
-    const/16 v2, 0xa4
+    const/16 v2, 0xa3
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->devnull:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
     const-string v1, "server-side-complains-enabled"
 
-    const/16 v2, 0xa5
+    const/16 v2, 0xa4
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2597,7 +2582,7 @@
 
     const-string v1, "channels-complaint-enabled"
 
-    const/16 v2, 0xa6
+    const/16 v2, 0xa5
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2607,7 +2592,7 @@
 
     const-string v1, "landscape"
 
-    const/16 v2, 0xa7
+    const/16 v2, 0xa6
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2617,7 +2602,7 @@
 
     const-string v1, "location-map-widget-enabled"
 
-    const/16 v2, 0xa8
+    const/16 v2, 0xa7
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2627,7 +2612,7 @@
 
     const-string v1, "utm-tag-for-trigger-link-share"
 
-    const/16 v2, 0xa9
+    const/16 v2, 0xa8
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2637,7 +2622,7 @@
 
     const-string v1, "media-playlist-enabled"
 
-    const/16 v2, 0xaa
+    const/16 v2, 0xa9
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2647,7 +2632,7 @@
 
     const-string v1, "miui-menu-enabled"
 
-    const/16 v2, 0xab
+    const/16 v2, 0xaa
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2659,29 +2644,29 @@
 
     sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$VALUES:[Lru/ok/tamtam/android/prefs/PmsKey;
 
-    new-instance v1, Lfd5;
+    new-instance v1, Lzd5;
 
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Led5;
+    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lyd5;
 
-    new-instance v0, Laub;
+    new-instance v0, Lfvb;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->Companion:Laub;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->Companion:Lfvb;
 
-    new-instance v0, Lvmb;
+    new-instance v0, Lcnb;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lvmb;-><init>(I)V
+    invoke-direct {v0, v1}, Lcnb;-><init>(I)V
 
-    new-instance v1, Lrhf;
+    new-instance v1, Lwif;
 
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
 
-    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Llt7;
+    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Liu7;
 
     return-void
 .end method
@@ -2709,24 +2694,24 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getKeys$delegate$cp()Llt7;
+.method public static final synthetic access$getKeys$delegate$cp()Liu7;
     .locals 1
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Llt7;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Liu7;
 
     return-object v0
 .end method
 
-.method public static getEntries()Led5;
+.method public static getEntries()Lyd5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Led5;"
+            "Lyd5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Led5;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lyd5;
 
     return-object v0
 .end method
@@ -2734,17 +2719,17 @@
 .method private static final keys_delegate$lambda$1()Ljava/util/Map;
     .locals 4
 
-    invoke-static {}, Lru/ok/tamtam/android/prefs/PmsKey;->getEntries()Led5;
+    invoke-static {}, Lru/ok/tamtam/android/prefs/PmsKey;->getEntries()Lyd5;
 
     move-result-object v0
 
     const/16 v1, 0xa
 
-    invoke-static {v0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    invoke-static {v1}, Lyf8;->e(I)I
+    invoke-static {v1}, Lzg8;->i(I)I
 
     move-result v1
 
@@ -2829,7 +2814,7 @@
 
     const-string v1, "\""
 
-    invoke-static {v1, v0, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

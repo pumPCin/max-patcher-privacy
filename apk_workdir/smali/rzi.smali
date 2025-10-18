@@ -3,240 +3,292 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Ljava/lang/String;
-
-
 # direct methods
-.method public static a(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;II)V
-    .locals 6
+.method public static a(Lfc4;Ljava/lang/String;[BLjava/util/Map;)[B
+    .locals 15
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Le2f;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Le2f;-><init>(Lfc4;)V
 
-    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    sget-object p0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    move-result-object v0
+    invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    array-length v1, v0
+    move-result-object v3
 
-    const/4 v2, 0x0
+    const-string p0, "The uri must be set."
 
-    :goto_0
-    const/16 v3, 0x21
+    invoke-static {v3, p0}, Lsgi;->k(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ge v2, v1, :cond_1
+    new-instance v2, Lmc4;
 
-    aget-object v4, v0, v2
+    const-wide/16 v4, 0x0
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    const/4 v6, 0x2
 
-    move-result v5
+    const-wide/16 v9, 0x0
 
-    if-ne v5, p2, :cond_0
+    const-wide/16 v11, -0x1
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    const/4 v13, 0x0
 
-    move-result v5
+    const/4 v14, 0x1
 
-    if-ne v5, p3, :cond_0
+    move-object/from16 v7, p2
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+    move-object/from16 v8, p3
 
-    move-result v5
+    invoke-direct/range {v2 .. v14}, Lmc4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-    if-ne v5, v3, :cond_0
+    const/4 p0, 0x0
 
-    invoke-interface {p0, v4}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p0, p1, p2, p3, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    return-void
-.end method
-
-.method public static b(La9;Lm1g;JJ)Lcj5;
-    .locals 8
-
-    iget-object p1, p1, Lm1g;->a:Lhb7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lhb7;->m(I)Lb36;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-virtual {p1}, Lb2;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1}, Lb2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll1g;
-
-    iget-object v2, v1, Ll1g;->b:Lm0g;
-
-    iget v2, v2, Lm0g;->c:I
-
-    iget v3, p0, La9;->b:I
-
-    if-ne v2, v3, :cond_0
-
-    invoke-virtual {v1}, Ll1g;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
+    move v3, p0
 
     :goto_0
-    if-eqz v1, :cond_8
+    :try_start_0
+    new-instance v4, Lic4;
 
-    iget-object p1, v1, Ll1g;->b:Lm0g;
+    invoke-direct {v4, v1, v2}, Lic4;-><init>(Lfc4;Lmc4;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p0, p0, La9;->c:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    :try_start_1
+    invoke-static {v4}, Lpx0;->b(Ljava/io/InputStream;)[B
 
     move-result-object p0
+    :try_end_1
+    .catch Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_2
+    invoke-static {v4}, Lnig;->g(Ljava/io/Closeable;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    move-result v2
+    return-object p0
 
-    if-eqz v2, :cond_8
+    :catch_0
+    move-exception v0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Load;
-
-    iget-object v3, v2, Load;->a:Lsa6;
-
-    iget v4, p1, Lm0g;->a:I
-
-    move v5, v0
-
-    :goto_1
-    const/4 v6, -0x1
-
-    if-ge v5, v4, :cond_4
-
-    iget-object v7, p1, Lm0g;->d:[Lsa6;
-
-    aget-object v7, v7, v5
-
-    invoke-static {v3, v7}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
+    move-object p0, v0
 
     goto :goto_2
 
-    :cond_3
-    add-int/lit8 v5, v5, 0x1
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
 
     goto :goto_1
 
-    :cond_4
-    move v5, v6
+    :catch_1
+    move-exception v0
+
+    :try_start_3
+    iget v5, v0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->o:I
+
+    const/16 v6, 0x133
+
+    const/4 v7, 0x0
+
+    if-eq v5, v6, :cond_0
+
+    const/16 v6, 0x134
+
+    if-ne v5, v6, :cond_1
+
+    :cond_0
+    const/4 v5, 0x5
+
+    if-ge v3, v5, :cond_1
+
+    iget-object v5, v0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->X:Ljava/util/Map;
+
+    if-eqz v5, :cond_1
+
+    const-string v6, "Location"
+
+    invoke-interface {v5, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/List;
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    invoke-interface {v5, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v7, v5
+
+    check-cast v7, Ljava/lang/String;
+
+    :cond_1
+    if-eqz v7, :cond_2
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {v2}, Lmc4;->a()Lkc4;
+
+    move-result-object v0
+
+    invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lkc4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Lkc4;->b()Lmc4;
+
+    move-result-object v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    invoke-static {v4}, Lnig;->g(Ljava/io/Closeable;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :goto_1
+    :try_start_6
+    invoke-static {v4}, Lnig;->g(Ljava/io/Closeable;)V
+
+    throw p0
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
     :goto_2
-    if-eq v6, v5, :cond_2
+    new-instance v0, Landroidx/media3/exoplayer/drm/MediaDrmCallbackException;
 
-    iget-object v3, v1, Ll1g;->e:[Z
+    iget-object v1, v1, Le2f;->a:Lfc4;
 
-    aget-boolean v3, v3, v5
+    invoke-interface {v1}, Lfc4;->x()Ljava/util/Map;
 
-    if-eqz v3, :cond_2
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {p4, p5}, Ljhg;->U(J)J
+    throw v0
+.end method
 
-    move-result-wide p0
+.method public static b(Ljava/lang/Throwable;)Z
+    .locals 2
 
-    instance-of p4, v2, Lkad;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz p4, :cond_5
+    const/16 v1, 0x22
 
-    check-cast v2, Lkad;
+    if-ne v0, v1, :cond_0
 
-    iget-object p4, v2, Lkad;->Y:Ldxd;
+    instance-of v0, p0, Ljava/lang/NoSuchMethodError;
 
-    invoke-static {p2, p3}, Ljhg;->U(J)J
+    if-eqz v0, :cond_0
 
-    move-result-wide p2
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {p4, p2, p3, p0, p1}, Ldxd;->g(JJ)J
+    move-result-object v0
 
-    move-result-wide p2
+    if-eqz v0, :cond_0
 
-    new-instance p5, Lcj5;
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {p4, p2, p3, p0, p1}, Ldxd;->f(JJ)J
+    move-result-object p0
 
-    move-result-wide p0
+    const-string v0, "Landroid/media/NotProvisionedException;.<init>("
 
-    invoke-direct {p5, p2, p3, p0, p1}, Lcj5;-><init>(JJ)V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    return-object p5
+    move-result p0
 
-    :cond_5
-    instance-of p2, v2, Lmad;
+    if-eqz p0, :cond_0
 
-    if-eqz p2, :cond_7
+    const/4 p0, 0x1
 
-    check-cast v2, Lmad;
+    return p0
 
-    iget-object p2, v2, Lmad;->Z:Lr22;
+    :cond_0
+    const/4 p0, 0x0
 
-    if-eqz p2, :cond_6
+    return p0
+.end method
 
-    new-instance p2, Lcj5;
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 2
 
-    const-wide/16 p3, 0x0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {p2, p3, p4, p0, p1}, Lcj5;-><init>(JJ)V
+    const/16 v1, 0x22
 
-    return-object p2
+    if-ne v0, v1, :cond_0
 
-    :cond_6
-    new-instance p2, Lcj5;
+    instance-of v0, p0, Ljava/lang/NoSuchMethodError;
 
-    const-wide/16 p3, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-direct {p2, p3, p4, p0, p1}, Lcj5;-><init>(JJ)V
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    return-object p2
+    move-result-object v0
 
-    :cond_7
-    new-instance p0, Lcj5;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcj5;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    return-object p0
+    move-result-object p0
 
-    :cond_8
-    new-instance p0, Lcj5;
+    const-string v0, "Landroid/media/ResourceBusyException;.<init>("
 
-    invoke-direct {p0}, Lcj5;-><init>()V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    return-object p0
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final d(Lzcg;)V
+    .locals 2
+
+    new-instance v0, Lnee;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+
+    const-class v1, Lvf4;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lnee;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+
+    const-class v1, Lms4;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    return-void
 .end method

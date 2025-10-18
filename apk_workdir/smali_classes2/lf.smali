@@ -50,18 +50,18 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    sget-object p1, Lcyg;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {v1}, Loxg;->c(Landroid/view/View;)V
+    invoke-static {v1}, Ltyg;->c(Landroid/view/View;)V
 
     return-void
 
     :pswitch_0
     invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {p1}, Loxg;->c(Landroid/view/View;)V
+    invoke-static {p1}, Ltyg;->c(Landroid/view/View;)V
 
     return-void
 

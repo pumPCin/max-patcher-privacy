@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public final X:La24;
+.field public final X:Lo24;
 
 .field public Y:Z
 
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lmh;La24;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public constructor <init>(Lmh;Lo24;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 
     iput-boolean p6, p0, Lkh;->o:Z
 
-    iput-object p2, p0, Lkh;->X:La24;
+    iput-object p2, p0, Lkh;->X:Lo24;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
     :cond_0
     const/4 v7, 0x1
 
-    iget-object v8, p0, Lkh;->X:La24;
+    iget-object v8, p0, Lkh;->X:Lo24;
 
     iget-object v2, p0, Lkh;->Z:Lmh;
 
@@ -87,7 +87,7 @@
 
     iget-boolean v6, p0, Lkh;->o:Z
 
-    invoke-virtual/range {v2 .. v8}, Lmh;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLa24;)V
+    invoke-virtual/range {v2 .. v8}, Lmh;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLo24;)V
 
     :cond_1
     return-void

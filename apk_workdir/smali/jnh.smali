@@ -4,38 +4,39 @@
 
 
 # instance fields
-.field public final a:Lxnf;
-
-.field public final b:Lda6;
-
-.field public final c:Lioh;
+.field public a:Linh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "WMFgUpdater"
-
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/work/impl/WorkDatabase;Lpyb;Ln1c;)V
-    .locals 0
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljnh;->b:Lda6;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput-object p3, p0, Ljnh;->a:Lxnf;
+    const/16 v1, 0x1e
 
-    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->x()Lioh;
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lhnh;
+
+    invoke-static {p1, p2, p3, p4}, Lxbb;->l(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
 
     move-result-object p1
 
-    iput-object p1, p0, Ljnh;->c:Lioh;
+    invoke-direct {v0, p1}, Lhnh;-><init>(Landroid/view/WindowInsetsAnimation;)V
+
+    iput-object v0, p0, Ljnh;->a:Linh;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lfnh;
+
+    invoke-direct {v0, p1, p2, p3, p4}, Linh;-><init>(ILandroid/view/animation/Interpolator;J)V
+
+    iput-object v0, p0, Ljnh;->a:Linh;
 
     return-void
 .end method

@@ -1,91 +1,149 @@
-.class public final synthetic Lws2;
-.super Ljava/lang/Object;
+.class public final Lws2;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Luu2;
-
-.field public final synthetic c:J
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luu2;JI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput p4, p0, Lws2;->a:I
+    iput-object p2, p0, Lws2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iput-object p1, p0, Lws2;->b:Luu2;
+    const/4 p2, 0x2
 
-    iput-wide p2, p0, Lws2;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lws2;->a:I
+    check-cast p1, Lvy5;
 
-    check-cast p1, Landroid/view/View;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lws2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lws2;->b:Luu2;
+    move-result-object p1
 
-    iget-object p1, p1, Luu2;->b1:Lde5;
+    check-cast p1, Lws2;
 
-    new-instance v0, Lgt2;
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v6, 0x0
+    invoke-virtual {p1, p2}, Lws2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x6
+    return-object p2
+.end method
 
-    iget-wide v2, p0, Lws2;->c:J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const-wide/16 v4, 0x0
+    new-instance p1, Lws2;
 
-    invoke-direct/range {v0 .. v6}, Lgt2;-><init>(IJJLjava/lang/String;)V
+    iget-object v0, p0, Lws2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-direct {p1, p2, v0}, Lws2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
     return-object p1
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Lws2;->b:Luu2;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p1, p1, Luu2;->b1:Lde5;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    new-instance v0, Lgt2;
+    iget-object p1, p0, Lws2;->X:Lone/me/chatscreen/ChatScreen;
 
-    const/4 v6, 0x0
+    invoke-static {p1}, Lxei;->a(Ll24;)Ljava/lang/String;
 
-    const/16 v1, 0xe
+    move-result-object p1
 
-    iget-wide v2, p0, Lws2;->c:J
+    sget-object v0, Ltei;->a:Lmxa;
 
-    const-wide/16 v4, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lgt2;-><init>(IJJLjava/lang/String;)V
-
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    sget-object v2, Lc98;->o:Lc98;
+
+    invoke-virtual {v0, v2}, Lmxa;->b(Lc98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "Start subscribing on viewModel.events"
+
+    invoke-virtual {v0, v2, p1, v3, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lws2;->X:Lone/me/chatscreen/ChatScreen;
+
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->k1()Lev2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-class v0, Lev2;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "restore draft"
+
+    invoke-static {v0, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lev2;->v()Lulf;
+
+    move-result-object v0
+
+    check-cast v0, Lqta;
+
+    invoke-virtual {v0}, Lqta;->b()Lk54;
+
+    move-result-object v0
+
+    sget-object v2, Lt54;->b:Lt54;
+
+    new-instance v3, Leu2;
+
+    invoke-direct {v3, p1, v1}, Leu2;-><init>(Lev2;Lkotlin/coroutines/Continuation;)V
+
+    iget-object v1, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v1, v0, v2, v3}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lev2;->U0:Lw0e;
+
+    sget-object v2, Lev2;->e1:[Ltr7;
+
+    const/16 v3, 0xa
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2, v0}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public a(Ljava/util/Map$Entry;)Lab7;
+.method public a(Ljava/util/Map$Entry;)Lxb7;
     .locals 4
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -69,9 +69,9 @@
     invoke-direct {v2, v1, v0, p1, v3}, Lx2;-><init>(Lk2;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     :goto_0
-    new-instance p1, Lab7;
+    new-instance p1, Lxb7;
 
-    invoke-direct {p1, v0, v2}, Lab7;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, v2}, Lxb7;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object p1
 .end method
@@ -85,17 +85,17 @@
 
     iget-object v0, p0, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     iget-object v1, p0, Lp2;->b:Ljava/util/Map;
 
-    iget-object v2, v0, Lq0i;->c:Lze3;
+    iget-object v2, v0, Lr1i;->c:Lmf3;
 
     if-ne v1, v2, :cond_1
 
-    iget-object v0, v0, Lq0i;->c:Lze3;
+    iget-object v0, v0, Lr1i;->c:Lmf3;
 
-    invoke-virtual {v0}, Lze3;->values()Ljava/util/Collection;
+    invoke-virtual {v0}, Lmf3;->values()Ljava/util/Collection;
 
     move-result-object v1
 
@@ -121,7 +121,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lze3;->clear()V
+    invoke-virtual {v0}, Lmf3;->clear()V
 
     goto :goto_2
 
@@ -257,13 +257,13 @@
 
     iget-object v0, p0, Lp2;->c:Ljava/util/AbstractSet;
 
-    check-cast v0, Lnzh;
+    check-cast v0, Lo0i;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lnzh;
+    new-instance v0, Lo0i;
 
-    invoke-direct {v0, p0}, Lnzh;-><init>(Lp2;)V
+    invoke-direct {v0, p0}, Lo0i;-><init>(Lp2;)V
 
     iput-object v0, p0, Lp2;->c:Ljava/util/AbstractSet;
 
@@ -394,7 +394,7 @@
     :cond_0
     iget-object v2, p0, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v2, Lq0i;
+    check-cast v2, Lr1i;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -404,9 +404,9 @@
 
     if-eqz v3, :cond_1
 
-    new-instance v3, Lwzh;
+    new-instance v3, Lx0i;
 
-    invoke-direct {v3, v2, p1, v0, v1}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v3, v2, p1, v0, v1}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     :goto_1
     move-object v1, v3
@@ -416,7 +416,7 @@
     :cond_1
     new-instance v3, Lx2;
 
-    invoke-direct {v3, v2, p1, v0, v1}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v3, v2, p1, v0, v1}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     goto :goto_1
 
@@ -527,9 +527,9 @@
 
     iget-object v0, p0, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
-    invoke-virtual {v0}, Lp0i;->b()Ljava/util/Set;
+    invoke-virtual {v0}, Lq1i;->b()Ljava/util/Set;
 
     move-result-object v0
 
@@ -570,7 +570,7 @@
 
     iget-object v0, p0, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     iget-object v1, p0, Lp2;->b:Ljava/util/Map;
 

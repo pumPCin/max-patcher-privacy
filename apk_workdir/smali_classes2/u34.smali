@@ -1,201 +1,60 @@
-.class public final Lu34;
+.class public final synthetic Lu34;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltr3;
 
-# static fields
-.field public static final a:Lhu7;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;I)V
+    .locals 0
 
-    new-instance v0, Lhu7;
+    iput p2, p0, Lu34;->a:I
 
-    const/16 v1, 0x8
+    iput-object p1, p0, Lu34;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
 
-    invoke-direct {v0, v1}, Lhu7;-><init>(I)V
-
-    sput-object v0, Lu34;->a:Lhu7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Lkt;)V
-    .locals 4
 
-    new-instance v0, Ljava/util/ArrayList;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iget v0, p0, Lu34;->a:I
 
-    invoke-virtual {p0}, Lkt;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lu34;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
 
-    :cond_0
-    :goto_0
-    move-object v1, p0
+    check-cast p1, Ljava/lang/Throwable;
 
-    check-cast v1, Lf2;
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->e(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v1}, Lf2;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ln47;
-
-    const-string v3, "Set-Cookie"
-
-    iget-object v2, v2, Ln47;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {p0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ln47;
-
-    iget-object v2, v2, Ln47;->b:Ljava/lang/String;
-
-    :try_start_0
-    invoke-static {v2}, Ljava/net/HttpCookie;->parse(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    sget-object v2, Ls95;->a:Ls95;
-
-    :goto_2
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p0}, Lcb3;->m(Ljava/util/Collection;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-static {p0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/net/HttpCookie;
-
-    invoke-virtual {v1}, Ljava/net/HttpCookie;->toString()Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/net/HttpCookie;
-
-    const-string v2, "vdt"
-
-    invoke-virtual {v1}, Ljava/net/HttpCookie;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    goto :goto_4
-
-    :cond_5
-    const/4 v0, 0x0
-
-    :goto_4
-    check-cast v0, Ljava/net/HttpCookie;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Ljava/net/HttpCookie;->getName()Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/net/HttpCookie;->getValue()Ljava/lang/String;
-
-    :cond_6
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu34;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->q(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

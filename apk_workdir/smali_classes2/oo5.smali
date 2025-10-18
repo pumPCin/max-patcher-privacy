@@ -1,226 +1,118 @@
-.class public final Loo5;
+.class public final synthetic Loo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lha8;
+.implements Lxef;
 
 
 # instance fields
-.field public final X:Lfi;
+.field public final synthetic a:I
 
-.field public final a:Lyed;
+.field public final synthetic b:J
 
-.field public final b:Lei;
-
-.field public final c:Lfi;
-
-.field public final o:Lfi;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+    .locals 0
+
+    iput p4, p0, Loo5;->a:I
+
+    iput-object p1, p0, Loo5;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Loo5;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loo5;->a:Lyed;
-
-    new-instance v0, Lei;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Loo5;->b:Lei;
-
-    new-instance v0, Lfi;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Loo5;->c:Lfi;
-
-    new-instance v0, Lfi;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Loo5;->o:Lfi;
-
-    new-instance v0, Lfi;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Loo5;->X:Lfi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 9
 
-    new-instance v0, Llo5;
+    iget v0, p0, Loo5;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1}, Llo5;-><init>(Loo5;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Loo5;->c:Ljava/lang/Object;
 
-    invoke-static {v0}, Lrji;->g(Lei6;)Ljava/lang/Object;
+    check-cast v0, Lvo5;
 
-    return-void
-.end method
+    new-instance v1, Lnre;
 
-.method public final w(Ljava/util/List;Lkfa;)Ljava/lang/Object;
-    .locals 6
+    invoke-direct {v1}, Lnre;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v2, v0, Lvo5;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/16 v1, 0xa
+    iget-object v0, v0, Lvo5;->a:Lll;
 
-    invoke-static {p1, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
+    check-cast v0, Lmna;
 
-    move-result v1
+    new-instance v3, Llu;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwfa;
-
-    iget-wide v2, v1, Lwfa;->a:J
-
-    iget-wide v4, v1, Lwfa;->b:J
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, "_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "SELECT * FROM fcm_notifications_analytics WHERE chat_id||\'_\'||msg_id IN ("
-
-    invoke-static {p1}, Lwx1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-static {v1, p1}, Lz0j;->a(ILjava/lang/StringBuilder;)V
-
-    const-string v2, ") AND analytics_status = ("
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "?"
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    add-int/2addr v1, v2
-
-    invoke-static {v1, p1}, Lpfd;->c(ILjava/lang/String;)Lpfd;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    move v3, v2
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Lmna;->x()Lpxb;
 
     move-result-object v4
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v4, Lrxb;
 
-    if-nez v4, :cond_1
+    iget-object v4, v4, Lrxb;->a:Ld78;
 
-    invoke-virtual {p1, v3}, Lpfd;->S(I)V
+    invoke-virtual {v4}, Lntd;->k()J
 
-    goto :goto_2
+    move-result-wide v5
 
-    :cond_1
-    invoke-virtual {p1, v3, v4}, Lpfd;->f(ILjava/lang/String;)V
+    const/4 v4, 0x4
 
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
+    iget-wide v7, p0, Loo5;->b:J
 
-    goto :goto_1
+    invoke-direct/range {v3 .. v8}, Llu;-><init>(IJJ)V
 
-    :cond_2
-    int-to-long v2, v2
+    invoke-virtual {v0}, Lmna;->y()Lunf;
 
-    invoke-virtual {p1, v1, v2, v3}, Lpfd;->k(IJ)V
+    move-result-object v0
 
-    new-instance v0, Landroid/os/CancellationSignal;
+    const/16 v4, 0xc
 
-    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
+    const/4 v5, 0x0
 
-    new-instance v1, Lgi;
+    invoke-static {v0, v3, v5, v4}, Lunf;->d(Lunf;Lym;ZI)J
 
-    const/16 v2, 0xe
+    move-result-wide v3
 
-    invoke-direct {v1, p0, v2, p1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object p1, p0, Loo5;->a:Lyed;
+    move-result-object v0
 
-    invoke-static {p1, v0, v1, p2}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    return-object v1
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Loo5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lso5;
+
+    new-instance v1, Lno5;
+
+    const/4 v2, 0x0
+
+    iget-wide v3, p0, Loo5;->b:J
+
+    invoke-direct {v1, v0, v3, v4, v2}, Lno5;-><init>(Ljava/lang/Object;JI)V
+
+    invoke-virtual {v0, v1}, Lso5;->a(Ljava/util/concurrent/Callable;)Lnre;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,136 +1,151 @@
 .class public final Ls92;
-.super Ljava/lang/Object;
+.super Lf87;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Llq7;
 
 
 # instance fields
-.field public final a:I
+.field public final b:Ljava/lang/String;
 
-.field public final b:I
+.field public final c:Z
 
-.field public c:Z
+.field public final d:Z
 
-.field public o:I
+.field public final e:[Ljava/lang/String;
+
+.field public final f:[Lf87;
 
 
 # direct methods
-.method public constructor <init>(CCI)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;ZZ[Ljava/lang/String;[Lf87;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "CTOC"
 
-    iput p3, p0, Ls92;->a:I
+    invoke-direct {p0, v0}, Lf87;-><init>(Ljava/lang/String;)V
 
-    iput p2, p0, Ls92;->b:I
+    iput-object p1, p0, Ls92;->b:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iput-boolean p2, p0, Ls92;->c:Z
 
-    const/4 v1, 0x1
+    iput-boolean p3, p0, Ls92;->d:Z
 
-    if-lez p3, :cond_0
+    iput-object p4, p0, Ls92;->e:[Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lc0i;->b(II)I
-
-    move-result p3
-
-    if-gtz p3, :cond_1
-
-    :goto_0
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {p1, p2}, Lc0i;->b(II)I
-
-    move-result p3
-
-    if-ltz p3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iput-boolean v0, p0, Ls92;->c:Z
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move p1, p2
-
-    :goto_2
-    iput p1, p0, Ls92;->o:I
+    iput-object p5, p0, Ls92;->f:[Lf87;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-boolean v0, p0, Ls92;->c:Z
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
 
     return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Ls92;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ls92;
+
+    iget-boolean v2, p0, Ls92;->c:Z
+
+    iget-boolean v3, p1, Ls92;->c:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Ls92;->d:Z
+
+    iget-boolean v3, p1, Ls92;->d:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Ls92;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Ls92;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Ls92;->e:[Ljava/lang/String;
+
+    iget-object v3, p1, Ls92;->e:[Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Ls92;->f:[Lf87;
+
+    iget-object p1, p1, Ls92;->f:[Lf87;
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Ls92;->o:I
-
-    iget v1, p0, Ls92;->b:I
-
-    if-ne v0, v1, :cond_1
+    const/16 v0, 0x20f
 
     iget-boolean v1, p0, Ls92;->c:Z
 
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Ls92;->d:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ls92;->b:Ljava/lang/String;
+
     if-eqz v1, :cond_0
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    iput-boolean v1, p0, Ls92;->c:Z
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget v1, p0, Ls92;->a:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Ls92;->o:I
+    const/4 v1, 0x0
 
     :goto_0
-    int-to-char v0, v0
+    add-int/2addr v0, v1
 
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method

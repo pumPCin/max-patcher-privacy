@@ -1,49 +1,61 @@
-.class public abstract Lra7;
-.super Llb7;
+.class public final synthetic Lra7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lid6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsa7;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lsa7;Lsa7;I)V
+    .locals 0
+
+    iput p3, p0, Lra7;->a:I
+
+    iput-object p2, p0, Lra7;->b:Lsa7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d()Lya7;
-    .locals 2
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "should never be called"
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-.end method
-
-.method public final h()Lya7;
+.method public final a(Ljd6;)V
     .locals 1
 
-    move-object v0, p0
+    iget p1, p0, Lra7;->a:I
 
-    check-cast v0, Lr7d;
+    iget-object v0, p0, Lra7;->b:Lsa7;
 
-    iget-object v0, v0, Lr7d;->r0:Lr7d;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0}, Llb7;->g()Lsb7;
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final values()Ljava/util/Collection;
-    .locals 1
+    :pswitch_0
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    move-object v0, p0
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lr7d;
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
-    iget-object v0, v0, Lr7d;->r0:Lr7d;
+    :cond_0
+    return-void
 
-    invoke-virtual {v0}, Llb7;->g()Lsb7;
+    nop
 
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

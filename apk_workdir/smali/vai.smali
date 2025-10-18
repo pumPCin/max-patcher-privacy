@@ -2,69 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
+# instance fields
+.field public final a:Lqai;
 
-# static fields
-.field public static final a:Lvai;
+.field public final b:Ljava/lang/Integer;
+
+.field public final c:Lvvi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lm75;)V
+    .locals 1
 
-    new-instance v0, Lvai;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lm75;->a:Ljava/lang/Object;
 
-    sput-object v0, Lvai;->a:Lvai;
+    check-cast v0, Lqai;
 
-    new-instance v0, Lsvh;
+    iput-object v0, p0, Lvai;->a:Lqai;
 
-    const/4 v1, 0x1
+    iget-object v0, p1, Lm75;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
+    check-cast v0, Ljava/lang/Integer;
 
-    const-class v1, Llwh;
+    iput-object v0, p0, Lvai;->b:Ljava/lang/Integer;
 
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
+    iget-object p1, p1, Lm75;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Lvvi;
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lvai;->c:Lvvi;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

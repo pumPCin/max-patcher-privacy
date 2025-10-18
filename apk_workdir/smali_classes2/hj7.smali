@@ -1,113 +1,47 @@
-.class public abstract Lhj7;
+.class public final Lhj7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lqid;
+
+
 # direct methods
-.method public static a([B)Lij7;
-    .locals 11
+.method public constructor <init>(Lqid;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;-><init>()V
+    iput-object p1, p0, Lhj7;->a:Lqid;
 
-    :try_start_0
-    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
+    return-void
+.end method
 
-    move-result-object p0
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final a(Ltid;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lpnf;
+    invoke-virtual {p1, p2}, Ltid;->d(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance p2, Ll27;
 
-    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->fileDownload:Lru/ok/tamtam/nano/Tasks$FileDownload;
+    const/4 v0, 0x0
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->messageId:J
+    invoke-direct {p2, v0}, Ll27;-><init>(I)V
 
-    iput-wide v2, v0, Lpnf;->a:J
+    invoke-virtual {p1, p2}, Ltid;->c(Lq24;)V
 
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->attachId:Ljava/lang/String;
+    new-instance p2, Ll27;
 
-    iput-object v2, v0, Lpnf;->b:Ljava/lang/String;
+    invoke-direct {p2, v0}, Ll27;-><init>(I)V
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->videoId:J
+    invoke-virtual {p1, p2}, Ltid;->a(Lq24;)V
 
-    iput-wide v2, v0, Lpnf;->c:J
+    iget-object p2, p0, Lhj7;->a:Lqid;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->audioId:J
+    invoke-virtual {p2, p1}, Lqid;->G(Ltid;)V
 
-    iput-wide v2, v0, Lpnf;->d:J
-
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->mp4GifId:J
-
-    iput-wide v2, v0, Lpnf;->e:J
-
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->stickerId:J
-
-    iput-wide v2, v0, Lpnf;->f:J
-
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileId:J
-
-    iput-wide v2, v0, Lpnf;->j:J
-
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileName:Ljava/lang/String;
-
-    iput-object v2, v0, Lpnf;->k:Ljava/lang/String;
-
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->url:Ljava/lang/String;
-
-    iput-object v2, v0, Lpnf;->g:Ljava/lang/String;
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notifyProgress:Z
-
-    iput-boolean v2, v0, Lpnf;->h:Z
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->checkAutoloadConnection:Z
-
-    iput-boolean v2, v0, Lpnf;->i:Z
-
-    iget v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->invalidateCount:I
-
-    iput v2, v0, Lpnf;->l:I
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->useOriginalExtension:Z
-
-    iput-boolean v2, v0, Lpnf;->m:Z
-
-    iget-boolean v1, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notCopyVideoToGallery:Z
-
-    iput-boolean v1, v0, Lpnf;->n:Z
-
-    new-instance v10, Lqnf;
-
-    invoke-direct {v10, v0}, Lqnf;-><init>(Lpnf;)V
-
-    new-instance v2, Lij7;
-
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->requestId:J
-
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->outputPath:Ljava/lang/String;
-
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->chatServerId:J
-
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->serverMessageId:J
-
-    invoke-direct/range {v2 .. v10}, Lij7;-><init>(JLjava/lang/String;JJLqnf;)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method

@@ -1,61 +1,45 @@
-.class public final Lgza;
-.super Liza;
+.class public final synthetic Lgza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/InputFilter;
 
-# static fields
-.field public static final a:Lgza;
+
+# instance fields
+.field public final synthetic a:Ljza;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljza;)V
+    .locals 0
 
-    new-instance v0, Lgza;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lgza;->a:Lgza;
+    iput-object p1, p0, Lgza;->a:Ljza;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-object p2, p0, Lgza;->a:Ljza;
 
-    if-ne p0, p1, :cond_0
+    iget-object p2, p2, Ljza;->o:Lc8d;
 
-    return v0
+    invoke-virtual {p2, p1}, Lc8d;->a(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    instance-of p1, p1, Lgza;
+    const-string p1, ""
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xb05fa03
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Small"
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,218 +1,123 @@
-.class public final enum Lg6h;
-.super Ljava/lang/Enum;
+.class public final Lg6h;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lkbh;
-
-
-# static fields
-.field public static final enum X:Lg6h;
-
-.field public static final enum Y:Lg6h;
-
-.field public static final enum Z:Lg6h;
-
-.field public static final enum o:Lg6h;
-
-.field public static final enum r0:Lg6h;
-
-.field public static final synthetic s0:[Lg6h;
-
-.field public static final synthetic t0:Lfd5;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/Integer;
+.field public final synthetic Y:Lq6h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Lg6h;
-
-    const/16 v1, 0x12
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "GET_INFO"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppBiometryGetInfo"
-
-    const-string v4, "biometry_get_info"
-
-    invoke-direct/range {v0 .. v5}, Lg6h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Lg6h;->o:Lg6h;
-
-    new-instance v1, Lg6h;
-
-    const/16 v2, 0x9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "REQUEST_ACCESS"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppBiometryRequestAccess"
-
-    const-string v5, "biometry_request_access"
-
-    invoke-direct/range {v1 .. v6}, Lg6h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lg6h;->X:Lg6h;
-
-    new-instance v2, Lg6h;
-
-    const/16 v3, 0xa
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "UPDATE_TOKEN"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppBiometryUpdateToken"
-
-    const-string v6, "biometry_update_token"
-
-    invoke-direct/range {v2 .. v7}, Lg6h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Lg6h;->Y:Lg6h;
-
-    new-instance v3, Lg6h;
-
-    const/16 v4, 0xb
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v4, "REQUEST_AUTH"
-
-    const/4 v5, 0x3
-
-    const-string v6, "WebAppBiometryRequestAuth"
-
-    const-string v7, "biometry_request_auth"
-
-    invoke-direct/range {v3 .. v8}, Lg6h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v3, Lg6h;->Z:Lg6h;
-
-    new-instance v4, Lg6h;
-
-    const/16 v5, 0xd
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v5, "OPEN_SETTINGS"
-
-    const/4 v6, 0x4
-
-    const-string v7, "WebAppBiometryOpenSettings"
-
-    const-string v8, "biometry_open_settings"
-
-    invoke-direct/range {v4 .. v9}, Lg6h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v4, Lg6h;->r0:Lg6h;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lg6h;
-
-    move-result-object v0
-
-    sput-object v0, Lg6h;->s0:[Lg6h;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lg6h;->t0:Lfd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(Lq6h;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lg6h;->Y:Lq6h;
 
-    iput-object p3, p0, Lg6h;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lg6h;->b:Ljava/lang/String;
-
-    iput-object p5, p0, Lg6h;->c:Ljava/lang/Integer;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lg6h;
-    .locals 1
-
-    const-class v0, Lg6h;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lg6h;
-
-    return-object p0
-.end method
-
-.method public static values()[Lg6h;
-    .locals 1
-
-    sget-object v0, Lg6h;->s0:[Lg6h;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lg6h;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lg6h;->c:Ljava/lang/Integer;
+    check-cast p1, Lq54;
 
-    return-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lg6h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lg6h;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lg6h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lg6h;->a:Ljava/lang/String;
+    new-instance p1, Lg6h;
 
-    return-object v0
+    iget-object v0, p0, Lg6h;->Y:Lq6h;
+
+    invoke-direct {p1, v0, p2}, Lg6h;-><init>(Lq6h;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lg6h;->b:Ljava/lang/String;
+    iget v0, p0, Lg6h;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg6h;->Y:Lq6h;
+
+    iget-object v0, p1, Lq6h;->h:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Ln5h;
+
+    iget-wide v3, p1, Lq6h;->a:J
+
+    iget-wide v5, p1, Lq6h;->b:J
+
+    iput v1, p0, Lg6h;->X:I
+
+    move-object v7, p0
+
+    invoke-virtual/range {v2 .. v7}, Ln5h;->a(JJLsgf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

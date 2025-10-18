@@ -1,26 +1,26 @@
 .class public final Lbnb;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final synthetic Y:Lone/me/startconversation/channel/PickSubscribersScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+.method public constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lbnb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iput-object p1, p0, Lbnb;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Lkmb;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +40,7 @@
 
     check-cast p1, Lbnb;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lbnb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,9 +52,9 @@
 
     new-instance v0, Lbnb;
 
-    iget-object v1, p0, Lbnb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iget-object v1, p0, Lbnb;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    invoke-direct {v0, p2, v1}, Lbnb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+    invoke-direct {v0, v1, p2}, Lbnb;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lbnb;->X:Ljava/lang/Object;
 
@@ -62,132 +62,98 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 4
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lbnb;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Lkmb;
 
-    iget-object v0, p0, Lbnb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    instance-of v0, p1, Ljmb;
 
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->x0:Lbmb;
+    const/4 v1, 0x0
 
-    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->w0:Lbmb;
+    iget-object v2, p0, Lbnb;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    iget-object v3, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->v0:Laj3;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v3}, Laj3;->C()Ljava/util/List;
+    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->y0:[Ltr7;
 
-    move-result-object v4
+    invoke-virtual {v2}, Lone/me/startconversation/channel/PickSubscribersScreen;->O0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const/4 v5, 0x0
+    move-result-object v0
 
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    move-result-object v4
+    sget-object v0, Laze;->c:Laze;
 
-    check-cast v4, Lm5d;
+    new-instance v3, Lanb;
 
-    invoke-static {p1}, Ls9f;->E(Ljava/lang/CharSequence;)Z
+    invoke-direct {v3, v2, p1, v1}, Lanb;-><init>(Lone/me/sdk/arch/Widget;Ljava/lang/Object;I)V
+
+    invoke-virtual {v0, v3}, Laze;->U0(Lli6;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Limb;->a:Limb;
+
+    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {v4, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->y0:[Ltr7;
 
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    iget-object p1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->r0:Loxf;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v4}, Lsl7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    :cond_0
-    invoke-virtual {v3, v1}, Laj3;->E(Lm5d;)V
-
-    iget-object p1, v3, Laj3;->o:Lbj3;
-
-    invoke-virtual {p1, v5, v2}, Lbj3;->a(ILm5d;)Z
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v2}, Lone/me/startconversation/channel/PickSubscribersScreen;->O0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object p1
 
-    invoke-static {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0(Lone/me/chats/picker/chats/PickerChatsListWidget;)Z
+    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    move-result v1
+    sget-object p1, Laze;->c:Laze;
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+    new-instance v0, Lwmb;
 
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v2, v1}, Lwmb;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
 
-    invoke-static {p1}, Lewi;->b(Landroidx/recyclerview/widget/RecyclerView;)Loxf;
+    invoke-virtual {p1, v0}, Laze;->U0(Lli6;)V
 
-    move-result-object p1
+    new-instance p1, Lc3b;
 
-    iput-object p1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->r0:Loxf;
+    invoke-direct {p1, v2}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    goto :goto_0
+    sget v0, Ll4b;->a:I
 
-    :cond_1
-    invoke-static {v4, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, Lorf;
 
-    move-result p1
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
 
-    if-nez p1, :cond_3
+    invoke-virtual {p1, v1}, Lc3b;->g(Ltrf;)V
 
-    iget-object p1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->r0:Loxf;
+    new-instance v0, Lq3b;
 
-    if-eqz p1, :cond_2
+    sget v1, Lpjd;->t1:I
 
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
 
-    move-result-object v4
+    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
 
-    invoke-virtual {p1, v4}, Lsl7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
 
-    :cond_2
-    invoke-virtual {v3, v2}, Laj3;->E(Lm5d;)V
-
-    iget-object p1, v3, Laj3;->o:Lbj3;
-
-    invoke-virtual {p1, v5, v1}, Lbj3;->a(ILm5d;)Z
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-static {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0(Lone/me/chats/picker/chats/PickerChatsListWidget;)Z
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lewi;->b(Landroidx/recyclerview/widget/RecyclerView;)Loxf;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->r0:Loxf;
-
-    :cond_3
     :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

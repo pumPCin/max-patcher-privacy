@@ -1,135 +1,315 @@
 .class public final Lry;
-.super Ljava/lang/Object;
+.super Landroid/media/MediaCodec$Callback;
 .source "SourceFile"
-
-# interfaces
-.implements Lfdc;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Landroid/os/HandlerThread;
+
+.field public c:Landroid/os/Handler;
+
+.field public final d:Lb73;
+
+.field public final e:Lb73;
+
+.field public final f:Ljava/util/ArrayDeque;
+
+.field public final g:Ljava/util/ArrayDeque;
+
+.field public h:Landroid/media/MediaFormat;
+
+.field public i:Landroid/media/MediaFormat;
+
+.field public j:Landroid/media/MediaCodec$CodecException;
+
+.field public k:Landroid/media/MediaCodec$CryptoException;
+
+.field public l:J
+
+.field public m:Z
+
+.field public n:Ljava/lang/IllegalStateException;
+
+.field public o:Lrs6;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Landroid/os/HandlerThread;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
 
-    iput p1, p0, Lry;->a:I
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lry;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lry;->b:Landroid/os/HandlerThread;
+
+    new-instance p1, Lb73;
+
+    invoke-direct {p1}, Lb73;-><init>()V
+
+    iput-object p1, p0, Lry;->d:Lb73;
+
+    new-instance p1, Lb73;
+
+    invoke-direct {p1}, Lb73;-><init>()V
+
+    iput-object p1, p0, Lry;->e:Lb73;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lry;->f:Ljava/util/ArrayDeque;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lry;->g:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final annotationType()Ljava/lang/Class;
-    .locals 1
-
-    const-class v0, Lfdc;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lfdc;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lfdc;
-
-    check-cast p1, Lry;
-
-    iget v0, p1, Lry;->a:I
-
-    iget v1, p0, Lry;->a:I
-
-    if-ne v1, v0, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Ledc;->a:Ledc;
-
-    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final a()V
     .locals 3
 
-    const v0, 0xde0d66
+    iget-object v0, p0, Lry;->g:Ljava/util/ArrayDeque;
 
-    iget v1, p0, Lry;->a:I
-
-    xor-int/2addr v0, v1
-
-    sget-object v1, Ledc;->a:Ledc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
-    const v2, 0x79ad669e
+    if-nez v1, :cond_0
 
-    xor-int/2addr v1, v2
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->getLast()Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    move-result-object v1
 
-    return v0
+    check-cast v1, Landroid/media/MediaFormat;
+
+    iput-object v1, p0, Lry;->i:Landroid/media/MediaFormat;
+
+    :cond_0
+    iget-object v1, p0, Lry;->d:Lb73;
+
+    iget v2, v1, Lb73;->a:I
+
+    iput v2, v1, Lb73;->b:I
+
+    iget-object v1, p0, Lry;->e:Lb73;
+
+    iget v2, v1, Lb73;->a:I
+
+    iput v2, v1, Lb73;->b:I
+
+    iget-object v1, p0, Lry;->f:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->clear()V
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onCryptoError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CryptoException;)V
+    .locals 0
+
+    iget-object p1, p0, Lry;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iput-object p2, p0, Lry;->k:Landroid/media/MediaCodec$CryptoException;
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
+    .locals 0
+
+    iget-object p1, p0, Lry;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iput-object p2, p0, Lry;->j:Landroid/media/MediaCodec$CodecException;
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final onInputBufferAvailable(Landroid/media/MediaCodec;I)V
+    .locals 1
+
+    iget-object p1, p0, Lry;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p0, Lry;->d:Lb73;
+
+    invoke-virtual {v0, p2}, Lb73;->a(I)V
+
+    iget-object p2, p0, Lry;->o:Lrs6;
+
+    if-eqz p2, :cond_0
+
+    iget-object p2, p2, Lrs6;->b:Ljava/lang/Object;
+
+    check-cast p2, Lkp8;
+
+    iget-object p2, p2, Lkp8;->Q0:Lbj5;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lbj5;->a()V
+
+    :cond_0
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final onOutputBufferAvailable(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
+    .locals 3
+
+    iget-object p1, p0, Lry;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p0, Lry;->i:Landroid/media/MediaFormat;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lry;->e:Lb73;
+
+    const/4 v2, -0x2
+
+    invoke-virtual {v1, v2}, Lb73;->a(I)V
+
+    iget-object v1, p0, Lry;->g:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lry;->i:Landroid/media/MediaFormat;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lry;->e:Lb73;
+
+    invoke-virtual {v0, p2}, Lb73;->a(I)V
+
+    iget-object p2, p0, Lry;->f:Ljava/util/ArrayDeque;
+
+    invoke-virtual {p2, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object p2, p0, Lry;->o:Lrs6;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p2, Lrs6;->b:Ljava/lang/Object;
+
+    check-cast p2, Lkp8;
+
+    iget-object p2, p2, Lkp8;->Q0:Lbj5;
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Lbj5;->a()V
+
+    :cond_1
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lry;->a:Ljava/lang/Object;
 
-    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
+    monitor-enter p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lry;->e:Lb73;
 
-    iget v1, p0, Lry;->a:I
+    const/4 v1, -0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lb73;->a(I)V
 
-    const-string v1, "intEncoding="
+    iget-object v0, p0, Lry;->g:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    sget-object v1, Ledc;->a:Ledc;
+    const/4 p2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object p2, p0, Lry;->i:Landroid/media/MediaFormat;
 
-    const/16 v1, 0x29
+    monitor-exit p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catchall_0
+    move-exception p2
 
-    move-result-object v0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v0
+    throw p2
 .end method

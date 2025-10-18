@@ -1,39 +1,59 @@
 .class public final Lxbd;
-.super Ljava/lang/Object;
+.super Ld1i;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/res/ColorStateList;
+.field public final synthetic b:[B
 
-.field public final b:Landroid/content/res/Configuration;
+.field public final synthetic c:Lq39;
 
-.field public final c:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
+.method public constructor <init>([BLq39;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxbd;->a:Landroid/content/res/ColorStateList;
+    iput-object p1, p0, Lxbd;->b:[B
 
-    iput-object p2, p0, Lxbd;->b:Landroid/content/res/Configuration;
+    iput-object p2, p0, Lxbd;->c:Lq39;
 
-    if-nez p3, :cond_0
+    iput p3, p0, Lxbd;->d:I
 
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    goto :goto_0
 
-    :cond_0
-    invoke-virtual {p3}, Landroid/content/res/Resources$Theme;->hashCode()I
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    move-result p1
+    iget v0, p0, Lxbd;->d:I
 
-    :goto_0
-    iput p1, p0, Lxbd;->c:I
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final b()Lq39;
+    .locals 1
+
+    iget-object v0, p0, Lxbd;->c:Lq39;
+
+    return-object v0
+.end method
+
+.method public final e(Lrv0;)V
+    .locals 2
+
+    iget-object v0, p0, Lxbd;->b:[B
+
+    iget v1, p0, Lxbd;->d:I
+
+    invoke-interface {p1, v1, v0}, Lrv0;->E(I[B)Lrv0;
 
     return-void
 .end method

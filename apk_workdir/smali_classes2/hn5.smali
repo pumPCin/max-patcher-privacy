@@ -1,190 +1,182 @@
-.class public final synthetic Lhn5;
-.super Ljava/lang/Object;
+.class public final Lhn5;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
-.implements Lfi6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Landroid/net/Uri$Builder;
 
-.field public final synthetic b:Lnn5;
+.field public Y:I
+
+.field public final synthetic Z:Lone/me/webview/FaqWebViewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnn5;I)V
+.method public constructor <init>(Lone/me/webview/FaqWebViewWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lhn5;->a:I
+    iput-object p1, p0, Lhn5;->Z:Lone/me/webview/FaqWebViewWidget;
 
-    iput-object p1, p0, Lhn5;->b:Lnn5;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lhn5;->a:I
+    check-cast p1, Lq54;
 
-    const-string v1, "nn5"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lhn5;->b:Lnn5;
+    invoke-virtual {p0, p1, p2}, Lhn5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    :pswitch_0
-    check-cast p1, Ltn5;
+    check-cast p1, Lhn5;
 
-    iget-wide v3, p1, Ltn5;->b:J
+    sget-object p2, Lccg;->a:Lccg;
 
-    const-wide/16 v5, 0x0
+    invoke-virtual {p1, p2}, Lhn5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v0, v3, v5
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v3, "loadFromMarker: new marker in response=%d"
-
-    invoke-static {v1, v3, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-wide v0, p1, Ltn5;->b:J
-
-    invoke-virtual {v2, v0, v1}, Lnn5;->x(J)V
-
-    :cond_0
-    return-void
-
-    :pswitch_1
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "on next favorite sticker sets: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, v2, Lnn5;->Z:Lim0;
-
-    invoke-virtual {v0, p1}, Lim0;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "on next favorite ids from obs: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Lnn5;->I(Ljava/util/List;)V
-
-    return-void
-
-    :pswitch_3
-    check-cast p1, Ljava/util/List;
-
-    const-string v0, "onNotifUpdated: updated ids: %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v0, v3}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v2, p1}, Lnn5;->I(Ljava/util/List;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lhn5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lhn5;->b:Lnn5;
-
-    iget-object v0, v0, Lnn5;->a:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsn5;
-
-    invoke-virtual {v0}, Lsn5;->a()Lape;
-
-    move-result-object v0
-
-    new-instance v1, Ltc2;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v1, v2, p1}, Ltc2;-><init>(ILjava/util/List;)V
-
-    new-instance p1, Lkg3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p1, v0, v2, v1}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Luk5;
+    new-instance p1, Lhn5;
+
+    iget-object v0, p0, Lhn5;->Z:Lone/me/webview/FaqWebViewWidget;
+
+    invoke-direct {p1, v0, p2}, Lhn5;-><init>(Lone/me/webview/FaqWebViewWidget;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lhn5;->Y:I
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lhn5;->b:Lnn5;
+    iget-object v2, p0, Lhn5;->Z:Lone/me/webview/FaqWebViewWidget;
 
-    invoke-direct {v0, v2, v1, p1}, Luk5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v0, :cond_1
 
-    new-instance p1, Lmg3;
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {p1, v1, v0}, Lmg3;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lhn5;->X:Landroid/net/Uri$Builder;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    sget p1, Ldkd;->I1:I
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object p1, v2, Lone/me/webview/FaqWebViewWidget;->Y:Lpp4;
+
+    iput-object v0, p0, Lhn5;->X:Landroid/net/Uri$Builder;
+
+    iput v1, p0, Lhn5;->Y:I
+
+    invoke-virtual {p1, p0}, Llo7;->awaitInternal(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lr54;->a:Lr54;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const-string v1, "source"
+
+    if-eqz p1, :cond_3
+
+    const-string p1, "settings"
+
+    invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    goto :goto_1
+
+    :cond_3
+    const-string p1, "reg"
+
+    invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, v2, Lone/me/webview/FaqWebViewWidget;->a:Lh0d;
+
+    sget-object v1, Lone/me/webview/FaqWebViewWidget;->q0:[Ltr7;
+
+    const/4 v3, 0x0
+
+    aget-object v1, v1, v3
+
+    invoke-interface {v0, v2, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz6b;
+
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method

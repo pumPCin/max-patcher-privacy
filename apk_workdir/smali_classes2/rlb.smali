@@ -1,129 +1,202 @@
-.class public final synthetic Lrlb;
+.class public final Lrlb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Ltlb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:D
 
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final b:D
+
+.field public final c:Ljava/lang/Float;
+
+.field public final d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+.method public constructor <init>(DDLjava/lang/Float;Z)V
     .locals 0
 
-    iput p2, p0, Lrlb;->a:I
-
-    iput-object p1, p0, Lrlb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lrlb;->a:D
+
+    iput-wide p3, p0, Lrlb;->b:D
+
+    iput-object p5, p0, Lrlb;->c:Ljava/lang/Float;
+
+    iput-boolean p6, p0, Lrlb;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lrlb;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lrlb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v0, p1, Lrlb;
 
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lwq7;
+    if-nez v0, :cond_1
 
-    sget v0, Lxr7;->a:I
+    goto :goto_0
 
-    sget v0, Lxr7;->c:I
+    :cond_1
+    check-cast p1, Lrlb;
 
-    invoke-static {v0}, Lxr7;->b(I)Z
+    iget-wide v0, p0, Lrlb;->a:D
+
+    iget-wide v2, p1, Lrlb;->a:D
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
-    invoke-static {v1}, Lbbi;->b(Lx14;)V
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lrlb;->b:D
+
+    iget-wide v2, p1, Lrlb;->b:D
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lrlb;->c:Ljava/lang/Float;
+
+    iget-object v1, p1, Lrlb;->c:Ljava/lang/Float;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-boolean v0, p0, Lrlb;->d:Z
+
+    iget-boolean p1, p1, Lrlb;->d:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lrlb;->a:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lrlb;->b:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lrlb;->c:Ljava/lang/Float;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lrlb;->d:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MoveCamera(lat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lrlb;->a:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lrlb;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrlb;->c:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", animate="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lrlb;->d:Z
+
+    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lwq7;
-
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v1, Li3b;->l:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Lhpa;->c:Lhpa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lhpa;)V
-
-    sget-object v1, Lepa;->o:Lepa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lepa;)V
-
-    sget-object v1, Lgpa;->a:Lgpa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lgpa;)V
-
-    sget v1, Ljra;->N:I
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0xc
-
-    int-to-float v2, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2, v2, v2, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

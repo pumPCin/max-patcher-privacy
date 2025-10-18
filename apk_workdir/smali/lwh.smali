@@ -1,14 +1,23 @@
-.class public interface abstract annotation Llwh;
+.class public abstract Llwh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
+
+# static fields
+.field public static final a:Low4;
 
 
-# annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Llwh;
-        zzb = .enum Liwh;->a:Liwh;
-    .end subannotation
-.end annotation
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Low4;
+
+    const-string v1, "PhoneskyVerificationUtils"
+
+    invoke-direct {v0, v1}, Low4;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Llwh;->a:Low4;
+
+    return-void
+.end method

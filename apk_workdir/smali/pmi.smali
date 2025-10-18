@@ -1,50 +1,60 @@
-.class public abstract Lpmi;
+.class public final Lpmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lpmi;
+
 
 # direct methods
-.method public static a(Llzc;Lk14;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lg32;
+    new-instance v0, Lpmi;
 
-    invoke-static {p1}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Lpmi;->a:Lpmi;
+
+    new-instance v0, Lr8i;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lg32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    invoke-virtual {v0}, Lg32;->o()V
+    const-class v1, Lm9i;
 
-    new-instance p1, Lfwb;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    const/16 v1, 0x16
+    move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
-    invoke-direct {p1, v0, v1, v2}, Lfwb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    invoke-virtual {p0, p1}, Llzc;->e(Ltt1;)V
+    move-result-object v0
 
-    new-instance p1, Lyka;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {p1, p0, v1}, Lyka;-><init>(Llzc;I)V
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
-    invoke-virtual {v0, p1}, Lg32;->e(Lqh6;)V
-
-    invoke-virtual {v0}, Lg32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract b(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

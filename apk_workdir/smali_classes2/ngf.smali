@@ -1,72 +1,53 @@
 .class public final Lngf;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llt7;
+.field public X:J
 
-.field public final b:Llt7;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Llt7;
+.field public final synthetic Z:Logf;
 
-.field public final d:Llt7;
+.field public o:Logf;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Logf;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lngf;->Z:Logf;
 
-    iput-object p1, p0, Lngf;->a:Llt7;
-
-    iput-object p4, p0, Lngf;->b:Llt7;
-
-    iput-object p2, p0, Lngf;->c:Llt7;
-
-    iput-object p3, p0, Lngf;->d:Llt7;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Lngf;Lqe9;)Ltdg;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance p0, Lqo4;
+    iput-object p1, p0, Lngf;->Y:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget p1, p0, Lngf;->q0:I
 
-    iget-object v0, p1, Lqe9;->f:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Lngf;->q0:I
 
-    if-nez v1, :cond_0
+    iget-object p1, p0, Lngf;->Z:Logf;
 
-    iget-object v0, p1, Lqe9;->a:Lad9;
+    const-wide/16 v0, 0x0
 
-    iget-object v0, v0, Lad9;->c:Ljava/lang/String;
+    invoke-virtual {p1, v0, v1, p0}, Logf;->a(JLy14;)Ljava/lang/Object;
 
-    :cond_0
-    iput-object v0, p0, Lqo4;->d:Ljava/lang/Object;
-
-    iget-object v0, p1, Lqe9;->b:Ljava/lang/String;
-
-    iput-object v0, p0, Lqo4;->c:Ljava/lang/Object;
-
-    iget v0, p1, Lqe9;->d:I
-
-    iput v0, p0, Lqo4;->a:I
-
-    iget-wide v0, p1, Lqe9;->c:J
-
-    iput-wide v0, p0, Lqo4;->b:J
-
-    new-instance p1, Ltdg;
-
-    invoke-direct {p1, p0}, Ltdg;-><init>(Lqo4;)V
+    move-result-object p1
 
     return-object p1
 .end method

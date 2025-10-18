@@ -6,7 +6,7 @@
 # instance fields
 .field public volatile a:J
 
-.field public volatile b:Lvt1;
+.field public volatile b:Ldu1;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lov;->b:Lvt1;
+    iput-object v0, p0, Lov;->b:Ldu1;
 
     return-void
 .end method
@@ -36,13 +36,13 @@
     :try_start_0
     invoke-virtual {p0}, Lov;->b()V
 
-    iget-object v0, p0, Lov;->b:Lvt1;
+    iget-object v0, p0, Lov;->b:Ldu1;
 
-    invoke-static {v0}, Lkjd;->b(Lev4;)V
+    invoke-static {v0}, Lrkd;->b(Lvv4;)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lov;->b:Lvt1;
+    iput-object v0, p0, Lov;->b:Ldu1;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lov;->b:Lvt1;
+    iget-object v1, p0, Lov;->b:Ldu1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

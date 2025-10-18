@@ -1,32 +1,51 @@
-.class public final synthetic Lkn2;
-.super Ljava/lang/Object;
+.class public final Lkn2;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/LongUnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lpo2;
+
+.field public Z:I
+
+.field public o:Lpo2;
 
 
 # direct methods
-.method public synthetic constructor <init>(J)V
+.method public constructor <init>(Lpo2;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkn2;->Y:Lpo2;
 
-    iput-wide p1, p0, Lkn2;->a:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyAsLong(J)J
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide p1, p0, Lkn2;->a:J
+    iput-object p1, p0, Lkn2;->X:Ljava/lang/Object;
 
-    return-wide p1
+    iget p1, p0, Lkn2;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkn2;->Z:I
+
+    iget-object p1, p0, Lkn2;->Y:Lpo2;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lpo2;->r(Lpo2;Ljava/util/List;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

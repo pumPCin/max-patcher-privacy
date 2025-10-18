@@ -1,195 +1,99 @@
-.class public final synthetic Lj43;
-.super Ljava/lang/Object;
+.class public final Lj43;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
     .locals 0
 
-    iput p1, p0, Lj43;->a:I
+    iput-object p2, p0, Lj43;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    iput-object p2, p0, Lj43;->b:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lj43;->a:I
+    check-cast p1, Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lj43;->b:Ljava/lang/Object;
-
-    check-cast p1, Ltbe;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->callOnClick()Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lj43;->b:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    invoke-virtual {p0, p1, p2}, Lj43;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v0, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Llnd;
+    check-cast p1, Lj43;
 
-    sget-object v1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lwq7;
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, p2}, Lj43;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    aget-object v1, v1, v2
+    return-object p2
+.end method
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object p2
+    new-instance v0, Lj43;
 
-    invoke-virtual {v0, p1, v1, p2}, Lqci;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    iget-object v1, p0, Lj43;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    return-void
+    invoke-direct {v0, p2, v1}, Lj43;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    :pswitch_1
-    iget-object p1, p0, Lj43;->b:Ljava/lang/Object;
+    iput-object p1, v0, Lj43;->X:Ljava/lang/Object;
 
-    check-cast p1, Lau7;
+    return-object v0
+.end method
 
-    iget-object v0, p1, Lau7;->F0:Lru/ok/messages/settings/FrgBaseSettings;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-eqz v0, :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {}, Len;->b()Lri3;
+    iget-object p1, p0, Lj43;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lj43;->Y:Lone/me/chats/tab/ChatsTabWidget;
+
+    iget-object v1, v0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lu96;
+
+    invoke-virtual {v1, p1}, Lu96;->e(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lu86;
 
     move-result-object v1
 
-    check-cast v1, Lqra;
+    invoke-virtual {v1, p1}, Lu86;->M(Ljava/util/List;)V
 
-    invoke-virtual {v1}, Lqra;->j()Llwb;
+    iget-object p1, v0, Lone/me/chats/tab/ChatsTabWidget;->c:Lh14;
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    iget-object v1, v1, Llwb;->c:Lchg;
+    invoke-interface {p1}, Lh14;->dismiss()V
 
-    iget-object p1, p1, Lau7;->K0:Ls7e;
+    :cond_0
+    const/4 p1, 0x0
 
-    iget p1, p1, Ls7e;->a:I
+    iput-object p1, v0, Lone/me/chats/tab/ChatsTabWidget;->c:Lh14;
 
-    if-eqz p2, :cond_1
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {v1}, Lchg;->q()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Lru/ok/messages/settings/FrgBaseSettings;->P0(ILjava/lang/Object;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lj43;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    iget-object v1, v0, Lcom/google/android/material/chip/Chip;->w0:Lxh8;
-
-    if-eqz v1, :cond_4
-
-    check-cast v1, Lswe;
-
-    iget-object v1, v1, Lswe;->b:Ljava/lang/Object;
-
-    check-cast v1, Lo43;
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {v1, v0}, Lo43;->a(Lyh8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    goto :goto_1
-
-    :cond_3
-    iget-boolean v2, v1, Lo43;->b:Z
-
-    invoke-virtual {v1, v0, v2}, Lo43;->h(Lyh8;Z)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    :goto_1
-    invoke-virtual {v1}, Lo43;->g()V
-
-    :cond_4
-    iget-object v0, v0, Lcom/google/android/material/chip/Chip;->v0:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0, p1, p2}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-
-    :cond_5
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lj43;->b:Ljava/lang/Object;
-
-    check-cast p1, Lk43;
-
-    iget-object v0, p1, Lv7e;->M0:Lru/ok/messages/settings/FrgBaseSettings;
-
-    if-eqz v0, :cond_6
-
-    iget-object p1, p1, Lv7e;->L0:Ls7e;
-
-    iget p1, p1, Ls7e;->a:I
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Lru/ok/messages/settings/FrgBaseSettings;->P0(ILjava/lang/Object;)V
-
-    :cond_6
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

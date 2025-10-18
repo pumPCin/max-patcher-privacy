@@ -18,7 +18,7 @@
 
     const/4 p1, 0x0
 
-    sget v0, Lbjc;->actionOverflowButtonStyle:I
+    sget v0, Likc;->actionOverflowButtonStyle:I
 
     invoke-direct {p0, p2, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -38,7 +38,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lgxf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Llyf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     new-instance p1, Le7;
 
@@ -161,7 +161,7 @@
 
     add-int/2addr p4, v0
 
-    invoke-static {p3, v1, v2, p2, p4}, Lc05;->f(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {p3, v1, v2, p2, p4}, Lv05;->f(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_0
     return p1

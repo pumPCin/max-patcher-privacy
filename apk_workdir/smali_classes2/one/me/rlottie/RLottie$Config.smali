@@ -28,18 +28,18 @@
         "nativeLibraryLoader",
         "",
         "screenRefreshRate",
-        "Lq3a;",
+        "Lt4a;",
         "logger",
         "<init>",
-        "(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;)V",
+        "(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V",
         "Z",
         "Lone/me/rlottie/NativeLibraryLoader;",
         "getNativeLibraryLoader",
         "()Lone/me/rlottie/NativeLibraryLoader;",
         "F",
-        "Lq3a;",
+        "Lt4a;",
         "getLogger",
-        "()Lq3a;",
+        "()Lt4a;",
         "rlottie_release"
     }
     k = 0x1
@@ -55,7 +55,7 @@
 # instance fields
 .field public final isEnabled:Z
 
-.field private final logger:Lq3a;
+.field private final logger:Lt4a;
 
 .field private final nativeLibraryLoader:Lone/me/rlottie/NativeLibraryLoader;
 
@@ -83,7 +83,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;ILvh4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;ILvh4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
@@ -133,12 +133,12 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;ILvh4;)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;)V
+.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V
     .locals 0
 
     .line 4
@@ -154,12 +154,12 @@
     iput p4, p0, Lone/me/rlottie/RLottie$Config;->screenRefreshRate:F
 
     .line 8
-    iput-object p5, p0, Lone/me/rlottie/RLottie$Config;->logger:Lq3a;
+    iput-object p5, p0, Lone/me/rlottie/RLottie$Config;->logger:Lt4a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;ILvh4;)V
+.method public constructor <init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;ILki4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -235,7 +235,7 @@
     if-eqz p3, :cond_4
 
     .line 15
-    sget-object p5, Lp3a;->a:Leh2;
+    sget-object p5, Ls4a;->a:Lnh2;
 
     :cond_4
     move-object v0, p0
@@ -247,17 +247,17 @@
     move-object v5, p5
 
     .line 16
-    invoke-direct/range {v0 .. v5}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLq3a;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/rlottie/RLottie$Config;-><init>(Landroid/content/Context;ZLone/me/rlottie/NativeLibraryLoader;FLt4a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getLogger()Lq3a;
+.method public final getLogger()Lt4a;
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottie$Config;->logger:Lq3a;
+    iget-object v0, p0, Lone/me/rlottie/RLottie$Config;->logger:Lt4a;
 
     return-object v0
 .end method

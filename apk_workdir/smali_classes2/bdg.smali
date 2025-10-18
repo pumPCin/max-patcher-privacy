@@ -1,127 +1,61 @@
 .class public final Lbdg;
-.super Llj0;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Lq1a;
 
-.field public final c:Ljava/util/List;
+.field public Y:J
+
+.field public Z:J
+
+.field public o:Lkdg;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lkdg;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
+.method public constructor <init>(Lkdg;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Llj0;-><init>()V
+    iput-object p1, p0, Lbdg;->r0:Lkdg;
 
-    iput-wide p1, p0, Lbdg;->b:J
-
-    iput-object p3, p0, Lbdg;->c:Ljava/util/List;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lbdg;->q0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lbdg;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lbdg;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lbdg;->s0:I
 
-    if-nez v1, :cond_1
+    const-wide/16 v1, 0x0
 
-    return v2
+    const-wide/16 v3, 0x0
 
-    :cond_1
-    check-cast p1, Lbdg;
+    iget-object v0, p0, Lbdg;->r0:Lkdg;
 
-    iget-wide v3, p0, Lbdg;->b:J
+    move-object v5, p0
 
-    iget-wide v5, p1, Lbdg;->b:J
+    invoke-virtual/range {v0 .. v5}, Lkdg;->b(JJLy14;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
+    move-result-object p1
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lbdg;->c:Ljava/util/List;
-
-    iget-object p1, p1, Lbdg;->c:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lbdg;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lbdg;->c:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateMessagesEvent(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lbdg;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lbdg;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

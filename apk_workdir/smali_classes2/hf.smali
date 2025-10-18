@@ -38,20 +38,20 @@
 
     iget-object v0, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lwp0;->c()V
+    invoke-static {}, Lfq0;->c()V
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+    iput-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
     :cond_0
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Z
+    iput-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Z
 
     invoke-static {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;)V
 
@@ -64,9 +64,9 @@
 
     iget-object v1, v0, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v1, v1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v1, v1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
-    invoke-virtual {v1}, Lwp0;->b()V
+    invoke-virtual {v1}, Lfq0;->b()V
 
     new-instance v1, Lhf;
 

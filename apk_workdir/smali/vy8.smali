@@ -1,39 +1,23 @@
-.class public Lvy8;
-.super Ljava/lang/Object;
+.class public abstract Lvy8;
+.super Lwy8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/media/session/MediaSession;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Luy8;
+.field public b:Ljava/util/concurrent/Executor;
 
-.field public final c:Lbz8;
+.field public c:Lj7;
 
-.field public final d:Ljava/lang/Object;
+.field public d:Ldy8;
 
-.field public final e:Landroid/os/Bundle;
-
-.field public final f:Landroid/os/RemoteCallbackList;
-
-.field public g:Lurb;
-
-.field public h:Ljava/util/List;
-
-.field public i:Lmt8;
-
-.field public j:I
-
-.field public k:I
-
-.field public l:Lty8;
-
-.field public m:Lvz8;
+.field public e:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,101 +25,123 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lvy8;->d:Ljava/lang/Object;
-
-    new-instance v0, Landroid/os/RemoteCallbackList;
-
-    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
-
-    iput-object v0, p0, Lvy8;->f:Landroid/os/RemoteCallbackList;
-
-    invoke-virtual {p0, p1, p2, p3}, Lvy8;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvy8;->a:Landroid/media/session/MediaSession;
-
-    new-instance p2, Luy8;
-
-    invoke-direct {p2, p0}, Luy8;-><init>(Lvy8;)V
-
-    iput-object p2, p0, Lvy8;->b:Luy8;
-
-    new-instance v0, Lbz8;
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Lbz8;-><init>(Landroid/media/session/MediaSession$Token;Lv57;)V
-
-    iput-object v0, p0, Lvy8;->c:Lbz8;
-
-    iput-object p3, p0, Lvy8;->e:Landroid/os/Bundle;
-
-    const/4 p2, 0x3
-
-    invoke-virtual {p1, p2}, Landroid/media/session/MediaSession;->setFlags(I)V
+    iput-object v0, p0, Lvy8;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-    .locals 0
-
-    new-instance p3, Landroid/media/session/MediaSession;
-
-    invoke-direct {p3, p1, p2}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    return-object p3
-.end method
-
-.method public b()Lvz8;
-    .locals 2
-
-    iget-object v0, p0, Lvy8;->d:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lvy8;->m:Lvz8;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public c(Lvz8;)V
+.method public j()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lvy8;->d:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    monitor-enter v0
+    return-object v0
+.end method
+
+.method public k()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final l(Ldy8;Ljava/util/ArrayList;)V
+    .locals 8
+
+    if-eqz p1, :cond_1
+
+    iget-object v1, p0, Lvy8;->a:Ljava/lang/Object;
+
+    monitor-enter v1
 
     :try_start_0
-    iput-object p1, p0, Lvy8;->m:Lvz8;
+    iget-object v0, p0, Lvy8;->b:Ljava/util/concurrent/Executor;
 
-    monitor-exit v0
+    if-eqz v0, :cond_0
+
+    iget-object v4, p0, Lvy8;->c:Lj7;
+
+    new-instance v2, Lsph;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/4 v7, 0x5
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    :try_start_1
+    invoke-direct/range {v2 .. v7}, Lsph;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    :goto_0
+    move-object p1, v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    move-object v3, p0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    iput-object v5, v3, Lvy8;->d:Ldy8;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object p1, v3, Lvy8;->e:Ljava/util/ArrayList;
+
+    :goto_1
+    monitor-exit v1
 
     return-void
 
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :goto_2
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p1
+
+    :cond_1
+    move-object v3, p0
+
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "groupRoute must not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public abstract m(Ljava/lang/String;)V
+.end method
+
+.method public abstract n(Ljava/lang/String;)V
+.end method
+
+.method public abstract o(Ljava/util/List;)V
 .end method

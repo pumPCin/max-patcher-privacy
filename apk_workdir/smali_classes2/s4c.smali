@@ -1,76 +1,87 @@
-.class public final synthetic Ls4c;
+.class public final Ls4c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lw4c;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p2, p0, Ls4c;->a:I
-
-    iput-object p1, p0, Ls4c;->b:Lone/me/profileedit/ProfileEditScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ls4c;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget p1, p0, Ls4c;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Ls4c;->b:Lone/me/profileedit/ProfileEditScreen;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
+    return v0
 
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
+    :cond_0
+    instance-of v1, p1, Ls4c;
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lo5c;->x()V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Ls4c;
 
-    :pswitch_0
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
+    iget-wide v3, p0, Ls4c;->a:J
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
+    iget-wide v5, p1, Ls4c;->a:J
 
-    move-result-object p1
+    cmp-long p1, v3, v5
 
-    iget-object p1, p1, Lo5c;->b:Lj55;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lj55;->d()Z
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ls4c;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :cond_0
-    invoke-virtual {p1}, Lj55;->k()V
+    const-string v0, "ChatUpdate(requestId="
 
-    :goto_0
-    return-void
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v2, p0, Ls4c;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

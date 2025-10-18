@@ -1,83 +1,128 @@
-.class public final Lzqi;
-.super Lf4;
+.class public final synthetic Lzqi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lzqi;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lcfc;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
+.field public final synthetic b:Ln4g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ln4g;I)V
+    .locals 0
 
-    new-instance v0, Lavg;
+    iput p2, p0, Lzqi;->a:I
 
-    const/16 v1, 0x18
+    iput-object p1, p0, Lzqi;->b:Ln4g;
 
-    invoke-direct {v0, v1}, Lavg;-><init>(I)V
-
-    sput-object v0, Lzqi;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lzqi;->a:I
 
-    const/4 v1, 0x2
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x4
+    new-instance v0, Lhc5;
 
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
+    const-string v1, "proto"
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x3
+    new-instance v1, Lxea;
 
-    iget-object v1, p0, Lzqi;->b:Ljava/lang/String;
+    const/16 v2, 0x10
 
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-direct {v1, v2}, Lxea;-><init>(I)V
 
-    iget-object v0, p0, Lzqi;->c:Ljava/lang/String;
+    iget-object v2, p0, Lzqi;->b:Ln4g;
 
-    invoke-static {p1, v2, v0}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const-string v3, "FIREBASE_ML_SDK"
 
-    const/4 v0, 0x5
+    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
 
-    iget-object v1, p0, Lzqi;->o:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    return-object v0
 
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    :pswitch_0
+    new-instance v0, Lhc5;
 
-    return-void
+    const-string v1, "json"
+
+    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Llga;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2}, Llga;-><init>(I)V
+
+    iget-object v2, p0, Lzqi;->b:Ln4g;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lhc5;
+
+    const-string v1, "proto"
+
+    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lev7;->q0:Lev7;
+
+    iget-object v2, p0, Lzqi;->b:Ln4g;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lhc5;
+
+    const-string v1, "json"
+
+    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lye8;->Z:Lye8;
+
+    iget-object v2, p0, Lzqi;->b:Ln4g;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

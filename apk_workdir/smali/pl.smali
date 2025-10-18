@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Landroid/media/EncoderProfiles;)Lw90;
+.method public static a(Landroid/media/EncoderProfiles;)Lfa0;
     .locals 17
 
     invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getDefaultDurationSeconds()I
@@ -64,9 +64,9 @@
 
     move-result v10
 
-    new-instance v5, Lv90;
+    new-instance v5, Lea0;
 
-    invoke-direct/range {v5 .. v11}, Lv90;-><init>(IIIIILjava/lang/String;)V
+    invoke-direct/range {v5 .. v11}, Lea0;-><init>(IIIIILjava/lang/String;)V
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -126,7 +126,7 @@
 
     move-result v13
 
-    new-instance v6, Lx90;
+    new-instance v6, Lga0;
 
     const/16 v14, 0x8
 
@@ -134,14 +134,14 @@
 
     const/16 v16, 0x0
 
-    invoke-direct/range {v6 .. v16}, Lx90;-><init>(ILjava/lang/String;IIIIIIII)V
+    invoke-direct/range {v6 .. v16}, Lga0;-><init>(ILjava/lang/String;IIIIIIII)V
 
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_1
-    invoke-static {v0, v1, v3, v4}, Lw90;->e(IILjava/util/List;Ljava/util/List;)Lw90;
+    invoke-static {v0, v1, v3, v4}, Lfa0;->e(IILjava/util/List;Ljava/util/List;)Lfa0;
 
     move-result-object v0
 

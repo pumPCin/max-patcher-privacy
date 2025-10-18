@@ -1,73 +1,100 @@
 .class public final Lkb7;
-.super Ljava/lang/Object;
+.super Lnp4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic o:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final p:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lkb7;->a:Ljava/lang/Object;
+    iput v0, p0, Lkb7;->o:I
 
-    iput-object p2, p0, Lkb7;->b:Ljava/lang/Object;
+    .line 3
+    sget-object v0, Lnp4;->k:Landroid/util/Size;
 
-    iput-object p3, p0, Lkb7;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lnp4;-><init>(Landroid/util/Size;I)V
+
+    .line 4
+    iput-object p1, p0, Lkb7;->p:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lkb7;->o:I
+
+    .line 1
+    invoke-direct {p0, p2, p3}, Lnp4;-><init>(Landroid/util/Size;I)V
+
+    .line 2
+    iput-object p1, p0, Lkb7;->p:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lggf;Landroid/util/Size;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lkb7;->o:I
+
+    .line 5
+    iput-object p1, p0, Lkb7;->p:Ljava/lang/Object;
+
+    const/16 p1, 0x22
+
+    invoke-direct {p0, p2, p1}, Lnp4;-><init>(Landroid/util/Size;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/IllegalArgumentException;
-    .locals 5
+.method public final f()Ll28;
+    .locals 1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v0, p0, Lkb7;->o:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "Multiple entries with same key: "
+    iget-object v0, p0, Lkb7;->p:Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lggf;
 
-    iget-object v2, p0, Lkb7;->a:Ljava/lang/Object;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, "="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lkb7;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, " and "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lkb7;->c:Ljava/lang/Object;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Lggf;->g:Lju1;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lkb7;->p:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/Surface;
+
+    invoke-static {v0}, Lwag;->i(Ljava/lang/Object;)Lib7;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

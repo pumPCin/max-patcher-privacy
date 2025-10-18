@@ -1,92 +1,69 @@
 .class public final Lj9h;
-.super Lm9h;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final b:Lj9h;
+
+.field public static final c:Lyf4;
+
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj9h;
 
-    iput-wide p1, p0, Lj9h;->a:J
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Lj9h;->b:Lj9h;
 
+    const-string v1, "bot_id"
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    iget-wide v0, p0, Lj9h;->a:J
+    move-result-object v2
 
-    return-wide v0
-.end method
+    const-string v3, ":webapp:root"
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const/4 v4, 0x0
 
-    const/4 v0, 0x1
+    const/16 v5, 0xe
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    return v0
+    move-result-object v2
 
-    :cond_0
-    instance-of v1, p1, Lj9h;
+    sput-object v2, Lj9h;->c:Lyf4;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    new-array v2, v2, [Ljava/lang/String;
 
-    return v2
+    const-string v3, ":settings/webapps"
 
-    :cond_1
-    check-cast p1, Lj9h;
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    iget-wide v3, p0, Lj9h;->a:J
+    move-result-object v2
 
-    iget-wide v5, p1, Lj9h;->a:J
+    sput-object v2, Lj9h;->d:Lyf4;
 
-    cmp-long p1, v3, v5
+    const-string v2, ":settings/webapp"
 
-    if-eqz p1, :cond_2
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    return v2
+    move-result-object v1
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lj9h;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Cancelled(requestId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lj9h;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lj9h;->e:Lyf4;
+
+    return-void
 .end method

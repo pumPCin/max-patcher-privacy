@@ -1,472 +1,406 @@
-.class public abstract synthetic Lyy8;
+.class public final Lyy8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Z
+
+.field public final c:Ljava/util/List;
+
+
 # direct methods
-.method public static synthetic a(I)I
+.method public constructor <init>(Ljava/util/ArrayList;Z)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-eq p0, v0, :cond_1
+    iput v0, p0, Lyy8;->a:I
 
-    const/4 v0, 0x2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_1
+    if-nez p1, :cond_0
 
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    return v0
+    .line 2
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     :cond_0
-    const/4 p0, 0x0
+    iput-object p1, p0, Lyy8;->c:Ljava/util/List;
 
-    throw p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public static synthetic b(I)Ljava/lang/String;
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const-string v1, "so"
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "dylib"
-
-    return-object p0
-
-    :cond_2
-    return-object v1
-.end method
-
-.method public static synthetic c(I)I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_0
-
-    const/16 p0, 0x28
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const/16 p0, 0x1e
-
-    return p0
-
-    :cond_2
-    const/16 p0, 0x14
-
-    return p0
-
-    :cond_3
-    const/16 p0, 0xa
-
-    return p0
-
-    :cond_4
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static d(JLjava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Ljava/lang/String;Z)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Lzf6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lzf6;->Q(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p2}, Lzf6;->Q(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p3}, Lzf6;->Q(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p4}, Lzf6;->Q(Ljava/lang/String;)V
+    .line 3
+    iput-boolean p2, p0, Lyy8;->b:Z
 
     return-void
 .end method
 
-.method public static h(Lpfd;IJLhi9;)V
-    .locals 0
+.method public constructor <init>(Z)V
+    .locals 1
 
-    invoke-virtual {p0, p1, p2, p3}, Lpfd;->k(IJ)V
+    const/4 v0, 0x1
 
-    invoke-virtual {p4}, Lhi9;->b()Lqp9;
+    iput v0, p0, Lyy8;->a:I
 
-    move-result-object p0
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 5
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 6
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lyy8;->c:Ljava/util/List;
+
+    .line 7
+    iput-boolean p1, p0, Lyy8;->b:Z
 
     return-void
 .end method
 
-.method public static synthetic i(I)Ljava/lang/String;
-    .locals 0
+.method public static b(Landroid/os/Bundle;)Lyy8;
+    .locals 8
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    const/4 p0, 0x0
+    if-nez p0, :cond_0
 
-    throw p0
-
-    :pswitch_0
-    const-string p0, "RELEASED"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ERROR"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ENDED"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "PAUSED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "PLAYING"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "BUFFERING"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "IDLE"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic j(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "TEMPORARILY_UNMETERED"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "METERED"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "NOT_ROAMING"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "UNMETERED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "CONNECTED"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "NOT_REQUIRED"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic k(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, "Disabled"
+    const-string v1, "routes"
 
-    return-object p0
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    move v5, v2
+
+    :goto_0
+    if-ge v5, v3, :cond_2
+
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/os/Bundle;
+
+    if-eqz v6, :cond_1
+
+    new-instance v7, Ldy8;
+
+    invoke-direct {v7, v6}, Ldy8;-><init>(Landroid/os/Bundle;)V
+
+    goto :goto_1
 
     :cond_1
-    const-string p0, "Inactive"
+    move-object v7, v0
 
-    return-object p0
+    :goto_1
+    invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_2
-    const-string p0, "Active"
+    add-int/lit8 v5, v5, 0x1
 
-    return-object p0
-.end method
-
-.method public static synthetic l(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "REVERSED_PORTRAIT"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "PORTRAIT"
-
-    return-object p0
+    goto :goto_0
 
     :cond_2
-    const-string p0, "LANDSCAPE"
-
-    return-object p0
+    move-object v0, v4
 
     :cond_3
-    const-string p0, "REVERSED_LANDSCAPE"
+    const-string v1, "supportsDynamicGroupRoute"
 
-    return-object p0
+    invoke-virtual {p0, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    new-instance v1, Lyy8;
+
+    invoke-direct {v1, v0, p0}, Lyy8;-><init>(Ljava/util/ArrayList;Z)V
+
+    return-object v1
 .end method
 
-.method public static synthetic m(I)Ljava/lang/String;
-    .locals 1
+
+# virtual methods
+.method public a(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    .locals 4
+
+    iget-boolean v0, p0, Lyy8;->b:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ltx1;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ltx1;-><init>(I)V
+
+    iget-object v1, v0, Ltx1;->b:Ljava/lang/Object;
+
+    check-cast v1, Lju1;
+
+    iget-object v2, p0, Lyy8;->c:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "RequestListener "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " monitoring "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "RequestMonitor"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v2, Ldtb;
+
+    const/4 v3, 0x6
+
+    invoke-direct {v2, p0, v0, v1, v3}, Ldtb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v3
+
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, v2, v3}, Le4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_2
+    aput-object p1, v1, v0
 
-    const/4 v0, 0x2
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-eq p0, v0, :cond_1
+    move-result-object p1
 
-    const/4 v0, 0x3
+    new-instance v0, Lmy1;
 
-    if-eq p0, v0, :cond_0
+    invoke-direct {v0, p1}, Lmy1;-><init>(Ljava/util/List;)V
 
-    const-string p0, "null"
-
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, "FORWARD"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "REPLY"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "UNKNOWN"
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public static synthetic n(I)Ljava/lang/String;
-    .locals 1
+.method public c()Ll28;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lyy8;->c:Ljava/util/List;
 
-    if-eq p0, v0, :cond_4
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    const/4 v0, 0x2
+    move-result v1
 
-    if-eq p0, v0, :cond_3
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x3
+    sget-object v0, Lib7;->c:Lib7;
 
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, "CHANNEL_ADMIN"
+    new-instance v1, Ljava/util/ArrayList;
 
-    return-object p0
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v1}, Lwag;->o(Ljava/util/ArrayList;)Lx18;
+
+    move-result-object v0
+
+    new-instance v1, Lpy1;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v2}, Lpy1;-><init>(I)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v2
+
+    new-instance v3, Ls9d;
+
+    const/16 v4, 0xe
+
+    invoke-direct {v3, v4, v1}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v3, v2}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwag;->k(Ll28;)Ll28;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d()V
+    .locals 3
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    iget-object v1, p0, Lyy8;->c:Ljava/util/List;
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll28;
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v1, Ll28;
+
+    const/4 v2, 0x1
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 6
+
+    iget v0, p0, Lyy8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MediaRouteProviderDescriptor{ routes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyy8;->c:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->toArray()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", isValid="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v2, :cond_1
+
+    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ldy8;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Ldy8;->d()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
 
     :cond_1
-    const-string p0, "CHANNEL"
-
-    return-object p0
+    const/4 v3, 0x1
 
     :cond_2
-    const-string p0, "GROUP"
+    :goto_1
+    const-string v1, " }"
 
-    return-object p0
+    invoke-static {v0, v3, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    :cond_3
-    const-string p0, "USER"
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
-    :cond_4
-    const-string p0, "UNKNOWN"
+    nop
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

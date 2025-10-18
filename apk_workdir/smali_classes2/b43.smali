@@ -1,69 +1,49 @@
-.class public final enum Lb43;
-.super Ljava/lang/Enum;
+.class public final Lb43;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lb43;
+# instance fields
+.field public final synthetic X:Ld43;
 
-.field public static final synthetic b:[Lb43;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ld43;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lb43;
+    iput-object p1, p0, Lb43;->X:Ld43;
 
-    const-string v1, "EDIT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lb43;
-
-    const-string v2, "DELETE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lb43;->a:Lb43;
-
-    filled-new-array {v0, v1}, [Lb43;
-
-    move-result-object v0
-
-    sput-object v0, Lb43;->b:[Lb43;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lb43;
-    .locals 1
 
-    const-class v0, Lb43;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lb43;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lb43;->Y:I
 
-    check-cast p0, Lb43;
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public static values()[Lb43;
-    .locals 1
+    iput p1, p0, Lb43;->Y:I
 
-    sget-object v0, Lb43;->b:[Lb43;
+    iget-object p1, p0, Lb43;->X:Ld43;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, v1, p0}, Ld43;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v0, [Lb43;
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

@@ -1,63 +1,25 @@
-.class public abstract Lsyd;
-.super Ljava/lang/Object;
+.class public final Lsyd;
+.super Ltyd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+# instance fields
+.field public final d:J
 
-.field public static final b:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final c:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final d:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final e:Lkotlinx/coroutines/internal/Symbol;
+.field public final e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lwwc;JJJJ)V
+    .locals 0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct/range {p0 .. p5}, Ltyd;-><init>(Ljava/lang/Object;JJ)V
 
-    const-string v1, "STATE_REG"
+    move-object p1, p0
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput-wide p6, p1, Lsyd;->d:J
 
-    sput-object v0, Lsyd;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "STATE_COMPLETED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsyd;->b:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "STATE_CANCELLED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsyd;->c:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "NO_RESULT"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsyd;->d:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "PARAM_CLAUSE_0"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsyd;->e:Lkotlinx/coroutines/internal/Symbol;
+    iput-wide p8, p1, Lsyd;->e:J
 
     return-void
 .end method

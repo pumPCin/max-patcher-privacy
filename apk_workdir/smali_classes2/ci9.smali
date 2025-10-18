@@ -1,111 +1,78 @@
 .class public final Lci9;
-.super Lscout/Component;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Lci9;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    .locals 0
 
-    new-instance v0, Lci9;
+    iput-object p2, p0, Lci9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    sget-object v1, Lhj9;->a:Liod;
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lscout/Component;-><init>(Liod;)V
-
-    sput-object v0, Lci9;->a:Lci9;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ldc7;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lci9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lr5;->e()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lci9;
 
-    check-cast v0, Ldc7;
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-object v0
+    invoke-virtual {p1, p2}, Lci9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b()Lzkd;
-    .locals 5
-
-    new-instance v0, Lzkd;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Llod;
-
-    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llod;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lqkf;
-
-    invoke-virtual {v2, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqkf;
-
-    check-cast v2, Losa;
-
-    invoke-virtual {v2}, Losa;->b()Lv44;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Laeb;
-
-    invoke-virtual {v3, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Laeb;
-
-    invoke-direct {v0, v1, v2, v3}, Lzkd;-><init>(Llod;Lv44;Laeb;)V
-
-    return-object v0
-.end method
-
-.method public final getDispatchers()Lqkf;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+    new-instance v0, Lci9;
 
-    move-result-object v0
+    iget-object v1, p0, Lci9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const-class v1, Lqkf;
+    invoke-direct {v0, p2, v1}, Lci9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqkf;
+    iput-object p1, v0, Lci9;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lci9;->X:Ljava/lang/Object;
+
+    check-cast p1, Lig9;
+
+    iget-object v0, p0, Lci9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-static {v0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0(Lone/me/sdk/messagewrite/MessageWriteWidget;Lig9;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

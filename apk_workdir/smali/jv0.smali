@@ -1,57 +1,65 @@
-.class public interface abstract Ljv0;
-.super Ljava/lang/Object;
+.class public final synthetic Ljv0;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lrte;
-.implements Ljava/nio/channels/ReadableByteChannel;
+.implements Lbj6;
+
+
+# static fields
+.field public static final a:Ljv0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Ljv0;
+
+    const-string v4, "processResultSelectReceiveCatching(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Lmv0;
+
+    const-string v3, "processResultSelectReceiveCatching"
+
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ljv0;->a:Ljv0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract H(Lay;)J
-.end method
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.method public abstract M(Ljava/nio/charset/Charset;)Ljava/lang/String;
-.end method
+    check-cast p1, Lmv0;
 
-.method public abstract O(Leu0;J)V
-.end method
+    sget-object p2, Lmv0;->b:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
-.method public abstract T()Ljava/lang/String;
-.end method
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public abstract Y(Lp8b;)I
-.end method
+    sget-object p2, Lov0;->l:Lkotlinx/coroutines/internal/Symbol;
 
-.method public abstract d0(J)V
-.end method
+    if-ne p3, p2, :cond_0
 
-.method public abstract e(J)Lhx0;
-.end method
+    invoke-virtual {p1}, Lmv0;->p()Ljava/lang/Throwable;
 
-.method public abstract f0()J
-.end method
+    move-result-object p1
 
-.method public abstract g0()Ljava/io/InputStream;
-.end method
+    new-instance p3, Lk92;
 
-.method public abstract j(J)Ljava/lang/String;
-.end method
+    invoke-direct {p3, p1}, Lk92;-><init>(Ljava/lang/Throwable;)V
 
-.method public abstract readByte()B
-.end method
+    :cond_0
+    new-instance p1, Lm92;
 
-.method public abstract readFully([B)V
-.end method
+    invoke-direct {p1, p3}, Lm92;-><init>(Ljava/lang/Object;)V
 
-.method public abstract readInt()I
-.end method
-
-.method public abstract readLong()J
-.end method
-
-.method public abstract readShort()S
-.end method
-
-.method public abstract skip(J)V
+    return-object p1
 .end method

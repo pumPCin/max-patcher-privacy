@@ -4,25 +4,11 @@
 
 
 # static fields
-.field public static final enum X:Ltw0;
-
-.field public static final enum Y:Ltw0;
-
-.field public static final enum Z:Ltw0;
-
 .field public static final enum b:Ltw0;
 
-.field public static final enum c:Ltw0;
+.field public static final c:[Ltw0;
 
-.field public static final enum o:Ltw0;
-
-.field public static final enum r0:Ltw0;
-
-.field public static final enum s0:Ltw0;
-
-.field public static final t0:[Ltw0;
-
-.field public static final synthetic u0:[Ltw0;
+.field public static final synthetic o:[Ltw0;
 
 
 # instance fields
@@ -41,8 +27,6 @@
 
     invoke-direct {v0, v1, v2, v1}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Ltw0;->b:Ltw0;
-
     new-instance v1, Ltw0;
 
     const-string v2, "LINK"
@@ -50,8 +34,6 @@
     const/4 v3, 0x1
 
     invoke-direct {v1, v2, v3, v2}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Ltw0;->c:Ltw0;
 
     new-instance v2, Ltw0;
 
@@ -61,8 +43,6 @@
 
     invoke-direct {v2, v3, v4, v3}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v2, Ltw0;->o:Ltw0;
-
     new-instance v3, Ltw0;
 
     const-string v4, "REQUEST_GEO_LOCATION"
@@ -70,8 +50,6 @@
     const/4 v5, 0x3
 
     invoke-direct {v3, v4, v5, v4}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Ltw0;->X:Ltw0;
 
     new-instance v4, Ltw0;
 
@@ -81,27 +59,21 @@
 
     invoke-direct {v4, v5, v6, v5}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v4, Ltw0;->Y:Ltw0;
-
     new-instance v5, Ltw0;
 
-    const-string v6, "OPEN_APP"
+    const-string v6, "MESSAGE"
 
     const/4 v7, 0x5
 
     invoke-direct {v5, v6, v7, v6}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v5, Ltw0;->Z:Ltw0;
-
     new-instance v6, Ltw0;
 
-    const-string v7, "MESSAGE"
+    const-string v7, "OPEN_APP"
 
     const/4 v8, 0x6
 
     invoke-direct {v6, v7, v8, v7}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Ltw0;->r0:Ltw0;
 
     new-instance v7, Ltw0;
 
@@ -111,19 +83,19 @@
 
     invoke-direct {v7, v8, v9, v8}, Ltw0;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v7, Ltw0;->s0:Ltw0;
+    sput-object v7, Ltw0;->b:Ltw0;
 
     filled-new-array/range {v0 .. v7}, [Ltw0;
 
     move-result-object v0
 
-    sput-object v0, Ltw0;->u0:[Ltw0;
+    sput-object v0, Ltw0;->o:[Ltw0;
 
     invoke-static {}, Ltw0;->values()[Ltw0;
 
     move-result-object v0
 
-    sput-object v0, Ltw0;->t0:[Ltw0;
+    sput-object v0, Ltw0;->c:[Ltw0;
 
     return-void
 .end method
@@ -155,13 +127,31 @@
 .method public static values()[Ltw0;
     .locals 1
 
-    sget-object v0, Ltw0;->u0:[Ltw0;
+    sget-object v0, Ltw0;->o:[Ltw0;
 
     invoke-virtual {v0}, [Ltw0;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ltw0;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "{value=\'"
+
+    const-string v1, "\'}"
+
+    iget-object v2, p0, Ltw0;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

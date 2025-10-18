@@ -1,5 +1,5 @@
 .class public final Lru;
-.super Llj0;
+.super Luj0;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 .method public constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Llj0;-><init>(J)V
+    invoke-direct {p0, p2, p3}, Luj0;-><init>(J)V
 
     iput p1, p0, Lru;->b:I
 
@@ -35,7 +35,7 @@
 
     iget v1, p0, Lru;->b:I
 
-    invoke-static {v1}, Lwx1;->w(I)Ljava/lang/String;
+    invoke-static {v1}, Ldy1;->w(I)Ljava/lang/String;
 
     move-result-object v1
 

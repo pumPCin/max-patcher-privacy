@@ -1,26 +1,28 @@
 .class public final Lt6a;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Landroid/content/Intent;
 
-.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final synthetic Y:Lv6a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Landroid/content/Intent;Lv6a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lt6a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput-object p1, p0, Lt6a;->X:Landroid/content/Intent;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lt6a;->Y:Lv6a;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lq54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lt6a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +42,7 @@
 
     check-cast p1, Lt6a;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lt6a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -48,222 +52,118 @@
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lt6a;
+    new-instance p1, Lt6a;
 
-    iget-object v1, p0, Lt6a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iget-object v0, p0, Lt6a;->X:Landroid/content/Intent;
 
-    invoke-direct {v0, p2, v1}, Lt6a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+    iget-object v1, p0, Lt6a;->Y:Lv6a;
 
-    iput-object p1, v0, Lt6a;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lt6a;-><init>(Landroid/content/Intent;Lv6a;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 9
 
-    iget-object v0, p0, Lt6a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    sget-object v0, Lccg;->a:Lccg;
 
-    iget-object v1, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->a:Lk8a;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lt6a;->X:Landroid/content/Intent;
 
-    iget-object p1, p0, Lt6a;->X:Ljava/lang/Object;
-
-    instance-of v2, p1, Lf98;
-
-    const/4 v3, 0x4
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    if-eqz v2, :cond_2
-
-    check-cast p1, Lf98;
-
-    iget-object p1, p1, Lf98;->c:Loqf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
+    const/4 v1, 0x0
 
     if-nez p1, :cond_0
 
-    goto/16 :goto_3
-
-    :cond_0
-    new-instance v1, La2b;
-
-    invoke-direct {v1, v0}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v1, p1}, La2b;->h(Ljava/lang/CharSequence;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, La2b;->b(Ljava/lang/CharSequence;)V
-
-    new-instance p1, Li2b;
-
-    invoke-virtual {v0}, Lx14;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-static {v2}, Lqbi;->k(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
+    move-object p1, v1
 
     goto :goto_0
 
-    :cond_1
-    move v2, v5
+    :cond_0
+    const-class v2, Landroid/graphics/RectF;
 
-    :goto_0
-    invoke-direct {p1, v4, v2, v5, v3}, Li2b;-><init>(IIII)V
+    const-string v3, "ru.ok.tamtam.extra.CROPPED_RECT"
 
-    invoke-virtual {v1, p1}, La2b;->c(Li2b;)V
-
-    invoke-virtual {v1}, La2b;->i()Lz1b;
-
-    goto :goto_3
-
-    :cond_2
-    instance-of v2, p1, Lg98;
-
-    if-eqz v2, :cond_6
-
-    check-cast p1, Lg98;
-
-    iget v2, p1, Lg98;->e:I
-
-    sget-object v6, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lwq7;
-
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->E0()Lf7d;
-
-    move-result-object v6
-
-    if-nez v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v6, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->o:Llt7;
-
-    invoke-interface {v6}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ln70;
-
-    new-instance v7, Lm70;
-
-    invoke-direct {v7, v2}, Lm70;-><init>(I)V
-
-    invoke-virtual {v6, v7}, Ln70;->a(Lhlf;)V
-
-    :goto_1
-    iget-object v2, p1, Lg98;->c:Loqf;
-
-    iget-object p1, p1, Lg98;->d:Loqf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {p1, v3, v2}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v2, La2b;
+    check-cast p1, Landroid/os/Parcelable;
 
-    invoke-direct {v2, v0}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
+    :goto_0
+    move-object v5, p1
 
-    invoke-virtual {v2, v1}, La2b;->h(Ljava/lang/CharSequence;)V
+    check-cast v5, Landroid/graphics/RectF;
 
-    invoke-virtual {v2, p1}, La2b;->b(Ljava/lang/CharSequence;)V
-
-    new-instance p1, Li2b;
-
-    invoke-virtual {v0}, Lx14;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-static {v1}, Lqbi;->k(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
+    if-nez v5, :cond_1
 
     goto :goto_2
 
-    :cond_5
-    move v1, v5
+    :cond_1
+    iget-object p1, p0, Lt6a;->X:Landroid/content/Intent;
 
-    :goto_2
-    invoke-direct {p1, v4, v1, v5, v3}, Li2b;-><init>(IIII)V
+    if-nez p1, :cond_2
 
-    invoke-virtual {v2, p1}, La2b;->c(Li2b;)V
+    move-object p1, v1
 
-    invoke-virtual {v2}, La2b;->i()Lz1b;
+    goto :goto_1
 
-    :cond_6
-    :goto_3
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lwq7;
+    :cond_2
+    const-class v2, Landroid/graphics/Rect;
 
-    iget-object p1, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->u0:Lazc;
+    const-string v3, "ru.ok.tamtam.extra.CROPPED_ABSOLUTE"
 
-    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lwq7;
-
-    const/4 v2, 0x6
-
-    aget-object v1, v1, v2
-
-    invoke-interface {p1, v0, v1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-static {p1, v3, v2}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast p1, Landroid/os/Parcelable;
 
-    invoke-virtual {p1, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    :goto_1
+    move-object v7, p1
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setClickable(Z)V
+    check-cast v7, Landroid/graphics/Rect;
 
-    sget-object p1, Lzag;->a:Lzag;
+    if-nez v7, :cond_3
 
-    return-object p1
+    :goto_2
+    return-object v0
+
+    :cond_3
+    iget-object p1, p0, Lt6a;->Y:Lv6a;
+
+    invoke-virtual {p1}, Lv6a;->a()Liv5;
+
+    move-result-object p1
+
+    iget-object v2, p0, Lt6a;->Y:Lv6a;
+
+    iget-object v2, v2, Lv6a;->m:Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lt6a;->Y:Lv6a;
+
+    iget-object p1, v4, Lv6a;->h:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Lr6a;
+
+    const/4 v8, 0x0
+
+    const/4 v6, 0x1
+
+    invoke-direct/range {v2 .. v8}, Lr6a;-><init>(Ljava/lang/String;Lv6a;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {p1, v1, v1, v2, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    return-object v0
 .end method

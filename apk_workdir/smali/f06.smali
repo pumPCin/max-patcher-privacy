@@ -1,48 +1,33 @@
 .class public final Lf06;
-.super Lk14;
+.super Ly14;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Lby5;
+.field public Y:I
 
-.field public final synthetic Z:Lg06;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lg06;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lf06;->Z:Lg06;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public o:Ljava/lang/Throwable;
 
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lf06;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lf06;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lf06;->X:I
+    iget p1, p0, Lf06;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lf06;->X:I
+    iput p1, p0, Lf06;->Y:I
 
-    iget-object p1, p0, Lf06;->Z:Lg06;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg06;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1, p1, p1, p0}, Lr40;->a(Ljuf;Lbj6;Ljava/lang/Throwable;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 

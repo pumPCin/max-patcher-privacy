@@ -1,226 +1,93 @@
 .class public final Lpea;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:Lda2;
+.field public final a:Z
 
-.field public Y:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:Lrea;
+.field public final c:I
 
-.field public final synthetic r0:J
+.field public final d:Z
 
-.field public final synthetic s0:J
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lrea;JJLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZLjava/lang/String;IZZ)V
     .locals 0
 
-    iput-object p1, p0, Lpea;->Z:Lrea;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lpea;->r0:J
+    iput-boolean p1, p0, Lpea;->a:Z
 
-    iput-wide p4, p0, Lpea;->s0:J
+    iput-object p2, p0, Lpea;->b:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput p3, p0, Lpea;->c:I
 
-    invoke-direct {p0, p1, p6}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p4, p0, Lpea;->d:Z
+
+    iput-boolean p5, p0, Lpea;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Lb54;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "Settings{notify="
 
-    invoke-virtual {p0, p1, p2}, Lpea;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-boolean v1, p0, Lpea;->a:Z
 
-    check-cast p1, Lpea;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lzag;->a:Lzag;
+    const-string v1, ", ringtone=\'"
 
-    invoke-virtual {p1, p2}, Lpea;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lpea;->b:Ljava/lang/String;
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    const-string v1, "\', led="
 
-    new-instance v0, Lpea;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lpea;->r0:J
+    iget v1, p0, Lpea;->c:I
 
-    iget-wide v4, p0, Lpea;->s0:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lpea;->Z:Lrea;
+    const-string v1, ", vibrate="
 
-    move-object v6, p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v0 .. v6}, Lpea;-><init>(Lrea;JJLkotlin/coroutines/Continuation;)V
+    iget-boolean v1, p0, Lpea;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxPriority="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lpea;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget v0, p0, Lpea;->Y:I
-
-    sget-object v1, Lzag;->a:Lzag;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lpea;->Z:Lrea;
-
-    sget-object v6, Lc54;->a:Lc54;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v4, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Lpea;->X:Lda2;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v5, Lrea;->b:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt23;
-
-    iput v4, p0, Lpea;->Y:I
-
-    check-cast p1, Lu33;
-
-    iget-wide v7, p0, Lpea;->r0:J
-
-    invoke-virtual {p1, v7, v8, p0}, Lu33;->K(JLk14;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_0
-    move-object v0, p1
-
-    check-cast v0, Lda2;
-
-    if-nez v0, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iput-object v0, p0, Lpea;->X:Lda2;
-
-    iput v3, p0, Lpea;->Y:I
-
-    iget-wide v3, p0, Lpea;->s0:J
-
-    invoke-static {v5, v0, v3, v4, p0}, Lrea;->w(Lrea;Lda2;JLk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    :goto_1
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    iget-object p1, v5, Lrea;->X:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v7, p1
-
-    check-cast v7, Lsfa;
-
-    iget-object p1, v0, Lda2;->b:Lfe2;
-
-    iget-wide v8, p1, Lfe2;->a:J
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lpea;->X:Lda2;
-
-    iput v2, p0, Lpea;->Y:I
-
-    iget-wide v10, p0, Lpea;->s0:J
-
-    move-object v12, p0
-
-    invoke-virtual/range {v7 .. v12}, Lsfa;->g(JJLlff;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_7
-
-    :goto_2
-    return-object v6
-
-    :cond_7
-    :goto_3
-    return-object v1
 .end method

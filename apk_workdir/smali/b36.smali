@@ -1,91 +1,169 @@
 .class public final Lb36;
-.super Lb2;
+.super Ljava/util/concurrent/atomic/AtomicLong;
 .source "SourceFile"
+
+# interfaces
+.implements Lq36;
+.implements Lgcf;
 
 
 # instance fields
-.field public final X:Ljava/lang/Iterable;
+.field public final a:Lecf;
 
-.field public final synthetic o:I
+.field public b:Lgcf;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lc36;I)V
-    .locals 1
+.method public constructor <init>(Lecf;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    iput v0, p0, Lb36;->o:I
-
-    .line 1
-    iput-object p1, p0, Lb36;->X:Ljava/lang/Iterable;
-
-    const/4 p1, 0x0
-
-    .line 2
-    invoke-direct {p0, p2, p1}, Lb2;-><init>(II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhb7;I)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lb36;->o:I
-
-    .line 3
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    invoke-direct {p0, v0, p2}, Lb2;-><init>(II)V
-
-    .line 4
-    iput-object p1, p0, Lb36;->X:Ljava/lang/Iterable;
+    iput-object p1, p0, Lb36;->a:Lecf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I)Ljava/lang/Object;
+.method public final b()V
     .locals 1
 
-    iget v0, p0, Lb36;->o:I
+    iget-boolean v0, p0, Lb36;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lb36;->X:Ljava/lang/Iterable;
+    return-void
 
-    check-cast v0, Lhb7;
+    :cond_0
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-boolean v0, p0, Lb36;->c:Z
 
-    move-result-object p1
+    iget-object v0, p0, Lb36;->a:Lecf;
 
-    return-object p1
+    invoke-interface {v0}, Lecf;->b()V
 
-    :pswitch_0
-    iget-object v0, p0, Lb36;->X:Ljava/lang/Iterable;
+    return-void
+.end method
 
-    check-cast v0, Lc36;
+.method public final cancel()V
+    .locals 1
 
-    iget-object v0, v0, Lc36;->a:[Ljava/lang/Iterable;
+    iget-object v0, p0, Lb36;->b:Lgcf;
 
-    aget-object p1, v0, p1
+    invoke-interface {v0}, Lgcf;->cancel()V
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final d(Ljava/lang/Object;)V
+    .locals 4
 
-    return-object p1
+    iget-boolean v0, p0, Lb36;->c:Z
 
-    nop
+    if-eqz v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lb36;->a:Lecf;
+
+    invoke-interface {v0, p1}, Lecf;->d(Ljava/lang/Object;)V
+
+    const-wide/16 v0, 0x1
+
+    invoke-static {p0, v0, v1}, Liji;->g(Ljava/util/concurrent/atomic/AtomicLong;J)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lb36;->b:Lgcf;
+
+    invoke-interface {p1}, Lgcf;->cancel()V
+
+    new-instance p1, Lio/reactivex/rxjava3/exceptions/MissingBackpressureException;
+
+    const-string v0, "Could not emit value due to lack of requests"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lb36;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final e(Lgcf;)V
+    .locals 2
+
+    iget-object v0, p0, Lb36;->b:Lgcf;
+
+    invoke-static {v0, p1}, Ljcf;->f(Lgcf;Lgcf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lb36;->b:Lgcf;
+
+    iget-object v0, p0, Lb36;->a:Lecf;
+
+    invoke-interface {v0, p0}, Lecf;->e(Lgcf;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lgcf;->i(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final i(J)V
+    .locals 1
+
+    invoke-static {p1, p2}, Ljcf;->e(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0, p1, p2}, Liji;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lb36;->c:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lb36;->c:Z
+
+    iget-object v0, p0, Lb36;->a:Lecf;
+
+    invoke-interface {v0, p1}, Lecf;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

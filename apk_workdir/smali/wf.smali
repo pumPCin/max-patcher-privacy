@@ -68,7 +68,7 @@
 
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lyfg;
+    check-cast p1, Lchg;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lvna;
+    check-cast p1, Lyoa;
 
     if-eqz p1, :cond_0
 
@@ -95,7 +95,7 @@
     :pswitch_1
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lf3b;
+    check-cast p1, Lh4b;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -118,22 +118,22 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v1, Le3b;
+    new-instance v1, Lg4b;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Le3b;-><init>(Lf3b;I)V
+    invoke-direct {v1, p1, v2}, Lg4b;-><init>(Lh4b;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
     :cond_2
-    new-instance v0, Le3b;
+    new-instance v0, Lg4b;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p1, v1}, Le3b;-><init>(Lf3b;I)V
+    invoke-direct {v0, p1, v1}, Lg4b;-><init>(Lh4b;I)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -143,14 +143,23 @@
     :pswitch_2
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lhna;
+    check-cast p1, Lkoa;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    :pswitch_3
     return-void
 
+    :pswitch_3
+    iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljd5;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
     :pswitch_4
+    return-void
+
+    :pswitch_5
     iget-object v0, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast v0, Ltk;
@@ -166,7 +175,7 @@
     :cond_3
     return-void
 
-    :pswitch_5
+    :pswitch_6
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast p1, Lzf;
@@ -179,6 +188,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3
@@ -197,7 +207,7 @@
 
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lyfg;
+    check-cast p1, Lchg;
 
     invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
@@ -207,7 +217,7 @@
     :pswitch_1
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lf3b;
+    check-cast p1, Lh4b;
 
     invoke-virtual {p1, p2, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -216,13 +226,22 @@
     :pswitch_2
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lhna;
+    check-cast p1, Lkoa;
 
     invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
     return-void
 
     :pswitch_3
+    iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljd5;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :pswitch_4
     iget-object v0, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/drawable/Drawable$Callback;
@@ -234,7 +253,7 @@
     :cond_0
     return-void
 
-    :pswitch_4
+    :pswitch_5
     iget-object v0, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast v0, Ltk;
@@ -250,7 +269,7 @@
     :cond_1
     return-void
 
-    :pswitch_5
+    :pswitch_6
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast p1, Lzf;
@@ -263,6 +282,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3
@@ -281,7 +301,7 @@
 
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lyfg;
+    check-cast p1, Lchg;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
@@ -291,7 +311,7 @@
     :pswitch_1
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lf3b;
+    check-cast p1, Lh4b;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -314,22 +334,22 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v1, Lmj6;
+    new-instance v1, Lhk6;
 
     const/16 v2, 0x13
 
-    invoke-direct {v1, p1, v2, p2}, Lmj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p1, v2, p2}, Lhk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
     :cond_1
-    new-instance v0, Llj6;
+    new-instance v0, Lgk6;
 
     const/16 v1, 0x14
 
-    invoke-direct {v0, p1, v1, p2}, Llj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, p2}, Lgk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -339,13 +359,22 @@
     :pswitch_2
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lhna;
+    check-cast p1, Lkoa;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_3
+    iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljd5;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_4
     iget-object v0, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/drawable/Drawable$Callback;
@@ -357,7 +386,7 @@
     :cond_2
     return-void
 
-    :pswitch_4
+    :pswitch_5
     iget-object v0, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast v0, Ltk;
@@ -373,7 +402,7 @@
     :cond_3
     return-void
 
-    :pswitch_5
+    :pswitch_6
     iget-object p1, p0, Lwf;->b:Ljava/lang/Object;
 
     check-cast p1, Lzf;
@@ -386,6 +415,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3

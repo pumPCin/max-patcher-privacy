@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lqb5;Z)V
+.method public constructor <init>(Lic5;Z)V
     .locals 2
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -27,7 +27,7 @@
     :goto_0
     const-string v1, "Missing keys for encryption level "
 
-    invoke-static {v1, p1, v0}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v0}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

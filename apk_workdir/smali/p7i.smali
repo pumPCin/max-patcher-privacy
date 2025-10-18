@@ -1,115 +1,248 @@
 .class public final Lp7i;
-.super Ln7i;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltha;
 
 
 # static fields
-.field public static final X:Lp7i;
+.field public static final a:Lp7i;
 
+.field public static final b:Lbr5;
 
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
+.field public static final c:Lbr5;
 
-.field public final transient o:I
+.field public static final d:Lbr5;
+
+.field public static final e:Lbr5;
+
+.field public static final f:Lbr5;
+
+.field public static final g:Lbr5;
+
+.field public static final h:Lbr5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     new-instance v0, Lp7i;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v2, v1, [Ljava/lang/Object;
+    sput-object v0, Lp7i;->a:Lp7i;
 
-    invoke-direct {v0, v1, v2}, Lp7i;-><init>(I[Ljava/lang/Object;)V
+    new-instance v0, Ltwh;
 
-    sput-object v0, Lp7i;->X:Lp7i;
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+    const-class v1, Lmxh;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
 
-    iput-object p2, p0, Lp7i;->c:[Ljava/lang/Object;
+    move-result-object v0
 
-    iput p1, p0, Lp7i;->o:I
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "durationMs"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->b:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageSource"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->c:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageFormat"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->d:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageByteSize"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->e:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageWidth"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->f:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageHeight"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lp7i;->g:Lbr5;
+
+    new-instance v0, Ltwh;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "rotationDegrees"
+
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lp7i;->h:Lbr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()[Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lp7i;->c:[Ljava/lang/Object;
+    check-cast p1, Laii;
 
-    return-object v0
-.end method
+    check-cast p2, Luha;
 
-.method public final b()I
-    .locals 1
+    sget-object v0, Lp7i;->b:Lbr5;
 
-    const/4 v0, 0x0
+    iget-object v1, p1, Laii;->a:Ljava/lang/Long;
 
-    return v0
-.end method
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-.method public final d()I
-    .locals 1
+    sget-object v0, Lp7i;->c:Lbr5;
 
-    iget v0, p0, Lp7i;->o:I
+    iget-object v1, p1, Laii;->b:Lxhi;
 
-    return v0
-.end method
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-.method public final e()Z
-    .locals 1
+    sget-object v0, Lp7i;->d:Lbr5;
 
-    const/4 v0, 0x0
+    iget-object v1, p1, Laii;->c:Lkhi;
 
-    return v0
-.end method
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-.method public final f([Ljava/lang/Object;)I
-    .locals 3
+    sget-object v0, Lp7i;->e:Lbr5;
 
-    iget-object v0, p0, Lp7i;->c:[Ljava/lang/Object;
+    iget-object v1, p1, Laii;->d:Ljava/lang/Integer;
 
-    const/4 v1, 0x0
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    iget v2, p0, Lp7i;->o:I
+    sget-object v0, Lp7i;->f:Lbr5;
 
-    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    iget-object v1, p1, Laii;->e:Ljava/lang/Integer;
 
-    return v2
-.end method
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+    sget-object v0, Lp7i;->g:Lbr5;
 
-    iget v0, p0, Lp7i;->o:I
+    iget-object v1, p1, Laii;->f:Ljava/lang/Integer;
 
-    invoke-static {p1, v0}, Leii;->e(II)V
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    iget-object v0, p0, Lp7i;->c:[Ljava/lang/Object;
+    sget-object v0, Lp7i;->h:Lbr5;
 
-    aget-object p1, v0, p1
+    iget-object p1, p1, Laii;->g:Ljava/lang/Integer;
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lp7i;->o:I
-
-    return v0
+    return-void
 .end method

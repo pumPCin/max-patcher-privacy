@@ -1,9 +1,9 @@
 .class public final Lwhi;
-.super Li6i;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements La9i;
+.implements Lbai;
 
 
 # static fields
@@ -13,9 +13,23 @@
 # instance fields
 .field private zzd:I
 
-.field private zze:Ljava/lang/String;
+.field private zze:Z
 
-.field private zzf:Lw6i;
+.field private zzf:I
+
+.field private zzg:Z
+
+.field private zzh:I
+
+.field private zzi:I
+
+.field private zzj:I
+
+.field private zzk:I
+
+.field private zzl:Ljava/lang/String;
+
+.field private zzm:Ljava/lang/String;
 
 
 # direct methods
@@ -30,7 +44,7 @@
 
     const-class v1, Lwhi;
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
 .end method
@@ -38,100 +52,124 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    invoke-direct {p0}, Lj7i;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwhi;->zzg:Z
 
     const-string v0, ""
 
-    iput-object v0, p0, Lwhi;->zze:Ljava/lang/String;
+    iput-object v0, p0, Lwhi;->zzl:Ljava/lang/String;
 
-    sget-object v0, Ls9i;->o:Ls9i;
-
-    iput-object v0, p0, Lwhi;->zzf:Lw6i;
+    iput-object v0, p0, Lwhi;->zzm:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 2
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 16
 
-    add-int/lit8 p1, p1, -0x1
+    add-int/lit8 v0, p1, -0x1
 
-    if-eqz p1, :cond_4
+    if-eqz v0, :cond_4
 
-    const/4 p2, 0x2
+    const/4 v1, 0x2
 
-    if-eq p1, p2, :cond_3
+    if-eq v0, v1, :cond_3
 
-    const/4 p2, 0x3
+    const/4 v1, 0x3
 
-    if-eq p1, p2, :cond_2
+    if-eq v0, v1, :cond_2
 
-    const/4 p2, 0x4
+    const/4 v1, 0x4
 
-    if-eq p1, p2, :cond_1
+    if-eq v0, v1, :cond_1
 
-    const/4 p2, 0x5
+    const/4 v1, 0x5
 
-    if-eq p1, p2, :cond_0
+    if-eq v0, v1, :cond_0
 
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lwhi;->zzb:Lwhi;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Laki;
-
-    sget-object p2, Lwhi;->zzb:Lwhi;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p1, v0, p2}, Laki;-><init>(ILi6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lwhi;
-
-    invoke-direct {p1}, Lwhi;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "zzf"
-
-    const-class p2, Lx1j;
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    filled-new-array {v0, v1, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lwhi;->zzb:Lwhi;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1008\u0000\u0002\u001b"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
     return-object v0
 
+    :cond_0
+    sget-object v0, Lwhi;->zzb:Lwhi;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lali;
+
+    sget-object v1, Lwhi;->zzb:Lwhi;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Lali;-><init>(ILj7i;)V
+
+    return-object v0
+
+    :cond_2
+    new-instance v0, Lwhi;
+
+    invoke-direct {v0}, Lwhi;-><init>()V
+
+    return-object v0
+
+    :cond_3
+    sget-object v4, Lcxh;->u:Lcxh;
+
+    sget-object v7, Lcxh;->s:Lcxh;
+
+    sget-object v9, Lcxh;->t:Lcxh;
+
+    const-string v14, "zzl"
+
+    const-string v15, "zzm"
+
+    const-string v1, "zzd"
+
+    const-string v2, "zze"
+
+    const-string v3, "zzf"
+
+    const-string v5, "zzg"
+
+    const-string v6, "zzh"
+
+    const-string v8, "zzi"
+
+    const-string v10, "zzj"
+
+    const-string v12, "zzk"
+
+    move-object v11, v9
+
+    move-object v13, v9
+
+    filled-new-array/range {v1 .. v15}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lwhi;->zzb:Lwhi;
+
+    new-instance v2, Lwai;
+
+    const-string v3, "\u0001\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1007\u0000\u0002\u180c\u0001\u0003\u1007\u0002\u0004\u180c\u0003\u0005\u180c\u0004\u0006\u180c\u0005\u0007\u180c\u0006\u0008\u1008\u0007\t\u1008\u0008"
+
+    invoke-direct {v2, v1, v3, v0}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v2
+
     :cond_4
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

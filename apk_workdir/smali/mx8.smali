@@ -1,77 +1,51 @@
 .class public final Lmx8;
-.super Lj6d;
+.super Landroid/media/MediaRouter2$RouteCallback;
 .source "SourceFile"
 
 
 # instance fields
-.field public final E0:Landroid/view/View;
-
-.field public final F0:Landroid/widget/ImageView;
-
-.field public final G0:Landroid/widget/ProgressBar;
-
-.field public final H0:Landroid/widget/TextView;
-
-.field public final I0:F
-
-.field public J0:Ley8;
-
-.field public final synthetic K0:Lpx8;
+.field public final synthetic a:Lox8;
 
 
 # direct methods
-.method public constructor <init>(Lpx8;Landroid/view/View;)V
-    .locals 2
+.method public constructor <init>(Lox8;)V
+    .locals 0
 
-    iput-object p1, p0, Lmx8;->K0:Lpx8;
+    iput-object p1, p0, Lmx8;->a:Lox8;
 
-    invoke-direct {p0, p2}, Lj6d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Landroid/media/MediaRouter2$RouteCallback;-><init>()V
 
-    iput-object p2, p0, Lmx8;->E0:Landroid/view/View;
+    return-void
+.end method
 
-    sget v0, Lnlc;->mr_cast_group_icon:I
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+# virtual methods
+.method public final onRoutesAdded(Ljava/util/List;)V
+    .locals 0
 
-    move-result-object v0
+    iget-object p1, p0, Lmx8;->a:Lox8;
 
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-virtual {p1}, Lox8;->j()V
 
-    iput-object v0, p0, Lmx8;->F0:Landroid/widget/ImageView;
+    return-void
+.end method
 
-    sget v0, Lnlc;->mr_cast_group_progress_bar:I
+.method public final onRoutesChanged(Ljava/util/List;)V
+    .locals 0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object p1, p0, Lmx8;->a:Lox8;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lox8;->j()V
 
-    check-cast v0, Landroid/widget/ProgressBar;
+    return-void
+.end method
 
-    iput-object v0, p0, Lmx8;->G0:Landroid/widget/ProgressBar;
+.method public final onRoutesRemoved(Ljava/util/List;)V
+    .locals 0
 
-    sget v1, Lnlc;->mr_cast_group_name:I
+    iget-object p1, p0, Lmx8;->a:Lox8;
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Lmx8;->H0:Landroid/widget/TextView;
-
-    iget-object p1, p1, Lpx8;->w0:Lrx8;
-
-    iget-object p2, p1, Lrx8;->x0:Landroid/content/Context;
-
-    invoke-static {p2}, Lly8;->c(Landroid/content/Context;)F
-
-    move-result p2
-
-    iput p2, p0, Lmx8;->I0:F
-
-    iget-object p1, p1, Lrx8;->x0:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lly8;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
+    invoke-virtual {p1}, Lox8;->j()V
 
     return-void
 .end method

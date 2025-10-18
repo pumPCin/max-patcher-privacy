@@ -1,35 +1,47 @@
 .class public final Lsyb;
-.super Lk14;
+.super Lrr9;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Landroid/graphics/PointF;
+
+
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:Lmyb;
 
-.field public Y:I
+.field public c:Landroid/graphics/Rect;
 
-.field public o:Loh6;
+.field public d:Landroid/graphics/Matrix;
 
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/graphics/PointF;
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-direct {v0, v1, v1}, Landroid/graphics/PointF;-><init>(FF)V
+
+    sput-object v0, Lsyb;->e:Landroid/graphics/PointF;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmyb;)V
     .locals 1
 
-    iput-object p1, p0, Lsyb;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lsyb;->Y:I
+    const/4 v0, 0x0
 
-    const/high16 v0, -0x80000000
+    iput-object v0, p0, Lrr9;->a:Landroid/util/Rational;
 
-    or-int/2addr p1, v0
+    iput-object v0, p0, Lsyb;->c:Landroid/graphics/Rect;
 
-    iput p1, p0, Lsyb;->Y:I
+    iput-object p1, p0, Lsyb;->b:Lmyb;
 
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1, p0}, Lfui;->a(Lyyb;Loh6;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,35 +1,48 @@
 .class public final Lyz7;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ly14;
 
 
 # instance fields
-.field public final a:Llt7;
+.field public X:I
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic Y:Li00;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Llt7;)V
+.method public constructor <init>(Li00;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lyz7;->Y:Li00;
+
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyz7;->o:Ljava/lang/Object;
 
-    iput-object p1, p0, Lyz7;->a:Llt7;
+    iget p1, p0, Lyz7;->X:I
 
-    new-instance p1, Lvj7;
+    const/high16 v0, -0x80000000
 
-    const/16 v0, 0xf
+    or-int/2addr p1, v0
 
-    invoke-direct {p1, v0}, Lvj7;-><init>(I)V
+    iput p1, p0, Lyz7;->X:I
 
-    const/4 v0, 0x3
+    iget-object p1, p0, Lyz7;->Y:Li00;
 
-    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Li00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lyz7;->b:Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

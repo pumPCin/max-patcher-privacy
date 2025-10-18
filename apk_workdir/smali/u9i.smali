@@ -2,38 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final a:Lp9i;
 
-.field public final b:Ljava/lang/Integer;
-
-.field public final c:Lvui;
+# static fields
+.field public static final a:Lu9i;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly38;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lu9i;
 
-    iget-object v0, p1, Ly38;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lp9i;
+    sput-object v0, Lu9i;->a:Lu9i;
 
-    iput-object v0, p0, Lu9i;->a:Lp9i;
+    new-instance v0, Ltwh;
 
-    iget-object v0, p1, Ly38;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v0, Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
 
-    iput-object v0, p0, Lu9i;->b:Ljava/lang/Integer;
+    const-class v1, Lmxh;
 
-    iget-object p1, p1, Ly38;->c:Ljava/lang/Object;
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
 
-    check-cast p1, Lvui;
+    move-result-object v0
 
-    iput-object p1, p0, Lu9i;->c:Lvui;
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

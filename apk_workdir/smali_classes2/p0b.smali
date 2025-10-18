@@ -1,43 +1,68 @@
-.class public abstract Lp0b;
-.super Ljava/lang/Object;
+.class public final Lp0b;
+.super Lvo;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+# interfaces
+.implements Lwsf;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final b(ZLv5b;)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p2}, Lv5b;->getIcon()Ld77;
+
+    move-result-object p1
+
+    iget p1, p1, Ld77;->k:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2}, Lv5b;->i()Lkbf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkbf;->b:Lpbf;
+
+    iget p1, p1, Lpbf;->b:I
+
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lv5b;)V
     .locals 1
 
-    sget v0, Lunc;->oneme_snackbar_caption_id:I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    sput v0, Lp0b;->a:I
+    move-result v0
 
-    sget v0, Lunc;->oneme_snackbar_container_id:I
+    invoke-virtual {p0, v0, p1}, Lp0b;->b(ZLv5b;)V
 
-    sput v0, Lp0b;->b:I
+    return-void
+.end method
 
-    sget v0, Lunc;->oneme_snackbar_left_icon_id:I
+.method public setChecked(Z)V
+    .locals 1
 
-    sput v0, Lp0b;->c:I
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    sget v0, Lunc;->oneme_snackbar_right_button_id:I
+    sget-object v0, Ll05;->s0:Lk82;
 
-    sput v0, Lp0b;->d:I
+    invoke-virtual {v0, p0}, Lk82;->n(Landroid/view/View;)Lv5b;
 
-    sget v0, Lunc;->oneme_snackbar_title_id:I
+    move-result-object v0
 
-    sput v0, Lp0b;->e:I
+    invoke-virtual {p0, p1, v0}, Lp0b;->b(ZLv5b;)V
 
     return-void
 .end method

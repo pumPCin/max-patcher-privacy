@@ -1,23 +1,21 @@
 .class public final Lkz1;
-.super Liz1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final b(ILpz1;)V
-    .locals 0
+# static fields
+.field public static final a:Lkz1;
 
-    return-void
-.end method
 
-.method public final c(ILnqi;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    new-instance v0, Lkz1;
 
-.method public final d(I)V
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkz1;->a:Lkz1;
 
     return-void
 .end method

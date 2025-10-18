@@ -4,121 +4,218 @@
 
 
 # direct methods
-.method public static final a(Landroid/text/Spanned;)I
-    .locals 6
+.method public static varargs a(Ljava/lang/String;[I)V
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result v0
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    const-class v3, Ljava/lang/Object;
-
-    invoke-interface {p0, v2, v1, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/16 v2, 0x3000
+
+    if-eq v0, v2, :cond_0
 
     goto :goto_0
 
-    :catchall_0
+    :cond_0
     const/4 v1, 0x0
 
     :goto_0
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_4
 
-    return v0
-
-    :cond_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    array-length v3, v1
-
-    :goto_1
-    if-ge v2, v3, :cond_3
-
-    aget-object v4, v1, v2
-
-    if-nez v4, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    if-eq v4, p0, :cond_2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
-
-    move-result v5
-
-    add-int/2addr v0, v5
-
-    :cond_2
-    mul-int/lit8 v0, v0, 0x1f
-
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v5
-
-    add-int/2addr v5, v0
-
-    mul-int/lit8 v5, v5, 0x1f
-
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
-    add-int/2addr v0, v5
+    const/16 v1, 0x3003
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eq v0, v1, :cond_3
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+    const/16 v1, 0x3005
 
-    move-result v4
+    if-eq v0, v1, :cond_2
 
-    add-int/2addr v4, v0
+    const/16 v1, 0x3009
 
-    move v0, v4
+    if-eq v0, v1, :cond_1
 
-    :goto_2
-    add-int/lit8 v2, v2, 0x1
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "0x"
+
+    invoke-static {v2, v1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :pswitch_0
+    const-string v1, "EGL_BAD_SURFACE"
+
+    goto :goto_1
+
+    :pswitch_1
+    const-string v1, "EGL_BAD_PARAMETER"
+
+    goto :goto_1
+
+    :pswitch_2
+    const-string v1, "EGL_BAD_NATIVE_WINDOW"
+
+    goto :goto_1
+
+    :cond_1
+    const-string v1, "EGL_BAD_MATCH"
+
+    goto :goto_1
+
+    :cond_2
+    const-string v1, "EGL_BAD_CONFIG"
 
     goto :goto_1
 
     :cond_3
-    return v0
-.end method
+    const-string v1, "EGL_BAD_ALLOC"
 
-.method public static final varargs b([Lqbb;)Lrhb;
-    .locals 1
+    :goto_1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    sget-object v0, Lrhb;->c:Lrhb;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v0, Lthb;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Lthb;-><init>()V
+    const-string p0, ": "
 
-    invoke-static {v0, p0}, Lyf8;->g(Ljava/util/AbstractMap;[Lqbb;)V
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lthb;->d()Lrhb;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    const-string v1, "EGL14Utils"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v0, p1}, Ljt;->k(I[I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    new-instance p1, Lone/video/gl/EGL14Utils$EGL14UtilsException;
+
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x300b
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Landroid/opengl/EGLDisplay;I)Landroid/opengl/EGLConfig;
+    .locals 21
+
+    const/4 v11, 0x1
+
+    const/16 v12, 0x3038
+
+    const/16 v0, 0x3024
+
+    const/16 v1, 0x8
+
+    const/16 v2, 0x3023
+
+    const/16 v3, 0x8
+
+    const/16 v4, 0x3022
+
+    const/16 v5, 0x8
+
+    const/16 v6, 0x3040
+
+    const/4 v7, 0x4
+
+    const/16 v8, 0x3033
+
+    const/16 v10, 0x3142
+
+    move/from16 v9, p1
+
+    filled-new-array/range {v0 .. v12}, [I
+
+    move-result-object v14
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [Landroid/opengl/EGLConfig;
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [I
+
+    const/16 v17, 0x0
+
+    const/16 v20, 0x0
+
+    const/4 v15, 0x0
+
+    move-object/from16 v13, p0
+
+    move/from16 v18, v0
+
+    move-object/from16 v16, v1
+
+    move-object/from16 v19, v2
+
+    invoke-static/range {v13 .. v20}, Landroid/opengl/EGL14;->eglChooseConfig(Landroid/opengl/EGLDisplay;[II[Landroid/opengl/EGLConfig;II[II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    aget-object v0, v16, v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Unable to find EGL config"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final c(Lzcg;)V
+    .locals 2
+
+    new-instance v0, Lnee;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+
+    const-class v1, Lvf4;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    return-void
 .end method

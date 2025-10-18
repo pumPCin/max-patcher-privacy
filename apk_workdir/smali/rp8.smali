@@ -1,68 +1,156 @@
-.class public final synthetic Lrp8;
+.class public final Lrp8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Laq8;
+.implements Lqp8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lcq8;
-
-.field public final synthetic c:F
+.field public b:[Landroid/media/MediaCodecInfo;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcq8;FI)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput p3, p0, Lrp8;->a:I
-
-    iput-object p1, p0, Lrp8;->b:Lcq8;
-
-    iput p2, p0, Lrp8;->c:F
-
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-nez p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    .line 4
+    :goto_1
+    iput p1, p0, Lrp8;->a:I
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-nez p1, :cond_1
+
+    if-nez p2, :cond_1
+
+    if-eqz p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    .line 2
+    :goto_1
+    iput p1, p0, Lrp8;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lw57;I)V
+.method public a(I)Landroid/media/MediaCodecInfo;
     .locals 2
 
-    iget v0, p0, Lrp8;->a:I
+    iget-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget v0, p0, Lrp8;->c:F
+    new-instance v0, Landroid/media/MediaCodecList;
 
-    iget-object v1, p0, Lrp8;->b:Lcq8;
+    iget v1, p0, Lrp8;->a:I
 
-    iget-object v1, v1, Lcq8;->c:Lmq8;
+    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
 
-    invoke-interface {p1, v1, p2, v0}, Lw57;->t(Lq57;IF)V
+    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget v0, p0, Lrp8;->c:F
+    iput-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
 
-    iget-object v1, p0, Lrp8;->b:Lcq8;
+    :cond_0
+    iget-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
 
-    iget-object v1, v1, Lcq8;->c:Lmq8;
+    aget-object p1, v0, p1
 
-    invoke-interface {p1, v1, p2, v0}, Lw57;->u(Lq57;IF)V
+    return-object p1
+.end method
 
-    return-void
+.method public c(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+    .locals 0
 
-    nop
+    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result p1
+
+    return p1
+.end method
+
+.method public d(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+    .locals 0
+
+    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e()I
+    .locals 2
+
+    iget-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/media/MediaCodecList;
+
+    iget v1, p0, Lrp8;->a:I
+
+    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+
+    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
+
+    :cond_0
+    iget-object v0, p0, Lrp8;->b:[Landroid/media/MediaCodecInfo;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public f()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

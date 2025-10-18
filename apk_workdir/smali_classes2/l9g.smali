@@ -1,196 +1,235 @@
-.class public final synthetic Ll9g;
-.super Ljava/lang/Object;
+.class public final Ll9g;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lo9g;
+.field public final synthetic Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lo9g;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
     .locals 0
 
-    iput p3, p0, Ll9g;->a:I
+    iput-object p2, p0, Ll9g;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    iput-object p1, p0, Ll9g;->b:Landroid/content/Context;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Ll9g;->c:Lo9g;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ll9g;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ll9g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lpn3;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    check-cast p1, Ll9g;
 
-    iget-object v2, p0, Ll9g;->b:Landroid/content/Context;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-direct {v0, v2, v1}, Lpn3;-><init>(Landroid/content/Context;I)V
+    invoke-virtual {p1, p2}, Ll9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Ll9g;->c:Lo9g;
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1}, Lpn3;->setListener(Lln3;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+    new-instance v0, Ll9g;
 
-    const/4 v3, -0x2
+    iget-object v1, p0, Ll9g;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v0, p2, v1}, Ll9g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
 
-    const/16 v3, 0x18
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v2, Lkm3;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v0, v0, v3}, Lkm3;-><init>(Lpn3;Lpn3;I)V
-
-    invoke-static {v0, v2}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
-
-    new-instance v2, Lwxe;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3}, Lwxe;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lpn3;->setKeyboardOpen(Loh6;)V
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
+    iput-object p1, v0, Ll9g;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lr4b;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
 
-    iget-object v1, p0, Ll9g;->b:Landroid/content/Context;
+    move-object/from16 v0, p0
 
-    invoke-direct {v0, v1}, Lr4b;-><init>(Landroid/content/Context;)V
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, v0, Ll9g;->X:Ljava/lang/Object;
 
-    const/4 v2, -0x1
+    check-cast v1, Lf7g;
 
-    const/4 v3, -0x2
+    sget v2, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->Y:I
 
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    instance-of v2, v1, Ld7g;
 
-    const/16 v2, 0x8
+    iget-object v3, v0, Ll9g;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    int-to-float v2, v2
+    if-eqz v2, :cond_0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    new-instance v2, Lc3b;
 
-    move-result-object v3
+    invoke-direct {v2, v3}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v1, Ld7g;
 
-    move-result-object v3
+    iget-object v3, v1, Ld7g;->a:Ltrf;
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v2, v3}, Lc3b;->g(Ltrf;)V
 
-    mul-float/2addr v2, v3
+    new-instance v3, Lq3b;
 
-    invoke-static {v2}, Lagi;->d(F)I
+    iget v1, v1, Ld7g;->b:I
 
-    move-result v2
+    invoke-direct {v3, v1}, Lq3b;-><init>(I)V
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    invoke-virtual {v2, v3}, Lc3b;->e(Lu3b;)V
 
-    const/16 v2, 0xc
+    invoke-virtual {v2}, Lc3b;->i()Lb3b;
 
-    int-to-float v2, v2
+    goto :goto_2
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    :cond_0
+    instance-of v2, v1, Le7g;
 
-    move-result-object v3
+    if-eqz v2, :cond_5
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
 
-    move-result-object v3
+    check-cast v1, Le7g;
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    iget-object v2, v1, Le7g;->a:Lorf;
 
-    mul-float/2addr v2, v3
+    sget-object v4, Lupd;->Q1:Lupd;
 
-    invoke-static {v2}, Lagi;->d(F)I
+    const/4 v5, 0x2
 
-    move-result v2
+    const/4 v6, 0x0
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    invoke-static {v2, v6, v4, v5}, Levi;->a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v9
 
-    sget v1, Luza;->M:I
+    iget-object v2, v1, Le7g;->b:Lorf;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v9, v2}, Leo3;->f(Ltrf;)V
+
+    iget-object v1, v1, Le7g;->c:Ljava/util/List;
+
+    new-instance v7, Lvo2;
+
+    const/16 v13, 0x8
+
+    const/16 v14, 0x11
+
+    const/4 v8, 0x1
+
+    const-class v10, Leo3;
+
+    const-string v11, "addButton"
+
+    const-string v12, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
+
+    invoke-direct/range {v7 .. v14}, Lvo2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lg4;
+
+    const/16 v4, 0x1a
+
+    invoke-direct {v2, v4, v7}, Lg4;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v9}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v3}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lr4b;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+    goto :goto_0
 
-    sget-object v1, Lp4b;->b:Lp4b;
+    :cond_1
+    instance-of v2, v1, Lwid;
 
-    invoke-virtual {v0, v1}, Lr4b;->setTypingMode(Lp4b;)V
+    if-eqz v2, :cond_2
 
-    new-instance v1, Lk9g;
+    check-cast v1, Lwid;
+
+    goto :goto_1
+
+    :cond_2
+    move-object v1, v6
+
+    :goto_1
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Lwid;->f0()Lqid;
+
+    move-result-object v6
+
+    :cond_3
+    invoke-virtual {v11, v3}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v6, :cond_4
+
+    new-instance v10, Ltid;
+
+    const/4 v15, 0x0
+
+    const/16 v16, -0x1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v10 .. v16}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Ll9g;->c:Lo9g;
+    const-string v3, "BottomSheetWidget"
 
-    invoke-direct {v1, v3, v2}, Lk9g;-><init>(Lo9g;I)V
+    invoke-static {v1, v10, v2, v3}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lr4b;->f(Lqh6;)V
+    invoke-virtual {v6, v10}, Lqid;->G(Ltid;)V
 
-    return-object v0
+    :cond_4
+    :goto_2
+    sget-object v1, Lccg;->a:Lccg;
 
-    nop
+    return-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
 .end method

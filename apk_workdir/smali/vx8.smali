@@ -1,198 +1,122 @@
-.class public abstract Lvx8;
+.class public final Lvx8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
+
 
 # instance fields
-.field public X:Ldx8;
+.field public final synthetic a:I
 
-.field public Y:Z
-
-.field public Z:Lwx8;
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lswe;
-
-.field public final c:Lky;
-
-.field public o:Lggd;
-
-.field public r0:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lswe;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lvx8;->a:I
+
+    iput-object p2, p0, Lvx8;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lky;
+    return-void
+.end method
 
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, p0}, Lky;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lvx8;->c:Lky;
-
-    if-eqz p1, :cond_1
-
-    iput-object p1, p0, Lvx8;->a:Landroid/content/Context;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Lswe;
-
-    new-instance v0, Landroid/content/ComponentName;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/16 p1, 0x13
-
-    invoke-direct {p2, p1, v0}, Lswe;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lvx8;->b:Lswe;
+.method private final a(Landroid/view/animation/Animation;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_0
-    iput-object p2, p0, Lvx8;->b:Lswe;
+.method private final b(Landroid/view/animation/Animation;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method private final c(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    const-string p2, "context must not be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/String;)Ltx8;
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    if-eqz p1, :cond_0
+    iget p1, p0, Lvx8;->a:I
 
-    const/4 p1, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    return-object p1
+    iget-object p1, p0, Lvx8;->b:Ljava/lang/Object;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    check-cast p1, Lry8;
 
-    const-string v0, "initialMemberRouteId cannot be null."
+    iget-object p1, p1, Lry8;->v0:Lty8;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw p1
+    iput-boolean v0, p1, Lty8;->H0:Z
+
+    invoke-virtual {p1}, Lty8;->o()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lvx8;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/mediarouter/app/d;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract d(Ljava/lang/String;)Lux8;
-.end method
-
-.method public e(Ljava/lang/String;Ljava/lang/String;)Lux8;
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    if-eqz p1, :cond_1
+    iget p1, p0, Lvx8;->a:I
 
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lvx8;->d(Ljava/lang/String;)Lux8;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "routeGroupId cannot be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "routeId cannot be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public abstract f(Ldx8;)V
-.end method
-
-.method public final g(Lwx8;)V
-    .locals 1
-
-    invoke-static {}, Lfy8;->b()V
-
-    iget-object v0, p0, Lvx8;->Z:Lwx8;
-
-    if-eq v0, p1, :cond_0
-
-    iput-object p1, p0, Lvx8;->Z:Lwx8;
-
-    iget-boolean p1, p0, Lvx8;->r0:Z
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lvx8;->r0:Z
-
-    iget-object v0, p0, Lvx8;->c:Lky;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    :cond_0
     return-void
 .end method
 
-.method public final h(Ldx8;)V
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
 
-    invoke-static {}, Lfy8;->b()V
+    iget p1, p0, Lvx8;->a:I
 
-    iget-object v0, p0, Lvx8;->X:Ldx8;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p0, Lvx8;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Lry8;
 
-    if-eqz v0, :cond_0
+    iget-object p1, p1, Lry8;->v0:Lty8;
 
-    goto :goto_0
+    const/4 v0, 0x1
 
-    :cond_0
-    iput-object p1, p0, Lvx8;->X:Ldx8;
+    iput-boolean v0, p1, Lty8;->H0:Z
 
-    iget-boolean p1, p0, Lvx8;->Y:Z
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lvx8;->Y:Z
-
-    iget-object p1, p0, Lvx8;->c:Lky;
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    :cond_1
-    :goto_0
+    :pswitch_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

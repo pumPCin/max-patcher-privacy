@@ -1,47 +1,63 @@
 .class public final Lju5;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Llu5;
+.field public final a:J
 
-.field public Y:I
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Llu5;Lk14;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lju5;->X:Llu5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lju5;->a:J
+
+    iput-object p3, p0, Lju5;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lju5;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput-object p1, p0, Lju5;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lju5;->b:Ljava/lang/String;
 
-    iget p1, p0, Lju5;->Y:I
+    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    xor-int/lit8 v0, v0, 0x1
 
-    iput p1, p0, Lju5;->Y:I
+    const-string v1, "FileUploadInfo{fileId="
 
-    iget-object p1, p0, Lju5;->X:Llu5;
+    const-string v2, ", token=\'"
 
-    invoke-virtual {p1, p0}, Llu5;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-wide v3, p0, Lju5;->a:J
 
-    move-result-object p1
+    invoke-static {v3, v4, v1, v2, v0}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    return-object p1
+    move-result-object v0
+
+    const-string v1, "\', url=\'"
+
+    const-string v2, "\'}"
+
+    iget-object v3, p0, Lju5;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

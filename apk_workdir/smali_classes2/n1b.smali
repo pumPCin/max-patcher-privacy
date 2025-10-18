@@ -44,108 +44,90 @@
 
 .field public static final t:I
 
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Llsc;->oneme_setting_item_about:I
+    sget v0, Lntc;->audio_record_active_call_error_snackbar_title:I
 
     sput v0, Ln1b;->a:I
 
-    sget v0, Llsc;->oneme_setting_item_appearance:I
+    sget v0, Lntc;->audio_record_confirm_exit_accept:I
 
     sput v0, Ln1b;->b:I
 
-    sget v0, Llsc;->oneme_setting_item_battery:I
+    sget v0, Lntc;->audio_record_confirm_exit_description:I
 
     sput v0, Ln1b;->c:I
 
-    sget v0, Llsc;->oneme_setting_item_esia_connected_title:I
+    sget v0, Lntc;->audio_record_confirm_exit_title:I
 
     sput v0, Ln1b;->d:I
 
-    sget v0, Llsc;->oneme_setting_item_esia_not_connected_subtitle:I
+    sget v0, Lntc;->audio_record_error_common:I
 
     sput v0, Ln1b;->e:I
 
-    sget v0, Llsc;->oneme_setting_item_esia_not_connected_title:I
+    sget v0, Lntc;->audio_record_error_limit:I
 
     sput v0, Ln1b;->f:I
 
-    sget v0, Llsc;->oneme_setting_item_folders:I
+    sget v0, Lntc;->audio_record_hold_to_start:I
 
     sput v0, Ln1b;->g:I
 
-    sget v0, Llsc;->oneme_setting_item_invite_friends_title:I
+    sget v0, Lntc;->channel_input_hint:I
 
     sput v0, Ln1b;->h:I
 
-    sget v0, Llsc;->oneme_setting_item_messages:I
+    sget v0, Lntc;->chat_input_hint:I
 
     sput v0, Ln1b;->i:I
 
-    sget v0, Llsc;->oneme_setting_item_notification:I
+    sget v0, Lntc;->messagewrite_edit_quote_title:I
 
     sput v0, Ln1b;->j:I
 
-    sget v0, Llsc;->oneme_setting_item_notification_and_sound:I
+    sget v0, Lntc;->reply_quote_self:I
 
     sput v0, Ln1b;->k:I
 
-    sget v0, Llsc;->oneme_setting_item_privacy:I
+    sget v0, Lntc;->reply_quote_to_somebody:I
 
     sput v0, Ln1b;->l:I
 
-    sget v0, Llsc;->oneme_setting_item_storage:I
+    sget v0, Lntc;->video_message_record_error_common:I
 
     sput v0, Ln1b;->m:I
 
-    sget v0, Llsc;->oneme_setting_item_support:I
+    sget v0, Lntc;->video_message_record_error_no_camera:I
 
     sput v0, Ln1b;->n:I
 
-    sget v0, Llsc;->oneme_settings_cant_open_camera:I
+    sget v0, Lntc;->video_record_active_call_error_snackbar_title:I
 
     sput v0, Ln1b;->o:I
 
-    sget v0, Llsc;->oneme_settings_change_avatar_error:I
+    sget v0, Lntc;->writebar__add_link_button:I
 
     sput v0, Ln1b;->p:I
 
-    sget v0, Llsc;->oneme_settings_change_avatar_success:I
+    sget v0, Lntc;->writebar__add_link_title:I
 
     sput v0, Ln1b;->q:I
 
-    sget v0, Llsc;->oneme_settings_change_avatar_title:I
+    sget v0, Lntc;->writebar_commands_not_found:I
 
     sput v0, Ln1b;->r:I
 
-    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_camera:I
+    sget v0, Lntc;->writebar_mentions_not_found:I
 
     sput v0, Ln1b;->s:I
 
-    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_gallery:I
+    sget v0, Lntc;->writebar_mentions_title:I
 
     sput v0, Ln1b;->t:I
-
-    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
-
-    sput v0, Ln1b;->u:I
-
-    sget v0, Llsc;->oneme_settings_link_copied_snackbar_title:I
-
-    sput v0, Ln1b;->v:I
-
-    sget v0, Llsc;->oneme_settings_phonenumber_copied_snackbar_title:I
-
-    sput v0, Ln1b;->w:I
 
     return-void
 .end method

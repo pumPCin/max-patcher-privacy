@@ -1,193 +1,82 @@
-.class public final synthetic Lcpb;
-.super Ljava/lang/Object;
+.class public final Lcpb;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+.field public final synthetic Y:Lone/me/chats/picker/members/PickerMembersListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lcpb;->a:I
+    iput-object p1, p0, Lcpb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    iput-object p1, p0, Lcpb;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcpb;->a:I
+    check-cast p1, Ljava/util/List;
 
-    iget-object v1, p0, Lcpb;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lcpb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Float;
+    check-cast p1, Lcpb;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lcpb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->C0:F
+    return-object p2
+.end method
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance v0, Lcpb;
 
-    :pswitch_0
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+    iget-object v1, p0, Lcpb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1, p2}, Lcpb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iput-object p1, v0, Lcpb;->X:Ljava/lang/Object;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    check-cast p1, Ljava/lang/Float;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result p1
+    iget-object p1, p0, Lcpb;->X:Ljava/lang/Object;
 
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->B0:F
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    iget-object v0, p0, Lcpb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    return-void
+    iget-object v0, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->q0:Lgnb;
 
-    :pswitch_1
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->y0:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->x0:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_3
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->r0:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_4
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->v0:Landroid/graphics/Paint;
-
-    const/high16 v2, 0x437f0000    # 255.0f
-
-    mul-float/2addr v2, p1
-
-    float-to-int v2, v2
-
-    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    float-to-double v2, p1
-
-    const-wide/16 v4, 0x0
-
-    cmpl-double p1, v2, v4
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->u0:Z
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

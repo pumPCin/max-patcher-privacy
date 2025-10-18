@@ -1,177 +1,80 @@
 .class public final Lx4b;
-.super Ljava/lang/Thread;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/geo/view/OneMeSupportMapFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lx4b;->a:I
+    iput-object p1, p0, Lx4b;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    iput-object p2, p0, Lx4b;->b:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    const-string p1, "ExoPlayer:SimpleDecoder"
-
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lx4b;->a:I
-
-    invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Loh6;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lx4b;->a:I
-
-    iput-object p1, p0, Lx4b;->b:Ljava/lang/Object;
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lv5b;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lx4b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lx4b;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lx4b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lx4b;->a:I
+    new-instance v0, Lx4b;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lx4b;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    iget-object v0, p0, Lx4b;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, p2}, Lx4b;-><init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Loh6;
+    iput-object p1, v0, Lx4b;->X:Ljava/lang/Object;
 
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lx4b;->b:Ljava/lang/Object;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast v0, Lboe;
+    iget-object p1, p0, Lx4b;->X:Ljava/lang/Object;
 
-    :goto_0
-    :try_start_0
-    invoke-virtual {v0}, Lboe;->j()Z
+    check-cast p1, Lv5b;
 
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lx4b;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p1}, Lone/me/geo/view/OneMeSupportMapFragment;->B0(Lv5b;)V
 
-    goto :goto_0
+    sget-object p1, Lccg;->a:Lccg;
 
-    :cond_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :pswitch_1
-    iget-object v0, p0, Lx4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lb7b;
-
-    :goto_1
-    :try_start_1
-    invoke-virtual {v0}, Lb7b;->g()Z
-
-    move-result v1
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :catch_1
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lx4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmoe;
-
-    :goto_2
-    :try_start_2
-    invoke-virtual {v0}, Lmoe;->g()Z
-
-    move-result v1
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
-
-    if-eqz v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    return-void
-
-    :catch_2
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :pswitch_3
-    iget-object v0, p0, Lx4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lqsf;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->getPriority()I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Lqsf;->a(I)V
-
-    :cond_3
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

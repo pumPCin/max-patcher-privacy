@@ -3,26 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Li11;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Lei1;
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li11;Lei1;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
-    iput p3, p0, Lt01;->a:I
+    iput p4, p0, Lt01;->a:I
 
-    iput-object p1, p0, Lt01;->b:Li11;
+    iput-object p1, p0, Lt01;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lt01;->c:Lei1;
+    iput-object p2, p0, Lt01;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lt01;->o:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,204 +35,122 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    iget v0, p0, Lt01;->a:I
+    iget p1, p0, Lt01;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lt01;->b:Li11;
+    iget-object p1, p0, Lt01;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lt01;->c:Lei1;
+    check-cast p1, Lw6b;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lt01;->c:Ljava/lang/Object;
 
-    sget-object v2, Lndi;->a:Lkwa;
+    check-cast v0, Lli6;
 
-    if-nez v2, :cond_0
+    iget-object v1, p0, Lt01;->o:Ljava/lang/Object;
+
+    check-cast v1, Lr6b;
+
+    invoke-static {p1, v0, v1}, Lw6b;->d(Lw6b;Lli6;Lr6b;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lt01;->b:Ljava/lang/Object;
+
+    check-cast p1, Lrm5;
+
+    iget-object v0, p0, Lt01;->c:Ljava/lang/Object;
+
+    check-cast v0, Lfx0;
+
+    iget-object v1, p0, Lt01;->o:Ljava/lang/Object;
+
+    check-cast v1, Lfx0;
+
+    iget-wide v2, p1, Lrm5;->a:J
+
+    iget-boolean p1, p1, Lrm5;->Z:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lfx0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lf88;->o:Lf88;
-
-    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Lfx0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v5, "Disable camera for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " failed due to: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v4, 0x0
-
-    const-string v5, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v5, p1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     :goto_0
-    iget-object p1, v0, Li11;->C0:Leie;
-
-    new-instance v0, Ljb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljb;-><init>(Lei1;Z)V
-
-    invoke-virtual {p1, v0}, Leie;->h(Ljava/lang/Object;)Z
-
-    :goto_1
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lt01;->b:Li11;
-
-    iget-object v1, p0, Lt01;->c:Lei1;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    sget-object v2, Lndi;->a:Lkwa;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v3, Lf88;->o:Lf88;
-
-    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable microphone for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " failed due to: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v4, 0x0
-
-    const-string v5, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v5, p1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_2
-    iget-object p1, v0, Li11;->C0:Leie;
-
-    new-instance v0, Lkb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lkb;-><init>(Lei1;Z)V
-
-    invoke-virtual {p1, v0}, Leie;->h(Ljava/lang/Object;)Z
-
-    goto :goto_1
+    return-void
 
     :pswitch_1
-    iget-object v0, p0, Lt01;->b:Li11;
+    iget-object p1, p0, Lt01;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lt01;->c:Lei1;
+    check-cast p1, Lu01;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lt01;->c:Ljava/lang/Object;
 
-    sget-object v2, Lndi;->a:Lkwa;
+    check-cast v0, Litb;
 
-    if-nez v2, :cond_4
+    iget-object v1, p0, Lt01;->o:Ljava/lang/Object;
 
-    goto :goto_3
+    check-cast v1, Lx11;
 
-    :cond_4
-    sget-object v3, Lf88;->o:Lf88;
+    iget-object p1, p1, Lq7d;->a:Landroid/view/View;
 
-    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
+    check-cast p1, Lcde;
 
-    move-result v4
+    iget-object v2, p1, Lcde;->P0:Ljava/lang/Object;
 
-    if-eqz v4, :cond_5
+    invoke-interface {v2}, Liu7;->e()Z
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    move-result v3
 
-    move-result-object p1
+    if-nez v3, :cond_1
 
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable screen sharing for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " failed due to: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v4, 0x0
-
-    const-string v5, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v5, p1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_3
-    iget-object p1, v0, Li11;->C0:Leie;
-
-    new-instance v0, Lnb;
-
-    invoke-direct {v0, v1}, Lnb;-><init>(Lei1;)V
-
-    invoke-virtual {p1, v0}, Leie;->h(Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
     goto :goto_1
+
+    :cond_1
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lg5b;
+
+    invoke-virtual {v2}, Landroid/widget/CompoundButton;->isChecked()Z
+
+    move-result v2
+
+    :goto_1
+    const/4 v3, 0x1
+
+    xor-int/2addr v2, v3
+
+    new-instance v4, Loce;
+
+    invoke-direct {v4, v2, v3}, Loce;-><init>(ZZ)V
+
+    invoke-virtual {p1, v4}, Lcde;->setEndView(Lqce;)V
+
+    iget-wide v3, v1, Lx11;->o:J
+
+    invoke-virtual {v0, v3, v4, v2}, Litb;->H(JZ)V
+
+    return-void
 
     nop
 

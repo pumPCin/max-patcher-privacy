@@ -2,115 +2,391 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcyd;
+
 
 # instance fields
-.field public final a:Lg02;
+.field public final X:J
 
-.field public final b:Lsqh;
+.field public final Y:J
 
-.field public c:Z
+.field public final Z:[J
 
-.field public d:Z
+.field public final a:J
 
-.field public final e:Z
+.field public final b:I
 
-.field public final f:Z
+.field public final c:J
 
-.field public g:Len8;
-
-.field public h:Ld42;
-
-.field public i:Lna7;
-
-.field public j:Landroid/media/ImageWriter;
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lg02;)V
-    .locals 6
+.method public constructor <init>(JIJIJ[J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-wide p1, p0, Lrqh;->a:J
 
-    iput-boolean v0, p0, Lrqh;->c:Z
+    iput p3, p0, Lrqh;->b:I
 
-    iput-boolean v0, p0, Lrqh;->d:Z
+    iput-wide p4, p0, Lrqh;->c:J
 
-    iput-boolean v0, p0, Lrqh;->e:Z
+    iput p6, p0, Lrqh;->o:I
 
-    iput-boolean v0, p0, Lrqh;->f:Z
+    iput-wide p7, p0, Lrqh;->X:J
 
-    iput-object p1, p0, Lrqh;->a:Lg02;
+    iput-object p9, p0, Lrqh;->Z:[J
 
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_CAPABILITIES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    const-wide/16 p3, -0x1
 
-    invoke-virtual {p1, v1}, Lg02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    cmp-long p5, p7, p3
 
-    move-result-object p1
+    if-nez p5, :cond_0
 
-    check-cast p1, [I
-
-    const/4 v1, 0x1
-
-    if-eqz p1, :cond_1
-
-    array-length v2, p1
-
-    move v3, v0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    aget v4, p1, v3
-
-    const/4 v5, 0x4
-
-    if-ne v4, v5, :cond_0
-
-    move p1, v1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-long p3, p1, p7
+
+    :goto_0
+    iput-wide p3, p0, Lrqh;->Y:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lrqh;->Y:J
+
+    return-wide v0
+.end method
+
+.method public final b(J)J
+    .locals 13
+
+    iget-wide v0, p0, Lrqh;->a:J
+
+    sub-long/2addr p1, v0
+
+    invoke-virtual {p0}, Lrqh;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget v0, p0, Lrqh;->b:I
+
+    int-to-long v0, v0
+
+    cmp-long v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    iget-object v0, p0, Lrqh;->Z:[J
+
+    invoke-static {v0}, Lsgi;->j(Ljava/lang/Object;)V
+
+    long-to-double p1, p1
+
+    const-wide/high16 v1, 0x4070000000000000L    # 256.0
+
+    mul-double/2addr p1, v1
+
+    iget-wide v1, p0, Lrqh;->X:J
+
+    long-to-double v1, v1
+
+    div-double/2addr p1, v1
+
+    double-to-long v1, p1
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v1, v2, v3}, Lnig;->e([JJZ)I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    iget-wide v4, p0, Lrqh;->c:J
+
+    mul-long/2addr v2, v4
+
+    const-wide/16 v6, 0x64
+
+    div-long/2addr v2, v6
+
+    aget-wide v8, v0, v1
+
+    add-int/lit8 v10, v1, 0x1
+
+    int-to-long v11, v10
+
+    mul-long/2addr v4, v11
+
+    div-long/2addr v4, v6
+
+    const/16 v6, 0x63
+
+    if-ne v1, v6, :cond_1
+
+    const-wide/16 v0, 0x100
 
     goto :goto_0
 
     :cond_1
-    move p1, v0
+    aget-wide v6, v0, v10
 
-    :goto_1
-    iput-boolean p1, p0, Lrqh;->e:Z
+    move-wide v0, v6
 
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/ZslDisablerQuirk;
+    :goto_0
+    cmp-long v6, v8, v0
 
-    sget-object v2, Lfs4;->a:Lx85;
+    if-nez v6, :cond_2
 
-    invoke-virtual {v2, p1}, Lx85;->C(Ljava/lang/Class;)Lzhc;
+    const-wide/16 p1, 0x0
 
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    move v0, v1
+    goto :goto_1
 
     :cond_2
-    iput-boolean v0, p0, Lrqh;->f:Z
+    long-to-double v6, v8
 
-    new-instance p1, Lsqh;
+    sub-double/2addr p1, v6
 
-    new-instance v0, Lxlg;
+    sub-long/2addr v0, v8
 
-    const/16 v1, 0xb
+    long-to-double v0, v0
 
-    invoke-direct {v0, v1}, Lxlg;-><init>(I)V
+    div-double/2addr p1, v0
 
-    const/4 v1, 0x3
+    :goto_1
+    sub-long/2addr v4, v2
 
-    invoke-direct {p1, v1, v0}, Ll5a;-><init>(ILxlg;)V
+    long-to-double v0, v4
 
-    iput-object p1, p0, Lrqh;->b:Lsqh;
+    mul-double/2addr p1, v0
 
-    return-void
+    invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v2
+
+    return-wide p1
+
+    :cond_3
+    :goto_2
+    const-wide/16 p1, 0x0
+
+    return-wide p1
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-object v0, p0, Lrqh;->Z:[J
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(J)Lsxd;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Lrqh;->c()Z
+
+    move-result v1
+
+    iget v2, v0, Lrqh;->b:I
+
+    iget-wide v3, v0, Lrqh;->a:J
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lsxd;
+
+    new-instance v5, Lyxd;
+
+    int-to-long v6, v2
+
+    add-long/2addr v3, v6
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct {v5, v6, v7, v3, v4}, Lyxd;-><init>(JJ)V
+
+    invoke-direct {v1, v5, v5}, Lsxd;-><init>(Lyxd;Lyxd;)V
+
+    return-object v1
+
+    :cond_0
+    const-wide/16 v10, 0x0
+
+    iget-wide v12, v0, Lrqh;->c:J
+
+    move-wide/from16 v8, p1
+
+    invoke-static/range {v8 .. v13}, Lnig;->j(JJJ)J
+
+    move-result-wide v5
+
+    long-to-double v7, v5
+
+    const-wide/high16 v9, 0x4059000000000000L    # 100.0
+
+    mul-double/2addr v7, v9
+
+    iget-wide v11, v0, Lrqh;->c:J
+
+    long-to-double v11, v11
+
+    div-double/2addr v7, v11
+
+    const-wide/16 v11, 0x0
+
+    cmpg-double v1, v7, v11
+
+    if-gtz v1, :cond_1
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_1
+    cmpl-double v1, v7, v9
+
+    if-ltz v1, :cond_2
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v11, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_2
+    double-to-int v1, v7
+
+    iget-object v9, v0, Lrqh;->Z:[J
+
+    invoke-static {v9}, Lsgi;->j(Ljava/lang/Object;)V
+
+    aget-wide v10, v9, v1
+
+    long-to-double v10, v10
+
+    const/16 v12, 0x63
+
+    if-ne v1, v12, :cond_3
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v12, 0x4070000000000000L    # 256.0
+
+    goto :goto_0
+
+    :cond_3
+    add-int/lit8 v12, v1, 0x1
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    aget-wide v13, v9, v12
+
+    long-to-double v12, v13
+
+    :goto_0
+    int-to-double v14, v1
+
+    sub-double/2addr v7, v14
+
+    sub-double/2addr v12, v10
+
+    mul-double/2addr v12, v7
+
+    add-double v11, v12, v10
+
+    :goto_1
+    div-double v11, v11, p1
+
+    iget-wide v7, v0, Lrqh;->X:J
+
+    long-to-double v9, v7
+
+    mul-double/2addr v11, v9
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v13
+
+    int-to-long v1, v2
+
+    const-wide/16 v9, 0x1
+
+    sub-long v17, v7, v9
+
+    move-wide v15, v1
+
+    invoke-static/range {v13 .. v18}, Lnig;->j(JJJ)J
+
+    move-result-wide v1
+
+    new-instance v7, Lsxd;
+
+    new-instance v8, Lyxd;
+
+    add-long/2addr v3, v1
+
+    invoke-direct {v8, v5, v6, v3, v4}, Lyxd;-><init>(JJ)V
+
+    invoke-direct {v7, v8, v8}, Lsxd;-><init>(Lyxd;Lyxd;)V
+
+    return-object v7
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lrqh;->c:J
+
+    return-wide v0
+.end method
+
+.method public final g()J
+    .locals 4
+
+    iget v0, p0, Lrqh;->b:I
+
+    int-to-long v0, v0
+
+    iget-wide v2, p0, Lrqh;->a:J
+
+    add-long/2addr v2, v0
+
+    return-wide v2
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Lrqh;->o:I
+
+    return v0
 .end method

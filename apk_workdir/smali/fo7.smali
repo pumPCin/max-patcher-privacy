@@ -3,793 +3,401 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcl5;
+.implements Lpe7;
+
+
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # instance fields
-.field public final a:Lzhg;
+.field private volatile synthetic _exceptionsHolder$volatile:Ljava/lang/Object;
 
-.field public b:Lgl5;
+.field private volatile synthetic _isCompleting$volatile:I
 
-.field public c:I
+.field private volatile synthetic _rootCause$volatile:Ljava/lang/Object;
 
-.field public d:I
-
-.field public e:I
-
-.field public f:J
-
-.field public g:Lyt9;
-
-.field public h:Lel5;
-
-.field public i:Lu43;
-
-.field public j:Lcv9;
+.field public final a:Lq9a;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
+
+    const-string v0, "_isCompleting$volatile"
+
+    const-class v1, Lfo7;
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lfo7;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const-string v0, "_rootCause$volatile"
+
+    const-class v2, Ljava/lang/Object;
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lfo7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "_exceptionsHolder$volatile"
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lfo7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lq9a;Ljava/lang/Throwable;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lzhg;
+    iput-object p1, p0, Lfo7;->a:Lq9a;
 
-    const/4 v1, 0x6
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1}, Lzhg;-><init>(I)V
+    iput p1, p0, Lfo7;->_isCompleting$volatile:I
 
-    iput-object v0, p0, Lfo7;->a:Lzhg;
-
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Lfo7;->f:J
+    iput-object p2, p0, Lfo7;->_rootCause$volatile:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Lxp9;
-
-    invoke-virtual {p0, v0}, Lfo7;->b([Lxp9;)V
-
-    iget-object v0, p0, Lfo7;->b:Lgl5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0}, Lgl5;->w()V
-
-    iget-object v0, p0, Lfo7;->b:Lgl5;
-
-    new-instance v1, Lbx5;
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {v1, v2, v3}, Lbx5;-><init>(J)V
-
-    invoke-interface {v0, v1}, Lgl5;->N(Lmwd;)V
-
-    const/4 v0, 0x6
-
-    iput v0, p0, Lfo7;->c:I
-
-    return-void
-.end method
-
-.method public final varargs b([Lxp9;)V
-    .locals 3
-
-    iget-object v0, p0, Lfo7;->b:Lgl5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v1, 0x400
-
-    const/4 v2, 0x4
-
-    invoke-interface {v0, v1, v2}, Lgl5;->B(II)Ls0g;
+    invoke-virtual {p0}, Lfo7;->c()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    new-instance v1, Loa6;
-
-    invoke-direct {v1}, Loa6;-><init>()V
-
-    const-string v2, "image/jpeg"
-
-    iput-object v2, v1, Loa6;->j:Ljava/lang/String;
-
-    new-instance v2, Lzp9;
-
-    invoke-direct {v2, p1}, Lzp9;-><init>([Lxp9;)V
-
-    iput-object v2, v1, Loa6;->i:Lzp9;
-
-    new-instance p1, Lqa6;
-
-    invoke-direct {p1, v1}, Lqa6;-><init>(Loa6;)V
-
-    invoke-interface {v0, p1}, Ls0g;->d(Lqa6;)V
-
-    return-void
-.end method
-
-.method public final d(JJ)V
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
     if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    sget-object v0, Lfo7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    iput p1, p0, Lfo7;->c:I
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lfo7;->j:Lcv9;
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 
     :cond_0
-    iget v0, p0, Lfo7;->c:I
-
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lfo7;->j:Lcv9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcv9;->d(JJ)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g(Lgl5;)V
-    .locals 0
-
-    iput-object p1, p0, Lfo7;->b:Lgl5;
-
-    return-void
-.end method
-
-.method public final h(Lel5;)Z
-    .locals 6
-
-    check-cast p1, Loj4;
-
-    iget-object v0, p0, Lfo7;->a:Lzhg;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lzhg;->B(I)V
-
-    iget-object v2, v0, Lzhg;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v2, v3, v1, v3}, Loj4;->n([BIIZ)Z
-
-    invoke-virtual {v0}, Lzhg;->x()I
-
-    move-result v2
-
-    const v4, 0xffd8
-
-    if-eq v2, v4, :cond_0
+    if-ne p1, v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v0, v1}, Lzhg;->B(I)V
-
-    iget-object v2, v0, Lzhg;->a:[B
-
-    invoke-virtual {p1, v2, v3, v1, v3}, Loj4;->n([BIIZ)Z
-
-    invoke-virtual {v0}, Lzhg;->x()I
-
-    move-result v2
-
-    iput v2, p0, Lfo7;->d:I
-
-    const v4, 0xffe0
-
-    if-ne v2, v4, :cond_1
-
-    invoke-virtual {v0, v1}, Lzhg;->B(I)V
-
-    iget-object v2, v0, Lzhg;->a:[B
-
-    invoke-virtual {p1, v2, v3, v1, v3}, Loj4;->n([BIIZ)Z
-
-    invoke-virtual {v0}, Lzhg;->x()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    invoke-virtual {p1, v2, v3}, Loj4;->b(IZ)Z
-
-    invoke-virtual {v0, v1}, Lzhg;->B(I)V
-
-    iget-object v2, v0, Lzhg;->a:[B
-
-    invoke-virtual {p1, v2, v3, v1, v3}, Loj4;->n([BIIZ)Z
-
-    invoke-virtual {v0}, Lzhg;->x()I
-
-    move-result v2
-
-    iput v2, p0, Lfo7;->d:I
-
     :cond_1
-    iget v2, p0, Lfo7;->d:I
+    sget-object v0, Lfo7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    const v4, 0xffe1
-
-    if-eq v2, v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v1, v3}, Loj4;->b(IZ)Z
-
-    const/4 v1, 0x6
-
-    invoke-virtual {v0, v1}, Lzhg;->B(I)V
-
-    iget-object v2, v0, Lzhg;->a:[B
-
-    invoke-virtual {p1, v2, v3, v1, v3}, Loj4;->n([BIIZ)Z
-
-    invoke-virtual {v0}, Lzhg;->t()J
-
-    move-result-wide v1
-
-    const-wide/32 v4, 0x45786966    # 5.758429993E-315
-
-    cmp-long p1, v1, v4
-
-    if-nez p1, :cond_3
-
-    invoke-virtual {v0}, Lzhg;->x()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    return v3
-.end method
-
-.method public final i(Lel5;Lq7;)I
-    .locals 25
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    iget v3, v0, Lfo7;->c:I
-
-    const-wide/16 v4, -0x1
-
-    const/4 v6, 0x4
-
-    iget-object v7, v0, Lfo7;->a:Lzhg;
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x1
-
-    const/4 v10, 0x0
-
-    if-eqz v3, :cond_17
-
-    if-eq v3, v9, :cond_16
-
-    if-eq v3, v8, :cond_a
-
-    const/4 v4, 0x5
-
-    if-eq v3, v6, :cond_5
-
-    if-eq v3, v4, :cond_1
-
-    const/4 v1, 0x6
-
-    if-ne v3, v1, :cond_0
-
-    const/4 v1, -0x1
-
-    return v1
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v1
-
-    :cond_1
-    iget-object v3, v0, Lfo7;->i:Lu43;
-
-    if-eqz v3, :cond_2
-
-    iget-object v3, v0, Lfo7;->h:Lel5;
-
-    if-eq v1, v3, :cond_3
-
-    :cond_2
-    iput-object v1, v0, Lfo7;->h:Lel5;
-
-    new-instance v3, Lu43;
-
-    iget-wide v4, v0, Lfo7;->f:J
-
-    invoke-direct {v3, v1, v4, v5}, Lu43;-><init>(Lel5;J)V
-
-    iput-object v3, v0, Lfo7;->i:Lu43;
-
-    :cond_3
-    iget-object v1, v0, Lfo7;->j:Lcv9;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v3, v0, Lfo7;->i:Lu43;
-
-    invoke-virtual {v1, v3, v2}, Lcv9;->i(Lel5;Lq7;)I
-
-    move-result v1
-
-    if-ne v1, v9, :cond_4
-
-    iget-wide v3, v2, Lq7;->a:J
-
-    iget-wide v5, v0, Lfo7;->f:J
-
-    add-long/2addr v3, v5
-
-    iput-wide v3, v2, Lq7;->a:J
-
-    :cond_4
-    return v1
-
-    :cond_5
-    move-object v3, v1
-
-    check-cast v3, Loj4;
-
-    iget-wide v5, v3, Loj4;->o:J
-
-    iget-wide v11, v0, Lfo7;->f:J
-
-    cmp-long v3, v5, v11
-
-    if-eqz v3, :cond_6
-
-    iput-wide v11, v2, Lq7;->a:J
-
-    return v9
-
-    :cond_6
-    iget-object v2, v7, Lzhg;->a:[B
-
-    move-object v3, v1
-
-    check-cast v3, Loj4;
-
-    invoke-virtual {v3, v2, v10, v9, v9}, Loj4;->n([BIIZ)Z
-
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    invoke-virtual {v0}, Lfo7;->a()V
-
-    return v10
-
-    :cond_7
-    iput v10, v3, Loj4;->Y:I
-
-    iget-object v2, v0, Lfo7;->j:Lcv9;
-
-    if-nez v2, :cond_8
-
-    new-instance v2, Lcv9;
-
-    invoke-direct {v2, v10}, Lcv9;-><init>(I)V
-
-    iput-object v2, v0, Lfo7;->j:Lcv9;
-
-    :cond_8
-    new-instance v2, Lu43;
-
-    iget-wide v5, v0, Lfo7;->f:J
-
-    invoke-direct {v2, v1, v5, v6}, Lu43;-><init>(Lel5;J)V
-
-    iput-object v2, v0, Lfo7;->i:Lu43;
-
-    iget-object v1, v0, Lfo7;->j:Lcv9;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v2, v10, v10}, Lc9i;->d(Lel5;ZZ)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    iget-object v1, v0, Lfo7;->j:Lcv9;
-
-    new-instance v2, Lu43;
-
-    iget-wide v5, v0, Lfo7;->f:J
-
-    iget-object v3, v0, Lfo7;->b:Lgl5;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v7, 0xe
-
-    invoke-direct {v2, v5, v6, v3, v7}, Lu43;-><init>(JLjava/lang/Object;I)V
-
-    iput-object v2, v1, Lcv9;->q:Lgl5;
-
-    iget-object v1, v0, Lfo7;->g:Lyt9;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-array v2, v9, [Lxp9;
-
-    aput-object v1, v2, v10
-
-    invoke-virtual {v0, v2}, Lfo7;->b([Lxp9;)V
-
-    iput v4, v0, Lfo7;->c:I
-
-    return v10
-
-    :cond_9
-    invoke-virtual {v0}, Lfo7;->a()V
-
-    return v10
-
-    :cond_a
-    iget v2, v0, Lfo7;->d:I
-
-    const v3, 0xffe1
-
-    if-ne v2, v3, :cond_14
-
-    new-instance v2, Lzhg;
-
-    iget v3, v0, Lfo7;->e:I
-
-    invoke-direct {v2, v3}, Lzhg;-><init>(I)V
-
-    iget-object v3, v2, Lzhg;->a:[B
-
-    iget v6, v0, Lfo7;->e:I
-
-    move-object v7, v1
-
-    check-cast v7, Loj4;
-
-    invoke-virtual {v7, v3, v10, v6, v10}, Loj4;->a([BIIZ)Z
-
-    iget-object v3, v0, Lfo7;->g:Lyt9;
-
-    if-nez v3, :cond_15
-
-    const-string v3, "http://ns.adobe.com/xap/1.0/"
-
-    invoke-virtual {v2}, Lzhg;->n()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_15
-
-    invoke-virtual {v2}, Lzhg;->n()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_15
-
-    check-cast v1, Loj4;
-
-    iget-wide v6, v1, Loj4;->c:J
-
-    cmp-long v1, v6, v4
-
-    if-nez v1, :cond_c
-
-    :cond_b
-    :goto_0
-    const/4 v3, 0x0
-
-    goto/16 :goto_5
-
-    :cond_c
-    :try_start_0
-    invoke-static {v2}, Lbbi;->e(Ljava/lang/String;)Lxt9;
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
-    :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lcom/google/android/exoplayer2/ParserException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    if-nez v1, :cond_2
 
-    :catch_0
-    const-string v1, "MotionPhotoXmpParser"
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v2, "Ignoring unexpected XMP metadata"
+    return-void
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_2
+    instance-of v2, v1, Ljava/lang/Throwable;
 
-    const/4 v1, 0x0
+    if-eqz v2, :cond_4
 
-    :goto_1
-    if-nez v1, :cond_d
+    if-ne p1, v1, :cond_3
 
-    goto :goto_0
+    :goto_0
+    return-void
 
-    :cond_d
-    iget-object v2, v1, Lxt9;->b:Ls7d;
+    :cond_3
+    new-instance v2, Ljava/util/ArrayList;
 
-    iget v11, v2, Ls7d;->o:I
+    const/4 v3, 0x4
 
-    if-ge v11, v8, :cond_e
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    goto :goto_0
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_e
-    sub-int/2addr v11, v9
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-wide v13, v4
+    invoke-virtual {v0, p0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-wide v15, v13
+    return-void
 
-    move-wide/from16 v19, v15
+    :cond_4
+    instance-of v0, v1, Ljava/util/ArrayList;
 
-    move-wide/from16 v21, v19
+    if-eqz v0, :cond_5
 
-    move v8, v10
+    check-cast v1, Ljava/util/ArrayList;
 
-    :goto_2
-    if-ltz v11, :cond_12
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v11}, Ls7d;->get(I)Ljava/lang/Object;
+    return-void
 
-    move-result-object v9
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    check-cast v9, Lvt9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v12, "video/mp4"
+    const-string v2, "State is "
 
-    iget-object v3, v9, Lvt9;->a:Ljava/lang/String;
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v12, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    or-int/2addr v3, v8
+    move-result-object v0
 
-    if-nez v11, :cond_f
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-wide v8, v9, Lvt9;->c:J
+    move-result-object v0
 
-    sub-long/2addr v6, v8
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v8, 0x0
-
-    :goto_3
-    move-wide/from16 v23, v8
-
-    move-wide v8, v6
-
-    move-wide/from16 v6, v23
-
-    goto :goto_4
-
-    :cond_f
-    iget-wide v8, v9, Lvt9;->b:J
-
-    sub-long v8, v6, v8
-
-    goto :goto_3
-
-    :goto_4
-    if-eqz v3, :cond_10
-
-    cmp-long v12, v6, v8
-
-    if-eqz v12, :cond_10
-
-    sub-long v21, v8, v6
-
-    move-wide/from16 v19, v6
-
-    move v3, v10
-
-    :cond_10
-    if-nez v11, :cond_11
-
-    move-wide v13, v6
-
-    move-wide v15, v8
-
-    :cond_11
-    add-int/lit8 v11, v11, -0x1
-
-    move v8, v3
-
-    goto :goto_2
-
-    :cond_12
-    cmp-long v2, v19, v4
-
-    if-eqz v2, :cond_b
-
-    cmp-long v2, v21, v4
-
-    if-eqz v2, :cond_b
-
-    cmp-long v2, v13, v4
-
-    if-eqz v2, :cond_b
-
-    cmp-long v2, v15, v4
-
-    if-nez v2, :cond_13
-
-    goto :goto_0
-
-    :cond_13
-    new-instance v12, Lyt9;
-
-    iget-wide v1, v1, Lxt9;->a:J
-
-    move-wide/from16 v17, v1
-
-    invoke-direct/range {v12 .. v22}, Lyt9;-><init>(JJJJJ)V
-
-    move-object v3, v12
-
-    :goto_5
-    iput-object v3, v0, Lfo7;->g:Lyt9;
-
-    if-eqz v3, :cond_15
-
-    iget-wide v1, v3, Lyt9;->o:J
-
-    iput-wide v1, v0, Lfo7;->f:J
-
-    goto :goto_6
-
-    :cond_14
-    iget v2, v0, Lfo7;->e:I
-
-    check-cast v1, Loj4;
-
-    invoke-virtual {v1, v2}, Loj4;->z(I)V
-
-    :cond_15
-    :goto_6
-    iput v10, v0, Lfo7;->c:I
-
-    return v10
-
-    :cond_16
-    invoke-virtual {v7, v8}, Lzhg;->B(I)V
-
-    iget-object v2, v7, Lzhg;->a:[B
-
-    check-cast v1, Loj4;
-
-    invoke-virtual {v1, v2, v10, v8, v10}, Loj4;->a([BIIZ)Z
-
-    invoke-virtual {v7}, Lzhg;->x()I
-
-    move-result v1
-
-    sub-int/2addr v1, v8
-
-    iput v1, v0, Lfo7;->e:I
-
-    iput v8, v0, Lfo7;->c:I
-
-    return v10
-
-    :cond_17
-    invoke-virtual {v7, v8}, Lzhg;->B(I)V
-
-    iget-object v2, v7, Lzhg;->a:[B
-
-    check-cast v1, Loj4;
-
-    invoke-virtual {v1, v2, v10, v8, v10}, Loj4;->a([BIIZ)Z
-
-    invoke-virtual {v7}, Lzhg;->x()I
-
-    move-result v1
-
-    iput v1, v0, Lfo7;->d:I
-
-    const v2, 0xffda
-
-    if-ne v1, v2, :cond_19
-
-    iget-wide v1, v0, Lfo7;->f:J
-
-    cmp-long v1, v1, v4
-
-    if-eqz v1, :cond_18
-
-    iput v6, v0, Lfo7;->c:I
-
-    return v10
-
-    :cond_18
-    invoke-virtual {v0}, Lfo7;->a()V
-
-    return v10
-
-    :cond_19
-    const v2, 0xffd0
-
-    if-lt v1, v2, :cond_1a
-
-    const v2, 0xffd9
-
-    if-le v1, v2, :cond_1b
-
-    :cond_1a
-    const v2, 0xff01
-
-    if-eq v1, v2, :cond_1b
-
-    iput v9, v0, Lfo7;->c:I
-
-    :cond_1b
-    return v10
+    throw p1
 .end method
 
-.method public final release()V
+.method public final b()Lq9a;
     .locals 1
 
-    iget-object v0, p0, Lfo7;->j:Lcv9;
+    iget-object v0, p0, Lfo7;->a:Lq9a;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/Throwable;
+    .locals 1
+
+    sget-object v0, Lfo7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    return-object v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lfo7;->c()Ljava/lang/Throwable;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(Ljava/lang/Throwable;)Ljava/util/ArrayList;
+    .locals 4
+
+    sget-object v0, Lfo7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/4 v2, 0x4
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v3, v1, Ljava/lang/Throwable;
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move-object v1, v3
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v2, v1, Ljava/util/ArrayList;
+
+    if-eqz v2, :cond_4
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    :goto_0
+    invoke-virtual {p0}, Lfo7;->c()Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    sget-object p1, Lmo7;->e:Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "State is "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final isActive()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lfo7;->c()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Finishing[cancelling="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lfo7;->d()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", completing="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lfo7;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", rootCause="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lfo7;->c()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", exceptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lfo7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", list="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfo7;->a:Lq9a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

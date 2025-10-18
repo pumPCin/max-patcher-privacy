@@ -109,9 +109,9 @@
 
     iput-object p3, p0, Lxc;->E:Lvc;
 
-    sget-object p3, Louc;->AlertDialog:[I
+    sget-object p3, Lvvc;->AlertDialog:[I
 
-    sget v1, Lbjc;->alertDialogStyle:I
+    sget v1, Likc;->alertDialogStyle:I
 
     const/4 v2, 0x0
 
@@ -119,7 +119,7 @@
 
     move-result-object p1
 
-    sget p3, Louc;->AlertDialog_android_layout:I
+    sget p3, Lvvc;->AlertDialog_android_layout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -127,11 +127,11 @@
 
     iput p3, p0, Lxc;->z:I
 
-    sget p3, Louc;->AlertDialog_buttonPanelSideLayout:I
+    sget p3, Lvvc;->AlertDialog_buttonPanelSideLayout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    sget p3, Louc;->AlertDialog_listLayout:I
+    sget p3, Lvvc;->AlertDialog_listLayout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -139,11 +139,11 @@
 
     iput p3, p0, Lxc;->A:I
 
-    sget p3, Louc;->AlertDialog_multiChoiceItemLayout:I
+    sget p3, Lvvc;->AlertDialog_multiChoiceItemLayout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    sget p3, Louc;->AlertDialog_singleChoiceItemLayout:I
+    sget p3, Lvvc;->AlertDialog_singleChoiceItemLayout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -151,7 +151,7 @@
 
     iput p3, p0, Lxc;->B:I
 
-    sget p3, Louc;->AlertDialog_listItemLayout:I
+    sget p3, Lvvc;->AlertDialog_listItemLayout:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -159,7 +159,7 @@
 
     iput p3, p0, Lxc;->C:I
 
-    sget p3, Louc;->AlertDialog_showTitle:I
+    sget p3, Lvvc;->AlertDialog_showTitle:I
 
     const/4 v1, 0x1
 
@@ -169,17 +169,17 @@
 
     iput-boolean p3, p0, Lxc;->D:Z
 
-    sget p3, Louc;->AlertDialog_buttonIconDimen:I
+    sget p3, Lvvc;->AlertDialog_buttonIconDimen:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {p2}, Loo;->c()Lzn;
+    invoke-virtual {p2}, Lpo;->c()Lao;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lzn;->g(I)Z
+    invoke-virtual {p1, v1}, Lao;->h(I)Z
 
     return-void
 .end method

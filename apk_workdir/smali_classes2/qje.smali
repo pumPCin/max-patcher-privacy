@@ -1,106 +1,94 @@
-.class public final synthetic Lqje;
+.class public final Lqje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
-
 
 # instance fields
-.field public final synthetic a:Lsje;
+.field public a:Lvje;
 
-.field public final synthetic b:Landroidx/appcompat/widget/AppCompatEditText;
+.field public b:Lq40;
 
+.field public c:Lw0a;
 
-# direct methods
-.method public synthetic constructor <init>(Lsje;Landroidx/appcompat/widget/AppCompatEditText;)V
-    .locals 0
+.field public d:Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public e:Lfwc;
 
-    iput-object p1, p0, Lqje;->a:Lsje;
+.field public f:Lgi1;
 
-    iput-object p2, p0, Lqje;->b:Landroidx/appcompat/widget/AppCompatEditText;
+.field public g:Lv68;
 
-    return-void
-.end method
+.field public h:Lahf;
+
+.field public i:Ljava/lang/Integer;
+
+.field public j:Z
+
+.field public k:Lorg/webrtc/EglBase$Context;
+
+.field public l:Lk68;
+
+.field public m:Lavf;
+
+.field public n:Luhd;
+
+.field public o:Lrje;
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 4
+.method public final a()Lsje;
+    .locals 1
 
-    iget-object p1, p0, Lqje;->a:Lsje;
+    iget-object v0, p0, Lqje;->a:Lvje;
 
-    iget-object v0, p1, Lsje;->J0:Landroid/widget/ImageView;
+    if-eqz v0, :cond_0
 
-    const/16 v1, 0x8
+    iget-object v0, p0, Lqje;->b:Lq40;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
-    if-eqz p2, :cond_1
+    iget-object v0, p0, Lqje;->l:Lk68;
 
-    iget-object v3, p0, Lqje;->b:Landroidx/appcompat/widget/AppCompatEditText;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v3}, Landroidx/appcompat/widget/AppCompatEditText;->getText()Landroid/text/Editable;
+    iget-object v0, p0, Lqje;->d:Landroid/content/Context;
 
-    move-result-object v3
+    if-eqz v0, :cond_0
 
-    if-eqz v3, :cond_1
+    iget-object v0, p0, Lqje;->c:Lw0a;
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
+    if-eqz v0, :cond_0
 
-    move-result v3
+    iget-object v0, p0, Lqje;->e:Lfwc;
 
-    if-nez v3, :cond_0
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    iget-object v0, p0, Lqje;->f:Lgi1;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqje;->g:Lv68;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqje;->n:Luhd;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqje;->h:Lahf;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lsje;
+
+    invoke-direct {v0, p0}, Lsje;-><init>(Lqje;)V
+
+    return-object v0
 
     :cond_0
-    move v3, v2
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    goto :goto_1
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    :cond_1
-    :goto_0
-    move v3, v1
-
-    :goto_1
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p1, Lsje;->E0:Lyyi;
-
-    instance-of v3, v0, Lnje;
-
-    if-eqz v3, :cond_4
-
-    iget-object p1, p1, Lsje;->K0:Landroid/widget/ImageView;
-
-    if-nez p2, :cond_3
-
-    if-eqz v0, :cond_2
-
-    check-cast v0, Lnje;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_2
-    if-eqz v0, :cond_3
-
-    iget-boolean p2, v0, Lnje;->d:Z
-
-    const/4 v0, 0x1
-
-    if-ne p2, v0, :cond_3
-
-    move v1, v2
-
-    :cond_3
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_4
-    return-void
+    throw v0
 .end method

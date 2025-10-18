@@ -1,48 +1,62 @@
 .class public final Lzu1;
-.super Lk14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lhp3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lip3;
 
-.field public final synthetic Y:Lxn1;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Le0c;
 
 
 # direct methods
-.method public constructor <init>(Lxn1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lip3;Le0c;)V
     .locals 0
 
-    iput-object p1, p0, Lzu1;->Y:Lxn1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzu1;->a:Lip3;
+
+    iput-object p2, p0, Lzu1;->b:Le0c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 0
 
-    iput-object p1, p0, Lzu1;->o:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lzu1;->X:I
+.method public final b()V
+    .locals 2
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lzu1;->a:Lip3;
 
-    or-int/2addr p1, v0
+    invoke-interface {v0}, Lip3;->d()Z
 
-    iput p1, p0, Lzu1;->X:I
+    move-result v0
 
-    iget-object p1, p0, Lzu1;->Y:Lxn1;
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    sget-object v0, Lshg;->a:Lshg;
 
-    invoke-virtual {p1, v0, p0}, Lxn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    sget-object v0, Lshg;->b:Lshg;
 
-    return-object p1
+    :goto_0
+    iget-object v1, p0, Lzu1;->b:Le0c;
+
+    check-cast v1, Lb0c;
+
+    invoke-virtual {v1, v0}, Lb0c;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

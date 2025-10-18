@@ -1,114 +1,108 @@
-.class public final Ldr1;
-.super Llff;
+.class public final synthetic Ldr1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+.field public final synthetic b:Lgr1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+.method public synthetic constructor <init>(Lgr1;I)V
     .locals 0
 
-    iput-object p2, p0, Ldr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    iput p2, p0, Ldr1;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ldr1;->b:Lgr1;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Ldr1;->a:I
 
-    invoke-virtual {p0, p1, p2}, Ldr1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Ldr1;->b:Lgr1;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ldr1;
+    iget-object v0, v1, Lgr1;->E0:Lfr1;
 
-    sget-object p2, Lzag;->a:Lzag;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, p2}, Ldr1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Lj7;
 
-    return-object p2
-.end method
+    iget-object v0, v0, Lj7;->a:Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    new-instance v0, Ldr1;
+    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Ltr7;
 
-    iget-object v1, p0, Ldr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    invoke-direct {v0, p2, v1}, Ldr1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
-
-    iput-object p1, v0, Ldr1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldr1;->X:Ljava/lang/Object;
-
-    check-cast p1, Lsxf;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
-
-    iget-object v0, p0, Ldr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->C0()Lyq1;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->D0()Ljr1;
 
     move-result-object v0
 
-    iget-boolean v1, p1, Lsxf;->c:Z
+    iget-object v0, v0, Ljr1;->c:Lcv1;
 
-    iget-object v2, p1, Lsxf;->f:Ljxf;
+    iget-object v0, v0, Lcv1;->i:Lkqd;
 
-    invoke-virtual {v0, v1, v2}, Lyq1;->x(ZLjxf;)V
+    check-cast v0, Ltqd;
 
-    new-instance v1, Lwq1;
+    iget-object v0, v0, Ltqd;->r0:Lx0f;
 
-    iget-boolean v2, p1, Lsxf;->d:Z
+    :cond_0
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
 
-    iget-boolean v3, p1, Lsxf;->e:Z
+    move-result-object v1
 
-    invoke-direct {v1, v2, v3}, Lwq1;-><init>(ZZ)V
+    move-object v2, v1
 
-    invoke-virtual {v0, v1}, Lyq1;->setButtonsVisibility(Lwq1;)V
+    check-cast v2, Luqd;
 
-    iget-boolean v5, p1, Lsxf;->b:Z
+    const/16 v3, 0xb
 
-    iget-object v4, v0, Lyq1;->K0:Landroid/widget/TextView;
+    const/4 v4, 0x0
 
-    const/4 v8, 0x0
+    invoke-static {v2, v4, v4, v4, v3}, Luqd;->a(Luqd;Lvqd;Ljqd;Ljava/lang/String;I)Luqd;
 
-    const/4 v9, 0x6
+    move-result-object v2
 
-    const-wide/16 v6, 0x0
+    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static/range {v4 .. v9}, Lndi;->k(Landroid/view/View;ZJLqh6;I)V
+    move-result v1
 
-    iget-object v4, v0, Lyq1;->L0:Landroid/widget/TextView;
+    if-eqz v1, :cond_0
 
-    invoke-static/range {v4 .. v9}, Lndi;->k(Landroid/view/View;ZJLqh6;I)V
+    :cond_1
+    sget-object v0, Lccg;->a:Lccg;
 
-    sget-object p1, Lzag;->a:Lzag;
+    return-object v0
 
-    return-object p1
+    :pswitch_0
+    sget-object v0, Ll05;->s0:Lk82;
+
+    invoke-virtual {v0, v1}, Lk82;->q(Landroid/view/View;)Lewa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lewa;->c:Lv5b;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

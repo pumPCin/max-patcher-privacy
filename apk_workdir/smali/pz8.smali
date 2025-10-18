@@ -1,100 +1,59 @@
-.class public final Lpz8;
+.class public interface abstract Lpz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:Landroid/media/VolumeProvider;
-
-.field public final synthetic f:Landroid/os/Handler;
-
-.field public final synthetic g:Lrtb;
-
-
-# direct methods
-.method public constructor <init>(IIILjava/lang/String;Landroid/os/Handler;Lrtb;)V
+# virtual methods
+.method public b(I)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p5, p0, Lpz8;->f:Landroid/os/Handler;
-
-    iput-object p6, p0, Lpz8;->g:Lrtb;
-
-    iput p1, p0, Lpz8;->a:I
-
-    iput p2, p0, Lpz8;->b:I
-
-    iput p3, p0, Lpz8;->d:I
-
-    iput-object p4, p0, Lpz8;->c:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public c(ILandroid/app/PendingIntent;)V
+    .locals 0
 
-# virtual methods
-.method public final a()Landroid/media/VolumeProvider;
-    .locals 8
+    return-void
+.end method
 
-    iget-object v0, p0, Lpz8;->e:Landroid/media/VolumeProvider;
+.method public e(ILk6e;)V
+    .locals 0
 
-    if-nez v0, :cond_1
+    return-void
+.end method
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public f(ILxv7;)V
+    .locals 0
 
-    const/16 v1, 0x1e
+    return-void
+.end method
 
-    if-lt v0, v1, :cond_0
+.method public h(ILktb;)V
+    .locals 0
 
-    new-instance v2, Lz1h;
+    return-void
+.end method
 
-    iget v6, p0, Lpz8;->d:I
+.method public i(ILl7e;)V
+    .locals 0
 
-    iget-object v7, p0, Lpz8;->c:Ljava/lang/String;
+    return-void
+.end method
 
-    iget v4, p0, Lpz8;->a:I
+.method public j(ILmub;Lktb;ZZ)V
+    .locals 0
 
-    iget v5, p0, Lpz8;->b:I
+    return-void
+.end method
 
-    move-object v3, p0
+.method public k(ILj7e;ZZI)V
+    .locals 0
 
-    invoke-direct/range {v2 .. v7}, Lz1h;-><init>(Lpz8;IIILjava/lang/String;)V
+    return-void
+.end method
 
-    iput-object v2, v3, Lpz8;->e:Landroid/media/VolumeProvider;
+.method public onDisconnected()V
+    .locals 0
 
-    goto :goto_0
-
-    :cond_0
-    move-object v3, p0
-
-    new-instance v0, Lfo1;
-
-    iget v1, v3, Lpz8;->b:I
-
-    iget v2, v3, Lpz8;->d:I
-
-    iget v4, v3, Lpz8;->a:I
-
-    invoke-direct {v0, p0, v4, v1, v2}, Lfo1;-><init>(Lpz8;III)V
-
-    iput-object v0, v3, Lpz8;->e:Landroid/media/VolumeProvider;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, p0
-
-    :goto_0
-    iget-object v0, v3, Lpz8;->e:Landroid/media/VolumeProvider;
-
-    return-object v0
+    return-void
 .end method

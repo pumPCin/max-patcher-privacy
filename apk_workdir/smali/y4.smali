@@ -152,7 +152,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m(Lth3;)Landroid/window/OnBackInvokedDispatcher;
+.method public static bridge synthetic m(Lgi3;)Landroid/window/OnBackInvokedDispatcher;
     .locals 0
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
@@ -274,7 +274,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic z(Landroid/window/OnBackInvokedDispatcher;Lfo;)V
+.method public static bridge synthetic z(Landroid/window/OnBackInvokedDispatcher;Lgo;)V
     .locals 1
 
     const v0, 0xf4240

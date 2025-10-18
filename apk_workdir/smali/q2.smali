@@ -1,5 +1,5 @@
 .class public Lq2;
-.super Lm7e;
+.super Lt8e;
 .source "SourceFile"
 
 
@@ -17,7 +17,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lm7e;-><init>(I)V
+    invoke-direct {p0, p1}, Lt8e;-><init>(I)V
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

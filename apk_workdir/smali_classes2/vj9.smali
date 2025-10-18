@@ -1,87 +1,96 @@
-.class public final Lvj9;
+.class public final synthetic Lvj9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxj9;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:I
+
+.field public final synthetic Y:Ljava/lang/CharSequence;
+
+.field public final synthetic Z:Z
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lck9;
+
+.field public final synthetic c:Lla2;
+
+.field public final synthetic o:Lca9;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lck9;Lla2;Lca9;ILjava/lang/CharSequence;ZI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p7, p0, Lvj9;->a:I
 
-    iput-wide p1, p0, Lvj9;->a:J
+    iput-object p1, p0, Lvj9;->b:Lck9;
+
+    iput-object p2, p0, Lvj9;->c:Lla2;
+
+    iput-object p3, p0, Lvj9;->o:Lca9;
+
+    iput p4, p0, Lvj9;->X:I
+
+    iput-object p5, p0, Lvj9;->Y:Ljava/lang/CharSequence;
+
+    iput-boolean p6, p0, Lvj9;->Z:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Lvj9;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v5, p0, Lvj9;->Y:Ljava/lang/CharSequence;
 
-    return v0
+    iget-boolean v6, p0, Lvj9;->Z:Z
 
-    :cond_0
-    instance-of v1, p1, Lvj9;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lvj9;->b:Lck9;
 
-    if-nez v1, :cond_1
+    iget-object v2, p0, Lvj9;->c:Lla2;
 
-    return v2
+    iget-object v3, p0, Lvj9;->o:Lca9;
 
-    :cond_1
-    check-cast p1, Lvj9;
+    iget v4, p0, Lvj9;->X:I
 
-    iget-wide v3, p0, Lvj9;->a:J
-
-    iget-wide v5, p1, Lvj9;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lvj9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "SetEditedMessage(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lvj9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual/range {v1 .. v6}, Lck9;->b(Lla2;Lca9;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v1, p0, Lvj9;->b:Lck9;
+
+    iget-object v2, p0, Lvj9;->c:Lla2;
+
+    iget-object v3, p0, Lvj9;->o:Lca9;
+
+    iget v4, p0, Lvj9;->X:I
+
+    invoke-virtual/range {v1 .. v6}, Lck9;->b(Lla2;Lca9;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

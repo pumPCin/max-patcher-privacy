@@ -1,50 +1,87 @@
-.class public final synthetic Lbs3;
-.super Lb9;
+.class public final Lbs3;
+.super Lez;
 .source "SourceFile"
 
-# interfaces
-.implements Lgi6;
 
+# instance fields
+.field public final X:J
 
-# static fields
-.field public static final r0:Lbs3;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
+
+.field public final q0:Ljava/lang/String;
+
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    new-instance v0, Lbs3;
+    sget-object v0, La10;->u0:La10;
 
-    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
+    invoke-direct {p0, v0, p9, p10}, Lez;-><init>(La10;ZZ)V
 
-    const/4 v2, 0x4
+    iput-object p1, p0, Lbs3;->o:Ljava/lang/String;
 
-    const/4 v3, 0x3
+    iput-wide p2, p0, Lbs3;->X:J
 
-    const-class v4, Ly62;
+    iput-object p4, p0, Lbs3;->Y:Ljava/lang/String;
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+    iput-object p7, p0, Lbs3;->r0:Ljava/lang/String;
 
-    sput-object v0, Lbs3;->r0:Lbs3;
+    iput-object p8, p0, Lbs3;->s0:Ljava/lang/String;
+
+    iput-object p5, p0, Lbs3;->Z:Ljava/lang/String;
+
+    iput-object p6, p0, Lbs3;->q0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 5
 
-    check-cast p1, Lm72;
+    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
 
-    check-cast p2, Ljava/util/List;
+    move-result-object v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lbs3;->o:Ljava/lang/String;
 
-    new-instance p3, Ly62;
+    invoke-static {v1}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {p3, p1, p2}, Ly62;-><init>(Lm72;Ljava/util/List;)V
+    move-result v2
 
-    return-object p3
+    if-nez v2, :cond_0
+
+    const-string v2, "vcfBody"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Lbs3;->X:J
+
+    cmp-long v1, v3, v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "contactId"
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    return-object v0
 .end method

@@ -1,117 +1,209 @@
 .class public final Lblb;
-.super Llff;
+.super Lpk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Ldlb;
+.field public final synthetic c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ldlb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lblb;->X:Ldlb;
+    iput p2, p0, Lblb;->c:I
 
-    const/4 p1, 0x2
+    iput p1, p0, Lblb;->d:I
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lblb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lblb;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lblb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lblb;
-
-    iget-object v0, p0, Lblb;->X:Ldlb;
-
-    invoke-direct {p1, v0, p2}, Lblb;-><init>(Ldlb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Landroid/graphics/Bitmap;Lmsb;)Lda3;
     .locals 7
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget p2, p0, Lblb;->c:I
 
-    iget-object p1, p0, Lblb;->X:Ldlb;
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, p1, Ldlb;->s0:Lde5;
+    new-instance v5, Landroid/graphics/Matrix;
 
-    new-instance v1, Lqkb;
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    iget-object p1, p1, Ldlb;->Z:Lsze;
+    iget p2, p0, Lblb;->d:I
 
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    if-lez p2, :cond_0
 
-    move-result-object v2
+    int-to-float p2, p2
 
-    check-cast v2, Lvkb;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    iget-object v2, v2, Lvkb;->c:Ljava/lang/Double;
+    move-result v0
 
-    const-wide/16 v3, 0x0
+    int-to-float v0, v0
 
-    if-eqz v2, :cond_0
+    const/high16 v1, 0x40000000    # 2.0f
 
-    invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
+    div-float/2addr v0, v1
 
-    move-result-wide v5
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    goto :goto_0
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v1
+
+    invoke-virtual {v5, p2, v0, v2}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
     :cond_0
-    move-wide v5, v3
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    :goto_0
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    move-result v3
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p1
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    check-cast p1, Lvkb;
+    new-instance p2, Lalb;
 
-    iget-object p1, p1, Lvkb;->d:Ljava/lang/Double;
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_1
+    invoke-direct {p2, v0}, Lalb;-><init>(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
+    sget-object v0, Lda3;->Y:Lnx3;
 
-    move-result-wide v3
+    invoke-static {p1, p2, v0}, Lda3;->k0(Ljava/lang/Object;Ladd;Lca3;)Lhi4;
 
-    :cond_1
-    invoke-direct {v1, v5, v6, v3, v4}, Lqkb;-><init>(DD)V
-
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    move-object v0, p1
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    iget p1, p0, Lblb;->d:I
+
+    if-lez p1, :cond_1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p2
+
+    div-int/lit8 p2, p2, 0x2
+
+    int-to-float p2, p2
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v5, p1, p2, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    new-instance p2, Lalb;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Lalb;-><init>(I)V
+
+    sget-object v0, Lda3;->Y:Lnx3;
+
+    invoke-static {p1, p2, v0}, Lda3;->k0(Ljava/lang/Object;Ladd;Lca3;)Lhi4;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Lmy0;
+    .locals 2
+
+    iget v0, p0, Lblb;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lblb;->d:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcpe;
+
+    invoke-direct {v1, v0}, Lcpe;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget v0, p0, Lblb;->d:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcpe;
+
+    invoke-direct {v1, v0}, Lcpe;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

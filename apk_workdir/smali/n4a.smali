@@ -1,83 +1,133 @@
 .class public final Ln4a;
-.super Landroid/view/View$BaseSavedState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ln4a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:I
+.field public final a:Landroid/content/Context;
+
+.field public volatile b:I
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Luj8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xe
+    iput-object p1, p0, Ln4a;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
+    const/4 p1, 0x1
 
-    sput-object v0, Ln4a;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput p1, p0, Ln4a;->b:I
+
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ln4a;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a(Lm4a;)Z
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Ln4a;->b:I
 
-    const-string v1, "HorizontalScrollView.SavedState{"
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    const/4 v3, 0x1
 
-    move-result v1
+    if-eq v0, v3, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object v1
+    :cond_0
+    iget-object v0, p0, Ln4a;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-enter v0
 
-    const-string v1, " scrollPosition="
+    :try_start_0
+    iget v4, p0, Ln4a;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v4, v3, :cond_1
 
-    iget v1, p0, Ln4a;->a:I
+    monitor-exit v0
 
-    const-string v2, "}"
+    goto :goto_1
 
-    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    :cond_1
+    :try_start_1
+    iget-object v4, p0, Ln4a;->a:Landroid/content/Context;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v0
+    :try_start_2
+    invoke-static {v4, v2}, Lcom/facebook/soloader/SoLoader;->g(Landroid/content/Context;I)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    return-object v0
-.end method
+    :try_start_3
+    iput v1, p0, Ln4a;->b:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    goto :goto_0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    :catch_0
+    move-exception v4
 
-    iget p2, p0, Ln4a;->a:I
+    new-instance v5, Ljava/lang/RuntimeException;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v5, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    return-void
+    throw v5
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :catchall_0
+    const/4 v4, 0x3
+
+    :try_start_4
+    iput v4, p0, Ln4a;->b:I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :goto_0
+    monitor-exit v0
+
+    :goto_1
+    iget v0, p0, Ln4a;->b:I
+
+    if-eq v0, v1, :cond_2
+
+    return v2
+
+    :cond_2
+    :try_start_5
+    iget-object p1, p1, Lm4a;->a:Ljava/lang/String;
+
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_5
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_5 .. :try_end_5} :catch_1
+
+    move v2, v3
+
+    :catch_1
+    return v2
+
+    :catchall_1
+    move-exception p1
+
+    monitor-exit v0
+
+    throw p1
 .end method

@@ -1,19 +1,17 @@
-.class public final Lvq6;
+.class public interface abstract Lvq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ly7f;
-
-
-# direct methods
-.method public constructor <init>(Ly7f;)V
+# virtual methods
+.method public h()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lvq6;->a:Ly7f;
+.method public u(Lxq6;J)V
+    .locals 0
 
     return-void
 .end method

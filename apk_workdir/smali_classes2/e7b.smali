@@ -1,128 +1,103 @@
-.class public final Le7b;
-.super Lao4;
+.class public abstract Le7b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final l:Lc7b;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lc7b;Lye4;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {}, Lbb3;->c()Lx08;
+    sget v0, Lfuc;->web_app_root_biometry_open_settings_dialog_accept:I
 
-    move-result-object v0
+    sput v0, Le7b;->a:I
 
-    iget-boolean v1, p3, Lye4;->b:Z
+    sget v0, Lfuc;->web_app_root_biometry_open_settings_dialog_title:I
 
-    if-eqz v1, :cond_0
+    sput v0, Le7b;->b:I
 
-    const-string v1, "video/av01"
+    sget v0, Lfuc;->web_app_root_biometry_request_dialog_accept:I
 
-    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->c:I
 
-    :cond_0
-    iget-boolean v1, p3, Lye4;->a:Z
+    sget v0, Lfuc;->web_app_root_biometry_request_dialog_decline:I
 
-    if-eqz v1, :cond_1
+    sput v0, Le7b;->d:I
 
-    const-string v1, "video/x-vnd.on2.vp9"
+    sget v0, Lfuc;->web_app_root_biometry_request_dialog_default_reason:I
 
-    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->e:I
 
-    :cond_1
-    const-string v1, "video/avc"
+    sget v0, Lfuc;->web_app_root_biometry_request_dialog_title:I
 
-    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->f:I
 
-    invoke-static {v0}, Lbb3;->a(Ljava/util/List;)Lx08;
+    sget v0, Lfuc;->web_app_root_biometry_setting:I
 
-    move-result-object v0
+    sput v0, Le7b;->g:I
 
-    invoke-static {}, Lbb3;->c()Lx08;
+    sget v0, Lfuc;->web_app_root_biometry_setting_description:I
 
-    move-result-object v1
+    sput v0, Le7b;->h:I
 
-    iget-boolean p3, p3, Lye4;->c:Z
+    sget v0, Lfuc;->web_app_root_choose_media_bottomsheet_gallery:I
 
-    if-eqz p3, :cond_2
+    sput v0, Le7b;->i:I
 
-    const-string p3, "audio/opus"
+    sget v0, Lfuc;->web_app_root_choose_media_bottomsheet_title:I
 
-    invoke-virtual {v1, p3}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->j:I
 
-    :cond_2
-    const-string p3, "audio/mp4a-latm"
+    sget v0, Lfuc;->web_app_root_max_share_quote_title:I
 
-    invoke-virtual {v1, p3}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->k:I
 
-    const-string p3, "audio/mp4"
+    sget v0, Lfuc;->web_app_root_setting_open_webapp:I
 
-    invoke-virtual {v1, p3}, Lx08;->add(Ljava/lang/Object;)Z
+    sput v0, Le7b;->l:I
 
-    invoke-static {v1}, Lbb3;->a(Ljava/util/List;)Lx08;
+    sget v0, Lfuc;->web_app_root_settings_header_subtitle:I
 
-    move-result-object p3
+    sput v0, Le7b;->m:I
 
-    new-instance v1, Lln4;
+    sget v0, Lfuc;->web_app_root_settings_header_title:I
 
-    invoke-direct {v1}, Lln4;-><init>()V
+    sput v0, Le7b;->n:I
 
-    const/4 v2, 0x0
+    sget v0, Lfuc;->web_app_root_settings_webapps:I
 
-    new-array v3, v2, [Ljava/lang/String;
-
-    invoke-virtual {v0, v3}, Lx08;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    array-length v3, v0
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-static {v0}, Lhb7;->l([Ljava/lang/Object;)Ls7d;
-
-    move-result-object v0
-
-    iput-object v0, v1, Ld1g;->m:Lhb7;
-
-    new-array v0, v2, [Ljava/lang/String;
-
-    invoke-virtual {p3, v0}, Lx08;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    array-length v0, p3
-
-    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    invoke-static {p3}, Lhb7;->l([Ljava/lang/Object;)Ls7d;
-
-    move-result-object p3
-
-    iput-object p3, v1, Ld1g;->t:Lhb7;
-
-    new-instance p3, Lnn4;
-
-    invoke-direct {p3, v1}, Lnn4;-><init>(Lln4;)V
-
-    invoke-direct {p0, p1, p3, p2}, Lao4;-><init>(Landroid/content/Context;Lf1g;Ldt9;)V
-
-    iput-object p2, p0, Le7b;->l:Lc7b;
+    sput v0, Le7b;->o:I
 
     return-void
 .end method

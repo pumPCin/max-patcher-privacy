@@ -1,68 +1,65 @@
-.class public final synthetic Lhze;
+.class public abstract synthetic Lhze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:La96;
-
-.field public final synthetic c:Lbsh;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(La96;Lbsh;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lhze;->a:I
+    const/4 v0, 0x7
 
-    iput-object p1, p0, Lhze;->b:La96;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    iput-object p2, p0, Lhze;->c:Lbsh;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x3
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v0, Lhze;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Llk7;->values()[Llk7;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v2, 0x0
+
+    :try_start_1
+    aput v1, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v2, 0x2
+
+    :try_start_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lhze;->$EnumSwitchMapping$1:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    iget v0, p0, Lhze;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhze;->b:La96;
-
-    iget-object v0, v0, La96;->t0:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/LinkedHashSet;
-
-    iget-object v1, p0, Lhze;->c:Lbsh;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lhze;->b:La96;
-
-    iget-object v1, p0, Lhze;->c:Lbsh;
-
-    invoke-virtual {v0, v1}, La96;->v(Lbsh;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,133 +1,295 @@
-.class public abstract Ll0b;
-.super Ljava/lang/Object;
+.class public final Ll0b;
+.super Lrdi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic c:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final synthetic o:Lm0b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lm0b;I)V
+    .locals 0
 
-    sget v0, Lgsc;->audio_record_active_call_error_snackbar_title:I
+    iput p2, p0, Ll0b;->c:I
 
-    sput v0, Ll0b;->a:I
+    iput-object p1, p0, Ll0b;->o:Lm0b;
 
-    sget v0, Lgsc;->audio_record_confirm_exit_accept:I
+    const/16 p1, 0xc
 
-    sput v0, Ll0b;->b:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Lgsc;->audio_record_confirm_exit_description:I
+    sget-object p2, Ld0b;->a:Ld0b;
 
-    sput v0, Ll0b;->c:I
-
-    sget v0, Lgsc;->audio_record_confirm_exit_title:I
-
-    sput v0, Ll0b;->d:I
-
-    sget v0, Lgsc;->audio_record_error_common:I
-
-    sput v0, Ll0b;->e:I
-
-    sget v0, Lgsc;->audio_record_error_limit:I
-
-    sput v0, Ll0b;->f:I
-
-    sget v0, Lgsc;->audio_record_hold_to_start:I
-
-    sput v0, Ll0b;->g:I
-
-    sget v0, Lgsc;->channel_input_hint:I
-
-    sput v0, Ll0b;->h:I
-
-    sget v0, Lgsc;->chat_input_hint:I
-
-    sput v0, Ll0b;->i:I
-
-    sget v0, Lgsc;->messagewrite_edit_quote_title:I
-
-    sput v0, Ll0b;->j:I
-
-    sget v0, Lgsc;->reply_quote_self:I
-
-    sput v0, Ll0b;->k:I
-
-    sget v0, Lgsc;->reply_quote_to_somebody:I
-
-    sput v0, Ll0b;->l:I
-
-    sget v0, Lgsc;->video_message_record_error_common:I
-
-    sput v0, Ll0b;->m:I
-
-    sget v0, Lgsc;->video_message_record_error_no_camera:I
-
-    sput v0, Ll0b;->n:I
-
-    sget v0, Lgsc;->video_record_active_call_error_snackbar_title:I
-
-    sput v0, Ll0b;->o:I
-
-    sget v0, Lgsc;->writebar__add_link_button:I
-
-    sput v0, Ll0b;->p:I
-
-    sget v0, Lgsc;->writebar__add_link_title:I
-
-    sput v0, Ll0b;->q:I
-
-    sget v0, Lgsc;->writebar_commands_not_found:I
-
-    sput v0, Ll0b;->r:I
-
-    sget v0, Lgsc;->writebar_mentions_not_found:I
-
-    sput v0, Ll0b;->s:I
-
-    sget v0, Lgsc;->writebar_mentions_title:I
-
-    sput v0, Ll0b;->t:I
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lj0b;->a:Lj0b;
+
+    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Ll0b;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    check-cast p2, Lk0b;
+
+    check-cast p1, Lk0b;
+
+    sget-object p1, Lg0b;->a:Lg0b;
+
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    iget-object v0, p0, Ll0b;->o:Lm0b;
+
+    if-eqz p1, :cond_0
+
+    const/16 p1, 0x28
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
+
+    const/4 p1, 0x4
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lh0b;->a:Lh0b;
+
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 p1, 0x18
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
+
+    const/4 p1, 0x2
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Li0b;->a:Li0b;
+
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x10
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setIndicatorSize(I)V
+
+    const/4 p1, 0x1
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lfhi;->b(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ld73;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p1, Lj0b;->a:Lj0b;
+
+    invoke-static {p2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Luk0;->invalidate()V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    check-cast p2, Lf0b;
+
+    check-cast p1, Lf0b;
+
+    sget-object p1, Ll05;->s0:Lk82;
+
+    iget-object v0, p0, Ll0b;->o:Lm0b;
+
+    invoke-virtual {p1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lm0b;->d(Lf0b;Lv5b;)I
+
+    move-result p1
+
+    filled-new-array {p1}, [I
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Luk0;->setIndicatorColor([I)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

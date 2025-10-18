@@ -1,156 +1,73 @@
-.class public final synthetic Lpke;
-.super Ljava/lang/Object;
+.class public final enum Lpke;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
 
+# static fields
+.field public static final enum a:Lpke;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lpke;
 
-.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
+.field public static final synthetic c:[Lpke;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lpke;->a:I
+    new-instance v0, Lpke;
 
-    iput-object p1, p0, Lpke;->b:Lone/me/location/map/show/ShowLocationScreen;
+    const-string v1, "CLOCKWISE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lpke;->a:Lpke;
+
+    new-instance v1, Lpke;
+
+    const-string v2, "COUNTERCLOCKWISE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lpke;->b:Lpke;
+
+    filled-new-array {v0, v1}, [Lpke;
+
+    move-result-object v0
+
+    sput-object v0, Lpke;->c:[Lpke;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lpke;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+    const-class v0, Lpke;
 
-    iget v0, p0, Lpke;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    iget-object v2, p0, Lpke;->b:Lone/me/location/map/show/ShowLocationScreen;
+    check-cast p0, Lpke;
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    new-instance v3, Lble;
+.method public static values()[Lpke;
+    .locals 1
 
-    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
+    sget-object v0, Lpke;->c:[Lpke;
 
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->a:Lqs;
-
-    sget-object v5, Lone/me/location/map/show/ShowLocationScreen;->A0:[Lwq7;
-
-    const/4 v6, 0x0
-
-    aget-object v6, v5, v6
-
-    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v6
-
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->b:Lqs;
-
-    aget-object v1, v5, v1
-
-    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v0
-
-    invoke-direct {v4, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
-
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->c:Lqs;
-
-    const/4 v1, 0x2
-
-    aget-object v1, v5, v1
-
-    invoke-virtual {v0, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->o:Lqs;
-
-    const/4 v6, 0x3
-
-    aget-object v6, v5, v6
-
-    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v6, v1
-
-    check-cast v6, Ljava/lang/Long;
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->X:Lqs;
-
-    const/4 v7, 0x4
-
-    aget-object v7, v5, v7
-
-    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v7, v1
-
-    check-cast v7, Ljava/lang/Long;
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->Y:Lqs;
-
-    const/4 v8, 0x5
-
-    aget-object v5, v5, v8
-
-    invoke-virtual {v1, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v8, v1
-
-    check-cast v8, Ljava/lang/Long;
-
-    move v5, v0
-
-    invoke-direct/range {v3 .. v8}, Lble;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)V
-
-    return-object v3
-
-    :pswitch_0
-    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->A0:[Lwq7;
-
-    new-instance v0, Lilh;
-
-    invoke-direct {v0, v2, v1}, Lilh;-><init>(Lone/me/sdk/arch/Widget;I)V
+    check-cast v0, [Lpke;
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

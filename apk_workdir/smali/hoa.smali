@@ -1,90 +1,45 @@
-.class public final Lhoa;
-.super Ljava/lang/Object;
+.class public final synthetic Lhoa;
+.super Leec;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lr5;
+# static fields
+.field public static final a:Lhoa;
 
 
 # direct methods
-.method public constructor <init>(Lr5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhoa;
 
-    iput-object p1, p0, Lhoa;->a:Lr5;
+    const-string v1, "getDependencyDuration()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lyk8;
+
+    const-string v4, "dependencyDuration"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lhoa;->a:Lhoa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)I
-    .locals 3
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-class v0, Landroid/content/Context;
+    check-cast p1, Lyk8;
 
-    iget-object v1, p0, Lhoa;->a:Lr5;
+    iget-wide v0, p1, Lyk8;->b:J
 
-    sget-object v2, Lsz4;->t0:Lc82;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    check-cast p1, Landroid/content/Context;
-
-    invoke-virtual {v2, p1}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lsz4;->l()Lu4b;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lu4b;->a()Lpv2;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lpv2;->h()Lmt0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lmt0;->d:Lpt0;
-
-    iget p1, p1, Lpt0;->b:I
-
-    return p1
-
-    :cond_0
-    invoke-virtual {v1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-virtual {v2, p1}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lsz4;->l()Lu4b;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lu4b;->a()Lpv2;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lpv2;->m()Lmt0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lmt0;->d:Lpt0;
-
-    iget p1, p1, Lpt0;->b:I
-
-    return p1
+    return-object p1
 .end method

@@ -1,192 +1,400 @@
-.class public final Lol5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final synthetic Lol5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt2g;
+.implements Lnog;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Lql5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public synthetic constructor <init>(Lql5;I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput p2, p0, Lol5;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lol5;->b:Lql5;
 
-    iput-boolean v0, p0, Lol5;->b:Z
-
-    iput-object p1, p0, Lol5;->a:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu2g;)V
-    .locals 0
+.method public final run()V
+    .locals 7
+
+    iget v0, p0, Lol5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lol5;->b:Lql5;
+
+    iget v1, v0, Lql5;->v0:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lql5;->v0:I
+
+    invoke-virtual {v0}, Lql5;->C()V
 
     return-void
-.end method
 
-.method public final b()V
-    .locals 3
+    :pswitch_0
+    iget-object v0, p0, Lol5;->b:Lql5;
 
-    iget-object v0, p0, Lol5;->a:Landroid/view/View;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    iput-object v1, v0, Lql5;->y0:Lcg6;
 
-    move-result v1
+    iget-boolean v2, v0, Lql5;->x0:Z
 
-    if-nez v1, :cond_0
+    if-eqz v2, :cond_1
 
-    sget-object v1, Lr0h;->a:Lx0h;
+    iget-object v2, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    invoke-virtual {v1, v0}, Lvci;->a(Landroid/view/View;)F
+    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
 
-    move-result v1
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v0, Lql5;->x0:Z
+
+    iget-object v3, v0, Lql5;->X:Lxm4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v3}, Lvj0;->c()V
+
+    invoke-static {}, Lte4;->a()V
+
+    iget-object v3, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v3, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_0
+    iput-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
+    :cond_1
+    invoke-virtual {v0}, Lql5;->C()V
 
     :goto_0
-    sget v2, Lqlc;->transition_pause_alpha:I
+    return-void
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :pswitch_1
+    iget-object v0, p0, Lol5;->b:Lql5;
+
+    invoke-static {}, Lte4;->a()V
+
+    iget-boolean v1, v0, Lql5;->A0:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    iget-object v2, v0, Lql5;->z0:Lcg6;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    iget-boolean v1, v0, Lql5;->D0:Z
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v0, Lql5;->q0:Landroid/graphics/SurfaceTexture;
+
+    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    iget-object v1, v0, Lql5;->C0:Ljava/util/concurrent/CountDownLatch;
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    iget-object v0, v0, Lql5;->C0:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    goto :goto_1
+
+    :cond_3
+    iget-boolean v1, v0, Lql5;->x0:Z
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v1, :cond_4
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_4
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    iget-object v1, v0, Lql5;->t0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v2, Lgj4;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, v3, v0}, Lgj4;-><init>(ILjava/lang/Object;)V
+
+    sget-wide v3, Lql5;->H0:J
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v1, v2, v3, v4, v5}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    iput-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
 
+    :cond_5
+    iget v1, v0, Lql5;->w0:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lql5;->w0:I
+
+    invoke-virtual {v0}, Lql5;->C()V
+
+    :cond_6
+    :goto_1
     return-void
-.end method
 
-.method public final c(Lu2g;)V
-    .locals 0
+    :pswitch_2
+    iget-object v0, p0, Lol5;->b:Lql5;
 
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    invoke-virtual {v0}, Lql5;->D()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
+
+    iput-object v1, v0, Lql5;->E0:Ljava/lang/RuntimeException;
+
+    const-string v2, "ExtTexMgr"
+
+    const-string v3, "Failed to remove texture frames"
+
+    invoke-static {v2, v3, v1}, Luyh;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lql5;->C0:Ljava/util/concurrent/CountDownLatch;
+
+    if-eqz v1, :cond_7
+
+    iget-object v0, v0, Lql5;->C0:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    :cond_7
+    :goto_2
     return-void
-.end method
 
-.method public final d(Lu2g;)V
-    .locals 0
+    :pswitch_3
+    iget-object v0, p0, Lol5;->b:Lql5;
 
+    iget-boolean v1, v0, Lql5;->A0:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_8
+
+    iput-boolean v2, v0, Lql5;->D0:Z
+
+    :cond_8
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    if-eqz v1, :cond_a
+
+    iget-object v1, v0, Lql5;->y0:Lcg6;
+
+    if-nez v1, :cond_a
+
+    iget-object v1, v0, Lql5;->X:Lxm4;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1}, Lvj0;->c()V
+
+    invoke-static {}, Lte4;->a()V
+
+    iget-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v1, :cond_9
+
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_9
+    iput-object v3, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    goto :goto_3
+
+    :cond_a
+    iput-boolean v2, v0, Lql5;->x0:Z
+
+    iget-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v1, :cond_b
+
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_b
+    iput-object v3, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    iget-object v1, v0, Lql5;->t0:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v2, Lgj4;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, v3, v0}, Lgj4;-><init>(ILjava/lang/Object;)V
+
+    sget-wide v3, Lql5;->H0:J
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v1, v2, v3, v4, v5}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lql5;->B0:Ljava/util/concurrent/ScheduledFuture;
+
+    :goto_3
     return-void
-.end method
 
-.method public final f()V
-    .locals 3
-
-    sget v0, Lqlc;->transition_pause_alpha:I
+    :pswitch_4
+    iget-object v0, p0, Lol5;->b:Lql5;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lol5;->a:Landroid/view/View;
-
-    invoke-virtual {v2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    iput-boolean v1, v0, Lql5;->D0:Z
 
     return-void
-.end method
 
-.method public final h(Lu2g;)V
-    .locals 0
+    :pswitch_5
+    iget-object v0, p0, Lol5;->b:Lql5;
 
-    return-void
-.end method
+    iget v1, v0, Lql5;->w0:I
 
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+    iget-object v2, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
 
-    sget-object v0, Lr0h;->a:Lx0h;
+    move-result v2
 
-    iget-object v1, p0, Lol5;->a:Landroid/view/View;
+    if-ne v1, v2, :cond_c
 
-    invoke-virtual {v0, v1, p1}, Lvci;->b(Landroid/view/View;F)V
+    goto :goto_4
 
-    return-void
-.end method
+    :cond_c
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    .line 1
-    invoke-virtual {p0, p1, v0}, Lol5;->onAnimationEnd(Landroid/animation/Animator;Z)V
+    sget-wide v2, Lql5;->H0:J
 
-    return-void
-.end method
+    iget v4, v0, Lql5;->w0:I
 
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 2
+    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 2
-    iget-boolean p1, p0, Lol5;->b:Z
+    const-string v5, "Forcing EOS after missing "
 
-    iget-object v0, p0, Lol5;->a:Landroid/view/View;
+    const-string v6, " frames for "
 
-    if-eqz p1, :cond_0
+    invoke-static {v1, v2, v3, v5, v6}, Lu15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    move-result-object v1
+
+    const-string v2, " ms, with available frame count: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ExtTexMgr"
+
+    invoke-static {v2, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    .line 3
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    .line 4
-    sget-object p1, Lr0h;->a:Lx0h;
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0, p2}, Lvci;->b(Landroid/view/View;F)V
-
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-object p1, p0, Lol5;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->hasOverlappingRendering()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lol5;->b:Z
-
-    const/4 v0, 0x2
+    iput-boolean v1, v0, Lql5;->x0:Z
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    iput-object v1, v0, Lql5;->y0:Lcg6;
 
-    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lql5;->D0:Z
+
+    invoke-virtual {v0}, Lql5;->D()V
+
+    iget-object v1, v0, Lql5;->s0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
+
+    invoke-virtual {v0}, Lql5;->A()V
+
+    :goto_4
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

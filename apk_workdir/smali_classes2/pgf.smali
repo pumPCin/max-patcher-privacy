@@ -1,27 +1,85 @@
-.class public final Lpgf;
-.super Lu87;
+.class public final enum Lpgf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:I
+# static fields
+.field public static final enum a:Lpgf;
 
-.field public final e:I
+.field public static final enum b:Lpgf;
+
+.field public static final enum c:Lpgf;
+
+.field public static final synthetic o:[Lpgf;
 
 
 # direct methods
-.method public constructor <init>(Logf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1}, Lu87;-><init>(Lsfd;)V
+    new-instance v0, Lpgf;
 
-    iget v0, p1, Logf;->o:I
+    const-string v1, "ALREADY_DOWNLOADING_BY_OTHER"
 
-    iput v0, p0, Lpgf;->d:I
+    const/4 v2, 0x0
 
-    iget p1, p1, Logf;->X:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p1, p0, Lpgf;->e:I
+    sput-object v0, Lpgf;->a:Lpgf;
+
+    new-instance v1, Lpgf;
+
+    const-string v2, "FINISH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lpgf;->b:Lpgf;
+
+    new-instance v2, Lpgf;
+
+    const-string v3, "ERROR"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lpgf;->c:Lpgf;
+
+    filled-new-array {v0, v1, v2}, [Lpgf;
+
+    move-result-object v0
+
+    sput-object v0, Lpgf;->o:[Lpgf;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lpgf;
+    .locals 1
+
+    const-class v0, Lpgf;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lpgf;
+
+    return-object p0
+.end method
+
+.method public static values()[Lpgf;
+    .locals 1
+
+    sget-object v0, Lpgf;->o:[Lpgf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpgf;
+
+    return-object v0
 .end method

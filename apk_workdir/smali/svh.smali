@@ -1,9 +1,6 @@
-.class public final Lsvh;
+.class public abstract Lsvh;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llwh;
 
 
 # instance fields
@@ -21,115 +18,58 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final annotationType()Ljava/lang/Class;
-    .locals 1
-
-    const-class v0, Llwh;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Llwh;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Llwh;
-
-    check-cast p1, Lsvh;
-
-    iget v0, p1, Lsvh;->a:I
-
-    iget v1, p0, Lsvh;->a:I
-
-    if-ne v1, v0, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Liwh;->a:Liwh;
-
-    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public static e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
     .locals 3
-
-    iget v0, p0, Lsvh;->a:I
-
-    const v1, 0xde0d66
-
-    xor-int/2addr v0, v1
-
-    sget-object v1, Liwh;->a:Liwh;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    const v2, 0x79ad669e
-
-    xor-int/2addr v1, v2
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v1, p0, Lsvh;->a:I
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    const-string v1, "intEncoding="
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Liwh;->a:Liwh;
+    const-string v1, ": "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x29
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
+
+    new-instance v0, Lcom/google/android/gms/common/api/Status;
+
+    const/16 v1, 0x13
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p0, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrp3;)V
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public abstract a(Lcom/google/android/gms/common/api/Status;)V
+.end method
+
+.method public abstract b(Ljava/lang/Exception;)V
+.end method
+
+.method public abstract c(Louh;)V
+.end method
+
+.method public abstract d(Liqe;Z)V
 .end method

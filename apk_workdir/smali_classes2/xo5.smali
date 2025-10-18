@@ -1,155 +1,92 @@
-.class public final Lxo5;
-.super Llff;
+.class public final synthetic Lxo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lsr3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lbp5;
+.field public final synthetic b:Lap5;
 
-.field public final synthetic Z:J
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lbp5;JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lap5;JI)V
     .locals 0
 
-    iput-object p1, p0, Lxo5;->Y:Lbp5;
+    iput p4, p0, Lxo5;->a:I
 
-    iput-wide p2, p0, Lxo5;->Z:J
+    iput-object p1, p0, Lxo5;->b:Lap5;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lxo5;->c:J
 
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    check-cast p1, Lb54;
+    iget v0, p0, Lxo5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "ap5"
 
-    invoke-virtual {p0, p1, p2}, Lxo5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v2, p0, Lxo5;->c:J
 
-    move-result-object p1
+    iget-object v4, p0, Lxo5;->b:Lap5;
 
-    check-cast p1, Lxo5;
+    check-cast p1, Ljava/lang/Throwable;
 
-    sget-object p2, Lzag;->a:Lzag;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Lxo5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    const-string v5, "onNotifUpdated: failed for id: "
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance p1, Lxo5;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxo5;->Y:Lbp5;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-wide v1, p0, Lxo5;->Z:J
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lxo5;-><init>(Lbp5;JLkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object p1
-.end method
+    invoke-virtual {v4}, Lap5;->I()V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    return-void
 
-    iget v0, p0, Lxo5;->X:I
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    const/4 v1, 0x1
+    const-string v0, "onNotifAdded: failed to add sticker "
 
-    if-eqz v0, :cond_1
+    const-string v5, " to cache"
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v2, v3, v0, v5}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :try_start_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    return-object p1
+    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {v4}, Lap5;->I()V
 
-    goto :goto_0
+    return-void
 
-    :catch_0
-    move-exception p1
+    nop
 
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxo5;->Y:Lbp5;
-
-    iget-wide v2, p0, Lxo5;->Z:J
-
-    :try_start_1
-    iget-object p1, p1, Lbp5;->Y:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbea;
-
-    iput v1, p0, Lxo5;->X:I
-
-    invoke-virtual {p1, v2, v3, p0}, Lbea;->w(JLxo5;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
-
-    :goto_0
-    const-string v0, "bp5"
-
-    const-string v1, "failed to read fcm notifications"
-
-    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Ls95;->a:Ls95;
-
-    return-object p1
-
-    :goto_1
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

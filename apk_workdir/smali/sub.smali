@@ -1,168 +1,123 @@
-.class public Lsub;
+.class public final Lsub;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrub;
-
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final a:Lqub;
 
-.field public b:I
+.field public final b:Loub;
+
+.field public c:I
+
+.field public d:Ljava/lang/Object;
+
+.field public final e:Landroid/os/Looper;
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Loub;Lqub;Ltvf;ILandroid/os/Looper;)V
+    .locals 0
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x100
+    iput-object p1, p0, Lsub;->b:Loub;
 
-    .line 5
-    new-array v0, v0, [Ljava/lang/Object;
+    iput-object p2, p0, Lsub;->a:Lqub;
 
-    iput-object v0, p0, Lsub;->a:[Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-lez p1, :cond_0
-
-    .line 2
-    new-array p1, p1, [Ljava/lang/Object;
-
-    iput-object p1, p0, Lsub;->a:[Ljava/lang/Object;
+    iput-object p5, p0, Lsub;->e:Landroid/os/Looper;
 
     return-void
-
-    .line 3
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "The max pool size must be > 0"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Object;
-    .locals 5
+.method public final declared-synchronized a(Z)V
+    .locals 0
 
-    iget v0, p0, Lsub;->b:I
+    monitor-enter p0
 
-    const/4 v1, 0x0
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-lez v0, :cond_0
+    monitor-exit p0
 
-    add-int/lit8 v2, v0, -0x1
-
-    iget-object v3, p0, Lsub;->a:[Ljava/lang/Object;
-
-    aget-object v4, v3, v2
-
-    aput-object v1, v3, v2
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lsub;->b:I
-
-    return-object v4
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public b(Lgt;)V
-    .locals 3
-
-    iget v0, p0, Lsub;->b:I
-
-    iget-object v1, p0, Lsub;->a:[Ljava/lang/Object;
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_0
-
-    aput-object p1, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lsub;->b:I
-
-    :cond_0
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public d(Ljava/lang/Object;)Z
-    .locals 6
+.method public final b()V
+    .locals 2
 
-    iget v0, p0, Lsub;->b:I
+    iget-boolean v0, p0, Lsub;->f:Z
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    move v2, v1
+    xor-int/2addr v0, v1
 
-    :goto_0
-    iget-object v3, p0, Lsub;->a:[Ljava/lang/Object;
+    invoke-static {v0}, Lsgi;->i(Z)V
 
-    const/4 v4, 0x1
+    iput-boolean v1, p0, Lsub;->f:Z
 
-    if-ge v2, v0, :cond_1
+    iget-object v0, p0, Lsub;->b:Loub;
 
-    aget-object v5, v3, v2
+    check-cast v0, Llj5;
 
-    if-ne v5, p1, :cond_0
+    iget-boolean v1, v0, Llj5;->R0:Z
 
-    move v0, v4
+    if-nez v1, :cond_1
 
-    goto :goto_1
+    iget-object v1, v0, Llj5;->s0:Landroid/os/Looper;
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    iget-object v0, v0, Llj5;->q0:Lkjf;
+
+    const/16 v1, 0xe
+
+    invoke-virtual {v0, v1, p0}, Lkjf;->a(ILjava/lang/Object;)Lijf;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lijf;->b()V
+
+    return-void
+
     :cond_1
-    move v0, v1
+    :goto_0
+    const-string v0, "ExoPlayerImplInternal"
 
-    :goto_1
-    if-nez v0, :cond_3
+    const-string v1, "Ignoring messages sent after release."
 
-    iget v0, p0, Lsub;->b:I
+    invoke-static {v0, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
 
-    array-length v2, v3
+    const/4 v0, 0x0
 
-    if-ge v0, v2, :cond_2
+    invoke-virtual {p0, v0}, Lsub;->a(Z)V
 
-    aput-object p1, v3, v0
-
-    add-int/2addr v0, v4
-
-    iput v0, p0, Lsub;->b:I
-
-    return v4
-
-    :cond_2
-    return v1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Already in the pool!"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

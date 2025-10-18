@@ -1,105 +1,105 @@
 .class public final Lwie;
-.super Ljava/lang/Object;
+.super Lkre;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[F
-
-.field public final b:[I
-
-.field public final c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public final g:F
-
-.field public final h:F
-
-.field public final i:Z
-
-.field public j:Z
-
-.field public k:Landroid/graphics/PorterDuff$Mode;
-
-.field public final l:I
-
-.field public final m:I
-
-.field public n:J
-
-.field public final o:J
-
-.field public p:Landroid/view/animation/Interpolator;
-
-.field public q:Landroid/animation/ValueAnimator;
+# static fields
+.field public static final b:Lwie;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwie;
 
-    const/4 v0, 0x5
+    invoke-direct {v0}, Lkre;-><init>()V
 
-    new-array v1, v0, [F
+    sput-object v0, Lwie;->b:Lwie;
 
-    iput-object v1, p0, Lwie;->a:[F
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    iput-object v0, p0, Lwie;->b:[I
+# virtual methods
+.method public final c()Leg4;
+    .locals 1
 
-    new-instance v0, Landroid/graphics/RectF;
+    sget-object v0, Leg4;->c:Leg4;
 
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+    sget-object v0, Leg4;->c:Leg4;
 
-    const/4 v0, 0x1
+    return-object v0
+.end method
 
-    iput v0, p0, Lwie;->c:I
+.method public final d(Landroid/os/Bundle;)Lfg4;
+    .locals 10
 
-    const/4 v1, -0x1
+    const-string v0, "msg_id"
 
-    iput v1, p0, Lwie;->d:I
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    const v2, -0x777778
+    move-result-wide v2
 
-    iput v2, p0, Lwie;->e:I
+    const-string v0, "attach_id"
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    invoke-static {v0, p1}, Llyi;->h(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    iput v2, p0, Lwie;->g:F
+    move-result-wide v4
 
-    iput v2, p0, Lwie;->h:F
+    const-string v0, "local_attach_id"
 
-    iput-boolean v0, p0, Lwie;->i:Z
+    invoke-static {v0, p1}, Llyi;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
-    iput-boolean v0, p0, Lwie;->j:Z
+    move-result-object v6
 
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    const-string v0, "cause_ordinal"
 
-    iput-object v2, p0, Lwie;->k:Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v0, p1}, Llyi;->g(Ljava/lang/String;Landroid/os/Bundle;)I
 
-    iput v1, p0, Lwie;->l:I
+    move-result v7
 
-    iput v0, p0, Lwie;->m:I
+    const-string v0, "snack_bot_margin"
 
-    const-wide/16 v0, 0x4b0
+    invoke-static {v0, p1}, Llyi;->b(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Integer;
 
-    iput-wide v0, p0, Lwie;->n:J
+    move-result-object v8
 
-    iput-wide v0, p0, Lwie;->o:J
+    const-string v0, "force_dark"
 
-    new-instance v0, Lsm5;
+    invoke-static {v0, p1}, Llyi;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
 
-    invoke-direct {v0}, Lsm5;-><init>()V
+    move-result-object v9
 
-    iput-object v0, p0, Lwie;->p:Landroid/view/animation/Interpolator;
+    new-instance v1, Lvie;
+
+    invoke-direct/range {v1 .. v9}, Lvie;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+
+    return-object v1
+.end method
+
+.method public final e(Ljre;)V
+    .locals 4
+
+    const-string v0, "local_attach_id"
+
+    const-string v1, "cause_ordinal"
+
+    const-string v2, "msg_id"
+
+    const-string v3, "attach_id"
+
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xe
+
+    const-string v3, ":dialogs/share-media"
+
+    invoke-static {p1, v3, v0, v1, v2}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     return-void
 .end method

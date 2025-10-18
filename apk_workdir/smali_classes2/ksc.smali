@@ -3,10 +3,14 @@
 
 
 # static fields
-.field public static oneme_stickers_set_add_button:I = 0x7f130a5c
+.field public static forward_message_hint:I = 0x7f13055e
 
-.field public static oneme_stickers_set_remove_button:I = 0x7f130a5d
+.field public static forward_search_hint:I = 0x7f13055f
 
-.field public static oneme_stickers_set_snackbar_favorite_added:I = 0x7f130a5e
+.field public static forward_snackbar_goto:I = 0x7f130560
 
-.field public static oneme_stickers_set_snackbar_favorite_removed:I = 0x7f130a5f
+.field public static forward_toolbar_action_cancel_selection:I = 0x7f130561
+
+.field public static forward_toolbar_action_select:I = 0x7f130562
+
+.field public static forward_toolbar_title:I = 0x7f130563

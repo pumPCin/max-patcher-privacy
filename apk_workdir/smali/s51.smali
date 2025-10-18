@@ -3,82 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqf4;
+.implements Lu51;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
+.field public final a:Ldt1;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;)V
+.method public constructor <init>(Ldt1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls51;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Ls51;->a:Ldt1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const-string v0, "call_id"
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ls51;->a:Landroid/os/Bundle;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, v1}, Lkxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ls51;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ls51;
+
+    iget-object v1, p0, Ls51;->a:Ldt1;
+
+    iget-object p1, p1, Ls51;->a:Ldt1;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ls51;->a:Ldt1;
+
+    invoke-virtual {v0}, Ldt1;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Active(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ls51;->a:Ldt1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "is_video"
-
-    invoke-static {v2, v1}, Lkxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v2
-
-    const-string v3, "is_group"
-
-    invoke-static {v3, v1}, Lkxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v3
-
-    const-string v4, "sdk_reasons"
-
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-static {v4, v1}, Lkxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, ","
-
-    filled-new-array {v4}, [Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x4
-
-    invoke-static {v1, v4, v5}, Ls9f;->R(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
-
-    return-object v4
+    return-object v0
 .end method

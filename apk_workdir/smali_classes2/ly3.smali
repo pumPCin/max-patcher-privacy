@@ -1,159 +1,191 @@
-.class public final synthetic Lly3;
-.super Ljava/lang/Object;
+.class public final Lly3;
+.super Lpmf;
 .source "SourceFile"
 
 # interfaces
-.implements Ld8;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:Lny3;
+.field public c:I
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lny3;)V
+.method public constructor <init>(Lpf9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lly3;->a:Lny3;
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljhd;)V
-    .locals 6
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object v0, p0, Lly3;->a:Lny3;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v0, Lny3;->b:Llt7;
+    const-string v0, "verifyResult"
 
-    const/4 v1, 0x0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :try_start_0
-    invoke-virtual {p1}, Ljhd;->d()Landroid/app/Activity;
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "name"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lg0i;->p(Lpf9;)Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    iput-object p1, p0, Lly3;->o:Ljava/lang/String;
 
-    new-instance v2, Lk0e;
+    return-void
 
-    const/16 v3, 0xb
+    :cond_1
+    invoke-static {p1}, Lg0i;->p(Lpf9;)Ljava/lang/String;
 
-    invoke-direct {v2, p1, v3}, Lk0e;-><init>(Landroid/content/Context;I)V
+    move-result-object p1
 
-    iget-object v3, v2, Lk0e;->c:Ljava/lang/Object;
+    if-eqz p1, :cond_5
 
-    check-cast v3, Landroid/content/Intent;
+    const-string p2, "GOOD"
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v4
+    move-result p2
 
-    check-cast v4, Lc3e;
+    if-eqz p2, :cond_2
 
-    check-cast v4, Lpsd;
+    const/4 p1, 0x1
 
-    const-string v5, "invite-header"
+    goto :goto_0
 
-    iget-object v4, v4, Lw3;->h:Lot7;
+    :cond_2
+    const-string p2, "BAD"
 
-    invoke-virtual {v4, v5, v1}, Lot7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v4
+    move-result p2
 
-    if-eqz v4, :cond_0
+    if-eqz p2, :cond_3
+
+    const/4 p1, 0x2
+
+    goto :goto_0
+
+    :cond_3
+    const-string p2, "UNDEFINED"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    const/4 p1, 0x3
+
+    :goto_0
+    iput p1, p0, Lly3;->c:I
+
+    return-void
+
+    :cond_4
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "No enum constant ru.ok.tamtam.api.commands.ContactVerifyCmd.VerifyResult."
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_5
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Name is null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    iget v0, p0, Lly3;->c:I
+
+    iget-object v1, p0, Lly3;->o:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "{verifyResult="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_2
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_1
+
+    const/4 v3, 0x3
+
+    if-eq v0, v3, :cond_0
+
+    const-string v0, "null"
 
     goto :goto_0
 
     :cond_0
-    sget v4, Lpid;->C:I
+    const-string v0, "UNDEFINED"
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_0
-    iput-object v4, v2, Lk0e;->a:Ljava/lang/Object;
-
-    const-string v4, "text/plain"
-
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lc3e;
-
-    check-cast v0, Lpsd;
-
-    const-string v4, "invite-long"
-
-    iget-object v5, v0, Lw3;->h:Lot7;
-
-    invoke-virtual {v5, v4, v1}, Lot7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    sget v4, Lpid;->J:I
+    const-string v0, "BAD"
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Lpsd;->l()Ljava/lang/String;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v4, 0x1
-
-    invoke-static {v0, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_1
-    const-string p1, "android.intent.extra.TEXT"
-
-    invoke-virtual {v3, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    invoke-virtual {v2}, Lk0e;->s()V
-
-    return-void
+    goto :goto_0
 
     :cond_2
-    const-string p1, "Required value was null."
+    const-string v0, "GOOD"
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    :goto_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const-string v0, ", name=\'"
 
-    throw v0
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    const-string p1, "ContactsDeepLinkFactory"
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "shareInvite: failed, no activity found"
+    const-string v0, "\'}"
 
-    invoke-static {p1, v0, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

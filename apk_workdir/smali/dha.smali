@@ -1,88 +1,52 @@
 .class public final Ldha;
-.super Lqoe;
+.super Ljava/net/ProxySelector;
 .source "SourceFile"
 
-# interfaces
-.implements Lbj6;
 
-
-# instance fields
-.field public final a:Lbj8;
-
-.field public final b:Lxi6;
-
-.field public final c:Lsud;
+# static fields
+.field public static final a:Ldha;
 
 
 # direct methods
-.method public constructor <init>(Lbj8;Lxi6;Lsud;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldha;
 
-    iput-object p1, p0, Ldha;->a:Lbj8;
+    invoke-direct {v0}, Ljava/net/ProxySelector;-><init>()V
 
-    iput-object p2, p0, Ldha;->b:Lxi6;
-
-    iput-object p3, p0, Ldha;->c:Lsud;
+    sput-object v0, Ldha;->a:Ldha;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Lwga;
-    .locals 5
+.method public final connectFailed(Ljava/net/URI;Ljava/net/SocketAddress;Ljava/io/IOException;)V
+    .locals 0
 
-    new-instance v0, Lcha;
-
-    iget-object v1, p0, Ldha;->c:Lsud;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ldha;->a:Lbj8;
-
-    iget-object v4, p0, Ldha;->b:Lxi6;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lcha;-><init>(Lwga;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public final l(Lkpe;)V
-    .locals 4
+.method public final select(Ljava/net/URI;)Ljava/util/List;
+    .locals 1
 
-    :try_start_0
-    iget-object v0, p0, Ldha;->b:Lxi6;
+    if-eqz p1, :cond_0
 
-    iget-object v0, v0, Lxi6;->a:Ljava/lang/Object;
+    sget-object p1, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
-    const-string v1, "The initialSupplier returned a null value"
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p1
 
-    new-instance v1, Lbha;
+    return-object p1
 
-    iget-object v2, p0, Ldha;->c:Lsud;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v3, 0x1
+    const-string v0, "uri must not be null"
 
-    invoke-direct {v1, p1, v0, v2, v3}, Lbha;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lsud;I)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Ldha;->a:Lbj8;
-
-    invoke-virtual {p1, v1}, Lwga;->a(Lcka;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Ln95;->d(Ljava/lang/Throwable;Lkpe;)V
-
-    return-void
+    throw p1
 .end method

@@ -1,86 +1,64 @@
-.class public final synthetic Lsgc;
+.class public final Lsgc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Lugc;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvgc;
+# static fields
+.field public static final a:Lsgc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvgc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lsgc;->a:I
+    new-instance v0, Lsgc;
 
-    iput-object p1, p0, Lsgc;->b:Lvgc;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lsgc;->a:Lsgc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lsgc;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lsgc;->b:Lvgc;
+    return v0
 
-    check-cast p1, Ljava/lang/Throwable;
+    :cond_0
+    instance-of p1, p1, Lsgc;
 
-    invoke-virtual {v0, p1}, Lvgc;->a(Ljava/lang/Throwable;)V
+    if-nez p1, :cond_1
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lsgc;->b:Lvgc;
+    return p1
 
-    check-cast p1, Li5d;
+    :cond_1
+    return v0
+.end method
 
-    iget v0, v0, Lvgc;->Y:I
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p1, v0}, Li5d;->d(I)V
+    const v0, 0x20f4ed05
 
-    return-void
+    return v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lsgc;->b:Lvgc;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Li5d;
+    const-string v0, "Scanning"
 
-    iget v0, v0, Lvgc;->Y:I
-
-    invoke-virtual {p1, v0}, Li5d;->d(I)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lsgc;->b:Lvgc;
-
-    check-cast p1, Li5d;
-
-    iget v0, v0, Lvgc;->Y:I
-
-    invoke-virtual {p1, v0}, Li5d;->d(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

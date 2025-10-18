@@ -1,53 +1,82 @@
 .class public final Lrx4;
-.super Lk14;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
+.field public final X:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:Lyx4;
+.field public final c:Ljava/lang/String;
 
-.field public o:Lyx4;
-
-.field public r0:I
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lyx4;Lk14;)V
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lrx4;->Z:Lyx4;
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p5, p0, Lrx4;->b:Ljava/lang/String;
+
+    iput-object p6, p0, Lrx4;->c:Ljava/lang/String;
+
+    if-nez p7, :cond_0
+
+    const-string p7, ""
+
+    :cond_0
+    iput-object p7, p0, Lrx4;->o:Ljava/lang/String;
+
+    iput-wide p3, p0, Lrx4;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iput-object p1, p0, Lrx4;->Y:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lrx4;->r0:I
+    const-string v1, "DownloadCompleteEvent{url=\'"
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lrx4;->b:Ljava/lang/String;
 
-    iput p1, p0, Lrx4;->r0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lrx4;->Z:Lyx4;
+    const-string v1, "\', path=\'"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, v0, p0}, Lyx4;->f(ZZLk14;)Ljava/lang/Object;
+    iget-object v1, p0, Lrx4;->c:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, "\', attachLocalId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrx4;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', messageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lrx4;->X:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

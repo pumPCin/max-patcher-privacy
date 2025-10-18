@@ -1,99 +1,60 @@
-.class public final Lmh9;
-.super Llff;
+.class public final synthetic Lmh9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
-    iput-object p2, p0, Lmh9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p2, p0, Lmh9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lmh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmh9;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lmh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onDismiss()V
     .locals 2
 
-    new-instance v0, Lmh9;
+    iget v0, p0, Lmh9;->a:I
 
-    iget-object v1, p0, Lmh9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p2, v1}, Lmh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    iget-object v0, p0, Lmh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    iput-object p1, v0, Lmh9;->X:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:Lsyf;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    return-void
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object v0, p0, Lmh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    iget-object p1, p0, Lmh9;->X:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljava/lang/Boolean;
+    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:Lsyf;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-void
 
-    move-result p1
+    nop
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:[Lwq7;
-
-    iget-object v0, p0, Lmh9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lfc9;->setKeyboardVisible(Z)V
-
-    iget-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0:Lnxf;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lnxf;->dismiss()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0:Lnxf;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

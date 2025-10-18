@@ -1,67 +1,23 @@
-.class public interface abstract Lawd;
+.class public final Lawd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkbe;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
-# virtual methods
-.method public a()Loqf;
-    .locals 1
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
-.end method
+    iput p1, p0, Lawd;->a:I
 
-.method public b()Labe;
-    .locals 1
+    iput p2, p0, Lawd;->b:I
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public c()Loqf;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public d()Lhbe;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()Lvt7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract f()I
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Ljbe;
-    .locals 1
-
-    sget-object v0, Ljbe;->b:Ljbe;
-
-    return-object v0
+    return-void
 .end method

@@ -1,164 +1,137 @@
-.class public final synthetic Lswh;
-.super Ljava/lang/Object;
+.class public final Lswh;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Lbai;
 
 
 # static fields
-.field public static final synthetic b:Lswh;
-
-.field public static final synthetic c:Lswh;
+.field private static final zzb:Lswh;
 
 
 # instance fields
-.field public final synthetic a:I
+.field private zzd:I
+
+.field private zze:I
+
+.field private zzf:Ljava/lang/String;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lswh;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Lswh;-><init>()V
 
-    invoke-direct {v0, v1}, Lswh;-><init>(I)V
+    sput-object v0, Lswh;->zzb:Lswh;
 
-    sput-object v0, Lswh;->b:Lswh;
+    const-class v1, Lswh;
 
-    new-instance v0, Lswh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lswh;-><init>(I)V
-
-    sput-object v0, Lswh;->c:Lswh;
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p1, p0, Lswh;->a:I
+    invoke-direct {p0}, Lj7i;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x1111
+
+    iput v0, p0, Lswh;->zze:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lswh;->zzf:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final m(ILj7i;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lswh;->a:I
+    add-int/lit8 p1, p1, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p1, :cond_4
 
-    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
+    const/4 p2, 0x2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq p1, p2, :cond_3
 
-    move-result-object p1
+    const/4 p2, 0x3
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    if-eq p1, p2, :cond_2
 
-    move-result-object p1
+    const/4 p2, 0x4
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    if-eq p1, p2, :cond_1
 
-    move-result-object p1
+    const/4 p2, 0x5
 
-    const-string v0, "Couldn\'t find encoder for type "
+    if-eq p1, p2, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return-object p1
 
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    :cond_0
+    sget-object p1, Lswh;->zzb:Lswh;
 
-    throw p2
+    return-object p1
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    :cond_1
+    new-instance p1, Lali;
 
-    check-cast p2, Lsga;
+    sget-object p2, Lswh;->zzb:Lswh;
 
-    sget-object v0, Lp8i;->g:Liq5;
+    const/4 v0, 0x3
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
 
-    move-result-object v1
+    return-object p1
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    :cond_2
+    new-instance p1, Lswh;
 
-    sget-object v0, Lp8i;->h:Liq5;
+    invoke-direct {p1}, Lswh;-><init>()V
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    return-object p1
 
-    move-result-object p1
+    :cond_3
+    sget-object p1, Lcxh;->B:Lcxh;
 
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    const-string p2, "zzf"
 
-    return-void
+    const-string v0, "zzd"
 
-    :pswitch_1
-    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
+    const-string v1, "zze"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    filled-new-array {v0, v1, p1, p2}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    sget-object p2, Lswh;->zzb:Lswh;
+
+    new-instance v0, Lwai;
+
+    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1008\u0001"
+
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_4
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
 
-    const-string v0, "Couldn\'t find encoder for type "
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :pswitch_2
-    check-cast p1, Ljava/util/Map$Entry;
-
-    check-cast p2, Lsga;
-
-    sget-object v0, Lvwh;->g:Liq5;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object v0, Lvwh;->h:Liq5;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

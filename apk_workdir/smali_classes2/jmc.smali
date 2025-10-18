@@ -3,8 +3,10 @@
 
 
 # static fields
-.field public static threads_state_recycler:I = 0x7f0a0c0e
+.field public static ic_file_24:I = 0x7f0805f4
 
-.field public static threads_state_state_view:I = 0x7f0a0c0f
+.field public static ic_geolocation_24:I = 0x7f08061b
 
-.field public static threads_state_toolbar:I = 0x7f0a0c10
+.field public static ic_microphone_24:I = 0x7f080697
+
+.field public static picture_plus_outline_24:I = 0x7f080928

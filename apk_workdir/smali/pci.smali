@@ -3,822 +3,579 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lcq5;
+
+.field public static final b:[Lcq5;
+
+
 # direct methods
-.method public static a(Ljava/lang/Iterable;Lzvb;)Z
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    instance-of v0, p0, Ljava/util/Collection;
+    new-instance v0, Lcq5;
 
-    if-eqz v0, :cond_0
+    const-string v1, "app_set_id"
 
-    move-object v0, p0
+    const-wide/16 v2, 0x1
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-direct {v0, v1, v2, v3}, Lcq5;-><init>(Ljava/lang/String;J)V
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    sput-object v0, Lpci;->a:Lcq5;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    filled-new-array {v0}, [Lcq5;
 
     move-result-object v0
 
-    :try_start_0
-    invoke-interface {p1, v0}, Lzvb;->test(Ljava/lang/Object;)Z
+    sput-object v0, Lpci;->b:[Lcq5;
 
-    move-result v0
+    return-void
+.end method
+
+.method public static final a(Landroid/text/Layout;)I
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/text/Layout;->getHeight()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final b(Landroid/text/Layout;)I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/text/Layout;->getEllipsisCount(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/text/Layout;->getLineMax(I)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/text/Layout;->getEllipsizedWidth()I
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public static c(Landroid/media/MediaMetadataRetriever;)I
+    .locals 2
+
+    const/16 v0, 0x14
+
+    :try_start_0
+    invoke-virtual {p0, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x1
 
     return p0
 
     :catchall_0
     move-exception p0
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    const-string v0, "pci"
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    const-string v1, "getVideoBitrate: failed"
 
-    throw p1
+    invoke-static {v0, v1, p0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_2
-    :goto_0
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public static b(Landroid/view/View;Lu4b;)V
-    .locals 12
+.method public static d(Landroid/content/Context;Landroid/net/Uri;)J
+    .locals 2
 
-    const-string v0, "c"
+    const/4 v0, 0x0
 
-    sget-object v1, Lba5;->a:Lba5;
+    :try_start_0
+    new-instance v1, Landroid/media/MediaMetadataRetriever;
 
-    instance-of v2, p0, Lrrf;
+    invoke-direct {v1}, Landroid/media/MediaMetadataRetriever;-><init>()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    if-eqz v2, :cond_0
+    :try_start_1
+    invoke-virtual {v1, p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    check-cast p0, Lrrf;
+    invoke-static {v1}, Lpci;->e(Landroid/media/MediaMetadataRetriever;)J
 
-    invoke-interface {p0, p1}, Lrrf;->onThemeChanged(Lu4b;)V
+    move-result-wide p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
+    invoke-static {v1}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
 
-    :cond_0
-    instance-of v2, p0, Landroidx/recyclerview/widget/RecyclerView;
+    return-wide p0
 
-    if-eqz v2, :cond_f
+    :catchall_0
+    move-exception p0
 
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
+    move-object v0, v1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getItemDecorationCount()I
+    goto :goto_0
 
-    move-result v2
+    :catchall_1
+    move-exception p0
+
+    :goto_0
+    :try_start_2
+    const-string p1, "pci"
+
+    const-string v1, "getVideoDuration from uri: failed"
+
+    invoke-static {p1, v1, p0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    invoke-static {v0}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
+
+    const-wide/16 p0, 0x0
+
+    return-wide p0
+
+    :catchall_2
+    move-exception p0
+
+    invoke-static {v0}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
+
+    throw p0
+.end method
+
+.method public static e(Landroid/media/MediaMetadataRetriever;)J
+    .locals 2
+
+    const/16 v0, 0x9
+
+    :try_start_0
+    invoke-virtual {p0, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-wide v0
+
+    :catchall_0
+    move-exception p0
+
+    const-string v0, "pci"
+
+    const-string v1, "getVideoDuration: failed "
+
+    invoke-static {v0, v1, p0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public static f(Landroid/content/Context;Landroid/net/Uri;)Lix5;
+    .locals 19
+
+    const-string v1, "pci"
+
+    const-string v2, "getVideoParams: failed"
 
     const/4 v3, 0x0
 
-    move v4, v3
+    const-wide/16 v4, 0x0
 
-    move v5, v4
-
-    :goto_0
     const/4 v6, 0x0
 
     const/4 v7, 0x1
 
-    if-ge v4, v2, :cond_4
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getItemDecorationCount()I
-
-    move-result v8
-
-    if-ltz v4, :cond_3
-
-    if-ge v4, v8, :cond_3
-
-    iget-object v8, p0, Landroidx/recyclerview/widget/RecyclerView;->C0:Ljava/util/ArrayList;
-
-    invoke-virtual {v8, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ls5d;
-
-    instance-of v9, v8, Lrrf;
-
-    if-eqz v9, :cond_1
-
-    move-object v6, v8
-
-    check-cast v6, Lrrf;
-
-    :cond_1
-    if-eqz v6, :cond_2
-
-    invoke-interface {v6, p1}, Lrrf;->onThemeChanged(Lu4b;)V
-
-    move v5, v7
-
-    :cond_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " is an invalid index for size "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    if-eqz v5, :cond_5
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    :cond_5
-    const-class v2, La6d;
-
     :try_start_0
-    const-class v4, Landroidx/recyclerview/widget/RecyclerView;
+    new-instance v8, Landroid/media/MediaMetadataRetriever;
 
-    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, La6d;
-
-    const-string v5, "a"
-
-    invoke-virtual {v2, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    instance-of v8, v5, Ljava/util/List;
-
-    if-eqz v8, :cond_6
-
-    check-cast v5, Ljava/util/List;
+    invoke-direct {v8}, Landroid/media/MediaMetadataRetriever;-><init>()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, p1
+
+    :try_start_1
+    invoke-virtual {v8, v0, v9}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
+
+    const-wide/16 v9, -0x1
+
+    invoke-virtual {v8, v9, v10}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(J)Landroid/graphics/Bitmap;
+
+    move-result-object v9
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-static {v8}, Lpci;->e(Landroid/media/MediaMetadataRetriever;)J
+
+    move-result-wide v4
+
+    invoke-static {v8}, Lpci;->g(Landroid/media/MediaMetadataRetriever;)Landroid/graphics/Point;
+
+    move-result-object v10
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    invoke-static {v8}, Lpci;->c(Landroid/media/MediaMetadataRetriever;)I
+
+    move-result v11
+    :try_end_3
+    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    const/16 v0, 0x10
+
+    :try_start_4
+    invoke-virtual {v8, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    move v0, v7
+
+    goto :goto_1
+
+    :cond_0
+    move v0, v6
 
     goto :goto_1
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
-    goto/16 :goto_7
+    :try_start_5
+    const-string v12, "getVideoBitrate: failed"
 
-    :cond_6
-    move-object v5, v6
+    invoke-static {v1, v12, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    goto :goto_0
 
     :goto_1
-    sget-object v8, Ls95;->a:Ls95;
+    invoke-static {v8}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
 
-    if-nez v5, :cond_7
-
-    move-object v5, v8
-
-    :cond_7
-    :try_start_1
-    invoke-virtual {v2, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v2, v0, Ljava/util/List;
-
-    if-eqz v2, :cond_8
-
-    check-cast v0, Ljava/util/List;
-
-    goto :goto_2
-
-    :cond_8
-    move-object v0, v6
+    move/from16 v18, v0
 
     :goto_2
-    if-nez v0, :cond_9
+    move-wide v14, v4
 
-    goto :goto_3
+    move/from16 v17, v11
 
-    :cond_9
-    move-object v8, v0
+    goto :goto_7
 
-    :goto_3
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {v0}, Lm5d;->j()I
-
-    move-result v2
-
-    invoke-static {v3, v2}, Ljvi;->i(II)Lxh7;
-
-    move-result-object v2
-
-    new-instance v6, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v6}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-virtual {v2}, Lvh7;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_4
-    move-object v4, v2
-
-    check-cast v4, Lwh7;
-
-    iget-boolean v4, v4, Lwh7;->c:Z
-
-    if-eqz v4, :cond_a
-
-    move-object v4, v2
-
-    check-cast v4, Lwh7;
-
-    invoke-virtual {v4}, Lwh7;->nextInt()I
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Lm5d;->l(I)I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-interface {v6, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
-
-    :cond_a
-    if-nez v6, :cond_b
-
-    sget-object v6, Lca5;->a:Lca5;
-
-    :cond_b
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_5
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    const/4 v6, 0x2
-
-    if-eqz v4, :cond_d
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Number;
-
-    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/b;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v4}, Landroidx/recyclerview/widget/b;->getRecycledView(I)Lj6d;
-
-    move-result-object v9
-
-    new-instance v10, Ls8;
-
-    invoke-direct {v10, p0, v4, v3}, Ls8;-><init>(Ljava/lang/Object;II)V
-
-    if-nez v9, :cond_c
-
-    move-object v4, v1
+    :catch_0
+    move-exception v0
 
     goto :goto_6
 
-    :cond_c
-    new-instance v4, Lpv4;
+    :goto_3
+    move-object v3, v8
 
-    new-instance v11, Lind;
+    goto/16 :goto_d
 
-    invoke-direct {v11, v6, v9}, Lind;-><init>(ILjava/lang/Object;)V
+    :catchall_1
+    move-exception v0
 
-    invoke-direct {v4, v11, v10}, Lpv4;-><init>(Loh6;Lqh6;)V
+    goto :goto_3
 
-    :goto_6
-    invoke-static {v0, v4}, Lgb3;->p(Ljava/util/AbstractList;Ld1e;)V
+    :catch_1
+    move-exception v0
+
+    :goto_4
+    move v11, v6
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    move-object v10, v3
+
+    goto :goto_4
+
+    :catch_3
+    move-exception v0
+
+    move-object v9, v3
+
+    :goto_5
+    move-object v10, v9
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_d
+
+    :catch_4
+    move-exception v0
+
+    move-object v8, v3
+
+    move-object v9, v8
 
     goto :goto_5
 
-    :cond_d
-    new-array p0, v6, [Ljava/util/List;
+    :goto_6
+    :try_start_6
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    aput-object v5, p0, v3
+    invoke-direct {v12, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aput-object v8, p0, v7
+    invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Ljt;->g([Ljava/lang/Object;)Ld1e;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v2, Ljx0;->C0:Ljx0;
+    invoke-static {v1, v0, v3}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    invoke-static {p0, v2}, Lo1e;->g(Ld1e;Lqh6;)Lgx5;
+    invoke-static {v8}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
 
-    move-result-object p0
+    move/from16 v18, v7
 
-    new-instance v2, Llt;
-
-    invoke-direct {v2, v6, v0}, Llt;-><init>(ILjava/lang/Object;)V
-
-    new-array v0, v6, [Ld1e;
-
-    aput-object p0, v0, v3
-
-    aput-object v2, v0, v7
-
-    invoke-static {v0}, Ljt;->g([Ljava/lang/Object;)Ld1e;
-
-    move-result-object p0
-
-    sget-object v0, Ljx0;->B0:Ljx0;
-
-    invoke-static {p0, v0}, Lo1e;->g(Ld1e;Lqh6;)Lgx5;
-
-    move-result-object p0
-
-    new-instance v0, Lq8;
-
-    invoke-direct {v0, v7}, Lq8;-><init>(I)V
-
-    new-instance v2, Lp2g;
-
-    invoke-direct {v2, p0, v0}, Lp2g;-><init>(Ld1e;Lqh6;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_8
+    goto :goto_2
 
     :goto_7
-    new-instance v2, Lvcd;
+    if-eqz v9, :cond_1
 
-    invoke-direct {v2, p0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_8
-    instance-of p0, v2, Lvcd;
-
-    if-eqz p0, :cond_e
-
-    goto :goto_9
-
-    :cond_e
-    move-object v1, v2
-
-    :goto_9
-    check-cast v1, Ld1e;
-
-    new-instance p0, Lq8;
-
-    invoke-direct {p0, v3}, Lq8;-><init>(I)V
-
-    new-instance v0, Lr8;
-
-    invoke-direct {v0, v3, p1}, Lr8;-><init>(ILu4b;)V
-
-    invoke-static {v1, p0, v0}, Ldzh;->c(Ld1e;Lqh6;Lqh6;)Lgx5;
-
-    move-result-object p0
-
-    new-instance v0, Lr8;
-
-    invoke-direct {v0, v7, p1}, Lr8;-><init>(ILu4b;)V
-
-    invoke-static {p0, v0}, Lo1e;->i(Ld1e;Lqh6;)Lp2g;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lo1e;->c(Ld1e;)I
-
-    return-void
-
-    :cond_f
-    instance-of v0, p0, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_10
-
-    check-cast p0, Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_10
-
-    invoke-static {p0, p1}, Li3a;->a(Ljava/lang/CharSequence;Lu4b;)V
-
-    :cond_10
-    return-void
-.end method
-
-.method public static c([J)Ljava/util/ArrayList;
-    .locals 5
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-wide v3, p0, v2
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public static d(Ljava/util/List;)[J
-    .locals 5
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    :try_start_7
+    invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    new-array v1, v0, [J
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_1
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Long;
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    aput-wide v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v1
-.end method
-
-.method public static e(Ljava/lang/Iterable;Lzvb;)Ljava/util/List;
-    .locals 3
-
-    instance-of v0, p0, Ljava/util/Collection;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    :try_start_0
-    invoke-interface {p1, v1}, Lzvb;->test(Ljava/lang/Object;)Z
+    invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v3
 
-    goto :goto_0
+    const/16 v4, 0x200
 
-    :catchall_0
-    move-exception p0
+    if-le v3, v4, :cond_1
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    const/high16 v4, 0x44000000    # 512.0f
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    int-to-float v3, v3
 
-    throw p1
+    div-float/2addr v4, v3
 
-    :cond_2
-    return-object v0
-.end method
+    int-to-float v0, v0
 
-.method public static f(Ljava/util/Collection;)Z
-    .locals 0
+    mul-float/2addr v0, v4
 
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static g(Ljava/util/List;Lfi6;)Ljava/util/ArrayList;
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    :try_start_0
-    invoke-interface {p1, v1}, Lfi6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public static h(Ljava/util/List;)V
-    .locals 1
-
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    int-to-float v2, v2
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    mul-float/2addr v4, v2
 
-    invoke-direct {v0, p0}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    invoke-static {v4}, Ljava/lang/Math;->round(F)I
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    move-result v2
 
-    invoke-interface {p0, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-static {v9, v0, v2, v7}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v9
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-.method public static final i(Landroid/view/View;Lrld;)V
-    .locals 1
+    goto :goto_8
 
-    sget v0, Lplc;->view_tree_saved_state_registry_owner:I
+    :catchall_3
+    move-exception v0
 
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static j(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/16 v2, 0x3e8
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-gt v1, v2, :cond_0
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-gt v1, v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    goto :goto_1
+    goto :goto_9
 
     :cond_1
-    move v1, v2
+    :goto_8
+    move-object v13, v9
 
-    :goto_1
-    const/4 v3, 0x0
+    goto :goto_a
 
-    invoke-virtual {v0, v3, v1}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
+    :goto_9
+    const-string v2, "getVideoParams: failed to resize to thumbnail"
+
+    invoke-static {v1, v2, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_8
+
+    :goto_a
+    if-eqz v10, :cond_2
+
+    :goto_b
+    move-object/from16 v16, v10
+
+    goto :goto_c
+
+    :cond_2
+    new-instance v10, Landroid/graphics/Point;
+
+    invoke-direct {v10, v6, v6}, Landroid/graphics/Point;-><init>(II)V
+
+    goto :goto_b
+
+    :goto_c
+    new-instance v12, Lix5;
+
+    invoke-direct/range {v12 .. v18}, Lix5;-><init>(Landroid/graphics/Bitmap;JLandroid/graphics/Point;IZ)V
+
+    return-object v12
+
+    :goto_d
+    invoke-static {v3}, Lpci;->h(Landroid/media/MediaMetadataRetriever;)V
+
+    throw v0
+.end method
+
+.method public static g(Landroid/media/MediaMetadataRetriever;)Landroid/graphics/Point;
+    .locals 4
+
+    const/16 v0, 0x12
+
+    :try_start_0
+    invoke-virtual {p0, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x13
+
+    invoke-virtual {p0, v1}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v3, Ljava/util/ArrayList;
+    const/16 v2, 0x18
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {p0, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
-    move-result v4
+    move-result-object p0
 
-    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    move-result p0
 
-    invoke-interface {v1}, Ljava/util/List;->clear()V
+    const/16 v2, 0x5a
 
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eq p0, v2, :cond_0
 
-    goto :goto_0
+    const/16 v2, 0x10e
 
-    :cond_2
+    if-ne p0, v2, :cond_1
+
+    :cond_0
+    move-object v3, v1
+
+    move-object v1, v0
+
+    move-object v0, v3
+
+    :cond_1
+    new-instance p0, Landroid/graphics/Point;
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-direct {p0, v0, v1}, Landroid/graphics/Point;-><init>(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    const-string v0, "pci"
+
+    const-string v1, "getVideoSize: failed"
+
+    invoke-static {v0, v1, p0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance p0, Landroid/graphics/Point;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v0}, Landroid/graphics/Point;-><init>(II)V
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/media/MediaMetadataRetriever;)V
+    .locals 0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-void
 .end method

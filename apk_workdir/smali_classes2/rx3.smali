@@ -1,353 +1,185 @@
-.class public final synthetic Lrx3;
-.super Ljava/lang/Object;
+.class public final Lrx3;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ldj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final synthetic b:Lsx3;
+.field public synthetic Y:Ljava/util/List;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final synthetic o:Ljava/lang/Cloneable;
+.field public synthetic q0:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsx3;Ljava/lang/Object;Ljava/lang/Cloneable;I)V
-    .locals 0
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    iput p4, p0, Lrx3;->a:I
+    .line 1
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lrx3;->b:Lsx3;
+    iput v0, p0, Lrx3;->X:I
 
-    iput-object p2, p0, Lrx3;->c:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p3, p0, Lrx3;->o:Ljava/lang/Cloneable;
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public constructor <init>(Lux3;Lkotlin/coroutines/Continuation;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lrx3;->X:I
+
+    .line 2
+    iput-object p1, p0, Lrx3;->q0:Ljava/lang/Object;
+
+    const/4 p1, 0x4
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lrx3;->a:I
+    iget v0, p0, Lrx3;->X:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lrx3;->c:Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    check-cast v0, Let;
+    check-cast p2, Ljava/util/List;
 
-    iget-object v1, p0, Lrx3;->o:Ljava/lang/Cloneable;
+    check-cast p3, Ljava/util/List;
 
-    check-cast v1, Ljava/text/Collator;
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lir3;
+    new-instance v0, Lrx3;
 
-    check-cast p2, Lir3;
+    const/4 v1, 0x4
 
-    iget-object v2, p0, Lrx3;->b:Lsx3;
+    invoke-direct {v0, v1, p4}, Lrx3;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, v0, Lrx3;->Y:Ljava/util/List;
 
-    invoke-virtual {p1}, Lir3;->p()J
+    iput-object p2, v0, Lrx3;->Z:Ljava/lang/Object;
 
-    move-result-wide v2
+    iput-object p3, v0, Lrx3;->q0:Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lsne;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    sget-object v3, Lnwb;->c:Lnwb;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p1}, Lir3;->p()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lsne;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnwb;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v3
-
-    :goto_0
-    invoke-virtual {p2}, Lir3;->p()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lsne;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {p2}, Lir3;->p()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lsne;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Lnwb;
-
-    :cond_1
-    iget v0, v2, Lnwb;->a:I
-
-    iget v2, v2, Lnwb;->b:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v6, -0x1
-
-    if-nez v0, :cond_6
-
-    iget v7, v3, Lnwb;->a:I
-
-    if-eqz v7, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget v0, v3, Lnwb;->b:I
-
-    if-ne v2, v0, :cond_3
-
-    invoke-static {p1, p2, v1}, Lsx3;->a(Lir3;Lir3;Ljava/text/Collator;)I
-
-    move-result v4
-
-    goto :goto_3
-
-    :cond_3
-    if-ge v0, v2, :cond_4
-
-    :goto_1
-    move v4, v6
-
-    goto :goto_3
-
-    :cond_4
-    if-ne v0, v2, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v4, v5
-
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    if-eqz v0, :cond_9
-
-    iget v7, v3, Lnwb;->a:I
-
-    if-eqz v7, :cond_9
-
-    iget v0, v3, Lnwb;->b:I
-
-    if-ne v2, v0, :cond_7
-
-    invoke-static {p1, p2, v1}, Lsx3;->a(Lir3;Lir3;Ljava/text/Collator;)I
-
-    move-result v4
-
-    goto :goto_3
-
-    :cond_7
-    if-ge v0, v2, :cond_8
-
-    goto :goto_1
-
-    :cond_8
-    if-ne v0, v2, :cond_5
-
-    goto :goto_3
-
-    :cond_9
-    if-eqz v0, :cond_5
-
-    goto :goto_1
-
-    :goto_3
-    return v4
-
-    :pswitch_0
-    iget-object v0, p0, Lrx3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lqh6;
-
-    iget-object v1, p0, Lrx3;->o:Ljava/lang/Cloneable;
-
-    check-cast v1, Ljava/util/HashMap;
-
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lrx3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/String;
+    return-object p1
 
-    invoke-interface {v0, p2}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    check-cast p1, Lwr3;
 
-    move-result-object p2
+    check-cast p2, Ltxb;
 
-    check-cast p2, Ljava/lang/String;
+    check-cast p3, Ljava/util/List;
 
-    iget-object v0, p0, Lrx3;->b:Lsx3;
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lsx3;->a:Lsoe;
+    new-instance p2, Lrx3;
 
-    invoke-virtual {v0}, Lqoe;->e()Ljava/lang/Object;
+    iget-object v0, p0, Lrx3;->q0:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lux3;
 
-    check-cast v0, Ljava/text/Collator;
+    invoke-direct {p2, v0, p4}, Lrx3;-><init>(Lux3;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p2, Lrx3;->Z:Ljava/lang/Object;
 
-    move-result-object v2
+    iput-object p3, p2, Lrx3;->Y:Ljava/util/List;
 
-    check-cast v2, Ljava/text/CollationKey;
+    sget-object p1, Lccg;->a:Lccg;
 
-    if-nez v2, :cond_a
+    invoke-virtual {p2, p1}, Lrx3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v2
+    return-object p1
 
-    invoke-virtual {v0, v2}, Ljava/text/Collator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lrx3;->X:I
 
-    :cond_a
-    invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v3
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast v3, Ljava/text/CollationKey;
+    iget-object p1, p0, Lrx3;->Y:Ljava/util/List;
 
-    if-nez v3, :cond_b
+    iget-object v0, p0, Lrx3;->Z:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    check-cast v0, Ljava/util/List;
 
-    move-result-object v3
+    iget-object v1, p0, Lrx3;->q0:Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Ljava/text/Collator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+    check-cast v1, Ljava/util/List;
 
-    move-result-object v3
+    new-instance v2, Lg7f;
 
-    invoke-virtual {v1, p2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    :cond_b
-    invoke-static {p1}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    iput-object p1, v2, Lg7f;->a:Ljava/util/List;
 
-    move-result v0
+    iput-object v0, v2, Lg7f;->b:Ljava/util/List;
 
-    const/4 v1, 0x1
+    iput-object v1, v2, Lg7f;->c:Ljava/util/List;
 
-    const/4 v4, 0x0
+    return-object v2
 
-    if-nez v0, :cond_c
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
+    iget-object p1, p0, Lrx3;->Z:Ljava/lang/Object;
 
-    move-result p1
+    check-cast p1, Lwr3;
 
-    invoke-static {p1}, Ljava/lang/Character;->isLetter(C)Z
+    iget-object v0, p0, Lrx3;->Y:Ljava/util/List;
 
-    move-result p1
+    iget-object v1, p0, Lrx3;->q0:Ljava/lang/Object;
 
-    if-eqz p1, :cond_c
+    check-cast v1, Lux3;
 
-    move p1, v1
+    invoke-virtual {v1, p1}, Lux3;->D(Lwr3;)Ltcb;
 
-    goto :goto_4
+    move-result-object p1
 
-    :cond_c
-    move p1, v4
+    iget-object v1, p1, Ltcb;->a:Ljava/lang/Object;
 
-    :goto_4
-    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    check-cast v1, Ln0c;
 
-    move-result v0
+    iget-object p1, p1, Ltcb;->b:Ljava/lang/Object;
 
-    if-nez v0, :cond_d
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p2, v4}, Ljava/lang/String;->charAt(I)C
+    new-instance v2, Lh0c;
 
-    move-result p2
+    invoke-direct {v2, v1, p1, v0}, Lh0c;-><init>(Ln0c;Ljava/util/List;Ljava/util/List;)V
 
-    invoke-static {p2}, Ljava/lang/Character;->isLetter(C)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_d
-
-    move v4, v1
-
-    :cond_d
-    if-eqz p1, :cond_e
-
-    if-nez v4, :cond_f
-
-    :cond_e
-    if-nez p1, :cond_10
-
-    if-nez v4, :cond_10
-
-    :cond_f
-    invoke-virtual {v2, v3}, Ljava/text/CollationKey;->compareTo(Ljava/text/CollationKey;)I
-
-    move-result v1
-
-    goto :goto_5
-
-    :cond_10
-    if-eqz p1, :cond_11
-
-    const/4 v1, -0x1
-
-    :cond_11
-    :goto_5
-    return v1
+    return-object v2
 
     nop
 

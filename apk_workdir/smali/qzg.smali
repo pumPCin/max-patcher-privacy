@@ -1,158 +1,52 @@
 .class public final Lqzg;
-.super Landroidx/recyclerview/widget/LinearLayoutManager;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lxvb;
+
+
 # instance fields
-.field public final synthetic E:Landroidx/viewpager2/widget/ViewPager2;
+.field public a:I
+
+.field public b:Lut;
+
+.field public c:Lut;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lqzg;->E:Landroidx/viewpager2/widget/ViewPager2;
+    new-instance v0, Lxvb;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+    const/16 v1, 0x14
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lxvb;-><init>(I)V
 
-
-# virtual methods
-.method public final K0(Lf6d;[I)V
-    .locals 3
-
-    iget-object v0, p0, Lqzg;->E:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getOffscreenPageLimit()I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->K0(Lf6d;[I)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getPageSize()I
-
-    move-result p1
-
-    mul-int/2addr p1, v1
-
-    const/4 v0, 0x0
-
-    aput p1, p2, v0
-
-    const/4 v0, 0x1
-
-    aput p1, p2, v0
+    sput-object v0, Lqzg;->d:Lxvb;
 
     return-void
 .end method
 
-.method public final a0(La6d;Lf6d;Lg5;)V
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/a;->a0(La6d;Lf6d;Lg5;)V
-
-    iget-object p1, p0, Lqzg;->E:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->G0:Lo56;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final b0(La6d;Lf6d;Landroid/view/View;Lg5;)V
-    .locals 3
-
-    iget-object p1, p0, Lqzg;->E:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->G0:Lo56;
-
-    iget-object p1, p1, Lo56;->o:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-ne p2, v1, :cond_0
-
-    iget-object p2, p1, Landroidx/viewpager2/widget/ViewPager2;->t0:Lqzg;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p3}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->t0:Lqzg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p3}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    move p1, v0
-
-    :goto_1
-    invoke-static {v0, p2, v1, p1, v1}, Lf5;->a(ZIIII)Lf5;
-
-    move-result-object p1
-
-    invoke-virtual {p4, p1}, Lg5;->i(Lf5;)V
-
-    return-void
-.end method
-
-.method public final o0(La6d;Lf6d;ILandroid/os/Bundle;)Z
+.method public static a()Lqzg;
     .locals 1
 
-    iget-object v0, p0, Lqzg;->E:Landroidx/viewpager2/widget/ViewPager2;
+    sget-object v0, Lqzg;->d:Lxvb;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lo56;
+    invoke-virtual {v0}, Lxvb;->a()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/a;->o0(La6d;Lf6d;ILandroid/os/Bundle;)Z
+    check-cast v0, Lqzg;
 
-    move-result p1
+    if-nez v0, :cond_0
 
-    return p1
-.end method
+    new-instance v0, Lqzg;
 
-.method public final u0(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    return p1
+    :cond_0
+    return-object v0
 .end method

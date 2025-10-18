@@ -1,13 +1,17 @@
-.class public final Lh28;
-.super Lj28;
+.class public interface abstract Lh28;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final e()Z
-    .locals 1
+.method public abstract c(II)V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract h(II)V
+.end method
 
-    return v0
+.method public abstract o(II)V
+.end method
+
+.method public abstract y(IILjava/lang/Object;)V
 .end method

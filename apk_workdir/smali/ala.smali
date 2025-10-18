@@ -1,11 +1,8 @@
-.class public final Lala;
-.super Lfq5;
+.class public interface abstract Lala;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public d:J
-
-.field public e:J
-
-.field public f:J
+# virtual methods
+.method public abstract a(J)V
+.end method

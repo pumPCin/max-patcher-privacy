@@ -1,29 +1,148 @@
-.class public interface abstract Lnd9;
+.class public final Lnd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lod9;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Landroid/net/Uri;
+
+
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lnd9;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lnd9;->b:Landroid/net/Uri;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnd9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnd9;
+
+    iget-object v1, p0, Lnd9;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lnd9;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lnd9;->b:Landroid/net/Uri;
+
+    iget-object p1, p1, Lnd9;->b:Landroid/net/Uri;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public abstract b(Lc62;I)V
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lnd9;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lnd9;->b:Landroid/net/Uri;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public abstract c(Lb62;I)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.method public abstract d(Lb62;I)V
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public abstract e(Lb62;I)V
-.end method
+    const-string v1, "Sticker(url="
 
-.method public abstract f(Lz52;I)V
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public abstract g(Ls7a;I)V
-.end method
+    iget-object v1, p0, Lnd9;->a:Ljava/lang/String;
 
-.method public abstract h(Lp2e;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lowResPreviewUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnd9;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

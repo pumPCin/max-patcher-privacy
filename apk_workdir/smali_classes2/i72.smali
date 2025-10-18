@@ -1,82 +1,96 @@
 .class public final Li72;
-.super Llff;
+.super Lm72;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ll72;
+.field public final a:Lsrf;
 
 
 # direct methods
-.method public constructor <init>(Ll72;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lsrf;)V
     .locals 0
 
-    iput-object p1, p0, Li72;->Y:Ll72;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li72;->a:Lsrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Li1c;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Li72;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Li72;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Li72;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Li72;
-
-    iget-object v1, p0, Li72;->Y:Ll72;
-
-    invoke-direct {v0, v1, p2}, Li72;-><init>(Ll72;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Li72;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Li72;->X:Ljava/lang/Object;
+    goto :goto_1
 
-    check-cast p1, Li1c;
+    :cond_0
+    instance-of v0, p1, Li72;
 
-    iget-object v0, p0, Li72;->Y:Ll72;
+    if-nez v0, :cond_1
 
-    iget-object v0, v0, Ll72;->r0:Lde5;
+    goto :goto_0
 
-    invoke-static {v0, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    :cond_1
+    check-cast p1, Li72;
 
-    sget-object p1, Lzag;->a:Lzag;
+    iget-object v0, p0, Li72;->a:Lsrf;
 
-    return-object p1
+    iget-object p1, p1, Li72;->a:Lsrf;
+
+    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li72;->a:Lsrf;
+
+    invoke-virtual {v0}, Lsrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ErrorWithLocalizedMessage(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Li72;->a:Lsrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

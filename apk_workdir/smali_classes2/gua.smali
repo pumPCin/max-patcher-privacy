@@ -1,51 +1,19 @@
-.class public final Lgua;
-.super Lk14;
+.class public abstract Lgua;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lo0a;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lsua;
-
-.field public o:Lsua;
-
-.field public r0:I
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lsua;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lgua;->Z:Lsua;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lgua;->Y:Ljava/lang/Object;
+    sget v0, Lunc;->oneme_complaint_action_cancel:I
 
-    iget p1, p0, Lgua;->r0:I
+    sput v0, Lgua;->a:I
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lgua;->r0:I
-
-    iget-object p1, p0, Lgua;->Z:Lsua;
-
-    invoke-static {p1, p0}, Lsua;->a(Lsua;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

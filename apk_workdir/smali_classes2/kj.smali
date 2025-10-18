@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lji6;
 
 
 # instance fields
@@ -36,15 +36,15 @@
 
     iget-object v0, p0, Lkj;->b:Lak;
 
-    iget-object v0, v0, Lak;->b:Lzed;
+    iget-object v0, v0, Lak;->b:Lggd;
 
-    invoke-virtual {v0}, Lzed;->m()Lyed;
+    invoke-virtual {v0}, Lggd;->m()Lfgd;
 
     move-result-object v0
 
     check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->L()Ljyc;
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->L()Lqzc;
 
     move-result-object v0
 
@@ -53,9 +53,9 @@
     :pswitch_0
     iget-object v0, p0, Lkj;->b:Lak;
 
-    iget-object v0, v0, Lak;->b:Lzed;
+    iget-object v0, v0, Lak;->b:Lggd;
 
-    invoke-virtual {v0}, Lzed;->m()Lyed;
+    invoke-virtual {v0}, Lggd;->m()Lfgd;
 
     move-result-object v0
 
@@ -70,9 +70,9 @@
     :pswitch_1
     iget-object v0, p0, Lkj;->b:Lak;
 
-    iget-object v0, v0, Lak;->b:Lzed;
+    iget-object v0, v0, Lak;->b:Lggd;
 
-    invoke-virtual {v0}, Lzed;->m()Lyed;
+    invoke-virtual {v0}, Lggd;->m()Lfgd;
 
     move-result-object v0
 

@@ -1,152 +1,119 @@
 .class public final Lk6g;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Landroid/widget/ScrollView;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
     .locals 0
 
-    iput p3, p0, Lk6g;->a:I
+    iput-object p2, p0, Lk6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    iput-object p1, p0, Lk6g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lk6g;->c:Landroid/widget/ScrollView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lk6g;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lk6g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lk6g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast p1, Lk6g;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lk6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lk6g;
+
+    iget-object v1, p0, Lk6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    invoke-direct {v0, p2, v1}, Lk6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    iput-object p1, v0, Lk6g;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk6g;->X:Ljava/lang/Object;
+
+    check-cast p1, Lmag;
+
+    iget-object v0, p0, Lk6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    iget-object v1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lh0d;
+
+    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
+
+    const/4 v3, 0x0
+
+    aget-object v3, v2, v3
+
+    invoke-interface {v1, v0, v3}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v1
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast v1, Lrag;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v1, p1}, Lrag;->f(Lmag;)V
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-interface {p1}, Lmag;->b()Z
 
-    goto :goto_0
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lh0d;
+
+    const/4 v1, 0x1
+
+    aget-object v1, v2, v1
+
+    invoke-interface {p1, v0, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ScrollView;
+
+    new-instance v1, Lzje;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v1, v2, v0}, Lzje;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    const/4 v1, 0x0
+    sget-object p1, Lccg;->a:Lccg;
 
-    :goto_0
-    if-eqz v1, :cond_1
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lk6g;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lk6g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_3
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lk6g;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

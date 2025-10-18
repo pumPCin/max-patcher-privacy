@@ -1,11 +1,27 @@
-.class public interface abstract Lesh;
+.class public final Lesh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:Lhi1;
 
-.method public abstract b()V
+.field public final b:Z
+
+.field public final c:Z
+
+
+# direct methods
+.method public constructor <init>(Lhi1;ZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lesh;->a:Lhi1;
+
+    iput-boolean p2, p0, Lesh;->b:Z
+
+    iput-boolean p3, p0, Lesh;->c:Z
+
+    return-void
 .end method

@@ -41,7 +41,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     invoke-virtual {p3, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Luta;
+    new-instance p1, Lwua;
 
     invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -75,55 +75,55 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p2, v0}, Luta;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p2, v0}, Lwua;-><init>(Landroid/content/Context;I)V
 
-    sget p2, Lcra;->b:I
+    sget p2, Lesa;->b:I
 
     invoke-virtual {p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    sget p2, Ldra;->e:I
+    sget p2, Lfsa;->e:I
 
-    new-instance v0, Ljqf;
+    new-instance v0, Lorf;
 
-    invoke-direct {v0, p2}, Ljqf;-><init>(I)V
+    invoke-direct {v0, p2}, Lorf;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Luta;->setTitle(Loqf;)V
+    invoke-virtual {p1, v0}, Lwua;->setTitle(Ltrf;)V
 
-    sget p2, Ldra;->d:I
+    sget p2, Lfsa;->d:I
 
-    new-instance v0, Ljqf;
+    new-instance v0, Lorf;
 
-    invoke-direct {v0, p2}, Ljqf;-><init>(I)V
+    invoke-direct {v0, p2}, Lorf;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Luta;->setSubtitle(Loqf;)V
+    invoke-virtual {p1, v0}, Lwua;->setSubtitle(Ltrf;)V
 
-    sget p2, Liid;->V:I
+    sget p2, Lpjd;->W:I
 
-    invoke-virtual {p1, p2}, Luta;->setIcon(I)V
+    invoke-virtual {p1, p2}, Lwua;->setIcon(I)V
 
-    sget-object p2, Lsz4;->t0:Lc82;
+    sget-object p2, Ll05;->s0:Lk82;
 
-    invoke-virtual {p2, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lu4b;->b()Lwe0;
+    invoke-virtual {p2, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
 
     move-result-object v0
 
-    iget-object v0, v0, Lwe0;->a:Lve0;
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
-    iget v0, v0, Lve0;->h:I
+    move-result-object v0
+
+    iget-object v0, v0, Lff0;->a:Lef0;
+
+    iget v0, v0, Lef0;->h:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-virtual {p2, p1}, Lc82;->o(Landroid/view/View;)Lcva;
+    invoke-virtual {p2, p1}, Lk82;->q(Landroid/view/View;)Lewa;
 
     move-result-object p2
 
-    iget-object p2, p2, Lcva;->c:Lu4b;
+    iget-object p2, p2, Lewa;->c:Lv5b;
 
-    invoke-virtual {p1, p2}, Luta;->setCustomTheme(Lu4b;)V
+    invoke-virtual {p1, p2}, Lwua;->setCustomTheme(Lv5b;)V
 
     invoke-virtual {p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 

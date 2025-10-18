@@ -1,16 +1,64 @@
-.class public interface abstract Lo61;
+.class public final Lo61;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw61;
+.implements Lt61;
+
+
+# static fields
+.field public static final a:Lo61;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lo61;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lo61;->a:Lo61;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public getPriority()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
 
     return v0
+
+    :cond_0
+    instance-of p1, p1, Lo61;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x7c56e03f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Finished"
+
+    return-object v0
 .end method

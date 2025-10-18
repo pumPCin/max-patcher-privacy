@@ -1,38 +1,53 @@
-.class public abstract Ljjc;
+.class public final Ljjc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static mr_cast_meta_black_scrim:I = 0x7f06031e
+.field public static final b:Lhjc;
 
-.field public static mr_cast_meta_default_background:I = 0x7f06031f
+.field public static final c:Ljjc;
 
-.field public static mr_cast_meta_default_text_color:I = 0x7f060320
 
-.field public static mr_cast_progressbar_background_dark:I = 0x7f060321
+# instance fields
+.field public final a:Lky;
 
-.field public static mr_cast_progressbar_background_light:I = 0x7f060322
 
-.field public static mr_cast_progressbar_progress_and_thumb_dark:I = 0x7f060323
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public static mr_cast_progressbar_progress_and_thumb_light:I = 0x7f060324
+    new-instance v0, Lhjc;
 
-.field public static mr_cast_route_divider_dark:I = 0x7f060325
+    const/4 v1, 0x1
 
-.field public static mr_cast_route_divider_light:I = 0x7f060326
+    const/4 v2, 0x0
 
-.field public static mr_dynamic_dialog_background_dark:I = 0x7f060327
+    invoke-direct {v0, v1, v2, v2}, Lhjc;-><init>(ZLjava/util/HashSet;Ljava/util/HashSet;)V
 
-.field public static mr_dynamic_dialog_background_light:I = 0x7f060328
+    sput-object v0, Ljjc;->b:Lhjc;
 
-.field public static mr_dynamic_dialog_header_text_color_dark:I = 0x7f060329
+    new-instance v0, Ljjc;
 
-.field public static mr_dynamic_dialog_header_text_color_light:I = 0x7f06032a
+    invoke-direct {v0}, Ljjc;-><init>()V
 
-.field public static mr_dynamic_dialog_icon_dark:I = 0x7f06032b
+    sput-object v0, Ljjc;->c:Ljjc;
 
-.field public static mr_dynamic_dialog_icon_light:I = 0x7f06032c
+    return-void
+.end method
 
-.field public static mr_dynamic_dialog_route_text_color_dark:I = 0x7f06032d
+.method public constructor <init>()V
+    .locals 2
 
-.field public static mr_dynamic_dialog_route_text_color_light:I = 0x7f06032e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lky;
+
+    sget-object v1, Ljjc;->b:Lhjc;
+
+    invoke-direct {v0, v1}, Lky;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ljjc;->a:Lky;
+
+    return-void
+.end method

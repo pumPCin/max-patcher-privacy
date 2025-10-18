@@ -1,14 +1,39 @@
-.class public interface abstract Lc5f;
+.class public final Lc5f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Lb3f;)V
-.end method
+# instance fields
+.field public final a:Lfgd;
 
-.method public abstract e(Ld2f;)V
-.end method
+.field public final b:Lei;
 
-.method public abstract f(Ld2f;)V
+.field public final c:Lxfd;
+
+
+# direct methods
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lc5f;->a:Lfgd;
+
+    new-instance v0, Lei;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lc5f;->b:Lei;
+
+    new-instance v0, Lxfd;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lc5f;->c:Lxfd;
+
+    return-void
 .end method

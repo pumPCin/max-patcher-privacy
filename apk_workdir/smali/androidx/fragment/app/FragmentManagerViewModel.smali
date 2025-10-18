@@ -1,5 +1,5 @@
 .class final Landroidx/fragment/app/FragmentManagerViewModel;
-.super Ltyg;
+.super Lyzg;
 .source "SourceFile"
 
 
@@ -37,7 +37,7 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    invoke-direct {p0}, Ltyg;-><init>()V
+    invoke-direct {p0}, Lyzg;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -365,11 +365,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lazg;
+    check-cast v0, Lf0h;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lazg;->a()V
+    invoke-virtual {v0}, Lf0h;->a()V
 
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 

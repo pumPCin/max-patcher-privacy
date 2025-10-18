@@ -1,126 +1,110 @@
 .class public final Lpn4;
-.super Ljava/lang/Object;
+.super Lbh6;
 .source "SourceFile"
-
-# interfaces
-.implements Lyv0;
 
 
 # instance fields
-.field public final a:I
+.field public final e:Ljava/lang/Object;
 
-.field public final b:[I
+.field public final f:Ljava/util/concurrent/ExecutorService;
 
-.field public final c:I
+.field public volatile g:Landroid/os/Handler;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(II[I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lpn4;->a:I
+    new-instance v0, Ljava/lang/Object;
 
-    array-length p1, p3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([II)[I
+    iput-object v0, p0, Lpn4;->e:Ljava/lang/Object;
 
-    move-result-object p1
+    new-instance v0, Lp30;
 
-    iput-object p1, p0, Lpn4;->b:[I
+    const/4 v1, 0x2
 
-    iput p2, p0, Lpn4;->c:I
+    invoke-direct {v0, v1}, Lp30;-><init>(I)V
 
-    invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lpn4;->f:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static c(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 4
 
-    const/4 v0, 0x1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ne p0, p1, :cond_0
+    const/16 v1, 0x1c
 
-    return v0
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0}, Lon4;->a(Landroid/os/Looper;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    const/4 v1, 0x0
+    :try_start_0
+    const-class v0, Landroid/os/Handler;
 
-    if-eqz p1, :cond_2
+    const-class v1, Landroid/os/Looper;
 
-    const-class v2, Lpn4;
+    const-class v2, Landroid/os/Handler$Callback;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    move-result-object v3
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Class;
 
-    if-eq v2, v3, :cond_1
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    :cond_1
-    check-cast p1, Lpn4;
+    move-result-object v0
 
-    iget v2, p0, Lpn4;->a:I
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iget v3, p1, Lpn4;->a:I
+    const/4 v2, 0x0
 
-    if-ne v2, v3, :cond_2
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lpn4;->b:[I
+    move-result-object v1
 
-    iget-object v3, p1, Lpn4;->b:[I
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+    move-result-object v0
 
-    move-result v2
+    check-cast v0, Landroid/os/Handler;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v2, :cond_2
+    return-object v0
 
-    iget v2, p0, Lpn4;->c:I
+    :catch_0
+    new-instance v0, Landroid/os/Handler;
 
-    iget p1, p1, Lpn4;->c:I
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    if-ne v2, p1, :cond_2
+    return-object v0
 
-    return v0
+    :catch_1
+    new-instance v0, Landroid/os/Handler;
 
-    :cond_2
-    :goto_0
-    return v1
-.end method
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lpn4;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lpn4;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lpn4;->c:I
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method

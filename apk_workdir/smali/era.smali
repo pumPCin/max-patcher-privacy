@@ -10,40 +10,22 @@
 
 .field public static final c:I
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lemc;->oneme_picker_input_view:I
+    sget v0, Lhnc;->call_permission_dialog_check_cancel:I
 
     sput v0, Lera;->a:I
 
-    sget v0, Lemc;->oneme_picker_media_keyboard_container:I
+    sget v0, Lhnc;->call_permission_dialog_check_continue:I
 
     sput v0, Lera;->b:I
 
-    sget v0, Lemc;->oneme_picker_quote_view:I
+    sget v0, Lhnc;->call_start_no_network_connection_neutral_button:I
 
     sput v0, Lera;->c:I
-
-    sget v0, Lemc;->oneme_picker_toolbar:I
-
-    sput v0, Lera;->d:I
-
-    sget v0, Lemc;->oneme_picker_toolbar_action_cancel_selection:I
-
-    sput v0, Lera;->e:I
-
-    sget v0, Lemc;->oneme_picker_toolbar_action_select:I
-
-    sput v0, Lera;->f:I
 
     return-void
 .end method

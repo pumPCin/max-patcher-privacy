@@ -1,164 +1,150 @@
-.class public final synthetic Lb9b;
-.super Ljava/lang/Object;
+.class public final Lb9b;
+.super Le5a;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iput p2, p0, Lb9b;->a:I
+    sget-object v0, Lccg;->a:Lccg;
 
-    iput-object p1, p0, Lb9b;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lb9b;->b:J
+
+    iput-object p3, p0, Lb9b;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lb9b;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lb9b;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, -0x1
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x6
+    return v0
 
-    iget-object v3, p0, Lb9b;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+    :cond_0
+    instance-of v1, p1, Lb9b;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x0
 
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lwq7;
+    if-nez v1, :cond_1
 
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return v2
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :cond_1
+    check-cast p1, Lb9b;
 
-    move-result-object v4
+    iget-wide v3, p0, Lb9b;->b:J
 
-    const/4 v5, 0x0
+    iget-wide v5, p1, Lb9b;->b:J
 
-    invoke-direct {v0, v4, v5, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    cmp-long v1, v3, v5
 
-    sget v2, Lxxa;->v:I
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    return v2
 
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+    :cond_2
+    iget-object v1, p0, Lb9b;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    iget-object v3, p1, Lb9b;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+    move-result v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-nez v1, :cond_3
 
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+    return v2
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    :cond_3
+    iget-object v1, p0, Lb9b;->d:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    iget-object p1, p1, Lb9b;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, v3, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Lmbe;
+    move-result p1
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lm5d;)V
+    if-nez p1, :cond_4
 
-    new-instance v4, Lzu9;
+    return v2
 
-    const/16 v1, 0x1a
+    :cond_4
+    return v0
+.end method
 
-    invoke-direct {v4, v1}, Lzu9;-><init>(I)V
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v2, Liwd;
+    iget-wide v0, p0, Lb9b;->b:J
 
-    sget-object v1, Lsz4;->t0:Lc82;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {v1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+    move-result v0
 
-    move-result-object v3
+    const/16 v1, 0x1f
 
-    const/4 v6, 0x0
+    mul-int/2addr v0, v1
 
-    const/16 v7, 0x1c
+    iget-object v2, p0, Lb9b;->c:Ljava/lang/String;
 
-    invoke-direct/range {v2 .. v7}, Liwd;-><init>(Lu4b;Lgwd;Ll;Lh9d;I)V
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
 
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+    move-result v0
 
-    new-instance v1, La01;
+    iget-object v1, p0, Lb9b;->d:Ljava/lang/String;
 
-    const/4 v2, 0x3
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v1, v2}, La01;-><init>(I)V
+    move-result v1
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+    add-int/2addr v1, v0
 
-    return-object v0
+    return v1
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lwq7;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v0, Ls5b;
+    const-string v0, "OpenPhoneBook(contactId="
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const-string v1, ", fullName="
 
-    move-result-object v3
+    iget-wide v2, p0, Lb9b;->b:J
 
-    invoke-direct {v0, v3, v2}, Ls5b;-><init>(Landroid/content/Context;I)V
+    iget-object v4, p0, Lb9b;->c:Ljava/lang/String;
 
-    sget v2, Lxxa;->x:I
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    move-result-object v0
 
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+    const-string v1, ", phone="
 
-    const/4 v3, -0x2
+    const-string v2, ")"
 
-    invoke-direct {v2, v1, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    iget-object v3, p0, Lb9b;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v1, Lk5b;->a:Lk5b;
-
-    invoke-virtual {v0, v1}, Ls5b;->setForm(Lk5b;)V
-
-    sget v1, Lzxa;->t:I
-
-    invoke-virtual {v0, v1}, Ls5b;->setTitle(I)V
-
-    new-instance v1, La5b;
-
-    new-instance v2, La7a;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3}, La7a;-><init>(I)V
-
-    invoke-direct {v1, v2}, La5b;-><init>(Lqh6;)V
-
-    invoke-virtual {v0, v1}, Ls5b;->setLeftActions(Lg5b;)V
+    move-result-object v0
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

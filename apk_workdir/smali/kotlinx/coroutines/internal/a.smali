@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # virtual methods
@@ -12,9 +12,9 @@
 
     check-cast p1, Lkotlinx/coroutines/internal/ThreadState;
 
-    check-cast p2, Lr44;
+    check-cast p2, Lg54;
 
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->c(Lkotlinx/coroutines/internal/ThreadState;Lr44;)Lkotlinx/coroutines/internal/ThreadState;
+    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->c(Lkotlinx/coroutines/internal/ThreadState;Lg54;)Lkotlinx/coroutines/internal/ThreadState;
 
     move-result-object p1
 

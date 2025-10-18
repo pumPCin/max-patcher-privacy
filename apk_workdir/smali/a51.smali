@@ -1,119 +1,147 @@
-.class public final synthetic La51;
-.super Ljava/lang/Object;
+.class public final La51;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lww0;
+.field public X:I
 
-.field public final synthetic a:Lhl;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lc51;
-
-.field public final synthetic o:Lyu1;
+.field public final synthetic Y:Lv48;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhl;JLc51;Lyu1;Lww0;)V
+.method public constructor <init>(Lv48;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La51;->Y:Lv48;
 
-    iput-object p1, p0, La51;->a:Lhl;
+    const/4 p1, 0x2
 
-    iput-wide p2, p0, La51;->b:J
-
-    iput-object p4, p0, La51;->c:Lc51;
-
-    iput-object p5, p0, La51;->o:Lyu1;
-
-    iput-object p6, p0, La51;->X:Lww0;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, La51;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, La51;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, La51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, La51;
+
+    iget-object v0, p0, La51;->Y:Lv48;
+
+    invoke-direct {p1, v0, p2}, La51;-><init>(Lv48;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    iget v0, p0, La51;->X:I
 
-    iget-object v0, p0, La51;->a:Lhl;
+    const/4 v1, 0x1
 
-    iget-wide v1, v0, Lhl;->a:J
+    iget-object v2, p0, La51;->Y:Lv48;
 
-    invoke-static {v1, v2}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    iget-object v1, v0, Lhl;->c:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    goto :goto_0
 
     :cond_0
-    iget-object v0, v0, Lhl;->b:Ljava/lang/String;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-wide v0, p0, La51;->b:J
+    throw p1
 
-    invoke-static {v0, v1}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    iget-object v0, p0, La51;->c:Lc51;
-
-    iget-object v0, v0, Lc51;->b:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfw1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {v2}, Lv48;->y()Ly83;
 
     move-result-object p1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    check-cast p1, Lntd;
 
-    iget-object v0, p0, La51;->o:Lyu1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lqh6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {p1}, Lntd;->p()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    if-eqz p1, :cond_2
 
-    iget-object v0, p0, La51;->X:Lww0;
+    invoke-static {p1}, Lzaf;->L(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lqh6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :cond_2
+    iget-object p1, v2, Lv48;->c:Ljava/lang/Object;
+
+    check-cast p1, Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    check-cast p1, Ldx1;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    iput v1, p0, La51;->X:I
+
+    check-cast p1, Lgx1;
+
+    invoke-virtual {p1, p0}, Lgx1;->a(Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_0
+    invoke-virtual {v2}, Lv48;->y()Ly83;
+
+    move-result-object p1
+
+    check-cast p1, Lntd;
+
+    invoke-virtual {p1}, Lntd;->p()Ljava/lang/String;
 
     move-result-object p1
 

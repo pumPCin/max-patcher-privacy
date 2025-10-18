@@ -1,254 +1,207 @@
 .class public final Lm6i;
-.super Lf4;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lm6i;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final X:Landroid/app/PendingIntent;
+.field public final H0:Lzoe;
 
-.field public final Y:Luvi;
+.field public final I0:Lzoe;
 
-.field public final Z:Ljava/lang/String;
-
-.field public final a:I
-
-.field public final b:Lh6i;
-
-.field public final c:Lt2j;
-
-.field public final o:Lk1j;
+.field public final J0:Lzoe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcq3;Louh;Louh;)V
+    .locals 8
 
-    new-instance v0, Lpzh;
+    const/16 v3, 0x17
 
-    const/16 v1, 0x13
+    const/4 v7, 0x0
 
-    invoke-direct {v0, v1}, Lpzh;-><init>(I)V
+    move-object v0, p0
 
-    sput-object v0, Lm6i;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-object v1, p1
 
-    return-void
-.end method
+    move-object v2, p2
 
-.method public constructor <init>(ILh6i;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/PendingIntent;Landroid/os/IBinder;Ljava/lang/String;)V
-    .locals 3
+    move-object v4, p3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v5, p4
 
-    iput p1, p0, Lm6i;->a:I
+    move-object v6, p5
 
-    iput-object p2, p0, Lm6i;->b:Lh6i;
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcq3;Lbs6;Lcs6;I)V
 
-    const/4 p1, 0x3
+    new-instance p1, Lzoe;
 
     const/4 p2, 0x0
 
-    if-eqz p3, :cond_1
+    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
 
-    sget v0, Lm2j;->d:I
+    iput-object p1, v0, Lm6i;->H0:Lzoe;
 
-    const-string v0, "com.google.android.gms.location.ILocationListener"
+    new-instance p1, Lzoe;
 
-    invoke-interface {p3, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
 
-    move-result-object v1
+    iput-object p1, v0, Lm6i;->I0:Lzoe;
 
-    instance-of v2, v1, Lt2j;
+    new-instance p1, Lzoe;
 
-    if-eqz v2, :cond_0
+    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
 
-    check-cast v1, Lt2j;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Lv1j;
-
-    invoke-direct {v1, p3, v0, p1}, Lfth;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    goto :goto_0
-
-    :cond_1
-    move-object v1, p2
-
-    :goto_0
-    iput-object v1, p0, Lm6i;->c:Lt2j;
-
-    iput-object p5, p0, Lm6i;->X:Landroid/app/PendingIntent;
-
-    if-eqz p4, :cond_3
-
-    sget p3, Ld5i;->e:I
-
-    const-string p3, "com.google.android.gms.location.ILocationCallback"
-
-    invoke-interface {p4, p3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object p5
-
-    instance-of v0, p5, Lk1j;
-
-    if-eqz v0, :cond_2
-
-    check-cast p5, Lk1j;
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p5, Lgzi;
-
-    invoke-direct {p5, p4, p3, p1}, Lfth;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    goto :goto_1
-
-    :cond_3
-    move-object p5, p2
-
-    :goto_1
-    iput-object p5, p0, Lm6i;->o:Lk1j;
-
-    if-eqz p6, :cond_5
-
-    const-string p2, "com.google.android.gms.location.internal.IFusedLocationProviderCallback"
-
-    invoke-interface {p6, p2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object p3
-
-    instance-of p4, p3, Luvi;
-
-    if-eqz p4, :cond_4
-
-    move-object p2, p3
-
-    check-cast p2, Luvi;
-
-    goto :goto_2
-
-    :cond_4
-    new-instance p3, Liti;
-
-    invoke-direct {p3, p6, p2, p1}, Lfth;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    move-object p2, p3
-
-    :cond_5
-    :goto_2
-    iput-object p2, p0, Lm6i;->Y:Luvi;
-
-    iput-object p7, p0, Lm6i;->Z:Ljava/lang/String;
+    iput-object p1, v0, Lm6i;->J0:Lzoe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 5
+.method public final g()I
+    .locals 1
 
-    const/16 v0, 0x4f45
+    const v0, 0xb2c988
 
-    invoke-static {p1, v0}, Ljxi;->k(Landroid/os/Parcel;I)I
+    return v0
+.end method
 
-    move-result v0
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 3
 
-    const/4 v1, 0x1
+    if-nez p1, :cond_0
 
-    const/4 v2, 0x4
+    const/4 p1, 0x0
 
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lm6i;->a:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x2
-
-    iget-object v3, p0, Lm6i;->b:Lh6i;
-
-    invoke-static {p1, v1, v3, p2}, Ljxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/4 v1, 0x0
-
-    iget-object v3, p0, Lm6i;->c:Lt2j;
-
-    if-nez v3, :cond_0
-
-    move-object v3, v1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    invoke-interface {v3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
 
-    move-result-object v3
-
-    :goto_0
-    const/4 v4, 0x3
-
-    invoke-static {p1, v4, v3}, Ljxi;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
-
-    iget-object v3, p0, Lm6i;->X:Landroid/app/PendingIntent;
-
-    invoke-static {p1, v2, v3, p2}, Ljxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    iget-object p2, p0, Lm6i;->o:Lk1j;
-
-    if-nez p2, :cond_1
-
-    move-object p2, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    :goto_1
-    const/4 v2, 0x5
-
-    invoke-static {p1, v2, p2}, Ljxi;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
-
-    iget-object p2, p0, Lm6i;->Y:Luvi;
-
-    if-nez p2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v1
 
-    :goto_2
-    const/4 p2, 0x6
+    instance-of v2, v1, Ld0j;
 
-    invoke-static {p1, p2, v1}, Ljxi;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    if-eqz v2, :cond_1
 
-    const/16 p2, 0x8
+    check-cast v1, Ld0j;
 
-    iget-object v1, p0, Lm6i;->Z:Ljava/lang/String;
+    return-object v1
 
-    invoke-static {p1, p2, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    :cond_1
+    new-instance v1, Ld0j;
 
-    invoke-static {p1, v0}, Ljxi;->l(Landroid/os/Parcel;I)V
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p1, v0, v2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public final m()[Lcq5;
+    .locals 1
+
+    sget-object v0, Lrci;->a:[Lcq5;
+
+    return-object v0
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
+
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.location.internal.GoogleLocationManagerService.START"
+
+    return-object v0
+.end method
+
+.method public final s()V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    iget-object v0, p0, Lm6i;->H0:Lzoe;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lm6i;->H0:Lzoe;
+
+    invoke-virtual {v1}, Lzoe;->clear()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    iget-object v1, p0, Lm6i;->I0:Lzoe;
+
+    monitor-enter v1
+
+    :try_start_1
+    iget-object v0, p0, Lm6i;->I0:Lzoe;
+
+    invoke-virtual {v0}, Lzoe;->clear()V
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    iget-object v0, p0, Lm6i;->J0:Lzoe;
+
+    monitor-enter v0
+
+    :try_start_2
+    iget-object v1, p0, Lm6i;->J0:Lzoe;
+
+    invoke-virtual {v1}, Lzoe;->clear()V
+
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v0
+
+    :catchall_2
+    move-exception v1
+
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    throw v1
+.end method
+
+.method public final t()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

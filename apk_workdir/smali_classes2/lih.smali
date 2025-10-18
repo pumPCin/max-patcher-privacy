@@ -1,66 +1,59 @@
 .class public final Llih;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lmih;
 
 
 # instance fields
-.field public final X:I
+.field public X:Ldih;
 
-.field public final a:Lube;
+.field public Y:Lhih;
 
-.field public final b:Lhf4;
+.field public Z:Lc9f;
 
-.field public final c:J
+.field public o:Lrih;
 
-.field public final o:I
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lrih;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lube;Lhf4;JI)V
+.method public constructor <init>(Lrih;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llih;->r0:Lrih;
 
-    iput-object p1, p0, Llih;->a:Lube;
-
-    iput-object p2, p0, Llih;->b:Lhf4;
-
-    iput-wide p3, p0, Llih;->c:J
-
-    iput p5, p0, Llih;->o:I
-
-    sget p1, La6b;->k:I
-
-    iput p1, p0, Llih;->X:I
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()I
-    .locals 1
-
-    iget v0, p0, Llih;->o:I
-
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Llih;->c:J
+    iput-object p1, p0, Llih;->q0:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Llih;->s0:I
 
-.method public final m()I
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    iget v0, p0, Llih;->X:I
+    or-int/2addr p1, v0
 
-    return v0
+    iput p1, p0, Llih;->s0:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Llih;->r0:Lrih;
+
+    invoke-virtual {v1, p1, v0, p0}, Lrih;->i(Ljava/lang/String;ZLy14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

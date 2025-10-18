@@ -1,80 +1,60 @@
-.class public final synthetic Lxp8;
+.class public final Lxp8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lgxg;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lbp8;
 
-.field public final synthetic b:Lcq8;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lbq8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcq8;I)V
+.method public constructor <init>(Lbq8;Lbp8;IJ)V
     .locals 0
 
-    iput p2, p0, Lxp8;->a:I
-
-    iput-object p1, p0, Lxp8;->b:Lcq8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxp8;->c:Lbq8;
+
+    iput-object p2, p0, Lxp8;->a:Lbp8;
+
+    iput p3, p0, Lxp8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final G()V
     .locals 3
 
-    iget v0, p0, Lxp8;->a:I
+    iget-object v0, p0, Lxp8;->a:Lbp8;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Lxp8;->b:I
 
-    iget-object v0, p0, Lxp8;->b:Lcq8;
+    iget-object v2, p0, Lxp8;->c:Lbq8;
 
-    iget-object v1, v0, Lcq8;->C:Lhtb;
-
-    if-eqz v1, :cond_0
-
-    sget-object v2, Lftb;->c:Lftb;
-
-    invoke-virtual {v0, v1, v2}, Lcq8;->V(Lhtb;Lftb;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxp8;->b:Lcq8;
-
-    iget-object v1, v0, Lcq8;->m:Lbq8;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Lcq8;->d:Landroid/content/Context;
-
-    invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lcq8;->m:Lbq8;
-
-    :cond_1
-    iget-object v0, v0, Lcq8;->c:Lmq8;
-
-    iget-object v0, v0, Lmq8;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->clear()V
+    invoke-virtual {v2, v0, v1}, Lbq8;->N0(Lbp8;I)V
 
     return-void
+.end method
 
-    nop
+.method public final a(J)V
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lxp8;->a:Lbp8;
+
+    iget v1, p0, Lxp8;->b:I
+
+    iget-object v2, p0, Lxp8;->c:Lbq8;
+
+    invoke-virtual {v2, v0, v1, p1, p2}, Lbq8;->J0(Lbp8;IJ)V
+
+    return-void
 .end method

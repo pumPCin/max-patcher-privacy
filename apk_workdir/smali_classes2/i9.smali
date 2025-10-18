@@ -8,15 +8,15 @@
 
 
 # instance fields
-.field public final a:Lpf6;
+.field public final a:Ljg6;
 
-.field public final b:Lpf6;
+.field public final b:Ljg6;
 
-.field public final c:Lpf6;
+.field public final c:Ljg6;
 
 .field public final d:Z
 
-.field public final e:Lpf6;
+.field public final e:Ljg6;
 
 
 # direct methods
@@ -25,37 +25,37 @@
 
     new-instance v0, Li9;
 
-    sget-object v2, Lpf6;->t0:Lpf6;
+    sget-object v2, Ljg6;->s0:Ljg6;
 
     const/4 v4, 0x0
 
-    sget-object v1, Lpf6;->b:Lpf6;
+    sget-object v1, Ljg6;->b:Ljg6;
 
     move-object v3, v1
 
     move-object v5, v1
 
-    invoke-direct/range {v0 .. v5}, Li9;-><init>(Lpf6;Lpf6;Lpf6;ZLpf6;)V
+    invoke-direct/range {v0 .. v5}, Li9;-><init>(Ljg6;Ljg6;Ljg6;ZLjg6;)V
 
     sput-object v0, Li9;->f:Li9;
 
     return-void
 .end method
 
-.method public constructor <init>(Lpf6;Lpf6;Lpf6;ZLpf6;)V
+.method public constructor <init>(Ljg6;Ljg6;Ljg6;ZLjg6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li9;->a:Lpf6;
+    iput-object p1, p0, Li9;->a:Ljg6;
 
-    iput-object p2, p0, Li9;->b:Lpf6;
+    iput-object p2, p0, Li9;->b:Ljg6;
 
-    iput-object p3, p0, Li9;->c:Lpf6;
+    iput-object p3, p0, Li9;->c:Ljg6;
 
     iput-boolean p4, p0, Li9;->d:Z
 
-    iput-object p5, p0, Li9;->e:Lpf6;
+    iput-object p5, p0, Li9;->e:Ljg6;
 
     return-void
 .end method
@@ -83,27 +83,27 @@
     :cond_1
     check-cast p1, Li9;
 
-    iget-object v1, p0, Li9;->a:Lpf6;
+    iget-object v1, p0, Li9;->a:Ljg6;
 
-    iget-object v3, p1, Li9;->a:Lpf6;
+    iget-object v3, p1, Li9;->a:Ljg6;
 
     if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Li9;->b:Lpf6;
+    iget-object v1, p0, Li9;->b:Ljg6;
 
-    iget-object v3, p1, Li9;->b:Lpf6;
+    iget-object v3, p1, Li9;->b:Ljg6;
 
     if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Li9;->c:Lpf6;
+    iget-object v1, p0, Li9;->c:Ljg6;
 
-    iget-object v3, p1, Li9;->c:Lpf6;
+    iget-object v3, p1, Li9;->c:Ljg6;
 
     if-eq v1, v3, :cond_4
 
@@ -119,9 +119,9 @@
     return v2
 
     :cond_5
-    iget-object v1, p0, Li9;->e:Lpf6;
+    iget-object v1, p0, Li9;->e:Ljg6;
 
-    iget-object p1, p1, Li9;->e:Lpf6;
+    iget-object p1, p1, Li9;->e:Ljg6;
 
     if-eq v1, p1, :cond_6
 
@@ -134,7 +134,7 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Li9;->a:Lpf6;
+    iget-object v0, p0, Li9;->a:Ljg6;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -144,7 +144,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Li9;->b:Lpf6;
+    iget-object v2, p0, Li9;->b:Ljg6;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -154,7 +154,7 @@
 
     mul-int/2addr v2, v1
 
-    iget-object v0, p0, Li9;->c:Lpf6;
+    iget-object v0, p0, Li9;->c:Ljg6;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -166,11 +166,11 @@
 
     iget-boolean v2, p0, Li9;->d:Z
 
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
 
     move-result v0
 
-    iget-object v1, p0, Li9;->e:Lpf6;
+    iget-object v1, p0, Li9;->e:Ljg6;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Li9;->a:Lpf6;
+    iget-object v1, p0, Li9;->a:Ljg6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -198,7 +198,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Li9;->b:Lpf6;
+    iget-object v1, p0, Li9;->b:Ljg6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -206,7 +206,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Li9;->c:Lpf6;
+    iget-object v1, p0, Li9;->c:Ljg6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -222,7 +222,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Li9;->e:Lpf6;
+    iget-object v1, p0, Li9;->e:Ljg6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

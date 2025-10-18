@@ -1,76 +1,36 @@
-.class public abstract Lw3g;
+.class public interface abstract Lw3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Llq7;
-
-
-# instance fields
-.field public a:[Ljava/lang/Object;
-
-.field public b:I
-
-.field public c:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lv3g;->e:Lv3g;
-
-    iget-object v0, v0, Lv3g;->d:[Ljava/lang/Object;
-
-    iput-object v0, p0, Lw3g;->a:[Ljava/lang/Object;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(II[Ljava/lang/Object;)V
+.method public abstract a(Lx3g;)V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract c(Lx3g;)V
+.end method
+
+.method public d(Lx3g;)V
     .locals 0
 
-    iput-object p3, p0, Lw3g;->a:[Ljava/lang/Object;
-
-    iput p1, p0, Lw3g;->b:I
-
-    iput p2, p0, Lw3g;->c:I
+    invoke-interface {p0, p1}, Lw3g;->a(Lx3g;)V
 
     return-void
 .end method
 
-.method public final hasNext()Z
-    .locals 2
+.method public e(Lx3g;)V
+    .locals 0
 
-    iget v0, p0, Lw3g;->c:I
+    invoke-interface {p0, p1}, Lw3g;->c(Lx3g;)V
 
-    iget v1, p0, Lw3g;->b:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method
 
-.method public final remove()V
-    .locals 2
+.method public abstract f()V
+.end method
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+.method public abstract h(Lx3g;)V
 .end method

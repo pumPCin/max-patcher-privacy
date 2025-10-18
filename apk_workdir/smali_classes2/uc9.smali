@@ -1,193 +1,85 @@
-.class public final Luc9;
-.super Lqci;
+.class public final enum Luc9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final enum a:Luc9;
 
-.field public final synthetic o:Lvc9;
+.field public static final enum b:Luc9;
+
+.field public static final enum c:Luc9;
+
+.field public static final synthetic o:[Luc9;
 
 
 # direct methods
-.method public constructor <init>(Lvc9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Luc9;->c:I
+    new-instance v0, Luc9;
 
-    packed-switch p2, :pswitch_data_0
+    const-string v1, "DISABLED"
 
-    iput-object p1, p0, Luc9;->o:Lvc9;
+    const/4 v2, 0x0
 
-    const/16 p1, 0xc
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget-object p2, Lsc9;->a:Lsc9;
+    sput-object v0, Luc9;->a:Luc9;
 
-    invoke-direct {p0, p1, p2}, Lqci;-><init>(ILjava/lang/Object;)V
+    new-instance v1, Luc9;
+
+    const-string v2, "EXPANDED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Luc9;->b:Luc9;
+
+    new-instance v2, Luc9;
+
+    const-string v3, "COLLAPSED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Luc9;->c:Luc9;
+
+    filled-new-array {v0, v1, v2}, [Luc9;
+
+    move-result-object v0
+
+    sput-object v0, Luc9;->o:[Luc9;
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Luc9;->o:Lvc9;
-
-    const/16 p1, 0xc
-
-    invoke-direct {p0, p1, p2}, Lqci;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Luc9;
+    .locals 1
 
-# virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+    const-class v0, Luc9;
 
-    iget v0, p0, Luc9;->c:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    invoke-static {p1, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p0, Luc9;
 
-    move-result v0
+    return-object p0
+.end method
 
-    if-nez v0, :cond_1
+.method public static values()[Luc9;
+    .locals 1
 
-    check-cast p2, Ljava/lang/Boolean;
+    sget-object v0, Luc9;->o:[Luc9;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Luc9;->o:Lvc9;
-
-    iget-object v0, p1, Lvc9;->F0:Landroid/graphics/Paint;
-
-    if-eqz p2, :cond_0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x40800000    # 4.0f
-
-    :goto_0
-    mul-float/2addr p2, v1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    goto :goto_0
-
-    :goto_1
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    check-cast p2, Lsc9;
-
-    check-cast p1, Lsc9;
-
-    iget-object p1, p0, Luc9;->o:Lvc9;
-
-    const/4 p2, 0x0
-
-    iput-object p2, p1, Lvc9;->o:Landroid/text/Layout;
-
-    iput-object p2, p1, Lvc9;->r0:Landroid/text/Layout;
-
-    iput-object p2, p1, Lvc9;->s0:Landroid/text/Layout;
-
-    iput-object p2, p1, Lvc9;->t0:Landroid/text/Layout;
-
-    iget-object v0, p1, Lvc9;->u0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->e()Z
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvna;
+    check-cast v0, [Luc9;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    iput-object p2, p1, Lvc9;->y0:Landroid/text/Layout;
-
-    iget-object v0, p1, Lvc9;->B0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_3
-    iput-object p2, p1, Lvc9;->w0:Landroid/text/Layout;
-
-    iput-object p2, p1, Lvc9;->v0:Landroid/text/Layout;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

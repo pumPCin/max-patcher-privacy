@@ -1,277 +1,251 @@
 .class public final Lze1;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Llt7;
+.field public X:Laf1;
+
+.field public Y:I
+
+.field public final synthetic Z:Laf1;
 
 
 # direct methods
-.method public constructor <init>(Llt7;)V
+.method public constructor <init>(Laf1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lze1;->Z:Laf1;
 
-    iput-object p1, p0, Lze1;->a:Llt7;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lru/ok/android/externcalls/sdk/Conversation;Lru/ok/android/externcalls/sdk/ConversationParticipant;ZZ)Lfi1;
-    .locals 24
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move/from16 v0, p3
+    check-cast p1, Lq54;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Lze1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1}, Lqcb;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lei1;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lze1;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAudioOptionState()Lyt8;
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result-object v2
+    invoke-virtual {p1, p2}, Lze1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getVideoOptionState()Lyt8;
+    move-result-object p1
 
-    move-result-object v3
+    return-object p1
+.end method
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getScreenshareOptionState()Lyt8;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result-object v4
+    new-instance p1, Lze1;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAudioEnabled()Z
+    iget-object v0, p0, Lze1;->Z:Laf1;
 
-    move-result v5
+    invoke-direct {p1, v0, p2}, Lze1;-><init>(Laf1;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v6, 0x0
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
+    move-object/from16 v0, p0
 
-    move-result v7
+    sget-object v1, Lr54;->a:Lr54;
 
-    if-eqz v7, :cond_0
+    iget v2, v0, Lze1;->Y:I
 
-    move-object/from16 v7, p0
+    const/4 v3, 0x0
 
-    iget-object v8, v7, Lze1;->a:Llt7;
+    const/4 v4, 0x1
 
-    invoke-interface {v8}, Llt7;->getValue()Ljava/lang/Object;
+    if-eqz v2, :cond_1
 
-    move-result-object v8
+    if-ne v2, v4, :cond_0
 
-    check-cast v8, Lood;
+    iget-object v1, v0, Lze1;->X:Laf1;
 
-    iget-object v8, v8, Lood;->b:Lsze;
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v8}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Boolean;
-
-    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v8
+    move-object/from16 v5, p1
 
     goto :goto_0
 
     :cond_0
-    move-object/from16 v7, p0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    move v8, v6
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object v2, v0, Lze1;->Z:Laf1;
+
+    iget-object v5, v2, Laf1;->o:Lh78;
+
+    iput-object v2, v0, Lze1;->X:Laf1;
+
+    iput v4, v0, Lze1;->Y:I
+
+    iget-object v6, v5, Lh78;->b:Ljava/lang/Object;
+
+    check-cast v6, Liu7;
+
+    invoke-interface {v6}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lulf;
+
+    check-cast v6, Lqta;
+
+    invoke-virtual {v6}, Lqta;->b()Lk54;
+
+    move-result-object v6
+
+    new-instance v7, Lkw1;
+
+    invoke-direct {v7, v5, v3}, Lkw1;-><init>(Lh78;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v6, v7, v0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-ne v5, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    move-object v1, v2
 
     :goto_0
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isVideoEnabled()Z
+    check-cast v5, Ljava/lang/Long;
 
-    move-result v9
+    iput-object v5, v1, Laf1;->q0:Ljava/lang/Long;
 
-    new-instance v7, Lhwg;
+    iget-object v1, v0, Lze1;->Z:Laf1;
 
-    new-instance v10, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    iget-object v2, v1, Laf1;->c:Lzgd;
 
-    invoke-direct {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
+    iget-object v1, v1, Laf1;->r0:Lx0f;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    :cond_3
+    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v5
 
-    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    move-object v6, v5
 
-    move-result-object v10
+    check-cast v6, Lne1;
 
-    sget-object v11, Lowg;->a:Lowg;
+    const-wide/high16 v7, -0x8000000000000000L
 
-    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Lowg;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v10
+    move-result-object v7
 
-    invoke-virtual {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    invoke-virtual {v2, v3, v7}, Lzgd;->e(Ljava/lang/CharSequence;Ljava/lang/Long;)Ltc0;
 
-    move-result-object v10
+    move-result-object v7
 
-    invoke-direct {v7, v9, v10, v0}, Lhwg;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
+    sget v8, Lcra;->g:I
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
+    new-instance v11, Lorf;
 
-    move-result v9
+    invoke-direct {v11, v8}, Lorf;-><init>(I)V
 
-    move v10, v8
+    new-instance v10, Lke1;
 
-    new-instance v8, Lhwg;
+    new-instance v8, Landroid/text/SpannableStringBuilder;
 
-    new-instance v11, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    const-string v9, " "
 
-    invoke-direct {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
+    invoke-direct {v8, v9}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    new-instance v12, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-    move-result-object v12
+    iget-object v9, v2, Lzgd;->c:Ljava/lang/Object;
 
-    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    move-result-object v11
-
-    sget-object v12, Lowg;->b:Lowg;
-
-    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Lowg;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    move-result-object v11
-
-    invoke-direct {v8, v9, v11, v6}, Lhwg;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCallAccepted()Z
-
-    move-result v13
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAcceptCallEpochMs()J
-
-    move-result-wide v14
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isConnected()Z
-
-    move-result v12
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isPrimarySpeaker()Z
-
-    move-result v17
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isTalking()Z
-
-    move-result v18
-
-    invoke-interface/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantStatesManager()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
+    invoke-interface {v9}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v9
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    move-object v13, v9
 
-    move-result-object v11
+    check-cast v13, La58;
 
-    invoke-interface {v9, v11}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->isHandRaised(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Z
+    const/16 v17, 0xe
 
-    move-result v19
+    const/16 v18, 0x0
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCreator()Z
+    const/4 v14, 0x0
 
-    move-result v9
+    const/4 v15, 0x0
 
-    move v11, v6
+    const/16 v16, 0x0
 
-    move v6, v10
+    invoke-direct/range {v12 .. v18}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lzw5;ZZILki4;)V
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAdmin()Z
+    const/4 v9, 0x0
 
-    move-result v10
+    const/16 v13, 0x11
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getMovies()Ljava/util/List;
+    invoke-virtual {v8, v12, v9, v4, v13}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    move-result-object v22
+    new-instance v9, Lsrf;
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->hasRegisteredPeers()Z
+    invoke-direct {v9, v8}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
 
-    move-result v20
+    invoke-direct {v10, v9}, Lke1;-><init>(Lsrf;)V
 
-    invoke-interface/range {p1 .. p2}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lv19;
+    sget-object v12, Lka5;->a:Lka5;
 
-    move-result-object v16
+    const/16 v16, 0x0
 
-    if-eqz v16, :cond_1
+    const/16 v17, 0x70d
 
-    const/16 v21, 0x1
+    const/4 v8, 0x0
 
-    goto :goto_1
+    const/4 v9, 0x0
 
-    :cond_1
-    const/16 v21, 0x0
+    const/4 v13, 0x0
 
-    :goto_1
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getNetworkStatus()Lf5a;
+    const/4 v14, 0x0
 
-    move-result-object v16
+    const/4 v15, 0x0
 
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/Enum;->ordinal()I
+    invoke-static/range {v6 .. v17}, Lne1;->a(Lne1;Ltc0;Ljava/lang/String;Ljava/lang/String;Lme1;Ltrf;Ljava/util/List;Lie1;ZLjava/lang/Long;Lk6b;I)Lne1;
 
-    move-result v11
+    move-result-object v6
 
-    if-eqz v11, :cond_4
+    invoke-virtual {v1, v5, v6}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v0, 0x2
+    move-result v5
 
-    move-object/from16 v16, v1
+    if-eqz v5, :cond_3
 
-    const/4 v1, 0x1
+    sget-object v1, Lccg;->a:Lccg;
 
-    if-eq v11, v1, :cond_3
-
-    if-ne v11, v0, :cond_2
-
-    const/4 v11, 0x3
-
-    move/from16 v23, v11
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_3
-    move/from16 v23, v0
-
-    goto :goto_2
-
-    :cond_4
-    move-object/from16 v16, v1
-
-    const/4 v1, 0x1
-
-    move/from16 v23, v1
-
-    :goto_2
-    new-instance v0, Lfi1;
-
-    move/from16 v11, p4
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, p3
-
-    invoke-direct/range {v0 .. v23}, Lfi1;-><init>(Lei1;Lyt8;Lyt8;Lyt8;ZZLhwg;Lhwg;ZZZZZJZZZZZZLjava/util/List;I)V
-
-    return-object v0
+    return-object v1
 .end method

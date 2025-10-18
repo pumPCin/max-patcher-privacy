@@ -1,215 +1,102 @@
 .class public final Leia;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lg3;
 .source "SourceFile"
-
-# interfaces
-.implements Lev4;
-.implements Lcka;
 
 
 # instance fields
-.field public X:Lev4;
+.field public final synthetic b:I
 
-.field public volatile Y:Z
+.field public final c:Ljava/lang/Object;
 
-.field public final a:Ltg3;
-
-.field public final b:Lcz;
-
-.field public final c:Lfi6;
-
-.field public final o:Lai3;
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ltg3;Lfi6;)V
+.method public synthetic constructor <init>(Lyha;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iput p4, p0, Leia;->b:I
 
-    iput-object p1, p0, Leia;->a:Ltg3;
+    invoke-direct {p0, p1}, Lg3;-><init>(Luka;)V
 
-    iput-object p2, p0, Leia;->c:Lfi6;
+    iput-object p2, p0, Leia;->c:Ljava/lang/Object;
 
-    new-instance p1, Lcz;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Leia;->b:Lcz;
-
-    new-instance p1, Lai3;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Leia;->o:Lai3;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    iput-object p3, p0, Leia;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final o(Lela;)V
+    .locals 4
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    iget v0, p0, Leia;->b:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    new-instance v0, Law4;
 
-    iget-object v0, p0, Leia;->b:Lcz;
+    iget-object v1, p0, Leia;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Leia;->a:Ltg3;
+    check-cast v1, Lsr3;
 
-    invoke-virtual {v0, v1}, Lcz;->c(Ltg3;)V
+    iget-object v2, p0, Leia;->o:Ljava/lang/Object;
 
-    :cond_0
+    check-cast v2, Lr6;
+
+    invoke-direct {v0, p1, v1, v2}, Law4;-><init>(Lela;Lsr3;Lr6;)V
+
+    iget-object p1, p0, Lg3;->a:Luka;
+
+    invoke-interface {p1, v0}, Luka;->a(Lela;)V
+
     return-void
-.end method
 
-.method public final c(Lev4;)V
-    .locals 1
-
-    iget-object v0, p0, Leia;->X:Lev4;
-
-    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Leia;->X:Lev4;
-
-    iget-object p1, p0, Leia;->a:Ltg3;
-
-    invoke-interface {p1, p0}, Ltg3;->c(Lev4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 2
-
+    :pswitch_0
     :try_start_0
-    iget-object v0, p0, Leia;->c:Lfi6;
+    iget-object v0, p0, Leia;->c:Ljava/lang/Object;
 
-    invoke-interface {v0, p1}, Lfi6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Lsj6;
 
-    move-result-object p1
+    iget-object v0, v0, Lsj6;->a:Ljava/lang/Object;
 
-    const-string v0, "The mapper returned a null CompletableSource"
+    const-string v1, "The initialSupplier returned a null value"
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast p1, Ljg3;
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    new-instance v1, Ldia;
 
-    new-instance v0, Llg3;
+    iget-object v2, p0, Leia;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Llg3;-><init>(Leia;)V
+    check-cast v2, Lzvd;
 
-    iget-boolean v1, p0, Leia;->Y:Z
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_0
+    invoke-direct {v1, p1, v0, v2, v3}, Ldia;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lzvd;I)V
 
-    iget-object v1, p0, Leia;->o:Lai3;
+    iget-object p1, p0, Lg3;->a:Luka;
 
-    invoke-virtual {v1, v0}, Lai3;->a(Lev4;)Z
+    invoke-interface {p1, v1}, Luka;->a(Lela;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v0}, Ljg3;->h(Ltg3;)V
-
-    :cond_0
-    return-void
+    goto :goto_0
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
-    invoke-static {p1}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Leia;->X:Lev4;
+    invoke-static {v0, p1}, Lfa5;->c(Ljava/lang/Throwable;Lela;)V
 
-    invoke-interface {v0}, Lev4;->g()V
-
-    invoke-virtual {p0, p1}, Leia;->onError(Ljava/lang/Throwable;)V
-
+    :goto_0
     return-void
-.end method
 
-.method public final g()V
-    .locals 1
+    nop
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Leia;->Y:Z
-
-    iget-object v0, p0, Leia;->X:Lev4;
-
-    invoke-interface {v0}, Lev4;->g()V
-
-    iget-object v0, p0, Leia;->o:Lai3;
-
-    invoke-virtual {v0}, Lai3;->g()V
-
-    iget-object v0, p0, Leia;->b:Lcz;
-
-    invoke-virtual {v0}, Lcz;->b()V
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Leia;->X:Lev4;
-
-    invoke-interface {v0}, Lev4;->h()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Leia;->b:Lcz;
-
-    invoke-virtual {v0, p1}, Lcz;->a(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Leia;->Y:Z
-
-    iget-object p1, p0, Leia;->X:Lev4;
-
-    invoke-interface {p1}, Lev4;->g()V
-
-    iget-object p1, p0, Leia;->o:Lai3;
-
-    invoke-virtual {p1}, Lai3;->g()V
-
-    iget-object p1, p0, Leia;->b:Lcz;
-
-    iget-object v0, p0, Leia;->a:Ltg3;
-
-    invoke-virtual {p1, v0}, Lcz;->c(Ltg3;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

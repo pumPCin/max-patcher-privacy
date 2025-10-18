@@ -1,83 +1,199 @@
-.class public final Lvk6;
+.class public abstract Lvk6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxk6;
+
+# static fields
+.field public static final d:Ljava/util/List;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lvk6;
+
+    sget-object v1, Ltk6;->e:Ltk6;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Luk6;->e:Luk6;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lvk6;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lvk6;->a:I
+    iput-object p1, p0, Lvk6;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lvk6;->d()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, " DESC"
+
+    invoke-static {p1, v0}, Ldy1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvk6;->b:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lvk6;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lvk6;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lvk6;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lvk6;->c()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lvk6;->d()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lvk6;->h()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lvk6;->i()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lvk6;->e()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Lvk6;->g()Ljava/lang/String;
+
+    move-result-object v8
+
+    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljt;->v([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Lvk6;->c:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvk6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvk6;
-
-    iget v1, p0, Lvk6;->a:I
-
-    iget p1, p1, Lvk6;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public final hashCode()I
+.method public abstract b()Ljava/lang/String;
+.end method
+
+.method public abstract c()Ljava/lang/String;
+.end method
+
+.method public abstract d()Ljava/lang/String;
+.end method
+
+.method public e()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lvk6;->a:I
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    return-object v0
+.end method
 
-    move-result v0
+.method public abstract f()Ljava/lang/String;
+.end method
 
-    return v0
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract h()Ljava/lang/String;
+.end method
+
+.method public i()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract j()Landroid/net/Uri;
+.end method
+
+.method public abstract k()Ljava/lang/String;
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "UpdateCameraLayoutParams(size="
+    const/16 v0, 0x2a
 
-    const-string v1, ")"
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
-    iget v2, p0, Lvk6;->a:I
+    move-result-object v0
 
-    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "QueryParams(name=\'"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\')"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

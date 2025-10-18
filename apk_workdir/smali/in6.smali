@@ -1,91 +1,117 @@
-.class public final Lin6;
-.super Ljava/lang/Object;
+.class public abstract Lin6;
+.super Liq7;
 .source "SourceFile"
-
-# interfaces
-.implements Lxze;
 
 
 # instance fields
-.field public final a:Lnhg;
+.field public a:I
 
-.field public final b:Lrnf;
+.field public b:Z
+
+.field public c:Lbr7;
 
 
 # direct methods
-.method public constructor <init>(Lnhg;Lrnf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lhq7;->r0:Lhq7;
 
-    iput-object p1, p0, Lin6;->a:Lnhg;
+    iget v0, v0, Lhq7;->b:I
 
-    iput-object p2, p0, Lin6;->b:Lrnf;
+    sget-object v0, Lhq7;->q0:Lhq7;
+
+    iget v0, v0, Lhq7;->b:I
+
+    sget-object v0, Lhq7;->t0:Lhq7;
+
+    iget v0, v0, Lhq7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Exception;)Z
-    .locals 1
+.method public final o0(Ljava/math/BigDecimal;)Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lin6;->b:Lrnf;
+    const/16 v0, 0x270f
 
-    invoke-virtual {v0, p1}, Lrnf;->c(Ljava/lang/Exception;)Z
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 p1, 0x1
+    move-result-object v1
 
-    return p1
+    sget-object v2, Lhq7;->s0:Lhq7;
+
+    iget v3, p0, Lin6;->a:I
+
+    iget v2, v2, Lhq7;->b:I
+
+    and-int/2addr v2, v3
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
+
+    move-result v2
+
+    const/16 v3, -0x270f
+
+    if-lt v2, v3, :cond_0
+
+    if-gt v2, v0, :cond_0
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    filled-new-array {p1, v1, v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
+
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Liq7;->d(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(Lya0;)Z
-    .locals 7
+.method public final p0(Lhq7;)Z
+    .locals 1
 
-    iget v0, p1, Lya0;->b:I
+    iget v0, p0, Lin6;->a:I
 
-    const/4 v1, 0x4
+    iget p1, p1, Lhq7;->b:I
 
-    if-ne v0, v1, :cond_1
+    and-int/2addr p1, v0
 
-    iget-object v0, p0, Lin6;->a:Lnhg;
-
-    invoke-virtual {v0, p1}, Lnhg;->a(Lya0;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v4, p1, Lya0;->c:Ljava/lang/String;
-
-    if-eqz v4, :cond_0
-
-    iget-wide v2, p1, Lya0;->e:J
-
-    iget-wide v5, p1, Lya0;->f:J
-
-    new-instance v1, Lka0;
-
-    invoke-direct/range {v1 .. v6}, Lka0;-><init>(JLjava/lang/String;J)V
-
-    iget-object p1, p0, Lin6;->b:Lrnf;
-
-    invoke-virtual {p1, v1}, Lrnf;->b(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "Null token"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
     const/4 p1, 0x0
 
     return p1

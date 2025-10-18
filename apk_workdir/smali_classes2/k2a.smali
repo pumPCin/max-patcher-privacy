@@ -1,891 +1,728 @@
 .class public final Lk2a;
-.super Lf3;
+.super Lrdi;
 .source "SourceFile"
 
 # interfaces
-.implements Le53;
-.implements Lksf;
-
-
-# static fields
-.field public static final x0:I
+.implements Lxxg;
+.implements Lnw8;
+.implements Lmw8;
 
 
 # instance fields
-.field public X:Landroidx/constraintlayout/widget/Group;
+.field public final X:Ln0e;
 
-.field public Y:Landroid/widget/TextView;
+.field public final Y:Lqmf;
 
-.field public Z:Landroid/widget/ImageButton;
+.field public final Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-.field public final o:Z
+.field public final c:Low8;
 
-.field public r0:Lcom/google/android/material/chip/ChipGroup;
+.field public final o:Landroid/content/Context;
 
-.field public s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+.field public final q0:Lywg;
 
-.field public t0:Lcom/google/android/material/chip/Chip;
+.field public r0:Lbwg;
 
-.field public u0:Lcom/google/android/material/chip/Chip;
+.field public s0:Ldu1;
 
-.field public v0:Lc78;
+.field public t0:Ltt7;
 
-.field public final w0:Lxl;
+.field public u0:Ltt7;
+
+.field public final v0:Lll8;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lc3a;Low8;Landroid/content/Context;Ln0e;Lqmf;Lru/ok/messages/media/mediabar/FrgLocalVideo;Lywg;Lll8;)V
     .locals 1
 
-    sget v0, Llpc;->layout_send_location:I
+    const/4 v0, 0x1
 
-    sput v0, Lk2a;->x0:I
+    invoke-direct {p0, v0, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
-    return-void
-.end method
+    iput-object p2, p0, Lk2a;->c:Low8;
 
-.method public constructor <init>(Landroid/content/Context;Z)V
-    .locals 2
+    iput-object p3, p0, Lk2a;->o:Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Landroid/content/Context;)V
+    iput-object p4, p0, Lk2a;->X:Ln0e;
 
-    new-instance p1, Lm09;
+    iput-object p5, p0, Lk2a;->Y:Lqmf;
 
-    const/16 v0, 0xb
+    iput-object p6, p0, Lk2a;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    invoke-direct {p1, v0, p0}, Lm09;-><init>(ILjava/lang/Object;)V
+    iput-object p7, p0, Lk2a;->q0:Lywg;
 
-    new-instance v0, Lxl;
+    iput-object p8, p0, Lk2a;->v0:Lll8;
 
-    const/4 v1, 0x5
+    new-instance p3, Lawg;
 
-    invoke-direct {v0, v1, p1}, Lxl;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lk2a;->w0:Lxl;
+    const/4 p4, 0x1
 
-    iput-boolean p2, p0, Lk2a;->o:Z
+    iput-boolean p4, p3, Lawg;->a:Z
+
+    new-instance p4, Lbwg;
+
+    invoke-direct {p4, p3}, Lbwg;-><init>(Lawg;)V
+
+    iput-object p4, p0, Lk2a;->r0:Lbwg;
+
+    check-cast p1, Lf3;
+
+    invoke-virtual {p1, p0}, Lf3;->r(Ljava/lang/Object;)V
+
+    check-cast p2, Ll68;
+
+    iput-object p0, p2, Ll68;->e:Lrdi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lc78;)V
-    .locals 7
+.method public final A(Ljava/lang/Throwable;)V
+    .locals 2
 
-    iput-object p1, p0, Lk2a;->v0:Lc78;
+    const-string v0, "k2a"
 
-    iget v0, p1, Lc78;->d:I
+    const-string v1, "onPlaybackError"
 
-    invoke-static {v0}, Lwx1;->v(I)I
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
 
-    const/16 v1, 0x8
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_c
-
-    const/4 v4, 0x2
-
-    if-eq v0, v4, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v0, p1, Lc78;->e:Lb78;
-
-    iget-object v5, p0, Lk2a;->X:Landroidx/constraintlayout/widget/Group;
-
-    invoke-virtual {v5, v2}, Landroidx/constraintlayout/widget/Group;->setVisibility(I)V
-
-    iget-object v5, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    iget-object v6, p0, Lk2a;->w0:Lxl;
-
-    invoke-virtual {v6}, Lxl;->get()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    invoke-virtual {v5, v6}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setTitle(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    if-eq v0, v3, :cond_7
-
-    if-eq v0, v4, :cond_5
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_3
-
-    const/4 v3, 0x4
-
-    if-eq v0, v3, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    sget v3, Looc;->layout_send_location__duration_no_limit:I
-
-    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->u0:Lo43;
-
-    iget-object v4, v0, Lo43;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyh8;
-
-    if-nez v3, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    invoke-virtual {v0, v3}, Lo43;->a(Lyh8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v0}, Lo43;->g()V
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    sget v3, Looc;->layout_send_location__duration_24h:I
-
-    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->u0:Lo43;
-
-    iget-object v4, v0, Lo43;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyh8;
-
-    if-nez v3, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    invoke-virtual {v0, v3}, Lo43;->a(Lyh8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v0}, Lo43;->g()V
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    sget v3, Looc;->layout_send_location__duration_3h:I
-
-    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->u0:Lo43;
-
-    iget-object v4, v0, Lo43;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyh8;
-
-    if-nez v3, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {v0, v3}, Lo43;->a(Lyh8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v0}, Lo43;->g()V
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    sget v3, Looc;->layout_send_location__duration_1h:I
-
-    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->u0:Lo43;
-
-    iget-object v4, v0, Lo43;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyh8;
-
-    if-nez v3, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    invoke-virtual {v0, v3}, Lo43;->a(Lyh8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v0}, Lo43;->g()V
-
-    goto :goto_0
-
-    :cond_9
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    sget v3, Looc;->layout_send_location__duration_20m:I
-
-    iget-object v0, v0, Lcom/google/android/material/chip/ChipGroup;->u0:Lo43;
-
-    iget-object v4, v0, Lo43;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyh8;
-
-    if-nez v3, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    invoke-virtual {v0, v3}, Lo43;->a(Lyh8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v0}, Lo43;->g()V
-
-    :cond_b
-    :goto_0
-    invoke-virtual {p0}, Lk2a;->C()V
-
-    goto :goto_2
-
-    :cond_c
-    iget-object v0, p0, Lk2a;->X:Landroidx/constraintlayout/widget/Group;
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/Group;->setVisibility(I)V
-
-    iget-boolean v0, p0, Lk2a;->o:Z
-
-    if-eqz v0, :cond_d
-
-    sget v0, Lwid;->H2:I
-
-    goto :goto_1
-
-    :cond_d
-    sget v0, Lwid;->u2:I
-
-    :goto_1
-    iget-object v3, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    iget-object v4, p0, Lf3;->b:Ljava/lang/Object;
-
-    check-cast v4, Landroid/content/Context;
-
-    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setTitle(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x0
 
-    :goto_2
-    iget-boolean p1, p1, Lc78;->i:Z
+    iput-boolean v1, v0, Lawg;->b:Z
 
-    if-eqz p1, :cond_e
+    iput-boolean v1, v0, Lawg;->c:Z
 
-    iget-object p1, p0, Lk2a;->u0:Lcom/google/android/material/chip/Chip;
+    new-instance v1, Lbwg;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {v1, v0}, Lbwg;-><init>(Lawg;)V
 
-    iget-object p1, p0, Lk2a;->t0:Lcom/google/android/material/chip/Chip;
+    iput-object v1, p0, Lk2a;->r0:Lbwg;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Ls2a;
 
-    :cond_e
-    iget-object p1, p0, Lk2a;->u0:Lcom/google/android/material/chip/Chip;
+    check-cast v0, Lc3a;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lc3a;->B(Lbwg;)V
 
-    iget-object p1, p0, Lk2a;->t0:Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public final C()V
-    .locals 4
-
-    iget-object v0, p0, Lf3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    invoke-virtual {v1}, Lcom/google/android/material/chip/ChipGroup;->getCheckedChipId()I
-
-    move-result v1
-
-    sget v2, Looc;->layout_send_location__duration_20m:I
-
-    if-ne v1, v2, :cond_0
-
-    sget-object v1, Lb78;->c:Lb78;
-
-    iget-wide v1, v1, Lb78;->a:J
-
-    long-to-int v1, v1
-
-    sget v2, Lvpc;->tt_dates_minutes:I
-
-    invoke-static {v2, v1, v0}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    sget v2, Looc;->layout_send_location__duration_1h:I
-
-    if-ne v1, v2, :cond_1
-
-    sget-object v1, Lb78;->o:Lb78;
-
-    iget-wide v1, v1, Lb78;->a:J
-
-    long-to-int v1, v1
-
-    sget v2, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v2, v1, v0}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    sget v2, Looc;->layout_send_location__duration_3h:I
-
-    if-ne v1, v2, :cond_2
-
-    sget-object v1, Lb78;->X:Lb78;
-
-    iget-wide v1, v1, Lb78;->a:J
-
-    long-to-int v1, v1
-
-    sget v2, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v2, v1, v0}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_2
-    sget v2, Looc;->layout_send_location__duration_24h:I
-
-    if-ne v1, v2, :cond_3
-
-    sget-object v1, Lb78;->Y:Lb78;
-
-    iget-wide v1, v1, Lb78;->a:J
-
-    long-to-int v1, v1
-
-    sget v2, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v2, v1, v0}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_3
-    sget v2, Looc;->layout_send_location__duration_no_limit:I
-
-    if-ne v1, v2, :cond_4
-
-    sget v1, Lwid;->p0:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_4
-    const-string v1, ""
-
-    :goto_0
-    iget-object v2, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    sget v3, Lwid;->z2:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 11
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
+    iget-object v0, p0, Lk2a;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Ltmf;->a0:Lrhf;
-
-    invoke-static {v0}, Lnw3;->g(Landroid/content/Context;)Ltmf;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lk2a;->Y:Landroid/widget/TextView;
-
-    iget v2, v0, Ltmf;->J:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v1, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    if-ge v4, v2, :cond_2
-
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v5
-
-    instance-of v6, v5, Lcom/google/android/material/chip/Chip;
-
-    if-eqz v6, :cond_1
-
-    check-cast v5, Lcom/google/android/material/chip/Chip;
-
-    new-instance v6, Landroid/content/res/ColorStateList;
-
-    const v7, 0x10100a0
-
-    filled-new-array {v7}, [I
-
-    move-result-object v8
-
-    new-array v9, v3, [I
-
-    filled-new-array {v8, v9}, [[I
-
-    move-result-object v8
-
-    iget v9, v0, Ltmf;->m:I
-
-    iget v10, v0, Ltmf;->F:I
-
-    filled-new-array {v9, v10}, [I
-
-    move-result-object v9
-
-    invoke-direct {v6, v8, v9}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
-
-    new-instance v6, Landroid/content/res/ColorStateList;
-
-    filled-new-array {v7}, [I
-
-    move-result-object v7
-
-    new-array v8, v3, [I
-
-    filled-new-array {v7, v8}, [[I
-
-    move-result-object v7
-
-    iget v8, v0, Ltmf;->k:I
-
-    iget v9, v0, Ltmf;->H:I
-
-    filled-new-array {v8, v9}, [I
-
-    move-result-object v8
-
-    invoke-direct {v6, v7, v8}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    invoke-virtual {v5, v6}, Lcom/google/android/material/chip/Chip;->setChipBackgroundColor(Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lk2a;->Z:Landroid/widget/ImageButton;
-
-    iget v2, v0, Ltmf;->J:I
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {v1, v2, v3}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
-
-    iget-object v1, p0, Lk2a;->Z:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->T0(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final l()V
-    .locals 6
+.method public final F()I
+    .locals 1
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lk2a;->c:Low8;
 
-    check-cast v0, Landroid/view/View;
+    check-cast v0, Ll68;
 
-    sget v1, Looc;->layout_send_location__live_group:I
+    invoke-virtual {v0}, Ll68;->d()I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result v0
 
-    move-result-object v0
+    return v0
+.end method
 
-    check-cast v0, Landroidx/constraintlayout/widget/Group;
+.method public final G()V
+    .locals 2
 
-    iput-object v0, p0, Lk2a;->X:Landroidx/constraintlayout/widget/Group;
+    const-string v0, "k2a"
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    const-string v1, "onMediaPlayerControllerDetach"
 
-    check-cast v0, Landroid/view/View;
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v1, Looc;->layout_send_location__tv_pick_duration:I
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+.method public final J(Landroid/view/Surface;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lk2a;->c:Low8;
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Ll68;
 
-    iput-object v0, p0, Lk2a;->Y:Landroid/widget/TextView;
+    invoke-virtual {v0, p1}, Ll68;->m(Landroid/view/Surface;)V
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Landroid/view/View;
+.method public final K()V
+    .locals 0
 
-    sget v1, Looc;->layout_send_location__cancel_button:I
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+.method public final L(III)V
+    .locals 0
 
-    move-result-object v0
+    iget-object p1, p0, Lrdi;->b:Ljava/lang/Object;
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast p1, Ls2a;
 
-    iput-object v0, p0, Lk2a;->Z:Landroid/widget/ImageButton;
+    check-cast p1, Lc3a;
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    iget-object p2, p1, Lc3a;->Y:Lru/ok/messages/video/widgets/VideoView;
 
-    check-cast v0, Landroid/view/View;
+    invoke-virtual {p2}, Lru/ok/messages/video/widgets/VideoView;->d()V
 
-    sget v1, Looc;->layout_send_location__cp_duration:I
+    iget-object p1, p1, Lc3a;->u0:Lru/ok/messages/views/widgets/VideoThumbnailView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    check-cast v0, Lcom/google/android/material/chip/ChipGroup;
+    return-void
+.end method
 
-    iput-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
+.method public final N()I
+    .locals 2
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lk2a;->c:Low8;
 
-    check-cast v0, Landroid/view/View;
+    check-cast v0, Ll68;
 
-    sget v1, Looc;->layout_send_location__send_button:I
+    iget-object v1, v0, Ll68;->f:Lpmg;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    return v0
 
-    iput-object v0, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    :cond_0
+    iget-object v0, v0, Ll68;->b:Lyh5;
 
-    iget-object v1, p0, Lf3;->b:Ljava/lang/Object;
+    iget v0, v0, Lyh5;->u0:I
 
-    check-cast v1, Landroid/content/Context;
+    return v0
+.end method
 
-    sget v2, Lwid;->z2:I
+.method public final O()V
+    .locals 3
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const-string v0, "k2a"
 
-    move-result-object v2
+    const-string v1, "onPlaybackPrepared"
 
-    sget v3, Lwid;->H2:I
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    iget-object v0, p0, Lk2a;->c:Low8;
 
-    move-result-object v4
+    check-cast v0, Ll68;
 
-    invoke-virtual {v0, v2, v4}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Ll68;->f()Z
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Landroid/view/View;
+    iget-object v1, p0, Lk2a;->r0:Lbwg;
 
-    sget v2, Looc;->layout_send_location__duration_20m:I
+    invoke-virtual {v1}, Lbwg;->a()Lawg;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    iput-boolean v0, v1, Lawg;->b:Z
 
-    check-cast v0, Lcom/google/android/material/chip/Chip;
+    const/4 v2, 0x0
 
-    sget-object v2, Lb78;->c:Lb78;
+    iput-boolean v2, v1, Lawg;->c:Z
 
-    iget-wide v4, v2, Lb78;->a:J
+    new-instance v2, Lbwg;
 
-    long-to-int v2, v4
+    invoke-direct {v2, v1}, Lbwg;-><init>(Lawg;)V
 
-    sget v4, Lvpc;->tt_dates_minutes:I
+    iput-object v2, p0, Lk2a;->r0:Lbwg;
 
-    invoke-static {v4, v2, v1}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
+    iget-object v1, p0, Lrdi;->b:Ljava/lang/Object;
 
-    move-result-object v2
+    check-cast v1, Ls2a;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    check-cast v1, Lc3a;
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v2, Looc;->layout_send_location__duration_1h:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    sget-object v2, Lb78;->o:Lb78;
-
-    iget-wide v4, v2, Lb78;->a:J
-
-    long-to-int v2, v4
-
-    sget v4, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v4, v2, v1}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v2, Looc;->layout_send_location__duration_3h:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    sget-object v2, Lb78;->X:Lb78;
-
-    iget-wide v4, v2, Lb78;->a:J
-
-    long-to-int v2, v4
-
-    sget v4, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v4, v2, v1}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v2, Looc;->layout_send_location__duration_24h:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    iput-object v0, p0, Lk2a;->u0:Lcom/google/android/material/chip/Chip;
-
-    sget-object v2, Lb78;->Y:Lb78;
-
-    iget-wide v4, v2, Lb78;->a:J
-
-    long-to-int v2, v4
-
-    sget v4, Lvpc;->tt_dates_hours:I
-
-    invoke-static {v4, v2, v1}, Ltg6;->i(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    sget v2, Looc;->layout_send_location__duration_no_limit:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    iput-object v0, p0, Lk2a;->t0:Lcom/google/android/material/chip/Chip;
-
-    iget-object v0, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
-
-    new-instance v2, Li2a;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, p0, v4}, Li2a;-><init>(Lk2a;I)V
-
-    invoke-static {v0, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lk2a;->Z:Landroid/widget/ImageButton;
-
-    new-instance v2, Li2a;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, p0, v4}, Li2a;-><init>(Lk2a;I)V
-
-    invoke-static {v0, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lk2a;->r0:Lcom/google/android/material/chip/ChipGroup;
-
-    invoke-virtual {v0, p0}, Lcom/google/android/material/chip/ChipGroup;->setOnCheckedChangeListener(Le53;)V
-
-    invoke-virtual {p0}, Lk2a;->c()V
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    new-instance v2, Lj2a;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    iget-boolean v0, p0, Lk2a;->o:Z
+    invoke-virtual {v1, v2}, Lc3a;->B(Lbwg;)V
 
     if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lk2a;->V0()V
+
+    invoke-virtual {p0}, Lk2a;->U0()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final S0()V
+    .locals 3
+
+    iget-object v0, p0, Lk2a;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget v3, Lwid;->u2:I
+    invoke-virtual {v0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Z
+
+    xor-int/lit8 v1, v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(ZZ)V
+
+    :cond_1
     :goto_0
-    iget-object v0, p0, Lk2a;->s0:Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    return-void
+.end method
 
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+.method public final T0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
+
+    move-result-object v0
+
+    iput-boolean p1, v0, Lawg;->a:Z
+
+    new-instance v1, Lbwg;
+
+    invoke-direct {v1, v0}, Lbwg;-><init>(Lawg;)V
+
+    iput-object v1, p0, Lk2a;->r0:Lbwg;
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls2a;
+
+    check-cast v0, Lc3a;
+
+    invoke-virtual {v0, v1}, Lc3a;->B(Lbwg;)V
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lk2a;->r0:Lbwg;
+
+    iget-boolean p1, p1, Lbwg;->b:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lk2a;->U0()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Lk2a;->W0()V
+
+    return-void
+.end method
+
+.method public final U0()V
+    .locals 7
+
+    invoke-virtual {p0}, Lk2a;->W0()V
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    iget-boolean v0, v0, Lbwg;->a:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {}, Lkpd;->a()Lxod;
+
+    move-result-object v6
+
+    const-wide/16 v1, 0x2
+
+    move-wide v3, v1
+
+    invoke-static/range {v1 .. v6}, Lyha;->j(JJLjava/util/concurrent/TimeUnit;Lxod;)Lsja;
+
+    move-result-object v0
+
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lyha;->l(Lxod;)Lvja;
+
+    move-result-object v0
+
+    new-instance v1, Lj2a;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p0, v2}, Lj2a;-><init>(Lk2a;I)V
+
+    new-instance v2, Law9;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v2, v3}, Law9;-><init>(I)V
+
+    new-instance v3, Ltt7;
+
+    sget-object v4, Louf;->c:Lqj6;
+
+    invoke-direct {v3, v1, v2, v4}, Ltt7;-><init>(Lsr3;Lsr3;Lr6;)V
+
+    invoke-virtual {v0, v3}, Lyha;->a(Lela;)V
+
+    iput-object v3, p0, Lk2a;->u0:Ltt7;
+
+    return-void
+.end method
+
+.method public final V0()V
+    .locals 6
+
+    invoke-virtual {p0}, Lk2a;->X0()V
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {}, Lkpd;->a()Lxod;
+
+    move-result-object v5
+
+    const-wide/16 v0, 0x64
+
+    move-wide v2, v0
+
+    invoke-static/range {v0 .. v5}, Lyha;->j(JJLjava/util/concurrent/TimeUnit;Lxod;)Lsja;
+
+    move-result-object v0
+
+    invoke-static {}, Lie;->a()Lxod;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lyha;->l(Lxod;)Lvja;
+
+    move-result-object v0
+
+    new-instance v1, Lj2a;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p0, v2}, Lj2a;-><init>(Lk2a;I)V
+
+    new-instance v2, Law9;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3}, Law9;-><init>(I)V
+
+    new-instance v3, Ltt7;
+
+    sget-object v4, Louf;->c:Lqj6;
+
+    invoke-direct {v3, v1, v2, v4}, Ltt7;-><init>(Lsr3;Lsr3;Lr6;)V
+
+    invoke-virtual {v0, v3}, Lyha;->a(Lela;)V
+
+    iput-object v3, p0, Lk2a;->t0:Ltt7;
+
+    return-void
+.end method
+
+.method public final W0()V
+    .locals 1
+
+    iget-object v0, p0, Lk2a;->u0:Ltt7;
+
+    invoke-static {v0}, Lrkd;->b(Lvv4;)V
+
+    return-void
+.end method
+
+.method public final X0()V
+    .locals 1
+
+    iget-object v0, p0, Lk2a;->t0:Ltt7;
+
+    invoke-static {v0}, Lrkd;->b(Lvv4;)V
+
+    return-void
+.end method
+
+.method public final a0()V
+    .locals 2
+
+    const-string v0, "k2a"
+
+    const-string v1, "onTrackChanged"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    const-string v0, "k2a"
+
+    const-string v1, "onRenderedFirstFrame"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lk2a;->O()V
+
+    return-void
+.end method
+
+.method public final d()V
+    .locals 4
+
+    const-string v0, "k2a"
+
+    const-string v1, "onPlaybackEnded"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lk2a;->X0()V
+
+    invoke-virtual {p0}, Lk2a;->W0()V
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lawg;->b:Z
+
+    iput-boolean v1, v0, Lawg;->c:Z
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Lawg;->a:Z
+
+    new-instance v3, Lbwg;
+
+    invoke-direct {v3, v0}, Lbwg;-><init>(Lawg;)V
+
+    iput-object v3, p0, Lk2a;->r0:Lbwg;
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls2a;
+
+    check-cast v0, Lc3a;
+
+    invoke-virtual {v0, v3}, Lc3a;->B(Lbwg;)V
+
+    iget-object v0, p0, Lk2a;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    invoke-virtual {v0, v2, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(ZZ)V
+
+    return-void
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget-object v0, p0, Lk2a;->c:Low8;
+
+    check-cast v0, Ll68;
+
+    iget-object v0, v0, Ll68;->f:Lpmg;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-interface {v0}, Lpmg;->e()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n()I
+    .locals 1
+
+    iget-object v0, p0, Lk2a;->c:Low8;
+
+    check-cast v0, Ll68;
+
+    invoke-virtual {v0}, Ll68;->e()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final p()V
+    .locals 3
+
+    invoke-virtual {p0}, Lk2a;->X0()V
+
+    invoke-virtual {p0}, Lk2a;->W0()V
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lawg;->b:Z
+
+    iput-boolean v1, v0, Lawg;->c:Z
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lawg;->a:Z
+
+    new-instance v2, Lbwg;
+
+    invoke-direct {v2, v0}, Lbwg;-><init>(Lawg;)V
+
+    iput-object v2, p0, Lk2a;->r0:Lbwg;
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls2a;
+
+    check-cast v0, Lc3a;
+
+    invoke-virtual {v0, v2}, Lc3a;->B(Lbwg;)V
+
+    iget-object v0, p0, Lk2a;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->Q0(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final s()V
+    .locals 2
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lk2a;->c:Low8;
+
+    check-cast v1, Ll68;
+
+    invoke-virtual {v1}, Ll68;->f()Z
+
+    move-result v1
+
+    iput-boolean v1, v0, Lawg;->b:Z
+
+    new-instance v1, Lbwg;
+
+    invoke-direct {v1, v0}, Lbwg;-><init>(Lawg;)V
+
+    iput-object v1, p0, Lk2a;->r0:Lbwg;
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls2a;
+
+    check-cast v0, Lc3a;
+
+    invoke-virtual {v0, v1}, Lc3a;->B(Lbwg;)V
+
+    return-void
+.end method
+
+.method public final x()V
+    .locals 2
+
+    const-string v0, "k2a"
+
+    const-string v1, "onPlaybackBuffering"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lk2a;->r0:Lbwg;
+
+    invoke-virtual {v0}, Lbwg;->a()Lawg;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lawg;->c:Z
+
+    new-instance v1, Lbwg;
+
+    invoke-direct {v1, v0}, Lbwg;-><init>(Lawg;)V
+
+    iput-object v1, p0, Lk2a;->r0:Lbwg;
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls2a;
+
+    check-cast v0, Lc3a;
+
+    invoke-virtual {v0, v1}, Lc3a;->B(Lbwg;)V
 
     return-void
 .end method

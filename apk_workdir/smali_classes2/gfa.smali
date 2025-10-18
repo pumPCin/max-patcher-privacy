@@ -1,24 +1,34 @@
 .class public final Lgfa;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lifa;
+.field public X:I
+
+.field public final synthetic Y:Lru/ok/messages/NotificationsImagesProvider;
+
+.field public final synthetic Z:Landroid/net/Uri;
+
+.field public final synthetic q0:Lcpe;
 
 
 # direct methods
-.method public constructor <init>(Lifa;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Lcpe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lgfa;->X:Lifa;
+    iput-object p1, p0, Lgfa;->Y:Lru/ok/messages/NotificationsImagesProvider;
+
+    iput-object p2, p0, Lgfa;->Z:Landroid/net/Uri;
+
+    iput-object p3, p0, Lgfa;->q0:Lcpe;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +38,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,199 +48,84 @@
 
     check-cast p1, Lgfa;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lgfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 3
 
     new-instance p1, Lgfa;
 
-    iget-object v0, p0, Lgfa;->X:Lifa;
+    iget-object v0, p0, Lgfa;->Z:Landroid/net/Uri;
 
-    invoke-direct {p1, v0, p2}, Lgfa;-><init>(Lifa;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lgfa;->q0:Lcpe;
+
+    iget-object v2, p0, Lgfa;->Y:Lru/ok/messages/NotificationsImagesProvider;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lgfa;-><init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Lcpe;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lgfa;->X:I
 
-    sget-object p1, Lifa;->F0:[Lwq7;
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lgfa;->X:Lifa;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lifa;->r()Lrq;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast v0, Lchg;
+    return-object p1
 
-    const-wide/16 v1, 0x0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v3, "app.notification.dontDisturbUntil"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v1, v2, v3}, Lw3;->h(JLjava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "app.notification.show.text"
+    throw p1
 
-    const/4 v2, 0x1
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+    new-instance p1, Lffa;
 
-    const-string v1, "app.notification.ringtone"
+    iget-object v0, p0, Lgfa;->q0:Lcpe;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v3, p0, Lgfa;->Y:Lru/ok/messages/NotificationsImagesProvider;
 
-    const-string v1, "app.notification.vibrate"
+    iget-object v4, p0, Lgfa;->Z:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+    invoke-direct {p1, v3, v4, v0, v2}, Lffa;-><init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Lcpe;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Lchg;->q()I
+    iput v1, p0, Lgfa;->X:I
 
-    move-result v1
+    const-wide/16 v0, 0xbb8
 
-    const-string v4, "app.notification.led.color"
+    invoke-static {v0, v1, p1, p0}, Lmzg;->F(JLzi6;Ly14;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v4}, Lw3;->g(ILjava/lang/String;)V
+    move-result-object p1
 
-    const-string v1, "app.notification.dialogs.show"
+    sget-object v0, Lr54;->a:Lr54;
 
-    const/4 v4, 0x0
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v0, v4, v1}, Lw3;->g(ILjava/lang/String;)V
+    return-object v0
 
-    iget-object v1, v0, Lird;->k:Lim0;
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Lim0;->d(Ljava/lang/Object;)V
-
-    const-string v1, "app.notification.dialogs.ringtone"
-
-    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.dialogs.vibrate"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Lchg;->q()I
-
-    move-result v1
-
-    const-string v5, "app.notification.dialogs.led.color"
-
-    invoke-virtual {v0, v1, v5}, Lw3;->g(ILjava/lang/String;)V
-
-    invoke-virtual {v0, v4}, Lird;->o(I)V
-
-    const-string v1, "app.notification.chats.ringtone"
-
-    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.chats.vibrate"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Lchg;->q()I
-
-    move-result v1
-
-    const-string v4, "app.notification.chats.led.color"
-
-    invoke-virtual {v0, v1, v4}, Lw3;->g(ILjava/lang/String;)V
-
-    const-string v1, "app.group.chat.call.notification.status"
-
-    const-string v4, "ON"
-
-    invoke-virtual {v0, v1, v4}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "app.notification.in.app.sound"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.in.app.vibrate"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.show.new.users"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.notification.show.drafts"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.calls.incoming.vibration"
-
-    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
-
-    const-string v1, "app.calls.incoming.ringtone"
-
-    const-string v4, "default_"
-
-    invoke-virtual {v0, v1, v4}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p1, Lifa;->X:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lll;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Lkma;
-
-    invoke-virtual {v0, v3, v2}, Lkma;->s(Lahg;Z)J
-
-    iget-object v0, p1, Lifa;->x0:Lsze;
-
-    invoke-virtual {p1}, Lifa;->r()Lrq;
-
-    move-result-object v1
-
-    check-cast v1, Lchg;
-
-    invoke-virtual {v1}, Lchg;->r()Lxdd;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iget-object p1, p1, Lifa;->y0:Lsze;
-
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    new-instance v1, Ljava/lang/Integer;
-
-    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {p1, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lzag;->a:Lzag;
-
+    :cond_2
     return-object p1
 .end method

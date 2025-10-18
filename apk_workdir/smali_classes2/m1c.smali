@@ -1,181 +1,112 @@
 .class public final Lm1c;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Llt7;
+.field public X:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
-
-.field public final f:Ljava/lang/Object;
-
-.field public final g:Ljava/lang/Object;
-
-.field public final h:Ljava/lang/Object;
-
-.field public final i:Ljava/lang/Object;
-
-.field public final j:Ljava/lang/Object;
-
-.field public final k:Ljava/lang/Object;
-
-.field public final l:Lrhf;
+.field public final synthetic Y:Lv1c;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lv1c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm1c;->Y:Lv1c;
 
-    sget-object v0, Lk1c;->a:Lk1c;
+    const/4 p1, 0x2
 
-    invoke-virtual {v0}, Lk1c;->f()Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->a:Llt7;
-
-    new-instance v0, Lvmb;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lvmb;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->b:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->c:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->d:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->e:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->f:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->g:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->h:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->i:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->j:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, v2}, Lvmb;-><init>(I)V
-
-    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm1c;->k:Ljava/lang/Object;
-
-    new-instance v0, Lvmb;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lvmb;-><init>(I)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    iput-object v1, p0, Lm1c;->l:Lrhf;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lm1c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lm1c;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lm1c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lm1c;
+
+    iget-object v0, p0, Lm1c;->Y:Lv1c;
+
+    invoke-direct {p1, v0, p2}, Lm1c;-><init>(Lv1c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lm1c;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lm1c;->Y:Lv1c;
+
+    iget-object p1, p1, Lv1c;->b:Lz0c;
+
+    iput v1, p0, Lm1c;->X:I
+
+    invoke-interface {p1, p0}, Lz0c;->b(Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

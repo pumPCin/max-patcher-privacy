@@ -1,154 +1,122 @@
-.class public final Leze;
+.class public final synthetic Leze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldv3;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:La88;
+.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
 
 
 # direct methods
-.method public constructor <init>(JJLa88;)V
+.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
     .locals 0
 
+    iput p2, p0, Leze;->a:I
+
+    iput-object p1, p0, Leze;->b:Lone/me/startconversation/StartConversationScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Leze;->a:J
-
-    iput-wide p3, p0, Leze;->b:J
-
-    iput-object p5, p0, Leze;->c:La88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final c(I)Z
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Leze;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    const/4 v2, 0x1
 
-    :cond_0
-    instance-of v1, p1, Leze;
+    iget-object v3, p0, Leze;->b:Lone/me/startconversation/StartConversationScreen;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    sget-object p1, Lone/me/startconversation/StartConversationScreen;->G0:[Ltr7;
 
-    return v2
+    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->C0()Ljava/lang/CharSequence;
 
-    :cond_1
-    check-cast p1, Leze;
+    move-result-object p1
 
-    iget-wide v3, p0, Leze;->a:J
+    if-eqz p1, :cond_0
 
-    iget-wide v5, p1, Leze;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Leze;->b:J
-
-    iget-wide v5, p1, Leze;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Leze;->c:La88;
-
-    iget-object p1, p1, Leze;->c:La88;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_1
 
-    return v2
+    :cond_0
+    move v1, v2
 
-    :cond_4
-    return v0
-.end method
+    :cond_1
+    xor-int/lit8 p1, v1, 0x1
 
-.method public final hashCode()I
-    .locals 4
+    return p1
 
-    iget-wide v0, p0, Leze;->a:J
+    :pswitch_0
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->w0:Lqjh;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Leze;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+    invoke-virtual {v0}, Lr18;->j()I
 
     move-result v0
 
-    iget-object v1, p0, Leze;->c:La88;
+    iget-object v4, v3, Lone/me/startconversation/StartConversationScreen;->B0:Lir6;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v4}, Lr18;->j()I
 
-    move-result v1
+    move-result v4
 
-    add-int/2addr v1, v0
+    add-int/2addr v4, v0
 
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->x0:Lji0;
+
+    invoke-virtual {v0}, Lr18;->j()I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    if-eq p1, v0, :cond_2
+
+    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->D0:Lnj3;
+
+    invoke-virtual {v0}, Lnj3;->j()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_3
+
+    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->C0()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
     return v1
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    nop
 
-    const-string v0, "StatEntity(id="
-
-    const-string v1, ", timestamp="
-
-    iget-wide v2, p0, Leze;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Leze;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", data="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Leze;->c:La88;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

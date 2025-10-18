@@ -1,11 +1,17 @@
-.class public interface abstract Lacb;
+.class public abstract Lacb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmm7;
 
+# direct methods
+.method public static a(Landroid/content/pm/PackageManager;)Z
+    .locals 1
 
-# virtual methods
-.method public abstract getChildJobCancellationCause()Ljava/util/concurrent/CancellationException;
+    const-string v0, "android.hardware.fingerprint"
+
+    invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
 .end method

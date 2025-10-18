@@ -1,118 +1,53 @@
 .class public final Lsy9;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lqy9;
 
 
 # instance fields
-.field public final synthetic a:Lmy9;
+.field public X:Ljava/util/Set;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Luy9;
+
+.field public o:Luy9;
+
+.field public q0:I
 
 
 # direct methods
-.method public constructor <init>(Lmy9;)V
+.method public constructor <init>(Luy9;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsy9;->Z:Luy9;
 
-    iput-object p1, p0, Lsy9;->a:Lmy9;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLzr8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b(JLzr8;)V
-    .locals 0
-
-    iget-object p1, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p1}, Lmy9;->t()V
-
-    return-void
-.end method
-
-.method public final c(JLzr8;JLzr8;)V
-    .locals 0
-
-    iget-object p1, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p1}, Lmy9;->G()V
-
-    return-void
-.end method
-
-.method public final d(JLzr8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e(JLzr8;J)V
-    .locals 0
-
-    iget-object p1, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p1}, Lmy9;->e()V
-
-    return-void
-.end method
-
-.method public final f(JLzr8;)V
-    .locals 0
-
-    iget-object p3, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p3, p1, p2}, Lmy9;->w(J)V
-
-    return-void
-.end method
-
-.method public final g(JLzr8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(JLzr8;)V
-    .locals 0
-
-    iget-object p1, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p1}, Lmy9;->I()V
-
-    return-void
-.end method
-
-.method public final i(JLzr8;)V
-    .locals 0
-
-    iget-object p1, p0, Lsy9;->a:Lmy9;
-
-    invoke-interface {p1}, Lmy9;->m()V
-
-    return-void
-.end method
-
-.method public final j(JLzr8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final p()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lsy9;->a:Lmy9;
+    iput-object p1, p0, Lsy9;->Y:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lmy9;->p()V
+    iget p1, p0, Lsy9;->q0:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lsy9;->q0:I
+
+    iget-object p1, p0, Lsy9;->Z:Luy9;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Luy9;->a(Luy9;Lli6;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

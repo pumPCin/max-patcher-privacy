@@ -1,219 +1,218 @@
 .class public final Lsjf;
-.super Ljava/lang/Object;
+.super Lwjf;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Ljava/util/List;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsjf;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lsjf;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lsjf;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lsjf;->d:Ljava/util/List;
-
-    iput-object p5, p0, Lsjf;->e:Ljava/util/List;
-
-    return-void
-.end method
+# interfaces
+.implements Llz8;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final m()Landroid/media/MediaRouter$RouteInfo;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lwjf;->s0:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    check-cast v0, Landroid/media/MediaRouter;
 
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Lsjf;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    check-cast p1, Lsjf;
-
-    iget-object v0, p1, Lsjf;->a:Ljava/lang/String;
-
-    iget-object v2, p0, Lsjf;->a:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object v0, p0, Lsjf;->b:Ljava/lang/String;
-
-    iget-object v2, p1, Lsjf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-object v0, p0, Lsjf;->c:Ljava/lang/String;
-
-    iget-object v2, p1, Lsjf;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    return v1
-
-    :cond_4
-    iget-object v0, p0, Lsjf;->d:Ljava/util/List;
-
-    iget-object v2, p1, Lsjf;->d:Ljava/util/List;
-
-    invoke-static {v0, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    return v1
-
-    :cond_5
-    iget-object v0, p0, Lsjf;->e:Ljava/util/List;
-
-    iget-object p1, p1, Lsjf;->e:Ljava/util/List;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lsjf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lsjf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lsjf;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lsjf;->d:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lfef;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lsjf;->e:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ForeignKey{referenceTable=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lsjf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', onDelete=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsjf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " +\', onUpdate=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsjf;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', columnNames="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsjf;->d:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", referenceColumnNames="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsjf;->e:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/media/MediaRouter;->getDefaultRoute()Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final o(Lujf;Lt2c;)V
+    .locals 4
+
+    iget-object v0, p2, Lt2c;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Bundle;
+
+    invoke-super {p0, p1, p2}, Lwjf;->o(Lujf;Lt2c;)V
+
+    iget-object v1, p1, Lujf;->a:Ljava/lang/Object;
+
+    move-object v2, v1
+
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    const-string v3, "enabled"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    :cond_0
+    iget-object v2, p1, Lujf;->a:Ljava/lang/Object;
+
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isConnecting()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x1
+
+    const-string v3, "connectionState"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_1
+    :try_start_0
+    check-cast v1, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v1}, Landroid/media/MediaRouter$RouteInfo;->getPresentationDisplay()Landroid/view/Display;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    const-string v2, "MediaRouterJellybeanMr1"
+
+    const-string v3, "Cannot get presentation display for the route."
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Landroid/view/Display;->getDisplayId()I
+
+    move-result v1
+
+    const-string v2, "presentationDisplayId"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_2
+    iget-object v0, p1, Lujf;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v0}, Landroid/media/MediaRouter$RouteInfo;->getDescription()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p2, Lt2c;->a:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/Bundle;
+
+    const-string v2, "status"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object p1, p1, Lujf;->a:Ljava/lang/Object;
+
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {p1}, Landroid/media/MediaRouter$RouteInfo;->getDeviceType()I
+
+    move-result p1
+
+    iget-object p2, p2, Lt2c;->a:Ljava/lang/Object;
+
+    check-cast p2, Landroid/os/Bundle;
+
+    const-string v0, "deviceType"
+
+    invoke-virtual {p2, v0, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final t(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-object v0, p0, Lwjf;->s0:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/MediaRouter;
+
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
+
+    const v1, 0x800003
+
+    invoke-virtual {v0, v1, p1}, Landroid/media/MediaRouter;->selectRoute(ILandroid/media/MediaRouter$RouteInfo;)V
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 4
+
+    iget-boolean v0, p0, Lwjf;->y0:Z
+
+    iget-object v1, p0, Lwjf;->t0:Ljava/lang/Object;
+
+    iget-object v2, p0, Lwjf;->s0:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, v2
+
+    check-cast v0, Landroid/media/MediaRouter;
+
+    move-object v3, v1
+
+    check-cast v3, Landroid/media/MediaRouter$Callback;
+
+    invoke-virtual {v0, v3}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwjf;->y0:Z
+
+    iget v0, p0, Lwjf;->w0:I
+
+    iget-boolean v3, p0, Lwjf;->x0:Z
+
+    or-int/lit8 v3, v3, 0x2
+
+    check-cast v2, Landroid/media/MediaRouter;
+
+    check-cast v1, Landroid/media/MediaRouter$Callback;
+
+    invoke-virtual {v2, v0, v1, v3}, Landroid/media/MediaRouter;->addCallback(ILandroid/media/MediaRouter$Callback;I)V
+
+    return-void
+.end method
+
+.method public final w(Lvjf;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lwjf;->w(Lvjf;)V
+
+    iget-object v0, p1, Lvjf;->b:Ljava/lang/Object;
+
+    iget-object p1, p1, Lvjf;->a:Lgz8;
+
+    iget-object p1, p1, Lgz8;->e:Ljava/lang/String;
+
+    check-cast v0, Landroid/media/MediaRouter$UserRouteInfo;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setDescription(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

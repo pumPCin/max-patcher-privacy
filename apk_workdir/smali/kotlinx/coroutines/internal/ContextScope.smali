@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb54;
+.implements Lq54;
 
 
 # annotations
@@ -13,18 +13,18 @@
     }
     d2 = {
         "Lkotlinx/coroutines/internal/ContextScope;",
-        "Lb54;",
-        "Lt44;",
+        "Lq54;",
+        "Li54;",
         "context",
         "<init>",
-        "(Lt44;)V",
+        "(Li54;)V",
         "",
         "toString",
         "()Ljava/lang/String;",
         "coroutineContext",
-        "Lt44;",
+        "Li54;",
         "getCoroutineContext",
-        "()Lt44;",
+        "()Li54;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -38,26 +38,26 @@
 
 
 # instance fields
-.field private final coroutineContext:Lt44;
+.field private final coroutineContext:Li54;
 
 
 # direct methods
-.method public constructor <init>(Lt44;)V
+.method public constructor <init>(Li54;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lt44;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Li54;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getCoroutineContext()Lt44;
+.method public getCoroutineContext()Li54;
     .locals 1
 
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lt44;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Li54;
 
     return-object v0
 .end method
@@ -71,7 +71,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Lt44;
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Li54;
 
     move-result-object v1
 

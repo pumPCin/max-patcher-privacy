@@ -1,204 +1,226 @@
 .class public final Lt27;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lsqe;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lhd6;
-
-.field public b:Z
-
-.field public final synthetic c:Ld9;
+.field public final synthetic X:Lx27;
 
 
 # direct methods
-.method public constructor <init>(Ld9;)V
-    .locals 1
+.method public constructor <init>(Lx27;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lt27;->X:Lx27;
 
-    iput-object p1, p0, Lt27;->c:Ld9;
+    const/4 p1, 0x2
 
-    new-instance v0, Lhd6;
-
-    iget-object p1, p1, Ld9;->f:Ljava/lang/Object;
-
-    check-cast p1, Liv0;
-
-    invoke-interface {p1}, Lsqe;->p()Lquf;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lhd6;-><init>(Lquf;)V
-
-    iput-object v0, p0, Lt27;->a:Lhd6;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L(Leu0;J)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lt27;->c:Ld9;
+    check-cast p1, Lq54;
 
-    iget-object v0, v0, Ld9;->f:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Liv0;
+    invoke-virtual {p0, p1, p2}, Lt27;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v1, p0, Lt27;->b:Z
+    move-result-object p1
 
-    if-nez v1, :cond_1
+    check-cast p1, Lt27;
 
-    const-wide/16 v1, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    cmp-long v1, p2, v1
+    invoke-virtual {p1, p2}, Lt27;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    return-void
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lt27;
+
+    iget-object v0, p0, Lt27;->X:Lx27;
+
+    invoke-direct {p1, v0, p2}, Lt27;-><init>(Lx27;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lt27;->X:Lx27;
+
+    const-string v5, "https://api.ipify.org"
+
+    const-string v6, "https://checkip.amazonaws.com"
+
+    const-string v0, "https://vk.ru/upload.php?act=myip"
+
+    const-string v1, "https://vk.com/upload.php?act=myip"
+
+    const-string v2, "https://ipv4-internet.yandex.net/api/v0/ip"
+
+    const-string v3, "https://ipv6-internet.yandex.net/api/v0/ip"
+
+    const-string v4, "https://ifconfig.me/ip"
+
+    filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_0
-    invoke-interface {v0, p2, p3}, Liv0;->N(J)Liv0;
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v1, "\r\n"
+    move-result v0
 
-    invoke-interface {v0, v1}, Liv0;->I(Ljava/lang/String;)Liv0;
+    const/4 v2, 0x0
 
-    invoke-interface {v0, p1, p2, p3}, Lsqe;->L(Leu0;J)V
+    if-eqz v0, :cond_4
 
-    invoke-interface {v0, v1}, Liv0;->I(Ljava/lang/String;)Liv0;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    :try_start_0
+    new-instance v3, Ljava/net/URL;
+
+    invoke-direct {v3, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    sget-object v0, Lha2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v3}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
+
+    move-result-object v3
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-static {v3}, Lyli;->d(Ljava/io/InputStream;)[B
+
+    move-result-object v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-interface {v3}, Ljava/io/Closeable;->close()V
+
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, v4, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    iget-object v0, p1, Lx27;->r0:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc8d;
+
+    iget-object v0, v0, Lc8d;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->find(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    move-object v3, v2
+
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v3, Lkxb;
 
-    const-string p2, "closed"
+    invoke-direct {v3, v0}, Lkxb;-><init>(Ljava/util/regex/Matcher;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    if-eqz v3, :cond_2
 
-    throw p1
-.end method
+    iget-object v0, v3, Lkxb;->b:Ljava/lang/Object;
 
-.method public final declared-synchronized close()V
-    .locals 3
+    check-cast v0, Ljava/util/regex/Matcher;
 
-    monitor-enter p0
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
-    :try_start_0
-    iget-boolean v0, p0, Lt27;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    goto :goto_1
 
-    monitor-exit p0
+    :cond_2
+    move-object v0, v2
 
-    return-void
+    :goto_1
+    if-eqz v0, :cond_3
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    :try_start_1
-    iput-boolean v0, p0, Lt27;->b:Z
+    move-result v3
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    iget-object v0, p0, Lt27;->c:Ld9;
+    if-lez v3, :cond_3
 
-    iget-object v0, v0, Ld9;->f:Ljava/lang/Object;
+    move-object v2, v0
 
-    check-cast v0, Liv0;
-
-    const-string v1, "0\r\n\r\n"
-
-    invoke-interface {v0, v1}, Liv0;->I(Ljava/lang/String;)Liv0;
-
-    iget-object v0, p0, Lt27;->a:Lhd6;
-
-    iget-object v1, v0, Lhd6;->e:Lquf;
-
-    sget-object v2, Lquf;->d:Lpuf;
-
-    iput-object v2, v0, Lhd6;->e:Lquf;
-
-    invoke-virtual {v1}, Lquf;->a()Lquf;
-
-    invoke-virtual {v1}, Lquf;->b()Lquf;
-
-    iget-object v0, p0, Lt27;->c:Ld9;
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Ld9;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
+    goto :goto_2
 
     :catchall_0
     move-exception v0
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-object v4, v0
 
-    throw v0
-.end method
+    :try_start_3
+    throw v4
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-.method public final declared-synchronized flush()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lt27;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    iget-object v0, p0, Lt27;->c:Ld9;
-
-    iget-object v0, v0, Ld9;->f:Ljava/lang/Object;
-
-    check-cast v0, Liv0;
-
-    invoke-interface {v0}, Liv0;->flush()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
+    :catchall_1
     move-exception v0
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_start_4
+    invoke-static {v3, v4}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v0
-.end method
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-.method public final p()Lquf;
-    .locals 1
+    :catch_0
+    :cond_3
+    :goto_2
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lt27;->a:Lhd6;
-
-    return-object v0
+    :cond_4
+    return-object v2
 .end method

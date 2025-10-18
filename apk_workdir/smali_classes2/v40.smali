@@ -1,75 +1,80 @@
-.class public final Lv40;
-.super Llff;
+.class public final synthetic Lv40;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgi6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public synthetic X:Le50;
+.field public final synthetic a:I
 
-.field public synthetic Y:F
+.field public final synthetic b:Lz40;
+
+.field public final synthetic c:Lu40;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lz40;Lu40;I)V
+    .locals 0
+
+    iput p3, p0, Lv40;->a:I
+
+    iput-object p1, p0, Lv40;->b:Lz40;
+
+    iput-object p2, p0, Lv40;->c:Lu40;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Le50;
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
-
-    move-result p2
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lv40;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lv40;->X:Le50;
-
-    iput p2, v0, Lv40;->Y:F
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {v0, p1}, Lv40;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget p1, p0, Lv40;->a:I
 
-    iget-object p1, p0, Lv40;->X:Le50;
+    packed-switch p1, :pswitch_data_0
 
-    iget v0, p0, Lv40;->Y:F
+    iget-object p1, p0, Lv40;->b:Lz40;
 
-    if-eqz p1, :cond_0
+    iget-object p1, p1, Lz40;->a:Lli6;
 
-    iget-object v1, p1, Le50;->a:Ljava/lang/Long;
+    new-instance v0, Loi9;
 
-    iget-object v2, p1, Le50;->b:Ljava/lang/Long;
+    iget-object v1, p0, Lv40;->c:Lu40;
 
-    iget-object p1, p1, Le50;->d:Lw20;
+    iget-wide v2, v1, Lu40;->b:J
 
-    new-instance v3, Le50;
+    invoke-direct {v0, v2, v3, v1}, Loi9;-><init>(JLu40;)V
 
-    invoke-direct {v3, v1, v2, v0, p1}, Le50;-><init>(Ljava/lang/Long;Ljava/lang/Long;FLw20;)V
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v3
+    return-void
 
-    :cond_0
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object p1, p0, Lv40;->b:Lz40;
 
-    return-object p1
+    iget-object p1, p1, Lz40;->a:Lli6;
+
+    new-instance v0, Loi9;
+
+    iget-object v1, p0, Lv40;->c:Lu40;
+
+    iget-wide v2, v1, Lu40;->b:J
+
+    invoke-direct {v0, v2, v3, v1}, Loi9;-><init>(JLu40;)V
+
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

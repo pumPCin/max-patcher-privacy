@@ -1,78 +1,64 @@
-.class public final Lusf;
-.super Llff;
+.class public final synthetic Lusf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
+    .locals 0
+
+    iput p2, p0, Lusf;->a:I
+
+    iput-object p1, p0, Lusf;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lusf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lusf;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lusf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final run()V
     .locals 1
 
-    new-instance p1, Lusf;
+    iget v0, p0, Lusf;->a:I
 
-    const/4 v0, 0x2
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lusf;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    return-object p1
-.end method
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    return-void
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object v0, p0, Lusf;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    invoke-static {}, Lw7b;->b()Lshf;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    move-result-object p1
+    return-void
 
-    iget-object v0, p1, Lshf;->b:Ljava/lang/Object;
+    :pswitch_1
+    iget-object v0, p0, Lusf;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    check-cast v0, Ljava/util/Map;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v2, "Threads count: "
+    nop
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lshf;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v1, "ThreadsDeveloperTools"
-
-    invoke-static {v1, v0, p1}, Lndi;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

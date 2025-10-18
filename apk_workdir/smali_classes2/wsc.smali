@@ -3,72 +3,38 @@
 
 
 # static fields
-.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a60
+.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f13089a
 
-.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a61
+.field public static oneme_media_keyboard_emoji_classic:I = 0x7f13089b
 
-.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a62
+.field public static oneme_media_keyboard_emoji_flags:I = 0x7f13089c
 
-.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a63
+.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f13089d
 
-.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a64
+.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f13089e
 
-.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a65
+.field public static oneme_media_keyboard_emoji_objects:I = 0x7f13089f
 
-.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a66
+.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f1308a0
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a67
+.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f1308a1
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a68
+.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f1308a2
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a69
+.field public static oneme_media_keyboard_favorite:I = 0x7f1308a3
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a6a
+.field public static oneme_media_keyboard_popular:I = 0x7f1308a4
 
-.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a6b
+.field public static oneme_media_keyboard_recent:I = 0x7f1308a5
 
-.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a6c
+.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f1308a6
 
-.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a6d
+.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f1308a7
 
-.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a6e
+.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f1308a8
 
-.field public static oneme_stickers_settings_recent_title:I = 0x7f130a6f
+.field public static oneme_media_keyboard_tab_emoji:I = 0x7f1308a9
 
-.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a70
+.field public static oneme_media_keyboard_tab_gifs:I = 0x7f1308aa
 
-.field public static oneme_stickers_settings_sets_title:I = 0x7f130a71
-
-.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a72
-
-.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a73
-
-.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a74
-
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a75
-
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a76
-
-.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a77
-
-.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a78
-
-.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a79
-
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a7a
-
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a7b
-
-.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a7c
-
-.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a7d
-
-.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a7e
-
-.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a7f
-
-.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a80
-
-.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130a82
-
-.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130a83
+.field public static oneme_media_keyboard_tab_stickers:I = 0x7f1308ab

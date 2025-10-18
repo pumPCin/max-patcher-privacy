@@ -1,48 +1,69 @@
 .class public final Lk8c;
-.super Lk14;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lj8c;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lj8c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lk8c;->Y:Lj8c;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Ly8c;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lk8c;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lk8c;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x100
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lk8c;->o:Ljava/lang/Object;
+    const/4 v0, -0x1
 
-    iget p1, p0, Lk8c;->X:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lk8c;->X:I
+.method public final m()I
+    .locals 1
 
-    iget-object p1, p0, Lk8c;->Y:Lj8c;
+    const/16 v0, 0x100
 
-    const/4 v0, 0x0
+    return v0
+.end method
 
-    invoke-virtual {p1, v0, p0}, Lj8c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
+    const-string v0, "Attaches(count=-1)"
 
-    return-object p1
+    return-object v0
 .end method

@@ -21,7 +21,7 @@
 
     new-instance v0, Las;
 
-    sget-object v1, Ls95;->a:Ls95;
+    sget-object v1, Lka5;->a:Lka5;
 
     const/4 v2, 0x0
 
@@ -95,7 +95,7 @@
 
     iget-object p1, p1, Las;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

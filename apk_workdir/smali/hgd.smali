@@ -1,117 +1,180 @@
 .class public final Lhgd;
-.super Lf4;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhgd;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:I
+.field public X:I
 
-.field public final a:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final synthetic Z:Lfgd;
 
-.field public final c:Z
+.field public final synthetic q0:Lo32;
 
-.field public final o:I
+.field public final synthetic r0:Ligd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqvh;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lqvh;-><init>(I)V
-
-    sput-object v0, Lhgd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIZZ)V
+.method public constructor <init>(Lfgd;Lo32;Ligd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhgd;->Z:Lfgd;
 
-    iput p1, p0, Lhgd;->a:I
+    iput-object p2, p0, Lhgd;->q0:Lo32;
 
-    iput-boolean p4, p0, Lhgd;->b:Z
+    iput-object p3, p0, Lhgd;->r0:Ligd;
 
-    iput-boolean p5, p0, Lhgd;->c:Z
+    const/4 p1, 0x2
 
-    iput p2, p0, Lhgd;->o:I
-
-    iput p3, p0, Lhgd;->X:I
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/16 p2, 0x4f45
+    check-cast p1, Lq54;
 
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p2
+    invoke-virtual {p0, p1, p2}, Lhgd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    const/4 v1, 0x4
+    check-cast p1, Lhgd;
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget v0, p0, Lhgd;->a:I
+    invoke-virtual {p1, p2}, Lhgd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p1
 
-    const/4 v0, 0x2
+    return-object p1
+.end method
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    iget-boolean v0, p0, Lhgd;->b:Z
+    new-instance v0, Lhgd;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, p0, Lhgd;->q0:Lo32;
 
-    const/4 v0, 0x3
+    iget-object v2, p0, Lhgd;->r0:Ligd;
 
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    iget-object v3, p0, Lhgd;->Z:Lfgd;
 
-    iget-boolean v0, p0, Lhgd;->c:Z
+    invoke-direct {v0, v3, v1, v2, p2}, Lhgd;-><init>(Lfgd;Lo32;Ligd;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iput-object p1, v0, Lhgd;->Y:Ljava/lang/Object;
 
-    invoke-static {p1, v1, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+    return-object v0
+.end method
 
-    iget v0, p0, Lhgd;->o:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x5
-
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
     iget v0, p0, Lhgd;->X:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v1, 0x1
 
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    if-eqz v0, :cond_1
 
-    return-void
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lhgd;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lkotlin/coroutines/Continuation;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhgd;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lq54;
+
+    invoke-interface {p1}, Lq54;->getCoroutineContext()Li54;
+
+    move-result-object p1
+
+    sget-object v0, Ln9a;->o:Ln9a;
+
+    invoke-interface {p1, v0}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object p1
+
+    check-cast p1, Lz14;
+
+    new-instance v0, Lw2g;
+
+    invoke-direct {v0, p1}, Lw2g;-><init>(Lz14;)V
+
+    iget-object v2, p0, Lhgd;->Z:Lfgd;
+
+    iget-object v2, v2, Lfgd;->j:Ljava/lang/ThreadLocal;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    new-instance v4, Lkotlinx/coroutines/internal/ThreadLocalElement;
+
+    invoke-direct {v4, v3, v2}, Lkotlinx/coroutines/internal/ThreadLocalElement;-><init>(Ljava/lang/Object;Ljava/lang/ThreadLocal;)V
+
+    invoke-interface {p1, v0}, Li54;->plus(Li54;)Li54;
+
+    move-result-object p1
+
+    invoke-interface {p1, v4}, Li54;->plus(Li54;)Li54;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lhgd;->q0:Lo32;
+
+    iput-object v0, p0, Lhgd;->Y:Ljava/lang/Object;
+
+    iput v1, p0, Lhgd;->X:I
+
+    iget-object v1, p0, Lhgd;->r0:Ligd;
+
+    invoke-static {p1, v1, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lr54;->a:Lr54;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

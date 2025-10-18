@@ -3,258 +3,108 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Lnri;
+
+
 # direct methods
-.method public static final a(J)J
-    .locals 2
+.method public static a(Lgv1;)Z
+    .locals 4
 
-    const/4 v0, 0x1
+    const-string v0, "Illegal thread"
 
-    shl-long/2addr p0, v0
-
-    const-wide/16 v0, 0x1
-
-    add-long/2addr p0, v0
-
-    sget v0, Lb35;->o:I
-
-    sget-object v0, Ld35;->a:[Ljava/lang/ThreadLocal;
-
-    return-wide p0
-.end method
-
-.method public static final b(J)J
-    .locals 6
-
-    const-wide v0, -0x431bde82d7aL
-
-    cmp-long v0, v0, p0
-
-    if-gtz v0, :cond_0
-
-    const-wide v0, 0x431bde82d7bL
-
-    cmp-long v0, p0, v0
-
-    if-gez v0, :cond_0
-
-    const v0, 0xf4240
-
-    int-to-long v0, v0
-
-    mul-long/2addr p0, v0
-
-    invoke-static {p0, p1}, Lsyi;->c(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_0
-    const-wide v2, -0x3fffffffffffffffL    # -2.0000000000000004
-
-    const-wide v4, 0x3fffffffffffffffL    # 1.9999999999999998
-
-    move-wide v0, p0
-
-    invoke-static/range {v0 .. v5}, Ljvi;->e(JJJ)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lsyi;->a(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public static final c(J)J
-    .locals 1
-
-    const/4 v0, 0x1
-
-    shl-long/2addr p0, v0
-
-    sget v0, Lb35;->o:I
-
-    sget-object v0, Ld35;->a:[Ljava/lang/ThreadLocal;
-
-    return-wide p0
-.end method
-
-.method public static d(Landroid/content/Intent;Ljava/util/ArrayList;)V
-    .locals 7
-
-    const-string v0, "android.intent.extra.TEXT"
-
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    const-string v1, "android.intent.extra.HTML_TEXT"
-
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    new-instance v2, Landroid/content/ClipData;
+    if-nez v1, :cond_2
 
-    invoke-virtual {p0}, Landroid/content/Intent;->getType()Ljava/lang/String;
+    sget-object v1, Lxr4;->c:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/ThreadLocal;
+
+    if-eqz v2, :cond_2
+
+    new-instance v2, Lxr4;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v2, v1}, Lxr4;-><init>(Ljava/lang/ThreadLocal;)V
+
+    iget-object v3, v2, Lxr4;->b:Landroid/os/Looper;
+
+    :try_start_0
+    invoke-virtual {p0, v2}, Lgv1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-static {p0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v3
 
-    filled-new-array {v3}, [Ljava/lang/String;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v1
 
-    new-instance v4, Landroid/content/ClipData$Item;
+    if-eqz v1, :cond_1
 
-    const/4 v5, 0x0
+    iget-object v0, v2, Lxr4;->a:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {p1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
 
-    move-result-object v5
+    throw p0
 
-    check-cast v5, Landroid/net/Uri;
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const/4 v6, 0x0
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v0, v1, v6, v5}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/content/Intent;Landroid/net/Uri;)V
+    throw p0
 
-    invoke-direct {v2, v6, v3, v4}, Landroid/content/ClipData;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;Landroid/content/ClipData$Item;)V
+    :cond_2
+    const/4 p0, 0x0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v0, :cond_0
-
-    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/net/Uri;
-
-    new-instance v5, Landroid/content/ClipData$Item;
-
-    invoke-direct {v5, v4}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
-
-    invoke-virtual {v2, v5}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, v2}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
-
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method public static final e(ILg35;)J
-    .locals 2
-
-    sget-object v0, Lg35;->o:Lg35;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    int-to-long v0, p0
-
-    sget-object p0, Lg35;->b:Lg35;
-
-    iget-object p0, p0, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    iget-object p1, p1, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, v0, v1, p1}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lsyi;->c(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_0
-    int-to-long v0, p0
-
-    invoke-static {v0, v1, p1}, Lsyi;->f(JLg35;)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public static final f(JLg35;)J
-    .locals 7
-
-    sget-object v0, Lg35;->b:Lg35;
-
-    iget-object v1, p2, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    iget-object p2, p2, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v2, v0, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    const-wide v3, 0x3ffffffffffa14bfL    # 1.9999999999138678
-
-    invoke-virtual {v1, v3, v4, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v1
-
-    neg-long v3, v1
-
-    cmp-long v3, v3, p0
-
-    if-gtz v3, :cond_0
-
-    cmp-long v1, p0, v1
-
-    if-gtz v1, :cond_0
-
-    iget-object v0, v0, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, p0, p1, p2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lsyi;->c(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_0
-    sget-object v0, Lg35;->c:Lg35;
-
-    iget-object v0, v0, Lg35;->a:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, p0, p1, p2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v1
-
-    const-wide v3, -0x3fffffffffffffffL    # -2.0000000000000004
-
-    const-wide v5, 0x3fffffffffffffffL    # 1.9999999999999998
-
-    invoke-static/range {v1 .. v6}, Ljvi;->e(JJJ)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lsyi;->a(J)J
-
-    move-result-wide p0
-
-    return-wide p0
+    return p0
 .end method

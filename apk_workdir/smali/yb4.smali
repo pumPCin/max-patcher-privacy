@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lr0;)V
-.end method
-
-.method public abstract b(Lr0;)V
-.end method
-
-.method public abstract c(Lr0;)V
-.end method
-
-.method public abstract d()V
+.method public abstract read([BII)I
 .end method

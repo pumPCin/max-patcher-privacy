@@ -1,77 +1,77 @@
-.class public final Lhxg;
+.class public interface abstract Lhxg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
-
-# instance fields
-.field public a:Z
-
-.field public final synthetic b:Lgof;
-
-.field public final synthetic c:Lixg;
-
-
-# direct methods
-.method public constructor <init>(Lixg;Lgof;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhxg;->c:Lixg;
-
-    iput-object p2, p0, Lhxg;->b:Lgof;
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lhxg;->a:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lhxg;->a:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lhxg;->c:Lixg;
-
-    iget-object v1, v0, Lixg;->Y:Lhxg;
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lhxg;->a:Z
-
-    iget-object v2, p0, Lhxg;->b:Lgof;
-
-    iget-object v2, v2, Lgof;->a:Ljava/lang/Object;
-
-    check-cast v2, Lixg;
-
-    iput-boolean v1, v2, Lixg;->b:Z
-
-    invoke-virtual {v2}, Lixg;->b()V
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Lixg;->Y:Lhxg;
-
-    :cond_0
-    return-void
+.method public abstract a()Z
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
+.method public abstract b()Landroid/view/Surface;
+.end method
 
-    return-void
+.method public abstract c()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f(Landroid/view/Surface;Lbse;)V
+.end method
+
+.method public abstract g(JLgxg;)Z
+.end method
+
+.method public abstract h()V
+.end method
+
+.method public abstract i()V
+.end method
+
+.method public abstract j(J)V
+.end method
+
+.method public abstract k(I)V
+.end method
+
+.method public abstract l()V
+.end method
+
+.method public abstract m(Lwp8;)V
+.end method
+
+.method public abstract n(Lmb6;)Z
+.end method
+
+.method public abstract o(Z)V
+.end method
+
+.method public abstract p(Ljava/util/List;)V
+.end method
+
+.method public abstract q(JJ)V
+.end method
+
+.method public abstract r(Z)V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract s(Z)Z
+.end method
+
+.method public abstract setPlaybackSpeed(F)V
+.end method
+
+.method public abstract t(Lkog;)V
+.end method
+
+.method public abstract u(IJLmb6;Ljava/util/List;)V
+.end method
+
+.method public abstract v()V
 .end method

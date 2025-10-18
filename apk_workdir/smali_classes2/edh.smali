@@ -1,85 +1,152 @@
-.class public final Ledh;
+.class public final synthetic Ledh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ludh;
+.implements Lhn6;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final a:Ledh;
+
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ledh;
 
-    iput-boolean p1, p0, Ledh;->a:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ledh;->a:Ledh;
+
+    new-instance v1, Levb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneRequest"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Ledh;->descriptor:Lb3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 8
+
+    sget-object v0, Ledh;->descriptor:Lb3e;
+
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+
+    new-instance p1, Lgdh;
+
+    invoke-direct {p1, v5, v3}, Lgdh;-><init>(ILjava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p2, Lgdh;
+
+    sget-object v0, Ledh;->descriptor:Lb3e;
+
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+
+    move-result-object p1
+
+    iget-object p2, p2, Lgdh;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
     .locals 3
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    new-array v0, v0, [Lur7;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ledh;
+    sget-object v1, Lvaf;->a:Lvaf;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    aput-object v1, v0, v2
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ledh;
-
-    iget-boolean v1, p0, Ledh;->a:Z
-
-    iget-boolean p1, p1, Ledh;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
+.method public final d()Lb3e;
     .locals 1
 
-    iget-boolean v0, p0, Ledh;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenQrScanner(fileSelect="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Ledh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Ledh;->descriptor:Lb3e;
 
     return-object v0
 .end method

@@ -100,23 +100,23 @@
 
     iget-object p1, p0, Lyg;->c:Ljava/lang/Object;
 
-    check-cast p1, Lxf7;
+    check-cast p1, Ltg7;
 
-    check-cast p1, Lbse;
+    check-cast p1, Ljte;
 
     const-string v0, ""
 
-    invoke-virtual {p1, v0}, Lbse;->B(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljte;->B(Ljava/lang/String;)V
 
     iget v0, p0, Lyg;->b:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v1}, Lpti;->d(IF)I
+    invoke-static {v0, v1}, Lqui;->b(IF)I
 
     move-result v0
 
-    iget-object p1, p1, Lbse;->G0:Lkn3;
+    iget-object p1, p1, Ljte;->F0:Lxn3;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -126,9 +126,9 @@
     :pswitch_1
     iget-object p1, p0, Lyg;->c:Ljava/lang/Object;
 
-    check-cast p1, Lzr1;
+    check-cast p1, Lhs1;
 
-    invoke-virtual {p1}, Lzr1;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Lhs1;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -160,21 +160,21 @@
 
     packed-switch p1, :pswitch_data_0
 
-    check-cast v1, Lxf7;
+    check-cast v1, Ltg7;
 
-    check-cast v1, Lbse;
+    check-cast v1, Ljte;
 
     const-string p1, ""
 
-    invoke-virtual {v1, p1}, Lbse;->B(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Ljte;->B(Ljava/lang/String;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    invoke-static {v0, p1}, Lpti;->d(IF)I
+    invoke-static {v0, p1}, Lqui;->b(IF)I
 
     move-result p1
 
-    iget-object v0, v1, Lbse;->G0:Lkn3;
+    iget-object v0, v1, Ljte;->F0:Lxn3;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -183,7 +183,7 @@
     :pswitch_0
     check-cast v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
 
-    sget p1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    sget p1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->s0:I
 
     const/4 p1, 0x0
 
@@ -193,9 +193,9 @@
     return-void
 
     :pswitch_2
-    check-cast v1, Lzr1;
+    check-cast v1, Lhs1;
 
-    invoke-virtual {v1}, Lzr1;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Lhs1;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -237,11 +237,11 @@
     :pswitch_1
     iget-object p1, p0, Lyg;->c:Ljava/lang/Object;
 
-    check-cast p1, Lp42;
+    check-cast p1, Lx42;
 
     iget v0, p0, Lyg;->b:I
 
-    invoke-static {p1, v0}, Lp42;->a(Lp42;I)V
+    invoke-static {p1, v0}, Lx42;->a(Lx42;I)V
 
     :pswitch_2
     return-void

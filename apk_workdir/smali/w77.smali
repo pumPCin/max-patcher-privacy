@@ -2,103 +2,560 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzq9;
 
-# static fields
-.field public static final a:Ld87;
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Z
+
+.field public final f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 1
 
-    new-instance v0, Landroid/util/Size;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x280
+    const/4 v0, -0x1
 
-    const/16 v2, 0x1e0
+    if-eq p2, v0, :cond_1
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+    if-lez p2, :cond_0
 
-    sget-object v1, Lqw5;->c:Lqw5;
+    goto :goto_0
 
-    new-instance v2, Lqbd;
+    :cond_0
+    const/4 v0, 0x0
 
-    sget-object v3, Luqe;->c:Landroid/util/Size;
+    goto :goto_1
 
-    invoke-direct {v2, v3}, Lqbd;-><init>(Landroid/util/Size;)V
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    new-instance v3, Lpbd;
+    :goto_1
+    invoke-static {v0}, Lsgi;->d(Z)V
 
-    const/4 v4, 0x0
+    iput p1, p0, Lw77;->a:I
 
-    invoke-direct {v3, v1, v2, v4}, Lpbd;-><init>(Lqw5;Lqbd;Lj36;)V
+    iput-object p3, p0, Lw77;->b:Ljava/lang/String;
 
-    new-instance v1, Lv77;
+    iput-object p4, p0, Lw77;->c:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iput-object p5, p0, Lw77;->d:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lv77;-><init>(I)V
+    iput-boolean p6, p0, Lw77;->e:Z
 
-    sget-object v2, Ln97;->E:Lq90;
+    iput p2, p0, Lw77;->f:I
 
-    iget-object v1, v1, Lv77;->b:La0a;
+    return-void
+.end method
 
-    invoke-virtual {v1, v2, v0}, La0a;->k(Lq90;Ljava/lang/Object;)V
+.method public static b(Ljava/util/Map;)Lw77;
+    .locals 14
 
-    sget-object v0, Ligg;->k0:Lq90;
+    const-string v0, "Invalid metadata interval: "
 
-    const/4 v2, 0x1
+    const-string v1, "Invalid bitrate: "
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v2, "icy-br"
 
-    move-result-object v2
-
-    invoke-virtual {v1, v0, v2}, La0a;->k(Lq90;Ljava/lang/Object;)V
-
-    sget-object v0, Ln97;->z:Lq90;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    check-cast v2, Ljava/util/List;
 
-    sget-object v0, Ln97;->H:Lq90;
+    const-string v3, "IcyHeaders"
 
-    invoke-virtual {v1, v0, v3}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    const/4 v4, 0x1
 
-    sget-object v0, Lc45;->d:Lc45;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v0}, Lc45;->equals(Ljava/lang/Object;)Z
+    const/4 v6, -0x1
 
-    move-result v2
+    if-eqz v2, :cond_1
 
-    if-eqz v2, :cond_0
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    sget-object v2, Ld97;->y:Lq90;
+    move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    check-cast v2, Ljava/lang/String;
 
-    new-instance v0, Ld87;
+    :try_start_0
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    invoke-static {v1}, Lq8b;->a(Lck3;)Lq8b;
+    move-result v7
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    mul-int/lit16 v7, v7, 0x3e8
+
+    if-lez v7, :cond_0
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ld87;-><init>(Lq8b;)V
+    invoke-static {v3, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    sput-object v0, Lw77;->a:Ld87;
+    move v1, v5
 
-    return-void
+    move v7, v6
+
+    :goto_0
+    move v8, v7
+
+    goto :goto_1
+
+    :catch_0
+    move v7, v6
+
+    :catch_1
+    const-string v1, "Invalid bitrate header: "
+
+    invoke-static {v1, v2, v3}, Ley1;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move v1, v5
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v5
+
+    move v8, v6
+
+    :goto_1
+    const-string v2, "icy-genre"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    const/4 v7, 0x0
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    move-object v10, v1
+
+    move v1, v4
+
+    goto :goto_2
+
+    :cond_2
+    move-object v10, v7
+
+    :goto_2
+    const-string v2, "icy-name"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    move-object v11, v1
+
+    move v1, v4
+
+    goto :goto_3
+
+    :cond_3
+    move-object v11, v7
+
+    :goto_3
+    const-string v2, "icy-url"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    move-object v12, v1
+
+    move v1, v4
+
+    goto :goto_4
+
+    :cond_4
+    move-object v12, v7
+
+    :goto_4
+    const-string v2, "icy-pub"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "1"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    move v13, v1
+
+    move v1, v4
+
+    goto :goto_5
+
+    :cond_5
+    move v13, v5
+
+    :goto_5
+    const-string v2, "icy-metaint"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    if-eqz p0, :cond_7
+
+    invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    :try_start_2
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+    :try_end_2
+    .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_3
+
+    if-lez v2, :cond_6
+
+    move v6, v2
+
+    goto :goto_6
+
+    :cond_6
+    :try_start_3
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_2
+
+    move v4, v1
+
+    :goto_6
+    move v1, v4
+
+    :cond_7
+    :goto_7
+    move v9, v6
+
+    goto :goto_8
+
+    :catch_2
+    move v6, v2
+
+    :catch_3
+    invoke-static {v0, p0, v3}, Ley1;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_7
+
+    :goto_8
+    if-eqz v1, :cond_8
+
+    new-instance v7, Lw77;
+
+    invoke-direct/range {v7 .. v13}, Lw77;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    :cond_8
+    return-object v7
+.end method
+
+
+# virtual methods
+.method public final a(Llu8;)V
+    .locals 1
+
+    iget-object v0, p0, Lw77;->c:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iput-object v0, p1, Llu8;->F:Ljava/lang/CharSequence;
 
     :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lw77;->b:Ljava/lang/String;
 
-    const-string v1, "ImageAnalysis currently only supports SDR"
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iput-object v0, p1, Llu8;->D:Ljava/lang/CharSequence;
 
-    throw v0
+    :cond_1
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lw77;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lw77;
+
+    iget v2, p0, Lw77;->a:I
+
+    iget v3, p1, Lw77;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lw77;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lw77;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lw77;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lw77;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lw77;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lw77;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-boolean v2, p0, Lw77;->e:Z
+
+    iget-boolean v3, p1, Lw77;->e:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lw77;->f:I
+
+    iget p1, p1, Lw77;->f:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/16 v0, 0x20f
+
+    iget v1, p0, Lw77;->a:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lw77;->b:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lw77;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lw77;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_2
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lw77;->e:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lw77;->f:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "IcyHeaders: name=\""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lw77;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\", genre=\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lw77;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\", bitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw77;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", metadataInterval="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw77;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

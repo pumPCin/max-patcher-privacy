@@ -1,181 +1,135 @@
 .class public final Lsy;
-.super Luy;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmec;
 
 
 # instance fields
-.field public final X:Ljava/util/ArrayList;
-
-.field public final c:J
-
-.field public final o:Ljava/util/ArrayList;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(IJ)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Luy;-><init>(II)V
-
-    iput-wide p2, p0, Lsy;->c:J
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lsy;->o:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lsy;->X:Ljava/util/ArrayList;
+    iput p1, p0, Lsy;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final annotationType()Ljava/lang/Class;
+    .locals 1
 
-    iget v0, p0, Luy;->b:I
-
-    invoke-static {v0}, Luy;->h(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsy;->o:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lsy;->X:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/16 v3, 0x16
-
-    invoke-static {v3, v0}, Ld15;->e(ILjava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v3, v1}, Ld15;->e(ILjava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v3, v2}, Ld15;->e(ILjava/lang/String;)I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " leaves: "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " containers: "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-class v0, Lmec;
 
     return-object v0
 .end method
 
-.method public final w(I)Lsy;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lsy;->X:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsy;
-
-    iget v4, v3, Luy;->b:I
-
-    if-ne v4, p1, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    instance-of v0, p1, Lmec;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
     :cond_1
+    check-cast p1, Lmec;
+
+    check-cast p1, Lsy;
+
+    iget v0, p1, Lsy;->a:I
+
+    iget v1, p0, Lsy;->a:I
+
+    if-ne v1, v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Llec;->a:Llec;
+
+    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
     const/4 p1, 0x0
 
-    return-object p1
+    return p1
 .end method
 
-.method public final x(I)Lty;
-    .locals 5
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lsy;->o:Ljava/util/ArrayList;
+    const v0, 0xde0d66
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    iget v1, p0, Lsy;->a:I
+
+    xor-int/2addr v0, v1
+
+    sget-object v1, Llec;->a:Llec;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    const/4 v2, 0x0
+    const v2, 0x79ad669e
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    xor-int/2addr v1, v2
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    add-int/2addr v0, v1
 
-    move-result-object v3
+    return v0
+.end method
 
-    check-cast v3, Lty;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v4, v3, Luy;->b:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne v4, p1, :cond_0
+    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
 
-    return-object v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iget v1, p0, Lsy;->a:I
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 p1, 0x0
+    const-string v1, "intEncoding="
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Llec;->a:Llec;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

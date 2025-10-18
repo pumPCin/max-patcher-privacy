@@ -1,90 +1,86 @@
-.class public final Lh30;
-.super Llff;
+.class public final synthetic Lh30;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lji6;
 
 
 # instance fields
-.field public final synthetic X:Ll30;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
+.field public final synthetic b:Lm30;
 
 
 # direct methods
-.method public constructor <init>(Ll30;JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lm30;I)V
     .locals 0
 
-    iput-object p1, p0, Lh30;->X:Ll30;
+    iput p2, p0, Lh30;->a:I
 
-    iput-wide p2, p0, Lh30;->Y:J
+    iput-object p1, p0, Lh30;->b:Lm30;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lh30;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lh30;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lh30;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    new-instance p1, Lh30;
+    iget v0, p0, Lh30;->a:I
 
-    iget-object v0, p0, Lh30;->X:Ll30;
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lh30;->Y:J
+    iget-object v0, p0, Lh30;->b:Lm30;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lh30;-><init>(Ll30;JLkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Lm30;->a:Landroid/content/Context;
 
-    return-object p1
-.end method
+    const-string v1, "power"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p1, p0, Lh30;->X:Ll30;
+    check-cast v0, Landroid/os/PowerManager;
 
-    iget-object p1, p1, Ll30;->f:Llt7;
+    const v1, 0x20000006
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    const-string v2, "ru.ok.tamtam:tam-tam-screen-dim"
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    check-cast p1, Lma9;
+    move-result-object v0
 
-    iget-wide v0, p0, Lh30;->Y:J
+    return-object v0
 
-    invoke-virtual {p1, v0, v1}, Lma9;->n(J)Loa9;
+    :pswitch_0
+    iget-object v0, p0, Lh30;->b:Lm30;
 
-    move-result-object p1
+    iget-object v0, v0, Lm30;->a:Landroid/content/Context;
 
-    return-object p1
+    const-string v1, "power"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    const/16 v1, 0x20
+
+    const-string v2, "ru.ok.tamtam:tam-tam-prox"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

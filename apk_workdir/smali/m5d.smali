@@ -1,401 +1,277 @@
-.class public abstract Lm5d;
+.class public final Lm5d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ln5d;
+.field public final a:Lorf;
 
-.field public b:Z
+.field public final b:Ltrf;
 
-.field public c:I
+.field public final c:Ll5d;
+
+.field public final d:Ll5d;
+
+.field public final e:Lsrf;
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lorf;Lorf;Ll5d;Ll5d;Lsrf;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ln5d;
+    iput-object p1, p0, Lm5d;->a:Lorf;
 
-    invoke-direct {v0}, Landroid/database/Observable;-><init>()V
+    iput-object p2, p0, Lm5d;->b:Ltrf;
 
-    iput-object v0, p0, Lm5d;->a:Ln5d;
+    iput-object p3, p0, Lm5d;->c:Ll5d;
 
-    const/4 v0, 0x0
+    iput-object p4, p0, Lm5d;->d:Ll5d;
 
-    iput-boolean v0, p0, Lm5d;->b:Z
+    iput-object p5, p0, Lm5d;->e:Lsrf;
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lm5d;->c:I
+    iput-boolean p6, p0, Lm5d;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A(Z)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lm5d;->a:Ln5d;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ln5d;->a()Z
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lm5d;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lm5d;
+
+    iget-object v0, p0, Lm5d;->a:Lorf;
+
+    iget-object v1, p1, Lm5d;->a:Lorf;
+
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
-    iput-boolean p1, p0, Lm5d;->b:Z
+    goto :goto_0
 
-    return-void
+    :cond_2
+    iget-object v0, p0, Lm5d;->b:Ltrf;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v1, p1, Lm5d;->b:Ltrf;
 
-    const-string v0, "Cannot change whether this adapter has stable IDs while the adapter has registered observers."
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p1
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lm5d;->c:Ll5d;
+
+    iget-object v1, p1, Lm5d;->c:Ll5d;
+
+    invoke-virtual {v0, v1}, Ll5d;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lm5d;->d:Ll5d;
+
+    iget-object v1, p1, Lm5d;->d:Ll5d;
+
+    invoke-virtual {v0, v1}, Ll5d;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lm5d;->e:Lsrf;
+
+    iget-object v1, p1, Lm5d;->e:Lsrf;
+
+    invoke-virtual {v0, v1}, Lsrf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Lm5d;->f:Z
+
+    iget-boolean p1, p1, Lm5d;->f:Z
+
+    if-eq v0, p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public B(Lo5d;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lm5d;->a:Ln5d;
+    iget-object v0, p0, Lm5d;->a:Lorf;
 
-    invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
+    iget v0, v0, Lorf;->c:I
 
-    return-void
-.end method
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-.method public final h(Lj6d;I)V
-    .locals 5
+    move-result v0
 
-    iget-object v0, p1, Lj6d;->C0:Lm5d;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p1, Lj6d;->a:Landroid/view/View;
+    iget-object v1, p0, Lm5d;->b:Ltrf;
 
-    const/4 v2, 0x1
+    if-nez v1, :cond_0
 
-    if-nez v0, :cond_0
-
-    move v0, v2
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iput p2, p1, Lj6d;->c:I
-
-    iget-boolean v3, p0, Lm5d;->b:Z
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p0, p2}, Lm5d;->k(I)J
-
-    move-result-wide v3
-
-    iput-wide v3, p1, Lj6d;->X:J
-
-    :cond_1
-    iget v3, p1, Lj6d;->t0:I
-
-    and-int/lit16 v3, v3, -0x208
-
-    or-int/2addr v3, v2
-
-    iput v3, p1, Lj6d;->t0:I
-
-    sget v3, Lczf;->a:I
-
-    const-string v3, "RV OnBindView"
-
-    invoke-static {v3}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
-
-    :cond_2
-    iput-object p0, p1, Lj6d;->C0:Lm5d;
-
-    sget-boolean v3, Landroidx/recyclerview/widget/RecyclerView;->K1:Z
-
-    if-eqz v3, :cond_6
-
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v3
-
-    if-nez v3, :cond_4
-
-    sget-object v3, Lcyg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v3
-
-    invoke-virtual {p1}, Lj6d;->s()Z
-
-    move-result v4
-
-    if-ne v3, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Temp-detached state out of sync with reality. holder.isTmpDetached(): "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lj6d;->s()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", attached to window: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :goto_0
+    add-int/2addr v0, v1
 
-    const-string v1, ", holder: "
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lm5d;->c:Ll5d;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ll5d;->hashCode()I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v1
 
-    move-result-object p1
+    add-int/2addr v1, v0
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    mul-int/lit8 v1, v1, 0x1f
 
-    throw p2
+    iget-object v0, p0, Lm5d;->d:Ll5d;
 
-    :cond_4
-    :goto_1
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Ll5d;->hashCode()I
 
-    move-result-object v3
+    move-result v0
 
-    if-nez v3, :cond_6
+    add-int/2addr v0, v1
 
-    sget-object v3, Lcyg;->a:Ljava/util/WeakHashMap;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+    iget-object v1, p0, Lm5d;->e:Lsrf;
 
-    move-result v3
+    invoke-virtual {v1}, Lsrf;->hashCode()I
 
-    if-nez v3, :cond_5
+    move-result v1
 
-    goto :goto_2
+    add-int/2addr v1, v0
 
-    :cond_5
-    new-instance p2, Ljava/lang/IllegalStateException;
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lm5d;->f:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Attempting to bind attached holder with no parent (AKA temp detached): "
+    const-string v1, "ExitWithRecordState(title="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lm5d;->a:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm5d;->b:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negativeButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm5d;->c:Ll5d;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", positiveButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm5d;->d:Ll5d;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordTitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm5d;->e:Lsrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canRemove="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lm5d;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_6
-    :goto_2
-    invoke-virtual {p1}, Lj6d;->j()Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-virtual {p0, p1, p2, v3}, Lm5d;->s(Lj6d;ILjava/util/List;)V
-
-    if-eqz v0, :cond_9
-
-    iget-object p2, p1, Lj6d;->u0:Ljava/util/ArrayList;
-
-    if-eqz p2, :cond_7
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->clear()V
-
-    :cond_7
-    iget p2, p1, Lj6d;->t0:I
-
-    and-int/lit16 p2, p2, -0x401
-
-    iput p2, p1, Lj6d;->t0:I
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    instance-of p2, p1, Lu5d;
-
-    if-eqz p2, :cond_8
-
-    check-cast p1, Lu5d;
-
-    iput-boolean v2, p1, Lu5d;->c:Z
-
-    :cond_8
-    sget p1, Lczf;->a:I
-
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    :cond_9
-    return-void
-.end method
-
-.method public i(Lm5d;Lj6d;I)I
-    .locals 0
-
-    if-ne p1, p0, :cond_0
-
-    return p3
-
-    :cond_0
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public abstract j()I
-.end method
-
-.method public k(I)J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final m()V
-    .locals 1
-
-    iget-object v0, p0, Lm5d;->a:Ln5d;
-
-    invoke-virtual {v0}, Ln5d;->b()V
-
-    return-void
-.end method
-
-.method public final n(II)V
-    .locals 1
-
-    iget-object v0, p0, Lm5d;->a:Ln5d;
-
-    invoke-virtual {v0, p1, p2}, Ln5d;->c(II)V
-
-    return-void
-.end method
-
-.method public final o(IILjava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lm5d;->a:Ln5d;
-
-    invoke-virtual {v0, p1, p2, p3}, Ln5d;->d(IILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final p(II)V
-    .locals 1
-
-    iget-object v0, p0, Lm5d;->a:Ln5d;
-
-    invoke-virtual {v0, p1, p2}, Ln5d;->e(II)V
-
-    return-void
-.end method
-
-.method public q(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract r(Lj6d;I)V
-.end method
-
-.method public s(Lj6d;ILjava/util/List;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lm5d;->r(Lj6d;I)V
-
-    return-void
-.end method
-
-.method public abstract t(Landroid/view/ViewGroup;I)Lj6d;
-.end method
-
-.method public u(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v(Lj6d;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public w(Lj6d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x(Lj6d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y(Lj6d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public z(Lo5d;)V
-    .locals 1
-
-    iget-object v0, p0, Lm5d;->a:Ln5d;
-
-    invoke-virtual {v0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

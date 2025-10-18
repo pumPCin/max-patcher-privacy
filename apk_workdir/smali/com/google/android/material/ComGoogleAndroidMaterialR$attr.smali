@@ -2329,4643 +2329,4643 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lzic;->actionBarDivider:I
+    sget v0, Lgkc;->actionBarDivider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarDivider:I
 
-    sget v0, Lzic;->actionBarItemBackground:I
+    sget v0, Lgkc;->actionBarItemBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarItemBackground:I
 
-    sget v0, Lzic;->actionBarPopupTheme:I
+    sget v0, Lgkc;->actionBarPopupTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarPopupTheme:I
 
-    sget v0, Lzic;->actionBarSize:I
+    sget v0, Lgkc;->actionBarSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarSize:I
 
-    sget v0, Lzic;->actionBarSplitStyle:I
+    sget v0, Lgkc;->actionBarSplitStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarSplitStyle:I
 
-    sget v0, Lzic;->actionBarStyle:I
+    sget v0, Lgkc;->actionBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarStyle:I
 
-    sget v0, Lzic;->actionBarTabBarStyle:I
+    sget v0, Lgkc;->actionBarTabBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarTabBarStyle:I
 
-    sget v0, Lzic;->actionBarTabStyle:I
+    sget v0, Lgkc;->actionBarTabStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarTabStyle:I
 
-    sget v0, Lzic;->actionBarTabTextStyle:I
+    sget v0, Lgkc;->actionBarTabTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarTabTextStyle:I
 
-    sget v0, Lzic;->actionBarTheme:I
+    sget v0, Lgkc;->actionBarTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarTheme:I
 
-    sget v0, Lzic;->actionBarWidgetTheme:I
+    sget v0, Lgkc;->actionBarWidgetTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionBarWidgetTheme:I
 
-    sget v0, Lzic;->actionButtonStyle:I
+    sget v0, Lgkc;->actionButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionButtonStyle:I
 
-    sget v0, Lzic;->actionDropDownStyle:I
+    sget v0, Lgkc;->actionDropDownStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionDropDownStyle:I
 
-    sget v0, Lzic;->actionLayout:I
+    sget v0, Lgkc;->actionLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionLayout:I
 
-    sget v0, Lzic;->actionMenuTextAppearance:I
+    sget v0, Lgkc;->actionMenuTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionMenuTextAppearance:I
 
-    sget v0, Lzic;->actionMenuTextColor:I
+    sget v0, Lgkc;->actionMenuTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionMenuTextColor:I
 
-    sget v0, Lzic;->actionModeBackground:I
+    sget v0, Lgkc;->actionModeBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeBackground:I
 
-    sget v0, Lzic;->actionModeCloseButtonStyle:I
+    sget v0, Lgkc;->actionModeCloseButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeCloseButtonStyle:I
 
-    sget v0, Lzic;->actionModeCloseContentDescription:I
+    sget v0, Lgkc;->actionModeCloseContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeCloseContentDescription:I
 
-    sget v0, Lzic;->actionModeCloseDrawable:I
+    sget v0, Lgkc;->actionModeCloseDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeCloseDrawable:I
 
-    sget v0, Lzic;->actionModeCopyDrawable:I
+    sget v0, Lgkc;->actionModeCopyDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeCopyDrawable:I
 
-    sget v0, Lzic;->actionModeCutDrawable:I
+    sget v0, Lgkc;->actionModeCutDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeCutDrawable:I
 
-    sget v0, Lzic;->actionModeFindDrawable:I
+    sget v0, Lgkc;->actionModeFindDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeFindDrawable:I
 
-    sget v0, Lzic;->actionModePasteDrawable:I
+    sget v0, Lgkc;->actionModePasteDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModePasteDrawable:I
 
-    sget v0, Lzic;->actionModePopupWindowStyle:I
+    sget v0, Lgkc;->actionModePopupWindowStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModePopupWindowStyle:I
 
-    sget v0, Lzic;->actionModeSelectAllDrawable:I
+    sget v0, Lgkc;->actionModeSelectAllDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeSelectAllDrawable:I
 
-    sget v0, Lzic;->actionModeShareDrawable:I
+    sget v0, Lgkc;->actionModeShareDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeShareDrawable:I
 
-    sget v0, Lzic;->actionModeSplitBackground:I
+    sget v0, Lgkc;->actionModeSplitBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeSplitBackground:I
 
-    sget v0, Lzic;->actionModeStyle:I
+    sget v0, Lgkc;->actionModeStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeStyle:I
 
-    sget v0, Lzic;->actionModeTheme:I
+    sget v0, Lgkc;->actionModeTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeTheme:I
 
-    sget v0, Lzic;->actionModeWebSearchDrawable:I
+    sget v0, Lgkc;->actionModeWebSearchDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionModeWebSearchDrawable:I
 
-    sget v0, Lzic;->actionOverflowButtonStyle:I
+    sget v0, Lgkc;->actionOverflowButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionOverflowButtonStyle:I
 
-    sget v0, Lzic;->actionOverflowMenuStyle:I
+    sget v0, Lgkc;->actionOverflowMenuStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionOverflowMenuStyle:I
 
-    sget v0, Lzic;->actionProviderClass:I
+    sget v0, Lgkc;->actionProviderClass:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionProviderClass:I
 
-    sget v0, Lzic;->actionTextColorAlpha:I
+    sget v0, Lgkc;->actionTextColorAlpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionTextColorAlpha:I
 
-    sget v0, Lzic;->actionViewClass:I
+    sget v0, Lgkc;->actionViewClass:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->actionViewClass:I
 
-    sget v0, Lzic;->activeIndicatorLabelPadding:I
+    sget v0, Lgkc;->activeIndicatorLabelPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->activeIndicatorLabelPadding:I
 
-    sget v0, Lzic;->activityChooserViewStyle:I
+    sget v0, Lgkc;->activityChooserViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->activityChooserViewStyle:I
 
-    sget v0, Lzic;->addElevationShadow:I
+    sget v0, Lgkc;->addElevationShadow:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->addElevationShadow:I
 
-    sget v0, Lzic;->alertDialogButtonGroupStyle:I
+    sget v0, Lgkc;->alertDialogButtonGroupStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alertDialogButtonGroupStyle:I
 
-    sget v0, Lzic;->alertDialogCenterButtons:I
+    sget v0, Lgkc;->alertDialogCenterButtons:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alertDialogCenterButtons:I
 
-    sget v0, Lzic;->alertDialogStyle:I
+    sget v0, Lgkc;->alertDialogStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alertDialogStyle:I
 
-    sget v0, Lzic;->alertDialogTheme:I
+    sget v0, Lgkc;->alertDialogTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alertDialogTheme:I
 
-    sget v0, Lzic;->allowStacking:I
+    sget v0, Lgkc;->allowStacking:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->allowStacking:I
 
-    sget v0, Lzic;->alpha:I
+    sget v0, Lgkc;->alpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alpha:I
 
-    sget v0, Lzic;->alphabeticModifiers:I
+    sget v0, Lgkc;->alphabeticModifiers:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->alphabeticModifiers:I
 
-    sget v0, Lzic;->altSrc:I
+    sget v0, Lgkc;->altSrc:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->altSrc:I
 
-    sget v0, Lzic;->animateMenuItems:I
+    sget v0, Lgkc;->animateMenuItems:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->animateMenuItems:I
 
-    sget v0, Lzic;->animateNavigationIcon:I
+    sget v0, Lgkc;->animateNavigationIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->animateNavigationIcon:I
 
-    sget v0, Lzic;->animate_relativeTo:I
+    sget v0, Lgkc;->animate_relativeTo:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->animate_relativeTo:I
 
-    sget v0, Lzic;->animationMode:I
+    sget v0, Lgkc;->animationMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->animationMode:I
 
-    sget v0, Lzic;->appBarLayoutStyle:I
+    sget v0, Lgkc;->appBarLayoutStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->appBarLayoutStyle:I
 
-    sget v0, Lzic;->applyMotionScene:I
+    sget v0, Lgkc;->applyMotionScene:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->applyMotionScene:I
 
-    sget v0, Lzic;->arcMode:I
+    sget v0, Lgkc;->arcMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->arcMode:I
 
-    sget v0, Lzic;->arrowHeadLength:I
+    sget v0, Lgkc;->arrowHeadLength:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->arrowHeadLength:I
 
-    sget v0, Lzic;->arrowShaftLength:I
+    sget v0, Lgkc;->arrowShaftLength:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->arrowShaftLength:I
 
-    sget v0, Lzic;->attributeName:I
+    sget v0, Lgkc;->attributeName:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->attributeName:I
 
-    sget v0, Lzic;->autoAdjustToWithinGrandparentBounds:I
+    sget v0, Lgkc;->autoAdjustToWithinGrandparentBounds:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoAdjustToWithinGrandparentBounds:I
 
-    sget v0, Lzic;->autoCompleteTextViewStyle:I
+    sget v0, Lgkc;->autoCompleteTextViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoCompleteTextViewStyle:I
 
-    sget v0, Lzic;->autoShowKeyboard:I
+    sget v0, Lgkc;->autoShowKeyboard:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoShowKeyboard:I
 
-    sget v0, Lzic;->autoSizeMaxTextSize:I
+    sget v0, Lgkc;->autoSizeMaxTextSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoSizeMaxTextSize:I
 
-    sget v0, Lzic;->autoSizeMinTextSize:I
+    sget v0, Lgkc;->autoSizeMinTextSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoSizeMinTextSize:I
 
-    sget v0, Lzic;->autoSizePresetSizes:I
+    sget v0, Lgkc;->autoSizePresetSizes:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoSizePresetSizes:I
 
-    sget v0, Lzic;->autoSizeStepGranularity:I
+    sget v0, Lgkc;->autoSizeStepGranularity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoSizeStepGranularity:I
 
-    sget v0, Lzic;->autoSizeTextType:I
+    sget v0, Lgkc;->autoSizeTextType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoSizeTextType:I
 
-    sget v0, Lzic;->autoTransition:I
+    sget v0, Lgkc;->autoTransition:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->autoTransition:I
 
-    sget v0, Lzic;->backHandlingEnabled:I
+    sget v0, Lgkc;->backHandlingEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backHandlingEnabled:I
 
-    sget v0, Lzic;->background:I
+    sget v0, Lgkc;->background:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->background:I
 
-    sget v0, Lzic;->backgroundColor:I
+    sget v0, Lgkc;->backgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundColor:I
 
-    sget v0, Lzic;->backgroundInsetBottom:I
+    sget v0, Lgkc;->backgroundInsetBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundInsetBottom:I
 
-    sget v0, Lzic;->backgroundInsetEnd:I
+    sget v0, Lgkc;->backgroundInsetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundInsetEnd:I
 
-    sget v0, Lzic;->backgroundInsetStart:I
+    sget v0, Lgkc;->backgroundInsetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundInsetStart:I
 
-    sget v0, Lzic;->backgroundInsetTop:I
+    sget v0, Lgkc;->backgroundInsetTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundInsetTop:I
 
-    sget v0, Lzic;->backgroundOverlayColorAlpha:I
+    sget v0, Lgkc;->backgroundOverlayColorAlpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundOverlayColorAlpha:I
 
-    sget v0, Lzic;->backgroundSplit:I
+    sget v0, Lgkc;->backgroundSplit:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundSplit:I
 
-    sget v0, Lzic;->backgroundStacked:I
+    sget v0, Lgkc;->backgroundStacked:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundStacked:I
 
-    sget v0, Lzic;->backgroundTint:I
+    sget v0, Lgkc;->backgroundTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundTint:I
 
-    sget v0, Lzic;->backgroundTintMode:I
+    sget v0, Lgkc;->backgroundTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->backgroundTintMode:I
 
-    sget v0, Lzic;->badgeGravity:I
+    sget v0, Lgkc;->badgeGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeGravity:I
 
-    sget v0, Lzic;->badgeHeight:I
+    sget v0, Lgkc;->badgeHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeHeight:I
 
-    sget v0, Lzic;->badgeRadius:I
+    sget v0, Lgkc;->badgeRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeRadius:I
 
-    sget v0, Lzic;->badgeShapeAppearance:I
+    sget v0, Lgkc;->badgeShapeAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeShapeAppearance:I
 
-    sget v0, Lzic;->badgeShapeAppearanceOverlay:I
+    sget v0, Lgkc;->badgeShapeAppearanceOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeShapeAppearanceOverlay:I
 
-    sget v0, Lzic;->badgeStyle:I
+    sget v0, Lgkc;->badgeStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeStyle:I
 
-    sget v0, Lzic;->badgeText:I
+    sget v0, Lgkc;->badgeText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeText:I
 
-    sget v0, Lzic;->badgeTextAppearance:I
+    sget v0, Lgkc;->badgeTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeTextAppearance:I
 
-    sget v0, Lzic;->badgeTextColor:I
+    sget v0, Lgkc;->badgeTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeTextColor:I
 
-    sget v0, Lzic;->badgeVerticalPadding:I
+    sget v0, Lgkc;->badgeVerticalPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeVerticalPadding:I
 
-    sget v0, Lzic;->badgeWidePadding:I
+    sget v0, Lgkc;->badgeWidePadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWidePadding:I
 
-    sget v0, Lzic;->badgeWidth:I
+    sget v0, Lgkc;->badgeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWidth:I
 
-    sget v0, Lzic;->badgeWithTextHeight:I
+    sget v0, Lgkc;->badgeWithTextHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWithTextHeight:I
 
-    sget v0, Lzic;->badgeWithTextRadius:I
+    sget v0, Lgkc;->badgeWithTextRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWithTextRadius:I
 
-    sget v0, Lzic;->badgeWithTextShapeAppearance:I
+    sget v0, Lgkc;->badgeWithTextShapeAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWithTextShapeAppearance:I
 
-    sget v0, Lzic;->badgeWithTextShapeAppearanceOverlay:I
+    sget v0, Lgkc;->badgeWithTextShapeAppearanceOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWithTextShapeAppearanceOverlay:I
 
-    sget v0, Lzic;->badgeWithTextWidth:I
+    sget v0, Lgkc;->badgeWithTextWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->badgeWithTextWidth:I
 
-    sget v0, Lzic;->barLength:I
+    sget v0, Lgkc;->barLength:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->barLength:I
 
-    sget v0, Lzic;->barrierAllowsGoneWidgets:I
+    sget v0, Lgkc;->barrierAllowsGoneWidgets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->barrierAllowsGoneWidgets:I
 
-    sget v0, Lzic;->barrierDirection:I
+    sget v0, Lgkc;->barrierDirection:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->barrierDirection:I
 
-    sget v0, Lzic;->barrierMargin:I
+    sget v0, Lgkc;->barrierMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->barrierMargin:I
 
-    sget v0, Lzic;->behavior_autoHide:I
+    sget v0, Lgkc;->behavior_autoHide:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_autoHide:I
 
-    sget v0, Lzic;->behavior_autoShrink:I
+    sget v0, Lgkc;->behavior_autoShrink:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_autoShrink:I
 
-    sget v0, Lzic;->behavior_draggable:I
+    sget v0, Lgkc;->behavior_draggable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_draggable:I
 
-    sget v0, Lzic;->behavior_expandedOffset:I
+    sget v0, Lgkc;->behavior_expandedOffset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_expandedOffset:I
 
-    sget v0, Lzic;->behavior_fitToContents:I
+    sget v0, Lgkc;->behavior_fitToContents:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_fitToContents:I
 
-    sget v0, Lzic;->behavior_halfExpandedRatio:I
+    sget v0, Lgkc;->behavior_halfExpandedRatio:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_halfExpandedRatio:I
 
-    sget v0, Lzic;->behavior_hideable:I
+    sget v0, Lgkc;->behavior_hideable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_hideable:I
 
-    sget v0, Lzic;->behavior_overlapTop:I
+    sget v0, Lgkc;->behavior_overlapTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_overlapTop:I
 
-    sget v0, Lzic;->behavior_peekHeight:I
+    sget v0, Lgkc;->behavior_peekHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_peekHeight:I
 
-    sget v0, Lzic;->behavior_saveFlags:I
+    sget v0, Lgkc;->behavior_saveFlags:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_saveFlags:I
 
-    sget v0, Lzic;->behavior_significantVelocityThreshold:I
+    sget v0, Lgkc;->behavior_significantVelocityThreshold:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_significantVelocityThreshold:I
 
-    sget v0, Lzic;->behavior_skipCollapsed:I
+    sget v0, Lgkc;->behavior_skipCollapsed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->behavior_skipCollapsed:I
 
-    sget v0, Lzic;->borderWidth:I
+    sget v0, Lgkc;->borderWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->borderWidth:I
 
-    sget v0, Lzic;->borderlessButtonStyle:I
+    sget v0, Lgkc;->borderlessButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->borderlessButtonStyle:I
 
-    sget v0, Lzic;->bottomAppBarStyle:I
+    sget v0, Lgkc;->bottomAppBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomAppBarStyle:I
 
-    sget v0, Lzic;->bottomInsetScrimEnabled:I
+    sget v0, Lgkc;->bottomInsetScrimEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomInsetScrimEnabled:I
 
-    sget v0, Lzic;->bottomNavigationStyle:I
+    sget v0, Lgkc;->bottomNavigationStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomNavigationStyle:I
 
-    sget v0, Lzic;->bottomSheetDialogTheme:I
+    sget v0, Lgkc;->bottomSheetDialogTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomSheetDialogTheme:I
 
-    sget v0, Lzic;->bottomSheetDragHandleStyle:I
+    sget v0, Lgkc;->bottomSheetDragHandleStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomSheetDragHandleStyle:I
 
-    sget v0, Lzic;->bottomSheetStyle:I
+    sget v0, Lgkc;->bottomSheetStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->bottomSheetStyle:I
 
-    sget v0, Lzic;->boxBackgroundColor:I
+    sget v0, Lgkc;->boxBackgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxBackgroundColor:I
 
-    sget v0, Lzic;->boxBackgroundMode:I
+    sget v0, Lgkc;->boxBackgroundMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxBackgroundMode:I
 
-    sget v0, Lzic;->boxCollapsedPaddingTop:I
+    sget v0, Lgkc;->boxCollapsedPaddingTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxCollapsedPaddingTop:I
 
-    sget v0, Lzic;->boxCornerRadiusBottomEnd:I
+    sget v0, Lgkc;->boxCornerRadiusBottomEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxCornerRadiusBottomEnd:I
 
-    sget v0, Lzic;->boxCornerRadiusBottomStart:I
+    sget v0, Lgkc;->boxCornerRadiusBottomStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxCornerRadiusBottomStart:I
 
-    sget v0, Lzic;->boxCornerRadiusTopEnd:I
+    sget v0, Lgkc;->boxCornerRadiusTopEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxCornerRadiusTopEnd:I
 
-    sget v0, Lzic;->boxCornerRadiusTopStart:I
+    sget v0, Lgkc;->boxCornerRadiusTopStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxCornerRadiusTopStart:I
 
-    sget v0, Lzic;->boxStrokeColor:I
+    sget v0, Lgkc;->boxStrokeColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxStrokeColor:I
 
-    sget v0, Lzic;->boxStrokeErrorColor:I
+    sget v0, Lgkc;->boxStrokeErrorColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxStrokeErrorColor:I
 
-    sget v0, Lzic;->boxStrokeWidth:I
+    sget v0, Lgkc;->boxStrokeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxStrokeWidth:I
 
-    sget v0, Lzic;->boxStrokeWidthFocused:I
+    sget v0, Lgkc;->boxStrokeWidthFocused:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->boxStrokeWidthFocused:I
 
-    sget v0, Lzic;->brightness:I
+    sget v0, Lgkc;->brightness:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->brightness:I
 
-    sget v0, Lzic;->buttonBarButtonStyle:I
+    sget v0, Lgkc;->buttonBarButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonBarButtonStyle:I
 
-    sget v0, Lzic;->buttonBarNegativeButtonStyle:I
+    sget v0, Lgkc;->buttonBarNegativeButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonBarNegativeButtonStyle:I
 
-    sget v0, Lzic;->buttonBarNeutralButtonStyle:I
+    sget v0, Lgkc;->buttonBarNeutralButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonBarNeutralButtonStyle:I
 
-    sget v0, Lzic;->buttonBarPositiveButtonStyle:I
+    sget v0, Lgkc;->buttonBarPositiveButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonBarPositiveButtonStyle:I
 
-    sget v0, Lzic;->buttonBarStyle:I
+    sget v0, Lgkc;->buttonBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonBarStyle:I
 
-    sget v0, Lzic;->buttonCompat:I
+    sget v0, Lgkc;->buttonCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonCompat:I
 
-    sget v0, Lzic;->buttonGravity:I
+    sget v0, Lgkc;->buttonGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonGravity:I
 
-    sget v0, Lzic;->buttonIcon:I
+    sget v0, Lgkc;->buttonIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonIcon:I
 
-    sget v0, Lzic;->buttonIconDimen:I
+    sget v0, Lgkc;->buttonIconDimen:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonIconDimen:I
 
-    sget v0, Lzic;->buttonIconTint:I
+    sget v0, Lgkc;->buttonIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonIconTint:I
 
-    sget v0, Lzic;->buttonIconTintMode:I
+    sget v0, Lgkc;->buttonIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonIconTintMode:I
 
-    sget v0, Lzic;->buttonPanelSideLayout:I
+    sget v0, Lgkc;->buttonPanelSideLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonPanelSideLayout:I
 
-    sget v0, Lzic;->buttonStyle:I
+    sget v0, Lgkc;->buttonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonStyle:I
 
-    sget v0, Lzic;->buttonStyleSmall:I
+    sget v0, Lgkc;->buttonStyleSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonStyleSmall:I
 
-    sget v0, Lzic;->buttonTint:I
+    sget v0, Lgkc;->buttonTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonTint:I
 
-    sget v0, Lzic;->buttonTintMode:I
+    sget v0, Lgkc;->buttonTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->buttonTintMode:I
 
-    sget v0, Lzic;->cardBackgroundColor:I
+    sget v0, Lgkc;->cardBackgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardBackgroundColor:I
 
-    sget v0, Lzic;->cardCornerRadius:I
+    sget v0, Lgkc;->cardCornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardCornerRadius:I
 
-    sget v0, Lzic;->cardElevation:I
+    sget v0, Lgkc;->cardElevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardElevation:I
 
-    sget v0, Lzic;->cardForegroundColor:I
+    sget v0, Lgkc;->cardForegroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardForegroundColor:I
 
-    sget v0, Lzic;->cardMaxElevation:I
+    sget v0, Lgkc;->cardMaxElevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardMaxElevation:I
 
-    sget v0, Lzic;->cardPreventCornerOverlap:I
+    sget v0, Lgkc;->cardPreventCornerOverlap:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardPreventCornerOverlap:I
 
-    sget v0, Lzic;->cardUseCompatPadding:I
+    sget v0, Lgkc;->cardUseCompatPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardUseCompatPadding:I
 
-    sget v0, Lzic;->cardViewStyle:I
+    sget v0, Lgkc;->cardViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cardViewStyle:I
 
-    sget v0, Lzic;->carousel_alignment:I
+    sget v0, Lgkc;->carousel_alignment:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->carousel_alignment:I
 
-    sget v0, Lzic;->centerIfNoTextEnabled:I
+    sget v0, Lgkc;->centerIfNoTextEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->centerIfNoTextEnabled:I
 
-    sget v0, Lzic;->chainUseRtl:I
+    sget v0, Lgkc;->chainUseRtl:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chainUseRtl:I
 
-    sget v0, Lzic;->checkMarkCompat:I
+    sget v0, Lgkc;->checkMarkCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkMarkCompat:I
 
-    sget v0, Lzic;->checkMarkTint:I
+    sget v0, Lgkc;->checkMarkTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkMarkTint:I
 
-    sget v0, Lzic;->checkMarkTintMode:I
+    sget v0, Lgkc;->checkMarkTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkMarkTintMode:I
 
-    sget v0, Lzic;->checkboxStyle:I
+    sget v0, Lgkc;->checkboxStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkboxStyle:I
 
-    sget v0, Lzic;->checkedButton:I
+    sget v0, Lgkc;->checkedButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedButton:I
 
-    sget v0, Lzic;->checkedChip:I
+    sget v0, Lgkc;->checkedChip:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedChip:I
 
-    sget v0, Lzic;->checkedIcon:I
+    sget v0, Lgkc;->checkedIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIcon:I
 
-    sget v0, Lzic;->checkedIconEnabled:I
+    sget v0, Lgkc;->checkedIconEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconEnabled:I
 
-    sget v0, Lzic;->checkedIconGravity:I
+    sget v0, Lgkc;->checkedIconGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconGravity:I
 
-    sget v0, Lzic;->checkedIconMargin:I
+    sget v0, Lgkc;->checkedIconMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconMargin:I
 
-    sget v0, Lzic;->checkedIconSize:I
+    sget v0, Lgkc;->checkedIconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconSize:I
 
-    sget v0, Lzic;->checkedIconTint:I
+    sget v0, Lgkc;->checkedIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconTint:I
 
-    sget v0, Lzic;->checkedIconVisible:I
+    sget v0, Lgkc;->checkedIconVisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedIconVisible:I
 
-    sget v0, Lzic;->checkedState:I
+    sget v0, Lgkc;->checkedState:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedState:I
 
-    sget v0, Lzic;->checkedTextViewStyle:I
+    sget v0, Lgkc;->checkedTextViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->checkedTextViewStyle:I
 
-    sget v0, Lzic;->chipBackgroundColor:I
+    sget v0, Lgkc;->chipBackgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipBackgroundColor:I
 
-    sget v0, Lzic;->chipCornerRadius:I
+    sget v0, Lgkc;->chipCornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipCornerRadius:I
 
-    sget v0, Lzic;->chipEndPadding:I
+    sget v0, Lgkc;->chipEndPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipEndPadding:I
 
-    sget v0, Lzic;->chipGroupStyle:I
+    sget v0, Lgkc;->chipGroupStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipGroupStyle:I
 
-    sget v0, Lzic;->chipIcon:I
+    sget v0, Lgkc;->chipIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipIcon:I
 
-    sget v0, Lzic;->chipIconEnabled:I
+    sget v0, Lgkc;->chipIconEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipIconEnabled:I
 
-    sget v0, Lzic;->chipIconSize:I
+    sget v0, Lgkc;->chipIconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipIconSize:I
 
-    sget v0, Lzic;->chipIconTint:I
+    sget v0, Lgkc;->chipIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipIconTint:I
 
-    sget v0, Lzic;->chipIconVisible:I
+    sget v0, Lgkc;->chipIconVisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipIconVisible:I
 
-    sget v0, Lzic;->chipMinHeight:I
+    sget v0, Lgkc;->chipMinHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipMinHeight:I
 
-    sget v0, Lzic;->chipMinTouchTargetSize:I
+    sget v0, Lgkc;->chipMinTouchTargetSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipMinTouchTargetSize:I
 
-    sget v0, Lzic;->chipSpacing:I
+    sget v0, Lgkc;->chipSpacing:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipSpacing:I
 
-    sget v0, Lzic;->chipSpacingHorizontal:I
+    sget v0, Lgkc;->chipSpacingHorizontal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipSpacingHorizontal:I
 
-    sget v0, Lzic;->chipSpacingVertical:I
+    sget v0, Lgkc;->chipSpacingVertical:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipSpacingVertical:I
 
-    sget v0, Lzic;->chipStandaloneStyle:I
+    sget v0, Lgkc;->chipStandaloneStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipStandaloneStyle:I
 
-    sget v0, Lzic;->chipStartPadding:I
+    sget v0, Lgkc;->chipStartPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipStartPadding:I
 
-    sget v0, Lzic;->chipStrokeColor:I
+    sget v0, Lgkc;->chipStrokeColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipStrokeColor:I
 
-    sget v0, Lzic;->chipStrokeWidth:I
+    sget v0, Lgkc;->chipStrokeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipStrokeWidth:I
 
-    sget v0, Lzic;->chipStyle:I
+    sget v0, Lgkc;->chipStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipStyle:I
 
-    sget v0, Lzic;->chipSurfaceColor:I
+    sget v0, Lgkc;->chipSurfaceColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->chipSurfaceColor:I
 
-    sget v0, Lzic;->circleRadius:I
+    sget v0, Lgkc;->circleRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->circleRadius:I
 
-    sget v0, Lzic;->circularProgressIndicatorStyle:I
+    sget v0, Lgkc;->circularProgressIndicatorStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->circularProgressIndicatorStyle:I
 
-    sget v0, Lzic;->clickAction:I
+    sget v0, Lgkc;->clickAction:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->clickAction:I
 
-    sget v0, Lzic;->clockFaceBackgroundColor:I
+    sget v0, Lgkc;->clockFaceBackgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->clockFaceBackgroundColor:I
 
-    sget v0, Lzic;->clockHandColor:I
+    sget v0, Lgkc;->clockHandColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->clockHandColor:I
 
-    sget v0, Lzic;->clockIcon:I
+    sget v0, Lgkc;->clockIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->clockIcon:I
 
-    sget v0, Lzic;->clockNumberTextColor:I
+    sget v0, Lgkc;->clockNumberTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->clockNumberTextColor:I
 
-    sget v0, Lzic;->closeIcon:I
+    sget v0, Lgkc;->closeIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIcon:I
 
-    sget v0, Lzic;->closeIconEnabled:I
+    sget v0, Lgkc;->closeIconEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconEnabled:I
 
-    sget v0, Lzic;->closeIconEndPadding:I
+    sget v0, Lgkc;->closeIconEndPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconEndPadding:I
 
-    sget v0, Lzic;->closeIconSize:I
+    sget v0, Lgkc;->closeIconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconSize:I
 
-    sget v0, Lzic;->closeIconStartPadding:I
+    sget v0, Lgkc;->closeIconStartPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconStartPadding:I
 
-    sget v0, Lzic;->closeIconTint:I
+    sget v0, Lgkc;->closeIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconTint:I
 
-    sget v0, Lzic;->closeIconVisible:I
+    sget v0, Lgkc;->closeIconVisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeIconVisible:I
 
-    sget v0, Lzic;->closeItemLayout:I
+    sget v0, Lgkc;->closeItemLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->closeItemLayout:I
 
-    sget v0, Lzic;->collapseContentDescription:I
+    sget v0, Lgkc;->collapseContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapseContentDescription:I
 
-    sget v0, Lzic;->collapseIcon:I
+    sget v0, Lgkc;->collapseIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapseIcon:I
 
-    sget v0, Lzic;->collapsedSize:I
+    sget v0, Lgkc;->collapsedSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsedSize:I
 
-    sget v0, Lzic;->collapsedTitleGravity:I
+    sget v0, Lgkc;->collapsedTitleGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsedTitleGravity:I
 
-    sget v0, Lzic;->collapsedTitleTextAppearance:I
+    sget v0, Lgkc;->collapsedTitleTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsedTitleTextAppearance:I
 
-    sget v0, Lzic;->collapsedTitleTextColor:I
+    sget v0, Lgkc;->collapsedTitleTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsedTitleTextColor:I
 
-    sget v0, Lzic;->collapsingToolbarLayoutLargeSize:I
+    sget v0, Lgkc;->collapsingToolbarLayoutLargeSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsingToolbarLayoutLargeSize:I
 
-    sget v0, Lzic;->collapsingToolbarLayoutLargeStyle:I
+    sget v0, Lgkc;->collapsingToolbarLayoutLargeStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsingToolbarLayoutLargeStyle:I
 
-    sget v0, Lzic;->collapsingToolbarLayoutMediumSize:I
+    sget v0, Lgkc;->collapsingToolbarLayoutMediumSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsingToolbarLayoutMediumSize:I
 
-    sget v0, Lzic;->collapsingToolbarLayoutMediumStyle:I
+    sget v0, Lgkc;->collapsingToolbarLayoutMediumStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsingToolbarLayoutMediumStyle:I
 
-    sget v0, Lzic;->collapsingToolbarLayoutStyle:I
+    sget v0, Lgkc;->collapsingToolbarLayoutStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->collapsingToolbarLayoutStyle:I
 
-    sget v0, Lzic;->color:I
+    sget v0, Lgkc;->color:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->color:I
 
-    sget v0, Lzic;->colorAccent:I
+    sget v0, Lgkc;->colorAccent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorAccent:I
 
-    sget v0, Lzic;->colorBackgroundFloating:I
+    sget v0, Lgkc;->colorBackgroundFloating:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorBackgroundFloating:I
 
-    sget v0, Lzic;->colorButtonNormal:I
+    sget v0, Lgkc;->colorButtonNormal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorButtonNormal:I
 
-    sget v0, Lzic;->colorContainer:I
+    sget v0, Lgkc;->colorContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorContainer:I
 
-    sget v0, Lzic;->colorControlActivated:I
+    sget v0, Lgkc;->colorControlActivated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorControlActivated:I
 
-    sget v0, Lzic;->colorControlHighlight:I
+    sget v0, Lgkc;->colorControlHighlight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorControlHighlight:I
 
-    sget v0, Lzic;->colorControlNormal:I
+    sget v0, Lgkc;->colorControlNormal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorControlNormal:I
 
-    sget v0, Lzic;->colorError:I
+    sget v0, Lgkc;->colorError:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorError:I
 
-    sget v0, Lzic;->colorErrorContainer:I
+    sget v0, Lgkc;->colorErrorContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorErrorContainer:I
 
-    sget v0, Lzic;->colorOnBackground:I
+    sget v0, Lgkc;->colorOnBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnBackground:I
 
-    sget v0, Lzic;->colorOnContainer:I
+    sget v0, Lgkc;->colorOnContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnContainer:I
 
-    sget v0, Lzic;->colorOnContainerUnchecked:I
+    sget v0, Lgkc;->colorOnContainerUnchecked:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnContainerUnchecked:I
 
-    sget v0, Lzic;->colorOnError:I
+    sget v0, Lgkc;->colorOnError:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnError:I
 
-    sget v0, Lzic;->colorOnErrorContainer:I
+    sget v0, Lgkc;->colorOnErrorContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnErrorContainer:I
 
-    sget v0, Lzic;->colorOnPrimary:I
+    sget v0, Lgkc;->colorOnPrimary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnPrimary:I
 
-    sget v0, Lzic;->colorOnPrimaryContainer:I
+    sget v0, Lgkc;->colorOnPrimaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnPrimaryContainer:I
 
-    sget v0, Lzic;->colorOnPrimaryFixed:I
+    sget v0, Lgkc;->colorOnPrimaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnPrimaryFixed:I
 
-    sget v0, Lzic;->colorOnPrimaryFixedVariant:I
+    sget v0, Lgkc;->colorOnPrimaryFixedVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnPrimaryFixedVariant:I
 
-    sget v0, Lzic;->colorOnPrimarySurface:I
+    sget v0, Lgkc;->colorOnPrimarySurface:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnPrimarySurface:I
 
-    sget v0, Lzic;->colorOnSecondary:I
+    sget v0, Lgkc;->colorOnSecondary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSecondary:I
 
-    sget v0, Lzic;->colorOnSecondaryContainer:I
+    sget v0, Lgkc;->colorOnSecondaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSecondaryContainer:I
 
-    sget v0, Lzic;->colorOnSecondaryFixed:I
+    sget v0, Lgkc;->colorOnSecondaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSecondaryFixed:I
 
-    sget v0, Lzic;->colorOnSecondaryFixedVariant:I
+    sget v0, Lgkc;->colorOnSecondaryFixedVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSecondaryFixedVariant:I
 
-    sget v0, Lzic;->colorOnSurface:I
+    sget v0, Lgkc;->colorOnSurface:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSurface:I
 
-    sget v0, Lzic;->colorOnSurfaceInverse:I
+    sget v0, Lgkc;->colorOnSurfaceInverse:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSurfaceInverse:I
 
-    sget v0, Lzic;->colorOnSurfaceVariant:I
+    sget v0, Lgkc;->colorOnSurfaceVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnSurfaceVariant:I
 
-    sget v0, Lzic;->colorOnTertiary:I
+    sget v0, Lgkc;->colorOnTertiary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnTertiary:I
 
-    sget v0, Lzic;->colorOnTertiaryContainer:I
+    sget v0, Lgkc;->colorOnTertiaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnTertiaryContainer:I
 
-    sget v0, Lzic;->colorOnTertiaryFixed:I
+    sget v0, Lgkc;->colorOnTertiaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnTertiaryFixed:I
 
-    sget v0, Lzic;->colorOnTertiaryFixedVariant:I
+    sget v0, Lgkc;->colorOnTertiaryFixedVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOnTertiaryFixedVariant:I
 
-    sget v0, Lzic;->colorOutline:I
+    sget v0, Lgkc;->colorOutline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOutline:I
 
-    sget v0, Lzic;->colorOutlineVariant:I
+    sget v0, Lgkc;->colorOutlineVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorOutlineVariant:I
 
-    sget v0, Lzic;->colorPrimary:I
+    sget v0, Lgkc;->colorPrimary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimary:I
 
-    sget v0, Lzic;->colorPrimaryContainer:I
+    sget v0, Lgkc;->colorPrimaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryContainer:I
 
-    sget v0, Lzic;->colorPrimaryDark:I
+    sget v0, Lgkc;->colorPrimaryDark:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryDark:I
 
-    sget v0, Lzic;->colorPrimaryFixed:I
+    sget v0, Lgkc;->colorPrimaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryFixed:I
 
-    sget v0, Lzic;->colorPrimaryFixedDim:I
+    sget v0, Lgkc;->colorPrimaryFixedDim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryFixedDim:I
 
-    sget v0, Lzic;->colorPrimaryInverse:I
+    sget v0, Lgkc;->colorPrimaryInverse:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryInverse:I
 
-    sget v0, Lzic;->colorPrimarySurface:I
+    sget v0, Lgkc;->colorPrimarySurface:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimarySurface:I
 
-    sget v0, Lzic;->colorPrimaryVariant:I
+    sget v0, Lgkc;->colorPrimaryVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorPrimaryVariant:I
 
-    sget v0, Lzic;->colorSecondary:I
+    sget v0, Lgkc;->colorSecondary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSecondary:I
 
-    sget v0, Lzic;->colorSecondaryContainer:I
+    sget v0, Lgkc;->colorSecondaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSecondaryContainer:I
 
-    sget v0, Lzic;->colorSecondaryFixed:I
+    sget v0, Lgkc;->colorSecondaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSecondaryFixed:I
 
-    sget v0, Lzic;->colorSecondaryFixedDim:I
+    sget v0, Lgkc;->colorSecondaryFixedDim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSecondaryFixedDim:I
 
-    sget v0, Lzic;->colorSecondaryVariant:I
+    sget v0, Lgkc;->colorSecondaryVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSecondaryVariant:I
 
-    sget v0, Lzic;->colorSurface:I
+    sget v0, Lgkc;->colorSurface:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurface:I
 
-    sget v0, Lzic;->colorSurfaceBright:I
+    sget v0, Lgkc;->colorSurfaceBright:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceBright:I
 
-    sget v0, Lzic;->colorSurfaceContainer:I
+    sget v0, Lgkc;->colorSurfaceContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceContainer:I
 
-    sget v0, Lzic;->colorSurfaceContainerHigh:I
+    sget v0, Lgkc;->colorSurfaceContainerHigh:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceContainerHigh:I
 
-    sget v0, Lzic;->colorSurfaceContainerHighest:I
+    sget v0, Lgkc;->colorSurfaceContainerHighest:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceContainerHighest:I
 
-    sget v0, Lzic;->colorSurfaceContainerLow:I
+    sget v0, Lgkc;->colorSurfaceContainerLow:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceContainerLow:I
 
-    sget v0, Lzic;->colorSurfaceContainerLowest:I
+    sget v0, Lgkc;->colorSurfaceContainerLowest:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceContainerLowest:I
 
-    sget v0, Lzic;->colorSurfaceDim:I
+    sget v0, Lgkc;->colorSurfaceDim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceDim:I
 
-    sget v0, Lzic;->colorSurfaceInverse:I
+    sget v0, Lgkc;->colorSurfaceInverse:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceInverse:I
 
-    sget v0, Lzic;->colorSurfaceVariant:I
+    sget v0, Lgkc;->colorSurfaceVariant:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSurfaceVariant:I
 
-    sget v0, Lzic;->colorSwitchThumbNormal:I
+    sget v0, Lgkc;->colorSwitchThumbNormal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorSwitchThumbNormal:I
 
-    sget v0, Lzic;->colorTertiary:I
+    sget v0, Lgkc;->colorTertiary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorTertiary:I
 
-    sget v0, Lzic;->colorTertiaryContainer:I
+    sget v0, Lgkc;->colorTertiaryContainer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorTertiaryContainer:I
 
-    sget v0, Lzic;->colorTertiaryFixed:I
+    sget v0, Lgkc;->colorTertiaryFixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorTertiaryFixed:I
 
-    sget v0, Lzic;->colorTertiaryFixedDim:I
+    sget v0, Lgkc;->colorTertiaryFixedDim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->colorTertiaryFixedDim:I
 
-    sget v0, Lzic;->commitIcon:I
+    sget v0, Lgkc;->commitIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->commitIcon:I
 
-    sget v0, Lzic;->compatShadowEnabled:I
+    sget v0, Lgkc;->compatShadowEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->compatShadowEnabled:I
 
-    sget v0, Lzic;->constraintSet:I
+    sget v0, Lgkc;->constraintSet:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->constraintSet:I
 
-    sget v0, Lzic;->constraintSetEnd:I
+    sget v0, Lgkc;->constraintSetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->constraintSetEnd:I
 
-    sget v0, Lzic;->constraintSetStart:I
+    sget v0, Lgkc;->constraintSetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->constraintSetStart:I
 
-    sget v0, Lzic;->constraint_referenced_ids:I
+    sget v0, Lgkc;->constraint_referenced_ids:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->constraint_referenced_ids:I
 
-    sget v0, Lzic;->constraints:I
+    sget v0, Lgkc;->constraints:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->constraints:I
 
-    sget v0, Lzic;->content:I
+    sget v0, Lgkc;->content:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->content:I
 
-    sget v0, Lzic;->contentDescription:I
+    sget v0, Lgkc;->contentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentDescription:I
 
-    sget v0, Lzic;->contentInsetEnd:I
+    sget v0, Lgkc;->contentInsetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetEnd:I
 
-    sget v0, Lzic;->contentInsetEndWithActions:I
+    sget v0, Lgkc;->contentInsetEndWithActions:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetEndWithActions:I
 
-    sget v0, Lzic;->contentInsetLeft:I
+    sget v0, Lgkc;->contentInsetLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetLeft:I
 
-    sget v0, Lzic;->contentInsetRight:I
+    sget v0, Lgkc;->contentInsetRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetRight:I
 
-    sget v0, Lzic;->contentInsetStart:I
+    sget v0, Lgkc;->contentInsetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetStart:I
 
-    sget v0, Lzic;->contentInsetStartWithNavigation:I
+    sget v0, Lgkc;->contentInsetStartWithNavigation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentInsetStartWithNavigation:I
 
-    sget v0, Lzic;->contentPadding:I
+    sget v0, Lgkc;->contentPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPadding:I
 
-    sget v0, Lzic;->contentPaddingBottom:I
+    sget v0, Lgkc;->contentPaddingBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingBottom:I
 
-    sget v0, Lzic;->contentPaddingEnd:I
+    sget v0, Lgkc;->contentPaddingEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingEnd:I
 
-    sget v0, Lzic;->contentPaddingLeft:I
+    sget v0, Lgkc;->contentPaddingLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingLeft:I
 
-    sget v0, Lzic;->contentPaddingRight:I
+    sget v0, Lgkc;->contentPaddingRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingRight:I
 
-    sget v0, Lzic;->contentPaddingStart:I
+    sget v0, Lgkc;->contentPaddingStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingStart:I
 
-    sget v0, Lzic;->contentPaddingTop:I
+    sget v0, Lgkc;->contentPaddingTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentPaddingTop:I
 
-    sget v0, Lzic;->contentScrim:I
+    sget v0, Lgkc;->contentScrim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contentScrim:I
 
-    sget v0, Lzic;->contrast:I
+    sget v0, Lgkc;->contrast:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->contrast:I
 
-    sget v0, Lzic;->controlBackground:I
+    sget v0, Lgkc;->controlBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->controlBackground:I
 
-    sget v0, Lzic;->coordinatorLayoutStyle:I
+    sget v0, Lgkc;->coordinatorLayoutStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->coordinatorLayoutStyle:I
 
-    sget v0, Lzic;->coplanarSiblingViewId:I
+    sget v0, Lgkc;->coplanarSiblingViewId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->coplanarSiblingViewId:I
 
-    sget v0, Lzic;->cornerFamily:I
+    sget v0, Lgkc;->cornerFamily:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerFamily:I
 
-    sget v0, Lzic;->cornerFamilyBottomLeft:I
+    sget v0, Lgkc;->cornerFamilyBottomLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerFamilyBottomLeft:I
 
-    sget v0, Lzic;->cornerFamilyBottomRight:I
+    sget v0, Lgkc;->cornerFamilyBottomRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerFamilyBottomRight:I
 
-    sget v0, Lzic;->cornerFamilyTopLeft:I
+    sget v0, Lgkc;->cornerFamilyTopLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerFamilyTopLeft:I
 
-    sget v0, Lzic;->cornerFamilyTopRight:I
+    sget v0, Lgkc;->cornerFamilyTopRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerFamilyTopRight:I
 
-    sget v0, Lzic;->cornerRadius:I
+    sget v0, Lgkc;->cornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerRadius:I
 
-    sget v0, Lzic;->cornerSize:I
+    sget v0, Lgkc;->cornerSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerSize:I
 
-    sget v0, Lzic;->cornerSizeBottomLeft:I
+    sget v0, Lgkc;->cornerSizeBottomLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerSizeBottomLeft:I
 
-    sget v0, Lzic;->cornerSizeBottomRight:I
+    sget v0, Lgkc;->cornerSizeBottomRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerSizeBottomRight:I
 
-    sget v0, Lzic;->cornerSizeTopLeft:I
+    sget v0, Lgkc;->cornerSizeTopLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerSizeTopLeft:I
 
-    sget v0, Lzic;->cornerSizeTopRight:I
+    sget v0, Lgkc;->cornerSizeTopRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cornerSizeTopRight:I
 
-    sget v0, Lzic;->counterEnabled:I
+    sget v0, Lgkc;->counterEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterEnabled:I
 
-    sget v0, Lzic;->counterMaxLength:I
+    sget v0, Lgkc;->counterMaxLength:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterMaxLength:I
 
-    sget v0, Lzic;->counterOverflowTextAppearance:I
+    sget v0, Lgkc;->counterOverflowTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterOverflowTextAppearance:I
 
-    sget v0, Lzic;->counterOverflowTextColor:I
+    sget v0, Lgkc;->counterOverflowTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterOverflowTextColor:I
 
-    sget v0, Lzic;->counterTextAppearance:I
+    sget v0, Lgkc;->counterTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterTextAppearance:I
 
-    sget v0, Lzic;->counterTextColor:I
+    sget v0, Lgkc;->counterTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->counterTextColor:I
 
-    sget v0, Lzic;->crossfade:I
+    sget v0, Lgkc;->crossfade:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->crossfade:I
 
-    sget v0, Lzic;->currentState:I
+    sget v0, Lgkc;->currentState:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->currentState:I
 
-    sget v0, Lzic;->cursorColor:I
+    sget v0, Lgkc;->cursorColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cursorColor:I
 
-    sget v0, Lzic;->cursorErrorColor:I
+    sget v0, Lgkc;->cursorErrorColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->cursorErrorColor:I
 
-    sget v0, Lzic;->curveFit:I
+    sget v0, Lgkc;->curveFit:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->curveFit:I
 
-    sget v0, Lzic;->customBoolean:I
+    sget v0, Lgkc;->customBoolean:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customBoolean:I
 
-    sget v0, Lzic;->customColorDrawableValue:I
+    sget v0, Lgkc;->customColorDrawableValue:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customColorDrawableValue:I
 
-    sget v0, Lzic;->customColorValue:I
+    sget v0, Lgkc;->customColorValue:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customColorValue:I
 
-    sget v0, Lzic;->customDimension:I
+    sget v0, Lgkc;->customDimension:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customDimension:I
 
-    sget v0, Lzic;->customFloatValue:I
+    sget v0, Lgkc;->customFloatValue:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customFloatValue:I
 
-    sget v0, Lzic;->customIntegerValue:I
+    sget v0, Lgkc;->customIntegerValue:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customIntegerValue:I
 
-    sget v0, Lzic;->customNavigationLayout:I
+    sget v0, Lgkc;->customNavigationLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customNavigationLayout:I
 
-    sget v0, Lzic;->customPixelDimension:I
+    sget v0, Lgkc;->customPixelDimension:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customPixelDimension:I
 
-    sget v0, Lzic;->customStringValue:I
+    sget v0, Lgkc;->customStringValue:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->customStringValue:I
 
-    sget v0, Lzic;->dayInvalidStyle:I
+    sget v0, Lgkc;->dayInvalidStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dayInvalidStyle:I
 
-    sget v0, Lzic;->daySelectedStyle:I
+    sget v0, Lgkc;->daySelectedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->daySelectedStyle:I
 
-    sget v0, Lzic;->dayStyle:I
+    sget v0, Lgkc;->dayStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dayStyle:I
 
-    sget v0, Lzic;->dayTodayStyle:I
+    sget v0, Lgkc;->dayTodayStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dayTodayStyle:I
 
-    sget v0, Lzic;->defaultDuration:I
+    sget v0, Lgkc;->defaultDuration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->defaultDuration:I
 
-    sget v0, Lzic;->defaultMarginsEnabled:I
+    sget v0, Lgkc;->defaultMarginsEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->defaultMarginsEnabled:I
 
-    sget v0, Lzic;->defaultQueryHint:I
+    sget v0, Lgkc;->defaultQueryHint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->defaultQueryHint:I
 
-    sget v0, Lzic;->defaultScrollFlagsEnabled:I
+    sget v0, Lgkc;->defaultScrollFlagsEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->defaultScrollFlagsEnabled:I
 
-    sget v0, Lzic;->defaultState:I
+    sget v0, Lgkc;->defaultState:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->defaultState:I
 
-    sget v0, Lzic;->deltaPolarAngle:I
+    sget v0, Lgkc;->deltaPolarAngle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->deltaPolarAngle:I
 
-    sget v0, Lzic;->deltaPolarRadius:I
+    sget v0, Lgkc;->deltaPolarRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->deltaPolarRadius:I
 
-    sget v0, Lzic;->deriveConstraintsFrom:I
+    sget v0, Lgkc;->deriveConstraintsFrom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->deriveConstraintsFrom:I
 
-    sget v0, Lzic;->dialogCornerRadius:I
+    sget v0, Lgkc;->dialogCornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dialogCornerRadius:I
 
-    sget v0, Lzic;->dialogPreferredPadding:I
+    sget v0, Lgkc;->dialogPreferredPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dialogPreferredPadding:I
 
-    sget v0, Lzic;->dialogTheme:I
+    sget v0, Lgkc;->dialogTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dialogTheme:I
 
-    sget v0, Lzic;->displayOptions:I
+    sget v0, Lgkc;->displayOptions:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->displayOptions:I
 
-    sget v0, Lzic;->divider:I
+    sget v0, Lgkc;->divider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->divider:I
 
-    sget v0, Lzic;->dividerColor:I
+    sget v0, Lgkc;->dividerColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerColor:I
 
-    sget v0, Lzic;->dividerHorizontal:I
+    sget v0, Lgkc;->dividerHorizontal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerHorizontal:I
 
-    sget v0, Lzic;->dividerInsetEnd:I
+    sget v0, Lgkc;->dividerInsetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerInsetEnd:I
 
-    sget v0, Lzic;->dividerInsetStart:I
+    sget v0, Lgkc;->dividerInsetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerInsetStart:I
 
-    sget v0, Lzic;->dividerPadding:I
+    sget v0, Lgkc;->dividerPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerPadding:I
 
-    sget v0, Lzic;->dividerThickness:I
+    sget v0, Lgkc;->dividerThickness:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerThickness:I
 
-    sget v0, Lzic;->dividerVertical:I
+    sget v0, Lgkc;->dividerVertical:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dividerVertical:I
 
-    sget v0, Lzic;->dragDirection:I
+    sget v0, Lgkc;->dragDirection:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dragDirection:I
 
-    sget v0, Lzic;->dragScale:I
+    sget v0, Lgkc;->dragScale:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dragScale:I
 
-    sget v0, Lzic;->dragThreshold:I
+    sget v0, Lgkc;->dragThreshold:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dragThreshold:I
 
-    sget v0, Lzic;->drawPath:I
+    sget v0, Lgkc;->drawPath:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawPath:I
 
-    sget v0, Lzic;->drawableBottomCompat:I
+    sget v0, Lgkc;->drawableBottomCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableBottomCompat:I
 
-    sget v0, Lzic;->drawableEndCompat:I
+    sget v0, Lgkc;->drawableEndCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableEndCompat:I
 
-    sget v0, Lzic;->drawableLeftCompat:I
+    sget v0, Lgkc;->drawableLeftCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableLeftCompat:I
 
-    sget v0, Lzic;->drawableRightCompat:I
+    sget v0, Lgkc;->drawableRightCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableRightCompat:I
 
-    sget v0, Lzic;->drawableSize:I
+    sget v0, Lgkc;->drawableSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableSize:I
 
-    sget v0, Lzic;->drawableStartCompat:I
+    sget v0, Lgkc;->drawableStartCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableStartCompat:I
 
-    sget v0, Lzic;->drawableTint:I
+    sget v0, Lgkc;->drawableTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableTint:I
 
-    sget v0, Lzic;->drawableTintMode:I
+    sget v0, Lgkc;->drawableTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableTintMode:I
 
-    sget v0, Lzic;->drawableTopCompat:I
+    sget v0, Lgkc;->drawableTopCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawableTopCompat:I
 
-    sget v0, Lzic;->drawerArrowStyle:I
+    sget v0, Lgkc;->drawerArrowStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawerArrowStyle:I
 
-    sget v0, Lzic;->drawerLayoutCornerSize:I
+    sget v0, Lgkc;->drawerLayoutCornerSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawerLayoutCornerSize:I
 
-    sget v0, Lzic;->drawerLayoutStyle:I
+    sget v0, Lgkc;->drawerLayoutStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->drawerLayoutStyle:I
 
-    sget v0, Lzic;->dropDownBackgroundTint:I
+    sget v0, Lgkc;->dropDownBackgroundTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dropDownBackgroundTint:I
 
-    sget v0, Lzic;->dropDownListViewStyle:I
+    sget v0, Lgkc;->dropDownListViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dropDownListViewStyle:I
 
-    sget v0, Lzic;->dropdownListPreferredItemHeight:I
+    sget v0, Lgkc;->dropdownListPreferredItemHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dropdownListPreferredItemHeight:I
 
-    sget v0, Lzic;->duration:I
+    sget v0, Lgkc;->duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->duration:I
 
-    sget v0, Lzic;->dynamicColorThemeOverlay:I
+    sget v0, Lgkc;->dynamicColorThemeOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->dynamicColorThemeOverlay:I
 
-    sget v0, Lzic;->editTextBackground:I
+    sget v0, Lgkc;->editTextBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->editTextBackground:I
 
-    sget v0, Lzic;->editTextColor:I
+    sget v0, Lgkc;->editTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->editTextColor:I
 
-    sget v0, Lzic;->editTextStyle:I
+    sget v0, Lgkc;->editTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->editTextStyle:I
 
-    sget v0, Lzic;->elevation:I
+    sget v0, Lgkc;->elevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->elevation:I
 
-    sget v0, Lzic;->elevationOverlayAccentColor:I
+    sget v0, Lgkc;->elevationOverlayAccentColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->elevationOverlayAccentColor:I
 
-    sget v0, Lzic;->elevationOverlayColor:I
+    sget v0, Lgkc;->elevationOverlayColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->elevationOverlayColor:I
 
-    sget v0, Lzic;->elevationOverlayEnabled:I
+    sget v0, Lgkc;->elevationOverlayEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->elevationOverlayEnabled:I
 
-    sget v0, Lzic;->emojiCompatEnabled:I
+    sget v0, Lgkc;->emojiCompatEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->emojiCompatEnabled:I
 
-    sget v0, Lzic;->enableEdgeToEdge:I
+    sget v0, Lgkc;->enableEdgeToEdge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->enableEdgeToEdge:I
 
-    sget v0, Lzic;->endIconCheckable:I
+    sget v0, Lgkc;->endIconCheckable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconCheckable:I
 
-    sget v0, Lzic;->endIconContentDescription:I
+    sget v0, Lgkc;->endIconContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconContentDescription:I
 
-    sget v0, Lzic;->endIconDrawable:I
+    sget v0, Lgkc;->endIconDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconDrawable:I
 
-    sget v0, Lzic;->endIconMinSize:I
+    sget v0, Lgkc;->endIconMinSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconMinSize:I
 
-    sget v0, Lzic;->endIconMode:I
+    sget v0, Lgkc;->endIconMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconMode:I
 
-    sget v0, Lzic;->endIconScaleType:I
+    sget v0, Lgkc;->endIconScaleType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconScaleType:I
 
-    sget v0, Lzic;->endIconTint:I
+    sget v0, Lgkc;->endIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconTint:I
 
-    sget v0, Lzic;->endIconTintMode:I
+    sget v0, Lgkc;->endIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->endIconTintMode:I
 
-    sget v0, Lzic;->enforceMaterialTheme:I
+    sget v0, Lgkc;->enforceMaterialTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->enforceMaterialTheme:I
 
-    sget v0, Lzic;->enforceTextAppearance:I
+    sget v0, Lgkc;->enforceTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->enforceTextAppearance:I
 
-    sget v0, Lzic;->ensureMinTouchTargetSize:I
+    sget v0, Lgkc;->ensureMinTouchTargetSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->ensureMinTouchTargetSize:I
 
-    sget v0, Lzic;->errorAccessibilityLabel:I
+    sget v0, Lgkc;->errorAccessibilityLabel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorAccessibilityLabel:I
 
-    sget v0, Lzic;->errorAccessibilityLiveRegion:I
+    sget v0, Lgkc;->errorAccessibilityLiveRegion:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorAccessibilityLiveRegion:I
 
-    sget v0, Lzic;->errorContentDescription:I
+    sget v0, Lgkc;->errorContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorContentDescription:I
 
-    sget v0, Lzic;->errorEnabled:I
+    sget v0, Lgkc;->errorEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorEnabled:I
 
-    sget v0, Lzic;->errorIconDrawable:I
+    sget v0, Lgkc;->errorIconDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorIconDrawable:I
 
-    sget v0, Lzic;->errorIconTint:I
+    sget v0, Lgkc;->errorIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorIconTint:I
 
-    sget v0, Lzic;->errorIconTintMode:I
+    sget v0, Lgkc;->errorIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorIconTintMode:I
 
-    sget v0, Lzic;->errorShown:I
+    sget v0, Lgkc;->errorShown:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorShown:I
 
-    sget v0, Lzic;->errorTextAppearance:I
+    sget v0, Lgkc;->errorTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorTextAppearance:I
 
-    sget v0, Lzic;->errorTextColor:I
+    sget v0, Lgkc;->errorTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->errorTextColor:I
 
-    sget v0, Lzic;->expandActivityOverflowButtonDrawable:I
+    sget v0, Lgkc;->expandActivityOverflowButtonDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandActivityOverflowButtonDrawable:I
 
-    sget v0, Lzic;->expanded:I
+    sget v0, Lgkc;->expanded:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expanded:I
 
-    sget v0, Lzic;->expandedHintEnabled:I
+    sget v0, Lgkc;->expandedHintEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedHintEnabled:I
 
-    sget v0, Lzic;->expandedTitleGravity:I
+    sget v0, Lgkc;->expandedTitleGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleGravity:I
 
-    sget v0, Lzic;->expandedTitleMargin:I
+    sget v0, Lgkc;->expandedTitleMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleMargin:I
 
-    sget v0, Lzic;->expandedTitleMarginBottom:I
+    sget v0, Lgkc;->expandedTitleMarginBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleMarginBottom:I
 
-    sget v0, Lzic;->expandedTitleMarginEnd:I
+    sget v0, Lgkc;->expandedTitleMarginEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleMarginEnd:I
 
-    sget v0, Lzic;->expandedTitleMarginStart:I
+    sget v0, Lgkc;->expandedTitleMarginStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleMarginStart:I
 
-    sget v0, Lzic;->expandedTitleMarginTop:I
+    sget v0, Lgkc;->expandedTitleMarginTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleMarginTop:I
 
-    sget v0, Lzic;->expandedTitleTextAppearance:I
+    sget v0, Lgkc;->expandedTitleTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleTextAppearance:I
 
-    sget v0, Lzic;->expandedTitleTextColor:I
+    sget v0, Lgkc;->expandedTitleTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->expandedTitleTextColor:I
 
-    sget v0, Lzic;->extendMotionSpec:I
+    sget v0, Lgkc;->extendMotionSpec:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendMotionSpec:I
 
-    sget v0, Lzic;->extendStrategy:I
+    sget v0, Lgkc;->extendStrategy:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendStrategy:I
 
-    sget v0, Lzic;->extendedFloatingActionButtonPrimaryStyle:I
+    sget v0, Lgkc;->extendedFloatingActionButtonPrimaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendedFloatingActionButtonPrimaryStyle:I
 
-    sget v0, Lzic;->extendedFloatingActionButtonSecondaryStyle:I
+    sget v0, Lgkc;->extendedFloatingActionButtonSecondaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendedFloatingActionButtonSecondaryStyle:I
 
-    sget v0, Lzic;->extendedFloatingActionButtonStyle:I
+    sget v0, Lgkc;->extendedFloatingActionButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendedFloatingActionButtonStyle:I
 
-    sget v0, Lzic;->extendedFloatingActionButtonSurfaceStyle:I
+    sget v0, Lgkc;->extendedFloatingActionButtonSurfaceStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendedFloatingActionButtonSurfaceStyle:I
 
-    sget v0, Lzic;->extendedFloatingActionButtonTertiaryStyle:I
+    sget v0, Lgkc;->extendedFloatingActionButtonTertiaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extendedFloatingActionButtonTertiaryStyle:I
 
-    sget v0, Lzic;->extraMultilineHeightEnabled:I
+    sget v0, Lgkc;->extraMultilineHeightEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->extraMultilineHeightEnabled:I
 
-    sget v0, Lzic;->fabAlignmentMode:I
+    sget v0, Lgkc;->fabAlignmentMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabAlignmentMode:I
 
-    sget v0, Lzic;->fabAlignmentModeEndMargin:I
+    sget v0, Lgkc;->fabAlignmentModeEndMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabAlignmentModeEndMargin:I
 
-    sget v0, Lzic;->fabAnchorMode:I
+    sget v0, Lgkc;->fabAnchorMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabAnchorMode:I
 
-    sget v0, Lzic;->fabAnimationMode:I
+    sget v0, Lgkc;->fabAnimationMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabAnimationMode:I
 
-    sget v0, Lzic;->fabCradleMargin:I
+    sget v0, Lgkc;->fabCradleMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabCradleMargin:I
 
-    sget v0, Lzic;->fabCradleRoundedCornerRadius:I
+    sget v0, Lgkc;->fabCradleRoundedCornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabCradleRoundedCornerRadius:I
 
-    sget v0, Lzic;->fabCradleVerticalOffset:I
+    sget v0, Lgkc;->fabCradleVerticalOffset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabCradleVerticalOffset:I
 
-    sget v0, Lzic;->fabCustomSize:I
+    sget v0, Lgkc;->fabCustomSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabCustomSize:I
 
-    sget v0, Lzic;->fabSize:I
+    sget v0, Lgkc;->fabSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fabSize:I
 
-    sget v0, Lzic;->fastScrollEnabled:I
+    sget v0, Lgkc;->fastScrollEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fastScrollEnabled:I
 
-    sget v0, Lzic;->fastScrollHorizontalThumbDrawable:I
+    sget v0, Lgkc;->fastScrollHorizontalThumbDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fastScrollHorizontalThumbDrawable:I
 
-    sget v0, Lzic;->fastScrollHorizontalTrackDrawable:I
+    sget v0, Lgkc;->fastScrollHorizontalTrackDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fastScrollHorizontalTrackDrawable:I
 
-    sget v0, Lzic;->fastScrollVerticalThumbDrawable:I
+    sget v0, Lgkc;->fastScrollVerticalThumbDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fastScrollVerticalThumbDrawable:I
 
-    sget v0, Lzic;->fastScrollVerticalTrackDrawable:I
+    sget v0, Lgkc;->fastScrollVerticalTrackDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fastScrollVerticalTrackDrawable:I
 
-    sget v0, Lzic;->firstBaselineToTopHeight:I
+    sget v0, Lgkc;->firstBaselineToTopHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->firstBaselineToTopHeight:I
 
-    sget v0, Lzic;->floatingActionButtonLargePrimaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonLargePrimaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonLargePrimaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonLargeSecondaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonLargeSecondaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonLargeSecondaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonLargeStyle:I
+    sget v0, Lgkc;->floatingActionButtonLargeStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonLargeStyle:I
 
-    sget v0, Lzic;->floatingActionButtonLargeSurfaceStyle:I
+    sget v0, Lgkc;->floatingActionButtonLargeSurfaceStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonLargeSurfaceStyle:I
 
-    sget v0, Lzic;->floatingActionButtonLargeTertiaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonLargeTertiaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonLargeTertiaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonPrimaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonPrimaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonPrimaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSecondaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonSecondaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSecondaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSmallPrimaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonSmallPrimaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSmallPrimaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSmallSecondaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonSmallSecondaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSmallSecondaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSmallStyle:I
+    sget v0, Lgkc;->floatingActionButtonSmallStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSmallStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSmallSurfaceStyle:I
+    sget v0, Lgkc;->floatingActionButtonSmallSurfaceStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSmallSurfaceStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSmallTertiaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonSmallTertiaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSmallTertiaryStyle:I
 
-    sget v0, Lzic;->floatingActionButtonStyle:I
+    sget v0, Lgkc;->floatingActionButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonStyle:I
 
-    sget v0, Lzic;->floatingActionButtonSurfaceStyle:I
+    sget v0, Lgkc;->floatingActionButtonSurfaceStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonSurfaceStyle:I
 
-    sget v0, Lzic;->floatingActionButtonTertiaryStyle:I
+    sget v0, Lgkc;->floatingActionButtonTertiaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->floatingActionButtonTertiaryStyle:I
 
-    sget v0, Lzic;->flow_firstHorizontalBias:I
+    sget v0, Lgkc;->flow_firstHorizontalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_firstHorizontalBias:I
 
-    sget v0, Lzic;->flow_firstHorizontalStyle:I
+    sget v0, Lgkc;->flow_firstHorizontalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_firstHorizontalStyle:I
 
-    sget v0, Lzic;->flow_firstVerticalBias:I
+    sget v0, Lgkc;->flow_firstVerticalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_firstVerticalBias:I
 
-    sget v0, Lzic;->flow_firstVerticalStyle:I
+    sget v0, Lgkc;->flow_firstVerticalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_firstVerticalStyle:I
 
-    sget v0, Lzic;->flow_horizontalAlign:I
+    sget v0, Lgkc;->flow_horizontalAlign:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_horizontalAlign:I
 
-    sget v0, Lzic;->flow_horizontalBias:I
+    sget v0, Lgkc;->flow_horizontalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_horizontalBias:I
 
-    sget v0, Lzic;->flow_horizontalGap:I
+    sget v0, Lgkc;->flow_horizontalGap:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_horizontalGap:I
 
-    sget v0, Lzic;->flow_horizontalStyle:I
+    sget v0, Lgkc;->flow_horizontalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_horizontalStyle:I
 
-    sget v0, Lzic;->flow_lastHorizontalBias:I
+    sget v0, Lgkc;->flow_lastHorizontalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_lastHorizontalBias:I
 
-    sget v0, Lzic;->flow_lastHorizontalStyle:I
+    sget v0, Lgkc;->flow_lastHorizontalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_lastHorizontalStyle:I
 
-    sget v0, Lzic;->flow_lastVerticalBias:I
+    sget v0, Lgkc;->flow_lastVerticalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_lastVerticalBias:I
 
-    sget v0, Lzic;->flow_lastVerticalStyle:I
+    sget v0, Lgkc;->flow_lastVerticalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_lastVerticalStyle:I
 
-    sget v0, Lzic;->flow_maxElementsWrap:I
+    sget v0, Lgkc;->flow_maxElementsWrap:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_maxElementsWrap:I
 
-    sget v0, Lzic;->flow_padding:I
+    sget v0, Lgkc;->flow_padding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_padding:I
 
-    sget v0, Lzic;->flow_verticalAlign:I
+    sget v0, Lgkc;->flow_verticalAlign:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_verticalAlign:I
 
-    sget v0, Lzic;->flow_verticalBias:I
+    sget v0, Lgkc;->flow_verticalBias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_verticalBias:I
 
-    sget v0, Lzic;->flow_verticalGap:I
+    sget v0, Lgkc;->flow_verticalGap:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_verticalGap:I
 
-    sget v0, Lzic;->flow_verticalStyle:I
+    sget v0, Lgkc;->flow_verticalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_verticalStyle:I
 
-    sget v0, Lzic;->flow_wrapMode:I
+    sget v0, Lgkc;->flow_wrapMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->flow_wrapMode:I
 
-    sget v0, Lzic;->font:I
+    sget v0, Lgkc;->font:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->font:I
 
-    sget v0, Lzic;->fontFamily:I
+    sget v0, Lgkc;->fontFamily:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontFamily:I
 
-    sget v0, Lzic;->fontProviderAuthority:I
+    sget v0, Lgkc;->fontProviderAuthority:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderAuthority:I
 
-    sget v0, Lzic;->fontProviderCerts:I
+    sget v0, Lgkc;->fontProviderCerts:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderCerts:I
 
-    sget v0, Lzic;->fontProviderFetchStrategy:I
+    sget v0, Lgkc;->fontProviderFetchStrategy:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderFetchStrategy:I
 
-    sget v0, Lzic;->fontProviderFetchTimeout:I
+    sget v0, Lgkc;->fontProviderFetchTimeout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderFetchTimeout:I
 
-    sget v0, Lzic;->fontProviderPackage:I
+    sget v0, Lgkc;->fontProviderPackage:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderPackage:I
 
-    sget v0, Lzic;->fontProviderQuery:I
+    sget v0, Lgkc;->fontProviderQuery:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderQuery:I
 
-    sget v0, Lzic;->fontProviderSystemFontFamily:I
+    sget v0, Lgkc;->fontProviderSystemFontFamily:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontProviderSystemFontFamily:I
 
-    sget v0, Lzic;->fontStyle:I
+    sget v0, Lgkc;->fontStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontStyle:I
 
-    sget v0, Lzic;->fontVariationSettings:I
+    sget v0, Lgkc;->fontVariationSettings:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontVariationSettings:I
 
-    sget v0, Lzic;->fontWeight:I
+    sget v0, Lgkc;->fontWeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->fontWeight:I
 
-    sget v0, Lzic;->forceApplySystemWindowInsetTop:I
+    sget v0, Lgkc;->forceApplySystemWindowInsetTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->forceApplySystemWindowInsetTop:I
 
-    sget v0, Lzic;->forceDefaultNavigationOnClickListener:I
+    sget v0, Lgkc;->forceDefaultNavigationOnClickListener:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->forceDefaultNavigationOnClickListener:I
 
-    sget v0, Lzic;->foregroundInsidePadding:I
+    sget v0, Lgkc;->foregroundInsidePadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->foregroundInsidePadding:I
 
-    sget v0, Lzic;->framePosition:I
+    sget v0, Lgkc;->framePosition:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->framePosition:I
 
-    sget v0, Lzic;->gapBetweenBars:I
+    sget v0, Lgkc;->gapBetweenBars:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->gapBetweenBars:I
 
-    sget v0, Lzic;->gestureInsetBottomIgnored:I
+    sget v0, Lgkc;->gestureInsetBottomIgnored:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->gestureInsetBottomIgnored:I
 
-    sget v0, Lzic;->goIcon:I
+    sget v0, Lgkc;->goIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->goIcon:I
 
-    sget v0, Lzic;->haloColor:I
+    sget v0, Lgkc;->haloColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->haloColor:I
 
-    sget v0, Lzic;->haloRadius:I
+    sget v0, Lgkc;->haloRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->haloRadius:I
 
-    sget v0, Lzic;->headerLayout:I
+    sget v0, Lgkc;->headerLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->headerLayout:I
 
-    sget v0, Lzic;->height:I
+    sget v0, Lgkc;->height:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->height:I
 
-    sget v0, Lzic;->helperText:I
+    sget v0, Lgkc;->helperText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->helperText:I
 
-    sget v0, Lzic;->helperTextEnabled:I
+    sget v0, Lgkc;->helperTextEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->helperTextEnabled:I
 
-    sget v0, Lzic;->helperTextTextAppearance:I
+    sget v0, Lgkc;->helperTextTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->helperTextTextAppearance:I
 
-    sget v0, Lzic;->helperTextTextColor:I
+    sget v0, Lgkc;->helperTextTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->helperTextTextColor:I
 
-    sget v0, Lzic;->hideAnimationBehavior:I
+    sget v0, Lgkc;->hideAnimationBehavior:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hideAnimationBehavior:I
 
-    sget v0, Lzic;->hideMotionSpec:I
+    sget v0, Lgkc;->hideMotionSpec:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hideMotionSpec:I
 
-    sget v0, Lzic;->hideNavigationIcon:I
+    sget v0, Lgkc;->hideNavigationIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hideNavigationIcon:I
 
-    sget v0, Lzic;->hideOnContentScroll:I
+    sget v0, Lgkc;->hideOnContentScroll:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hideOnContentScroll:I
 
-    sget v0, Lzic;->hideOnScroll:I
+    sget v0, Lgkc;->hideOnScroll:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hideOnScroll:I
 
-    sget v0, Lzic;->hintAnimationEnabled:I
+    sget v0, Lgkc;->hintAnimationEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hintAnimationEnabled:I
 
-    sget v0, Lzic;->hintEnabled:I
+    sget v0, Lgkc;->hintEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hintEnabled:I
 
-    sget v0, Lzic;->hintTextAppearance:I
+    sget v0, Lgkc;->hintTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hintTextAppearance:I
 
-    sget v0, Lzic;->hintTextColor:I
+    sget v0, Lgkc;->hintTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hintTextColor:I
 
-    sget v0, Lzic;->homeAsUpIndicator:I
+    sget v0, Lgkc;->homeAsUpIndicator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->homeAsUpIndicator:I
 
-    sget v0, Lzic;->homeLayout:I
+    sget v0, Lgkc;->homeLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->homeLayout:I
 
-    sget v0, Lzic;->horizontalOffset:I
+    sget v0, Lgkc;->horizontalOffset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->horizontalOffset:I
 
-    sget v0, Lzic;->horizontalOffsetWithText:I
+    sget v0, Lgkc;->horizontalOffsetWithText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->horizontalOffsetWithText:I
 
-    sget v0, Lzic;->hoveredFocusedTranslationZ:I
+    sget v0, Lgkc;->hoveredFocusedTranslationZ:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->hoveredFocusedTranslationZ:I
 
-    sget v0, Lzic;->icon:I
+    sget v0, Lgkc;->icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->icon:I
 
-    sget v0, Lzic;->iconEndPadding:I
+    sget v0, Lgkc;->iconEndPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconEndPadding:I
 
-    sget v0, Lzic;->iconGravity:I
+    sget v0, Lgkc;->iconGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconGravity:I
 
-    sget v0, Lzic;->iconPadding:I
+    sget v0, Lgkc;->iconPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconPadding:I
 
-    sget v0, Lzic;->iconSize:I
+    sget v0, Lgkc;->iconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconSize:I
 
-    sget v0, Lzic;->iconStartPadding:I
+    sget v0, Lgkc;->iconStartPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconStartPadding:I
 
-    sget v0, Lzic;->iconTint:I
+    sget v0, Lgkc;->iconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconTint:I
 
-    sget v0, Lzic;->iconTintMode:I
+    sget v0, Lgkc;->iconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconTintMode:I
 
-    sget v0, Lzic;->iconifiedByDefault:I
+    sget v0, Lgkc;->iconifiedByDefault:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->iconifiedByDefault:I
 
-    sget v0, Lzic;->imageButtonStyle:I
+    sget v0, Lgkc;->imageButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->imageButtonStyle:I
 
-    sget v0, Lzic;->indeterminateAnimationType:I
+    sget v0, Lgkc;->indeterminateAnimationType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indeterminateAnimationType:I
 
-    sget v0, Lzic;->indeterminateProgressStyle:I
+    sget v0, Lgkc;->indeterminateProgressStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indeterminateProgressStyle:I
 
-    sget v0, Lzic;->indicatorColor:I
+    sget v0, Lgkc;->indicatorColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorColor:I
 
-    sget v0, Lzic;->indicatorDirectionCircular:I
+    sget v0, Lgkc;->indicatorDirectionCircular:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorDirectionCircular:I
 
-    sget v0, Lzic;->indicatorDirectionLinear:I
+    sget v0, Lgkc;->indicatorDirectionLinear:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorDirectionLinear:I
 
-    sget v0, Lzic;->indicatorInset:I
+    sget v0, Lgkc;->indicatorInset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorInset:I
 
-    sget v0, Lzic;->indicatorSize:I
+    sget v0, Lgkc;->indicatorSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorSize:I
 
-    sget v0, Lzic;->indicatorTrackGapSize:I
+    sget v0, Lgkc;->indicatorTrackGapSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->indicatorTrackGapSize:I
 
-    sget v0, Lzic;->initialActivityCount:I
+    sget v0, Lgkc;->initialActivityCount:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->initialActivityCount:I
 
-    sget v0, Lzic;->insetForeground:I
+    sget v0, Lgkc;->insetForeground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->insetForeground:I
 
-    sget v0, Lzic;->isLightTheme:I
+    sget v0, Lgkc;->isLightTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->isLightTheme:I
 
-    sget v0, Lzic;->isMaterial3DynamicColorApplied:I
+    sget v0, Lgkc;->isMaterial3DynamicColorApplied:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->isMaterial3DynamicColorApplied:I
 
-    sget v0, Lzic;->isMaterial3Theme:I
+    sget v0, Lgkc;->isMaterial3Theme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->isMaterial3Theme:I
 
-    sget v0, Lzic;->isMaterialTheme:I
+    sget v0, Lgkc;->isMaterialTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->isMaterialTheme:I
 
-    sget v0, Lzic;->itemActiveIndicatorStyle:I
+    sget v0, Lgkc;->itemActiveIndicatorStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemActiveIndicatorStyle:I
 
-    sget v0, Lzic;->itemBackground:I
+    sget v0, Lgkc;->itemBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemBackground:I
 
-    sget v0, Lzic;->itemFillColor:I
+    sget v0, Lgkc;->itemFillColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemFillColor:I
 
-    sget v0, Lzic;->itemHorizontalPadding:I
+    sget v0, Lgkc;->itemHorizontalPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemHorizontalPadding:I
 
-    sget v0, Lzic;->itemHorizontalTranslationEnabled:I
+    sget v0, Lgkc;->itemHorizontalTranslationEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemHorizontalTranslationEnabled:I
 
-    sget v0, Lzic;->itemIconPadding:I
+    sget v0, Lgkc;->itemIconPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemIconPadding:I
 
-    sget v0, Lzic;->itemIconSize:I
+    sget v0, Lgkc;->itemIconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemIconSize:I
 
-    sget v0, Lzic;->itemIconTint:I
+    sget v0, Lgkc;->itemIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemIconTint:I
 
-    sget v0, Lzic;->itemMaxLines:I
+    sget v0, Lgkc;->itemMaxLines:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemMaxLines:I
 
-    sget v0, Lzic;->itemMinHeight:I
+    sget v0, Lgkc;->itemMinHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemMinHeight:I
 
-    sget v0, Lzic;->itemPadding:I
+    sget v0, Lgkc;->itemPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemPadding:I
 
-    sget v0, Lzic;->itemPaddingBottom:I
+    sget v0, Lgkc;->itemPaddingBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemPaddingBottom:I
 
-    sget v0, Lzic;->itemPaddingTop:I
+    sget v0, Lgkc;->itemPaddingTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemPaddingTop:I
 
-    sget v0, Lzic;->itemRippleColor:I
+    sget v0, Lgkc;->itemRippleColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemRippleColor:I
 
-    sget v0, Lzic;->itemShapeAppearance:I
+    sget v0, Lgkc;->itemShapeAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeAppearance:I
 
-    sget v0, Lzic;->itemShapeAppearanceOverlay:I
+    sget v0, Lgkc;->itemShapeAppearanceOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeAppearanceOverlay:I
 
-    sget v0, Lzic;->itemShapeFillColor:I
+    sget v0, Lgkc;->itemShapeFillColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeFillColor:I
 
-    sget v0, Lzic;->itemShapeInsetBottom:I
+    sget v0, Lgkc;->itemShapeInsetBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeInsetBottom:I
 
-    sget v0, Lzic;->itemShapeInsetEnd:I
+    sget v0, Lgkc;->itemShapeInsetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeInsetEnd:I
 
-    sget v0, Lzic;->itemShapeInsetStart:I
+    sget v0, Lgkc;->itemShapeInsetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeInsetStart:I
 
-    sget v0, Lzic;->itemShapeInsetTop:I
+    sget v0, Lgkc;->itemShapeInsetTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemShapeInsetTop:I
 
-    sget v0, Lzic;->itemSpacing:I
+    sget v0, Lgkc;->itemSpacing:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemSpacing:I
 
-    sget v0, Lzic;->itemStrokeColor:I
+    sget v0, Lgkc;->itemStrokeColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemStrokeColor:I
 
-    sget v0, Lzic;->itemStrokeWidth:I
+    sget v0, Lgkc;->itemStrokeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemStrokeWidth:I
 
-    sget v0, Lzic;->itemTextAppearance:I
+    sget v0, Lgkc;->itemTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemTextAppearance:I
 
-    sget v0, Lzic;->itemTextAppearanceActive:I
+    sget v0, Lgkc;->itemTextAppearanceActive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemTextAppearanceActive:I
 
-    sget v0, Lzic;->itemTextAppearanceActiveBoldEnabled:I
+    sget v0, Lgkc;->itemTextAppearanceActiveBoldEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemTextAppearanceActiveBoldEnabled:I
 
-    sget v0, Lzic;->itemTextAppearanceInactive:I
+    sget v0, Lgkc;->itemTextAppearanceInactive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemTextAppearanceInactive:I
 
-    sget v0, Lzic;->itemTextColor:I
+    sget v0, Lgkc;->itemTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemTextColor:I
 
-    sget v0, Lzic;->itemVerticalPadding:I
+    sget v0, Lgkc;->itemVerticalPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->itemVerticalPadding:I
 
-    sget v0, Lzic;->keyPositionType:I
+    sget v0, Lgkc;->keyPositionType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->keyPositionType:I
 
-    sget v0, Lzic;->keyboardIcon:I
+    sget v0, Lgkc;->keyboardIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->keyboardIcon:I
 
-    sget v0, Lzic;->keylines:I
+    sget v0, Lgkc;->keylines:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->keylines:I
 
-    sget v0, Lzic;->lStar:I
+    sget v0, Lgkc;->lStar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->lStar:I
 
-    sget v0, Lzic;->labelBehavior:I
+    sget v0, Lgkc;->labelBehavior:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->labelBehavior:I
 
-    sget v0, Lzic;->labelStyle:I
+    sget v0, Lgkc;->labelStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->labelStyle:I
 
-    sget v0, Lzic;->labelVisibilityMode:I
+    sget v0, Lgkc;->labelVisibilityMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->labelVisibilityMode:I
 
-    sget v0, Lzic;->largeFontVerticalOffsetAdjustment:I
+    sget v0, Lgkc;->largeFontVerticalOffsetAdjustment:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->largeFontVerticalOffsetAdjustment:I
 
-    sget v0, Lzic;->lastBaselineToBottomHeight:I
+    sget v0, Lgkc;->lastBaselineToBottomHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->lastBaselineToBottomHeight:I
 
-    sget v0, Lzic;->lastItemDecorated:I
+    sget v0, Lgkc;->lastItemDecorated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->lastItemDecorated:I
 
-    sget v0, Lzic;->layout:I
+    sget v0, Lgkc;->layout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout:I
 
-    sget v0, Lzic;->layoutDescription:I
+    sget v0, Lgkc;->layoutDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layoutDescription:I
 
-    sget v0, Lzic;->layoutDuringTransition:I
+    sget v0, Lgkc;->layoutDuringTransition:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layoutDuringTransition:I
 
-    sget v0, Lzic;->layoutManager:I
+    sget v0, Lgkc;->layoutManager:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layoutManager:I
 
-    sget v0, Lzic;->layout_anchor:I
+    sget v0, Lgkc;->layout_anchor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_anchor:I
 
-    sget v0, Lzic;->layout_anchorGravity:I
+    sget v0, Lgkc;->layout_anchorGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_anchorGravity:I
 
-    sget v0, Lzic;->layout_behavior:I
+    sget v0, Lgkc;->layout_behavior:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_behavior:I
 
-    sget v0, Lzic;->layout_collapseMode:I
+    sget v0, Lgkc;->layout_collapseMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_collapseMode:I
 
-    sget v0, Lzic;->layout_collapseParallaxMultiplier:I
+    sget v0, Lgkc;->layout_collapseParallaxMultiplier:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_collapseParallaxMultiplier:I
 
-    sget v0, Lzic;->layout_constrainedHeight:I
+    sget v0, Lgkc;->layout_constrainedHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constrainedHeight:I
 
-    sget v0, Lzic;->layout_constrainedWidth:I
+    sget v0, Lgkc;->layout_constrainedWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constrainedWidth:I
 
-    sget v0, Lzic;->layout_constraintBaseline_creator:I
+    sget v0, Lgkc;->layout_constraintBaseline_creator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintBaseline_creator:I
 
-    sget v0, Lzic;->layout_constraintBaseline_toBaselineOf:I
+    sget v0, Lgkc;->layout_constraintBaseline_toBaselineOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintBaseline_toBaselineOf:I
 
-    sget v0, Lzic;->layout_constraintBottom_creator:I
+    sget v0, Lgkc;->layout_constraintBottom_creator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintBottom_creator:I
 
-    sget v0, Lzic;->layout_constraintBottom_toBottomOf:I
+    sget v0, Lgkc;->layout_constraintBottom_toBottomOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintBottom_toBottomOf:I
 
-    sget v0, Lzic;->layout_constraintBottom_toTopOf:I
+    sget v0, Lgkc;->layout_constraintBottom_toTopOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintBottom_toTopOf:I
 
-    sget v0, Lzic;->layout_constraintCircle:I
+    sget v0, Lgkc;->layout_constraintCircle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintCircle:I
 
-    sget v0, Lzic;->layout_constraintCircleAngle:I
+    sget v0, Lgkc;->layout_constraintCircleAngle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintCircleAngle:I
 
-    sget v0, Lzic;->layout_constraintCircleRadius:I
+    sget v0, Lgkc;->layout_constraintCircleRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintCircleRadius:I
 
-    sget v0, Lzic;->layout_constraintDimensionRatio:I
+    sget v0, Lgkc;->layout_constraintDimensionRatio:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintDimensionRatio:I
 
-    sget v0, Lzic;->layout_constraintEnd_toEndOf:I
+    sget v0, Lgkc;->layout_constraintEnd_toEndOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintEnd_toEndOf:I
 
-    sget v0, Lzic;->layout_constraintEnd_toStartOf:I
+    sget v0, Lgkc;->layout_constraintEnd_toStartOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintEnd_toStartOf:I
 
-    sget v0, Lzic;->layout_constraintGuide_begin:I
+    sget v0, Lgkc;->layout_constraintGuide_begin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintGuide_begin:I
 
-    sget v0, Lzic;->layout_constraintGuide_end:I
+    sget v0, Lgkc;->layout_constraintGuide_end:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintGuide_end:I
 
-    sget v0, Lzic;->layout_constraintGuide_percent:I
+    sget v0, Lgkc;->layout_constraintGuide_percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintGuide_percent:I
 
-    sget v0, Lzic;->layout_constraintHeight_default:I
+    sget v0, Lgkc;->layout_constraintHeight_default:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHeight_default:I
 
-    sget v0, Lzic;->layout_constraintHeight_max:I
+    sget v0, Lgkc;->layout_constraintHeight_max:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHeight_max:I
 
-    sget v0, Lzic;->layout_constraintHeight_min:I
+    sget v0, Lgkc;->layout_constraintHeight_min:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHeight_min:I
 
-    sget v0, Lzic;->layout_constraintHeight_percent:I
+    sget v0, Lgkc;->layout_constraintHeight_percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHeight_percent:I
 
-    sget v0, Lzic;->layout_constraintHorizontal_bias:I
+    sget v0, Lgkc;->layout_constraintHorizontal_bias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHorizontal_bias:I
 
-    sget v0, Lzic;->layout_constraintHorizontal_chainStyle:I
+    sget v0, Lgkc;->layout_constraintHorizontal_chainStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHorizontal_chainStyle:I
 
-    sget v0, Lzic;->layout_constraintHorizontal_weight:I
+    sget v0, Lgkc;->layout_constraintHorizontal_weight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintHorizontal_weight:I
 
-    sget v0, Lzic;->layout_constraintLeft_creator:I
+    sget v0, Lgkc;->layout_constraintLeft_creator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintLeft_creator:I
 
-    sget v0, Lzic;->layout_constraintLeft_toLeftOf:I
+    sget v0, Lgkc;->layout_constraintLeft_toLeftOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintLeft_toLeftOf:I
 
-    sget v0, Lzic;->layout_constraintLeft_toRightOf:I
+    sget v0, Lgkc;->layout_constraintLeft_toRightOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintLeft_toRightOf:I
 
-    sget v0, Lzic;->layout_constraintRight_creator:I
+    sget v0, Lgkc;->layout_constraintRight_creator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintRight_creator:I
 
-    sget v0, Lzic;->layout_constraintRight_toLeftOf:I
+    sget v0, Lgkc;->layout_constraintRight_toLeftOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintRight_toLeftOf:I
 
-    sget v0, Lzic;->layout_constraintRight_toRightOf:I
+    sget v0, Lgkc;->layout_constraintRight_toRightOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintRight_toRightOf:I
 
-    sget v0, Lzic;->layout_constraintStart_toEndOf:I
+    sget v0, Lgkc;->layout_constraintStart_toEndOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintStart_toEndOf:I
 
-    sget v0, Lzic;->layout_constraintStart_toStartOf:I
+    sget v0, Lgkc;->layout_constraintStart_toStartOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintStart_toStartOf:I
 
-    sget v0, Lzic;->layout_constraintTag:I
+    sget v0, Lgkc;->layout_constraintTag:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintTag:I
 
-    sget v0, Lzic;->layout_constraintTop_creator:I
+    sget v0, Lgkc;->layout_constraintTop_creator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintTop_creator:I
 
-    sget v0, Lzic;->layout_constraintTop_toBottomOf:I
+    sget v0, Lgkc;->layout_constraintTop_toBottomOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintTop_toBottomOf:I
 
-    sget v0, Lzic;->layout_constraintTop_toTopOf:I
+    sget v0, Lgkc;->layout_constraintTop_toTopOf:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintTop_toTopOf:I
 
-    sget v0, Lzic;->layout_constraintVertical_bias:I
+    sget v0, Lgkc;->layout_constraintVertical_bias:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintVertical_bias:I
 
-    sget v0, Lzic;->layout_constraintVertical_chainStyle:I
+    sget v0, Lgkc;->layout_constraintVertical_chainStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintVertical_chainStyle:I
 
-    sget v0, Lzic;->layout_constraintVertical_weight:I
+    sget v0, Lgkc;->layout_constraintVertical_weight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintVertical_weight:I
 
-    sget v0, Lzic;->layout_constraintWidth_default:I
+    sget v0, Lgkc;->layout_constraintWidth_default:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintWidth_default:I
 
-    sget v0, Lzic;->layout_constraintWidth_max:I
+    sget v0, Lgkc;->layout_constraintWidth_max:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintWidth_max:I
 
-    sget v0, Lzic;->layout_constraintWidth_min:I
+    sget v0, Lgkc;->layout_constraintWidth_min:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintWidth_min:I
 
-    sget v0, Lzic;->layout_constraintWidth_percent:I
+    sget v0, Lgkc;->layout_constraintWidth_percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_constraintWidth_percent:I
 
-    sget v0, Lzic;->layout_dodgeInsetEdges:I
+    sget v0, Lgkc;->layout_dodgeInsetEdges:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_dodgeInsetEdges:I
 
-    sget v0, Lzic;->layout_editor_absoluteX:I
+    sget v0, Lgkc;->layout_editor_absoluteX:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_editor_absoluteX:I
 
-    sget v0, Lzic;->layout_editor_absoluteY:I
+    sget v0, Lgkc;->layout_editor_absoluteY:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_editor_absoluteY:I
 
-    sget v0, Lzic;->layout_goneMarginBottom:I
+    sget v0, Lgkc;->layout_goneMarginBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginBottom:I
 
-    sget v0, Lzic;->layout_goneMarginEnd:I
+    sget v0, Lgkc;->layout_goneMarginEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginEnd:I
 
-    sget v0, Lzic;->layout_goneMarginLeft:I
+    sget v0, Lgkc;->layout_goneMarginLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginLeft:I
 
-    sget v0, Lzic;->layout_goneMarginRight:I
+    sget v0, Lgkc;->layout_goneMarginRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginRight:I
 
-    sget v0, Lzic;->layout_goneMarginStart:I
+    sget v0, Lgkc;->layout_goneMarginStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginStart:I
 
-    sget v0, Lzic;->layout_goneMarginTop:I
+    sget v0, Lgkc;->layout_goneMarginTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_goneMarginTop:I
 
-    sget v0, Lzic;->layout_insetEdge:I
+    sget v0, Lgkc;->layout_insetEdge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_insetEdge:I
 
-    sget v0, Lzic;->layout_keyline:I
+    sget v0, Lgkc;->layout_keyline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_keyline:I
 
-    sget v0, Lzic;->layout_optimizationLevel:I
+    sget v0, Lgkc;->layout_optimizationLevel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_optimizationLevel:I
 
-    sget v0, Lzic;->layout_scrollEffect:I
+    sget v0, Lgkc;->layout_scrollEffect:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_scrollEffect:I
 
-    sget v0, Lzic;->layout_scrollFlags:I
+    sget v0, Lgkc;->layout_scrollFlags:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_scrollFlags:I
 
-    sget v0, Lzic;->layout_scrollInterpolator:I
+    sget v0, Lgkc;->layout_scrollInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->layout_scrollInterpolator:I
 
-    sget v0, Lzic;->liftOnScroll:I
+    sget v0, Lgkc;->liftOnScroll:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->liftOnScroll:I
 
-    sget v0, Lzic;->liftOnScrollColor:I
+    sget v0, Lgkc;->liftOnScrollColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->liftOnScrollColor:I
 
-    sget v0, Lzic;->liftOnScrollTargetViewId:I
+    sget v0, Lgkc;->liftOnScrollTargetViewId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->liftOnScrollTargetViewId:I
 
-    sget v0, Lzic;->limitBoundsTo:I
+    sget v0, Lgkc;->limitBoundsTo:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->limitBoundsTo:I
 
-    sget v0, Lzic;->lineHeight:I
+    sget v0, Lgkc;->lineHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->lineHeight:I
 
-    sget v0, Lzic;->lineSpacing:I
+    sget v0, Lgkc;->lineSpacing:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->lineSpacing:I
 
-    sget v0, Lzic;->linearProgressIndicatorStyle:I
+    sget v0, Lgkc;->linearProgressIndicatorStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->linearProgressIndicatorStyle:I
 
-    sget v0, Lzic;->listChoiceBackgroundIndicator:I
+    sget v0, Lgkc;->listChoiceBackgroundIndicator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listChoiceBackgroundIndicator:I
 
-    sget v0, Lzic;->listChoiceIndicatorMultipleAnimated:I
+    sget v0, Lgkc;->listChoiceIndicatorMultipleAnimated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listChoiceIndicatorMultipleAnimated:I
 
-    sget v0, Lzic;->listChoiceIndicatorSingleAnimated:I
+    sget v0, Lgkc;->listChoiceIndicatorSingleAnimated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listChoiceIndicatorSingleAnimated:I
 
-    sget v0, Lzic;->listDividerAlertDialog:I
+    sget v0, Lgkc;->listDividerAlertDialog:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listDividerAlertDialog:I
 
-    sget v0, Lzic;->listItemLayout:I
+    sget v0, Lgkc;->listItemLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listItemLayout:I
 
-    sget v0, Lzic;->listLayout:I
+    sget v0, Lgkc;->listLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listLayout:I
 
-    sget v0, Lzic;->listMenuViewStyle:I
+    sget v0, Lgkc;->listMenuViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listMenuViewStyle:I
 
-    sget v0, Lzic;->listPopupWindowStyle:I
+    sget v0, Lgkc;->listPopupWindowStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPopupWindowStyle:I
 
-    sget v0, Lzic;->listPreferredItemHeight:I
+    sget v0, Lgkc;->listPreferredItemHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemHeight:I
 
-    sget v0, Lzic;->listPreferredItemHeightLarge:I
+    sget v0, Lgkc;->listPreferredItemHeightLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemHeightLarge:I
 
-    sget v0, Lzic;->listPreferredItemHeightSmall:I
+    sget v0, Lgkc;->listPreferredItemHeightSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemHeightSmall:I
 
-    sget v0, Lzic;->listPreferredItemPaddingEnd:I
+    sget v0, Lgkc;->listPreferredItemPaddingEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemPaddingEnd:I
 
-    sget v0, Lzic;->listPreferredItemPaddingLeft:I
+    sget v0, Lgkc;->listPreferredItemPaddingLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemPaddingLeft:I
 
-    sget v0, Lzic;->listPreferredItemPaddingRight:I
+    sget v0, Lgkc;->listPreferredItemPaddingRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemPaddingRight:I
 
-    sget v0, Lzic;->listPreferredItemPaddingStart:I
+    sget v0, Lgkc;->listPreferredItemPaddingStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->listPreferredItemPaddingStart:I
 
-    sget v0, Lzic;->logo:I
+    sget v0, Lgkc;->logo:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->logo:I
 
-    sget v0, Lzic;->logoAdjustViewBounds:I
+    sget v0, Lgkc;->logoAdjustViewBounds:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->logoAdjustViewBounds:I
 
-    sget v0, Lzic;->logoDescription:I
+    sget v0, Lgkc;->logoDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->logoDescription:I
 
-    sget v0, Lzic;->logoScaleType:I
+    sget v0, Lgkc;->logoScaleType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->logoScaleType:I
 
-    sget v0, Lzic;->marginHorizontal:I
+    sget v0, Lgkc;->marginHorizontal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->marginHorizontal:I
 
-    sget v0, Lzic;->marginLeftSystemWindowInsets:I
+    sget v0, Lgkc;->marginLeftSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->marginLeftSystemWindowInsets:I
 
-    sget v0, Lzic;->marginRightSystemWindowInsets:I
+    sget v0, Lgkc;->marginRightSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->marginRightSystemWindowInsets:I
 
-    sget v0, Lzic;->marginTopSystemWindowInsets:I
+    sget v0, Lgkc;->marginTopSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->marginTopSystemWindowInsets:I
 
-    sget v0, Lzic;->materialAlertDialogBodyTextStyle:I
+    sget v0, Lgkc;->materialAlertDialogBodyTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialAlertDialogBodyTextStyle:I
 
-    sget v0, Lzic;->materialAlertDialogButtonSpacerVisibility:I
+    sget v0, Lgkc;->materialAlertDialogButtonSpacerVisibility:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialAlertDialogButtonSpacerVisibility:I
 
-    sget v0, Lzic;->materialAlertDialogTitleIconStyle:I
+    sget v0, Lgkc;->materialAlertDialogTitleIconStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialAlertDialogTitleIconStyle:I
 
-    sget v0, Lzic;->materialAlertDialogTitlePanelStyle:I
+    sget v0, Lgkc;->materialAlertDialogTitlePanelStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialAlertDialogTitlePanelStyle:I
 
-    sget v0, Lzic;->materialAlertDialogTitleTextStyle:I
+    sget v0, Lgkc;->materialAlertDialogTitleTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialAlertDialogTitleTextStyle:I
 
-    sget v0, Lzic;->materialButtonOutlinedStyle:I
+    sget v0, Lgkc;->materialButtonOutlinedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialButtonOutlinedStyle:I
 
-    sget v0, Lzic;->materialButtonStyle:I
+    sget v0, Lgkc;->materialButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialButtonStyle:I
 
-    sget v0, Lzic;->materialButtonToggleGroupStyle:I
+    sget v0, Lgkc;->materialButtonToggleGroupStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialButtonToggleGroupStyle:I
 
-    sget v0, Lzic;->materialCalendarDay:I
+    sget v0, Lgkc;->materialCalendarDay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarDay:I
 
-    sget v0, Lzic;->materialCalendarDayOfWeekLabel:I
+    sget v0, Lgkc;->materialCalendarDayOfWeekLabel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarDayOfWeekLabel:I
 
-    sget v0, Lzic;->materialCalendarFullscreenTheme:I
+    sget v0, Lgkc;->materialCalendarFullscreenTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarFullscreenTheme:I
 
-    sget v0, Lzic;->materialCalendarHeaderCancelButton:I
+    sget v0, Lgkc;->materialCalendarHeaderCancelButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderCancelButton:I
 
-    sget v0, Lzic;->materialCalendarHeaderConfirmButton:I
+    sget v0, Lgkc;->materialCalendarHeaderConfirmButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderConfirmButton:I
 
-    sget v0, Lzic;->materialCalendarHeaderDivider:I
+    sget v0, Lgkc;->materialCalendarHeaderDivider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderDivider:I
 
-    sget v0, Lzic;->materialCalendarHeaderLayout:I
+    sget v0, Lgkc;->materialCalendarHeaderLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderLayout:I
 
-    sget v0, Lzic;->materialCalendarHeaderSelection:I
+    sget v0, Lgkc;->materialCalendarHeaderSelection:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderSelection:I
 
-    sget v0, Lzic;->materialCalendarHeaderTitle:I
+    sget v0, Lgkc;->materialCalendarHeaderTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderTitle:I
 
-    sget v0, Lzic;->materialCalendarHeaderToggleButton:I
+    sget v0, Lgkc;->materialCalendarHeaderToggleButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarHeaderToggleButton:I
 
-    sget v0, Lzic;->materialCalendarMonth:I
+    sget v0, Lgkc;->materialCalendarMonth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarMonth:I
 
-    sget v0, Lzic;->materialCalendarMonthNavigationButton:I
+    sget v0, Lgkc;->materialCalendarMonthNavigationButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarMonthNavigationButton:I
 
-    sget v0, Lzic;->materialCalendarStyle:I
+    sget v0, Lgkc;->materialCalendarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarStyle:I
 
-    sget v0, Lzic;->materialCalendarTheme:I
+    sget v0, Lgkc;->materialCalendarTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarTheme:I
 
-    sget v0, Lzic;->materialCalendarYearNavigationButton:I
+    sget v0, Lgkc;->materialCalendarYearNavigationButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCalendarYearNavigationButton:I
 
-    sget v0, Lzic;->materialCardViewElevatedStyle:I
+    sget v0, Lgkc;->materialCardViewElevatedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCardViewElevatedStyle:I
 
-    sget v0, Lzic;->materialCardViewFilledStyle:I
+    sget v0, Lgkc;->materialCardViewFilledStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCardViewFilledStyle:I
 
-    sget v0, Lzic;->materialCardViewOutlinedStyle:I
+    sget v0, Lgkc;->materialCardViewOutlinedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCardViewOutlinedStyle:I
 
-    sget v0, Lzic;->materialCardViewStyle:I
+    sget v0, Lgkc;->materialCardViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCardViewStyle:I
 
-    sget v0, Lzic;->materialCircleRadius:I
+    sget v0, Lgkc;->materialCircleRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialCircleRadius:I
 
-    sget v0, Lzic;->materialClockStyle:I
+    sget v0, Lgkc;->materialClockStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialClockStyle:I
 
-    sget v0, Lzic;->materialDisplayDividerStyle:I
+    sget v0, Lgkc;->materialDisplayDividerStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialDisplayDividerStyle:I
 
-    sget v0, Lzic;->materialDividerHeavyStyle:I
+    sget v0, Lgkc;->materialDividerHeavyStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialDividerHeavyStyle:I
 
-    sget v0, Lzic;->materialDividerStyle:I
+    sget v0, Lgkc;->materialDividerStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialDividerStyle:I
 
-    sget v0, Lzic;->materialIconButtonFilledStyle:I
+    sget v0, Lgkc;->materialIconButtonFilledStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialIconButtonFilledStyle:I
 
-    sget v0, Lzic;->materialIconButtonFilledTonalStyle:I
+    sget v0, Lgkc;->materialIconButtonFilledTonalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialIconButtonFilledTonalStyle:I
 
-    sget v0, Lzic;->materialIconButtonOutlinedStyle:I
+    sget v0, Lgkc;->materialIconButtonOutlinedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialIconButtonOutlinedStyle:I
 
-    sget v0, Lzic;->materialIconButtonStyle:I
+    sget v0, Lgkc;->materialIconButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialIconButtonStyle:I
 
-    sget v0, Lzic;->materialSearchBarStyle:I
+    sget v0, Lgkc;->materialSearchBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSearchBarStyle:I
 
-    sget v0, Lzic;->materialSearchViewPrefixStyle:I
+    sget v0, Lgkc;->materialSearchViewPrefixStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSearchViewPrefixStyle:I
 
-    sget v0, Lzic;->materialSearchViewStyle:I
+    sget v0, Lgkc;->materialSearchViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSearchViewStyle:I
 
-    sget v0, Lzic;->materialSearchViewToolbarHeight:I
+    sget v0, Lgkc;->materialSearchViewToolbarHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSearchViewToolbarHeight:I
 
-    sget v0, Lzic;->materialSearchViewToolbarStyle:I
+    sget v0, Lgkc;->materialSearchViewToolbarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSearchViewToolbarStyle:I
 
-    sget v0, Lzic;->materialSwitchStyle:I
+    sget v0, Lgkc;->materialSwitchStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialSwitchStyle:I
 
-    sget v0, Lzic;->materialThemeOverlay:I
+    sget v0, Lgkc;->materialThemeOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialThemeOverlay:I
 
-    sget v0, Lzic;->materialTimePickerStyle:I
+    sget v0, Lgkc;->materialTimePickerStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialTimePickerStyle:I
 
-    sget v0, Lzic;->materialTimePickerTheme:I
+    sget v0, Lgkc;->materialTimePickerTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialTimePickerTheme:I
 
-    sget v0, Lzic;->materialTimePickerTitleStyle:I
+    sget v0, Lgkc;->materialTimePickerTitleStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->materialTimePickerTitleStyle:I
 
-    sget v0, Lzic;->maxAcceleration:I
+    sget v0, Lgkc;->maxAcceleration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxAcceleration:I
 
-    sget v0, Lzic;->maxActionInlineWidth:I
+    sget v0, Lgkc;->maxActionInlineWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxActionInlineWidth:I
 
-    sget v0, Lzic;->maxButtonHeight:I
+    sget v0, Lgkc;->maxButtonHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxButtonHeight:I
 
-    sget v0, Lzic;->maxCharacterCount:I
+    sget v0, Lgkc;->maxCharacterCount:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxCharacterCount:I
 
-    sget v0, Lzic;->maxHeight:I
+    sget v0, Lgkc;->maxHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxHeight:I
 
-    sget v0, Lzic;->maxImageSize:I
+    sget v0, Lgkc;->maxImageSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxImageSize:I
 
-    sget v0, Lzic;->maxLines:I
+    sget v0, Lgkc;->maxLines:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxLines:I
 
-    sget v0, Lzic;->maxNumber:I
+    sget v0, Lgkc;->maxNumber:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxNumber:I
 
-    sget v0, Lzic;->maxVelocity:I
+    sget v0, Lgkc;->maxVelocity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxVelocity:I
 
-    sget v0, Lzic;->maxWidth:I
+    sget v0, Lgkc;->maxWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->maxWidth:I
 
-    sget v0, Lzic;->measureWithLargestChild:I
+    sget v0, Lgkc;->measureWithLargestChild:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->measureWithLargestChild:I
 
-    sget v0, Lzic;->menu:I
+    sget v0, Lgkc;->menu:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->menu:I
 
-    sget v0, Lzic;->menuAlignmentMode:I
+    sget v0, Lgkc;->menuAlignmentMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->menuAlignmentMode:I
 
-    sget v0, Lzic;->menuGravity:I
+    sget v0, Lgkc;->menuGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->menuGravity:I
 
-    sget v0, Lzic;->minHeight:I
+    sget v0, Lgkc;->minHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->minHeight:I
 
-    sget v0, Lzic;->minHideDelay:I
+    sget v0, Lgkc;->minHideDelay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->minHideDelay:I
 
-    sget v0, Lzic;->minSeparation:I
+    sget v0, Lgkc;->minSeparation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->minSeparation:I
 
-    sget v0, Lzic;->minTouchTargetSize:I
+    sget v0, Lgkc;->minTouchTargetSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->minTouchTargetSize:I
 
-    sget v0, Lzic;->minWidth:I
+    sget v0, Lgkc;->minWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->minWidth:I
 
-    sget v0, Lzic;->mock_diagonalsColor:I
+    sget v0, Lgkc;->mock_diagonalsColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_diagonalsColor:I
 
-    sget v0, Lzic;->mock_label:I
+    sget v0, Lgkc;->mock_label:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_label:I
 
-    sget v0, Lzic;->mock_labelBackgroundColor:I
+    sget v0, Lgkc;->mock_labelBackgroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_labelBackgroundColor:I
 
-    sget v0, Lzic;->mock_labelColor:I
+    sget v0, Lgkc;->mock_labelColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_labelColor:I
 
-    sget v0, Lzic;->mock_showDiagonals:I
+    sget v0, Lgkc;->mock_showDiagonals:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_showDiagonals:I
 
-    sget v0, Lzic;->mock_showLabel:I
+    sget v0, Lgkc;->mock_showLabel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->mock_showLabel:I
 
-    sget v0, Lzic;->motionDebug:I
+    sget v0, Lgkc;->motionDebug:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDebug:I
 
-    sget v0, Lzic;->motionDurationExtraLong1:I
+    sget v0, Lgkc;->motionDurationExtraLong1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationExtraLong1:I
 
-    sget v0, Lzic;->motionDurationExtraLong2:I
+    sget v0, Lgkc;->motionDurationExtraLong2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationExtraLong2:I
 
-    sget v0, Lzic;->motionDurationExtraLong3:I
+    sget v0, Lgkc;->motionDurationExtraLong3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationExtraLong3:I
 
-    sget v0, Lzic;->motionDurationExtraLong4:I
+    sget v0, Lgkc;->motionDurationExtraLong4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationExtraLong4:I
 
-    sget v0, Lzic;->motionDurationLong1:I
+    sget v0, Lgkc;->motionDurationLong1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationLong1:I
 
-    sget v0, Lzic;->motionDurationLong2:I
+    sget v0, Lgkc;->motionDurationLong2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationLong2:I
 
-    sget v0, Lzic;->motionDurationLong3:I
+    sget v0, Lgkc;->motionDurationLong3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationLong3:I
 
-    sget v0, Lzic;->motionDurationLong4:I
+    sget v0, Lgkc;->motionDurationLong4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationLong4:I
 
-    sget v0, Lzic;->motionDurationMedium1:I
+    sget v0, Lgkc;->motionDurationMedium1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationMedium1:I
 
-    sget v0, Lzic;->motionDurationMedium2:I
+    sget v0, Lgkc;->motionDurationMedium2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationMedium2:I
 
-    sget v0, Lzic;->motionDurationMedium3:I
+    sget v0, Lgkc;->motionDurationMedium3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationMedium3:I
 
-    sget v0, Lzic;->motionDurationMedium4:I
+    sget v0, Lgkc;->motionDurationMedium4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationMedium4:I
 
-    sget v0, Lzic;->motionDurationShort1:I
+    sget v0, Lgkc;->motionDurationShort1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationShort1:I
 
-    sget v0, Lzic;->motionDurationShort2:I
+    sget v0, Lgkc;->motionDurationShort2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationShort2:I
 
-    sget v0, Lzic;->motionDurationShort3:I
+    sget v0, Lgkc;->motionDurationShort3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationShort3:I
 
-    sget v0, Lzic;->motionDurationShort4:I
+    sget v0, Lgkc;->motionDurationShort4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionDurationShort4:I
 
-    sget v0, Lzic;->motionEasingAccelerated:I
+    sget v0, Lgkc;->motionEasingAccelerated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingAccelerated:I
 
-    sget v0, Lzic;->motionEasingDecelerated:I
+    sget v0, Lgkc;->motionEasingDecelerated:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingDecelerated:I
 
-    sget v0, Lzic;->motionEasingEmphasized:I
+    sget v0, Lgkc;->motionEasingEmphasized:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingEmphasized:I
 
-    sget v0, Lzic;->motionEasingEmphasizedAccelerateInterpolator:I
+    sget v0, Lgkc;->motionEasingEmphasizedAccelerateInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingEmphasizedAccelerateInterpolator:I
 
-    sget v0, Lzic;->motionEasingEmphasizedDecelerateInterpolator:I
+    sget v0, Lgkc;->motionEasingEmphasizedDecelerateInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingEmphasizedDecelerateInterpolator:I
 
-    sget v0, Lzic;->motionEasingEmphasizedInterpolator:I
+    sget v0, Lgkc;->motionEasingEmphasizedInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingEmphasizedInterpolator:I
 
-    sget v0, Lzic;->motionEasingLinear:I
+    sget v0, Lgkc;->motionEasingLinear:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingLinear:I
 
-    sget v0, Lzic;->motionEasingLinearInterpolator:I
+    sget v0, Lgkc;->motionEasingLinearInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingLinearInterpolator:I
 
-    sget v0, Lzic;->motionEasingStandard:I
+    sget v0, Lgkc;->motionEasingStandard:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingStandard:I
 
-    sget v0, Lzic;->motionEasingStandardAccelerateInterpolator:I
+    sget v0, Lgkc;->motionEasingStandardAccelerateInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingStandardAccelerateInterpolator:I
 
-    sget v0, Lzic;->motionEasingStandardDecelerateInterpolator:I
+    sget v0, Lgkc;->motionEasingStandardDecelerateInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingStandardDecelerateInterpolator:I
 
-    sget v0, Lzic;->motionEasingStandardInterpolator:I
+    sget v0, Lgkc;->motionEasingStandardInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionEasingStandardInterpolator:I
 
-    sget v0, Lzic;->motionInterpolator:I
+    sget v0, Lgkc;->motionInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionInterpolator:I
 
-    sget v0, Lzic;->motionPath:I
+    sget v0, Lgkc;->motionPath:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionPath:I
 
-    sget v0, Lzic;->motionPathRotate:I
+    sget v0, Lgkc;->motionPathRotate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionPathRotate:I
 
-    sget v0, Lzic;->motionProgress:I
+    sget v0, Lgkc;->motionProgress:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionProgress:I
 
-    sget v0, Lzic;->motionStagger:I
+    sget v0, Lgkc;->motionStagger:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionStagger:I
 
-    sget v0, Lzic;->motionTarget:I
+    sget v0, Lgkc;->motionTarget:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motionTarget:I
 
-    sget v0, Lzic;->motion_postLayoutCollision:I
+    sget v0, Lgkc;->motion_postLayoutCollision:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motion_postLayoutCollision:I
 
-    sget v0, Lzic;->motion_triggerOnCollision:I
+    sget v0, Lgkc;->motion_triggerOnCollision:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->motion_triggerOnCollision:I
 
-    sget v0, Lzic;->moveWhenScrollAtTop:I
+    sget v0, Lgkc;->moveWhenScrollAtTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->moveWhenScrollAtTop:I
 
-    sget v0, Lzic;->multiChoiceItemLayout:I
+    sget v0, Lgkc;->multiChoiceItemLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->multiChoiceItemLayout:I
 
-    sget v0, Lzic;->navigationContentDescription:I
+    sget v0, Lgkc;->navigationContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationContentDescription:I
 
-    sget v0, Lzic;->navigationIcon:I
+    sget v0, Lgkc;->navigationIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationIcon:I
 
-    sget v0, Lzic;->navigationIconTint:I
+    sget v0, Lgkc;->navigationIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationIconTint:I
 
-    sget v0, Lzic;->navigationMode:I
+    sget v0, Lgkc;->navigationMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationMode:I
 
-    sget v0, Lzic;->navigationRailStyle:I
+    sget v0, Lgkc;->navigationRailStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationRailStyle:I
 
-    sget v0, Lzic;->navigationViewStyle:I
+    sget v0, Lgkc;->navigationViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->navigationViewStyle:I
 
-    sget v0, Lzic;->nestedScrollFlags:I
+    sget v0, Lgkc;->nestedScrollFlags:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->nestedScrollFlags:I
 
-    sget v0, Lzic;->nestedScrollViewStyle:I
+    sget v0, Lgkc;->nestedScrollViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->nestedScrollViewStyle:I
 
-    sget v0, Lzic;->nestedScrollable:I
+    sget v0, Lgkc;->nestedScrollable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->nestedScrollable:I
 
-    sget v0, Lzic;->number:I
+    sget v0, Lgkc;->number:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->number:I
 
-    sget v0, Lzic;->numericModifiers:I
+    sget v0, Lgkc;->numericModifiers:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->numericModifiers:I
 
-    sget v0, Lzic;->offsetAlignmentMode:I
+    sget v0, Lgkc;->offsetAlignmentMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->offsetAlignmentMode:I
 
-    sget v0, Lzic;->onCross:I
+    sget v0, Lgkc;->onCross:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onCross:I
 
-    sget v0, Lzic;->onHide:I
+    sget v0, Lgkc;->onHide:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onHide:I
 
-    sget v0, Lzic;->onNegativeCross:I
+    sget v0, Lgkc;->onNegativeCross:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onNegativeCross:I
 
-    sget v0, Lzic;->onPositiveCross:I
+    sget v0, Lgkc;->onPositiveCross:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onPositiveCross:I
 
-    sget v0, Lzic;->onShow:I
+    sget v0, Lgkc;->onShow:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onShow:I
 
-    sget v0, Lzic;->onTouchUp:I
+    sget v0, Lgkc;->onTouchUp:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->onTouchUp:I
 
-    sget v0, Lzic;->overlapAnchor:I
+    sget v0, Lgkc;->overlapAnchor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->overlapAnchor:I
 
-    sget v0, Lzic;->overlay:I
+    sget v0, Lgkc;->overlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->overlay:I
 
-    sget v0, Lzic;->paddingBottomNoButtons:I
+    sget v0, Lgkc;->paddingBottomNoButtons:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingBottomNoButtons:I
 
-    sget v0, Lzic;->paddingBottomSystemWindowInsets:I
+    sget v0, Lgkc;->paddingBottomSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingBottomSystemWindowInsets:I
 
-    sget v0, Lzic;->paddingEnd:I
+    sget v0, Lgkc;->paddingEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingEnd:I
 
-    sget v0, Lzic;->paddingLeftSystemWindowInsets:I
+    sget v0, Lgkc;->paddingLeftSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingLeftSystemWindowInsets:I
 
-    sget v0, Lzic;->paddingRightSystemWindowInsets:I
+    sget v0, Lgkc;->paddingRightSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingRightSystemWindowInsets:I
 
-    sget v0, Lzic;->paddingStart:I
+    sget v0, Lgkc;->paddingStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingStart:I
 
-    sget v0, Lzic;->paddingStartSystemWindowInsets:I
+    sget v0, Lgkc;->paddingStartSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingStartSystemWindowInsets:I
 
-    sget v0, Lzic;->paddingTopNoTitle:I
+    sget v0, Lgkc;->paddingTopNoTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingTopNoTitle:I
 
-    sget v0, Lzic;->paddingTopSystemWindowInsets:I
+    sget v0, Lgkc;->paddingTopSystemWindowInsets:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->paddingTopSystemWindowInsets:I
 
-    sget v0, Lzic;->panelBackground:I
+    sget v0, Lgkc;->panelBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->panelBackground:I
 
-    sget v0, Lzic;->panelMenuListTheme:I
+    sget v0, Lgkc;->panelMenuListTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->panelMenuListTheme:I
 
-    sget v0, Lzic;->panelMenuListWidth:I
+    sget v0, Lgkc;->panelMenuListWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->panelMenuListWidth:I
 
-    sget v0, Lzic;->passwordToggleContentDescription:I
+    sget v0, Lgkc;->passwordToggleContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->passwordToggleContentDescription:I
 
-    sget v0, Lzic;->passwordToggleDrawable:I
+    sget v0, Lgkc;->passwordToggleDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->passwordToggleDrawable:I
 
-    sget v0, Lzic;->passwordToggleEnabled:I
+    sget v0, Lgkc;->passwordToggleEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->passwordToggleEnabled:I
 
-    sget v0, Lzic;->passwordToggleTint:I
+    sget v0, Lgkc;->passwordToggleTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->passwordToggleTint:I
 
-    sget v0, Lzic;->passwordToggleTintMode:I
+    sget v0, Lgkc;->passwordToggleTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->passwordToggleTintMode:I
 
-    sget v0, Lzic;->pathMotionArc:I
+    sget v0, Lgkc;->pathMotionArc:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->pathMotionArc:I
 
-    sget v0, Lzic;->path_percent:I
+    sget v0, Lgkc;->path_percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->path_percent:I
 
-    sget v0, Lzic;->percentHeight:I
+    sget v0, Lgkc;->percentHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->percentHeight:I
 
-    sget v0, Lzic;->percentWidth:I
+    sget v0, Lgkc;->percentWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->percentWidth:I
 
-    sget v0, Lzic;->percentX:I
+    sget v0, Lgkc;->percentX:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->percentX:I
 
-    sget v0, Lzic;->percentY:I
+    sget v0, Lgkc;->percentY:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->percentY:I
 
-    sget v0, Lzic;->perpendicularPath_percent:I
+    sget v0, Lgkc;->perpendicularPath_percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->perpendicularPath_percent:I
 
-    sget v0, Lzic;->pivotAnchor:I
+    sget v0, Lgkc;->pivotAnchor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->pivotAnchor:I
 
-    sget v0, Lzic;->placeholderText:I
+    sget v0, Lgkc;->placeholderText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->placeholderText:I
 
-    sget v0, Lzic;->placeholderTextAppearance:I
+    sget v0, Lgkc;->placeholderTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->placeholderTextAppearance:I
 
-    sget v0, Lzic;->placeholderTextColor:I
+    sget v0, Lgkc;->placeholderTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->placeholderTextColor:I
 
-    sget v0, Lzic;->placeholder_emptyVisibility:I
+    sget v0, Lgkc;->placeholder_emptyVisibility:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->placeholder_emptyVisibility:I
 
-    sget v0, Lzic;->popupMenuBackground:I
+    sget v0, Lgkc;->popupMenuBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->popupMenuBackground:I
 
-    sget v0, Lzic;->popupMenuStyle:I
+    sget v0, Lgkc;->popupMenuStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->popupMenuStyle:I
 
-    sget v0, Lzic;->popupTheme:I
+    sget v0, Lgkc;->popupTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->popupTheme:I
 
-    sget v0, Lzic;->popupWindowStyle:I
+    sget v0, Lgkc;->popupWindowStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->popupWindowStyle:I
 
-    sget v0, Lzic;->prefixText:I
+    sget v0, Lgkc;->prefixText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->prefixText:I
 
-    sget v0, Lzic;->prefixTextAppearance:I
+    sget v0, Lgkc;->prefixTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->prefixTextAppearance:I
 
-    sget v0, Lzic;->prefixTextColor:I
+    sget v0, Lgkc;->prefixTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->prefixTextColor:I
 
-    sget v0, Lzic;->preserveIconSpacing:I
+    sget v0, Lgkc;->preserveIconSpacing:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->preserveIconSpacing:I
 
-    sget v0, Lzic;->pressedTranslationZ:I
+    sget v0, Lgkc;->pressedTranslationZ:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->pressedTranslationZ:I
 
-    sget v0, Lzic;->progressBarPadding:I
+    sget v0, Lgkc;->progressBarPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->progressBarPadding:I
 
-    sget v0, Lzic;->progressBarStyle:I
+    sget v0, Lgkc;->progressBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->progressBarStyle:I
 
-    sget v0, Lzic;->queryBackground:I
+    sget v0, Lgkc;->queryBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->queryBackground:I
 
-    sget v0, Lzic;->queryHint:I
+    sget v0, Lgkc;->queryHint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->queryHint:I
 
-    sget v0, Lzic;->queryPatterns:I
+    sget v0, Lgkc;->queryPatterns:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->queryPatterns:I
 
-    sget v0, Lzic;->radioButtonStyle:I
+    sget v0, Lgkc;->radioButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->radioButtonStyle:I
 
-    sget v0, Lzic;->rangeFillColor:I
+    sget v0, Lgkc;->rangeFillColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->rangeFillColor:I
 
-    sget v0, Lzic;->ratingBarStyle:I
+    sget v0, Lgkc;->ratingBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->ratingBarStyle:I
 
-    sget v0, Lzic;->ratingBarStyleIndicator:I
+    sget v0, Lgkc;->ratingBarStyleIndicator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->ratingBarStyleIndicator:I
 
-    sget v0, Lzic;->ratingBarStyleSmall:I
+    sget v0, Lgkc;->ratingBarStyleSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->ratingBarStyleSmall:I
 
-    sget v0, Lzic;->recyclerViewStyle:I
+    sget v0, Lgkc;->recyclerViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->recyclerViewStyle:I
 
-    sget v0, Lzic;->region_heightLessThan:I
+    sget v0, Lgkc;->region_heightLessThan:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->region_heightLessThan:I
 
-    sget v0, Lzic;->region_heightMoreThan:I
+    sget v0, Lgkc;->region_heightMoreThan:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->region_heightMoreThan:I
 
-    sget v0, Lzic;->region_widthLessThan:I
+    sget v0, Lgkc;->region_widthLessThan:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->region_widthLessThan:I
 
-    sget v0, Lzic;->region_widthMoreThan:I
+    sget v0, Lgkc;->region_widthMoreThan:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->region_widthMoreThan:I
 
-    sget v0, Lzic;->removeEmbeddedFabElevation:I
+    sget v0, Lgkc;->removeEmbeddedFabElevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->removeEmbeddedFabElevation:I
 
-    sget v0, Lzic;->reverseLayout:I
+    sget v0, Lgkc;->reverseLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->reverseLayout:I
 
-    sget v0, Lzic;->rippleColor:I
+    sget v0, Lgkc;->rippleColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->rippleColor:I
 
-    sget v0, Lzic;->round:I
+    sget v0, Lgkc;->round:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->round:I
 
-    sget v0, Lzic;->roundPercent:I
+    sget v0, Lgkc;->roundPercent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->roundPercent:I
 
-    sget v0, Lzic;->saturation:I
+    sget v0, Lgkc;->saturation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->saturation:I
 
-    sget v0, Lzic;->scrimAnimationDuration:I
+    sget v0, Lgkc;->scrimAnimationDuration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->scrimAnimationDuration:I
 
-    sget v0, Lzic;->scrimBackground:I
+    sget v0, Lgkc;->scrimBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->scrimBackground:I
 
-    sget v0, Lzic;->scrimVisibleHeightTrigger:I
+    sget v0, Lgkc;->scrimVisibleHeightTrigger:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->scrimVisibleHeightTrigger:I
 
-    sget v0, Lzic;->searchHintIcon:I
+    sget v0, Lgkc;->searchHintIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->searchHintIcon:I
 
-    sget v0, Lzic;->searchIcon:I
+    sget v0, Lgkc;->searchIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->searchIcon:I
 
-    sget v0, Lzic;->searchPrefixText:I
+    sget v0, Lgkc;->searchPrefixText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->searchPrefixText:I
 
-    sget v0, Lzic;->searchViewStyle:I
+    sget v0, Lgkc;->searchViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->searchViewStyle:I
 
-    sget v0, Lzic;->seekBarStyle:I
+    sget v0, Lgkc;->seekBarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->seekBarStyle:I
 
-    sget v0, Lzic;->selectableItemBackground:I
+    sget v0, Lgkc;->selectableItemBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->selectableItemBackground:I
 
-    sget v0, Lzic;->selectableItemBackgroundBorderless:I
+    sget v0, Lgkc;->selectableItemBackgroundBorderless:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->selectableItemBackgroundBorderless:I
 
-    sget v0, Lzic;->selectionRequired:I
+    sget v0, Lgkc;->selectionRequired:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->selectionRequired:I
 
-    sget v0, Lzic;->selectorSize:I
+    sget v0, Lgkc;->selectorSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->selectorSize:I
 
-    sget v0, Lzic;->shapeAppearance:I
+    sget v0, Lgkc;->shapeAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearance:I
 
-    sget v0, Lzic;->shapeAppearanceCornerExtraLarge:I
+    sget v0, Lgkc;->shapeAppearanceCornerExtraLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceCornerExtraLarge:I
 
-    sget v0, Lzic;->shapeAppearanceCornerExtraSmall:I
+    sget v0, Lgkc;->shapeAppearanceCornerExtraSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceCornerExtraSmall:I
 
-    sget v0, Lzic;->shapeAppearanceCornerLarge:I
+    sget v0, Lgkc;->shapeAppearanceCornerLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceCornerLarge:I
 
-    sget v0, Lzic;->shapeAppearanceCornerMedium:I
+    sget v0, Lgkc;->shapeAppearanceCornerMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceCornerMedium:I
 
-    sget v0, Lzic;->shapeAppearanceCornerSmall:I
+    sget v0, Lgkc;->shapeAppearanceCornerSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceCornerSmall:I
 
-    sget v0, Lzic;->shapeAppearanceLargeComponent:I
+    sget v0, Lgkc;->shapeAppearanceLargeComponent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceLargeComponent:I
 
-    sget v0, Lzic;->shapeAppearanceMediumComponent:I
+    sget v0, Lgkc;->shapeAppearanceMediumComponent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceMediumComponent:I
 
-    sget v0, Lzic;->shapeAppearanceOverlay:I
+    sget v0, Lgkc;->shapeAppearanceOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceOverlay:I
 
-    sget v0, Lzic;->shapeAppearanceSmallComponent:I
+    sget v0, Lgkc;->shapeAppearanceSmallComponent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeAppearanceSmallComponent:I
 
-    sget v0, Lzic;->shapeCornerFamily:I
+    sget v0, Lgkc;->shapeCornerFamily:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shapeCornerFamily:I
 
-    sget v0, Lzic;->shortcutMatchRequired:I
+    sget v0, Lgkc;->shortcutMatchRequired:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shortcutMatchRequired:I
 
-    sget v0, Lzic;->shouldRemoveExpandedCorners:I
+    sget v0, Lgkc;->shouldRemoveExpandedCorners:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shouldRemoveExpandedCorners:I
 
-    sget v0, Lzic;->showAnimationBehavior:I
+    sget v0, Lgkc;->showAnimationBehavior:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showAnimationBehavior:I
 
-    sget v0, Lzic;->showAsAction:I
+    sget v0, Lgkc;->showAsAction:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showAsAction:I
 
-    sget v0, Lzic;->showDelay:I
+    sget v0, Lgkc;->showDelay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showDelay:I
 
-    sget v0, Lzic;->showDividers:I
+    sget v0, Lgkc;->showDividers:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showDividers:I
 
-    sget v0, Lzic;->showMarker:I
+    sget v0, Lgkc;->showMarker:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showMarker:I
 
-    sget v0, Lzic;->showMotionSpec:I
+    sget v0, Lgkc;->showMotionSpec:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showMotionSpec:I
 
-    sget v0, Lzic;->showPaths:I
+    sget v0, Lgkc;->showPaths:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showPaths:I
 
-    sget v0, Lzic;->showText:I
+    sget v0, Lgkc;->showText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showText:I
 
-    sget v0, Lzic;->showTitle:I
+    sget v0, Lgkc;->showTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->showTitle:I
 
-    sget v0, Lzic;->shrinkMotionSpec:I
+    sget v0, Lgkc;->shrinkMotionSpec:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->shrinkMotionSpec:I
 
-    sget v0, Lzic;->sideSheetDialogTheme:I
+    sget v0, Lgkc;->sideSheetDialogTheme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->sideSheetDialogTheme:I
 
-    sget v0, Lzic;->sideSheetModalStyle:I
+    sget v0, Lgkc;->sideSheetModalStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->sideSheetModalStyle:I
 
-    sget v0, Lzic;->simpleItemLayout:I
+    sget v0, Lgkc;->simpleItemLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->simpleItemLayout:I
 
-    sget v0, Lzic;->simpleItemSelectedColor:I
+    sget v0, Lgkc;->simpleItemSelectedColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->simpleItemSelectedColor:I
 
-    sget v0, Lzic;->simpleItemSelectedRippleColor:I
+    sget v0, Lgkc;->simpleItemSelectedRippleColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->simpleItemSelectedRippleColor:I
 
-    sget v0, Lzic;->simpleItems:I
+    sget v0, Lgkc;->simpleItems:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->simpleItems:I
 
-    sget v0, Lzic;->singleChoiceItemLayout:I
+    sget v0, Lgkc;->singleChoiceItemLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->singleChoiceItemLayout:I
 
-    sget v0, Lzic;->singleLine:I
+    sget v0, Lgkc;->singleLine:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->singleLine:I
 
-    sget v0, Lzic;->singleSelection:I
+    sget v0, Lgkc;->singleSelection:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->singleSelection:I
 
-    sget v0, Lzic;->sizePercent:I
+    sget v0, Lgkc;->sizePercent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->sizePercent:I
 
-    sget v0, Lzic;->sliderStyle:I
+    sget v0, Lgkc;->sliderStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->sliderStyle:I
 
-    sget v0, Lzic;->snackbarButtonStyle:I
+    sget v0, Lgkc;->snackbarButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->snackbarButtonStyle:I
 
-    sget v0, Lzic;->snackbarStyle:I
+    sget v0, Lgkc;->snackbarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->snackbarStyle:I
 
-    sget v0, Lzic;->snackbarTextViewStyle:I
+    sget v0, Lgkc;->snackbarTextViewStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->snackbarTextViewStyle:I
 
-    sget v0, Lzic;->spanCount:I
+    sget v0, Lgkc;->spanCount:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->spanCount:I
 
-    sget v0, Lzic;->spinBars:I
+    sget v0, Lgkc;->spinBars:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->spinBars:I
 
-    sget v0, Lzic;->spinnerDropDownItemStyle:I
+    sget v0, Lgkc;->spinnerDropDownItemStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->spinnerDropDownItemStyle:I
 
-    sget v0, Lzic;->spinnerStyle:I
+    sget v0, Lgkc;->spinnerStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->spinnerStyle:I
 
-    sget v0, Lzic;->splitTrack:I
+    sget v0, Lgkc;->splitTrack:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->splitTrack:I
 
-    sget v0, Lzic;->srcCompat:I
+    sget v0, Lgkc;->srcCompat:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->srcCompat:I
 
-    sget v0, Lzic;->stackFromEnd:I
+    sget v0, Lgkc;->stackFromEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->stackFromEnd:I
 
-    sget v0, Lzic;->staggered:I
+    sget v0, Lgkc;->staggered:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->staggered:I
 
-    sget v0, Lzic;->startIconCheckable:I
+    sget v0, Lgkc;->startIconCheckable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconCheckable:I
 
-    sget v0, Lzic;->startIconContentDescription:I
+    sget v0, Lgkc;->startIconContentDescription:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconContentDescription:I
 
-    sget v0, Lzic;->startIconDrawable:I
+    sget v0, Lgkc;->startIconDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconDrawable:I
 
-    sget v0, Lzic;->startIconMinSize:I
+    sget v0, Lgkc;->startIconMinSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconMinSize:I
 
-    sget v0, Lzic;->startIconScaleType:I
+    sget v0, Lgkc;->startIconScaleType:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconScaleType:I
 
-    sget v0, Lzic;->startIconTint:I
+    sget v0, Lgkc;->startIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconTint:I
 
-    sget v0, Lzic;->startIconTintMode:I
+    sget v0, Lgkc;->startIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->startIconTintMode:I
 
-    sget v0, Lzic;->state_above_anchor:I
+    sget v0, Lgkc;->state_above_anchor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_above_anchor:I
 
-    sget v0, Lzic;->state_collapsed:I
+    sget v0, Lgkc;->state_collapsed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_collapsed:I
 
-    sget v0, Lzic;->state_collapsible:I
+    sget v0, Lgkc;->state_collapsible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_collapsible:I
 
-    sget v0, Lzic;->state_dragged:I
+    sget v0, Lgkc;->state_dragged:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_dragged:I
 
-    sget v0, Lzic;->state_error:I
+    sget v0, Lgkc;->state_error:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_error:I
 
-    sget v0, Lzic;->state_indeterminate:I
+    sget v0, Lgkc;->state_indeterminate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_indeterminate:I
 
-    sget v0, Lzic;->state_liftable:I
+    sget v0, Lgkc;->state_liftable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_liftable:I
 
-    sget v0, Lzic;->state_lifted:I
+    sget v0, Lgkc;->state_lifted:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_lifted:I
 
-    sget v0, Lzic;->state_with_icon:I
+    sget v0, Lgkc;->state_with_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->state_with_icon:I
 
-    sget v0, Lzic;->statusBarBackground:I
+    sget v0, Lgkc;->statusBarBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->statusBarBackground:I
 
-    sget v0, Lzic;->statusBarForeground:I
+    sget v0, Lgkc;->statusBarForeground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->statusBarForeground:I
 
-    sget v0, Lzic;->statusBarScrim:I
+    sget v0, Lgkc;->statusBarScrim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->statusBarScrim:I
 
-    sget v0, Lzic;->strokeColor:I
+    sget v0, Lgkc;->strokeColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->strokeColor:I
 
-    sget v0, Lzic;->strokeWidth:I
+    sget v0, Lgkc;->strokeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->strokeWidth:I
 
-    sget v0, Lzic;->subMenuArrow:I
+    sget v0, Lgkc;->subMenuArrow:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subMenuArrow:I
 
-    sget v0, Lzic;->subheaderColor:I
+    sget v0, Lgkc;->subheaderColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subheaderColor:I
 
-    sget v0, Lzic;->subheaderInsetEnd:I
+    sget v0, Lgkc;->subheaderInsetEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subheaderInsetEnd:I
 
-    sget v0, Lzic;->subheaderInsetStart:I
+    sget v0, Lgkc;->subheaderInsetStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subheaderInsetStart:I
 
-    sget v0, Lzic;->subheaderTextAppearance:I
+    sget v0, Lgkc;->subheaderTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subheaderTextAppearance:I
 
-    sget v0, Lzic;->submitBackground:I
+    sget v0, Lgkc;->submitBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->submitBackground:I
 
-    sget v0, Lzic;->subtitle:I
+    sget v0, Lgkc;->subtitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subtitle:I
 
-    sget v0, Lzic;->subtitleCentered:I
+    sget v0, Lgkc;->subtitleCentered:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subtitleCentered:I
 
-    sget v0, Lzic;->subtitleTextAppearance:I
+    sget v0, Lgkc;->subtitleTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subtitleTextAppearance:I
 
-    sget v0, Lzic;->subtitleTextColor:I
+    sget v0, Lgkc;->subtitleTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subtitleTextColor:I
 
-    sget v0, Lzic;->subtitleTextStyle:I
+    sget v0, Lgkc;->subtitleTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->subtitleTextStyle:I
 
-    sget v0, Lzic;->suffixText:I
+    sget v0, Lgkc;->suffixText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->suffixText:I
 
-    sget v0, Lzic;->suffixTextAppearance:I
+    sget v0, Lgkc;->suffixTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->suffixTextAppearance:I
 
-    sget v0, Lzic;->suffixTextColor:I
+    sget v0, Lgkc;->suffixTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->suffixTextColor:I
 
-    sget v0, Lzic;->suggestionRowLayout:I
+    sget v0, Lgkc;->suggestionRowLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->suggestionRowLayout:I
 
-    sget v0, Lzic;->switchMinWidth:I
+    sget v0, Lgkc;->switchMinWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->switchMinWidth:I
 
-    sget v0, Lzic;->switchPadding:I
+    sget v0, Lgkc;->switchPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->switchPadding:I
 
-    sget v0, Lzic;->switchStyle:I
+    sget v0, Lgkc;->switchStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->switchStyle:I
 
-    sget v0, Lzic;->switchTextAppearance:I
+    sget v0, Lgkc;->switchTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->switchTextAppearance:I
 
-    sget v0, Lzic;->tabBackground:I
+    sget v0, Lgkc;->tabBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabBackground:I
 
-    sget v0, Lzic;->tabContentStart:I
+    sget v0, Lgkc;->tabContentStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabContentStart:I
 
-    sget v0, Lzic;->tabGravity:I
+    sget v0, Lgkc;->tabGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabGravity:I
 
-    sget v0, Lzic;->tabIconTint:I
+    sget v0, Lgkc;->tabIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIconTint:I
 
-    sget v0, Lzic;->tabIconTintMode:I
+    sget v0, Lgkc;->tabIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIconTintMode:I
 
-    sget v0, Lzic;->tabIndicator:I
+    sget v0, Lgkc;->tabIndicator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicator:I
 
-    sget v0, Lzic;->tabIndicatorAnimationDuration:I
+    sget v0, Lgkc;->tabIndicatorAnimationDuration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorAnimationDuration:I
 
-    sget v0, Lzic;->tabIndicatorAnimationMode:I
+    sget v0, Lgkc;->tabIndicatorAnimationMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorAnimationMode:I
 
-    sget v0, Lzic;->tabIndicatorColor:I
+    sget v0, Lgkc;->tabIndicatorColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorColor:I
 
-    sget v0, Lzic;->tabIndicatorFullWidth:I
+    sget v0, Lgkc;->tabIndicatorFullWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorFullWidth:I
 
-    sget v0, Lzic;->tabIndicatorGravity:I
+    sget v0, Lgkc;->tabIndicatorGravity:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorGravity:I
 
-    sget v0, Lzic;->tabIndicatorHeight:I
+    sget v0, Lgkc;->tabIndicatorHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabIndicatorHeight:I
 
-    sget v0, Lzic;->tabInlineLabel:I
+    sget v0, Lgkc;->tabInlineLabel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabInlineLabel:I
 
-    sget v0, Lzic;->tabMaxWidth:I
+    sget v0, Lgkc;->tabMaxWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabMaxWidth:I
 
-    sget v0, Lzic;->tabMinWidth:I
+    sget v0, Lgkc;->tabMinWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabMinWidth:I
 
-    sget v0, Lzic;->tabMode:I
+    sget v0, Lgkc;->tabMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabMode:I
 
-    sget v0, Lzic;->tabPadding:I
+    sget v0, Lgkc;->tabPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabPadding:I
 
-    sget v0, Lzic;->tabPaddingBottom:I
+    sget v0, Lgkc;->tabPaddingBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabPaddingBottom:I
 
-    sget v0, Lzic;->tabPaddingEnd:I
+    sget v0, Lgkc;->tabPaddingEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabPaddingEnd:I
 
-    sget v0, Lzic;->tabPaddingStart:I
+    sget v0, Lgkc;->tabPaddingStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabPaddingStart:I
 
-    sget v0, Lzic;->tabPaddingTop:I
+    sget v0, Lgkc;->tabPaddingTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabPaddingTop:I
 
-    sget v0, Lzic;->tabRippleColor:I
+    sget v0, Lgkc;->tabRippleColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabRippleColor:I
 
-    sget v0, Lzic;->tabSecondaryStyle:I
+    sget v0, Lgkc;->tabSecondaryStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabSecondaryStyle:I
 
-    sget v0, Lzic;->tabSelectedTextAppearance:I
+    sget v0, Lgkc;->tabSelectedTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabSelectedTextAppearance:I
 
-    sget v0, Lzic;->tabSelectedTextColor:I
+    sget v0, Lgkc;->tabSelectedTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabSelectedTextColor:I
 
-    sget v0, Lzic;->tabStyle:I
+    sget v0, Lgkc;->tabStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabStyle:I
 
-    sget v0, Lzic;->tabTextAppearance:I
+    sget v0, Lgkc;->tabTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabTextAppearance:I
 
-    sget v0, Lzic;->tabTextColor:I
+    sget v0, Lgkc;->tabTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabTextColor:I
 
-    sget v0, Lzic;->tabUnboundedRipple:I
+    sget v0, Lgkc;->tabUnboundedRipple:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tabUnboundedRipple:I
 
-    sget v0, Lzic;->targetId:I
+    sget v0, Lgkc;->targetId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->targetId:I
 
-    sget v0, Lzic;->telltales_tailColor:I
+    sget v0, Lgkc;->telltales_tailColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->telltales_tailColor:I
 
-    sget v0, Lzic;->telltales_tailScale:I
+    sget v0, Lgkc;->telltales_tailScale:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->telltales_tailScale:I
 
-    sget v0, Lzic;->telltales_velocityMode:I
+    sget v0, Lgkc;->telltales_velocityMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->telltales_velocityMode:I
 
-    sget v0, Lzic;->textAllCaps:I
+    sget v0, Lgkc;->textAllCaps:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAllCaps:I
 
-    sget v0, Lzic;->textAppearanceBody1:I
+    sget v0, Lgkc;->textAppearanceBody1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceBody1:I
 
-    sget v0, Lzic;->textAppearanceBody2:I
+    sget v0, Lgkc;->textAppearanceBody2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceBody2:I
 
-    sget v0, Lzic;->textAppearanceBodyLarge:I
+    sget v0, Lgkc;->textAppearanceBodyLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceBodyLarge:I
 
-    sget v0, Lzic;->textAppearanceBodyMedium:I
+    sget v0, Lgkc;->textAppearanceBodyMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceBodyMedium:I
 
-    sget v0, Lzic;->textAppearanceBodySmall:I
+    sget v0, Lgkc;->textAppearanceBodySmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceBodySmall:I
 
-    sget v0, Lzic;->textAppearanceButton:I
+    sget v0, Lgkc;->textAppearanceButton:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceButton:I
 
-    sget v0, Lzic;->textAppearanceCaption:I
+    sget v0, Lgkc;->textAppearanceCaption:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceCaption:I
 
-    sget v0, Lzic;->textAppearanceDisplayLarge:I
+    sget v0, Lgkc;->textAppearanceDisplayLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceDisplayLarge:I
 
-    sget v0, Lzic;->textAppearanceDisplayMedium:I
+    sget v0, Lgkc;->textAppearanceDisplayMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceDisplayMedium:I
 
-    sget v0, Lzic;->textAppearanceDisplaySmall:I
+    sget v0, Lgkc;->textAppearanceDisplaySmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceDisplaySmall:I
 
-    sget v0, Lzic;->textAppearanceHeadline1:I
+    sget v0, Lgkc;->textAppearanceHeadline1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline1:I
 
-    sget v0, Lzic;->textAppearanceHeadline2:I
+    sget v0, Lgkc;->textAppearanceHeadline2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline2:I
 
-    sget v0, Lzic;->textAppearanceHeadline3:I
+    sget v0, Lgkc;->textAppearanceHeadline3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline3:I
 
-    sget v0, Lzic;->textAppearanceHeadline4:I
+    sget v0, Lgkc;->textAppearanceHeadline4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline4:I
 
-    sget v0, Lzic;->textAppearanceHeadline5:I
+    sget v0, Lgkc;->textAppearanceHeadline5:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline5:I
 
-    sget v0, Lzic;->textAppearanceHeadline6:I
+    sget v0, Lgkc;->textAppearanceHeadline6:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadline6:I
 
-    sget v0, Lzic;->textAppearanceHeadlineLarge:I
+    sget v0, Lgkc;->textAppearanceHeadlineLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadlineLarge:I
 
-    sget v0, Lzic;->textAppearanceHeadlineMedium:I
+    sget v0, Lgkc;->textAppearanceHeadlineMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadlineMedium:I
 
-    sget v0, Lzic;->textAppearanceHeadlineSmall:I
+    sget v0, Lgkc;->textAppearanceHeadlineSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceHeadlineSmall:I
 
-    sget v0, Lzic;->textAppearanceLabelLarge:I
+    sget v0, Lgkc;->textAppearanceLabelLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceLabelLarge:I
 
-    sget v0, Lzic;->textAppearanceLabelMedium:I
+    sget v0, Lgkc;->textAppearanceLabelMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceLabelMedium:I
 
-    sget v0, Lzic;->textAppearanceLabelSmall:I
+    sget v0, Lgkc;->textAppearanceLabelSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceLabelSmall:I
 
-    sget v0, Lzic;->textAppearanceLargePopupMenu:I
+    sget v0, Lgkc;->textAppearanceLargePopupMenu:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceLargePopupMenu:I
 
-    sget v0, Lzic;->textAppearanceLineHeightEnabled:I
+    sget v0, Lgkc;->textAppearanceLineHeightEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceLineHeightEnabled:I
 
-    sget v0, Lzic;->textAppearanceListItem:I
+    sget v0, Lgkc;->textAppearanceListItem:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceListItem:I
 
-    sget v0, Lzic;->textAppearanceListItemSecondary:I
+    sget v0, Lgkc;->textAppearanceListItemSecondary:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceListItemSecondary:I
 
-    sget v0, Lzic;->textAppearanceListItemSmall:I
+    sget v0, Lgkc;->textAppearanceListItemSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceListItemSmall:I
 
-    sget v0, Lzic;->textAppearanceOverline:I
+    sget v0, Lgkc;->textAppearanceOverline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceOverline:I
 
-    sget v0, Lzic;->textAppearancePopupMenuHeader:I
+    sget v0, Lgkc;->textAppearancePopupMenuHeader:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearancePopupMenuHeader:I
 
-    sget v0, Lzic;->textAppearanceSearchResultSubtitle:I
+    sget v0, Lgkc;->textAppearanceSearchResultSubtitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceSearchResultSubtitle:I
 
-    sget v0, Lzic;->textAppearanceSearchResultTitle:I
+    sget v0, Lgkc;->textAppearanceSearchResultTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceSearchResultTitle:I
 
-    sget v0, Lzic;->textAppearanceSmallPopupMenu:I
+    sget v0, Lgkc;->textAppearanceSmallPopupMenu:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceSmallPopupMenu:I
 
-    sget v0, Lzic;->textAppearanceSubtitle1:I
+    sget v0, Lgkc;->textAppearanceSubtitle1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceSubtitle1:I
 
-    sget v0, Lzic;->textAppearanceSubtitle2:I
+    sget v0, Lgkc;->textAppearanceSubtitle2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceSubtitle2:I
 
-    sget v0, Lzic;->textAppearanceTitleLarge:I
+    sget v0, Lgkc;->textAppearanceTitleLarge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceTitleLarge:I
 
-    sget v0, Lzic;->textAppearanceTitleMedium:I
+    sget v0, Lgkc;->textAppearanceTitleMedium:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceTitleMedium:I
 
-    sget v0, Lzic;->textAppearanceTitleSmall:I
+    sget v0, Lgkc;->textAppearanceTitleSmall:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textAppearanceTitleSmall:I
 
-    sget v0, Lzic;->textColorAlertDialogListItem:I
+    sget v0, Lgkc;->textColorAlertDialogListItem:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textColorAlertDialogListItem:I
 
-    sget v0, Lzic;->textColorSearchUrl:I
+    sget v0, Lgkc;->textColorSearchUrl:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textColorSearchUrl:I
 
-    sget v0, Lzic;->textEndPadding:I
+    sget v0, Lgkc;->textEndPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textEndPadding:I
 
-    sget v0, Lzic;->textInputFilledDenseStyle:I
+    sget v0, Lgkc;->textInputFilledDenseStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputFilledDenseStyle:I
 
-    sget v0, Lzic;->textInputFilledExposedDropdownMenuStyle:I
+    sget v0, Lgkc;->textInputFilledExposedDropdownMenuStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputFilledExposedDropdownMenuStyle:I
 
-    sget v0, Lzic;->textInputFilledStyle:I
+    sget v0, Lgkc;->textInputFilledStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputFilledStyle:I
 
-    sget v0, Lzic;->textInputLayoutFocusedRectEnabled:I
+    sget v0, Lgkc;->textInputLayoutFocusedRectEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputLayoutFocusedRectEnabled:I
 
-    sget v0, Lzic;->textInputOutlinedDenseStyle:I
+    sget v0, Lgkc;->textInputOutlinedDenseStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputOutlinedDenseStyle:I
 
-    sget v0, Lzic;->textInputOutlinedExposedDropdownMenuStyle:I
+    sget v0, Lgkc;->textInputOutlinedExposedDropdownMenuStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputOutlinedExposedDropdownMenuStyle:I
 
-    sget v0, Lzic;->textInputOutlinedStyle:I
+    sget v0, Lgkc;->textInputOutlinedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputOutlinedStyle:I
 
-    sget v0, Lzic;->textInputStyle:I
+    sget v0, Lgkc;->textInputStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textInputStyle:I
 
-    sget v0, Lzic;->textLocale:I
+    sget v0, Lgkc;->textLocale:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textLocale:I
 
-    sget v0, Lzic;->textStartPadding:I
+    sget v0, Lgkc;->textStartPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->textStartPadding:I
 
-    sget v0, Lzic;->theme:I
+    sget v0, Lgkc;->theme:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->theme:I
 
-    sget v0, Lzic;->thickness:I
+    sget v0, Lgkc;->thickness:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thickness:I
 
-    sget v0, Lzic;->thumbColor:I
+    sget v0, Lgkc;->thumbColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbColor:I
 
-    sget v0, Lzic;->thumbElevation:I
+    sget v0, Lgkc;->thumbElevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbElevation:I
 
-    sget v0, Lzic;->thumbHeight:I
+    sget v0, Lgkc;->thumbHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbHeight:I
 
-    sget v0, Lzic;->thumbIcon:I
+    sget v0, Lgkc;->thumbIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbIcon:I
 
-    sget v0, Lzic;->thumbIconSize:I
+    sget v0, Lgkc;->thumbIconSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbIconSize:I
 
-    sget v0, Lzic;->thumbIconTint:I
+    sget v0, Lgkc;->thumbIconTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbIconTint:I
 
-    sget v0, Lzic;->thumbIconTintMode:I
+    sget v0, Lgkc;->thumbIconTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbIconTintMode:I
 
-    sget v0, Lzic;->thumbRadius:I
+    sget v0, Lgkc;->thumbRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbRadius:I
 
-    sget v0, Lzic;->thumbStrokeColor:I
+    sget v0, Lgkc;->thumbStrokeColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbStrokeColor:I
 
-    sget v0, Lzic;->thumbStrokeWidth:I
+    sget v0, Lgkc;->thumbStrokeWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbStrokeWidth:I
 
-    sget v0, Lzic;->thumbTextPadding:I
+    sget v0, Lgkc;->thumbTextPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbTextPadding:I
 
-    sget v0, Lzic;->thumbTint:I
+    sget v0, Lgkc;->thumbTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbTint:I
 
-    sget v0, Lzic;->thumbTintMode:I
+    sget v0, Lgkc;->thumbTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbTintMode:I
 
-    sget v0, Lzic;->thumbTrackGapSize:I
+    sget v0, Lgkc;->thumbTrackGapSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbTrackGapSize:I
 
-    sget v0, Lzic;->thumbWidth:I
+    sget v0, Lgkc;->thumbWidth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->thumbWidth:I
 
-    sget v0, Lzic;->tickColor:I
+    sget v0, Lgkc;->tickColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickColor:I
 
-    sget v0, Lzic;->tickColorActive:I
+    sget v0, Lgkc;->tickColorActive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickColorActive:I
 
-    sget v0, Lzic;->tickColorInactive:I
+    sget v0, Lgkc;->tickColorInactive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickColorInactive:I
 
-    sget v0, Lzic;->tickMark:I
+    sget v0, Lgkc;->tickMark:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickMark:I
 
-    sget v0, Lzic;->tickMarkTint:I
+    sget v0, Lgkc;->tickMarkTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickMarkTint:I
 
-    sget v0, Lzic;->tickMarkTintMode:I
+    sget v0, Lgkc;->tickMarkTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickMarkTintMode:I
 
-    sget v0, Lzic;->tickRadiusActive:I
+    sget v0, Lgkc;->tickRadiusActive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickRadiusActive:I
 
-    sget v0, Lzic;->tickRadiusInactive:I
+    sget v0, Lgkc;->tickRadiusInactive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickRadiusInactive:I
 
-    sget v0, Lzic;->tickVisible:I
+    sget v0, Lgkc;->tickVisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tickVisible:I
 
-    sget v0, Lzic;->tint:I
+    sget v0, Lgkc;->tint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tint:I
 
-    sget v0, Lzic;->tintMode:I
+    sget v0, Lgkc;->tintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tintMode:I
 
-    sget v0, Lzic;->tintNavigationIcon:I
+    sget v0, Lgkc;->tintNavigationIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tintNavigationIcon:I
 
-    sget v0, Lzic;->title:I
+    sget v0, Lgkc;->title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->title:I
 
-    sget v0, Lzic;->titleCentered:I
+    sget v0, Lgkc;->titleCentered:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleCentered:I
 
-    sget v0, Lzic;->titleCollapseMode:I
+    sget v0, Lgkc;->titleCollapseMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleCollapseMode:I
 
-    sget v0, Lzic;->titleEnabled:I
+    sget v0, Lgkc;->titleEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleEnabled:I
 
-    sget v0, Lzic;->titleMargin:I
+    sget v0, Lgkc;->titleMargin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMargin:I
 
-    sget v0, Lzic;->titleMarginBottom:I
+    sget v0, Lgkc;->titleMarginBottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMarginBottom:I
 
-    sget v0, Lzic;->titleMarginEnd:I
+    sget v0, Lgkc;->titleMarginEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMarginEnd:I
 
-    sget v0, Lzic;->titleMarginStart:I
+    sget v0, Lgkc;->titleMarginStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMarginStart:I
 
-    sget v0, Lzic;->titleMarginTop:I
+    sget v0, Lgkc;->titleMarginTop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMarginTop:I
 
-    sget v0, Lzic;->titleMargins:I
+    sget v0, Lgkc;->titleMargins:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleMargins:I
 
-    sget v0, Lzic;->titlePositionInterpolator:I
+    sget v0, Lgkc;->titlePositionInterpolator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titlePositionInterpolator:I
 
-    sget v0, Lzic;->titleTextAppearance:I
+    sget v0, Lgkc;->titleTextAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleTextAppearance:I
 
-    sget v0, Lzic;->titleTextColor:I
+    sget v0, Lgkc;->titleTextColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleTextColor:I
 
-    sget v0, Lzic;->titleTextEllipsize:I
+    sget v0, Lgkc;->titleTextEllipsize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleTextEllipsize:I
 
-    sget v0, Lzic;->titleTextStyle:I
+    sget v0, Lgkc;->titleTextStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->titleTextStyle:I
 
-    sget v0, Lzic;->toggleCheckedStateOnClick:I
+    sget v0, Lgkc;->toggleCheckedStateOnClick:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->toggleCheckedStateOnClick:I
 
-    sget v0, Lzic;->toolbarId:I
+    sget v0, Lgkc;->toolbarId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->toolbarId:I
 
-    sget v0, Lzic;->toolbarNavigationButtonStyle:I
+    sget v0, Lgkc;->toolbarNavigationButtonStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->toolbarNavigationButtonStyle:I
 
-    sget v0, Lzic;->toolbarStyle:I
+    sget v0, Lgkc;->toolbarStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->toolbarStyle:I
 
-    sget v0, Lzic;->toolbarSurfaceStyle:I
+    sget v0, Lgkc;->toolbarSurfaceStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->toolbarSurfaceStyle:I
 
-    sget v0, Lzic;->tooltipForegroundColor:I
+    sget v0, Lgkc;->tooltipForegroundColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tooltipForegroundColor:I
 
-    sget v0, Lzic;->tooltipFrameBackground:I
+    sget v0, Lgkc;->tooltipFrameBackground:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tooltipFrameBackground:I
 
-    sget v0, Lzic;->tooltipStyle:I
+    sget v0, Lgkc;->tooltipStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tooltipStyle:I
 
-    sget v0, Lzic;->tooltipText:I
+    sget v0, Lgkc;->tooltipText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->tooltipText:I
 
-    sget v0, Lzic;->topInsetScrimEnabled:I
+    sget v0, Lgkc;->topInsetScrimEnabled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->topInsetScrimEnabled:I
 
-    sget v0, Lzic;->touchAnchorId:I
+    sget v0, Lgkc;->touchAnchorId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->touchAnchorId:I
 
-    sget v0, Lzic;->touchAnchorSide:I
+    sget v0, Lgkc;->touchAnchorSide:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->touchAnchorSide:I
 
-    sget v0, Lzic;->touchRegionId:I
+    sget v0, Lgkc;->touchRegionId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->touchRegionId:I
 
-    sget v0, Lzic;->track:I
+    sget v0, Lgkc;->track:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->track:I
 
-    sget v0, Lzic;->trackColor:I
+    sget v0, Lgkc;->trackColor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackColor:I
 
-    sget v0, Lzic;->trackColorActive:I
+    sget v0, Lgkc;->trackColorActive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackColorActive:I
 
-    sget v0, Lzic;->trackColorInactive:I
+    sget v0, Lgkc;->trackColorInactive:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackColorInactive:I
 
-    sget v0, Lzic;->trackCornerRadius:I
+    sget v0, Lgkc;->trackCornerRadius:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackCornerRadius:I
 
-    sget v0, Lzic;->trackDecoration:I
+    sget v0, Lgkc;->trackDecoration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackDecoration:I
 
-    sget v0, Lzic;->trackDecorationTint:I
+    sget v0, Lgkc;->trackDecorationTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackDecorationTint:I
 
-    sget v0, Lzic;->trackDecorationTintMode:I
+    sget v0, Lgkc;->trackDecorationTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackDecorationTintMode:I
 
-    sget v0, Lzic;->trackHeight:I
+    sget v0, Lgkc;->trackHeight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackHeight:I
 
-    sget v0, Lzic;->trackInsideCornerSize:I
+    sget v0, Lgkc;->trackInsideCornerSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackInsideCornerSize:I
 
-    sget v0, Lzic;->trackStopIndicatorSize:I
+    sget v0, Lgkc;->trackStopIndicatorSize:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackStopIndicatorSize:I
 
-    sget v0, Lzic;->trackThickness:I
+    sget v0, Lgkc;->trackThickness:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackThickness:I
 
-    sget v0, Lzic;->trackTint:I
+    sget v0, Lgkc;->trackTint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackTint:I
 
-    sget v0, Lzic;->trackTintMode:I
+    sget v0, Lgkc;->trackTintMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->trackTintMode:I
 
-    sget v0, Lzic;->transitionDisable:I
+    sget v0, Lgkc;->transitionDisable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->transitionDisable:I
 
-    sget v0, Lzic;->transitionEasing:I
+    sget v0, Lgkc;->transitionEasing:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->transitionEasing:I
 
-    sget v0, Lzic;->transitionFlags:I
+    sget v0, Lgkc;->transitionFlags:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->transitionFlags:I
 
-    sget v0, Lzic;->transitionPathRotate:I
+    sget v0, Lgkc;->transitionPathRotate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->transitionPathRotate:I
 
-    sget v0, Lzic;->transitionShapeAppearance:I
+    sget v0, Lgkc;->transitionShapeAppearance:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->transitionShapeAppearance:I
 
-    sget v0, Lzic;->triggerId:I
+    sget v0, Lgkc;->triggerId:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->triggerId:I
 
-    sget v0, Lzic;->triggerReceiver:I
+    sget v0, Lgkc;->triggerReceiver:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->triggerReceiver:I
 
-    sget v0, Lzic;->triggerSlack:I
+    sget v0, Lgkc;->triggerSlack:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->triggerSlack:I
 
-    sget v0, Lzic;->ttcIndex:I
+    sget v0, Lgkc;->ttcIndex:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->ttcIndex:I
 
-    sget v0, Lzic;->useCompatPadding:I
+    sget v0, Lgkc;->useCompatPadding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->useCompatPadding:I
 
-    sget v0, Lzic;->useDrawerArrowDrawable:I
+    sget v0, Lgkc;->useDrawerArrowDrawable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->useDrawerArrowDrawable:I
 
-    sget v0, Lzic;->useMaterialThemeColors:I
+    sget v0, Lgkc;->useMaterialThemeColors:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->useMaterialThemeColors:I
 
-    sget v0, Lzic;->values:I
+    sget v0, Lgkc;->values:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->values:I
 
-    sget v0, Lzic;->verticalOffset:I
+    sget v0, Lgkc;->verticalOffset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->verticalOffset:I
 
-    sget v0, Lzic;->verticalOffsetWithText:I
+    sget v0, Lgkc;->verticalOffsetWithText:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->verticalOffsetWithText:I
 
-    sget v0, Lzic;->viewInflaterClass:I
+    sget v0, Lgkc;->viewInflaterClass:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->viewInflaterClass:I
 
-    sget v0, Lzic;->visibilityMode:I
+    sget v0, Lgkc;->visibilityMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->visibilityMode:I
 
-    sget v0, Lzic;->voiceIcon:I
+    sget v0, Lgkc;->voiceIcon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->voiceIcon:I
 
-    sget v0, Lzic;->warmth:I
+    sget v0, Lgkc;->warmth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->warmth:I
 
-    sget v0, Lzic;->waveDecay:I
+    sget v0, Lgkc;->waveDecay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->waveDecay:I
 
-    sget v0, Lzic;->waveOffset:I
+    sget v0, Lgkc;->waveOffset:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->waveOffset:I
 
-    sget v0, Lzic;->wavePeriod:I
+    sget v0, Lgkc;->wavePeriod:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->wavePeriod:I
 
-    sget v0, Lzic;->waveShape:I
+    sget v0, Lgkc;->waveShape:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->waveShape:I
 
-    sget v0, Lzic;->waveVariesBy:I
+    sget v0, Lgkc;->waveVariesBy:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->waveVariesBy:I
 
-    sget v0, Lzic;->windowActionBar:I
+    sget v0, Lgkc;->windowActionBar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowActionBar:I
 
-    sget v0, Lzic;->windowActionBarOverlay:I
+    sget v0, Lgkc;->windowActionBarOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowActionBarOverlay:I
 
-    sget v0, Lzic;->windowActionModeOverlay:I
+    sget v0, Lgkc;->windowActionModeOverlay:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowActionModeOverlay:I
 
-    sget v0, Lzic;->windowFixedHeightMajor:I
+    sget v0, Lgkc;->windowFixedHeightMajor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowFixedHeightMajor:I
 
-    sget v0, Lzic;->windowFixedHeightMinor:I
+    sget v0, Lgkc;->windowFixedHeightMinor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowFixedHeightMinor:I
 
-    sget v0, Lzic;->windowFixedWidthMajor:I
+    sget v0, Lgkc;->windowFixedWidthMajor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowFixedWidthMajor:I
 
-    sget v0, Lzic;->windowFixedWidthMinor:I
+    sget v0, Lgkc;->windowFixedWidthMinor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowFixedWidthMinor:I
 
-    sget v0, Lzic;->windowMinWidthMajor:I
+    sget v0, Lgkc;->windowMinWidthMajor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowMinWidthMajor:I
 
-    sget v0, Lzic;->windowMinWidthMinor:I
+    sget v0, Lgkc;->windowMinWidthMinor:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowMinWidthMinor:I
 
-    sget v0, Lzic;->windowNoTitle:I
+    sget v0, Lgkc;->windowNoTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->windowNoTitle:I
 
-    sget v0, Lzic;->yearSelectedStyle:I
+    sget v0, Lgkc;->yearSelectedStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->yearSelectedStyle:I
 
-    sget v0, Lzic;->yearStyle:I
+    sget v0, Lgkc;->yearStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->yearStyle:I
 
-    sget v0, Lzic;->yearTodayStyle:I
+    sget v0, Lgkc;->yearTodayStyle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$attr;->yearTodayStyle:I
 

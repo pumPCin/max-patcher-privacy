@@ -1,136 +1,63 @@
 .class public final Lcz3;
-.super Ljava/lang/Object;
+.super Lkhd;
 .source "SourceFile"
-
-# interfaces
-.implements Lgob;
 
 
 # static fields
-.field public static final synthetic h:[Lwq7;
+.field public static final b:Lcz3;
 
+.field public static final c:Lyf4;
 
-# instance fields
-.field public final a:Lo56;
+.field public static final d:Lyf4;
 
-.field public final b:Llt7;
-
-.field public final c:Llt7;
-
-.field public d:Lb54;
-
-.field public final e:Lpzd;
-
-.field public final f:Leie;
-
-.field public final g:Lfzc;
+.field public static final e:Lyf4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
-    new-instance v0, Lc0a;
+    new-instance v0, Lcz3;
 
-    const-string v1, "collectJob"
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    const-string v2, "getCollectJob()Lkotlinx/coroutines/Job;"
+    sput-object v0, Lcz3;->b:Lcz3;
 
-    const-class v3, Lcz3;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    new-array v2, v1, [Ljava/lang/String;
 
-    sget-object v1, Ls6d;->a:Lt6d;
+    const-string v3, ":contact-list/create-contact"
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v4, 0x0
 
-    const/4 v1, 0x1
+    const/16 v5, 0xe
 
-    new-array v1, v1, [Lwq7;
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    aput-object v0, v1, v2
+    sput-object v2, Lcz3;->c:Lyf4;
 
-    sput-object v1, Lcz3;->h:[Lwq7;
+    const-string v2, ":contact-list/share-invite"
 
-    return-void
-.end method
+    new-array v3, v1, [Ljava/lang/String;
 
-.method public constructor <init>(Lo56;Llt7;Llt7;)V
-    .locals 0
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v2
 
-    iput-object p1, p0, Lcz3;->a:Lo56;
+    sput-object v2, Lcz3;->d:Lyf4;
 
-    iput-object p2, p0, Lcz3;->b:Llt7;
+    const-string v2, ":call-contact"
 
-    iput-object p3, p0, Lcz3;->c:Llt7;
+    new-array v1, v1, [Ljava/lang/String;
 
-    invoke-static {}, Lnvi;->a()Lpzd;
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, p0, Lcz3;->e:Lpzd;
-
-    const p1, 0x7fffffff
-
-    const/4 p2, 0x5
-
-    const/4 p3, 0x0
-
-    invoke-static {p3, p1, p2}, Lfie;->b(III)Leie;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcz3;->f:Leie;
-
-    new-instance p2, Lfzc;
-
-    invoke-direct {p2, p1}, Lfzc;-><init>(Lg0a;)V
-
-    iput-object p2, p0, Lcz3;->g:Lfzc;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcz3;->d:Lb54;
-
-    return-void
-.end method
-
-.method public final b(Lwnb;)V
-    .locals 1
-
-    iget-object v0, p0, Lcz3;->a:Lo56;
-
-    invoke-virtual {v0, p1}, Lo56;->E(Lwnb;)V
-
-    return-void
-.end method
-
-.method public final d(J)V
-    .locals 1
-
-    iget-object v0, p0, Lcz3;->a:Lo56;
-
-    invoke-virtual {v0, p1, p2}, Lo56;->B(J)V
-
-    return-void
-.end method
-
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
-
-    iput-object p1, p0, Lcz3;->d:Lb54;
+    sput-object v0, Lcz3;->e:Lyf4;
 
     return-void
 .end method

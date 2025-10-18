@@ -1,62 +1,178 @@
-.class public final synthetic Lev0;
-.super Lti6;
+.class public final Lev0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lev0;
+.field public final b:I
+
+.field public final c:Ljava/nio/ByteBuffer;
+
+.field public d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/nio/ByteBuffer;Lp90;II)V
+    .locals 2
 
-    new-instance v0, Lev0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;"
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    const/4 v5, 0x1
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    const/4 v1, 0x2
+    move-result v0
 
-    const-class v2, Lfv0;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    const-string v3, "createSegment"
+    move-result v1
 
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    sub-int/2addr v0, v1
 
-    sput-object v0, Lev0;->a:Lev0;
+    iget v1, p2, Lp90;->a:I
+
+    if-ne v0, v1, :cond_0
+
+    iput p3, p0, Lev0;->a:I
+
+    iput p4, p0, Lev0;->b:I
+
+    iput-object p1, p0, Lev0;->c:Ljava/nio/ByteBuffer;
+
+    iget-wide p1, p2, Lp90;->b:J
+
+    iput-wide p1, p0, Lev0;->d:J
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, "Byte buffer size is not match with packet info: "
+
+    const-string p4, " != "
+
+    invoke-static {v0, p3, p4}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p3
+
+    iget p2, p2, Lp90;->a:I
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(Ljava/nio/ByteBuffer;)Lp90;
+    .locals 10
 
-    check-cast p1, Ljava/lang/Number;
+    iget-wide v0, p0, Lev0;->d:J
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    iget-object v2, p0, Lev0;->c:Ljava/nio/ByteBuffer;
 
-    move-result-wide v1
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
-    move-object v3, p2
+    move-result v3
 
-    check-cast v3, Lf92;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    sget-object p1, Lfv0;->a:Lf92;
+    move-result v4
 
-    new-instance v0, Lf92;
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
 
-    iget-object v4, v3, Lf92;->a:Ldv0;
+    move-result v5
 
-    const/4 v5, 0x0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    invoke-direct/range {v0 .. v5}, Lf92;-><init>(JLf92;Ldv0;I)V
+    move-result v6
 
-    return-object v0
+    if-le v5, v6, :cond_0
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v5
+
+    int-to-long v6, v5
+
+    iget v8, p0, Lev0;->a:I
+
+    invoke-static {v8, v6, v7}, Lmhi;->c(IJ)J
+
+    move-result-wide v6
+
+    iget v8, p0, Lev0;->b:I
+
+    invoke-static {v8, v6, v7}, Lmhi;->a(IJ)J
+
+    move-result-wide v6
+
+    iget-wide v8, p0, Lev0;->d:J
+
+    add-long/2addr v8, v6
+
+    iput-wide v8, p0, Lev0;->d:J
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object v7
+
+    add-int v8, v3, v5
+
+    invoke-virtual {v7, v8}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    add-int v6, v4, v5
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v5
+
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    add-int v6, v4, v5
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
+
+    :goto_0
+    add-int/2addr v3, v5
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    new-instance p1, Lp90;
+
+    invoke-direct {p1, v5, v0, v1}, Lp90;-><init>(IJ)V
+
+    return-object p1
 .end method

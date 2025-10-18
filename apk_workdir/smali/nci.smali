@@ -1,134 +1,223 @@
-.class public final Lnci;
-.super Lqci;
+.class public abstract Lnci;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final L0(JLjava/lang/Object;)D
+# static fields
+.field public static final a:Ljava/lang/Object;
+
+.field public static b:Z
+
+.field public static c:I
+
+.field public static final synthetic d:I
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/Object;
 
-    check-cast v0, Lsun/misc/Unsafe;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final M0(JLjava/lang/Object;)F
-    .locals 1
-
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final N0(Ljava/lang/Object;JZ)V
-    .locals 1
-
-    sget-boolean v0, Ltci;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3, p4}, Ltci;->c(Ljava/lang/Object;JB)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ltci;->d(Ljava/lang/Object;JB)V
+    sput-object v0, Lnci;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final O0(Ljava/lang/Object;JB)V
-    .locals 1
-
-    sget-boolean v0, Ltci;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3, p4}, Ltci;->c(Ljava/lang/Object;JB)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ltci;->d(Ljava/lang/Object;JB)V
-
-    return-void
-.end method
-
-.method public final P0(Ljava/lang/Object;JD)V
+.method public static a(Ljava/util/Map;)Ljava/lang/String;
     .locals 6
 
-    invoke-static {p4, p5}, Ljava/lang/Double;->doubleToLongBits(D)J
+    const/4 v0, 0x0
 
-    move-result-wide v4
+    if-eqz p0, :cond_5
 
-    iget-object p4, p0, Lqci;->b:Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
 
-    move-object v0, p4
+    move-result v1
 
-    check-cast v0, Lsun/misc/Unsafe;
+    if-eqz v1, :cond_0
 
-    move-object v1, p1
+    goto :goto_1
 
-    move-wide v2, p2
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
+    move-result-object v1
 
-    return-void
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    move-object v2, v0
+
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-static {v4}, Lnci;->b(Ljava/lang/String;)I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    invoke-static {v2}, Lnci;->b(Ljava/lang/String;)I
+
+    move-result v5
+
+    if-le v4, v5, :cond_1
+
+    :cond_3
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    return-object p0
+
+    :cond_5
+    :goto_1
+    return-object v0
 .end method
 
-.method public final Q0(Ljava/lang/Object;JF)V
-    .locals 1
+.method public static b(Ljava/lang/String;)I
+    .locals 3
 
-    invoke-static {p4}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-static {p0}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    move-result p4
+    move-result v0
 
-    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
-
-    return-void
-.end method
-
-.method public final R0(JLjava/lang/Object;)Z
-    .locals 1
-
-    sget-boolean v0, Ltci;->g:Z
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, p2, p3}, Ltci;->m(JLjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    invoke-static {p1, p2, p3}, Ltci;->n(JLjava/lang/Object;)Z
+    const-string v0, "MP4"
 
-    move-result p1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    return p1
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "mp4"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :goto_0
+    return v1
+
+    :cond_1
+    :try_start_0
+    const-string v0, "_"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    aget-object v0, v0, v2
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "failed to parse mp4 video key: "
+
+    invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, "nci"
+
+    invoke-static {v2, p0, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return v1
+.end method
+
+.method public static final c(Landroidx/fragment/app/b;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+
+    :try_start_0
+    const-string v1, "input_method"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_0
+    return-void
 .end method

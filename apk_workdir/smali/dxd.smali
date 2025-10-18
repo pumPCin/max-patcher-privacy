@@ -1,399 +1,318 @@
-.class public abstract Ldxd;
-.super Lmxd;
+.class public final Ldxd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ls5g;
 
 
 # instance fields
-.field public final d:J
+.field public final a:Lbxd;
 
-.field public final e:J
+.field public final b:Ledb;
 
-.field public final f:Ljava/util/List;
+.field public c:I
 
-.field public final g:J
+.field public d:I
 
-.field public final h:J
+.field public e:Z
 
-.field public final i:J
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(Lpvc;JJJJLjava/util/List;JJJ)V
-    .locals 0
+.method public constructor <init>(Lbxd;)V
+    .locals 1
 
-    invoke-direct/range {p0 .. p5}, Lmxd;-><init>(Ljava/lang/Object;JJ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p6, p0, Ldxd;->d:J
+    iput-object p1, p0, Ldxd;->a:Lbxd;
 
-    iput-wide p8, p0, Ldxd;->e:J
+    new-instance p1, Ledb;
 
-    iput-object p10, p0, Ldxd;->f:Ljava/util/List;
+    const/16 v0, 0x20
 
-    iput-wide p11, p0, Ldxd;->i:J
+    invoke-direct {p1, v0}, Ledb;-><init>(I)V
 
-    iput-wide p13, p0, Ldxd;->g:J
-
-    move-wide p1, p15
-
-    iput-wide p1, p0, Ldxd;->h:J
+    iput-object p1, p0, Ldxd;->b:Ledb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(JJ)J
-    .locals 4
-
-    invoke-virtual {p0, p1, p2}, Ldxd;->e(J)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    return-wide v0
-
-    :cond_0
-    iget-wide v0, p0, Ldxd;->h:J
-
-    sub-long v0, p3, v0
-
-    iget-wide v2, p0, Ldxd;->i:J
-
-    add-long/2addr v0, v2
-
-    invoke-virtual {p0, v0, v1, p1, p2}, Ldxd;->g(JJ)J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Ldxd;->d(JJ)J
-
-    move-result-wide p1
-
-    sub-long/2addr v0, p1
-
-    long-to-int p1, v0
-
-    int-to-long p1, p1
-
-    return-wide p1
-.end method
-
-.method public final d(JJ)J
-    .locals 7
-
-    invoke-virtual {p0, p1, p2}, Ldxd;->e(J)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v0, v0, v2
-
-    iget-wide v1, p0, Ldxd;->d:J
-
-    if-nez v0, :cond_1
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    iget-wide v5, p0, Ldxd;->g:J
-
-    cmp-long v0, v5, v3
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v3, p0, Ldxd;->h:J
-
-    sub-long/2addr p3, v3
-
-    sub-long/2addr p3, v5
-
-    invoke-virtual {p0, p3, p4, p1, p2}, Ldxd;->g(JJ)J
-
-    move-result-wide p1
-
-    invoke-static {v1, v2, p1, p2}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_1
-    :goto_0
-    return-wide v1
-.end method
-
-.method public abstract e(J)J
-.end method
-
-.method public final f(JJ)J
-    .locals 10
-
-    iget-wide v0, p0, Lmxd;->a:J
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p0, Ldxd;->d:J
-
-    iget-object v6, p0, Ldxd;->f:Ljava/util/List;
-
-    if-eqz v6, :cond_0
-
-    sub-long/2addr p1, v4
-
-    long-to-int p1, p1
-
-    invoke-interface {v6, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljxd;
-
-    iget-wide p1, p1, Ljxd;->b:J
-
-    mul-long/2addr p1, v2
-
-    div-long/2addr p1, v0
-
-    return-wide p1
-
-    :cond_0
-    invoke-virtual {p0, p3, p4}, Ldxd;->e(J)J
-
-    move-result-wide v6
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v8, v6, v8
-
-    if-eqz v8, :cond_1
-
-    add-long/2addr v4, v6
-
-    const-wide/16 v6, 0x1
-
-    sub-long/2addr v4, v6
-
-    cmp-long v4, p1, v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {p0, p1, p2}, Ldxd;->h(J)J
-
-    move-result-wide p1
-
-    sub-long/2addr p3, p1
-
-    return-wide p3
-
-    :cond_1
-    iget-wide p1, p0, Ldxd;->e:J
-
-    mul-long/2addr p1, v2
-
-    div-long/2addr p1, v0
-
-    return-wide p1
-.end method
-
-.method public final g(JJ)J
-    .locals 11
-
-    invoke-virtual {p0, p3, p4}, Ldxd;->e(J)J
-
-    move-result-wide p3
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p3, v0
-
-    iget-wide v1, p0, Ldxd;->d:J
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ldxd;->f:Ljava/util/List;
-
-    const-wide/16 v3, 0x1
-
-    if-nez v0, :cond_3
-
-    iget-wide v5, p0, Ldxd;->e:J
-
-    const-wide/32 v7, 0xf4240
-
-    mul-long/2addr v5, v7
-
-    iget-wide v7, p0, Lmxd;->a:J
-
-    div-long/2addr v5, v7
-
-    div-long/2addr p1, v5
-
-    add-long/2addr p1, v1
-
-    cmp-long v0, p1, v1
-
-    if-gez v0, :cond_1
-
-    :goto_0
-    return-wide v1
-
-    :cond_1
-    const-wide/16 v5, -0x1
-
-    cmp-long v0, p3, v5
-
-    if-nez v0, :cond_2
-
-    return-wide p1
-
-    :cond_2
-    add-long/2addr v1, p3
-
-    sub-long/2addr v1, v3
-
-    invoke-static {p1, p2, v1, v2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_3
-    add-long/2addr p3, v1
-
-    sub-long/2addr p3, v3
-
-    move-wide v5, v1
-
-    :goto_1
-    cmp-long v0, v5, p3
-
-    if-gtz v0, :cond_6
-
-    sub-long v7, p3, v5
-
-    const-wide/16 v9, 0x2
-
-    div-long/2addr v7, v9
-
-    add-long/2addr v7, v5
-
-    invoke-virtual {p0, v7, v8}, Ldxd;->h(J)J
-
-    move-result-wide v9
-
-    cmp-long v0, v9, p1
-
-    if-gez v0, :cond_4
-
-    add-long v5, v7, v3
-
-    goto :goto_1
-
-    :cond_4
-    if-lez v0, :cond_5
-
-    sub-long/2addr v7, v3
-
-    move-wide p3, v7
-
-    goto :goto_1
-
-    :cond_5
-    return-wide v7
-
-    :cond_6
-    cmp-long p1, v5, v1
-
-    if-nez p1, :cond_7
-
-    return-wide v5
-
-    :cond_7
-    return-wide p3
-.end method
-
-.method public final h(J)J
-    .locals 7
-
-    iget-wide v0, p0, Ldxd;->d:J
-
-    iget-object v2, p0, Ldxd;->f:Ljava/util/List;
-
-    if-eqz v2, :cond_0
-
-    sub-long/2addr p1, v0
-
-    long-to-int p1, p1
-
-    invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljxd;
-
-    iget-wide p1, p1, Ljxd;->a:J
-
-    iget-wide v0, p0, Lmxd;->b:J
-
-    sub-long/2addr p1, v0
-
-    :goto_0
-    move-wide v0, p1
-
-    goto :goto_1
-
-    :cond_0
-    sub-long/2addr p1, v0
-
-    iget-wide v0, p0, Ldxd;->e:J
-
-    mul-long/2addr p1, v0
-
-    goto :goto_0
-
-    :goto_1
-    sget-object p1, Ljhg;->a:Ljava/lang/String;
-
-    sget-object v6, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p0, Lmxd;->a:J
-
-    invoke-static/range {v0 .. v6}, Ljhg;->e0(JJJLjava/math/RoundingMode;)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public abstract i(Lkad;J)Lpvc;
-.end method
-
-.method public j()Z
+.method public final a()V
     .locals 1
-
-    iget-object v0, p0, Ldxd;->f:Ljava/util/List;
-
-    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    return v0
+    iput-boolean v0, p0, Ldxd;->f:Z
+
+    return-void
+.end method
+
+.method public final b(Lawf;Lam5;Lq5g;)V
+    .locals 1
+
+    iget-object v0, p0, Ldxd;->a:Lbxd;
+
+    invoke-interface {v0, p1, p2, p3}, Lbxd;->b(Lawf;Lam5;Lq5g;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ldxd;->f:Z
+
+    return-void
+.end method
+
+.method public final c(ILedb;)V
+    .locals 7
+
+    const/4 v0, 0x1
+
+    and-int/2addr p1, v0
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    move p1, v0
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move p1, v1
 
-    return v0
+    :goto_0
+    const/4 v2, -0x1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p2}, Ledb;->x()I
+
+    move-result v3
+
+    iget v4, p2, Ledb;->b:I
+
+    add-int/2addr v4, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v2
+
+    :goto_1
+    iget-boolean v3, p0, Ldxd;->f:Z
+
+    if-eqz v3, :cond_3
+
+    if-nez p1, :cond_2
+
+    goto/16 :goto_5
+
+    :cond_2
+    iput-boolean v1, p0, Ldxd;->f:Z
+
+    invoke-virtual {p2, v4}, Ledb;->J(I)V
+
+    iput v1, p0, Ldxd;->d:I
+
+    :cond_3
+    :goto_2
+    invoke-virtual {p2}, Ledb;->a()I
+
+    move-result p1
+
+    if-lez p1, :cond_9
+
+    iget p1, p0, Ldxd;->d:I
+
+    const/4 v3, 0x3
+
+    iget-object v4, p0, Ldxd;->b:Ledb;
+
+    if-ge p1, v3, :cond_6
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {p2}, Ledb;->x()I
+
+    move-result p1
+
+    iget v5, p2, Ledb;->b:I
+
+    sub-int/2addr v5, v0
+
+    invoke-virtual {p2, v5}, Ledb;->J(I)V
+
+    const/16 v5, 0xff
+
+    if-ne p1, v5, :cond_4
+
+    iput-boolean v0, p0, Ldxd;->f:Z
+
+    return-void
+
+    :cond_4
+    invoke-virtual {p2}, Ledb;->a()I
+
+    move-result p1
+
+    iget v5, p0, Ldxd;->d:I
+
+    rsub-int/lit8 v5, v5, 0x3
+
+    invoke-static {p1, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iget-object v5, v4, Ledb;->a:[B
+
+    iget v6, p0, Ldxd;->d:I
+
+    invoke-virtual {p2, v6, v5, p1}, Ledb;->h(I[BI)V
+
+    iget v5, p0, Ldxd;->d:I
+
+    add-int/2addr v5, p1
+
+    iput v5, p0, Ldxd;->d:I
+
+    if-ne v5, v3, :cond_3
+
+    invoke-virtual {v4, v1}, Ledb;->J(I)V
+
+    invoke-virtual {v4, v3}, Ledb;->I(I)V
+
+    invoke-virtual {v4, v0}, Ledb;->K(I)V
+
+    invoke-virtual {v4}, Ledb;->x()I
+
+    move-result p1
+
+    invoke-virtual {v4}, Ledb;->x()I
+
+    move-result v5
+
+    and-int/lit16 v6, p1, 0x80
+
+    if-eqz v6, :cond_5
+
+    move v6, v0
+
+    goto :goto_3
+
+    :cond_5
+    move v6, v1
+
+    :goto_3
+    iput-boolean v6, p0, Ldxd;->e:Z
+
+    and-int/lit8 p1, p1, 0xf
+
+    shl-int/lit8 p1, p1, 0x8
+
+    or-int/2addr p1, v5
+
+    add-int/2addr p1, v3
+
+    iput p1, p0, Ldxd;->c:I
+
+    iget-object v3, v4, Ledb;->a:[B
+
+    array-length v5, v3
+
+    if-ge v5, p1, :cond_3
+
+    array-length v3, v3
+
+    mul-int/lit8 v3, v3, 0x2
+
+    invoke-static {p1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    const/16 v3, 0x1002
+
+    invoke-static {v3, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-virtual {v4, p1}, Ledb;->c(I)V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p2}, Ledb;->a()I
+
+    move-result p1
+
+    iget v3, p0, Ldxd;->c:I
+
+    iget v5, p0, Ldxd;->d:I
+
+    sub-int/2addr v3, v5
+
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iget-object v3, v4, Ledb;->a:[B
+
+    iget v5, p0, Ldxd;->d:I
+
+    invoke-virtual {p2, v5, v3, p1}, Ledb;->h(I[BI)V
+
+    iget v3, p0, Ldxd;->d:I
+
+    add-int/2addr v3, p1
+
+    iput v3, p0, Ldxd;->d:I
+
+    iget p1, p0, Ldxd;->c:I
+
+    if-ne v3, p1, :cond_3
+
+    iget-boolean v3, p0, Ldxd;->e:Z
+
+    if-eqz v3, :cond_8
+
+    iget-object v3, v4, Ledb;->a:[B
+
+    invoke-static {v1, p1, v2, v3}, Lnig;->m(III[B)I
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    iput-boolean v0, p0, Ldxd;->f:Z
+
+    return-void
+
+    :cond_7
+    iget p1, p0, Ldxd;->c:I
+
+    add-int/lit8 p1, p1, -0x4
+
+    invoke-virtual {v4, p1}, Ledb;->I(I)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v4, p1}, Ledb;->I(I)V
+
+    :goto_4
+    invoke-virtual {v4, v1}, Ledb;->J(I)V
+
+    iget-object p1, p0, Ldxd;->a:Lbxd;
+
+    invoke-interface {p1, v4}, Lbxd;->d(Ledb;)V
+
+    iput v1, p0, Ldxd;->d:I
+
+    goto/16 :goto_2
+
+    :cond_9
+    :goto_5
+    return-void
 .end method

@@ -85,7 +85,7 @@
     return v2
 
     :cond_1
-    sget-object v1, Luqe;->a:Landroid/util/Size;
+    sget-object v1, Lcse;->a:Landroid/util/Size;
 
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
@@ -97,7 +97,7 @@
 
     mul-int/2addr v3, v1
 
-    invoke-static {p2}, Luqe;->a(Landroid/util/Size;)I
+    invoke-static {p2}, Lcse;->a(Landroid/util/Size;)I
 
     move-result p2
 
@@ -201,7 +201,7 @@
     move v0, v2
 
     :goto_0
-    invoke-static {v0}, Lbui;->b(Z)V
+    invoke-static {v0}, Ldvi;->b(Z)V
 
     invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
 

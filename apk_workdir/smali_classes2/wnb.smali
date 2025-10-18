@@ -1,54 +1,48 @@
 .class public final Lwnb;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ly14;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:I
+.field public final synthetic Y:Lunb;
 
-.field public final c:I
-
-.field public final d:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IIJ)V
+.method public constructor <init>(Lunb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwnb;->Y:Lunb;
 
-    iput-wide p3, p0, Lwnb;->a:J
-
-    iput p1, p0, Lwnb;->b:I
-
-    iput p2, p0, Lwnb;->c:I
-
-    sget-object p1, Lvnb;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p2}, Lwx1;->v(I)I
-
-    move-result p2
-
-    aget p1, p1, p2
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p3, 0x2
-
-    if-eq p1, p3, :cond_0
-
-    const/4 p3, 0x3
-
-    if-eq p1, p3, :cond_0
-
-    const/4 p2, 0x0
-
-    :cond_0
-    iput-boolean p2, p0, Lwnb;->d:Z
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lwnb;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lwnb;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwnb;->X:I
+
+    iget-object p1, p0, Lwnb;->Y:Lunb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lunb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lzp1;
+.field public final synthetic b:Lyp1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lzp1;I)V
+.method public synthetic constructor <init>(Lyp1;I)V
     .locals 0
 
-    iput p3, p0, Lwp1;->a:I
+    iput p2, p0, Lwp1;->a:I
 
-    iput-object p1, p0, Lwp1;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lwp1;->c:Lzp1;
+    iput-object p1, p0, Lwp1;->b:Lyp1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,73 +27,61 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget v0, p0, Lwp1;->a:I
+    iget p1, p0, Lwp1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lwp1;->b:Lyp1;
 
-    new-instance v0, Lui1;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v1, p0, Lwp1;->b:Landroid/content/Context;
+    iget-object p1, v0, Lyp1;->J0:Lxp1;
 
-    invoke-direct {v0, v1}, Lui1;-><init>(Landroid/content/Context;)V
+    if-eqz p1, :cond_0
 
-    sget-object v1, Lsz4;->t0:Lc82;
+    check-cast p1, Lcl1;
 
-    invoke-virtual {v1, v0}, Lc82;->o(Landroid/view/View;)Lcva;
+    iget-object p1, p1, Lcl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-    move-result-object v1
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
 
-    iget-object v1, v1, Lcva;->c:Lu4b;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
 
-    invoke-virtual {v0, v1}, Lui1;->setPipTheme(Lu4b;)V
+    move-result-object p1
 
-    sget-object v1, Lri1;->b:Lri1;
+    iget-object p1, p1, Lio1;->q0:Lwr1;
 
-    invoke-virtual {v0, v1}, Lui1;->setPipMode(Lri1;)V
+    invoke-virtual {p1}, Lwr1;->h()V
 
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Li5;
-
-    const/4 v2, 0x5
-
-    iget-object v3, p0, Lwp1;->c:Lzp1;
-
-    invoke-direct {v1, v2, v3}, Li5;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lui1;->setListener(Ljs1;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    new-instance v1, Lvp1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v3, v2}, Lvp1;-><init>(Lzp1;I)V
-
-    invoke-virtual {v0, v1}, Lui1;->setVideoLayoutUpdatesControllerProvider(Loh6;)V
-
-    return-object v0
+    :cond_0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lwp1;->b:Landroid/content/Context;
+    iget-object p1, v0, Lyp1;->J0:Lxp1;
 
-    iget-object v1, p0, Lwp1;->c:Lzp1;
+    if-eqz p1, :cond_1
 
-    invoke-static {v0, v1}, Lzp1;->w(Landroid/content/Context;Lzp1;)Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, v0, Lyp1;->O0:Lmi1;
 
-    move-result-object v0
+    check-cast p1, Lcl1;
 
-    return-object v0
+    iget-object p1, p1, Lcl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+
+    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lio1;->q0:Lwr1;
+
+    invoke-virtual {p1, v0}, Lwr1;->f(Lmi1;)V
+
+    :cond_1
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,152 +1,141 @@
 .class public final Lwc5;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lxc5;
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+.field public final synthetic b:I
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+.method public constructor <init>(Lxc5;II)V
     .locals 0
 
-    iput-object p2, p0, Lwc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lwc5;->a:Lxc5;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lwc5;->b:I
+
+    iput p3, p0, Lwc5;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lwc5;->a:Lxc5;
 
-    invoke-virtual {p0, p1, p2}, Lwc5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lxc5;->a:Ltc5;
 
-    move-result-object p1
+    iget-object v2, v0, Lxc5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    check-cast p1, Lwc5;
+    iget v3, p0, Lwc5;->b:I
 
-    sget-object p2, Lzag;->a:Lzag;
+    if-nez v3, :cond_0
 
-    invoke-virtual {p1, p2}, Lwc5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lwc5;
-
-    iget-object v1, p0, Lwc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    invoke-direct {v0, p2, v1}, Lwc5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
-
-    iput-object p1, v0, Lwc5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwc5;->X:Ljava/lang/Object;
-
-    check-cast p1, Lzag;
-
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Lwq7;
-
-    new-instance v1, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;
-
-    invoke-direct {v1}, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;-><init>()V
-
-    iget-object p1, p0, Lwc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/arch/Widget;->setTargetController(Lx14;)V
-
-    move-object v0, p1
-
-    :goto_0
-    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
-
-    move-result-object v0
-
-    goto :goto_0
+    iget v3, p0, Lwc5;->c:I
 
     :cond_0
-    instance-of v2, v0, Lphd;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Lphd;
-
-    goto :goto_1
-
-    :cond_1
-    move-object v0, v3
-
-    :goto_1
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lphd;->f0()Ljhd;
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
 
     move-result-object v3
 
-    :cond_2
-    move-object v7, v3
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+    move-result v3
 
-    if-eqz v7, :cond_3
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
 
-    new-instance v0, Lmhd;
+    move-result-object v4
 
-    const/4 v5, 0x0
+    if-eqz v4, :cond_1
 
-    const/4 v6, -0x1
+    invoke-virtual {v4}, Lt6d;->j()I
 
-    const/4 v2, 0x0
+    move-result v4
 
-    const/4 v3, 0x0
+    goto :goto_0
 
+    :cond_1
     const/4 v4, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
+    :goto_0
+    sub-int/2addr v4, v3
 
-    const/4 p1, 0x0
+    iget v3, v0, Lxc5;->b:I
 
-    const/4 v1, 0x1
+    const/4 v5, 0x1
 
-    const-string v2, "forgot-pin"
+    if-gt v4, v3, :cond_3
 
-    invoke-static {p1, v0, v1, v2}, Lwx1;->u(ZLmhd;ZLjava/lang/String;)V
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
 
-    invoke-virtual {v7, v0}, Ljhd;->G(Lmhd;)V
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-boolean v3, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:Z
+
+    if-nez v3, :cond_3
+
+    :cond_2
+    invoke-interface {v1}, Ltc5;->p()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+
+    invoke-interface {v1}, Ltc5;->n()V
 
     :cond_3
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    return-object p1
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result v3
+
+    if-ltz v3, :cond_5
+
+    iget v0, v0, Lxc5;->b:I
+
+    if-gt v3, v0, :cond_5
+
+    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-boolean v0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
+
+    if-nez v0, :cond_5
+
+    :cond_4
+    invoke-interface {v1}, Ltc5;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
+
+    invoke-interface {v1}, Ltc5;->j()V
+
+    :cond_5
+    return-void
 .end method

@@ -1,24 +1,32 @@
 .class public final Lr61;
-.super Ljava/lang/Object;
+.super Lv2h;
 .source "SourceFile"
 
 # interfaces
-.implements Lx61;
+.implements Lt61;
 
 
 # static fields
-.field public static final a:Lr61;
+.field public static final c:Lr61;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Lr61;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v1, Lisc;->call_screen_connection_restored:I
 
-    sput-object v0, Lr61;->a:Lr61;
+    const-wide/16 v2, 0x3e8
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Lv2h;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lr61;->c:Lr61;
 
     return-void
 .end method
@@ -50,7 +58,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x3f0d84a0
+    const v0, 0x426150a3
 
     return v0
 .end method
@@ -58,7 +66,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Logout"
+    const-string v0, "Restored"
 
     return-object v0
 .end method

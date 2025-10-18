@@ -1,412 +1,741 @@
 .class public final Ly63;
-.super Ljava/lang/Object;
+.super Ls15;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ly63;
-
-
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public b:F
 
-.field public final b:Ljava/util/HashMap;
+.field public c:F
 
+.field public d:F
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public e:Z
 
-    new-instance v0, Ly63;
-
-    invoke-direct {v0}, Ly63;-><init>()V
-
-    sput-object v0, Ly63;->c:Ly63;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ly63;->a:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ly63;->b:Ljava/util/HashMap;
-
-    return-void
-.end method
-
-.method public static b(Ljava/util/HashMap;Lx63;Ljv7;Ljava/lang/Class;)V
-    .locals 3
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljv7;
-
-    if-eqz v0, :cond_1
-
-    if-ne p2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p1, Lx63;->b:Ljava/lang/reflect/Method;
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Method "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " in "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " already declared with different @OnLifecycleEvent value: previous value "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", new value "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    return-void
-.end method
+.field public f:F
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lw63;
+.method public final a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
+    .locals 8
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0}, Ly63;->i()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Ly63;->i()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    iget-object v2, p0, Ls15;->a:Lvk0;
+
+    check-cast v2, Le73;
+
+    iget v3, v2, Le73;->h:I
+
+    int-to-float v3, v3
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    div-float/2addr v3, v4
+
+    iget v5, v2, Le73;->i:I
+
+    int-to-float v5, v5
+
+    add-float/2addr v3, v5
+
+    mul-float v5, v3, v0
+
+    mul-float v6, v3, v1
+
+    iget v7, p2, Landroid/graphics/Rect;->left:I
+
+    int-to-float v7, v7
+
+    add-float/2addr v5, v7
+
+    iget p2, p2, Landroid/graphics/Rect;->top:I
+
+    int-to-float p2, p2
+
+    add-float/2addr v6, p2
+
+    invoke-virtual {p1, v5, v6}, Landroid/graphics/Canvas;->translate(FF)V
+
+    const/high16 p2, -0x3d4c0000    # -90.0f
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->rotate(F)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
+
+    iget p2, v2, Le73;->j:I
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    if-eqz p2, :cond_0
+
+    const/high16 p2, -0x40800000    # -1.0f
+
+    invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->scale(FF)V
+
+    :cond_0
+    neg-float p2, v3
+
+    invoke-virtual {p1, p2, p2, v3, v3}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
+
+    iget p1, v2, Lvk0;->a:I
+
+    div-int/lit8 p2, p1, 0x2
+
+    iget v1, v2, Lvk0;->b:I
+
+    const/4 v3, 0x1
+
+    if-gt p2, v1, :cond_1
+
+    move p2, v3
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p2, 0x0
+
+    :goto_0
+    iput-boolean p2, p0, Ly63;->e:Z
+
+    int-to-float p2, p1
+
+    mul-float/2addr p2, p3
+
+    iput p2, p0, Ly63;->b:F
+
+    const/4 p2, 0x2
+
+    div-int/2addr p1, p2
+
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    mul-float/2addr p1, p3
+
+    iput p1, p0, Ly63;->c:F
+
+    iget p1, v2, Le73;->h:I
+
+    iget v1, v2, Lvk0;->a:I
+
+    sub-int/2addr p1, v1
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v4
+
+    iput p1, p0, Ly63;->d:F
+
+    if-nez p4, :cond_2
+
+    if-eqz p5, :cond_8
+
+    :cond_2
+    if-eqz p4, :cond_3
+
+    iget v5, v2, Lvk0;->e:I
+
+    if-eq v5, p2, :cond_4
+
+    :cond_3
+    if-eqz p5, :cond_5
+
+    iget v5, v2, Lvk0;->f:I
+
+    if-ne v5, v3, :cond_5
+
+    :cond_4
+    sub-float p2, v0, p3
+
+    int-to-float p4, v1
+
+    mul-float/2addr p2, p4
+
+    div-float/2addr p2, v4
+
+    add-float/2addr p2, p1
+
+    iput p2, p0, Ly63;->d:F
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz p4, :cond_6
+
+    iget p4, v2, Lvk0;->e:I
+
+    if-eq p4, v3, :cond_7
+
+    :cond_6
+    if-eqz p5, :cond_8
+
+    iget p4, v2, Lvk0;->f:I
+
+    if-ne p4, p2, :cond_8
+
+    :cond_7
+    sub-float p2, v0, p3
+
+    int-to-float p4, v1
+
+    mul-float/2addr p2, p4
+
+    div-float/2addr p2, v4
+
+    sub-float/2addr p1, p2
+
+    iput p1, p0, Ly63;->d:F
+
+    :cond_8
+    :goto_1
+    if-eqz p5, :cond_9
+
+    iget p1, v2, Lvk0;->f:I
+
+    const/4 p2, 0x3
+
+    if-ne p1, p2, :cond_9
+
+    iput p3, p0, Ly63;->f:F
+
+    return-void
+
+    :cond_9
+    iput v0, p0, Ly63;->f:F
+
+    return-void
+.end method
+
+.method public final b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lr15;I)V
+    .locals 9
+
+    iget v0, p3, Lr15;->c:I
+
+    invoke-static {v0, p4}, Lzgi;->d(II)I
+
+    move-result v6
+
+    iget v4, p3, Lr15;->a:F
+
+    iget v5, p3, Lr15;->b:F
+
+    iget v7, p3, Lr15;->d:I
+
+    move v8, v7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    invoke-virtual/range {v1 .. v8}, Ly63;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+
+    return-void
+.end method
+
+.method public final d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+    .locals 8
+
+    invoke-static {p5, p6}, Lzgi;->d(II)I
+
+    move-result v5
+
+    move v7, p7
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move v6, p7
+
+    invoke-virtual/range {v0 .. v7}, Ly63;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+
+    return-void
+.end method
+
+.method public final e()I
+    .locals 1
+
+    invoke-virtual {p0}, Ly63;->i()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    invoke-virtual {p0}, Ly63;->i()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
     .locals 12
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+    cmpl-float v1, p4, p3
 
-    move-result-object v0
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    new-instance v1, Ljava/util/HashMap;
+    if-ltz v1, :cond_0
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ly63;->a:Ljava/util/HashMap;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lw63;
-
-    if-eqz v4, :cond_0
+    sub-float v1, p4, p3
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0, v2}, Ly63;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lw63;
+    add-float v1, p4, v2
 
-    move-result-object v4
+    sub-float/2addr v1, p3
 
     :goto_0
-    iget-object v0, v4, Lw63;->b:Ljava/util/HashMap;
+    rem-float v3, p3, v2
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+    iget v4, p0, Ly63;->f:F
+
+    cmpg-float v4, v4, v2
+
+    if-gez v4, :cond_1
+
+    add-float v8, v3, v1
+
+    cmpl-float v4, v8, v2
+
+    if-lez v4, :cond_1
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move/from16 v5, p5
+
+    move/from16 v6, p6
+
+    invoke-virtual/range {v0 .. v7}, Ly63;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const/4 v6, 0x0
+
+    move/from16 v7, p7
+
+    move v4, v8
+
+    invoke-virtual/range {v0 .. v7}, Ly63;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+
+    return-void
 
     :cond_1
-    invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
+    iget v4, p0, Ly63;->c:F
 
-    move-result-object v0
+    iget v6, p0, Ly63;->d:F
 
-    array-length v4, v0
+    div-float/2addr v4, v6
 
-    const/4 v5, 0x0
+    float-to-double v6, v4
 
-    move v6, v5
+    invoke-static {v6, v7}, Ljava/lang/Math;->toDegrees(D)D
 
-    :goto_1
-    if-ge v6, v4, :cond_4
+    move-result-wide v6
 
-    aget-object v7, v0, v6
+    double-to-float v7, v6
 
-    invoke-virtual {v3, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v6, 0x0
 
-    move-result-object v8
+    cmpl-float v4, v3, v6
 
-    check-cast v8, Lw63;
+    const/high16 v8, 0x43b40000    # 360.0f
 
-    if-eqz v8, :cond_2
+    const/high16 v9, 0x40000000    # 2.0f
 
-    goto :goto_2
+    if-nez v4, :cond_2
+
+    const v4, 0x3f7d70a4    # 0.99f
+
+    cmpl-float v10, v1, v4
+
+    if-ltz v10, :cond_2
+
+    sub-float v4, v1, v4
+
+    mul-float v10, v7, v9
+
+    div-float/2addr v10, v8
+
+    mul-float/2addr v10, v4
+
+    const v4, 0x3c23d70a    # 0.01f
+
+    div-float/2addr v10, v4
+
+    add-float/2addr v1, v10
 
     :cond_2
-    invoke-virtual {p0, v7, v2}, Ly63;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lw63;
+    iget v4, p0, Ly63;->f:F
 
-    move-result-object v8
+    sub-float v4, v2, v4
 
-    :goto_2
-    iget-object v7, v8, Lw63;->b:Ljava/util/HashMap;
+    invoke-static {v4, v2, v3}, Lmhi;->b(FFF)F
 
-    invoke-virtual {v7}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+    move-result v2
 
-    move-result-object v7
+    iget v3, p0, Ly63;->f:F
 
-    invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {v6, v3, v1}, Lmhi;->b(FFF)F
 
-    move-result-object v7
+    move-result v1
 
-    :goto_3
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    move/from16 v3, p6
 
-    move-result v8
+    int-to-float v3, v3
 
-    if-eqz v8, :cond_3
+    iget v4, p0, Ly63;->d:F
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    div-float/2addr v3, v4
 
-    move-result-object v8
+    float-to-double v3, v3
 
-    check-cast v8, Ljava/util/Map$Entry;
+    invoke-static {v3, v4}, Ljava/lang/Math;->toDegrees(D)D
 
-    invoke-interface {v8}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result-wide v3
 
-    move-result-object v9
+    double-to-float v3, v3
 
-    check-cast v9, Lx63;
+    move/from16 v4, p7
 
-    invoke-interface {v8}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    int-to-float v4, v4
 
-    move-result-object v8
+    iget v10, p0, Ly63;->d:F
 
-    check-cast v8, Ljv7;
+    div-float/2addr v4, v10
 
-    invoke-static {v1, v9, v8, p1}, Ly63;->b(Ljava/util/HashMap;Lx63;Ljv7;Ljava/lang/Class;)V
+    float-to-double v10, v4
 
-    goto :goto_3
+    invoke-static {v10, v11}, Ljava/lang/Math;->toDegrees(D)D
+
+    move-result-wide v10
+
+    double-to-float v4, v10
+
+    mul-float/2addr v1, v8
+
+    sub-float/2addr v1, v3
+
+    sub-float v10, v1, v4
+
+    mul-float/2addr v2, v8
+
+    add-float v8, v2, v3
+
+    cmpg-float v1, v10, v6
+
+    if-gtz v1, :cond_3
+
+    goto/16 :goto_2
 
     :cond_3
-    add-int/lit8 v6, v6, 0x1
+    const/4 v1, 0x1
+
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    move/from16 v1, p5
+
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v1, p0, Ly63;->b:F
+
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    mul-float v1, v7, v9
+
+    cmpg-float v2, v10, v1
+
+    if-gez v2, :cond_4
+
+    div-float v6, v10, v1
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    mul-float/2addr v7, v6
+
+    add-float v3, v7, v8
+
+    iget v1, p0, Ly63;->c:F
+
+    mul-float v4, v1, v9
+
+    iget v5, p0, Ly63;->b:F
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v0 .. v6}, Ly63;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+
+    return-void
+
+    :cond_4
+    move v0, v1
+
+    new-instance v1, Landroid/graphics/RectF;
+
+    iget v3, p0, Ly63;->d:F
+
+    neg-float v4, v3
+
+    invoke-direct {v1, v4, v4, v3, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-boolean v3, p0, Ly63;->e:Z
+
+    if-eqz v3, :cond_5
+
+    sget-object v3, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     goto :goto_1
 
-    :cond_4
-    if-eqz p2, :cond_5
-
-    goto :goto_4
-
     :cond_5
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
+    sget-object v3, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
 
-    move-result-object p2
-    :try_end_0
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_1
+    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    :goto_4
-    array-length v0, p2
+    add-float v3, v8, v7
 
-    move v2, v5
+    sub-float v0, v10, v0
 
-    move v4, v2
+    const/4 v4, 0x0
 
-    :goto_5
-    if-ge v2, v0, :cond_d
+    move-object v5, p2
 
-    aget-object v6, p2, v2
+    move v2, v3
 
-    const-class v7, Lsla;
+    move v3, v0
 
-    invoke-virtual {v6, v7}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+    move-object v0, p1
 
-    move-result-object v7
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    check-cast v7, Lsla;
+    move v3, v2
 
-    if-nez v7, :cond_6
+    iget-boolean v0, p0, Ly63;->e:Z
 
-    goto :goto_8
+    if-nez v0, :cond_6
+
+    iget v0, p0, Ly63;->c:F
+
+    cmpl-float v0, v0, v6
+
+    if-lez v0, :cond_6
+
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget v0, p0, Ly63;->c:F
+
+    mul-float v4, v0, v9
+
+    iget v5, p0, Ly63;->b:F
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v0 .. v6}, Ly63;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+
+    add-float/2addr v8, v10
+
+    sub-float v3, v8, v7
+
+    iget v1, p0, Ly63;->c:F
+
+    mul-float v4, v1, v9
+
+    iget v5, p0, Ly63;->b:F
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v6}, Ly63;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
 
     :cond_6
-    invoke-virtual {v6}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
+    :goto_2
+    return-void
+.end method
 
-    move-result-object v4
+.method public final h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+    .locals 6
 
-    array-length v8, v4
+    iget v0, p0, Ly63;->b:F
 
-    const/4 v9, 0x1
+    invoke-static {p5, v0}, Ljava/lang/Math;->min(FF)F
 
-    if-lez v8, :cond_8
+    move-result p5
 
-    const-class v8, Liw7;
+    float-to-int p5, p5
 
-    aget-object v10, v4, v5
+    int-to-float p5, p5
 
-    invoke-virtual {v8, v10}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    iget v0, p0, Ly63;->c:F
 
-    move-result v8
+    mul-float/2addr v0, p5
 
-    if-eqz v8, :cond_7
+    iget v1, p0, Ly63;->b:F
 
-    move v8, v9
+    div-float/2addr v0, v1
 
-    goto :goto_6
+    const/high16 v1, 0x40000000    # 2.0f
 
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    div-float v2, p4, v1
 
-    const-string p2, "invalid parameter type. Must be one and instanceof LifecycleOwner"
+    invoke-static {v2, v0}, Ljava/lang/Math;->min(FF)F
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p1
+    new-instance v3, Landroid/graphics/RectF;
 
-    :cond_8
-    move v8, v5
+    neg-float v4, p5
 
-    :goto_6
-    invoke-interface {v7}, Lsla;->value()Ljv7;
+    div-float/2addr v4, v1
 
-    move-result-object v7
+    neg-float p4, p4
 
-    array-length v10, v4
+    div-float/2addr p4, v1
 
-    const/4 v11, 0x2
+    div-float/2addr p5, v1
 
-    if-le v10, v9, :cond_b
+    invoke-direct {v3, v4, p4, p5, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    const-class v8, Ljv7;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    aget-object v10, v4, v9
+    iget p4, p0, Ly63;->d:F
 
-    invoke-virtual {v8, v10}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    float-to-double p4, p4
 
-    move-result v8
+    float-to-double v1, p3
 
-    if-eqz v8, :cond_a
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
 
-    sget-object v8, Ljv7;->ON_ANY:Ljv7;
+    move-result-wide v4
 
-    if-ne v7, v8, :cond_9
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
-    move v8, v11
+    move-result-wide v4
 
-    goto :goto_7
+    mul-double/2addr v4, p4
 
-    :cond_9
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    double-to-float p4, v4
 
-    const-string p2, "Second arg is supported only for ON_ANY value"
+    iget p5, p0, Ly63;->d:F
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    float-to-double v4, p5
 
-    throw p1
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
 
-    :cond_a
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    move-result-wide v1
 
-    const-string p2, "invalid parameter type. second arg must be an event"
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-wide v1
 
-    throw p1
+    mul-double/2addr v1, v4
 
-    :cond_b
-    :goto_7
-    array-length v4, v4
+    double-to-float p5, v1
 
-    if-gt v4, v11, :cond_c
+    invoke-virtual {p1, p4, p5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    new-instance v4, Lx63;
+    invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->rotate(F)V
 
-    invoke-direct {v4, v8, v6}, Lx63;-><init>(ILjava/lang/reflect/Method;)V
+    invoke-virtual {p1, p6, p6}, Landroid/graphics/Canvas;->scale(FF)V
 
-    invoke-static {v1, v4, v7, p1}, Ly63;->b(Ljava/util/HashMap;Lx63;Ljv7;Ljava/lang/Class;)V
+    invoke-virtual {p1, v3, v0, v0, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    move v4, v9
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    :goto_8
-    add-int/lit8 v2, v2, 0x1
+    return-void
+.end method
 
-    goto :goto_5
+.method public final i()I
+    .locals 2
 
-    :cond_c
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Ls15;->a:Lvk0;
 
-    const-string p2, "cannot have more than 2 params"
+    move-object v1, v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast v1, Le73;
 
-    throw p1
+    iget v1, v1, Le73;->h:I
 
-    :cond_d
-    new-instance p2, Lw63;
+    check-cast v0, Le73;
 
-    invoke-direct {p2, v1}, Lw63;-><init>(Ljava/util/HashMap;)V
+    iget v0, v0, Le73;->i:I
 
-    invoke-virtual {v3, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x2
 
-    iget-object v0, p0, Ly63;->b:Ljava/util/HashMap;
+    add-int/2addr v0, v1
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor."
-
-    invoke-direct {p2, v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
+    return v0
 .end method

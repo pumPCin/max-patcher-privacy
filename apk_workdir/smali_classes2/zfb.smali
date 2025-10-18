@@ -1,245 +1,172 @@
-.class public final enum Lzfb;
-.super Ljava/lang/Enum;
+.class public final synthetic Lzfb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lzfb;
-
-.field public static final enum Y:Lzfb;
-
-.field public static final enum Z:Lzfb;
-
-.field public static final enum b:Lzfb;
-
-.field public static final enum c:Lzfb;
-
-.field public static final enum o:Lzfb;
-
-.field public static final enum r0:Lzfb;
-
-.field public static final enum s0:Lzfb;
-
-.field public static final enum t0:Lzfb;
-
-.field public static final enum u0:Lzfb;
-
-.field public static final enum v0:Lzfb;
-
-.field public static final enum w0:Lzfb;
-
-.field public static final enum x0:Lzfb;
-
-.field public static final synthetic y0:[Lzfb;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Legb;
+
+.field public final synthetic c:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 16
-
-    new-instance v0, Lzfb;
-
-    const/4 v1, 0x0
-
-    const-string v2, "app_init"
-
-    const-string v3, "APP_INIT"
-
-    invoke-direct {v0, v3, v1, v2}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lzfb;->b:Lzfb;
-
-    new-instance v1, Lzfb;
-
-    const/4 v2, 0x1
-
-    const-string v3, "open_chats_to_render"
-
-    const-string v4, "OPEN_CHATS_ROOT_SPAN"
-
-    invoke-direct {v1, v4, v2, v3}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lzfb;->c:Lzfb;
-
-    new-instance v2, Lzfb;
-
-    const/4 v3, 0x2
-
-    const-string v4, "open_chat_to_render"
-
-    const-string v5, "OPEN_CHAT_ROOT_SPAN"
-
-    invoke-direct {v2, v5, v3, v4}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lzfb;->o:Lzfb;
-
-    new-instance v3, Lzfb;
-
-    const/4 v4, 0x3
-
-    const-string v5, "open_call_screen_to_render"
-
-    const-string v6, "OPEN_CALL_SCREEN_ROOT_SPAN"
-
-    invoke-direct {v3, v6, v4, v5}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lzfb;->X:Lzfb;
-
-    new-instance v4, Lzfb;
-
-    const/4 v5, 0x4
-
-    const-string v6, "main_screen_init_to_render"
-
-    const-string v7, "MAIN_SCREEN_INIT_TO_RENDER"
-
-    invoke-direct {v4, v7, v5, v6}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lzfb;->Y:Lzfb;
-
-    new-instance v5, Lzfb;
-
-    const/4 v6, 0x5
-
-    const-string v7, "folders_init_to_render"
-
-    const-string v8, "FOLDERS_INIT_TO_RENDER"
-
-    invoke-direct {v5, v8, v6, v7}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lzfb;->Z:Lzfb;
-
-    new-instance v6, Lzfb;
-
-    const/4 v7, 0x6
-
-    const-string v8, "chats_init_to_render"
-
-    const-string v9, "CHATS_INIT_TO_RENDER"
-
-    invoke-direct {v6, v9, v7, v8}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lzfb;->r0:Lzfb;
-
-    new-instance v7, Lzfb;
-
-    const/4 v8, 0x7
-
-    const-string v9, "chat_init_to_render"
-
-    const-string v10, "CHAT_INIT_TO_RENDER"
-
-    invoke-direct {v7, v10, v8, v9}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lzfb;->s0:Lzfb;
-
-    new-instance v8, Lzfb;
-
-    const/16 v9, 0x8
-
-    const-string v10, "call_init"
-
-    const-string v11, "CALL_INIT"
-
-    invoke-direct {v8, v11, v9, v10}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v8, Lzfb;->t0:Lzfb;
-
-    new-instance v9, Lzfb;
-
-    const/16 v10, 0x9
-
-    const-string v11, "incoming_call_processing_init"
-
-    const-string v12, "INCOMING_CALL_PROCESSING_INIT"
-
-    invoke-direct {v9, v12, v10, v11}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v9, Lzfb;->u0:Lzfb;
-
-    new-instance v10, Lzfb;
-
-    const/16 v11, 0xa
-
-    const-string v12, "call_screen_init_to_render"
-
-    const-string v13, "CALL_SCREEN_INIT_TO_RENDER"
-
-    invoke-direct {v10, v13, v11, v12}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v10, Lzfb;->v0:Lzfb;
-
-    new-instance v11, Lzfb;
-
-    const/16 v12, 0xb
-
-    const-string v13, "call_screen_on_create_view"
-
-    const-string v14, "CALL_SCREEN_VIEW_CREATION"
-
-    invoke-direct {v11, v14, v12, v13}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v11, Lzfb;->w0:Lzfb;
-
-    new-instance v12, Lzfb;
-
-    const/16 v13, 0xc
-
-    const-string v14, "call_screen_on_view_created"
-
-    const-string v15, "CALL_SCREEN_VIEW_CREATED"
-
-    invoke-direct {v12, v15, v13, v14}, Lzfb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v12, Lzfb;->x0:Lzfb;
-
-    filled-new-array/range {v0 .. v12}, [Lzfb;
-
-    move-result-object v0
-
-    sput-object v0, Lzfb;->y0:[Lzfb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Legb;Lorg/webrtc/SessionDescription;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, Lzfb;->a:I
 
-    iput-object p3, p0, Lzfb;->a:Ljava/lang/String;
+    iput-object p1, p0, Lzfb;->b:Legb;
+
+    iput-object p2, p0, Lzfb;->c:Lorg/webrtc/SessionDescription;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lzfb;
-    .locals 1
 
-    const-class v0, Lzfb;
+# virtual methods
+.method public final run()V
+    .locals 10
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lzfb;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lzfb;
+    iget-object v0, p0, Lzfb;->b:Legb;
 
-    return-object p0
-.end method
+    iget-object v1, v0, Legb;->I:Ldw5;
 
-.method public static values()[Lzfb;
-    .locals 1
+    iget-object v2, p0, Lzfb;->c:Lorg/webrtc/SessionDescription;
 
-    sget-object v0, Lzfb;->y0:[Lzfb;
+    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-boolean v4, v1, Ldw5;->c:Z
 
-    move-result-object v0
+    const-wide/16 v5, 0x0
 
-    check-cast v0, [Lzfb;
+    if-nez v4, :cond_0
 
-    return-object v0
+    goto :goto_0
+
+    :cond_0
+    iput-wide v5, v1, Ldw5;->b:J
+
+    iput-wide v5, v1, Ldw5;->a:J
+
+    const/4 v4, 0x0
+
+    iput-boolean v4, v1, Ldw5;->c:Z
+
+    :goto_0
+    invoke-static {v3}, Ldw5;->a(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    iput-wide v3, v1, Ldw5;->a:J
+
+    iget-wide v7, v1, Ldw5;->b:J
+
+    cmp-long v9, v7, v5
+
+    if-eqz v9, :cond_1
+
+    cmp-long v5, v3, v5
+
+    if-eqz v5, :cond_1
+
+    xor-long/2addr v3, v7
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v1, Ldw5;->c:Z
+
+    iget-object v1, v1, Ldw5;->d:Lcw5;
+
+    invoke-interface {v1, v3, v4}, Lcw5;->c(J)V
+
+    :cond_1
+    iget-object v1, v0, Legb;->R:Ldgb;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1, v0, v2}, Ldgb;->a(Legb;Lorg/webrtc/SessionDescription;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzfb;->b:Legb;
+
+    iget-object v1, v0, Legb;->I:Ldw5;
+
+    iget-object v2, p0, Lzfb;->c:Lorg/webrtc/SessionDescription;
+
+    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+
+    iget-boolean v4, v1, Ldw5;->c:Z
+
+    const-wide/16 v5, 0x0
+
+    if-nez v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iput-wide v5, v1, Ldw5;->b:J
+
+    iput-wide v5, v1, Ldw5;->a:J
+
+    const/4 v4, 0x0
+
+    iput-boolean v4, v1, Ldw5;->c:Z
+
+    :goto_1
+    invoke-static {v3}, Ldw5;->a(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    iput-wide v3, v1, Ldw5;->b:J
+
+    cmp-long v7, v3, v5
+
+    if-eqz v7, :cond_4
+
+    iget-wide v7, v1, Ldw5;->a:J
+
+    cmp-long v5, v7, v5
+
+    if-eqz v5, :cond_4
+
+    xor-long/2addr v3, v7
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v1, Ldw5;->c:Z
+
+    iget-object v1, v1, Ldw5;->d:Lcw5;
+
+    invoke-interface {v1, v3, v4}, Lcw5;->c(J)V
+
+    :cond_4
+    iget-object v1, v0, Legb;->R:Ldgb;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1, v0, v2}, Ldgb;->k(Legb;Lorg/webrtc/SessionDescription;)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

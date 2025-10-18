@@ -1,62 +1,53 @@
-.class public final synthetic Li33;
-.super Ljava/lang/Object;
+.class public final Li33;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:Lu33;
+.field public X:J
 
-.field public final synthetic b:J
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:J
+.field public final synthetic Z:Ln33;
 
-.field public final synthetic o:J
+.field public o:Ln33;
+
+.field public q0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu33;JJJ)V
+.method public constructor <init>(Ln33;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Li33;->Z:Ln33;
 
-    iput-object p1, p0, Li33;->a:Lu33;
-
-    iput-wide p2, p0, Li33;->b:J
-
-    iput-wide p4, p0, Li33;->c:J
-
-    iput-wide p6, p0, Li33;->o:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v8, 0x0
+    iput-object p1, p0, Li33;->Y:Ljava/lang/Object;
 
-    iget-object v0, p0, Li33;->a:Lu33;
+    iget p1, p0, Li33;->q0:I
 
-    invoke-virtual {v0}, Lu33;->M()Lkd2;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    iget-wide v1, p0, Li33;->b:J
+    iput p1, p0, Li33;->q0:I
 
-    iget-wide v3, p0, Li33;->c:J
+    iget-object p1, p0, Li33;->Z:Ln33;
 
-    iget-wide v5, p0, Li33;->o:J
+    const-wide/16 v0, 0x0
 
-    const/4 v7, -0x1
+    invoke-static {p1, v0, v1, p0}, Ln33;->b(Ln33;JLy14;)Ljava/lang/Comparable;
 
-    invoke-virtual/range {v0 .. v8}, Lkd2;->l0(JJJIZ)Lda2;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

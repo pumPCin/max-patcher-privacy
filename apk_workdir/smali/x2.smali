@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+.method public constructor <init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -773,15 +773,15 @@
     :cond_0
     iget-object v0, p0, Lx2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
-    iget-object v0, v0, Lq0i;->c:Lze3;
+    iget-object v0, v0, Lr1i;->c:Lmf3;
 
     iget-object v1, p0, Lx2;->c:Ljava/util/Collection;
 
     iget-object v2, p0, Lx2;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v1}, Lze3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v1}, Lmf3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -875,13 +875,13 @@
 
     iget-object v0, p0, Lx2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     iget-object v1, p0, Lx2;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lq0i;->c:Lze3;
+    iget-object v0, v0, Lr1i;->c:Lmf3;
 
-    invoke-virtual {v0, v1}, Lze3;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lmf3;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -920,13 +920,13 @@
 
     iget-object v0, p0, Lx2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     iget-object v1, p0, Lx2;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lq0i;->c:Lze3;
+    iget-object v0, v0, Lr1i;->c:Lmf3;
 
-    invoke-virtual {v0, v1}, Lze3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lmf3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
@@ -1130,10 +1130,10 @@
     .line 1
     invoke-virtual {p0}, Lx2;->f()V
 
-    new-instance v0, Ld0i;
+    new-instance v0, Le1i;
 
     .line 2
-    invoke-direct {v0, p0}, Ld0i;-><init>(Lx2;)V
+    invoke-direct {v0, p0}, Le1i;-><init>(Lx2;)V
 
     return-object v0
 
@@ -1166,10 +1166,10 @@
     .line 5
     invoke-virtual {p0}, Lx2;->f()V
 
-    new-instance v0, Ld0i;
+    new-instance v0, Le1i;
 
     .line 6
-    invoke-direct {v0, p0, p1}, Ld0i;-><init>(Lx2;I)V
+    invoke-direct {v0, p0, p1}, Le1i;-><init>(Lx2;I)V
 
     return-object v0
 
@@ -1593,7 +1593,7 @@
     :cond_0
     iget-object v0, p0, Lx2;->Z:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     instance-of v1, p1, Ljava/util/RandomAccess;
 
@@ -1601,16 +1601,16 @@
 
     if-eqz v1, :cond_1
 
-    new-instance v1, Lwzh;
+    new-instance v1, Lx0i;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     goto :goto_0
 
     :cond_1
     new-instance v1, Lx2;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     :goto_0
     return-object v1

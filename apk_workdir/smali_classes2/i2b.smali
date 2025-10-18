@@ -1,268 +1,169 @@
-.class public final Li2b;
+.class public abstract Li2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Li2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:I
+.field public static final c:I
 
-.field public final b:I
+.field public static final d:I
 
-.field public final c:I
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Luj8;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
-
-    sput-object v0, Li2b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput p1, p0, Li2b;->a:I
-
-    .line 3
-    iput p2, p0, Li2b;->b:I
-
-    .line 4
-    iput p3, p0, Li2b;->c:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IIII)V
-    .locals 2
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x2
-
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    move p2, v1
-
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_2
-
-    move p3, v1
-
-    .line 5
-    :cond_2
-    invoke-direct {p0, p1, p2, p3}, Li2b;-><init>(III)V
-
-    return-void
-.end method
-
-.method public static a(Li2b;IIII)Li2b;
     .locals 1
 
-    and-int/lit8 v0, p4, 0x1
+    sget v0, Lttc;->oneme_settings_media_action_always:I
 
-    if-eqz v0, :cond_0
+    sput v0, Li2b;->a:I
 
-    iget p1, p0, Li2b;->a:I
+    sget v0, Lttc;->oneme_settings_media_action_disabled:I
 
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
+    sput v0, Li2b;->b:I
 
-    if-eqz v0, :cond_1
+    sget v0, Lttc;->oneme_settings_media_action_dont_load:I
 
-    iget p2, p0, Li2b;->b:I
+    sput v0, Li2b;->c:I
 
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
+    sget v0, Lttc;->oneme_settings_media_action_video_quality_1080:I
 
-    if-eqz p4, :cond_2
+    sput v0, Li2b;->d:I
 
-    iget p3, p0, Li2b;->c:I
+    sget v0, Lttc;->oneme_settings_media_action_video_quality_480:I
 
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput v0, Li2b;->e:I
 
-    new-instance p0, Li2b;
+    sget v0, Lttc;->oneme_settings_media_action_video_quality_720:I
 
-    invoke-direct {p0, p1, p2, p3}, Li2b;-><init>(III)V
+    sput v0, Li2b;->f:I
 
-    return-object p0
-.end method
+    sget v0, Lttc;->oneme_settings_media_action_wifi:I
 
+    sput v0, Li2b;->g:I
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    sget v0, Lttc;->oneme_settings_media_animoji:I
 
-    const/4 v0, 0x0
+    sput v0, Li2b;->h:I
 
-    return v0
-.end method
+    sget v0, Lttc;->oneme_settings_media_caching:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    sput v0, Li2b;->i:I
 
-    const/4 v0, 0x1
+    sget v0, Lttc;->oneme_settings_media_gif:I
 
-    if-ne p0, p1, :cond_0
+    sput v0, Li2b;->j:I
 
-    return v0
+    sget v0, Lttc;->oneme_settings_media_gif_play:I
 
-    :cond_0
-    instance-of v1, p1, Li2b;
+    sput v0, Li2b;->k:I
 
-    const/4 v2, 0x0
+    sget v0, Lttc;->oneme_settings_media_gif_title:I
 
-    if-nez v1, :cond_1
+    sput v0, Li2b;->l:I
 
-    return v2
+    sget v0, Lttc;->oneme_settings_media_load_media_in_roaming:I
 
-    :cond_1
-    check-cast p1, Li2b;
+    sput v0, Li2b;->m:I
 
-    iget v1, p0, Li2b;->a:I
+    sget v0, Lttc;->oneme_settings_media_photo:I
 
-    iget v3, p1, Li2b;->a:I
+    sput v0, Li2b;->n:I
 
-    if-ne v1, v3, :cond_4
+    sget v0, Lttc;->oneme_settings_media_photo_title:I
 
-    iget v1, p0, Li2b;->b:I
+    sput v0, Li2b;->o:I
 
-    iget v3, p1, Li2b;->b:I
+    sget v0, Lttc;->oneme_settings_media_playlist:I
 
-    if-eq v1, v3, :cond_2
+    sput v0, Li2b;->p:I
 
-    return v2
+    sget v0, Lttc;->oneme_settings_media_screen_autoloading_section:I
 
-    :cond_2
-    iget v1, p0, Li2b;->c:I
+    sput v0, Li2b;->q:I
 
-    iget p1, p1, Li2b;->c:I
+    sget v0, Lttc;->oneme_settings_media_screen_autoplaying_section:I
 
-    if-eq v1, p1, :cond_3
+    sput v0, Li2b;->r:I
 
-    return v2
+    sget v0, Lttc;->oneme_settings_media_screen_datapressing_section:I
 
-    :cond_3
-    return v0
+    sput v0, Li2b;->s:I
 
-    :cond_4
-    return v2
-.end method
+    sget v0, Lttc;->oneme_settings_media_screen_toolbar_title:I
 
-.method public final hashCode()I
-    .locals 3
+    sput v0, Li2b;->t:I
 
-    iget v0, p0, Li2b;->a:I
+    sget v0, Lttc;->oneme_settings_media_video:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    sput v0, Li2b;->u:I
 
-    move-result v0
+    sget v0, Lttc;->oneme_settings_media_video_messages:I
 
-    const/16 v1, 0x1f
+    sput v0, Li2b;->v:I
 
-    mul-int/2addr v0, v1
+    sget v0, Lttc;->oneme_settings_media_video_messages_title:I
 
-    iget v2, p0, Li2b;->b:I
+    sput v0, Li2b;->w:I
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    sget v0, Lttc;->oneme_settings_media_video_quality:I
 
-    move-result v0
+    sput v0, Li2b;->x:I
 
-    iget v1, p0, Li2b;->c:I
+    sget v0, Lttc;->oneme_settings_media_video_quality_title:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    sput v0, Li2b;->y:I
 
-    move-result v1
+    sget v0, Lttc;->oneme_settings_media_video_title:I
 
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget v0, p0, Li2b;->a:I
-
-    const-string v1, "ContainerGravity(value="
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, ", topMargin="
-
-    const-string v3, ", bottomMargin="
-
-    iget v4, p0, Li2b;->b:I
-
-    const-string v5, "ContainerParams(gravity="
-
-    invoke-static {v4, v5, v0, v1, v3}, Llfb;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Li2b;->c:I
-
-    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Li2b;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Li2b;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Li2b;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Li2b;->z:I
 
     return-void
 .end method

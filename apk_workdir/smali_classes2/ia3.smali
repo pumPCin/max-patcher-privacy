@@ -1,64 +1,131 @@
 .class public final Lia3;
-.super Ljava/lang/Object;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/text/style/UpdateAppearance;
+.implements Landroid/os/Parcelable;
+.implements Llh8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lia3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lma3;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lma3;Landroid/graphics/drawable/Drawable;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lh8;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+
+    sput-object v0, Lia3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const/high16 v0, -0x10000
+
+    .line 1
+    invoke-direct {p0, v0}, Lia3;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lia3;->a:I
+    .line 2
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    iput-object p1, p0, Lia3;->b:Lma3;
+    .line 3
+    iput p1, p0, Lia3;->a:I
 
-    iput-object p2, p0, Lia3;->c:Landroid/graphics/drawable/Drawable;
+    const/16 p1, 0x9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    iput p1, p0, Lia3;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 0
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Lia3;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final copy()Lr44;
+    .locals 1
+
+    new-instance v0, Lia3;
+
+    invoke-direct {v0}, Lia3;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lia3;->b:I
+
+    return v0
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
     iget v0, p0, Lia3;->a:I
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lia3;->b:Lma3;
-
-    iget-object v1, p0, Lia3;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, v1}, Lma3;->z(Lma3;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lia3;->b:Lma3;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v1, p0, Lia3;->c:Landroid/graphics/drawable/Drawable;
+    iget p2, p0, Lia3;->a:I
 
-    invoke-static {v0, v1}, Lma3;->x(Lma3;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,84 +1,41 @@
 .class public final Lly9;
-.super Leli;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/util/Set;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    sget-object v0, Lua5;->a:Lua5;
 
-    iput-wide p1, p0, Lly9;->a:J
+    .line 5
+    sget-object v1, Lka5;->a:Lka5;
+
+    .line 6
+    invoke-direct {p0, v1, v0}, Lly9;-><init>(Ljava/util/List;Ljava/util/Set;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/List;Ljava/util/Set;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    .line 2
+    iput-object p2, p0, Lly9;->a:Ljava/util/Set;
 
-    if-ne p0, p1, :cond_0
+    .line 3
+    iput-object p1, p0, Lly9;->b:Ljava/util/List;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lly9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lly9;
-
-    iget-wide v3, p0, Lly9;->a:J
-
-    iget-wide v5, p1, Lly9;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lly9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "AudioRecord(recordAudioId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lly9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

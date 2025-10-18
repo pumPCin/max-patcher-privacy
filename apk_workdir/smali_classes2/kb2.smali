@@ -1,111 +1,109 @@
-.class public final Lkb2;
-.super Llff;
+.class public final enum Lkb2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
+# static fields
+.field public static final enum X:Lkb2;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final synthetic Y:[Lkb2;
 
-.field public final synthetic Y:Ldc2;
+.field public static final enum a:Lkb2;
+
+.field public static final enum b:Lkb2;
+
+.field public static final enum c:Lkb2;
+
+.field public static final enum o:Lkb2;
 
 
 # direct methods
-.method public constructor <init>(Ldc2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lkb2;->Y:Ldc2;
+    new-instance v0, Lkb2;
 
-    const/4 p1, 0x2
+    const-string v1, "NONE"
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkb2;->a:Lkb2;
+
+    new-instance v1, Lkb2;
+
+    const-string v2, "IN_PROGRESS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkb2;->b:Lkb2;
+
+    new-instance v2, Lkb2;
+
+    const-string v3, "SENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkb2;->c:Lkb2;
+
+    new-instance v3, Lkb2;
+
+    const-string v4, "READ"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lkb2;->o:Lkb2;
+
+    new-instance v4, Lkb2;
+
+    const-string v5, "ERROR"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lkb2;->X:Lkb2;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lkb2;
+
+    move-result-object v0
+
+    sput-object v0, Lkb2;->Y:[Lkb2;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lkb2;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lkb2;
 
-    check-cast p1, Lo72;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lkb2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lkb2;
 
-    move-result-object p1
-
-    check-cast p1, Lkb2;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lkb2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lkb2;
+    .locals 1
 
-    new-instance v0, Lkb2;
+    sget-object v0, Lkb2;->Y:[Lkb2;
 
-    iget-object v1, p0, Lkb2;->Y:Ldc2;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p2}, Lkb2;-><init>(Ldc2;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lkb2;->X:Ljava/lang/Object;
+    check-cast v0, [Lkb2;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkb2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lo72;
-
-    iget-object v0, p0, Lkb2;->Y:Ldc2;
-
-    iget-object v1, v0, Lz62;->i:Lsze;
-
-    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lo72;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Lo72;->b:Ln72;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    sget-object v3, Ln72;->b:Ln72;
-
-    if-ne v2, v3, :cond_1
-
-    invoke-virtual {v1, p1}, Lsze;->setValue(Ljava/lang/Object;)V
-
-    :cond_1
-    sget-object p1, Ldc2;->B:[Lwq7;
-
-    invoke-virtual {v0}, Ldc2;->u()Ly62;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lz62;->d(Ly62;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

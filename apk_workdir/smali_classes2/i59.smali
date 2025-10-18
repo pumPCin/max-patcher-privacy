@@ -1,87 +1,109 @@
 .class public final Li59;
-.super Ljava/lang/Object;
+.super Lvpe;
 .source "SourceFile"
 
-# interfaces
-.implements Lm59;
 
-
-# instance fields
-.field public final a:J
-
-
-# direct methods
-.method public constructor <init>(J)V
+# virtual methods
+.method public final bridge synthetic A(Ly18;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lh59;
 
-    iput-wide p1, p0, Li59;->a:J
+    invoke-virtual {p0, p1}, Li59;->G(Lh59;)V
 
     return-void
 .end method
 
+.method public final G(Lh59;)V
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    const/4 v0, 0x1
+    check-cast v0, Lwra;
 
-    if-ne p0, p1, :cond_0
+    iget-wide v1, p1, Lh59;->a:J
 
-    return v0
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+
+    iget-boolean v3, p1, Lh59;->s0:Z
+
+    invoke-virtual {v0, v3}, Lwra;->setEnabled(Z)V
+
+    iget-object v3, p1, Lh59;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v3, p1, Lh59;->o:Ltrf;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lwra;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v3, p1, Lh59;->Z:Z
+
+    invoke-virtual {v0, v3}, Lwra;->setVerified(Z)V
+
+    iget-object v3, p1, Lh59;->v0:Ltrf;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Li59;
+    move-object v3, v4
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-virtual {v0, v3}, Lwra;->setAlias(Ljava/lang/CharSequence;)V
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0}, Lwra;->e()V
 
-    return v2
+    invoke-virtual {v0, v4}, Lwra;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v3, p1, Lh59;->Y:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lh59;->X:Landroid/net/Uri;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_2
 
     :cond_1
-    check-cast p1, Li59;
+    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    iget-wide v3, p0, Li59;->a:J
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    iget-wide v5, p1, Li59;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
+    move-result-object p1
 
     :cond_2
-    return v0
-.end method
+    invoke-virtual {v0, v1, v2, v3, p1}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-.method public final hashCode()I
-    .locals 2
+    const/4 p1, 0x0
 
-    iget-wide v0, p0, Li59;->a:J
+    invoke-virtual {v0, p1}, Lwra;->setSelectionEnabled(Z)V
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OnMemberClicked(id="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Li59;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

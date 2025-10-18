@@ -1,98 +1,184 @@
 .class public final Lyke;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ld5c;
 
 
 # instance fields
-.field public final synthetic X:Lble;
+.field public final a:Lb0j;
 
 
 # direct methods
-.method public constructor <init>(Lble;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lb0j;)V
     .locals 0
 
-    iput-object p1, p0, Lyke;->X:Lble;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lyke;->a:Lb0j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lyke;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lyke;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lyke;
+
+    iget-object v1, p0, Lyke;->a:Lb0j;
+
+    iget-object p1, p1, Lyke;->a:Lb0j;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x10
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Ly18;)Z
+    .locals 4
+
+    const/16 v0, 0x10
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Ly18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lyke;->a:Lb0j;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, -0x7ffffff0
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Ly18;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lyke;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lv5c;
 
     check-cast p1, Lyke;
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-object p1, p1, Lyke;->a:Lb0j;
 
-    invoke-virtual {p1, p2}, Lyke;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p1}, Lv5c;-><init>(Lb0j;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final m()I
     .locals 1
 
-    new-instance p1, Lyke;
+    const v0, -0x7ffffff0
 
-    iget-object v0, p0, Lyke;->X:Lble;
-
-    invoke-direct {p1, v0, p2}, Lyke;-><init>(Lble;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final q(Ly18;)Z
+    .locals 0
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lyke;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lyke;->X:Lble;
+    move-result p1
 
-    iget-object p1, p1, Lble;->o:Llt7;
+    return p1
+.end method
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShortLinkInputItem(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyke;->a:Lb0j;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType=-2147483632)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/Context;
-
-    sget v1, Lmkc;->ic_geolocation_filled_28:I
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/content/Context;
-
-    sget-object v2, Lsz4;->t0:Lc82;
-
-    invoke-static {v2, p1}, Lu9d;->i(Lc82;Landroid/content/Context;)Lh67;
-
-    move-result-object p1
-
-    iget p1, p1, Lh67;->k:I
-
-    invoke-static {v1, p1, v0}, Lkzh;->n(IILandroid/content/Context;)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

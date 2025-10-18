@@ -3,21 +3,17 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
-
-
-# direct methods
-.method public constructor <init>()V
+# virtual methods
+.method public final serializer()Lur7;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lur7;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lgdf;->a:Lgdf;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lhdf;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-void
+    return-object v0
 .end method

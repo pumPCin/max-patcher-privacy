@@ -1,91 +1,51 @@
-.class public final synthetic Lrz7;
-.super Ljava/lang/Object;
+.class public final Lrz7;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic a:Ltz7;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lc08;
+
+.field public Z:I
+
+.field public o:Lvy5;
 
 
 # direct methods
-.method public constructor <init>(Ltz7;)V
+.method public constructor <init>(Lc08;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrz7;->Y:Lc08;
 
-    iput-object p1, p0, Lrz7;->a:Ltz7;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Lrz7;
+    iput-object p1, p0, Lrz7;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lrz7;->Z:I
 
-    if-eqz p1, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Lrz7;->getFunctionDelegate()Lji6;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lrz7;->Z:I
 
-    check-cast p1, Lqi6;
+    iget-object p1, p0, Lrz7;->Y:Lc08;
 
-    invoke-interface {p1}, Lqi6;->getFunctionDelegate()Lji6;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lc08;->h(Lvy5;Lm18;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getFunctionDelegate()Lji6;
-    .locals 7
-
-    new-instance v0, Lti6;
-
-    const-string v6, "onProfileTagClicked(Landroid/view/View;Ljava/lang/String;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x2
-
-    const-class v3, Ltz7;
-
-    iget-object v4, p0, Lrz7;->a:Ltz7;
-
-    const-string v5, "onProfileTagClicked"
-
-    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lrz7;->getFunctionDelegate()Lji6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

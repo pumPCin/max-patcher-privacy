@@ -1,5 +1,5 @@
 .class public final Lev;
-.super Llj0;
+.super Luj0;
 .source "SourceFile"
 
 
@@ -14,7 +14,7 @@
     .line 1
     iput p1, p0, Lev;->b:I
 
-    invoke-direct {p0}, Llj0;-><init>()V
+    invoke-direct {p0}, Luj0;-><init>()V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .line 2
     iput p3, p0, Lev;->b:I
 
-    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
+    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     sparse-switch v0, :sswitch_data_0
 
-    invoke-super {p0}, Llj0;->toString()Ljava/lang/String;
+    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
 
     move-result-object v0
 

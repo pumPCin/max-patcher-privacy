@@ -1,10 +1,10 @@
 .class public final Lc4;
-.super Lfci;
+.super Lgdi;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final c(Le4;La4;La4;)Z
+.method public final a(Le4;La4;La4;)Z
     .locals 1
 
     monitor-enter p1
@@ -42,7 +42,7 @@
     throw p2
 .end method
 
-.method public final d(Le4;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final b(Le4;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     monitor-enter p1
@@ -80,7 +80,7 @@
     throw p2
 .end method
 
-.method public final e(Le4;Ld4;Ld4;)Z
+.method public final c(Le4;Ld4;Ld4;)Z
     .locals 1
 
     monitor-enter p1
@@ -118,7 +118,7 @@
     throw p2
 .end method
 
-.method public final f(Ld4;Ld4;)V
+.method public final e(Ld4;Ld4;)V
     .locals 0
 
     iput-object p2, p1, Ld4;->b:Ld4;
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public final g(Ld4;Ljava/lang/Thread;)V
+.method public final f(Ld4;Ljava/lang/Thread;)V
     .locals 0
 
     iput-object p2, p1, Ld4;->a:Ljava/lang/Thread;

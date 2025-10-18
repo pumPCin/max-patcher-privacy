@@ -142,7 +142,7 @@
 .method public g(Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 6
 
-    sget v0, Lenc;->tag_accessibility_actions:I
+    sget v0, Lloc;->tag_accessibility_actions:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -234,7 +234,7 @@
     invoke-static {v5, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
-    invoke-interface {v2, p1}, Lq5;->g(Landroid/view/View;)Z
+    invoke-interface {v2, p1}, Lq5;->f(Landroid/view/View;)Z
 
     move-result v0
 
@@ -260,7 +260,7 @@
     :cond_5
     if-nez v0, :cond_9
 
-    sget v2, Lenc;->accessibility_action_clickable_span:I
+    sget v2, Lloc;->accessibility_action_clickable_span:I
 
     if-ne p2, v2, :cond_9
 
@@ -274,7 +274,7 @@
 
     move-result p2
 
-    sget p3, Lenc;->tag_accessibility_clickable_spans:I
+    sget p3, Lloc;->tag_accessibility_clickable_spans:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

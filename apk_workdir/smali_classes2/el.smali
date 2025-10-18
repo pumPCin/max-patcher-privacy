@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final b:Lv6d;
+.field public static final b:Lc8d;
 
 
 # instance fields
@@ -15,13 +15,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lv6d;
+    new-instance v0, Lc8d;
 
     const-string v1, "main-([0-9]+)\\.txt"
 
-    invoke-direct {v0, v1}, Lv6d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lc8d;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lel;->b:Lv6d;
+    sput-object v0, Lel;->b:Lc8d;
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 
     const/16 v0, 0x64
 
-    invoke-static {p2, p1, v0}, Ljvi;->c(III)I
+    invoke-static {p2, p1, v0}, Llwi;->c(III)I
 
     return-void
 .end method

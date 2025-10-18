@@ -1,28 +1,43 @@
-.class public interface abstract Liq1;
+.class public abstract synthetic Liq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
-.implements Leq1;
-.implements Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# virtual methods
-.method public b(Ljava/lang/String;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    return-void
-.end method
+    const/4 v0, 0x2
 
-.method public onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
-    .locals 0
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
-    .locals 0
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v1, Liq1;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

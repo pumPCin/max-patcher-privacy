@@ -1,180 +1,148 @@
 .class public final Lw88;
-.super Lxm;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmmf;
 
 
 # instance fields
-.field public final X:J
+.field public final a:J
 
-.field public final Y:J
+.field public final b:[B
 
-.field public final Z:J
-
-.field public final o:Ljava/lang/String;
-
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:J
-
-.field public final t0:J
-
-.field public final u0:J
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:Llmf;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;JJJLjava/lang/String;JJJ)V
+.method public constructor <init>(J[B)V
     .locals 0
 
-    invoke-direct/range {p0 .. p2}, Lxm;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lw88;->o:Ljava/lang/String;
+    iput-wide p1, p0, Lw88;->a:J
 
-    iput-wide p4, p0, Lw88;->X:J
+    iput-object p3, p0, Lw88;->b:[B
 
-    iput-wide p6, p0, Lw88;->Y:J
+    array-length p1, p3
 
-    iput-wide p8, p0, Lw88;->Z:J
+    add-int/lit8 p1, p1, 0x1e
 
-    iput-object p10, p0, Lw88;->r0:Ljava/lang/String;
-
-    iput-wide p11, p0, Lw88;->s0:J
-
-    iput-wide p13, p0, Lw88;->t0:J
-
-    move-wide p1, p15
-
-    iput-wide p1, p0, Lw88;->u0:J
-
-    const-class p1, Lw88;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lw88;->v0:Ljava/lang/String;
-
-    new-instance p1, Llmf;
-
-    invoke-direct {p1}, Llmf;-><init>()V
-
-    iput-object p1, p0, Lw88;->w0:Llmf;
+    iput p1, p0, Lw88;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Llmf;
-    .locals 1
-
-    iget-object v0, p0, Lw88;->w0:Llmf;
-
-    return-object v0
-.end method
-
-.method public final e(Lklf;)V
+.method public final a(Ljava/io/OutputStream;I)V
     .locals 2
 
-    check-cast p1, Ly88;
+    const/16 v0, 0x23
 
-    sget-object v0, Lu98;->i:Lu98;
+    invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    invoke-static {}, Lu98;->g()V
+    move-result-object p2
 
-    new-instance v0, Lv88;
+    invoke-static {p1, p2}, Lvei;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    const/16 p2, 0x20
 
-    invoke-direct {v0, p0, p1, v1}, Lv88;-><init>(Lw88;Ly88;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
 
-    invoke-static {v0}, Lrji;->g(Lei6;)Ljava/lang/Object;
+    iget-wide v0, p0, Lw88;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lvei;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
+
+    const-string p2, " | "
+
+    invoke-static {p1, p2}, Lvei;->a(Ljava/io/OutputStream;Ljava/lang/String;)V
+
+    iget-object p2, p0, Lw88;->b:[B
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    const/16 p2, 0xa
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
 
     return-void
 .end method
 
-.method public final f(Lukf;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lxm;->c:Lym;
+    instance-of v0, p1, Lw88;
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    check-cast p1, Lw88;
+
+    iget-wide v0, p1, Lw88;->a:J
+
+    iget-wide v2, p0, Lw88;->a:J
+
+    cmp-long v0, v2, v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lw88;->b:[B
+
+    iget-object p1, p1, Lw88;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    :goto_0
-    iget-object v0, v0, Lym;->l:Llt7;
+    return p1
+.end method
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lw88;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    iget-object v1, p0, Lw88;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lw88;->a(Ljava/io/OutputStream;I)V
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ll98;
-
-    invoke-virtual {v0, p1}, Ll98;->a(Lukf;)V
-
-    return-void
-.end method
-
-.method public final i()Lhlf;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    new-instance v1, Lx88;
-
-    iget-object v2, v0, Lxm;->c:Lym;
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    iget-object v2, v2, Lym;->b:Llt7;
-
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lxr4;
-
-    invoke-virtual {v2}, Lxr4;->d()Z
-
-    move-result v3
-
-    iget-wide v13, v0, Lw88;->t0:J
-
-    iget-wide v4, v0, Lw88;->u0:J
-
-    iget-object v2, v0, Lw88;->o:Ljava/lang/String;
-
-    move-wide v15, v4
-
-    iget-wide v4, v0, Lw88;->X:J
-
-    iget-wide v6, v0, Lw88;->Y:J
-
-    iget-wide v8, v0, Lw88;->Z:J
-
-    iget-object v10, v0, Lw88;->r0:Ljava/lang/String;
-
-    iget-wide v11, v0, Lw88;->s0:J
-
-    invoke-direct/range {v1 .. v16}, Lx88;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
-
-    return-object v1
+    return-object v0
 .end method

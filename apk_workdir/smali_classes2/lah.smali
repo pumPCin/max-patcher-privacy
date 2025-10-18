@@ -1,174 +1,92 @@
-.class public final enum Llah;
-.super Ljava/lang/Enum;
+.class public final Llah;
+.super Lmah;
 .source "SourceFile"
-
-# interfaces
-.implements Lkbh;
-
-
-# static fields
-.field public static final enum X:Llah;
-
-.field public static final enum Y:Llah;
-
-.field public static final synthetic Z:[Llah;
-
-.field public static final enum o:Llah;
-
-.field public static final synthetic r0:Lfd5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/Integer;
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Llah;
-
-    const/16 v1, 0x8
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "HAPTIC_FEEDBACK_IMPACT"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppHapticFeedbackImpact"
-
-    const-string v4, "haptic_feedback_impact"
-
-    invoke-direct/range {v0 .. v5}, Llah;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Llah;->o:Llah;
-
-    new-instance v1, Llah;
-
-    const/16 v2, 0x14
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "HAPTIC_FEEDBACK_NOTIFICATION"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppHapticFeedbackNotification"
-
-    const-string v5, "haptic_feedback_notification"
-
-    invoke-direct/range {v1 .. v6}, Llah;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Llah;->X:Llah;
-
-    new-instance v2, Llah;
-
-    const/16 v3, 0x10
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "HAPTIC_FEEDBACK_SELECTION_CHANGE"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppHapticFeedbackSelectionChange"
-
-    const-string v6, "haptic_feedback_selection_change"
-
-    invoke-direct/range {v2 .. v7}, Llah;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Llah;->Y:Llah;
-
-    filled-new-array {v0, v1, v2}, [Llah;
-
-    move-result-object v0
-
-    sput-object v0, Llah;->Z:[Llah;
-
-    new-instance v1, Lfd5;
-
-    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Llah;->r0:Lfd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Llah;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Llah;->b:Ljava/lang/String;
-
-    iput-object p5, p0, Llah;->c:Ljava/lang/Integer;
+    iput-wide p1, p0, Llah;->a:J
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llah;
-    .locals 1
-
-    const-class v0, Llah;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Llah;
-
-    return-object p0
-.end method
-
-.method public static values()[Llah;
-    .locals 1
-
-    sget-object v0, Llah;->Z:[Llah;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llah;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    iget-object v0, p0, Llah;->c:Ljava/lang/Integer;
+    iget-wide v0, p0, Llah;->a:J
 
-    return-object v0
+    return-wide v0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Llah;->a:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Llah;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Llah;
+
+    iget-wide v3, p0, Llah;->a:J
+
+    iget-wide v5, p1, Llah;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Llah;->b:Ljava/lang/String;
+    iget-wide v0, p0, Llah;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Error(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Llah;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

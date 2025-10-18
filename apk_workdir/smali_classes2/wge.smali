@@ -1,167 +1,74 @@
-.class public final synthetic Lwge;
-.super Ljava/lang/Object;
+.class public final Lwge;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sharedata/ShareDataPickerScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
-    .locals 0
-
-    iput p2, p0, Lwge;->a:I
-
-    iput-object p1, p0, Lwge;->b:Lone/me/sharedata/ShareDataPickerScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lwge;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lzag;->a:Lzag;
+    invoke-virtual {p0, p1, p2}, Lwge;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lwge;->b:Lone/me/sharedata/ShareDataPickerScreen;
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lwge;
 
-    check-cast p1, Landroid/view/View;
+    sget-object p2, Lccg;->a:Lccg;
 
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->E0:[Lwq7;
+    invoke-virtual {p1, p2}, Lwge;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    return-object p2
+.end method
 
-    invoke-static {v0}, Lcvi;->a(I)Ls04;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lwge;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lwge;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwge;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    sget-object v0, Lsee;->c:Lsee;
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Ls04;->t(Landroid/view/View;)Ls04;
+    const-string v1, ":settings/privacy/pincode?mode=confirm&hash="
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iget-boolean v0, v2, Lone/me/sharedata/ShareDataPickerScreen;->D0:Z
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    new-instance v3, Lv04;
+    sget-object p1, Lccg;->a:Lccg;
 
-    sget v4, Lu1b;->g:I
-
-    sget v0, Lv1b;->f:I
-
-    new-instance v5, Ljqf;
-
-    invoke-direct {v5, v0}, Ljqf;-><init>(I)V
-
-    sget v0, Liid;->p1:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x14
-
-    invoke-direct/range {v3 .. v8}, Lv04;-><init>(ILoqf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v3, Lv04;
-
-    sget v4, Lu1b;->h:I
-
-    sget v0, Lv1b;->g:I
-
-    new-instance v5, Ljqf;
-
-    invoke-direct {v5, v0}, Ljqf;-><init>(I)V
-
-    sget v0, Liid;->o1:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x14
-
-    invoke-direct/range {v3 .. v8}, Lv04;-><init>(ILoqf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {p1, v0}, Ls04;->i(Ljava/util/Collection;)Ls04;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ls04;->c()Ls04;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ls04;->build()Lt04;
-
-    move-result-object p1
-
-    invoke-interface {p1, v2}, Lt04;->v(Lone/me/sdk/arch/Widget;)V
-
-    return-object v1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/sharedata/ShareDataPickerScreen;->E0:[Lwq7;
-
-    invoke-virtual {v2}, Lx14;->getOnBackPressedDispatcher()Lnla;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lnla;->d()V
-
-    :cond_1
-    return-object v1
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->E0:[Lwq7;
-
-    invoke-virtual {v2, p1}, Lone/me/sharedata/ShareDataPickerScreen;->P0(Z)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

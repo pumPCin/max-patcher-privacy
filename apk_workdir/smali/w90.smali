@@ -2,44 +2,33 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmb5;
-
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Ljava/util/List;
+.field public final b:Loa0;
 
 
 # direct methods
-.method public constructor <init>(IILjava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;Loa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lw90;->a:I
+    if-eqz p1, :cond_1
 
-    iput p2, p0, Lw90;->b:I
+    iput-object p1, p0, Lw90;->a:Ljava/lang/String;
 
-    if-eqz p3, :cond_1
+    if-eqz p2, :cond_0
 
-    iput-object p3, p0, Lw90;->c:Ljava/util/List;
-
-    if-eqz p4, :cond_0
-
-    iput-object p4, p0, Lw90;->d:Ljava/util/List;
+    iput-object p2, p0, Lw90;->b:Loa0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null videoProfiles"
+    const-string p2, "Null cameraConfigId"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -48,73 +37,15 @@
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null audioProfiles"
+    const-string p2, "Null cameraIdString"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public static e(IILjava/util/List;Ljava/util/List;)Lw90;
-    .locals 2
-
-    new-instance v0, Lw90;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p2
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p3
-
-    invoke-direct {v0, p0, p1, p2, p3}, Lw90;-><init>(IILjava/util/List;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lw90;->a:I
-
-    return v0
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lw90;->b:I
-
-    return v0
-.end method
-
-.method public final c()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lw90;->c:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lw90;->d:Ljava/util/List;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -133,33 +64,21 @@
 
     check-cast p1, Lw90;
 
-    iget v1, p0, Lw90;->a:I
+    iget-object v1, p0, Lw90;->a:Ljava/lang/String;
 
-    iget v3, p1, Lw90;->a:I
+    iget-object v3, p1, Lw90;->a:Ljava/lang/String;
 
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lw90;->b:I
-
-    iget v3, p1, Lw90;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Lw90;->c:Ljava/util/List;
-
-    iget-object v3, p1, Lw90;->c:Ljava/util/List;
-
-    invoke-interface {v1, v3}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lw90;->d:Ljava/util/List;
+    iget-object v1, p0, Lw90;->b:Loa0;
 
-    iget-object p1, p1, Lw90;->d:Ljava/util/List;
+    iget-object p1, p1, Lw90;->b:Loa0;
 
-    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Loa0;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -172,9 +91,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lw90;->a:I
+    iget-object v0, p0, Lw90;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -182,25 +105,9 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lw90;->b:I
+    iget-object v1, p0, Lw90;->b:Loa0;
 
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lw90;->c:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lw90;->d:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    invoke-virtual {v1}, Loa0;->hashCode()I
 
     move-result v1
 
@@ -210,43 +117,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableEncoderProfilesProxy{defaultDurationSeconds="
+    const-string v1, "CameraId{cameraIdString="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lw90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recommendedFileFormat="
+    iget-object v1, p0, Lw90;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lw90;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioProfiles="
+    const-string v1, ", cameraConfigId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lw90;->c:Ljava/util/List;
+    iget-object v1, p0, Lw90;->b:Loa0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", videoProfiles="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lw90;->d:Ljava/util/List;
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lwx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

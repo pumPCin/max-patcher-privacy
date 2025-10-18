@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lrig;
+.field public a:Lvjg;
 
 .field public b:Landroid/animation/AnimatorSet;
 

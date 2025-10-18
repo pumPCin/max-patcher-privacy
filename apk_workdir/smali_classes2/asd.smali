@@ -1,416 +1,204 @@
 .class public final Lasd;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr5;
+.field public final c:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr5;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
 
-    iput p2, p0, Lasd;->a:I
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Lasd;->b:Lr5;
+    invoke-direct {p0, v0, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lasd;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final l0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 6
 
-    iget v0, p0, Lasd;->a:I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lasd;->b:Lr5;
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    const-class v1, Lkd2;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-le v0, v1, :cond_0
 
-    move-result-object v0
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    return-object v0
+    const-string p2, "Can\'t fit view into desired rect!"
 
-    :pswitch_0
-    iget-object v0, p0, Lasd;->b:Lr5;
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-class v1, Lx86;
+    return-void
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_0
+    iget v0, p1, Landroid/graphics/Rect;->top:I
 
-    move-result-object v0
+    iget v1, p2, Landroid/graphics/Rect;->top:I
 
-    return-object v0
+    const/4 v2, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Lasd;->b:Lr5;
+    iget-object v3, p0, Lasd;->c:Landroidx/recyclerview/widget/RecyclerView;
 
-    const-class v1, Lrs9;
+    if-ge v0, v1, :cond_3
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    sub-int/2addr v0, v1
 
-    move-result-object v0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    return-object v0
+    move-result p2
 
-    :pswitch_2
-    iget-object v0, p0, Lasd;->b:Lr5;
+    add-int v1, p2, v0
 
-    const-class v1, Lkd2;
+    if-lez p2, :cond_1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3, v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
 
-    move-result-object v0
+    :cond_1
+    if-gez v1, :cond_2
 
-    return-object v0
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    :pswitch_3
-    iget-object v0, p0, Lasd;->b:Lr5;
+    move-result p2
 
-    const-class v1, Lll;
+    invoke-virtual {v3, p2}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    move-result-object v0
+    :cond_2
+    neg-int p2, v0
 
-    return-object v0
+    invoke-virtual {p1, v2, p2}, Landroid/graphics/Rect;->offset(II)V
 
-    :pswitch_4
-    iget-object v0, p0, Lasd;->b:Lr5;
+    return-void
 
-    const-class v1, Lac4;
+    :cond_3
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
-    move-result-object v0
+    if-le p1, p2, :cond_b
 
-    return-object v0
+    sub-int/2addr p1, p2
 
-    :pswitch_5
-    iget-object v0, p0, Lasd;->b:Lr5;
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    const-class v1, Lye5;
+    move-result p2
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
 
-    :pswitch_6
-    iget-object v0, p0, Lasd;->b:Lr5;
+    move-result v1
 
-    const-class v1, Lez;
+    add-int/2addr v1, p2
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    sub-int/2addr v0, v1
 
-    move-result-object v0
+    if-gez v0, :cond_4
 
-    return-object v0
+    move v0, v2
 
-    :pswitch_7
-    iget-object v0, p0, Lasd;->b:Lr5;
+    :cond_4
+    if-lez v0, :cond_5
 
-    const-class v1, Lrs9;
+    invoke-virtual {v3, v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_5
+    sub-int/2addr v0, p1
 
-    move-result-object v0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    return-object v0
+    move-result-object p2
 
-    :pswitch_8
-    iget-object v0, p0, Lasd;->b:Lr5;
+    instance-of v1, p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    const-class v1, Lxr4;
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result-object v0
+    goto :goto_0
 
-    return-object v0
+    :cond_6
+    const/4 p2, 0x0
 
-    :pswitch_9
-    iget-object v0, p0, Lasd;->b:Lr5;
+    :goto_0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
 
-    const-class v1, Lsd7;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const/4 v4, 0x1
 
-    move-result-object v0
+    if-eqz v1, :cond_7
 
-    return-object v0
+    invoke-virtual {v1}, Lt6d;->j()I
 
-    :pswitch_a
-    iget-object v0, p0, Lasd;->b:Lr5;
+    move-result v1
 
-    const-class v1, Lzyc;
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_7
+    move v1, v4
 
-    move-result-object v0
+    :goto_1
+    sub-int/2addr v1, v4
 
-    return-object v0
+    if-eqz p2, :cond_8
 
-    :pswitch_b
-    iget-object v0, p0, Lasd;->b:Lr5;
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
 
-    const-class v1, Lwrd;
+    move-result v5
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-nez v5, :cond_8
 
-    move-result-object v0
+    move v5, v4
 
-    return-object v0
+    goto :goto_2
 
-    :pswitch_c
-    iget-object v0, p0, Lasd;->b:Lr5;
+    :cond_8
+    move v5, v2
 
-    const-class v1, Lqvb;
+    :goto_2
+    if-eqz p2, :cond_9
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
 
-    move-result-object v0
+    move-result p2
 
-    return-object v0
+    if-ne p2, v1, :cond_9
 
-    :pswitch_d
-    iget-object v0, p0, Lasd;->b:Lr5;
+    move v2, v4
 
-    const-class v1, Lwxa;
+    :cond_9
+    if-eqz v5, :cond_a
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-eqz v2, :cond_a
 
-    move-result-object v0
+    neg-int p1, p1
 
-    return-object v0
+    invoke-virtual {v3, p1}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
 
-    :pswitch_e
-    iget-object v0, p0, Lasd;->b:Lr5;
+    return-void
 
-    const-class v1, Lma9;
+    :cond_a
+    if-gez v0, :cond_b
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lyib;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lac4;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lye5;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lwxa;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lma9;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lkd2;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lxq5;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lsoh;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lma9;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Ll83;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lsoh;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lma9;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lllf;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lllf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Lmlf;
-
-    invoke-virtual {v0}, Lmlf;->a()Lqnd;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Lasd;->b:Lr5;
-
-    const-class v1, Lllf;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lllf;
-
-    check-cast v0, Lmlf;
-
-    invoke-virtual {v0}, Lmlf;->a()Lqnd;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_b
+    return-void
 .end method

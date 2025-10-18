@@ -1,64 +1,88 @@
-.class public final synthetic Lq25;
-.super Ljava/lang/Object;
+.class public final Lq25;
+.super Lj15;
 .source "SourceFile"
-
-# interfaces
-.implements Lhr3;
 
 
 # instance fields
-.field public final synthetic a:Lr25;
-
-.field public final synthetic b:Landroid/graphics/SurfaceTexture;
-
-.field public final synthetic c:Landroid/view/Surface;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lr25;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lq25;->a:Lr25;
-
-    iput-object p2, p0, Lq25;->b:Landroid/graphics/SurfaceTexture;
-
-    iput-object p3, p0, Lq25;->c:Landroid/view/Surface;
-
-    return-void
-.end method
+.field public b:Z
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    check-cast p1, Lsb0;
+    iget-boolean v0, p0, Lq25;->b:Z
 
-    iget-object p1, p0, Lq25;->a:Lr25;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-super {p0, p1}, Lj15;->draw(Landroid/graphics/Canvas;)V
 
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lq25;->b:Landroid/graphics/SurfaceTexture;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->release()V
-
-    iget-object v0, p0, Lq25;->c:Landroid/view/Surface;
-
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
-
-    iget v0, p1, Lr25;->X:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lr25;->X:I
-
-    invoke-virtual {p1}, Lr25;->a()V
-
+    :cond_0
     return-void
+.end method
+
+.method public final setHotspot(FF)V
+    .locals 1
+
+    iget-boolean v0, p0, Lq25;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2}, Lj15;->setHotspot(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setHotspotBounds(IIII)V
+    .locals 1
+
+    iget-boolean v0, p0, Lq25;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Lj15;->setHotspotBounds(IIII)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setState([I)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lq25;->b:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lj15;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lq25;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2}, Lj15;->setVisible(ZZ)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

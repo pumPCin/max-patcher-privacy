@@ -1,30 +1,26 @@
 .class public final Lmi2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lsi2;
-
-.field public final synthetic Z:Luf2;
+.field public final synthetic Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lsi2;Luf2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lmi2;->Y:Lsi2;
+    iput-object p2, p0, Lmi2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iput-object p2, p0, Lmi2;->Z:Luf2;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lmi2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -44,82 +38,63 @@
 
     check-cast p1, Lmi2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lmi2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lmi2;
+    new-instance v0, Lmi2;
 
-    iget-object v0, p0, Lmi2;->Y:Lsi2;
+    iget-object v1, p0, Lmi2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iget-object v1, p0, Lmi2;->Z:Luf2;
+    invoke-direct {v0, p2, v1}, Lmi2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lmi2;-><init>(Lsi2;Luf2;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lmi2;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lmi2;->X:I
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lmi2;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Ljava/lang/Number;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    move-result p1
 
-    return-object p1
+    iget-object v0, p0, Lmi2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->B0:Ljava/lang/Object;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p1
+    check-cast v0, Lz00;
 
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/16 v1, 0x64
 
-    iget-object p1, p0, Lmi2;->Y:Lsi2;
+    int-to-float v1, v1
 
-    iget-object p1, p1, Lsi2;->Z:Llt7;
+    mul-float/2addr p1, v1
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Lfhi;->b(F)I
 
-    move-result-object p1
+    move-result p1
 
-    check-cast p1, Lll;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    iput v1, p0, Lmi2;->X:I
+    sget-object p1, Lccg;->a:Lccg;
 
-    check-cast p1, Lkma;
-
-    iget-object v0, p0, Lmi2;->Z:Luf2;
-
-    invoke-virtual {p1, v0, p0}, Lkma;->I(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     return-object p1
 .end method

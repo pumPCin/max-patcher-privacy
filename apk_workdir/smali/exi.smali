@@ -4,177 +4,209 @@
 
 
 # direct methods
-.method public static final a(Lsja;)Lxt1;
-    .locals 2
+.method public static final a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Lgjd;
+    invoke-virtual {p0}, Lfgd;->m()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lfgd;->j()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p2}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Li54;
+
+    move-result-object v0
+
+    sget-object v1, Lw2g;->c:Lftd;
+
+    invoke-interface {v0, v1}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object v0
+
+    check-cast v0, Lw2g;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lw2g;->a:Lz14;
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    invoke-static {p0}, Lfxi;->b(Lfgd;)Lk54;
+
+    move-result-object v0
+
+    :cond_2
+    new-instance p0, Lo32;
+
+    invoke-static {p3}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, v1, p3}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {p0}, Lo32;->o()V
+
+    new-instance p3, Ld64;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lgjd;-><init>(Lsja;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p3, p2, p0, v1}, Ld64;-><init>(Ljava/util/concurrent/Callable;Lo32;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v0}, Ly1j;->c(Lei6;)Lxt1;
+    const/4 p2, 0x2
+
+    sget-object v2, Ltr6;->a:Ltr6;
+
+    invoke-static {v2, v0, v1, p3, p2}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    move-result-object p2
+
+    new-instance p3, Lc64;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p1, v0, p2}, Lc64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p3}, Lo32;->e(Lli6;)V
+
+    invoke-virtual {p0}, Lo32;->n()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 11
+.method public static final b(Lfgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    if-nez p0, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v3, v0
-
-    move v4, v1
-
-    :goto_0
-    if-ge v4, v3, :cond_3
-
-    aget-object v5, v0, v4
-
-    invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
-
-    move-result-object v6
-
-    array-length v7, v6
-
-    move v8, v1
-
-    :goto_1
-    if-ge v8, v7, :cond_2
-
-    aget-object v9, v6, v8
-
-    const/4 v10, 0x1
-
-    invoke-static {v9, p0, v10}, Laaf;->l(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p0}, Lfgd;->m()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Lfgd;->j()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Li54;
 
     move-result-object v0
 
-    move-object v2, v0
+    sget-object v1, Lw2g;->c:Lftd;
 
-    check-cast v2, Landroid/media/MediaCodecInfo;
+    invoke-interface {v0, v1}, Li54;->get(Lh54;)Lg54;
 
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
+    move-result-object v0
+
+    check-cast v0, Lw2g;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lw2g;->a:Lz14;
+
+    if-nez v0, :cond_4
+
+    :cond_1
+    iget-object v0, p0, Lfgd;->k:Ljava/util/Map;
+
+    const-string v1, "TransactionDispatcher"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v2, :cond_3
 
-    move-result v2
+    iget-object p0, p0, Lfgd;->c:Le3e;
 
-    if-eqz v2, :cond_4
+    if-nez p0, :cond_2
 
-    goto :goto_3
+    const/4 p0, 0x0
 
-    :cond_5
-    const/4 v0, 0x0
+    :cond_2
+    invoke-static {p0}, Ls0j;->b(Ljava/util/concurrent/Executor;)Lk54;
 
-    :goto_3
-    check-cast v0, Landroid/media/MediaCodecInfo;
+    move-result-object v2
 
-    if-nez v0, :cond_6
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_5
+    :cond_3
+    move-object v0, v2
 
-    :cond_6
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast v0, Lk54;
 
-    const/16 p1, 0x1d
+    :cond_4
+    new-instance p0, Lb64;
 
-    if-lt p0, p1, :cond_7
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lh05;->A(Landroid/media/MediaCodecInfo;)Z
+    invoke-direct {p0, p1, v1}, Lb64;-><init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
 
-    move-result v2
+    invoke-static {v0, p0, p2}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    goto :goto_4
-
-    :cond_7
-    move v2, v1
-
-    :goto_4
-    if-eqz v2, :cond_8
-
-    const-string p0, "HW"
+    move-result-object p0
 
     return-object p0
+.end method
 
-    :cond_8
-    if-lt p0, p1, :cond_9
+.method public static c(Ljava/lang/Integer;)Lm2d;
+    .locals 5
 
-    invoke-static {v0}, Lh05;->v(Landroid/media/MediaCodecInfo;)Z
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result p0
 
-    :cond_9
-    if-eqz v1, :cond_a
+    invoke-static {}, Lm2d;->values()[Lm2d;
 
-    const-string p0, "SW"
+    move-result-object v0
 
-    return-object p0
+    array-length v1, v0
 
-    :cond_a
-    :goto_5
-    const-string p0, "unknown"
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    iget v4, v3, Lm2d;->a:I
+
+    if-ne v4, p0, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p0, Lm2d;->b:Lm2d;
 
     return-object p0
 .end method

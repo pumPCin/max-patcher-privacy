@@ -3,50 +3,68 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsm7;
+.implements Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field public final a:Landroid/content/Intent;
-
-.field public final b:I
-
-.field public final synthetic c:Lxm7;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lxm7;Landroid/content/Intent;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lrm7;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrm7;->c:Lxm7;
-
-    iput-object p2, p0, Lrm7;->a:Landroid/content/Intent;
-
-    iput p3, p0, Lrm7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final getInterpolation(F)F
     .locals 2
 
-    iget-object v0, p0, Lrm7;->c:Lxm7;
+    iget v0, p0, Lrm7;->a:I
 
-    iget v1, p0, Lrm7;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
+    :pswitch_0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return-void
-.end method
+    sub-float/2addr p1, v0
 
-.method public final getIntent()Landroid/content/Intent;
-    .locals 1
+    mul-float v1, p1, p1
 
-    iget-object v0, p0, Lrm7;->a:Landroid/content/Intent;
+    mul-float/2addr v1, p1
 
-    return-object v0
+    mul-float/2addr v1, p1
+
+    mul-float/2addr v1, p1
+
+    add-float/2addr v1, v0
+
+    return v1
+
+    :pswitch_1
+    mul-float v0, p1, p1
+
+    mul-float/2addr v0, p1
+
+    mul-float/2addr v0, p1
+
+    mul-float/2addr v0, p1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

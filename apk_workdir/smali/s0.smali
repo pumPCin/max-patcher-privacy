@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lev4;
+.implements Lvv4;
 
 
 # static fields
@@ -26,7 +26,7 @@
 
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    sget-object v1, Ljtf;->b:Lyth;
+    sget-object v1, Louf;->b:Lzuh;
 
     const/4 v2, 0x0
 

@@ -1,90 +1,36 @@
-.class public final Lm33;
-.super Llff;
+.class public final synthetic Lm33;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic X:Lu33;
+.field public final synthetic a:Lli6;
 
 
 # direct methods
-.method public constructor <init>(Lu33;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lli6;)V
     .locals 0
 
-    iput-object p1, p0, Lm33;->X:Lu33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm33;->a:Lli6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lm33;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lm33;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lm33;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance p1, Lm33;
+    iget-object v0, p0, Lm33;->a:Lli6;
 
-    iget-object v0, p0, Lm33;->X:Lu33;
-
-    invoke-direct {p1, v0, p2}, Lm33;-><init>(Lu33;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lm33;->X:Lu33;
-
-    invoke-virtual {p1}, Lu33;->M()Lkd2;
+    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Luc2;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Luc2;-><init>(Lkd2;I)V
-
-    const-string v1, "create-saved-messages"
-
-    invoke-virtual {p1, v1, v0}, Lkd2;->a0(Ljava/lang/String;Lrdf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lda2;
 
     return-object p1
 .end method

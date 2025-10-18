@@ -1,112 +1,128 @@
-.class public final synthetic Lc19;
+.class public Lc19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:Lus8;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic a:I
+.field public final b:I
 
-.field public final synthetic b:Lqo4;
-
-.field public final synthetic c:Lh19;
-
-.field public final synthetic o:Ll38;
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqo4;Lh19;Ll38;Lus8;I)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    iput p5, p0, Lc19;->a:I
-
-    iput-object p1, p0, Lc19;->b:Lqo4;
-
-    iput-object p2, p0, Lc19;->c:Lh19;
-
-    iput-object p3, p0, Lc19;->o:Ll38;
-
-    iput-object p4, p0, Lc19;->X:Lus8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lc19;->a:Ljava/lang/String;
+
+    iput p2, p0, Lc19;->b:I
+
+    iput p3, p0, Lc19;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget v0, p0, Lc19;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lc19;->b:Lqo4;
+    return v0
 
-    iget v1, v0, Lqo4;->a:I
+    :cond_0
+    instance-of v1, p1, Lc19;
 
-    iget-object v0, v0, Lqo4;->c:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v0, Lx09;
+    if-nez v1, :cond_1
 
-    iget-object v2, p0, Lc19;->c:Lh19;
+    return v2
 
-    iget-object v3, p0, Lc19;->o:Ll38;
+    :cond_1
+    check-cast p1, Lc19;
 
-    iget-object v4, p0, Lc19;->X:Lus8;
+    iget v1, p0, Lc19;->c:I
 
-    invoke-interface {v2, v1, v0, v3, v4}, Lh19;->b(ILx09;Ll38;Lus8;)V
+    iget-object v3, p0, Lc19;->a:Ljava/lang/String;
 
-    return-void
+    iget v4, p0, Lc19;->b:I
 
-    :pswitch_0
-    iget-object v0, p0, Lc19;->b:Lqo4;
+    if-ltz v4, :cond_4
 
-    iget v1, v0, Lqo4;->a:I
+    iget v5, p1, Lc19;->b:I
 
-    iget-object v0, v0, Lqo4;->c:Ljava/lang/Object;
+    if-gez v5, :cond_2
 
-    check-cast v0, Lx09;
+    goto :goto_0
 
-    iget-object v2, p0, Lc19;->c:Lh19;
+    :cond_2
+    iget-object v5, p1, Lc19;->a:Ljava/lang/String;
 
-    iget-object v3, p0, Lc19;->o:Ll38;
+    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    iget-object v4, p0, Lc19;->X:Lus8;
+    move-result v3
 
-    invoke-interface {v2, v1, v0, v3, v4}, Lh19;->I(ILx09;Ll38;Lus8;)V
+    if-eqz v3, :cond_3
 
-    return-void
+    iget v3, p1, Lc19;->b:I
 
-    :pswitch_1
-    iget-object v0, p0, Lc19;->b:Lqo4;
+    if-ne v4, v3, :cond_3
 
-    iget v1, v0, Lqo4;->a:I
+    iget p1, p1, Lc19;->c:I
 
-    iget-object v0, v0, Lqo4;->c:Ljava/lang/Object;
+    if-ne v1, p1, :cond_3
 
-    check-cast v0, Lx09;
+    return v0
 
-    iget-object v2, p0, Lc19;->c:Lh19;
+    :cond_3
+    return v2
 
-    iget-object v3, p0, Lc19;->o:Ll38;
+    :cond_4
+    :goto_0
+    iget-object v4, p1, Lc19;->a:Ljava/lang/String;
 
-    iget-object v4, p0, Lc19;->X:Lus8;
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    invoke-interface {v2, v1, v0, v3, v4}, Lh19;->J(ILx09;Ll38;Lus8;)V
+    move-result v3
 
-    return-void
+    if-eqz v3, :cond_5
 
-    nop
+    iget p1, p1, Lc19;->c:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-ne v1, p1, :cond_5
+
+    return v0
+
+    :cond_5
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lc19;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lc19;->a:Ljava/lang/String;
+
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

@@ -12,13 +12,13 @@
 
 .field public final synthetic d:Lmh;
 
-.field public final synthetic e:La24;
+.field public final synthetic e:Lo24;
 
 .field public final synthetic f:Z
 
 
 # direct methods
-.method public constructor <init>(Lmh;La24;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public constructor <init>(Lmh;Lo24;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
     .locals 0
 
     iput-object p3, p0, Llh;->a:Landroid/view/View;
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Llh;->d:Lmh;
 
-    iput-object p2, p0, Llh;->e:La24;
+    iput-object p2, p0, Llh;->e:Lo24;
 
     iput-boolean p6, p0, Llh;->f:Z
 
@@ -67,9 +67,9 @@
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_1
-    iget-object v0, p0, Llh;->e:La24;
+    iget-object v0, p0, Llh;->e:Lo24;
 
-    invoke-virtual {p1, v0, p0}, Lmh;->k(La24;Llh;)V
+    invoke-virtual {p1, v0, p0}, Lmh;->k(Lo24;Llh;)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p1, Lmh;->r0:Landroid/animation/Animator;
+    iget-object v0, p1, Lmh;->q0:Landroid/animation/Animator;
 
     if-eqz v0, :cond_2
 
@@ -107,9 +107,9 @@
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_1
-    iget-object v2, p0, Llh;->e:La24;
+    iget-object v2, p0, Llh;->e:Lo24;
 
-    invoke-virtual {p1, v2, p0}, Lmh;->k(La24;Llh;)V
+    invoke-virtual {p1, v2, p0}, Lmh;->k(Lo24;Llh;)V
 
     if-eqz v0, :cond_2
 

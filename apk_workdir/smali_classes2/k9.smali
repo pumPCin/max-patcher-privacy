@@ -1,128 +1,92 @@
 .class public final Lk9;
-.super Lb94;
+.super Lq94;
 .source "SourceFile"
 
 
 # instance fields
-.field public final v0:J
+.field public final u0:J
 
-.field public final w0:Ljava/lang/String;
+.field public final v0:Ljava/lang/String;
 
-.field public final x0:Ljava/util/List;
+.field public final w0:Ljava/util/List;
 
 
 # direct methods
 .method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lone/me/profile/screens/addadmins/AddChatAdminsScreen;)V
     .locals 0
 
-    invoke-direct {p0, p5}, Lb94;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {p0, p5}, Lq94;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-wide p1, p0, Lk9;->v0:J
+    iput-wide p1, p0, Lk9;->u0:J
 
-    iput-object p3, p0, Lk9;->w0:Ljava/lang/String;
+    iput-object p3, p0, Lk9;->v0:Ljava/lang/String;
 
-    iput-object p4, p0, Lk9;->x0:Ljava/util/List;
+    iput-object p4, p0, Lk9;->w0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Ljhd;I)V
-    .locals 16
+.method public final E(Lqid;I)V
+    .locals 7
 
-    move-object/from16 v0, p0
+    invoke-virtual {p1}, Lqid;->n()Z
 
-    invoke-virtual/range {p1 .. p1}, Ljhd;->n()Z
+    move-result v0
 
-    move-result v1
-
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v1, v0, Lk9;->x0:Ljava/util/List;
+    iget-object v0, p0, Lk9;->w0:Ljava/util/List;
 
-    move/from16 v2, p2
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v1
+    check-cast p2, Ll9;
 
-    check-cast v1, Ll9;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Lone/me/members/list/MembersListWidget;
 
-    const/4 v1, 0x1
+    new-instance p2, Ld69;
 
-    invoke-static {v1}, Lwx1;->v(I)I
+    sget-object v0, Lro2;->b:Lro2;
 
-    move-result v2
+    const/16 v2, 0xc
 
-    iget-wide v3, v0, Lk9;->v0:J
+    iget-wide v3, p0, Lk9;->u0:J
+
+    invoke-direct {p2, v3, v4, v0, v2}, Ld69;-><init>(JLro2;I)V
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Lk9;->v0:Ljava/lang/String;
+
+    invoke-direct {v1, v2, p2, v0}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Ld69;Lki4;)V
+
+    sget-object p2, Lk24;->b:Lk24;
+
+    invoke-virtual {v1, p2}, Ll24;->setRetainViewMode(Lk24;)V
+
+    new-instance v0, Ltid;
 
     const/4 v5, 0x0
 
-    iget-object v6, v0, Lk9;->w0:Ljava/lang/String;
+    const/4 v6, -0x1
 
-    if-eqz v2, :cond_2
+    const/4 v2, 0x0
 
-    if-ne v2, v1, :cond_1
+    const/4 v3, 0x0
 
-    new-instance v1, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    const/4 v4, 0x0
 
-    invoke-direct {v1, v6, v3, v4, v5}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;-><init>(Ljava/lang/String;JLvh4;)V
+    invoke-direct/range {v0 .. v6}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
-    :goto_0
-    move-object v10, v1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v1
-
-    :cond_2
-    new-instance v1, Lone/me/members/list/MembersListWidget;
-
-    new-instance v2, Lb59;
-
-    sget-object v7, Lho2;->b:Lho2;
-
-    const/16 v8, 0xc
-
-    invoke-direct {v2, v3, v4, v7, v8}, Lb59;-><init>(JLho2;I)V
-
-    invoke-direct {v1, v6, v2, v5}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Lb59;Lvh4;)V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object v1, Lw14;->b:Lw14;
-
-    invoke-virtual {v10, v1}, Lx14;->setRetainViewMode(Lw14;)V
-
-    new-instance v9, Lmhd;
-
-    const/4 v14, 0x0
-
-    const/4 v15, -0x1
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v9 .. v15}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
-
-    move-object/from16 v1, p1
-
-    invoke-virtual {v1, v9}, Ljhd;->R(Lmhd;)V
+    invoke-virtual {p1, v0}, Lqid;->R(Ltid;)V
 
     return-void
 .end method
@@ -130,7 +94,7 @@
 .method public final j()I
     .locals 1
 
-    iget-object v0, p0, Lk9;->x0:Ljava/util/List;
+    iget-object v0, p0, Lk9;->w0:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 

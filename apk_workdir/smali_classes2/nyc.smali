@@ -1,142 +1,74 @@
 .class public final Lnyc;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public final synthetic X:Lpyc;
+
+.field public final synthetic a:Lone/me/rlottie/RLottieImageView;
+
+.field public final synthetic b:Lqyc;
+
+.field public final synthetic c:Lone/me/rlottie/RLottieDrawable;
+
+.field public final synthetic o:Loyc;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/rlottie/RLottieImageView;Lqyc;Lone/me/rlottie/RLottieDrawable;Loyc;Lpyc;)V
     .locals 0
 
-    iput-object p1, p0, Lnyc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lnyc;->a:Lone/me/rlottie/RLottieImageView;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lnyc;->b:Lqyc;
+
+    iput-object p3, p0, Lnyc;->c:Lone/me/rlottie/RLottieDrawable;
+
+    iput-object p4, p0, Lnyc;->o:Loyc;
+
+    iput-object p5, p0, Lnyc;->X:Lpyc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnyc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnyc;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lnyc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 1
 
-    new-instance p1, Lnyc;
+    iget-object p1, p0, Lnyc;->a:Lone/me/rlottie/RLottieImageView;
 
-    iget-object v0, p0, Lnyc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    invoke-direct {p1, v0, p2}, Lnyc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lnyc;->b:Lqyc;
 
-    return-object p1
-.end method
+    iget-object p1, p1, Lqyc;->a:Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    const-string v0, "onDetach"
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p0, Lnyc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
+    iget-object p1, p0, Lnyc;->o:Loyc;
 
-    iget-object p1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lkbd;
+    iget-object v0, p0, Lnyc;->c:Lone/me/rlottie/RLottieDrawable;
 
-    invoke-virtual {p1}, Lkbd;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
 
-    move-result-object p1
+    iget-object p1, p0, Lnyc;->X:Lpyc;
 
-    check-cast p1, Ljava/lang/Iterable;
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
 
-    const/16 v0, 0x8
-
-    invoke-static {p1, v0}, Lab3;->T(Ljava/lang/Iterable;I)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x3f
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v1 .. v6}, Lab3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqh6;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lndi;->a:Lkwa;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lf88;->o:Lf88;
-
-    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "Warmup reactions. defaultReactions = ["
-
-    const-string v3, "]"
-
-    invoke-static {v2, p1, v3}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v2, 0x0
-
-    const-string v3, "ru.ok.onechat.reactions.ReactionsViewModel"
-
-    invoke-virtual {v0, v1, v3, p1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lnyc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-virtual {p1}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lda2;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p1, Lda2;->b:Lfe2;
-
-    iget-wide v0, p1, Lfe2;->i0:J
-
-    :cond_2
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-void
 .end method

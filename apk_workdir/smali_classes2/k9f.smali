@@ -1,3 +1,3 @@
-.class public final Lk9f;
-.super Lq9f;
+.class public interface abstract Lk9f;
+.super Ljava/lang/Object;
 .source "SourceFile"

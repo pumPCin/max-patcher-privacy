@@ -1,179 +1,120 @@
-.class public final Lmx9;
-.super Llff;
+.class public abstract Lmx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
-
-
-# instance fields
-.field public final synthetic X:Lrx9;
-
-.field public final synthetic Y:J
 
 
 # direct methods
-.method public constructor <init>(Lrx9;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a([B)Lnx9;
+    .locals 17
 
-    iput-object p1, p0, Lmx9;->X:Lrx9;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
 
-    iput-wide p2, p0, Lmx9;->Y:J
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgReact;-><init>()V
 
-    const/4 p1, 0x2
+    move-object/from16 v1, p0
 
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmx9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmx9;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lmx9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lmx9;
-
-    iget-object v0, p0, Lmx9;->X:Lrx9;
-
-    iget-wide v1, p0, Lmx9;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lmx9;-><init>(Lrx9;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmx9;->X:Lrx9;
-
-    iget-object p1, p1, Lrx9;->d:Lsze;
-
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    :try_start_0
+    invoke-static {v0, v1}, Lee9;->mergeFrom(Lee9;[B)Lee9;
 
     move-result-object v0
 
-    check-cast v0, Lix9;
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, v0, Lix9;->b:Ljava/util/Set;
+    new-instance v1, Lnx9;
 
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->requestId:J
 
-    move-result v1
+    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatId:J
 
-    iget-wide v2, p0, Lmx9;->Y:J
+    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageId:J
 
-    if-eqz v1, :cond_0
+    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatServerId:J
 
-    new-instance v0, Ljava/lang/Long;
+    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageServerId:J
 
-    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
+    new-instance v12, Lpe9;
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    iget v13, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reactionType:I
 
-    move-result-object v0
+    sget-object v14, Lue9;->o:Lzd5;
 
-    goto :goto_0
+    invoke-virtual {v14}, Li2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v14
+
+    :goto_0
+    move-object v15, v14
+
+    check-cast v15, Lf2;
+
+    invoke-virtual {v15}, Lf2;->hasNext()Z
+
+    move-result v16
+
+    if-eqz v16, :cond_1
+
+    invoke-virtual {v15}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    move-object/from16 p0, v1
+
+    move-object v1, v15
+
+    check-cast v1, Lue9;
+
+    iget v1, v1, Lue9;->a:I
+
+    if-ne v1, v13, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    new-instance v1, Ljava/lang/Long;
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-static {v0}, Lab3;->b0(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/Long;
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    move-object/from16 v1, p0
 
     goto :goto_0
 
     :cond_1
-    new-instance v1, Ljava/lang/Long;
+    move-object/from16 p0, v1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v0, v1}, Ln7e;->d(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    sget-object v1, Ls95;->a:Ls95;
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {}, Lbb3;->c()Lx08;
-
-    move-result-object v1
-
-    new-instance v2, Lp5b;
-
-    sget v3, Lp3b;->v:I
-
-    sget v4, Lq3b;->h:I
-
-    sget v5, Liid;->w:I
-
-    invoke-direct {v2, v3, v4, v5}, Lp5b;-><init>(III)V
-
-    invoke-virtual {v1, v2}, Lx08;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Lbb3;->a(Ljava/util/List;)Lx08;
-
-    move-result-object v1
+    const/4 v15, 0x0
 
     :goto_1
-    new-instance v2, Lix9;
+    check-cast v15, Lue9;
 
-    const/4 v3, 0x1
+    if-eqz v15, :cond_2
 
-    invoke-direct {v2, v3, v0, v1}, Lix9;-><init>(ZLjava/util/Set;Ljava/util/List;)V
+    iget-object v0, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reaction:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-direct {v12, v15, v0}, Lpe9;-><init>(Lue9;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0, v2}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object/from16 v1, p0
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-direct/range {v1 .. v12}, Lnx9;-><init>(JJJJJLpe9;)V
 
-    return-object p1
+    return-object v1
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unknown reactionType = "
+
+    invoke-static {v13, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

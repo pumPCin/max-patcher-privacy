@@ -1,6 +1,3 @@
 .class public final Ld0j;
-.super Lfth;
+.super Lguh;
 .source "SourceFile"
-
-# interfaces
-.implements Ls1j;

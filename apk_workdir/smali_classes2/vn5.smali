@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpdf;
+.implements Lr6;
 
 
 # instance fields
@@ -11,18 +11,22 @@
 
 .field public final synthetic b:J
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
     .locals 0
 
-    iput p4, p0, Lvn5;->a:I
+    iput p5, p0, Lvn5;->a:I
 
-    iput-object p1, p0, Lvn5;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lvn5;->d:Ljava/lang/Object;
 
     iput-wide p2, p0, Lvn5;->b:J
+
+    iput p4, p0, Lvn5;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,85 +35,143 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 9
+.method public final run()V
+    .locals 6
 
     iget v0, p0, Lvn5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvn5;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lvn5;->d:Ljava/lang/Object;
 
-    check-cast v0, Lco5;
+    check-cast v0, Lto5;
 
-    new-instance v1, Lfqe;
+    iget-wide v1, p0, Lvn5;->b:J
 
-    invoke-direct {v1}, Lfqe;-><init>()V
+    iget-object v3, v0, Lto5;->a:Lfgd;
 
-    iget-object v2, v0, Lco5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {v3}, Lfgd;->c()V
 
-    iget-object v0, v0, Lco5;->a:Lll;
-
-    check-cast v0, Lkma;
-
-    new-instance v3, Llu;
-
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
+    :try_start_0
+    invoke-virtual {v0}, Lto5;->c()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    check-cast v4, Llwb;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v4, v4, Llwb;->a:Lg68;
+    move-result-object v1
 
-    invoke-virtual {v4}, Lgsd;->k()J
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
-    move-result-wide v5
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v4, 0x4
+    if-ltz v1, :cond_0
 
-    iget-wide v7, p0, Lvn5;->b:J
+    iget v2, p0, Lvn5;->c:I
 
-    invoke-direct/range {v3 .. v8}, Llu;-><init>(IJJ)V
+    if-ltz v2, :cond_0
 
-    invoke-virtual {v0}, Lkma;->y()Lpmf;
+    :try_start_1
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v0
+    move-result v5
 
-    const/16 v4, 0xc
+    if-ge v2, v5, :cond_0
 
-    const/4 v5, 0x0
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-static {v0, v3, v5, v4}, Lpmf;->d(Lpmf;Lxm;ZI)J
+    move-result-object v5
 
-    move-result-wide v3
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v4}, Lto5;->a(Ljava/util/List;)V
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v3}, Lfgd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-object v1
+    invoke-virtual {v3}, Lfgd;->k()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v3}, Lfgd;->k()V
+
+    throw v0
 
     :pswitch_0
-    iget-object v0, p0, Lvn5;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lvn5;->d:Ljava/lang/Object;
 
-    check-cast v0, Lzn5;
+    check-cast v0, Lbp5;
 
-    new-instance v1, Lun5;
+    iget-wide v1, p0, Lvn5;->b:J
 
-    const/4 v2, 0x0
+    iget-object v3, v0, Lbp5;->a:Lfgd;
 
-    iget-wide v3, p0, Lvn5;->b:J
+    invoke-virtual {v3}, Lfgd;->c()V
 
-    invoke-direct {v1, v0, v3, v4, v2}, Lun5;-><init>(Ljava/lang/Object;JI)V
+    :try_start_2
+    invoke-virtual {v0}, Lbp5;->c()Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lzn5;->a(Ljava/util/concurrent/Callable;)Lfqe;
+    move-result-object v4
 
-    move-result-object v0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ltz v1, :cond_1
+
+    iget v2, p0, Lvn5;->c:I
+
+    if-ltz v2, :cond_1
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lbp5;->a(Ljava/util/List;)V
+
+    :cond_1
+    invoke-virtual {v3}, Lfgd;->q()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-virtual {v3}, Lfgd;->k()V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {v3}, Lfgd;->k()V
+
+    throw v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

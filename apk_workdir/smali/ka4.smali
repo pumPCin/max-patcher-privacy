@@ -1,56 +1,65 @@
-.class public final synthetic Lka4;
-.super Ljava/lang/Object;
+.class public final Lka4;
+.super Lvyd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lra4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lra4;I)V
-    .locals 0
+.method public constructor <init>(Ldy0;)V
+    .locals 1
 
-    iput p2, p0, Lka4;->a:I
+    new-instance v0, Lta4;
 
-    iput-object p1, p0, Lka4;->b:Lra4;
+    invoke-direct {v0}, Lta4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0}, Lvyd;-><init>(Ldy0;Lhdb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Lat8;)Lzyd;
+    .locals 9
 
-    iget v0, p0, Lka4;->a:I
+    new-instance v0, Lla4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v4, p0, Lvyd;->c:Ljava/util/concurrent/Executor;
 
-    iget-object v0, p0, Lka4;->b:Lra4;
+    iget-wide v5, p0, Lvyd;->d:J
 
-    const/4 v1, 0x0
+    iget-wide v7, p0, Lvyd;->e:J
 
-    invoke-virtual {v0, v1}, Lra4;->s(Z)V
+    iget-object v2, p0, Lvyd;->b:Lhdb;
 
-    return-void
+    iget-object v3, p0, Lvyd;->a:Ldy0;
 
-    :pswitch_0
-    iget-object v0, p0, Lka4;->b:Lra4;
+    move-object v1, p1
 
-    invoke-virtual {v0}, Lra4;->t()V
+    invoke-direct/range {v0 .. v8}, Lla4;-><init>(Lat8;Lhdb;Ldy0;Ljava/util/concurrent/Executor;JJ)V
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final b(J)Lvyd;
+    .locals 0
+
+    iput-wide p1, p0, Lvyd;->e:J
+
+    return-object p0
+.end method
+
+.method public final c(Ljava/util/concurrent/ExecutorService;)Lvyd;
+    .locals 0
+
+    iput-object p1, p0, Lvyd;->c:Ljava/util/concurrent/Executor;
+
+    return-object p0
+.end method
+
+.method public final d(J)Lvyd;
+    .locals 0
+
+    iput-wide p1, p0, Lvyd;->d:J
+
+    return-object p0
 .end method

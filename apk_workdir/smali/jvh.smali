@@ -1,217 +1,88 @@
-.class public abstract Ljvh;
-.super Ljava/util/AbstractCollection;
+.class public final Ljvh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lpvh;
 
 
-# static fields
-.field public static final a:[Ljava/lang/Object;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqp4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lqp4;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Ljvh;->a:I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    iput-object p1, p0, Ljvh;->b:Lqp4;
 
-    sput-object v0, Ljvh;->a:[Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a([Ljava/lang/Object;)I
-.end method
-
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public b()I
+.method public final a()I
     .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Ljvh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    throw v0
+    const/4 v0, 0x5
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x4
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final clear()V
+.method public final b()V
     .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Ljvh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    throw v0
-.end method
+    iget-object v0, p0, Ljvh;->b:Lqp4;
 
-.method public d()I
-    .locals 1
+    iget-object v0, v0, Lqp4;->a:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    check-cast v0, Luw7;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-interface {v0}, Luw7;->o()V
 
-    throw v0
-.end method
+    return-void
 
-.method public e()[Ljava/lang/Object;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Ljvh;->b:Lqp4;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lqp4;->a:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Luw7;
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
+    invoke-interface {v0}, Luw7;->s()V
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    return-void
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    nop
 
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    const/16 v0, 0x510
-
-    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Ljvh;->a:[Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Ljvh;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 3
-
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    array-length v1, p1
-
-    if-ge v1, v0, :cond_2
-
-    invoke-virtual {p0}, Ljvh;->e()[Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 5
-    :cond_0
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 6
-    :cond_1
-    invoke-virtual {p0}, Ljvh;->d()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Ljvh;->b()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    .line 7
-    invoke-static {v2, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    if-le v1, v0, :cond_3
-
-    const/4 v1, 0x0
-
-    .line 8
-    aput-object v1, p1, v0
-
-    .line 9
-    :cond_3
-    :goto_0
-    invoke-virtual {p0, p1}, Ljvh;->a([Ljava/lang/Object;)I
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,52 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnDismissListener;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lwoe;
-
-.field public c:Landroid/view/VelocityTracker;
-
-.field public d:F
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public final h:[I
+.field public final synthetic a:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lwoe;)V
-    .locals 2
+.method public constructor <init>(Landroidx/fragment/app/DialogFragment;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Let4;->a:Landroidx/fragment/app/DialogFragment;
 
-    iput v0, p0, Let4;->e:I
+    return-void
+.end method
 
-    iput v0, p0, Let4;->f:I
 
-    iput v0, p0, Let4;->g:I
+# virtual methods
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    const v0, 0x7fffffff
+    iget-object p1, p0, Let4;->a:Landroidx/fragment/app/DialogFragment;
 
-    const/4 v1, 0x0
+    iget-object v0, p1, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
-    filled-new-array {v0, v1}, [I
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
-    iput-object v0, p0, Let4;->h:[I
-
-    iput-object p1, p0, Let4;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Let4;->b:Lwoe;
-
+    :cond_0
     return-void
 .end method

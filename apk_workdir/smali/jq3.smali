@@ -2,191 +2,114 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljue;
 
-# instance fields
-.field public final a:F
 
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:F
-
-.field public final e:I
+# static fields
+.field public static final a:Liq3;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Liq3;
 
-    const/high16 v0, 0x7fc00000    # Float.NaN
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Ljq3;->a:F
+    sput-object v0, Ljq3;->a:Liq3;
 
-    iput v0, p0, Ljq3;->b:F
+    return-void
+.end method
 
-    iput v0, p0, Ljq3;->c:F
 
-    iput v0, p0, Ljq3;->d:F
+# virtual methods
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    const/4 v0, -0x1
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
 
-    iput v0, p0, Ljq3;->e:I
+    move-result p1
 
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+    return p1
+.end method
 
-    move-result-object p2
+.method public final b()Z
+    .locals 1
 
-    sget-object v0, Lhuc;->Variant:[I
+    sget-boolean v0, Lhq3;->d:Z
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    sget-boolean v0, Lhq3;->d:Z
 
-    move-result-object p2
+    return v0
+.end method
 
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->getIndexCount()I
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Ljq3;->a(Ljavax/net/ssl/SSLSocket;)Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    if-ge v1, v0, :cond_6
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->getApplicationProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
-    invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
+    move-result-object p1
 
-    move-result v2
-
-    sget v3, Lhuc;->Variant_constraints:I
-
-    if-ne v2, v3, :cond_0
-
-    iget v3, p0, Ljq3;->e:I
-
-    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v2
-
-    iput v2, p0, Ljq3;->e:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    const-string v4, "layout"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    new-instance v3, Lsq3;
-
-    invoke-direct {v3}, Lsq3;-><init>()V
-
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v2, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {v3, v2}, Lsq3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    goto :goto_1
+    return-object p1
 
     :cond_0
-    sget v3, Lhuc;->Variant_region_heightLessThan:I
+    const/4 p1, 0x0
 
-    if-ne v2, v3, :cond_1
+    return-object p1
+.end method
 
-    iget v3, p0, Ljq3;->d:F
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
-    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-virtual {p0, p1}, Ljq3;->a(Ljavax/net/ssl/SSLSocket;)Z
 
-    move-result v2
+    move-result p2
 
-    iput v2, p0, Ljq3;->d:F
+    if-eqz p2, :cond_1
 
-    goto :goto_1
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lorg/conscrypt/Conscrypt;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V
+
+    sget-object p2, Lksb;->a:Lksb;
+
+    invoke-static {p3}, Lnri;->d(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p2
+
+    const/4 p3, 0x0
+
+    new-array p3, p3, [Ljava/lang/String;
+
+    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    check-cast p2, [Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lorg/conscrypt/Conscrypt;->setApplicationProtocols(Ljavax/net/ssl/SSLSocket;[Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    sget v3, Lhuc;->Variant_region_heightMoreThan:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v3, p0, Ljq3;->b:F
-
-    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v2
-
-    iput v2, p0, Ljq3;->b:F
-
-    goto :goto_1
-
-    :cond_2
-    sget v3, Lhuc;->Variant_region_widthLessThan:I
-
-    if-ne v2, v3, :cond_3
-
-    iget v3, p0, Ljq3;->c:F
-
-    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v2
-
-    iput v2, p0, Ljq3;->c:F
-
-    goto :goto_1
-
-    :cond_3
-    sget v3, Lhuc;->Variant_region_widthMoreThan:I
-
-    if-ne v2, v3, :cond_4
-
-    iget v3, p0, Ljq3;->a:F
-
-    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v2
-
-    iput v2, p0, Ljq3;->a:F
-
-    goto :goto_1
-
-    :cond_4
-    const-string v2, "ConstraintLayoutStates"
-
-    const-string v3, "Unknown tag"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_5
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
-
     return-void
 .end method

@@ -1,85 +1,78 @@
-.class public abstract Lxu4;
+.class public final synthetic Lxu4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lav4;
+
 
 # direct methods
-.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/graphics/Rect;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)",
-            "Landroid/view/DisplayCutout;"
-        }
-    .end annotation
+.method public synthetic constructor <init>(Lav4;I)V
+    .locals 0
 
-    new-instance v0, Landroid/view/DisplayCutout;
+    iput p2, p0, Lxu4;->a:I
 
-    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
+    iput-object p1, p0, Lxu4;->b:Lav4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lxu4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxu4;->b:Lav4;
+
+    iget-object v1, v0, Lav4;->a:Lch8;
+
+    iget-object v0, v0, Lav4;->f:Ltu4;
+
+    invoke-virtual {v1, v0}, Lch8;->g(Ltu4;)Lcv4;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/DisplayCutout;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
+    :pswitch_0
+    iget-object v0, p0, Lxu4;->b:Lav4;
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
+    iget-object v1, v0, Lav4;->a:Lch8;
 
-    move-result-object p0
+    iget-object v0, v0, Lav4;->e:Ltu4;
 
-    return-object p0
-.end method
+    invoke-virtual {v1, v0}, Lch8;->g(Ltu4;)Lcv4;
 
-.method public static c(Landroid/view/DisplayCutout;)I
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
+    return-object v0
 
-    move-result p0
+    :pswitch_1
+    new-instance v0, Lzu4;
 
-    return p0
-.end method
+    iget-object v1, p0, Lxu4;->b:Lav4;
 
-.method public static d(Landroid/view/DisplayCutout;)I
-    .locals 0
+    invoke-direct {v0, v1}, Lzu4;-><init>(Lav4;)V
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
+    return-object v0
 
-    move-result p0
+    nop
 
-    return p0
-.end method
-
-.method public static e(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

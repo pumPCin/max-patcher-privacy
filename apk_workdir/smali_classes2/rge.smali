@@ -1,64 +1,52 @@
-.class public final Lrge;
-.super Ljava/lang/Object;
+.class public final synthetic Lrge;
+.super Lb9;
 .source "SourceFile"
 
 # interfaces
-.implements Lvge;
+.implements Lbj6;
 
 
 # static fields
-.field public static final a:Lrge;
+.field public static final q0:Lrge;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     new-instance v0, Lrge;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    sput-object v0, Lrge;->a:Lrge;
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Ltcb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lrge;->q0:Lrge;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lvy0;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Ljava/util/List;
 
-    return v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lrge;
+    sget-object p3, Luge;->w0:[Ltr7;
 
-    if-nez p1, :cond_1
+    new-instance p3, Ltcb;
 
-    const/4 p1, 0x0
+    invoke-direct {p3, p1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x50cc4ef4
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CancelShare"
-
-    return-object v0
+    return-object p3
 .end method

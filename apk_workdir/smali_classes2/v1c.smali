@@ -1,112 +1,71 @@
 .class public final Lv1c;
-.super Ljava/lang/Object;
+.super Lxzg;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Liu7;
 
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public volatile Y:I
+
+.field public final Z:Lxe5;
+
+.field public final b:Lz0c;
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Liu7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
+.method public constructor <init>(Lz0c;Liu7;Liu7;)V
     .locals 0
 
-    iput p2, p0, Lv1c;->a:I
+    invoke-direct {p0}, Lxzg;-><init>()V
 
-    iput-object p1, p0, Lv1c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iput-object p1, p0, Lv1c;->b:Lz0c;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class p1, Lv1c;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
-
-    iget p1, p0, Lv1c;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lv1c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    invoke-virtual {p1}, Lx14;->getRouter()Ljhd;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljhd;->C()Z
+    iput-object p1, p0, Lv1c;->c:Ljava/lang/String;
 
-    return-void
+    iput-object p2, p0, Lv1c;->o:Liu7;
 
-    :pswitch_0
-    iget-object p1, p0, Lv1c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iput-object p3, p0, Lv1c;->X:Liu7;
 
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Lwq7;
+    new-instance p1, Lxe5;
 
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Llt7;
+    const/4 p2, 0x0
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-direct {p1, p2}, Lxe5;-><init>(I)V
+
+    iput-object p1, p0, Lv1c;->Z:Lxe5;
+
+    invoke-interface {p3}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Le2c;
+    check-cast p1, Lulf;
 
-    iget-object v0, p1, Le2c;->t0:Lwwe;
+    check-cast p1, Lqta;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Lqta;->b()Lk54;
 
-    invoke-virtual {v0}, Lo0;->isActive()Z
+    move-result-object p1
 
-    move-result v0
+    new-instance p2, Lm1c;
 
-    const/4 v1, 0x1
+    const/4 p3, 0x0
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {p2, p0, p3}, Lm1c;-><init>(Lv1c;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_0
+    const/4 p3, 0x2
 
-    :cond_0
-    iget-object v0, p1, Le2c;->X:Llt7;
+    invoke-static {p0, p1, p2, p3}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqkf;
-
-    check-cast v0, Losa;
-
-    invoke-virtual {v0}, Losa;->b()Lv44;
-
-    move-result-object v0
-
-    new-instance v1, Ld2c;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Ld2c;-><init>(Le2c;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v0, v1, v2}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
-
-    move-result-object v0
-
-    iput-object v0, p1, Le2c;->t0:Lwwe;
-
-    :goto_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

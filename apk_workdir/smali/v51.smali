@@ -1,185 +1,98 @@
-.class public final Lv51;
-.super Lof4;
+.class public final synthetic Lv51;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfg4;
 
-# static fields
-.field public static final b:Lv51;
 
-.field public static final c:Ljf4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Ljf4;
-
-.field public static final e:Ljf4;
-
-.field public static final f:Ljf4;
-
-.field public static final g:Ljf4;
-
-.field public static final h:Ljf4;
-
-.field public static final i:Ljf4;
-
-.field public static final j:Ljf4;
-
-.field public static final k:Ljf4;
-
-.field public static final l:Ljf4;
-
-.field public static final m:Ljf4;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lv51;
+    iput p2, p0, Lv51;->a:I
 
-    invoke-direct {v0}, Lof4;-><init>()V
+    iput-object p1, p0, Lv51;->b:Ljava/lang/String;
 
-    sput-object v0, Lv51;->b:Lv51;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "opponent_id"
+    return-void
+.end method
 
-    filled-new-array {v1}, [Ljava/lang/String;
 
-    move-result-object v1
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    const-string v2, ":call-user"
+    iget v0, p0, Lv51;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    new-instance v2, Lpj7;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x1d
 
     const/4 v3, 0x0
 
-    const/16 v4, 0xe
+    iget-object v4, p0, Lv51;->b:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    const/4 v5, 0x0
 
-    move-result-object v1
+    const/4 v6, 0x0
 
-    sput-object v1, Lv51;->c:Ljf4;
+    invoke-direct/range {v2 .. v8}, Lpj7;-><init>(Ljava/lang/String;Ljava/lang/String;Loj7;Ljava/lang/String;Lc7g;I)V
 
-    const-string v1, "link"
+    const/4 v5, 0x2
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-object v4, v2
 
-    move-result-object v2
+    const-string v2, "SETTINGS"
 
-    const-string v5, ":call-join-link"
+    invoke-direct/range {v1 .. v6}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lpj7;ILki4;)V
 
-    invoke-static {v0, v5, v2, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    return-object v1
 
-    move-result-object v2
+    :pswitch_0
+    new-instance v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    sput-object v2, Lv51;->d:Ljf4;
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
 
-    const-string v2, "chat_id"
+    invoke-direct {v0, v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    return-object v0
 
-    move-result-object v5
+    :pswitch_1
+    new-instance v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    const-string v6, ":call-chat"
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
 
-    invoke-static {v0, v6, v5, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    invoke-direct {v0, v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;-><init>(Ljava/lang/String;)V
 
-    move-result-object v5
+    return-object v0
 
-    sput-object v5, Lv51;->e:Ljf4;
+    :pswitch_2
+    new-instance v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    const-string v5, "call_name"
+    iget-object v1, p0, Lv51;->b:Ljava/lang/String;
 
-    filled-new-array {v2, v5}, [Ljava/lang/String;
+    invoke-direct {v0, v1}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    return-object v0
 
-    const-string v5, ":call-incoming"
-
-    invoke-static {v0, v5, v2, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v2
-
-    sput-object v2, Lv51;->f:Ljf4;
-
-    const/4 v2, 0x0
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    const-string v6, ":call-active"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v5
-
-    sput-object v5, Lv51;->g:Ljf4;
-
-    const-string v5, ":call-join-preview"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v5, v1, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v1
-
-    sput-object v1, Lv51;->h:Ljf4;
-
-    const-string v1, ":call-opponents-list"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v1
-
-    sput-object v1, Lv51;->i:Ljf4;
-
-    const-string v1, ":call-admin-settings"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v1
-
-    sput-object v1, Lv51;->j:Ljf4;
-
-    const-string v1, ":call-pip"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v1
-
-    sput-object v1, Lv51;->k:Ljf4;
-
-    const-string v1, ":call-admin-waiting-room"
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v1
-
-    sput-object v1, Lv51;->l:Ljf4;
-
-    const-string v1, "is_group"
-
-    const-string v2, "is_video"
-
-    const-string v5, "call_id"
-
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":call-rate"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
-
-    move-result-object v0
-
-    sput-object v0, Lv51;->m:Ljf4;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

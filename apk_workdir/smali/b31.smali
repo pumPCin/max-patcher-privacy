@@ -1,48 +1,74 @@
-.class public final Lb31;
-.super Lk14;
+.class public final synthetic Lb31;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lhg0;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhg0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lb31;->Y:Lhg0;
+    iput p1, p0, Lb31;->a:I
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lb31;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onDismiss()V
+    .locals 2
 
-    iput-object p1, p0, Lb31;->o:Ljava/lang/Object;
+    iget v0, p0, Lb31;->a:I
 
-    iget p1, p0, Lb31;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lb31;->b:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput p1, p0, Lb31;->X:I
+    const/4 v1, 0x0
 
-    iget-object p1, p0, Lb31;->Y:Lhg0;
+    iput-object v1, v0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lsyf;
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Lhg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lb31;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lgr1;
 
-    return-object p1
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lgr1;->G0:Lsyf;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lb31;->b:Ljava/lang/Object;
+
+    check-cast v0, Lji6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

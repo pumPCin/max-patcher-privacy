@@ -1,216 +1,120 @@
 .class public final Lq11;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lr11;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljqf;
+.field public X:I
 
-.field public final b:I
+.field public final synthetic Y:Lr11;
+
+.field public final synthetic Z:Lht;
 
 
 # direct methods
-.method public constructor <init>(Ljqf;)V
-    .locals 1
+.method public constructor <init>(Lr11;Lht;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Liqa;->q:I
+    iput-object p1, p0, Lq11;->Y:Lr11;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lq11;->Z:Lht;
 
-    iput-object p1, p0, Lq11;->a:Ljqf;
+    const/4 p1, 0x2
 
-    sget p1, Lhqa;->e:I
-
-    iput p1, p0, Lq11;->b:I
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loqf;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lq54;
 
-    return-object v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {p0, p1, p2}, Lq11;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lq11;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lq11;
 
-    iget-object v0, p0, Lq11;->a:Ljqf;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object p1, p1, Lq11;->a:Ljqf;
+    invoke-virtual {p1, p2}, Lq11;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
+    return-object p1
+.end method
 
-    if-nez p1, :cond_2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lq11;
+
+    iget-object v0, p0, Lq11;->Y:Lr11;
+
+    iget-object v1, p0, Lq11;->Z:Lht;
+
+    invoke-direct {p1, v0, v1, p2}, Lq11;-><init>(Lr11;Lht;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lq11;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lq11;->Y:Lr11;
+
+    iget-object p1, p1, Lr11;->b:Lms1;
+
+    iput v1, p0, Lq11;->X:I
+
+    iget-object v0, p0, Lq11;->Z:Lht;
+
+    invoke-virtual {p1, v0, p0}, Lms1;->d(Ljava/util/Set;Lsgf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
     :cond_2
-    sget-wide v0, Liqa;->a:J
-
-    cmp-long p1, v0, v0
-
-    if-eqz p1, :cond_3
-
     :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lccg;->a:Lccg;
 
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Liqa;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Loqf;
-    .locals 1
-
-    iget-object v0, p0, Lq11;->a:Ljqf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lq11;->a:Ljqf;
-
-    iget v0, v0, Ljqf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    sget-wide v2, Liqa;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v2, v0, v1}, Llfb;->j(III)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lq11;->b:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Liqa;->a:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "HeaderBottom(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lq11;->a:Ljqf;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId=0, itemId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionItemType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Lu9d;->v(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", descriptionRes=null)"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

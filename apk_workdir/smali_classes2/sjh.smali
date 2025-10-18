@@ -1,326 +1,103 @@
 .class public final Lsjh;
-.super Landroid/widget/ImageView;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable$OnNextFrameRenderedListener;
-.implements Lxb8;
+.implements Lzi6;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Z
-
-.field public c:Lrjh;
-
-.field public o:Z
-
-.field public r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-.field public final s0:Lui;
+.field public final synthetic Y:Lone/me/webapp/settings/WebAppsSettingScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lsjh;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 p2, 0x2
 
-    new-instance p1, Lui;
-
-    const/4 v0, 0x5
-
-    invoke-direct {p1, v0, p0}, Lui;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lsjh;->s0:Lui;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lsjh;->o:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->start()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lsjh;->o:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->stop()V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->recycle()V
-
-    :cond_2
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->stop()V
-
-    :cond_3
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    invoke-virtual {p0, v0}, Lsjh;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iput-object v0, p0, Lsjh;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lsjh;->o:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->stop()V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/widget/ImageView;->onAttachedToWindow()V
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    :cond_0
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lsjh;->s0:Lui;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->addParent(Lone/me/rlottie/ImageReceiver;)V
-
-    :cond_1
-    iget-boolean v0, p0, Lsjh;->o:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->start()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/widget/ImageView;->onDetachedFromWindow()V
-
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->stop()V
-
-    :cond_0
-    iget-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lsjh;->s0:Lui;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->removeParent(Lone/me/rlottie/ImageReceiver;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onNextFrameRendered(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;)V
-    .locals 2
-
-    iget-boolean p1, p0, Lsjh;->b:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lsjh;->c:Lrjh;
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Ltjh;
-
-    iget-object p1, p1, Ltjh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lujh;
-
-    iget-object v0, p1, Lujh;->a:Lxr6;
-
-    iget-object v0, v0, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-boolean v0, p1, Lujh;->c:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lujh;->o:Z
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lsjh;->b:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
-
-    instance-of v0, p1, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz v0, :cond_2
-
-    move-object v0, p1
-
-    check-cast v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    iput-object v0, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    if-eqz p1, :cond_0
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v2, p0, Lsjh;->s0:Lui;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->removeParent(Lone/me/rlottie/ImageReceiver;)V
-
-    :cond_1
-    invoke-virtual {v0, v2}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->addParent(Lone/me/rlottie/ImageReceiver;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lsjh;->o:Z
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lsjh;->o:Z
-
-    :goto_1
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public setImageResource(I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 p1, 0x0
+    invoke-virtual {p0, p1, p2}, Lsjh;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-object p1, p0, Lsjh;->r0:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lsjh;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lsjh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final setOnFirstFrameListener(Lrjh;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-object p1, p0, Lsjh;->c:Lrjh;
+    new-instance v0, Lsjh;
 
-    const/4 p1, 0x1
+    iget-object v1, p0, Lsjh;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    iput-boolean p1, p0, Lsjh;->b:Z
+    invoke-direct {v0, p2, v1}, Lsjh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
 
-    return-void
+    iput-object p1, v0, Lsjh;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsjh;->X:Ljava/lang/Object;
+
+    check-cast p1, Le5a;
+
+    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Ltr7;
+
+    instance-of v0, p1, Ls93;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lsjh;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
+
+    invoke-virtual {p1}, Ll24;->getRouter()Lqid;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lqid;->C()Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lwf4;
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Llch;->c:Llch;
+
+    check-cast p1, Lwf4;
+
+    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

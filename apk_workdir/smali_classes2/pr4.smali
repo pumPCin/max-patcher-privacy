@@ -1,23 +1,39 @@
-.class public final Lpr4;
-.super Lqci;
+.class public final synthetic Lpr4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lpr4;
+# instance fields
+.field public final synthetic a:Lrr4;
+
+.field public final synthetic b:Lzh1;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lrr4;Lzh1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpr4;->a:Lrr4;
+
+    iput-object p2, p0, Lpr4;->b:Lzh1;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
     .locals 2
 
-    new-instance v0, Lpr4;
+    iget-object v0, p0, Lpr4;->b:Lzh1;
 
-    const/16 v1, 0xb
+    iget-object v1, p0, Lpr4;->a:Lrr4;
 
-    invoke-direct {v0, v1}, Lqci;-><init>(I)V
+    iget-object v1, v1, Lrr4;->r0:Landroid/widget/EditText;
 
-    sput-object v0, Lpr4;->c:Lpr4;
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
     return-void
 .end method

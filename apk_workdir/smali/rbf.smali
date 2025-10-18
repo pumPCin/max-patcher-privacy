@@ -1,53 +1,45 @@
-.class public interface abstract Lrbf;
-.super Ljava/lang/Object;
+.class public final Lrbf;
+.super Lsbf;
 .source "SourceFile"
 
 
-# virtual methods
-.method public i(I[BI)Lebf;
-    .locals 6
+# static fields
+.field public static final b:Lrbf;
 
-    invoke-static {}, Lhb7;->j()Leb7;
+.field public static final c:Lrbf;
 
-    move-result-object p1
+.field public static final d:Lrbf;
 
-    new-instance v5, Lobf;
+.field public static final e:Lrbf;
 
-    const/4 v0, 0x0
 
-    invoke-direct {v5, v0, p1}, Lobf;-><init>(ILjava/lang/Object;)V
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
-    const/4 v2, 0x0
+    new-instance v0, Lrbf;
 
-    sget-object v4, Lqbf;->c:Lqbf;
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-    move-object v0, p0
+    sput-object v0, Lrbf;->b:Lrbf;
 
-    move-object v1, p2
+    new-instance v0, Lrbf;
 
-    move v3, p3
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-    invoke-interface/range {v0 .. v5}, Lrbf;->q([BIILqbf;Ldr3;)V
+    sput-object v0, Lrbf;->c:Lrbf;
 
-    new-instance p2, Lo84;
+    new-instance v0, Lrbf;
 
-    invoke-virtual {p1}, Leb7;->i()Ls7d;
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Lrbf;->d:Lrbf;
 
-    invoke-direct {p2, p1}, Lo84;-><init>(Ls7d;)V
+    new-instance v0, Lrbf;
 
-    return-object p2
-.end method
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-.method public abstract q([BIILqbf;Ldr3;)V
-.end method
-
-.method public reset()V
-    .locals 0
+    sput-object v0, Lrbf;->e:Lrbf;
 
     return-void
-.end method
-
-.method public abstract v()I
 .end method

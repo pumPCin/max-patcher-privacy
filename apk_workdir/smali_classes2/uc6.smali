@@ -1,76 +1,78 @@
-.class public final synthetic Luc6;
-.super Ljava/lang/Object;
+.class public final Luc6;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:Lyc6;
-
-.field public final synthetic b:Lll0;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public final synthetic X:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyc6;Lll0;II)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luc6;->X:Landroid/view/ViewGroup;
 
-    iput-object p1, p0, Luc6;->a:Lyc6;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Luc6;->b:Lll0;
-
-    iput p3, p0, Luc6;->c:I
-
-    iput p4, p0, Luc6;->o:I
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Luc6;->a:Lyc6;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v0, v0, Lyc6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Luc6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Luc6;
 
-    if-eqz v1, :cond_0
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Luc6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p2
+.end method
 
-    check-cast v1, Lw6b;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v2, p0, Luc6;->b:Lll0;
+    new-instance p1, Luc6;
 
-    iget v3, p0, Luc6;->c:I
+    iget-object v0, p0, Luc6;->X:Landroid/view/ViewGroup;
 
-    iget v4, p0, Luc6;->o:I
+    invoke-direct {p1, v0, p2}, Luc6;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {v1, v2, v3, v4}, Lw6b;->s(Lll0;II)V
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    :cond_0
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->I0:Lgi7;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Luc6;->X:Landroid/view/ViewGroup;
+
+    invoke-static {v1, p1, v0}, Lt0i;->b(Landroid/view/View;Lgi7;Lli6;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

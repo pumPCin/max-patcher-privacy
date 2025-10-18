@@ -389,7 +389,7 @@
 
     iget-object v2, v2, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v2, Lq0i;
+    check-cast v2, Lr1i;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -401,21 +401,21 @@
 
     if-eqz v3, :cond_0
 
-    new-instance v3, Lwzh;
+    new-instance v3, Lx0i;
 
-    invoke-direct {v3, v2, v1, v0, v4}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v3, v2, v1, v0, v4}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     goto :goto_0
 
     :cond_0
     new-instance v3, Lx2;
 
-    invoke-direct {v3, v2, v1, v0, v4}, Lx2;-><init>(Lq0i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
+    invoke-direct {v3, v2, v1, v0, v4}, Lx2;-><init>(Lr1i;Ljava/lang/Object;Ljava/util/List;Lx2;)V
 
     :goto_0
-    new-instance v0, Ll2i;
+    new-instance v0, Lm3i;
 
-    invoke-direct {v0, v1, v3}, Ll2i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v3}, Lm3i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 
@@ -468,7 +468,7 @@
 
     check-cast v1, Lp2;
 
-    invoke-virtual {v1, v0}, Lp2;->a(Ljava/util/Map$Entry;)Lab7;
+    invoke-virtual {v1, v0}, Lp2;->a(Ljava/util/Map$Entry;)Lxb7;
 
     move-result-object v0
 
@@ -519,7 +519,7 @@
     :goto_0
     const-string v1, "no calls to next() since the last call to remove()"
 
-    invoke-static {v1, v0}, Lggi;->g(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Lohi;->f(Ljava/lang/String;Z)V
 
     iget-object v0, p0, Lo2;->b:Ljava/util/Iterator;
 
@@ -531,7 +531,7 @@
 
     iget-object v0, v0, Lp2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lq0i;
+    check-cast v0, Lr1i;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

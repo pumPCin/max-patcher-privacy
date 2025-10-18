@@ -1,186 +1,160 @@
-.class public final Lpe1;
+.class public final synthetic Lpe1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqe1;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
     .locals 0
 
+    iput p2, p0, Lpe1;->a:I
+
+    iput-object p1, p0, Lpe1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lpe1;->a:J
-
-    iput-object p3, p0, Lpe1;->b:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lpe1;->c:Z
-
-    iput-object p4, p0, Lpe1;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lpe1;->a:I
 
-    goto :goto_1
+    const/4 v1, 0x0
 
-    :cond_0
-    instance-of v0, p1, Lpe1;
+    iget-object v2, p0, Lpe1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
-    if-nez v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
 
-    :cond_1
-    check-cast p1, Lpe1;
+    new-instance v0, Lwi1;
 
-    iget-wide v0, p0, Lpe1;->a:J
+    new-instance v3, Lpe1;
 
-    iget-wide v2, p1, Lpe1;->a:J
+    invoke-direct {v3, v2, v1}, Lpe1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
 
-    cmp-long v0, v0, v2
+    new-instance v4, Lwif;
 
-    if-eqz v0, :cond_2
+    invoke-direct {v4, v3}, Lwif;-><init>(Lji6;)V
 
-    goto :goto_0
+    new-instance v3, Ljmh;
 
-    :cond_2
-    iget-object v0, p0, Lpe1;->b:Ljava/lang/String;
+    invoke-direct {v3, v2, v1}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    iget-object v1, p1, Lpe1;->b:Ljava/lang/String;
+    invoke-direct {v0, v4, v3}, Lwi1;-><init>(Lwif;Ljmh;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result v0
+    :pswitch_0
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
 
-    if-nez v0, :cond_3
+    new-instance v3, Lee0;
 
-    goto :goto_0
+    sget v0, Lyqa;->a:I
 
-    :cond_3
-    iget-boolean v0, p0, Lpe1;->c:Z
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-boolean v1, p1, Lpe1;->c:Z
+    move-result-object v1
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    goto :goto_0
+    move-result-object v4
 
-    :cond_4
-    iget-object v0, p0, Lpe1;->d:Ljava/lang/String;
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object p1, p1, Lpe1;->d:Ljava/lang/String;
+    move-result-object v6
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    new-instance v7, Lq8;
 
-    move-result p1
+    const/16 v0, 0x18
 
-    if-nez p1, :cond_5
+    invoke-direct {v7, v0}, Lq8;-><init>(I)V
 
-    :goto_0
-    const/4 p1, 0x0
+    new-instance v8, Lq8;
 
-    return p1
+    const/16 v0, 0x19
 
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
+    invoke-direct {v8, v0}, Lq8;-><init>(I)V
 
-    return p1
-.end method
+    sget-object v5, Looa;->a:Looa;
 
-.method public final hashCode()I
-    .locals 3
+    invoke-direct/range {v3 .. v8}, Lee0;-><init>(Landroid/graphics/drawable/Drawable;Lroa;Landroid/content/Context;Lli6;Lli6;)V
 
-    iget-wide v0, p0, Lpe1;->a:J
+    return-object v3
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :pswitch_1
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
 
-    move-result v0
+    new-instance v3, Lhe0;
 
-    const/16 v1, 0x1f
+    sget v0, Lyqa;->c:I
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object v2, p0, Lpe1;->b:Ljava/lang/String;
+    move-result-object v4
 
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+    invoke-static {v4, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result v0
+    move-result-object v4
 
-    iget-boolean v2, p0, Lpe1;->c:Z
+    sget-object v0, Ll05;->s0:Lk82;
 
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v2
 
-    iget-object v1, p0, Lpe1;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Exist(serverChatId="
-
-    const-string v1, ", link="
-
-    iget-wide v2, p0, Lpe1;->a:J
-
-    iget-object v4, p0, Lpe1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lf67;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Lk82;->e(Landroid/content/Context;)Ll05;
 
     move-result-object v0
 
-    const-string v1, ", isLinkCall="
+    invoke-virtual {v0}, Ll05;->l()Lv5b;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v6
 
-    iget-boolean v1, p0, Lpe1;->c:Z
+    new-instance v7, Lre1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v7, v1}, Lre1;-><init>(I)V
 
-    const-string v1, ", title="
+    new-instance v8, Lre1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lpe1;->d:Ljava/lang/String;
+    invoke-direct {v8, v0}, Lre1;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v5, Lqoa;->a:Lqoa;
 
-    const-string v1, ")"
+    invoke-direct/range {v3 .. v8}, Lhe0;-><init>(Landroid/graphics/drawable/Drawable;Lroa;Lv5b;Lli6;Lli6;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_2
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
+
+    invoke-virtual {v2}, Ll24;->getRouter()Lqid;
 
     move-result-object v0
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

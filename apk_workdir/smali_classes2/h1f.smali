@@ -1,84 +1,129 @@
-.class public final synthetic Lh1f;
+.class public final Lh1f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgme;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lg1f;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-.field public final synthetic c:Lqh6;
+.field public final b:Li1f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lqh6;I)V
+.method public constructor <init>(Lg1f;Li1f;)V
     .locals 0
 
-    iput p3, p0, Lh1f;->a:I
-
-    iput-object p1, p0, Lh1f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-    iput-object p2, p0, Lh1f;->c:Lqh6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh1f;->a:Lg1f;
+
+    iput-object p2, p0, Lh1f;->b:Li1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lh1f;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lh1f;
+
+    iget-object v1, p0, Lh1f;->a:Lg1f;
+
+    iget-object v3, p1, Lh1f;->a:Lg1f;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lh1f;->b:Li1f;
+
+    iget-object p1, p1, Lh1f;->b:Li1f;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lh1f;->a:I
+    iget-object v0, p0, Lh1f;->a:Lg1f;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lg1f;->hashCode()I
 
-    iget-object v0, p0, Lh1f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    move-result v0
 
-    iget-object v1, p0, Lh1f;->c:Lqh6;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lqh6;Lorg/json/JSONObject;)V
+    iget-object v1, p0, Lh1f;->b:Li1f;
 
-    return-void
+    invoke-virtual {v1}, Li1f;->hashCode()I
 
-    :pswitch_0
-    iget-object v0, p0, Lh1f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    move-result v1
 
-    iget-object v1, p0, Lh1f;->c:Lqh6;
+    add-int/2addr v1, v0
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lqh6;Lorg/json/JSONObject;)V
+    return v1
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :pswitch_1
-    iget-object v0, p0, Lh1f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lh1f;->c:Lqh6;
+    const-string v1, "StatesBackgroundColors(active="
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lqh6;Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget-object v1, p0, Lh1f;->a:Lg1f;
 
-    :pswitch_2
-    iget-object v0, p0, Lh1f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lh1f;->c:Lqh6;
+    const-string v1, ", disabled="
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lqh6;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget-object v1, p0, Lh1f;->b:Li1f;
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

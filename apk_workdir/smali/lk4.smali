@@ -3,166 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv87;
+.implements Lvx6;
+.implements Lwx6;
 
 
 # instance fields
-.field public final a:Lv87;
+.field public final a:Lli3;
 
-.field public final b:Lv87;
+.field public final b:Landroid/content/Context;
 
-.field public final c:Lirb;
+.field public final c:Lcfc;
 
-.field public final d:Lef;
+.field public final d:Ljava/util/Set;
 
-.field public final e:Ljava/util/Map;
+.field public final e:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(Lef;Lcf;Lirb;Ljava/util/HashMap;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lcfc;Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lef;
+    new-instance v0, Lli3;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lef;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, p2}, Lli3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object v0, p0, Llk4;->d:Lef;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llk4;->a:Lv87;
+    iput-object v0, p0, Llk4;->a:Lli3;
 
-    iput-object p2, p0, Llk4;->b:Lv87;
+    iput-object p3, p0, Llk4;->d:Ljava/util/Set;
 
-    iput-object p3, p0, Llk4;->c:Lirb;
+    iput-object p5, p0, Llk4;->e:Ljava/util/concurrent/Executor;
 
-    iput-object p4, p0, Llk4;->e:Ljava/util/Map;
+    iput-object p4, p0, Llk4;->c:Lcfc;
+
+    iput-object p1, p0, Llk4;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lna5;ILhgc;Lu87;)Ln93;
+.method public final a()Le2j;
     .locals 2
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Llk4;->b:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-static {v0}, Lbig;->a(Landroid/content/Context;)Z
 
-    iget-object v0, p1, Lna5;->b:Ly87;
+    move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    sget-object v1, Ly87;->c:Ly87;
+    const-string v0, ""
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v0}, Lxj7;->e(Ljava/lang/Object;)Le2j;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    invoke-virtual {p1}, Lna5;->n()Ljava/io/InputStream;
+    new-instance v0, Lkk4;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    if-eqz v1, :cond_1
+    invoke-direct {v0, p0, v1}, Lkk4;-><init>(Llk4;I)V
 
-    sget-object v0, Lz87;->d:Ljava/lang/Object;
+    iget-object v1, p0, Llk4;->e:Ljava/util/concurrent/Executor;
 
-    :try_start_0
-    invoke-static {v1}, Lpyh;->d(Ljava/io/InputStream;)Ly87;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iput-object v0, p1, Lna5;->b:Ly87;
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    invoke-static {p1}, Lvje;->d(Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget-object v1, p0, Llk4;->e:Ljava/util/Map;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lxj7;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Le2j;
 
     move-result-object v0
 
-    check-cast v0, Lv87;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lv87;->a(Lna5;ILhgc;Lu87;)Ln93;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    iget-object v0, p0, Llk4;->d:Lef;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lef;->a(Lna5;ILhgc;Lu87;)Ln93;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final b(Lna5;Lu87;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, Llk4;->c:Lirb;
+    iget-object v0, p0, Llk4;->d:Ljava/util/Set;
 
-    iget-object p2, p2, Lu87;->a:Landroid/graphics/Bitmap$Config;
+    invoke-interface {v0}, Ljava/util/Set;->size()I
 
-    invoke-interface {v0, p1, p2}, Lirb;->a(Lna5;Landroid/graphics/Bitmap$Config;)Lq93;
+    move-result v0
 
-    move-result-object p2
+    const/4 v1, 0x0
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-gtz v0, :cond_0
 
-    sget-object v0, Lqb7;->d:Lqb7;
+    invoke-static {v1}, Lxj7;->e(Ljava/lang/Object;)Le2j;
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    return-void
 
-    iget v1, p1, Lna5;->c:I
+    :cond_0
+    iget-object v0, p0, Llk4;->b:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lna5;->i0()V
+    invoke-static {v0}, Lbig;->a(Landroid/content/Context;)Z
 
-    iget p1, p1, Lna5;->o:I
+    move-result v0
 
-    invoke-static {p2, v0, v1, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lq93;Lhgc;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    invoke-static {v1}, Lxj7;->e(Ljava/lang/Object;)Le2j;
 
-    const-string v0, "is_rounded"
+    return-void
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    :cond_1
+    new-instance v0, Lkk4;
 
-    invoke-interface {p1, v0, v1}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x0
 
-    invoke-virtual {p2}, Lq93;->close()V
+    invoke-direct {v0, p0, v1}, Lkk4;-><init>(Llk4;I)V
 
-    return-object p1
+    iget-object v1, p0, Llk4;->e:Ljava/util/concurrent/Executor;
 
-    :catchall_0
-    move-exception p1
+    invoke-static {v0, v1}, Lxj7;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Le2j;
 
-    invoke-static {p2}, Lq93;->P(Lq93;)V
-
-    throw p1
+    return-void
 .end method

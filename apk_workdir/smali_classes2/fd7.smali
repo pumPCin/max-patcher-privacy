@@ -1,122 +1,31 @@
 .class public final Lfd7;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lld7;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:I
+.field public c:Lad7;
 
 
 # direct methods
-.method public constructor <init>(Lld7;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lfd7;->Y:Lld7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lfd7;->Z:I
+    iput-object p1, p0, Lfd7;->a:Landroid/content/Context;
 
-    const/4 p1, 0x2
+    const-class p1, Lfd7;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfd7;->b:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfd7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfd7;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lfd7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lfd7;
-
-    iget-object v1, p0, Lfd7;->Y:Lld7;
-
-    iget v2, p0, Lfd7;->Z:I
-
-    invoke-direct {v0, v1, v2, p2}, Lfd7;-><init>(Lld7;ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfd7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfd7;->X:Ljava/lang/Object;
-
-    check-cast p1, Lb54;
-
-    new-instance v0, Ldd7;
-
-    iget-object v1, p0, Lfd7;->Y:Lld7;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ldd7;-><init>(Lld7;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x3
-
-    invoke-static {p1, v2, v2, v0, v3}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    move-result-object v0
-
-    new-instance v4, Lsr1;
-
-    const/4 v5, 0x1
-
-    iget v6, p0, Lfd7;->Z:I
-
-    invoke-direct {v4, v6, v5}, Lsr1;-><init>(II)V
-
-    invoke-virtual {v0, v4}, Lon7;->invokeOnCompletion(Lqh6;)Lhv4;
-
-    new-instance v0, Led7;
-
-    invoke-direct {v0, v1, v2}, Led7;-><init>(Lld7;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v2, v2, v0, v3}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    move-result-object p1
-
-    new-instance v0, Lsr1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v6, v1}, Lsr1;-><init>(II)V
-
-    invoke-virtual {p1, v0}, Lon7;->invokeOnCompletion(Lqh6;)Lhv4;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

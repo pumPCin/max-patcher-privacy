@@ -1,100 +1,337 @@
-.class public final synthetic Lohe;
+.class public abstract Lohe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
 
+# static fields
+.field public static final a:Lkp0;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lrhe;
+.field public static final b:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lrhe;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lohe;->a:I
+    new-instance v0, Lkp0;
 
-    iput-object p1, p0, Lohe;->b:Landroid/content/Context;
+    const/16 v1, 0xa
 
-    iput-object p2, p0, Lohe;->c:Lrhe;
+    const/4 v2, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Lkp0;-><init>(II)V
+
+    sput-object v0, Lohe;->a:Lkp0;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    sput-object v0, Lohe;->b:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
+.method public static final a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
+    .locals 5
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+    if-eqz p1, :cond_2
 
-    iget v0, p0, Lohe;->a:I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lohe;->b:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lohe;->c:Lrhe;
+    goto :goto_0
 
-    invoke-static {v0, v1}, Lrhe;->c(Landroid/content/Context;Lrhe;)Landroidx/appcompat/widget/AppCompatTextView;
+    :cond_0
+    new-instance v0, Landroid/graphics/Matrix;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
-    :pswitch_0
-    iget-object v0, p0, Lohe;->b:Landroid/content/Context;
+    move-result v1
 
-    iget-object v1, p0, Lohe;->c:Lrhe;
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    invoke-static {v0, v1}, Lrhe;->e(Landroid/content/Context;Lrhe;)Landroidx/appcompat/widget/AppCompatTextView;
+    move-result v2
 
-    move-result-object v0
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_1
-    iget-object v0, p0, Lohe;->b:Landroid/content/Context;
+    div-int/lit8 v1, v1, 0x2
 
-    iget-object v1, p0, Lohe;->c:Lrhe;
+    new-instance v2, Ltwe;
 
-    invoke-static {v0, v1}, Lrhe;->a(Landroid/content/Context;Lrhe;)Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-direct {v2, v1}, Ltwe;-><init>(I)V
 
-    move-result-object v0
+    sget-object v3, Lohe;->a:Lkp0;
 
-    return-object v0
+    invoke-virtual {v3, v2}, Led8;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_2
-    new-instance v0, Lm87;
+    move-result-object v2
 
-    iget-object v1, p0, Lohe;->b:Landroid/content/Context;
+    check-cast v2, Landroid/graphics/Path;
 
-    invoke-direct {v0, v1}, Lm87;-><init>(Landroid/content/Context;)V
+    if-nez v2, :cond_1
 
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {v1}, Lohe;->b(I)Landroid/graphics/Path;
 
-    const/4 v2, -0x2
+    move-result-object v2
 
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    :cond_1
+    invoke-virtual {p0, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
 
-    iget-object v2, p0, Lohe;->c:Lrhe;
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
-    invoke-virtual {v2, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result v2
 
-    return-object v0
+    int-to-float v2, v2
 
-    nop
+    const/high16 v3, 0x40000000    # 2.0f
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    div-float/2addr v2, v3
+
+    int-to-float v1, v1
+
+    sub-float/2addr v2, v1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float/2addr v4, v3
+
+    sub-float/2addr v4, v1
+
+    iget v1, p1, Landroid/graphics/Rect;->left:I
+
+    int-to-float v1, v1
+
+    add-float/2addr v1, v2
+
+    iget p1, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float p1, p1
+
+    add-float/2addr p1, v4
+
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/Matrix;->setTranslate(FF)V
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Landroid/graphics/Path;->reset()V
+
+    return-void
+.end method
+
+.method public static final b(I)Landroid/graphics/Path;
+    .locals 22
+
+    move/from16 v0, p0
+
+    new-instance v1, Landroid/graphics/Path;
+
+    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+
+    if-gtz v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    int-to-double v2, v0
+
+    const-wide v4, 0x4006666666666666L    # 2.8
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v6
+
+    int-to-float v8, v0
+
+    neg-float v9, v8
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v1, v9, v10}, Landroid/graphics/Path;->moveTo(FF)V
+
+    neg-double v9, v2
+
+    move-wide/from16 v16, v9
+
+    const/4 v14, 0x0
+
+    :goto_0
+    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    sub-double v11, v6, v11
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
+
+    move-result-wide v18
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    const-wide v4, 0x3fd6db6db6db6db7L    # 0.35714285714285715
+
+    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    mul-double v11, v11, v18
+
+    move-wide/from16 v4, v16
+
+    double-to-float v13, v4
+
+    double-to-float v11, v11
+
+    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
+
+    const/16 v16, 0x1
+
+    if-eqz v14, :cond_3
+
+    move-wide v4, v2
+
+    const/4 v15, 0x0
+
+    :goto_1
+    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    const-wide v13, 0x4006666666666666L    # 2.8
+
+    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    sub-double v11, v6, v11
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
+
+    move-result-wide v13
+
+    neg-double v13, v13
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    move-wide/from16 v20, v2
+
+    const-wide v2, 0x3fd6db6db6db6db7L    # 0.35714285714285715
+
+    invoke-static {v11, v12, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    mul-double/2addr v11, v13
+
+    double-to-float v13, v4
+
+    double-to-float v11, v11
+
+    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
+
+    if-eqz v15, :cond_1
+
+    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
+
+    invoke-virtual {v1, v8, v8}, Landroid/graphics/Path;->offset(FF)V
+
+    return-object v1
+
+    :cond_1
+    const/16 v11, 0x50
+
+    int-to-double v12, v11
+
+    div-double v12, v20, v12
+
+    const-wide v2, 0x3fc999999999999aL    # 0.2
+
+    invoke-static {v12, v13, v2, v3}, Llwi;->a(DD)D
+
+    move-result-wide v12
+
+    sub-double/2addr v4, v12
+
+    neg-int v12, v0
+
+    int-to-double v12, v12
+
+    cmpg-double v12, v4, v12
+
+    if-gtz v12, :cond_2
+
+    move-wide v4, v9
+
+    move/from16 v15, v16
+
+    :cond_2
+    move-wide/from16 v2, v20
+
+    goto :goto_1
+
+    :cond_3
+    move-wide/from16 v20, v2
+
+    move v12, v14
+
+    const-wide v2, 0x3fc999999999999aL    # 0.2
+
+    const/16 v11, 0x50
+
+    int-to-double v13, v11
+
+    div-double v13, v20, v13
+
+    invoke-static {v13, v14, v2, v3}, Llwi;->a(DD)D
+
+    move-result-wide v2
+
+    add-double/2addr v2, v4
+
+    cmpl-double v4, v2, v20
+
+    if-ltz v4, :cond_4
+
+    move/from16 v14, v16
+
+    move-wide/from16 v2, v20
+
+    move-wide/from16 v16, v2
+
+    :goto_2
+    const-wide v4, 0x4006666666666666L    # 2.8
+
+    goto/16 :goto_0
+
+    :cond_4
+    move-wide/from16 v16, v2
+
+    move v14, v12
+
+    move-wide/from16 v2, v20
+
+    goto :goto_2
 .end method

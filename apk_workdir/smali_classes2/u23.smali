@@ -1,62 +1,48 @@
-.class public final synthetic Lu23;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqh6;
+.class public final Lu23;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lda2;
+.field public final synthetic Y:Lv23;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lda2;I)V
+.method public constructor <init>(Lv23;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lu23;->a:I
+    iput-object p1, p0, Lu23;->Y:Lv23;
 
-    iput-object p1, p0, Lu23;->b:Lda2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lu23;->a:I
+    iput-object p1, p0, Lu23;->o:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Long;
+    iget p1, p0, Lu23;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lu23;->b:Lda2;
+    or-int/2addr p1, v0
 
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    iput p1, p0, Lu23;->X:I
 
-    move-result-object p1
+    iget-object p1, p0, Lu23;->Y:Lv23;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Lu23;->b:Lda2;
-
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    invoke-virtual {p1, v0, p0}, Lv23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -20,48 +20,42 @@
 
 .field public static final h:I
 
-.field public static final i:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lisc;->permissions_allow_access:I
+    sget v0, Lnoc;->qrscanner_allow_permission:I
 
     sput v0, Ln0b;->a:I
 
-    sget v0, Lisc;->permissions_audio_denied_title:I
+    sget v0, Lnoc;->qrscanner_camera_preview:I
 
     sput v0, Ln0b;->b:I
 
-    sget v0, Lisc;->permissions_audio_request_denied:I
+    sget v0, Lnoc;->qrscanner_gallery_button_image:I
 
     sput v0, Ln0b;->c:I
 
-    sget v0, Lisc;->permissions_audio_title:I
+    sget v0, Lnoc;->qrscanner_hint_view:I
 
     sput v0, Ln0b;->d:I
 
-    sget v0, Lisc;->permissions_dialog_open_setting:I
+    sget v0, Lnoc;->qrscanner_not_allow_permission:I
 
     sput v0, Ln0b;->e:I
 
-    sget v0, Lisc;->permissions_dialog_yes:I
+    sget v0, Lnoc;->qrscanner_overlay_view:I
 
     sput v0, Ln0b;->f:I
 
-    sget v0, Lisc;->permissions_video_message_request:I
+    sget v0, Lnoc;->qrscanner_toolbar:I
 
     sput v0, Ln0b;->g:I
 
-    sget v0, Lisc;->permissions_video_message_request_only_camera_title:I
+    sget v0, Lnoc;->qrscanner_torch_button_image:I
 
     sput v0, Ln0b;->h:I
-
-    sget v0, Lisc;->permissions_video_message_request_title:I
-
-    sput v0, Ln0b;->i:I
 
     return-void
 .end method

@@ -1,50 +1,41 @@
-.class public final synthetic Lwn5;
+.class public final Lwn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpdf;
-
 
 # instance fields
-.field public final synthetic a:Lzn5;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
+.field public final a:Lq0b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzn5;JJ)V
+.method public constructor <init>(Lq0b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwn5;->a:Lzn5;
-
-    iput-wide p2, p0, Lwn5;->b:J
-
-    iput-wide p4, p0, Lwn5;->c:J
+    iput-object p1, p0, Lwn5;->a:Lq0b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 6
+.method public final a()Lhqe;
+    .locals 3
 
-    new-instance v0, Lyn5;
+    iget-object v0, p0, Lwn5;->a:Lq0b;
 
-    iget-object v1, p0, Lwn5;->a:Lzn5;
+    invoke-virtual {v0}, Lggd;->n()Ltka;
 
-    iget-wide v2, p0, Lwn5;->b:J
+    move-result-object v0
 
-    iget-wide v4, p0, Lwn5;->c:J
+    new-instance v1, Lvg5;
 
-    invoke-direct/range {v0 .. v5}, Lyn5;-><init>(Lzn5;JJ)V
+    const/16 v2, 0xd
 
-    invoke-virtual {v1, v0}, Lzn5;->a(Ljava/util/concurrent/Callable;)Lfqe;
+    invoke-direct {v1, v2}, Lvg5;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 

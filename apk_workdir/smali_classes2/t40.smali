@@ -3,60 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls00;
+.implements Ls2d;
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:[B
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:J
-
-.field public final j:Llze;
-
-.field public final k:Llze;
-
-
-# direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;JLsze;Llze;)V
+# virtual methods
+.method public final a()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-wide p1, p0, Lt40;->a:J
+.method public final b()V
+    .locals 0
 
-    iput-wide p3, p0, Lt40;->b:J
+    return-void
+.end method
 
-    iput-object p5, p0, Lt40;->c:Ljava/lang/String;
+.method public final c(Z)V
+    .locals 0
 
-    iput-object p6, p0, Lt40;->d:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p7, p0, Lt40;->e:Ljava/lang/String;
+.method public final clear()V
+    .locals 0
 
-    iput-object p8, p0, Lt40;->f:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p9, p0, Lt40;->g:[B
+.method public final d()V
+    .locals 0
 
-    iput-object p10, p0, Lt40;->h:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-wide p11, p0, Lt40;->i:J
+.method public final e()V
+    .locals 0
 
-    iput-object p13, p0, Lt40;->j:Llze;
+    return-void
+.end method
 
-    iput-object p14, p0, Lt40;->k:Llze;
+.method public final f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/Long;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final h(Lw2d;)V
+    .locals 0
 
     return-void
 .end method

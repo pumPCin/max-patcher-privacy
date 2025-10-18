@@ -1,9 +1,8 @@
-.class public abstract Lb29;
-.super Landroid/content/BroadcastReceiver;
+.class public interface abstract Lb29;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
-
-.field public static final synthetic b:I
+# virtual methods
+.method public abstract a(Lfk0;Ltvf;)V
+.end method

@@ -2,290 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
 
 # static fields
-.field public static final f:Landroid/util/Range;
+.field public static final a:Le90;
 
-.field public static final g:Landroid/util/Range;
+.field public static final b:Lbr5;
 
-
-# instance fields
-.field public final a:Landroid/util/Range;
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Landroid/util/Range;
-
-.field public final e:I
+.field public static final c:Lbr5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    new-instance v0, Landroid/util/Range;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const v2, 0x7fffffff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    sput-object v0, Le90;->f:Landroid/util/Range;
-
-    new-instance v0, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    sput-object v0, Le90;->g:Landroid/util/Range;
-
-    invoke-static {}, Le90;->a()Lc46;
-
-    move-result-object v0
-
-    iput-object v1, v0, Lc46;->e:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lc46;->c()Le90;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/util/Range;IILandroid/util/Range;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Le90;->a:Landroid/util/Range;
-
-    iput p2, p0, Le90;->b:I
-
-    iput p3, p0, Le90;->c:I
-
-    iput-object p4, p0, Le90;->d:Landroid/util/Range;
-
-    iput p5, p0, Le90;->e:I
-
-    return-void
-.end method
-
-.method public static a()Lc46;
-    .locals 2
-
-    new-instance v0, Lc46;
+    new-instance v0, Le90;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, -0x1
+    sput-object v0, Le90;->a:Le90;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, Lsy;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    iput-object v1, v0, Lc46;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lsy;-><init>(I)V
 
-    iput-object v1, v0, Lc46;->c:Ljava/lang/Object;
+    const-class v1, Lmec;
 
-    iput-object v1, v0, Lc46;->e:Ljava/lang/Object;
+    invoke-static {v1, v0}, Ldy1;->o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
 
-    sget-object v1, Le90;->f:Landroid/util/Range;
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    new-instance v2, Lbr5;
 
-    iput-object v1, v0, Lc46;->a:Ljava/lang/Object;
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    sget-object v1, Le90;->g:Landroid/util/Range;
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    const-string v3, "currentCacheSizeBytes"
 
-    iput-object v1, v0, Lc46;->d:Ljava/lang/Object;
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    return-object v0
+    sput-object v2, Le90;->b:Lbr5;
 
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    new-instance v0, Lsy;
 
-    const-string v1, "Null sampleRate"
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Lsy;-><init>(I)V
 
-    throw v0
+    invoke-static {v1, v0}, Ldy1;->o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
 
-    :cond_1
-    new-instance v0, Ljava/lang/NullPointerException;
+    move-result-object v0
 
-    const-string v1, "Null bitrate"
+    new-instance v1, Lbr5;
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    throw v0
+    move-result-object v0
+
+    const-string v2, "maxCacheSizeBytes"
+
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Le90;->c:Lbr5;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Le90;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Le90;
-
-    iget-object v1, p0, Le90;->a:Landroid/util/Range;
-
-    iget-object v3, p1, Le90;->a:Landroid/util/Range;
-
-    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Le90;->b:I
-
-    iget v3, p1, Le90;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Le90;->c:I
-
-    iget v3, p1, Le90;->c:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Le90;->d:Landroid/util/Range;
-
-    iget-object v3, p1, Le90;->d:Landroid/util/Range;
-
-    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Le90;->e:I
-
-    iget p1, p1, Le90;->e:I
-
-    if-ne v1, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    iget-object v0, p0, Le90;->a:Landroid/util/Range;
+    check-cast p1, Lg9f;
 
-    invoke-virtual {v0}, Landroid/util/Range;->hashCode()I
+    check-cast p2, Luha;
 
-    move-result v0
+    sget-object v0, Le90;->b:Lbr5;
 
-    const v1, 0xf4243
+    iget-wide v1, p1, Lg9f;->a:J
 
-    xor-int/2addr v0, v1
+    invoke-interface {p2, v0, v1, v2}, Luha;->e(Lbr5;J)Luha;
 
-    mul-int/2addr v0, v1
+    sget-object v0, Le90;->c:Lbr5;
 
-    iget v2, p0, Le90;->b:I
+    iget-wide v1, p1, Lg9f;->b:J
 
-    xor-int/2addr v0, v2
+    invoke-interface {p2, v0, v1, v2}, Luha;->e(Lbr5;J)Luha;
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Le90;->c:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Le90;->d:Landroid/util/Range;
-
-    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Le90;->e:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AudioSpec{bitrate="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Le90;->a:Landroid/util/Range;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sourceFormat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Le90;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", source="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Le90;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le90;->d:Landroid/util/Range;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", channelCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Le90;->e:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

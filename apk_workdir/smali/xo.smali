@@ -1,129 +1,127 @@
-.class public Lxo;
-.super Landroid/widget/SeekBar;
+.class public abstract Lxo;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyo;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+.method public static a(Landroid/view/DragEvent;Landroid/widget/TextView;Landroid/app/Activity;)Z
+    .locals 2
 
-    .line 1
-    sget v0, Lbjc;->seekBarStyle:I
+    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
 
-    invoke-direct {p0, p1, p2, v0}, Lxo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getX()F
 
-    return-void
-.end method
+    move-result p2
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getY()F
 
-    .line 2
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    move-result v0
 
-    .line 3
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
 
-    move-result-object p1
+    move-result p2
 
-    invoke-static {p0, p1}, Lhsf;->a(Landroid/view/View;Landroid/content/Context;)V
-
-    .line 4
-    new-instance p1, Lyo;
-
-    invoke-direct {p1, p0}, Lyo;-><init>(Lxo;)V
-
-    iput-object p1, p0, Lxo;->a:Lyo;
-
-    .line 5
-    invoke-virtual {p1, p2, p3}, Lyo;->s(Landroid/util/AttributeSet;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public drawableStateChanged()V
-    .locals 3
-
-    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
-
-    iget-object v0, p0, Lxo;->a:Lyo;
-
-    iget-object v1, v0, Lyo;->X:Lxo;
-
-    iget-object v0, v0, Lyo;->Y:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final jumpDrawablesToCurrentState()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
-
-    iget-object v0, p0, Lxo;->a:Lyo;
-
-    iget-object v0, v0, Lyo;->Y:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public declared-synchronized onDraw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    monitor-enter p0
+    invoke-virtual {p1}, Landroid/widget/TextView;->beginBatchEdit()V
 
     :try_start_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lxo;->a:Lyo;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lyo;->y(Landroid/graphics/Canvas;)V
+    check-cast v0, Landroid/text/Spannable;
+
+    invoke-static {v0, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+
+    move-result-object p0
+
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1f
+
+    const/4 v1, 0x3
+
+    if-lt p2, v0, :cond_0
+
+    new-instance p2, Lor6;
+
+    invoke-direct {p2, p0, v1}, Lor6;-><init>(Landroid/content/ClipData;I)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, Lo04;
+
+    invoke-direct {p2}, Lo04;-><init>()V
+
+    iput-object p0, p2, Lo04;->b:Landroid/content/ClipData;
+
+    iput v1, p2, Lo04;->c:I
+
+    :goto_0
+    invoke-interface {p2}, Ln04;->build()Lq04;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lhzg;->j(Landroid/view/View;Lq04;)Lq04;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit p0
+    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
 
-    return-void
+    const/4 p0, 0x1
+
+    return p0
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
 
-    throw p1
+    throw p0
+.end method
+
+.method public static b(Landroid/view/DragEvent;Landroid/view/View;Landroid/app/Activity;)Z
+    .locals 2
+
+    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+
+    move-result-object p0
+
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1f
+
+    const/4 v1, 0x3
+
+    if-lt p2, v0, :cond_0
+
+    new-instance p2, Lor6;
+
+    invoke-direct {p2, p0, v1}, Lor6;-><init>(Landroid/content/ClipData;I)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, Lo04;
+
+    invoke-direct {p2}, Lo04;-><init>()V
+
+    iput-object p0, p2, Lo04;->b:Landroid/content/ClipData;
+
+    iput v1, p2, Lo04;->c:I
+
+    :goto_0
+    invoke-interface {p2}, Ln04;->build()Lq04;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lhzg;->j(Landroid/view/View;Lq04;)Lq04;
+
+    const/4 p0, 0x1
+
+    return p0
 .end method

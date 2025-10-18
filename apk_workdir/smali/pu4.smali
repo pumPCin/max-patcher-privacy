@@ -2,15 +2,12 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw1g;
+
 
 # instance fields
-.field public a:Z
-
-.field public b:Z
-
-.field public c:Z
-
-.field public final d:Ljava/util/ArrayDeque;
+.field public final a:[B
 
 
 # direct methods
@@ -19,100 +16,69 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/16 v0, 0x1000
 
-    iput-boolean v0, p0, Lpu4;->a:Z
+    new-array v0, v0, [B
 
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lpu4;->d:Ljava/util/ArrayDeque;
+    iput-object v0, p0, Lpu4;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
-
-    iget-object v0, p0, Lpu4;->d:Ljava/util/ArrayDeque;
-
-    iget-boolean v1, p0, Lpu4;->c:Z
-
-    if-eqz v1, :cond_0
+.method public final a(JIIILu1g;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public final b(Ledb;II)V
+    .locals 0
+
+    invoke-virtual {p1, p2}, Ledb;->K(I)V
+
+    return-void
+.end method
+
+.method public final c(Lyb4;IZ)I
+    .locals 2
+
+    iget-object v0, p0, Lpu4;->a:[B
+
+    array-length v1, v0
+
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v0, v1, p2}, Lyb4;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_1
+
+    if-eqz p3, :cond_0
+
+    return p2
 
     :cond_0
-    const/4 v1, 0x1
+    new-instance p1, Ljava/io/EOFException;
 
-    const/4 v2, 0x0
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
 
-    :try_start_0
-    iput-boolean v1, p0, Lpu4;->c:Z
+    throw p1
 
     :cond_1
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+    return p1
+.end method
 
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    iget-boolean v3, p0, Lpu4;->b:Z
-
-    if-nez v3, :cond_3
-
-    iget-boolean v3, p0, Lpu4;->a:Z
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v3, v2
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    move v3, v1
-
-    :goto_2
-    if-nez v3, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Runnable;
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    iput-boolean v2, p0, Lpu4;->c:Z
+.method public final d(Lmb6;)V
+    .locals 0
 
     return-void
-
-    :goto_4
-    iput-boolean v2, p0, Lpu4;->c:Z
-
-    throw v0
 .end method

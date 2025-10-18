@@ -1,23 +1,21 @@
 .class public final Lt3f;
-.super Ljava/lang/Object;
+.super Lz1d;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
-
-.field public static volatile b:Lt3f;
+# instance fields
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(JJ)V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    sget-object v0, Lm2d;->o:Lm2d;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0, p3, p4}, Lz1d;-><init>(Lm2d;J)V
 
-    sput-object v0, Lt3f;->a:Ljava/lang/Object;
+    iput-wide p1, p0, Lt3f;->c:J
 
     return-void
 .end method

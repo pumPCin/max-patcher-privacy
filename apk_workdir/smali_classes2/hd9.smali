@@ -3,172 +3,251 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
+.implements Ljd9;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public a:Ljava/nio/charset/CodingErrorAction;
+.field public final b:Ljava/lang/String;
 
-.field public b:Ljava/nio/charset/CodingErrorAction;
+.field public final c:J
 
-.field public c:I
+.field public final d:Landroid/text/Layout;
 
-.field public o:I
+.field public final e:Landroid/text/Layout;
+
+
+# direct methods
+.method public constructor <init>(JLjava/lang/String;JLandroid/text/Layout;Landroid/text/Layout;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lhd9;->a:J
+
+    iput-object p3, p0, Lhd9;->b:Ljava/lang/String;
+
+    iput-wide p4, p0, Lhd9;->c:J
+
+    iput-object p6, p0, Lhd9;->d:Landroid/text/Layout;
+
+    iput-object p7, p0, Lhd9;->e:Landroid/text/Layout;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 2
+.method public final a()Landroid/text/Layout;
+    .locals 1
 
-    new-instance v0, Lhd9;
+    iget-object v0, p0, Lhd9;->d:Landroid/text/Layout;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-object v0
+.end method
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+.method public final b()Landroid/text/Layout;
+    .locals 1
 
-    iput-object v1, v0, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    const v1, 0x7fffffff
-
-    iput v1, v0, Lhd9;->c:I
-
-    const/16 v1, 0x2000
-
-    iput v1, v0, Lhd9;->o:I
-
-    iput v1, v0, Lhd9;->X:I
-
-    iget-object v1, p0, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p0, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget v1, p0, Lhd9;->c:I
-
-    iput v1, v0, Lhd9;->c:I
-
-    iget v1, p0, Lhd9;->o:I
-
-    iput v1, v0, Lhd9;->o:I
+    iget-object v0, p0, Lhd9;->e:Landroid/text/Layout;
 
     return-object v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 7
 
-    instance-of v0, p1, Lhd9;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    check-cast p1, Lhd9;
+    instance-of v1, p1, Lhd9;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
+    if-nez v1, :cond_1
 
-    iget-object v1, p1, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lhd9;->c:I
-
-    iget v1, p1, Lhd9;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lhd9;->X:I
-
-    iget v1, p1, Lhd9;->X:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lhd9;->o:I
-
-    iget p1, p1, Lhd9;->o:I
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
+    return v2
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    check-cast p1, Lhd9;
 
-    return p1
-.end method
+    iget-wide v3, p0, Lhd9;->a:J
 
-.method public final hashCode()I
-    .locals 3
+    iget-wide v5, p1, Lhd9;->a:J
 
-    iget-object v0, p0, Lhd9;->a:Ljava/nio/charset/CodingErrorAction;
+    cmp-long v1, v3, v5
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_0
+    return v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    :cond_2
+    iget-object v1, p0, Lhd9;->b:Ljava/lang/String;
 
-    move-result v0
+    iget-object v3, p1, Lhd9;->b:Ljava/lang/String;
 
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    const/16 v2, 0x3e0
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lhd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lhd9;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lhd9;->o:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lhd9;->X:I
-
-    add-int/2addr v2, v0
+    if-nez v1, :cond_3
 
     return v2
+
+    :cond_3
+    iget-wide v3, p0, Lhd9;->c:J
+
+    iget-wide v5, p1, Lhd9;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lhd9;->d:Landroid/text/Layout;
+
+    iget-object v3, p1, Lhd9;->d:Landroid/text/Layout;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lhd9;->e:Landroid/text/Layout;
+
+    iget-object p1, p1, Lhd9;->e:Landroid/text/Layout;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Lhd9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lhd9;->b:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lhd9;->c:J
+
+    invoke-static {v0, v1, v3, v4}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lhd9;->d:Landroid/text/Layout;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    iget-object v0, p0, Lhd9;->e:Landroid/text/Layout;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v3, v2
+
+    return v3
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Channel(chatId="
+
+    const-string v1, ", channelLink="
+
+    iget-wide v2, p0, Lhd9;->a:J
+
+    iget-object v4, p0, Lhd9;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", forwardedMessageId="
+
+    const-string v2, ", bodyLayout="
+
+    iget-wide v3, p0, Lhd9;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lhd9;->d:Landroid/text/Layout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", forwardedTitleLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhd9;->e:Landroid/text/Layout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

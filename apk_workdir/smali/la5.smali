@@ -3,213 +3,179 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lka5;
+.implements Ljava/util/Map;
+.implements Ljava/io/Serializable;
+.implements Lir7;
 
 
-# instance fields
-.field public final X:Lbu1;
-
-.field public final Y:Lyt1;
-
-.field public final Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final a:Landroid/media/MediaCodec;
-
-.field public final b:Landroid/media/MediaCodec$BufferInfo;
-
-.field public final c:I
-
-.field public final o:Ljava/nio/ByteBuffer;
+# static fields
+.field public static final a:Lla5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lla5;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Lla5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lla5;->a:Landroid/media/MediaCodec;
-
-    iput p2, p0, Lla5;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lla5;->o:Ljava/nio/ByteBuffer;
-
-    iput-object p3, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    new-instance p2, Lhu0;
-
-    const/4 p3, 0x2
-
-    invoke-direct {p2, p1, p3}, Lhu0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-
-    invoke-static {p2}, Lmli;->a(Lzt1;)Lbu1;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lla5;->X:Lbu1;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyt1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lla5;->Y:Lyt1;
+    sput-object v0, Lla5;->a:Lla5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()Landroid/media/MediaCodec$BufferInfo;
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final bridge containsValue(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final bridge entrySet()Ljava/util/Set;
     .locals 1
 
-    iget-object v0, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
+    sget-object v0, Lua5;->a:Lua5;
 
     return-object v0
 .end method
 
-.method public final C()Z
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
+    instance-of v0, p1, Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
-    return v1
+    check-cast p1, Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final U()J
-    .locals 2
+.method public final isEmpty()Z
+    .locals 1
 
-    iget-object v0, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
+    const/4 v0, 0x1
 
-    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    return-wide v0
+    return v0
 .end method
 
-.method public final close()V
-    .locals 4
+.method public final bridge keySet()Ljava/util/Set;
+    .locals 1
 
-    iget-object v0, p0, Lla5;->Y:Lyt1;
+    sget-object v0, Lua5;->a:Lua5;
 
-    iget-object v1, p0, Lla5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v1, p0, Lla5;->a:Landroid/media/MediaCodec;
-
-    iget v2, p0, Lla5;->c:I
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lyt1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v0, v1}, Lyt1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
+    return-object v0
 .end method
 
-.method public final r()Ljava/nio/ByteBuffer;
-    .locals 3
+.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lla5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    const-string p2, "Operation is not supported for read-only collection"
 
-    move-result v0
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    iget-object v2, p0, Lla5;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    add-int/2addr v1, v0
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    return-object v2
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "encoded data is closed."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw p1
 .end method
 
-.method public final size()J
-    .locals 2
+.method public final putAll(Ljava/util/Map;)V
+    .locals 1
 
-    iget-object v0, p0, Lla5;->b:Landroid/media/MediaCodec$BufferInfo;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+    const-string v0, "Operation is not supported for read-only collection"
 
-    int-to-long v0, v0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return-wide v0
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final bridge size()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "{}"
+
+    return-object v0
+.end method
+
+.method public final bridge values()Ljava/util/Collection;
+    .locals 1
+
+    sget-object v0, Lka5;->a:Lka5;
+
+    return-object v0
 .end method

@@ -1,49 +1,53 @@
 .class public final Ll48;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Ln48;
+.field public final a:Liu7;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Ln48;Lk14;)V
+.method public constructor <init>(Liu7;Liu7;)V
     .locals 0
 
-    iput-object p1, p0, Ll48;->X:Ln48;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ll48;->a:Liu7;
+
+    iput-object p2, p0, Ll48;->b:Liu7;
 
     return-void
 .end method
 
+.method public static a(Ll48;Landroid/content/Context;Lsf0;Lsgf;)Ljava/lang/Object;
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Ll48;->a:Liu7;
 
-    iput-object p1, p0, Ll48;->o:Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget p1, p0, Ll48;->Y:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    check-cast v0, Lulf;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lqta;
 
-    iput p1, p0, Ll48;->Y:I
+    invoke-virtual {v0}, Lqta;->b()Lk54;
 
-    iget-object p1, p0, Ll48;->X:Ln48;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    new-instance v1, Lk48;
 
-    invoke-virtual {p1, v0, p0}, Ln48;->U0(Ljava/util/List;Lk14;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    invoke-direct {v1, p0, p2, p1, v2}, Lk48;-><init>(Ll48;Lsf0;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
 
-    return-object p1
+    invoke-static {v0, v1, p3}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

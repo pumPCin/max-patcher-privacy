@@ -1,253 +1,144 @@
-.class public abstract Laq7;
+.class public final Laq7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Z
 
-.field public b:I
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
+
+.field public final g:I
+
+
+# direct methods
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p4, p0, Laq7;->a:Z
+
+    iput-boolean p5, p0, Laq7;->b:Z
+
+    iput-boolean p6, p0, Laq7;->c:Z
+
+    iput-object p2, p0, Laq7;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Laq7;->e:Ljava/lang/String;
+
+    iput-boolean p7, p0, Laq7;->f:Z
+
+    iput p1, p0, Laq7;->g:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget v0, p0, Laq7;->a:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    iget v0, p0, Laq7;->a:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget v0, p0, Laq7;->a:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()Ljava/lang/String;
-    .locals 2
-
-    iget v0, p0, Laq7;->a:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "?"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Object"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "Array"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "root"
-
-    return-object v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 10
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x40
+    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Laq7;->a:I
+    iget-boolean v1, p0, Laq7;->a:Z
 
-    if-eqz v1, :cond_7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_5
-
-    const/16 v1, 0x7b
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Laq7;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    const/16 v3, 0x22
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    sget-object v4, Lv92;->h:[I
-
-    array-length v5, v4
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    :goto_0
-    if-ge v2, v6, :cond_3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v7
-
-    if-ge v7, v5, :cond_2
-
-    aget v8, v4, v7
-
-    if-nez v8, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/16 v8, 0x5c
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    aget v8, v4, v7
-
-    if-gez v8, :cond_1
-
-    const-string v8, "u00"
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v8, Lv92;->a:[C
-
-    shr-int/lit8 v9, v7, 0x4
-
-    aget-char v9, v8, v9
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    and-int/lit8 v7, v7, 0xf
-
-    aget-char v7, v8, v7
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_2
-
-    :cond_1
-    int-to-char v7, v8
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_2
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_4
-    const/16 v1, 0x3f
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_3
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_5
-
-    :cond_5
-    const/16 v1, 0x5b
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Laq7;->b:I
-
-    if-gez v1, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    move v2, v1
-
-    :goto_4
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_5
-
-    :cond_7
-    const-string v1, "/"
+    const-string v1, ", isLenient="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_5
+    iget-boolean v1, p0, Laq7;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Laq7;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", prettyPrintIndent=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Laq7;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Laq7;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Laq7;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Laq7;->g:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "POLYMORPHIC"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "ALL_JSON_OBJECTS"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "NONE"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

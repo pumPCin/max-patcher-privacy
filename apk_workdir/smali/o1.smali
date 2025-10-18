@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo18;
+.implements Ll28;

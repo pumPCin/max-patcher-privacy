@@ -1,136 +1,64 @@
-.class public final Le88;
+.class public final synthetic Le88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# static fields
-.field public static final X:Le88;
-
-.field public static final Y:Le88;
-
-.field public static final Z:Le88;
-
-.field public static final b:Le88;
-
-.field public static final c:Le88;
-
-.field public static final o:Le88;
+.implements Lzef;
 
 
 # instance fields
-.field public final a:Lqfe;
+.field public final synthetic a:I
+
+.field public final synthetic b:Liu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->c:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->b:Le88;
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->o:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->c:Le88;
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->X:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->o:Le88;
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->Y:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->X:Le88;
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->Z:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->Y:Le88;
-
-    new-instance v0, Le88;
-
-    sget-object v1, Lqfe;->r0:Lqfe;
-
-    invoke-direct {v0, v1}, Le88;-><init>(Lqfe;)V
-
-    sput-object v0, Le88;->Z:Le88;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqfe;)V
+.method public synthetic constructor <init>(Liu7;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Le88;->a:I
 
-    iput-object p1, p0, Le88;->a:Lqfe;
+    iput-object p1, p0, Le88;->b:Liu7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Le88;
+    iget v0, p0, Le88;->a:I
 
-    iget-object p1, p1, Le88;->a:Lqfe;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Le88;->a:Lqfe;
+    iget-object v0, p0, Le88;->b:Liu7;
 
-    iget v0, v0, Lqfe;->b:I
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget p1, p1, Lqfe;->b:I
+    move-result-object v0
 
-    invoke-static {v0, p1}, Lc0i;->b(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Le88;->a:Lqfe;
-
-    iget-object v0, v0, Lqfe;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Le88;->a:Lqfe;
-
-    iget-object v0, v0, Lqfe;->a:Ljava/lang/String;
+    check-cast v0, Ljs6;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Le88;->b:Liu7;
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhs6;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

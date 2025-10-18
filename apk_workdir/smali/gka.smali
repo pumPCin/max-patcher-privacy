@@ -1,23 +1,19 @@
 .class public final Lgka;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/nio/ByteBuffer;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILjava/nio/ByteBuffer;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput p1, p0, Lgka;->a:I
-
-    iput-object p2, p0, Lgka;->b:Ljava/nio/ByteBuffer;
+    iput-object p1, p0, Lgka;->a:Ljava/lang/Object;
 
     return-void
 .end method

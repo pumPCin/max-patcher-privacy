@@ -1,235 +1,231 @@
 .class public final Lxpd;
-.super Ljava/lang/Object;
+.super Landroid/media/projection/MediaProjection$Callback;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
 
-.field public final b:J
+.field public final b:Lfwc;
 
-.field public final c:J
+.field public volatile c:Z
 
-.field public final d:J
+.field public volatile d:Z
 
-.field public final e:J
+.field public e:I
 
-.field public final f:J
+.field public f:I
 
-.field public final g:J
+.field public g:I
 
-.field public final h:J
-
-.field public final i:J
-
-.field public final j:J
-
-.field public final k:J
-
-.field public final l:D
-
-.field public final m:D
-
-.field public final n:D
-
-.field public final o:D
-
-.field public final p:Lgg6;
+.field public final h:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(JJJJJJJJJJJDDDDLgg6;)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Lfwc;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
 
-    iput-wide p1, p0, Lxpd;->a:J
+    iput-object p3, p0, Lxpd;->b:Lfwc;
 
-    iput-wide p3, p0, Lxpd;->b:J
+    iput-object p2, p0, Lxpd;->h:Ljava/util/concurrent/Executor;
 
-    iput-wide p5, p0, Lxpd;->c:J
+    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
 
-    iput-wide p7, p0, Lxpd;->d:J
+    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
 
-    iput-wide p9, p0, Lxpd;->e:J
-
-    iput-wide p11, p0, Lxpd;->f:J
-
-    iput-wide p13, p0, Lxpd;->g:J
-
-    move-wide p1, p15
-
-    iput-wide p1, p0, Lxpd;->h:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lxpd;->i:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lxpd;->j:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lxpd;->k:J
-
-    move-wide/from16 p1, p23
-
-    iput-wide p1, p0, Lxpd;->l:D
-
-    move-wide/from16 p1, p25
-
-    iput-wide p1, p0, Lxpd;->m:D
-
-    move-wide/from16 p1, p27
-
-    iput-wide p1, p0, Lxpd;->n:D
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Lxpd;->o:D
-
-    move-object/from16 p1, p31
-
-    iput-object p1, p0, Lxpd;->p:Lgg6;
+    iput-object p2, p0, Lxpd;->a:Lorg/webrtc/ScreenCapturerAndroid;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a(II)V
+    .locals 4
+
+    iget-object v0, p0, Lxpd;->b:Lfwc;
+
+    const-string v1, "x"
+
+    const-string v2, "@30"
+
+    const-string v3, "changeFormat, "
+
+    invoke-static {v3, p1, v1, p2, v2}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ScreenCapturerAdapter"
+
+    invoke-interface {v0, v2, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lxpd;->g:I
+
+    const/16 v1, 0x1e
+
+    if-ne v0, p1, :cond_1
+
+    iget v0, p0, Lxpd;->f:I
+
+    if-ne v0, p2, :cond_1
+
+    iget v0, p0, Lxpd;->e:I
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iput v1, p0, Lxpd;->e:I
+
+    iput p2, p0, Lxpd;->f:I
+
+    iput p1, p0, Lxpd;->g:I
+
+    iget-boolean v0, p0, Lxpd;->d:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lxpd;->b:Lfwc;
+
+    const-string v3, "Screen capture is already started, just change capture format"
+
+    invoke-interface {v0, v2, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v0, p0, Lxpd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    iget-object p2, p0, Lxpd;->b:Lfwc;
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Cant change screen capture format"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string p1, "screen.capture.change.format"
+
+    invoke-interface {p2, v2, p1, v0}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public final b()V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "ScreenCapturerAdapter"
 
-    const-string v1, "ScreenshareRecvStat{packetsRecvStat="
+    const-string v1, "release"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lxpd;->b:Lfwc;
 
-    iget-wide v1, p0, Lxpd;->a:J
+    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lxpd;->c()V
 
-    const-string v1, ", frameStartsRecvStat="
+    iget-object v0, p0, Lxpd;->a:Lorg/webrtc/ScreenCapturerAndroid;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
 
-    iget-wide v1, p0, Lxpd;->b:J
+    return-void
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final c()V
+    .locals 5
 
-    const-string v1, ", recvOdditiesStat="
+    iget-object v0, p0, Lxpd;->b:Lfwc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "stop"
 
-    iget-wide v1, p0, Lxpd;->c:J
+    const-string v2, "ScreenCapturerAdapter"
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v2, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, ", completeFramesStat="
+    iget-boolean v0, p0, Lxpd;->d:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    iget-wide v1, p0, Lxpd;->d:J
+    iget-object v0, p0, Lxpd;->b:Lfwc;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v1, "Screen capturer is not yet started"
 
-    const-string v1, ", keyFramesEnqStat="
+    invoke-interface {v0, v2, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-wide v1, p0, Lxpd;->e:J
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-boolean v0, p0, Lxpd;->d:Z
 
-    const-string v1, ", deltaFramesEnqStat="
+    :try_start_0
+    iget-object v0, p0, Lxpd;->a:Lorg/webrtc/ScreenCapturerAndroid;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-wide v1, p0, Lxpd;->f:J
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :catch_0
+    move-exception v0
 
-    const-string v1, ", framesDroppedOnEnqStat="
+    iget-object v1, p0, Lxpd;->b:Lfwc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/RuntimeException;
 
-    iget-wide v1, p0, Lxpd;->g:J
+    const-string v4, "Stop screen capture failed"
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v1, ", framesDecodedStat="
+    const-string v0, "screen.capture.stop"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v1, v2, v0, v3}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-wide v1, p0, Lxpd;->h:J
+    return-void
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final onStop()V
+    .locals 3
 
-    const-string v1, ", decodeErrors="
+    iget-object v0, p0, Lxpd;->b:Lfwc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "ScreenCapturerAdapter"
 
-    iget-wide v1, p0, Lxpd;->i:J
+    const-string v2, "onStop, screen capture session stopped"
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, ", allocatedBuffersStat="
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-boolean v0, p0, Lxpd;->c:Z
 
-    iget-wide v1, p0, Lxpd;->j:J
+    iget-object v0, p0, Lxpd;->h:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance v1, Lrta;
 
-    const-string v1, ", allocatedMemStat="
+    const/16 v2, 0x14
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2, p0}, Lrta;-><init>(ILjava/lang/Object;)V
 
-    iget-wide v1, p0, Lxpd;->k:J
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", packetReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lxpd;->l:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lxpd;->m:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lxpd;->n:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodeErrorEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lxpd;->o:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

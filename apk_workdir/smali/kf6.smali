@@ -4,22 +4,24 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final synthetic b:Lyof;
+.field public final b:Z
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lyof;)V
+.method public constructor <init>(IJZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkf6;->b:Lyof;
+    iput-wide p2, p0, Lkf6;->a:J
 
-    iget p1, p1, Lyof;->Y:I
+    iput-boolean p4, p0, Lkf6;->b:Z
 
-    iput p1, p0, Lkf6;->a:I
+    iput p1, p0, Lkf6;->c:I
 
     return-void
 .end method

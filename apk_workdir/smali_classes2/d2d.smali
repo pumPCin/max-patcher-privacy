@@ -1,117 +1,133 @@
-.class public final Ld2d;
-.super Lsyg;
+.class public abstract Ld2d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lsze;
-
-.field public final Y:Lgzc;
-
-.field public final Z:Lsze;
-
-.field public final b:Ler2;
-
-.field public final c:Lde5;
-
-.field public final o:Lde5;
-
-.field public final r0:Lgzc;
-
-.field public final s0:Lsze;
-
-.field public final t0:Lgzc;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ler2;)V
-    .locals 2
+.method public static a(Lz1d;J)Lw1d;
+    .locals 4
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    new-instance v0, Lw1d;
 
-    iput-object p1, p0, Ld2d;->b:Ler2;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lde5;
+    iget-object v1, p0, Lz1d;->a:Lm2d;
 
-    const/4 v0, 0x0
+    iput-object v1, v0, Lw1d;->b:Lm2d;
 
-    invoke-direct {p1, v0}, Lde5;-><init>(I)V
+    iget-wide v2, p0, Lz1d;->b:J
 
-    iput-object p1, p0, Ld2d;->c:Lde5;
+    iput-wide v2, v0, Lw1d;->d:J
 
-    new-instance p1, Lde5;
+    iput-wide p1, v0, Lw1d;->c:J
 
-    invoke-direct {p1, v0}, Lde5;-><init>(I)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iput-object p1, p0, Ld2d;->o:Lde5;
+    move-result p1
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    const/4 p2, 0x1
 
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    if-eq p1, p2, :cond_3
 
-    move-result-object v0
+    const/4 p2, 0x2
 
-    iput-object v0, p0, Ld2d;->X:Lsze;
+    if-eq p1, p2, :cond_2
 
-    new-instance v1, Lgzc;
+    const/4 p2, 0x3
 
-    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
+    if-eq p1, p2, :cond_1
 
-    iput-object v1, p0, Ld2d;->Y:Lgzc;
+    const/4 p2, 0x4
 
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    if-ne p1, p2, :cond_0
 
-    move-result-object v0
+    return-object v0
 
-    iput-object v0, p0, Ld2d;->Z:Lsze;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Lgzc;
+    sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
+    iget-object p0, p0, Lz1d;->a:Lm2d;
 
-    iput-object v1, p0, Ld2d;->r0:Lgzc;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    const-string v0, "Unexpected value: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    check-cast p0, Lkq6;
+
+    iget-object p0, p0, Lkq6;->c:Ls10;
+
+    invoke-static {p0}, Lru/ok/tamtam/nano/b;->o(Ls10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     move-result-object p1
 
-    iput-object p1, p0, Ld2d;->s0:Lsze;
+    invoke-static {p1}, Lee9;->toByteArray(Lee9;)[B
 
-    new-instance v0, Lgzc;
+    move-result-object p1
 
-    invoke-direct {v0, p1}, Lgzc;-><init>(Lh0a;)V
+    new-instance p2, Lg53;
 
-    iput-object v0, p0, Ld2d;->t0:Lgzc;
+    const/4 v1, 0x7
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    invoke-direct {p2, v1, v2}, Lg53;-><init>(IZ)V
 
-# virtual methods
-.method public final r(Loqf;Z)V
-    .locals 1
+    iput-object p1, p2, Lg53;->c:Ljava/lang/Object;
 
-    if-eqz p2, :cond_0
+    iget-wide p0, p0, Ls10;->q0:J
 
-    sget p2, Liid;->I:I
+    iput-wide p0, p2, Lg53;->b:J
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p2, v0, Lw1d;->g:Lg53;
 
-    move-result-object p2
+    return-object v0
 
-    goto :goto_0
+    :cond_2
+    check-cast p0, Lt3f;
 
-    :cond_0
-    const/4 p2, 0x0
+    new-instance p1, Lq7;
 
-    :goto_0
-    new-instance v0, La2d;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p1, p2}, La2d;-><init>(Loqf;Ljava/lang/Integer;)V
+    iget-wide v1, p0, Lt3f;->c:J
 
-    iget-object p1, p0, Ld2d;->c:Lde5;
+    iput-wide v1, p1, Lq7;->a:J
 
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    iput-object p1, v0, Lw1d;->e:Lq7;
 
-    return-void
+    return-object v0
+
+    :cond_3
+    check-cast p0, Lz85;
+
+    new-instance p1, Lj7;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iget-object p0, p0, Lz85;->c:Ljava/lang/String;
+
+    iput-object p0, p1, Lj7;->a:Ljava/lang/Object;
+
+    iput-object p1, v0, Lw1d;->f:Lj7;
+
+    return-object v0
 .end method

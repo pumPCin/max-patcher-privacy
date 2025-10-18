@@ -1,26 +1,48 @@
 .class public final Lupe;
-.super Ljava/lang/Object;
+.super Lq24;
 .source "SourceFile"
 
 # interfaces
-.implements Lqkd;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public a:I
+.field public final X:Z
 
-.field public b:Z
+.field public Y:Z
 
-.field public final synthetic c:Lwpe;
+.field public Z:Landroid/view/ViewGroup;
+
+.field public o:Z
+
+.field public q0:Lo24;
 
 
 # direct methods
-.method public constructor <init>(Lwpe;)V
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-direct {p0, v0}, Lupe;-><init>(Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0}, Lq24;-><init>()V
 
-    iput-object p1, p0, Lupe;->c:Lwpe;
+    .line 3
+    iput-boolean p1, p0, Lupe;->o:Z
+
+    const/4 p1, 0x1
+
+    .line 4
+    iput-boolean p1, p0, Lupe;->X:Z
 
     return-void
 .end method
@@ -28,196 +50,178 @@
 
 # virtual methods
 .method public final a()V
-    .locals 8
+    .locals 2
 
-    iget-boolean v0, p0, Lupe;->b:Z
+    iget-object v0, p0, Lupe;->q0:Lo24;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lupe;->c:Lwpe;
-
-    iget-object v1, v0, Lwpe;->X:Lvf6;
-
-    iget-object v2, v0, Lwpe;->t0:Lsa6;
-
-    iget-object v2, v2, Lsa6;->n:Ljava/lang/String;
-
-    invoke-static {v2}, Ler9;->h(Ljava/lang/String;)I
-
-    move-result v2
-
-    iget-object v3, v0, Lwpe;->t0:Lsa6;
-
-    const/4 v5, 0x0
-
-    const-wide/16 v6, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v1 .. v7}, Lvf6;->F(ILsa6;ILjava/lang/Object;J)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lupe;->b:Z
+    invoke-virtual {v0}, Lo24;->n()V
 
     :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lupe;->q0:Lo24;
+
+    iget-object v1, p0, Lupe;->Z:Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :cond_1
+    iput-object v0, p0, Lupe;->Z:Landroid/view/ViewGroup;
+
     return-void
 .end method
 
-.method public final b()V
+.method public final b()Lq24;
     .locals 2
 
-    iget-object v0, p0, Lupe;->c:Lwpe;
+    new-instance v0, Lupe;
 
-    iget-boolean v1, v0, Lwpe;->u0:Z
+    iget-boolean v1, p0, Lupe;->o:Z
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, v1}, Lupe;-><init>(Z)V
 
-    iget-object v0, v0, Lwpe;->s0:Lk68;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lk68;->b()V
+.method public final d()Z
+    .locals 1
 
-    :cond_0
-    return-void
+    iget-boolean v0, p0, Lupe;->o:Z
+
+    return v0
 .end method
 
 .method public final e()Z
     .locals 1
 
-    iget-object v0, p0, Lupe;->c:Lwpe;
-
-    iget-boolean v0, v0, Lwpe;->v0:Z
+    iget-boolean v0, p0, Lupe;->X:Z
 
     return v0
 .end method
 
-.method public final h(J)I
-    .locals 2
-
-    invoke-virtual {p0}, Lupe;->a()V
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p1, p1, v0
-
-    if-lez p1, :cond_0
-
-    iget p1, p0, Lupe;->a:I
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_0
-
-    iput p2, p0, Lupe;->a:I
+.method public final f(Lq24;Ll24;)V
+    .locals 0
 
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Lupe;->Y:Z
+
+    return-void
+.end method
+
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo24;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lupe;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    if-eqz p2, :cond_2
+
+    if-eqz p4, :cond_1
+
+    iget-boolean p4, p0, Lupe;->o:Z
+
+    if-eqz p4, :cond_2
+
+    :cond_1
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_2
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p2
+
+    if-nez p2, :cond_3
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p5}, Lo24;->n()V
+
+    return-void
+
+    :cond_4
+    iput-object p5, p0, Lupe;->q0:Lo24;
+
+    iput-object p1, p0, Lupe;->Z:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+.end method
+
+.method public final h(Landroid/os/Bundle;)V
+    .locals 1
+
+    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lupe;->o:Z
+
+    return-void
+.end method
+
+.method public final i(Landroid/os/Bundle;)V
+    .locals 2
+
+    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+
+    iget-boolean v1, p0, Lupe;->o:Z
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 1
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Lupe;->q0:Lo24;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lo24;->n()V
 
     :cond_0
     const/4 p1, 0x0
 
-    return p1
-.end method
+    iput-object p1, p0, Lupe;->q0:Lo24;
 
-.method public final p(Lsfd;Lse4;I)I
-    .locals 9
+    iget-object v0, p0, Lupe;->Z:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Lupe;->a()V
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lupe;->c:Lwpe;
-
-    iget-boolean v1, v0, Lwpe;->v0:Z
-
-    const/4 v2, 0x2
-
-    if-eqz v1, :cond_0
-
-    iget-object v3, v0, Lwpe;->w0:[B
-
-    if-nez v3, :cond_0
-
-    iput v2, p0, Lupe;->a:I
-
-    :cond_0
-    iget v3, p0, Lupe;->a:I
-
-    const/4 v4, -0x4
-
-    if-ne v3, v2, :cond_1
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p2, p1}, Luy;->a(I)V
-
-    return v4
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     :cond_1
-    and-int/lit8 v5, p3, 0x2
+    iput-object p1, p0, Lupe;->Z:Landroid/view/ViewGroup;
 
-    const/4 v6, 0x1
+    return-void
+.end method
 
-    if-nez v5, :cond_6
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
 
-    if-nez v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    if-nez v1, :cond_3
-
-    const/4 p1, -0x3
-
-    return p1
-
-    :cond_3
-    iget-object p1, v0, Lwpe;->w0:[B
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2, v6}, Luy;->a(I)V
-
-    const-wide/16 v7, 0x0
-
-    iput-wide v7, p2, Lse4;->Z:J
-
-    and-int/lit8 p1, p3, 0x4
-
-    if-nez p1, :cond_4
-
-    iget p1, v0, Lwpe;->x0:I
-
-    invoke-virtual {p2, p1}, Lse4;->y(I)V
-
-    iget-object p1, p2, Lse4;->X:Ljava/nio/ByteBuffer;
-
-    iget-object p2, v0, Lwpe;->w0:[B
-
-    const/4 v1, 0x0
-
-    iget v0, v0, Lwpe;->x0:I
-
-    invoke-virtual {p1, p2, v1, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    :cond_4
-    and-int/lit8 p1, p3, 0x1
-
-    if-nez p1, :cond_5
-
-    iput v2, p0, Lupe;->a:I
-
-    :cond_5
-    return v4
-
-    :cond_6
-    :goto_0
-    iget-object p2, v0, Lwpe;->t0:Lsa6;
-
-    iput-object p2, p1, Lsfd;->c:Ljava/lang/Object;
-
-    iput v6, p0, Lupe;->a:I
-
-    const/4 p1, -0x5
-
-    return p1
+    return-void
 .end method

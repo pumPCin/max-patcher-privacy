@@ -1,77 +1,61 @@
 .class public final Leyh;
-.super Lf4;
+.super Lbxh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Leyh;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public final synthetic c:Lhyh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpzh;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lpzh;-><init>(I)V
-
-    sput-object v0, Leyh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lhyh;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leyh;->c:Lhyh;
 
-    iput-object p1, p0, Leyh;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Leyh;->b:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final bridge synthetic get(I)Ljava/lang/Object;
     .locals 2
 
-    const/16 p2, 0x4f45
+    iget-object v0, p0, Leyh;->c:Lhyh;
 
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+    iget v1, v0, Lhyh;->X:I
 
-    move-result p2
+    invoke-static {p1, v1}, Lbki;->e(II)V
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lhyh;->o:[Ljava/lang/Object;
 
-    iget-object v1, p0, Leyh;->a:Ljava/lang/String;
+    add-int/2addr p1, p1
 
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    aget-object v1, v0, p1
 
-    const/4 v0, 0x2
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Leyh;->b:Ljava/lang/String;
+    add-int/lit8 p1, p1, 0x1
 
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    aget-object p1, v0, p1
 
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
+
+    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Leyh;->c:Lhyh;
+
+    iget v0, v0, Lhyh;->X:I
+
+    return v0
 .end method

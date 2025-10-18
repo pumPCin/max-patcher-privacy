@@ -13,9 +13,9 @@
 # instance fields
 .field public final a:I
 
-.field public final b:Lt88;
+.field public final b:Lq98;
 
-.field public final c:Lgjg;
+.field public final c:Lkkg;
 
 .field public d:[B
 
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lgjg;ILt88;I)V
+.method public constructor <init>(Lkkg;ILq98;I)V
     .locals 0
 
     iput p4, p0, Loc;->r:I
@@ -83,15 +83,15 @@
     iput p2, p0, Loc;->a:I
 
     .line 5
-    iput-object p3, p0, Loc;->b:Lt88;
+    iput-object p3, p0, Loc;->b:Lq98;
 
     .line 6
-    iput-object p1, p0, Loc;->c:Lgjg;
+    iput-object p1, p0, Loc;->c:Lkkg;
 
     return-void
 .end method
 
-.method public constructor <init>(Lgjg;[BILt88;)V
+.method public constructor <init>(Lkkg;[BILq98;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -111,10 +111,10 @@
     iput p3, p0, Loc;->a:I
 
     .line 11
-    iput-object p4, p0, Loc;->b:Lt88;
+    iput-object p4, p0, Loc;->b:Lq98;
 
     .line 12
-    iput-object p1, p0, Loc;->c:Lgjg;
+    iput-object p1, p0, Loc;->c:Lkkg;
 
     const/4 p1, 0x1
 
@@ -138,7 +138,7 @@
     move-result-object p2
 
     .line 14
-    invoke-static {p3}, Lu9d;->s(I)Ljava/lang/String;
+    invoke-static {p3}, Labd;->s(I)Ljava/lang/String;
 
     move-result-object p3
 
@@ -148,7 +148,7 @@
 
     move-result-object p3
 
-    invoke-interface {p4, p3, p2}, Lt88;->secret(Ljava/lang/String;[B)V
+    invoke-interface {p4, p3, p2}, Lq98;->secret(Ljava/lang/String;[B)V
 
     .line 15
     invoke-virtual {p0, p2, p1, p1}, Loc;->f([BZZ)V
@@ -214,9 +214,9 @@
 
     move-result p1
 
-    invoke-static {}, Ley;->j()V
+    invoke-static {}, Lfy;->j()V
 
-    invoke-static {p1, v3}, Ley;->i(I[B)Ljavax/crypto/spec/ChaCha20ParameterSpec;
+    invoke-static {p1, v3}, Lfy;->i(I[B)Ljavax/crypto/spec/ChaCha20ParameterSpec;
 
     move-result-object p1
 
@@ -607,9 +607,9 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v2, p0, Loc;->c:Lgjg;
+    iget-object v2, p0, Loc;->c:Lkkg;
 
-    invoke-virtual {v2}, Lgjg;->b()Z
+    invoke-virtual {v2}, Lkkg;->b()Z
 
     move-result v2
 
@@ -644,7 +644,7 @@
 
     iput-object v1, p0, Loc;->e:[B
 
-    iget-object v1, p0, Loc;->b:Lt88;
+    iget-object v1, p0, Loc;->b:Lq98;
 
     if-eqz p1, :cond_1
 
@@ -672,7 +672,7 @@
 
     iget-object v2, p0, Loc;->e:[B
 
-    invoke-interface {v1, v0, v2}, Lt88;->secret(Ljava/lang/String;[B)V
+    invoke-interface {v1, v0, v2}, Lq98;->secret(Ljava/lang/String;[B)V
 
     iget-object v0, p0, Loc;->e:[B
 
@@ -744,9 +744,9 @@
 .method public final f([BZZ)V
     .locals 5
 
-    iget-object v0, p0, Loc;->c:Lgjg;
+    iget-object v0, p0, Loc;->c:Lkkg;
 
-    invoke-virtual {v0}, Lgjg;->b()Z
+    invoke-virtual {v0}, Lkkg;->b()Z
 
     move-result v0
 
@@ -792,7 +792,7 @@
     :goto_1
     iget v2, p0, Loc;->a:I
 
-    invoke-static {v2}, Lu9d;->s(I)Ljava/lang/String;
+    invoke-static {v2}, Labd;->s(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -802,9 +802,9 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Loc;->b:Lt88;
+    iget-object v4, p0, Loc;->b:Lq98;
 
-    invoke-interface {v4, v3, v1}, Lt88;->secret(Ljava/lang/String;[B)V
+    invoke-interface {v4, v3, v1}, Lq98;->secret(Ljava/lang/String;[B)V
 
     const-string v1, "iv"
 
@@ -828,7 +828,7 @@
     iput-object v1, p0, Loc;->i:[B
 
     :goto_2
-    invoke-static {v2}, Lu9d;->s(I)Ljava/lang/String;
+    invoke-static {v2}, Labd;->s(I)Ljava/lang/String;
 
     move-result-object p3
 
@@ -838,7 +838,7 @@
 
     move-result-object p3
 
-    invoke-interface {v4, p3, v1}, Lt88;->secret(Ljava/lang/String;[B)V
+    invoke-interface {v4, p3, v1}, Lq98;->secret(Ljava/lang/String;[B)V
 
     if-eqz p2, :cond_3
 
@@ -858,7 +858,7 @@
 
     iput-object p1, p0, Loc;->j:[B
 
-    invoke-static {v2}, Lu9d;->s(I)Ljava/lang/String;
+    invoke-static {v2}, Labd;->s(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -870,7 +870,7 @@
 
     iget-object p2, p0, Loc;->j:[B
 
-    invoke-interface {v4, p1, p2}, Lt88;->secret(Ljava/lang/String;[B)V
+    invoke-interface {v4, p1, p2}, Lq98;->secret(Ljava/lang/String;[B)V
 
     :cond_3
     return-void
@@ -886,11 +886,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Loc;->b:Lt88;
+    iget-object v0, p0, Loc;->b:Lq98;
 
     const-string v1, "Installing updated keys (initiated by peer)"
 
-    invoke-interface {v0, v1}, Lt88;->info(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lq98;->info(Ljava/lang/String;)V
 
     iget-object v0, p0, Loc;->e:[B
 
@@ -934,11 +934,11 @@
 
     if-ge v0, v1, :cond_0
 
-    iget-object v0, p0, Loc;->b:Lt88;
+    iget-object v0, p0, Loc;->b:Lq98;
 
     const-string v1, "Keys out of sync; updating keys for peer"
 
-    invoke-interface {v0, v1}, Lt88;->debug(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lq98;->debug(Ljava/lang/String;)V
 
     iget-object v0, p0, Loc;->q:Loc;
 
@@ -968,21 +968,21 @@
     throw v0
 .end method
 
-.method public h()Lx85;
+.method public h()Lp95;
     .locals 1
 
     iget v0, p0, Loc;->r:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Lx85;->B()Lx85;
+    invoke-static {}, Lp95;->B()Lp95;
 
     move-result-object v0
 
     return-object v0
 
     :pswitch_0
-    invoke-static {}, Lx85;->B()Lx85;
+    invoke-static {}, Lp95;->B()Lp95;
 
     move-result-object v0
 
@@ -1317,7 +1317,7 @@
 
     invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Loc;->h()Lx85;
+    invoke-virtual {p0}, Loc;->h()Lp95;
 
     move-result-object p2
 
@@ -1325,7 +1325,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, p1, v0, p3}, Lx85;->s([B[BI)[B
+    invoke-virtual {p2, p1, v0, p3}, Lp95;->v([B[BI)[B
 
     move-result-object p1
 

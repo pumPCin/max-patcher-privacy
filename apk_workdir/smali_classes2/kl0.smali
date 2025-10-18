@@ -1,162 +1,73 @@
-.class public final Lkl0;
-.super Ljava/lang/Object;
+.class public final enum Lkl0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lu95;
 
+# static fields
+.field public static final enum a:Lkl0;
 
-# instance fields
-.field public final synthetic a:Lo6b;
+.field public static final enum b:Lkl0;
+
+.field public static final synthetic c:[Lkl0;
 
 
 # direct methods
-.method public constructor <init>(Lo6b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkl0;
 
-    iput-object p1, p0, Lkl0;->a:Lo6b;
+    const-string v1, "SQUARE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkl0;->a:Lkl0;
+
+    new-instance v1, Lkl0;
+
+    const-string v2, "ORIGINAL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkl0;->b:Lkl0;
+
+    filled-new-array {v0, v1}, [Lkl0;
+
+    move-result-object v0
+
+    sput-object v0, Lkl0;->c:[Lkl0;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final k(Lo6b;Lmwg;)V
+.method public static valueOf(Ljava/lang/String;)Lkl0;
     .locals 1
 
-    iget-object p1, p0, Lkl0;->a:Lo6b;
+    const-class v0, Lkl0;
 
-    iget-object v0, p1, Lll0;->b:Lj9d;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_1
+    move-result-object p0
 
-    if-eqz p2, :cond_0
+    check-cast p0, Lkl0;
 
-    iget-object p2, p2, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast p2, Loq8;
-
-    check-cast p2, Ldng;
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, Ldng;->j:Lrhf;
-
-    invoke-virtual {p2}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/util/Size;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {v0, p1, p2}, Lj9d;->g(Lo6b;Landroid/util/Size;)V
-
-    :cond_1
-    return-void
+    return-object p0
 .end method
 
-.method public final s(Lll0;II)V
-    .locals 2
+.method public static values()[Lkl0;
+    .locals 1
 
-    const/4 p1, 0x3
+    sget-object v0, Lkl0;->c:[Lkl0;
 
-    if-ne p3, p1, :cond_2
+    invoke-virtual {v0}, [Lkl0;->clone()Ljava/lang/Object;
 
-    iget-object p1, p0, Lkl0;->a:Lo6b;
+    move-result-object v0
 
-    iget-object p1, p1, Lll0;->c:Lvve;
+    check-cast v0, [Lkl0;
 
-    iget-object p1, p1, Lvve;->c:Ljava/lang/Object;
-
-    check-cast p1, Lxtf;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-wide p2, p1, Lxtf;->d:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-wide/16 v0, -0x1
-
-    cmp-long p2, p2, v0
-
-    const/4 p3, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, p3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    monitor-exit p1
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lxtf;->d:J
-
-    invoke-virtual {p1, p3, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-
-    throw p2
-
-    :cond_2
-    iget-object p1, p0, Lkl0;->a:Lo6b;
-
-    iget-object p1, p1, Lll0;->c:Lvve;
-
-    iget-object p1, p1, Lvve;->c:Ljava/lang/Object;
-
-    check-cast p1, Lxtf;
-
-    invoke-virtual {p1}, Lxtf;->b()V
-
-    iget-object p1, p0, Lkl0;->a:Lo6b;
-
-    iget-object p2, p1, Lll0;->c:Lvve;
-
-    iget-object p2, p2, Lvve;->c:Ljava/lang/Object;
-
-    check-cast p2, Lxtf;
-
-    invoke-virtual {p2}, Lxtf;->a()J
-
-    move-result-wide p2
-
-    invoke-virtual {p1, p2, p3}, Lll0;->b(J)V
-
-    return-void
+    return-object v0
 .end method

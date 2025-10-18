@@ -1,23 +1,23 @@
 .class public final Lb00;
-.super Ld00;
+.super Le00;
 .source "SourceFile"
 
 
 # instance fields
 .field public final a:J
 
-.field public final b:Lnqf;
+.field public final b:Lsrf;
 
 
 # direct methods
-.method public constructor <init>(JLnqf;)V
+.method public constructor <init>(JLsrf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lb00;->a:J
 
-    iput-object p3, p0, Lb00;->b:Lnqf;
+    iput-object p3, p0, Lb00;->b:Lsrf;
 
     return-void
 .end method
@@ -32,10 +32,10 @@
     return-wide v0
 .end method
 
-.method public final b()Loqf;
+.method public final b()Ltrf;
     .locals 1
 
-    iget-object v0, p0, Lb00;->b:Lnqf;
+    iget-object v0, p0, Lb00;->b:Lsrf;
 
     return-object v0
 .end method
@@ -68,11 +68,11 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lb00;->b:Lnqf;
+    iget-object v0, p0, Lb00;->b:Lsrf;
 
-    iget-object p1, p1, Lb00;->b:Lnqf;
+    iget-object p1, p1, Lb00;->b:Lsrf;
 
-    invoke-virtual {v0, p1}, Lnqf;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -101,9 +101,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lb00;->b:Lnqf;
+    iget-object v1, p0, Lb00;->b:Lsrf;
 
-    invoke-virtual {v1}, Lnqf;->hashCode()I
+    invoke-virtual {v1}, Lsrf;->hashCode()I
 
     move-result v1
 
@@ -117,7 +117,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Success(messageId="
+    const-string v1, "NeedDownload(messageId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lb00;->b:Lnqf;
+    iget-object v1, p0, Lb00;->b:Lsrf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

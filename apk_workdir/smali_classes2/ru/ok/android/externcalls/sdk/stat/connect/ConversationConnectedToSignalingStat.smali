@@ -11,20 +11,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;",
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
-        "Lvtf;",
+        "Lavf;",
         "timeProvider",
         "Lkotlin/Function0;",
-        "Lp71;",
+        "Lx71;",
         "getEventualStatSender",
         "<init>",
-        "(Lvtf;Loh6;)V",
+        "(Lavf;Lji6;)V",
         "callEventualStatSender",
-        "Lzag;",
+        "Lccg;",
         "report",
-        "(Lp71;)V",
+        "(Lx71;)V",
         "onConnectedToSignaling",
         "()V",
-        "Lvtf;",
+        "Lavf;",
         "",
         "startTimeMs",
         "J",
@@ -43,26 +43,26 @@
 # instance fields
 .field private final startTimeMs:J
 
-.field private final timeProvider:Lvtf;
+.field private final timeProvider:Lavf;
 
 
 # direct methods
-.method public constructor <init>(Lvtf;Loh6;)V
+.method public constructor <init>(Lavf;Lji6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvtf;",
-            "Loh6;",
+            "Lavf;",
+            "Lji6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Loh6;)V
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lji6;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->timeProvider:Lvtf;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->timeProvider:Lavf;
 
-    invoke-interface {p1}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {p1}, Lavf;->getMsSinceBoot()J
 
     move-result-wide p1
 
@@ -71,20 +71,20 @@
     return-void
 .end method
 
-.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;Lp71;)V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;Lx71;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->report(Lp71;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->report(Lx71;)V
 
     return-void
 .end method
 
-.method private final report(Lp71;)V
+.method private final report(Lx71;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->timeProvider:Lvtf;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->timeProvider:Lavf;
 
-    invoke-interface {v0}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {v0}, Lavf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -102,7 +102,7 @@
 
     const-string v3, "signaling_connected"
 
-    invoke-static {p1, v3, v0, v1, v2}, Lp71;->a(Lp71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {p1, v3, v0, v1, v2}, Lx71;->a(Lx71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     return-void
 .end method
@@ -116,7 +116,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat$onConnectedToSignaling$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lqh6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lli6;)V
 
     return-void
 .end method

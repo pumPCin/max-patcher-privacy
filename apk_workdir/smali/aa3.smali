@@ -1,23 +1,34 @@
-.class public abstract Laa3;
+.class public interface abstract Laa3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Ly97;
+.implements Lcom/facebook/fresco/middleware/HasExtraData;
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
 
+# virtual methods
+.method public abstract close()V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public abstract getHeight()I
+.end method
 
-    new-instance v0, Landroid/util/LruCache;
+.method public abstract getImageInfo()Ly97;
+.end method
 
-    const/16 v1, 0xa
+.method public abstract getQualityInfo()Lohc;
+.end method
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+.method public abstract getSizeInBytes()I
+.end method
 
-    sput-object v0, Laa3;->a:Landroid/util/LruCache;
+.method public abstract getWidth()I
+.end method
 
-    return-void
+.method public abstract isClosed()Z
+.end method
+
+.method public abstract isStateful()Z
 .end method

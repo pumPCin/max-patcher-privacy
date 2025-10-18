@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfi6;
+.implements Laj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Lqoe;
+    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

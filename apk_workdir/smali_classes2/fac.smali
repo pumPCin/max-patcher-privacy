@@ -1,19 +1,25 @@
 .class public final Lfac;
-.super Lpac;
+.super Lpd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llqf;
+.field public final b:J
+
+.field public final c:Lz2c;
 
 
 # direct methods
-.method public constructor <init>(Llqf;)V
-    .locals 0
+.method public constructor <init>(JLz2c;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xf
 
-    iput-object p1, p0, Lfac;->a:Llqf;
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+
+    iput-wide p1, p0, Lfac;->b:J
+
+    iput-object p3, p0, Lfac;->c:Lz2c;
 
     return-void
 .end method
@@ -21,66 +27,89 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lfac;
+    instance-of v1, p1, Lfac;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lfac;
 
-    iget-object v0, p0, Lfac;->a:Llqf;
+    iget-wide v3, p0, Lfac;->b:J
 
-    iget-object p1, p1, Lfac;->a:Llqf;
+    iget-wide v5, p1, Lfac;->b:J
 
-    invoke-virtual {v0, p1}, Llqf;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p1
+    if-eqz v1, :cond_2
 
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    iget-object v1, p0, Lfac;->c:Lz2c;
 
-    return p1
-.end method
+    iget-object p1, p1, Lfac;->c:Lz2c;
 
-.method public final hashCode()I
-    .locals 1
+    if-eq v1, p1, :cond_3
 
-    iget-object v0, p0, Lfac;->a:Llqf;
+    return v2
 
-    invoke-virtual {v0}, Llqf;->hashCode()I
-
-    move-result v0
-
+    :cond_3
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final hashCode()I
     .locals 2
+
+    iget-wide v0, p0, Lfac;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lfac;->c:Lz2c;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ExternalShareChannelLink(text="
+    const-string v1, "EditProfile(id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lfac;->a:Llqf;
+    iget-wide v1, p0, Lfac;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfac;->c:Lz2c;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

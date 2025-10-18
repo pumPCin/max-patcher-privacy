@@ -38,12 +38,12 @@
         <item quantity="many">подписчиков</item>
     </plurals>
     <plurals name="chat_screen_action_copy_success">
-        <item quantity="other">Сообщения скопированы</item>
+        <item quantity="other">Вы скопировали сообщения</item>
         <item quantity="zero">Сообщений скопировано</item>
-        <item quantity="one">Сообщение скопировано</item>
+        <item quantity="one">Вы скопировали сообщение</item>
         <item quantity="two">Сообщения скопированы</item>
-        <item quantity="few">Сообщения скопированы</item>
-        <item quantity="many">Сообщения скопированы</item>
+        <item quantity="few">Вы скопировали сообщения</item>
+        <item quantity="many">Вы скопировали сообщения</item>
     </plurals>
     <plurals name="chat_screen_confirmation_delete_title">
         <item quantity="other">Удалить сообщений?</item>

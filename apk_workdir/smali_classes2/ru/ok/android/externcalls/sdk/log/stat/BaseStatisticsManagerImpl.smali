@@ -34,7 +34,7 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Lzag;",
+        "Lccg;",
         "sendStat",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
         "Lru/ok/android/onelog/OneLogItem;",
@@ -68,7 +68,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     :try_start_0
-    sget-object v0, Lgma;->b:Lxl;
+    sget-object v0, Lina;->a:Lxl;
 
     if-eqz v0, :cond_0
 
@@ -77,7 +77,7 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-class v1, Lgma;
+    const-class v1, Lina;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

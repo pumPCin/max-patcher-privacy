@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract g(Landroid/view/View;)Z
+.method public abstract f(Landroid/view/View;)Z
 .end method

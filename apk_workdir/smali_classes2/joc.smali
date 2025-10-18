@@ -3,32 +3,22 @@
 
 
 # static fields
-.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d3c
+.field public static pinbars_group_call_bar:I = 0x7f0a08e3
 
-.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d3d
+.field public static pinbars_group_call_bar_button:I = 0x7f0a08e4
 
-.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d3e
+.field public static pinbars_group_call_bar_divider:I = 0x7f0a08e5
 
-.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d3f
+.field public static pinbars_group_call_bar_stack:I = 0x7f0a08e6
 
-.field public static webapp_root_content_container:I = 0x7f0a0d40
+.field public static pinbars_group_call_bar_subtitle:I = 0x7f0a08e7
 
-.field public static webapp_root_error_container:I = 0x7f0a0d41
+.field public static pinbars_group_call_bar_title:I = 0x7f0a08e8
 
-.field public static webapp_root_frame:I = 0x7f0a0d42
+.field public static pinbars_message:I = 0x7f0a08e9
 
-.field public static webapp_root_progressbar:I = 0x7f0a0d43
+.field public static pinbars_miniplayer:I = 0x7f0a08ea
 
-.field public static webapp_root_settings_header:I = 0x7f0a0d44
+.field public static pinbars_root:I = 0x7f0a08eb
 
-.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d45
-
-.field public static webapp_root_settings_switcher:I = 0x7f0a0d46
-
-.field public static webapp_root_settings_toolbar:I = 0x7f0a0d47
-
-.field public static webapp_root_settings_transition:I = 0x7f0a0d48
-
-.field public static webapp_root_toolbar:I = 0x7f0a0d49
-
-.field public static webapp_root_webview:I = 0x7f0a0d4a
+.field public static unknown_contact:I = 0x7f0a0c49

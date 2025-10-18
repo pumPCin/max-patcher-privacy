@@ -1,39 +1,66 @@
-.class public final La85;
-.super Ljava/lang/Object;
+.class public abstract La85;
+.super Lvi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lim0;
-
-.field public final b:Lllf;
-
-.field public c:Ljava/util/List;
+.field public u0:Laa5;
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Lllf;Lb85;)V
+# virtual methods
+.method public final onTextContextMenuItem(I)Z
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x1020022
 
-    new-instance p3, Lim0;
+    if-ne p1, v0, :cond_0
 
-    const/4 v0, 0x0
+    const p1, 0x1020031
 
-    invoke-direct {p3, v0}, Lim0;-><init>(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
 
-    iput-object p3, p0, La85;->a:Lim0;
+    move-result p1
 
-    iput-object p2, p0, La85;->b:Lllf;
+    return p1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
 
-    move-result-object p1
+    move-result p1
 
-    sget p2, Lrid;->b:I
+    return p1
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+.method public setReplaceTextSmiles(Z)V
+    .locals 0
 
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, La85;->u0:Laa5;
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Laa5;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La85;->u0:Laa5;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, La85;->u0:Laa5;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, La85;->u0:Laa5;
+
+    :cond_1
     return-void
 .end method

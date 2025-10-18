@@ -1,13 +1,6 @@
-.class public abstract Lf3e;
+.class public interface abstract Lf3e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# direct methods
-.method public static a(Landroid/app/Service;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Service;->stopForeground(I)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/concurrent/ExecutorService;

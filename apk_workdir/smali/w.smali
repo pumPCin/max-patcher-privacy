@@ -1,5 +1,5 @@
 .class public final Lw;
-.super Lb4a;
+.super Le5a;
 .source "SourceFile"
 
 
@@ -11,9 +11,9 @@
 .method public constructor <init>(Ljava/nio/file/Path;)V
     .locals 1
 
-    sget-object v0, Lzag;->a:Lzag;
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-direct {p0, v0}, Lb4a;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Le5a;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lw;->b:Ljava/nio/file/Path;
 

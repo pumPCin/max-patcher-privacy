@@ -1,324 +1,273 @@
 .class public final Lz6a;
-.super Landroid/widget/LinearLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+.implements Ly18;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lz6a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final o:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvk8;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+
+    sput-object v0, Lz6a;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;IZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lz6a;->a:J
+
+    iput-object p3, p0, Lz6a;->b:Ljava/lang/String;
+
+    iput p4, p0, Lz6a;->c:I
+
+    iput-boolean p5, p0, Lz6a;->o:Z
+
+    return-void
+.end method
+
+.method public static x(Lz6a;Z)Lz6a;
+    .locals 6
+
+    iget-wide v1, p0, Lz6a;->a:J
+
+    iget-object v3, p0, Lz6a;->b:Ljava/lang/String;
+
+    iget v4, p0, Lz6a;->c:I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lz6a;
+
+    move v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lz6a;-><init>(JLjava/lang/String;IZ)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final onDetachedFromWindow()V
-    .locals 3
-
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    move v1, v0
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    move v2, v0
-
-    :goto_1
-    if-eqz v2, :cond_2
-
-    add-int/lit8 v2, v1, 0x1
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    check-cast v1, Laje;
-
-    iget-object v1, v1, Laje;->b:Lzie;
-
-    invoke-virtual {v1}, Lzie;->d()V
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw v0
-
-    :cond_2
-    return-void
+    return v0
 .end method
 
-.method public final setTabs(I)V
-    .locals 6
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p1, :cond_0
-
-    new-instance v1, Laje;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Laje;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/16 v3, 0x56
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    const/16 v4, 0x28
-
-    int-to-float v4, v4
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Lagi;->d(F)I
-
-    move-result v4
-
-    invoke-direct {v2, v3, v4}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    const/4 v3, 0x4
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lagi;->d(F)I
-
-    move-result v4
-
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v2, Lq44;
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v4, 0x41000000    # 8.0f
-
-    mul-float/2addr v3, v4
-
-    invoke-direct {v2, v3}, Lq44;-><init>(F)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    sget-object v2, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v2, v1}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lu4b;->b()Lwe0;
-
-    move-result-object v2
-
-    iget v2, v2, Lwe0;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    new-instance v2, Ljd0;
-
-    const/4 v3, 0x3
-
-    const/16 v4, 0x19
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, v3, v5, v4}, Ljd0;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v2, v1}, Lkci;->m(Lgi6;Landroid/view/View;)V
-
-    invoke-virtual {p0, v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public setVisibility(I)V
-    .locals 3
-
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    if-nez p1, :cond_2
-
-    move p1, v1
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-ge p1, v2, :cond_0
-
-    move v2, v0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    move v2, v1
+    instance-of v1, p1, Lz6a;
 
-    :goto_1
-    if-eqz v2, :cond_5
+    const/4 v2, 0x0
 
-    add-int/lit8 v2, p1, 0x1
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    check-cast p1, Laje;
-
-    iget-object p1, p1, Laje;->b:Lzie;
-
-    invoke-virtual {p1}, Lzie;->c()V
-
-    move p1, v2
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    check-cast p1, Lz6a;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    iget-wide v3, p0, Lz6a;->a:J
 
-    throw p1
+    iget-wide v5, p1, Lz6a;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    move p1, v1
+    iget-object v1, p0, Lz6a;->b:Ljava/lang/String;
 
-    :goto_2
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    iget-object v3, p1, Lz6a;->b:Ljava/lang/String;
 
-    move-result v2
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ge p1, v2, :cond_3
+    move-result v1
 
-    move v2, v0
+    if-nez v1, :cond_3
 
-    goto :goto_3
+    return v2
 
     :cond_3
-    move v2, v1
+    iget v1, p0, Lz6a;->c:I
 
-    :goto_3
-    if-eqz v2, :cond_5
+    iget v3, p1, Lz6a;->c:I
 
-    add-int/lit8 v2, p1, 0x1
+    if-eq v1, v3, :cond_4
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    check-cast p1, Laje;
-
-    iget-object p1, p1, Laje;->b:Lzie;
-
-    invoke-virtual {p1}, Lzie;->d()V
-
-    move p1, v2
-
-    goto :goto_2
+    return v2
 
     :cond_4
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    iget-boolean v1, p0, Lz6a;->o:Z
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    iget-boolean p1, p1, Lz6a;->o:Z
 
-    throw p1
+    if-eq v1, p1, :cond_5
+
+    return v2
 
     :cond_5
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lz6a;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lz6a;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lz6a;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lz6a;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lz6a;->o:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "NeuroAvatarModel(id="
+
+    const-string v1, ", url="
+
+    iget-wide v2, p0, Lz6a;->a:J
+
+    iget-object v4, p0, Lz6a;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", categoryId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lz6a;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lz6a;->o:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lz6a;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, p0, Lz6a;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget p2, p0, Lz6a;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lz6a;->o:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
 .end method

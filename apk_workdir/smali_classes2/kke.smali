@@ -1,21 +1,34 @@
 .class public final Lkke;
-.super Lzd5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly18;
 
-# static fields
-.field public static final a:Lkke;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 2
 
-    new-instance v0, Lkke;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lkke;->a:I
 
-    sput-object v0, Lkke;->a:Lkke;
+    sget v0, Laya;->d:I
+
+    iput v0, p0, Lkke;->b:I
+
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lkke;->c:J
 
     return-void
 .end method
@@ -23,7 +36,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -32,30 +45,69 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lkke;
+    instance-of v1, p1, Lkke;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lkke;
+
+    iget v1, p0, Lkke;->a:I
+
+    iget p1, p1, Lkke;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lkke;->c:J
+
+    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x18b578b0
+    iget v0, p0, Lkke;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lkke;->b:I
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "ShowKeyboard"
+    const-string v0, "ShimmerMemberListItem(pos="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lkke;->a:I
+
+    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

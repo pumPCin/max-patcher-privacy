@@ -1,194 +1,574 @@
-.class public final synthetic Lzu0;
-.super Lti6;
+.class public final Lzu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgi6;
+.implements Lj89;
+.implements Ljava/io/Closeable;
 
 
-# static fields
-.field public static final a:Lzu0;
+# instance fields
+.field public a:Ljava/nio/ByteBuffer;
+
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(I)V
+    .locals 2
 
-    new-instance v0, Lzu0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "registerSelectForReceive(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    const/4 v5, 0x0
+    move-result-object v0
 
-    const/4 v1, 0x3
+    iput-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
 
-    const-class v2, Ldv0;
+    iput p1, p0, Lzu0;->b:I
 
-    const-string v3, "registerSelectForReceive"
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    move-result p1
 
-    sput-object v0, Lzu0;->a:Lzu0;
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lzu0;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final declared-synchronized P(III[B)I
+    .locals 2
 
-    move-object v0, p1
+    monitor-enter p0
 
-    check-cast v0, Ldv0;
+    :try_start_0
+    invoke-virtual {p0}, Lzu0;->isClosed()Z
 
-    move-object v5, p2
+    move-result v0
 
-    check-cast v5, Lqyd;
+    xor-int/lit8 v0, v0, 0x1
 
-    sget-object p1, Ldv0;->b:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    invoke-static {v0}, Loi3;->g(Z)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Ldv0;->Z:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget v0, p0, Lzu0;->b:I
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p3, v0}, Ldki;->a(III)I
+
+    move-result p3
+
+    array-length v0, p4
+
+    iget v1, p0, Lzu0;->b:I
+
+    invoke-static {p1, v0, p2, p3, v1}, Ldki;->b(IIIII)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object p1, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p4, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p3
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized Q(III[B)I
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lzu0;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Loi3;->g(Z)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lzu0;->b:I
+
+    invoke-static {p1, p3, v0}, Ldki;->a(III)I
+
+    move-result p3
+
+    array-length v0, p4
+
+    iget v1, p0, Lzu0;->b:I
+
+    invoke-static {p1, v0, p2, p3, v1}, Ldki;->b(IIIII)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object p1, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p4, p2, p3}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p3
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final Z()J
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Cannot get the pointer of a BufferMemoryChunk"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final c(Lj89;I)V
+    .locals 3
+
+    instance-of v0, p1, Lzu0;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lzu0;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Loi3;->g(Z)V
+
+    check-cast p1, Lzu0;
+
+    invoke-virtual {p1}, Lzu0;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Loi3;->g(Z)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p1, Lzu0;->b:I
+
+    iget v1, p0, Lzu0;->b:I
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v2, p2, v1}, Ldki;->b(IIIII)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {p1}, Lzu0;->r()Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    check-cast p1, Lf92;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    invoke-virtual {v0}, Ldv0;->v()Z
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    move-result p2
+    new-array v0, p2, [B
 
-    if-eqz p2, :cond_0
+    iget-object v1, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
 
-    sget-object p1, Lfv0;->l:Lkotlinx/coroutines/internal/Symbol;
+    invoke-virtual {v1, v0, v2, p2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    check-cast v5, Lpyd;
+    invoke-virtual {p1, v0, v2, p2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    iput-object p1, v5, Lpyd;->X:Ljava/lang/Object;
-
-    goto :goto_4
+    return-void
 
     :cond_0
-    sget-object p2, Ldv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {p2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+    const-string p2, "Cannot copy two incompatible MemoryChunks"
 
-    move-result-wide v3
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sget p2, Lfv0;->b:I
+    throw p1
+.end method
 
-    int-to-long p2, p2
+.method public final declared-synchronized close()V
+    .locals 1
 
-    div-long v1, v3, p2
+    monitor-enter p0
 
-    rem-long p2, v3, p2
+    const/4 v0, 0x0
 
-    long-to-int p2, p2
+    :try_start_0
+    iput-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-wide v6, p1, Lkotlinx/coroutines/internal/Segment;->id:J
+    monitor-exit p0
 
-    cmp-long p3, v6, v1
+    return-void
 
-    if-eqz p3, :cond_2
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0, v1, v2, p1}, Ldv0;->o(JLf92;)Lf92;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p3
+    throw v0
+.end method
 
-    if-nez p3, :cond_1
+.method public final getSize()I
+    .locals 1
+
+    iget v0, p0, Lzu0;->b:I
+
+    return v0
+.end method
+
+.method public final declared-synchronized isClosed()Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final m()J
+    .locals 2
+
+    iget-wide v0, p0, Lzu0;->c:J
+
+    return-wide v0
+.end method
+
+.method public final n(Lj89;I)V
+    .locals 4
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1}, Lj89;->m()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lzu0;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const-string v0, "BufferMemoryChunk"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Copying from BufferMemoryChunk "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lzu0;->c:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " to BufferMemoryChunk "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lj89;->m()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " which are the same "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Loi3;->b(Ljava/lang/Boolean;)V
+
+    :cond_0
+    invoke-interface {p1}, Lj89;->m()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lzu0;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    monitor-enter p1
+
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {p0, p1, p2}, Lzu0;->c(Lj89;I)V
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    monitor-exit p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p2
+
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p2
+
     :cond_1
-    move-object v1, p3
+    monitor-enter p0
 
-    :goto_1
-    move v2, p2
+    :try_start_5
+    monitor-enter p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    goto :goto_2
+    :try_start_6
+    invoke-virtual {p0, p1, p2}, Lzu0;->c(Lj89;I)V
 
-    :cond_2
-    move-object v1, p1
+    monitor-exit p1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    :try_start_7
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    return-void
+
+    :catchall_2
+    move-exception p1
 
     goto :goto_1
 
-    :goto_2
-    invoke-virtual/range {v0 .. v5}, Ldv0;->G(Lf92;IJLjava/lang/Object;)Ljava/lang/Object;
+    :catchall_3
+    move-exception p2
 
-    move-result-object p1
+    :try_start_8
+    monitor-exit p1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    move-object p3, v1
+    :try_start_9
+    throw p2
 
-    sget-object p2, Lfv0;->m:Lkotlinx/coroutines/internal/Symbol;
+    :goto_1
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    if-ne p1, p2, :cond_4
+    throw p1
+.end method
 
-    instance-of p1, v5, Ll2h;
+.method public final declared-synchronized o(I)B
+    .locals 3
 
-    if-eqz p1, :cond_3
+    monitor-enter p0
 
-    check-cast v5, Ll2h;
+    :try_start_0
+    invoke-virtual {p0}, Lzu0;->isClosed()Z
 
-    goto :goto_3
+    move-result v0
 
-    :cond_3
-    const/4 v5, 0x0
+    const/4 v1, 0x1
 
-    :goto_3
-    if-eqz v5, :cond_7
+    xor-int/2addr v0, v1
 
-    invoke-interface {v5, p3, v2}, Ll2h;->a(Lkotlinx/coroutines/internal/Segment;I)V
+    invoke-static {v0}, Loi3;->g(Z)V
 
-    goto :goto_4
+    const/4 v0, 0x0
 
-    :cond_4
-    sget-object p2, Lfv0;->o:Lkotlinx/coroutines/internal/Symbol;
+    if-ltz p1, :cond_0
 
-    if-ne p1, p2, :cond_6
-
-    invoke-virtual {v0}, Ldv0;->s()J
-
-    move-result-wide p1
-
-    cmp-long p1, v3, p1
-
-    if-gez p1, :cond_5
-
-    invoke-virtual {p3}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    :cond_5
-    move-object p1, p3
+    move v2, v1
 
     goto :goto_0
 
-    :cond_6
-    sget-object p2, Lfv0;->n:Lkotlinx/coroutines/internal/Symbol;
+    :cond_0
+    move v2, v0
 
-    if-eq p1, p2, :cond_8
+    :goto_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {p3}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+    move-result-object v2
 
-    check-cast v5, Lpyd;
+    invoke-static {v2}, Loi3;->b(Ljava/lang/Boolean;)V
 
-    iput-object p1, v5, Lpyd;->X:Ljava/lang/Object;
+    iget v2, p0, Lzu0;->b:I
 
-    :cond_7
-    :goto_4
-    sget-object p1, Lzag;->a:Lzag;
+    if-ge p1, v2, :cond_1
 
-    return-object p1
+    goto :goto_1
 
-    :cond_8
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :cond_1
+    move v1, v0
 
-    const-string p2, "unexpected"
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
+
+    invoke-static {v0}, Loi3;->b(Ljava/lang/Boolean;)V
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p1
+.end method
+
+.method public final declared-synchronized r()Ljava/nio/ByteBuffer;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lzu0;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

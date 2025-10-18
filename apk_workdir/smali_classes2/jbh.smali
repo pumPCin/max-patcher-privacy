@@ -3,55 +3,23 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lrhf;
+# virtual methods
+.method public final serializer()Lur7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lur7;"
+        }
+    .end annotation
 
-.field public final b:Lrhf;
+    sget-object v0, Lkbh;->a:Ljava/lang/Object;
 
-.field public final c:Lrhf;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
+    move-result-object v0
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+    check-cast v0, Lur7;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Litg;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Litg;-><init>(I)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    iput-object v1, p0, Ljbh;->a:Lrhf;
-
-    new-instance v0, Litg;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Litg;-><init>(I)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    iput-object v1, p0, Ljbh;->b:Lrhf;
-
-    new-instance v0, Litg;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Litg;-><init>(I)V
-
-    new-instance v1, Lrhf;
-
-    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
-
-    iput-object v1, p0, Ljbh;->c:Lrhf;
-
-    return-void
+    return-object v0
 .end method

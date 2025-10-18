@@ -3,22 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lrt1;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lhif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lhif;Lhif;I)V
+    .locals 0
 
-    new-instance v0, Lrt1;
+    iput p3, p0, Lrt1;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lrt1;->b:Lhif;
 
-    sput-object v0, Lrt1;->a:Lrt1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lrt1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lrt1;->b:Lhif;
+
+    invoke-virtual {v0}, Lhif;->d()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrt1;->b:Lhif;
+
+    invoke-virtual {v0}, Lhif;->d()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lrt1;->b:Lhif;
+
+    invoke-virtual {v0}, Lhif;->d()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,27 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq3c;
-
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final a:Z
 
-.field public final b:Loqf;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Loqf;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp3c;->a:Ljava/lang/Long;
+    iput-boolean p1, p0, Lp3c;->a:Z
 
-    iput-object p2, p0, Lp3c;->b:Loqf;
+    iput-boolean p2, p0, Lp3c;->b:Z
 
     return-void
+.end method
+
+.method public static a(Lp3c;Z)Lp3c;
+    .locals 1
+
+    iget-boolean v0, p0, Lp3c;->b:Z
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lp3c;
+
+    invoke-direct {p0, p1, v0}, Lp3c;-><init>(ZZ)V
+
+    return-object p0
 .end method
 
 
@@ -48,28 +59,20 @@
     :cond_1
     check-cast p1, Lp3c;
 
-    iget-object v1, p0, Lp3c;->a:Ljava/lang/Long;
+    iget-boolean v1, p0, Lp3c;->a:Z
 
-    iget-object v3, p1, Lp3c;->a:Ljava/lang/Long;
+    iget-boolean v3, p1, Lp3c;->a:Z
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lp3c;->b:Loqf;
+    iget-boolean v1, p0, Lp3c;->b:Z
 
-    iget-object p1, p1, Lp3c;->b:Loqf;
+    iget-boolean p1, p1, Lp3c;->b:Z
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eq v1, p1, :cond_3
 
     return v2
 
@@ -80,25 +83,17 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lp3c;->a:Ljava/lang/Long;
+    iget-boolean v0, p0, Lp3c;->a:Z
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lp3c;->b:Loqf;
+    iget-boolean v1, p0, Lp3c;->b:Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -108,31 +103,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateError(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lp3c;->a:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp3c;->b:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", isEnabled="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "State(isChecked="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v3, p0, Lp3c;->a:Z
+
+    iget-boolean v4, p0, Lp3c;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lfd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

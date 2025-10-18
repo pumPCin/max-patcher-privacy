@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Llq7;
+.implements Lir7;
 
 
 # instance fields
@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lrs;->a:[Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Ljt;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Ljt;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -107,7 +107,7 @@
 
     iget-object v2, p0, Lrs;->a:[Ljava/lang/Object;
 
-    invoke-static {v2, v0}, Ljt;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Ljt;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -240,7 +240,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lm94;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lba4;->i(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 

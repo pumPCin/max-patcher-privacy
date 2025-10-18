@@ -1,63 +1,132 @@
 .class public final Lg4c;
-.super Lgd0;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final b:Lg4c;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+    .locals 0
 
-    new-instance v0, Lg4c;
+    iput-object p2, p0, Lg4c;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    const/16 v1, 0xd
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lgd0;-><init>(I)V
-
-    sput-object v0, Lg4c;->b:Lg4c;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lg4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lg4c;
+    check-cast p1, Lg4c;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lg4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x28fc5ec6
+    new-instance v0, Lg4c;
 
-    return v0
-.end method
+    iget-object v1, p0, Lg4c;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lg4c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    const-string v0, "PopToChatsList"
+    iput-object p1, v0, Lg4c;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg4c;->X:Ljava/lang/Object;
+
+    check-cast p1, Le5a;
+
+    instance-of v0, p1, Lr3c;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Le5c;->c:Le5c;
+
+    check-cast p1, Lr3c;
+
+    iget-wide v1, p1, Lr3c;->b:J
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
+
+    move-result-object p1
+
+    const-string v0, ":chats?id="
+
+    const-string v3, "&type=local"
+
+    invoke-static {v1, v2, v0, v3}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ls93;
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p0, Lg4c;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+
+    invoke-static {p1}, Lici;->b(Ll24;)V
+
+    invoke-virtual {p1}, Ll24;->getRouter()Lqid;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lqid;->B(Ll24;)Z
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v0, p1, Lwf4;
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Le5c;->c:Le5c;
+
+    check-cast p1, Lwf4;
+
+    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

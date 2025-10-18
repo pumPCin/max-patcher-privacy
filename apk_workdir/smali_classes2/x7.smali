@@ -9,7 +9,7 @@
 # instance fields
 .field public final a:Ljava/util/ArrayList;
 
-.field public final b:Lnec;
+.field public final b:Lufc;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     iput-object v0, p0, Lx7;->a:Ljava/util/ArrayList;
 
-    new-instance v0, Lnec;
+    new-instance v0, Lufc;
 
-    invoke-direct {v0}, Lnec;-><init>()V
+    invoke-direct {v0}, Lufc;-><init>()V
 
-    iput-object v0, p0, Lx7;->b:Lnec;
+    iput-object v0, p0, Lx7;->b:Lufc;
 
     return-void
 .end method
@@ -92,9 +92,9 @@
 .method public final onActivityPostResumed(Landroid/app/Activity;)V
     .locals 1
 
-    iget-object v0, p0, Lx7;->b:Lnec;
+    iget-object v0, p0, Lx7;->b:Lufc;
 
-    invoke-virtual {v0, p1}, Lnec;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lufc;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -154,7 +154,7 @@
 
     if-eqz p1, :cond_0
 
-    sget v0, Lwid;->W2:I
+    sget v0, Ldkd;->W2:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 

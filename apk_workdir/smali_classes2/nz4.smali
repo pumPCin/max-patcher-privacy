@@ -1,232 +1,226 @@
-.class public final Lnz4;
-.super Ljava/lang/Object;
+.class public final enum Lnz4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lqgb;
+
+
+# static fields
+.field public static final enum X:Lnz4;
+
+.field public static final enum Y:Lnz4;
+
+.field public static final enum Z:Lnz4;
+
+.field public static final enum b:Lnz4;
+
+.field public static final enum c:Lnz4;
+
+.field public static final enum o:Lnz4;
+
+.field public static final enum q0:Lnz4;
+
+.field public static final enum r0:Lnz4;
+
+.field public static final enum s0:Lnz4;
+
+.field public static final enum t0:Lnz4;
+
+.field public static final synthetic u0:[Lnz4;
 
 
 # instance fields
-.field public final a:Lgz4;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public final d:I
-
-.field public final e:Lwlg;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lgz4;Ljava/lang/String;JILwlg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnz4;
 
-    iput-object p1, p0, Lnz4;->a:Lgz4;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lnz4;->b:Ljava/lang/String;
+    const/16 v2, 0x65
 
-    iput-wide p3, p0, Lnz4;->c:J
+    const-string v3, "CANT_CREATE_OUTPUT_FILE"
 
-    iput p5, p0, Lnz4;->d:I
+    invoke-direct {v0, v3, v1, v2}, Lnz4;-><init>(Ljava/lang/String;II)V
 
-    iput-object p6, p0, Lnz4;->e:Lwlg;
+    sput-object v0, Lnz4;->b:Lnz4;
+
+    new-instance v1, Lnz4;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0x66
+
+    const-string v4, "MAX_INVALIDATE_COUNT"
+
+    invoke-direct {v1, v4, v2, v3}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lnz4;->c:Lnz4;
+
+    new-instance v2, Lnz4;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x67
+
+    const-string v5, "URL_EXPIRED_FOR_NON_AUDIO"
+
+    invoke-direct {v2, v5, v3, v4}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lnz4;->o:Lnz4;
+
+    new-instance v3, Lnz4;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x68
+
+    const-string v6, "MESSAGE_DELETED"
+
+    invoke-direct {v3, v6, v4, v5}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lnz4;->X:Lnz4;
+
+    new-instance v4, Lnz4;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0x69
+
+    const-string v7, "TMP_FAIL_AUDIO"
+
+    invoke-direct {v4, v7, v5, v6}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lnz4;->Y:Lnz4;
+
+    new-instance v5, Lnz4;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x6a
+
+    const-string v8, "USER_CANCELLED"
+
+    invoke-direct {v5, v8, v6, v7}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lnz4;->Z:Lnz4;
+
+    new-instance v6, Lnz4;
+
+    const/4 v7, 0x6
+
+    const/16 v8, 0x6b
+
+    const-string v9, "INTERRUPTED_UNKNOWN"
+
+    invoke-direct {v6, v9, v7, v8}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lnz4;->q0:Lnz4;
+
+    new-instance v7, Lnz4;
+
+    const/4 v8, 0x7
+
+    const/16 v9, 0x6c
+
+    const-string v10, "NOT_ENOUGH_SPACE"
+
+    invoke-direct {v7, v10, v8, v9}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v7, Lnz4;->r0:Lnz4;
+
+    new-instance v8, Lnz4;
+
+    const/16 v9, 0x8
+
+    const/16 v10, 0x6d
+
+    const-string v11, "BAD_RESPONSE"
+
+    invoke-direct {v8, v11, v9, v10}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Lnz4;->s0:Lnz4;
+
+    new-instance v9, Lnz4;
+
+    const/16 v10, 0x9
+
+    const/16 v11, 0x12c
+
+    const-string v12, "ERROR_CREATING_REQUEST"
+
+    invoke-direct {v9, v12, v10, v11}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    sput-object v9, Lnz4;->t0:Lnz4;
+
+    new-instance v10, Lnz4;
+
+    const/16 v11, 0xa
+
+    const/16 v12, 0x12d
+
+    const-string v13, "ERROR_FAIL_RESPONSE"
+
+    invoke-direct {v10, v13, v11, v12}, Lnz4;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array/range {v0 .. v10}, [Lnz4;
+
+    move-result-object v0
+
+    sput-object v0, Lnz4;->u0:[Lnz4;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lnz4;->a:I
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lnz4;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lnz4;
-
-    iget-object v0, p0, Lnz4;->a:Lgz4;
-
-    iget-object v1, p1, Lnz4;->a:Lgz4;
-
-    invoke-virtual {v0, v1}, Lgz4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lnz4;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lnz4;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v0, p0, Lnz4;->c:J
-
-    iget-wide v2, p1, Lnz4;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lnz4;->d:I
-
-    iget v1, p1, Lnz4;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lnz4;->e:Lwlg;
-
-    iget-object p1, p1, Lnz4;->e:Lwlg;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lnz4;
+    .locals 1
 
-    iget-object v0, p0, Lnz4;->a:Lgz4;
+    const-class v0, Lnz4;
 
-    invoke-virtual {v0}, Lgz4;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    const/16 v1, 0x1f
+    check-cast p0, Lnz4;
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lnz4;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lnz4;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget v2, p0, Lnz4;->d:I
-
-    invoke-static {v2, v0, v1}, Llfb;->j(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lnz4;->e:Lwlg;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lwlg;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static values()[Lnz4;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lnz4;->u0:[Lnz4;
 
-    const-string v1, "DraftUpload(draftMediaUploadKey="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnz4;->a:Lgz4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", path="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnz4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lastModified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lnz4;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uploadType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lnz4;->d:I
-
-    invoke-static {v1}, Lfef;->C(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoConvertOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnz4;->e:Lwlg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, [Lnz4;
+
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lnz4;->a:I
+
+    return v0
 .end method

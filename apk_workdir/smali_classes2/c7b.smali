@@ -1,55 +1,91 @@
-.class public final Lc7b;
-.super Ldt9;
+.class public abstract Lc7b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final Z:Ll6b;
+# static fields
+.field public static final a:I
 
-.field public final r0:Ll6b;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Ll6b;Ll6b;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x6
+    sget v0, Lqpc;->web_app_root_choose_media_bottomsheet_camera:I
 
-    invoke-direct {p0, v0}, Ldt9;-><init>(I)V
+    sput v0, Lc7b;->a:I
 
-    iput-object p1, p0, Lc7b;->Z:Ll6b;
+    sget v0, Lqpc;->web_app_root_choose_media_bottomsheet_file_manager:I
 
-    iput-object p2, p0, Lc7b;->r0:Ll6b;
+    sput v0, Lc7b;->b:I
+
+    sget v0, Lqpc;->web_app_root_choose_media_bottomsheet_gallery:I
+
+    sput v0, Lc7b;->c:I
+
+    sget v0, Lqpc;->webapp_root_content_container:I
+
+    sput v0, Lc7b;->d:I
+
+    sget v0, Lqpc;->webapp_root_error_container:I
+
+    sput v0, Lc7b;->e:I
+
+    sget v0, Lqpc;->webapp_root_frame:I
+
+    sput v0, Lc7b;->f:I
+
+    sget v0, Lqpc;->webapp_root_progressbar:I
+
+    sput v0, Lc7b;->g:I
+
+    sget v0, Lqpc;->webapp_root_settings_header:I
+
+    sput v0, Lc7b;->h:I
+
+    sget v0, Lqpc;->webapp_root_settings_sections_recycler:I
+
+    sput v0, Lc7b;->i:I
+
+    sget v0, Lqpc;->webapp_root_settings_switcher:I
+
+    sput v0, Lc7b;->j:I
+
+    sget v0, Lqpc;->webapp_root_settings_transition:I
+
+    sput v0, Lc7b;->k:I
+
+    sget v0, Lqpc;->webapp_root_toolbar:I
+
+    sput v0, Lc7b;->l:I
+
+    sget v0, Lqpc;->webapp_root_webview:I
+
+    sput v0, Lc7b;->m:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final c(Lm0g;[ILug0;Lhb7;)Lh9;
-    .locals 7
-
-    new-instance v0, Ld7b;
-
-    sget v1, Lg1g;->a:I
-
-    sget v1, Lg1g;->a:I
-
-    iget-object v1, p1, Lm0g;->d:[Lsa6;
-
-    iget-object v5, p0, Lc7b;->Z:Ll6b;
-
-    iget-object v6, p0, Lc7b;->r0:Ll6b;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-direct/range {v0 .. v6}, Ld7b;-><init>(Lm0g;[ILug0;Lhb7;Ll6b;Ll6b;)V
-
-    return-object v0
 .end method

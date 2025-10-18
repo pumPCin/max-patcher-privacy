@@ -19,7 +19,7 @@
         "",
         "tag",
         "message",
-        "Lzag;",
+        "Lccg;",
         "d",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "i",

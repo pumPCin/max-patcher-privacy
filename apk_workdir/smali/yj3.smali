@@ -1,43 +1,43 @@
-.class public abstract Lyj3;
+.class public final Lyj3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+# instance fields
+.field public final a:Lci8;
 
-.field public static final b:Lmg8;
+.field public final b:I
 
-.field public static final c:Lmg8;
+.field public final c:J
+
+.field public final d:Ljava/util/HashMap;
+
+.field public e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lwdc;IJ)V
     .locals 2
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "REHASH"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lyj3;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lmg8;
+    new-instance v0, Lci8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lmg8;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v1}, Lci8;-><init>(Lfk0;Z)V
 
-    sput-object v0, Lyj3;->b:Lmg8;
+    iput-object v0, p0, Lyj3;->a:Lci8;
 
-    new-instance v0, Lmg8;
+    iput p2, p0, Lyj3;->b:I
 
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iput-wide p3, p0, Lyj3;->c:J
 
-    invoke-direct {v0, v1}, Lmg8;-><init>(Ljava/lang/Object;)V
+    new-instance p1, Ljava/util/HashMap;
 
-    sput-object v0, Lyj3;->c:Lmg8;
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lyj3;->d:Ljava/util/HashMap;
 
     return-void
 .end method

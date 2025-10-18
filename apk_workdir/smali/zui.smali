@@ -1,170 +1,289 @@
-.class public final enum Lzui;
-.super Ljava/lang/Enum;
+.class public abstract Lzui;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lh8i;
-
-
-# static fields
-.field public static final enum X:Lzui;
-
-.field public static final enum Y:Lzui;
-
-.field public static final enum Z:Lzui;
-
-.field public static final enum b:Lzui;
-
-.field public static final enum c:Lzui;
-
-.field public static final enum o:Lzui;
-
-.field public static final synthetic r0:[Lzui;
-
-
-# instance fields
-.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public static final a(Lgd9;Landroid/view/View;IIII)V
+    .locals 8
 
-    new-instance v0, Lzui;
+    new-instance v0, Lbj3;
 
-    const-string v1, "UNKNOWN_FORMAT"
+    const/4 v7, 0x0
 
-    const/4 v2, 0x0
+    move-object v6, p0
 
-    invoke-direct {v0, v1, v2, v2}, Lzui;-><init>(Ljava/lang/String;II)V
+    move-object v1, p1
 
-    sput-object v0, Lzui;->b:Lzui;
+    move v2, p2
 
-    new-instance v1, Lzui;
+    move v3, p3
 
-    const-string v2, "NV16"
+    move v4, p4
 
-    const/4 v3, 0x1
+    move v5, p5
 
-    invoke-direct {v1, v2, v3, v3}, Lzui;-><init>(Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lbj3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
 
-    sput-object v1, Lzui;->c:Lzui;
-
-    new-instance v2, Lzui;
-
-    const-string v3, "NV21"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lzui;->o:Lzui;
-
-    new-instance v3, Lzui;
-
-    const-string v4, "YV12"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lzui;->X:Lzui;
-
-    new-instance v4, Lzui;
-
-    const-string v5, "YUV_420_888"
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x7
-
-    invoke-direct {v4, v5, v6, v7}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lzui;->Y:Lzui;
-
-    new-instance v5, Lzui;
-
-    const-string v8, "JPEG"
-
-    const/4 v9, 0x5
-
-    const/16 v10, 0x8
-
-    invoke-direct {v5, v8, v9, v10}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    move v8, v6
-
-    new-instance v6, Lzui;
-
-    const-string v11, "BITMAP"
-
-    const/4 v12, 0x6
-
-    invoke-direct {v6, v11, v12, v8}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lzui;->Z:Lzui;
-
-    move v8, v7
-
-    new-instance v7, Lzui;
-
-    const-string v11, "CM_SAMPLE_BUFFER_REF"
-
-    invoke-direct {v7, v11, v8, v9}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lzui;
-
-    const-string v9, "UI_IMAGE"
-
-    invoke-direct {v8, v9, v10, v12}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lzui;
-
-    const-string v10, "CV_PIXEL_BUFFER_REF"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v11}, Lzui;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Lzui;
-
-    move-result-object v0
-
-    sput-object v0, Lzui;->r0:[Lzui;
+    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public static b(Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lzui;->a:I
+    if-eqz p1, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static values()[Lzui;
-    .locals 1
+.method public static varargs c(ZLjava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
 
-    sget-object v0, Lzui;->r0:[Lzui;
+    if-eqz p0, :cond_0
 
-    invoke-virtual {v0}, [Lzui;->clone()Ljava/lang/Object;
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static d(Landroid/os/Handler;)V
+    .locals 5
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    check-cast v0, [Lzui;
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    return-object v0
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "null current looper"
+
+    :goto_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, " thread, but got "
+
+    const-string v3, "."
+
+    const-string v4, "Must be called on "
+
+    invoke-static {v4, p0, v2, v0, v3}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    return-void
 .end method
 
-
-# virtual methods
-.method public final b()I
+.method public static e(Ljava/lang/String;)V
     .locals 1
 
-    iget v0, p0, Lzui;->a:I
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    return v0
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Given String is empty or null"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static f(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static g()V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "GoogleApiHandler"
+
+    if-eq v0, v1, :cond_0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Must not be called on GoogleApiHandler thread."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public static h(Ljava/lang/String;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static i(Ljava/lang/Object;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string v0, "null reference"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static j(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static k(Ljava/lang/String;Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

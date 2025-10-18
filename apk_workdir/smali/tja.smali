@@ -1,37 +1,48 @@
 .class public final Ltja;
-.super Lg3;
+.super Lyha;
 .source "SourceFile"
+
+# interfaces
+.implements Lcnd;
 
 
 # instance fields
-.field public final b:J
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwga;J)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ltja;->b:J
+    iput-object p1, p0, Ltja;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lcka;)V
-    .locals 3
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lwha;
+    iget-object v0, p0, Ltja;->a:Ljava/lang/Object;
 
-    iget-wide v1, p0, Ltja;->b:J
+    return-object v0
+.end method
 
-    invoke-direct {v0, p1, v1, v2}, Lwha;-><init>(Lcka;J)V
+.method public final o(Lela;)V
+    .locals 2
 
-    iget-object p1, p0, Lg3;->a:Lsja;
+    new-instance v0, Lska;
 
-    invoke-interface {p1, v0}, Lsja;->a(Lcka;)V
+    iget-object v1, p0, Ltja;->a:Ljava/lang/Object;
+
+    invoke-direct {v0, p1, v1}, Lska;-><init>(Lela;Ljava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lela;->c(Lvv4;)V
+
+    invoke-virtual {v0}, Lska;->run()V
 
     return-void
 .end method

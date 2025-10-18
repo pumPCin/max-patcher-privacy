@@ -1,44 +1,29 @@
 .class public final Lnxc;
-.super Ljava/lang/Object;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public E0:I
 
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnxc;->a:Landroid/content/Context;
-
-    return-void
-.end method
+.field public F0:Lmxc;
 
 
 # virtual methods
-.method public final a()I
-    .locals 2
+.method public final getSelected()I
+    .locals 1
 
-    iget-object v0, p0, Lnxc;->a:Landroid/content/Context;
+    iget v0, p0, Lnxc;->E0:I
 
-    invoke-static {v0}, Lsxi;->d(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/16 v1, 0x168
-
-    if-lt v0, v1, :cond_0
-
-    const/16 v0, 0x20
+    add-int/lit8 v0, v0, 0x1
 
     return v0
+.end method
 
-    :cond_0
-    const/16 v0, 0x1c
+.method public final setOnSelectListener(Lmxc;)V
+    .locals 0
 
-    return v0
+    iput-object p1, p0, Lnxc;->F0:Lmxc;
+
+    return-void
 .end method

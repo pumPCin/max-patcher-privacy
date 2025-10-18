@@ -1,65 +1,152 @@
-.class public final Lcq2;
-.super Lk14;
+.class public final enum Lcq2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# instance fields
-.field public X:Lzx5;
 
-.field public Y:Ljava/util/Collection;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcq2;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public Z:Ljava/util/Iterator;
+.field public static final enum X:Lcq2;
 
-.field public o:Ldq2;
+.field public static final synthetic Y:[Lcq2;
 
-.field public r0:Ljava/lang/Object;
+.field public static final enum a:Lcq2;
 
-.field public s0:Lrp2;
+.field public static final enum b:Lcq2;
 
-.field public t0:Ldq2;
+.field public static final enum c:Lcq2;
 
-.field public u0:J
-
-.field public synthetic v0:Ljava/lang/Object;
-
-.field public final synthetic w0:Ldq2;
-
-.field public x0:I
+.field public static final enum o:Lcq2;
 
 
 # direct methods
-.method public constructor <init>(Ldq2;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lcq2;->w0:Ldq2;
+    new-instance v0, Lcq2;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "DIALOG_MESSAGE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcq2;->a:Lcq2;
+
+    new-instance v1, Lcq2;
+
+    const-string v2, "CHAT_MESSAGE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcq2;->b:Lcq2;
+
+    new-instance v2, Lcq2;
+
+    const-string v3, "CHANNEL_MESSAGE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lcq2;->c:Lcq2;
+
+    new-instance v3, Lcq2;
+
+    const-string v4, "GROUP_CHAT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lcq2;->o:Lcq2;
+
+    new-instance v4, Lcq2;
+
+    const-string v5, "SCHEDULED_MESSAGE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lcq2;->X:Lcq2;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lcq2;
+
+    move-result-object v0
+
+    sput-object v0, Lcq2;->Y:[Lcq2;
+
+    new-instance v0, Lh8;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+
+    sput-object v0, Lcq2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lcq2;
     .locals 1
 
-    iput-object p1, p0, Lcq2;->v0:Ljava/lang/Object;
+    const-class v0, Lcq2;
 
-    iget p1, p0, Lcq2;->x0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lcq2;
 
-    iput p1, p0, Lcq2;->x0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lcq2;->w0:Ldq2;
+.method public static values()[Lcq2;
+    .locals 1
+
+    sget-object v0, Lcq2;->Y:[Lcq2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcq2;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v0, p0}, Ldq2;->h(Ltp2;Lzx5;Lk14;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return-object p1
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

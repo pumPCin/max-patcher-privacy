@@ -4,172 +4,260 @@
 
 
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
-    .locals 6
+.method public static a(Ljava/lang/String;)Landroid/net/Uri;
+    .locals 8
 
-    instance-of v0, p0, Landroid/graphics/drawable/BitmapDrawable;
+    new-instance v0, Landroid/net/Uri$Builder;
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+    const-string v1, "max"
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+    const/4 v1, 0x0
 
-    move-result v0
-
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->encodedAuthority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+    const-string v1, "?"
 
-    move-result v0
+    invoke-static {p0, v1}, Lzaf;->d0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-ne p2, v0, :cond_0
+    move-result-object v2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->encodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v3, 0x6
+
+    const/4 v4, 0x0
+
+    invoke-static {p0, v1, v4, v4, v3}, Lzaf;->J(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v1
+
+    const/4 v3, -0x1
+
+    const/4 v5, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    const-string p0, ""
+
+    goto :goto_0
+
+    :cond_0
+    add-int/2addr v1, v5
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {p0, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    move v3, v4
+
+    :goto_1
+    if-ge v4, v1, :cond_4
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result v6
+
+    const/16 v7, 0x3d
+
+    if-ne v6, v7, :cond_1
+
+    invoke-static {v3, v4}, Llwi;->i(II)Lti7;
+
+    move-result-object v3
+
+    iget v6, v3, Lri7;->a:I
+
+    iget v3, v3, Lri7;->b:I
+
+    add-int/2addr v3, v5
+
+    invoke-virtual {p0, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    sget-object v6, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result v6
+
+    const/16 v7, 0x26
+
+    if-ne v6, v7, :cond_2
+
+    invoke-static {v3, v4}, Llwi;->i(II)Lti7;
+
+    move-result-object v3
+
+    iget v6, v3, Lri7;->a:I
+
+    iget v3, v3, Lri7;->b:I
+
+    add-int/2addr v3, v5
+
+    invoke-virtual {p0, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_2
+    move v3, v4
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    sub-int/2addr v6, v5
+
+    if-ne v4, v6, :cond_3
+
+    add-int/lit8 v6, v4, 0x1
+
+    invoke-static {v3, v6}, Llwi;->i(II)Lti7;
+
+    move-result-object v6
+
+    iget v7, v6, Lri7;->a:I
+
+    iget v6, v6, Lri7;->b:I
+
+    add-int/2addr v6, v5
+
+    invoke-virtual {p0, v7, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    :goto_3
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/net/Uri$Builder;->encodedQuery(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
 
     return-object p0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, p1, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "bitmap is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget v1, v0, Landroid/graphics/Rect;->left:I
-
-    iget v2, v0, Landroid/graphics/Rect;->top:I
-
-    iget v3, v0, Landroid/graphics/Rect;->right:I
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {p1, p2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {p0, v5, v5, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    new-instance p1, Landroid/graphics/Canvas;
-
-    invoke-direct {p1, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p0, v1, v2, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-object v4
 .end method
 
-.method public static b(Landroid/graphics/drawable/RippleDrawable;IIII)V
-    .locals 1
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/graphics/Rect;->left:I
-
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/graphics/Rect;->top:I
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/Rect;->right:I
-
-    and-int/lit8 p4, p4, 0x8
-
-    if-eqz p4, :cond_2
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
-
-    :cond_2
-    invoke-virtual {p0, p1, p2, v0, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-void
-.end method
-
-.method public static final c(Lwbg;)V
+.method public static b(Ljava/io/File;Ljava/io/File;)V
     .locals 2
 
-    new-instance v0, Lkrd;
+    new-instance v0, Ljava/io/FileInputStream;
 
-    const/16 v1, 0x8
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    invoke-direct {v0, v1}, Lkrd;-><init>(I)V
+    :try_start_0
+    new-instance p0, Ljava/io/FileOutputStream;
 
-    const-class v1, Lao6;
+    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+    new-instance p1, Ljava/util/zip/GZIPOutputStream;
 
-    new-instance v0, Lkrd;
+    invoke-direct {p1, p0}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v1, 0x9
+    :try_start_1
+    invoke-static {v0, p1}, Lyli;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-direct {v0, v1}, Lkrd;-><init>(I)V
+    :try_start_2
+    invoke-interface {p1}, Ljava/io/Closeable;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const-class v1, La6c;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :catchall_2
+    move-exception v1
+
+    :try_start_4
+    invoke-static {p1, p0}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_0
+    :try_start_5
+    throw p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    :catchall_3
+    move-exception p1
+
+    invoke-static {v0, p0}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
 .end method

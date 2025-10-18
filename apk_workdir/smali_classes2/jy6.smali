@@ -1,104 +1,87 @@
-.class public interface abstract Ljy6;
+.class public final Ljy6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llk9;
 
-# static fields
-.field public static final a:Lhy6;
+
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 0
 
-    sget-object v0, Lhy6;->a:Lhy6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Ljy6;->a:Lhy6;
+    iput-wide p1, p0, Ljy6;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljy6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljy6;
+
+    iget-wide v3, p0, Ljy6;->a:J
+
+    iget-wide v5, p1, Ljy6;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ljy6;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
 
     return v0
 .end method
 
-.method public b()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-void
-.end method
+    const-string v0, "HideMessageContextMenu(messageId="
 
-.method public c()Ljava/util/Comparator;
-    .locals 1
+    const-string v1, ")"
 
-    sget-object v0, Ljy6;->a:Lhy6;
+    iget-wide v2, p0, Ljy6;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lhy6;->b:Lff3;
-
-    return-object v0
-.end method
-
-.method public d(J)Lv53;
-    .locals 1
-
-    invoke-interface {p0}, Ljy6;->j()Ljava/util/List;
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, p2, v0}, Lloi;->c(JLjava/util/List;)Lv53;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public e()Ljava/util/Comparator;
-    .locals 1
-
-    sget-object v0, Ljy6;->a:Lhy6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lhy6;->c:Lqy4;
-
     return-object v0
-.end method
-
-.method public f(J)Lv53;
-    .locals 1
-
-    invoke-interface {p0}, Ljy6;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {p1, p2, v0}, Lloi;->d(JLjava/util/List;)Lv53;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract g()J
-.end method
-
-.method public abstract h()J
-.end method
-
-.method public i()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public abstract j()Ljava/util/List;
 .end method

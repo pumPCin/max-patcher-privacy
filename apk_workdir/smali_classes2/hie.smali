@@ -1,94 +1,134 @@
-.class public final Lhie;
+.class public final synthetic Lhie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lji6;
+
 
 # instance fields
-.field public a:Lmie;
+.field public final synthetic a:I
 
-.field public b:Lp40;
+.field public final synthetic b:Lone/me/sharedata/ShareDataPickerScreen;
 
-.field public c:Luz9;
 
-.field public d:Landroid/content/Context;
+# direct methods
+.method public synthetic constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
+    .locals 0
 
-.field public e:Lyuc;
+    iput p2, p0, Lhie;->a:I
 
-.field public f:Lyh1;
+    iput-object p1, p0, Lhie;->b:Lone/me/sharedata/ShareDataPickerScreen;
 
-.field public g:Ly58;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:Ldte;
-
-.field public i:Ljava/lang/Integer;
-
-.field public j:Z
-
-.field public k:Lorg/webrtc/EglBase$Context;
-
-.field public l:Ln58;
-
-.field public m:Lvtf;
-
-.field public n:Lngd;
-
-.field public o:Liie;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljie;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lhie;->a:Lmie;
+    iget v0, p0, Lhie;->a:I
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lhie;->b:Lp40;
+    sget-object v2, Lccg;->a:Lccg;
 
-    if-eqz v0, :cond_0
+    iget-object v3, p0, Lhie;->b:Lone/me/sharedata/ShareDataPickerScreen;
 
-    iget-object v0, p0, Lhie;->l:Ln58;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->d:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->c:Luz9;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->e:Lyuc;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->f:Lyh1;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->g:Ly58;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->n:Lngd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lhie;->h:Ldte;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljie;
-
-    invoke-direct {v0, p0}, Ljie;-><init>(Lhie;)V
+    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->D0:Lsc6;
 
     return-object v0
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->D0:Lsc6;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-virtual {v0}, Lsc6;->k()V
 
-    throw v0
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->G0:[Ltr7;
+
+    new-instance v0, Lgd9;
+
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Lgd9;-><init>(Landroid/content/Context;)V
+
+    sget v2, Lw2b;->d:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    sget v2, Lx2b;->e:I
+
+    invoke-virtual {v0, v2}, Lgd9;->setInputHint(I)V
+
+    sget-object v2, Lxc9;->a:Lxc9;
+
+    invoke-virtual {v0, v2}, Lgd9;->setRightOuterIconActionState(Lad9;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Lmbe;
+
+    const/4 v5, 0x2
+
+    invoke-direct {v4, v3, v5, v0}, Lmbe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v4}, Lfy9;->a(Landroid/content/Context;Lji6;)Lvn6;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lgd9;->setRightOuterIconTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Lhie;
+
+    invoke-direct {v4, v3, v1}, Lhie;-><init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
+
+    invoke-static {v2, v4}, Lfy9;->a(Landroid/content/Context;Lji6;)Lvn6;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lgd9;->setLeftInnerIconTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    return-object v0
+
+    :pswitch_2
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->G0:[Ltr7;
+
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmnb;->c:Lkpb;
+
+    check-cast v0, Lzhe;
+
+    iget-object v0, v0, Lzhe;->l:Lzgd;
+
+    invoke-virtual {v0, v1}, Lzgd;->A(I)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

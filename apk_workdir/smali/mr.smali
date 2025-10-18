@@ -1,12 +1,12 @@
 .class public final Lmr;
-.super Lof4;
+.super Ldg4;
 .source "SourceFile"
 
 
 # static fields
 .field public static final b:Lmr;
 
-.field public static final c:Ljf4;
+.field public static final c:Lyf4;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     new-instance v0, Lmr;
 
-    invoke-direct {v0}, Lof4;-><init>()V
+    invoke-direct {v0}, Ldg4;-><init>()V
 
     sput-object v0, Lmr;->b:Lmr;
 
@@ -29,11 +29,11 @@
 
     const-string v4, ":settings/appearance"
 
-    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+    invoke-static {v0, v4, v1, v2, v3}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    sput-object v0, Lmr;->c:Ljf4;
+    sput-object v0, Lmr;->c:Lyf4;
 
     return-void
 .end method

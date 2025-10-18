@@ -1,169 +1,101 @@
 .class public final Lal7;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lgi6;
 
 
 # instance fields
-.field public synthetic X:Lbl7;
-
-.field public synthetic Y:Lu4b;
-
-.field public final synthetic Z:Landroid/widget/TextView;
-
-.field public final synthetic r0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-.field public final synthetic s0:Lone/me/rlottie/RLottieImageView;
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lone/me/rlottie/RLottieImageView;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput-object p1, p0, Lal7;->Z:Landroid/widget/TextView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lal7;->r0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-    iput-object p3, p0, Lal7;->s0:Lone/me/rlottie/RLottieImageView;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lal7;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lbl7;
+    const/4 v0, 0x1
 
-    check-cast p2, Lu4b;
+    if-ne p0, p1, :cond_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return v0
 
-    new-instance v0, Lal7;
+    :cond_0
+    instance-of v1, p1, Lal7;
 
-    iget-object v1, p0, Lal7;->r0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lal7;->s0:Lone/me/rlottie/RLottieImageView;
+    if-nez v1, :cond_1
 
-    iget-object v3, p0, Lal7;->Z:Landroid/widget/TextView;
+    return v2
 
-    invoke-direct {v0, v3, v1, v2, p3}, Lal7;-><init>(Landroid/widget/TextView;Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lone/me/rlottie/RLottieImageView;Lkotlin/coroutines/Continuation;)V
+    :cond_1
+    check-cast p1, Lal7;
 
-    iput-object p1, v0, Lal7;->X:Lbl7;
+    iget-object v1, p0, Lal7;->a:Landroid/net/Uri;
 
-    iput-object p2, v0, Lal7;->Y:Lu4b;
+    iget-object p1, p1, Lal7;->a:Landroid/net/Uri;
 
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {v0, p1}, Lal7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lal7;->X:Lbl7;
-
-    iget-object v0, p0, Lal7;->Y:Lu4b;
-
-    invoke-interface {v0}, Lu4b;->getText()Lapf;
-
-    move-result-object v0
-
-    iget v0, v0, Lapf;->e:I
-
-    iget-object v1, p0, Lal7;->Z:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v1, v0}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsz4;->l()Lu4b;
-
-    iget-object v0, p0, Lal7;->r0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-    iget-object v2, v0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->J0:Lqs;
-
-    sget-object v3, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->K0:[Lwq7;
-
-    const/4 v4, 0x1
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Lc82;->c(Landroid/content/Context;)Lsz4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lsz4;->l()Lu4b;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lu4b;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    sget-object v1, Lzag;->a:Lzag;
+    if-nez p1, :cond_2
 
-    if-eqz p1, :cond_0
+    return v2
 
-    return-object v1
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lal7;->a:Landroid/net/Uri;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
 
     :cond_0
-    iget-object p1, v0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->H0:Llt7;
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p1
+    return v0
+.end method
 
-    check-cast p1, Lzk7;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0}, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->T0()Lffc;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string v1, "ShowInviteDialog(qrCodeUri="
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v5, v0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->G0:I
+    iget-object v1, p0, Lal7;->a:Landroid/net/Uri;
 
-    invoke-virtual {p1, v2, v3, v5}, Lzk7;->r(Lgfc;ZI)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lal7;->s0:Lone/me/rlottie/RLottieImageView;
+    const-string v1, ")"
 
-    invoke-virtual {v0, p1, v4}, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->S0(Lone/me/rlottie/RLottieImageView;Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lone/me/rlottie/RLottieImageView;->playAnimation()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v1
+    move-result-object v0
+
+    return-object v0
 .end method

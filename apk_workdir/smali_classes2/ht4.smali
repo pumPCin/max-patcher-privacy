@@ -1,163 +1,80 @@
-.class public abstract Lht4;
-.super Ljava/lang/Object;
+.class public final Lht4;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
 
-.field public static final b:Ljava/util/regex/Pattern;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p2, p0, Lht4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const/4 p2, 0x2
 
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "px"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "dip"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "sp"
-
-    const/4 v3, 0x2
-
-    const-string v4, "dp"
-
-    invoke-static {v0, v4, v1, v3, v2}, Lmb3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
-
-    const-string v1, "in"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-string v4, "pt"
-
-    invoke-static {v3, v0, v4, v2, v1}, Lxx1;->q(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "mm"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sput-object v0, Lht4;->a:Ljava/util/HashMap;
-
-    const-string v0, "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lht4;->b:Ljava/util/regex/Pattern;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)F
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lht4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lht4;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lht4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Lht4;
 
-    move-result-object p0
+    iget-object v1, p0, Lht4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v0, p2, v1}, Lht4;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;)V
 
-    move-result-object p0
+    iput-object p1, v0, Lht4;->X:Ljava/lang/Object;
 
-    sget-object v0, Lht4;->b:Ljava/util/regex/Pattern;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object p1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
+    iget-object p1, p0, Lht4;->X:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Ljava/util/List;
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lht4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->c:Lvce;
 
-    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
 
-    move-result-object v0
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v1, Lht4;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    invoke-static {p1, v0, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NumberFormatException;
-
-    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
-
-    throw p0
+    return-object p1
 .end method

@@ -1,351 +1,213 @@
-.class public abstract Lho7;
-.super Ljava/lang/Object;
+.class public final Lho7;
+.super Lwdd;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Lyz;
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Llo7;
+
+.field public c:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
+
+.field public o:Lf53;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Llo7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lho7;->Z:Llo7;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p1, 0x2
 
-    move-result-object v0
-
-    const/4 v1, 0x7
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/4 v4, 0x5
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v0, v1, v3, v4}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v1, Lyz;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-static {v1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
-
-    sput-object v1, Lho7;->a:Lyz;
+    invoke-direct {p0, p1, p2}, Lwdd;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Lkgd;Lna5;)I
-    .locals 2
 
-    invoke-virtual {p1}, Lna5;->i0()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p1, Lna5;->o:I
+    check-cast p1, Lp2e;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lho7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object v0, Lho7;->a:Lyz;
+    check-cast p1, Lho7;
 
-    invoke-virtual {v0, p1}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lho7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ltz p1, :cond_2
+    move-result-object p1
 
-    iget p0, p0, Lkgd;->a:I
-
-    const/4 v1, -0x1
-
-    if-ne p0, v1, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    if-eq p0, v1, :cond_1
-
-    :goto_0
-    div-int/lit8 p0, p0, 0x5a
-
-    add-int/2addr p0, p1
-
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result p1
-
-    rem-int/2addr p0, p1
-
-    invoke-virtual {v0, p0}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Rotation is set to use EXIF"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Only accepts inverted exif orientations"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p1
 .end method
 
-.method public static final b(Lkgd;Lna5;)I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lkgd;->a:I
+    new-instance v0, Lho7;
 
-    const/4 v1, -0x2
+    iget-object v1, p0, Lho7;->Z:Llo7;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, p2}, Lho7;-><init>(Llo7;Lkotlin/coroutines/Continuation;)V
 
-    if-eq v0, v1, :cond_3
+    iput-object p1, v0, Lho7;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lna5;->i0()V
-
-    iget v0, p1, Lna5;->c:I
-
-    const/16 v1, 0x5a
-
-    if-eq v0, v1, :cond_0
-
-    const/16 v1, 0xb4
-
-    if-eq v0, v1, :cond_0
-
-    const/16 v1, 0x10e
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lna5;->i0()V
-
-    iget v2, p1, Lna5;->c:I
-
-    :goto_0
-    iget p0, p0, Lkgd;->a:I
-
-    const/4 p1, -0x1
-
-    if-ne p0, p1, :cond_1
-
-    return v2
-
-    :cond_1
-    if-eq p0, p1, :cond_2
-
-    add-int/2addr p0, v2
-
-    rem-int/lit16 p0, p0, 0x168
-
-    return p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Rotation is set to use EXIF"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    return v2
+    return-object v0
 .end method
 
-.method public static final c(Lkgd;Lobd;Lna5;Z)I
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const/16 v0, 0x8
+    iget v0, p0, Lho7;->X:I
 
-    if-nez p3, :cond_0
+    const/4 v1, 0x2
 
-    goto/16 :goto_3
+    const/4 v2, 0x1
 
-    :cond_0
-    if-nez p1, :cond_1
+    sget-object v3, Lr54;->a:Lr54;
 
-    goto/16 :goto_3
+    if-eqz v0, :cond_2
 
-    :cond_1
-    invoke-static {p0, p2}, Lho7;->b(Lkgd;Lna5;)I
+    if-eq v0, v2, :cond_1
 
-    move-result p3
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p2}, Lna5;->i0()V
+    iget-object v0, p0, Lho7;->o:Lf53;
 
-    iget v1, p2, Lna5;->o:I
+    iget-object v2, p0, Lho7;->c:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v4, p0, Lho7;->Y:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast v4, Lp2e;
 
-    sget-object v2, Lho7;->a:Lyz;
-
-    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    invoke-static {p0, p2}, Lho7;->a(Lkgd;Lna5;)I
-
-    move-result p0
-
-    goto :goto_0
-
-    :cond_2
-    move p0, v2
-
-    :goto_0
-    const/16 v1, 0x5a
-
-    const/4 v3, 0x1
-
-    if-eq p3, v1, :cond_3
-
-    const/16 v1, 0x10e
-
-    if-eq p3, v1, :cond_3
-
-    const/4 p3, 0x5
-
-    if-eq p0, p3, :cond_3
-
-    const/4 p3, 0x7
-
-    if-ne p0, p3, :cond_4
-
-    :cond_3
-    move v2, v3
-
-    :cond_4
-    if-eqz v2, :cond_5
-
-    invoke-virtual {p2}, Lna5;->i0()V
-
-    iget p0, p2, Lna5;->Y:I
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {p2}, Lna5;->i0()V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget p0, p2, Lna5;->X:I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :goto_1
-    if-eqz v2, :cond_6
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lna5;->i0()V
+    throw p1
 
-    iget p2, p2, Lna5;->X:I
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_2
 
-    :cond_6
-    invoke-virtual {p2}, Lna5;->i0()V
+    :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget p2, p2, Lna5;->Y:I
+    iget-object p1, p0, Lho7;->Y:Ljava/lang/Object;
 
-    :goto_2
-    iget p3, p1, Lobd;->a:I
+    check-cast p1, Lp2e;
 
-    int-to-float p3, p3
+    iget-object v0, p0, Lho7;->Z:Llo7;
 
-    int-to-float p0, p0
+    invoke-virtual {v0}, Llo7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
-    div-float/2addr p3, p0
+    move-result-object v0
 
-    iget p1, p1, Lobd;->b:I
+    instance-of v4, v0, Lf53;
 
-    int-to-float p1, p1
+    if-eqz v4, :cond_3
 
-    int-to-float p2, p2
+    check-cast v0, Lf53;
 
-    div-float/2addr p1, p2
+    iget-object v0, v0, Lf53;->b:Lh53;
 
-    invoke-static {p3, p1}, Ljava/lang/Math;->max(FF)F
+    iput v2, p0, Lho7;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lp2e;->b(Ljava/lang/Object;Lwdd;)V
+
+    return-object v3
+
+    :cond_3
+    instance-of v2, v0, Lpe7;
+
+    if-eqz v2, :cond_5
+
+    check-cast v0, Lpe7;
+
+    invoke-interface {v0}, Lpe7;->b()Lq9a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNext()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+
+    move-object v4, v2
+
+    move-object v2, v0
+
+    move-object v0, v4
+
+    move-object v4, p1
+
+    :goto_0
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    mul-float p3, p0, p1
+    if-nez p1, :cond_5
 
-    const/high16 v1, 0x45000000    # 2048.0f
+    instance-of p1, v0, Lf53;
 
-    cmpl-float p3, p3, v1
+    if-eqz p1, :cond_4
 
-    if-lez p3, :cond_7
+    move-object p1, v0
 
-    div-float p1, v1, p0
+    check-cast p1, Lf53;
 
-    :cond_7
-    mul-float p0, p2, p1
+    iget-object p1, p1, Lf53;->b:Lh53;
 
-    cmpl-float p0, p0, v1
+    iput-object v4, p0, Lho7;->Y:Ljava/lang/Object;
 
-    if-lez p0, :cond_8
+    iput-object v2, p0, Lho7;->c:Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 
-    div-float p1, v1, p2
+    check-cast v0, Lf53;
 
-    :cond_8
-    int-to-float p0, v0
+    iput-object v0, p0, Lho7;->o:Lf53;
 
-    mul-float/2addr p1, p0
+    iput v1, p0, Lho7;->X:I
 
-    const p0, 0x3f2aaaab
+    invoke-virtual {v4, p1, p0}, Lp2e;->b(Ljava/lang/Object;Lwdd;)V
 
-    add-float/2addr p1, p0
+    return-object v3
 
-    float-to-int p0, p1
+    :cond_4
+    :goto_1
+    invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
-    if-le p0, v0, :cond_9
+    move-result-object v0
 
-    :goto_3
-    return v0
+    goto :goto_0
 
-    :cond_9
-    if-ge p0, v3, :cond_a
+    :cond_5
+    :goto_2
+    sget-object p1, Lccg;->a:Lccg;
 
-    return v3
-
-    :cond_a
-    return p0
+    return-object p1
 .end method

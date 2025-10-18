@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lczc;
+.implements Lj0d;
 
 
 # instance fields
@@ -60,7 +60,7 @@
 
 
 # virtual methods
-.method public D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+.method public D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
     .locals 2
 
     iget-object p1, p0, Le5;->b:Ljava/lang/Object;
@@ -78,7 +78,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p2}, Lhq7;->getName()Ljava/lang/String;
+    invoke-interface {p2}, Ler7;->getName()Ljava/lang/String;
 
     move-result-object p2
 
@@ -97,7 +97,7 @@
     throw p1
 .end method
 
-.method public P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+.method public P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
     .locals 0
 
     iput-object p3, p0, Le5;->b:Ljava/lang/Object;

@@ -1,97 +1,120 @@
-.class public final enum Lqd2;
-.super Ljava/lang/Enum;
+.class public final synthetic Lqd2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final synthetic X:[Lqd2;
 
-.field public static final enum a:Lqd2;
+# instance fields
+.field public final synthetic a:Lsd2;
 
-.field public static final enum b:Lqd2;
+.field public final synthetic b:Ljava/util/List;
 
-.field public static final enum c:Lqd2;
+.field public final synthetic c:Ljava/lang/String;
 
-.field public static final enum o:Lqd2;
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lsd2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lqd2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TITLE"
+    iput-object p1, p0, Lqd2;->a:Lsd2;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lqd2;->b:Ljava/util/List;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lqd2;->c:Ljava/lang/String;
 
-    sput-object v0, Lqd2;->a:Lqd2;
-
-    new-instance v1, Lqd2;
-
-    const-string v2, "ICON"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lqd2;->b:Lqd2;
-
-    new-instance v2, Lqd2;
-
-    const-string v3, "CHANGE_PARTICIPANT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lqd2;->c:Lqd2;
-
-    new-instance v3, Lqd2;
-
-    const-string v4, "PIN_MESSAGE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lqd2;->o:Lqd2;
-
-    filled-new-array {v0, v1, v2, v3}, [Lqd2;
-
-    move-result-object v0
-
-    sput-object v0, Lqd2;->X:[Lqd2;
+    iput-object p4, p0, Lqd2;->o:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqd2;
-    .locals 1
 
-    const-class v0, Lqd2;
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, "createMultiChat, contacts.size() = "
 
-    check-cast p0, Lqd2;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lqd2;->b:Ljava/util/List;
 
-.method public static values()[Lqd2;
-    .locals 1
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    sget-object v0, Lqd2;->X:[Lqd2;
+    move-result v2
 
-    invoke-virtual {v0}, [Lqd2;->clone()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lqd2;
+    const-string v2, "sd2"
+
+    invoke-static {v2, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lme2;->b:Lme2;
+
+    iget-object v2, p0, Lqd2;->a:Lsd2;
+
+    iget-object v3, p0, Lqd2;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lqd2;->o:Ljava/lang/String;
+
+    invoke-virtual {v2, v0, v1, v3, v4}, Lsd2;->b(Lme2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lla2;
+
+    move-result-object v0
+
+    new-instance v4, Lj10;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    sget-object v5, Lk10;->b:Lk10;
+
+    iput-object v5, v4, Lj10;->a:Lk10;
+
+    const/4 v5, 0x3
+
+    iput v5, v4, Lj10;->l:I
+
+    iput-object v1, v4, Lj10;->c:Ljava/util/Collection;
+
+    iput-object v3, v4, Lj10;->d:Ljava/lang/String;
+
+    invoke-virtual {v4}, Lj10;->a()Ll10;
+
+    move-result-object v1
+
+    iget-wide v3, v0, Lla2;->a:J
+
+    new-instance v5, Lv4e;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v5, v3, v4, v1, v6}, Lv4e;-><init>(JLjava/lang/Object;I)V
+
+    new-instance v1, Lw4e;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v5, v3}, Lw4e;-><init>(Lv4e;B)V
+
+    iget-object v2, v2, Lsd2;->v:Lpw4;
+
+    invoke-virtual {v2}, Lpw4;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltph;
+
+    invoke-virtual {v2, v1}, Ltph;->b(Lr4e;)V
 
     return-object v0
 .end method

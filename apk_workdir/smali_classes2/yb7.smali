@@ -1,121 +1,258 @@
-.class public final enum Lyb7;
-.super Ljava/lang/Enum;
+.class public final Lyb7;
+.super La2;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lyb7;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lyig;
 
 
-# static fields
-.field public static final Companion:Lxb7;
+# instance fields
+.field public final a:B
 
-.field public static final a:Ljava/lang/Object;
-
-.field public static final synthetic b:[Lyb7;
+.field public final b:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(B[B)V
+    .locals 0
 
-    new-instance v0, Lyb7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LIGHT"
+    iput-byte p1, p0, Lyb7;->a:B
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lyb7;
-
-    const-string v2, "MEDIUM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lyb7;
-
-    const-string v3, "HEAVY"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lyb7;
-
-    const-string v5, "RIGID"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lyb7;
-
-    const-string v6, "SOFT"
-
-    const/4 v7, 0x4
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2, v3, v5}, [Lyb7;
-
-    move-result-object v0
-
-    sput-object v0, Lyb7;->b:[Lyb7;
-
-    new-instance v0, Lxb7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lyb7;->Companion:Lxb7;
-
-    new-instance v0, Lim5;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lim5;-><init>(I)V
-
-    invoke-static {v4, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    sput-object v0, Lyb7;->a:Ljava/lang/Object;
+    iput-object p2, p0, Lyb7;->b:[B
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyb7;
+
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-byte v1, p0, Lyb7;->a:B
+
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyb7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "\"]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()I
     .locals 1
 
-    const-class v0, Lyb7;
+    const/16 v0, 0x9
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p0, Lyb7;
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lyig;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lyig;
+
+    move-object v0, p1
+
+    check-cast v0, La2;
+
+    invoke-interface {v0}, Lyig;->b()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Lyig;->o()Lyb7;
+
+    move-result-object p1
+
+    iget-byte v0, p0, Lyb7;->a:B
+
+    iget-byte v1, p1, Lyb7;->a:B
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lyb7;->b:[B
+
+    iget-object p1, p1, Lyb7;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-byte v0, p0, Lyb7;->a:B
+
+    add-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lyb7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, v4
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+.end method
+
+.method public final o()Lyb7;
+    .locals 0
 
     return-object p0
 .end method
 
-.method public static values()[Lyb7;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    sget-object v0, Lyb7;->b:[Lyb7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v1, "("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-byte v1, p0, Lyb7;->a:B
+
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",0x"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyb7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lyb7;
-
     return-object v0
+.end method
+
+.method public final v()Lyb7;
+    .locals 0
+
+    return-object p0
 .end method

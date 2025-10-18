@@ -73,7 +73,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lv4;->i(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-static {p2}, Lv4;->h(Landroid/os/Looper;)Landroid/os/Handler;
 
     move-result-object p2
 
@@ -105,11 +105,11 @@
 
     move-result v0
 
-    new-instance v1, Lvn;
+    new-instance v1, Lwn;
 
     const/4 v2, 0x4
 
-    invoke-direct {v1, p1, v2}, Lvn;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, p1, v2}, Lwn;-><init>(Landroid/content/Context;I)V
 
     add-int/lit16 v0, v0, 0x1388
 

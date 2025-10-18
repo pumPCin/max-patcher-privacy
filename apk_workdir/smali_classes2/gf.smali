@@ -50,13 +50,13 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X0:Z
+    iget-boolean v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->W0:Z
 
     if-nez v0, :cond_17
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->w0:Z
+    iget-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v0:Z
 
     if-nez v3, :cond_6
 
@@ -68,7 +68,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->A0:Ljava/io/File;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->z0:Ljava/io/File;
 
     if-eqz v3, :cond_6
 
@@ -102,7 +102,7 @@
 
     if-eqz v11, :cond_0
 
-    iget v3, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->w1:I
+    iget v3, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v1:I
 
     if-le v3, v10, :cond_1
 
@@ -115,7 +115,7 @@
     move v3, v9
 
     :goto_0
-    iput-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->Y0:Z
+    iput-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X0:Z
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
@@ -167,11 +167,11 @@
 
     iget-object v3, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget v11, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->w1:I
+    iget v11, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v1:I
 
     add-int/lit8 v12, v11, 0x1
 
-    iput v12, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->w1:I
+    iput v12, v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v1:I
 
     if-le v11, v10, :cond_4
 
@@ -187,21 +187,21 @@
     move v3, v6
 
     :goto_2
-    iput-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->w0:Z
+    iput-boolean v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v0:Z
 
     :cond_6
     :try_start_0
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
     if-eqz v3, :cond_e
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     if-nez v3, :cond_8
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->O0:Ljava/util/ArrayList;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -211,7 +211,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->O0:Ljava/util/ArrayList;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v9}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -219,7 +219,7 @@
 
     check-cast v3, Landroid/graphics/Bitmap;
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     goto :goto_3
 
@@ -231,9 +231,9 @@
     :cond_7
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->d1:I
+    iget v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->c1:I
 
-    iget v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->c1:I
+    iget v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->b1:I
 
     sget-object v5, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -241,56 +241,56 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     :cond_8
     :goto_3
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lqw5;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lkx5;
 
     if-nez v3, :cond_9
 
-    new-instance v3, Lqw5;
+    new-instance v3, Lkx5;
 
     const/4 v4, 0x5
 
-    invoke-direct {v3, v4}, Lqw5;-><init>(I)V
+    invoke-direct {v3, v4}, Lkx5;-><init>(I)V
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lqw5;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lkx5;
 
     :cond_9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    iput-wide v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->I0:J
+    iput-wide v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->H0:J
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lqw5;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lkx5;
 
-    iget v4, v3, Lqw5;->b:I
+    iget v4, v3, Lkx5;->b:I
 
-    iget-object v5, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v5, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
-    iget v7, v5, Lwp0;->i:I
+    iget v7, v5, Lfq0;->i:I
 
-    invoke-virtual {v5, v0, v7}, Lwp0;->f(Landroid/graphics/Bitmap;I)I
+    invoke-virtual {v5, v0, v7}, Lfq0;->f(Landroid/graphics/Bitmap;I)I
 
     move-result v0
 
-    iget v7, v5, Lwp0;->i:I
+    iget v7, v5, Lfq0;->i:I
 
-    iput v7, v3, Lqw5;->b:I
+    iput v7, v3, Lkx5;->b:I
 
-    iget-boolean v3, v5, Lwp0;->s:Z
+    iget-boolean v3, v5, Lfq0;->s:Z
 
     if-eqz v3, :cond_a
 
-    iget-object v3, v5, Lwp0;->e:Ljava/util/ArrayList;
+    iget-object v3, v5, Lfq0;->e:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -298,13 +298,13 @@
 
     if-nez v3, :cond_a
 
-    iget v3, v5, Lwp0;->i:I
+    iget v3, v5, Lfq0;->i:I
 
     add-int/2addr v3, v6
 
-    iput v3, v5, Lwp0;->i:I
+    iput v3, v5, Lfq0;->i:I
 
-    iget-object v7, v5, Lwp0;->e:Ljava/util/ArrayList;
+    iget-object v7, v5, Lfq0;->e:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -312,7 +312,7 @@
 
     if-lt v3, v7, :cond_a
 
-    iput v9, v5, Lwp0;->i:I
+    iput v9, v5, Lfq0;->i:I
 
     :cond_a
     const/4 v3, -0x1
@@ -321,30 +321,30 @@
 
     iget-object v5, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v7, v5, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lqw5;
+    iget-object v7, v5, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lkx5;
 
-    iget v7, v7, Lqw5;->b:I
+    iget v7, v7, Lkx5;->b:I
 
     if-ge v7, v4, :cond_b
 
-    iput-boolean v6, v5, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F0:Z
+    iput-boolean v6, v5, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:Z
 
     :cond_b
     iget-object v4, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
     iget-object v5, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o:[I
 
-    iget-object v7, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lqw5;
+    iget-object v7, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lkx5;
 
-    iget v7, v7, Lqw5;->b:I
+    iget v7, v7, Lkx5;->b:I
 
     const/4 v8, 0x4
 
     aget v8, v5, v8
 
-    iget-object v9, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v9, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
-    iget-object v9, v9, Lwp0;->e:Ljava/util/ArrayList;
+    iget-object v9, v9, Lfq0;->e:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -364,15 +364,15 @@
 
     mul-int/2addr v7, v6
 
-    iput v7, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u0:I
+    iput v7, v4, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:I
 
     aput v7, v5, v2
 
     iget-object v2, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lwp0;
+    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Lfq0;
 
-    invoke-virtual {v2}, Lwp0;->g()Z
+    invoke-virtual {v2}, Lfq0;->g()Z
 
     move-result v2
 
@@ -380,7 +380,7 @@
 
     iget-object v2, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u1:Lgf;
+    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lgf;
 
     invoke-static {v2}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -389,7 +389,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Lgf;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lgf;
 
     invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -398,7 +398,7 @@
     :cond_d
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v1:Lgf;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u1:Lgf;
 
     invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -426,7 +426,7 @@
     goto :goto_4
 
     :cond_f
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Lgf;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lgf;
 
     invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -436,7 +436,7 @@
     :goto_4
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     if-nez v3, :cond_12
 
@@ -453,7 +453,7 @@
     if-lez v3, :cond_12
 
     :try_start_1
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->O0:Ljava/util/ArrayList;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -463,7 +463,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->O0:Ljava/util/ArrayList;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v9}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -471,7 +471,7 @@
 
     check-cast v3, Landroid/graphics/Bitmap;
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     goto :goto_6
 
@@ -489,7 +489,7 @@
 
     int-to-float v10, v10
 
-    iget v11, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->g1:F
+    iget v11, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->f1:F
 
     mul-float/2addr v10, v11
 
@@ -509,7 +509,7 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -517,19 +517,19 @@
 
     :goto_5
     :try_start_2
-    sget-object v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->G1:[F
+    sget-object v3, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F1:[F
 
     const-string v3, "one.me.sdk.media.ffmpeg.AnimatedFileDrawable"
 
     const-string v10, "Fail create background bitmap"
 
-    invoke-static {v3, v10, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v10, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_12
     :goto_6
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     cmp-long v0, v10, v7
 
@@ -539,7 +539,7 @@
 
     iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o:[I
 
-    iget-wide v7, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iget-wide v7, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     long-to-int v0, v7
 
@@ -547,11 +547,11 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-wide v9, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iget-wide v9, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->G0:Ljava/lang/Object;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F0:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_2
@@ -560,7 +560,7 @@
     :try_start_3
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     monitor-exit v3
     :try_end_3
@@ -600,7 +600,7 @@
     :goto_7
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     if-eqz v3, :cond_17
 
@@ -608,7 +608,7 @@
 
     move-result-wide v3
 
-    iput-wide v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->I0:J
+    iput-wide v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->H0:J
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
@@ -616,7 +616,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v12, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v12, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     iget-object v13, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o:[I
 
@@ -626,9 +626,9 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a1:F
+    iget v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->Z0:F
 
-    iget v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->b1:F
+    iget v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a1:F
 
     const/16 v18, 0x1
 
@@ -646,7 +646,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Lgf;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q1:Lgf;
 
     invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -663,7 +663,7 @@
 
     if-ge v2, v3, :cond_15
 
-    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F0:Z
+    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:Z
 
     :cond_15
     if-eqz v9, :cond_16
@@ -671,26 +671,26 @@
     iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->b:I
 
     :cond_16
-    iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u0:I
+    iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto :goto_9
 
     :goto_8
-    sget-object v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->G1:[F
+    sget-object v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F1:[F
 
     const-string v2, "one.me.sdk.media.ffmpeg.AnimatedFileDrawable"
 
     const-string v3, "Fail load frame"
 
-    invoke-static {v2, v3, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v3, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_17
     :goto_9
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v1:Lgf;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u1:Lgf;
 
     invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
 
@@ -704,21 +704,21 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->z0:Z
+    iget-boolean v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->y0:Z
 
     if-nez v10, :cond_18
 
-    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->y0:Z
+    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->x0:Z
 
     goto :goto_b
 
     :cond_18
-    iput-boolean v9, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->z0:Z
+    iput-boolean v9, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->y0:Z
 
     :goto_b
     iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X:Lgf;
 
-    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:J
+    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
 
     cmp-long v0, v10, v7
 
@@ -726,32 +726,32 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
-    iput-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r0:Landroid/graphics/Bitmap;
+    iput-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q0:Landroid/graphics/Bitmap;
 
-    iget v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u0:I
+    iget v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:I
 
-    iput v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:I
+    iput v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r0:I
 
     move v0, v9
 
     :goto_c
     iget-object v10, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:[Landroid/graphics/BitmapShader;
+    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->M0:[Landroid/graphics/BitmapShader;
 
     array-length v12, v11
 
     if-ge v0, v12, :cond_1a
 
-    iget-object v12, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->L0:[Landroid/graphics/BitmapShader;
+    iget-object v12, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->K0:[Landroid/graphics/BitmapShader;
 
     aget-object v11, v11, v0
 
     aput-object v11, v12, v0
 
-    iget-object v10, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->M0:[Landroid/graphics/BitmapShader;
+    iget-object v10, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->L0:[Landroid/graphics/BitmapShader;
 
     aput-object v3, v10, v0
 
@@ -762,26 +762,26 @@
     :cond_19
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iget-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
-    iput-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r0:Landroid/graphics/Bitmap;
+    iput-object v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->q0:Landroid/graphics/Bitmap;
 
-    iget v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u0:I
+    iget v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:I
 
-    iput v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:I
+    iput v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r0:I
 
     move v0, v9
 
     :goto_d
     iget-object v10, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:[Landroid/graphics/BitmapShader;
+    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->M0:[Landroid/graphics/BitmapShader;
 
     array-length v12, v11
 
     if-ge v0, v12, :cond_1a
 
-    iget-object v10, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->L0:[Landroid/graphics/BitmapShader;
+    iget-object v10, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->K0:[Landroid/graphics/BitmapShader;
 
     aget-object v11, v11, v0
 
@@ -794,14 +794,14 @@
     :cond_1a
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t0:Landroid/graphics/Bitmap;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s0:Landroid/graphics/Bitmap;
 
     move v0, v9
 
     :goto_e
     iget-object v10, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->N0:[Landroid/graphics/BitmapShader;
+    iget-object v11, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->M0:[Landroid/graphics/BitmapShader;
 
     array-length v12, v11
 
@@ -814,11 +814,11 @@
     goto :goto_e
 
     :cond_1b
-    iget-boolean v0, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F0:Z
+    iget-boolean v0, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:Z
 
     if-eqz v0, :cond_1c
 
-    iput-boolean v9, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->F0:Z
+    iput-boolean v9, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:Z
 
     iget v0, v10, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->repeatCount:I
 
@@ -839,7 +839,7 @@
 
     if-ge v3, v6, :cond_1e
 
-    iget v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a1:F
+    iget v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->Z0:F
 
     const/4 v10, 0x0
 
@@ -870,7 +870,7 @@
 
     iput v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->c:I
 
-    iget-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->o1:Z
+    iget-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->n1:Z
 
     if-eqz v6, :cond_1f
 
@@ -881,7 +881,7 @@
     iput v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->c:I
 
     :cond_1f
-    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:J
+    iget-wide v10, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
 
     cmp-long v0, v10, v7
 
@@ -889,7 +889,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-wide v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iget-wide v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     cmp-long v0, v6, v4
 
@@ -897,7 +897,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:J
+    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
@@ -912,7 +912,7 @@
 
     iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->b:I
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -922,7 +922,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
+    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -933,7 +933,7 @@
 
     iget-object v2, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
+    iget-object v2, v2, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -961,21 +961,21 @@
     :pswitch_1
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X0:Z
+    iget-boolean v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->W0:Z
 
     if-nez v0, :cond_23
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-boolean v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->v0:Z
+    iget-boolean v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->u0:Z
 
     if-nez v2, :cond_23
 
-    iget-boolean v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Z
+    iget-boolean v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Z
 
     if-nez v2, :cond_23
 
-    iget-object v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+    iget-object v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
     if-nez v2, :cond_23
 
@@ -985,9 +985,9 @@
 
     long-to-float v2, v4
 
-    iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->a1:F
+    iput v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->Z0:F
 
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lou4;
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lfv4;
 
     if-nez v0, :cond_22
 
@@ -996,25 +996,25 @@
     :cond_22
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Z
+    iput-boolean v6, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->r1:Z
 
     iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X:Lgf;
 
-    sget v2, Lwp0;->B:I
+    sget v2, Lfq0;->B:I
 
     add-int/2addr v2, v6
 
-    sput v2, Lwp0;->B:I
+    sput v2, Lfq0;->B:I
 
-    sget-object v2, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lou4;
+    sget-object v2, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lfv4;
 
     new-instance v3, Lhf;
 
     invoke-direct {v3, v1, v9}, Lhf;-><init>(Lgf;I)V
 
-    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->t1:Lhf;
+    iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->s1:Lhf;
 
-    invoke-virtual {v2, v3}, Lou4;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v3}, Lfv4;->b(Ljava/lang/Runnable;)V
 
     :cond_23
     return-void
@@ -1028,7 +1028,7 @@
 
     iput-object v3, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->X:Lgf;
 
-    iget-wide v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:J
+    iget-wide v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
 
     cmp-long v0, v2, v7
 
@@ -1036,7 +1036,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iget-wide v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
+    iget-wide v2, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->C0:J
 
     cmp-long v0, v2, v4
 
@@ -1044,7 +1044,7 @@
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 
-    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->E0:J
+    iput-wide v4, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->D0:J
 
     iget-object v0, v1, Lgf;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
 

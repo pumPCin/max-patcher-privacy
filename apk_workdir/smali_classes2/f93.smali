@@ -1,63 +1,98 @@
 .class public final Lf93;
-.super Lb4a;
+.super Landroid/transition/Transition;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lf93;
+# instance fields
+.field public final a:Landroid/graphics/Rect;
+
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/graphics/Rect;Z)V
+    .locals 0
 
-    new-instance v0, Lf93;
+    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
 
-    sget-object v1, Lzag;->a:Lzag;
+    iput-object p1, p0, Lf93;->a:Landroid/graphics/Rect;
 
-    invoke-direct {v0, v1}, Lb4a;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Lf93;->b:Lf93;
+    iput-boolean p2, p0, Lf93;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final captureEndValues(Landroid/transition/TransitionValues;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final captureStartValues(Landroid/transition/TransitionValues;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 2
+
+    if-eqz p2, :cond_1
+
+    if-eqz p3, :cond_1
+
+    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    instance-of p1, p1, Lpn6;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    new-instance p3, Lwg;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p3, p0, v0, p2}, Lwg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance p3, Loh;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {p3, p0, p2, v1, v0}, Loh;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    :cond_0
-    instance-of p1, p1, Lf93;
+    invoke-virtual {p1, p3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
+    return-object p1
 
     :cond_1
-    return v0
-.end method
+    :goto_0
+    const/4 p1, 0x0
 
-.method public final hashCode()I
-    .locals 1
+    return-object p1
 
-    const v0, -0x1193edd2
+    nop
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Close"
-
-    return-object v0
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

@@ -1,92 +1,81 @@
 .class public final Lwg1;
-.super Llff;
+.super Lvpe;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Lih1;
+.field public final D0:Lrs1;
+
+.field public final E0:Lus1;
 
 
 # direct methods
-.method public constructor <init>(Lih1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/widget/FrameLayout;Lrs1;)V
     .locals 0
 
-    iput-object p1, p0, Lwg1;->X:Lih1;
+    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lwg1;->D0:Lrs1;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget p2, Ljnc;->call_opponent:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lus1;
+
+    iput-object p1, p0, Lwg1;->E0:Lus1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final A(Ly18;)V
+    .locals 3
 
-    check-cast p1, Ltcb;
+    check-cast p1, Led1;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Led1;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1, p2}, Lwg1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p1, Led1;->o:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v2, p0, Lwg1;->E0:Lus1;
 
-    check-cast p1, Lwg1;
+    invoke-virtual {v2, v1, v0}, Lus1;->G(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-boolean v0, p1, Led1;->q0:Z
 
-    invoke-virtual {p1, p2}, Lwg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Lus1;->D(Z)V
 
-    return-object p2
-.end method
+    iget-boolean v0, p1, Led1;->Y:Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v2, v0}, Lus1;->E(Z)V
 
-    new-instance p1, Lwg1;
+    iget-object v0, p1, Led1;->X:Lce0;
 
-    iget-object v0, p0, Lwg1;->X:Lih1;
+    invoke-virtual {v2, v0}, Lus1;->setAvatar(Lce0;)V
 
-    invoke-direct {p1, v0, p2}, Lwg1;-><init>(Lih1;Lkotlin/coroutines/Continuation;)V
+    iget-boolean v0, p1, Led1;->t0:Z
 
-    return-object p1
-.end method
+    invoke-virtual {v2, v0}, Lus1;->setRaiseHand(Z)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    iget-object v0, p1, Led1;->x0:Lhig;
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, v0}, Lus1;->setOpponentVideo(Lhig;)V
 
-    iget-object p1, p0, Lwg1;->X:Lih1;
+    iget-object v0, p1, Led1;->y0:Liig;
 
-    iget-object v0, p1, Lih1;->x0:Ljava/lang/String;
+    invoke-virtual {v2, v0}, Lus1;->setButtonAction(Liig;)V
 
-    iget-object v1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object p1, p1, Led1;->a:Lmi1;
 
-    iget-object v2, p1, Lih1;->X:Lqkf;
+    iput-object p1, v2, Lus1;->g1:Lmi1;
 
-    check-cast v2, Losa;
+    iget-object p1, p0, Lwg1;->D0:Lrs1;
 
-    invoke-virtual {v2}, Losa;->f()Lv44;
+    iput-object p1, v2, Lus1;->a1:Lrs1;
 
-    move-result-object v2
-
-    new-instance v3, Ldh1;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v0, v4}, Ldh1;-><init>(Lih1;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v1, v2, v4, v3, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-void
 .end method

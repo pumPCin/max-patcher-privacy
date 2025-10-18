@@ -1,209 +1,139 @@
-.class public final Lf2g;
+.class public Lf2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:Ljava/lang/String;
+.field public b:I
 
-.field public final c:Ljava/lang/String;
+.field public c:I
 
-.field public final d:I
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:Z
+
+.field public l:Lec7;
+
+.field public m:I
+
+.field public n:Lec7;
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:Lec7;
+
+.field public s:Lec7;
+
+.field public t:I
+
+.field public u:Z
+
+.field public v:Z
+
+.field public w:Z
+
+.field public x:Ld2g;
+
+.field public y:Lpc7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lf2g;->a:I
+    const v0, 0x7fffffff
 
-    iput-object p1, p0, Lf2g;->b:Ljava/lang/String;
+    iput v0, p0, Lf2g;->a:I
 
-    iput-object p4, p0, Lf2g;->c:Ljava/lang/String;
+    iput v0, p0, Lf2g;->b:I
 
-    iput p3, p0, Lf2g;->d:I
+    iput v0, p0, Lf2g;->c:I
+
+    iput v0, p0, Lf2g;->d:I
+
+    iput v0, p0, Lf2g;->i:I
+
+    iput v0, p0, Lf2g;->j:I
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lf2g;->k:Z
+
+    sget-object v1, Lec7;->b:Lv36;
+
+    sget-object v1, Lz8d;->X:Lz8d;
+
+    iput-object v1, p0, Lf2g;->l:Lec7;
+
+    const/4 v2, 0x0
+
+    iput v2, p0, Lf2g;->m:I
+
+    iput-object v1, p0, Lf2g;->n:Lec7;
+
+    iput v2, p0, Lf2g;->o:I
+
+    iput v0, p0, Lf2g;->p:I
+
+    iput v0, p0, Lf2g;->q:I
+
+    iput-object v1, p0, Lf2g;->r:Lec7;
+
+    iput-object v1, p0, Lf2g;->s:Lec7;
+
+    iput v2, p0, Lf2g;->t:I
+
+    iput-boolean v2, p0, Lf2g;->u:Z
+
+    iput-boolean v2, p0, Lf2g;->v:Z
+
+    iput-boolean v2, p0, Lf2g;->w:Z
+
+    sget-object v0, Ld2g;->b:Ld2g;
+
+    iput-object v0, p0, Lf2g;->x:Ld2g;
+
+    sget v0, Lpc7;->c:I
+
+    sget-object v0, Lf9d;->s0:Lf9d;
+
+    iput-object v0, p0, Lf2g;->y:Lpc7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lss0;
-    .locals 2
+.method public a(II)Lf2g;
+    .locals 0
 
-    new-instance v0, Lss0;
+    iput p1, p0, Lf2g;->i:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lf2g;->j:I
 
-    iget v1, p0, Lf2g;->a:I
+    const/4 p1, 0x1
 
-    iput v1, v0, Lss0;->a:I
+    iput-boolean p1, p0, Lf2g;->k:Z
 
-    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
-
-    iput-object v1, v0, Lss0;->c:Ljava/lang/Object;
-
-    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
-
-    iput-object v1, v0, Lss0;->d:Ljava/lang/Object;
-
-    iget v1, p0, Lf2g;->d:I
-
-    iput v1, v0, Lss0;->b:I
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lf2g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lf2g;
-
-    iget v1, p0, Lf2g;->a:I
-
-    iget v3, p1, Lf2g;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lf2g;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lf2g;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lf2g;->d:I
-
-    iget p1, p1, Lf2g;->d:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lf2g;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lf2g;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lf2g;->c:Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lf2g;->d:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TransformationRequest{outputHeight="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lf2g;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioMimeType=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', videoMimeType=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', hdrMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lf2g;->d:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

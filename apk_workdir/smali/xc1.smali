@@ -1,22 +1,19 @@
 .class public final Lxc1;
-.super Ljava/lang/Object;
+.super Ldd1;
 .source "SourceFile"
-
-# interfaces
-.implements Lzc1;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Liig;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Liig;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxc1;->a:Ljava/lang/String;
+    iput-object p1, p0, Lxc1;->a:Liig;
 
     return-void
 .end method
@@ -44,15 +41,11 @@
     :cond_1
     check-cast p1, Lxc1;
 
-    iget-object v1, p0, Lxc1;->a:Ljava/lang/String;
+    iget-object v1, p0, Lxc1;->a:Liig;
 
-    iget-object p1, p1, Lxc1;->a:Ljava/lang/String;
+    iget-object p1, p1, Lxc1;->a:Liig;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -60,67 +53,36 @@
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    return-wide v0
-.end method
-
-.method public final h(Lb18;)Z
-    .locals 4
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    invoke-interface {p1}, Lb18;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lxc1;->a:Ljava/lang/String;
+    iget-object v0, p0, Lxc1;->a:Liig;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "CallShareLinkPreviewState(link="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ButtonAction(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxc1;->a:Liig;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lxc1;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

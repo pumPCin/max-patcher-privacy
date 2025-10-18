@@ -10,7 +10,7 @@
 
 .field public c:I
 
-.field public o:Lbbf;
+.field public o:Licf;
 
 
 # virtual methods
@@ -101,7 +101,7 @@
 
     iput v0, p0, Lh4;->b:I
 
-    iget-object v0, p0, Lh4;->o:Lbbf;
+    iget-object v0, p0, Lh4;->o:Licf;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -109,7 +109,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0, v1}, Lbbf;->z(I)V
+    invoke-virtual {v0, v1}, Licf;->z(I)V
 
     :cond_5
     return-object v2
@@ -120,17 +120,17 @@
     throw v0
 .end method
 
-.method public final i()Llze;
+.method public final i()Lq0f;
     .locals 5
 
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lh4;->o:Lbbf;
+    iget-object v0, p0, Lh4;->o:Licf;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lbbf;
+    new-instance v0, Licf;
 
     iget v1, p0, Lh4;->b:I
 
@@ -140,15 +140,15 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v0, v4, v2, v3}, Leie;-><init>(III)V
+    invoke-direct {v0, v4, v2, v3}, Lnje;-><init>(III)V
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Leie;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lnje;->h(Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Lh4;->o:Lbbf;
+    iput-object v0, p0, Lh4;->o:Licf;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -191,7 +191,7 @@
 
     iput v0, p0, Lh4;->b:I
 
-    iget-object v2, p0, Lh4;->o:Lbbf;
+    iget-object v2, p0, Lh4;->o:Licf;
 
     const/4 v3, 0x0
 
@@ -225,7 +225,7 @@
 
     if-eqz v4, :cond_1
 
-    sget-object v5, Lzag;->a:Lzag;
+    sget-object v5, Lccg;->a:Lccg;
 
     invoke-interface {v4, v5}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
@@ -237,7 +237,7 @@
     :cond_2
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2, v1}, Lbbf;->z(I)V
+    invoke-virtual {v2, v1}, Licf;->z(I)V
 
     :cond_3
     return-void

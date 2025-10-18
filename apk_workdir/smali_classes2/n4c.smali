@@ -1,106 +1,90 @@
-.class public final Ln4c;
+.class public final synthetic Ln4c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq4c;
+.implements Lfg4;
 
 
 # instance fields
-.field public final a:Lec3;
+.field public final synthetic a:J
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lec3;)V
+.method public synthetic constructor <init>(JLjava/lang/String;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln4c;->a:Lec3;
+    iput-wide p1, p0, Ln4c;->a:J
+
+    iput-wide p4, p0, Ln4c;->b:J
+
+    iput-object p3, p0, Ln4c;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    new-instance v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Ls3c;->X:Lzd5;
 
-    return v0
+    invoke-virtual {v1}, Li2;->iterator()Ljava/util/Iterator;
 
-    :cond_0
-    instance-of v1, p1, Ln4c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ln4c;
-
-    iget-object v1, p0, Ln4c;->a:Lec3;
-
-    iget-object p1, p1, Ln4c;->a:Lec3;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ln4c;->a:Lec3;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
+    move-result-object v1
 
     :cond_0
-    iget-object v0, v0, Lec3;->a:Ljava/util/List;
+    move-object v2, v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    check-cast v2, Lf2;
 
-    move-result v0
+    invoke-virtual {v2}, Lf2;->hasNext()Z
 
-    return v0
-.end method
+    move-result v3
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    if-eqz v3, :cond_1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
 
-    const-string v1, "FirstNamePayload(errorText="
+    move-result-object v2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-object v5, v2
 
-    iget-object v1, p0, Ln4c;->a:Lec3;
+    check-cast v5, Ls3c;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, v5, Ls3c;->a:Ljava/lang/String;
 
-    const-string v1, ")"
+    iget-object v3, p0, Ln4c;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_0
+
+    iget-wide v1, p0, Ln4c;->a:J
+
+    iget-wide v3, p0, Ln4c;->b:J
+
+    invoke-direct/range {v0 .. v5}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;-><init>(JJLs3c;)V
 
     return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    const-string v1, "Collection contains no element matching the predicate."
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

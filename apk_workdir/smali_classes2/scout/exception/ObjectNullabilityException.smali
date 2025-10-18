@@ -26,11 +26,11 @@
 # instance fields
 .field public final a:Ljava/lang/Class;
 
-.field public final b:Liod;
+.field public final b:Lppd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Liod;)V
+.method public constructor <init>(Ljava/lang/Class;Lppd;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     iput-object p1, p0, Lscout/exception/ObjectNullabilityException;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Liod;
+    iput-object p2, p0, Lscout/exception/ObjectNullabilityException;->b:Lppd;
 
     return-void
 .end method
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lscout/exception/ObjectNullabilityException;->b:Liod;
+    iget-object v1, p0, Lscout/exception/ObjectNullabilityException;->b:Lppd;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

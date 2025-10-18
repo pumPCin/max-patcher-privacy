@@ -3,158 +3,104 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public static final a(Luka;)Lfu1;
+    .locals 2
 
-    const/4 v0, 0x2
+    new-instance v0, Lnkd;
 
-    iput v0, p0, Lhyi;->a:I
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p0, v1}, Lnkd;-><init>(Luka;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    invoke-static {v0}, Ltq;->c(Lzi6;)Lfu1;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static a(D)J
-    .locals 3
+.method public static final b(Lkotlin/coroutines/Continuation;)V
+    .locals 4
 
-    invoke-static {p0, p1}, Lhyi;->b(D)Z
+    sget-boolean v0, Lne4;->a:Z
 
-    move-result v0
+    sget-object v0, Lme4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    if-eqz v0, :cond_1
+    sget-object v1, Lne4;->c:Lme4;
 
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    move-result v0
+    move-result v2
 
-    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+    if-lez v2, :cond_5
 
-    move-result-wide p0
+    sget-boolean v2, Lne4;->a:Z
 
-    const-wide v1, 0xfffffffffffffL
+    if-eqz v2, :cond_0
 
-    and-long/2addr p0, v1
+    invoke-interface {p0}, Lkotlin/coroutines/Continuation;->getContext()Li54;
 
-    const/16 v1, -0x3ff
+    move-result-object v2
 
-    if-ne v0, v1, :cond_0
+    sget-object v3, Lea5;->a:Lea5;
 
-    const/4 v0, 0x1
+    if-ne v2, v3, :cond_0
 
-    shl-long/2addr p0, v0
-
-    return-wide p0
+    goto :goto_2
 
     :cond_0
-    const-wide/high16 v0, 0x10000000000000L
+    instance-of v2, p0, Ls54;
 
-    or-long/2addr p0, v0
+    if-eqz v2, :cond_1
 
-    return-wide p0
+    check-cast p0, Ls54;
+
+    goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "not a normal value"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static b(D)Z
-    .locals 0
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result p0
-
-    const/16 p1, 0x3ff
-
-    if-gt p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
     const/4 p0, 0x0
 
-    return p0
-.end method
+    :goto_0
+    if-nez p0, :cond_2
 
+    goto :goto_2
 
-# virtual methods
-.method public hashCode()I
-    .locals 1
-
-    iget v0, p0, Lhyi;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
+    :cond_2
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
     move-result v0
 
-    return v0
+    if-lez v0, :cond_5
 
-    :pswitch_0
-    invoke-virtual {p0}, Lhyi;->toString()Ljava/lang/String;
+    sget-object v0, Lne4;->b:Lkk3;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Lhyi;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lkk3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    if-nez v0, :cond_4
 
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_1
+    invoke-interface {p0}, Ls54;->getCallerFrame()Ls54;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ls6d;->a(Ljava/lang/Class;)Lv63;
+    if-eqz p0, :cond_3
 
-    move-result-object v0
+    goto :goto_1
 
-    invoke-virtual {v0}, Lv63;->b()Ljava/lang/String;
+    :cond_3
+    :goto_2
+    return-void
 
-    move-result-object v0
+    :cond_4
+    new-instance p0, Ljava/lang/ClassCastException;
 
-    return-object v0
+    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
 
-    nop
+    throw p0
 
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    return-void
 .end method

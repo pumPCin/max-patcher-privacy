@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luhg;
+.implements Lyig;
 
 
 # static fields
@@ -248,7 +248,7 @@
 
     :cond_0
     :try_start_1
-    sget-object v1, Lid9;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lje9;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
 
@@ -293,7 +293,7 @@
     move-exception v1
 
     :try_start_2
-    sget-object v2, Lid9;->a:Ljava/nio/charset/Charset;
+    sget-object v2, Lje9;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v2}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
 

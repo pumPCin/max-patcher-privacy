@@ -1,52 +1,96 @@
-.class public final synthetic Lcz6;
-.super Lti6;
+.class public final Lcz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Ldz6;
 
 
-# static fields
-.field public static final a:Lcz6;
+# instance fields
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ldz6;)V
+    .locals 2
 
-    new-instance v0, Lcz6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "getTime()J"
+    invoke-interface {p1}, Ldz6;->g()J
 
-    const/4 v5, 0x0
+    move-result-wide v0
 
-    const/4 v1, 0x1
+    iput-wide v0, p0, Lcz6;->b:J
 
-    const-class v2, Lmy6;
+    invoke-interface {p1}, Ldz6;->h()J
 
-    const-string v3, "getTime"
+    move-result-wide v0
 
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-wide v0, p0, Lcz6;->c:J
 
-    sput-object v0, Lcz6;->a:Lcz6;
+    invoke-interface {p1}, Ldz6;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcz6;->d:Ljava/util/List;
+
+    invoke-interface {p1}, Ldz6;->b()V
+
+    invoke-interface {p1}, Ldz6;->a()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcz6;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcz6;->e:Z
+
+    return v0
+.end method
+
+.method public final b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final g()J
     .locals 2
 
-    check-cast p1, Lmy6;
+    iget-wide v0, p0, Lcz6;->b:J
 
-    invoke-interface {p1}, Lmy6;->l()J
+    return-wide v0
+.end method
 
-    move-result-wide v0
+.method public final h()J
+    .locals 2
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v0, p0, Lcz6;->c:J
 
-    move-result-object p1
+    return-wide v0
+.end method
 
-    return-object p1
+.method public final j()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcz6;->d:Ljava/util/List;
+
+    return-object v0
 .end method

@@ -23,7 +23,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const-class v1, Lxka;
+    const-class v1, Lzla;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
@@ -56,7 +56,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-class v1, Lx27;
+    const-class v1, Lr37;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -66,7 +66,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-class v1, Lhof;
+    const-class v1, Llpf;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -82,7 +82,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0}, Lyf8;->k(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v0}, Lzg8;->n(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 

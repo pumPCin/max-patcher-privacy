@@ -1,212 +1,194 @@
-.class public Lvoi;
+.class public abstract Lvoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
-
-# static fields
-.field public static final Y:Ljava/util/HashMap;
-
-
-# instance fields
-.field public X:J
-
-.field public a:I
-
-.field public b:J
-
-.field public c:J
-
-.field public o:J
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(I)V
+    .locals 5
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v0, 0x2
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    if-gt v0, p0, :cond_0
 
-    sput-object v0, Lvoi;->Y:Ljava/util/HashMap;
+    const/16 v1, 0x25
+
+    if-ge p0, v1, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "radix "
+
+    const-string v3, " was not in valid range "
+
+    invoke-static {p0, v2, v3}, Li57;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    new-instance v2, Lti7;
+
+    const/16 v3, 0x24
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v0, v3, v4}, Lri7;-><init>(III)V
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+.method public static final b(CCZ)Z
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    const-wide/32 v0, 0x7fffffff
+    if-ne p0, p1, :cond_0
 
-    iput-wide v0, p0, Lvoi;->o:J
-
-    const-wide/32 v0, -0x80000000
-
-    iput-wide v0, p0, Lvoi;->X:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public close()V
-    .locals 4
-
-    iget-wide v0, p0, Lvoi;->b:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0, v0, v1}, Lvoi;->o(J)V
-
-    return-void
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v1, 0x0
 
-    const-string v1, "Did you forget to call start()?"
+    if-nez p2, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return v1
 
-    throw v0
+    :cond_1
+    invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result p0
+
+    invoke-static {p1}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result p1
+
+    if-eq p0, p1, :cond_3
+
+    invoke-static {p0}, Ljava/lang/Character;->toLowerCase(C)C
+
+    move-result p0
+
+    invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
+
+    move-result p1
+
+    if-ne p0, p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    return v1
+
+    :cond_3
+    :goto_0
+    return v0
 .end method
 
-.method public m()V
-    .locals 4
+.method public static c(C)Z
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+    invoke-static {p0}, Ljava/lang/Character;->isWhitespace(C)Z
 
-    move-result-wide v0
+    move-result v0
 
-    const-wide/16 v2, 0x3e8
+    if-nez v0, :cond_1
 
-    div-long/2addr v0, v2
+    invoke-static {p0}, Ljava/lang/Character;->isSpaceChar(C)Z
 
-    iput-wide v0, p0, Lvoi;->b:J
+    move-result p0
 
-    return-void
-.end method
+    if-eqz p0, :cond_0
 
-.method public n(J)V
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move-wide/from16 v1, p1
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
-
-    move-result-wide v3
-
-    const-wide/16 v5, 0x3e8
-
-    div-long/2addr v3, v5
-
-    iget-wide v5, v0, Lvoi;->c:J
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v9, v5, v7
-
-    const-wide/32 v10, -0x80000000
-
-    const-wide/32 v12, 0x7fffffff
-
-    const/4 v14, 0x0
-
-    if-eqz v9, :cond_0
-
-    sub-long v5, v3, v5
-
-    const-wide/32 v15, 0xf4240
-
-    cmp-long v5, v5, v15
-
-    if-ltz v5, :cond_0
-
-    iput v14, v0, Lvoi;->a:I
-
-    iput-wide v7, v0, Lvoi;->b:J
-
-    iput-wide v12, v0, Lvoi;->o:J
-
-    iput-wide v10, v0, Lvoi;->X:J
+    goto :goto_0
 
     :cond_0
-    iput-wide v3, v0, Lvoi;->c:J
+    const/4 p0, 0x0
 
-    iget v3, v0, Lvoi;->a:I
+    return p0
 
-    add-int/lit8 v3, v3, 0x1
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    iput v3, v0, Lvoi;->a:I
+    return p0
+.end method
 
-    iget-wide v3, v0, Lvoi;->o:J
+.method public static d(Lv48;ILrr3;)V
+    .locals 6
 
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v3
-
-    iput-wide v3, v0, Lvoi;->o:J
-
-    iget-wide v3, v0, Lvoi;->X:J
-
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->max(JJ)J
+    invoke-virtual {p0, p1}, Lv48;->h(I)J
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lvoi;->X:J
+    invoke-virtual {p0, v1, v2}, Lv48;->m(J)Ljava/util/List;
 
-    iget v1, v0, Lvoi;->a:I
+    move-result-object v5
 
-    rem-int/lit8 v1, v1, 0x32
+    move-object v0, v5
 
-    if-nez v1, :cond_1
+    check-cast v0, Ljava/util/ArrayList;
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-static {}, Lnqi;->g()V
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lv48;->c:Ljava/lang/Object;
+
+    check-cast v0, [J
+
+    array-length v0, v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    if-eq p1, v0, :cond_2
+
+    add-int/lit8 v0, p1, 0x1
+
+    invoke-virtual {p0, v0}, Lv48;->h(I)J
+
+    move-result-wide v3
+
+    invoke-virtual {p0, p1}, Lv48;->h(I)J
+
+    move-result-wide p0
+
+    sub-long/2addr v3, p0
+
+    const-wide/16 p0, 0x0
+
+    cmp-long p0, v3, p0
+
+    if-lez p0, :cond_1
+
+    new-instance v0, Lc94;
+
+    invoke-direct/range {v0 .. v5}, Lc94;-><init>(JJLjava/util/List;)V
+
+    invoke-interface {p2, v0}, Lrr3;->accept(Ljava/lang/Object;)V
 
     :cond_1
-    iget v1, v0, Lvoi;->a:I
-
-    rem-int/lit16 v1, v1, 0x1f4
-
-    if-nez v1, :cond_2
-
-    iput v14, v0, Lvoi;->a:I
-
-    iput-wide v7, v0, Lvoi;->b:J
-
-    iput-wide v12, v0, Lvoi;->o:J
-
-    iput-wide v10, v0, Lvoi;->X:J
+    :goto_0
+    return-void
 
     :cond_2
-    return-void
-.end method
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-.method public o(J)V
-    .locals 4
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x3e8
-
-    div-long/2addr v0, v2
-
-    sub-long/2addr v0, p1
-
-    invoke-virtual {p0, v0, v1}, Lvoi;->n(J)V
-
-    return-void
+    throw p0
 .end method

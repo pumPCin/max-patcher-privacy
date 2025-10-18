@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static bridge synthetic A(Landroid/media/AudioTrack;Lzg4;)V
+.method public static bridge synthetic A(Landroid/media/AudioTrack;Loh4;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/media/AudioTrack;->unregisterStreamEventCallback(Landroid/media/AudioTrack$StreamEventCallback;)V
@@ -114,7 +114,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic i(Lux1;)V
+.method public static bridge synthetic i(Lby1;)V
     .locals 0
 
     invoke-virtual {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;->onCameraAccessPrioritiesChanged()V
@@ -154,7 +154,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic n(Landroid/media/AudioTrack;Lju1;Lzg4;)V
+.method public static bridge synthetic n(Landroid/media/AudioTrack;Lru1;Loh4;)V
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioTrack;->registerStreamEventCallback(Ljava/util/concurrent/Executor;Landroid/media/AudioTrack$StreamEventCallback;)V
@@ -162,7 +162,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic o(Landroid/media/AudioTrack;Lzg4;)V
+.method public static bridge synthetic o(Landroid/media/AudioTrack;Loh4;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/media/AudioTrack;->unregisterStreamEventCallback(Landroid/media/AudioTrack$StreamEventCallback;)V
@@ -262,7 +262,7 @@
     return-object v0
 .end method
 
-.method public static bridge synthetic z(Landroid/media/AudioTrack;Lju1;Lzg4;)V
+.method public static bridge synthetic z(Landroid/media/AudioTrack;Lru1;Loh4;)V
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioTrack;->registerStreamEventCallback(Ljava/util/concurrent/Executor;Landroid/media/AudioTrack$StreamEventCallback;)V

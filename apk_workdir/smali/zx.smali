@@ -1,158 +1,192 @@
 .class public final Lzx;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final q0:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public static r0:Lhu9;
+
+.field public static volatile s0:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final Y:Ljava/util/concurrent/CountDownLatch;
+
+.field public final synthetic Z:Ll4i;
+
+.field public final a:Lsj4;
+
+.field public final b:Lfu9;
+
+.field public volatile c:I
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 8
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v7, Lp30;
 
-    iput v0, p0, Lzx;->a:I
+    const/4 v0, 0x4
 
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v0}, Lp30;-><init>(I)V
+
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    const/16 v0, 0xa
+
+    invoke-direct {v6, v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
+
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const-wide/16 v3, 0x1
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/4 v1, 0x5
+
+    const/16 v2, 0x80
+
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lzx;->q0:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sput-object v0, Lzx;->s0:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 1
+.method public constructor <init>(Ll4i;)V
+    .locals 2
 
-    .line 2
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lzx;->a:I
+    iput-object p1, p0, Lzx;->Z:Ll4i;
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    const/4 p1, 0x1
 
-    return-void
-.end method
+    iput p1, p0, Lzx;->c:I
 
-.method public synthetic constructor <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
-    .locals 1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
-    const/4 v0, 0x2
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput v0, p0, Lzx;->a:I
+    iput-object v0, p0, Lzx;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Lzx;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v0, Lsj4;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lzx;->a:Lsj4;
+
+    new-instance v1, Lfu9;
+
+    invoke-direct {v1, p0, v0}, Lfu9;-><init>(Lzx;Lsj4;)V
+
+    iput-object v1, p0, Lzx;->b:Lfu9;
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object v0, p0, Lzx;->Y:Ljava/util/concurrent/CountDownLatch;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 5
 
-    iget v0, p0, Lzx;->a:I
+    const-class v0, Lzx;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    :pswitch_0
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
-
-    return-void
-
-    :pswitch_1
-    const/16 v0, 0x13
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    monitor-enter p0
-
-    :goto_0
     :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v1, Lzx;->r0:Lhu9;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lhu9;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, v4}, Lhu9;-><init>(Landroid/os/Looper;IZ)V
+
+    sput-object v1, Lzx;->r0:Lhu9;
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
+    move-exception p1
 
     goto :goto_1
 
-    :catch_0
-    :try_start_1
-    monitor-exit p0
+    :cond_0
+    :goto_0
+    sget-object v1, Lzx;->r0:Lhu9;
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v0, Lgu9;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-direct {v0, p0, p1}, Lgu9;-><init>(Lzx;[Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v1, p1, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
     :goto_1
-    monitor-exit p0
+    :try_start_1
+    monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v0
+    throw p1
+.end method
 
-    :catch_1
-    :cond_0
-    :goto_2
-    :pswitch_2
-    :try_start_2
-    const-class v0, Ldy;
+.method public final run()V
+    .locals 1
 
-    monitor-enter v0
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
+    iget-object v0, p0, Lzx;->Z:Ll4i;
 
-    :try_start_3
-    sget-object v1, Ldy;->j:Ldy;
-
-    invoke-static {}, Lrfi;->a()Ldy;
-
-    move-result-object v1
-
-    sget-object v2, Ldy;->j:Ldy;
-
-    if-ne v1, v2, :cond_1
-
-    const/4 v1, 0x0
-
-    sput-object v1, Ldy;->j:Ldy;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    monitor-exit v0
+    invoke-virtual {v0}, Ll4i;->b()V
 
     return-void
-
-    :catchall_1
-    move-exception v1
-
-    goto :goto_3
-
-    :cond_1
-    monitor-exit v0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ldy;->k()V
-
-    goto :goto_2
-
-    :goto_3
-    monitor-exit v0
-
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

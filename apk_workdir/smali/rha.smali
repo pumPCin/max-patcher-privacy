@@ -1,71 +1,123 @@
 .class public final Lrha;
-.super Lg3;
+.super Lcu0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public e:Ljava/util/LinkedList;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lsja;I)V
-    .locals 0
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iput p2, p0, Lrha;->b:I
+    iget-object v0, p0, Lrha;->e:Ljava/util/LinkedList;
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqha;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lqha;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lqha;->a:Ljava/lang/ref/SoftReference;
+
+    iput-object v1, v0, Lqha;->b:Ljava/lang/ref/SoftReference;
+
+    iput-object v1, v0, Lqha;->c:Ljava/lang/ref/SoftReference;
+
+    :cond_0
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lqha;->a:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lqha;->b:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lqha;->c:Ljava/lang/ref/SoftReference;
+
+    iget-object p1, p0, Lcu0;->c:Ljava/util/LinkedList;
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
+.method public final b()Ljava/lang/Object;
+    .locals 4
 
-# virtual methods
-.method public final o(Lcka;)V
-    .locals 2
+    iget-object v0, p0, Lcu0;->c:Ljava/util/LinkedList;
 
-    iget v0, p0, Lrha;->b:I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    new-instance v0, Lnia;
+    check-cast v0, Lqha;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, p1, v1}, Lnia;-><init>(Lcka;I)V
+    iget-object v1, v0, Lqha;->a:Ljava/lang/ref/SoftReference;
 
-    iget-object p1, p0, Lg3;->a:Lsja;
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v0}, Lsja;->a(Lcka;)V
+    if-nez v1, :cond_0
 
-    return-void
+    move-object v1, v2
 
-    :pswitch_0
-    new-instance v0, Lnia;
+    goto :goto_0
 
-    const/4 v1, 0x0
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
-    invoke-direct {v0, p1, v1}, Lnia;-><init>(Lcka;I)V
+    move-result-object v1
 
-    iget-object p1, p0, Lg3;->a:Lsja;
+    :goto_0
+    iget-object v3, v0, Lqha;->a:Ljava/lang/ref/SoftReference;
 
-    invoke-interface {p1, v0}, Lsja;->a(Lcka;)V
+    if-eqz v3, :cond_1
 
-    return-void
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    :pswitch_1
-    new-instance v0, Lqha;
+    iput-object v2, v0, Lqha;->a:Ljava/lang/ref/SoftReference;
 
-    invoke-direct {v0, p1}, Lql0;-><init>(Lcka;)V
+    :cond_1
+    iget-object v3, v0, Lqha;->b:Ljava/lang/ref/SoftReference;
 
-    iget-object p1, p0, Lg3;->a:Lsja;
+    if-eqz v3, :cond_2
 
-    invoke-interface {p1, v0}, Lsja;->a(Lcka;)V
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    return-void
+    iput-object v2, v0, Lqha;->b:Ljava/lang/ref/SoftReference;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    iget-object v3, v0, Lqha;->c:Ljava/lang/ref/SoftReference;
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Lqha;->c:Ljava/lang/ref/SoftReference;
+
+    :cond_3
+    iget-object v2, p0, Lrha;->e:Ljava/util/LinkedList;
+
+    invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-object v1
 .end method

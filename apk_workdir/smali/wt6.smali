@@ -1,246 +1,228 @@
 .class public final Lwt6;
-.super Ljava/lang/Object;
+.super Lbdb;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final synthetic c:I
 
-.field public b:I
 
-.field public c:F
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-.field public d:I
+    iput p1, p0, Lwt6;->c:I
 
-.field public e:Z
+    invoke-direct {p0}, Lbdb;-><init>()V
 
-.field public f:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final c(Landroid/view/View;II)I
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    iget p3, p0, Lwt6;->c:I
 
-    goto :goto_1
+    packed-switch p3, :pswitch_data_0
+
+    const/high16 p1, -0x80000000
+
+    return p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result p2
+
+    const/16 p3, 0x8
+
+    if-ne p2, p3, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lwt6;
+    invoke-virtual {p1}, Landroid/view/View;->getBaseline()I
 
-    if-nez v0, :cond_1
+    move-result p1
 
-    goto :goto_0
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_1
+
+    const/high16 p1, -0x80000000
 
     :cond_1
-    check-cast p1, Lwt6;
-
-    iget v0, p0, Lwt6;->a:I
-
-    iget v1, p1, Lwt6;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lwt6;->b:I
-
-    iget v1, p1, Lwt6;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lwt6;->c:F
-
-    iget v1, p1, Lwt6;->c:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lwt6;->d:I
-
-    iget v1, p1, Lwt6;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Lwt6;->e:Z
-
-    iget-boolean v1, p1, Lwt6;->e:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lwt6;->f:I
-
-    iget p1, p1, Lwt6;->f:I
-
-    if-eq v0, p1, :cond_7
-
     :goto_0
+    return p1
+
+    :pswitch_1
+    shr-int/lit8 p1, p2, 0x1
+
+    return p1
+
+    :pswitch_2
+    return p2
+
+    :pswitch_3
     const/4 p1, 0x0
 
     return p1
 
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
+    :pswitch_4
+    const/high16 p1, -0x80000000
 
     return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public d()Lcu6;
+    .locals 1
 
-    iget v0, p0, Lwt6;->a:I
+    iget v0, p0, Lwt6;->c:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lwt6;->b:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lwt6;->c:F
-
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lwt6;->d:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lwt6;->e:Z
-
-    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget v1, p0, Lwt6;->f:I
-
-    invoke-static {v1}, Lwx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 9
-
-    iget v0, p0, Lwt6;->a:I
-
-    iget v1, p0, Lwt6;->b:I
-
-    iget v2, p0, Lwt6;->c:F
-
-    iget v3, p0, Lwt6;->d:I
-
-    iget-boolean v4, p0, Lwt6;->e:Z
-
-    iget v5, p0, Lwt6;->f:I
-
-    const-string v6, ", selectedPageIndex="
-
-    const-string v7, ", pageOffsetFraction="
-
-    const-string v8, "PageState(pagesNumber="
-
-    invoke-static {v8, v0, v6, v1, v7}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", selectedBigDotIndex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", wasShiftedFromZeroToZero="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dotsAnimationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    if-eq v5, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v5, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v5, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v5, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "ALL_DOTS_TO_RIGHT"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ALL_DOTS_TO_LEFT"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "BIG_DOTS_CHANGE"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "NONE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-super {p0}, Lbdb;->d()Lcu6;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lyt6;
+
+    invoke-direct {v0}, Lcu6;-><init>()V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lwt6;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "FILL"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "BASELINE"
+
+    return-object v0
+
+    :pswitch_1
+    const-string v0, "CENTER"
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "TRAILING"
+
+    return-object v0
+
+    :pswitch_3
+    const-string v0, "LEADING"
+
+    return-object v0
+
+    :pswitch_4
+    const-string v0, "UNDEFINED"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g(Landroid/view/View;I)I
+    .locals 0
+
+    iget p1, p0, Lwt6;->c:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_1
+    shr-int/lit8 p1, p2, 0x1
+
+    return p1
+
+    :pswitch_2
+    return p2
+
+    :pswitch_3
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_4
+    const/high16 p1, -0x80000000
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(II)I
+    .locals 1
+
+    iget v0, p0, Lwt6;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return p1
+
+    :pswitch_0
+    return p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_0
+    .end packed-switch
 .end method

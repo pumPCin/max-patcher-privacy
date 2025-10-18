@@ -1,394 +1,138 @@
 .class public final Lr7a;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lbj6;
 
 
 # instance fields
-.field public final a:Lt88;
+.field public final synthetic X:I
 
-.field public volatile b:J
+.field public synthetic Y:Lon;
 
-.field public volatile c:J
-
-.field public final d:Lv0e;
-
-.field public e:J
-
-.field public f:Ljava/time/Instant;
+.field public synthetic Z:Lv5b;
 
 
 # direct methods
-.method public constructor <init>(Lt88;Lv0e;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lr7a;->X:I
 
-    iput-object p1, p0, Lr7a;->a:Lt88;
-
-    iput-object p2, p0, Lr7a;->d:Lv0e;
-
-    const-wide/16 p1, 0x2ee0
-
-    iput-wide p1, p0, Lr7a;->c:J
-
-    const-wide p1, 0x7fffffffffffffffL
-
-    iput-wide p1, p0, Lr7a;->e:J
-
-    sget-object p1, Ljava/time/Instant;->MIN:Ljava/time/Instant;
-
-    iput-object p1, p0, Lr7a;->f:Ljava/time/Instant;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-wide v0, p0, Lr7a;->b:J
+    iget v0, p0, Lr7a;->X:I
 
-    const-wide/16 v2, 0x0
+    check-cast p1, Lon;
 
-    cmp-long v0, v0, v2
+    check-cast p2, Lv5b;
 
-    if-gez v0, :cond_0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lr7a;->a:Lt88;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "Inconsistency error in congestion controller; attempt to set bytes in-flight below 0"
+    new-instance v0, Lr7a;
 
-    invoke-interface {v0, v1}, Lt88;->error(Ljava/lang/String;)V
+    const/4 v1, 0x3
 
-    iput-wide v2, p0, Lr7a;->b:J
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lr7a;->d:Lv0e;
+    invoke-direct {v0, v1, p3, v2}, Lr7a;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v0}, Lv0e;->k()V
+    iput-object p1, v0, Lr7a;->Y:Lon;
 
-    :cond_0
-    return-void
+    iput-object p2, v0, Lr7a;->Z:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Lr7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lr7a;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Lr7a;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lr7a;->Y:Lon;
+
+    iput-object p2, v0, Lr7a;->Z:Lv5b;
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    invoke-virtual {v0, p1}, Lr7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final declared-synchronized b(Ljava/util/List;)V
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "Bytes in flight decreased with "
+    iget v0, p0, Lr7a;->X:I
 
-    monitor-enter p0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lr7a;->Y:Lon;
 
-    new-instance v2, Lm0;
+    iget-object v0, p0, Lr7a;->Z:Lv5b;
 
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3}, Lm0;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Ln0;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3}, Ln0;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    iget-wide v3, p0, Lr7a;->b:J
-
-    sub-long/2addr v3, v1
-
-    iput-wide v3, p0, Lr7a;->b:J
-
-    iget-object v3, p0, Lr7a;->d:Lv0e;
-
-    invoke-virtual {v3}, Lv0e;->k()V
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v1, v3
-
-    if-lez v3, :cond_0
-
-    invoke-virtual {p0}, Lr7a;->a()V
-
-    iget-object v3, p0, Lr7a;->a:Lt88;
-
-    iget-wide v4, p0, Lr7a;->b:J
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " to "
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " ("
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " packets RESET)"
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v3, p1}, Lt88;->debug(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Ljava/util/List;)V
-    .locals 6
-
-    const-string v0, "Bytes in flight decreased to "
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Lm0;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Lm0;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Ln0;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Ln0;-><init>(I)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-wide v2, p0, Lr7a;->b:J
-
-    int-to-long v4, v1
-
-    sub-long/2addr v2, v4
-
-    iput-wide v2, p0, Lr7a;->b:J
-
-    iget-object v1, p0, Lr7a;->d:Lv0e;
-
-    invoke-virtual {v1}, Lv0e;->k()V
-
-    invoke-virtual {p0}, Lr7a;->a()V
-
-    iget-object v1, p0, Lr7a;->a:Lt88;
-
-    iget-wide v2, p0, Lr7a;->b:J
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " ("
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " packets acked)"
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v1, p1}, Lt88;->debug(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d(Lygc;)V
-    .locals 6
-
-    const-string v0, "Bytes in flight exceeds congestion window: "
-
-    const-string v1, "Bytes in flight increased to "
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p1}, Lygc;->q()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-wide v2, p0, Lr7a;->b:J
-
-    invoke-virtual {p1}, Lygc;->o()I
-
-    move-result p1
-
-    int-to-long v4, p1
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lr7a;->b:J
-
-    iget-object p1, p0, Lr7a;->a:Lt88;
-
-    iget-wide v2, p0, Lr7a;->b:J
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lt88;->debug(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lr7a;->b:J
-
-    iget-wide v3, p0, Lr7a;->c:J
-
-    cmp-long p1, v1, v3
-
-    if-lez p1, :cond_0
-
-    iget-object p1, p0, Lr7a;->a:Lt88;
-
-    iget-wide v1, p0, Lr7a;->b:J
-
-    iget-wide v3, p0, Lr7a;->c:J
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " > "
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lv5b;->b()Lff0;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lt88;->cc(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v0, v0, Lff0;->k:I
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    :catchall_0
-    move-exception p1
+    sget-object p1, Lccg;->a:Lccg;
 
-    goto :goto_1
+    return-object p1
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    :pswitch_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lr7a;->Y:Lon;
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v0, p0, Lr7a;->Z:Lv5b;
 
-    throw p1
+    invoke-interface {v0}, Lv5b;->b()Lff0;
+
+    move-result-object v0
+
+    iget v0, v0, Lff0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

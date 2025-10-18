@@ -1,62 +1,316 @@
-.class public final Lau1;
-.super Le4;
+.class public abstract Lau1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ler7;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final NO_RECEIVER:Ljava/lang/Object;
 
 
 # instance fields
-.field public final synthetic r0:Lbu1;
+.field private final isTopLevel:Z
+
+.field private final name:Ljava/lang/String;
+
+.field private final owner:Ljava/lang/Class;
+
+.field protected final receiver:Ljava/lang/Object;
+
+.field private transient reflected:Ler7;
+
+.field private final signature:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbu1;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lzt1;->a:Lzt1;
+
+    sput-object v0, Lau1;->NO_RECEIVER:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lau1;->r0:Lbu1;
+    iput-object p1, p0, Lau1;->receiver:Ljava/lang/Object;
+
+    iput-object p2, p0, Lau1;->owner:Ljava/lang/Class;
+
+    iput-object p3, p0, Lau1;->name:Ljava/lang/String;
+
+    iput-object p4, p0, Lau1;->signature:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lau1;->isTopLevel:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()Ljava/lang/String;
-    .locals 3
+.method public varargs call([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lau1;->r0:Lbu1;
-
-    iget-object v0, v0, Lbu1;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
 
     move-result-object v0
 
-    check-cast v0, Lyt1;
+    invoke-interface {v0, p1}, Ler7;->call([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public callBy(Ljava/util/Map;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ler7;->callBy(Ljava/util/Map;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public compute()Ler7;
+    .locals 1
+
+    iget-object v0, p0, Lau1;->reflected:Ler7;
 
     if-nez v0, :cond_0
 
-    const-string v0, "Completer object has been garbage collected, future will fail soon"
+    invoke-virtual {p0}, Lau1;->computeReflected()Ler7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lau1;->reflected:Ler7;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public abstract computeReflected()Ler7;
+.end method
+
+.method public getAnnotations()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ldr7;->getAnnotations()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getBoundReceiver()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lau1;->receiver:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lau1;->name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOwner()Lgr7;
+    .locals 2
+
+    iget-object v0, p0, Lau1;->owner:Ljava/lang/Class;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     return-object v0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lau1;->isTopLevel:Z
 
-    const-string v2, "tag=["
+    if-eqz v1, :cond_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v1, Lz7d;->a:La8d;
 
-    iget-object v0, v0, Lyt1;->a:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Lzbb;
 
-    const-string v0, "]"
+    invoke-direct {v1, v0}, Lzbb;-><init>(Ljava/lang/Class;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_1
+    invoke-static {v0}, Lz7d;->a(Ljava/lang/Class;)Lh73;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public getParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->getParameters()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract getReflected()Ler7;
+.end method
+
+.method public getReturnType()Lwr7;
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->getReturnType()Lwr7;
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getSignature()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lau1;->signature:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTypeParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->getTypeParameters()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getVisibility()Lxr7;
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->getVisibility()Lxr7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isAbstract()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->isAbstract()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isFinal()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->isFinal()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isOpen()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->isOpen()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isSuspend()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ler7;->isSuspend()Z
+
+    move-result v0
+
+    return v0
 .end method

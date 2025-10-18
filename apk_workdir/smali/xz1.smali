@@ -1,33 +1,76 @@
 .class public final Lxz1;
-.super Lfwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lz97;
+
+
+# instance fields
+.field public final a:Lwz1;
+
+
+# direct methods
+.method public constructor <init>(Lwz1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxz1;->a:Lwz1;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final C(Ljava/util/ArrayList;Lt1e;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+.method public final a()I
     .locals 1
 
-    iget-object v0, p0, Lfwb;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->captureBurstRequests(Ljava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
-
-    move-result p1
-
-    return p1
+    return v0
 .end method
 
-.method public final N(Landroid/hardware/camera2/CaptureRequest;Lt1e;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+.method public final b(Lah5;)V
     .locals 1
 
-    iget-object v0, p0, Lfwb;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lxz1;->a:Lwz1;
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
+    invoke-interface {v0, p1}, Lwz1;->b(Lah5;)V
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->setSingleRepeatingRequest(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+    return-void
+.end method
 
-    move-result p1
+.method public final c()Landroid/graphics/Matrix;
+    .locals 1
 
-    return p1
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final d()Lalf;
+    .locals 1
+
+    iget-object v0, p0, Lxz1;->a:Lwz1;
+
+    invoke-interface {v0}, Lwz1;->d()Lalf;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getTimestamp()J
+    .locals 2
+
+    iget-object v0, p0, Lxz1;->a:Lwz1;
+
+    invoke-interface {v0}, Lwz1;->getTimestamp()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

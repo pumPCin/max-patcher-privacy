@@ -1,360 +1,87 @@
-.class public abstract Lkme;
+.class public final Lkme;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llk9;
+
 
 # instance fields
-.field public a:J
+.field public final a:J
 
-.field public b:Ljava/lang/Runnable;
 
-.field public c:Lgne;
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
 
-.field public d:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:Lyuc;
+    iput-wide p1, p0, Lkme;->a:J
 
-.field public f:Lzuc;
-
-.field public g:J
-
-.field public h:Z
-
-.field public i:Lic5;
-
-.field public j:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract build()Lime;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkme;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkme;
+
+    iget-wide v3, p0, Lkme;->a:J
+
+    iget-wide v5, p1, Lkme;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final getEndpointParameters()Lic5;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->i:Lic5;
-
-    return-object v0
-.end method
-
-.method public final getExecutor()Ljava/util/concurrent/ExecutorService;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-object v0
-.end method
-
-.method public final getLog()Lyuc;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->e:Lyuc;
-
-    return-object v0
-.end method
-
-.method public final getLogConfiguration()Lzuc;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->f:Lzuc;
-
-    return-object v0
-.end method
-
-.method public final getReconnectTimeoutAction()Ljava/lang/Runnable;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->b:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method public final getServerPingTimeoutMs()J
-    .locals 2
-
-    iget-wide v0, p0, Lkme;->g:J
-
-    return-wide v0
-.end method
-
-.method public final getSignalingStat()Lgne;
-    .locals 1
-
-    iget-object v0, p0, Lkme;->c:Lgne;
-
-    return-object v0
-.end method
-
-.method public final getTimeoutMS()J
+.method public final hashCode()I
     .locals 2
 
     iget-wide v0, p0, Lkme;->a:J
 
-    return-wide v0
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-.method public final isFastRecoverEnabled()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lkme;->h:Z
+    move-result v0
 
     return v0
 .end method
 
-.method public final isReplaceParametersInEndpointEnabled()Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-boolean v0, p0, Lkme;->j:Z
+    const-string v0, "ShowMessageContextMenu(messageId="
 
-    return v0
-.end method
+    const-string v1, ")"
 
-.method public final setEndpointParameters(Lic5;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lic5;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
+    iget-wide v2, p0, Lkme;->a:J
 
-    .line 2
-    iput-object p1, p0, Lkme;->i:Lic5;
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final setEndpointParameters(Lic5;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->i:Lic5;
-
-    return-void
-.end method
-
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/ExecutorService;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-object p0
-.end method
-
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-.method public final setFastRecoverEnabled(Z)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-boolean p1, p0, Lkme;->h:Z
-
-    return-object p0
-.end method
-
-.method public final setFastRecoverEnabled(Z)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lkme;->h:Z
-
-    return-void
-.end method
-
-.method public final setIsReplaceParametersInEndpointEnabled(Z)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lkme;"
-        }
-    .end annotation
-
-    iput-boolean p1, p0, Lkme;->j:Z
-
-    return-object p0
-.end method
-
-.method public final setLog(Lyuc;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lyuc;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lkme;->e:Lyuc;
-
-    return-object p0
-.end method
-
-.method public final setLog(Lyuc;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->e:Lyuc;
-
-    return-void
-.end method
-
-.method public final setLogConfiguration(Lzuc;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lzuc;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lkme;->f:Lzuc;
-
-    return-object p0
-.end method
-
-.method public final setLogConfiguration(Lzuc;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->f:Lzuc;
-
-    return-void
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lkme;->b:Ljava/lang/Runnable;
-
-    return-object p0
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->b:Ljava/lang/Runnable;
-
-    return-void
-.end method
-
-.method public final setReplaceParametersInEndpointEnabled(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lkme;->j:Z
-
-    return-void
-.end method
-
-.method public final setServerPingTimeoutMs(J)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lkme;->g:J
-
-    return-object p0
-.end method
-
-.method public final setServerPingTimeoutMs(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lkme;->g:J
-
-    return-void
-.end method
-
-.method public final setSignalingStat(Lgne;)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lgne;",
-            ")",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lkme;->c:Lgne;
-
-    return-object p0
-.end method
-
-.method public final setSignalingStat(Lgne;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lkme;->c:Lgne;
-
-    return-void
-.end method
-
-.method public final setTimeoutMS(J)Lkme;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lkme;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lkme;->a:J
-
-    return-object p0
-.end method
-
-.method public final setTimeoutMS(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lkme;->a:J
-
-    return-void
+    return-object v0
 .end method

@@ -1,102 +1,135 @@
 .class public final Lx63;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lx63;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final b:Ljava/lang/reflect/Method;
+
+# instance fields
+.field public X:I
+
+.field public Y:F
+
+.field public Z:Z
+
+.field public a:Lcom/google/android/gms/maps/model/LatLng;
+
+.field public b:D
+
+.field public c:F
+
+.field public o:I
+
+.field public q0:Z
+
+.field public r0:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/reflect/Method;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lp0i;
 
-    iput p1, p0, Lx63;->a:I
+    const/16 v1, 0xb
 
-    iput-object p2, p0, Lx63;->b:Ljava/lang/reflect/Method;
+    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
 
-    const/4 p1, 0x1
-
-    invoke-virtual {p2, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    sput-object v0, Lx63;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    const/4 v0, 0x1
+    const/16 v0, 0x4f45
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    return v0
+    move-result v0
 
-    :cond_0
-    instance-of v1, p1, Lx63;
+    const/4 v1, 0x2
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lx63;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    if-nez v1, :cond_1
+    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    return v2
+    iget-wide v1, p0, Lx63;->b:D
 
-    :cond_1
-    check-cast p1, Lx63;
+    const/4 p2, 0x3
 
-    iget v1, p0, Lx63;->a:I
+    const/16 v3, 0x8
 
-    iget v3, p1, Lx63;->a:I
+    invoke-static {p1, p2, v3}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    if-ne v1, v3, :cond_2
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeDouble(D)V
 
-    iget-object v1, p0, Lx63;->b:Ljava/lang/reflect/Method;
+    iget p2, p0, Lx63;->c:F
 
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    const/4 v1, 0x4
 
-    move-result-object v1
+    invoke-static {p1, v1, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    iget-object p1, p1, Lx63;->b:Ljava/lang/reflect/Method;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    iget p2, p0, Lx63;->o:I
 
-    move-result-object p1
+    const/4 v2, 0x5
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    move-result p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz p1, :cond_2
+    iget p2, p0, Lx63;->X:I
 
-    return v0
+    const/4 v2, 0x6
 
-    :cond_2
-    return v2
-.end method
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lx63;->a:I
+    iget p2, p0, Lx63;->Y:F
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v2, 0x7
 
-    iget-object v1, p0, Lx63;->b:Ljava/lang/reflect/Method;
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    move-result-object v1
+    iget-boolean p2, p0, Lx63;->Z:Z
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-static {p1, v3, v1}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    move-result v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    add-int/2addr v1, v0
+    iget-boolean p2, p0, Lx63;->q0:Z
 
-    return v1
+    const/16 v2, 0x9
+
+    invoke-static {p1, v2, v1}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/16 p2, 0xa
+
+    iget-object v1, p0, Lx63;->r0:Ljava/util/ArrayList;
+
+    invoke-static {p1, v1, p2}, Llyi;->s(Landroid/os/Parcel;Ljava/util/List;I)V
+
+    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

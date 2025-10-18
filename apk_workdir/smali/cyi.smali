@@ -1,66 +1,82 @@
-.class public final Lcyi;
+.class public abstract Lcyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public static final a(Ll24;Lmh;Lmh;)Ltid;
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltid;
 
-    iput-object p1, p0, Lcyi;->a:Landroid/content/Context;
+    const/4 v5, 0x0
 
-    return-void
-.end method
-
-.method public static a(Ljava/io/File;)J
-    .locals 5
-
-    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/io/File;->length()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object p0
-
-    const-wide/16 v0, 0x0
-
-    if-eqz p0, :cond_1
+    const/4 v6, -0x1
 
     const/4 v2, 0x0
 
-    :goto_0
-    array-length v3, p0
+    const/4 v3, 0x0
 
-    if-ge v2, v3, :cond_1
+    const/4 v4, 0x0
 
-    aget-object v3, p0, v2
+    move-object v1, p0
 
-    invoke-static {v3}, Lcyi;->a(Ljava/io/File;)J
+    invoke-direct/range {v0 .. v6}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
-    move-result-wide v3
+    invoke-virtual {v0, p2}, Ltid;->c(Lq24;)V
 
-    add-long/2addr v0, v3
+    invoke-virtual {v0, p1}, Ltid;->a(Lq24;)V
 
-    add-int/lit8 v2, v2, 0x1
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public static final b(Ljava/lang/Long;)Ljava/lang/String;
+    .locals 4
 
-    :cond_1
-    return-wide v0
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const/4 v1, 0x4
+
+    filled-new-array {p0, p0, p0, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v1, "%d [%tF %tT %tL]"
+
+    invoke-static {v0, v1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "ms"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

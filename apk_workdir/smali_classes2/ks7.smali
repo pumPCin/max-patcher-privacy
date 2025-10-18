@@ -1,90 +1,90 @@
 .class public final Lks7;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lwk4;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljs7;
-
-.field public c:I
+.field public final synthetic Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
-    .locals 3
+.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lks7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x2
 
-    iput v0, p0, Lks7;->c:I
-
-    iput-object p1, p0, Lks7;->a:Landroid/view/View;
-
-    new-instance v0, Ljs7;
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Lj6;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p1}, Lj6;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, p2, v1}, Ljs7;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lj6;)V
-
-    iput-object v0, p0, Lks7;->b:Ljs7;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPause(Liw7;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string p1, "ks7"
+    check-cast p1, Lu95;
 
-    const-string v0, "onPause: unregisterGlobalLayoutListener"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lks7;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p0, p1, p2}, Lks7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v0, p0, Lks7;->b:Ljs7;
+    check-cast p1, Lks7;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-void
+    invoke-virtual {p1, p2}, Lks7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onResume(Liw7;)V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string p1, "ks7"
+    new-instance v0, Lks7;
 
-    const-string v0, "onResume: registerGlobalLayoutListener"
+    iget-object v1, p0, Lks7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p2}, Lks7;-><init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p1, p0, Lks7;->a:Landroid/view/View;
+    iput-object p1, v0, Lks7;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lks7;->b:Ljs7;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    iget-object p1, p0, Lks7;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Lu95;
+
+    iget-object v0, p0, Lks7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+
+    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->Y:Lcy2;
+
+    iget-object v2, p1, Lu95;->a:Ljava/util/List;
+
+    invoke-virtual {v1, v2}, Lr18;->E(Ljava/util/List;)V
+
+    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Li76;
+
+    iget-object p1, p1, Lu95;->b:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

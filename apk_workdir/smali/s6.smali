@@ -163,11 +163,11 @@
 
     check-cast p1, Landroidx/appcompat/widget/ActionBarContainer;
 
-    iget-boolean v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->t0:Z
+    iget-boolean v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->s0:Z
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->s0:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->r0:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_3
 
@@ -183,11 +183,11 @@
     invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_2
-    iget-object v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->r0:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->q0:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_3
 
-    iget-boolean p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->u0:Z
+    iget-boolean p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->t0:Z
 
     if-eqz p1, :cond_3
 
@@ -273,11 +273,11 @@
 
     check-cast v0, Landroidx/appcompat/widget/ActionBarContainer;
 
-    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->t0:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->s0:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->s0:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->r0:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 

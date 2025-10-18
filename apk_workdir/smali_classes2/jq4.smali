@@ -1,69 +1,60 @@
-.class public final Ljq4;
-.super Lc5c;
+.class public final synthetic Ljq4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lal8;
+
+
+# instance fields
+.field public final synthetic a:Lkq4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public synthetic constructor <init>(Lkq4;)V
+    .locals 0
 
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    invoke-direct {p0, v0}, Lj6d;-><init>(Landroid/view/View;)V
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v1, -0x1
-
-    const/4 v2, -0x2
-
-    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object p1, Lhpa;->c:Lhpa;
-
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lhpa;)V
-
-    sget-object p1, Lgpa;->c:Lgpa;
-
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lgpa;)V
-
-    sget-object p1, Lepa;->b:Lepa;
-
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lepa;)V
+    iput-object p1, p0, Ljq4;->a:Lkq4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Lb18;)V
+.method public final n(Lbl8;)V
     .locals 2
 
-    check-cast p1, Lkq4;
+    iget-object v0, p0, Ljq4;->a:Lkq4;
 
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+    iput-object p1, v0, Lkq4;->o:Ljava/lang/Object;
 
-    move-object v1, v0
+    iget-object v0, v0, Lkq4;->b:Ljava/lang/Object;
 
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object p1, p1, Lkq4;->a:Ljqf;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v1
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+    if-eqz v1, :cond_0
 
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lal8;
+
+    invoke-interface {v1, p1}, Lal8;->n(Lbl8;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

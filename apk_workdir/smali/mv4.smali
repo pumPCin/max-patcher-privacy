@@ -1,49 +1,31 @@
-.class public final Lmv4;
-.super Lk14;
+.class public abstract Lmv4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lh40;
+# static fields
+.field public static final a:Lsm4;
 
-.field public Y:I
+.field public static final b:Lvbg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Lcl4;
 
 
 # direct methods
-.method public constructor <init>(Lh40;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lmv4;->X:Lh40;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lmv4;->o:Ljava/lang/Object;
+    sget-object v0, Lsm4;->b:Lsm4;
 
-    iget p1, p0, Lmv4;->Y:I
+    sput-object v0, Lmv4;->a:Lsm4;
 
-    const/high16 v0, -0x80000000
+    sget-object v0, Lvbg;->a:Lvbg;
 
-    or-int/2addr p1, v0
+    sput-object v0, Lmv4;->b:Lvbg;
 
-    iput p1, p0, Lmv4;->Y:I
+    sget-object v0, Lcl4;->a:Lcl4;
 
-    iget-object p1, p0, Lmv4;->X:Lh40;
+    sput-object v0, Lmv4;->c:Lcl4;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

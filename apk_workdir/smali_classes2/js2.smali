@@ -1,9 +1,9 @@
 .class public final Ljs2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljs2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Ljs2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,76 +60,112 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 11
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Ljs2;->X:Ljava/lang/Object;
 
-    check-cast p1, Ltx9;
+    check-cast p1, Ljava/lang/Boolean;
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->j1:[Lwq7;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
 
     iget-object v0, p0, Ljs2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    invoke-virtual {v0}, Lx14;->getView()Landroid/view/View;
+    iget-object v1, v0, Lone/me/chatscreen/ChatScreen;->V0:Lh0d;
 
-    move-result-object v1
+    sget-object v2, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
 
-    if-eqz v1, :cond_1
-
-    iget v1, p1, Ltx9;->a:I
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
-
-    move-result-object v1
-
-    iget v2, p1, Ltx9;->a:I
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->j1()Le72;
 
     move-result-object v2
 
-    iget-object p1, p1, Ltx9;->b:Ljava/util/List;
+    const/4 v3, 0x0
 
-    new-instance v3, Luk2;
+    if-eqz p1, :cond_0
 
-    const/16 v4, 0x8
-
-    invoke-direct {v3, v4, v0}, Luk2;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Lm11;
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v5, v0}, Lm11;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2, p1, v3, v4}, Ls5b;->c(Ljava/lang/String;Ljava/util/List;Loh6;Lqh6;)V
+    move v4, v3
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    const/16 v4, 0x8
 
-    move-result-object p1
+    :goto_0
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1}, Ls5b;->b()Z
-
-    move-result p1
+    const/16 v2, 0x11
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->i1()Ls5b;
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
+
+    aget-object p1, p1, v2
+
+    invoke-interface {v1, v0, p1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ls5b;->a()V
+    check-cast p1, Lj53;
+
+    iget-object v0, p1, Lj53;->a:Lqid;
+
+    invoke-virtual {p1}, Lj53;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "video_msg_controller"
+
+    invoke-static {p1, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0, v3}, Lqid;->Q(Z)V
+
+    new-instance v5, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {v5}, Lone/me/chatscreen/videomsg/VideoMessageWidget;-><init>()V
+
+    new-instance v4, Ltid;
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+
+    invoke-virtual {v4, v1}, Ltid;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Lqid;->R(Ltid;)V
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->i1:[Ltr7;
+
+    aget-object p1, p1, v2
+
+    invoke-interface {v1, v0, p1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj53;
+
+    invoke-virtual {p1}, Lj53;->a()V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

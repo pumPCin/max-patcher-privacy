@@ -1,84 +1,168 @@
-.class public final synthetic Lom1;
-.super Ljava/lang/Object;
+.class public final Lom1;
+.super Lqm1;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final D:Lwl1;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final E:Ltrf;
 
-.field public final synthetic c:Lsm1;
+.field public final F:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lsm1;I)V
-    .locals 0
+.method public constructor <init>(Ltrf;Ljava/lang/Integer;)V
+    .locals 1
 
-    iput p3, p0, Lom1;->a:I
+    invoke-direct {p0}, Lqm1;-><init>()V
 
-    iput-object p1, p0, Lom1;->b:Landroid/content/Context;
+    sget-object v0, Lwl1;->a:Lwl1;
 
-    iput-object p2, p0, Lom1;->c:Lsm1;
+    iput-object v0, p0, Lom1;->D:Lwl1;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lom1;->E:Ltrf;
+
+    iput-object p2, p0, Lom1;->F:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lom1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lom1;->b:Landroid/content/Context;
+    return v0
 
-    iget-object v1, p0, Lom1;->c:Lsm1;
+    :cond_0
+    instance-of v1, p1, Lom1;
 
-    invoke-static {v0, v1}, Lsm1;->w(Landroid/content/Context;Lsm1;)Lqp1;
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lom1;
+
+    iget-object v1, p0, Lom1;->D:Lwl1;
+
+    iget-object v3, p1, Lom1;->D:Lwl1;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lom1;->E:Ltrf;
+
+    iget-object v3, p1, Lom1;->E:Ltrf;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lom1;->F:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lom1;->F:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lom1;->D:Lwl1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lom1;->E:Ltrf;
+
+    invoke-static {v0, v1, v2}, Lfd0;->c(IILtrf;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lom1;->F:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(priority="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lom1;->D:Lwl1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textSource="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lom1;->E:Ltrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lom1;->F:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lp31;
-
-    iget-object v1, p0, Lom1;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lp31;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Liq3;
-
-    const/4 v2, -0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Liq3;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p0, Lom1;->c:Lsm1;
-
-    iget-object v1, v1, Lsm1;->J0:Lrm1;
-
-    invoke-virtual {v0, v1}, Lp31;->setClickListener(Lo31;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

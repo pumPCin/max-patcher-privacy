@@ -1,3 +1,3 @@
-.class public interface abstract Lsr6;
-.super Ljava/lang/Object;
+.class public final Lsr6;
+.super Lkotlinx/coroutines/internal/LockFreeTaskQueue;
 .source "SourceFile"

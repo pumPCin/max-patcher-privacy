@@ -1,307 +1,312 @@
 .class public final Ls41;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lwm;
-.implements Lrl;
-.implements Lan;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Llt7;
+.field public X:Lx41;
 
-.field public final b:Llt7;
+.field public Y:Lhy7;
 
-.field public final c:Llt7;
+.field public Z:I
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lx41;
+
+.field public final synthetic s0:Ljava/lang/String;
+
+.field public final synthetic t0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Lx41;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ls41;->a:Llt7;
+    iput-object p1, p0, Ls41;->r0:Lx41;
 
-    iput-object p2, p0, Ls41;->b:Llt7;
+    iput-object p2, p0, Ls41;->s0:Ljava/lang/String;
 
-    iput-object p3, p0, Ls41;->c:Llt7;
+    iput-boolean p3, p0, Ls41;->t0:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ll83;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ls41;->a:Llt7;
+    check-cast p1, Lq54;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Ls41;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Ll83;
+    move-result-object p1
+
+    check-cast p1, Ls41;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ls41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    new-instance v0, Ls41;
+
+    iget-object v1, p0, Ls41;->s0:Ljava/lang/String;
+
+    iget-boolean v2, p0, Ls41;->t0:Z
+
+    iget-object v3, p0, Ls41;->r0:Lx41;
+
+    invoke-direct {v0, v3, v1, v2, p2}, Ls41;-><init>(Lx41;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ls41;->q0:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public e()Lzm;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    new-instance v0, Lzm;
+    iget v0, p0, Ls41;->Z:I
 
-    new-instance v1, Lr41;
+    const/4 v1, 0x2
 
-    const/4 v2, 0x0
+    const-string v2, "CallChatRepositoryTag"
 
-    invoke-direct {v1, p0, v2}, Lr41;-><init>(Ls41;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v3, Lm95;->a:Lm95;
-
-    invoke-static {v3, v1}, Lrji;->f(Lt44;Lei6;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    iget-object v3, p0, Ls41;->b:Llt7;
-
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lc3e;
-
-    check-cast v3, Lpsd;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->calls-endpoint:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v3, v4, v2}, Lpsd;->t(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, ""
-
-    :cond_0
-    invoke-direct {v0, v1, v2}, Lzm;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public getSessionInfo()Lvm;
-    .locals 6
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-virtual {p0}, Ls41;->a()Ll83;
-
-    move-result-object v1
-
-    check-cast v1, Lgsd;
-
-    iget-object v1, v1, Lw3;->h:Lot7;
-
-    const-string v2, "user.callSession"
-
-    invoke-virtual {v1, v2, v0}, Lot7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    const-string v2, ","
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x6
-
-    invoke-static {v1, v2, v3}, Ls9f;->R(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v1, Ls95;->a:Ls95;
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    if-ge v2, v3, :cond_3
-
-    :goto_2
-    return-object v0
-
-    :cond_3
-    new-instance v2, Lvm;
-
-    const/4 v3, 0x0
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
+    iget-object v3, p0, Ls41;->r0:Lx41;
 
     const/4 v4, 0x1
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sget-object v5, Lr54;->a:Lr54;
 
-    move-result-object v4
+    if-eqz v0, :cond_2
 
-    check-cast v4, Ljava/lang/String;
+    if-eq v0, v4, :cond_1
 
-    const/4 v5, 0x2
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Ls41;->Y:Lhy7;
 
-    move-result-object v1
+    iget-object v3, p0, Ls41;->X:Lx41;
 
-    check-cast v1, Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v3, v4, v1}, Lvm;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    goto/16 :goto_4
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :try_start_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v2
+    goto :goto_0
 
     :catchall_0
-    move-exception v1
+    move-exception p1
 
-    const-string v2, "OKConfigStoreTag"
+    goto :goto_1
 
-    const-string v3, "Call session info cache error: "
+    :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v2, v3, v1}, Lndi;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object p1, p0, Ls41;->q0:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast p1, Lq54;
 
-.method public setSessionInfo(Lvm;)V
-    .locals 8
+    iget-object p1, p0, Ls41;->s0:Ljava/lang/String;
 
-    const-string v0, "user.callSession"
+    iget-boolean v0, p0, Ls41;->t0:Z
 
-    if-nez p1, :cond_0
+    :try_start_1
+    const-string v6, "start loading call link info"
 
-    invoke-virtual {p0}, Ls41;->a()Ll83;
+    invoke-static {v2, v6}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v6, v3, Lx41;->c:Liu7;
 
-    check-cast p1, Lgsd;
+    invoke-interface {v6}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p1, Lw3;->h:Lot7;
+    move-result-object v6
 
-    invoke-virtual {p1}, Lot7;->edit()Landroid/content/SharedPreferences$Editor;
+    check-cast v6, Lll;
 
-    move-result-object p1
+    new-instance v7, Lgy7;
 
-    const/4 v5, 0x0
-
-    const/16 v6, 0x3e
-
-    sget-object v1, Ls95;->a:Ls95;
-
-    const-string v2, ","
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v1 .. v6}, Lab3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqh6;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    check-cast p1, Ljs5;
-
-    invoke-virtual {p1, v0, v1}, Ljs5;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-virtual {p1}, Ljs5;->apply()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Ls41;->a()Ll83;
-
-    move-result-object v1
-
-    iget-object v2, p1, Lvm;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lvm;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lvm;->c:Ljava/lang/String;
-
-    filled-new-array {v2, v3, p1}, [Ljava/lang/String;
+    invoke-static {p1}, Lldi;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Ljt;->s([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-direct {v7, p1, v0}, Lgy7;-><init>(Ljava/lang/String;Z)V
+
+    iput v4, p0, Ls41;->Z:I
+
+    check-cast v6, Lmna;
+
+    invoke-virtual {v6, v7, p0}, Lmna;->I(Lmmf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    :goto_0
+    check-cast p1, Lhy7;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    new-instance v0, Lbed;
+
+    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :goto_2
+    invoke-static {p1}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "fail when loading call link info due to: "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v3, Lx41;->i:Lx0f;
+
+    :cond_4
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    move-object v7, v6
+
+    check-cast v7, Li41;
+
+    sget-object v7, Li41;->h:Li41;
+
+    invoke-virtual {v0, v6, v7}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    :cond_5
+    instance-of v0, p1, Lbed;
+
+    if-nez v0, :cond_7
+
+    move-object v0, p1
+
+    check-cast v0, Lhy7;
+
+    const-string v6, "call link info loaded success"
+
+    invoke-static {v2, v6}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Ls41;->q0:Ljava/lang/Object;
+
+    iput-object v3, p0, Ls41;->X:Lx41;
+
+    iput-object v0, p0, Ls41;->Y:Lhy7;
+
+    iput v1, p0, Ls41;->Z:I
+
+    invoke-static {v3, v0, p0}, Lx41;->a(Lx41;Lhy7;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_6
+
+    :goto_3
+    return-object v5
+
+    :cond_6
+    :goto_4
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, v0, Lhy7;->q0:Lnmg;
+
+    if-eqz v0, :cond_7
+
+    iget-wide v0, v0, Lnmg;->Z:J
+
+    xor-int/2addr p1, v4
+
+    invoke-virtual {v3}, Lx41;->b()Ld33;
 
     move-result-object v2
 
-    check-cast v1, Lgsd;
+    check-cast v2, Ld43;
 
-    iget-object p1, v1, Lw3;->h:Lot7;
+    invoke-virtual {v2, v0, v1}, Ld43;->O(J)Ln0d;
 
-    invoke-virtual {p1}, Lot7;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v0
+
+    invoke-virtual {v3, v0, p1}, Lx41;->c(Lxj6;Z)Lcye;
 
     move-result-object p1
 
-    const/4 v6, 0x0
+    iget-object v0, v3, Lx41;->l:Lw0e;
 
-    const/16 v7, 0x3e
+    sget-object v1, Lx41;->o:[Ltr7;
 
-    const-string v3, ","
+    const/4 v2, 0x0
 
-    const/4 v4, 0x0
+    aget-object v1, v1, v2
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v3, v1, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
-    invoke-static/range {v2 .. v7}, Lab3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqh6;I)Ljava/lang/String;
+    :cond_7
+    sget-object p1, Lccg;->a:Lccg;
 
-    move-result-object v1
-
-    check-cast p1, Ljs5;
-
-    invoke-virtual {p1, v0, v1}, Ljs5;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-virtual {p1}, Ljs5;->apply()V
-
-    return-void
+    return-object p1
 .end method

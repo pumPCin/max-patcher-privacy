@@ -1,205 +1,98 @@
 .class public final Lr86;
-.super Lsyg;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Lqkf;
-
-.field public final Y:Ll66;
-
-.field public final Z:Llt7;
-
-.field public final b:J
-
-.field public final c:Landroid/content/Context;
-
-.field public final o:Lx86;
-
-.field public final r0:Llt7;
-
-.field public final s0:Lsze;
-
-.field public final t0:Lgzc;
-
-.field public final u0:Lsze;
-
-.field public final v0:Lgzc;
-
-.field public final w0:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final x0:Lsze;
-
-.field public final y0:Lgzc;
+.field public final synthetic X:Ls86;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 8
+.method public constructor <init>(Ls86;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lf76;->a:Lf76;
+    iput-object p1, p0, Lr86;->X:Ls86;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    const/4 p1, 0x2
 
-    move-result-object v1
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-class v2, Landroid/content/Context;
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast v1, Landroid/content/Context;
+    check-cast p1, Lq54;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v2
-
-    const-class v3, Lx86;
-
-    invoke-virtual {v2, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lx86;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lqkf;
-
-    invoke-virtual {v3, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lqkf;
-
-    invoke-virtual {v0}, Lf76;->b()Ll66;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v5
-
-    const-class v6, Lt23;
-
-    invoke-virtual {v5, v6}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v5
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v6
-
-    const-class v7, La2b;
-
-    invoke-virtual {v6, v7}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v7, Ldxa;
-
-    invoke-virtual {v0, v7}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lsyg;-><init>()V
-
-    iput-wide p1, p0, Lr86;->b:J
-
-    iput-object v1, p0, Lr86;->c:Landroid/content/Context;
-
-    iput-object v2, p0, Lr86;->o:Lx86;
-
-    iput-object v3, p0, Lr86;->X:Lqkf;
-
-    iput-object v4, p0, Lr86;->Y:Ll66;
-
-    iput-object v6, p0, Lr86;->Z:Llt7;
-
-    iput-object v5, p0, Lr86;->r0:Llt7;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lr86;->s0:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, p2}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lr86;->t0:Lgzc;
-
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p2}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lr86;->u0:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, p2}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lr86;->v0:Lgzc;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lr86;->w0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object p2, Lca5;->a:Lca5;
-
-    invoke-static {p2}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lr86;->x0:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, p2}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lr86;->y0:Lgzc;
-
-    invoke-interface {v2}, Lx86;->y()Lzx5;
-
-    move-result-object p2
-
-    new-instance v1, Ln86;
-
-    invoke-direct {v1, p0, v0, p1}, Ln86;-><init>(Lr86;Llt7;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p1, Lh06;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p2, v1, v0}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    check-cast v3, Losa;
-
-    invoke-virtual {v3}, Losa;->a()Lv44;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
+    invoke-virtual {p0, p1, p2}, Lr86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object p2, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p1, Lr86;
 
-    invoke-static {p1, p2}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    sget-object p2, Lccg;->a:Lccg;
 
-    return-void
+    invoke-virtual {p1, p2}, Lr86;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lr86;
+
+    iget-object v0, p0, Lr86;->X:Ls86;
+
+    invoke-direct {p1, v0, p2}, Lr86;-><init>(Ls86;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lr86;->X:Ls86;
+
+    iget-object p1, p1, Ls86;->Z:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc3b;
+
+    sget v0, Ldkd;->P2:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lc3b;->g(Ltrf;)V
+
+    sget v0, Ldkd;->O2:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lc3b;->a(Ltrf;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    move-result-object p1
+
+    return-object p1
 .end method

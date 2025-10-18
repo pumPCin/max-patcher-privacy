@@ -1,131 +1,79 @@
 .class public final Lree;
-.super Lgd0;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljqf;
+# static fields
+.field public static final b:Lree;
 
-.field public final c:I
+.field public static final c:Lyf4;
+
+.field public static final d:Lyf4;
+
+.field public static final e:Lyf4;
+
+.field public static final f:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(ILjqf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/16 v0, 0x13
+    new-instance v0, Lree;
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    iput-object p2, p0, Lree;->b:Ljqf;
+    sput-object v0, Lree;->b:Lree;
 
-    iput p1, p0, Lree;->c:I
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    new-array v2, v1, [Ljava/lang/String;
 
+    const-string v3, ":settings/privacy"
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const/4 v4, 0x0
 
-    if-ne p0, p1, :cond_0
+    const/16 v5, 0xe
 
-    goto :goto_1
+    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    :cond_0
-    instance-of v0, p1, Lree;
+    move-result-object v2
 
-    if-nez v0, :cond_1
+    sput-object v2, Lree;->c:Lyf4;
 
-    goto :goto_0
+    const-string v2, ":settings/blacklist"
 
-    :cond_1
-    check-cast p1, Lree;
+    new-array v3, v1, [Ljava/lang/String;
 
-    iget-object v0, p0, Lree;->b:Ljqf;
+    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    iget-object v1, p1, Lree;->b:Ljqf;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljqf;->equals(Ljava/lang/Object;)Z
+    sput-object v2, Lree;->d:Lyf4;
 
-    move-result v0
+    const-string v2, ":settings/privacy/onboarding"
 
-    if-nez v0, :cond_2
+    new-array v1, v1, [Ljava/lang/String;
 
-    goto :goto_0
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
-    :cond_2
-    iget v0, p0, Lree;->c:I
+    move-result-object v1
 
-    iget p1, p1, Lree;->c:I
+    sput-object v1, Lree;->e:Lyf4;
 
-    if-eq v0, p1, :cond_3
+    const-string v1, "mode"
 
-    :goto_0
-    const/4 p1, 0x0
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    return p1
+    move-result-object v1
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    const-string v2, ":settings/privacy/pincode"
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lree;->b:Ljqf;
-
-    iget v0, v0, Ljqf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lree;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lree;->b:Ljqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lree;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lree;->f:Lyf4;
+
+    return-void
 .end method

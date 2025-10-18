@@ -1,178 +1,213 @@
-.class public abstract Likd;
+.class public final Likd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lv0a;
+.field public a:Lqmh;
 
-.field public final b:I
-
-.field public final c:Laq9;
-
-.field public d:Z
+.field public b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lsa6;Lv0a;)V
-    .locals 0
+.method public static a(Lkr4;J)J
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lkr4;->d:Lqmh;
 
-    iput-object p2, p0, Likd;->a:Lv0a;
+    iget-object v1, p0, Lkr4;->k:Ljava/util/ArrayList;
 
-    iget-object p2, p1, Lsa6;->l:Laq9;
+    instance-of v2, v0, Ldy6;
 
-    iput-object p2, p0, Likd;->c:Laq9;
+    if-eqz v2, :cond_0
 
-    iget-object p1, p1, Lsa6;->n:Ljava/lang/String;
-
-    invoke-static {p1}, Lmyh;->f(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Likd;->b:I
-
-    return-void
-.end method
-
-.method public static i(Lsa6;Ljava/util/List;)Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lsa6;->n:Ljava/lang/String;
-
-    iget-object p0, p0, Lsa6;->D:Llb3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Ler9;->m(Ljava/lang/String;)Z
-
-    move-result v1
-
-    new-instance v2, Lrb7;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v3}, Lxa7;-><init>(I)V
-
-    invoke-virtual {v2, v0}, Lrb7;->i(Ljava/lang/Object;)V
-
-    if-eqz v1, :cond_0
-
-    const-string v0, "video/hevc"
-
-    invoke-virtual {v2, v0}, Lxa7;->a(Ljava/lang/Object;)V
-
-    const-string v0, "video/avc"
-
-    invoke-virtual {v2, v0}, Lxa7;->a(Ljava/lang/Object;)V
+    return-wide p1
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v2, p1}, Lxa7;->d(Ljava/lang/Iterable;)V
+    move-result v2
 
-    invoke-virtual {v2}, Lrb7;->j()Lsb7;
+    const/4 v3, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsb7;->a()Lhb7;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
+    move-wide v4, p1
 
     :goto_0
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+    if-ge v3, v2, :cond_3
 
-    move-result v3
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-ge v2, v3, :cond_4
+    move-result-object v6
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    check-cast v6, Lhr4;
 
-    move-result-object v3
+    instance-of v7, v6, Lkr4;
 
-    check-cast v3, Ljava/lang/String;
+    if-eqz v7, :cond_2
 
-    invoke-interface {p1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    check-cast v6, Lkr4;
 
-    move-result v4
+    iget-object v7, v6, Lkr4;->d:Lqmh;
 
-    if-nez v4, :cond_1
+    if-ne v7, v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    if-eqz v1, :cond_2
+    iget v7, v6, Lkr4;->f:I
 
-    invoke-static {p0}, Llb3;->g(Llb3;)Z
+    int-to-long v7, v7
 
-    move-result v4
+    add-long/2addr v7, p1
 
-    if-eqz v4, :cond_2
+    invoke-static {v6, v7, v8}, Likd;->a(Lkr4;J)J
 
-    invoke-static {v3, p0}, Lob5;->f(Ljava/lang/String;Llb3;)Ls7d;
+    move-result-wide v6
 
-    move-result-object v4
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(JJ)J
 
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    return-object v3
+    move-result-wide v4
 
     :cond_2
-    invoke-static {v3}, Lob5;->e(Ljava/lang/String;)Lhb7;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    return-object v3
-
-    :cond_3
     :goto_1
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    :cond_3
+    iget-object v1, v0, Lqmh;->i:Lkr4;
+
+    iget-object v2, v0, Lqmh;->h:Lkr4;
+
+    if-ne p0, v1, :cond_4
+
+    invoke-virtual {v0}, Lqmh;->j()J
+
+    move-result-wide v0
+
+    sub-long/2addr p1, v0
+
+    invoke-static {v2, p1, p2}, Likd;->a(Lkr4;J)J
+
+    move-result-wide v0
+
+    invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    iget p0, v2, Lkr4;->f:I
+
+    int-to-long v2, p0
+
+    sub-long/2addr p1, v2
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
     :cond_4
-    const/4 p0, 0x0
-
-    return-object p0
+    return-wide v4
 .end method
 
+.method public static b(Lkr4;J)J
+    .locals 9
 
-# virtual methods
-.method public abstract j(Lo55;Lsa6;I)Lys6;
-.end method
+    iget-object v0, p0, Lkr4;->d:Lqmh;
 
-.method public abstract k()Lse4;
-.end method
+    iget-object v1, p0, Lkr4;->k:Ljava/util/ArrayList;
 
-.method public abstract l()Lsa6;
-.end method
+    instance-of v2, v0, Ldy6;
 
-.method public abstract m()Z
-.end method
+    if-eqz v2, :cond_0
 
-.method public n()Z
-    .locals 1
+    return-wide p1
 
-    const/4 v0, 0x0
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    return v0
-.end method
+    move-result v2
 
-.method public abstract o()V
-.end method
+    const/4 v3, 0x0
 
-.method public abstract p()V
+    move-wide v4, p1
+
+    :goto_0
+    if-ge v3, v2, :cond_3
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lhr4;
+
+    instance-of v7, v6, Lkr4;
+
+    if-eqz v7, :cond_2
+
+    check-cast v6, Lkr4;
+
+    iget-object v7, v6, Lkr4;->d:Lqmh;
+
+    if-ne v7, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget v7, v6, Lkr4;->f:I
+
+    int-to-long v7, v7
+
+    add-long/2addr v7, p1
+
+    invoke-static {v6, v7, v8}, Likd;->b(Lkr4;J)J
+
+    move-result-wide v6
+
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v4
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, v0, Lqmh;->h:Lkr4;
+
+    iget-object v2, v0, Lqmh;->i:Lkr4;
+
+    if-ne p0, v1, :cond_4
+
+    invoke-virtual {v0}, Lqmh;->j()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    invoke-static {v2, v0, v1}, Likd;->b(Lkr4;J)J
+
+    move-result-wide p0
+
+    invoke-static {v4, v5, p0, p1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p0
+
+    iget p2, v2, Lkr4;->f:I
+
+    int-to-long v2, p2
+
+    sub-long/2addr v0, v2
+
+    invoke-static {p0, p1, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_4
+    return-wide v4
 .end method

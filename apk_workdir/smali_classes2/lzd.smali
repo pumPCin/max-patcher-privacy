@@ -1,94 +1,48 @@
-.class public final synthetic Llzd;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Llzd;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lmzd;
+.field public final synthetic Y:Lkzd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmzd;I)V
+.method public constructor <init>(Lkzd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Llzd;->a:I
+    iput-object p1, p0, Llzd;->Y:Lkzd;
 
-    iput-object p1, p0, Llzd;->b:Lmzd;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Llzd;->a:I
+    iput-object p1, p0, Llzd;->o:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Llzd;->X:I
 
-    iget-object p1, p0, Llzd;->b:Lmzd;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p1, Lmzd;->H0:Lizd;
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Llzd;->X:I
 
-    iget-object p1, p1, Lmzd;->E0:Lam8;
+    iget-object p1, p0, Llzd;->Y:Lkzd;
 
-    iget-object p1, p1, Lam8;->u0:Ldv0;
+    const/4 v0, 0x0
 
-    new-instance v1, Lok8;
+    invoke-virtual {p1, v0, p0}, Lkzd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Lok8;-><init>(Lizd;)V
+    move-result-object p1
 
-    invoke-interface {p1, v1}, Lh0e;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Llzd;->b:Lmzd;
-
-    iget-object v0, p1, Lmzd;->H0:Lizd;
-
-    if-eqz v0, :cond_1
-
-    iget-object p1, p1, Lmzd;->E0:Lam8;
-
-    iget-object v1, p1, Lam8;->y0:Lsze;
-
-    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    move-result v1
-
-    iget-object p1, p1, Lam8;->u0:Ldv0;
-
-    new-instance v2, Lsk8;
-
-    invoke-direct {v2, v0, v1}, Lsk8;-><init>(Lizd;I)V
-
-    invoke-interface {p1, v2}, Lh0e;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

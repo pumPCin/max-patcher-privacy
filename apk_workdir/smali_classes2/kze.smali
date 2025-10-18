@@ -1,181 +1,101 @@
 .class public final Lkze;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:J
-
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/startconversation/StartConversationScreen;
 
 
 # direct methods
-.method public constructor <init>(La96;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lkze;->Y:Lone/me/startconversation/StartConversationScreen;
 
-    iput v0, p0, Lkze;->a:I
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lkze;->o:Ljava/lang/Object;
-
-    .line 3
-    new-instance v0, Ljze;
-
-    invoke-direct {v0, p1, p0}, Ljze;-><init>(La96;Lkze;)V
-
-    iput-object v0, p0, Lkze;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Runnable;Lr1g;J)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lkze;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-object p1, p0, Lkze;->c:Ljava/lang/Object;
-
-    .line 6
-    iput-object p2, p0, Lkze;->o:Ljava/lang/Object;
-
-    .line 7
-    iput-wide p3, p0, Lkze;->b:J
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkze;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lkze;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lkze;->o:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lr1g;
+    check-cast p1, Lkze;
 
-    iget-boolean v0, v0, Lr1g;->o:Z
+    sget-object p2, Lccg;->a:Lccg;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1, p2}, Lkze;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    return-object p2
+.end method
 
-    invoke-static {v0}, Lond;->a(Ljava/util/concurrent/TimeUnit;)J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-wide v0
+    new-instance v0, Lkze;
 
-    iget-wide v2, p0, Lkze;->b:J
+    iget-object v1, p0, Lkze;->Y:Lone/me/startconversation/StartConversationScreen;
 
-    cmp-long v4, v2, v0
+    invoke-direct {v0, p2, v1}, Lkze;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
 
-    if-lez v4, :cond_0
+    iput-object p1, v0, Lkze;->X:Ljava/lang/Object;
 
-    sub-long/2addr v2, v0
+    return-object v0
+.end method
 
-    :try_start_0
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    goto :goto_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :catch_0
-    move-exception v0
+    iget-object p1, p0, Lkze;->X:Ljava/lang/Object;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    check-cast p1, Lzye;
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lkze;->Y:Lone/me/startconversation/StartConversationScreen;
+
+    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->Z:Lwif;
+
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+    check-cast v1, Lxu3;
 
-    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    goto :goto_1
+    move-result-object v0
+
+    iget-object p1, p1, Lzye;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1, v0, p1}, Lxu3;->a(Landroid/content/Context;Landroid/net/Uri;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 
     :cond_0
-    :goto_0
-    iget-object v0, p0, Lkze;->o:Ljava/lang/Object;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    check-cast v0, Lr1g;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-boolean v0, v0, Lr1g;->o:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lkze;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lkze;->o:Ljava/lang/Object;
-
-    check-cast v0, La96;
-
-    iget-object v1, v0, La96;->r0:Ljava/lang/Object;
-
-    check-cast v1, Lqh6;
-
-    iget-object v2, p0, Lkze;->c:Ljava/lang/Object;
-
-    check-cast v2, Ljze;
-
-    invoke-interface {v1, v2}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, v0, La96;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/os/Handler;
-
-    invoke-virtual {v1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, v0, La96;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const-wide/16 v1, 0x3e8
-
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iget-wide v0, p0, Lkze;->b:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lkze;->b:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

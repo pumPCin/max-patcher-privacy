@@ -1,129 +1,90 @@
-.class public final Lql7;
-.super Lwl7;
+.class public final synthetic Lql7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final Y:Lvk;
+.field public final synthetic a:I
 
-.field public final Z:Lt5f;
+.field public final synthetic b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lvk;Lt5f;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;I)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p2, p0, Lql7;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lql7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    invoke-direct {p0, v0, v1}, Lwl7;-><init>(II)V
-
-    iput-object p1, p0, Lql7;->Y:Lvk;
-
-    iput-object p2, p0, Lql7;->Z:Lt5f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Lj6d;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    invoke-super {p0, p1, p2}, Lwl7;->a(Landroidx/recyclerview/widget/RecyclerView;Lj6d;)V
+    iget v0, p0, Lql7;->a:I
 
-    instance-of p1, p2, Lb05;
+    iget-object v1, p0, Lql7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    if-eqz p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    move-object p1, p2
+    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0:[Ltr7;
 
-    check-cast p1, Lb05;
+    new-instance v0, Lwl7;
 
-    check-cast p1, Lx2f;
+    invoke-virtual {v1}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->S0()Lngc;
 
-    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
+    move-result-object v1
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    const/16 v2, 0x1e
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1, v3, v2}, Lwl7;-><init>(Lngc;II)V
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+    return-object v0
 
-    iget-object p1, p0, Lql7;->Z:Lt5f;
+    :pswitch_0
+    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0:[Ltr7;
 
-    invoke-virtual {p1, p2}, Lt5f;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Lc3b;
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-.method public final i(Lj6d;Lj6d;)Z
-    .locals 1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1}, Lj6d;->g()I
+    move-result-object v1
 
-    move-result p1
+    sget v2, Lrjd;->g:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-virtual {p2}, Lj6d;->g()I
+    invoke-virtual {v0, v1}, Lc3b;->h(Ljava/lang/CharSequence;)V
 
-    move-result p2
+    new-instance v1, Lq3b;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v2, Lpjd;->J:I
 
-    move-result-object p2
+    invoke-direct {v1, v2}, Lq3b;-><init>(I)V
 
-    iget-object v0, p0, Lql7;->Y:Lvk;
+    invoke-virtual {v0, v1}, Lc3b;->e(Lu3b;)V
 
-    invoke-virtual {v0, p1, p2}, Lvk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
 
-    const/4 p1, 0x1
+    nop
 
-    return p1
-.end method
-
-.method public final j(Lj6d;I)V
-    .locals 1
-
-    if-eqz p2, :cond_0
-
-    instance-of p2, p1, Lb05;
-
-    if-eqz p2, :cond_0
-
-    check-cast p1, Lb05;
-
-    check-cast p1, Lx2f;
-
-    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41a00000    # 20.0f
-
-    mul-float/2addr p2, v0
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

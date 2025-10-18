@@ -14,18 +14,18 @@
 
 
 # virtual methods
-.method public getCameraXConfig()Lo22;
+.method public getCameraXConfig()Lw22;
     .locals 5
 
-    new-instance v0, Lzy1;
+    new-instance v0, Lgz1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Laz1;
+    new-instance v1, Lhz1;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    new-instance v2, Lbz1;
+    new-instance v2, Liz1;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
@@ -37,27 +37,27 @@
 
     iget-object v3, v3, Lj7;->a:Ljava/lang/Object;
 
-    check-cast v3, La0a;
+    check-cast v3, Lc1a;
 
-    sget-object v4, Lo22;->b:Lq90;
+    sget-object v4, Lw22;->b:Lz90;
 
-    invoke-virtual {v3, v4, v0}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v0}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    sget-object v0, Lo22;->c:Lq90;
+    sget-object v0, Lw22;->c:Lz90;
 
-    invoke-virtual {v3, v0, v1}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    invoke-virtual {v3, v0, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    sget-object v0, Lo22;->o:Lq90;
+    sget-object v0, Lw22;->o:Lz90;
 
-    invoke-virtual {v3, v0, v2}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    invoke-virtual {v3, v0, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    new-instance v0, Lo22;
+    new-instance v0, Lw22;
 
-    invoke-static {v3}, Lq8b;->a(Lck3;)Lq8b;
+    invoke-static {v3}, Ls9b;->a(Lpk3;)Ls9b;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lo22;-><init>(Lq8b;)V
+    invoke-direct {v0, v1}, Lw22;-><init>(Ls9b;)V
 
     return-object v0
 .end method

@@ -1,136 +1,76 @@
-.class public final Ly5c;
-.super Llff;
+.class public final synthetic Ly5c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:La6c;
-
-.field public final synthetic Z:Lkj0;
+.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
 
 
 # direct methods
-.method public constructor <init>(La6c;Lkj0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Ly5c;->Y:La6c;
+    iput p2, p0, Ly5c;->a:I
 
-    iput-object p2, p0, Ly5c;->Z:Lkj0;
+    iput-object p1, p0, Ly5c;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    check-cast p1, Lb54;
+    iget p1, p0, Ly5c;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ly5c;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    invoke-virtual {p0, p1, p2}, Ly5c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p1
+    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->w0:[Ltr7;
 
-    check-cast p1, Ly5c;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Ly5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Lu6c;->x()V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    return-void
 
-    new-instance p1, Ly5c;
+    :pswitch_0
+    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->w0:[Ltr7;
 
-    iget-object v0, p0, Ly5c;->Y:La6c;
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
 
-    iget-object v1, p0, Ly5c;->Z:Lkj0;
+    move-result-object p1
 
-    invoke-direct {p1, v0, v1, p2}, Ly5c;-><init>(La6c;Lkj0;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p1, Lu6c;->b:Lc65;
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Lc65;->d()Z
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    move-result v0
 
-    iget v0, p0, Ly5c;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1}, Lc65;->k()V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ly5c;->Y:La6c;
-
-    iget-object v0, p1, La6c;->a:Leie;
-
-    new-instance v2, Lr5c;
-
-    iget-object v3, p0, Ly5c;->Z:Lkj0;
-
-    iget-wide v4, v3, Llj0;->a:J
-
-    new-instance v6, Ljava/lang/Long;
-
-    invoke-direct {v6, v4, v5}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v3, v3, Lkj0;->b:Lukf;
-
-    invoke-static {p1, v3}, La6c;->a(La6c;Lukf;)Loqf;
-
-    move-result-object p1
-
-    invoke-direct {v2, v6, p1}, Lr5c;-><init>(Ljava/lang/Long;Loqf;)V
-
-    iput v1, p0, Ly5c;->X:I
-
-    invoke-virtual {v0, v2, p0}, Leie;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    return-void
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

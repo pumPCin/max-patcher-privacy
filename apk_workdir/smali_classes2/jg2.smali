@@ -1,68 +1,65 @@
 .class public final Ljg2;
-.super Lklf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lea2;
+.field public final a:Lnje;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Loe9;)V
-    .locals 0
+.method public constructor <init>(Lpw0;Lulf;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljg2;->a:Lnje;
+
+    check-cast p2, Lqta;
+
+    invoke-virtual {p2}, Lqta;->c()Lce8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ljg2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Loe9;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "chat"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Lea2;->a(Loe9;)Lea2;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljg2;->c:Lea2;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Loe9;->y()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final onEvent(Lhg2;)V
     .locals 3
+    .annotation runtime Lzbf;
+    .end annotation
 
-    iget-object v0, p0, Ljg2;->c:Lea2;
+    new-instance v0, Lig2;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v2, "{chat="
+    invoke-direct {v0, p0, p1, v1}, Lig2;-><init>(Ljg2;Lhg2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x3
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Ljg2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v0, "}"
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

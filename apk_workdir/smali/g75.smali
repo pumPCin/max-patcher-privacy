@@ -3,84 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb75;
+.implements Lf75;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public a:Ljava/io/File;
 
+.field public b:Ljava/io/FileInputStream;
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 0
-
-    packed-switch p2, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lg75;->a:Landroid/content/Context;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lg75;->a:Landroid/content/Context;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public c:Ljava/nio/channels/FileChannel;
 
 
 # virtual methods
-.method public h(Lzyi;)V
-    .locals 8
+.method public final a(JLjava/nio/ByteBuffer;)I
+    .locals 1
 
-    new-instance v7, Loj3;
+    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
 
-    const-string v1, "EmojiCompatInitializer"
+    move-result p1
 
-    invoke-direct {v7, v0, v1}, Loj3;-><init>(ILjava/io/Serializable;)V
+    return p1
+.end method
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+.method public final close()V
+    .locals 1
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lg75;->b:Ljava/io/FileInputStream;
 
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingDeque;
-
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0xf
-
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
-
-    new-instance v1, Lv55;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p0, p1, v0, v2}, Lv55;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     return-void
+.end method
+
+.method public final isOpen()Z
+    .locals 1
+
+    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
+
+    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final read(Ljava/nio/ByteBuffer;)I
+    .locals 1
+
+    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
+
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final write(Ljava/nio/ByteBuffer;)I
+    .locals 1
+
+    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
+
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
+
+    move-result p1
+
+    return p1
 .end method

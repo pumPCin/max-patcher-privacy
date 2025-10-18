@@ -1,160 +1,417 @@
 .class public final Lbee;
-.super Llff;
+.super Lpd0;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final d:Lbee;
+
+.field public static final e:Lbee;
+
+.field public static final f:Lbee;
+
+.field public static final g:Lbee;
+
+.field public static final h:Lbee;
 
 
 # instance fields
-.field public X:I
+.field public final b:Lorf;
 
-.field public final synthetic Y:Lhee;
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lhee;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    iput-object p1, p0, Lbee;->Y:Lhee;
+    new-instance v0, Lbee;
 
-    const/4 p1, 0x2
+    sget v1, Li2b;->o:I
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    new-instance v1, Laee;
+
+    sget v3, Li2b;->a:I
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+
+    sget v5, Lg2b;->q:I
+
+    invoke-direct {v1, v5, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v4, Laee;
+
+    sget v5, Li2b;->g:I
+
+    new-instance v6, Lorf;
+
+    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+
+    sget v7, Lg2b;->s:I
+
+    invoke-direct {v4, v7, v6}, Laee;-><init>(ILorf;)V
+
+    new-instance v6, Laee;
+
+    sget v7, Li2b;->c:I
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    sget v9, Lg2b;->r:I
+
+    invoke-direct {v6, v9, v8}, Laee;-><init>(ILorf;)V
+
+    filled-new-array {v1, v4, v6}, [Laee;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbee;-><init>(Lorf;Ljava/util/List;)V
+
+    sput-object v0, Lbee;->d:Lbee;
+
+    new-instance v0, Lbee;
+
+    sget v1, Li2b;->l:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    new-instance v1, Laee;
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+
+    sget v6, Lg2b;->d:I
+
+    invoke-direct {v1, v6, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v4, Laee;
+
+    new-instance v6, Lorf;
+
+    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+
+    sget v8, Lg2b;->f:I
+
+    invoke-direct {v4, v8, v6}, Laee;-><init>(ILorf;)V
+
+    new-instance v6, Laee;
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    sget v9, Lg2b;->e:I
+
+    invoke-direct {v6, v9, v8}, Laee;-><init>(ILorf;)V
+
+    filled-new-array {v1, v4, v6}, [Laee;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbee;-><init>(Lorf;Ljava/util/List;)V
+
+    sput-object v0, Lbee;->e:Lbee;
+
+    new-instance v0, Lbee;
+
+    sget v1, Li2b;->w:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    new-instance v1, Laee;
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+
+    sget v6, Lg2b;->C:I
+
+    invoke-direct {v1, v6, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v4, Laee;
+
+    new-instance v6, Lorf;
+
+    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+
+    sget v8, Lg2b;->E:I
+
+    invoke-direct {v4, v8, v6}, Laee;-><init>(ILorf;)V
+
+    new-instance v6, Laee;
+
+    new-instance v8, Lorf;
+
+    invoke-direct {v8, v7}, Lorf;-><init>(I)V
+
+    sget v7, Lg2b;->D:I
+
+    invoke-direct {v6, v7, v8}, Laee;-><init>(ILorf;)V
+
+    filled-new-array {v1, v4, v6}, [Laee;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbee;-><init>(Lorf;Ljava/util/List;)V
+
+    sput-object v0, Lbee;->f:Lbee;
+
+    new-instance v0, Lbee;
+
+    sget v1, Li2b;->z:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    new-instance v1, Laee;
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+
+    sget v3, Lg2b;->a:I
+
+    invoke-direct {v1, v3, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v3, Laee;
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v5}, Lorf;-><init>(I)V
+
+    sget v5, Lg2b;->c:I
+
+    invoke-direct {v3, v5, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v4, Laee;
+
+    sget v5, Li2b;->b:I
+
+    new-instance v6, Lorf;
+
+    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+
+    sget v5, Lg2b;->b:I
+
+    invoke-direct {v4, v5, v6}, Laee;-><init>(ILorf;)V
+
+    filled-new-array {v1, v3, v4}, [Laee;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbee;-><init>(Lorf;Ljava/util/List;)V
+
+    sput-object v0, Lbee;->g:Lbee;
+
+    new-instance v0, Lbee;
+
+    sget v1, Li2b;->y:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    new-instance v1, Laee;
+
+    sget v3, Li2b;->d:I
+
+    new-instance v4, Lorf;
+
+    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+
+    sget v3, Lg2b;->t:I
+
+    invoke-direct {v1, v3, v4}, Laee;-><init>(ILorf;)V
+
+    new-instance v3, Laee;
+
+    sget v4, Li2b;->f:I
+
+    new-instance v5, Lorf;
+
+    invoke-direct {v5, v4}, Lorf;-><init>(I)V
+
+    sget v4, Lg2b;->v:I
+
+    invoke-direct {v3, v4, v5}, Laee;-><init>(ILorf;)V
+
+    new-instance v4, Laee;
+
+    sget v5, Li2b;->e:I
+
+    new-instance v6, Lorf;
+
+    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+
+    sget v5, Lg2b;->u:I
+
+    invoke-direct {v4, v5, v6}, Laee;-><init>(ILorf;)V
+
+    filled-new-array {v1, v3, v4}, [Laee;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lbee;-><init>(Lorf;Ljava/util/List;)V
+
+    sput-object v0, Lbee;->h:Lbee;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lorf;Ljava/util/List;)V
+    .locals 1
+
+    const/16 v0, 0x11
+
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+
+    iput-object p1, p0, Lbee;->b:Lorf;
+
+    iput-object p2, p0, Lbee;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lb54;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lbee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lbee;
 
-    move-result-object p1
-
-    check-cast p1, Lbee;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lbee;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lbee;
-
-    iget-object v0, p0, Lbee;->Y:Lhee;
-
-    invoke-direct {p1, v0, p2}, Lbee;-><init>(Lhee;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lbee;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lbee;
 
-    iget-object p1, p0, Lbee;->Y:Lhee;
+    iget-object v0, p0, Lbee;->b:Lorf;
 
-    iget-object v0, p1, Lhee;->y0:Llt7;
+    iget-object v1, p1, Lbee;->b:Lorf;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Ln4h;
+    if-nez v0, :cond_2
 
-    invoke-virtual {p1}, Lhee;->v()Ll83;
-
-    move-result-object p1
-
-    check-cast p1, Lgsd;
-
-    invoke-virtual {p1}, Lgsd;->s()J
-
-    move-result-wide v2
-
-    iput v1, p0, Lbee;->X:I
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p1, "SELECT * FROM webapp_biometry WHERE user_id = ?"
-
-    invoke-static {v1, p1}, Lpfd;->c(ILjava/lang/String;)Lpfd;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1, v2, v3}, Lpfd;->k(IJ)V
-
-    new-instance v2, Landroid/os/CancellationSignal;
-
-    invoke-direct {v2}, Landroid/os/CancellationSignal;-><init>()V
-
-    iget-object v3, v0, Ln4h;->a:Lyed;
-
-    new-instance v4, Ll4h;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v0, p1, v5}, Ll4h;-><init>(Ln4h;Lpfd;I)V
-
-    invoke-static {v3, v2, v4, p0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/util/Collection;
+    iget-object v0, p0, Lbee;->c:Ljava/util/List;
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    iget-object p1, p1, Lbee;->c:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    xor-int/2addr p1, v1
+    if-nez p1, :cond_3
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
 
-    return-object p1
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lbee;->b:Lorf;
+
+    iget v0, v0, Lorf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lbee;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lzdf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenConfirmationDialog(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbee;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbee;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", payload=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

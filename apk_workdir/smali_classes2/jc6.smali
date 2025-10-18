@@ -2,144 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmc6;
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+# static fields
+.field public static final a:Ljc6;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljc6;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object v0, p0, Ljc6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sput-object v0, Ljc6;->a:Ljc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ly6b;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Ljc6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljc6;
-
-    invoke-virtual {v1, p1}, Ljc6;->a(Ly6b;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Ljc6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final b(Ly6b;Lk6b;Lu6b;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Ljc6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const v0, 0x25527745
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljc6;
-
-    invoke-virtual {v1, p1, p2, p3}, Ljc6;->b(Ly6b;Lk6b;Lu6b;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final c(Ly6b;Lk6b;Lu6b;Ljava/io/IOException;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Ljc6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const-string v0, "MultiselectDisabled"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljc6;
-
-    invoke-virtual {v1, p1, p2, p3, p4}, Ljc6;->c(Ly6b;Lk6b;Lu6b;Ljava/io/IOException;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Ly6b;Lk6b;Lu6b;)V
-    .locals 2
-
-    iget-object v0, p0, Ljc6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljc6;
-
-    invoke-virtual {v1, p1, p2, p3}, Ljc6;->d(Ly6b;Lk6b;Lu6b;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

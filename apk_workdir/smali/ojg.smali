@@ -1,126 +1,276 @@
 .class public final Lojg;
-.super Lmh;
+.super Lrjg;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+# instance fields
+.field public d:Lpg6;
 
-    const/4 v0, 0x0
+.field public e:F
 
-    .line 1
-    invoke-direct {p0, v0}, Lmh;-><init>(I)V
+.field public f:Lpg6;
 
-    return-void
-.end method
+.field public g:F
 
-.method public constructor <init>(I)V
-    .locals 2
+.field public h:F
 
-    const-wide/16 v0, 0xc8
+.field public i:F
 
-    const/4 p1, 0x2
+.field public j:F
 
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Lmh;-><init>(JI)V
+.field public k:F
 
-    return-void
-.end method
+.field public l:Landroid/graphics/Paint$Cap;
+
+.field public m:Landroid/graphics/Paint$Join;
+
+.field public n:F
 
 
 # virtual methods
-.method public final b()Lc24;
-    .locals 4
+.method public final a()Z
+    .locals 1
 
-    new-instance v0, Lojg;
+    iget-object v0, p0, Lojg;->f:Lpg6;
 
-    iget-wide v1, p0, Lmh;->o:J
+    invoke-virtual {v0}, Lpg6;->L()Z
 
-    iget-boolean v3, p0, Lmh;->t0:Z
+    move-result v0
 
-    invoke-direct {v0, v1, v2, v3}, Lmh;-><init>(JZ)V
+    if-nez v0, :cond_1
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lojg;->d:Lpg6;
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 3
+    invoke-virtual {v0}, Lpg6;->L()Z
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    move-result v0
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-instance p5, Ljava/util/ArrayList;
-
-    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p2, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getHeight()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [F
-
-    aput p4, v2, v1
-
-    const/4 p4, 0x0
-
-    aput p4, v2, v0
-
-    invoke-static {p3, p2, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-nez p4, :cond_1
+    const/4 v0, 0x0
 
-    if-eqz p2, :cond_1
-
-    sget-object p3, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    new-array v0, v0, [F
-
-    aput p4, v0, v1
-
-    invoke-static {p2, p3, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    return v0
 
     :cond_1
     :goto_0
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+    const/4 v0, 0x1
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Landroid/view/View;)V
+.method public final b([I)Z
+    .locals 6
+
+    iget-object v0, p0, Lojg;->f:Lpg6;
+
+    invoke-virtual {v0}, Lpg6;->L()Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lpg6;->o:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v4
+
+    invoke-virtual {v1, p1, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v1
+
+    iget v4, v0, Lpg6;->b:I
+
+    if-eq v1, v4, :cond_0
+
+    iput v1, v0, Lpg6;->b:I
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    :goto_0
+    iget-object v1, p0, Lojg;->d:Lpg6;
+
+    invoke-virtual {v1}, Lpg6;->L()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, v1, Lpg6;->o:Ljava/lang/Object;
+
+    check-cast v4, Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v4}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v5
+
+    invoke-virtual {v4, p1, v5}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p1
+
+    iget v4, v1, Lpg6;->b:I
+
+    if-eq p1, v4, :cond_1
+
+    iput p1, v1, Lpg6;->b:I
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    or-int p1, v0, v2
+
+    return p1
+.end method
+
+.method public getFillAlpha()F
+    .locals 1
+
+    iget v0, p0, Lojg;->h:F
+
+    return v0
+.end method
+
+.method public getFillColor()I
+    .locals 1
+
+    iget-object v0, p0, Lojg;->f:Lpg6;
+
+    iget v0, v0, Lpg6;->b:I
+
+    return v0
+.end method
+
+.method public getStrokeAlpha()F
+    .locals 1
+
+    iget v0, p0, Lojg;->g:F
+
+    return v0
+.end method
+
+.method public getStrokeColor()I
+    .locals 1
+
+    iget-object v0, p0, Lojg;->d:Lpg6;
+
+    iget v0, v0, Lpg6;->b:I
+
+    return v0
+.end method
+
+.method public getStrokeWidth()F
+    .locals 1
+
+    iget v0, p0, Lojg;->e:F
+
+    return v0
+.end method
+
+.method public getTrimPathEnd()F
+    .locals 1
+
+    iget v0, p0, Lojg;->j:F
+
+    return v0
+.end method
+
+.method public getTrimPathOffset()F
+    .locals 1
+
+    iget v0, p0, Lojg;->k:F
+
+    return v0
+.end method
+
+.method public getTrimPathStart()F
+    .locals 1
+
+    iget v0, p0, Lojg;->i:F
+
+    return v0
+.end method
+
+.method public setFillAlpha(F)V
     .locals 0
+
+    iput p1, p0, Lojg;->h:F
+
+    return-void
+.end method
+
+.method public setFillColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lojg;->f:Lpg6;
+
+    iput p1, v0, Lpg6;->b:I
+
+    return-void
+.end method
+
+.method public setStrokeAlpha(F)V
+    .locals 0
+
+    iput p1, p0, Lojg;->g:F
+
+    return-void
+.end method
+
+.method public setStrokeColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lojg;->d:Lpg6;
+
+    iput p1, v0, Lpg6;->b:I
+
+    return-void
+.end method
+
+.method public setStrokeWidth(F)V
+    .locals 0
+
+    iput p1, p0, Lojg;->e:F
+
+    return-void
+.end method
+
+.method public setTrimPathEnd(F)V
+    .locals 0
+
+    iput p1, p0, Lojg;->j:F
+
+    return-void
+.end method
+
+.method public setTrimPathOffset(F)V
+    .locals 0
+
+    iput p1, p0, Lojg;->k:F
+
+    return-void
+.end method
+
+.method public setTrimPathStart(F)V
+    .locals 0
+
+    iput p1, p0, Lojg;->i:F
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldla;
+.implements Lfma;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final x(Landroid/view/View;Lwmh;)Lwmh;
+.method public final u(Landroid/view/View;Lxnh;)Lxnh;
     .locals 5
 
     iget p1, p0, Lk6;->a:I
@@ -36,9 +36,9 @@
 
     iget-object p1, p0, Lk6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Landroid/view/View;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Landroid/view/View;
 
-    invoke-virtual {p2}, Lwmh;->a()I
+    invoke-virtual {p2}, Lxnh;->a()I
 
     move-result v0
 
@@ -62,31 +62,31 @@
     :pswitch_0
     iget-object p1, p0, Lk6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    invoke-virtual {p2}, Lwmh;->b()I
+    invoke-virtual {p2}, Lxnh;->b()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lwmh;->c()I
+    invoke-virtual {p2}, Lxnh;->c()I
 
     move-result v1
 
-    invoke-virtual {p2}, Lwmh;->a()I
+    invoke-virtual {p2}, Lxnh;->a()I
 
     move-result v2
 
-    iget-object v3, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->H0:Landroid/view/View;
+    iget-object v3, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->G0:Landroid/view/View;
 
-    invoke-static {v3, v0}, Ltai;->j(Landroid/view/View;I)V
+    invoke-static {v3, v0}, Lubi;->k(Landroid/view/View;I)V
 
-    iget-object v4, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->G0:Landroid/view/View;
+    iget-object v4, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Landroid/view/View;
 
-    invoke-static {v4, v0}, Ltai;->j(Landroid/view/View;I)V
+    invoke-static {v4, v0}, Lubi;->k(Landroid/view/View;I)V
 
-    invoke-static {v3, v1}, Ltai;->i(Landroid/view/View;I)V
+    invoke-static {v3, v1}, Lubi;->j(Landroid/view/View;I)V
 
-    invoke-static {v4, v1}, Ltai;->i(Landroid/view/View;I)V
+    invoke-static {v4, v1}, Lubi;->j(Landroid/view/View;I)V
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
 
@@ -111,7 +111,7 @@
     invoke-virtual {p1, v0, v4, v1, v3}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_1
-    invoke-static {p1, v2}, Ltai;->a(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lubi;->b(Landroid/view/View;I)V
 
     return-object p2
 

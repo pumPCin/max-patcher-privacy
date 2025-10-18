@@ -1,130 +1,213 @@
-.class public final La9e;
-.super Llff;
+.class public final enum La9e;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
+
+# static fields
+.field public static final enum X:La9e;
+
+.field public static final enum Y:La9e;
+
+.field public static final enum Z:La9e;
+
+.field public static final enum b:La9e;
+
+.field public static final enum c:La9e;
+
+.field public static final enum o:La9e;
+
+.field public static final enum q0:La9e;
+
+.field public static final enum r0:La9e;
+
+.field public static final enum s0:La9e;
+
+.field public static final enum t0:La9e;
+
+.field public static final enum u0:La9e;
+
+.field public static final enum v0:La9e;
+
+.field public static final synthetic w0:[La9e;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lc9e;
-
-.field public final synthetic Z:Z
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lc9e;ZLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    iput-object p1, p0, La9e;->Y:Lc9e;
+    new-instance v0, La9e;
 
-    iput-boolean p2, p0, La9e;->Z:Z
+    const-string v1, "FOLDERS"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, La9e;->b:La9e;
+
+    new-instance v1, La9e;
+
+    const-string v2, "APPEARANCE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, La9e;->c:La9e;
+
+    new-instance v2, La9e;
+
+    const-string v3, "NOTIFICATIONS"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, La9e;->o:La9e;
+
+    new-instance v3, La9e;
+
+    const-string v4, "PRIVACY"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, La9e;->X:La9e;
+
+    new-instance v4, La9e;
+
+    const-string v5, "MESSAGES"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, La9e;->Y:La9e;
+
+    new-instance v5, La9e;
+
+    const-string v6, "SAVED_MESSAGES"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, La9e;->Z:La9e;
+
+    new-instance v6, La9e;
+
+    const-string v7, "BATTERY"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, La9e;->q0:La9e;
+
+    new-instance v7, La9e;
+
+    const-string v8, "STORAGE"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, La9e;->r0:La9e;
+
+    new-instance v8, La9e;
+
+    const-string v9, "SUPPORT"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, La9e;->s0:La9e;
+
+    new-instance v9, La9e;
+
+    const-string v10, "ABOUT"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, La9e;->t0:La9e;
+
+    new-instance v10, La9e;
+
+    const-string v11, "ESIA_CONNECT"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, La9e;->u0:La9e;
+
+    new-instance v11, La9e;
+
+    const-string v12, "INVITE_FRIENDS"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13}, La9e;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, La9e;->v0:La9e;
+
+    filled-new-array/range {v0 .. v11}, [La9e;
+
+    move-result-object v0
+
+    sput-object v0, La9e;->w0:[La9e;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    check-cast p1, Lb54;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0, p1, p2}, La9e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    move-result-object p1
+    int-to-long p1, p1
 
-    check-cast p1, La9e;
+    iput-wide p1, p0, La9e;->a:J
 
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, La9e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)La9e;
+    .locals 1
 
-    new-instance p1, La9e;
+    const-class v0, La9e;
 
-    iget-object v0, p0, La9e;->Y:Lc9e;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-boolean v1, p0, La9e;->Z:Z
+    move-result-object p0
 
-    invoke-direct {p1, v0, v1, p2}, La9e;-><init>(Lc9e;ZLkotlin/coroutines/Continuation;)V
+    check-cast p0, La9e;
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public static values()[La9e;
+    .locals 1
 
-    iget v0, p0, La9e;->X:I
+    sget-object v0, La9e;->w0:[La9e;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lc9e;->A0:[Lwq7;
-
-    iget-object p1, p0, La9e;->Y:Lc9e;
-
-    invoke-virtual {p1}, Lc9e;->s()Lird;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lchg;
-
-    const-string v2, "app.media.autoplay.playlist"
-
-    iget-boolean v3, p0, La9e;->Z:Z
-
-    invoke-virtual {v0, v2, v3}, Lw3;->f(Ljava/lang/String;Z)V
-
-    iput v1, p0, La9e;->X:I
-
-    invoke-static {p1, p0}, Lc9e;->r(Lc9e;Llff;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [La9e;
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

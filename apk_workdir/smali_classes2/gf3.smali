@@ -1,127 +1,271 @@
-.class public abstract Lgf3;
+.class public final Lgf3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+
 # direct methods
-.method public static a([B)Lhf3;
-    .locals 12
+.method public constructor <init>(IIIIIIII)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Complain;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Complain;-><init>()V
+    iput p1, p0, Lgf3;->a:I
 
-    :try_start_0
-    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
+    iput p2, p0, Lgf3;->b:I
 
-    move-result-object p0
+    iput p3, p0, Lgf3;->c:I
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Complain;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iput p4, p0, Lgf3;->d:I
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$Complain;->requestId:J
+    iput p5, p0, Lgf3;->e:I
 
-    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->typeId:I
+    iput p6, p0, Lgf3;->f:I
 
-    int-to-byte v0, v0
+    iput p7, p0, Lgf3;->g:I
 
-    new-instance v3, Lf2;
+    iput p8, p0, Lgf3;->h:I
 
-    const/4 v4, 0x0
+    return-void
+.end method
 
-    sget-object v5, Lsf3;->t0:Lfd5;
 
-    invoke-direct {v3, v4, v5}, Lf2;-><init>(ILjava/lang/Object;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v3}, Lf2;->hasNext()Z
+    instance-of v0, p1, Lgf3;
 
-    move-result v4
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v3}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v6, v4
-
-    check-cast v6, Lsf3;
-
-    iget-byte v6, v6, Lsf3;->a:B
-
-    if-ne v6, v0, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move-object v4, v5
+    check-cast p1, Lgf3;
 
-    :goto_0
-    move-object v3, v4
+    iget v0, p0, Lgf3;->a:I
 
-    check-cast v3, Lsf3;
+    iget v1, p1, Lgf3;->a:I
 
-    if-eqz v3, :cond_3
+    if-eq v0, v1, :cond_2
 
-    iget v0, p0, Lru/ok/tamtam/nano/Tasks$Complain;->reasonId:I
-
-    int-to-byte v4, v0
-
-    move-object v0, v5
-
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Complain;->ids:[J
-
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Complain;->serverIds:[J
-
-    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$Complain;->parentId:J
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    const-wide/16 v10, 0x0
-
-    cmp-long v7, v7, v10
-
-    if-eqz v7, :cond_2
-
-    move-object v7, v9
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    move-object v7, v0
+    iget v0, p0, Lgf3;->b:I
 
-    :goto_1
-    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$Complain;->details:Ljava/lang/String;
+    iget v1, p1, Lgf3;->b:I
 
-    new-instance v0, Lhf3;
+    if-eq v0, v1, :cond_3
 
-    invoke-direct/range {v0 .. v8}, Lhf3;-><init>(JLsf3;B[J[JLjava/lang/Long;Ljava/lang/String;)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget v0, p0, Lgf3;->c:I
 
-    const-string v0, "Required value was null."
+    iget v1, p1, Lgf3;->c:I
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eq v0, v1, :cond_4
 
-    throw p0
+    goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_4
+    iget v0, p0, Lgf3;->d:I
 
-    move-object p0, v0
+    iget v1, p1, Lgf3;->d:I
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    if-eq v0, v1, :cond_5
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    throw v0
+    :cond_5
+    iget v0, p0, Lgf3;->e:I
+
+    iget v1, p1, Lgf3;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lgf3;->f:I
+
+    iget v1, p1, Lgf3;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lgf3;->g:I
+
+    iget v1, p1, Lgf3;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lgf3;->h:I
+
+    iget p1, p1, Lgf3;->h:I
+
+    if-eq v0, p1, :cond_9
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_9
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lgf3;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgf3;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgf3;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    const/4 v2, -0x1
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    const v2, -0x1f000001
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgf3;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgf3;->e:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgf3;->f:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgf3;->g:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lgf3;->h:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", capsuleSecondary="
+
+    const-string v1, ", contrast="
+
+    const-string v2, "CommonTextColors(capsule="
+
+    iget v3, p0, Lgf3;->a:I
+
+    iget v4, p0, Lgf3;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", contrastStatic=-1, fileType=-520093697, negative="
+
+    const-string v2, ", primary="
+
+    iget v3, p0, Lgf3;->c:I
+
+    iget v4, p0, Lgf3;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", secondary="
+
+    const-string v2, ", tertiary="
+
+    iget v3, p0, Lgf3;->e:I
+
+    iget v4, p0, Lgf3;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", themed="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lgf3;->g:I
+
+    iget v4, p0, Lgf3;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lfd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

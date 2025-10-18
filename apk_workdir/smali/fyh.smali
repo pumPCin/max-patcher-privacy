@@ -1,81 +1,119 @@
-.class public abstract Lfyh;
-.super Ljava/lang/Object;
+.class public final Lfyh;
+.super Lf4;
 .source "SourceFile"
 
 
 # static fields
-.field public static volatile a:Lye8;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfyh;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final X:I
+
+.field public a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final o:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lex9;
+    new-instance v0, Lnwh;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x13
 
-    sput-object v0, Lfyh;->a:Lye8;
+    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
+
+    sput-object v0, Lfyh;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a(Ljava/io/Closeable;)V
+.method public constructor <init>(IIIJI)V
     .locals 0
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iput p1, p0, Lfyh;->a:I
 
-    :catch_0
-    :cond_0
+    iput p2, p0, Lfyh;->b:I
+
+    iput p3, p0, Lfyh;->c:I
+
+    iput-wide p4, p0, Lfyh;->o:J
+
+    iput p6, p0, Lfyh;->X:I
+
     return-void
 .end method
 
-.method public static b(Laj5;)Ly85;
-    .locals 8
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    move-result-wide v0
+    const/16 p2, 0x4f45
 
-    invoke-interface {p0}, Laj5;->length()I
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    move-result v5
+    move-result p2
 
-    const/4 v4, 0x0
+    iget v0, p0, Lfyh;->a:I
 
-    move v2, v4
+    const/4 v1, 0x2
 
-    move v6, v2
+    const/4 v2, 0x4
 
-    :goto_0
-    if-ge v2, v5, :cond_1
+    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    invoke-interface {p0, v2, v0, v1}, Laj5;->q(IJ)Z
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v3
+    const/4 v0, 0x3
 
-    if-eqz v3, :cond_0
+    invoke-static {p1, v0, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    add-int/lit8 v6, v6, 0x1
+    iget v0, p0, Lfyh;->b:I
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    goto :goto_0
+    invoke-static {p1, v2, v2}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    :cond_1
-    new-instance v2, Ly85;
+    iget v0, p0, Lfyh;->c:I
 
-    const/4 v7, 0x3
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v3, 0x1
+    const/16 v0, 0x8
 
-    invoke-direct/range {v2 .. v7}, Ly85;-><init>(IIIII)V
+    const/4 v1, 0x5
 
-    return-object v2
+    invoke-static {p1, v1, v0}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget-wide v0, p0, Lfyh;->o:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    const/4 v0, 0x6
+
+    invoke-static {p1, v0, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lfyh;->X:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

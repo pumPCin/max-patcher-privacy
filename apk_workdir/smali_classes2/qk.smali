@@ -32,11 +32,11 @@
 
     iget-object v0, p0, Lqk;->a:Ltk;
 
-    iget-object v1, v0, Ltk;->s0:Ljava/lang/String;
+    iget-object v1, v0, Ltk;->r0:Ljava/lang/String;
 
     const-string v2, "Animoji lottie download. Fail"
 
-    invoke-static {v1, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     iget-object p1, p0, Lqk;->b:Ljava/lang/String;
 
@@ -62,7 +62,7 @@
     invoke-virtual {v0, p1}, Ltk;->h(Lok;)V
 
     :goto_1
-    iget-object p1, v0, Ltk;->x0:Lone/me/rlottie/RLottieDrawable;
+    iget-object p1, v0, Ltk;->w0:Lone/me/rlottie/RLottieDrawable;
 
     const/4 v1, 0x0
 
@@ -71,7 +71,7 @@
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     :cond_2
-    iput-object v1, v0, Ltk;->x0:Lone/me/rlottie/RLottieDrawable;
+    iput-object v1, v0, Ltk;->w0:Lone/me/rlottie/RLottieDrawable;
 
     return-void
 .end method
@@ -81,18 +81,18 @@
 
     iget-object v0, p0, Lqk;->a:Ltk;
 
-    iget-object v0, v0, Ltk;->s0:Ljava/lang/String;
+    iget-object v0, v0, Ltk;->r0:Ljava/lang/String;
 
-    sget-object v1, Lndi;->a:Lkwa;
+    sget-object v1, Ltei;->a:Lmxa;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lf88;->o:Lf88;
+    sget-object v2, Lc98;->o:Lc98;
 
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
 
     move-result v3
 
@@ -122,19 +122,19 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v0, v3, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
     iget-object v0, p0, Lqk;->a:Ltk;
 
-    iget-object v0, v0, Ltk;->t0:Lwf;
+    iget-object v0, v0, Ltk;->s0:Lwf;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     iget-object v0, p0, Lqk;->a:Ltk;
 
-    iput-object p1, v0, Ltk;->x0:Lone/me/rlottie/RLottieDrawable;
+    iput-object p1, v0, Ltk;->w0:Lone/me/rlottie/RLottieDrawable;
 
     sget-object v1, Lok;->c:Lok;
 
@@ -148,9 +148,9 @@
 
     iget-object v0, p0, Lqk;->a:Ltk;
 
-    iget-object v0, v0, Ltk;->y0:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, v0, Ltk;->x0:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {v0}, Lcwi;->e(Lb54;)Z
+    invoke-static {v0}, Ldxi;->e(Lq54;)Z
 
     move-result v0
 

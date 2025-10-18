@@ -1,46 +1,133 @@
 .class public final Lzt9;
-.super Ljava/lang/Object;
+.super Le87;
 .source "SourceFile"
 
-# interfaces
-.implements Lyp9;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzt9;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:J
+.field public final X:[I
 
-.field public final b:J
+.field public final Y:[I
 
-.field public final c:J
+.field public final b:I
 
-.field public final d:J
+.field public final c:I
 
-.field public final e:J
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(JJJJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvk8;
 
-    iput-wide p1, p0, Lzt9;->a:J
+    const/16 v1, 0xa
 
-    iput-wide p3, p0, Lzt9;->b:J
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
 
-    iput-wide p5, p0, Lzt9;->c:J
+    sput-object v0, Lzt9;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput-wide p7, p0, Lzt9;->d:J
+    return-void
+.end method
 
-    iput-wide p9, p0, Lzt9;->e:J
+.method public constructor <init>(III[I[I)V
+    .locals 1
+
+    .line 1
+    const-string v0, "MLLT"
+
+    invoke-direct {p0, v0}, Le87;-><init>(Ljava/lang/String;)V
+
+    .line 2
+    iput p1, p0, Lzt9;->b:I
+
+    .line 3
+    iput p2, p0, Lzt9;->c:I
+
+    .line 4
+    iput p3, p0, Lzt9;->o:I
+
+    .line 5
+    iput-object p4, p0, Lzt9;->X:[I
+
+    .line 6
+    iput-object p5, p0, Lzt9;->Y:[I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 7
+    const-string v0, "MLLT"
+
+    invoke-direct {p0, v0}, Le87;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lzt9;->b:I
+
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lzt9;->c:I
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lzt9;->o:I
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v0
+
+    sget v1, Llig;->a:I
+
+    iput-object v0, p0, Lzt9;->X:[I
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzt9;->Y:[I
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -66,45 +153,43 @@
     :cond_1
     check-cast p1, Lzt9;
 
-    iget-wide v2, p0, Lzt9;->a:J
+    iget v2, p0, Lzt9;->b:I
 
-    iget-wide v4, p1, Lzt9;->a:J
+    iget v3, p1, Lzt9;->b:I
 
-    cmp-long v2, v2, v4
+    if-ne v2, v3, :cond_2
 
-    if-nez v2, :cond_2
+    iget v2, p0, Lzt9;->c:I
 
-    iget-wide v2, p0, Lzt9;->b:J
+    iget v3, p1, Lzt9;->c:I
 
-    iget-wide v4, p1, Lzt9;->b:J
+    if-ne v2, v3, :cond_2
 
-    cmp-long v2, v2, v4
+    iget v2, p0, Lzt9;->o:I
 
-    if-nez v2, :cond_2
+    iget v3, p1, Lzt9;->o:I
 
-    iget-wide v2, p0, Lzt9;->c:J
+    if-ne v2, v3, :cond_2
 
-    iget-wide v4, p1, Lzt9;->c:J
+    iget-object v2, p0, Lzt9;->X:[I
 
-    cmp-long v2, v2, v4
+    iget-object v3, p1, Lzt9;->X:[I
 
-    if-nez v2, :cond_2
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
 
-    iget-wide v2, p0, Lzt9;->d:J
+    move-result v2
 
-    iget-wide v4, p1, Lzt9;->d:J
+    if-eqz v2, :cond_2
 
-    cmp-long v2, v2, v4
+    iget-object v2, p0, Lzt9;->Y:[I
 
-    if-nez v2, :cond_2
+    iget-object p1, p1, Lzt9;->Y:[I
 
-    iget-wide v2, p0, Lzt9;->e:J
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([I[I)Z
 
-    iget-wide v4, p1, Lzt9;->e:J
+    move-result p1
 
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v0
 
@@ -114,41 +199,31 @@
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 2
 
-    iget-wide v0, p0, Lzt9;->a:J
+    const/16 v0, 0x20f
 
-    invoke-static {v0, v1}, Lrei;->c(J)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lzt9;->b:J
-
-    invoke-static {v1, v2}, Lrei;->c(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lzt9;->c:J
-
-    invoke-static {v2, v3}, Lrei;->c(J)I
-
-    move-result v0
+    iget v1, p0, Lzt9;->b:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p0, Lzt9;->d:J
+    iget v1, p0, Lzt9;->c:I
 
-    invoke-static {v1, v2}, Lrei;->c(J)I
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzt9;->o:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzt9;->X:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v1
 
@@ -156,9 +231,9 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    iget-wide v2, p0, Lzt9;->e:J
+    iget-object v0, p0, Lzt9;->Y:[I
 
-    invoke-static {v2, v3}, Lrei;->c(J)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
@@ -167,54 +242,28 @@
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p2, p0, Lzt9;->b:I
 
-    const-string v1, "Motion photo metadata: photoStartPosition="
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget p2, p0, Lzt9;->c:I
 
-    iget-wide v1, p0, Lzt9;->a:J
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget p2, p0, Lzt9;->o:I
 
-    const-string v1, ", photoSize="
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lzt9;->X:[I
 
-    iget-wide v1, p0, Lzt9;->b:J
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lzt9;->Y:[I
 
-    const-string v1, ", photoPresentationTimestampUs="
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lzt9;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoStartPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lzt9;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lzt9;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

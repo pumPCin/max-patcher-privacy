@@ -1,66 +1,110 @@
-.class public final synthetic Lge1;
+.class public final Lge1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Lie1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lge1;
+
+.field public static final b:J
+
+.field public static final c:Lorf;
+
+.field public static final d:Ljqa;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Lge1;
 
-    iput v0, p0, Lge1;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lge1;->a:Lge1;
 
-    return-void
-.end method
+    sget-wide v0, Lara;->f:J
 
-.method public synthetic constructor <init>(Lvi0;Lkq6;Leb2;)V
-    .locals 0
+    sput-wide v0, Lge1;->b:J
 
-    .line 2
-    const/4 p1, 0x1
+    sget v0, Lcra;->k:I
 
-    iput p1, p0, Lge1;->a:I
+    new-instance v1, Lorf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    sput-object v1, Lge1;->c:Lorf;
+
+    sget-object v0, Ljqa;->a:Ljqa;
+
+    sput-object v0, Lge1;->d:Ljqa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 0
+.method public final a()Ljqa;
+    .locals 1
 
-    iget p1, p0, Lge1;->a:I
+    sget-object v0, Lge1;->d:Ljqa;
 
-    packed-switch p1, :pswitch_data_0
+    return-object v0
+.end method
 
-    const/4 p1, 0x1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return p1
+    const/4 v0, 0x1
 
-    :pswitch_0
-    sget-object p1, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Ln8a;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lge1;
+
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    nop
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lge1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lorf;
+    .locals 1
+
+    sget-object v0, Lge1;->c:Lorf;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x38c47456
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "StartCall"
+
+    return-object v0
 .end method

@@ -17,7 +17,7 @@
         "workerParams",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "ky4",
+        "bz4",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -31,35 +31,35 @@
 
 
 # instance fields
-.field public final X:Lrhf;
+.field public final X:Lwif;
 
-.field public final Y:Lrhf;
+.field public final Y:Lwif;
 
-.field public final Z:Lrhf;
+.field public final Z:Lwif;
 
-.field public final a:Lrhf;
+.field public final a:Lwif;
 
-.field public final b:Lrhf;
+.field public final b:Lwif;
 
-.field public final c:Lrhf;
+.field public final c:Lwif;
 
-.field public final o:Lrhf;
+.field public final o:Lwif;
 
-.field public final r0:Lrhf;
+.field public final q0:Lwif;
 
-.field public final s0:Lrhf;
+.field public final r0:Lwif;
 
-.field public final t0:Lrhf;
+.field public final s0:Lwif;
 
-.field public final u0:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final t0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public v0:J
+.field public u0:J
 
-.field public volatile w0:Lky4;
+.field public volatile v0:Lbz4;
 
-.field public x0:Ljava/io/File;
+.field public w0:Ljava/io/File;
 
-.field public final y0:Loy4;
+.field public final x0:Lfz4;
 
 
 # direct methods
@@ -68,167 +68,167 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->a:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->a:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x2
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x3
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->o:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->o:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x4
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x5
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Y:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Y:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x6
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/4 p2, 0x7
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r0:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->q0:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/16 p2, 0x8
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->s0:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r0:Lwif;
 
-    new-instance p1, Ley4;
+    new-instance p1, Lvy4;
 
     const/16 p2, 0x9
 
-    invoke-direct {p1, p0, p2}, Ley4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
+    invoke-direct {p1, p0, p2}, Lvy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;I)V
 
-    new-instance p2, Lrhf;
+    new-instance p2, Lwif;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->t0:Lrhf;
+    iput-object p2, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->s0:Lwif;
 
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->u0:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->t0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance p1, Loy4;
+    new-instance p1, Lfz4;
 
-    invoke-direct {p1, p0}, Loy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;)V
+    invoke-direct {p1, p0}, Lfz4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->y0:Loy4;
+    iput-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Lfz4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lznf;
+.method public final b()Ldpf;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->a:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->a:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lznf;
+    check-cast v0, Ldpf;
 
     return-object v0
 .end method
 
-.method public final c()Lgw0;
+.method public final c()Lpw0;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->o:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->o:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lgw0;
+    check-cast v0, Lpw0;
 
     return-object v0
 .end method
@@ -236,31 +236,31 @@
 .method public final createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 14
 
-    invoke-virtual {p0}, Lt18;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lrnh;->d(Landroid/content/Context;)Lrnh;
+    invoke-static {p1}, Lsoh;->d(Landroid/content/Context;)Lsoh;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lt18;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lq28;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lrnh;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
+    invoke-virtual {p1, v0}, Lsoh;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
 
     move-result-object v8
 
-    iget-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Lky4;
+    iget-object p1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->v0:Lbz4;
 
-    instance-of v0, p1, Ljy4;
+    instance-of v0, p1, Laz4;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Ljy4;
+    check-cast p1, Laz4;
 
     goto :goto_0
 
@@ -270,11 +270,11 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    iget v0, p1, Ljy4;->a:I
+    iget v0, p1, Laz4;->a:I
 
-    iget-wide v2, p1, Ljy4;->b:J
+    iget-wide v2, p1, Laz4;->b:J
 
-    iget-wide v4, p1, Ljy4;->c:J
+    iget-wide v4, p1, Laz4;->c:J
 
     :goto_1
     move v6, v0
@@ -291,47 +291,47 @@
     goto :goto_1
 
     :goto_2
-    invoke-virtual {p0}, Lt18;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lq28;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lbs5;
+    check-cast v0, Lus5;
 
-    iget v0, v0, Lbs5;->e:I
+    iget v0, v0, Lus5;->e:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->t0:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->s0:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgz3;
-
-    invoke-virtual {v0, v4, v5}, Lgz3;->c(J)Lgzc;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lgzc;->a:Llze;
+    check-cast v0, Luz3;
 
-    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v4, v5}, Luz3;->c(J)Ln0d;
 
     move-result-object v0
 
-    check-cast v0, Lir3;
+    iget-object v0, v0, Ln0d;->a:Lq0f;
+
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwr3;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lir3;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lwr3;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -347,18 +347,18 @@
     move-object v2, v1
 
     :goto_3
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->Z:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v3, v0
 
-    check-cast v3, Lbs5;
+    check-cast v3, Lus5;
 
     :try_start_0
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
     if-nez v0, :cond_3
 
@@ -376,16 +376,16 @@
     :catchall_0
     move-exception v0
 
-    new-instance v7, Lvcd;
+    new-instance v7, Lbed;
 
-    invoke-direct {v7, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v7, v0}, Lbed;-><init>(Ljava/lang/Throwable;)V
 
     move-object v0, v7
 
     :goto_4
     nop
 
-    instance-of v7, v0, Lvcd;
+    instance-of v7, v0, Lbed;
 
     if-eqz v7, :cond_4
 
@@ -408,31 +408,31 @@
 
     move-result-object p1
 
-    iget-object v0, v3, Lbs5;->a:Landroid/content/Context;
+    iget-object v0, v3, Lus5;->a:Landroid/content/Context;
 
     invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v7
 
-    iget-object v11, v3, Lbs5;->b:Lvxa;
+    iget-object v11, v3, Lus5;->b:Lxya;
 
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v12, Ldd8;->c:Ldd8;
+    sget-object v12, Lae8;->c:Lae8;
 
-    sget-object v13, Lr3h;->Y:Lr3h;
+    sget-object v13, Lr4h;->Y:Lr4h;
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v4, v5, v13, v1}, Ldd8;->Y0(JLr3h;Ljava/lang/String;)Lhf4;
+    invoke-static {v4, v5, v13, v1}, Lae8;->Y0(JLr4h;Ljava/lang/String;)Lwf4;
 
     move-result-object v1
 
-    invoke-virtual {v11, v1}, Lvxa;->j(Lhf4;)Landroid/content/Intent;
+    invoke-virtual {v11, v1}, Lxya;->j(Lwf4;)Landroid/content/Intent;
 
     move-result-object v1
 
-    invoke-static {v0, v7, v1}, Lqoi;->c(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
+    invoke-static {v0, v7, v1}, Leui;->b(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
 
     move-result-object v7
 
@@ -446,15 +446,15 @@
 
     move-object v3, p1
 
-    invoke-virtual/range {v1 .. v8}, Lbs5;->a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
+    invoke-virtual/range {v1 .. v8}, Lus5;->a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
 
     move-result-object p1
 
-    new-instance v0, Lba6;
+    new-instance v0, Lva6;
 
-    iget-object v1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b:Lrhf;
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b:Lwif;
 
-    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -464,35 +464,35 @@
 
     move-result v1
 
-    sget v2, Li3e;->a:I
+    sget v2, Lp4e;->a:I
 
-    invoke-direct {v0, v1, p1, v2}, Lba6;-><init>(ILandroid/app/Notification;I)V
+    invoke-direct {v0, v1, p1, v2}, Lva6;-><init>(ILandroid/app/Notification;I)V
 
     return-object v0
 .end method
 
 .method public final doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 18
+    .locals 19
 
     move-object/from16 v1, p0
 
     move-object/from16 v0, p1
 
-    sget-object v2, Lfy4;->a:Lfy4;
+    sget-object v2, Lwy4;->a:Lwy4;
 
-    sget-object v3, Lzag;->a:Lzag;
+    sget-object v3, Lccg;->a:Lccg;
 
-    sget-object v4, Lc54;->a:Lc54;
+    sget-object v4, Lr54;->a:Lr54;
 
-    instance-of v5, v0, Lly4;
+    instance-of v5, v0, Lcz4;
 
     if-eqz v5, :cond_0
 
     move-object v5, v0
 
-    check-cast v5, Lly4;
+    check-cast v5, Lcz4;
 
-    iget v6, v5, Lly4;->Z:I
+    iget v6, v5, Lcz4;->Z:I
 
     const/high16 v7, -0x80000000
 
@@ -502,54 +502,54 @@
 
     sub-int/2addr v6, v7
 
-    iput v6, v5, Lly4;->Z:I
+    iput v6, v5, Lcz4;->Z:I
 
     :goto_0
-    move-object v12, v5
+    move-object v13, v5
 
     goto :goto_1
 
     :cond_0
-    new-instance v5, Lly4;
+    new-instance v5, Lcz4;
 
-    check-cast v0, Lk14;
+    check-cast v0, Ly14;
 
-    invoke-direct {v5, v1, v0}, Lly4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lk14;)V
+    invoke-direct {v5, v1, v0}, Lcz4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Ly14;)V
 
     goto :goto_0
 
     :goto_1
-    iget-object v0, v12, Lly4;->X:Ljava/lang/Object;
+    iget-object v0, v13, Lcz4;->X:Ljava/lang/Object;
 
-    iget v5, v12, Lly4;->Z:I
+    iget v5, v13, Lcz4;->Z:I
 
-    const/4 v14, 0x3
+    const/4 v15, 0x3
 
     const/4 v6, 0x2
 
-    const-string v15, "workers:DownloadFileFromWebAppWorker"
+    const-string v7, "workers:DownloadFileFromWebAppWorker"
 
-    const/4 v7, 0x4
+    const/4 v8, 0x4
 
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     if-eqz v5, :cond_5
 
-    if-eq v5, v8, :cond_4
+    if-eq v5, v9, :cond_4
 
     if-eq v5, v6, :cond_3
 
-    if-eq v5, v14, :cond_2
+    if-eq v5, v15, :cond_2
 
-    if-ne v5, v7, :cond_1
+    if-ne v5, v8, :cond_1
 
-    invoke-static {v0}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const/16 v17, 0x5
+    const/16 v18, 0x5
 
-    goto/16 :goto_e
+    goto/16 :goto_c
 
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -561,64 +561,68 @@
     throw v0
 
     :cond_2
-    iget-object v5, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iget-object v5, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
     :try_start_0
-    invoke-static {v0}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v6, v0
+    move/from16 v16, v8
 
-    move/from16 p1, v7
+    move/from16 v17, v9
 
-    move v0, v8
+    move-object v14, v10
 
-    move-object v13, v9
+    move/from16 p1, v15
 
-    const/16 v17, 0x5
+    const/16 v18, 0x5
 
-    goto/16 :goto_7
+    move-object v15, v7
+
+    goto/16 :goto_6
 
     :catchall_0
     move-exception v0
 
-    move/from16 p1, v7
+    move-object v15, v7
 
-    move-object v13, v9
+    move/from16 v16, v8
+
+    move-object v14, v10
 
     :goto_2
-    const/16 v17, 0x5
+    const/16 v18, 0x5
 
-    goto/16 :goto_a
+    goto/16 :goto_8
 
     :cond_3
-    iget-object v5, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iget-object v5, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
     :try_start_1
-    invoke-static {v0}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_5
 
     :cond_4
-    iget-object v5, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iget-object v5, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
     :try_start_2
-    invoke-static {v0}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_3
 
     :cond_5
-    invoke-static {v0}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxxi;->b(Ljava/lang/Object;)V
 
     :try_start_3
     const-string v0, "File download. doWork %s"
 
-    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v5
 
@@ -626,39 +630,39 @@
 
     move-result-object v5
 
-    invoke-static {v15, v0, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v0, v5}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r0:Lrhf;
+    iget-object v0, v1, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->q0:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqkf;
-
-    check-cast v0, Losa;
-
-    invoke-virtual {v0}, Losa;->b()Lv44;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v5, Lmy4;
+    check-cast v0, Lulf;
 
-    invoke-direct {v5, v1, v9}, Lmy4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
+    check-cast v0, Lqta;
 
-    iput-object v1, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    invoke-virtual {v0}, Lqta;->b()Lk54;
 
-    iput v8, v12, Lly4;->Z:I
+    move-result-object v0
 
-    invoke-static {v0, v5, v12}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v5, Ldz4;
+
+    invoke-direct {v5, v1, v10}, Ldz4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
+
+    iput-object v1, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+
+    iput v9, v13, Lcz4;->Z:I
+
+    invoke-static {v0, v5, v13}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v0
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_4
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     if-ne v0, v4, :cond_6
 
-    goto/16 :goto_d
+    goto/16 :goto_b
 
     :cond_6
     move-object v5, v1
@@ -667,46 +671,56 @@
     :try_start_4
     check-cast v0, Ljava/io/File;
 
-    iput-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
+    iput-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
-    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->s0:Lrhf;
+    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r0:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvo3;
+    check-cast v0, Lip3;
 
-    iput-object v5, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iput-object v5, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    iput v6, v12, Lly4;->Z:I
+    iput v6, v13, Lcz4;->Z:I
 
-    new-instance v6, Lg32;
+    new-instance v6, Lo32;
 
-    invoke-static {v12}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v13}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v10
+    move-result-object v11
 
-    invoke-direct {v6, v8, v10}, Lg32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v6, v9, v11}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v6}, Lg32;->o()V
+    invoke-virtual {v6}, Lo32;->o()V
 
-    invoke-interface {v0}, Lvo3;->f()Z
+    new-instance v11, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result v10
+    const/4 v12, 0x0
 
-    if-eqz v10, :cond_7
+    invoke-direct {v11, v12}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    invoke-virtual {v6, v3}, Lg32;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lip3;->f()Z
+
+    move-result v16
+
+    if-eqz v16, :cond_7
+
+    invoke-virtual {v11, v12, v9}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_7
+
+    invoke-virtual {v6, v3}, Lo32;->resumeWith(Ljava/lang/Object;)V
 
     goto :goto_4
 
     :cond_7
-    new-instance v10, Lru1;
+    new-instance v12, Lkp3;
 
-    const/4 v11, 0x1
-
-    invoke-direct {v10, v0, v6, v11}, Lru1;-><init>(Lvo3;Ljava/lang/Object;I)V
+    invoke-direct {v12, v0, v6, v11}, Lkp3;-><init>(Lip3;Lo32;Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -719,208 +733,202 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :try_start_5
-    const-string v7, "Network connection lost, waiting network."
+    const-string v8, "Network connection lost, waiting network."
 
-    invoke-static {v11, v7}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v8}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0, v10}, Lvo3;->c(Luo3;)V
+    invoke-interface {v0, v12}, Lip3;->c(Lhp3;)V
 
-    new-instance v7, Llt1;
+    new-instance v8, Ltt1;
 
     const/4 v11, 0x3
 
-    invoke-direct {v7, v0, v11, v10}, Llt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v8, v0, v11, v12}, Ltt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v6, v7}, Lg32;->e(Lqh6;)V
+    invoke-virtual {v6, v8}, Lo32;->e(Lli6;)V
 
     :goto_4
-    invoke-virtual {v6}, Lg32;->n()Ljava/lang/Object;
+    invoke-virtual {v6}, Lo32;->n()Ljava/lang/Object;
 
     move-result-object v0
 
     if-ne v0, v4, :cond_8
 
-    goto/16 :goto_d
+    goto/16 :goto_b
 
     :cond_8
     :goto_5
-    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lrhf;
+    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkff;
+    check-cast v0, Lrgf;
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v6
 
-    iget-object v7, v6, Lznf;->c:Ljava/lang/String;
+    iget-object v6, v6, Ldpf;->c:Ljava/lang/String;
 
-    iget-object v6, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+    iget-object v8, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
-    if-nez v6, :cond_9
+    if-nez v8, :cond_9
 
-    move-object v6, v9
-
-    move-object v10, v6
-
-    goto :goto_6
+    move-object v8, v10
 
     :cond_9
-    move-object v10, v9
+    move v11, v9
 
-    :goto_6
-    :try_start_6
-    iget-object v9, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->y0:Loy4;
+    iget-object v9, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Lfz4;
 
-    iput-object v5, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    const-string v12, ""
 
-    iput v14, v12, Lly4;->Z:I
+    iput-object v5, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    iget-object v0, v0, Lkff;->a:Ld4b;
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    iput v15, v13, Lcz4;->Z:I
 
-    move-object v11, v10
+    iget-object v0, v0, Lrgf;->a:Lf5b;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    move-object/from16 v16, v10
 
     const/4 v10, 0x0
 
-    move-object/from16 v16, v11
+    move/from16 v17, v11
 
     const/4 v11, 0x1
 
-    move-object/from16 p1, v6
+    move/from16 p1, v15
+
+    move-object/from16 v14, v16
+
+    const/16 v16, 0x4
+
+    const/16 v18, 0x5
+
+    move-object v15, v7
+
+    move-object v7, v6
 
     move-object v6, v0
 
-    move v0, v8
-
-    move-object/from16 v8, p1
-
-    move-object/from16 v13, v16
-
-    const/16 p1, 0x4
-
-    const/16 v17, 0x5
-
-    :try_start_7
-    invoke-virtual/range {v6 .. v12}, Ld4b;->b(Ljava/lang/String;Ljava/io/File;Ljff;Ljava/lang/String;ZLk14;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-ne v6, v4, :cond_a
-
-    goto/16 :goto_d
-
-    :cond_a
-    :goto_7
-    check-cast v6, Liff;
-
-    sget-object v7, Liff;->a:Liff;
-
-    if-ne v6, v7, :cond_b
-
-    const-string v6, "File download. Process: already downloading file %s"
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
-
-    move-result-object v7
-
-    filled-new-array {v7}, [Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-static {v15, v6, v7}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {v0}, Ld15;->a(I)Lya4;
+    :try_start_6
+    invoke-virtual/range {v6 .. v13}, Lf5b;->b(Ljava/lang/String;Ljava/io/File;Lqgf;Ljava/lang/String;ZLjava/lang/String;Ly14;)Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v6, Lp18;
+    if-ne v0, v4, :cond_a
 
-    invoke-direct {v6, v0}, Lp18;-><init>(Lya4;)V
+    goto/16 :goto_b
+
+    :cond_a
+    :goto_6
+    check-cast v0, Lpgf;
+
+    sget-object v6, Lpgf;->a:Lpgf;
+
+    if-ne v0, v6, :cond_b
+
+    const-string v0, "File download. Process: already downloading file %s"
+
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
+
+    move-result-object v6
+
+    filled-new-array {v6}, [Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-static {v15, v0, v6}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static/range {v17 .. v17}, Lu15;->a(I)Lnb4;
+
+    move-result-object v0
+
+    new-instance v6, Lm28;
+
+    invoke-direct {v6, v0}, Lm28;-><init>(Lnb4;)V
 
     return-object v6
 
     :catchall_1
     move-exception v0
 
-    goto/16 :goto_a
+    goto/16 :goto_8
 
     :cond_b
-    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Lky4;
+    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->v0:Lbz4;
 
-    instance-of v6, v0, Liy4;
+    instance-of v6, v0, Lzy4;
 
     if-eqz v6, :cond_d
 
-    check-cast v0, Liy4;
+    check-cast v0, Lzy4;
 
-    iget-boolean v0, v0, Liy4;->a:Z
+    iget-boolean v0, v0, Lzy4;->a:Z
 
     if-eqz v0, :cond_c
 
-    new-instance v0, Lq18;
+    new-instance v0, Ln28;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-object v0
 
     :cond_c
-    invoke-static {v14}, Ld15;->a(I)Lya4;
+    invoke-static/range {p1 .. p1}, Lu15;->a(I)Lnb4;
 
     move-result-object v0
 
-    new-instance v6, Lp18;
+    new-instance v6, Lm28;
 
-    invoke-direct {v6, v0}, Lp18;-><init>(Lya4;)V
+    invoke-direct {v6, v0}, Lm28;-><init>(Lnb4;)V
 
     return-object v6
 
     :cond_d
-    sget-object v6, Lhy4;->a:Lhy4;
+    sget-object v6, Lyy4;->a:Lyy4;
 
-    invoke-static {v0, v6}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v6}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_e
 
-    invoke-static/range {p1 .. p1}, Ld15;->a(I)Lya4;
+    invoke-static/range {v16 .. v16}, Lu15;->a(I)Lnb4;
 
     move-result-object v0
 
-    new-instance v6, Lp18;
+    new-instance v6, Lm28;
 
-    invoke-direct {v6, v0}, Lp18;-><init>(Lya4;)V
+    invoke-direct {v6, v0}, Lm28;-><init>(Lnb4;)V
 
     return-object v6
 
     :cond_e
-    invoke-static {v0, v2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_f
 
-    invoke-static/range {v17 .. v17}, Ld15;->a(I)Lya4;
+    invoke-static/range {v18 .. v18}, Lu15;->a(I)Lnb4;
 
     move-result-object v0
 
-    new-instance v6, Lp18;
+    new-instance v6, Lm28;
 
-    invoke-direct {v6, v0}, Lp18;-><init>(Lya4;)V
+    invoke-direct {v6, v0}, Lm28;-><init>(Lnb4;)V
 
     return-object v6
 
     :cond_f
-    sget-object v6, Lgy4;->a:Lgy4;
+    sget-object v6, Lxy4;->a:Lxy4;
 
-    invoke-static {v0, v6}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v6}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -928,14 +936,14 @@
 
     if-nez v0, :cond_10
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_10
-    instance-of v0, v0, Ljy4;
+    instance-of v0, v0, Laz4;
 
     if-eqz v0, :cond_11
 
-    invoke-static {}, Ls18;->b()Lr18;
+    invoke-static {}, Lp28;->b()Lo28;
 
     move-result-object v0
 
@@ -949,148 +957,144 @@
     throw v0
 
     :cond_12
-    :goto_8
-    invoke-static {}, Ls18;->b()Lr18;
+    :goto_7
+    invoke-static {}, Lp28;->b()Lo28;
 
     move-result-object v0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     return-object v0
 
     :catchall_2
     move-exception v0
 
-    move-object v13, v10
+    move-object v15, v7
 
-    :goto_9
-    const/16 p1, 0x4
+    move-object v14, v10
+
+    const/16 v16, 0x4
 
     goto/16 :goto_2
 
     :catchall_3
     move-exception v0
 
-    move-object v13, v9
+    move-object v15, v7
 
-    goto :goto_9
+    move/from16 v16, v8
 
-    :catchall_4
-    move-exception v0
+    move-object v14, v10
 
-    move/from16 p1, v7
-
-    move-object v13, v9
-
-    const/16 v17, 0x5
+    const/16 v18, 0x5
 
     move-object v5, v1
 
-    :goto_a
+    :goto_8
     const-string v6, "File download. Cancelled!"
 
-    invoke-static {v15, v6, v0}, Lndi;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v15, v6, v0}, Ltei;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object v13, v12, Lly4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iput-object v14, v13, Lcz4;->o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
 
-    move/from16 v6, p1
+    move/from16 v6, v16
 
-    iput v6, v12, Lly4;->Z:I
+    iput v6, v13, Lcz4;->Z:I
 
-    sget-object v0, Lndi;->a:Lkwa;
+    sget-object v0, Ltei;->a:Lmxa;
 
     if-nez v0, :cond_13
 
-    goto :goto_c
+    goto :goto_a
 
     :cond_13
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v6, Lf88;->o:Lf88;
+    sget-object v6, Lc98;->o:Lc98;
 
-    invoke-virtual {v0, v6}, Lkwa;->b(Lf88;)Z
+    invoke-virtual {v0, v6}, Lmxa;->b(Lc98;)Z
 
     move-result v7
 
     if-eqz v7, :cond_16
 
-    invoke-static {}, Lndi;->b()Z
+    invoke-static {}, Ltei;->a()Z
 
     move-result v7
 
     if-eqz v7, :cond_14
 
-    iget-object v9, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
+    iget-object v10, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
-    if-nez v9, :cond_15
+    if-nez v10, :cond_15
 
-    move-object v9, v13
+    move-object v10, v14
 
-    goto :goto_b
+    goto :goto_9
 
     :cond_14
-    const-string v9, "*****"
+    const-string v10, "*****"
 
     :cond_15
-    :goto_b
+    :goto_9
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "File download. CancelLoading: "
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0, v6, v15, v7, v13}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v6, v15, v7, v14}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_16
-    :goto_c
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c()Lgw0;
+    :goto_a
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c()Lpw0;
 
     move-result-object v0
 
-    new-instance v6, Lkr5;
+    new-instance v6, Lds5;
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v7
 
-    iget-wide v7, v7, Lznf;->a:J
+    iget-wide v7, v7, Ldpf;->a:J
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v9
 
-    iget-object v9, v9, Lznf;->c:Ljava/lang/String;
+    iget-object v9, v9, Ldpf;->c:Ljava/lang/String;
 
-    invoke-direct {v6, v7, v8}, Lkr5;-><init>(J)V
+    invoke-direct {v6, v7, v8}, Lds5;-><init>(J)V
 
-    invoke-virtual {v0, v6}, Lgw0;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v6}, Lpw0;->c(Ljava/lang/Object;)V
 
-    iput-object v2, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Lky4;
+    iput-object v2, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->v0:Lbz4;
 
-    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lrhf;
+    iget-object v0, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkff;
+    check-cast v0, Lrgf;
 
-    iget-object v9, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
+    iget-object v10, v5, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
-    if-nez v9, :cond_17
+    if-nez v10, :cond_17
 
-    move-object v9, v13
+    move-object v10, v14
 
     :cond_17
-    iget-object v0, v0, Lkff;->a:Ld4b;
+    iget-object v0, v0, Lrgf;->a:Lf5b;
 
-    invoke-virtual {v0, v9, v13, v12}, Ld4b;->a(Ljava/io/File;Ljava/lang/String;Lk14;)Ljava/lang/Object;
+    invoke-virtual {v0, v10, v14, v13}, Lf5b;->a(Ljava/io/File;Ljava/lang/String;Ly14;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1101,36 +1105,36 @@
     :cond_18
     if-ne v3, v4, :cond_19
 
-    :goto_d
+    :goto_b
     return-object v4
 
     :cond_19
-    :goto_e
-    invoke-static/range {v17 .. v17}, Ld15;->a(I)Lya4;
+    :goto_c
+    invoke-static/range {v18 .. v18}, Lu15;->a(I)Lnb4;
 
     move-result-object v0
 
-    new-instance v2, Lp18;
+    new-instance v2, Lm28;
 
-    invoke-direct {v2, v0}, Lp18;-><init>(Lya4;)V
+    invoke-direct {v2, v0}, Lm28;-><init>(Lnb4;)V
 
     return-object v2
 .end method
 
-.method public final getCoroutineContext()Lv44;
+.method public final getCoroutineContext()Lk54;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->r0:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->q0:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqkf;
+    check-cast v0, Lulf;
 
-    check-cast v0, Losa;
+    check-cast v0, Lqta;
 
-    invoke-virtual {v0}, Losa;->d()Lv44;
+    invoke-virtual {v0}, Lqta;->d()Lk54;
 
     move-result-object v0
 
@@ -1140,13 +1144,13 @@
 .method public final getName()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, Lt18;->getInputData()Lya4;
+    invoke-virtual {p0}, Lq28;->getInputData()Lnb4;
 
     move-result-object v0
 
     const-string v1, "taskName"
 
-    invoke-virtual {v0, v1}, Lya4;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lnb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1173,43 +1177,43 @@
 
     const-string v1, "File download. OnStopWork"
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c()Lgw0;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c()Lpw0;
 
     move-result-object v0
 
-    new-instance v1, Lkr5;
+    new-instance v1, Lds5;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v2
 
-    iget-wide v2, v2, Lznf;->a:J
+    iget-wide v2, v2, Ldpf;->a:J
 
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Lznf;
+    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
 
     move-result-object v4
 
-    iget-object v4, v4, Lznf;->c:Ljava/lang/String;
+    iget-object v4, v4, Ldpf;->c:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Lkr5;-><init>(J)V
+    invoke-direct {v1, v2, v3}, Lds5;-><init>(J)V
 
-    invoke-virtual {v0, v1}, Lgw0;->c(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lpw0;->c(Ljava/lang/Object;)V
 
-    sget-object v0, Lfy4;->a:Lfy4;
+    sget-object v0, Lwy4;->a:Lwy4;
 
-    iput-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Lky4;
+    iput-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->v0:Lbz4;
 
-    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lrhf;
+    iget-object v0, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->X:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkff;
+    check-cast v0, Lrgf;
 
-    iget-object v1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->x0:Ljava/io/File;
+    iget-object v1, p0, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->w0:Ljava/io/File;
 
     const/4 v2, 0x0
 
@@ -1218,11 +1222,11 @@
     move-object v1, v2
 
     :cond_0
-    iget-object v0, v0, Lkff;->a:Ld4b;
+    iget-object v0, v0, Lrgf;->a:Lf5b;
 
-    invoke-virtual {v0, v1, v2, p1}, Ld4b;->k(Ljava/io/File;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2, p1}, Lf5b;->k(Ljava/io/File;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

@@ -4,40 +4,20 @@
 
 
 # instance fields
-.field public final a:Lyuc;
+.field public final a:I
 
-.field public final b:J
-
-.field public final c:Lrhd;
-
-.field public final d:Lshd;
-
-.field public e:J
-
-.field public f:J
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(JLshd;Lyuc;)V
-    .locals 2
+.method public constructor <init>(II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    iput p1, p0, Lm45;->a:I
 
-    iput-wide v0, p0, Lm45;->e:J
-
-    iput-wide v0, p0, Lm45;->f:J
-
-    iput-wide p1, p0, Lm45;->b:J
-
-    iget-object p1, p3, Lshd;->b:Lrhd;
-
-    iput-object p1, p0, Lm45;->c:Lrhd;
-
-    iput-object p3, p0, Lm45;->d:Lshd;
-
-    iput-object p4, p0, Lm45;->a:Lyuc;
+    iput p2, p0, Lm45;->b:I
 
     return-void
 .end method

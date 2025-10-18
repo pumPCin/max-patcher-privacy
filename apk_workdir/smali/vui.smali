@@ -1,63 +1,155 @@
-.class public final Lvui;
+.class public abstract Lvui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Long;
-
-.field public final b:Ljava/lang/Long;
-
-.field public final c:Ljava/lang/Long;
-
-.field public final d:Ljava/lang/Long;
-
-.field public final e:Ljava/lang/Long;
-
-.field public final f:Ljava/lang/Long;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lvp5;)V
-    .locals 1
+.method public static final a(Ljava/lang/Long;Ljava/lang/Long;)Ljava/lang/String;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, p0}, Ljava/lang/Long;->compareTo(Ljava/lang/Object;)I
 
-    iget-object v0, p1, Lvp5;->a:Ljava/lang/Object;
+    move-result p0
 
-    check-cast v0, Ljava/lang/Long;
+    if-lez p0, :cond_0
 
-    iput-object v0, p0, Lvui;->a:Ljava/lang/Long;
+    const-string p0, "<"
 
-    iget-object v0, p1, Lvp5;->b:Ljava/lang/Object;
+    return-object p0
 
-    check-cast v0, Ljava/lang/Long;
+    :cond_0
+    if-gez p0, :cond_1
 
-    iput-object v0, p0, Lvui;->b:Ljava/lang/Long;
+    const-string p0, ">"
 
-    iget-object v0, p1, Lvp5;->c:Ljava/lang/Object;
+    return-object p0
 
-    check-cast v0, Ljava/lang/Long;
+    :cond_1
+    const-string p0, "="
 
-    iput-object v0, p0, Lvui;->c:Ljava/lang/Long;
+    return-object p0
+.end method
 
-    iget-object v0, p1, Lvp5;->d:Ljava/lang/Object;
+.method public static final b(Lzcg;)V
+    .locals 3
 
-    check-cast v0, Ljava/lang/Long;
+    new-instance v0, Lhhb;
 
-    iput-object v0, p0, Lvui;->d:Ljava/lang/Long;
+    const/4 v1, 0x3
 
-    iget-object v0, p1, Lvp5;->e:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
 
-    check-cast v0, Ljava/lang/Long;
+    const-class v1, Lfog;
 
-    iput-object v0, p0, Lvui;->e:Ljava/lang/Long;
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
-    iget-object p1, p1, Lvp5;->f:Ljava/lang/Object;
+    new-instance v0, Lhhb;
 
-    check-cast p1, Ljava/lang/Long;
+    const/4 v1, 0x4
 
-    iput-object p1, p0, Lvui;->f:Ljava/lang/Long;
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lgub;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lyqe;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Luh5;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lxx0;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lsmg;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lgpa;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+
+    const-class v1, Lmmd;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lnub;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lkng;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lhhb;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lhhb;-><init>(I)V
+
+    const-class v1, Lqxg;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lfpa;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lfpa;-><init>(I)V
+
+    const-class v1, Lms4;
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+
+    new-instance v0, Lfpa;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Lfpa;-><init>(I)V
+
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
 
     return-void
 .end method

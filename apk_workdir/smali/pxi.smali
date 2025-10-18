@@ -3,258 +3,149 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Z
-
-
 # direct methods
-.method public static final a(Lk14;)V
-    .locals 4
+.method public static final a(Landroid/database/Cursor;Ljava/lang/String;)I
+    .locals 2
 
-    instance-of v0, p0, Llp4;
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    move-object v0, p0
+    if-ltz v0, :cond_0
 
-    check-cast v0, Llp4;
+    return v0
 
-    iget v1, v0, Llp4;->X:I
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/high16 v2, -0x80000000
+    const-string v1, "`"
 
-    and-int v3, v1, v2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sub-int/2addr v1, v2
+    const/16 p1, 0x60
 
-    iput v1, v0, Llp4;->X:I
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-ltz p0, :cond_1
+
+    return p0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public static final b(Landroid/database/Cursor;Ljava/lang/String;)I
+    .locals 3
+
+    invoke-static {p0, p1}, Lpxi;->a(Landroid/database/Cursor;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    :try_start_0
+    invoke-interface {p0}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x3f
+
+    invoke-static {p0, v0, v1}, Ljt;->C([Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "RoomCursorUtil"
+
+    const-string v1, "Cannot collect column names for debug purposes"
+
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const-string p0, "unknown"
+
+    :goto_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "column \'"
+
+    const-string v2, "\' does not exist. Available columns: "
+
+    invoke-static {v1, p1, v2, p0}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final c(Lhx7;Lhw7;Lzi6;Lsgf;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Lhw7;->b:Lhw7;
+
+    if-eq p1, v0, :cond_2
+
+    iget-object v0, p0, Lhx7;->d:Lhw7;
+
+    sget-object v1, Lhw7;->a:Lhw7;
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Llp4;
+    new-instance v0, Lxad;
 
-    invoke-direct {v0, p0}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
 
+    invoke-direct {v0, p0, p1, p2, v1}, Lxad;-><init>(Lhx7;Lhw7;Lzi6;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, p3}, Ldxi;->c(Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lr54;->a:Lr54;
+
+    if-ne p0, p1, :cond_1
+
+    return-object p0
+
+    :cond_1
     :goto_0
-    iget-object p0, v0, Llp4;->o:Ljava/lang/Object;
-
-    iget v1, v0, Llp4;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-eq v1, v2, :cond_1
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p0}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p0}, Lswi;->b(Ljava/lang/Object;)V
-
-    iput v2, v0, Llp4;->X:I
-
-    new-instance p0, Lg32;
-
-    invoke-static {v0}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v0
-
-    invoke-direct {p0, v2, v0}, Lg32;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {p0}, Lg32;->o()V
-
-    invoke-virtual {p0}, Lg32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p0, v0, :cond_3
-
-    return-void
-
-    :cond_3
-    :goto_1
-    new-instance p0, Lkotlin/KotlinNothingValueException;
-
-    invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
-
-    throw p0
-.end method
-
-.method public static final b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p0, v0
-
-    sget-object v1, Lzag;->a:Lzag;
-
-    if-gtz v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    new-instance v0, Lg32;
-
-    invoke-static {p2}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p2
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, p2}, Lg32;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Lg32;->o()V
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long p2, p0, v2
-
-    if-gez p2, :cond_1
-
-    invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lpxi;->d(Lt44;)Lkp4;
-
-    move-result-object p2
-
-    invoke-interface {p2, p0, p1, v0}, Lkp4;->scheduleResumeAfterDelay(JLf32;)V
-
-    :cond_1
-    invoke-virtual {v0}, Lg32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    if-ne p0, p1, :cond_2
+    sget-object p0, Lccg;->a:Lccg;
 
     return-object p0
 
     :cond_2
-    return-object v1
-.end method
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-.method public static final c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
+    const-string p1, "repeatOnLifecycle cannot start work with the INITIALIZED lifecycle state."
 
-    invoke-static {p0, p1}, Lpxi;->e(J)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1, p2}, Lpxi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lzag;->a:Lzag;
-
-    return-object p0
-.end method
-
-.method public static final d(Lt44;)Lkp4;
-    .locals 1
-
-    sget-object v0, Lk8a;->o:Lk8a;
-
-    invoke-interface {p0, v0}, Lt44;->get(Ls44;)Lr44;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lkp4;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lkp4;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-nez p0, :cond_1
-
-    sget-object p0, Lnj4;->a:Lkp4;
-
-    :cond_1
-    return-object p0
-.end method
-
-.method public static final e(J)J
-    .locals 4
-
-    sget v0, Lb35;->o:I
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p0, v0
-
-    const/4 v3, 0x1
-
-    if-lez v2, :cond_0
-
-    move v2, v3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ne v2, v3, :cond_1
-
-    const-wide/32 v0, 0xf423f
-
-    sget-object v2, Lg35;->b:Lg35;
-
-    invoke-static {v0, v1, v2}, Lsyi;->f(JLg35;)J
-
-    move-result-wide v0
-
-    invoke-static {p0, p1, v0, v1}, Lb35;->j(JJ)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lb35;->g(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_1
-    if-nez v2, :cond_2
-
-    return-wide v0
-
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
 .end method

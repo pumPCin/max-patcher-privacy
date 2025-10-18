@@ -1,9 +1,3 @@
-.class public final Lq6b;
+.class public interface abstract Lq6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# instance fields
-.field public a:Z
-
-.field public b:I

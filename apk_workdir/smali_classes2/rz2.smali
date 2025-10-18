@@ -1,105 +1,80 @@
 .class public final Lrz2;
-.super Lzhe;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public w0:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/chats/search/ChatsListSearchScreen;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Lzhe;-><init>()V
+    iput-object p2, p0, Lrz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    const-string v0, ""
+    const/4 p2, 0x2
 
-    iput-object v0, p0, Lrz2;->w0:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lu2g;ZLp40;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lrz2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget v1, Ljra;->q:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    check-cast p1, Lrz2;
 
-    move-result-object v0
+    sget-object p2, Lccg;->a:Lccg;
 
-    iput-object v0, p0, Lrz2;->w0:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lrz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p3, :cond_1
-
-    if-nez p5, :cond_1
-
-    invoke-static {p3, v0}, Lpyh;->b(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Ls5b;
-
-    invoke-virtual {v0}, Ls5b;->getSearchView()Ld1b;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v2}, Ld1b;->setExpandable(Z)V
-
-    :cond_0
-    invoke-virtual {v0}, Ls5b;->g()V
-
-    invoke-virtual {v0}, Ls5b;->getSearchView()Ld1b;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    sget v1, Ld1b;->H0:I
-
-    invoke-virtual {v0, v2}, Ld1b;->c(Z)V
-
-    :cond_1
-    invoke-super/range {p0 .. p6}, Lzhe;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lu2g;ZLp40;)V
-
-    return-void
+    return-object p2
 .end method
 
-.method public final o()V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lrz2;->w0:Ljava/lang/String;
+    new-instance v0, Lrz2;
 
-    iget-object v1, p0, Lzhe;->Z:Let;
+    iget-object v1, p0, Lrz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    invoke-virtual {v1, v0, v0}, Lsne;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p2, v1}, Lrz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
 
-    return-void
-.end method
-
-.method public final p(Landroid/view/View;Z)Lc3g;
-    .locals 2
-
-    new-instance v0, Lc3g;
-
-    invoke-direct {v0}, Lc3g;-><init>()V
-
-    new-instance v1, Lqz2;
-
-    invoke-direct {v1, p1, p0, p2}, Lqz2;-><init>(Landroid/view/View;Lrz2;Z)V
-
-    invoke-virtual {v0, v1}, Lc3g;->R(Lt2g;)V
+    iput-object p1, v0, Lrz2;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrz2;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lrz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+
+    iget-object v0, v0, Lone/me/chats/search/ChatsListSearchScreen;->B0:Lji0;
+
+    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

@@ -1,310 +1,125 @@
-.class public final Lkj8;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Lkj8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmj8;
-.implements Lev4;
-.implements Ljava/lang/Runnable;
-.implements Lkpe;
 
+# static fields
+.field public static final a:[I
 
-# instance fields
-.field public final X:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final b:Lqnd;
-
-.field public c:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Throwable;
+.field public static final b:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lqnd;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lkj8;->a:I
+    const/high16 v0, 0x1010000
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    sget v1, Lgkc;->theme:I
 
-    iput-object p1, p0, Lkj8;->X:Ljava/lang/Object;
-
-    iput-object p2, p0, Lkj8;->b:Lqnd;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Lkj8;->c:Ljava/lang/Object;
-
-    iget-object p1, p0, Lkj8;->b:Lqnd;
-
-    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Lkj8;->c:Ljava/lang/Object;
-
-    iget-object p1, p0, Lkj8;->b:Lqnd;
-
-    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lkj8;->b:Lqnd;
-
-    invoke-virtual {v0, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+    sput-object v0, Lkj8;->a:[I
 
-    return-void
-.end method
+    sget v0, Lgkc;->materialThemeOverlay:I
 
-.method public final c(Lev4;)V
-    .locals 1
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Liv4;->i(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lkj8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkpe;
-
-    invoke-interface {p1, p0}, Lkpe;->c(Lev4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0, p1}, Liv4;->i(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lkj8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lmj8;
-
-    invoke-interface {p1, p0}, Lmj8;->c(Lev4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    filled-new-array {v0}, [I
 
     move-result-object v0
 
-    check-cast v0, Lev4;
+    sput-object v0, Lkj8;->b:[I
 
-    invoke-static {v0}, Liv4;->b(Lev4;)Z
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 2
+
+    sget-object v0, Lkj8;->b:[I
+
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p2
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    return v0
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    instance-of p2, p0, Lu14;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    check-cast v0, Lev4;
+    if-eqz p2, :cond_0
 
-    invoke-static {v0}, Liv4;->b(Lev4;)Z
+    move-object p2, p0
 
-    move-result v0
+    check-cast p2, Lu14;
 
-    return v0
+    iget p2, p2, Lu14;->a:I
 
-    nop
+    if-ne p2, v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Lkj8;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lkj8;->b:Lqnd;
-
-    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Lkj8;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lkj8;->b:Lqnd;
-
-    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Lkj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkj8;->X:Ljava/lang/Object;
-
-    check-cast v0, Lkpe;
-
-    iget-object v1, p0, Lkj8;->o:Ljava/lang/Throwable;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, v1}, Lkpe;->onError(Ljava/lang/Throwable;)V
+    move p2, v1
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lkj8;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lkpe;->a(Ljava/lang/Object;)V
+    move p2, p3
 
     :goto_0
-    return-void
+    if-eqz v0, :cond_4
 
-    :pswitch_0
-    iget-object v0, p0, Lkj8;->X:Ljava/lang/Object;
+    if-eqz p2, :cond_1
 
-    check-cast v0, Lmj8;
-
-    iget-object v1, p0, Lkj8;->o:Ljava/lang/Throwable;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    iput-object v2, p0, Lkj8;->o:Ljava/lang/Throwable;
-
-    invoke-interface {v0, v1}, Lmj8;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
-    iget-object v1, p0, Lkj8;->c:Ljava/lang/Object;
+    new-instance p2, Lu14;
 
-    if-eqz v1, :cond_2
+    invoke-direct {p2, p0, v0}, Lu14;-><init>(Landroid/content/Context;I)V
 
-    iput-object v2, p0, Lkj8;->c:Ljava/lang/Object;
+    sget-object v0, Lkj8;->a:[I
 
-    invoke-interface {v0, v1}, Lmj8;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p1, :cond_2
 
     goto :goto_1
 
     :cond_2
-    invoke-interface {v0}, Lmj8;->b()V
+    move p1, p3
 
     :goto_1
-    return-void
+    if-eqz p1, :cond_3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p2}, Lu14;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

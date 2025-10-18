@@ -1,55 +1,96 @@
 .class public final Lk9c;
-.super Lk14;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public X:Lir3;
-
-.field public Y:Lda2;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Ll9c;
-
-.field public final synthetic r0:Ll9c;
-
-.field public s0:I
+.field public final synthetic X:Lu9c;
 
 
 # direct methods
-.method public constructor <init>(Ll9c;Lk14;)V
+.method public constructor <init>(Lu9c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lk9c;->r0:Ll9c;
+    iput-object p1, p0, Lk9c;->X:Lu9c;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lk9c;->Z:Ljava/lang/Object;
+    check-cast p1, Lq54;
 
-    iget p1, p0, Lk9c;->s0:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lk9c;->s0:I
-
-    iget-object p1, p0, Lk9c;->r0:Ll9c;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, v0, p0}, Ll9c;->j(Ljava/lang/Long;Lir3;Lda2;Lk14;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lk9c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lk9c;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lk9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lk9c;
+
+    iget-object v0, p0, Lk9c;->X:Lu9c;
+
+    invoke-direct {p1, v0, p2}, Lk9c;-><init>(Lu9c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk9c;->X:Lu9c;
+
+    iget-object p1, p1, Lu9c;->Y:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc3b;
+
+    sget v0, Luza;->s1:I
+
+    new-instance v1, Lorf;
+
+    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lc3b;->g(Ltrf;)V
+
+    new-instance v0, Lq3b;
+
+    sget v1, Lpjd;->J:I
+
+    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

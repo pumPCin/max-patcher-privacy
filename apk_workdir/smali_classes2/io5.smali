@@ -1,236 +1,111 @@
-.class public final Lio5;
+.class public final synthetic Lio5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # instance fields
-.field public final a:Lyed;
+.field public final synthetic a:I
 
-.field public final b:Lei;
-
-.field public final c:Lfi;
+.field public final synthetic b:Lto5;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(Lto5;I)V
+    .locals 0
+
+    iput p2, p0, Lio5;->a:I
+
+    iput-object p1, p0, Lio5;->b:Lto5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lio5;->a:Lyed;
-
-    new-instance v0, Lei;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lio5;->b:Lei;
-
-    new-instance v0, Lfi;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lio5;->c:Lfi;
-
     return-void
-.end method
-
-.method public static b(ILjava/util/List;)Ljava/util/ArrayList;
-    .locals 6
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    new-instance v3, Lwm5;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    iput-wide v4, v3, Lwm5;->a:J
-
-    add-int v2, p0, v1
-
-    int-to-long v4, v2
-
-    iput-wide v4, v3, Lwm5;->b:J
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)V
-    .locals 4
+.method public final call()Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Lio5;->a:Lyed;
+    iget v0, p0, Lio5;->a:I
 
-    invoke-virtual {v0}, Lyed;->c()V
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    new-instance v1, Lej4;
+    iget-object v0, p0, Lio5;->b:Lto5;
 
-    const/4 v2, 0x3
+    invoke-virtual {v0}, Lto5;->c()Ljava/util/ArrayList;
 
-    invoke-direct {v1, v2, p0}, Lej4;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    new-instance v2, Lmg3;
+    return-object v0
 
-    const/4 v3, 0x2
+    :pswitch_0
+    iget-object v0, p0, Lio5;->b:Lto5;
 
-    invoke-direct {v2, v3, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x0
 
-    invoke-static {v1, p1}, Lio5;->b(ILjava/util/List;)Ljava/util/ArrayList;
+    const-string v2, "SELECT COUNT(*) FROM favorite_sticker_sets"
 
-    move-result-object p1
-
-    new-instance v1, Lgi;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v1, p0, v3, p1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Lmg3;
-
-    const/4 v3, 0x2
-
-    invoke-direct {p1, v3, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lkg3;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3, p1}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1}, Ljg3;->a()V
-
-    invoke-virtual {v0}, Lyed;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Lyed;->k()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {v0}, Lyed;->k()V
-
-    throw p1
-.end method
-
-.method public final c()Ljava/util/ArrayList;
-    .locals 6
-
-    const/4 v0, 0x0
-
-    const-string v1, "SELECT id FROM favorite_stickers ORDER BY `index` ASC"
-
-    invoke-static {v0, v1}, Lpfd;->c(ILjava/lang/String;)Lpfd;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lio5;->a:Lyed;
-
-    invoke-virtual {v2}, Lyed;->b()V
-
-    invoke-virtual {v2, v1}, Lyed;->n(Ldef;)Landroid/database/Cursor;
+    invoke-static {v1, v2}, Lvgd;->c(ILjava/lang/String;)Lvgd;
 
     move-result-object v2
 
+    iget-object v0, v0, Lto5;->a:Lfgd;
+
+    invoke-virtual {v0}, Lfgd;->b()V
+
+    invoke-virtual {v0, v2}, Lfgd;->n(Llff;)Landroid/database/Cursor;
+
+    move-result-object v0
+
     :try_start_0
-    new-instance v3, Ljava/util/ArrayList;
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    move-result v3
 
-    move-result v4
+    if-eqz v3, :cond_0
 
-    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    :goto_0
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    const/4 v4, 0x0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    :goto_1
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
+    move-exception v1
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_1
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    :cond_0
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v1}, Lpfd;->o()V
+    :goto_0
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    return-object v3
+    invoke-virtual {v2}, Lvgd;->n()V
 
-    :goto_2
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v1}, Lpfd;->o()V
+    move-result-object v0
 
-    throw v0
+    return-object v0
+
+    :goto_1
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v2}, Lvgd;->n()V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

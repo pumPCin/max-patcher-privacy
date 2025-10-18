@@ -26,16 +26,16 @@
 # instance fields
 .field public final synthetic E:Landroid/content/Context;
 
-.field public final synthetic F:Lc76;
+.field public final synthetic F:Lw76;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lc76;)V
+.method public constructor <init>(Landroid/content/Context;Lw76;)V
     .locals 0
 
     iput-object p1, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->E:Landroid/content/Context;
 
-    iput-object p2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Lc76;
+    iput-object p2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Lw76;
 
     const/4 p1, 0x0
 
@@ -61,13 +61,13 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    sget-object v2, Lr66;->a:Lxh7;
+    sget-object v2, Ll76;->a:Lti7;
 
-    iget-object v2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Lc76;
+    iget-object v2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Lw76;
 
-    iget-object v2, v2, Lc76;->U1:Lo66;
+    iget-object v2, v2, Lw76;->T1:Li76;
 
-    invoke-virtual {v2}, Lu08;->j()I
+    invoke-virtual {v2}, Lr18;->j()I
 
     move-result v2
 
@@ -85,15 +85,15 @@
 
     div-float/2addr v1, v0
 
-    invoke-static {v1}, Lagi;->d(F)I
+    invoke-static {v1}, Lfhi;->b(F)I
 
     move-result v0
 
-    sget-object v1, Lr66;->a:Lxh7;
+    sget-object v1, Ll76;->a:Lti7;
 
-    iget v3, v1, Lvh7;->a:I
+    iget v3, v1, Lri7;->a:I
 
-    iget v1, v1, Lvh7;->b:I
+    iget v1, v1, Lri7;->b:I
 
     if-gt v0, v1, :cond_0
 

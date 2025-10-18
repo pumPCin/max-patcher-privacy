@@ -1,300 +1,51 @@
 .class public final Lwkg;
-.super Lxm;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmmf;
-
-
-# instance fields
-.field public final X:Z
-
-.field public final Y:Ljava/lang/String;
-
-.field public final o:J
-
-
-# direct methods
-.method public constructor <init>(JJZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lxm;-><init>(J)V
-
-    iput-wide p3, p0, Lwkg;->o:J
-
-    iput-boolean p5, p0, Lwkg;->X:Z
-
-    const-class p1, Lwkg;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwkg;->Y:Ljava/lang/String;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final e(Lklf;)V
-    .locals 21
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    move-object/from16 v1, p1
+    if-ne p0, p1, :cond_0
 
-    check-cast v1, Lxkg;
-
-    new-instance v14, Lkr7;
-
-    invoke-direct {v14}, Lkr7;-><init>()V
-
-    iget-object v2, v1, Lxkg;->c:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x0
-
-    move-wide v5, v3
-
-    move-wide v7, v5
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_6
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lx81;
-
-    invoke-virtual {v0}, Lxm;->m()Lkd2;
-
-    move-result-object v10
-
-    iget-wide v11, v9, Lx81;->a:J
-
-    iget-object v13, v9, Lx81;->b:Lb99;
-
-    invoke-virtual {v10, v11, v12}, Lkd2;->z(J)Lda2;
-
-    move-result-object v10
-
-    cmp-long v11, v5, v3
-
-    if-eqz v11, :cond_0
-
-    iget-wide v11, v13, Lb99;->b:J
-
-    cmp-long v11, v11, v5
-
-    if-gez v11, :cond_1
+    return v0
 
     :cond_0
-    iget-wide v5, v13, Lb99;->b:J
+    instance-of v1, p1, Lwkg;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    cmp-long v11, v7, v3
+    check-cast p1, Lwkg;
 
-    if-eqz v11, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide v11, v13, Lb99;->b:J
-
-    cmp-long v11, v11, v7
-
-    if-lez v11, :cond_3
-
-    :cond_2
-    iget-wide v7, v13, Lb99;->b:J
-
-    :cond_3
-    if-eqz v10, :cond_5
-
-    iget-object v9, v0, Lxm;->c:Lym;
-
-    if-eqz v9, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v9, 0x0
-
-    :goto_1
-    iget-object v9, v9, Lym;->Q:Llt7;
-
-    invoke-interface {v9}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lac4;
-
-    check-cast v9, Lhb4;
-
-    iget-object v15, v9, Lhb4;->c:Lmfd;
-
-    iget-wide v9, v10, Lda2;->a:J
-
-    invoke-virtual {v0}, Lxm;->q()Ljwb;
-
-    move-result-object v11
-
-    check-cast v11, Llwb;
-
-    iget-object v11, v11, Llwb;->a:Lg68;
-
-    invoke-virtual {v11}, Lgsd;->s()J
-
-    move-result-wide v18
-
-    move-wide/from16 v16, v9
-
-    move-object/from16 v20, v13
-
-    invoke-virtual/range {v15 .. v20}, Lmfd;->e(JJLb99;)J
-
-    goto :goto_0
-
-    :cond_5
-    move-object v10, v13
-
-    iget-wide v11, v9, Lx81;->a:J
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    iget-wide v10, v10, Lb99;->a:J
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    invoke-virtual {v14, v9, v10}, Lkr7;->a(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_6
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lbxi;->e(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lbxi;->e(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v14}, Lkr7;->b()I
-
-    move-result v4
-
-    const-string v9, " endTime: "
-
-    const-string v10, " missedMessages: "
-
-    const-string v11, "onSuccess: startTime: "
-
-    invoke-static {v11, v2, v9, v3, v10}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lwkg;->Y:Ljava/lang/String;
-
-    invoke-static {v3, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lxm;->l()Lgw0;
-
-    move-result-object v15
-
-    new-instance v2, Lykg;
-
-    iget-wide v9, v1, Lxkg;->o:J
-
-    iget-wide v11, v1, Lxkg;->X:J
-
-    iget-boolean v13, v1, Lxkg;->Y:Z
-
-    iget-wide v3, v0, Lxm;->a:J
-
-    invoke-direct/range {v2 .. v14}, Lykg;-><init>(JJJJJZLkr7;)V
-
-    invoke-virtual {v15, v2}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final f(Lukf;)V
-    .locals 4
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0}, Lxm;->l()Lgw0;
+    const/high16 v0, 0x1f000000
 
-    move-result-object v0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    new-instance v1, Lkj0;
+    move-result v0
 
-    iget-wide v2, p0, Lxm;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Lkj0;-><init>(JLukf;)V
-
-    invoke-virtual {v0, v1}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final i()Lhlf;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Lqv9;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v0, v1, v2}, Lqv9;-><init>(Lk7b;I)V
-
-    const-wide/16 v1, 0x0
-
-    iget-wide v3, p0, Lwkg;->o:J
-
-    cmp-long v1, v3, v1
-
-    if-lez v1, :cond_0
-
-    const-string v1, "marker"
-
-    invoke-virtual {v0, v3, v4, v1}, Lhlf;->u(JLjava/lang/String;)V
-
-    :cond_0
-    const-string v1, "count"
-
-    const/16 v2, 0x64
-
-    invoke-virtual {v0, v2, v1}, Lhlf;->j(ILjava/lang/String;)V
-
-    const-string v1, "forward"
-
-    iget-boolean v2, p0, Lwkg;->X:Z
-
-    invoke-virtual {v0, v1, v2}, Lhlf;->i(Ljava/lang/String;Z)V
+    const-string v0, "VfxButtonIconOverlayPlainElevation1Colors(color=520093696)"
 
     return-object v0
 .end method

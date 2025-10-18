@@ -4,46 +4,188 @@
 
 
 # instance fields
-.field public final a:Llt7;
+.field public a:Ljava/lang/Object;
 
-.field public final b:Llt7;
+.field public b:Lju1;
 
-.field public final c:Lzdc;
+.field public c:Lycd;
 
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:Lrhf;
+.field public d:Z
 
 
-# direct methods
-.method public constructor <init>(Llt7;Llt7;Lzdc;Llt7;Llt7;)V
-    .locals 0
+# virtual methods
+.method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lgu1;->c:Lycd;
 
-    iput-object p1, p0, Lgu1;->a:Llt7;
+    if-eqz v0, :cond_0
 
-    iput-object p2, p0, Lgu1;->b:Llt7;
+    invoke-virtual {v0, p1, p2}, Le4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    iput-object p3, p0, Lgu1;->c:Lzdc;
+    :cond_0
+    return-void
+.end method
 
-    iput-object p4, p0, Lgu1;->d:Llt7;
+.method public final b(Ljava/lang/Object;)Z
+    .locals 2
 
-    iput-object p5, p0, Lgu1;->e:Llt7;
+    const/4 v0, 0x1
 
-    new-instance p1, Lnk1;
+    iput-boolean v0, p0, Lgu1;->d:Z
 
-    const/16 p2, 0xf
+    iget-object v1, p0, Lgu1;->b:Lju1;
 
-    invoke-direct {p1, p2}, Lnk1;-><init>(I)V
+    if-eqz v1, :cond_0
 
-    new-instance p2, Lrhf;
+    iget-object v1, v1, Lju1;->b:Liu1;
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    invoke-virtual {v1, p1}, Le4;->l(Ljava/lang/Object;)Z
 
-    iput-object p2, p0, Lgu1;->f:Lrhf;
+    move-result p1
 
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lgu1;->b:Lju1;
+
+    iput-object p1, p0, Lgu1;->c:Lycd;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final c()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgu1;->d:Z
+
+    iget-object v1, p0, Lgu1;->b:Lju1;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, v0}, Le4;->cancel(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object v0, p0, Lgu1;->b:Lju1;
+
+    iput-object v0, p0, Lgu1;->c:Lycd;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Throwable;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgu1;->d:Z
+
+    iget-object v1, p0, Lgu1;->b:Lju1;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lju1;->b:Liu1;
+
+    invoke-virtual {v1, p1}, Le4;->m(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lgu1;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lgu1;->b:Lju1;
+
+    iput-object p1, p0, Lgu1;->c:Lycd;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final finalize()V
+    .locals 4
+
+    iget-object v0, p0, Lgu1;->b:Lju1;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lju1;->b:Liu1;
+
+    invoke-virtual {v0}, Le4;->isDone()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ld1;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "The completer object was garbage collected - this future would otherwise never complete. The tag was: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lgu1;->a:Ljava/lang/Object;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
+
+    invoke-virtual {v0, v1}, Le4;->m(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    iget-boolean v0, p0, Lgu1;->d:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lgu1;->c:Lycd;
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Le4;->l(Ljava/lang/Object;)Z
+
+    :cond_1
     return-void
 .end method

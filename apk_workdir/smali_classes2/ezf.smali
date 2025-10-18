@@ -1,146 +1,284 @@
 .class public final Lezf;
-.super Lvs7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
+.method public constructor <init>(IIIIIIIII)V
     .locals 0
 
-    iput p2, p0, Lezf;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lezf;->b:Landroid/content/Context;
+    iput p1, p0, Lezf;->a:I
 
-    const/4 p1, 0x0
+    iput p2, p0, Lezf;->b:I
 
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    iput p3, p0, Lezf;->c:I
+
+    iput p4, p0, Lezf;->d:I
+
+    iput p5, p0, Lezf;->e:I
+
+    iput p6, p0, Lezf;->f:I
+
+    iput p7, p0, Lezf;->g:I
+
+    iput p8, p0, Lezf;->h:I
+
+    iput p9, p0, Lezf;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lezf;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    new-instance v0, Lrzf;
+    :cond_0
+    instance-of v0, p1, Lezf;
 
-    iget-object v1, p0, Lezf;->b:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v2, Lpzf;
-
-    invoke-direct {v2}, Lpzf;-><init>()V
-
-    new-instance v3, Lgoe;
-
-    const-string v4, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
-
-    invoke-direct {v3, v4}, Lgoe;-><init>(Ljava/lang/String;)V
-
-    iput-object v3, v2, Lpzf;->b:Lgoe;
-
-    new-instance v3, Lpwe;
-
-    invoke-direct {v3, v2}, Lpwe;-><init>(Lpzf;)V
-
-    const-string v2, "ru.ok.android.externcalls"
-
-    invoke-direct {v0, v1, v2, v3}, Lrzf;-><init>(Landroid/content/Context;Ljava/lang/String;Lpwe;)V
-
-    const-string v1, "calls-sdk-version"
-
-    const-string v2, "125.1.0.70"
-
-    invoke-virtual {v0, v1, v2}, Lrzf;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_0
-    invoke-static {}, Leui;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lezf;->b:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-string v0, "tracer"
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    :cond_1
+    check-cast p1, Lezf;
 
-    const-string v3, "tracer-"
+    iget v0, p0, Lezf;->a:I
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v1, p1, Lezf;->a:I
 
-    const/16 v3, 0x2d
+    if-eq v0, v1, :cond_2
 
-    const/4 v4, 0x0
+    goto :goto_0
 
-    const/16 v5, 0x3a
+    :cond_2
+    iget v0, p0, Lezf;->b:I
 
-    invoke-static {v0, v5, v3, v4}, Laaf;->n(Ljava/lang/String;CCZ)Ljava/lang/String;
+    iget v1, p1, Lezf;->b:I
 
-    move-result-object v0
+    if-eq v0, v1, :cond_3
 
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_3
+    iget v0, p0, Lezf;->c:I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p1, Lezf;->c:I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eq v0, v1, :cond_4
 
-    move-result-object v0
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lezf;->d:I
+
+    iget v1, p1, Lezf;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lezf;->e:I
+
+    iget v1, p1, Lezf;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lezf;->f:I
+
+    iget v1, p1, Lezf;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lezf;->g:I
+
+    iget v1, p1, Lezf;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lezf;->h:I
+
+    iget v1, p1, Lezf;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v0, p0, Lezf;->i:I
+
+    iget p1, p1, Lezf;->i:I
+
+    if-eq v0, p1, :cond_a
 
     :goto_0
-    new-instance v2, Ljava/io/File;
+    const/4 p1, 0x0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    return p1
 
-    move-result-object v1
+    :cond_a
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    return p1
+.end method
 
-    invoke-static {v2}, Lp0j;->b(Ljava/io/File;)V
+.method public final hashCode()I
+    .locals 3
 
-    const-string v0, "settings.data"
+    iget v0, p0, Lezf;->a:I
 
-    invoke-static {v2, v0}, Lpu5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lezf;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->e:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->f:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->g:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lezf;->h:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lezf;->i:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", contrastStatic="
+
+    const-string v1, ", negative="
+
+    const-string v2, "TopbarIconDisabledColors(contrast="
+
+    iget v3, p0, Lezf;->a:I
+
+    iget v4, p0, Lezf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", neutralFade="
+
+    const-string v2, ", primary="
+
+    iget v3, p0, Lezf;->c:I
+
+    iget v4, p0, Lezf;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", quaternary="
+
+    const-string v2, ", secondary="
+
+    iget v3, p0, Lezf;->e:I
+
+    iget v4, p0, Lezf;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", tertiary="
+
+    const-string v2, ", themed="
+
+    iget v3, p0, Lezf;->g:I
+
+    iget v4, p0, Lezf;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Lezf;->i:I
+
+    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

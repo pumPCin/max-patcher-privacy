@@ -1,51 +1,122 @@
 .class public final Lpqg;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public X:Lo0a;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lrqg;
-
-.field public o:Lrqg;
-
-.field public r0:I
+.field public final synthetic b:Lqqg;
 
 
 # direct methods
-.method public constructor <init>(Lrqg;Lk14;)V
+.method public synthetic constructor <init>(Lqqg;I)V
     .locals 0
 
-    iput-object p1, p0, Lpqg;->Z:Lrqg;
+    iput p2, p0, Lpqg;->a:I
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpqg;->b:Lqqg;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lpqg;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iput-object p1, p0, Lpqg;->Y:Ljava/lang/Object;
+    iget p1, p0, Lpqg;->a:I
 
-    iget p1, p0, Lpqg;->r0:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lpqg;->b:Lqqg;
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x0
 
-    iput p1, p0, Lpqg;->r0:I
+    iput-object v0, p1, Lqqg;->D0:Landroid/animation/ValueAnimator;
 
-    iget-object p1, p0, Lpqg;->Z:Lrqg;
+    return-void
 
-    invoke-virtual {p1, p0}, Lrqg;->f(Lk14;)Ljava/lang/Object;
+    :pswitch_0
+    const/4 p1, 0x0
 
-    move-result-object p1
+    iget-object v0, p0, Lpqg;->b:Lqqg;
 
-    return-object p1
+    iput-object p1, v0, Lqqg;->G0:Landroid/animation/ValueAnimator;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v0, Lqqg;->H0:Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lpqg;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lpqg;->a:I
+
+    return-void
 .end method

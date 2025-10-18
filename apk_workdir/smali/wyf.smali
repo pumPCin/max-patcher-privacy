@@ -1,162 +1,104 @@
 .class public final Lwyf;
-.super Ljava/lang/Object;
+.super Lryh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lox1;
-
-.field public final b:Lmz9;
-
-.field public final c:Z
-
-.field public final d:Lt1e;
-
-.field public e:Z
-
-.field public f:Lyt1;
-
-.field public g:Z
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lox1;Lg02;Lt1e;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwyf;->a:Lox1;
-
-    iput-object p3, p0, Lwyf;->d:Lt1e;
-
-    new-instance p3, Lihd;
-
-    const/16 v0, 0x17
-
-    invoke-direct {p3, v0, p2}, Lihd;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p3}, Ly0j;->a(Lihd;)Z
-
-    move-result p2
-
-    iput-boolean p2, p0, Lwyf;->c:Z
-
-    new-instance p2, Lmz9;
-
-    const/4 p3, 0x0
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Lk28;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lwyf;->b:Lmz9;
-
-    new-instance p2, Lvyf;
-
-    invoke-direct {p2, p0}, Lvyf;-><init>(Lwyf;)V
-
-    invoke-virtual {p1, p2}, Lox1;->p(Lnx1;)V
-
-    return-void
-.end method
-
-.method public static b(Lmz9;Ljava/lang/Integer;)V
-    .locals 1
-
-    invoke-static {}, Ltwc;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lk28;->k(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lk28;->i(Ljava/lang/Object;)V
+    iput-object p1, p0, Lwyf;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyt1;Z)V
-    .locals 2
+.method public final b()Ljava/lang/CharSequence;
+    .locals 1
 
-    iget-boolean v0, p0, Lwyf;->c:Z
+    iget-object v0, p0, Lwyf;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    if-eqz p1, :cond_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance p2, Ljava/lang/IllegalStateException;
+    if-ne p0, p1, :cond_0
 
-    const-string v0, "No flash unit"
-
-    invoke-direct {p2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Lyt1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    iget-boolean v0, p0, Lwyf;->e:Z
+    instance-of v0, p1, Lwyf;
 
-    iget-object v1, p0, Lwyf;->b:Lmz9;
+    if-nez v0, :cond_1
 
-    if-nez v0, :cond_2
-
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-static {v1, p2}, Lwyf;->b(Lmz9;Ljava/lang/Integer;)V
-
-    if-eqz p1, :cond_1
-
-    new-instance p2, Landroidx/camera/core/CameraControl$OperationCanceledException;
-
-    const-string v0, "Camera is not active."
-
-    invoke-direct {p2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Lyt1;->d(Ljava/lang/Throwable;)Z
+    goto :goto_0
 
     :cond_1
-    return-void
+    check-cast p1, Lwyf;
+
+    iget-object v0, p0, Lwyf;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lwyf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_2
-    iput-boolean p2, p0, Lwyf;->g:Z
+    :goto_1
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Lwyf;->a:Lox1;
+    return p1
+.end method
 
-    invoke-virtual {v0, p2}, Lox1;->r(Z)V
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lwyf;->b:Ljava/lang/String;
 
-    move-result-object p2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {v1, p2}, Lwyf;->b(Lmz9;Ljava/lang/Integer;)V
+    move-result v0
 
-    iget-object p2, p0, Lwyf;->f:Lyt1;
+    return v0
+.end method
 
-    if-eqz p2, :cond_3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "There is a new enableTorch being set"
+    const-string v1, "LostConnection(text="
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
+    iget-object v1, p0, Lwyf;->b:Ljava/lang/String;
 
-    :cond_3
-    iput-object p1, p0, Lwyf;->f:Lyt1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

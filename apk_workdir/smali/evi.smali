@@ -1,55 +1,110 @@
-.class public final Levi;
+.class public abstract Levi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Long;
-
-.field public final b:Lzvi;
-
-.field public final c:Ljava/lang/Boolean;
-
-.field public final d:Ljava/lang/Boolean;
-
-.field public final e:Ljava/lang/Boolean;
-
-
 # direct methods
-.method public synthetic constructor <init>(Lih4;)V
-    .locals 1
+.method public static a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p3, 0x2
 
-    iget-object v0, p1, Lih4;->a:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v0, Ljava/lang/Long;
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Levi;->a:Ljava/lang/Long;
+    move-object p1, v1
 
-    iget-object v0, p1, Lih4;->b:Ljava/lang/Object;
+    :cond_0
+    and-int/lit8 p3, p3, 0x4
 
-    check-cast v0, Lzvi;
+    if-eqz p3, :cond_1
 
-    iput-object v0, p0, Levi;->b:Lzvi;
+    move-object p2, v1
 
-    iget-object v0, p1, Lih4;->c:Ljava/lang/Object;
+    :cond_1
+    new-instance p3, Leo3;
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-direct {p3, p0, p1, p2}, Leo3;-><init>(Ltrf;Landroid/os/Bundle;Lupd;)V
 
-    iput-object v0, p0, Levi;->c:Ljava/lang/Boolean;
+    return-object p3
+.end method
 
-    iget-object v0, p1, Lih4;->o:Ljava/lang/Object;
+.method public static b(Landroid/content/Context;)Ls62;
+    .locals 5
 
-    check-cast v0, Ljava/lang/Boolean;
+    sget-object v0, Lizb;->f:Lizb;
 
-    iput-object v0, p0, Levi;->d:Ljava/lang/Boolean;
+    iget-object v1, v0, Lizb;->a:Ljava/lang/Object;
 
-    iget-object p1, p1, Lih4;->X:Ljava/lang/Object;
+    monitor-enter v1
 
-    check-cast p1, Ljava/lang/Boolean;
+    :try_start_0
+    iget-object v2, v0, Lizb;->b:Lju1;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object p1, p0, Levi;->e:Ljava/lang/Boolean;
+    if-eqz v2, :cond_0
 
-    return-void
+    monitor-exit v1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance v2, Lv22;
+
+    invoke-direct {v2, p0}, Lv22;-><init>(Landroid/content/Context;)V
+
+    new-instance v3, Lek9;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v3, v0, v4, v2}, Lek9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v3}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lizb;->b:Lju1;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v1
+
+    :goto_0
+    new-instance v0, Lj0;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1, p0}, Lj0;-><init>(ILjava/lang/Object;)V
+
+    new-instance p0, Ly02;
+
+    const/4 v1, 0x3
+
+    invoke-direct {p0, v1, v0}, Ly02;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v0
+
+    new-instance v1, Ls9d;
+
+    const/16 v3, 0xe
+
+    invoke-direct {v1, v3, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2, v1, v0}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object p0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v1
+
+    throw p0
 .end method

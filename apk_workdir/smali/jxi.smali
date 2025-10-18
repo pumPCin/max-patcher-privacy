@@ -1,432 +1,256 @@
-.class public abstract Ljxi;
-.super Ljava/lang/Object;
+.class public final enum Ljxi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Li9i;
+
+
+# static fields
+.field public static final enum X:Ljxi;
+
+.field public static final enum Y:Ljxi;
+
+.field public static final enum Z:Ljxi;
+
+.field public static final enum b:Ljxi;
+
+.field public static final enum c:Ljxi;
+
+.field public static final enum o:Ljxi;
+
+.field public static final enum q0:Ljxi;
+
+.field public static final enum r0:Ljxi;
+
+.field public static final enum s0:Ljxi;
+
+.field public static final enum t0:Ljxi;
+
+.field public static final enum u0:Ljxi;
+
+.field public static final enum v0:Ljxi;
+
+.field public static final enum w0:Ljxi;
+
+.field public static final enum x0:Ljxi;
+
+.field public static final synthetic y0:[Ljxi;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public static a(J)Ljava/lang/String;
-    .locals 11
+.method static constructor <clinit>()V
+    .locals 17
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Ljxi;
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const-string v1, "FORMAT_UNKNOWN"
 
-    move-result-wide p0
+    const/4 v2, 0x0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0, v1, v2, v2}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toHours(J)J
+    sput-object v0, Ljxi;->b:Ljxi;
 
-    move-result-wide v1
+    new-instance v1, Ljxi;
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    const-string v2, "FORMAT_CODE_128"
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const/4 v3, 0x1
 
-    move-result-wide v4
+    invoke-direct {v1, v2, v3, v3}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    sub-long v4, p0, v4
+    sput-object v1, Ljxi;->c:Ljxi;
 
-    invoke-virtual {v0, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
+    new-instance v2, Ljxi;
 
-    move-result-wide v4
+    const-string v3, "FORMAT_CODE_39"
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const/4 v4, 0x2
 
-    move-result-wide v6
+    invoke-direct {v2, v3, v4, v4}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    sub-long v6, p0, v6
+    sput-object v2, Ljxi;->o:Ljxi;
 
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    new-instance v3, Ljxi;
 
-    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const-string v4, "FORMAT_CODE_93"
 
-    move-result-wide v9
+    const/4 v5, 0x3
 
-    sub-long/2addr v6, v9
+    const/4 v6, 0x4
 
-    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    invoke-direct {v3, v4, v5, v6}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    move-result-wide v6
+    sput-object v3, Ljxi;->X:Ljxi;
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    new-instance v4, Ljxi;
 
-    move-result-wide v9
+    const-string v5, "FORMAT_CODABAR"
 
-    sub-long/2addr p0, v9
+    const/16 v7, 0x8
 
-    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-direct {v4, v5, v6, v7}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    move-result-wide v8
+    sput-object v4, Ljxi;->Y:Ljxi;
 
-    sub-long/2addr p0, v8
+    new-instance v5, Ljxi;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v6, 0x5
 
-    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const/16 v8, 0x10
 
-    move-result-wide v8
+    const-string v9, "FORMAT_DATA_MATRIX"
 
-    sub-long/2addr p0, v8
+    invoke-direct {v5, v9, v6, v8}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sput-object v5, Ljxi;->Z:Ljxi;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v6, Ljxi;
 
-    move-result-object v1
+    const/4 v8, 0x6
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/16 v9, 0x20
 
-    move-result-object v2
+    const-string v10, "FORMAT_EAN_13"
 
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v6, v10, v8, v9}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    move-result-object v3
+    sput-object v6, Ljxi;->q0:Ljxi;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v8, Ljxi;
 
-    move-result-object p0
+    const/4 v9, 0x7
 
-    filled-new-array {v1, v2, v3, p0}, [Ljava/lang/Object;
+    const/16 v10, 0x40
 
-    move-result-object p0
+    const-string v11, "FORMAT_EAN_8"
 
-    const-string p1, "%02d:%02d:%02d.%03d"
+    invoke-direct {v8, v11, v9, v10}, Ljxi;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v0, p1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    sput-object v8, Ljxi;->r0:Ljxi;
 
-    move-result-object p0
+    move-object v9, v8
 
-    return-object p0
+    new-instance v8, Ljxi;
+
+    const-string v10, "FORMAT_ITF"
+
+    const/16 v11, 0x80
+
+    invoke-direct {v8, v10, v7, v11}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Ljxi;->s0:Ljxi;
+
+    move-object v7, v9
+
+    new-instance v9, Ljxi;
+
+    const/16 v10, 0x9
+
+    const/16 v11, 0x100
+
+    const-string v12, "FORMAT_QR_CODE"
+
+    invoke-direct {v9, v12, v10, v11}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v9, Ljxi;->t0:Ljxi;
+
+    new-instance v10, Ljxi;
+
+    const/16 v11, 0xa
+
+    const/16 v12, 0x200
+
+    const-string v13, "FORMAT_UPC_A"
+
+    invoke-direct {v10, v13, v11, v12}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v10, Ljxi;->u0:Ljxi;
+
+    new-instance v11, Ljxi;
+
+    const/16 v12, 0xb
+
+    const/16 v13, 0x400
+
+    const-string v14, "FORMAT_UPC_E"
+
+    invoke-direct {v11, v14, v12, v13}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v11, Ljxi;->v0:Ljxi;
+
+    new-instance v12, Ljxi;
+
+    const/16 v13, 0xc
+
+    const/16 v14, 0x800
+
+    const-string v15, "FORMAT_PDF417"
+
+    invoke-direct {v12, v15, v13, v14}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v12, Ljxi;->w0:Ljxi;
+
+    new-instance v13, Ljxi;
+
+    const/16 v14, 0xd
+
+    const/16 v15, 0x1000
+
+    move-object/from16 v16, v0
+
+    const-string v0, "FORMAT_AZTEC"
+
+    invoke-direct {v13, v0, v14, v15}, Ljxi;-><init>(Ljava/lang/String;II)V
+
+    sput-object v13, Ljxi;->x0:Ljxi;
+
+    move-object/from16 v0, v16
+
+    filled-new-array/range {v0 .. v13}, [Ljxi;
+
+    move-result-object v0
+
+    sput-object v0, Ljxi;->y0:[Ljxi;
+
+    return-void
 .end method
 
-.method public static b(Landroid/os/Parcel;ILandroid/os/Bundle;)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    if-nez p2, :cond_0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
+    iput p3, p0, Ljxi;->a:I
 
     return-void
 .end method
 
-.method public static c(Landroid/os/Parcel;I[B)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/os/Parcel;ILjava/lang/Float;)V
+.method public static values()[Ljxi;
     .locals 1
 
-    if-nez p2, :cond_0
+    sget-object v0, Ljxi;->y0:[Ljxi;
 
-    return-void
+    invoke-virtual {v0}, [Ljxi;->clone()Ljava/lang/Object;
 
-    :cond_0
-    const/4 v0, 0x4
+    move-result-object v0
 
-    invoke-static {p0, p1, v0}, Ljxi;->m(Landroid/os/Parcel;II)V
+    check-cast v0, [Ljxi;
 
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeFloat(F)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public static e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
-    .locals 0
 
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-interface {p2, p0, p3}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static g(Landroid/os/Parcel;ILjava/lang/String;)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static h(Landroid/os/Parcel;I[Ljava/lang/String;)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
-
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static i(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
-    .locals 6
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p1}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p1
-
-    array-length v0, p2
-
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    aget-object v3, p2, v2
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    invoke-virtual {p0, v5}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v5
-
-    invoke-interface {v3, p0, p3}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v3
-
-    invoke-virtual {p0, v4}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    sub-int v4, v3, v5
-
-    invoke-virtual {p0, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0, v3}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p0, p1}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static j(Landroid/os/Parcel;Ljava/util/List;I)V
-    .locals 6
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {p0, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/os/Parcelable;
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    invoke-virtual {p0, v5}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v5
-
-    invoke-interface {v3, p0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v3
-
-    invoke-virtual {p0, v4}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    sub-int v4, v3, v5
-
-    invoke-virtual {p0, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0, v3}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p0, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-.method public static k(Landroid/os/Parcel;I)I
+# virtual methods
+.method public final c()I
     .locals 1
 
-    const/high16 v0, -0x10000
+    iget v0, p0, Ljxi;->a:I
 
-    or-int/2addr p1, v0
-
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static l(Landroid/os/Parcel;I)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v0
-
-    sub-int v1, v0, p1
-
-    add-int/lit8 p1, p1, -0x4
-
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    return-void
-.end method
-
-.method public static m(Landroid/os/Parcel;II)V
-    .locals 0
-
-    shl-int/lit8 p2, p2, 0x10
-
-    or-int/2addr p1, p2
-
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return v0
 .end method

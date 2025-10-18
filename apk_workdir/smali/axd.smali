@@ -1,14 +1,11 @@
-.class public abstract Laxd;
+.class public interface abstract Laxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
-
-
 # virtual methods
-.method public abstract a()V
+.method public abstract e(Lzvf;Lzl5;Lq5g;)V
+.end method
+
+.method public abstract g(Ldjg;)V
 .end method

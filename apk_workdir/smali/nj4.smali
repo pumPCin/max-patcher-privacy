@@ -1,58 +1,157 @@
-.class public abstract Lnj4;
+.class public final Lnj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkp4;
+# instance fields
+.field public final a:[B
+
+.field public final b:Ljava/util/ArrayDeque;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:J
+
+.field public final f:Ljava/lang/Object;
+
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 2
 
-    const-string v0, "kotlinx.coroutines.main.delay"
+    packed-switch p1, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0x8
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Lnj4;->a:[B
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lnj4;->b:Ljava/util/ArrayDeque;
+
+    new-instance p1, Ldjg;
+
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Z)Z
+    invoke-direct {p1, v0, v1}, Ldjg;-><init>(IZ)V
 
-    move-result v0
+    iput-object p1, p0, Lnj4;->f:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    return-void
 
-    sget-object v0, Lmj4;->r0:Lmj4;
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_1
+    const/16 p1, 0x8
 
-    :cond_0
-    sget-object v0, Lvu4;->a:Lem4;
+    new-array p1, p1, [B
 
-    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lfd8;
+    iput-object p1, p0, Lnj4;->a:[B
 
-    invoke-static {v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->isMissing(Lfd8;)Z
+    new-instance p1, Ljava/util/ArrayDeque;
 
-    move-result v1
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
 
-    if-nez v1, :cond_2
+    iput-object p1, p0, Lnj4;->b:Ljava/util/ArrayDeque;
 
-    instance-of v1, v0, Lkp4;
+    new-instance p1, Ldjg;
 
-    if-nez v1, :cond_1
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Ldjg;-><init>(IZ)V
+
+    iput-object p1, p0, Lnj4;->f:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public a(Lxl5;I)J
+    .locals 6
+
+    iget-object v0, p0, Lnj4;->a:[B
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v0, v1, p2}, Lxl5;->readFully([BII)V
+
+    const-wide/16 v2, 0x0
+
+    :goto_0
+    if-ge v1, p2, :cond_0
+
+    const/16 p1, 0x8
+
+    shl-long/2addr v2, p1
+
+    aget-byte p1, v0, v1
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-long v4, p1
+
+    or-long/2addr v2, v4
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
-    check-cast v0, Lkp4;
+    :cond_0
+    return-wide v2
+.end method
 
-    goto :goto_1
+.method public b(Lyl5;I)J
+    .locals 6
 
-    :cond_2
+    iget-object v0, p0, Lnj4;->a:[B
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v0, v1, p2}, Lyl5;->readFully([BII)V
+
+    const-wide/16 v2, 0x0
+
     :goto_0
-    sget-object v0, Lmj4;->r0:Lmj4;
+    if-ge v1, p2, :cond_0
 
-    :goto_1
-    sput-object v0, Lnj4;->a:Lkp4;
+    const/16 p1, 0x8
 
-    return-void
+    shl-long/2addr v2, p1
+
+    aget-byte p1, v0, v1
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-long v4, p1
+
+    or-long/2addr v2, v4
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v2
 .end method

@@ -37,10 +37,10 @@
 
 .field private volatile errorHandler:Lru/ok/android/onelog/OneLogErrorHandler;
 
-.field private volatile forceFallbackLogs:Lqdf;
+.field private volatile forceFallbackLogs:Lyef;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lqdf;"
+            "Lyef;"
         }
     .end annotation
 .end field
@@ -279,7 +279,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Luei;->b()Landroid/app/Application;
+    invoke-static {}, Lxfi;->b()Landroid/app/Application;
 
     move-result-object v0
 
@@ -410,12 +410,12 @@
     return-void
 .end method
 
-.method public setForceFallbackLogs(Lqdf;)V
+.method public setForceFallbackLogs(Lyef;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqdf;",
+            "Lyef;",
             ")V"
         }
     .end annotation
@@ -483,11 +483,11 @@
     return-void
 
     :cond_0
-    new-instance v1, Ldma;
+    new-instance v1, Lfna;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Ldma;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, p1, v2}, Lfna;-><init>(Ljava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

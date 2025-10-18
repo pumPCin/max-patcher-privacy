@@ -1,31 +1,26 @@
 .class public final Lm76;
-.super Lklf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lo76;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final a:J
 
-.field public final Y:Lf0a;
-
-.field public final c:J
-
-.field public final o:Lzz9;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JLzz9;Ljava/util/List;Lf0a;)V
+.method public constructor <init>(JLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lm76;->c:J
+    iput-wide p1, p0, Lm76;->a:J
 
-    iput-object p3, p0, Lm76;->o:Lzz9;
-
-    iput-object p4, p0, Lm76;->X:Ljava/util/List;
-
-    iput-object p5, p0, Lm76;->Y:Lf0a;
+    iput-object p3, p0, Lm76;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -53,9 +48,9 @@
     :cond_1
     check-cast p1, Lm76;
 
-    iget-wide v3, p0, Lm76;->c:J
+    iget-wide v3, p0, Lm76;->a:J
 
-    iget-wide v5, p1, Lm76;->c:J
+    iget-wide v5, p1, Lm76;->a:J
 
     cmp-long v1, v3, v5
 
@@ -64,124 +59,66 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lm76;->o:Lzz9;
+    iget-object v1, p0, Lm76;->b:Ljava/lang/String;
 
-    iget-object v3, p1, Lm76;->o:Lzz9;
+    iget-object p1, p1, Lm76;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_3
+    if-nez p1, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Lm76;->X:Ljava/util/List;
-
-    iget-object v3, p1, Lm76;->X:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lm76;->Y:Lf0a;
-
-    iget-object p1, p1, Lm76;->Y:Lf0a;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-wide v0, p0, Lm76;->c:J
+    iget-wide v0, p0, Lm76;->a:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    const/16 v1, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v0, v1
+    iget-object v1, p0, Lm76;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lm76;->o:Lzz9;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2}, Lzz9;->hashCode()I
+    const/4 v1, 0x0
 
-    move-result v2
+    goto :goto_0
 
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lm76;->X:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lfef;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lm76;->Y:Lf0a;
-
-    invoke-virtual {v1}, Lf0a;->hashCode()I
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    add-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "OpenApp(appId="
 
-    const-string v1, "Response(folderSync="
+    const-string v1, ", startParam="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lm76;->a:J
 
-    iget-wide v1, p0, Lm76;->c:J
+    iget-object v4, p0, Lm76;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", folders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm76;->o:Lzz9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", foldersOrder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm76;->X:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allFilterExcludeFolders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm76;->Y:Lf0a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     const-string v1, ")"
 

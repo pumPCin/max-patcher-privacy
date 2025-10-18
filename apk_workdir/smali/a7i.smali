@@ -1,41 +1,50 @@
-.class public abstract La7i;
+.class public final La7i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
 
 # static fields
-.field public static final a:Ljava/nio/charset/Charset;
-
-.field public static final b:[B
+.field public static final a:La7i;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "US-ASCII"
+    new-instance v0, La7i;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "UTF-8"
+    sput-object v0, La7i;->a:La7i;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    new-instance v0, Ltwh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+
+    const-class v1, Lmxh;
+
+    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, La7i;->a:Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [B
-
-    sput-object v0, La7i;->b:[B
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

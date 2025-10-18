@@ -1,154 +1,270 @@
 .class public final Ll7e;
-.super Lk7e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/SortedSet;
+
+# static fields
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
 
 
-# virtual methods
-.method public final comparator()Ljava/util/Comparator;
-    .locals 1
+# instance fields
+.field public final a:I
 
-    iget-object v0, p0, Lk7e;->a:Ljava/util/Set;
+.field public final b:Landroid/os/Bundle;
 
-    check-cast v0, Ljava/util/SortedSet;
+.field public final c:J
 
-    invoke-interface {v0}, Ljava/util/SortedSet;->comparator()Ljava/util/Comparator;
+.field public final d:Lw6e;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    sget-object v0, Lnig;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Ll7e;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll7e;->f:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll7e;->g:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll7e;->h:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public final first()Ljava/lang/Object;
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 1
 
-    iget-object v0, p0, Lk7e;->a:Ljava/util/Set;
+    .line 1
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-direct {p0, p1, v0}, Ll7e;-><init>(ILandroid/os/Bundle;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public constructor <init>(ILandroid/os/Bundle;)V
+    .locals 6
 
-    iget-object v1, p0, Lk7e;->b:Lyvb;
+    .line 2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-wide v3
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    .line 3
+    invoke-direct/range {v0 .. v5}, Ll7e;-><init>(ILandroid/os/Bundle;JLw6e;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ILandroid/os/Bundle;JLw6e;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p5, :cond_1
+
+    if-gez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x0
 
-    move-result v2
+    goto :goto_1
 
-    if-eqz v2, :cond_1
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 5
+    :goto_1
+    invoke-static {v0}, Lsgi;->d(Z)V
 
-    move-result-object v2
+    .line 6
+    iput p1, p0, Ll7e;->a:I
 
-    invoke-interface {v1, v2}, Lyvb;->apply(Ljava/lang/Object;)Z
+    .line 7
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0, p2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    iput-object v0, p0, Ll7e;->b:Landroid/os/Bundle;
+
+    .line 8
+    iput-wide p3, p0, Ll7e;->c:J
+
+    if-nez p5, :cond_2
+
+    if-gez p1, :cond_2
+
+    .line 9
+    new-instance p5, Lw6e;
+
+    invoke-direct {p5, p1}, Lw6e;-><init>(I)V
+
+    .line 10
+    :cond_2
+    iput-object p5, p0, Ll7e;->d:Lw6e;
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/Bundle;)Ll7e;
+    .locals 8
+
+    sget-object v0, Ll7e;->e:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    sget-object v0, Ll7e;->f:Ljava/lang/String;
 
-    return-object v2
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
-
-    new-instance v0, Ll7e;
-
-    iget-object v1, p0, Lk7e;->a:Ljava/util/Set;
-
-    check-cast v1, Ljava/util/SortedSet;
-
-    invoke-interface {v1, p1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lk7e;->b:Lyvb;
-
-    invoke-direct {v0, p1, v1}, Lk7e;-><init>(Ljava/util/Set;Lyvb;)V
-
-    return-object v0
-.end method
-
-.method public final last()Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lk7e;->a:Ljava/util/Set;
-
-    check-cast v0, Ljava/util/SortedSet;
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/SortedSet;->last()Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lk7e;->b:Lyvb;
-
-    invoke-interface {v2, v1}, Lyvb;->apply(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-interface {v0, v1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
+    sget-object v1, Ll7e;->g:Ljava/lang/String;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    invoke-virtual {p0, v1, v4, v5}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v5
+
+    sget-object v1, Ll7e;->h:Ljava/lang/String;
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lw6e;->a(Landroid/os/Bundle;)Lw6e;
+
+    move-result-object p0
+
+    :goto_0
+    move-object v7, p0
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz v3, :cond_1
+
+    new-instance p0, Lw6e;
+
+    invoke-direct {p0, v3}, Lw6e;-><init>(I)V
+
     goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v2, Ll7e;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    :cond_2
+    move-object v4, v0
+
+    invoke-direct/range {v2 .. v7}, Ll7e;-><init>(ILandroid/os/Bundle;JLw6e;)V
+
+    return-object v2
 .end method
 
-.method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
 
-    new-instance v0, Ll7e;
+# virtual methods
+.method public final b()Landroid/os/Bundle;
+    .locals 4
 
-    iget-object v1, p0, Lk7e;->a:Ljava/util/Set;
+    new-instance v0, Landroid/os/Bundle;
 
-    check-cast v1, Ljava/util/SortedSet;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-interface {v1, p1, p2}, Ljava/util/SortedSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
+    sget-object v1, Ll7e;->e:Ljava/lang/String;
 
-    move-result-object p1
+    iget v2, p0, Ll7e;->a:I
 
-    iget-object p2, p0, Lk7e;->b:Lyvb;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-direct {v0, p1, p2}, Lk7e;-><init>(Ljava/util/Set;Lyvb;)V
+    sget-object v1, Ll7e;->f:Ljava/lang/String;
 
-    return-object v0
-.end method
+    iget-object v2, p0, Ll7e;->b:Landroid/os/Bundle;
 
-.method public final tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 2
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    new-instance v0, Ll7e;
+    sget-object v1, Ll7e;->g:Ljava/lang/String;
 
-    iget-object v1, p0, Lk7e;->a:Ljava/util/Set;
+    iget-wide v2, p0, Ll7e;->c:J
 
-    check-cast v1, Ljava/util/SortedSet;
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
-    invoke-interface {v1, p1}, Ljava/util/SortedSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
+    iget-object v1, p0, Ll7e;->d:Lw6e;
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lk7e;->b:Lyvb;
+    sget-object v2, Ll7e;->h:Ljava/lang/String;
 
-    invoke-direct {v0, p1, v1}, Lk7e;-><init>(Ljava/util/Set;Lyvb;)V
+    invoke-virtual {v1}, Lw6e;->b()Landroid/os/Bundle;
 
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
     return-object v0
 .end method

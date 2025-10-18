@@ -1,72 +1,140 @@
-.class public final Lm6d;
+.class public final synthetic Lm6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr44;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ln6d;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lp6d;
+
+.field public final synthetic c:Lhvb;
 
 
 # direct methods
-.method public constructor <init>(Ln6d;)V
+.method public synthetic constructor <init>(Lp6d;Lhvb;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lm6d;->a:I
 
-    iput-object p1, p0, Lm6d;->a:Ln6d;
+    iput-object p1, p0, Lm6d;->b:Lp6d;
+
+    iput-object p2, p0, Lm6d;->c:Lhvb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lei6;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    invoke-interface {p2, p1, p0}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lm6d;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
-.end method
+    iget-object v0, p0, Lm6d;->b:Lp6d;
 
-.method public final get(Ls44;)Lr44;
-    .locals 0
+    iget-object v0, v0, Lp6d;->f:Lc2e;
 
-    invoke-static {p0, p1}, Ljvi;->f(Lr44;Ls44;)Lr44;
+    new-instance v1, Lmqb;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
-.end method
+    new-instance v2, Lmqb;
 
-.method public final getKey()Ls44;
-    .locals 1
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lm6d;->a:Ln6d;
+    filled-new-array {v1, v2}, [Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final minusKey(Ls44;)Lt44;
-    .locals 0
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-static {p0, p1}, Ljvi;->g(Lr44;Ls44;)Lt44;
+    const/4 v3, 0x2
 
-    move-result-object p1
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    return-object p1
-.end method
+    const/4 v4, 0x0
 
-.method public final plus(Lt44;)Lt44;
-    .locals 0
+    :goto_0
+    if-ge v4, v3, :cond_0
 
-    invoke-static {p0, p1}, Livi;->b(Lt44;Lt44;)Lt44;
+    aget-object v5, v1, v4
 
-    move-result-object p1
+    invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lm6d;->c:Lhvb;
+
+    invoke-virtual {v2}, Lhvb;->a()Lic5;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lc2e;->i(Ljava/util/List;Lic5;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lm6d;->b:Lp6d;
+
+    iget-object v0, v0, Lp6d;->f:Lc2e;
+
+    new-instance v1, Lmqb;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v3, 0x0
+
+    aget-object v1, v1, v3
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lm6d;->c:Lhvb;
+
+    invoke-virtual {v2}, Lhvb;->a()Lic5;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lc2e;->i(Ljava/util/List;Lic5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

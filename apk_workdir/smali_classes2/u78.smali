@@ -3,94 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lfg4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:D
 
-.field public final synthetic b:Llt7;
+.field public final synthetic Y:Ljava/lang/Float;
+
+.field public final synthetic a:Ljava/lang/Long;
+
+.field public final synthetic b:Ljava/lang/Long;
+
+.field public final synthetic c:Ljava/lang/Long;
+
+.field public final synthetic o:D
 
 
 # direct methods
-.method public synthetic constructor <init>(Llt7;I)V
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
     .locals 0
 
-    iput p2, p0, Lu78;->a:I
-
-    iput-object p1, p0, Lu78;->b:Llt7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lu78;->a:Ljava/lang/Long;
+
+    iput-object p2, p0, Lu78;->b:Ljava/lang/Long;
+
+    iput-object p3, p0, Lu78;->c:Ljava/lang/Long;
+
+    iput-wide p4, p0, Lu78;->o:D
+
+    iput-wide p6, p0, Lu78;->X:D
+
+    iput-object p8, p0, Lu78;->Y:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lu78;->a:I
+    new-instance v0, Lone/me/location/map/show/ShowLocationScreen;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lu78;->a:Ljava/lang/Long;
 
-    check-cast p1, Ljava/lang/Long;
+    iget-object v2, p0, Lu78;->b:Ljava/lang/Long;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    iget-object v3, p0, Lu78;->c:Ljava/lang/Long;
 
-    move-result-wide v0
+    iget-wide v4, p0, Lu78;->o:D
 
-    iget-object p1, p0, Lu78;->b:Llt7;
+    iget-wide v6, p0, Lu78;->X:D
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object v8, p0, Lu78;->Y:Ljava/lang/Float;
 
-    move-result-object p1
+    invoke-direct/range {v0 .. v8}, Lone/me/location/map/show/ShowLocationScreen;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
 
-    check-cast p1, Lms3;
-
-    invoke-virtual {p1, v0, v1}, Lms3;->m(J)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "LogController"
-
-    const-string v1, "Failed to store event"
-
-    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lu78;->b:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lye5;
-
-    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
-
-    const-string v2, "Error in log buffer"
-
-    const-string v3, "ONEME-18649"
-
-    invoke-direct {v1, v2, v3, p1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {v0, v1}, Lye5;->b(Lye5;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

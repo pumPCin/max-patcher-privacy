@@ -1,132 +1,296 @@
-.class public final Ls8a;
-.super Lp0;
+.class public final synthetic Ls8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmm7;
+.implements Ljava/util/function/Function;
 
 
-# static fields
-.field public static final a:Ls8a;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ls8a;
+    iput p1, p0, Ls8a;->a:I
 
-    sget-object v1, Lg93;->s0:Lg93;
-
-    invoke-direct {v0, v1}, Lp0;-><init>(Ls44;)V
-
-    sput-object v0, Ls8a;->a:Ls8a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final attachChild(Lv43;)Ls43;
-    .locals 0
-
-    sget-object p1, Lz8a;->a:Lz8a;
-
-    return-object p1
-.end method
-
-.method public final cancel(Ljava/util/concurrent/CancellationException;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getCancellationException()Ljava/util/concurrent/CancellationException;
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    iget v0, p0, Ls8a;->a:I
 
-    const-string v1, "This job is always active"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Leic;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lkkg;
+
+    invoke-virtual {p1}, Lkkg;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ljk5;
+
+    check-cast p1, Loff;
+
+    iget-short p1, p1, Loff;->b:S
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    check-cast p1, Ljava/util/List;
+
+    sget-object p1, Lcxf;->A:Ljava/util/List;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Ljk5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Ljk5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Ljk5;
+
+    check-cast p1, Lg62;
+
+    iget-object p1, p1, Lg62;->a:Ljava/util/ArrayList;
+
+    return-object p1
+
+    :pswitch_6
+    check-cast p1, Ljk5;
+
+    check-cast p1, Luoe;
+
+    iget-object p1, p1, Luoe;->a:Ljava/util/List;
+
+    return-object p1
+
+    :pswitch_7
+    check-cast p1, Ljk5;
+
+    check-cast p1, Les7;
+
+    iget-object p1, p1, Les7;->b:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lds7;
+
+    return-object p1
+
+    :pswitch_8
+    check-cast p1, Leic;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_9
+    check-cast p1, Ljava/io/InputStream;
+
+    :try_start_0
+    new-instance v0, Lx93;
+
+    invoke-direct {v0, p1}, Lx93;-><init>(Ljava/io/InputStream;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Ljava/io/UncheckedIOException;
+
+    invoke-direct {v0, p1}, Ljava/io/UncheckedIOException;-><init>(Ljava/io/IOException;)V
 
     throw v0
-.end method
 
-.method public final getChildren()Ld1e;
-    .locals 1
+    :pswitch_a
+    check-cast p1, Lp1e;
 
-    sget-object v0, Lba5;->a:Lba5;
-
-    return-object v0
-.end method
-
-.method public final invokeOnCompletion(Lqh6;)Lhv4;
-    .locals 0
-
-    .line 1
-    sget-object p1, Lz8a;->a:Lz8a;
+    iget-object p1, p1, Lp1e;->a:Lfic;
 
     return-object p1
-.end method
 
-.method public final invokeOnCompletion(ZZLqh6;)Lhv4;
-    .locals 0
+    :pswitch_b
+    check-cast p1, Lhvd;
 
-    .line 2
-    sget-object p1, Lz8a;->a:Lz8a;
+    iget-object p1, p1, Lhvd;->X:Lwr3;
+
+    invoke-virtual {p1}, Lwr3;->p()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
 
     return-object p1
-.end method
 
-.method public final isActive()Z
-    .locals 1
+    :pswitch_c
+    check-cast p1, Lhvd;
 
-    const/4 v0, 0x1
+    iget-object p1, p1, Lhvd;->o:Lla2;
 
-    return v0
-.end method
+    iget-object p1, p1, Lla2;->b:Lne2;
 
-.method public final isCancelled()Z
-    .locals 1
+    iget-wide v0, p1, Lne2;->a:J
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final isCompleted()Z
-    .locals 1
+    return-object p1
 
-    const/4 v0, 0x0
+    :pswitch_d
+    check-cast p1, Ldt3;
 
-    return v0
-.end method
+    invoke-virtual {p1}, Ldt3;->a()Ljava/lang/String;
 
-.method public final join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    return-object p1
 
-    const-string v0, "This job is always active"
+    :pswitch_e
+    check-cast p1, Lhvd;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lhvd;->X:Lwr3;
 
-    throw p1
-.end method
+    invoke-virtual {p1}, Lwr3;->p()J
 
-.method public final start()Z
-    .locals 1
+    move-result-wide v0
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    return-object p1
 
-    const-string v0, "NonCancellable"
+    :pswitch_f
+    check-cast p1, Lhvd;
 
-    return-object v0
+    iget-object p1, p1, Lhvd;->o:Lla2;
+
+    iget-wide v0, p1, Lla2;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_10
+    check-cast p1, Lqc8;
+
+    iget-object p1, p1, Lqc8;->k:Ljava/time/Instant;
+
+    return-object p1
+
+    :pswitch_11
+    check-cast p1, Lqc8;
+
+    iget-object p1, p1, Lqc8;->j:Ljava/time/Instant;
+
+    return-object p1
+
+    :pswitch_12
+    check-cast p1, Lkkg;
+
+    invoke-virtual {p1}, Lkkg;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_13
+    check-cast p1, Lru3;
+
+    iget-wide v0, p1, Lru3;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_14
+    check-cast p1, Lhcb;
+
+    iget-object p1, p1, Lhcb;->b:Lfic;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

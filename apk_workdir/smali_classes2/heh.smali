@@ -1,239 +1,120 @@
 .class public final Lheh;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lueh;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lmeh;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmeh;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lheh;->Y:Lmeh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lheh;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lheh;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lheh;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lheh;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lheh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lheh;
-
-    iget-object v1, p0, Lheh;->Y:Lmeh;
-
-    invoke-direct {v0, v1, p2}, Lheh;-><init>(Lmeh;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lheh;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lheh;->X:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lb54;
-
-    iget-object v0, p0, Lheh;->Y:Lmeh;
-
-    :try_start_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ".jpg"
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lmeh;->R0:Ljava/lang/String;
-
-    iget-object v1, v0, Lmeh;->B0:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lou5;
-
-    iget-object v2, v0, Lmeh;->R0:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lou5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "content://"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v2, v0, Lmeh;->B0:Llt7;
+    instance-of v1, p1, Lheh;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v2
+    if-nez v1, :cond_1
 
-    check-cast v2, Lou5;
-
-    iget-object v0, v0, Lmeh;->C0:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-static {v1}, Lq1i;->e(Landroid/net/Uri;)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v0, v1}, Lou5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    :goto_0
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v2, "android.media.action.IMAGE_CAPTURE"
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "output"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string v1, "outputFormat"
-
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_1
-    iget-object v1, p0, Lheh;->Y:Lmeh;
-
-    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v3, "capturePhoto: failed to capture photo"
-
-    invoke-static {p1, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 p1, 0x0
-
-    iput-object p1, v1, Lmeh;->R0:Ljava/lang/String;
-
-    iget-object p1, v1, Lmeh;->X0:Lde5;
-
-    sget-object v1, Lwch;->a:Lwch;
-
-    invoke-static {p1, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v2
 
     :cond_1
-    iget-object p1, p0, Lheh;->Y:Lmeh;
+    check-cast p1, Lheh;
 
-    instance-of v1, v0, Lvcd;
+    iget-object v1, p0, Lheh;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lheh;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
 
     if-nez v1, :cond_2
 
-    check-cast v0, Landroid/content/Intent;
-
-    iget-object p1, p1, Lmeh;->X0:Lde5;
-
-    new-instance v1, Lych;
-
-    invoke-direct {v1, v0}, Lych;-><init>(Landroid/content/Intent;)V
-
-    invoke-static {p1, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v2
 
     :cond_2
-    sget-object p1, Lzag;->a:Lzag;
+    iget-object v1, p0, Lheh;->b:Ljava/lang/String;
 
-    return-object p1
+    iget-object p1, p1, Lheh;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lheh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lheh;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", data="
+
+    const-string v1, ")"
+
+    const-string v2, "SendJsEvent(name="
+
+    iget-object v3, p0, Lheh;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lheh;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

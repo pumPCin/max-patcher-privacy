@@ -1,102 +1,133 @@
-.class public abstract Lfvh;
-.super Ljava/lang/Object;
+.class public final Lfvh;
+.super Lhu9;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/Boolean;
+.field public final b:Landroid/content/Context;
 
-.field public b:Z
-
-.field public final synthetic c:Lcom/google/android/gms/common/internal/a;
-
-.field public final d:I
-
-.field public final e:Landroid/os/Bundle;
-
-.field public final synthetic f:Lcom/google/android/gms/common/internal/a;
+.field public final synthetic c:Lzr6;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
+.method public constructor <init>(Lzr6;Landroid/content/Context;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfvh;->c:Lzr6;
 
-    iput-object p1, p0, Lfvh;->f:Lcom/google/android/gms/common/internal/a;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    move-result-object p1
 
-    iput-object p1, p0, Lfvh;->c:Lcom/google/android/gms/common/internal/a;
+    if-nez p1, :cond_0
 
-    iput-object v0, p0, Lfvh;->a:Ljava/lang/Boolean;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    iput-boolean p1, p0, Lfvh;->b:Z
+    goto :goto_0
 
-    iput p2, p0, Lfvh;->d:I
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    iput-object p3, p0, Lfvh;->e:Landroid/os/Bundle;
+    move-result-object p1
+
+    :goto_0
+    const/4 v0, 0x2
+
+    invoke-direct {p0, p1, v0}, Lhu9;-><init>(Landroid/os/Looper;I)V
+
+    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfvh;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ldp3;)V
-.end method
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 5
 
-.method public abstract b()Z
-.end method
+    iget p1, p1, Landroid/os/Message;->what:I
 
-.method public final c()V
-    .locals 2
+    const/4 v0, 0x1
 
-    monitor-enter p0
+    if-eq p1, v0, :cond_0
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :try_start_0
-    iput-object v0, p0, Lfvh;->a:Ljava/lang/Boolean;
+    const-string v1, "Don\'t know how to handle this message: "
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lfvh;->c:Lcom/google/android/gms/common/internal/a;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->u0:Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    monitor-enter v0
+    move-result-object p1
 
-    :try_start_1
-    iget-object v1, p0, Lfvh;->c:Lcom/google/android/gms/common/internal/a;
+    const-string v0, "GoogleApiAvailability"
 
-    iget-object v1, v1, Lcom/google/android/gms/common/internal/a;->u0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    monitor-exit v0
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    :catchall_0
-    move-exception v1
+    :cond_0
+    sget p1, Las6;->a:I
 
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v1, p0, Lfvh;->c:Lzr6;
 
-    throw v1
+    iget-object v2, p0, Lfvh;->b:Landroid/content/Context;
 
-    :catchall_1
-    move-exception v0
+    invoke-virtual {v1, v2, p1}, Las6;->c(Landroid/content/Context;I)I
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result p1
 
-    throw v0
+    sget v3, Los6;->e:I
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x9
+
+    if-eq p1, v0, :cond_1
+
+    return-void
+
+    :cond_1
+    const-string v0, "n"
+
+    invoke-virtual {v1, p1, v2, v0}, Las6;->b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 v3, 0xc000000
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v4, v0, v3}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v1, v2, p1, v0}, Lzr6;->g(Landroid/content/Context;ILandroid/app/PendingIntent;)V
+
+    return-void
 .end method

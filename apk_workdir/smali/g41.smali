@@ -1,107 +1,86 @@
-.class public final Lg41;
-.super Llff;
+.class public final synthetic Lg41;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lo41;
+.field public final synthetic b:Lh41;
 
 
 # direct methods
-.method public constructor <init>(Lo41;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lh41;I)V
     .locals 0
 
-    iput-object p1, p0, Lg41;->Y:Lo41;
+    iput p2, p0, Lg41;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lg41;->b:Lh41;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lda2;
+    iget v0, p0, Lg41;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lg41;->b:Lh41;
 
-    invoke-virtual {p0, p1, p2}, Lg41;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-wide/16 v2, 0xfa
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lg41;
+    sget v0, Lh41;->B0:I
 
-    sget-object p2, Lzag;->a:Lzag;
+    new-instance v0, Le61;
 
-    invoke-virtual {p1, p2}, Lg41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lh41;->d()Z
 
-    return-object p2
-.end method
+    move-result v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lg41;
-
-    iget-object v1, p0, Lg41;->Y:Lo41;
-
-    invoke-direct {v0, v1, p2}, Lg41;-><init>(Lo41;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lg41;->X:Ljava/lang/Object;
+    invoke-direct {v0, v2, v3, v1}, Le61;-><init>(JZ)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    :pswitch_0
+    sget v0, Lh41;->B0:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance v0, Lvp1;
 
-    iget-object p1, p0, Lg41;->X:Ljava/lang/Object;
+    invoke-virtual {v1}, Lh41;->d()Z
 
-    check-cast p1, Lda2;
+    move-result v1
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0, v2, v3, v1}, Lvp1;-><init>(JZ)V
 
-    iget-object v0, p0, Lg41;->Y:Lo41;
+    return-object v0
 
-    iget-object v1, v0, Lo41;->a:Lwu1;
+    :pswitch_1
+    sget v0, Lh41;->B0:I
 
-    iget-object v2, v0, Lo41;->e:Llt7;
+    new-instance v0, Luk1;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lh41;->d()Z
 
-    move-result-object v2
+    move-result v1
 
-    check-cast v2, Lqkf;
+    invoke-direct {v0, v2, v3, v1}, Luk1;-><init>(JZ)V
 
-    check-cast v2, Losa;
+    return-object v0
 
-    invoke-virtual {v2}, Losa;->a()Lv44;
+    nop
 
-    move-result-object v2
-
-    new-instance v3, Lf41;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v0, p1, v4}, Lf41;-><init>(Lo41;Lda2;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v1, v2, v4, v3, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

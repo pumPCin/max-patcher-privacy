@@ -1,192 +1,95 @@
 .class public final Ltrb;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ltrb;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lzi6;
 
 
 # instance fields
-.field public X:Landroid/media/session/PlaybackState$CustomAction;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/CharSequence;
-
-.field public final c:I
-
-.field public final o:Landroid/os/Bundle;
+.field public final synthetic Y:Lone/me/calls/ui/ui/pip/PipScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lv2b;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
-
-    sput-object v0, Ltrb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 8
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 9
-    iput-object v0, p0, Ltrb;->a:Ljava/lang/String;
-
-    .line 10
-    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    .line 11
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    check-cast v0, Ljava/lang/CharSequence;
-
-    iput-object v0, p0, Ltrb;->b:Ljava/lang/CharSequence;
-
-    .line 13
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Ltrb;->c:I
-
-    .line 14
-    const-class v0, Lcz8;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltrb;->o:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;ILandroid/os/Bundle;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltrb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
 
-    .line 2
-    iput-object p1, p0, Ltrb;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    .line 3
-    iput-object p2, p0, Ltrb;->b:Ljava/lang/CharSequence;
-
-    .line 4
-    iput p3, p0, Ltrb;->c:I
-
-    .line 5
-    iput-object p4, p0, Ltrb;->o:Landroid/os/Bundle;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lk9b;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ltrb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ltrb;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ltrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Ltrb;
 
-    const-string v1, "Action:mName=\'"
+    iget-object v1, p0, Ltrb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, p2}, Ltrb;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Ltrb;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mIcon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltrb;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mExtras="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltrb;->o:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Ltrb;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ltrb;->a:Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object p1, p0, Ltrb;->X:Ljava/lang/Object;
 
-    iget-object v0, p0, Ltrb;->b:Ljava/lang/CharSequence;
+    check-cast p1, Lk9b;
 
-    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Ltr7;
 
-    iget p2, p0, Ltrb;->c:I
+    iget-object v0, p0, Ltrb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, v0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
 
-    iget-object p2, p0, Ltrb;->o:Landroid/os/Bundle;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, Llrb;
+
+    iget-object v0, v0, Llrb;->c:Lcj1;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lcj1;->d(Lk9b;)V
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

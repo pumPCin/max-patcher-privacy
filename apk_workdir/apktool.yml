@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 6429
-  versionName: 25.13.1
+  versionCode: 6432
+  versionName: 25.13.2
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -48,15 +48,15 @@ unknownFiles:
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
 doNotCompress:
 - resources.arsc
-- META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/w44
-- META-INF/services/uzf
-- META-INF/services/jp7
 - webp
 - png
 - mp3
-- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
-- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
-- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
+- META-INF/services/l54
+- META-INF/services/gq7
+- META-INF/services/y0g
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
+- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
+- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
+- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite

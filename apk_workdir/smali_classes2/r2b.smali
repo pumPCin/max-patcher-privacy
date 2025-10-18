@@ -1,100 +1,55 @@
-.class public final Lr2b;
+.class public abstract Lr2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls2b;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lr2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:J
 
-.field public static final a:Lr2b;
+.field public static final b:J
+
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final synthetic f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lr2b;
+    sget v0, Lgpc;->oneme_settings_ringtone_section_bottom_vh:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    int-to-long v0, v0
 
-    sput-object v0, Lr2b;->a:Lr2b;
+    sput-wide v0, Lr2b;->a:J
 
-    new-instance v0, Luj8;
+    sget v0, Lgpc;->oneme_settings_ringtone_section_custom_add:I
 
-    const/16 v1, 0x1b
+    int-to-long v0, v0
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
+    sput-wide v0, Lr2b;->b:J
 
-    sput-object v0, Lr2b;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget v0, Lgpc;->oneme_settings_ringtone_section_default:I
 
-    return-void
-.end method
+    int-to-long v0, v0
 
+    sput-wide v0, Lr2b;->c:J
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    sget v0, Lgpc;->oneme_settings_ringtone_section_header_vh:I
 
-    const/4 v0, 0x0
+    int-to-long v0, v0
 
-    return v0
-.end method
+    sput-wide v0, Lr2b;->d:J
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lgpc;->oneme_settings_ringtone_section_system:I
 
-    const/4 v0, 0x1
+    int-to-long v0, v0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lr2b;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x77b9f821
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Timer"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput-wide v0, Lr2b;->e:J
 
     return-void
 .end method

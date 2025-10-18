@@ -1,27 +1,23 @@
 .class public final Lc00;
-.super Ld00;
+.super Le00;
 .source "SourceFile"
 
 
 # instance fields
 .field public final a:J
 
-.field public final b:F
-
-.field public final c:Lnqf;
+.field public final b:Lsrf;
 
 
 # direct methods
-.method public constructor <init>(JFLnqf;)V
+.method public constructor <init>(JLsrf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lc00;->a:J
 
-    iput p3, p0, Lc00;->b:F
-
-    iput-object p4, p0, Lc00;->c:Lnqf;
+    iput-object p3, p0, Lc00;->b:Lsrf;
 
     return-void
 .end method
@@ -36,10 +32,10 @@
     return-wide v0
 .end method
 
-.method public final b()Loqf;
+.method public final b()Ltrf;
     .locals 1
 
-    iget-object v0, p0, Lc00;->c:Lnqf;
+    iget-object v0, p0, Lc00;->b:Lsrf;
 
     return-object v0
 .end method
@@ -72,35 +68,22 @@
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lc00;->b:F
+    iget-object v0, p0, Lc00;->b:Lsrf;
 
-    iget v1, p1, Lc00;->b:F
+    iget-object p1, p1, Lc00;->b:Lsrf;
 
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lc00;->c:Lnqf;
-
-    iget-object p1, p1, Lc00;->c:Lnqf;
-
-    invoke-virtual {v0, p1}, Lnqf;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_3
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_4
+    :cond_3
     :goto_1
     const/4 p1, 0x1
 
@@ -108,7 +91,7 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
     iget-wide v0, p0, Lc00;->a:J
 
@@ -116,19 +99,11 @@
 
     move-result v0
 
-    const/16 v1, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v0, v1
+    iget-object v1, p0, Lc00;->b:Lsrf;
 
-    iget v2, p0, Lc00;->b:F
-
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v1, p0, Lc00;->c:Lnqf;
-
-    invoke-virtual {v1}, Lnqf;->hashCode()I
+    invoke-virtual {v1}, Lsrf;->hashCode()I
 
     move-result v1
 
@@ -142,7 +117,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Uploading(messageId="
+    const-string v1, "Success(messageId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -150,19 +125,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lc00;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
     const-string v1, ", textSize="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lc00;->c:Lnqf;
+    iget-object v1, p0, Lc00;->b:Lsrf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,63 +3,147 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Leie;
+# static fields
+.field public static final c:Lag2;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+
+# instance fields
+.field public final a:Ljava/util/Set;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lgw0;Lqkf;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lag2;
+
+    sget-object v1, Lua5;->a:Lua5;
+
+    sget-object v2, Lka5;->a:Lka5;
+
+    invoke-direct {v0, v2, v1}, Lag2;-><init>(Ljava/util/List;Ljava/util/Set;)V
+
+    sput-object v0, Lag2;->c:Lag2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;Ljava/util/Set;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lag2;->a:Ljava/util/Set;
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lag2;->a:Leie;
-
-    check-cast p2, Losa;
-
-    invoke-virtual {p2}, Losa;->c()Lfd8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lag2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lag2;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lyf2;)V
-    .locals 3
-    .annotation runtime Lsaf;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lzf2;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p1, v1}, Lzf2;-><init>(Lag2;Lyf2;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 p1, 0x3
+    :cond_0
+    instance-of v1, p1, Lag2;
 
-    iget-object v2, p0, Lag2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lag2;
+
+    iget-object v1, p0, Lag2;->a:Ljava/util/Set;
+
+    iget-object v3, p1, Lag2;->a:Ljava/util/Set;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lag2;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lag2;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lag2;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lag2;->b:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatFolders(allFilterExclude="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lag2;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", folders="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lag2;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

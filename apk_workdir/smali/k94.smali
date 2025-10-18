@@ -1,105 +1,82 @@
 .class public final Lk94;
-.super Lbi8;
+.super La42;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic J0:I
-
-
 # instance fields
-.field public I0:Lj94;
+.field public final X:F
+
+.field public final o:Lbp0;
+
+
+# direct methods
+.method public constructor <init>(Lbp0;F)V
+    .locals 2
+
+    const-string v0, "bitmapDescriptor must not be null"
+
+    invoke-static {p1, v0}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p2, v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, p1, v1}, La42;-><init>(ILbp0;Ljava/lang/Float;)V
+
+    iput-object p1, p0, Lk94;->o:Lbp0;
+
+    iput p2, p0, Lk94;->X:F
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "refWidth must be positive"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Canvas;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lk94;->I0:Lj94;
+    iget-object v0, p0, Lk94;->o:Lbp0;
 
-    iget-object v0, v0, Lj94;->r:Landroid/graphics/RectF;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
+    move-result-object v0
 
-    move-result v0
+    const-string v1, "[CustomCap: bitmapDescriptor="
 
-    if-eqz v0, :cond_0
+    const-string v2, " refWidth="
 
-    invoke-super {p0, p1}, Lbi8;->f(Landroid/graphics/Canvas;)V
+    invoke-static {v1, v0, v2}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iget v1, p0, Lk94;->X:F
 
-    iget-object v0, p0, Lk94;->I0:Lj94;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lj94;->r:Landroid/graphics/RectF;
+    const-string v1, "]"
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-super {p0, p1}, Lbi8;->f(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+    move-result-object v0
 
-    return-void
-.end method
-
-.method public final mutate()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    new-instance v0, Lj94;
-
-    iget-object v1, p0, Lk94;->I0:Lj94;
-
-    invoke-direct {v0, v1}, Lj94;-><init>(Lj94;)V
-
-    iput-object v0, p0, Lk94;->I0:Lj94;
-
-    return-object p0
-.end method
-
-.method public final q(FFFF)V
-    .locals 2
-
-    iget-object v0, p0, Lk94;->I0:Lj94;
-
-    iget-object v0, v0, Lj94;->r:Landroid/graphics/RectF;
-
-    iget v1, v0, Landroid/graphics/RectF;->left:F
-
-    cmpl-float v1, p1, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->top:F
-
-    cmpl-float v1, p2, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->right:F
-
-    cmpl-float v1, p3, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->bottom:F
-
-    cmpl-float v1, p4, v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
-
-    invoke-virtual {p0}, Lbi8;->invalidateSelf()V
-
-    return-void
+    return-object v0
 .end method

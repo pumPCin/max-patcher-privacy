@@ -1,94 +1,55 @@
 .class public final Lsu4;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
 # instance fields
-.field private volatile synthetic _decision$volatile:I
+.field public a:Ljava/lang/String;
+
+.field public b:Lvef;
+
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public final f:Lb3j;
+
+.field public final g:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    const-class v0, Lsu4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "_decision$volatile"
+    const-string v0, "image_cache"
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object v0, p0, Lsu4;->a:Ljava/lang/String;
 
-    move-result-object v0
+    const-wide/32 v0, 0x2800000
 
-    sput-object v0, Lsu4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-wide v0, p0, Lsu4;->c:J
 
-    return-void
-.end method
+    const-wide/32 v0, 0xa00000
 
+    iput-wide v0, p0, Lsu4;->d:J
 
-# virtual methods
-.method public final afterCompletion(Ljava/lang/Object;)V
-    .locals 0
+    const-wide/32 v0, 0x200000
 
-    invoke-virtual {p0, p1}, Lsu4;->afterResume(Ljava/lang/Object;)V
+    iput-wide v0, p0, Lsu4;->e:J
 
-    return-void
-.end method
+    new-instance v0, Lb3j;
 
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 3
+    const/16 v1, 0x8
 
-    :cond_0
-    sget-object v0, Lsu4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    invoke-direct {v0, v1}, Lb3j;-><init>(I)V
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    iput-object v0, p0, Lsu4;->f:Lb3j;
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-eqz v1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-ne v1, v0, :cond_1
-
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lxti;->h(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1, v2, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lqh6;ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Already resumed"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lsu4;->g:Landroid/content/Context;
 
     return-void
 .end method

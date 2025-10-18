@@ -1,71 +1,35 @@
 .class public final Lr8a;
-.super Ljava/lang/Object;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final X:J
 
-.field public final b:Z
+.field public final Y:Ljava/util/Set;
+
+.field public final b:J
 
 .field public final c:Z
 
-.field public final d:Z
-
-.field public final e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:Z
-
-.field public final m:Ljava/lang/Runnable;
-
-.field public final n:I
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(ZZZZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLti0;I)V
+.method public constructor <init>(JZJJLjava/util/Set;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Luj0;-><init>()V
 
-    iput-boolean p1, p0, Lr8a;->a:Z
-
-    iput-boolean p2, p0, Lr8a;->b:Z
+    iput-wide p1, p0, Lr8a;->b:J
 
     iput-boolean p3, p0, Lr8a;->c:Z
 
-    iput-boolean p4, p0, Lr8a;->d:Z
+    iput-wide p4, p0, Lr8a;->o:J
 
-    iput-object p5, p0, Lr8a;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    iput-wide p6, p0, Lr8a;->X:J
 
-    iput-object p6, p0, Lr8a;->f:Ljava/lang/String;
-
-    iput p7, p0, Lr8a;->g:I
-
-    iput p8, p0, Lr8a;->h:I
-
-    iput p9, p0, Lr8a;->i:I
-
-    iput p10, p0, Lr8a;->j:I
-
-    iput p11, p0, Lr8a;->k:I
-
-    iput-boolean p12, p0, Lr8a;->l:Z
-
-    iput-object p13, p0, Lr8a;->m:Ljava/lang/Runnable;
-
-    iput p14, p0, Lr8a;->n:I
+    iput-object p8, p0, Lr8a;->Y:Ljava/util/Set;
 
     return-void
 .end method
@@ -73,161 +37,80 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
 
     if-ne p0, p1, :cond_0
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :cond_0
     instance-of v0, p1, Lr8a;
 
     if-nez v0, :cond_1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lr8a;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v0, p0, Lr8a;->b:J
 
-    iget-boolean v0, p0, Lr8a;->a:Z
+    iget-wide v2, p1, Lr8a;->b:J
 
-    iget-boolean v1, p1, Lr8a;->a:Z
+    cmp-long v0, v0, v2
 
-    if-eq v0, v1, :cond_2
+    if-eqz v0, :cond_2
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Lr8a;->b:Z
-
-    iget-boolean v1, p1, Lr8a;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
     iget-boolean v0, p0, Lr8a;->c:Z
 
     iget-boolean v1, p1, Lr8a;->c:Z
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v0, p0, Lr8a;->o:J
+
+    iget-wide v2, p1, Lr8a;->o:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_4
 
     goto :goto_0
 
     :cond_4
-    iget-boolean v0, p0, Lr8a;->d:Z
+    iget-wide v0, p0, Lr8a;->X:J
 
-    iget-boolean v1, p1, Lr8a;->d:Z
+    iget-wide v2, p1, Lr8a;->X:J
 
-    if-eq v0, v1, :cond_5
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_5
 
     goto :goto_0
 
     :cond_5
-    iget-object v0, p0, Lr8a;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    iget-object v0, p0, Lr8a;->Y:Ljava/util/Set;
 
-    iget-object v1, p1, Lr8a;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    iget-object p1, p1, Lr8a;->Y:Ljava/util/Set;
 
-    if-eq v0, v1, :cond_6
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result p1
 
-    :cond_6
-    iget-object v0, p0, Lr8a;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lr8a;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lr8a;->g:I
-
-    iget v1, p1, Lr8a;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Lr8a;->h:I
-
-    iget v1, p1, Lr8a;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget v0, p0, Lr8a;->i:I
-
-    iget v1, p1, Lr8a;->i:I
-
-    if-eq v0, v1, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget v0, p0, Lr8a;->j:I
-
-    iget v1, p1, Lr8a;->j:I
-
-    if-eq v0, v1, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    iget v0, p0, Lr8a;->k:I
-
-    iget v1, p1, Lr8a;->k:I
-
-    if-eq v0, v1, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    iget-boolean v0, p0, Lr8a;->l:Z
-
-    iget-boolean v1, p1, Lr8a;->l:Z
-
-    if-eq v0, v1, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    iget-object v0, p0, Lr8a;->m:Ljava/lang/Runnable;
-
-    iget-object v1, p1, Lr8a;->m:Ljava/lang/Runnable;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_e
-
-    goto :goto_0
-
-    :cond_e
-    iget v0, p0, Lr8a;->n:I
-
-    iget p1, p1, Lr8a;->n:I
-
-    if-eq v0, p1, :cond_f
+    if-nez p1, :cond_6
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_f
+    :cond_6
     :goto_1
     const/4 p1, 0x1
 
@@ -235,142 +118,42 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
-    const/4 v0, 0x0
+    iget-wide v0, p0, Lr8a;->b:J
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v2, p0, Lr8a;->a:Z
-
-    invoke-static {v1, v2}, Lyf8;->a(IZ)I
-
-    move-result v1
-
-    iget-boolean v2, p0, Lr8a;->b:Z
-
-    invoke-static {v1, v2}, Lyf8;->a(IZ)I
-
-    move-result v1
-
-    iget-boolean v2, p0, Lr8a;->c:Z
-
-    invoke-static {v1, v2}, Lyf8;->a(IZ)I
-
-    move-result v1
-
-    iget-boolean v2, p0, Lr8a;->d:Z
-
-    invoke-static {v1, v2}, Lyf8;->a(IZ)I
-
-    move-result v1
-
-    iget-object v2, p0, Lr8a;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    if-nez v2, :cond_0
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lr8a;->f:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v2, p0, Lr8a;->g:I
-
-    invoke-static {v2, v1}, Lwei;->a(II)I
-
-    move-result v1
-
-    iget v2, p0, Lr8a;->h:I
-
-    invoke-static {v2, v1}, Lwei;->a(II)I
-
-    move-result v1
-
-    iget v2, p0, Lr8a;->i:I
-
-    invoke-static {v2, v1}, Lwei;->a(II)I
-
-    move-result v1
-
-    iget v2, p0, Lr8a;->j:I
-
-    invoke-static {v2, v1}, Lwei;->a(II)I
-
-    move-result v1
-
-    iget v2, p0, Lr8a;->k:I
-
-    invoke-static {v2, v1}, Lwei;->a(II)I
-
-    move-result v1
-
-    iget-boolean v2, p0, Lr8a;->l:Z
-
-    invoke-static {v1, v2}, Lyf8;->a(IZ)I
-
-    move-result v1
-
-    iget-object v2, p0, Lr8a;->m:Ljava/lang/Runnable;
-
-    if-nez v2, :cond_2
-
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v2, p0, Lr8a;->n:I
-
-    if-nez v2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {v2}, Lwx1;->v(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    :goto_3
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lr8a;->c:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lr8a;->o:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lr8a;->X:J
+
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lr8a;->Y:Ljava/util/Set;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
     add-int/2addr v1, v0
 
     return v1
@@ -379,123 +162,37 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", serversideAnn="
+    const-string v0, "NewReactionEvent(chatId="
 
-    const-string v1, ", clientsidePlatform="
+    const-string v1, ", isOnSubscription="
 
-    const-string v2, "NoiseSuppressorActiveState(noiseSuppressorStuttering=false, serversideBasic="
+    iget-wide v2, p0, Lr8a;->b:J
 
-    iget-boolean v3, p0, Lr8a;->a:Z
+    iget-boolean v4, p0, Lr8a;->c:Z
 
-    iget-boolean v4, p0, Lr8a;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lf67;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", clientsideAnn="
+    const-string v1, ", messageLocalId="
 
-    const-string v2, ", enhancerKind="
+    const-string v2, ", messageTime="
 
-    iget-boolean v3, p0, Lr8a;->c:Z
+    iget-wide v3, p0, Lr8a;->o:J
 
-    iget-boolean v4, p0, Lr8a;->d:Z
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    invoke-static {v1, v2, v0, v3, v4}, Lwx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    iget-wide v1, p0, Lr8a;->X:J
 
-    iget-object v1, p0, Lr8a;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", reactions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lr8a;->Y:Ljava/util/Set;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", filePath="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8a;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inputSampleRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", outputSampleRate="
-
-    const-string v2, ", fallbackTimeLimitMillis="
-
-    iget v3, p0, Lr8a;->g:I
-
-    iget v4, p0, Lr8a;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", fallbackStutterCountMillis="
-
-    const-string v2, ", fallbackTimeframeMillis="
-
-    iget v3, p0, Lr8a;->i:I
-
-    iget v4, p0, Lr8a;->j:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Lr8a;->k:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", logTimings="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lr8a;->l:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", onNoiseSuppressorDisabledDueToStutter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8a;->m:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", kind="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lr8a;->n:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "PIPELINE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "BASELINE"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NONE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

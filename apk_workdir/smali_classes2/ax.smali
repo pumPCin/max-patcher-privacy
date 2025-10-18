@@ -1,5 +1,5 @@
 .class public final Lax;
-.super Lk14;
+.super Ly14;
 
 
 # instance fields
@@ -11,9 +11,9 @@
 
 .field public synthetic o:Ljava/lang/Object;
 
-.field public r0:Lzv;
+.field public q0:Lzv;
 
-.field public s0:J
+.field public r0:J
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     iput-object p1, p0, Lax;->Y:Lbx;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method

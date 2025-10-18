@@ -1,80 +1,73 @@
-.class public final synthetic Lqw3;
+.class public abstract synthetic Lqw3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lsw3;
-
-.field public final synthetic c:Lpr3;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsw3;Lpr3;I)V
-    .locals 0
-
-    iput p3, p0, Lqw3;->a:I
-
-    iput-object p1, p0, Lqw3;->b:Lsw3;
-
-    iput-object p2, p0, Lqw3;->c:Lpr3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 4
 
-    iget p1, p0, Lqw3;->a:I
+    const/4 v0, 0x7
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    iget-object p1, p0, Lqw3;->b:Lsw3;
+    move-result-object v0
 
-    iget-object p1, p1, Lsw3;->o:Lqh6;
+    array-length v0, v0
 
-    new-instance v0, Lph9;
+    new-array v0, v0, [I
 
-    iget-object v1, p0, Lqw3;->c:Lpr3;
+    const/4 v1, 0x1
 
-    iget-wide v2, v1, Lpr3;->j:J
+    const/4 v2, 0x6
 
-    invoke-direct {v0, v2, v3, v1}, Lph9;-><init>(JLs00;)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :catch_0
+    const/4 v2, 0x5
+
+    const/4 v3, 0x2
+
+    :try_start_1
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lqw3;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lpw3;->values()[Lpw3;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v2, 0x0
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v3, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Lqw3;->$EnumSwitchMapping$1:[I
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lqw3;->b:Lsw3;
-
-    iget-object p1, p1, Lsw3;->o:Lqh6;
-
-    new-instance v0, Loh9;
-
-    iget-object v1, p0, Lqw3;->c:Lpr3;
-
-    iget-wide v2, v1, Lpr3;->j:J
-
-    invoke-direct {v0, v2, v3, v1}, Loh9;-><init>(JLs00;)V
-
-    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

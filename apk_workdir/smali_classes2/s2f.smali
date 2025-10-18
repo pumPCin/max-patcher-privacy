@@ -1,128 +1,125 @@
-.class public final synthetic Ls2f;
-.super Ljava/lang/Object;
+.class public final Ls2f;
+.super Loz;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lwif;
 
-.field public final synthetic b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+.field public final d:Lwif;
+
+.field public final e:Ltt5;
+
+.field public f:Lyx;
+
+.field public final g:Lr2f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
+.method public constructor <init>(Le20;Lwif;Lwif;Ltt5;)V
     .locals 0
 
-    iput p2, p0, Ls2f;->a:I
+    invoke-direct {p0, p1}, Loz;-><init>(Le20;)V
 
-    iput-object p1, p0, Ls2f;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+    new-instance p1, Lr2f;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, p0}, Lr2f;-><init>(Ls2f;)V
+
+    iput-object p1, p0, Ls2f;->g:Lr2f;
+
+    iput-object p2, p0, Ls2f;->c:Lwif;
+
+    iput-object p3, p0, Ls2f;->d:Lwif;
+
+    iput-object p4, p0, Ls2f;->e:Ltt5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final b()Lyha;
     .locals 4
 
-    iget p1, p0, Ls2f;->a:I
-
-    iget-object v0, p0, Ls2f;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Lwq7;
-
-    iget-object p1, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->v0:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm2f;
-
-    iget-object v0, p1, Lm2f;->B0:Lgzc;
-
-    iget-object v0, v0, Lgzc;->a:Llze;
-
-    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
+    invoke-super {p0}, Loz;->b()Lyha;
 
     move-result-object v0
 
-    check-cast v0, Lb3f;
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Ls2f;->f:Lyx;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p1, Lm2f;->F0:Lwwe;
+    return-object v0
 
-    if-eqz v1, :cond_0
+    :cond_1
+    new-instance v0, Lyx;
 
-    invoke-virtual {v1}, Lo0;->isActive()Z
+    invoke-direct {v0}, Lyx;-><init>()V
 
-    move-result v1
+    iput-object v0, p0, Ls2f;->f:Lyx;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Loz;->a:Le20;
 
-    if-ne v1, v2, :cond_0
+    iget-object v0, v0, Le20;->f:Lz10;
 
-    goto :goto_0
+    iget v1, v0, Lz10;->j:I
 
-    :cond_0
-    iget-object v1, p1, Lm2f;->c:Lqkf;
+    iget-object v2, v0, Lz10;->h:Ljava/lang/String;
 
-    check-cast v1, Losa;
+    const/4 v3, 0x4
 
-    invoke-virtual {v1}, Losa;->b()Lv44;
+    if-ne v1, v3, :cond_2
 
-    move-result-object v1
+    iget-object v0, v0, Lz10;->l:Ljava/lang/String;
 
-    new-instance v2, Ll2f;
+    const/4 v1, 0x1
 
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, p1, v3}, Ll2f;-><init>(Lb3f;Lm2f;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v1, v2, v0}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
+    invoke-static {v0, v1, v1}, Lw4a;->a(Ljava/lang/String;IZ)Lu4a;
 
     move-result-object v0
 
-    iput-object v0, p1, Lm2f;->F0:Lwwe;
+    iget-object v1, p0, Ls2f;->g:Lr2f;
 
-    :cond_1
-    :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Lu4a;->e(Lv4a;)V
 
-    :pswitch_0
-    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Lwq7;
-
-    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lx14;->getRouter()Ljhd;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljhd;->C()Z
+    goto :goto_1
 
     :cond_2
-    return-void
+    invoke-static {v2}, Li79;->b(Ljava/lang/CharSequence;)Z
 
-    nop
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v2, v0, Lz10;->b:Ljava/lang/String;
+
+    :goto_0
+    iget-object v0, p0, Ls2f;->d:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lha7;
+
+    new-instance v1, Lz22;
+
+    const/16 v3, 0x1d
+
+    invoke-direct {v1, v3, p0}, Lz22;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2, v1}, Lha7;->a(Ljava/lang/String;Lga7;)V
+
+    :goto_1
+    iget-object v0, p0, Ls2f;->f:Lyx;
+
+    return-object v0
 .end method

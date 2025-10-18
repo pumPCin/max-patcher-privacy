@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public y1:Z
+.field public x1:Z
 
 
 # direct methods
@@ -125,7 +125,7 @@
     move-result-object v4
 
     :cond_3
-    new-instance v0, Ldh8;
+    new-instance v0, Lei8;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
 
@@ -133,9 +133,9 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v0, v5, v6}, Ldh8;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v5, v6}, Lei8;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, v1}, Ldh8;->d(Ljava/lang/CharSequence;)Ldh8;
+    invoke-virtual {v0, v1}, Lei8;->d(Ljava/lang/CharSequence;)Lei8;
 
     move-result-object v0
 
@@ -143,27 +143,27 @@
 
     iput-object v2, v1, Luc;->f:Ljava/lang/CharSequence;
 
-    new-instance v2, Lxn3;
+    new-instance v2, Lko3;
 
     const/4 v5, 0x0
 
-    invoke-direct {v2, p0, v5}, Lxn3;-><init>(Lru/ok/messages/views/dialogs/ConfirmationDialog;I)V
+    invoke-direct {v2, p0, v5}, Lko3;-><init>(Lru/ok/messages/views/dialogs/ConfirmationDialog;I)V
 
     iput-object v3, v1, Luc;->g:Ljava/lang/CharSequence;
 
     iput-object v2, v1, Luc;->h:Landroid/content/DialogInterface$OnClickListener;
 
-    new-instance v2, Lxn3;
+    new-instance v2, Lko3;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p0, v3}, Lxn3;-><init>(Lru/ok/messages/views/dialogs/ConfirmationDialog;I)V
+    invoke-direct {v2, p0, v3}, Lko3;-><init>(Lru/ok/messages/views/dialogs/ConfirmationDialog;I)V
 
     iput-object v4, v1, Luc;->k:Ljava/lang/CharSequence;
 
     iput-object v2, v1, Luc;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {v0}, Ldh8;->create()Lzc;
+    invoke-virtual {v0}, Lei8;->create()Lzc;
 
     move-result-object v0
 
@@ -173,7 +173,7 @@
 .method public final G0()V
     .locals 6
 
-    iget-boolean v0, p0, Lru/ok/messages/views/dialogs/ConfirmationDialog;->y1:Z
+    iget-boolean v0, p0, Lru/ok/messages/views/dialogs/ConfirmationDialog;->x1:Z
 
     if-eqz v0, :cond_0
 
@@ -200,19 +200,19 @@
 
     move-result-object v2
 
-    new-instance v3, Lqbb;
+    new-instance v3, Ltcb;
 
     const-string v4, "NEGATIVE"
 
-    sget-object v5, Lzn3;->b:Lzn3;
+    sget-object v5, Lmo3;->b:Lmo3;
 
-    invoke-direct {v3, v4, v5}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v4, v5}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v3}, [Lqbb;
+    filled-new-array {v3}, [Ltcb;
 
     move-result-object v3
 
-    invoke-static {v3}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+    invoke-static {v3}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -230,11 +230,11 @@
 
     if-eqz v3, :cond_3
 
-    instance-of v5, v3, Lyn3;
+    instance-of v5, v3, Llo3;
 
     if-eqz v5, :cond_2
 
-    check-cast v3, Lyn3;
+    check-cast v3, Llo3;
 
     goto :goto_1
 
@@ -258,11 +258,11 @@
 
     move-result-object v3
 
-    instance-of v5, v3, Lyn3;
+    instance-of v5, v3, Llo3;
 
     if-eqz v5, :cond_4
 
-    check-cast v3, Lyn3;
+    check-cast v3, Llo3;
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -289,7 +289,7 @@
 
     :cond_5
     :goto_1
-    iput-boolean v2, p0, Lru/ok/messages/views/dialogs/ConfirmationDialog;->y1:Z
+    iput-boolean v2, p0, Lru/ok/messages/views/dialogs/ConfirmationDialog;->x1:Z
 
     return-void
 .end method

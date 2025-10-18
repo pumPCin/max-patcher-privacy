@@ -1,87 +1,161 @@
-.class public abstract Lhqi;
-.super Ljava/lang/Object;
+.class public final Lhqi;
+.super Lmuh;
 .source "SourceFile"
 
+# interfaces
+.implements Lxwi;
 
-# static fields
-.field public static a:Lfqi;
+
+# instance fields
+.field public final synthetic d:I
+
+.field public final synthetic e:Ldji;
 
 
 # direct methods
-.method public static a(Landroid/net/Uri;)Landroid/net/Uri;
-    .locals 6
+.method public constructor <init>(Ldji;I)V
+    .locals 0
 
-    const-string v0, "CMCD"
+    iput p2, p0, Lhqi;->d:I
 
-    invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lhqi;->e:Ldji;
 
-    move-result-object v1
+    const-string p1, "com.google.android.gms.auth.api.signin.internal.ISignInCallbacks"
 
-    if-eqz v1, :cond_2
+    const/4 p2, 0x7
 
-    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    invoke-direct {p0, p1, p2}, Lmuh;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v1}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
 
-    invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
+# virtual methods
+.method public final Y(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 0
 
-    move-result-object v2
+    packed-switch p1, :pswitch_data_0
 
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const/4 p1, 0x0
 
-    move-result-object v2
+    return p1
 
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    :pswitch_0
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result v3
+    invoke-static {p2, p1}, Lb9i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    if-eqz v3, :cond_1
+    move-result-object p1
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
 
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {p0, v3}, Landroid/net/Uri;->getQueryParameters(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-virtual {v1, v3, v5}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    invoke-interface {p0, p1}, Lxwi;->m(Lcom/google/android/gms/common/api/Status;)V
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+    :pswitch_1
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result-object p0
+    invoke-static {p2, p1}, Lb9i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    :cond_2
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    invoke-interface {p0, p1}, Lxwi;->h(Lcom/google/android/gms/common/api/Status;)V
+
+    :goto_0
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_2
+    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lb9i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lb9i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x65
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    iget v0, p0, Lhqi;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lhqi;->e:Ldji;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->k(Lfed;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public m(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    iget v0, p0, Lhqi;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lhqi;->e:Ldji;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->k(Lfed;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,80 +1,61 @@
-.class public final Lyta;
+.class public abstract Lyta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lq8c;
+# static fields
+.field public static final a:Lzta;
+
+.field public static final b:Lzta;
 
 
 # direct methods
-.method public constructor <init>(Lq8c;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzta;
 
-    iput-object p1, p0, Lyta;->a:Lq8c;
+    sget v1, Lrjd;->i:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    sget v1, Lpjd;->y0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v3, "BY"
+
+    const/16 v4, 0x177
+
+    invoke-direct {v0, v3, v4, v2, v1}, Lzta;-><init>(Ljava/lang/String;ILorf;Ljava/lang/Integer;)V
+
+    sput-object v0, Lyta;->a:Lzta;
+
+    new-instance v0, Lzta;
+
+    sget v1, Lrjd;->y0:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    sget v1, Lpjd;->z0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v3, "RU"
+
+    const/4 v4, 0x7
+
+    invoke-direct {v0, v3, v4, v2, v1}, Lzta;-><init>(Ljava/lang/String;ILorf;Ljava/lang/Integer;)V
+
+    sput-object v0, Lyta;->b:Lzta;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(ILjava/lang/String;)Lzu5;
-    .locals 9
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x23
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lwta;
-
-    invoke-direct {v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;-><init>()V
-
-    :goto_0
-    move-object v7, v0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lxta;
-
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v0, p0, Lyta;->a:Lq8c;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p2, p1}, Lq8c;->p(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
-
-    move-result-object v8
-
-    new-instance v1, Lzu5;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    new-instance p1, Lb12;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Lb12;-><init>(I)V
-
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
-
-    return-object v1
 .end method

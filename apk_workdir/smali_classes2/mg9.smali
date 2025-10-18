@@ -1,169 +1,145 @@
-.class public final synthetic Lmg9;
+.class public final Lmg9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final b:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
     .locals 0
 
-    iput p2, p0, Lmg9;->a:I
-
-    iput-object p1, p0, Lmg9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmg9;->a:Ljava/lang/CharSequence;
+
+    iput-object p2, p0, Lmg9;->b:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lmg9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lmg9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    return v0
 
-    iget-object v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->Y:Lj58;
+    :cond_0
+    instance-of v1, p1, Lmg9;
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1}, Lfc9;->getText()Ljava/lang/CharSequence;
+    return v2
 
-    move-result-object v1
+    :cond_1
+    check-cast p1, Lmg9;
 
-    iget-object v0, v0, Lj58;->f:Lgzd;
+    iget-object v1, p0, Lmg9;->a:Ljava/lang/CharSequence;
 
-    iput-object v1, v0, Lgzd;->j:Ljava/lang/CharSequence;
+    iget-object v3, p1, Lmg9;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0()Lig9;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v1
 
-    iget-object p1, p1, Lig9;->y0:Lde5;
+    if-nez v1, :cond_2
 
-    sget-object v0, Ltf9;->a:Ltf9;
+    return v2
 
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    :cond_2
+    iget-object v1, p0, Lmg9;->b:Ljava/lang/Integer;
 
-    return-void
+    iget-object p1, p1, Lmg9;->b:Ljava/lang/Integer;
 
-    :pswitch_0
-    iget-object p1, p0, Lmg9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:I
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lmg9;->a:Ljava/lang/CharSequence;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0()Lig9;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v1
+    move-result v1
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    move-result-object v2
+    iget-object v2, p0, Lmg9;->b:Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Lfc9;->getMessageState()Llze;
+    if-nez v2, :cond_1
 
-    move-result-object v2
+    goto :goto_1
 
-    invoke-interface {v2}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lfc9;->getMessagePosition()Llze;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llze;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lwx1;->v(I)I
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v3, 0x0
+    :goto_1
+    add-int/2addr v1, v0
 
-    if-eqz v0, :cond_3
+    return v1
+.end method
 
-    const/4 v4, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    if-eq v0, v4, :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x2
+    const-string v1, "InputTextData(inputText="
 
-    if-ne v0, p1, :cond_1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, v1, Lig9;->y0:Lde5;
+    iget-object v1, p0, Lmg9;->a:Ljava/lang/CharSequence;
 
-    new-instance v0, Lsf9;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, ", inputCursorPosition="
 
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    iget-object v1, p0, Lmg9;->b:Ljava/lang/Integer;
 
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v1, ")"
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    iget-object v0, v1, Lig9;->O0:Lsze;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v4, Llf9;
+    move-result-object v0
 
-    invoke-direct {v4, v2, p1}, Llf9;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
-
-    invoke-virtual {v0, v3, v4}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v1, v3}, Lig9;->E(Ljava/lang/Long;)V
-
-    goto :goto_0
-
-    :cond_3
-    const/16 p1, 0xe
-
-    invoke-static {v1, v3, v3, v3, p1}, Lig9;->D(Lig9;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

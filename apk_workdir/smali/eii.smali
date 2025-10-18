@@ -4,384 +4,334 @@
 
 
 # direct methods
-.method public static a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-    .locals 5
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_1
-
-    return-wide v2
-
-    :cond_1
-    invoke-static {v0, v1, p1, p2}, Leii;->b(JJ)J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-wide v0
-.end method
-
-.method public static b(JJ)J
-    .locals 0
-
-    add-long/2addr p0, p2
-
-    const-wide/16 p2, 0x0
-
-    cmp-long p2, p0, p2
-
-    if-gez p2, :cond_0
-
-    const-wide p0, 0x7fffffffffffffffL
-
-    :cond_0
-    return-wide p0
-.end method
-
-.method public static c(Ljava/util/ArrayList;)[Lsa6;
+.method public static final a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
     .locals 4
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    if-eqz p0, :cond_9
 
-    move-result v0
+    if-nez p1, :cond_8
 
-    new-array v1, v0, [Lsa6;
+    instance-of p1, p0, Ljava/lang/AutoCloseable;
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_0
 
+    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+
+    goto :goto_1
+
+    :cond_0
+    instance-of p1, p0, Ljava/util/concurrent/ExecutorService;
+
+    if-eqz p1, :cond_4
+
+    check-cast p0, Ljava/util/concurrent/ExecutorService;
+
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+
+    move-result-object p1
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    const/4 v0, 0x0
+
+    :cond_2
     :goto_0
-    if-ge v2, v0, :cond_1
+    if-nez p1, :cond_3
 
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :try_start_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object v3
+    const-wide/16 v2, 0x1
 
-    check-cast v3, Lzq8;
+    invoke-interface {p0, v2, v3, v1}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
 
-    iget-object v3, v3, Lzq8;->a:Lsa6;
-
-    if-eqz v3, :cond_0
-
-    aput-object v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
+    :catch_0
+    if-nez v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v0, :cond_9
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    goto :goto_1
+
+    :cond_4
+    instance-of p1, p0, Landroid/content/res/TypedArray;
+
+    if-eqz p1, :cond_5
+
+    check-cast p0, Landroid/content/res/TypedArray;
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto :goto_1
+
+    :cond_5
+    instance-of p1, p0, Landroid/media/MediaMetadataRetriever;
+
+    if-eqz p1, :cond_6
+
+    check-cast p0, Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
+
+    goto :goto_1
+
+    :cond_6
+    instance-of p1, p0, Landroid/media/MediaDrm;
+
+    if-eqz p1, :cond_7
+
+    check-cast p0, Landroid/media/MediaDrm;
+
+    invoke-virtual {p0}, Landroid/media/MediaDrm;->release()V
+
+    goto :goto_1
+
+    :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Required value was null."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
-    :cond_1
-    return-object v1
+    :cond_8
+    :try_start_1
+    invoke-static {p0}, Lrtg;->p(Ljava/lang/AutoCloseable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {p1, p0}, Lr0j;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    :cond_9
+    :goto_1
+    return-void
 .end method
 
-.method public static d(Ljava/util/concurrent/atomic/AtomicLong;J)V
-    .locals 8
+.method public static b(Z)I
+    .locals 4
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    const/4 v0, 0x0
 
-    move-result-wide v0
+    :try_start_0
+    new-instance v1, Ljb6;
 
-    const-wide v2, 0x7fffffffffffffffL
+    invoke-direct {v1}, Ljb6;-><init>()V
 
-    cmp-long v2, v0, v2
+    const-string v2, "video/avc"
 
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sub-long v2, v0, p1
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v6, v2, v4
-
-    if-gez v6, :cond_2
-
-    new-instance v6, Ljava/lang/IllegalStateException;
-
-    const-string v7, "More produced than requested: "
-
-    invoke-static {v2, v3, v7}, Lyy8;->d(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lfs9;->n(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v6, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object v2, v1, Ljb6;->m:Ljava/lang/String;
 
-    invoke-static {v6}, Lgxi;->a(Ljava/lang/Throwable;)V
+    new-instance v2, Lmb6;
 
-    move-wide v2, v4
+    invoke-direct {v2, v1}, Lmb6;-><init>(Ljb6;)V
 
-    :cond_2
-    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
+    iget-object v1, v2, Lmb6;->n:Ljava/lang/String;
 
-    move-result v0
+    if-eqz v1, :cond_4
 
-    if-eqz v0, :cond_0
+    invoke-static {v1, p0, v0}, Lvp8;->d(Ljava/lang/String;ZZ)Ljava/util/List;
 
-    :goto_0
-    return-void
-.end method
+    move-result-object v1
 
-.method public static e(II)V
-    .locals 2
+    invoke-static {v2}, Lvp8;->b(Lmb6;)Ljava/lang/String;
 
-    if-ltz p0, :cond_1
+    move-result-object v2
 
-    if-lt p0, p1, :cond_0
+    if-nez v2, :cond_0
+
+    sget-object p0, Lz8d;->X:Lz8d;
 
     goto :goto_0
 
     :cond_0
-    return-void
+    invoke-static {v2, p0, v0}, Lvp8;->d(Ljava/lang/String;ZZ)Ljava/util/List;
 
-    :cond_1
+    move-result-object p0
+
     :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    invoke-static {}, Lec7;->j()Lbc7;
 
-    const-string v1, "index"
+    move-result-object v2
 
-    if-ltz p0, :cond_3
+    invoke-virtual {v2, v1}, Lub7;->d(Ljava/lang/Iterable;)V
 
-    if-gez p1, :cond_2
+    invoke-virtual {v2, p0}, Lub7;->d(Ljava/lang/Iterable;)V
 
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0xf
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "negative size: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2}, Lbc7;->i()Lz8d;
 
     move-result-object p0
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {v1, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must be less than size (%s)"
-
-    invoke-static {p1, p0}, Lhii;->b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be negative"
-
-    invoke-static {p1, p0}, Lhii;->b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
+    move v1, v0
 
     :goto_1
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lz8d;->o:I
 
-    throw v0
-.end method
+    if-ge v1, v2, :cond_4
 
-.method public static f(III)V
-    .locals 1
+    invoke-virtual {p0, v1}, Lz8d;->get(I)Ljava/lang/Object;
 
-    if-ltz p0, :cond_1
+    move-result-object v2
 
-    if-lt p1, p0, :cond_1
+    check-cast v2, Lgp8;
 
-    if-le p1, p2, :cond_0
+    iget-object v2, v2, Lgp8;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    goto :goto_0
+    if-eqz v2, :cond_3
 
-    :cond_0
-    return-void
+    invoke-virtual {p0, v1}, Lz8d;->get(I)Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    move-result-object v2
 
-    if-ltz p0, :cond_4
+    check-cast v2, Lgp8;
 
-    if-gt p0, p2, :cond_4
+    iget-object v2, v2, Lgp8;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    if-ltz p1, :cond_3
+    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
 
-    if-le p1, p2, :cond_2
+    move-result-object v2
 
-    goto :goto_1
+    if-eqz v2, :cond_3
 
-    :cond_2
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, La15;->m(Landroid/media/MediaCodecInfo$VideoCapabilities;)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v2, :cond_3
 
-    move-result-object p0
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    filled-new-array {p1, p0}, [Ljava/lang/Object;
+    move-result v3
 
-    move-result-object p0
+    if-nez v3, :cond_3
 
-    const-string p1, "end index (%s) must not be less than start index (%s)"
+    invoke-static {}, La15;->n()V
 
-    invoke-static {p1, p0}, Lhii;->b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {}, La15;->f()Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
 
     move-result-object p0
 
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    const-string p0, "end index"
-
-    invoke-static {p1, p2, p0}, Leii;->g(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_2
-
-    :cond_4
-    const-string p1, "start index"
-
-    invoke-static {p0, p2, p1}, Leii;->g(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
+    move v1, v0
 
     :goto_2
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    throw v0
-.end method
+    move-result v3
 
-.method public static g(IILjava/lang/String;)Ljava/lang/String;
-    .locals 1
+    if-ge v1, v3, :cond_2
 
-    if-gez p0, :cond_0
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v3
 
-    move-result-object p0
+    invoke-static {v3}, La15;->h(Ljava/lang/Object;)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
 
-    filled-new-array {p2, p0}, [Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object p0
+    invoke-static {v3, p0}, La15;->u(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
 
-    const-string p1, "%s (%s) must not be negative"
+    move-result v3
+    :try_end_0
+    .catch Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p1, p0}, Lhii;->b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    if-eqz v3, :cond_1
 
-    move-result-object p0
+    const/4 p0, 0x2
 
-    return-object p0
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p2, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be greater than size (%s)"
-
-    invoke-static {p1, p0}, Lhii;->b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    goto :goto_2
 
-    move-result-object p2
+    :cond_2
+    const/4 p0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    return p0
 
-    move-result p2
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    add-int/lit8 p2, p2, 0xf
+    :catch_0
+    :cond_4
+    return v0
+.end method
 
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
+.method public static c(Ljava/lang/Object;)I
+    .locals 4
 
-    const-string p2, "negative size: "
+    if-nez p0, :cond_0
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p1
+    move-result p0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    int-to-long v0, p0
 
-    throw p0
+    const-wide/32 v2, -0x3361d2af
+
+    mul-long/2addr v0, v2
+
+    long-to-int p0, v0
+
+    const/16 v0, 0xf
+
+    invoke-static {p0, v0}, Ljava/lang/Integer;->rotateLeft(II)I
+
+    move-result p0
+
+    int-to-long v0, p0
+
+    const-wide/32 v2, 0x1b873593
+
+    mul-long/2addr v0, v2
+
+    long-to-int p0, v0
+
+    return p0
 .end method

@@ -1,76 +1,193 @@
-.class public interface abstract Lsh3;
+.class public final Lsh3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
+# instance fields
+.field public a:Ljava/lang/String;
 
-    invoke-static {p1}, Ldgc;->a(Ljava/lang/Class;)Ldgc;
+.field public b:I
 
-    move-result-object p1
+.field public c:I
 
-    invoke-interface {p0, p1}, Lsh3;->f(Ldgc;)Ljava/lang/Object;
+.field public d:Ljava/lang/Object;
 
-    move-result-object p1
+.field public e:Ljava/io/Serializable;
 
-    return-object p1
-.end method
+.field public f:Ljava/io/Serializable;
 
-.method public b(Ldgc;)Ljava/util/Set;
-    .locals 0
+.field public g:Ljava/lang/Object;
 
-    invoke-interface {p0, p1}, Lsh3;->d(Ldgc;)Lvdc;
 
-    move-result-object p1
+# direct methods
+.method public constructor <init>(Ljava/lang/Class;[Ljava/lang/Class;)V
+    .locals 3
 
-    invoke-interface {p1}, Lvdc;->get()Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    check-cast p1, Ljava/util/Set;
+    iput-object v0, p0, Lsh3;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
+    new-instance v0, Ljava/util/HashSet;
 
-.method public c(Ljava/lang/Class;)Lvdc;
-    .locals 0
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {p1}, Ldgc;->a(Ljava/lang/Class;)Ldgc;
+    iput-object v0, p0, Lsh3;->d:Ljava/lang/Object;
 
-    move-result-object p1
+    new-instance v1, Ljava/util/HashSet;
 
-    invoke-interface {p0, p1}, Lsh3;->e(Ldgc;)Lvdc;
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object p1
+    iput-object v1, p0, Lsh3;->e:Ljava/io/Serializable;
 
-    return-object p1
-.end method
+    const/4 v1, 0x0
 
-.method public abstract d(Ldgc;)Lvdc;
-.end method
+    iput v1, p0, Lsh3;->b:I
 
-.method public abstract e(Ldgc;)Lvdc;
-.end method
+    iput v1, p0, Lsh3;->c:I
 
-.method public f(Ldgc;)Ljava/lang/Object;
-    .locals 0
+    new-instance v2, Ljava/util/HashSet;
 
-    invoke-interface {p0, p1}, Lsh3;->e(Ldgc;)Lvdc;
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v2, p0, Lsh3;->f:Ljava/io/Serializable;
+
+    invoke-static {p1}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    const/4 p1, 0x0
+    array-length p1, p2
 
-    return-object p1
+    :goto_0
+    if-ge v1, p1, :cond_0
+
+    aget-object v0, p2, v1
+
+    const-string v2, "Null interface"
+
+    invoke-static {v0, v2}, Lbvi;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lsh3;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashSet;
+
+    invoke-static {v0}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lvdc;->get()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
 
-    return-object p1
+# virtual methods
+.method public a(Lgr4;)V
+    .locals 2
+
+    iget-object v0, p1, Lgr4;->a:Lkhc;
+
+    iget-object v1, p0, Lsh3;->d:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/HashSet;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lsh3;->e:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Components are not allowed to depend on interfaces they themselves provide."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b()Lth3;
+    .locals 9
+
+    iget-object v0, p0, Lsh3;->g:Ljava/lang/Object;
+
+    check-cast v0, Lii3;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lth3;
+
+    iget-object v2, p0, Lsh3;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/util/HashSet;
+
+    iget-object v0, p0, Lsh3;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v4, Ljava/util/HashSet;
+
+    iget-object v0, p0, Lsh3;->e:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    iget v5, p0, Lsh3;->b:I
+
+    iget v6, p0, Lsh3;->c:I
+
+    iget-object v0, p0, Lsh3;->g:Ljava/lang/Object;
+
+    move-object v7, v0
+
+    check-cast v7, Lii3;
+
+    iget-object v0, p0, Lsh3;->f:Ljava/io/Serializable;
+
+    move-object v8, v0
+
+    check-cast v8, Ljava/util/HashSet;
+
+    invoke-direct/range {v1 .. v8}, Lth3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILii3;Ljava/util/Set;)V
+
+    return-object v1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Missing required property: factory."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

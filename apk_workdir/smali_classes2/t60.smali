@@ -1,125 +1,195 @@
-.class public final Lt60;
+.class public abstract Lt60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static final a:Ljava/util/List;
 
-.field public final b:Lsze;
+.field public static final b:Ljava/util/List;
 
-.field public final c:Lgzc;
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 22
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzr7;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 v6, 0x0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/high16 v7, 0x3f000000    # 0.5f
 
-    iput-object v0, p0, Lt60;->a:Ljava/util/ArrayList;
+    const v1, 0x3e8a3d71    # 0.27f
 
-    const/4 v0, 0x0
+    const v2, 0x3f3ae148    # 0.73f
 
-    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    invoke-direct {v0, v6, v7, v1, v2}, Lzr7;-><init>(FFFF)V
+
+    new-instance v3, Lzr7;
+
+    const/high16 v8, 0x43c80000    # 400.0f
+
+    const/high16 v9, 0x3e800000    # 0.25f
+
+    const v10, 0x3efd70a4    # 0.495f
+
+    invoke-direct {v3, v8, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    new-instance v4, Lzr7;
+
+    const/high16 v11, 0x44480000    # 800.0f
+
+    invoke-direct {v4, v11, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    move-object v5, v3
+
+    new-instance v3, Lzr7;
+
+    const v12, 0x3e8bc6a8    # 0.273f
+
+    const/high16 v13, 0x44960000    # 1200.0f
+
+    invoke-direct {v3, v13, v7, v12, v2}, Lzr7;-><init>(FFFF)V
+
+    move-object v12, v4
+
+    new-instance v4, Lzr7;
+
+    const/high16 v14, 0x44c80000    # 1600.0f
+
+    invoke-direct {v4, v14, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    move-object v15, v5
+
+    new-instance v5, Lzr7;
+
+    const/high16 v14, 0x44fa0000    # 2000.0f
+
+    invoke-direct {v5, v14, v7, v1, v2}, Lzr7;-><init>(FFFF)V
+
+    move-object v2, v12
+
+    move-object v1, v15
+
+    filled-new-array/range {v0 .. v5}, [Lzr7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lt60;->b:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lt60;->c:Lgzc;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 7
-
-    iget-object v0, p0, Lt60;->a:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    new-array v2, v2, [B
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    sput-object v0, Lt60;->a:Ljava/util/List;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Lzr7;
 
-    move-result v4
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    if-eqz v4, :cond_2
+    invoke-direct {v0, v6, v1, v6, v1}, Lzr7;-><init>(FFFF)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v2, Lzr7;
 
-    move-result-object v4
+    const v3, 0x3f3f7cee    # 0.748f
 
-    add-int/lit8 v5, v3, 0x1
+    invoke-direct {v2, v8, v7, v9, v3}, Lzr7;-><init>(FFFF)V
 
-    if-ltz v3, :cond_1
+    new-instance v4, Lzr7;
 
-    check-cast v4, Ljava/lang/Number;
+    invoke-direct {v4, v11, v9, v10, v7}, Lzr7;-><init>(FFFF)V
 
-    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+    new-instance v5, Lzr7;
 
-    move-result v4
+    invoke-direct {v5, v13, v9, v10, v7}, Lzr7;-><init>(FFFF)V
 
-    mul-int/lit8 v4, v4, 0x7f
+    new-instance v12, Lzr7;
 
-    const v6, 0x8000
+    const v15, 0x3e7be76d    # 0.246f
 
-    div-int/2addr v4, v6
+    const v13, 0x3f408312    # 0.752f
 
-    int-to-byte v4, v4
+    const/high16 v3, 0x44c80000    # 1600.0f
 
-    aput-byte v4, v2, v3
+    invoke-direct {v12, v3, v7, v15, v13}, Lzr7;-><init>(FFFF)V
 
-    move v3, v5
+    new-instance v3, Lzr7;
 
-    goto :goto_0
+    invoke-direct {v3, v14, v1, v6, v1}, Lzr7;-><init>(FFFF)V
 
-    :cond_1
-    invoke-static {}, Lbb3;->k()V
+    move-object/from16 v16, v0
 
-    throw v1
+    move-object/from16 v17, v2
 
-    :cond_2
-    move-object v1, v2
+    move-object/from16 v21, v3
 
-    :cond_3
-    :goto_1
-    iget-object v0, p0, Lt60;->b:Lsze;
+    move-object/from16 v18, v4
 
-    invoke-virtual {v0, v1}, Lsze;->setValue(Ljava/lang/Object;)V
+    move-object/from16 v19, v5
+
+    move-object/from16 v20, v12
+
+    filled-new-array/range {v16 .. v21}, [Lzr7;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lt60;->b:Ljava/util/List;
+
+    new-instance v0, Lzr7;
+
+    invoke-direct {v0, v6, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    new-instance v2, Lzr7;
+
+    invoke-direct {v2, v8, v1, v6, v1}, Lzr7;-><init>(FFFF)V
+
+    new-instance v3, Lzr7;
+
+    const v4, 0x3f3f7cee    # 0.748f
+
+    invoke-direct {v3, v11, v7, v9, v4}, Lzr7;-><init>(FFFF)V
+
+    new-instance v4, Lzr7;
+
+    const/high16 v5, 0x44960000    # 1200.0f
+
+    invoke-direct {v4, v5, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    new-instance v5, Lzr7;
+
+    const/high16 v8, 0x44c80000    # 1600.0f
+
+    invoke-direct {v5, v8, v1, v6, v1}, Lzr7;-><init>(FFFF)V
+
+    new-instance v1, Lzr7;
+
+    invoke-direct {v1, v14, v9, v10, v7}, Lzr7;-><init>(FFFF)V
+
+    move-object/from16 v16, v0
+
+    move-object/from16 v21, v1
+
+    move-object/from16 v17, v2
+
+    move-object/from16 v18, v3
+
+    move-object/from16 v19, v4
+
+    move-object/from16 v20, v5
+
+    filled-new-array/range {v16 .. v21}, [Lzr7;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lt60;->c:Ljava/util/List;
 
     return-void
 .end method

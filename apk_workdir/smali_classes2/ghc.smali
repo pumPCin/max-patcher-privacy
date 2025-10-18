@@ -1,64 +1,93 @@
 .class public final Lghc;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lkhc;
+.implements Lzi6;
 
 
-# static fields
-.field public static final a:Lghc;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/qrscanner/QrScannerWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+    .locals 0
 
-    new-instance v0, Lghc;
+    iput-object p2, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lghc;->a:Lghc;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lghc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lghc;
+    check-cast p1, Lghc;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lghc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x38ae5339
+    new-instance v0, Lghc;
 
-    return v0
-.end method
+    iget-object v1, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lghc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
 
-    const-string v0, "ModePhoto"
+    iput-object p1, v0, Lghc;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lghc;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+
+    iget-object p1, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
+
+    invoke-virtual {p1}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+
+    move-result-object p1
+
+    sget-object v0, Lmnd;->a:Lmnd;
+
+    invoke-virtual {p1, v0}, Lchc;->r(Lnnd;)V
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

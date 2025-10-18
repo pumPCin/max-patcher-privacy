@@ -1,26 +1,30 @@
 .class public final Lh23;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/chats/list/ChatsListWidget;
+.field public final synthetic Y:Li23;
+
+.field public final synthetic Z:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+.method public constructor <init>(Li23;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lh23;->Y:Lone/me/chats/list/ChatsListWidget;
+    iput-object p1, p0, Lh23;->Y:Li23;
 
-    const/4 p2, 0x2
+    iput-wide p2, p0, Lh23;->Z:J
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +34,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lq54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lh23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,84 +44,80 @@
 
     check-cast p1, Lh23;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lh23;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lh23;
+    new-instance p1, Lh23;
 
-    iget-object v1, p0, Lh23;->Y:Lone/me/chats/list/ChatsListWidget;
+    iget-object v0, p0, Lh23;->Y:Li23;
 
-    invoke-direct {v0, p2, v1}, Lh23;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+    iget-wide v1, p0, Lh23;->Z:J
 
-    iput-object p1, v0, Lh23;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, v2, p2}, Lh23;-><init>(Li23;JLkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 4
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lh23;->X:I
 
-    iget-object p1, p0, Lh23;->X:Ljava/lang/Object;
+    sget-object v1, Lccg;->a:Lccg;
 
-    check-cast p1, Lb4a;
-
-    instance-of v0, p1, Lhf4;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lvy3;->c:Lvy3;
-
-    check-cast p1, Lhf4;
-
-    invoke-virtual {v0, p1}, Lqci;->t0(Lhf4;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lgxe;
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->K0:[Lwq7;
+    if-ne v0, v2, :cond_0
 
-    iget-object v0, p0, Lh23;->Y:Lone/me/chats/list/ChatsListWidget;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lone/me/chats/list/ChatsListWidget;->H0:Ljava/lang/Object;
+    return-object v1
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast v0, Loi1;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-object v1, p1
-
-    check-cast v1, Lgxe;
-
-    iget-wide v2, v1, Lgxe;->b:J
-
-    iget-boolean v1, v1, Lgxe;->c:Z
-
-    new-instance v4, Lo23;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, p1, v5}, Lo23;-><init>(Lb4a;I)V
-
-    invoke-virtual {v0, v2, v3, v1, v4}, Loi1;->l(JZLoh6;)V
+    throw p1
 
     :cond_1
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lh23;->Y:Li23;
+
+    iget-object p1, p1, Li23;->x0:Liu7;
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhy3;
+
+    iput v2, p0, Lh23;->X:I
+
+    iget-wide v2, p0, Lh23;->Z:J
+
+    invoke-virtual {p1, v2, v3}, Lhy3;->a(J)V
+
+    sget-object p1, Lr54;->a:Lr54;
+
+    if-ne v1, p1, :cond_2
 
     return-object p1
+
+    :cond_2
+    return-object v1
 .end method

@@ -1,61 +1,69 @@
 .class public final Lv71;
-.super Ljava/lang/Object;
+.super Ljl4;
 .source "SourceFile"
 
-# interfaces
-.implements Lyuc;
+
+# instance fields
+.field public final synthetic t:Lw0e;
 
 
-# virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+# direct methods
+.method public constructor <init>(Lw0e;)V
+    .locals 2
 
-    sget-object v0, Lndi;->a:Lkwa;
+    iput-object p1, p0, Lv71;->t:Lw0e;
 
-    if-nez v0, :cond_0
+    invoke-direct {p0}, Ljl4;-><init>()V
 
-    goto :goto_0
+    const-wide/16 v0, 0x12c
 
-    :cond_0
-    sget-object v1, Lf88;->o:Lf88;
+    iput-wide v0, p0, Ly6d;->d:J
 
-    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+    iput-wide v0, p0, Ly6d;->c:J
 
-    move-result v2
+    iput-wide v0, p0, Ly6d;->f:J
 
-    if-eqz v2, :cond_1
+    iput-wide v0, p0, Ly6d;->e:J
 
-    const-string v2, "["
-
-    const-string v3, "] "
-
-    invoke-static {v2, p1, v3, p2}, Lwc0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const-string v2, "CallsSdk"
-
-    invoke-virtual {v0, v1, v2, p1, p2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
 
-    const-string v0, "[%s] %s"
+# virtual methods
+.method public final m()V
+    .locals 3
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    iget-object v0, p0, Lv71;->t:Lw0e;
 
-    move-result-object p1
+    iget-object v0, v0, Lw0e;->b:Ljava/lang/Object;
 
-    const-string p2, "CallsSdk"
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p2, p3, v0, p1}, Lndi;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, -0x2
+
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
     return-void
 .end method

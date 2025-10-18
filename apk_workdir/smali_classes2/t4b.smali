@@ -1,58 +1,25 @@
-.class public final Lt4b;
+.class public abstract Lt4b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltqf;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Llwb;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Llt7;
-
-.field public final e:Llt7;
-
-.field public final f:Lrhf;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Llt7;Landroid/content/Context;Llwb;Llt7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lppc;->oneme_stickers_showcase_sets_list:I
 
-    iput-object p2, p0, Lt4b;->a:Landroid/content/Context;
+    sput v0, Lt4b;->a:I
 
-    iput-object p3, p0, Lt4b;->b:Llwb;
+    sget v0, Lppc;->oneme_stickers_showcase_toolbar:I
 
-    const-class p2, Lt4b;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lt4b;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lt4b;->d:Llt7;
-
-    iput-object p1, p0, Lt4b;->e:Llt7;
-
-    new-instance p1, Lrma;
-
-    const/16 p2, 0x10
-
-    invoke-direct {p1, p2}, Lrma;-><init>(I)V
-
-    new-instance p2, Lrhf;
-
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p2, p0, Lt4b;->f:Lrhf;
+    sput v0, Lt4b;->b:I
 
     return-void
 .end method

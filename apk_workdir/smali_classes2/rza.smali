@@ -1,355 +1,511 @@
-.class public final Lrza;
+.class public abstract Lrza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final X:Ljava/util/concurrent/CountDownLatch;
+.field public static final A0:I
 
-.field public volatile Y:Ljava/lang/Object;
+.field public static final B:I
 
-.field public final Z:Ljava/util/concurrent/atomic/AtomicReference;
+.field public static final B0:I
 
-.field public final a:Ljava/util/concurrent/Callable;
+.field public static final C:I
 
-.field public final b:Ljava/util/concurrent/ExecutorService;
+.field public static final C0:I
 
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final D:I
 
-.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final D0:I
 
-.field public r0:Ljava/util/concurrent/ScheduledFuture;
+.field public static final E:I
+
+.field public static final E0:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
+
+.field public static final U:I
+
+.field public static final V:I
+
+.field public static final W:I
+
+.field public static final X:I
+
+.field public static final Y:I
+
+.field public static final Z:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final g:I
+
+.field public static final g0:I
+
+.field public static final h:I
+
+.field public static final h0:I
+
+.field public static final i:I
+
+.field public static final i0:I
+
+.field public static final j:I
+
+.field public static final j0:I
+
+.field public static final k:I
+
+.field public static final k0:I
+
+.field public static final l:I
+
+.field public static final l0:I
+
+.field public static final m:I
+
+.field public static final m0:I
+
+.field public static final n:I
+
+.field public static final n0:I
+
+.field public static final o:I
+
+.field public static final o0:I
+
+.field public static final p:I
+
+.field public static final p0:I
+
+.field public static final q:I
+
+.field public static final q0:I
+
+.field public static final r:I
+
+.field public static final r0:I
+
+.field public static final s:I
+
+.field public static final s0:I
+
+.field public static final t:I
+
+.field public static final t0:I
+
+.field public static final u:I
+
+.field public static final u0:I
+
+.field public static final v:I
+
+.field public static final v0:I
+
+.field public static final w:I
+
+.field public static final w0:I
+
+.field public static final x:I
+
+.field public static final x0:I
+
+.field public static final y:I
+
+.field public static final y0:I
+
+.field public static final z:I
+
+.field public static final z0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lmoc;->profile_avatar_select_screen:I
 
-    iput-object p1, p0, Lrza;->a:Ljava/util/concurrent/Callable;
+    sput v0, Lrza;->a:I
 
-    iput-object p2, p0, Lrza;->b:Ljava/util/concurrent/ExecutorService;
+    sget v0, Lmoc;->profile_change_inactive_ttl_delete_1_month:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    sput v0, Lrza;->b:I
 
-    const/4 p2, 0x0
+    sget v0, Lmoc;->profile_change_inactive_ttl_delete_3_month:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    sput v0, Lrza;->c:I
 
-    iput-object p1, p0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget v0, Lmoc;->profile_change_inactive_ttl_delete_6_month:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    sput v0, Lrza;->d:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    sget v0, Lmoc;->profile_confirmation_sheet_cancel:I
 
-    iput-object p1, p0, Lrza;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sput v0, Lrza;->e:I
 
-    new-instance p1, Ljava/util/concurrent/CountDownLatch;
+    sget v0, Lmoc;->profile_delete_contact_confirmation_sheet_confirm:I
 
-    const/4 p2, 0x1
+    sput v0, Lrza;->f:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    sget v0, Lmoc;->profile_edit_admin_chat_type:I
 
-    iput-object p1, p0, Lrza;->X:Ljava/util/concurrent/CountDownLatch;
+    sput v0, Lrza;->g:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    sget v0, Lmoc;->profile_edit_admin_clear_channel_history:I
 
-    const/4 p2, 0x0
+    sput v0, Lrza;->h:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    sget v0, Lmoc;->profile_edit_admin_clear_channel_history_cancel:I
 
-    iput-object p1, p0, Lrza;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+    sput v0, Lrza;->i:I
+
+    sget v0, Lmoc;->profile_edit_admin_clear_channel_history_confirm:I
+
+    sput v0, Lrza;->j:I
+
+    sget v0, Lmoc;->profile_edit_admin_clear_chat_history:I
+
+    sput v0, Lrza;->k:I
+
+    sget v0, Lmoc;->profile_edit_admin_clear_chat_history_cancel:I
+
+    sput v0, Lrza;->l:I
+
+    sget v0, Lmoc;->profile_edit_admin_clear_chat_history_confirm:I
+
+    sput v0, Lrza;->m:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_channel:I
+
+    sput v0, Lrza;->n:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_channel_cancel:I
+
+    sput v0, Lrza;->o:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_channel_certain_confirm:I
+
+    sput v0, Lrza;->p:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_channel_confirm:I
+
+    sput v0, Lrza;->q:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_chat:I
+
+    sput v0, Lrza;->r:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_chat_cancel:I
+
+    sput v0, Lrza;->s:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_chat_certain_confirm:I
+
+    sput v0, Lrza;->t:I
+
+    sget v0, Lmoc;->profile_edit_admin_close_chat_confirm:I
+
+    sput v0, Lrza;->u:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_channel:I
+
+    sput v0, Lrza;->v:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_channel_and_change_owner_confirm:I
+
+    sput v0, Lrza;->w:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_channel_cancel:I
+
+    sput v0, Lrza;->x:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_channel_confirm:I
+
+    sput v0, Lrza;->y:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_chat:I
+
+    sput v0, Lrza;->z:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_chat_and_change_owner_confirm:I
+
+    sput v0, Lrza;->A:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_chat_cancel:I
+
+    sput v0, Lrza;->B:I
+
+    sget v0, Lmoc;->profile_edit_admin_leave_chat_confirm:I
+
+    sput v0, Lrza;->C:I
+
+    sget v0, Lmoc;->profile_edit_admin_move_rights:I
+
+    sput v0, Lrza;->D:I
+
+    sget v0, Lmoc;->profile_edit_admin_participants_permission:I
+
+    sput v0, Lrza;->E:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_change_chat_info:I
+
+    sput v0, Lrza;->F:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_change_owner_cancel_action:I
+
+    sput v0, Lrza;->G:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_change_owner_change_action:I
+
+    sput v0, Lrza;->H:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_control_admin:I
+
+    sput v0, Lrza;->I:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_delete_from_admins_cancel_action:I
+
+    sput v0, Lrza;->J:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
+
+    sput v0, Lrza;->K:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_delete_messages:I
+
+    sput v0, Lrza;->L:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_link:I
+
+    sput v0, Lrza;->M:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_members:I
+
+    sput v0, Lrza;->N:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_edit_messages:I
+
+    sput v0, Lrza;->O:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_pin_messages:I
+
+    sput v0, Lrza;->P:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_recycler_view:I
+
+    sput v0, Lrza;->Q:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_send_messages:I
+
+    sput v0, Lrza;->R:I
+
+    sget v0, Lmoc;->profile_edit_admin_permissions_toolbar_view:I
+
+    sput v0, Lrza;->S:I
+
+    sget v0, Lmoc;->profile_edit_appbar_layout:I
+
+    sput v0, Lrza;->T:I
+
+    sget v0, Lmoc;->profile_edit_avatar:I
+
+    sput v0, Lrza;->U:I
+
+    sget v0, Lmoc;->profile_edit_change_avatar_cancel:I
+
+    sput v0, Lrza;->V:I
+
+    sget v0, Lmoc;->profile_edit_change_avatar_remove_current:I
+
+    sput v0, Lrza;->W:I
+
+    sget v0, Lmoc;->profile_edit_change_avatar_select_neuro_avatar:I
+
+    sput v0, Lrza;->X:I
+
+    sget v0, Lmoc;->profile_edit_change_avatar_upload_from_camera:I
+
+    sput v0, Lrza;->Y:I
+
+    sget v0, Lmoc;->profile_edit_change_avatar_upload_from_gallery:I
+
+    sput v0, Lrza;->Z:I
+
+    sget v0, Lmoc;->profile_edit_collapsible_container_layout:I
+
+    sput v0, Lrza;->a0:I
+
+    sget v0, Lmoc;->profile_edit_confirm_exit_button:I
+
+    sput v0, Lrza;->b0:I
+
+    sget v0, Lmoc;->profile_edit_confirm_save_button:I
+
+    sput v0, Lrza;->c0:I
+
+    sget v0, Lmoc;->profile_edit_contact_delete_action:I
+
+    sput v0, Lrza;->d0:I
+
+    sget v0, Lmoc;->profile_edit_delete_profile_button:I
+
+    sput v0, Lrza;->e0:I
+
+    sget v0, Lmoc;->profile_edit_delete_profile_cancel_button:I
+
+    sput v0, Lrza;->f0:I
+
+    sget v0, Lmoc;->profile_edit_invite_by_link:I
+
+    sput v0, Lrza;->g0:I
+
+    sget v0, Lmoc;->profile_edit_link_private:I
+
+    sput v0, Lrza;->h0:I
+
+    sget v0, Lmoc;->profile_edit_link_public:I
+
+    sput v0, Lrza;->i0:I
+
+    sget v0, Lmoc;->profile_edit_logout_confirm_action:I
+
+    sput v0, Lrza;->j0:I
+
+    sget v0, Lmoc;->profile_edit_member_permissions_add_user:I
+
+    sput v0, Lrza;->k0:I
+
+    sget v0, Lmoc;->profile_edit_member_permissions_call_to_chat:I
+
+    sput v0, Lrza;->l0:I
+
+    sget v0, Lmoc;->profile_edit_member_permissions_change_photo:I
+
+    sput v0, Lrza;->m0:I
+
+    sget v0, Lmoc;->profile_edit_member_permissions_pin_message:I
+
+    sput v0, Lrza;->n0:I
+
+    sget v0, Lmoc;->profile_edit_member_permissions_see_private_link:I
+
+    sput v0, Lrza;->o0:I
+
+    sget v0, Lmoc;->profile_edit_oneme_toolbar:I
+
+    sput v0, Lrza;->p0:I
+
+    sget v0, Lmoc;->profile_edit_recycler_view:I
+
+    sput v0, Lrza;->q0:I
+
+    sget v0, Lmoc;->profile_edit_selectable_item_checkbox:I
+
+    sput v0, Lrza;->r0:I
+
+    sget v0, Lmoc;->profile_edit_selectable_item_subtitle:I
+
+    sput v0, Lrza;->s0:I
+
+    sget v0, Lmoc;->profile_edit_selectable_item_title:I
+
+    sput v0, Lrza;->t0:I
+
+    sget v0, Lmoc;->profile_edit_short_link:I
+
+    sput v0, Lrza;->u0:I
+
+    sget v0, Lmoc;->profile_edit_short_link_input_button:I
+
+    sput v0, Lrza;->v0:I
+
+    sget v0, Lmoc;->profile_edit_short_link_recycler:I
+
+    sput v0, Lrza;->w0:I
+
+    sget v0, Lmoc;->profile_edit_short_link_toolbar:I
+
+    sput v0, Lrza;->x0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_action_copy:I
+
+    sput v0, Lrza;->y0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_action_qr_code:I
+
+    sput v0, Lrza;->z0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_action_refresh_link:I
+
+    sput v0, Lrza;->A0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_action_share:I
+
+    sput v0, Lrza;->B0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_action_share_external:I
+
+    sput v0, Lrza;->C0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_confirm_button:I
+
+    sput v0, Lrza;->D0:I
+
+    sget v0, Lmoc;->profile_edit_shortlink_confirm_update:I
+
+    sput v0, Lrza;->E0:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 3
-
-    iget-object v0, p0, Lrza;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    iget-object v0, p0, Lrza;->r0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_1
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iget-object p1, p0, Lrza;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return v2
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Ljava/util/concurrent/Delayed;
-
-    iget-object v0, p0, Lrza;->r0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lrza;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lrza;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lrza;->Z:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Exception;
-
-    if-eqz v0, :cond_3
-
-    instance-of v1, v0, Ljava/util/concurrent/ExecutionException;
-
-    if-eqz v1, :cond_1
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/util/concurrent/ExecutionException;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v1, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v1
-
-    .line 4
-    :cond_3
-    iget-object v0, p0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    .line 5
-    iget-object v0, p0, Lrza;->Y:Ljava/lang/Object;
-
-    return-object v0
-
-    .line 6
-    :cond_4
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v1, "Future is cancelled"
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 3
-
-    .line 7
-    iget-object v0, p0, Lrza;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 8
-    iget-object v0, p0, Lrza;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "No result for "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, " "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 9
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lrza;->Z:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Exception;
-
-    if-eqz p1, :cond_4
-
-    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
-
-    if-eqz p2, :cond_2
-
-    move-object p2, p1
-
-    check-cast p2, Ljava/util/concurrent/ExecutionException;
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p2, 0x0
-
-    :goto_1
-    if-eqz p2, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    new-instance p2, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_2
-    throw p2
-
-    .line 10
-    :cond_4
-    iget-object p1, p0, Lrza;->Y:Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
-
-    iget-object v0, p0, Lrza;->r0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Lrza;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
 .end method

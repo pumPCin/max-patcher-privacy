@@ -4,53 +4,68 @@
 
 
 # instance fields
-.field public final b:Lqnd;
-
-.field public final c:I
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lwga;Lqnd;I)V
+.method public synthetic constructor <init>(Luka;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
+    iput p2, p0, Ltia;->b:I
 
-    iput-object p2, p0, Ltia;->b:Lqnd;
-
-    iput p3, p0, Ltia;->c:I
+    invoke-direct {p0, p1}, Lg3;-><init>(Luka;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lcka;)V
-    .locals 4
+.method public final o(Lela;)V
+    .locals 2
 
-    iget-object v0, p0, Ltia;->b:Lqnd;
+    iget v0, p0, Ltia;->b:I
 
-    instance-of v1, v0, Ls1g;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lg3;->a:Lsja;
+    new-instance v0, Lpja;
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x1
 
-    invoke-interface {v2, p1}, Lsja;->a(Lcka;)V
+    invoke-direct {v0, p1, v1}, Lpja;-><init>(Lela;I)V
+
+    iget-object p1, p0, Lg3;->a:Luka;
+
+    invoke-interface {p1, v0}, Luka;->a(Lela;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lpja;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lpja;-><init>(Lela;I)V
+
+    iget-object p1, p0, Lg3;->a:Luka;
+
+    invoke-interface {p1, v0}, Luka;->a(Lela;)V
 
     return-void
 
-    :cond_0
-    invoke-virtual {v0}, Lqnd;->a()Lond;
+    :pswitch_1
+    new-instance v0, Lsia;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lzl0;-><init>(Lela;)V
 
-    new-instance v1, Lsia;
+    iget-object p1, p0, Lg3;->a:Luka;
 
-    iget v3, p0, Ltia;->c:I
-
-    invoke-direct {v1, p1, v0, v3}, Lsia;-><init>(Lcka;Lond;I)V
-
-    invoke-interface {v2, v1}, Lsja;->a(Lcka;)V
+    invoke-interface {p1, v0}, Luka;->a(Lela;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

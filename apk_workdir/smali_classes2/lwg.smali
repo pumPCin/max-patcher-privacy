@@ -1,330 +1,460 @@
 .class public final Llwg;
-.super Ljava/lang/Object;
+.super Lhr3;
 .source "SourceFile"
+
+# interfaces
+.implements Lorg/webrtc/SurfaceTextureHelper$FrameGeometryAdjuster;
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final f:Lorg/webrtc/PeerConnectionFactory;
 
-.field public final b:Llt7;
+.field public final g:Lrkh;
 
-.field public final c:Llt7;
+.field public h:Lorg/webrtc/SurfaceTextureHelper;
 
-.field public final d:Llt7;
+.field public i:Lpxe;
 
-.field public final e:Ljava/lang/String;
+.field public final j:Ldpg;
+
+.field public volatile k:Lorg/webrtc/Size;
+
+.field public volatile l:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Ljava/lang/Integer;ZLrkh;Lfwc;)V
+    .locals 8
 
-    new-instance v0, Lc0a;
+    invoke-direct {p0, p2, p3, p7}, Lhr3;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lfwc;)V
 
-    sget-object v0, Ls6d;->a:Lt6d;
+    iput-object p1, p0, Llwg;->f:Lorg/webrtc/PeerConnectionFactory;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p6, p0, Llwg;->g:Lrkh;
 
-    return-void
-.end method
+    new-instance p1, Ldpg;
 
-.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;)V
-    .locals 0
+    const/16 p2, 0x3c0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p4, :cond_0
 
-    iput-object p1, p0, Llwg;->a:Llt7;
+    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
 
-    iput-object p2, p0, Llwg;->b:Llt7;
+    move-result p3
 
-    iput-object p3, p0, Llwg;->c:Llt7;
+    goto :goto_0
 
-    iput-object p4, p0, Llwg;->d:Llt7;
+    :cond_0
+    move p3, p2
 
-    const-class p1, Llwg;
+    :goto_0
+    new-instance v0, Loh9;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v6, 0x0
 
-    move-result-object p1
+    const/16 v7, 0x17
 
-    iput-object p1, p0, Llwg;->e:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-static {}, Lnvi;->a()Lpzd;
+    const-class v3, Llwg;
+
+    const-string v4, "logBufferTransform"
+
+    const-string v5, "logBufferTransform(Ljava/lang/String;)V"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Loh9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-direct {p1, p5, p3, v0}, Ldpg;-><init>(ZILoh9;)V
+
+    iput-object p1, v2, Llwg;->j:Ldpg;
+
+    new-instance p1, Lorg/webrtc/Size;
+
+    const/16 p3, 0x21c
+
+    invoke-direct {p1, p2, p3}, Lorg/webrtc/Size;-><init>(II)V
+
+    iput-object p1, v2, Llwg;->k:Lorg/webrtc/Size;
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, v2, Llwg;->l:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lk14;)Ljava/lang/Object;
-    .locals 8
+.method public final adjustFrameGeometry(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+    .locals 7
 
-    instance-of v0, p1, Lkwg;
+    iget-object v0, p0, Llwg;->j:Ldpg;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v0, p1
+    const-string v1, "x"
 
-    check-cast v0, Lkwg;
+    if-eqz p2, :cond_8
 
-    iget v1, v0, Lkwg;->Z:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lkwg;->Z:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lkwg;
-
-    invoke-direct {v0, p0, p1}, Lkwg;-><init>(Llwg;Lk14;)V
-
-    :goto_0
-    iget-object p1, v0, Lkwg;->X:Ljava/lang/Object;
-
-    iget v1, v0, Lkwg;->Z:I
-
-    sget-object v2, Lzag;->a:Lzag;
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v0, v0, Lkwg;->o:Llwg;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-nez p3, :cond_0
 
     goto/16 :goto_2
 
+    :cond_0
+    iget-object v2, v0, Ldpg;->f:Lojb;
+
+    iget-object v3, v0, Ldpg;->d:Ljava/lang/Integer;
+
+    iget-object v4, v0, Ldpg;->e:Ljava/lang/Integer;
+
+    iget v5, v0, Ldpg;->c:I
+
+    if-eqz v3, :cond_1
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    goto :goto_0
+
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-eqz v3, :cond_2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v5
 
-    throw p1
+    goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-eqz v4, :cond_3
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result p1
-
-    iget-object v1, p0, Llwg;->e:Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p0, Llwg;->b:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcpa;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v4, "Ok token was called from the main thread."
-
-    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v4, p1}, Lndi;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v5
 
     :cond_3
-    iget-object p1, p0, Llwg;->a:Llt7;
+    :goto_0
+    if-eqz v2, :cond_7
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object v3, v0, Ldpg;->g:Ljava/lang/Integer;
 
-    move-result-object v4
-
-    check-cast v4, Ll83;
-
-    check-cast v4, Lgsd;
-
-    invoke-virtual {v4}, Lgsd;->j()J
-
-    move-result-wide v4
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ll83;
-
-    check-cast v6, Lgsd;
-
-    invoke-virtual {v6}, Lgsd;->q()J
-
-    move-result-wide v6
-
-    cmp-long v4, v4, v6
-
-    if-ltz v4, :cond_7
-
-    iput-object p0, v0, Lkwg;->o:Llwg;
-
-    iput v3, v0, Lkwg;->Z:I
-
-    iget-object v1, p0, Llwg;->d:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgna;
-
-    invoke-virtual {v1}, Lgna;->f()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    const/4 p1, 0x0
+    if-nez v3, :cond_4
 
     goto :goto_1
 
     :cond_4
-    iget-object v3, p0, Llwg;->c:Llt7;
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
+    move-result v3
 
-    move-result-object v3
+    if-ne v3, p2, :cond_7
 
-    check-cast v3, Lpmf;
+    iget-object v3, v0, Ldpg;->h:Ljava/lang/Integer;
 
-    new-instance v4, Lqv9;
+    if-nez v3, :cond_5
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll83;
-
-    check-cast p1, Lgsd;
-
-    invoke-virtual {p1}, Lgsd;->s()J
-
-    move-result-wide v5
-
-    invoke-direct {v4, v1, v5, v6}, Lqv9;-><init>(Ljava/lang/String;J)V
-
-    invoke-virtual {v3, v4, v0}, Lpmf;->e(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_1
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_5
-
-    return-object v0
+    goto :goto_1
 
     :cond_5
-    move-object v0, p0
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    :goto_2
-    check-cast p1, Lbla;
+    move-result v3
 
-    if-nez p1, :cond_6
+    if-ne v3, p3, :cond_7
 
-    iget-object p1, v0, Llwg;->e:Ljava/lang/String;
+    iget-object v3, v0, Ldpg;->i:Ljava/lang/Integer;
 
-    const-string v0, "Can\'t get ok token without auth token."
+    if-nez v3, :cond_6
 
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
+    goto :goto_1
 
     :cond_6
-    iget-object v1, v0, Llwg;->a:Llt7;
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    move-result v3
 
-    move-result-object v1
+    if-ne v3, v5, :cond_7
 
-    check-cast v1, Ll83;
+    goto :goto_3
 
-    iget-object v3, p1, Lbla;->c:Ljava/lang/String;
+    :cond_7
+    :goto_1
+    invoke-virtual {v0, p2, p3}, Ldpg;->a(II)Lojb;
 
-    check-cast v1, Lgsd;
+    move-result-object v2
 
-    iget-object v4, v1, Lgsd;->J:Lj3e;
+    iput-object v2, v0, Ldpg;->f:Lojb;
 
-    sget-object v5, Lgsd;->h0:[Lwq7;
-
-    const/16 v6, 0x1a
-
-    aget-object v6, v5, v6
-
-    invoke-virtual {v4, v1, v6, v3}, Lj3e;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    iget-object v1, v0, Llwg;->a:Llt7;
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll83;
-
-    iget-wide v3, p1, Lbla;->X:J
-
-    check-cast v1, Lgsd;
-
-    iget-object p1, v1, Lgsd;->L:Lj3e;
-
-    const/16 v6, 0x1c
-
-    aget-object v5, v5, v6
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    invoke-virtual {p1, v1, v5, v3}, Lj3e;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    iput-object v3, v0, Ldpg;->g:Ljava/lang/Integer;
 
-    iget-object p1, v0, Llwg;->e:Ljava/lang/String;
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v0, "Ok token updated."
+    move-result-object v3
 
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v3, v0, Ldpg;->h:Ljava/lang/Integer;
 
-    return-object v2
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_7
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    const-string v0, "Ok token will be expired in "
+    iput-object v3, v0, Ldpg;->i:Ljava/lang/Integer;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Ldpg;->b:Loh9;
 
-    invoke-virtual {p1, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget v3, v2, Lojb;->g:I
 
-    const-string v0, "."
+    iget v4, v2, Lojb;->h:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "get new transform "
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v6, " -> "
+
+    invoke-static {v5, p2, v1, p3, v6}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Loh9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_8
+    :goto_2
+    iget-object v0, v0, Ldpg;->b:Loh9;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Wrong frame size: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Loh9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lbpg;->a:Lbpg;
+
+    :goto_3
+    invoke-interface {v2, p1, p2, p3}, Lcpg;->a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    return-object p1
+.end method
 
-    return-object v2
+.method public final b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+    .locals 1
+
+    check-cast p2, Lorg/webrtc/VideoTrack;
+
+    sget-object v0, Lorg/webrtc/VideoTrack$ContentHint;->NONE:Lorg/webrtc/VideoTrack$ContentHint;
+
+    invoke-virtual {p2, v0}, Lorg/webrtc/VideoTrack;->setContentHint(Lorg/webrtc/VideoTrack$ContentHint;)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->addTrack(Lorg/webrtc/VideoTrack;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+    .locals 0
+
+    check-cast p2, Lorg/webrtc/VideoTrack;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->removeTrack(Lorg/webrtc/VideoTrack;)Z
+
+    :cond_0
+    iget-object p1, p0, Llwg;->h:Lorg/webrtc/SurfaceTextureHelper;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
+
+    :cond_1
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Llwg;->h:Lorg/webrtc/SurfaceTextureHelper;
+
+    return-void
+.end method
+
+.method public final g()Lorg/webrtc/MediaSource;
+    .locals 2
+
+    iget-object v0, p0, Llwg;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/webrtc/PeerConnectionFactory;->createVideoSource(Z)Lorg/webrtc/VideoSource;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+    .locals 1
+
+    check-cast p2, Lorg/webrtc/VideoSource;
+
+    iget-object v0, p0, Llwg;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {v0, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->createVideoTrack(Ljava/lang/String;Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoTrack;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final j()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "VideoRecord"
+
+    return-object v0
+.end method
+
+.method public final m()V
+    .locals 1
+
+    invoke-super {p0}, Lhr3;->m()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Llwg;->i:Lpxe;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OkSdkVideoRecord(isScreenCast=false)"
+
+    return-object v0
+.end method
+
+.method public final u()V
+    .locals 8
+
+    iget-object v0, p0, Lhr3;->d:Ljava/lang/Object;
+
+    check-cast v0, Lorg/webrtc/MediaSource;
+
+    check-cast v0, Lorg/webrtc/VideoSource;
+
+    const-string v1, "VideoRecord"
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lhr3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lfwc;
+
+    const-string v2, "No source while trying to update video format"
+
+    invoke-interface {v0, v1, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-object v2, p0, Llwg;->j:Ldpg;
+
+    iget-object v3, p0, Llwg;->k:Lorg/webrtc/Size;
+
+    iget v3, v3, Lorg/webrtc/Size;->width:I
+
+    iget-object v4, p0, Llwg;->k:Lorg/webrtc/Size;
+
+    iget v4, v4, Lorg/webrtc/Size;->height:I
+
+    invoke-virtual {v2, v3, v4}, Ldpg;->b(II)Lorg/webrtc/Size;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    new-instance v2, Lorg/webrtc/Size;
+
+    const/16 v3, 0x3c0
+
+    const/16 v4, 0x21c
+
+    invoke-direct {v2, v3, v4}, Lorg/webrtc/Size;-><init>(II)V
+
+    :cond_1
+    iget-object v3, p0, Lhr3;->c:Ljava/lang/Object;
+
+    check-cast v3, Lfwc;
+
+    iget v4, v2, Lorg/webrtc/Size;->width:I
+
+    iget v5, v2, Lorg/webrtc/Size;->height:I
+
+    const-string v6, "Apply output format adaptation: size= "
+
+    const-string v7, "x"
+
+    invoke-static {v6, v4, v5, v7}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v3, v1, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v1, v2, Lorg/webrtc/Size;->width:I
+
+    iget v2, v2, Lorg/webrtc/Size;->height:I
+
+    iget v3, p0, Llwg;->l:F
+
+    const/high16 v4, 0x41c00000    # 24.0f
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lfhi;->b(F)I
+
+    move-result v3
+
+    invoke-virtual {v0, v1, v2, v3}, Lorg/webrtc/VideoSource;->adaptOutputFormat(III)V
+
+    return-void
 .end method

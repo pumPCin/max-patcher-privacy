@@ -1,30 +1,51 @@
 .class public final Lu7f;
-.super Lmo7;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lx7f;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/String;
+.field public final synthetic Y:Lx7f;
 
-.field public final e:Z
+.field public Z:I
+
+.field public o:Lwme;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lx7f;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Lmo7;-><init>()V
+    iput-object p1, p0, Lu7f;->Y:Lx7f;
 
-    iput-object p1, p0, Lu7f;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lu7f;->d:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lu7f;->e:Z
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lu7f;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lu7f;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lu7f;->Z:I
+
+    iget-object p1, p0, Lu7f;->Y:Lx7f;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lx7f;->t(Lr6f;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

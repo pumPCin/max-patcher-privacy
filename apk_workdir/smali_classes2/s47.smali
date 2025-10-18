@@ -1,14 +1,15 @@
-.class public interface abstract Ls47;
-.super Ljava/lang/Object;
+.class public final Ls47;
+.super Ljava/util/zip/GZIPOutputStream;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract getContentLength()J
-.end method
+.method public final m()V
+    .locals 1
 
-.method public abstract getContentType()Ljava/lang/String;
-.end method
+    iget-object v0, p0, Ljava/util/zip/GZIPOutputStream;->def:Ljava/util/zip/Deflater;
 
-.method public abstract writeTo(Ljava/io/OutputStream;)V
+    invoke-virtual {v0}, Ljava/util/zip/Deflater;->end()V
+
+    return-void
 .end method

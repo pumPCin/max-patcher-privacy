@@ -2,111 +2,140 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Law7;
-
 
 # instance fields
-.field public final synthetic X:Lg32;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lo0a;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public final synthetic Z:Llff;
+.field public final c:[Ljava/lang/CharSequence;
 
-.field public final synthetic a:Ljv7;
+.field public final d:Z
 
-.field public final synthetic b:Lr6d;
+.field public final e:I
 
-.field public final synthetic c:Lb54;
+.field public final f:Landroid/os/Bundle;
 
-.field public final synthetic o:Ljv7;
+.field public final g:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Ljv7;Lr6d;Lb54;Ljv7;Lg32;Lo0a;Lei6;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp9d;->a:Ljv7;
+    iput-object p1, p0, Lp9d;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lp9d;->b:Lr6d;
+    iput-object p2, p0, Lp9d;->b:Ljava/lang/CharSequence;
 
-    iput-object p3, p0, Lp9d;->c:Lb54;
+    iput-object p3, p0, Lp9d;->c:[Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Lp9d;->o:Ljv7;
+    iput-boolean p4, p0, Lp9d;->d:Z
 
-    iput-object p5, p0, Lp9d;->X:Lg32;
+    iput p5, p0, Lp9d;->e:I
 
-    iput-object p6, p0, Lp9d;->Y:Lo0a;
+    iput-object p6, p0, Lp9d;->f:Landroid/os/Bundle;
 
-    check-cast p7, Llff;
+    iput-object p7, p0, Lp9d;->g:Ljava/util/Set;
 
-    iput-object p7, p0, Lp9d;->Z:Llff;
+    const/4 p1, 0x2
 
+    if-ne p5, p1, :cond_1
+
+    if-eqz p4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "setEditChoicesBeforeSending requires setAllowFreeFormInput"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
+.method public static a(Lp9d;)Landroid/app/RemoteInput;
+    .locals 4
 
-# virtual methods
-.method public final d(Liw7;Ljv7;)V
-    .locals 3
+    new-instance v0, Landroid/app/RemoteInput$Builder;
 
-    iget-object p1, p0, Lp9d;->a:Ljv7;
+    iget-object v1, p0, Lp9d;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lp9d;->b:Lr6d;
+    invoke-direct {v0, v1}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lp9d;->b:Ljava/lang/CharSequence;
 
-    if-ne p2, p1, :cond_0
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
 
-    new-instance p1, Lo9d;
+    move-result-object v0
 
-    iget-object p2, p0, Lp9d;->Y:Lo0a;
+    iget-object v1, p0, Lp9d;->c:[Ljava/lang/CharSequence;
 
-    iget-object v2, p0, Lp9d;->Z:Llff;
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setChoices([Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
 
-    invoke-direct {p1, p2, v2, v1}, Lo9d;-><init>(Lo0a;Lei6;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    const/4 p2, 0x3
+    iget-boolean v1, p0, Lp9d;->d:Z
 
-    iget-object v2, p0, Lp9d;->c:Lb54;
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setAllowFreeFormInput(Z)Landroid/app/RemoteInput$Builder;
 
-    invoke-static {v2, v1, v1, p1, p2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    move-result-object v0
 
-    move-result-object p1
+    iget-object v1, p0, Lp9d;->f:Landroid/os/Bundle;
 
-    iput-object p1, v0, Lr6d;->a:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/RemoteInput$Builder;
 
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lp9d;->g:Ljava/util/Set;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3}, Ln9d;->d(Landroid/app/RemoteInput$Builder;Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
+
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lp9d;->o:Ljv7;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ne p2, p1, :cond_2
+    const/16 v2, 0x1d
 
-    iget-object p1, v0, Lr6d;->a:Ljava/lang/Object;
+    if-lt v1, v2, :cond_1
 
-    check-cast p1, Lmm7;
+    iget p0, p0, Lp9d;->e:I
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1, v1}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-static {v0, p0}, Lo9d;->b(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
 
     :cond_1
-    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
 
-    :cond_2
-    sget-object p1, Ljv7;->ON_DESTROY:Ljv7;
+    move-result-object p0
 
-    if-ne p2, p1, :cond_3
-
-    iget-object p1, p0, Lp9d;->X:Lg32;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_3
-    return-void
+    return-object p0
 .end method

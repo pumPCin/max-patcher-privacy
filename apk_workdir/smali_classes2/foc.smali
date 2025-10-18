@@ -3,26 +3,14 @@
 
 
 # static fields
-.field public static oneme_stickers_preview_action_favorite:I = 0x7f0a086d
+.field public static members_list_action_view_type:I = 0x7f0a04cc
 
-.field public static oneme_stickers_preview_action_forward:I = 0x7f0a086e
+.field public static members_list_bottom_action_view_type:I = 0x7f0a04cd
 
-.field public static oneme_stickers_preview_action_send:I = 0x7f0a086f
+.field public static members_list_empty_search_view_type:I = 0x7f0a04ce
 
-.field public static oneme_stickers_preview_content_container:I = 0x7f0a0870
+.field public static members_list_item_view_type:I = 0x7f0a04cf
 
-.field public static oneme_stickers_preview_lottie_cell:I = 0x7f0a0871
+.field public static members_list_rv:I = 0x7f0a04d0
 
-.field public static oneme_stickers_preview_static_cell:I = 0x7f0a0872
-
-.field public static oneme_stickers_preview_sticker_container:I = 0x7f0a0873
-
-.field public static oneme_stickers_preview_stickers_set_container:I = 0x7f0a0874
-
-.field public static oneme_stickers_preview_stickers_set_content:I = 0x7f0a0875
-
-.field public static oneme_stickers_preview_stickers_set_header:I = 0x7f0a0876
-
-.field public static oneme_stickers_preview_toolbar:I = 0x7f0a0877
-
-.field public static oneme_stickers_preview_webm_cell:I = 0x7f0a0878
+.field public static members_list_shimmer_view_type:I = 0x7f0a04d1

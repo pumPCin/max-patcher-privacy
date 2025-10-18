@@ -1,511 +1,637 @@
-.class public final Lmya;
-.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.class public abstract Lmya;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrrf;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final B0:Landroid/graphics/drawable/ShapeDrawable;
+.field public static final A0:I
 
-.field public final C0:Landroid/graphics/drawable/Drawable;
+.field public static final B:I
 
-.field public final D0:Landroid/graphics/drawable/Drawable;
+.field public static final B0:I
 
-.field public final E0:Lq63;
+.field public static final C:I
 
-.field public final F0:Landroid/graphics/drawable/LayerDrawable;
+.field public static final C0:I
 
-.field public final G0:Landroid/graphics/drawable/LayerDrawable;
+.field public static final D:I
 
-.field public H0:Z
+.field public static final D0:I
+
+.field public static final E:I
+
+.field public static final E0:I
+
+.field public static final F:I
+
+.field public static final F0:I
+
+.field public static final G:I
+
+.field public static final G0:I
+
+.field public static final H:I
+
+.field public static final H0:I
+
+.field public static final I:I
+
+.field public static final I0:I
+
+.field public static final J:I
+
+.field public static final J0:I
+
+.field public static final K:I
+
+.field public static final K0:I
+
+.field public static final L:I
+
+.field public static final L0:I
+
+.field public static final M:I
+
+.field public static final M0:I
+
+.field public static final N:I
+
+.field public static final N0:I
+
+.field public static final O:I
+
+.field public static final O0:I
+
+.field public static final P:I
+
+.field public static final P0:I
+
+.field public static final Q:I
+
+.field public static final Q0:I
+
+.field public static final R:I
+
+.field public static final R0:I
+
+.field public static final S:I
+
+.field public static final S0:I
+
+.field public static final T:I
+
+.field public static final T0:I
+
+.field public static final U:I
+
+.field public static final U0:I
+
+.field public static final V:I
+
+.field public static final V0:I
+
+.field public static final W:I
+
+.field public static final W0:I
+
+.field public static final X:I
+
+.field public static final X0:I
+
+.field public static final Y:I
+
+.field public static final Y0:I
+
+.field public static final Z:I
+
+.field public static final Z0:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final g:I
+
+.field public static final g0:I
+
+.field public static final h:I
+
+.field public static final h0:I
+
+.field public static final i:I
+
+.field public static final i0:I
+
+.field public static final j:I
+
+.field public static final j0:I
+
+.field public static final k:I
+
+.field public static final k0:I
+
+.field public static final l:I
+
+.field public static final l0:I
+
+.field public static final m:I
+
+.field public static final m0:I
+
+.field public static final n:I
+
+.field public static final n0:I
+
+.field public static final o:I
+
+.field public static final o0:I
+
+.field public static final p:I
+
+.field public static final p0:I
+
+.field public static final q:I
+
+.field public static final q0:I
+
+.field public static final r:I
+
+.field public static final r0:I
+
+.field public static final s:I
+
+.field public static final s0:I
+
+.field public static final t:I
+
+.field public static final t0:I
+
+.field public static final u:I
+
+.field public static final u0:I
+
+.field public static final v:I
+
+.field public static final v0:I
+
+.field public static final w:I
+
+.field public static final w0:I
+
+.field public static final x:I
+
+.field public static final x0:I
+
+.field public static final y:I
+
+.field public static final y0:I
+
+.field public static final z:I
+
+.field public static final z0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    invoke-direct/range {p0 .. p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v2, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v2}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    iput-object v1, v0, Lmya;->B0:Landroid/graphics/drawable/ShapeDrawable;
-
-    sget v2, Liid;->D1:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-static {v3, v2}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lmya;->C0:Landroid/graphics/drawable/Drawable;
-
-    sget v3, Liid;->X1:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-static {v4, v3}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    iput-object v3, v0, Lmya;->D0:Landroid/graphics/drawable/Drawable;
-
-    new-instance v4, Lq63;
-
-    invoke-direct {v4}, Lq63;-><init>()V
-
-    iput-object v4, v0, Lmya;->E0:Lq63;
-
-    new-instance v5, Landroid/graphics/drawable/LayerDrawable;
-
-    const/4 v11, 0x2
-
-    new-array v6, v11, [Landroid/graphics/drawable/Drawable;
-
-    const/4 v12, 0x0
-
-    aput-object v1, v6, v12
-
-    const/4 v13, 0x1
-
-    aput-object v2, v6, v13
-
-    invoke-direct {v5, v6}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    const/16 v2, 0x28
-
-    int-to-float v2, v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v2
-
-    invoke-static {v6}, Lagi;->d(F)I
-
-    move-result v6
-
-    const/16 v7, 0x10
-
-    int-to-float v14, v7
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v14
-
-    invoke-static {v7}, Lagi;->d(F)I
-
-    move-result v7
-
-    invoke-virtual {v5, v12, v6, v6}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    invoke-virtual {v5, v13, v7, v7}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    div-int/2addr v6, v11
-
-    div-int/2addr v7, v11
-
-    sub-int v7, v6, v7
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v6, 0x1
-
-    move v8, v7
-
-    invoke-virtual/range {v5 .. v10}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    iput-object v5, v0, Lmya;->F0:Landroid/graphics/drawable/LayerDrawable;
-
-    new-instance v15, Landroid/graphics/drawable/LayerDrawable;
-
-    const/4 v5, 0x3
-
-    new-array v5, v5, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v1, v5, v12
-
-    aput-object v3, v5, v13
-
-    aput-object v4, v5, v11
-
-    invoke-direct {v15, v5}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v14, v2
-
-    invoke-static {v14}, Lagi;->d(F)I
-
-    move-result v2
-
-    invoke-virtual {v15, v12, v1, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    invoke-virtual {v15, v13, v2, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    const/16 v3, 0x24
-
-    int-to-float v3, v3
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lagi;->d(F)I
-
-    move-result v4
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lagi;->d(F)I
-
-    move-result v3
-
-    invoke-virtual {v15, v11, v4, v3}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    div-int/2addr v1, v11
-
-    div-int/2addr v2, v11
-
-    sub-int v17, v1, v2
-
-    const/16 v19, 0x0
-
-    const/16 v20, 0x0
-
-    const/16 v16, 0x1
-
-    move/from16 v18, v17
-
-    invoke-virtual/range {v15 .. v20}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    int-to-float v1, v11
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v17
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v18
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v19
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v20
-
-    const/16 v16, 0x2
-
-    invoke-virtual/range {v15 .. v20}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    iput-object v15, v0, Lmya;->G0:Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-virtual {v0}, Lx05;->getHierarchy()Lu05;
-
-    move-result-object v1
-
-    check-cast v1, Lsm6;
-
-    invoke-static {}, Lghd;->a()Lghd;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lsm6;->m(Lghd;)V
-
-    sget-object v1, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmya;->onThemeChanged(Lu4b;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Lu4b;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lmya;->H0:Z
-
-    iget-object v1, p0, Lmya;->B0:Landroid/graphics/drawable/ShapeDrawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lu4b;->b()Lwe0;
-
-    move-result-object p1
-
-    iget p1, p1, Lwe0;->f:I
-
-    invoke-static {v1, p1}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Lu4b;->getIcon()Lh67;
-
-    move-result-object p1
-
-    iget p1, p1, Lh67;->k:I
-
-    invoke-static {v1, p1}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    :goto_0
-    iget-object p1, p0, Lmya;->C0:Landroid/graphics/drawable/Drawable;
-
-    const/4 v0, -0x1
-
-    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    iget-object p1, p0, Lmya;->D0:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    iget-object p1, p0, Lmya;->E0:Lq63;
-
-    iget-object p1, p1, Lq63;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-void
-.end method
-
-.method public final setCover(Landroid/net/Uri;)V
-    .locals 3
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-boolean v0, p0, Lmya;->H0:Z
-
-    sget-object v0, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v0, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lmya;->H0:Z
-
-    iget-object v2, p0, Lmya;->B0:Landroid/graphics/drawable/ShapeDrawable;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Lu4b;->b()Lwe0;
-
-    move-result-object v0
-
-    iget v0, v0, Lwe0;->f:I
-
-    invoke-static {v2, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
-
-    move-result-object v0
-
-    iget v0, v0, Lh67;->k:I
-
-    invoke-static {v2, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
-
-    :goto_1
-    invoke-static {p1}, Lda7;->a(Landroid/net/Uri;)Lda7;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
-
-    return-void
-.end method
-
-.method public final setPlaying(Z)V
+.method static constructor <clinit>()V
     .locals 1
 
-    if-eqz p1, :cond_0
+    sget v0, Lbtc;->channel_screen_confirmation_pin_title:I
 
-    invoke-virtual {p0}, Lx05;->getHierarchy()Lu05;
+    sput v0, Lmya;->a:I
 
-    move-result-object p1
+    sget v0, Lbtc;->channel_screen_confirmation_replace_pin_title:I
 
-    check-cast p1, Lsm6;
+    sput v0, Lmya;->b:I
 
-    iget-object v0, p0, Lmya;->G0:Landroid/graphics/drawable/LayerDrawable;
+    sget v0, Lbtc;->channel_screen_message_send_error_delete_action:I
 
-    invoke-virtual {p1, v0}, Lsm6;->k(Landroid/graphics/drawable/Drawable;)V
+    sput v0, Lmya;->c:I
 
-    return-void
+    sget v0, Lbtc;->channel_screen_message_send_error_resend_action_multi:I
 
-    :cond_0
-    invoke-virtual {p0}, Lx05;->getHierarchy()Lu05;
+    sput v0, Lmya;->d:I
 
-    move-result-object p1
+    sget v0, Lbtc;->channel_screen_message_send_error_resend_action_solo:I
 
-    check-cast p1, Lsm6;
+    sput v0, Lmya;->e:I
 
-    iget-object v0, p0, Lmya;->F0:Landroid/graphics/drawable/LayerDrawable;
+    sget v0, Lbtc;->channel_screen_message_send_error_title:I
 
-    invoke-virtual {p1, v0}, Lsm6;->k(Landroid/graphics/drawable/Drawable;)V
+    sput v0, Lmya;->f:I
 
-    return-void
-.end method
+    sget v0, Lbtc;->chat_screen__bot_cleared_history__subtitle:I
 
-.method public final setProgress(F)V
-    .locals 1
+    sput v0, Lmya;->g:I
 
-    const v0, 0x40666666    # 3.6f
+    sget v0, Lbtc;->chat_screen__bot_cleared_history_state__title:I
 
-    mul-float/2addr p1, v0
+    sput v0, Lmya;->h:I
 
-    iget-object v0, p0, Lmya;->E0:Lq63;
+    sget v0, Lbtc;->chat_screen__bot_empty_state__subtitle:I
 
-    iput p1, v0, Lq63;->b:F
+    sput v0, Lmya;->i:I
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    sget v0, Lbtc;->chat_screen__bot_empty_state__title:I
+
+    sput v0, Lmya;->j:I
+
+    sget v0, Lbtc;->chat_screen__bot_official_cleared_history_state__title:I
+
+    sput v0, Lmya;->k:I
+
+    sget v0, Lbtc;->chat_screen__bot_official_empty_state__title:I
+
+    sput v0, Lmya;->l:I
+
+    sget v0, Lbtc;->chat_screen_action_copy:I
+
+    sput v0, Lmya;->m:I
+
+    sget v0, Lbtc;->chat_screen_action_copy_photo:I
+
+    sput v0, Lmya;->n:I
+
+    sget v0, Lbtc;->chat_screen_action_copy_photo_failed:I
+
+    sput v0, Lmya;->o:I
+
+    sget v0, Lbtc;->chat_screen_action_copy_photo_success:I
+
+    sput v0, Lmya;->p:I
+
+    sget v0, Lbtc;->chat_screen_action_delete:I
+
+    sput v0, Lmya;->q:I
+
+    sget v0, Lbtc;->chat_screen_action_delete_for_all:I
+
+    sput v0, Lmya;->r:I
+
+    sget v0, Lbtc;->chat_screen_action_edit:I
+
+    sput v0, Lmya;->s:I
+
+    sget v0, Lbtc;->chat_screen_action_forward:I
+
+    sput v0, Lmya;->t:I
+
+    sget v0, Lbtc;->chat_screen_action_mark_as_unread:I
+
+    sput v0, Lmya;->u:I
+
+    sget v0, Lbtc;->chat_screen_action_pin:I
+
+    sput v0, Lmya;->v:I
+
+    sget v0, Lbtc;->chat_screen_action_reply:I
+
+    sput v0, Lmya;->w:I
+
+    sget v0, Lbtc;->chat_screen_action_report:I
+
+    sput v0, Lmya;->x:I
+
+    sget v0, Lbtc;->chat_screen_action_save_to_gallery:I
+
+    sput v0, Lmya;->y:I
+
+    sget v0, Lbtc;->chat_screen_action_select:I
+
+    sput v0, Lmya;->z:I
+
+    sget v0, Lbtc;->chat_screen_action_share_post:I
+
+    sput v0, Lmya;->A:I
+
+    sget v0, Lbtc;->chat_screen_action_unpin:I
+
+    sput v0, Lmya;->B:I
+
+    sget v0, Lbtc;->chat_screen_attach_file_downloading_status:I
+
+    sput v0, Lmya;->C:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_complain_body:I
+
+    sput v0, Lmya;->D:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_complain_title:I
+
+    sput v0, Lmya;->E:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_delete_for_all:I
+
+    sput v0, Lmya;->F:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_delete_for_me:I
+
+    sput v0, Lmya;->G:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_pin_title:I
+
+    sput v0, Lmya;->H:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_pin_with_notify_button:I
+
+    sput v0, Lmya;->I:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_pin_without_notify_button:I
+
+    sput v0, Lmya;->J:I
+
+    sget v0, Lbtc;->chat_screen_confirmation_replace_pin_title:I
+
+    sput v0, Lmya;->K:I
+
+    sget v0, Lbtc;->chat_screen_context_menu_toolbar_title:I
+
+    sput v0, Lmya;->L:I
+
+    sget v0, Lbtc;->chat_screen_empty_dialog_state_subtitle:I
+
+    sput v0, Lmya;->M:I
+
+    sget v0, Lbtc;->chat_screen_empty_dialog_state_title:I
+
+    sput v0, Lmya;->N:I
+
+    sget v0, Lbtc;->chat_screen_folder_link_error_caption:I
+
+    sput v0, Lmya;->O:I
+
+    sget v0, Lbtc;->chat_screen_folder_link_error_title:I
+
+    sput v0, Lmya;->P:I
+
+    sget v0, Lbtc;->chat_screen_group_link_call_empty_state_subtitle_1:I
+
+    sput v0, Lmya;->Q:I
+
+    sget v0, Lbtc;->chat_screen_group_link_call_empty_state_subtitle_2:I
+
+    sput v0, Lmya;->R:I
+
+    sget v0, Lbtc;->chat_screen_group_link_call_empty_state_subtitle_3:I
+
+    sput v0, Lmya;->S:I
+
+    sget v0, Lbtc;->chat_screen_group_link_call_empty_state_title:I
+
+    sput v0, Lmya;->T:I
+
+    sget v0, Lbtc;->chat_screen_message_audio_sender_self:I
+
+    sput v0, Lmya;->U:I
+
+    sget v0, Lbtc;->chat_screen_message_audio_title:I
+
+    sput v0, Lmya;->V:I
+
+    sget v0, Lbtc;->chat_screen_message_call_subtitle_audio:I
+
+    sput v0, Lmya;->W:I
+
+    sget v0, Lbtc;->chat_screen_message_call_subtitle_video:I
+
+    sput v0, Lmya;->X:I
+
+    sget v0, Lbtc;->chat_screen_message_call_title_incoming:I
+
+    sput v0, Lmya;->Y:I
+
+    sget v0, Lbtc;->chat_screen_message_call_title_missed:I
+
+    sput v0, Lmya;->Z:I
+
+    sget v0, Lbtc;->chat_screen_message_call_title_outgoing:I
+
+    sput v0, Lmya;->a0:I
+
+    sget v0, Lbtc;->chat_screen_message_call_title_reject:I
+
+    sput v0, Lmya;->b0:I
+
+    sget v0, Lbtc;->chat_screen_message_contact_subtitle_added:I
+
+    sput v0, Lmya;->c0:I
+
+    sget v0, Lbtc;->chat_screen_message_contact_subtitle_new:I
+
+    sput v0, Lmya;->d0:I
+
+    sget v0, Lbtc;->chat_screen_message_contact_subtitle_phone_book:I
+
+    sput v0, Lmya;->e0:I
+
+    sget v0, Lbtc;->chat_screen_message_contact_subtitle_you:I
+
+    sput v0, Lmya;->f0:I
+
+    sget v0, Lbtc;->chat_screen_message_geo_subtitle:I
+
+    sput v0, Lmya;->g0:I
+
+    sget v0, Lbtc;->chat_screen_message_geo_title:I
+
+    sput v0, Lmya;->h0:I
+
+    sget v0, Lbtc;->chat_screen_message_group_call:I
+
+    sput v0, Lmya;->i0:I
+
+    sget v0, Lbtc;->chat_screen_message_group_call_title:I
+
+    sput v0, Lmya;->j0:I
+
+    sget v0, Lbtc;->chat_screen_message_resend_media_permission_error:I
+
+    sput v0, Lmya;->k0:I
+
+    sget v0, Lbtc;->chat_screen_message_send_error_delete_action:I
+
+    sput v0, Lmya;->l0:I
+
+    sget v0, Lbtc;->chat_screen_message_send_error_resend_action_multi:I
+
+    sput v0, Lmya;->m0:I
+
+    sget v0, Lbtc;->chat_screen_message_send_error_resend_action_solo:I
+
+    sput v0, Lmya;->n0:I
+
+    sget v0, Lbtc;->chat_screen_message_send_error_title:I
+
+    sput v0, Lmya;->o0:I
+
+    sget v0, Lbtc;->chat_screen_message_unpinned_snackbar:I
+
+    sput v0, Lmya;->p0:I
+
+    sget v0, Lbtc;->chat_screen_new_messages_decor_title:I
+
+    sput v0, Lmya;->q0:I
+
+    sget v0, Lbtc;->chat_screen_read_participants_read_header:I
+
+    sput v0, Lmya;->r0:I
+
+    sget v0, Lbtc;->chat_screen_save_to_gallery_completed_gif_title:I
+
+    sput v0, Lmya;->s0:I
+
+    sget v0, Lbtc;->chat_screen_save_to_gallery_completed_photo_title:I
+
+    sput v0, Lmya;->t0:I
+
+    sget v0, Lbtc;->chat_screen_save_to_gallery_completed_video_title:I
+
+    sput v0, Lmya;->u0:I
+
+    sget v0, Lbtc;->chat_screen_save_to_gallery_failed_title:I
+
+    sput v0, Lmya;->v0:I
+
+    sget v0, Lbtc;->chat_screen_saved_messages_empty_state_subtitle:I
+
+    sput v0, Lmya;->w0:I
+
+    sget v0, Lbtc;->chat_screen_saved_messages_empty_state_title:I
+
+    sput v0, Lmya;->x0:I
+
+    sget v0, Lbtc;->chat_screen_snackbar_report_success:I
+
+    sput v0, Lmya;->y0:I
+
+    sget v0, Lbtc;->chat_screen_toolbar_saved_messages_description:I
+
+    sput v0, Lmya;->z0:I
+
+    sget v0, Lbtc;->message_link_forwarded:I
+
+    sput v0, Lmya;->A0:I
+
+    sget v0, Lbtc;->message_link_reply_audio:I
+
+    sput v0, Lmya;->B0:I
+
+    sget v0, Lbtc;->message_link_reply_audio_call:I
+
+    sput v0, Lmya;->C0:I
+
+    sget v0, Lbtc;->message_link_reply_contact:I
+
+    sput v0, Lmya;->D0:I
+
+    sget v0, Lbtc;->message_link_reply_location:I
+
+    sput v0, Lmya;->E0:I
+
+    sget v0, Lbtc;->message_link_reply_video_call:I
+
+    sput v0, Lmya;->F0:I
+
+    sget v0, Lbtc;->messages_list_bot_button_request_contact_confirm_action:I
+
+    sput v0, Lmya;->G0:I
+
+    sget v0, Lbtc;->messages_list_bot_button_request_contact_confirm_description:I
+
+    sput v0, Lmya;->H0:I
+
+    sget v0, Lbtc;->messages_list_bot_button_request_contact_confirm_title:I
+
+    sput v0, Lmya;->I0:I
+
+    sget v0, Lbtc;->messages_list_bot_official_button_request_contact_confirm_description:I
+
+    sput v0, Lmya;->J0:I
+
+    sget v0, Lbtc;->messages_list_channel_description_admin_subtitle:I
+
+    sput v0, Lmya;->K0:I
+
+    sget v0, Lbtc;->messages_list_channel_description_admin_title:I
+
+    sput v0, Lmya;->L0:I
+
+    sget v0, Lbtc;->messages_list_channel_description_private_subscriber_subtitle:I
+
+    sput v0, Lmya;->M0:I
+
+    sget v0, Lbtc;->messages_list_channel_description_public_subscriber_subtitle:I
+
+    sput v0, Lmya;->N0:I
+
+    sget v0, Lbtc;->messages_list_chat_description_view_owner_subtitle:I
+
+    sput v0, Lmya;->O0:I
+
+    sget v0, Lbtc;->messages_list_chat_description_view_owner_title:I
+
+    sput v0, Lmya;->P0:I
+
+    sget v0, Lbtc;->messages_list_chat_description_view_subtitle:I
+
+    sput v0, Lmya;->Q0:I
+
+    sget v0, Lbtc;->messages_list_contact_removed:I
+
+    sput v0, Lmya;->R0:I
+
+    sget v0, Lbtc;->messages_list_date_status_edit:I
+
+    sput v0, Lmya;->S0:I
+
+    sget v0, Lbtc;->messages_list_message_content_level_chat_snackbar_text:I
+
+    sput v0, Lmya;->T0:I
+
+    sget v0, Lbtc;->messages_list_message_content_level_chat_stub_text:I
+
+    sput v0, Lmya;->U0:I
+
+    sget v0, Lbtc;->messages_list_message_copy_with_sender_name:I
+
+    sput v0, Lmya;->V0:I
+
+    sget v0, Lbtc;->messages_list_message_error_open_channel_private:I
+
+    sput v0, Lmya;->W0:I
+
+    sget v0, Lbtc;->messages_list_message_error_open_channel_unavailable:I
+
+    sput v0, Lmya;->X0:I
+
+    sget v0, Lbtc;->messages_list_message_error_post_not_founded:I
+
+    sput v0, Lmya;->Y0:I
+
+    sget v0, Lbtc;->messages_list_new_geo_external_map:I
+
+    sput v0, Lmya;->Z0:I
 
     return-void
 .end method

@@ -1,161 +1,100 @@
 .class public final Lgpi;
-.super Llth;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxvi;
+.implements Ltha;
 
 
-# instance fields
-.field public final synthetic d:I
-
-.field public final synthetic e:Lcii;
+# static fields
+.field public static final a:Lgpi;
 
 
 # direct methods
-.method public constructor <init>(Lcii;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lgpi;->d:I
+    new-instance v0, Lgpi;
 
-    iput-object p1, p0, Lgpi;->e:Lcii;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "com.google.android.gms.auth.api.signin.internal.ISignInCallbacks"
+    sput-object v0, Lgpi;->a:Lgpi;
 
-    const/4 p2, 0x7
+    new-instance v0, Lr8i;
 
-    invoke-direct {p0, p1, p2}, Llth;-><init>(Ljava/lang/String;I)V
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Y(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    packed-switch p1, :pswitch_data_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_0
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, La8i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-interface {p0, p1}, Lxvi;->m(Lcom/google/android/gms/common/api/Status;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, La8i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-interface {p0, p1}, Lxvi;->h(Lcom/google/android/gms/common/api/Status;)V
-
-    :goto_0
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_2
-    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, La8i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, La8i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x65
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h(Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
-
-    iget v0, p0, Lgpi;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lgpi;->e:Lcii;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lzcd;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public m(Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
-
-    iget v0, p0, Lgpi;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lgpi;->e:Lcii;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lzcd;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

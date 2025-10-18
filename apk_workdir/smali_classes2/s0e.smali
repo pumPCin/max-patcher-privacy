@@ -1,136 +1,94 @@
-.class public final Ls0e;
-.super Lhlf;
+.class public final synthetic Ls0e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lu0e;
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt0e;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lt0e;I)V
+    .locals 0
 
-    new-instance v0, Ltxc;
+    iput p2, p0, Ls0e;->a:I
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ls0e;->b:Lt0e;
 
-    invoke-direct {v0, v1}, Ltxc;-><init>(I)V
-
-    invoke-direct {p0, v0}, Lhlf;-><init>(Lqh6;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f0()I
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+    iget p1, p0, Ls0e;->a:I
 
-    invoke-static {v0}, Lqbi;->n(Llt7;)Z
+    packed-switch p1, :pswitch_data_0
 
-    move-result v0
+    iget-object p1, p0, Ls0e;->b:Lt0e;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lhlf;->M()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Ld15;->c(FFI)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final setAlias(Landroid/text/Layout;)V
-    .locals 1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lhlf;->c:Ljava/lang/Object;
-
-    invoke-interface {p1}, Llt7;->e()Z
-
-    move-result v0
+    iget-object v0, p1, Lt0e;->G0:Lp0e;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lt0e;->D0:Lbn8;
 
-    move-result-object p1
+    iget-object p1, p1, Lbn8;->t0:Lmv0;
 
-    check-cast p1, Lt0e;
+    new-instance v1, Lpl8;
 
-    const/16 v0, 0x8
+    invoke-direct {v1, v0}, Lpl8;-><init>(Lp0e;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-interface {p1, v1}, Lo1e;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 
-    :cond_1
-    invoke-virtual {p0}, Lhlf;->R()Landroid/view/View;
+    :pswitch_0
+    iget-object p1, p0, Ls0e;->b:Lt0e;
 
-    move-result-object v0
+    iget-object v0, p1, Lt0e;->G0:Lp0e;
 
-    check-cast v0, Lt0e;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lt0e;->setLayout(Landroid/text/Layout;)V
+    iget-object p1, p1, Lt0e;->D0:Lbn8;
 
-    invoke-virtual {p0}, Lhlf;->R()Landroid/view/View;
+    iget-object v1, p1, Lbn8;->x0:Lx0f;
 
-    move-result-object p1
+    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    check-cast v1, Ljava/util/List;
 
-    invoke-virtual {p0}, Lhlf;->y()V
-
-    return-void
-.end method
-
-.method public final setAliasColor(I)V
-    .locals 2
-
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Llt7;->e()Z
+    invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    iget-object p1, p1, Lbn8;->t0:Lmv0;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    new-instance v2, Ltl8;
 
-    move-result-object v0
+    invoke-direct {v2, v0, v1}, Ltl8;-><init>(Lp0e;I)V
 
-    check-cast v0, Lt0e;
+    invoke-interface {p1, v2}, Lo1e;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lt0e;->setTextColor(I)V
-
-    :cond_0
+    :cond_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

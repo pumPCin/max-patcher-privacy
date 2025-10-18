@@ -1,188 +1,176 @@
 .class public final Lou4;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static Y:I
-
-
 # instance fields
-.field public final X:I
-
-.field public volatile a:Landroid/os/Handler;
-
-.field public final b:Ljava/util/concurrent/CountDownLatch;
-
-.field public c:J
-
-.field public final o:I
+.field public final a:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Liu7;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lou4;->a:Landroid/os/Handler;
-
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    iput-object v0, p0, Lou4;->b:Ljava/util/concurrent/CountDownLatch;
-
-    sget v0, Lou4;->Y:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    sput v1, Lou4;->Y:I
-
-    iput v0, p0, Lou4;->o:I
-
-    const/16 v0, -0x3e8
-
-    iput v0, p0, Lou4;->X:I
-
-    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
+    iput-object p1, p0, Lou4;->a:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final a(JLjava/lang/Long;Ljava/lang/Long;)V
+    .locals 7
 
-    :try_start_0
-    iget-object v0, p0, Lou4;->b:Ljava/util/concurrent/CountDownLatch;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    const-string v1, "execute: chatId="
 
-    iget-object v0, p0, Lou4;->a:Landroid/os/Handler;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", contactId="
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lq3a;
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lq3a;->k(Ljava/lang/Throwable;)V
+    const-string v1, "ou4"
 
-    return-void
-.end method
+    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final b(Ljava/lang/Runnable;)V
-    .locals 2
+    iget-object v0, p0, Lou4;->a:Liu7;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    const-wide/16 v2, 0x0
 
-    move-result-wide v0
+    const/4 v4, 0x0
 
-    iput-wide v0, p0, Lou4;->c:J
+    if-eqz p3, :cond_0
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {p0, p1, v0, v1}, Lou4;->c(Ljava/lang/Runnable;J)Z
+    move-result-wide v5
 
-    return-void
-.end method
+    cmp-long v5, v5, v2
 
-.method public final c(Ljava/lang/Runnable;J)Z
-    .locals 2
+    if-eqz v5, :cond_0
 
-    :try_start_0
-    iget-object v0, p0, Lou4;->b:Ljava/util/concurrent/CountDownLatch;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p4
+
+    check-cast p4, Lsd2;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p4, v5, v6}, Lsd2;->z(J)Lla2;
+
+    move-result-object p3
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    if-eqz p4, :cond_1
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lq3a;
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
 
-    move-result-object v1
+    move-result-wide v5
 
-    invoke-interface {v1, v0}, Lq3a;->k(Ljava/lang/Throwable;)V
+    cmp-long p3, v5, v2
+
+    if-eqz p3, :cond_1
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lsd2;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p3, v5, v6}, Lsd2;->F(J)Lla2;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_1
+    move-object p3, v4
 
     :goto_0
-    const-wide/16 v0, 0x0
+    if-nez p3, :cond_2
 
-    cmp-long v0, p2, v0
+    const-string p1, "Chat is null. Ignore"
 
-    if-gtz v0, :cond_0
+    invoke-static {v1, p1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lou4;->a:Landroid/os/Handler;
+    return-void
 
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :cond_2
+    iget-object p4, p3, Lla2;->b:Lne2;
 
-    move-result p1
+    iget-object p4, p4, Lne2;->c0:Lpua;
 
-    return p1
+    if-nez p4, :cond_3
 
-    :cond_0
-    iget-object v0, p0, Lou4;->a:Landroid/os/Handler;
+    const-string p1, "draft is null, ignore"
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-static {v1, p1, v4}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    move-result p1
+    return-void
 
-    return p1
-.end method
+    :cond_3
+    invoke-virtual {p4}, Lpua;->b()Ljava/lang/Long;
 
-.method public final run()V
-    .locals 4
+    move-result-object p4
 
-    invoke-static {}, Landroid/os/Looper;->prepare()V
+    if-eqz p4, :cond_4
 
-    new-instance v0, Landroid/os/Handler;
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    move-result-wide v2
 
-    move-result-object v1
+    :cond_4
+    cmp-long p1, v2, p1
 
-    new-instance v2, Lej3;
+    if-lez p1, :cond_5
 
-    const/4 v3, 0x2
+    const-string p1, "try to rewrite draft by old, ignore it!"
 
-    invoke-direct {v2, v3, p0}, Lej3;-><init>(ILjava/lang/Object;)V
+    invoke-static {v1, p1}, Ltei;->r(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    return-void
 
-    iput-object v0, p0, Lou4;->a:Landroid/os/Handler;
+    :cond_5
+    const-string p1, "Discard server draft"
 
-    iget-object v0, p0, Lou4;->b:Ljava/util/concurrent/CountDownLatch;
+    invoke-static {v1, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lou4;->X:I
+    move-result-object p1
 
-    const/16 v1, -0x3e8
+    check-cast p1, Lsd2;
 
-    if-eq v0, v1, :cond_0
+    iget-wide p2, p3, Lla2;->a:J
 
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    :cond_0
-    invoke-static {}, Landroid/os/Looper;->loop()V
+    invoke-virtual {p1, p2, p3}, Lsd2;->p(J)V
 
     return-void
 .end method

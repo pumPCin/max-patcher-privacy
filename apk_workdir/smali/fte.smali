@@ -1,137 +1,185 @@
 .class public final Lfte;
-.super Ldte;
+.super Lh3;
 .source "SourceFile"
+
+# interfaces
+.implements Lfc7;
+
+
+# static fields
+.field public static final b:Lfte;
 
 
 # instance fields
-.field public b:Landroid/view/View;
+.field public final a:[Ljava/lang/Object;
 
 
-# virtual methods
-.method public final a()V
-    .locals 6
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object v0, p0, Lfte;->b:Landroid/view/View;
+    new-instance v0, Lfte;
 
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Luab;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
     const/4 v1, 0x0
 
-    :goto_0
-    if-eqz v1, :cond_2
+    new-array v1, v1, [Ljava/lang/Object;
 
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1}, Lfte;-><init>([Ljava/lang/Object;)V
 
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    new-instance v4, Lete;
-
-    invoke-direct {v4, v2}, Lete;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
-
-    invoke-static {v1, v4}, Luab;->y(Landroid/view/WindowInsetsController;Lete;)V
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const-string v5, "input_method"
-
-    invoke-virtual {v2, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    :cond_1
-    invoke-static {v1, v4}, Luab;->D(Landroid/view/WindowInsetsController;Lete;)V
-
-    invoke-static {}, Luab;->b()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Luab;->C(Landroid/view/WindowInsetsController;I)V
-
-    return-void
-
-    :cond_2
-    invoke-super {p0}, Ldte;->a()V
+    sput-object v0, Lfte;->b:Lfte;
 
     return-void
 .end method
 
-.method public final h()V
-    .locals 3
+.method public constructor <init>([Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lfte;->b:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lfte;->a:[Ljava/lang/Object;
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    return-void
+.end method
 
-    const/16 v2, 0x21
 
-    if-ge v1, v2, :cond_0
+# virtual methods
+.method public final a()Lhjb;
+    .locals 4
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    new-instance v0, Lhjb;
 
-    move-result-object v1
+    iget-object v1, p0, Lfte;->a:[Ljava/lang/Object;
 
-    const-string v2, "input_method"
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    invoke-direct {v0, p0, v3, v1, v2}, Lhjb;-><init>(Lh3;[Ljava/lang/Object;[Ljava/lang/Object;I)V
 
-    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Landroid/view/inputmethod/InputMethodManager;->isActive()Z
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lfte;->getSize()I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Ltdi;->a(II)V
+
+    iget-object v0, p0, Lfte;->a:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget-object v0, p0, Lfte;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lfte;->a:[Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Ljt;->A([Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 5
+
+    iget-object v0, p0, Lfte;->a:[Ljava/lang/Object;
+
+    const/4 v1, -0x1
+
+    if-nez p1, :cond_2
+
+    array-length p1, v0
+
+    add-int/2addr p1, v1
+
+    if-ltz p1, :cond_5
+
+    :goto_0
+    add-int/lit8 v2, p1, -0x1
+
+    aget-object v3, v0, p1
+
+    if-nez v3, :cond_0
+
+    return p1
 
     :cond_0
-    if-eqz v0, :cond_1
+    if-gez v2, :cond_1
 
-    invoke-static {v0}, Luab;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
+    goto :goto_2
 
-    move-result-object v0
+    :cond_1
+    move p1, v2
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Luab;->b()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Luab;->x(Landroid/view/WindowInsetsController;I)V
-
     :cond_2
-    invoke-super {p0}, Ldte;->h()V
+    array-length v2, v0
 
-    return-void
+    add-int/2addr v2, v1
+
+    if-ltz v2, :cond_5
+
+    :goto_1
+    add-int/lit8 v3, v2, -0x1
+
+    aget-object v4, v0, v2
+
+    invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    return v2
+
+    :cond_3
+    if-gez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v2, v3
+
+    goto :goto_1
+
+    :cond_5
+    :goto_2
+    return v1
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 3
+
+    iget-object v0, p0, Lfte;->a:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    invoke-static {p1, v1}, Ltdi;->b(II)V
+
+    new-instance v1, Lxu0;
+
+    array-length v2, v0
+
+    invoke-direct {v1, p1, v2, v0}, Lxu0;-><init>(II[Ljava/lang/Object;)V
+
+    return-object v1
 .end method

@@ -1,55 +1,77 @@
-.class public final Lhy6;
+.class public abstract Lhy6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:Lhy6;
-
-.field public static final b:Lff3;
-
-.field public static final c:Lqy4;
+.field public static final a:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lhy6;
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "0123456789ABCDEF"
 
-    sput-object v0, Lhy6;->a:Lhy6;
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lqh6;
-
-    sget-object v1, Lfy6;->a:Lfy6;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lgy6;->a:Lgy6;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lvti;->a([Lqh6;)Lff3;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    sput-object v0, Lhy6;->b:Lff3;
-
-    new-instance v0, Lqy4;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lqy4;-><init>(I)V
-
-    sput-object v0, Lhy6;->c:Lqy4;
+    sput-object v0, Lhy6;->a:[B
 
     return-void
+.end method
+
+.method public static a([B)Ljava/lang/String;
+    .locals 6
+
+    array-length v0, p0
+
+    mul-int/lit8 v0, v0, 0x2
+
+    new-array v0, v0, [B
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_0
+
+    aget-byte v2, p0, v1
+
+    and-int/lit16 v3, v2, 0xff
+
+    mul-int/lit8 v4, v1, 0x2
+
+    ushr-int/lit8 v3, v3, 0x4
+
+    sget-object v5, Lhy6;->a:[B
+
+    aget-byte v3, v5, v3
+
+    aput-byte v3, v0, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    and-int/lit8 v2, v2, 0xf
+
+    aget-byte v2, v5, v2
+
+    aput-byte v2, v0, v4
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/String;
+
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-direct {p0, v0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    return-object p0
 .end method

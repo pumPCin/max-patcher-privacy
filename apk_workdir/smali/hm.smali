@@ -1,47 +1,115 @@
 .class public final Lhm;
-.super Ljava/lang/Object;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lhm;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/List;
 
-.field public final b:Lfwb;
+.field public final b:Z
 
-.field public final c:Ljl;
+.field public final c:Ljava/lang/String;
 
-.field public final d:Ljava/lang/String;
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lfwb;Ljl;Ljava/lang/String;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljmg;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Ljmg;-><init>(I)V
+
+    sput-object v0, Lhm;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/ArrayList;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhm;->b:Lfwb;
+    invoke-static {p1}, Lzui;->i(Ljava/lang/Object;)V
 
-    iput-object p2, p0, Lhm;->c:Ljl;
+    iput-object p1, p0, Lhm;->a:Ljava/util/List;
 
-    iput-object p3, p0, Lhm;->d:Ljava/lang/String;
+    iput-boolean p2, p0, Lhm;->b:Z
 
-    filled-new-array {p1, p2, p3}, [Ljava/lang/Object;
+    iput-object p3, p0, Lhm;->c:Ljava/lang/String;
 
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p1
-
-    iput p1, p0, Lhm;->a:I
+    iput-object p4, p0, Lhm;->o:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public static b(Ljava/util/List;Z)Lhm;
+    .locals 2
+
+    new-instance v0, Ljava/util/TreeSet;
+
+    sget-object v1, Lu25;->q0:Lu25;
+
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lo9b;
+
+    invoke-interface {v1}, Lo9b;->m()[Lcq5;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Lhm;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v1, p1, v0, v0}, Lhm;-><init>(Ljava/util/ArrayList;ZLjava/lang/String;Ljava/lang/String;)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -50,62 +118,121 @@
     return v0
 
     :cond_0
-    const/4 v1, 0x1
+    instance-of v1, p1, Lhm;
 
-    if-ne p1, p0, :cond_1
-
-    return v1
-
-    :cond_1
-    instance-of v2, p1, Lhm;
-
-    if-nez v2, :cond_2
+    if-nez v1, :cond_1
 
     return v0
 
-    :cond_2
+    :cond_1
     check-cast p1, Lhm;
 
-    iget-object v2, p0, Lhm;->b:Lfwb;
+    iget-boolean v1, p0, Lhm;->b:Z
 
-    iget-object v3, p1, Lhm;->b:Lfwb;
+    iget-boolean v2, p1, Lhm;->b:Z
 
-    invoke-static {v2, v3}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v1, v2, :cond_2
 
-    move-result v2
+    iget-object v1, p0, Lhm;->a:Ljava/util/List;
 
-    if-eqz v2, :cond_3
+    iget-object v2, p1, Lhm;->a:Ljava/util/List;
 
-    iget-object v2, p0, Lhm;->c:Ljl;
+    invoke-static {v1, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v3, p1, Lhm;->c:Ljl;
+    move-result v1
 
-    invoke-static {v2, v3}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v1, :cond_2
 
-    move-result v2
+    iget-object v1, p0, Lhm;->c:Ljava/lang/String;
 
-    if-eqz v2, :cond_3
+    iget-object v2, p1, Lhm;->c:Ljava/lang/String;
 
-    iget-object v2, p0, Lhm;->d:Ljava/lang/String;
+    invoke-static {v1, v2}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lhm;->d:Ljava/lang/String;
+    move-result v1
 
-    invoke-static {v2, p1}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lhm;->o:Ljava/lang/String;
+
+    iget-object p1, p1, Lhm;->o:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lbni;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    return v1
+    const/4 p1, 0x1
 
-    :cond_3
+    return p1
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 4
 
-    iget v0, p0, Lhm;->a:I
+    iget-boolean v0, p0, Lhm;->b:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lhm;->c:Ljava/lang/String;
+
+    iget-object v2, p0, Lhm;->o:Ljava/lang/String;
+
+    iget-object v3, p0, Lhm;->a:Ljava/util/List;
+
+    filled-new-array {v0, v3, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
 
     return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lhm;->a:Ljava/util/List;
+
+    invoke-static {p1, v1, v0}, Llyi;->s(Landroid/os/Parcel;Ljava/util/List;I)V
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x4
+
+    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    iget-boolean v0, p0, Lhm;->b:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x3
+
+    iget-object v2, p0, Lhm;->c:Ljava/lang/String;
+
+    invoke-static {p1, v0, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    iget-object v0, p0, Lhm;->o:Ljava/lang/String;
+
+    invoke-static {p1, v1, v0}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

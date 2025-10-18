@@ -1,33 +1,13 @@
 .class public final Lpnf;
-.super Ljava/lang/Object;
+.super Lqnf;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# virtual methods
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 0
 
-.field public b:Ljava/lang/String;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:Ljava/lang/String;
-
-.field public h:Z
-
-.field public i:Z
-
-.field public j:J
-
-.field public k:Ljava/lang/String;
-
-.field public l:I
-
-.field public m:Z
-
-.field public n:Z
+    return-void
+.end method

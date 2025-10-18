@@ -1,131 +1,59 @@
 .class public final Llv4;
-.super Lzm7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/lang/Object;
+.field public final a:Lk54;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lk54;)V
     .locals 0
 
-    iput p1, p0, Llv4;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
-
-    iput-object p2, p0, Llv4;->c:Ljava/lang/Object;
+    iput-object p1, p0, Llv4;->a:Lk54;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
 
-    iget v0, p0, Llv4;->b:I
+    iget-object v0, p0, Llv4;->a:Lk54;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Lea5;->a:Lea5;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Lk54;->isDispatchNeeded(Li54;)Z
 
-    return v0
+    move-result v2
 
-    :pswitch_0
-    const/4 v0, 0x0
+    if-eqz v2, :cond_0
 
-    return v0
+    invoke-virtual {v0, v1, p1}, Lk54;->dispatch(Li54;Ljava/lang/Runnable;)V
 
-    :pswitch_1
-    const/4 v0, 0x0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Llv4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Llv4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lgn7;
-
-    iget-object v0, p0, Lzm7;->a:Lon7;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    :goto_0
-    invoke-virtual {v0}, Lon7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Llv4;->a:Lk54;
+
+    invoke-virtual {v0}, Lk54;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    instance-of v1, v0, Ldh3;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Ldh3;
-
-    iget-object v0, v0, Ldh3;->a:Ljava/lang/Throwable;
-
-    new-instance v1, Lvcd;
-
-    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v0}, Lpn7;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Llv4;->c:Ljava/lang/Object;
-
-    check-cast v0, Lqh6;
-
-    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Llv4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lhv4;
-
-    invoke-interface {p1}, Lhv4;->dispose()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

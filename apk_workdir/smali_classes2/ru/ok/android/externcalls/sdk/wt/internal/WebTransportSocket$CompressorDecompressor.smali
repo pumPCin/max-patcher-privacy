@@ -29,7 +29,7 @@
         "([BII)[B",
         "compressedData",
         "decompress",
-        "Lzag;",
+        "Lccg;",
         "release",
         "()V",
         "wtsignaling_release"

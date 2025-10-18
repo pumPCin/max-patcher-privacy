@@ -1,22 +1,19 @@
-.class public final Lvi6;
+.class public interface abstract Lvi6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr6;
-
 
 # virtual methods
-.method public final run()V
-    .locals 0
-
-    return-void
+.method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "EmptyAction"
-
-    return-object v0
+.method public abstract equals(Ljava/lang/Object;)Z
 .end method

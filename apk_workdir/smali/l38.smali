@@ -2,93 +2,59 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final h:Ljava/util/concurrent/atomic/AtomicLong;
+# interfaces
+.implements Lfla;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Ly49;
 
-.field public final b:Lwb4;
+.field public a:Ljava/lang/Object;
 
-.field public final c:Landroid/net/Uri;
+.field public final synthetic b:Lbpf;
 
-.field public final d:Ljava/util/Map;
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
+.field public final synthetic o:Lkj6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    sput-object v0, Ll38;->h:Ljava/util/concurrent/atomic/AtomicLong;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLwb4;J)V
-    .locals 12
-
-    .line 1
-    iget-object v4, p3, Lwb4;->a:Landroid/net/Uri;
-
-    .line 2
-    sget-object v5, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    const-wide/16 v8, 0x0
-
-    const-wide/16 v10, 0x0
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-object v3, p3
-
-    move-wide/from16 v6, p4
-
-    .line 3
-    invoke-direct/range {v0 .. v11}, Ll38;-><init>(JLwb4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JLwb4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
+.method public constructor <init>(Lw9c;Ljava/lang/Object;Lkj6;Ly49;)V
     .locals 0
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-wide p1, p0, Ll38;->a:J
+    iput-object p1, p0, Ll38;->b:Lbpf;
 
-    .line 6
-    iput-object p3, p0, Ll38;->b:Lwb4;
+    iput-object p2, p0, Ll38;->c:Ljava/lang/Object;
 
-    .line 7
-    iput-object p4, p0, Ll38;->c:Landroid/net/Uri;
+    iput-object p3, p0, Ll38;->o:Lkj6;
 
-    .line 8
-    iput-object p5, p0, Ll38;->d:Ljava/util/Map;
+    iput-object p4, p0, Ll38;->X:Ly49;
 
-    .line 9
-    iput-wide p6, p0, Ll38;->e:J
+    const/4 p1, 0x0
 
-    .line 10
-    iput-wide p8, p0, Ll38;->f:J
+    iput-object p1, p0, Ll38;->a:Ljava/lang/Object;
 
-    .line 11
-    iput-wide p10, p0, Ll38;->g:J
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 3
+
+    new-instance v0, Lhk6;
+
+    const/16 v1, 0xb
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lhk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p1, p0, Ll38;->b:Lbpf;
+
+    invoke-interface {p1, v0}, Lbpf;->f(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -1,113 +1,89 @@
-.class public final enum Lzgg;
-.super Ljava/lang/Enum;
+.class public final synthetic Lzgg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lzgg;
-
-.field public static final synthetic Y:[Lzgg;
-
-.field public static final enum c:Lzgg;
-
-.field public static final enum o:Lzgg;
+# interfaces
+.implements Lhh3;
+.implements Lqk8;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lahg;
 
-.field public final b:I
+.field public final synthetic b:Lweg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lzgg;
-
-    const-string v1, "TTL_1M"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const-string v4, "1M"
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lzgg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v0, Lzgg;->c:Lzgg;
-
-    new-instance v1, Lzgg;
-
-    const-string v2, "3M"
-
-    const/4 v4, 0x3
-
-    const-string v5, "TTL_3M"
-
-    invoke-direct {v1, v5, v3, v4, v2}, Lzgg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v1, Lzgg;->o:Lzgg;
-
-    new-instance v2, Lzgg;
-
-    const-string v3, "6M"
-
-    const/4 v4, 0x6
-
-    const-string v5, "TTL_6M"
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v4, v3}, Lzgg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v2, Lzgg;->X:Lzgg;
-
-    filled-new-array {v0, v1, v2}, [Lzgg;
-
-    move-result-object v0
-
-    sput-object v0, Lzgg;->Y:[Lzgg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+.method public synthetic constructor <init>(Lahg;Lweg;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lzgg;->a:Lahg;
 
-    iput-object p4, p0, Lzgg;->a:Ljava/lang/String;
+    iput-object p2, p0, Lzgg;->b:Lweg;
 
-    iput p3, p0, Lzgg;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lzgg;
-    .locals 1
 
-    const-class v0, Lzgg;
+# virtual methods
+.method public b(Lyj8;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lzgg;->a:Lahg;
 
-    move-result-object p0
+    iget-object v0, v0, Lahg;->b:Ljava/lang/Object;
 
-    check-cast p0, Lzgg;
+    check-cast v0, Ljava/util/Map;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lzgg;->b:Lweg;
 
-.method public static values()[Lzgg;
-    .locals 1
-
-    sget-object v0, Lzgg;->Y:[Lzgg;
-
-    invoke-virtual {v0}, [Lzgg;->clone()Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lzgg;
+    check-cast v0, Loeg;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lyj8;->h()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lyj8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lyj8;->h()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lyj8;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public c(Lyg3;)V
+    .locals 2
+
+    iget-object v0, p0, Lzgg;->a:Lahg;
+
+    iget-object v0, v0, Lahg;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Map;
+
+    iget-object v1, p0, Lzgg;->b:Lweg;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lyg3;->b()V
+
+    return-void
 .end method

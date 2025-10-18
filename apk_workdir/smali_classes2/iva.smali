@@ -1,43 +1,51 @@
-.class public abstract Liva;
-.super Ljava/lang/Object;
+.class public final Liva;
+.super Ly14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Lq1a;
 
-.field public static final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic Z:Luva;
 
-.field public static final d:I
+.field public o:Luva;
 
-.field public static final e:I
+.field public q0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Luva;Ly14;)V
+    .locals 0
 
-    sget v0, Lnrc;->oneme_in_app_review_close:I
+    iput-object p1, p0, Liva;->Z:Luva;
 
-    sput v0, Liva;->a:I
-
-    sget v0, Lnrc;->oneme_in_app_review_not_now:I
-
-    sput v0, Liva;->b:I
-
-    sget v0, Lnrc;->oneme_in_app_review_send:I
-
-    sput v0, Liva;->c:I
-
-    sget v0, Lnrc;->oneme_in_app_review_subtitle:I
-
-    sput v0, Liva;->d:I
-
-    sget v0, Lnrc;->oneme_in_app_review_thanks:I
-
-    sput v0, Liva;->e:I
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Liva;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Liva;->q0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Liva;->q0:I
+
+    iget-object p1, p0, Liva;->Z:Luva;
+
+    invoke-static {p1, p0}, Luva;->a(Luva;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,63 +1,76 @@
 .class public abstract Lqj0;
-.super Lpn8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final u0:J
-
-.field public final v0:J
-
-.field public w0:Lsfd;
-
-.field public x0:[I
+# interfaces
+.implements Lnc4;
 
 
-# direct methods
-.method public constructor <init>(Lob4;Lwb4;Lqa6;ILjava/lang/Object;JJJJJ)V
-    .locals 12
+# virtual methods
+.method public final a(Lr0;)V
+    .locals 2
 
-    move-object v0, p0
+    invoke-virtual {p1}, Lr0;->h()Z
 
-    move-object v1, p1
+    move-result v0
 
-    move-object v2, p2
+    :try_start_0
+    invoke-virtual {p0, p1}, Lqj0;->f(Lr0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v3, p3
+    if-eqz v0, :cond_0
 
-    move/from16 v4, p4
+    invoke-virtual {p1}, Lr0;->a()Z
 
-    move-object/from16 v5, p5
+    :cond_0
+    return-void
 
-    move-wide/from16 v6, p6
+    :catchall_0
+    move-exception v1
 
-    move-wide/from16 v8, p8
+    if-eqz v0, :cond_1
 
-    move-wide/from16 v10, p14
+    invoke-virtual {p1}, Lr0;->a()Z
 
-    invoke-direct/range {v0 .. v11}, Lpn8;-><init>(Lob4;Lwb4;Lqa6;ILjava/lang/Object;JJJ)V
+    :cond_1
+    throw v1
+.end method
 
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lqj0;->u0:J
-
-    move-wide/from16 p1, p12
-
-    iput-wide p1, p0, Lqj0;->v0:J
+.method public b(Lr0;)V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final d(I)I
+.method public final c(Lr0;)V
     .locals 1
 
-    iget-object v0, p0, Lqj0;->x0:[I
+    :try_start_0
+    invoke-virtual {p0, p1}, Lqj0;->e(Lr0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0}, Lefi;->g(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lr0;->a()Z
 
-    aget p1, v0, p1
+    return-void
 
-    return p1
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    throw v0
+.end method
+
+.method public d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract e(Lr0;)V
+.end method
+
+.method public abstract f(Lr0;)V
 .end method

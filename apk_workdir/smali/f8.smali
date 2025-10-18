@@ -120,11 +120,11 @@
 
     sget-object v0, Lg8;->g:Landroid/os/Handler;
 
-    new-instance v2, Llj6;
+    new-instance v2, Lgk6;
 
     const/4 v3, 0x3
 
-    invoke-direct {v2, p1, v3, v1}, Llj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v1}, Lgk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
     :try_end_1

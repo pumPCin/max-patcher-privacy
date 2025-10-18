@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhc1;
+.implements Lpc1;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x4f5ee731
+    const v0, -0x195c98c1
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Unknown"
+    const-string v0, "AcceptCall"
 
     return-object v0
 .end method

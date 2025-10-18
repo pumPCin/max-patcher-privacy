@@ -111,7 +111,7 @@
     :cond_2
     const/16 v3, 0x17
 
-    invoke-static {v3, v0}, Ls9f;->Y(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Lzaf;->f0(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -126,7 +126,7 @@
 
     const-string v0, "\n"
 
-    invoke-static {v2, v0}, Lf67;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0}, Li57;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -152,7 +152,7 @@
 
     const/16 v5, 0xa
 
-    invoke-static {v2, v5, v0, v4}, Ls9f;->B(Ljava/lang/CharSequence;CII)I
+    invoke-static {v2, v5, v0, v4}, Lzaf;->I(Ljava/lang/CharSequence;CII)I
 
     move-result v5
 

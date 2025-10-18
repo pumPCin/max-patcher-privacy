@@ -1,353 +1,102 @@
 .class public final Le3c;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final d:Ljava/lang/CharSequence;
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:I
+.field public final synthetic Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Le3c;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    iput-object p1, p0, Le3c;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    iput-wide p2, p0, Le3c;->b:J
-
-    iput-object p4, p0, Le3c;->c:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, Le3c;->d:Ljava/lang/CharSequence;
-
-    iput-boolean p6, p0, Le3c;->e:Z
-
-    iput-boolean p7, p0, Le3c;->f:Z
-
-    iput p8, p0, Le3c;->g:I
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Le3c;Ljava/lang/String;ZI)Le3c;
-    .locals 9
 
-    and-int/lit8 v0, p3, 0x1
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Le3c;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Le3c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    move-object v1, p1
+    move-result-object p1
 
-    iget-wide v2, p0, Le3c;->b:J
+    check-cast p1, Le3c;
 
-    iget-object v4, p0, Le3c;->c:Ljava/lang/CharSequence;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object v5, p0, Le3c;->d:Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Le3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    and-int/lit8 p1, p3, 0x10
+    return-object p2
+.end method
 
-    if-eqz p1, :cond_1
-
-    iget-boolean p2, p0, Le3c;->e:Z
-
-    :cond_1
-    move v6, p2
-
-    iget-boolean v7, p0, Le3c;->f:Z
-
-    iget v8, p0, Le3c;->g:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Le3c;
 
-    invoke-direct/range {v0 .. v8}, Le3c;-><init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
+    iget-object v1, p0, Le3c;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+
+    invoke-direct {v0, p2, v1}, Le3c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
+
+    iput-object p1, v0, Le3c;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    iget-object p1, p0, Le3c;->X:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v0, p1, Le3c;
+    check-cast p1, Lh3c;
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Le3c;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    goto :goto_0
+    iget-object v1, v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->o:Lh0d;
 
-    :cond_1
-    check-cast p1, Le3c;
+    sget-object v2, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Ltr7;
 
-    iget-object v0, p0, Le3c;->a:Ljava/lang/String;
+    const/4 v3, 0x0
 
-    iget-object v1, p1, Le3c;->a:Ljava/lang/String;
+    aget-object v2, v2, v3
 
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_2
+    check-cast v1, Landroid/widget/TextView;
 
-    goto :goto_0
+    iget-object p1, p1, Lh3c;->a:Lmrf;
 
-    :cond_2
-    iget-wide v0, p0, Le3c;->b:J
-
-    iget-wide v2, p1, Le3c;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Le3c;->c:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Le3c;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Le3c;->d:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Le3c;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Le3c;->e:Z
-
-    iget-boolean v1, p1, Le3c;->e:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Le3c;->f:Z
-
-    iget-boolean v1, p1, Le3c;->f:Z
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Le3c;->g:I
-
-    iget p1, p1, Le3c;->g:I
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Le3c;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-wide v3, p0, Le3c;->b:J
-
-    invoke-static {v1, v2, v3, v4}, Lhug;->c(IIJ)I
-
-    move-result v1
-
-    iget-object v3, p0, Le3c;->c:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Le3c;->d:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v1, v0
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v0, p0, Le3c;->e:Z
-
-    invoke-static {v1, v2, v0}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Le3c;->f:Z
-
-    invoke-static {v0, v2, v1}, Lhug;->d(IIZ)I
-
-    move-result v0
-
-    iget v1, p0, Le3c;->g:I
-
-    invoke-static {v1}, Lwx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ProfileEditAppBarState(avatarUrl="
-
-    const-string v1, ", avatarSourceId="
-
-    iget-wide v2, p0, Le3c;->b:J
-
-    iget-object v4, p0, Le3c;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lfef;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string v1, ", firstName="
+    invoke-virtual {p1, v0}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Le3c;->c:Ljava/lang/CharSequence;
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le3c;->d:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", showAcceptChanges="
-
-    const-string v2, ", showAddPhoto="
-
-    iget-boolean v3, p0, Le3c;->e:Z
-
-    iget-boolean v4, p0, Le3c;->f:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lmb3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ", confirmType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Le3c;->g:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "TOOLBAR_ACTION"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "BUTTON"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

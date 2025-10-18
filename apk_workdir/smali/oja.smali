@@ -1,140 +1,105 @@
-.class public abstract Loja;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public final Loja;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcka;
-.implements Lev4;
-.implements Ljava/lang/Runnable;
+.implements Lq36;
+.implements Lvv4;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Lela;
 
-.field public Y:Lev4;
-
-.field public final a:Lb2e;
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-.field public final o:Lqnd;
+.field public b:Lgcf;
 
 
 # direct methods
-.method public constructor <init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
-    .locals 1
+.method public constructor <init>(Lela;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p1, p0, Loja;->a:Lb2e;
-
-    iput-wide p2, p0, Loja;->b:J
-
-    iput-object p4, p0, Loja;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p5, p0, Loja;->o:Lqnd;
+    iput-object p1, p0, Loja;->a:Lela;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
 .method public final b()V
     .locals 1
 
-    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Loja;->a:Lela;
 
-    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    invoke-virtual {p0}, Loja;->a()V
-
-    return-void
-.end method
-
-.method public final c(Lev4;)V
-    .locals 7
-
-    iget-object v0, p0, Loja;->Y:Lev4;
-
-    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Loja;->Y:Lev4;
-
-    iget-object p1, p0, Loja;->a:Lb2e;
-
-    invoke-virtual {p1, p0}, Lb2e;->c(Lev4;)V
-
-    iget-wide v2, p0, Loja;->b:J
-
-    iget-object v6, p0, Loja;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v0, p0, Loja;->o:Lqnd;
-
-    move-wide v4, v2
-
-    move-object v1, p0
-
-    invoke-virtual/range {v0 .. v6}, Lqnd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
-
-    move-result-object p1
-
-    iget-object v0, v1, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-
-    :cond_0
-    move-object v1, p0
+    invoke-interface {v0}, Lela;->b()V
 
     return-void
 .end method
 
 .method public final d(Ljava/lang/Object;)V
-    .locals 0
+    .locals 1
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Loja;->a:Lela;
 
+    invoke-interface {v0, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final e(Lgcf;)V
+    .locals 2
+
+    iget-object v0, p0, Loja;->b:Lgcf;
+
+    invoke-static {v0, p1}, Ljcf;->f(Lgcf;Lgcf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Loja;->b:Lgcf;
+
+    iget-object v0, p0, Loja;->a:Lela;
+
+    invoke-interface {v0, p0}, Lela;->c(Lvv4;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lgcf;->i(J)V
+
+    :cond_0
     return-void
 .end method
 
 .method public final g()V
     .locals 1
 
-    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Loja;->b:Lgcf;
 
-    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    invoke-interface {v0}, Lgcf;->cancel()V
 
-    iget-object v0, p0, Loja;->Y:Lev4;
+    sget-object v0, Ljcf;->a:Ljcf;
 
-    invoke-interface {v0}, Lev4;->g()V
+    iput-object v0, p0, Loja;->b:Lgcf;
 
     return-void
 .end method
 
 .method public final h()Z
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Loja;->Y:Lev4;
+    iget-object v0, p0, Loja;->b:Lgcf;
 
-    invoke-interface {v0}, Lev4;->h()Z
+    sget-object v1, Ljcf;->a:Ljcf;
 
-    move-result v0
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -142,13 +107,9 @@
 .method public final onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Loja;->a:Lela;
 
-    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Loja;->a:Lb2e;
-
-    invoke-virtual {v0, p1}, Lb2e;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

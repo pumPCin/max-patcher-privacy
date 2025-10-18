@@ -2,97 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr44;
-
-
-# static fields
-.field public static final c:Lyrd;
-
 
 # instance fields
-.field public final a:Ll14;
+.field public final a:I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final b:[B
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lyrd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lt1g;->c:Lyrd;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll14;)V
-    .locals 1
+.method public constructor <init>(III[B)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt1g;->a:Ll14;
+    iput p1, p0, Lt1g;->a:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p4, p0, Lt1g;->b:[B
 
-    const/4 v0, 0x0
+    iput p2, p0, Lt1g;->c:I
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lt1g;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput p3, p0, Lt1g;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lei6;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-interface {p2, p1, p0}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    return-object p1
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lt1g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lt1g;
+
+    iget v2, p0, Lt1g;->a:I
+
+    iget v3, p1, Lt1g;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lt1g;->c:I
+
+    iget v3, p1, Lt1g;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lt1g;->d:I
+
+    iget v3, p1, Lt1g;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lt1g;->b:[B
+
+    iget-object p1, p1, Lt1g;->b:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final get(Ls44;)Lr44;
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-static {p0, p1}, Ljvi;->f(Lr44;Ls44;)Lr44;
+    iget v0, p0, Lt1g;->a:I
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lt1g;->b:[B
 
-.method public final getKey()Ls44;
-    .locals 1
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
-    sget-object v0, Lt1g;->c:Lyrd;
+    move-result v1
 
-    return-object v0
-.end method
+    add-int/2addr v1, v0
 
-.method public final minusKey(Ls44;)Lt44;
-    .locals 0
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-static {p0, p1}, Ljvi;->g(Lr44;Ls44;)Lt44;
+    iget v0, p0, Lt1g;->c:I
 
-    move-result-object p1
+    add-int/2addr v1, v0
 
-    return-object p1
-.end method
+    mul-int/lit8 v1, v1, 0x1f
 
-.method public final plus(Lt44;)Lt44;
-    .locals 0
+    iget v0, p0, Lt1g;->d:I
 
-    invoke-static {p0, p1}, Livi;->b(Lt44;Lt44;)Lt44;
+    add-int/2addr v1, v0
 
-    move-result-object p1
-
-    return-object p1
+    return v1
 .end method

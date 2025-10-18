@@ -42,7 +42,7 @@
 .method public final getComponents()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Ls95;->a:Ls95;
+    sget-object v0, Lka5;->a:Lka5;
 
     return-object v0
 .end method

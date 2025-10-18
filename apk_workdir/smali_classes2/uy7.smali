@@ -1,51 +1,89 @@
 .class public final Luy7;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkz7;
+.implements Liz7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Luy7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic Y:Lfz7;
-
-.field public Z:I
-
-.field public o:Lby5;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lfz7;Lk14;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ldu7;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+
+    sput-object v0, Luy7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Luy7;->Y:Lfz7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Luy7;->a:Landroid/net/Uri;
+
+    iput-object p2, p0, Luy7;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
-
-    iput-object p1, p0, Luy7;->X:Ljava/lang/Object;
-
-    iget p1, p0, Luy7;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Luy7;->Z:I
-
-    iget-object p1, p0, Luy7;->Y:Lfz7;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v0, p0}, Lfz7;->h(Lby5;Lp08;Lk14;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final n()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Luy7;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    new-instance v0, Lhg4;
+
+    iget-object v1, p0, Luy7;->a:Landroid/net/Uri;
+
+    invoke-direct {v0, v1}, Lhg4;-><init>(Landroid/net/Uri;)V
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, Luy7;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

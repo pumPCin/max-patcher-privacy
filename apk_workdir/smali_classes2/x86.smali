@@ -1,107 +1,180 @@
-.class public interface abstract Lx86;
+.class public final synthetic Lx86;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lha8;
+.implements Lli6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lx86;->a:I
+
+    iput-object p1, p0, Lx86;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public A()V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    return-void
-.end method
+    iget v0, p0, Lx86;->a:I
 
-.method public abstract B(Ljava/lang/String;)Lo36;
-.end method
+    const/4 v1, 0x1
 
-.method public abstract D(Ljava/util/List;Ljava/util/Set;)V
-.end method
+    sget-object v2, Lthg;->a:Lthg;
 
-.method public abstract E()Z
-.end method
+    const/4 v3, 0x0
 
-.method public abstract F()J
-.end method
+    iget-object v4, p0, Lx86;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-.method public abstract G(JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public a()V
-    .locals 0
+    check-cast p1, Ljava/lang/Integer;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-.method public abstract b(Ljava/lang/String;Lnf2;)Ljava/lang/Object;
-.end method
+    move-result p1
 
-.method public abstract c(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Li76;
 
-.method public abstract d(Ljava/lang/String;Lk14;)Ljava/lang/Object;
-.end method
+    invoke-virtual {v0}, Lr18;->j()I
 
-.method public abstract e(Lf0a;JLp86;)Ljava/lang/Object;
-.end method
+    move-result v5
 
-.method public abstract g(Ljava/lang/String;Ljava/util/List;ZLlff;)Ljava/lang/Object;
-.end method
+    if-le v5, p1, :cond_1
 
-.method public abstract h()Llze;
-.end method
+    if-ltz p1, :cond_1
 
-.method public i()V
-    .locals 0
+    invoke-virtual {v0, p1}, Lr18;->C(I)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public abstract j(JLrf2;Lzz9;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    check-cast p1, Ly18;
 
-.method public abstract k(Ljava/lang/String;ILw76;)Ljava/lang/Object;
-.end method
+    check-cast p1, Luhg;
 
-.method public abstract l(JLrf2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    iget-object v0, p1, Luhg;->a:Li46;
 
-.method public abstract m(Lo36;Lv76;)Ljava/lang/Object;
-.end method
+    if-eqz v0, :cond_1
 
-.method public abstract n(JLjava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    iget-object v0, v0, Li46;->a:Ljava/lang/String;
 
-.method public abstract o(JLzz9;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract p(Ljava/lang/String;Lg56;)Ljava/lang/Object;
-.end method
+    goto :goto_0
 
-.method public abstract q(Ljava/lang/String;Ljava/util/List;Lg56;)Ljava/lang/Object;
-.end method
+    :cond_0
+    iget-object p1, p1, Luhg;->b:Lthg;
 
-.method public abstract r(Ljava/lang/String;Llff;)Ljava/lang/Object;
-.end method
+    if-eq p1, v2, :cond_2
 
-.method public s()V
-    .locals 0
+    invoke-virtual {v4}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0()Ll96;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public abstract t(Lf0a;JLp86;)Ljava/lang/Object;
-.end method
+    iget-object p1, p1, Ll96;->w0:Lx0f;
 
-.method public abstract u(Ljava/lang/String;)Llze;
-.end method
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
 
-.method public abstract v(Ljava/lang/String;Ljava/lang/String;Lg56;)Ljava/lang/Object;
-.end method
+    move-result-object p1
 
-.method public abstract y()Lzx5;
-.end method
+    check-cast p1, Ljava/util/Set;
 
-.method public abstract z(J)V
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v3
+
+    :cond_2
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Li76;
+
+    invoke-virtual {v0}, Lr18;->j()I
+
+    move-result v4
+
+    if-lt v4, p1, :cond_3
+
+    if-ltz p1, :cond_3
+
+    invoke-virtual {v0, p1}, Lr18;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ly18;
+
+    check-cast p1, Luhg;
+
+    iget-object p1, p1, Luhg;->b:Lthg;
+
+    if-eq p1, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v3
+
+    :goto_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
+
+    invoke-virtual {v4}, Ll24;->getOnBackPressedDispatcher()Lpma;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lpma;->d()V
+
+    :cond_4
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

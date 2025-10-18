@@ -21,7 +21,7 @@
 
     sget-object v3, Lfh;->o:Lfh;
 
-    invoke-direct {v0, v3, v2, v1}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v3, v2, v1}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     sput-object v0, Ljh;->o:Ljh;
 
@@ -29,7 +29,7 @@
 
     sget-object v3, Lfh;->X:Lfh;
 
-    invoke-direct {v0, v3, v2, v1}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v3, v2, v1}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     sput-object v0, Ljh;->X:Ljh;
 

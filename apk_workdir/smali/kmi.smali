@@ -1,60 +1,70 @@
-.class public final Lkmi;
+.class public abstract Lkmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Lkmi;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Loo1;)Lm7e;
+    .locals 8
 
-    new-instance v0, Lkmi;
+    new-instance v0, Lm7e;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v3, p0, Loo1;->a:Lr7e;
 
-    sput-object v0, Lkmi;->a:Lkmi;
+    iget-object v5, p0, Loo1;->b:Ljava/lang/String;
 
-    new-instance v0, Lq7i;
+    iget-boolean v7, p0, Loo1;->c:Z
 
-    const/4 v1, 0x1
+    iget v1, p0, Loo1;->e:I
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    iget-object v6, p0, Loo1;->d:Ljava/util/List;
 
-    const-class v1, Ll8i;
+    iget-object v2, p0, Loo1;->f:Lhi1;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    iget-object v4, p0, Loo1;->g:Ljava/lang/Long;
 
-    move-result-object v0
+    invoke-direct/range {v0 .. v7}, Lm7e;-><init>(ILhi1;Lr7e;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Z)V
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
-
-    return-void
+    return-object v0
 .end method
 
+.method public static final b(Ln1a;Lli6;Ly14;)Ljava/lang/Object;
+    .locals 3
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    new-instance v0, Lu7d;
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {v0, p0}, Lu7d;-><init>(Ln1a;)V
 
-    move-result-object p1
+    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Li54;
 
-    throw p1
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Li54;->get(Lh54;)Lg54;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    new-instance v1, Lt7d;
+
+    invoke-direct {v1, v0}, Lt7d;-><init>(Lu7d;)V
+
+    new-instance v0, Lo1a;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2}, Lo1a;-><init>(Ln1a;Lli6;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v1, v0, p2}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

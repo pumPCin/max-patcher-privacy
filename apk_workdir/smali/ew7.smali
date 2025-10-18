@@ -1,3 +1,3 @@
-.class public interface abstract Lew7;
+.class public final Lew7;
 .super Ljava/lang/Object;
 .source "SourceFile"

@@ -1,101 +1,139 @@
-.class public final synthetic Lqpd;
+.class public final Lqpd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqpd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Integer;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Ljava/lang/Integer;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Integer;Landroid/view/ViewGroup;Ljava/lang/Integer;Lspd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lx3b;
 
-    iput-object p1, p0, Lqpd;->a:Ljava/lang/Integer;
+    const/16 v1, 0x1c
 
-    iput-object p2, p0, Lqpd;->b:Landroid/view/ViewGroup;
+    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
 
-    iput-object p3, p0, Lqpd;->c:Ljava/lang/Integer;
+    sput-object v0, Lqpd;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqpd;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "ScopeId(value="
+
+    const-string v1, ")"
+
+    invoke-static {v0, p0, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    iget-object p1, p0, Lqpd;->a:Ljava/lang/Integer;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lqpd;->b:Landroid/view/ViewGroup;
+    return v0
+.end method
 
-    const-string v1, "statusBarOverlay"
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-eqz p1, :cond_0
+    instance-of v0, p1, Lqpd;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, p2, v2}, Lspd;->p(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    check-cast p1, Lqpd;
 
-    move-result-object p1
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lqpd;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lqpd;->c:Ljava/lang/Integer;
-
-    const-string v1, "navBarOverlay"
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    const/4 v2, 0x2
+    if-nez p1, :cond_1
 
-    invoke-static {v0, v1, p2, v2}, Lspd;->p(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqpd;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lqpd;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lqpd;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    return-object v0
+.end method
 
-    return-object p2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :cond_2
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    iget-object p2, p0, Lqpd;->a:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_3
-    return-object p2
+    return-void
 .end method

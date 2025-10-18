@@ -1,114 +1,35 @@
 .class public final Lk06;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lby5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lr6d;
+.field public Y:I
 
-
-# direct methods
-.method public synthetic constructor <init>(Lr6d;I)V
-    .locals 0
-
-    iput p2, p0, Lk06;->a:I
-
-    iput-object p1, p0, Lk06;->b:Lr6d;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public o:Ly7d;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p2, p0, Lk06;->a:I
+    iput-object p1, p0, Lk06;->X:Ljava/lang/Object;
 
-    packed-switch p2, :pswitch_data_0
+    iget p1, p0, Lk06;->Y:I
 
-    iget-object p2, p0, Lk06;->b:Lr6d;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p2, Lr6d;->a:Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    sget-object v1, Lega;->a:Lkotlinx/coroutines/internal/Symbol;
+    iput p1, p0, Lk06;->Y:I
 
-    if-ne v0, v1, :cond_0
+    const/4 p1, 0x0
 
-    iput-object p1, p2, Lr6d;->a:Ljava/lang/Object;
+    invoke-static {p0, p1, p1}, Ltq;->e(Ly14;Lty5;Lvy5;)Ljava/io/Serializable;
 
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :cond_0
-    iput-object v1, p2, Lr6d;->a:Ljava/lang/Object;
-
-    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
-
-    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :pswitch_0
-    iget-object p2, p0, Lk06;->b:Lr6d;
-
-    iget-object v0, p2, Lr6d;->a:Ljava/lang/Object;
-
-    sget-object v1, Lega;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v0, v1, :cond_1
-
-    iput-object p1, p2, Lr6d;->a:Ljava/lang/Object;
-
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Flow has more than one element"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_1
-    iget-object p2, p0, Lk06;->b:Lr6d;
-
-    iput-object p1, p2, Lr6d;->a:Ljava/lang/Object;
-
-    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
-
-    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :pswitch_2
-    iget-object p2, p0, Lk06;->b:Lr6d;
-
-    iput-object p1, p2, Lr6d;->a:Ljava/lang/Object;
-
-    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
-
-    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

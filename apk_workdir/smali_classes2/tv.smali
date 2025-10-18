@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lli6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lqz9;
+.field public final synthetic b:Ls0a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqz9;I)V
+.method public synthetic constructor <init>(Ls0a;I)V
     .locals 0
 
     iput p2, p0, Ltv;->a:I
 
-    iput-object p1, p0, Ltv;->b:Lqz9;
+    iput-object p1, p0, Ltv;->b:Ls0a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,13 +34,13 @@
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ldmb;
+    check-cast p1, Linb;
 
-    iget-wide v0, p1, Ldmb;->a:J
+    iget-wide v0, p1, Linb;->a:J
 
-    iget-object p1, p0, Ltv;->b:Lqz9;
+    iget-object p1, p0, Ltv;->b:Ls0a;
 
-    invoke-virtual {p1, v0, v1}, Lqz9;->a(J)Z
+    invoke-virtual {p1, v0, v1}, Ls0a;->a(J)Z
 
     move-result p1
 
@@ -54,30 +54,30 @@
     return-object p1
 
     :pswitch_0
-    check-cast p1, Lmy6;
+    check-cast p1, Lgz6;
 
-    invoke-interface {p1}, Lmy6;->getId()J
+    invoke-interface {p1}, Lgz6;->getId()J
 
     move-result-wide v0
 
-    iget-object p1, p0, Ltv;->b:Lqz9;
+    iget-object p1, p0, Ltv;->b:Ls0a;
 
-    invoke-virtual {p1, v0, v1}, Lqz9;->d(J)Z
+    invoke-virtual {p1, v0, v1}, Ls0a;->d(J)Z
 
     move-result p1
 
     goto :goto_0
 
     :pswitch_1
-    check-cast p1, Lmy6;
+    check-cast p1, Lgz6;
 
-    invoke-interface {p1}, Lmy6;->getId()J
+    invoke-interface {p1}, Lgz6;->getId()J
 
     move-result-wide v0
 
-    iget-object p1, p0, Ltv;->b:Lqz9;
+    iget-object p1, p0, Ltv;->b:Ls0a;
 
-    invoke-virtual {p1, v0, v1}, Lqz9;->d(J)Z
+    invoke-virtual {p1, v0, v1}, Ls0a;->d(J)Z
 
     move-result p1
 

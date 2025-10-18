@@ -1,53 +1,29 @@
-.class public final Ld16;
-.super Lk14;
+.class public abstract synthetic Ld16;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lr6d;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lh40;
-
-.field public o:Lh40;
-
-.field public r0:I
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lh40;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Ld16;->Z:Lh40;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const v1, 0x7fffffff
+
+    const-string v2, "kotlinx.coroutines.flow.defaultConcurrency"
+
+    const/16 v3, 0x10
+
+    invoke-static {v2, v3, v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;III)I
+
+    move-result v0
+
+    sput v0, Ld16;->a:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ld16;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Ld16;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ld16;->r0:I
-
-    iget-object p1, p0, Ld16;->Z:Lh40;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,202 +1,73 @@
-.class public final Lbrb;
-.super Landroid/view/Surface;
+.class public final enum Lbrb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static X:Z
+.field public static final enum a:Lbrb;
 
-.field public static o:I
+.field public static final enum b:Lbrb;
 
-
-# instance fields
-.field public final a:Z
-
-.field public final b:Lx25;
-
-.field public c:Z
+.field public static final synthetic c:[Lbrb;
 
 
 # direct methods
-.method public constructor <init>(Lx25;Landroid/graphics/SurfaceTexture;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0, p2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    new-instance v0, Lbrb;
 
-    iput-object p1, p0, Lbrb;->b:Lx25;
-
-    iput-boolean p3, p0, Lbrb;->a:Z
-
-    return-void
-.end method
-
-.method public static declared-synchronized a()Z
-    .locals 7
-
-    const-class v0, Lbrb;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-boolean v1, Lbrb;->X:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, "TOP"
 
     const/4 v2, 0x0
 
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lbrb;->a:Lbrb;
+
+    new-instance v1, Lbrb;
+
+    const-string v2, "BOTTOM"
+
     const/4 v3, 0x1
 
-    if-nez v1, :cond_2
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :try_start_1
-    const-string v1, "EGL_EXT_protected_content"
+    sput-object v1, Lbrb;->b:Lbrb;
 
-    invoke-static {v1}, Lhyg;->v(Ljava/lang/String;)Z
+    filled-new-array {v0, v1}, [Lbrb;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
-
-    const-string v1, "EGL_KHR_surfaceless_context"
-
-    invoke-static {v1}, Lhyg;->v(Ljava/lang/String;)Z
-
-    move-result v1
-    :try_end_1
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v1, 0x2
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v1, v2
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_2
-    const-string v4, "PlaceholderSurface"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Failed to determine secure mode due to GL error: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Ltxh;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :goto_2
-    sput v1, Lbrb;->o:I
-
-    sput-boolean v3, Lbrb;->X:Z
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_4
-
-    :cond_2
-    :goto_3
-    sget v1, Lbrb;->o:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz v1, :cond_3
-
-    move v2, v3
-
-    :cond_3
-    monitor-exit v0
-
-    return v2
-
-    :goto_4
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw v1
-.end method
-
-
-# virtual methods
-.method public final release()V
-    .locals 3
-
-    invoke-super {p0}, Landroid/view/Surface;->release()V
-
-    iget-object v0, p0, Lbrb;->b:Lx25;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lbrb;->c:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lbrb;->b:Lx25;
-
-    iget-object v2, v1, Lx25;->b:Landroid/os/Handler;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, v1, Lx25;->b:Landroid/os/Handler;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lbrb;->c:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    sput-object v0, Lbrb;->c:[Lbrb;
 
     return-void
+.end method
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public static valueOf(Ljava/lang/String;)Lbrb;
+    .locals 1
 
-    throw v1
+    const-class v0, Lbrb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lbrb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lbrb;
+    .locals 1
+
+    sget-object v0, Lbrb;->c:[Lbrb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lbrb;
+
+    return-object v0
 .end method

@@ -3,62 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkpi;
+.implements Ltha;
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static final a:Lopi;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lhpi;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lopi;
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    sput-object v0, Lopi;->a:Lopi;
 
-    iput-object v0, p0, Lopi;->a:Ljava/util/ArrayList;
+    new-instance v0, Lr8i;
 
-    new-instance v1, Lcqi;
+    const/4 v1, 0x1
 
-    invoke-direct {v1, p1, p2}, Lcqi;-><init>(Landroid/content/Context;Lhpi;)V
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-class v1, Lm9i;
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Laze;)V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lopi;->a:Ljava/util/ArrayList;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkpi;
-
-    invoke-interface {v1, p1}, Lkpi;->a(Laze;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    throw p1
 .end method

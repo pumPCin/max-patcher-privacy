@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbre;
+.implements Ljse;
 
 
 # instance fields
-.field public x1:Z
+.field public w1:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->w1:Z
 
     return-void
 .end method
@@ -30,9 +30,9 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->k1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->j1:Z
 
-    instance-of p1, p1, Lch6;
+    instance-of p1, p1, Lxh6;
 
     if-eqz p1, :cond_0
 
@@ -48,7 +48,7 @@
     throw p1
 .end method
 
-.method public final M0()Lch6;
+.method public final M0()Lxh6;
     .locals 1
 
     invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lh6;
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lch6;
+    check-cast v0, Lxh6;
 
     return-object v0
 
@@ -71,16 +71,16 @@
     return-object v0
 .end method
 
-.method public final f()V
+.method public final g()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lch6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
+    iget-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->w1:Z
 
     if-nez v1, :cond_0
 
@@ -93,14 +93,14 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0(ZZ)V
+    invoke-virtual {v0, v2, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(ZZ)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public p()Z
+.method public q()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -140,7 +140,7 @@
 .method public w()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lch6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
 
     move-result-object v0
 
@@ -151,15 +151,15 @@
     :cond_0
     check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Z
 
-    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
+    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->w1:Z
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(ZZ)V
 
     return-void
 .end method

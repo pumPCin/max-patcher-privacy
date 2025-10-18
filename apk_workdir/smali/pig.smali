@@ -1,61 +1,121 @@
-.class public final Lpig;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.class public abstract enum Lpig;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final a:Ljava/nio/ByteOrder;
 
-.field public b:Loig;
+.field public static final b:Z
 
-.field public c:Landroid/content/res/ColorStateList;
-
-.field public d:Landroid/graphics/PorterDuff$Mode;
-
-.field public e:Z
-
-.field public f:Landroid/graphics/Bitmap;
-
-.field public g:Landroid/content/res/ColorStateList;
-
-.field public h:Landroid/graphics/PorterDuff$Mode;
-
-.field public i:I
-
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Landroid/graphics/Paint;
+.field public static final synthetic c:[Lpig;
 
 
-# virtual methods
-.method public getChangingConfigurations()I
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget v0, p0, Lpig;->a:I
+    const/4 v0, 0x0
 
-    return v0
+    new-array v1, v0, [Lpig;
+
+    sput-object v1, Lpig;->c:[Lpig;
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    sput-object v1, Lpig;->a:Ljava/nio/ByteOrder;
+
+    const-string v1, "os.arch"
+
+    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "i386"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "x86"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "amd64"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "x86_64"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "aarch64"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "ppc64le"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    sput-boolean v0, Lpig;->b:Z
+
+    return-void
 .end method
 
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+.method public static valueOf(Ljava/lang/String;)Lpig;
     .locals 1
 
-    .line 1
-    new-instance v0, Lrig;
+    const-class v0, Lpig;
 
-    invoke-direct {v0, p0}, Lrig;-><init>(Lpig;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lu15;->r(Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public static values()[Lpig;
+    .locals 1
+
+    sget-object v0, Lpig;->c:[Lpig;
+
+    invoke-virtual {v0}, [Lpig;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpig;
 
     return-object v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    .line 2
-    new-instance p1, Lrig;
-
-    invoke-direct {p1, p0}, Lrig;-><init>(Lpig;)V
-
-    return-object p1
 .end method

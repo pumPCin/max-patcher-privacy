@@ -1,52 +1,71 @@
-.class public abstract Leti;
-.super Ljava/lang/Object;
+.class public final Leti;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Leti;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:D
+
+.field public b:D
+
+
 # direct methods
-.method public static a(ILjava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    if-ltz p0, :cond_0
+    new-instance v0, Ljmg;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Ljmg;-><init>(I)V
+
+    sput-object v0, Leti;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, " cannot be negative but was: "
-
-    invoke-static {p0, p1, v1}, Lwc0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public static final b(Lwbg;)V
-    .locals 2
 
-    new-instance v0, Ldgb;
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    const/4 v1, 0x1
+    const/16 p2, 0x4f45
 
-    invoke-direct {v0, v1}, Ldgb;-><init>(I)V
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    const-class v1, Lnhb;
+    move-result p2
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+    iget-wide v0, p0, Leti;->a:D
 
-    new-instance v0, Ldgb;
+    const/4 v2, 0x2
 
-    const/4 v1, 0x2
+    const/16 v3, 0x8
 
-    invoke-direct {v0, v1}, Ldgb;-><init>(I)V
+    invoke-static {p1, v2, v3}, Llyi;->v(Landroid/os/Parcel;II)V
 
-    const-class v1, Ltgb;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+    iget-wide v0, p0, Leti;->b:D
+
+    const/4 v2, 0x3
+
+    invoke-static {p1, v2, v3}, Llyi;->v(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
     return-void
 .end method

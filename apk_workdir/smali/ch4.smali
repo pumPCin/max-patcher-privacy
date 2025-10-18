@@ -2,158 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu28;
+
 
 # instance fields
-.field public final synthetic a:Leh4;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnd;
+
+.field public final synthetic c:Lwt8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leh4;)V
+.method public synthetic constructor <init>(Lnd;Lwt8;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lch4;->a:I
 
-    iput-object p1, p0, Lch4;->a:Leh4;
+    iput-object p1, p0, Lch4;->b:Lnd;
+
+    iput-object p2, p0, Lch4;->c:Lwt8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v1, p0, Lch4;->a:Leh4;
+    iget v0, p0, Lch4;->a:I
 
-    monitor-enter v1
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget v0, v1, Leh4;->i:I
+    iget-object v0, p0, Lch4;->c:Lwt8;
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lod;
 
-    iget-boolean v2, v1, Leh4;->e:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v1, p0, Lch4;->b:Lnd;
 
-    if-nez v2, :cond_0
-
-    monitor-exit v1
+    invoke-interface {p1, v1, v0}, Lod;->c0(Lnd;Lwt8;)V
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :pswitch_0
+    iget-object v0, p0, Lch4;->c:Lwt8;
 
-    move-object p1, v0
+    check-cast p1, Lod;
 
-    goto :goto_2
+    iget-object v1, p0, Lch4;->b:Lnd;
 
-    :cond_0
-    if-ne v0, p1, :cond_1
-
-    monitor-exit v1
+    invoke-interface {p1, v1, v0}, Lod;->S0(Lnd;Lwt8;)V
 
     return-void
 
-    :cond_1
-    :try_start_1
-    iput p1, v1, Leh4;->i:I
+    nop
 
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_4
-
-    if-eqz p1, :cond_4
-
-    const/16 v0, 0x8
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1, p1}, Leh4;->b(I)J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Leh4;->l:J
-
-    iget-object p1, v1, Leh4;->d:Lxhf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    iget p1, v1, Leh4;->f:I
-
-    const/4 v0, 0x0
-
-    if-lez p1, :cond_3
-
-    iget-wide v2, v1, Leh4;->g:J
-
-    sub-long v2, v7, v2
-
-    long-to-int p1, v2
-
-    move v2, p1
-
-    goto :goto_0
-
-    :cond_3
-    move v2, v0
-
-    :goto_0
-    iget-wide v3, v1, Leh4;->h:J
-
-    iget-wide v5, v1, Leh4;->l:J
-
-    invoke-virtual/range {v1 .. v6}, Leh4;->c(IJJ)V
-
-    iput-wide v7, v1, Leh4;->g:J
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v1, Leh4;->h:J
-
-    iput-wide v2, v1, Leh4;->k:J
-
-    iput-wide v2, v1, Leh4;->j:J
-
-    iget-object p1, v1, Leh4;->c:Ljre;
-
-    iget-object v2, p1, Ljre;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
-
-    const/4 v2, -0x1
-
-    iput v2, p1, Ljre;->d:I
-
-    iput v0, p1, Ljre;->e:I
-
-    iput v0, p1, Ljre;->f:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v1
-
-    return-void
-
-    :cond_4
-    :goto_1
-    monitor-exit v1
-
-    return-void
-
-    :goto_2
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

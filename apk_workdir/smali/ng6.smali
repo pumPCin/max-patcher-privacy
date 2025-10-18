@@ -1,40 +1,75 @@
-.class public final synthetic Lng6;
+.class public final Lng6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lndf;
+.implements Lp84;
+
+
+# static fields
+.field public static final c:Z
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final a:Ljava/util/UUID;
+
+.field public final b:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Amazon"
 
-    iput-object p1, p0, Lng6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "AFTM"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "AFTB"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-boolean v0, Lng6;->c:Z
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/UUID;[B)V
+    .locals 0
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lng6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, Lng6;->a:Ljava/util/UUID;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    iput-object p2, p0, Lng6;->b:[B
 
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

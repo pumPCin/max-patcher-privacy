@@ -1,347 +1,343 @@
 .class public final Lbhf;
-.super Landroid/widget/FrameLayout;
+.super Lsgf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic r0:I
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lgyg;
+.field public X:I
 
-.field public b:Z
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:Landroid/animation/ValueAnimator;
+.field public final synthetic Z:Lohf;
 
-.field public o:Lahf;
+.field public final synthetic q0:Lweg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance p1, Lcs0;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p0}, Lcs0;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lgyg;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p0, p1}, Lgyg;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lobi;)V
-
-    iget p1, v0, Lgyg;->b:I
-
-    int-to-float p1, p1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    mul-float/2addr v1, p1
-
-    float-to-int p1, v1
-
-    iput p1, v0, Lgyg;->b:I
-
-    iput-object v0, p0, Lbhf;->a:Lgyg;
-
-    return-void
-.end method
-
-.method public static a(Lbhf;F)V
+.method public constructor <init>(Lohf;Lweg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lbhf;->setBackgroundAlpha(F)V
+    iput-object p1, p0, Lbhf;->Z:Lohf;
 
-    return-void
-.end method
+    iput-object p2, p0, Lbhf;->q0:Lweg;
 
-.method public static b(Lbhf;FF)V
-    .locals 2
+    const/4 p1, 0x2
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    cmpg-float v0, p2, v0
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    int-to-float v0, v1
-
-    sub-float p2, v0, p2
-
-    :goto_0
-    cmpl-float p2, p1, p2
-
-    if-lez p2, :cond_1
-
-    int-to-float p2, v1
-
-    sub-float/2addr p2, p1
-
-    invoke-direct {p0, p2}, Lbhf;->setBackgroundAlpha(F)V
-
-    :cond_1
-    return-void
-.end method
-
-.method private final setBackgroundAlpha(F)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v1, 0xff
-
-    int-to-float v1, v1
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v2, v3}, Ljvi;->b(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(IILoh6;Loh6;Lei6;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lbhf;->o:Lahf;
+    check-cast p1, Lvy5;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lbhf;->c:Landroid/animation/ValueAnimator;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v2, p0, Lbhf;->c:Landroid/animation/ValueAnimator;
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v2}, Lsdi;->a(Landroid/animation/Animator;)V
-
-    :cond_2
-    filled-new-array {p1, p2}, [I
+    invoke-virtual {p0, p1, p2}, Lbhf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+    check-cast p1, Lbhf;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lbhf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {p1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance p2, Lqf;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p2, v0, p5, v1, v2}, Lqf;-><init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Lbh;
-
-    const/4 p5, 0x2
-
-    invoke-direct {p2, p4, p0, p3, p5}, Lbh;-><init>(Loh6;Landroid/widget/FrameLayout;Loh6;I)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object p1, p0, Lbhf;->c:Landroid/animation/ValueAnimator;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final computeScroll()V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Lbhf;->a:Lgyg;
+    new-instance v0, Lbhf;
 
-    invoke-virtual {v0}, Lgyg;->f()Z
+    iget-object v1, p0, Lbhf;->Z:Lohf;
 
-    move-result v0
+    iget-object v2, p0, Lbhf;->q0:Lweg;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, v2, p2}, Lbhf;-><init>(Lohf;Lweg;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 8
-
-    iget-object v0, p0, Lbhf;->o:Lahf;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lahf;->p()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    invoke-interface {v0}, Lahf;->t()I
-
-    move-result v3
-
-    invoke-interface {v0}, Lahf;->h()I
-
-    move-result v4
-
-    new-instance v5, Lwxe;
-
-    const/16 v0, 0xc
-
-    invoke-direct {v5, v0}, Lwxe;-><init>(I)V
-
-    new-instance v6, Lwxe;
-
-    invoke-direct {v6, v0}, Lwxe;-><init>(I)V
-
-    new-instance v7, Lzgf;
-
-    const/4 v0, 0x0
-
-    invoke-direct {v7, p0, v0}, Lzgf;-><init>(Lbhf;I)V
-
-    move-object v2, p0
-
-    invoke-virtual/range {v2 .. v7}, Lbhf;->c(IILoh6;Loh6;Lei6;)V
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final getCallback()Lahf;
-    .locals 1
-
-    iget-object v0, p0, Lbhf;->o:Lahf;
+    iput-object p1, v0, Lbhf;->Y:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget-object v0, p0, Lbhf;->a:Lgyg;
+    sget-object v0, Lc98;->o:Lc98;
 
-    invoke-virtual {v0, p1}, Lgyg;->p(Landroid/view/MotionEvent;)Z
+    sget-object v1, Lr54;->a:Lr54;
 
-    move-result p1
+    iget v2, p0, Lbhf;->X:I
 
-    return p1
-.end method
+    const/4 v3, 0x0
 
-.method public final onLayout(ZIIII)V
-    .locals 3
+    const/4 v4, 0x2
 
-    iget-object v0, p0, Lbhf;->o:Lahf;
+    const/4 v5, 0x1
 
-    if-nez v0, :cond_0
+    if-eqz v2, :cond_2
 
-    return-void
+    if-eq v2, v5, :cond_1
+
+    if-ne v2, v4, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_6
 
     :cond_0
-    invoke-interface {v0}, Lahf;->p()Landroid/view/View;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v2
+    throw p1
 
-    if-lez v2, :cond_1
+    :cond_1
+    iget-object v2, p0, Lbhf;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+    check-cast v2, Lvy5;
 
-    move-result v0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_3
+
+    :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbhf;->Y:Ljava/lang/Object;
+
+    move-object v2, p1
+
+    check-cast v2, Lvy5;
+
+    iget-object p1, p0, Lbhf;->Z:Lohf;
+
+    iget-object p1, p1, Lohf;->a:Ly2g;
+
+    iget-object v6, p0, Lbhf;->q0:Lweg;
+
+    iget-object v6, v6, Lweg;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Legg;->j:Legg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v7, "upload_started"
+
+    const/16 v8, 0x18
+
+    invoke-static {p1, v7, v4, v6, v8}, Lbhb;->b(Lbhb;Ljava/lang/String;ILjava/lang/String;I)V
+
+    iget-object p1, p0, Lbhf;->Z:Lohf;
+
+    iget-object p1, p1, Lohf;->b:Ljava/lang/String;
+
+    iget-object v6, p0, Lbhf;->q0:Lweg;
+
+    sget-object v7, Ltei;->a:Lmxa;
+
+    if-nez v7, :cond_3
 
     goto :goto_0
 
-    :cond_1
-    invoke-interface {v0}, Lahf;->t()I
+    :cond_3
+    invoke-virtual {v7, v0}, Lmxa;->b(Lc98;)Z
 
-    move-result v0
+    move-result v8
 
+    if-eqz v8, :cond_4
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v9, "Starting uploading data="
+
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v7, v0, p1, v6, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
     :goto_0
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
+    iget-object p1, p0, Lbhf;->Z:Lohf;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
+    iget-object v6, p0, Lbhf;->q0:Lweg;
 
-    return-void
-.end method
+    iget-object v7, v6, Lweg;->a:Ljava/lang/String;
 
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
+    :try_start_0
+    new-instance v8, Ljava/io/File;
 
-    iget-object v0, p0, Lbhf;->a:Lgyg;
+    invoke-direct {v8, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lgyg;->j(Landroid/view/MotionEvent;)V
+    invoke-virtual {v8}, Ljava/io/File;->lastModified()J
 
-    const/4 p1, 0x1
+    move-result-wide v7
 
-    return p1
-.end method
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final setCallback(Lahf;)V
-    .locals 0
+    move-result-object v7
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object p1, p0, Lbhf;->o:Lahf;
+    goto :goto_1
 
-    return-void
+    :catchall_0
+    move-exception v7
+
+    new-instance v8, Lbed;
+
+    invoke-direct {v8, v7}, Lbed;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v7, v8
+
+    :goto_1
+    const-wide/16 v8, 0x0
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    instance-of v11, v7, Lbed;
+
+    if-eqz v11, :cond_5
+
+    move-object v7, v10
+
+    :cond_5
+    check-cast v7, Ljava/lang/Number;
+
+    invoke-virtual {v7}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v10
+
+    cmp-long v7, v10, v8
+
+    if-eqz v7, :cond_7
+
+    iget-wide v7, v6, Lweg;->b:J
+
+    cmp-long v7, v10, v7
+
+    if-nez v7, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    iget-object v0, p1, Lohf;->a:Ly2g;
+
+    sget-object v1, Ldgg;->Y:Ldgg;
+
+    iget-object v2, v6, Lweg;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1, v2}, Ly2g;->f(Ldgg;Ljava/lang/String;)V
+
+    iget-object p1, p1, Lohf;->b:Ljava/lang/String;
+
+    const-string v0, "File is changed during uploading, aborting!"
+
+    invoke-static {p1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Lone/me/sdk/transfer/domain/UploadException;
+
+    const-string v0, "Error to upload, file changed"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    :goto_2
+    iget-object p1, p0, Lbhf;->Z:Lohf;
+
+    iget-object v6, p0, Lbhf;->q0:Lweg;
+
+    iput-object v2, p0, Lbhf;->Y:Ljava/lang/Object;
+
+    iput v5, p0, Lbhf;->X:I
+
+    invoke-static {p1, v6, p0}, Lohf;->a(Lohf;Lweg;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    :goto_3
+    check-cast p1, Loeg;
+
+    iget-object v5, p0, Lbhf;->Z:Lohf;
+
+    iget-object v5, v5, Lohf;->b:Ljava/lang/String;
+
+    sget-object v6, Ltei;->a:Lmxa;
+
+    if-nez v6, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    invoke-virtual {v6, v0}, Lmxa;->b(Lc98;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_a
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "Retrieved upload from repository = "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v0, v5, v7, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_a
+    :goto_4
+    iput-object v3, p0, Lbhf;->Y:Ljava/lang/Object;
+
+    iput v4, p0, Lbhf;->X:I
+
+    invoke-interface {v2, p1, p0}, Lvy5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_b
+
+    :goto_5
+    return-object v1
+
+    :cond_b
+    :goto_6
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

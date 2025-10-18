@@ -1,127 +1,71 @@
 .class public final Laii;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Laii;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/Long;
 
-.field public Y:I
+.field public final b:Lxhi;
 
-.field public Z:Z
+.field public final c:Lkhi;
 
-.field public a:I
+.field public final d:Ljava/lang/Integer;
 
-.field public b:I
+.field public final e:Ljava/lang/Integer;
 
-.field public c:I
+.field public final f:Ljava/lang/Integer;
 
-.field public o:I
-
-.field public r0:Ljava/lang/String;
+.field public final g:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ly6e;)V
+    .locals 1
 
-    new-instance v0, Lmti;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
+    iget-object v0, p1, Ly6e;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lmti;-><init>(I)V
+    check-cast v0, Ljava/lang/Long;
 
-    sput-object v0, Laii;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Laii;->a:Ljava/lang/Long;
 
-    return-void
-.end method
+    iget-object v0, p1, Ly6e;->b:Ljava/lang/Object;
 
+    check-cast v0, Lxhi;
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    iput-object v0, p0, Laii;->b:Lxhi;
 
-    const/16 p2, 0x4f45
+    iget-object v0, p1, Ly6e;->c:Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+    check-cast v0, Lkhi;
 
-    move-result p2
+    iput-object v0, p0, Laii;->c:Lkhi;
 
-    iget v0, p0, Laii;->a:I
+    iget-object v0, p1, Ly6e;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    check-cast v0, Ljava/lang/Integer;
 
-    const/4 v2, 0x4
+    iput-object v0, p0, Laii;->d:Ljava/lang/Integer;
 
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
+    iget-object v0, p1, Ly6e;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    check-cast v0, Ljava/lang/Integer;
 
-    iget v0, p0, Laii;->b:I
+    iput-object v0, p0, Laii;->e:Ljava/lang/Integer;
 
-    const/4 v1, 0x3
+    iget-object v0, p1, Ly6e;->Y:Ljava/lang/Object;
 
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iput-object v0, p0, Laii;->f:Ljava/lang/Integer;
 
-    iget v0, p0, Laii;->c:I
+    iget-object p1, p1, Ly6e;->Z:Ljava/lang/Object;
 
-    invoke-static {p1, v2, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Laii;->o:I
-
-    const/4 v1, 0x5
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Laii;->X:I
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Laii;->Y:I
-
-    const/4 v1, 0x7
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Laii;->Z:Z
-
-    const/16 v1, 0x8
-
-    invoke-static {p1, v1, v2}, Ljxi;->m(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 v0, 0x9
-
-    iget-object v1, p0, Laii;->r0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    iput-object p1, p0, Laii;->g:Ljava/lang/Integer;
 
     return-void
 .end method

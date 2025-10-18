@@ -3,56 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqs1;
+.implements Lji6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzpg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lzpg;I)V
+    .locals 0
+
+    iput p2, p0, Lzug;->a:I
+
+    iput-object p1, p0, Lzug;->b:Lzpg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lzug;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ltui;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lzug;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Lzug;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lzug;->b:Lzpg;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-eqz v1, :cond_0
+    sget-object v0, Lccg;->a:Lccg;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_0
+    iget-object v0, p0, Lzug;->b:Lzpg;
 
-    check-cast v1, Lqs1;
+    const/16 v1, 0x8
 
-    invoke-interface {v1, p1}, Lqs1;->b(Ltui;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_0
+    sget-object v0, Lccg;->a:Lccg;
 
-    :cond_0
-    return-void
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

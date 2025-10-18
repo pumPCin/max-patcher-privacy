@@ -1,124 +1,73 @@
 .class public final Lgyb;
-.super Ll95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic this$0:Lhyb;
+# static fields
+.field public static final a:Ljyb;
 
 
 # direct methods
-.method public constructor <init>(Lhyb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lgyb;->this$0:Lhyb;
+    sget-object v0, Lkx5;->c:Lkx5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lwcd;->c:Lwcd;
 
-    return-void
-.end method
+    new-instance v2, Lvcd;
 
+    const/4 v3, 0x0
 
-# virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
+    invoke-direct {v2, v0, v1, v3}, Lvcd;-><init>(Lkx5;Lwcd;Ld46;)V
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lr87;
 
-    const/16 v0, 0x1d
+    const/4 v1, 0x2
 
-    if-ge p2, v0, :cond_0
+    invoke-direct {v0, v1}, Lr87;-><init>(I)V
 
-    sget p2, Ldad;->b:I
+    sget-object v1, Lmhg;->j0:Lz90;
 
-    invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+    const/4 v3, 0x2
 
-    move-result-object p1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string p2, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
+    move-result-object v3
 
-    invoke-virtual {p1, p2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+    iget-object v0, v0, Lr87;->b:Lc1a;
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v3}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    check-cast p1, Ldad;
+    sget-object v1, Lka7;->y:Lz90;
 
-    iget-object p2, p0, Lgyb;->this$0:Lhyb;
+    const/4 v3, 0x0
 
-    iget-object p2, p2, Lhyb;->r0:Lzsa;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p2, p1, Ldad;->a:Lzsa;
+    move-result-object v3
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0, v1, v3}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-.method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 3
+    sget-object v1, Lka7;->G:Lz90;
 
-    iget-object p1, p0, Lgyb;->this$0:Lhyb;
+    invoke-virtual {v0, v1, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    iget v0, p1, Lhyb;->b:I
+    sget-object v1, Laa7;->x:Lz90;
 
-    add-int/lit8 v0, v0, -0x1
+    sget-object v2, Lv45;->c:Lv45;
 
-    iput v0, p1, Lhyb;->b:I
+    invoke-virtual {v0, v1, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    if-nez v0, :cond_0
+    new-instance v1, Ljyb;
 
-    iget-object v0, p1, Lhyb;->X:Landroid/os/Handler;
+    invoke-static {v0}, Ls9b;->a(Lpk3;)Ls9b;
 
-    iget-object p1, p1, Lhyb;->Z:Lpsa;
+    move-result-object v0
 
-    const-wide/16 v1, 0x2bc
+    invoke-direct {v1, v0}, Ljyb;-><init>(Ls9b;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    sput-object v1, Lgyb;->a:Ljyb;
 
-    :cond_0
-    return-void
-.end method
-
-.method public onActivityPreCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
-
-    new-instance p2, Lgyb$a;
-
-    iget-object v0, p0, Lgyb;->this$0:Lhyb;
-
-    invoke-direct {p2, v0}, Lgyb$a;-><init>(Lhyb;)V
-
-    invoke-static {p1, p2}, Lfyb;->a(Landroid/app/Activity;Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 2
-
-    iget-object p1, p0, Lgyb;->this$0:Lhyb;
-
-    iget v0, p1, Lhyb;->a:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lhyb;->a:I
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p1, Lhyb;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lhyb;->Y:Lkw7;
-
-    sget-object v1, Ljv7;->ON_STOP:Ljv7;
-
-    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lhyb;->o:Z
-
-    :cond_0
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lzl1;
-.super Lim1;
+.super Lqm1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lzl1;
 
-    invoke-direct {v0}, Lim1;-><init>()V
+    invoke-direct {v0}, Lqm1;-><init>()V
 
     sput-object v0, Lzl1;->D:Lzl1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x3c8f4613
+    const v0, -0x377eee04
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RecordStartDialog"
+    const-string v0, "InviteToP2PCall"
 
     return-object v0
 .end method

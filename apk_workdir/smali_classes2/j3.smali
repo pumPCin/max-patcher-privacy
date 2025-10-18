@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lji6;
 
 
 # instance fields
@@ -36,33 +36,33 @@
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lwq7;
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->r0:[Ltr7;
 
-    new-instance v0, Lxra;
+    new-instance v0, Lzsa;
 
     invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lxra;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lzsa;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lxra;->getEditText()Landroid/widget/EditText;
+    invoke-virtual {v0}, Lzsa;->getEditText()Landroid/widget/EditText;
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Llze;
+    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Lq0f;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    check-cast v3, Lsze;
+    check-cast v3, Lx0f;
 
-    invoke-virtual {v3}, Lsze;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lx0f;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Loqf;
+    check-cast v3, Ltrf;
 
     if-eqz v3, :cond_0
 
@@ -70,7 +70,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v3, v4}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -82,15 +82,15 @@
     :goto_0
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
-    new-instance v2, Lsfd;
+    new-instance v2, Lzgd;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v1, v3, v0}, Lsfd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v1, v3, v0}, Lzgd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Lxra;->setCallback(Lvra;)V
+    invoke-virtual {v0, v2}, Lzsa;->setCallback(Lxsa;)V
 
-    invoke-virtual {v0}, Lxra;->getEditText()Landroid/widget/EditText;
+    invoke-virtual {v0}, Lzsa;->getEditText()Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -105,13 +105,13 @@
     return-object v0
 
     :pswitch_0
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lwq7;
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->r0:[Ltr7;
 
     invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->F0(Landroid/content/Context;)Ls5b;
+    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->F0(Landroid/content/Context;)Lu6b;
 
     move-result-object v0
 

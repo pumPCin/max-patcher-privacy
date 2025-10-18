@@ -1,23 +1,17 @@
-.class public final Lg01;
+.class public interface abstract Lg01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/Collection;
+# virtual methods
+.method public abstract onIceRestart()V
+.end method
 
-.field public final b:Ljava/util/Collection;
+.method public abstract onNegotiationError(Lm5a;)V
+.end method
 
+.method public abstract onPeerConnectionStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lg01;->a:Ljava/util/Collection;
-
-    iput-object p2, p0, Lg01;->b:Ljava/util/Collection;
-
-    return-void
+.method public abstract onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
 .end method

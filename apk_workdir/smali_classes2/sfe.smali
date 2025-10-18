@@ -1,47 +1,42 @@
 .class public final Lsfe;
-.super Landroid/opengl/GLSurfaceView;
+.super Lvpe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lrfe;
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 4
 
+    instance-of v0, p1, Lgxd;
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
-
-    new-instance p1, Lrfe;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lrfe;->Y:J
-
-    iput-object p1, p0, Lsfe;->a:Lrfe;
-
-    invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
+    if-nez v0, :cond_0
 
     return-void
-.end method
 
+    :cond_0
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-# virtual methods
-.method public final getRenderer()Lrfe;
-    .locals 1
+    move-object v1, v0
 
-    iget-object v0, p0, Lsfe;->a:Lrfe;
+    check-cast v1, Lcde;
 
-    return-object v0
+    move-object v2, p1
+
+    check-cast v2, Lgxd;
+
+    iget-wide v2, v2, Lgxd;->o:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    check-cast v0, Lcde;
+
+    check-cast p1, Ltce;
+
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
+
+    return-void
 .end method

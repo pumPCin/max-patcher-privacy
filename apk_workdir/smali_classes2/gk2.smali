@@ -1,98 +1,61 @@
-.class public final synthetic Lgk2;
-.super Ljava/lang/Object;
+.class public final Lgk2;
+.super Lmk2;
 .source "SourceFile"
 
-# interfaces
-.implements Loh6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhk2;
+# static fields
+.field public static final b:Lgk2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhk2;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lgk2;->a:I
+    new-instance v0, Lgk2;
 
-    iput-object p1, p0, Lgk2;->b:Lhk2;
+    invoke-direct {v0}, Lmk2;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lgk2;->b:Lgk2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lgk2;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lgk2;->b:Lhk2;
+    return v0
 
-    sget-object v1, Lsz4;->t0:Lc82;
+    :cond_0
+    instance-of p1, p1, Lgk2;
 
-    invoke-virtual {v1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+    if-nez p1, :cond_1
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Lu4b;->b()Lwe0;
+    return p1
 
-    move-result-object v0
+    :cond_1
+    return v0
+.end method
 
-    iget-object v0, v0, Lwe0;->a:Lve0;
+.method public final hashCode()I
+    .locals 1
 
-    iget v0, v0, Lve0;->h:I
+    const v0, -0x4d5d16e2
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    return v0
+.end method
 
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object v1
-
-    :pswitch_0
-    sget v0, Liid;->V:I
-
-    sget-object v1, Lsz4;->t0:Lc82;
-
-    iget-object v2, p0, Lgk2;->b:Lhk2;
-
-    invoke-virtual {v1, v2}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lu4b;->getIcon()Lh67;
-
-    move-result-object v1
-
-    iget v1, v1, Lh67;->h:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
+    const-string v0, "RequestStoragePermissions"
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

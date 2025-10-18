@@ -1,57 +1,78 @@
-.class public abstract Lbi9;
-.super Ljava/lang/Object;
+.class public final Lbi9;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Llt7;
 
-.field public static final b:Llt7;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final c:Llt7;
+.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    .locals 0
 
-    sget-object v0, Lci9;->a:Lci9;
+    iput-object p2, p0, Lbi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    const/4 p2, 0x2
 
-    move-result-object v1
-
-    const-class v2, Lcr;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v1
-
-    sput-object v1, Lbi9;->a:Llt7;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lhcg;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v1
-
-    sput-object v1, Lbi9;->b:Llt7;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lbw8;
-
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v0
-
-    sput-object v0, Lbi9;->c:Llt7;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbi9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbi9;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lbi9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lbi9;
+
+    iget-object v1, p0, Lbi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {v0, p2, v1}, Lbi9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+
+    iput-object p1, v0, Lbi9;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbi9;->X:Ljava/lang/Object;
+
+    check-cast p1, Log9;
+
+    iget-object v0, p0, Lbi9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-static {v0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0(Lone/me/sdk/messagewrite/MessageWriteWidget;Log9;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

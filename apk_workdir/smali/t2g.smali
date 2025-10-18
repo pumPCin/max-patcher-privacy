@@ -1,36 +1,67 @@
-.class public interface abstract Lt2g;
+.class public final Lt2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public volatile o:Z
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Long;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lt2g;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lt2g;->b:J
+
+    iput p3, p0, Lt2g;->c:I
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a(Lu2g;)V
-.end method
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-.method public abstract b()V
-.end method
+    check-cast p1, Lt2g;
 
-.method public abstract c(Lu2g;)V
-.end method
+    iget-wide v0, p0, Lt2g;->b:J
 
-.method public d(Lu2g;)V
-    .locals 0
+    iget-wide v2, p1, Lt2g;->b:J
 
-    invoke-interface {p0, p1}, Lt2g;->a(Lu2g;)V
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public e(Lu2g;)V
-    .locals 0
+    if-nez v0, :cond_0
 
-    invoke-interface {p0, p1}, Lt2g;->c(Lu2g;)V
+    iget v0, p0, Lt2g;->c:I
 
-    return-void
-.end method
+    iget p1, p1, Lt2g;->c:I
 
-.method public abstract f()V
-.end method
+    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
 
-.method public abstract h(Lu2g;)V
+    move-result p1
+
+    return p1
+
+    :cond_0
+    return v0
 .end method

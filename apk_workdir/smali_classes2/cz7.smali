@@ -1,131 +1,168 @@
 .class public final Lcz7;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lkz7;
+.implements Liz7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcz7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic Y:Lfz7;
+.field public final a:J
 
-.field public final synthetic Z:J
+.field public final b:J
+
+.field public final c:Z
+
+.field public final o:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Lfz7;JLkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ldu7;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+
+    sput-object v0, Lcz7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JJLjava/lang/Long;Ljava/lang/String;I)V
+    .locals 8
+
+    and-int/lit8 v0, p7, 0x2
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 p3, 0x0
+
+    :cond_0
+    move-wide v3, p3
+
+    and-int/lit8 p3, p7, 0x8
+
+    if-eqz p3, :cond_1
+
+    const/4 p5, 0x0
+
+    :cond_1
+    move-object v6, p5
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v7, p6
+
+    .line 1
+    invoke-direct/range {v0 .. v7}, Lcz7;-><init>(JJZLjava/lang/Long;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JJZLjava/lang/Long;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcz7;->Y:Lfz7;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lcz7;->Z:J
+    .line 3
+    iput-wide p1, p0, Lcz7;->a:J
 
-    const/4 p1, 0x2
+    .line 4
+    iput-wide p3, p0, Lcz7;->b:J
 
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 5
+    iput-boolean p5, p0, Lcz7;->c:Z
+
+    .line 6
+    iput-object p6, p0, Lcz7;->o:Ljava/lang/Long;
+
+    .line 7
+    iput-object p7, p0, Lcz7;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcz7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcz7;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lcz7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final n()Ljava/lang/String;
+    .locals 1
 
-    new-instance p1, Lcz7;
-
-    iget-object v0, p0, Lcz7;->Y:Lfz7;
-
-    iget-wide v1, p0, Lcz7;->Z:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lcz7;-><init>(Lfz7;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lcz7;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcz7;->Y:Lfz7;
-
-    iget-object p1, p1, Lfz7;->i:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lox7;
-
-    iget-object p1, p1, Lox7;->a:Leie;
-
-    new-instance v0, Lj00;
-
-    const/4 v2, 0x3
-
-    iget-wide v3, p0, Lcz7;->Z:J
-
-    invoke-direct {v0, p1, v3, v4, v2}, Lj00;-><init>(Lzx5;JI)V
-
-    iput v1, p0, Lcz7;->X:I
-
-    invoke-static {v0, p0}, Ly1j;->o(Lzx5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
+    iget-object v0, p0, Lcz7;->X:Ljava/lang/String;
 
     return-object v0
+.end method
 
-    :cond_2
-    return-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lcz7;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Lcz7;->b:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-boolean p2, p0, Lcz7;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lcz7;->o:Ljava/lang/Long;
+
+    if-nez p2, :cond_0
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    :goto_0
+    iget-object p2, p0, Lcz7;->X:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

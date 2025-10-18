@@ -1,209 +1,133 @@
 .class public final Lhde;
-.super Ljava/lang/Object;
+.super Lkde;
 .source "SourceFile"
 
-# interfaces
-.implements Lgf4;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lhde;
-
-.field public static final b:Lide;
+.field public final b:Lorf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lorf;)V
+    .locals 0
 
-    new-instance v0, Lhde;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhde;->a:Ljava/lang/String;
 
-    sput-object v0, Lhde;->a:Lhde;
-
-    sget-object v0, Lide;->b:Lide;
-
-    sput-object v0, Lhde;->b:Lide;
+    iput-object p2, p0, Lhde;->b:Lorf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lof4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lhde;->b:Lide;
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/String;Ljf4;Landroid/os/Bundle;)Lrf4;
-    .locals 11
-
-    sget-object v0, Lhde;->b:Lide;
-
-    iget-object v0, v0, Lof4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Lide;->b:Lide;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lide;->c:Ljf4;
-
-    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lgde;->b:Lgde;
-
-    :goto_0
-    move-object v9, v0
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    sget-object v0, Lide;->d:Ljf4;
+    :cond_0
+    instance-of v0, p1, Lhde;
 
-    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lhde;
+
+    iget-object v0, p0, Lhde;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lhde;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lgde;->c:Lgde;
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lide;->e:Ljf4;
+    iget-object v0, p0, Lhde;->b:Lorf;
 
-    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lhde;->b:Lorf;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lorf;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_3
+    move-result p1
 
-    sget-object v0, Lgde;->o:Lgde;
+    if-nez p1, :cond_3
 
-    goto :goto_0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_3
-    sget-object v0, Lide;->f:Ljf4;
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lhde;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v0, "mode"
+    iget-object v1, p0, Lhde;->b:Lorf;
 
-    invoke-static {v0, p3}, Lkxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    iget v1, v1, Lorf;->c:I
 
-    move-result-object v0
-
-    const-string v1, "setup"
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    add-int/2addr v1, v0
 
-    sget-object v0, Lgde;->X:Lgde;
+    return v1
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_4
-    const-string v1, "confirm"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v1, "CopyToClipboard(textToCopy="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_5
+    iget-object v1, p0, Lhde;->a:Ljava/lang/String;
 
-    const-string v0, "hash"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p3}, Lkxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    const-string v1, ", snackbarTitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhde;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ln51;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Ln51;-><init>(Ljava/lang/String;I)V
-
-    move-object v9, v1
-
-    :goto_1
-    new-instance v3, Lrf4;
-
-    const/16 v10, 0x18
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v3 .. v10}, Lrf4;-><init>(Ljava/lang/String;Ljf4;Landroid/os/Bundle;ILpf4;Lqf4;I)V
-
-    return-object v3
-
-    :cond_5
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "illegal mode"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_6
-    move-object v5, p2
-
-    const-class p1, Lhde;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v5}, Lf67;->h(Ljava/lang/String;Ljf4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v5}, Lf67;->h(Ljava/lang/String;Ljf4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-object v0
 .end method

@@ -4,222 +4,360 @@
 
 
 # direct methods
-.method public static a()Lj3e;
-    .locals 6
+.method public static a(Ljava/util/UUID;[Ljava/util/UUID;[B)[B
+    .locals 5
 
-    const-string v0, "androidxBiometric"
+    const/4 v0, 0x0
 
-    const-string v1, "AndroidKeyStore"
+    if-eqz p2, :cond_0
 
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-static {v1}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
-
-    const/4 v4, 0x3
-
-    invoke-static {v0, v4}, Ld84;->b(Ljava/lang/String;I)Landroid/security/keystore/KeyGenParameterSpec$Builder;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ld84;->d(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
-
-    invoke-static {v4}, Ld84;->e(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
-
-    const-string v5, "AES"
-
-    invoke-static {v5, v1}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
-
-    move-result-object v1
-
-    invoke-static {v4}, Ld84;->a(Landroid/security/keystore/KeyGenParameterSpec$Builder;)Landroid/security/keystore/KeyGenParameterSpec;
-
-    move-result-object v4
-
-    invoke-static {v1, v4}, Ld84;->c(Ljavax/crypto/KeyGenerator;Landroid/security/keystore/KeyGenParameterSpec;)V
-
-    invoke-virtual {v1}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
-
-    invoke-virtual {v3, v0, v2}, Ljava/security/KeyStore;->getKey(Ljava/lang/String;[C)Ljava/security/Key;
-
-    move-result-object v0
-
-    check-cast v0, Ljavax/crypto/SecretKey;
-
-    const-string v1, "AES/CBC/PKCS7Padding"
-
-    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v1
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
-
-    new-instance v0, Lj3e;
-
-    invoke-direct {v0, v1}, Lj3e;-><init>(Ljavax/crypto/Cipher;)V
-    :try_end_0
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_8
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_7
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_6
-    .catch Ljava/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_5
-    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/security/UnrecoverableKeyException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/security/NoSuchProviderException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
+    array-length v1, p2
 
     goto :goto_0
 
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_5
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_6
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_7
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_8
-    move-exception v0
+    :cond_0
+    move v1, v0
 
     :goto_0
-    const-string v1, "CryptoObjectUtils"
+    add-int/lit8 v1, v1, 0x20
 
-    const-string v3, "Failed to create fake crypto object."
+    if-eqz p1, :cond_1
 
-    invoke-static {v1, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    array-length v2, p1
 
-    return-object v2
-.end method
+    mul-int/lit8 v2, v2, 0x10
 
-.method public static final b(Lv63;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+    add-int/lit8 v2, v2, 0x4
 
-    :try_start_0
-    invoke-interface {p0}, Lt63;->a()Ljava/lang/Class;
+    add-int/2addr v1, v2
+
+    :cond_1
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    const v1, 0x70737368    # 3.013775E29f
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    if-eqz p1, :cond_2
+
+    const/high16 v1, 0x1000000
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v0
+
+    :goto_1
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p0}, Ljava/util/UUID;->getMostSignificantBits()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p0}, Ljava/util/UUID;->getLeastSignificantBits()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    if-eqz p1, :cond_3
+
+    array-length p0, p1
+
+    invoke-virtual {v2, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    array-length p0, p1
+
+    :goto_2
+    if-ge v0, p0, :cond_3
+
+    aget-object v1, p1, v0
+
+    invoke-virtual {v1}, Ljava/util/UUID;->getMostSignificantBits()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1}, Ljava/util/UUID;->getLeastSignificantBits()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz p2, :cond_4
+
+    array-length p0, p2
+
+    if-eqz p0, :cond_4
+
+    array-length p0, p2
+
+    invoke-virtual {v2, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    :cond_4
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object p0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {p0, p1, p3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    return-void
+    return-object p0
 .end method
 
-.method public static c(Lj3e;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 3
+.method public static b(Ljava/lang/String;)Z
+    .locals 2
+
+    sget-object v0, Lq24;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm24;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lm24;->a:Lq24;
+
+    invoke-virtual {v1}, Lq24;->a()V
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static c(Landroid/os/Bundle;)Lq24;
+    .locals 4
 
     const/4 v0, 0x0
 
     if-nez p0, :cond_0
 
-    return-object v0
+    goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lj3e;->c:Ljava/lang/Object;
+    const-string v1, "ControllerChangeHandler.className"
 
-    check-cast v1, Ljavax/crypto/Cipher;
+    invoke-virtual {p0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v1, :cond_1
+    move-result-object v1
 
-    invoke-static {v1}, Le84;->b(Ljavax/crypto/Cipher;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    if-nez v1, :cond_1
 
-    move-result-object p0
-
-    return-object p0
+    goto :goto_1
 
     :cond_1
-    iget-object v1, p0, Lj3e;->b:Ljava/lang/Object;
+    const-string v2, "ControllerChangeHandler.savedState"
 
-    check-cast v1, Ljava/security/Signature;
-
-    if-eqz v1, :cond_2
-
-    invoke-static {v1}, Le84;->a(Ljava/security/Signature;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p0
 
-    return-object p0
+    if-nez p0, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Lj3e;->o:Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    check-cast v1, Ljavax/crypto/Mac;
+    :try_start_0
+    invoke-static {v1, v2}, Lrpi;->b(Ljava/lang/String;Z)Ljava/lang/Class;
 
-    if-eqz v1, :cond_3
+    move-result-object v2
 
-    invoke-static {v1}, Le84;->c(Ljavax/crypto/Mac;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    if-eqz v2, :cond_3
 
-    move-result-object p0
+    invoke-virtual {v2}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    goto :goto_2
 
     :cond_3
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-object v1, v0
 
-    const/16 v2, 0x1e
+    :goto_0
+    check-cast v1, Lq24;
 
-    if-lt v1, v2, :cond_4
+    if-eqz v1, :cond_4
 
-    iget-object p0, p0, Lj3e;->X:Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lq24;->h(Landroid/os/Bundle;)V
 
-    check-cast p0, Landroid/security/identity/IdentityCredential;
+    return-object v1
 
-    if-eqz p0, :cond_4
+    :cond_4
+    :goto_1
+    return-object v0
 
-    invoke-static {p0}, Lf84;->a(Landroid/security/identity/IdentityCredential;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+    :goto_2
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v2, "An exception occurred while creating a new instance of "
+
+    const-string v3, ". "
+
+    invoke-static {v2, v1, v3}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static d([B)Lj7;
+    .locals 9
+
+    new-instance v0, Ldjg;
+
+    invoke-direct {v0, p0}, Ldjg;-><init>([B)V
+
+    iget p0, v0, Ldjg;->c:I
+
+    const/16 v1, 0x20
+
+    const/4 v2, 0x0
+
+    if-ge p0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, p0}, Ldjg;->E(I)V
+
+    invoke-virtual {v0}, Ldjg;->f()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ldjg;->c()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, 0x4
+
+    if-eq v1, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ldjg;->f()I
+
+    move-result v1
+
+    const v3, 0x70737368    # 3.013775E29f
+
+    if-eq v1, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Ldjg;->f()I
+
+    move-result v1
+
+    invoke-static {v1}, Lvy;->v(I)I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-le v1, v3, :cond_3
+
+    const/16 p0, 0x25
+
+    const-string v0, "Unsupported pssh version: "
+
+    const-string v3, "PsshAtomUtil"
+
+    invoke-static {v0, p0, v1, v3}, Ldy1;->s(Ljava/lang/String;IILjava/lang/String;)V
+
+    return-object v2
+
+    :cond_3
+    new-instance v4, Ljava/util/UUID;
+
+    invoke-virtual {v0}, Ldjg;->m()J
+
+    move-result-wide v5
+
+    invoke-virtual {v0}, Ldjg;->m()J
+
+    move-result-wide v7
+
+    invoke-direct {v4, v5, v6, v7, v8}, Ljava/util/UUID;-><init>(JJ)V
+
+    if-ne v1, v3, :cond_4
+
+    invoke-virtual {v0}, Ldjg;->v()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x10
+
+    invoke-virtual {v0, v1}, Ldjg;->F(I)V
 
     :cond_4
-    return-object v0
+    invoke-virtual {v0}, Ldjg;->v()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ldjg;->c()I
+
+    move-result v3
+
+    if-eq v1, v3, :cond_5
+
+    :goto_0
+    return-object v2
+
+    :cond_5
+    new-array v2, v1, [B
+
+    invoke-virtual {v0, p0, v2, v1}, Ldjg;->e(I[BI)V
+
+    new-instance p0, Lj7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v4, p0, Lj7;->a:Ljava/lang/Object;
+
+    return-object p0
 .end method

@@ -1,203 +1,147 @@
-.class public Lquf;
+.class public final Lquf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lpuf;
-
-
 # instance fields
-.field public a:Z
-
-.field public b:J
-
-.field public c:J
+.field public final a:Llzh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llzh;)V
+    .locals 0
 
-    new-instance v0, Lpuf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lquf;->d:Lpuf;
+    iput-object p1, p0, Lquf;->a:Llzh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lquf;
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    const/4 v0, 0x0
+    :try_start_0
+    iget-object v0, p0, Lquf;->a:Llzh;
 
-    iput-boolean v0, p0, Lquf;->a:Z
+    check-cast v0, Ldzh;
 
-    return-object p0
+    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lguh;->Y(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public b()Lquf;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const-wide/16 v0, 0x0
+    instance-of v0, p1, Lquf;
 
-    iput-wide v0, p0, Lquf;->c:J
+    const/4 v1, 0x0
 
-    return-object p0
-.end method
+    if-nez v0, :cond_0
 
-.method public c()J
-    .locals 2
-
-    iget-boolean v0, p0, Lquf;->a:Z
-
-    if-eqz v0, :cond_0
-
-    iget-wide v0, p0, Lquf;->b:J
-
-    return-wide v0
+    return v1
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :try_start_0
+    iget-object v0, p0, Lquf;->a:Llzh;
 
-    const-string v1, "No deadline"
+    check-cast p1, Lquf;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lquf;->a:Llzh;
 
-    throw v0
-.end method
+    check-cast v0, Ldzh;
 
-.method public d(J)Lquf;
-    .locals 1
+    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
 
-    const/4 v0, 0x1
+    move-result-object v2
 
-    iput-boolean v0, p0, Lquf;->a:Z
+    invoke-static {v2, p1}, Lz1i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    iput-wide p1, p0, Lquf;->b:J
+    const/16 p1, 0x8
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v2, p1}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-.method public e()Z
-    .locals 1
+    move-result-object p1
 
-    iget-boolean v0, p0, Lquf;->a:Z
-
-    return v0
-.end method
-
-.method public f()V
-    .locals 4
-
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    if-nez v0, :cond_2
-
-    iget-boolean v0, p0, Lquf;->a:Z
-
     if-eqz v0, :cond_1
 
-    iget-wide v0, p0, Lquf;->b:J
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/io/InterruptedIOException;
-
-    const-string v1, "deadline reached"
-
-    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    const/4 v1, 0x1
 
     :cond_1
-    :goto_0
-    return-void
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_2
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    return v1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lquf;->a:Llzh;
+
+    check-cast v0, Ldzh;
+
+    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
 
-    new-instance v0, Ljava/io/InterruptedIOException;
+    move-result v1
 
-    const-string v1, "interrupted"
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
+    return v1
 
-    throw v0
-.end method
+    :catch_0
+    move-exception v0
 
-.method public g(JLjava/util/concurrent/TimeUnit;)Lquf;
-    .locals 2
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    const-wide/16 v0, 0x0
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lquf;->c:J
-
-    return-object p0
-
-    :cond_1
-    const-string p3, "timeout < 0: "
-
-    invoke-static {p1, p2, p3}, Lyy8;->d(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public h()J
-    .locals 2
-
-    iget-wide v0, p0, Lquf;->c:J
-
-    return-wide v0
+    throw v1
 .end method

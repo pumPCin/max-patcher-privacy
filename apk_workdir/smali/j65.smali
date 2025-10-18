@@ -1,20 +1,31 @@
-.class public interface abstract Lj65;
+.class public final Lj65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/AutoCloseable;
+
+
+# instance fields
+.field public a:Landroid/media/metrics/EditingSession;
+
+.field public b:Z
+
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final close()V
+    .locals 1
 
-.method public abstract h(Lzhg;)V
-.end method
+    iget-object v0, p0, Lj65;->a:Landroid/media/metrics/EditingSession;
 
-.method public abstract i(IJ)V
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract j()V
-.end method
+    invoke-static {v0}, Ly4;->x(Landroid/media/metrics/EditingSession;)V
 
-.method public abstract l(Lgl5;Ln4g;)V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lj65;->a:Landroid/media/metrics/EditingSession;
+
+    :cond_0
+    return-void
 .end method

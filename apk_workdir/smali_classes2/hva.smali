@@ -1,25 +1,17 @@
-.class public abstract Lhva;
+.class public final Lhva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public a:J
 
-.field public static final b:I
+.field public b:Ljava/lang/String;
 
+.field public c:Lc98;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public d:Ljava/lang/String;
 
-    sget v0, Lcqc;->oneme_in_app_review_rating_bar_accessibility:I
+.field public e:Ljava/lang/String;
 
-    sput v0, Lhva;->a:I
-
-    sget v0, Lcqc;->oneme_in_app_review_rating_star_accessibility:I
-
-    sput v0, Lhva;->b:I
-
-    return-void
-.end method
+.field public f:Ljava/lang/Throwable;

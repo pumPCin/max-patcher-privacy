@@ -1,58 +1,63 @@
-.class public final synthetic Lzzd;
-.super Lti6;
+.class public abstract Lzzd;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # static fields
-.field public static final a:Lzzd;
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final d:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final e:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Lzzd;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+    const-string v1, "STATE_REG"
 
-    const/4 v5, 0x1
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x2
+    sput-object v0, Lzzd;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    const-class v2, Lc0e;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v3, "createSegment"
+    const-string v1, "STATE_COMPLETED"
 
-    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lzzd;->a:Lzzd;
+    sput-object v0, Lzzd;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "STATE_CANCELLED"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lzzd;->c:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "NO_RESULT"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lzzd;->d:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "PARAM_CLAUSE_0"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lzzd;->e:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p2, Ld0e;
-
-    sget p1, Lc0e;->a:I
-
-    new-instance p1, Ld0e;
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v0, v1, p2, v2}, Ld0e;-><init>(JLd0e;I)V
-
-    return-object p1
 .end method

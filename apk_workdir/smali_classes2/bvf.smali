@@ -1,100 +1,120 @@
-.class public final synthetic Lbvf;
+.class public final Lbvf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lavf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/Long;
 
-.field public final synthetic b:Lvvf;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lvvf;I)V
-    .locals 0
-
-    iput p2, p0, Lbvf;->a:I
-
-    iput-object p1, p0, Lbvf;->b:Lvvf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public b:Ljava/lang/Long;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final getMsSinceBoot()J
+    .locals 2
 
-    iget v0, p0, Lbvf;->a:I
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide v0
 
-    iget-object v0, p0, Lbvf;->b:Lvvf;
+    return-wide v0
+.end method
 
-    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
+.method public final getServerTimeMs()Ljava/lang/Long;
+    .locals 6
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+    iget-object v0, p0, Lbvf;->b:Ljava/lang/Long;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v2
+
+    iget-object v0, p0, Lbvf;->a:Ljava/lang/Long;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v4
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public final localTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
+    .locals 2
+
+    invoke-virtual {p0}, Lbvf;->getServerTimeMs()Ljava/lang/Long;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    sget-object v0, Lzag;->a:Lzag;
+    move-result-wide v0
 
-    goto :goto_0
+    sub-long/2addr p1, v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    :goto_0
-    return-object v0
+    return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lbvf;->b:Lvvf;
+.method public final utcTimeMs()J
+    .locals 2
 
-    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
-
-    sget-object v0, Lzag;->a:Lzag;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lbvf;->b:Lvvf;
-
-    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    move-result-wide v0
 
-    sget-object v0, Lzag;->a:Lzag;
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

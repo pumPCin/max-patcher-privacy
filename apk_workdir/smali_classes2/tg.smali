@@ -57,9 +57,9 @@
     :pswitch_0
     iget-object p1, p0, Ltg;->b:Ljava/lang/Object;
 
-    check-cast p1, Lldi;
+    check-cast p1, Lmei;
 
-    invoke-virtual {p1}, Lldi;->d()V
+    invoke-virtual {p1}, Lmei;->e()V
 
     return-void
 
@@ -89,9 +89,9 @@
     :pswitch_0
     iget-object p1, p0, Ltg;->b:Ljava/lang/Object;
 
-    check-cast p1, Lldi;
+    check-cast p1, Lmei;
 
-    invoke-virtual {p1}, Lldi;->e()V
+    invoke-virtual {p1}, Lmei;->f()V
 
     return-void
 

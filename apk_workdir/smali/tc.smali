@@ -46,7 +46,7 @@
 
     iget-object p1, p4, Lxc;->b:Lzc;
 
-    invoke-virtual {p1}, Loo;->dismiss()V
+    invoke-virtual {p1}, Lpo;->dismiss()V
 
     :cond_0
     return-void

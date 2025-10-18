@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lvh4;)V
+.method public synthetic constructor <init>(Lki4;)V
     .locals 0
 
     .line 1
@@ -66,13 +66,13 @@
 .method public final chunkFromPackage$calls_sdk_release(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Leu;)Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;
     .locals 2
 
-    iget-object v0, p2, Leu;->a:Lzh1;
+    iget-object v0, p2, Leu;->a:Lhi1;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lhi1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object p1
 

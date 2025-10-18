@@ -1,147 +1,89 @@
-.class public final Lgj0;
+.class public abstract Lgj0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnb4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnje;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lulf;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lgj0;->a:I
+    const/4 v1, 0x7
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
 
-    .line 2
-    new-instance v0, Lgk4;
+    move-result-object v0
 
-    invoke-direct {v0}, Lgk4;-><init>()V
+    iput-object v0, p0, Lgj0;->a:Lnje;
 
-    .line 3
-    iput-object p2, v0, Lgk4;->c:Ljava/lang/String;
+    check-cast p1, Lqta;
 
-    .line 4
-    sget-object p2, Lbg8;->Y:Lbg8;
-
-    .line 5
-    invoke-virtual {p2, p1}, Lbg8;->g(Landroid/content/Context;)Lj6b;
+    invoke-virtual {p1}, Lqta;->a()Lk54;
 
     move-result-object p1
 
-    .line 6
-    iget-object p1, p1, Lj6b;->c:Li6b;
+    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
-    .line 7
-    iput-object p1, v0, Lgk4;->b:Lz1g;
+    move-result-object p1
 
-    const/16 p1, 0x1f40
-
-    .line 8
-    iput p1, v0, Lgk4;->d:I
-
-    .line 9
-    iput p1, v0, Lgk4;->e:I
-
-    .line 10
-    iput-object v0, p0, Lgj0;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lr5;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lgj0;->a:I
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 12
-    new-instance v0, Lo21;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, p1, v1}, Lo21;-><init>(Lr5;I)V
-
-    .line 13
-    new-instance p1, Lrhf;
-
-    invoke-direct {p1, v0}, Lrhf;-><init>(Loh6;)V
-
-    .line 14
-    iput-object p1, p0, Lgj0;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lgj0;->b:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqb4;
-    .locals 6
+.method public final a(Lvx2;)V
+    .locals 3
 
-    iget v0, p0, Lgj0;->a:I
+    new-instance v0, Lfj0;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lgj0;->b:Ljava/lang/Object;
+    invoke-direct {v0, p0, p1, v1}, Lfj0;-><init>(Lgj0;Lvx2;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Lrhf;
+    const/4 p1, 0x3
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    iget-object v2, p0, Lgj0;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v0
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
-    check-cast v0, Lux0;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lux0;->b()Lwx0;
+.method public final b()Lwt3;
+    .locals 4
+
+    sget v0, Lu35;->o:I
+
+    const/16 v0, 0x12c
+
+    sget-object v1, Lz35;->c:Lz35;
+
+    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
+
+    move-result-wide v0
+
+    new-instance v2, Lej0;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Lej0;-><init>(I)V
+
+    iget-object v3, p0, Lgj0;->a:Lnje;
+
+    invoke-static {v3, v0, v1, v2}, La3j;->a(Lty5;JLzi6;)Lwt3;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgj0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgk4;
-
-    new-instance v1, Lkk4;
-
-    iget-object v2, v0, Lgk4;->c:Ljava/lang/String;
-
-    iget v3, v0, Lgk4;->d:I
-
-    iget v4, v0, Lgk4;->e:I
-
-    iget-object v5, v0, Lgk4;->a:Lcz8;
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lkk4;-><init>(Ljava/lang/String;IILcz8;)V
-
-    iget-object v0, v0, Lgk4;->b:Lz1g;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Lfj0;->I(Lz1g;)V
-
-    :cond_0
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxmf;
+.implements Lcof;
 .implements Landroid/widget/Checkable;
 
 
@@ -15,7 +15,7 @@
     d2 = {
         "Lru/ok/tamtam/calls/ui/IconSwitch;",
         "Landroid/widget/LinearLayout;",
-        "Lxmf;",
+        "Lcof;",
         "Landroid/widget/Checkable;",
         "Landroid/content/Context;",
         "context",
@@ -25,7 +25,7 @@
         "(Landroid/content/Context;Landroid/util/AttributeSet;)V",
         "",
         "text",
-        "Lzag;",
+        "Lccg;",
         "setText",
         "(I)V",
         "",
@@ -34,10 +34,10 @@
         "setIconDrawable",
         "orientation",
         "setOrientation",
-        "Lu67;",
+        "Lq77;",
         "listener",
         "setListener",
-        "(Lu67;)V",
+        "(Lq77;)V",
         "",
         "checked",
         "setChecked",
@@ -104,7 +104,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -116,7 +116,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Lagi;->d(F)I
+    invoke-static {v3}, Lfhi;->b(F)I
 
     move-result v3
 
@@ -152,7 +152,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -164,7 +164,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Lagi;->d(F)I
+    invoke-static {v3}, Lfhi;->b(F)I
 
     move-result v3
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {p0, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Lt67;
+    new-instance v2, Lp77;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
@@ -189,13 +189,13 @@
 
     if-eqz p2, :cond_1
 
-    sget-object v1, Lbuc;->IconSwitch:[I
+    sget-object v1, Livc;->IconSwitch:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lbuc;->IconSwitch_icon_switch_start_drawable:I
+    sget p2, Livc;->IconSwitch_icon_switch_start_drawable:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -212,7 +212,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lcn4;->e0:Lcn4;
+    sget-object p1, Lqn4;->e0:Lqn4;
 
     goto :goto_0
 
@@ -221,14 +221,14 @@
 
     move-result-object p1
 
-    sget-object p2, Ltmf;->a0:Lrhf;
+    sget-object p2, Lynf;->a0:Lwif;
 
-    invoke-static {p1}, Lnw3;->g(Landroid/content/Context;)Ltmf;
+    invoke-static {p1}, Laa4;->c(Landroid/content/Context;)Lynf;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/calls/ui/IconSwitch;->n(Ltmf;)V
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/calls/ui/IconSwitch;->n(Lynf;)V
 
     return-void
 .end method
@@ -263,10 +263,10 @@
     return v0
 .end method
 
-.method public final n(Ltmf;)V
+.method public final n(Lynf;)V
     .locals 7
 
-    iget v0, p1, Ltmf;->w:I
+    iget v0, p1, Lynf;->w:I
 
     iget-object v1, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -292,9 +292,9 @@
 
     move-result-object v3
 
-    iget v5, p1, Ltmf;->k:I
+    iget v5, p1, Lynf;->k:I
 
-    iget v6, p1, Ltmf;->l:I
+    iget v6, p1, Lynf;->l:I
 
     filled-new-array {v5, v6}, [I
 
@@ -318,13 +318,13 @@
 
     const v3, 0x3e99999a    # 0.3f
 
-    invoke-static {v5, v3}, Loti;->b(IF)I
+    invoke-static {v5, v3}, Lpui;->b(IF)I
 
     move-result v4
 
-    iget p1, p1, Ltmf;->M:I
+    iget p1, p1, Lynf;->M:I
 
-    invoke-static {p1, v3}, Loti;->b(IF)I
+    invoke-static {p1, v3}, Lpui;->b(IF)I
 
     move-result p1
 
@@ -356,7 +356,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -367,7 +367,7 @@
     return-void
 .end method
 
-.method public final setListener(Lu67;)V
+.method public final setListener(Lq77;)V
     .locals 0
 
     return-void

@@ -1,48 +1,105 @@
 .class public final La03;
-.super Lk14;
+.super Lije;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lb03;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public v0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lb03;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, La03;->Y:Lb03;
+    invoke-direct {p0}, Lije;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v0, ""
+
+    iput-object v0, p0, La03;->v0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lx3g;ZLq40;)V
+    .locals 3
 
-    iput-object p1, p0, La03;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    iget p1, p0, La03;->X:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    sget v1, Llsa;->q:I
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    iput p1, p0, La03;->X:I
+    move-result-object v0
 
-    iget-object p1, p0, La03;->Y:Lb03;
+    iput-object v0, p0, La03;->v0:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    if-eqz p3, :cond_1
 
-    invoke-virtual {p1, v0, p0}, Lb03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-nez p5, :cond_1
 
-    move-result-object p1
+    invoke-static {p3, v0}, Lc0i;->b(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Lu6b;
+
+    invoke-virtual {v0}, Lu6b;->getSearchView()Lf2b;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v2}, Lf2b;->setExpandable(Z)V
+
+    :cond_0
+    invoke-virtual {v0}, Lu6b;->g()V
+
+    invoke-virtual {v0}, Lu6b;->getSearchView()Lf2b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    sget v1, Lf2b;->G0:I
+
+    invoke-virtual {v0, v2}, Lf2b;->c(Z)V
+
+    :cond_1
+    invoke-super/range {p0 .. p6}, Lije;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lx3g;ZLq40;)V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 2
+
+    iget-object v0, p0, La03;->v0:Ljava/lang/String;
+
+    iget-object v1, p0, Lije;->Z:Let;
+
+    invoke-virtual {v1, v0, v0}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final p(Landroid/view/View;Z)Lf4g;
+    .locals 2
+
+    new-instance v0, Lf4g;
+
+    invoke-direct {v0}, Lf4g;-><init>()V
+
+    new-instance v1, Lzz2;
+
+    invoke-direct {v1, p1, p0, p2}, Lzz2;-><init>(Landroid/view/View;La03;Z)V
+
+    invoke-virtual {v0, v1}, Lf4g;->R(Lw3g;)V
+
+    return-object v0
 .end method

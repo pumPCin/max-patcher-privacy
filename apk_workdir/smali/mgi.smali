@@ -1,80 +1,99 @@
 .class public final Lmgi;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
-
-# static fields
-.field public static final a:Lmgi;
+# instance fields
+.field public final c:Lxt9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lxt9;)V
+    .locals 1
 
-    new-instance v0, Lmgi;
+    const/16 v0, 0x8
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lrdi;-><init>(I)V
 
-    sput-object v0, Lmgi;->a:Lmgi;
-
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lmgi;->c:Lxt9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final e0(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Loi0;
 
-    move-result-object p1
+    iget-object v0, p0, Lmgi;->c:Lxt9;
 
-    throw p1
+    invoke-virtual {v0}, Lxt9;->b()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {}, Lxzh;->c()Z
+
+    move-result v3
+
+    if-eq v2, v3, :cond_0
+
+    const-string v2, "play-services-mlkit-barcode-scanning"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "barcode-scanning"
+
+    :goto_0
+    invoke-static {v2}, La3j;->g(Ljava/lang/String;)Ls2j;
+
+    move-result-object v2
+
+    sget-object v3, Lcti;->q0:Lh5i;
+
+    const-string v3, "com.google.mlkit.dynamite.barcode"
+
+    invoke-static {v1, v3}, Le55;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-lez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v3, Las6;->b:Las6;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1}, Las6;->a(Landroid/content/Context;)I
+
+    move-result v3
+
+    const v4, 0xc306c20
+
+    if-lt v3, v4, :cond_2
+
+    :goto_1
+    new-instance v3, Lcti;
+
+    invoke-direct {v3, v1, p1, v2}, Lcti;-><init>(Landroid/content/Context;Loi0;Ls2j;)V
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v3, Lze;
+
+    invoke-direct {v3, v1, p1, v2}, Lze;-><init>(Landroid/content/Context;Loi0;Ls2j;)V
+
+    :goto_2
+    new-instance v1, Lwni;
+
+    invoke-direct {v1, v0, p1, v3, v2}, Lwni;-><init>(Lxt9;Loi0;Lcqi;Ls2j;)V
+
+    return-object v1
 .end method

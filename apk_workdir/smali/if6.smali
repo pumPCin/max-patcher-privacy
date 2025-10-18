@@ -1,90 +1,49 @@
-.class public final Lif6;
+.class public final synthetic Lif6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvi6;
+.implements Lsad;
+
 
 # instance fields
-.field public final a:Lsa6;
-
-.field public final b:J
+.field public final synthetic a:Lof6;
 
 
 # direct methods
-.method public constructor <init>(Lsa6;J)V
-    .locals 7
+.method public synthetic constructor <init>(Lof6;)V
+    .locals 0
+
+    iput-object p1, p0, Lif6;->a:Lof6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lsa6;->D:Llb3;
+    return-void
+.end method
 
-    iget v1, p1, Lsa6;->v:I
 
-    iget v2, p1, Lsa6;->u:I
+# virtual methods
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v3, 0x0
+    check-cast p1, Li1g;
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lif6;->a:Lof6;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move v0, v4
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public d(JLedb;)V
+    .locals 1
 
-    :cond_0
-    move v0, v3
+    iget-object v0, p0, Lif6;->a:Lof6;
 
-    :goto_0
-    const-string v5, "format colorInfo must be set"
+    iget-object v0, v0, Lof6;->T0:[Lw1g;
 
-    invoke-static {v5, v0}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    if-lez v2, :cond_1
-
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v3
-
-    :goto_1
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "format width must be positive, but is: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    if-lez v1, :cond_2
-
-    move v3, v4
-
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "format height must be positive, but is: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v3}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    iput-object p1, p0, Lif6;->a:Lsa6;
-
-    iput-wide p2, p0, Lif6;->b:J
+    invoke-static {p1, p2, p3, v0}, Lpni;->a(JLedb;[Lw1g;)V
 
     return-void
 .end method

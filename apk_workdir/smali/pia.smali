@@ -1,87 +1,148 @@
 .class public final Lpia;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lev4;
-.implements Ljava/lang/Runnable;
+.implements Lela;
+.implements Lvv4;
 
 
 # instance fields
-.field public final a:Lcka;
+.field public final a:Lela;
 
-.field public b:J
+.field public final b:J
+
+.field public final c:Lvod;
+
+.field public o:Lvv4;
 
 
 # direct methods
-.method public constructor <init>(Lcka;)V
-    .locals 0
+.method public constructor <init>(Lela;JLvod;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p1, p0, Lpia;->a:Lcka;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpia;->a:Lela;
+
+    iput-wide p2, p0, Lpia;->b:J
+
+    iput-object p4, p0, Lpia;->c:Lvod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 0
+.method public final b()V
+    .locals 5
 
-    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    new-instance v0, Ldt7;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1, p0}, Ldt7;-><init>(ILjava/lang/Object;)V
+
+    iget-wide v1, p0, Lpia;->b:J
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v4, p0, Lpia;->c:Lvod;
+
+    invoke-virtual {v4, v0, v1, v2, v3}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+
+    return-void
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget-object v0, p0, Lpia;->o:Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lpia;->o:Lvv4;
+
+    iget-object p1, p0, Lpia;->a:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 4
+
+    new-instance v0, Lgk6;
+
+    const/16 v1, 0x11
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lgk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-wide v1, p0, Lpia;->b:J
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v3, p0, Lpia;->c:Lvod;
+
+    invoke-virtual {v3, v0, v1, v2, p1}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lpia;->o:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    iget-object v0, p0, Lpia;->c:Lvod;
+
+    invoke-interface {v0}, Lvv4;->g()V
 
     return-void
 .end method
 
 .method public final h()Z
-    .locals 2
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v0, p0, Lpia;->c:Lvod;
 
-    move-result-object v0
+    invoke-interface {v0}, Lvv4;->h()Z
 
-    sget-object v1, Liv4;->a:Liv4;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    move-result v0
 
     return v0
 .end method
 
-.method public final run()V
+.method public final onError(Ljava/lang/Throwable;)V
     .locals 4
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    new-instance v0, Lhk6;
 
-    move-result-object v0
+    const/16 v1, 0x10
 
-    sget-object v1, Liv4;->a:Liv4;
+    const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_0
+    invoke-direct {v0, p0, p1, v2, v1}, Lhk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    iget-wide v0, p0, Lpia;->b:J
+    const-wide/16 v1, 0x0
 
-    const-wide/16 v2, 0x1
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    add-long/2addr v2, v0
+    iget-object v3, p0, Lpia;->c:Lvod;
 
-    iput-wide v2, p0, Lpia;->b:J
+    invoke-virtual {v3, v0, v1, v2, p1}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lpia;->a:Lcka;
-
-    invoke-interface {v1, v0}, Lcka;->d(Ljava/lang/Object;)V
-
-    :cond_0
     return-void
 .end method

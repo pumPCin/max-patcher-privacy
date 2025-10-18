@@ -7,28 +7,60 @@
 
 
 # instance fields
-.field public final synthetic a:Lxxc;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/ViewGroup;
+.field public final synthetic b:F
 
-.field public final synthetic c:Lqh6;
-
-.field public final synthetic d:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lxxc;Landroid/view/ViewGroup;Lqh6;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
     .locals 0
+
+    iput p3, p0, Lgyc;->a:I
+
+    iput-object p1, p0, Lgyc;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lgyc;->b:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgyc;->a:Lxxc;
+    return-void
+.end method
 
-    iput-object p2, p0, Lgyc;->b:Landroid/view/ViewGroup;
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
 
-    iput-object p3, p0, Lgyc;->c:Lqh6;
+    return-void
+.end method
 
-    iput p4, p0, Lgyc;->d:I
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
@@ -36,135 +68,79 @@
 
 # virtual methods
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+    .locals 0
 
-    iget-object p1, p0, Lgyc;->a:Lxxc;
+    iget p1, p0, Lgyc;->a:I
 
-    iget-object p1, p1, Lxxc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    if-eqz v0, :cond_2
-
-    iget v2, p0, Lgyc;->d:I
-
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lgyc;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lgyc;->c:Lqh6;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    .locals 1
 
-    iget-object p1, p0, Lgyc;->a:Lxxc;
+    iget p1, p0, Lgyc;->a:I
 
-    iget-object p1, p1, Lxxc;->d:Landroidx/recyclerview/widget/RecyclerView;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object p1, p0, Lgyc;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
-    iget v2, p0, Lgyc;->d:I
+    move-result-object p1
 
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iget v0, p0, Lgyc;->b:F
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    iget-object p1, p0, Lgyc;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lgyc;->c:Lqh6;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
+    :pswitch_0
     return-void
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    nop
 
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
+    iget p1, p0, Lgyc;->a:I
+
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 1
+
+    iget p1, p0, Lgyc;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgyc;->c:Ljava/lang/Object;
+
+    check-cast p1, Liyc;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Liyc;->a:Z
+
+    iget v0, p0, Lgyc;->b:F
+
+    iput v0, p1, Liyc;->o:F
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

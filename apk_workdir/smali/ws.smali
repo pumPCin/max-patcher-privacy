@@ -13,7 +13,7 @@
 
     const/16 v0, 0xc
 
-    invoke-static {v0}, Lze3;->a(I)Lze3;
+    invoke-static {v0}, Lmf3;->a(I)Lmf3;
 
     move-result-object v0
 
@@ -23,7 +23,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Leti;->a(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Loui;->a(ILjava/lang/String;)V
 
     iput v1, p0, Lws;->Y:I
 

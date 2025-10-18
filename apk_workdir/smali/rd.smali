@@ -1,5 +1,5 @@
 .class public final Lrd;
-.super Lpmi;
+.super Lfoi;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+.method public final a(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 2
 
     const/4 v0, 0x0

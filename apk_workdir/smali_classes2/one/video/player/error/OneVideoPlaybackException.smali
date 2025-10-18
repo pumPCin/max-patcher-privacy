@@ -12,8 +12,8 @@
         "Lone/video/player/error/OneVideoPlaybackException;",
         "Ljava/lang/Exception;",
         "Lkotlin/Exception;",
-        "s6b",
-        "t6b",
+        "u7b",
+        "v7b",
         "one-video-player_release"
     }
     k = 0x1
@@ -31,7 +31,7 @@
 
 .field public a:Ljava/lang/String;
 
-.field public b:Lt6b;
+.field public b:Lv7b;
 
 .field public c:Lone/video/exo/error/OneVideoExoSourceException;
 

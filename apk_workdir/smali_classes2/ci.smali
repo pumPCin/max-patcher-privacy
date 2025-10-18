@@ -28,13 +28,13 @@
 
     iget-object v0, p0, Lci;->a:Ldi;
 
-    iget-object v1, v0, Ldi;->a:Lyz0;
+    iget-object v1, v0, Ldi;->a:Lh01;
 
-    iget-object v1, v1, Lyz0;->j0:Lii1;
+    iget-object v1, v1, Lh01;->j0:Lqi1;
 
-    iget-object v1, v1, Lii1;->a:Ldi1;
+    iget-object v1, v1, Lqi1;->a:Lli1;
 
-    iget-object v1, v1, Ldi1;->a:Lzh1;
+    iget-object v1, v1, Lli1;->a:Lhi1;
 
     if-eqz v1, :cond_1
 

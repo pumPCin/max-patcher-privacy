@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf4g;
+.implements Li5g;
 
 
 # instance fields
@@ -100,7 +100,7 @@
 
     iget-object v1, p1, Lde;->a:Ljavax/net/ssl/X509TrustManager;
 
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -110,7 +110,7 @@
 
     iget-object p1, p1, Lde;->b:Ljava/lang/reflect/Method;
 
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

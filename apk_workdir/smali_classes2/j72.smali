@@ -1,112 +1,61 @@
 .class public final Lj72;
-.super Llff;
+.super Lm72;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ll72;
+# static fields
+.field public static final a:Lj72;
 
 
 # direct methods
-.method public constructor <init>(Ll72;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lj72;->Y:Ll72;
+    new-instance v0, Lj72;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lj72;->a:Lj72;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lj72;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj72;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lj72;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lj72;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lj72;->Y:Ll72;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lj72;-><init>(Ll72;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lj72;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p1, Lj72;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object p1, p0, Lj72;->Y:Ll72;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p1, Ll72;->b:Lz62;
+    const v0, -0x29e8873b
 
-    iput v1, p0, Lj72;->X:I
+    return v0
+.end method
 
-    invoke-virtual {p1, p0}, Lz62;->c(Lj72;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_2
+    const-string v0, "NoInternetConnection"
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
 .end method

@@ -1,127 +1,184 @@
 .class public final Lxa1;
-.super Lgd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lup1;
 
 
 # instance fields
-.field public final b:Lz31;
-
-.field public final c:Z
+.field public final synthetic a:Ldb1;
 
 
 # direct methods
-.method public constructor <init>(Lz31;Z)V
-    .locals 1
+.method public constructor <init>(Ldb1;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
-
-    iput-object p1, p0, Lxa1;->b:Lz31;
-
-    iput-boolean p2, p0, Lxa1;->c:Z
+    iput-object p1, p0, Lxa1;->a:Ldb1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d()V
+    .locals 8
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lxa1;->a:Ldb1;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, v0, Ldb1;->a:Lfv1;
 
-    return v0
+    check-cast v1, Luv1;
+
+    iget-object v1, v1, Luv1;->P:Lx0f;
+
+    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Le94;
+
+    iget-object v2, v1, Le94;->l:Luk5;
+
+    instance-of v3, v2, Lnk5;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    move-object v3, v2
+
+    check-cast v3, Lnk5;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lxa1;
+    move-object v3, v4
 
-    const/4 v2, 0x0
+    :goto_0
+    const/4 v5, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v3, :cond_1
 
-    return v2
+    iget v3, v3, Lnk5;->a:I
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lxa1;
+    move v3, v5
 
-    iget-object v1, p0, Lxa1;->b:Lz31;
+    :goto_1
+    const/16 v6, 0xa
 
-    iget-object v3, p1, Lxa1;->b:Lz31;
+    const/4 v7, 0x1
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v3, v6, :cond_5
 
-    move-result v1
+    instance-of v3, v2, Lnk5;
 
-    if-nez v1, :cond_2
+    if-eqz v3, :cond_2
 
-    return v2
+    move-object v3, v2
+
+    check-cast v3, Lnk5;
+
+    goto :goto_2
 
     :cond_2
-    iget-boolean v1, p0, Lxa1;->c:Z
+    move-object v3, v4
 
-    iget-boolean p1, p1, Lxa1;->c:Z
+    :goto_2
+    if-eqz v3, :cond_3
 
-    if-eq v1, p1, :cond_3
+    iget v3, v3, Lnk5;->a:I
 
-    return v2
+    goto :goto_3
 
     :cond_3
-    return v0
-.end method
+    move v3, v5
 
-.method public final hashCode()I
-    .locals 2
+    :goto_3
+    if-ne v3, v7, :cond_4
 
-    iget-object v0, p0, Lxa1;->b:Lz31;
+    goto :goto_4
 
-    invoke-virtual {v0}, Lz31;->hashCode()I
+    :cond_4
+    move v3, v5
 
-    move-result v0
+    goto :goto_5
 
-    mul-int/lit8 v0, v0, 0x1f
+    :cond_5
+    :goto_4
+    move v3, v7
 
-    iget-boolean v1, p0, Lxa1;->c:Z
+    :goto_5
+    instance-of v2, v2, Lnk5;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    if-eqz v2, :cond_7
+
+    iget-boolean v1, v1, Le94;->h:Z
+
+    if-nez v1, :cond_7
+
+    if-eqz v3, :cond_7
+
+    iget-object v1, v0, Ldb1;->w0:Lcye;
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Lo0;->isActive()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-ne v1, v7, :cond_6
 
-    return v1
+    return-void
+
+    :cond_6
+    iget-object v1, v0, Ldb1;->v0:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Lza1;
+
+    invoke-direct {v2, v0, v4}, Lza1;-><init>(Ldb1;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {v1, v4, v4, v2, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ldb1;->w0:Lcye;
+
+    return-void
+
+    :cond_7
+    invoke-virtual {v0, v5}, Ldb1;->h(Z)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final i()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lxa1;->a:Ldb1;
 
-    const-string v1, "OpenIncomingCall(chatInfo="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ldb1;->j(Z)V
 
-    iget-object v1, p0, Lxa1;->b:Lz31;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final k()V
+    .locals 2
 
-    const-string v1, ", isVideo="
+    iget-object v0, p0, Lxa1;->a:Ldb1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    iget-boolean v1, p0, Lxa1;->c:Z
+    iput-boolean v1, v0, Ldb1;->u0:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

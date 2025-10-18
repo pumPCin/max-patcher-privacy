@@ -1,69 +1,67 @@
-.class public final Lqfg;
+.class public abstract synthetic Lqfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyed;
-
-.field public final b:Lei;
-
-.field public final c:Lqed;
-
-.field public final d:Lqed;
-
-.field public final e:Lqed;
-
-.field public final f:Lqed;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, La20;->values()[La20;
 
-    iput-object p1, p0, Lqfg;->a:Lyed;
+    move-result-object v0
 
-    new-instance v0, Lei;
+    array-length v0, v0
 
-    const/16 v1, 0x1d
+    new-array v0, v0, [I
 
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lyed;I)V
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lqfg;->b:Lei;
+    const/4 v2, 0x2
 
-    new-instance v0, Lqed;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v1, 0x12
+    :catch_0
+    const/4 v1, 0x4
 
-    invoke-direct {v0, p1, v1}, Lqed;-><init>(Lyed;I)V
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iput-object v0, p0, Lqfg;->c:Lqed;
+    :catch_1
+    const/4 v2, 0x3
 
-    new-instance v0, Lqed;
+    :try_start_2
+    aput v2, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    const/16 v1, 0x13
+    :catch_2
+    const/16 v2, 0x9
 
-    invoke-direct {v0, p1, v1}, Lqed;-><init>(Lyed;I)V
+    :try_start_3
+    aput v1, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iput-object v0, p0, Lqfg;->d:Lqed;
+    :catch_3
+    const/4 v1, 0x5
 
-    new-instance v0, Lqed;
+    :try_start_4
+    aput v1, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1}, Lqed;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lqfg;->e:Lqed;
-
-    new-instance v0, Lqed;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p1, v1}, Lqed;-><init>(Lyed;I)V
-
-    iput-object v0, p0, Lqfg;->f:Lqed;
+    :catch_4
+    sput-object v0, Lqfg;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

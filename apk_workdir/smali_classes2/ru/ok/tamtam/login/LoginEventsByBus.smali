@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj98;
+.implements Lga8;
 
 
 # annotations
@@ -13,12 +13,12 @@
     }
     d2 = {
         "Lru/ok/tamtam/login/LoginEventsByBus;",
-        "Lj98;",
-        "Li98;",
+        "Lga8;",
+        "Lfa8;",
         "event",
-        "Lzag;",
+        "Lccg;",
         "onEvent",
-        "(Li98;)V",
+        "(Lfa8;)V",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,13 +32,13 @@
 
 
 # instance fields
-.field public final a:Leie;
+.field public final a:Lnje;
 
 .field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lgw0;Lqkf;)V
+.method public constructor <init>(Lpw0;Lulf;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,66 +47,66 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
+    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/tamtam/login/LoginEventsByBus;->a:Leie;
+    iput-object v0, p0, Lru/ok/tamtam/login/LoginEventsByBus;->a:Lnje;
 
-    check-cast p2, Losa;
+    check-cast p2, Lqta;
 
-    invoke-virtual {p2}, Losa;->c()Lfd8;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lfd8;->getImmediate()Lfd8;
+    invoke-virtual {p2}, Lqta;->c()Lce8;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p2}, Lce8;->getImmediate()Lce8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
 
     move-result-object p2
 
     iput-object p2, p0, Lru/ok/tamtam/login/LoginEventsByBus;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Li98;)V
+.method public final onEvent(Lfa8;)V
     .locals 3
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .annotation runtime Lsaf;
+    .annotation runtime Lzbf;
     .end annotation
 
     new-instance v0, Lru/ok/tamtam/login/a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lru/ok/tamtam/login/a;-><init>(Lru/ok/tamtam/login/LoginEventsByBus;Li98;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1, v1}, Lru/ok/tamtam/login/a;-><init>(Lru/ok/tamtam/login/LoginEventsByBus;Lfa8;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x3
 
     iget-object v2, p0, Lru/ok/tamtam/login/LoginEventsByBus;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
     return-void
 .end method
 
-.method public final stream()Lfzc;
+.method public final stream()Lm0d;
     .locals 2
 
-    new-instance v0, Lfzc;
+    new-instance v0, Lm0d;
 
-    iget-object v1, p0, Lru/ok/tamtam/login/LoginEventsByBus;->a:Leie;
+    iget-object v1, p0, Lru/ok/tamtam/login/LoginEventsByBus;->a:Lnje;
 
-    invoke-direct {v0, v1}, Lfzc;-><init>(Lg0a;)V
+    invoke-direct {v0, v1}, Lm0d;-><init>(Li1a;)V
 
     return-object v0
 .end method

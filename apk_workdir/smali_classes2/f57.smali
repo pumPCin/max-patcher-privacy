@@ -1,40 +1,46 @@
-.class public final synthetic Lf57;
+.class public final Lf57;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/IntConsumer;
+.implements Lh57;
 
 
 # instance fields
-.field public final synthetic a:[Lh57;
-
-.field public final synthetic b:Lh57;
+.field public final a:Lwd;
 
 
 # direct methods
-.method public synthetic constructor <init>([Lh57;Lh57;)V
+.method public constructor <init>(Lwd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf57;->a:[Lh57;
-
-    iput-object p2, p0, Lf57;->b:Lh57;
+    iput-object p1, p0, Lf57;->a:Lwd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(I)V
-    .locals 2
+.method public final a(Ljava/io/File;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object v0, p0, Lf57;->a:[Lh57;
+    iget-object v0, p0, Lf57;->a:Lwd;
 
-    iget-object v1, p0, Lf57;->b:Lh57;
-
-    aput-object v1, v0, p1
+    invoke-virtual {v0, p1, p2}, Lwd;->a(Ljava/io/File;Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method public final b(Ljava/lang/String;Ljava/io/File;Le57;Ljava/lang/String;)Z
+    .locals 1
+
+    iget-object v0, p0, Lf57;->a:Lwd;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lwd;->b(Ljava/lang/String;Ljava/io/File;Le57;Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
 .end method

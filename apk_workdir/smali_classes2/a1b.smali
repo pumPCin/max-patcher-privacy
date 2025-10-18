@@ -1,35 +1,19 @@
-.class public interface abstract La1b;
+.class public abstract La1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public O(Ljava/lang/CharSequence;)V
-    .locals 0
+# static fields
+.field public static final a:I
 
-    return-void
-.end method
 
-.method public g0()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    sget v0, Lqrc;->bell_anim:I
 
-.method public i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o()V
-    .locals 0
+    sput v0, La1b;->a:I
 
     return-void
 .end method

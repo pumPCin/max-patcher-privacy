@@ -8,12 +8,12 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyed;I)V
+.method public synthetic constructor <init>(Lfgd;I)V
     .locals 0
 
     iput p2, p0, Lfi;->o:I
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Lyed;)V
+    invoke-direct {p0, p1}, Lf3;-><init>(Lfgd;)V
 
     return-void
 .end method

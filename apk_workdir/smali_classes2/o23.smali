@@ -1,168 +1,248 @@
 .class public final Lo23;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lb4a;
+.field public final synthetic Y:Lone/me/chats/list/ChatsListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb4a;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
     .locals 0
 
-    iput p2, p0, Lo23;->a:I
+    iput-object p2, p0, Lo23;->Y:Lone/me/chats/list/ChatsListWidget;
 
-    iput-object p1, p0, Lo23;->b:Lb4a;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lo23;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lo23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lr8c;->c:Lr8c;
+    move-result-object p1
 
-    iget-object v1, p0, Lo23;->b:Lb4a;
+    check-cast p1, Lo23;
 
-    check-cast v1, Lc9c;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-wide v2, v1, Lc9c;->b:J
+    invoke-virtual {p1, p2}, Lo23;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-boolean v1, v1, Lc9c;->d:Z
+    return-object p2
+.end method
 
-    invoke-virtual {v0}, Lqci;->q0()Llf4;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lo23;
+
+    iget-object v1, p0, Lo23;->Y:Lone/me/chats/list/ChatsListWidget;
+
+    invoke-direct {v0, p2, v1}, Lo23;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+
+    iput-object p1, v0, Lo23;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lo23;->X:Ljava/lang/Object;
+
+    check-cast p1, Le5a;
+
+    instance-of v0, p1, Lp8b;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lc33;->c:Lc33;
+
+    check-cast p1, Lp8b;
+
+    iget-object p1, p1, Le5a;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v4, ":settings/folder/by-chat?id="
+
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    const-string v5, ":call-chat?chat_id="
+    goto/16 :goto_0
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_0
+    instance-of v0, p1, Ldv9;
 
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v2, "&video_enabled="
+    sget-object v0, Lc33;->c:Lc33;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Ldv9;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Le5a;->a:Ljava/lang/Object;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Ljava/lang/Number;
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    const/4 v2, 0x0
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
 
-    sget-object v0, Lzag;->a:Lzag;
+    move-result-object p1
 
-    return-object v0
+    const-string v0, ":profile/change-owner?chat_id="
 
-    :pswitch_0
-    sget-object v0, Lr8c;->c:Lr8c;
+    const-string v4, "&leave_chat=true"
 
-    iget-object v1, p0, Lo23;->b:Lb4a;
-
-    check-cast v1, Lc9c;
-
-    iget-object v1, v1, Lc9c;->e:Ljava/lang/String;
-
-    invoke-virtual {v0}, Lqci;->q0()Llf4;
+    invoke-static {v2, v3, v0, v4}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, ":call-join-link?link="
+    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_1
+    instance-of v0, p1, Lwf4;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1, v2}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    sget-object v0, Lc33;->c:Lc33;
 
-    sget-object v0, Lzag;->a:Lzag;
+    check-cast p1, Lwf4;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
 
-    :pswitch_1
-    sget-object v0, Lr8c;->c:Lr8c;
+    goto :goto_0
 
-    iget-object v1, p0, Lo23;->b:Lb4a;
+    :cond_2
+    instance-of v0, p1, Ln8b;
 
-    check-cast v1, Lc9c;
+    if-eqz v0, :cond_3
 
-    iget-wide v2, v1, Lc9c;->b:J
+    iget-object v0, p0, Lo23;->Y:Lone/me/chats/list/ChatsListWidget;
 
-    iget-boolean v1, v1, Lc9c;->d:Z
-
-    invoke-virtual {v0}, Lqci;->q0()Llf4;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    check-cast p1, Ln8b;
 
-    const-string v5, ":call-user?opponent_id="
+    iget-object p1, p1, Le5a;->a:Ljava/lang/Object;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Landroid/net/Uri;
 
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance v1, Landroid/content/Intent;
 
-    const-string v2, "&video_enabled="
+    const-string v2, "android.intent.action.VIEW"
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v2, "android.intent.category.BROWSABLE"
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v1
+    invoke-virtual {v1, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    const/4 v2, 0x0
+    :try_start_0
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v1, v2}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    goto :goto_0
 
-    sget-object v0, Lzag;->a:Lzag;
+    :catch_0
+    move-exception v0
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    :pswitch_2
-    sget-object v0, Lvy3;->c:Lvy3;
+    move-result-object v0
 
-    iget-object v1, p0, Lo23;->b:Lb4a;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast v1, Lgxe;
+    const-string v2, "openWebLink "
 
-    iget-wide v2, v1, Lgxe;->b:J
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v1, v1, Lgxe;->c:Z
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2, v3, v1}, Lvy3;->S0(JZ)V
+    const-string p1, ": "
 
-    sget-object v0, Lzag;->a:Lzag;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ContextExt"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v0, p1, Lkj7;
+
+    if-eqz v0, :cond_4
+
+    sget-object v0, Lc33;->c:Lc33;
+
+    check-cast p1, Lkj7;
+
+    iget-object p1, p1, Le5a;->a:Ljava/lang/Object;
+
+    check-cast p1, Lhg4;
+
+    iget-object p1, p1, Lhg4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, v1}, Lag4;->c(Landroid/net/Uri;Landroid/os/Bundle;)Z
+
+    :cond_4
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

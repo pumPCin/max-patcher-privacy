@@ -1,941 +1,429 @@
 .class public final Lb7b;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
 
-# interfaces
-.implements Lgbf;
-.implements Lpe4;
+
+# static fields
+.field public static final synthetic d:I
 
 
 # instance fields
-.field public final a:Lx4b;
+.field public final a:Lmfh;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ls73;
 
-.field public final c:Ljava/util/ArrayDeque;
-
-.field public final d:Ljava/util/ArrayDeque;
-
-.field public final e:[Lse4;
-
-.field public final f:[Lte4;
-
-.field public g:I
-
-.field public h:I
-
-.field public i:Lse4;
-
-.field public j:Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:J
-
-.field public final n:Lrbf;
+.field public final c:Lwif;
 
 
 # direct methods
-.method public constructor <init>(Lrbf;)V
-    .locals 6
+.method public constructor <init>(Lmfh;Ls73;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
-    new-array v1, v0, [Lmbf;
+    iput-object p1, p0, Lb7b;->a:Lmfh;
 
-    new-array v0, v0, [Ls52;
+    iput-object p2, p0, Lb7b;->b:Ls73;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Luna;
 
-    new-instance v2, Ljava/lang/Object;
+    const/16 p2, 0x14
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, p2}, Luna;-><init>(I)V
 
-    iput-object v2, p0, Lb7b;->b:Ljava/lang/Object;
+    new-instance p2, Lwif;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
 
-    iput-wide v2, p0, Lb7b;->m:J
-
-    new-instance v2, Ljava/util/ArrayDeque;
-
-    invoke-direct {v2}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v2, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    new-instance v2, Ljava/util/ArrayDeque;
-
-    invoke-direct {v2}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v2, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    iput-object v1, p0, Lb7b;->e:[Lse4;
-
-    array-length v1, v1
-
-    iput v1, p0, Lb7b;->g:I
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    iget v3, p0, Lb7b;->g:I
-
-    if-ge v2, v3, :cond_0
-
-    iget-object v3, p0, Lb7b;->e:[Lse4;
-
-    new-instance v4, Lmbf;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, v5}, Lse4;-><init>(I)V
-
-    aput-object v4, v3, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iput-object v0, p0, Lb7b;->f:[Lte4;
-
-    array-length v0, v0
-
-    iput v0, p0, Lb7b;->h:I
-
-    :goto_1
-    iget v0, p0, Lb7b;->h:I
-
-    if-ge v1, v0, :cond_1
-
-    iget-object v0, p0, Lb7b;->f:[Lte4;
-
-    new-instance v2, Ls52;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3}, Ls52;-><init>(Lgbf;I)V
-
-    aput-object v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Lx4b;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p0}, Lx4b;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lb7b;->a:Lx4b;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    iget v0, p0, Lb7b;->g:I
-
-    iget-object v1, p0, Lb7b;->e:[Lse4;
-
-    array-length v2, v1
-
-    const/4 v3, 0x0
-
-    if-ne v0, v2, :cond_2
-
-    const/4 v0, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v3
-
-    :goto_2
-    invoke-static {v0}, Lgfi;->g(Z)V
-
-    array-length v0, v1
-
-    :goto_3
-    if-ge v3, v0, :cond_3
-
-    aget-object v2, v1, v3
-
-    const/16 v4, 0x400
-
-    invoke-virtual {v2, v4}, Lse4;->y(I)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    iput-object p1, p0, Lb7b;->n:Lrbf;
+    iput-object p2, p0, Lb7b;->c:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 0
+.method public final onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 9
 
-    return-void
-.end method
+    if-eqz p1, :cond_6
 
-.method public final b()Ljava/lang/Object;
-    .locals 2
+    iget-object v0, p0, Lb7b;->c:Lwif;
 
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lb7b;->j:Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lte4;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :cond_1
-    throw v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final c()Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lb7b;->j:Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lb7b;->i:Lse4;
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_0
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lgfi;->g(Z)V
-
-    iget v1, p0, Lb7b;->g:I
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v3, p0, Lb7b;->e:[Lse4;
-
-    sub-int/2addr v1, v2
-
-    iput v1, p0, Lb7b;->g:I
-
-    aget-object v1, v3, v1
-
-    :goto_1
-    iput-object v1, p0, Lb7b;->i:Lse4;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :cond_2
-    throw v1
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final d(J)V
-    .locals 3
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget v1, p0, Lb7b;->g:I
-
-    iget-object v2, p0, Lb7b;->e:[Lse4;
-
-    array-length v2, v2
-
-    if-eq v1, v2, :cond_1
-
-    iget-boolean v1, p0, Lb7b;->k:Z
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    :goto_0
-    const/4 v1, 0x1
-
-    :goto_1
-    invoke-static {v1}, Lgfi;->g(Z)V
-
-    iput-wide p1, p0, Lb7b;->m:J
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final e(Lmbf;)V
-    .locals 2
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lb7b;->j:Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lb7b;->i:Lse4;
-
-    if-ne p1, v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lgfi;->b(Z)V
-
-    iget-object v1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget p1, p0, Lb7b;->h:I
-
-    if-lez p1, :cond_1
-
-    iget-object p1, p0, Lb7b;->b:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->notify()V
-
-    :cond_1
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lb7b;->i:Lse4;
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
-    throw v1
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final f(Lse4;Lte4;Z)Landroidx/media3/decoder/DecoderException;
-    .locals 6
-
-    check-cast p1, Lmbf;
-
-    move-object v0, p2
-
-    check-cast v0, Ls52;
-
-    :try_start_0
-    iget-object p2, p1, Lse4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
-
-    move-result p2
-
-    iget-object v2, p0, Lb7b;->n:Lrbf;
-
-    if-eqz p3, :cond_0
-
-    invoke-interface {v2}, Lrbf;->reset()V
-
-    :cond_0
-    const/4 p3, 0x0
-
-    invoke-interface {v2, p3, v1, p2}, Lrbf;->i(I[BI)Lebf;
-
-    move-result-object v3
-
-    iget-wide v1, p1, Lse4;->Z:J
-
-    iget-wide v4, p1, Lmbf;->t0:J
-
-    invoke-virtual/range {v0 .. v5}, Ls52;->y(JLebf;J)V
-
-    iput-boolean p3, v0, Lte4;->o:Z
-    :try_end_0
-    .catch Landroidx/media3/extractor/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    return-object p1
-.end method
-
-.method public final flush()V
-    .locals 5
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lb7b;->k:Z
-
-    iget-object v1, p0, Lb7b;->i:Lse4;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lse4;->w()V
-
-    iget-object v2, p0, Lb7b;->e:[Lse4;
-
-    iget v3, p0, Lb7b;->g:I
-
-    add-int/lit8 v4, v3, 0x1
-
-    iput v4, p0, Lb7b;->g:I
-
-    aput-object v1, v2, v3
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lb7b;->i:Lse4;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lse4;
-
-    invoke-virtual {v1}, Lse4;->w()V
-
-    iget-object v2, p0, Lb7b;->e:[Lse4;
-
-    iget v3, p0, Lb7b;->g:I
-
-    add-int/lit8 v4, v3, 0x1
-
-    iput v4, p0, Lb7b;->g:I
-
-    aput-object v1, v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lte4;
-
-    invoke-virtual {v1}, Lte4;->x()V
-
-    goto :goto_1
-
-    :cond_2
-    monitor-exit v0
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final g()Z
-    .locals 13
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :goto_0
-    :try_start_0
-    iget-boolean v1, p0, Lb7b;->l:Z
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget v1, p0, Lb7b;->h:I
-
-    if-lez v1, :cond_0
-
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_0
-    move v1, v3
-
-    :goto_1
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lb7b;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->wait()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto/16 :goto_9
-
-    :cond_1
-    iget-boolean v1, p0, Lb7b;->l:Z
-
-    if-eqz v1, :cond_2
-
-    monitor-exit v0
-
-    return v3
-
-    :cond_2
-    iget-object v1, p0, Lb7b;->c:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lse4;
-
-    iget-object v4, p0, Lb7b;->f:[Lte4;
-
-    iget v5, p0, Lb7b;->h:I
-
-    sub-int/2addr v5, v2
-
-    iput v5, p0, Lb7b;->h:I
-
-    aget-object v4, v4, v5
-
-    iget-boolean v5, p0, Lb7b;->k:Z
-
-    iput-boolean v3, p0, Lb7b;->k:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x4
-
-    invoke-virtual {v1, v0}, Luy;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    invoke-virtual {v4, v0}, Luy;->a(I)V
-
-    goto :goto_6
-
-    :cond_3
-    iget-wide v6, v1, Lse4;->Z:J
-
-    iput-wide v6, v4, Lte4;->c:J
-
-    const/high16 v0, 0x8000000
-
-    invoke-virtual {v1, v0}, Luy;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    invoke-virtual {v4, v0}, Luy;->a(I)V
-
-    :cond_4
-    iget-wide v6, v1, Lse4;->Z:J
-
-    iget-object v8, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v8
-
-    :try_start_1
-    iget-wide v9, p0, Lb7b;->m:J
-
-    const-wide v11, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, v9, v11
-
-    if-eqz v0, :cond_6
-
-    cmp-long v0, v6, v9
-
-    if-ltz v0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move v0, v3
-
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    move v0, v2
-
-    :goto_3
-    monitor-exit v8
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
-
-    if-nez v0, :cond_7
-
-    iput-boolean v2, v4, Lte4;->o:Z
-
-    :cond_7
-    :try_start_2
-    invoke-virtual {p0, v1, v4, v5}, Lb7b;->f(Lse4;Lte4;Z)Landroidx/media3/decoder/DecoderException;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
-    :try_end_2
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto :goto_5
+    check-cast v0, Lqxc;
 
-    :catch_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v2, Ld7b;->a:I
+
+    iget-object v3, v0, Lqxc;->b:Ljava/lang/ThreadLocal;
+
+    iget-object v0, v0, Lqxc;->a:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, [B
+
+    if-nez v4, :cond_0
+
+    const/high16 v4, 0x10000
+
+    new-array v4, v4, [B
+
+    invoke-virtual {v0, v4}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [B
+
+    if-nez v2, :cond_1
+
+    const/16 v2, 0x1000
+
+    new-array v2, v2, [B
+
+    invoke-virtual {v3, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
     move-exception v0
-
-    new-instance v5, Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-    const-string v6, "Unexpected decode error"
-
-    invoke-direct {v5, v6, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_4
-    move-object v0, v5
-
-    goto :goto_5
-
-    :catch_1
-    move-exception v0
-
-    new-instance v5, Landroidx/media3/extractor/text/SubtitleDecoderException;
-
-    const-string v6, "Unexpected decode error"
-
-    invoke-direct {v5, v6, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_4
 
-    :goto_5
-    if-eqz v0, :cond_8
+    :cond_1
+    :goto_0
+    const/4 v3, 0x0
 
-    iget-object v5, p0, Lb7b;->b:Ljava/lang/Object;
+    move v5, v3
 
-    monitor-enter v5
+    :cond_2
+    :goto_1
+    :try_start_1
+    array-length v6, v2
 
-    :try_start_3
-    check-cast v0, Landroidx/media3/extractor/text/SubtitleDecoderException;
+    invoke-virtual {v1, v2, v3, v6}, Ljava/io/InputStream;->read([BII)I
 
-    iput-object v0, p0, Lb7b;->j:Landroidx/media3/extractor/text/SubtitleDecoderException;
+    move-result v6
 
-    monitor-exit v5
+    if-ltz v6, :cond_4
 
-    return v3
+    array-length v7, v4
+
+    add-int v8, v5, v6
+
+    if-ge v7, v8, :cond_3
+
+    array-length v7, v4
+
+    mul-int/lit8 v7, v7, 0x2
+
+    new-array v7, v7, [B
+
+    invoke-static {v4, v3, v7, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {v0, v7}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    move-object v4, v7
+
+    goto :goto_2
 
     :catchall_1
     move-exception v0
 
-    monitor-exit v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    goto :goto_3
 
-    throw v0
+    :cond_3
+    :goto_2
+    if-lez v6, :cond_2
 
-    :cond_8
-    :goto_6
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_4
-    iget-boolean v3, p0, Lb7b;->k:Z
-
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v4}, Lte4;->x()V
-
-    goto :goto_7
-
-    :catchall_2
-    move-exception v1
-
-    goto :goto_8
-
-    :cond_9
-    iget-boolean v3, v4, Lte4;->o:Z
-
-    if-eqz v3, :cond_a
-
-    invoke-virtual {v4}, Lte4;->x()V
-
-    goto :goto_7
-
-    :cond_a
-    iget-object v3, p0, Lb7b;->d:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    :goto_7
-    invoke-virtual {v1}, Lse4;->w()V
-
-    iget-object v3, p0, Lb7b;->e:[Lse4;
-
-    iget v4, p0, Lb7b;->g:I
-
-    add-int/lit8 v5, v4, 0x1
-
-    iput v5, p0, Lb7b;->g:I
-
-    aput-object v1, v3, v4
-
-    monitor-exit v0
-
-    return v2
-
-    :goto_8
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw v1
-
-    :catchall_3
-    move-exception v0
-
-    :try_start_5
-    monitor-exit v8
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    throw v0
-
-    :goto_9
-    :try_start_6
-    monitor-exit v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    throw v1
-.end method
-
-.method public final release()V
-    .locals 2
-
-    iget-object v0, p0, Lb7b;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lb7b;->l:Z
-
-    iget-object v1, p0, Lb7b;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lb7b;->a:Lx4b;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :try_start_1
-    iget-object v0, p0, Lb7b;->a:Lx4b;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
+    invoke-static {v2, v3, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
     :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    return-void
+    move v5, v8
 
-    :catch_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    goto :goto_1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
+    :cond_4
     :try_start_2
-    monitor-exit v0
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v1, Lha2;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v4, v3, v5, v1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    throw v1
+    goto :goto_5
+
+    :goto_3
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :catchall_2
+    move-exception v2
+
+    :try_start_4
+    invoke-static {v1, v0}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_4
+    new-instance v1, Lbed;
+
+    invoke-direct {v1, v0}, Lbed;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_5
+    nop
+
+    instance-of v1, v0, Lbed;
+
+    if-eqz v1, :cond_5
+
+    const/4 v0, 0x0
+
+    :cond_5
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_6
+
+    new-instance v1, La7b;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, La7b;-><init>(I)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    :cond_6
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 2
+
+    iget-object p1, p0, Lb7b;->a:Lmfh;
+
+    iget-object p1, p1, Lmfh;->H0:Lx0f;
+
+    :cond_0
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    move-object v0, p2
+
+    check-cast v0, Ljcb;
+
+    sget-object v1, Ljcb;->a:Ljcb;
+
+    if-eq v0, v1, :cond_1
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    sget-object v0, Ljcb;->b:Ljcb;
+
+    invoke-virtual {p1, p2, v0}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    iget-object p1, p0, Lb7b;->a:Lmfh;
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p2, p3}, Lmfh;->w(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+    .locals 3
+
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->isForMainFrame()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lb7b;->a:Lmfh;
+
+    iget-object v0, v0, Lmfh;->H0:Lx0f;
+
+    sget-object v1, Ljcb;->o:Ljcb;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+
+    return-void
+.end method
+
+.method public final onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 3
+
+    iget-object p1, p0, Lb7b;->a:Lmfh;
+
+    iget-object p3, p1, Lmfh;->q0:Ly83;
+
+    check-cast p3, Ld78;
+
+    iget-object v0, p3, Ld78;->z0:Lq4e;
+
+    sget-object v1, Ld78;->P0:[Ltr7;
+
+    const/16 v2, 0xf
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, p3, v1}, Lq4e;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->proceed()V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p1, Lmfh;->H0:Lx0f;
+
+    sget-object p2, Ljcb;->o:Ljcb;
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p3, p2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 4
+
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lb7b;->b:Ls73;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "http"
+
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "https"
+
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_0
+    iget-object v1, v1, Ls73;->a:Landroid/content/Context;
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "android.intent.action.VIEW"
+
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "WebAppUrlInterceptor"
+
+    const-string v2, "Unexpected exception when try to open activity by link"
+
+    invoke-static {v1, v2, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catch_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_1
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+
+    move-result p1
+
+    return p1
 .end method

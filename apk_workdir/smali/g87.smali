@@ -1,188 +1,496 @@
-.class public final Lg87;
-.super Lb87;
+.class public abstract Lg87;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final D0:Ljava/util/concurrent/Executor;
-
-.field public final E0:Ljava/lang/Object;
-
-.field public F0:Lv97;
-
-.field public G0:Lf87;
+# static fields
+.field public static final a:Lz8d;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 181
 
-    invoke-direct {p0}, Lb87;-><init>()V
+    const-string v179, "Garage Rock"
 
-    new-instance v0, Ljava/lang/Object;
+    const-string v180, "Psybient"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "Other"
 
-    iput-object v0, p0, Lg87;->E0:Ljava/lang/Object;
+    const-string v2, "Pop"
 
-    iput-object p1, p0, Lg87;->D0:Ljava/util/concurrent/Executor;
+    const-string v3, "R&B"
+
+    const-string v4, "Rap"
+
+    const-string v5, "Reggae"
+
+    const-string v6, "Rock"
+
+    const-string v7, "Techno"
+
+    const-string v8, "Industrial"
+
+    const-string v9, "Alternative"
+
+    const-string v10, "Ska"
+
+    const-string v11, "Death Metal"
+
+    const-string v12, "Pranks"
+
+    const-string v13, "Soundtrack"
+
+    const-string v14, "Euro-Techno"
+
+    const-string v15, "Ambient"
+
+    const-string v16, "Trip-Hop"
+
+    const-string v17, "Vocal"
+
+    const-string v18, "Jazz+Funk"
+
+    const-string v19, "Fusion"
+
+    const-string v20, "Trance"
+
+    const-string v21, "Classical"
+
+    const-string v22, "Instrumental"
+
+    const-string v23, "Acid"
+
+    const-string v24, "House"
+
+    const-string v25, "Game"
+
+    const-string v26, "Sound Clip"
+
+    const-string v27, "Gospel"
+
+    const-string v28, "Noise"
+
+    const-string v29, "AlternRock"
+
+    const-string v30, "Bass"
+
+    const-string v31, "Soul"
+
+    const-string v32, "Punk"
+
+    const-string v33, "Space"
+
+    const-string v34, "Meditative"
+
+    const-string v35, "Instrumental Pop"
+
+    const-string v36, "Instrumental Rock"
+
+    const-string v37, "Ethnic"
+
+    const-string v38, "Gothic"
+
+    const-string v39, "Darkwave"
+
+    const-string v40, "Techno-Industrial"
+
+    const-string v41, "Electronic"
+
+    const-string v42, "Pop-Folk"
+
+    const-string v43, "Eurodance"
+
+    const-string v44, "Dream"
+
+    const-string v45, "Southern Rock"
+
+    const-string v46, "Comedy"
+
+    const-string v47, "Cult"
+
+    const-string v48, "Gangsta"
+
+    const-string v49, "Top 40"
+
+    const-string v50, "Christian Rap"
+
+    const-string v51, "Pop/Funk"
+
+    const-string v52, "Jungle"
+
+    const-string v53, "Native American"
+
+    const-string v54, "Cabaret"
+
+    const-string v55, "New Wave"
+
+    const-string v56, "Psychadelic"
+
+    const-string v57, "Rave"
+
+    const-string v58, "Showtunes"
+
+    const-string v59, "Trailer"
+
+    const-string v60, "Lo-Fi"
+
+    const-string v61, "Tribal"
+
+    const-string v62, "Acid Punk"
+
+    const-string v63, "Acid Jazz"
+
+    const-string v64, "Polka"
+
+    const-string v65, "Retro"
+
+    const-string v66, "Musical"
+
+    const-string v67, "Rock & Roll"
+
+    const-string v68, "Hard Rock"
+
+    const-string v69, "Folk"
+
+    const-string v70, "Folk-Rock"
+
+    const-string v71, "National Folk"
+
+    const-string v72, "Swing"
+
+    const-string v73, "Fast Fusion"
+
+    const-string v74, "Bebob"
+
+    const-string v75, "Latin"
+
+    const-string v76, "Revival"
+
+    const-string v77, "Celtic"
+
+    const-string v78, "Bluegrass"
+
+    const-string v79, "Avantgarde"
+
+    const-string v80, "Gothic Rock"
+
+    const-string v81, "Progressive Rock"
+
+    const-string v82, "Psychedelic Rock"
+
+    const-string v83, "Symphonic Rock"
+
+    const-string v84, "Slow Rock"
+
+    const-string v85, "Big Band"
+
+    const-string v86, "Chorus"
+
+    const-string v87, "Easy Listening"
+
+    const-string v88, "Acoustic"
+
+    const-string v89, "Humour"
+
+    const-string v90, "Speech"
+
+    const-string v91, "Chanson"
+
+    const-string v92, "Opera"
+
+    const-string v93, "Chamber Music"
+
+    const-string v94, "Sonata"
+
+    const-string v95, "Symphony"
+
+    const-string v96, "Booty Bass"
+
+    const-string v97, "Primus"
+
+    const-string v98, "Porn Groove"
+
+    const-string v99, "Satire"
+
+    const-string v100, "Slow Jam"
+
+    const-string v101, "Club"
+
+    const-string v102, "Tango"
+
+    const-string v103, "Samba"
+
+    const-string v104, "Folklore"
+
+    const-string v105, "Ballad"
+
+    const-string v106, "Power Ballad"
+
+    const-string v107, "Rhythmic Soul"
+
+    const-string v108, "Freestyle"
+
+    const-string v109, "Duet"
+
+    const-string v110, "Punk Rock"
+
+    const-string v111, "Drum Solo"
+
+    const-string v112, "A capella"
+
+    const-string v113, "Euro-House"
+
+    const-string v114, "Dance Hall"
+
+    const-string v115, "Goa"
+
+    const-string v116, "Drum & Bass"
+
+    const-string v117, "Club-House"
+
+    const-string v118, "Hardcore"
+
+    const-string v119, "Terror"
+
+    const-string v120, "Indie"
+
+    const-string v121, "BritPop"
+
+    const-string v122, "Afro-Punk"
+
+    const-string v123, "Polsk Punk"
+
+    const-string v124, "Beat"
+
+    const-string v125, "Christian Gangsta Rap"
+
+    const-string v126, "Heavy Metal"
+
+    const-string v127, "Black Metal"
+
+    const-string v128, "Crossover"
+
+    const-string v129, "Contemporary Christian"
+
+    const-string v130, "Christian Rock"
+
+    const-string v131, "Merengue"
+
+    const-string v132, "Salsa"
+
+    const-string v133, "Thrash Metal"
+
+    const-string v134, "Anime"
+
+    const-string v135, "Jpop"
+
+    const-string v136, "Synthpop"
+
+    const-string v137, "Abstract"
+
+    const-string v138, "Art Rock"
+
+    const-string v139, "Baroque"
+
+    const-string v140, "Bhangra"
+
+    const-string v141, "Big beat"
+
+    const-string v142, "Breakbeat"
+
+    const-string v143, "Chillout"
+
+    const-string v144, "Downtempo"
+
+    const-string v145, "Dub"
+
+    const-string v146, "EBM"
+
+    const-string v147, "Eclectic"
+
+    const-string v148, "Electro"
+
+    const-string v149, "Electroclash"
+
+    const-string v150, "Emo"
+
+    const-string v151, "Experimental"
+
+    const-string v152, "Garage"
+
+    const-string v153, "Global"
+
+    const-string v154, "IDM"
+
+    const-string v155, "Illbient"
+
+    const-string v156, "Industro-Goth"
+
+    const-string v157, "Jam Band"
+
+    const-string v158, "Krautrock"
+
+    const-string v159, "Leftfield"
+
+    const-string v160, "Lounge"
+
+    const-string v161, "Math Rock"
+
+    const-string v162, "New Romantic"
+
+    const-string v163, "Nu-Breakz"
+
+    const-string v164, "Post-Punk"
+
+    const-string v165, "Post-Rock"
+
+    const-string v166, "Psytrance"
+
+    const-string v167, "Shoegaze"
+
+    const-string v168, "Space Rock"
+
+    const-string v169, "Trop Rock"
+
+    const-string v170, "World Music"
+
+    const-string v171, "Neoclassical"
+
+    const-string v172, "Audiobook"
+
+    const-string v173, "Audio theatre"
+
+    const-string v174, "Neue Deutsche Welle"
+
+    const-string v175, "Podcast"
+
+    const-string v176, "Indie-Rock"
+
+    const-string v177, "G-Funk"
+
+    const-string v178, "Dubstep"
+
+    filled-new-array/range {v1 .. v180}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lec7;->b:Lv36;
+
+    const/16 v1, 0xc0
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const-string v4, "Blues"
+
+    aput-object v4, v2, v3
+
+    const/4 v4, 0x1
+
+    const-string v5, "Classic Rock"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x2
+
+    const-string v5, "Country"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x3
+
+    const-string v5, "Dance"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x4
+
+    const-string v5, "Disco"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x5
+
+    const-string v5, "Funk"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x6
+
+    const-string v5, "Grunge"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x7
+
+    const-string v5, "Hip-Hop"
+
+    aput-object v5, v2, v4
+
+    const/16 v4, 0x8
+
+    const-string v5, "Jazz"
+
+    aput-object v5, v2, v4
+
+    const/16 v4, 0x9
+
+    const-string v5, "Metal"
+
+    aput-object v5, v2, v4
+
+    const/16 v4, 0xa
+
+    const-string v5, "New Age"
+
+    aput-object v5, v2, v4
+
+    const/16 v4, 0xb
+
+    const-string v5, "Oldies"
+
+    aput-object v5, v2, v4
+
+    const/16 v4, 0xc
+
+    const/16 v5, 0xb4
+
+    invoke-static {v0, v3, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-static {v1, v2}, Lymi;->a(I[Ljava/lang/Object;)V
+
+    invoke-static {v1, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
+
+    move-result-object v0
+
+    sput-object v0, Lg87;->a:Lz8d;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lx97;)Lv97;
-    .locals 0
-
-    invoke-interface {p1}, Lx97;->b()Lv97;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c()V
+.method public static a(I)Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lg87;->E0:Ljava/lang/Object;
+    if-ltz p0, :cond_0
 
-    monitor-enter v0
+    sget-object v0, Lg87;->a:Lz8d;
 
-    :try_start_0
-    iget-object v1, p0, Lg87;->F0:Lv97;
+    iget v1, v0, Lz8d;->o:I
 
-    if-eqz v1, :cond_0
+    if-ge p0, v1, :cond_0
 
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+    invoke-virtual {v0, p0}, Lz8d;->get(I)Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    iput-object v1, p0, Lg87;->F0:Lv97;
+    check-cast p0, Ljava/lang/String;
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    return-object p0
 
     :cond_0
-    :goto_0
-    monitor-exit v0
+    const/4 p0, 0x0
 
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final f(Lv97;)V
-    .locals 5
-
-    iget-object v0, p0, Lg87;->E0:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lb87;->C0:Z
-
-    if-nez v1, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lg87;->G0:Lf87;
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Lv97;->getImageInfo()Lc97;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lc97;->getTimestamp()J
-
-    move-result-wide v1
-
-    iget-object v3, p0, Lg87;->G0:Lf87;
-
-    iget-object v3, v3, Lpc6;->b:Lv97;
-
-    invoke-interface {v3}, Lv97;->getImageInfo()Lc97;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lc97;->getTimestamp()J
-
-    move-result-wide v3
-
-    cmp-long v1, v1, v3
-
-    if-gtz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lg87;->F0:Lv97;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
-
-    :cond_2
-    iput-object p1, p0, Lg87;->F0:Lv97;
-
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :cond_3
-    new-instance v1, Lf87;
-
-    invoke-direct {v1, p1, p0}, Lf87;-><init>(Lv97;Lg87;)V
-
-    iput-object v1, p0, Lg87;->G0:Lf87;
-
-    invoke-virtual {p0, v1}, Lb87;->b(Lv97;)Lo18;
-
-    move-result-object p1
-
-    new-instance v2, Lx85;
-
-    const/16 v3, 0x12
-
-    invoke-direct {v2, v3, v1}, Lx85;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Ldmi;->a()Lst4;
-
-    move-result-object v1
-
-    invoke-static {p1, v2, v1}, Lt9g;->a(Lo18;Lej6;Ljava/util/concurrent/Executor;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return-object p0
 .end method

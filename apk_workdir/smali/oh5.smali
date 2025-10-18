@@ -1,154 +1,97 @@
-.class public final synthetic Loh5;
-.super Ljava/lang/Object;
+.class public final enum Loh5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lx18;
 
+# static fields
+.field public static final synthetic X:[Loh5;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Loh5;
 
-.field public final synthetic b:Lprb;
+.field public static final enum b:Loh5;
+
+.field public static final enum c:Loh5;
+
+.field public static final enum o:Loh5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lprb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Loh5;->a:I
+    new-instance v0, Loh5;
 
-    iput-object p1, p0, Loh5;->b:Lprb;
+    const-string v1, "REPLACE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Loh5;->a:Loh5;
+
+    new-instance v1, Loh5;
+
+    const-string v2, "KEEP"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Loh5;->b:Loh5;
+
+    new-instance v2, Loh5;
+
+    const-string v3, "APPEND"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Loh5;->c:Loh5;
+
+    new-instance v3, Loh5;
+
+    const-string v4, "APPEND_OR_REPLACE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Loh5;->o:Loh5;
+
+    filled-new-array {v0, v1, v2, v3}, [Loh5;
+
+    move-result-object v0
+
+    sput-object v0, Loh5;->X:[Loh5;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Loh5;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+    const-class v0, Loh5;
 
-    iget v0, p0, Loh5;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p1, Lisb;
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p0, Loh5;
 
-    iget-object v0, p0, Loh5;->b:Lprb;
+    return-object p0
+.end method
 
-    iget-object v0, v0, Lprb;->i:Lh1g;
+.method public static values()[Loh5;
+    .locals 1
 
-    iget-object v0, v0, Lh1g;->Y:Ljava/lang/Object;
+    sget-object v0, Loh5;->X:[Loh5;
 
-    check-cast v0, Lm1g;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lisb;->e0(Lm1g;)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, [Loh5;
 
-    :pswitch_0
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-object v0, v0, Lprb;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lisb;->K0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-object v0, v0, Lprb;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lisb;->C0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-object v0, v0, Lprb;->o:Lrrb;
-
-    invoke-interface {p1, v0}, Lisb;->A0(Lrrb;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    invoke-virtual {v0}, Lprb;->m()Z
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Lisb;->q(Z)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget v0, v0, Lprb;->n:I
-
-    invoke-interface {p1, v0}, Lisb;->e(I)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-boolean v1, v0, Lprb;->l:Z
-
-    iget v0, v0, Lprb;->m:I
-
-    invoke-interface {p1, v0, v1}, Lisb;->i(IZ)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget v0, v0, Lprb;->e:I
-
-    invoke-interface {p1, v0}, Lisb;->k(I)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-boolean v1, v0, Lprb;->l:Z
-
-    iget v0, v0, Lprb;->e:I
-
-    invoke-interface {p1, v0, v1}, Lisb;->o(IZ)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Loh5;->b:Lprb;
-
-    iget-boolean v1, v0, Lprb;->g:Z
-
-    invoke-interface {p1, v1}, Lisb;->r(Z)V
-
-    iget-boolean v0, v0, Lprb;->g:Z
-
-    invoke-interface {p1, v0}, Lisb;->h(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

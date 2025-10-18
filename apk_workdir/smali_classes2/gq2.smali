@@ -1,130 +1,61 @@
 .class public final Lgq2;
-.super Llff;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lgi6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:Ljava/lang/Object;
 
-.field public synthetic Y:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public Y:Ljava/lang/Object;
 
-.field public final synthetic Z:Lo7f;
+.field public Z:Ljava/lang/Object;
+
+.field public o:Lnq2;
+
+.field public q0:J
+
+.field public r0:Z
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lnq2;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lnq2;Ly14;)V
     .locals 0
 
-    iput p3, p0, Lgq2;->X:I
+    iput-object p1, p0, Lgq2;->t0:Lnq2;
 
-    iput-object p1, p0, Lgq2;->Z:Lo7f;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lgq2;->X:I
-
-    check-cast p1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    check-cast p2, Lu4b;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lgq2;
-
-    iget-object v0, p0, Lgq2;->Z:Lo7f;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lgq2;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lgq2;->Y:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {p2, p1}, Lgq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lgq2;
-
-    iget-object v0, p0, Lgq2;->Z:Lo7f;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lgq2;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lgq2;->Y:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    invoke-virtual {p2, p1}, Lgq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lgq2;->X:I
+    iput-object p1, p0, Lgq2;->s0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lgq2;->u0:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lgq2;->Y:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Lgq2;->Z:Lo7f;
+    iput p1, p0, Lgq2;->u0:I
 
-    invoke-virtual {v0}, Lo7f;->j()V
+    iget-object p1, p0, Lgq2;->t0:Lnq2;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    const/4 v0, 0x0
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {p1, v0, p0}, Lnq2;->c(Ls0a;Ly14;)Ljava/lang/Object;
 
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgq2;->Y:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    iget-object v0, p0, Lgq2;->Z:Lo7f;
-
-    invoke-virtual {v0}, Lo7f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

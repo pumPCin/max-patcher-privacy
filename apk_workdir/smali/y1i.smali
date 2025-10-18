@@ -1,194 +1,102 @@
-.class public final Ly1i;
-.super Ly2;
+.class public abstract Ly1i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/Object;
-
-.field public c:I
-
-.field public final synthetic o:Lze3;
-
-
 # direct methods
-.method public constructor <init>(Lze3;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x0
+    const-class v0, Ly1i;
 
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v1}, Ly2;-><init>(ZI)V
-
-    iput-object p1, p0, Ly1i;->o:Lze3;
-
-    sget-object v0, Lze3;->v0:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lze3;->m()[Ljava/lang/Object;
-
-    move-result-object p1
-
-    aget-object p1, p1, p2
-
-    iput-object p1, p0, Ly1i;->b:Ljava/lang/Object;
-
-    iput p2, p0, Ly1i;->c:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-# virtual methods
-.method public final a()V
-    .locals 4
-
-    iget v0, p0, Ly1i;->c:I
-
-    const/4 v1, -0x1
-
-    iget-object v2, p0, Ly1i;->b:Ljava/lang/Object;
-
-    iget-object v3, p0, Ly1i;->o:Lze3;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {v3}, Lze3;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    iget v0, p0, Ly1i;->c:I
-
-    invoke-virtual {v3}, Lze3;->m()[Ljava/lang/Object;
-
-    move-result-object v1
-
-    aget-object v0, v1, v0
-
-    invoke-static {v2, v0}, Legi;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
 
     :cond_0
-    return-void
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    sget-object v0, Lze3;->v0:Ljava/lang/Object;
+    move-result-object p0
 
-    invoke-virtual {v3, v2}, Lze3;->s(Ljava/lang/Object;)I
+    check-cast p0, Landroid/os/Parcelable;
 
-    move-result v0
-
-    iput v0, p0, Ly1i;->c:I
-
-    return-void
+    return-object p0
 .end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ly1i;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Ly1i;->o:Lze3;
-
-    invoke-virtual {v0}, Lze3;->o()Ljava/util/Map;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, p0, Ly1i;->b:Ljava/lang/Object;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Ly1i;->a()V
-
-    iget v1, p0, Ly1i;->c:I
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_1
+.method public static b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    .locals 2
 
     const/4 v0, 0x0
 
-    return-object v0
+    if-nez p1, :cond_0
 
-    :cond_1
-    invoke-virtual {v0}, Lze3;->n()[Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v0
+    return-void
 
-    aget-object v0, v0, v1
+    :cond_0
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return-void
 .end method
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public static c(Landroid/os/Parcel;)V
+    .locals 3
 
-    iget-object v0, p0, Ly1i;->o:Lze3;
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    invoke-virtual {v0}, Lze3;->o()Ljava/util/Map;
+    move-result p0
+
+    if-gtz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Ly1i;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    if-eqz v1, :cond_0
+    move-result v1
 
-    invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    add-int/lit8 v1, v1, 0x2d
 
-    return-object p1
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :cond_0
-    invoke-virtual {p0}, Ly1i;->a()V
+    const-string v1, "Parcel data not fully consumed, unread size: "
 
-    iget v1, p0, Ly1i;->c:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, -0x1
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v2, p1}, Lze3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
 
-    const/4 p1, 0x0
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
 
-    return-object p1
-
-    :cond_1
-    invoke-virtual {v0}, Lze3;->n()[Ljava/lang/Object;
-
-    move-result-object v2
-
-    aget-object v1, v2, v1
-
-    iget v2, p0, Ly1i;->c:I
-
-    invoke-virtual {v0}, Lze3;->n()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    aput-object p1, v0, v2
-
-    return-object v1
+    throw v0
 .end method

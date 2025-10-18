@@ -1,132 +1,206 @@
 .class public final Luia;
-.super Lg3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lvv4;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public X:Lvv4;
 
-.field public final c:Ljava/lang/Object;
+.field public Y:Z
+
+.field public final a:Lela;
+
+.field public final b:Lsr3;
+
+.field public final c:Lsr3;
+
+.field public final o:Lr6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsja;Ljava/lang/Object;I)V
+.method public constructor <init>(Lela;Lsr3;Lsr3;Lr6;)V
     .locals 0
 
-    iput p3, p0, Luia;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
+    iput-object p1, p0, Luia;->a:Lela;
 
-    iput-object p2, p0, Luia;->c:Ljava/lang/Object;
+    iput-object p2, p0, Luia;->b:Lsr3;
+
+    iput-object p3, p0, Luia;->c:Lsr3;
+
+    iput-object p4, p0, Luia;->o:Lr6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lcka;)V
-    .locals 4
+.method public final b()V
+    .locals 1
 
-    iget v0, p0, Luia;->b:I
+    iget-boolean v0, p0, Luia;->Y:Z
 
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Luia;->c:Ljava/lang/Object;
-
-    iget-object v3, p0, Lg3;->a:Lsja;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lbka;
-
-    check-cast v2, Lqf5;
-
-    invoke-direct {v0, p1, v2}, Lbka;-><init>(Lcka;Lqf5;)V
-
-    invoke-interface {v3, v0}, Lsja;->a(Lcka;)V
+    if-eqz v0, :cond_0
 
     return-void
 
-    :pswitch_0
+    :cond_0
     :try_start_0
-    check-cast v2, Lui6;
+    iget-object v0, p0, Luia;->o:Lr6;
 
-    invoke-virtual {v2}, Lui6;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v2, Laf5;->a:Lze5;
-
-    check-cast v0, Ljava/util/Collection;
+    invoke-interface {v0}, Lr6;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v2, Lvg3;
+    const/4 v0, 0x1
 
-    invoke-direct {v2, p1, v1, v0}, Lvg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-boolean v0, p0, Luia;->Y:Z
 
-    invoke-interface {v3, v2}, Lsja;->a(Lcka;)V
+    iget-object v0, p0, Luia;->a:Lela;
+
+    invoke-interface {v0}, Lela;->b()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0, v0}, Luia;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget-object v0, p0, Luia;->X:Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Luia;->X:Lvv4;
+
+    iget-object p1, p0, Luia;->a:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-boolean v0, p0, Luia;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Luia;->b:Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Luia;->a:Lela;
+
+    invoke-interface {v0, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Luia;->X:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    invoke-virtual {p0, p1}, Luia;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Luia;->X:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Luia;->X:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-boolean v0, p0, Luia;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Luia;->Y:Z
+
+    :try_start_0
+    iget-object v0, p0, Luia;->c:Lsr3;
+
+    invoke-interface {v0, p1}, Lsr3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    invoke-static {v0, p1}, Ln95;->b(Ljava/lang/Throwable;Lcka;)V
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    move-object p1, v1
 
     :goto_0
-    return-void
+    iget-object v0, p0, Luia;->a:Lela;
 
-    :pswitch_1
-    new-instance v0, Lyga;
-
-    check-cast v2, Leof;
-
-    invoke-direct {v0, p1, v2, v1}, Lyga;-><init>(Ljava/lang/Object;Lzvb;I)V
-
-    invoke-interface {v3, v0}, Lsja;->a(Lcka;)V
+    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
 
     return-void
-
-    :pswitch_2
-    new-instance v0, Lyga;
-
-    check-cast v2, Lbof;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v2, v1}, Lyga;-><init>(Ljava/lang/Object;Lzvb;I)V
-
-    invoke-interface {v3, v0}, Lsja;->a(Lcka;)V
-
-    return-void
-
-    :pswitch_3
-    new-instance v0, Lo43;
-
-    check-cast v2, Lpc2;
-
-    invoke-direct {v0, p1, v2}, Lo43;-><init>(Lcka;Lpc2;)V
-
-    iget-object v1, v0, Lo43;->X:Ljava/lang/Object;
-
-    check-cast v1, Li32;
-
-    invoke-interface {p1, v1}, Lcka;->c(Lev4;)V
-
-    invoke-interface {v3, v0}, Lsja;->a(Lcka;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

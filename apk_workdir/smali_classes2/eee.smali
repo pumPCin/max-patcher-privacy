@@ -1,173 +1,119 @@
 .class public final Leee;
-.super Llff;
+.super Lpd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Y:Lhee;
-
-.field public final synthetic Z:I
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhee;ILkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Leee;->Y:Lhee;
+    const/16 v0, 0x12
 
-    iput p2, p0, Leee;->Z:I
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Leee;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Leee;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Leee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Leee;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Leee;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Leee;
-
-    iget-object v0, p0, Leee;->Y:Lhee;
-
-    iget v1, p0, Leee;->Z:I
-
-    invoke-direct {p1, v0, v1, p2}, Leee;-><init>(Lhee;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Leee;->X:I
-
-    sget-object v1, Lzag;->a:Lzag;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object v1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Leee;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    check-cast p1, Leee;
 
-    sget-object p1, Lhee;->R0:[Lwq7;
+    iget-object v1, p0, Leee;->b:Ljava/lang/String;
 
-    iget-object p1, p0, Leee;->Y:Lhee;
+    iget-object v3, p1, Leee;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lhee;->u()Lird;
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v1
 
-    check-cast v0, Lchg;
+    if-nez v1, :cond_2
 
-    const-string v3, "ALL"
+    return v2
 
-    iget-object v0, v0, Lw3;->h:Lot7;
+    :cond_2
+    iget-object v1, p0, Leee;->c:Ljava/lang/String;
 
-    const-string v4, "app.privacy.chats.invite"
+    iget-object p1, p1, Leee;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v4, v3}, Lot7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    invoke-static {v0}, Lfef;->d(Ljava/lang/String;)I
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Leee;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    iget v3, p0, Leee;->Z:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-ne v0, v3, :cond_2
+    iget-object v1, p0, Leee;->c:Ljava/lang/String;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    :cond_2
-    invoke-virtual {p1}, Lhee;->u()Lird;
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", path="
+
+    const-string v1, ")"
+
+    const-string v2, "CropAvatar(uriAsString="
+
+    iget-object v3, p0, Leee;->b:Ljava/lang/String;
+
+    iget-object v4, p0, Leee;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v3}, Lfef;->k(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    check-cast v0, Lchg;
-
-    invoke-virtual {v0, v4, v5}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lhee;->t()Lll;
-
-    move-result-object v0
-
-    new-instance v4, Lygg;
-
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
-
-    iput v3, v4, Lygg;->o:I
-
-    new-instance v3, Lahg;
-
-    invoke-direct {v3, v4}, Lahg;-><init>(Lygg;)V
-
-    invoke-interface {v0, v3}, Lll;->a(Lahg;)J
-
-    iput v2, p0, Leee;->X:I
-
-    invoke-static {p1, p0}, Lhee;->s(Lhee;Llff;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    if-ne p1, v0, :cond_3
 
     return-object v0
-
-    :cond_3
-    :goto_0
-    return-object v1
 .end method

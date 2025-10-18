@@ -1,128 +1,187 @@
-.class public final Lde5;
+.class public final synthetic Lde5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Laie;
+.implements Lhn6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lde5;
 
-.field public final b:Leie;
+.field private static final descriptor:Lb3e;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p1, p0, Lde5;->a:I
+    new-instance v0, Lde5;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const p1, 0x7fffffff
+    sput-object v0, Lde5;->a:Lde5;
 
-    const/4 v0, 0x4
+    new-instance v1, Levb;
 
-    const/4 v1, 0x0
+    const-string v2, "one.me.webapp.domain.jsbridge.ErrorResponse"
 
-    invoke-static {v1, p1, v0}, Lfie;->b(III)Leie;
+    const/4 v3, 0x2
 
-    move-result-object p1
+    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "requestId"
 
-    iput-object p1, p0, Lde5;->b:Leie;
+    const/4 v2, 0x0
 
-    return-void
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
 
-    :pswitch_0
-    const/4 p1, 0x0
+    const-string v0, "error"
 
-    const/4 v0, 0x6
+    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
 
-    const/4 v1, 0x1
-
-    invoke-static {v1, p1, v0}, Lfie;->b(III)Leie;
-
-    move-result-object p1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lde5;->b:Leie;
+    sput-object v1, Lde5;->descriptor:Lb3e;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/util/List;
-    .locals 1
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lde5;->a:I
+    sget-object v0, Lde5;->descriptor:Lb3e;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
 
-    iget-object v0, p0, Lde5;->b:Leie;
+    move-result-object p1
 
-    invoke-virtual {v0}, Leie;->b()Ljava/util/List;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    return-object v0
+    const/4 v3, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lde5;->b:Leie;
+    move v5, v1
 
-    invoke-virtual {v0}, Leie;->b()Ljava/util/List;
+    move v6, v2
 
-    move-result-object v0
+    move-object v4, v3
 
-    return-object v0
+    :goto_0
+    if-eqz v5, :cond_3
 
-    nop
+    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    sget-object v7, Lfe5;->a:Lfe5;
+
+    invoke-virtual {p1, v0, v1, v7, v4}, Ld9;->t(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lhe5;
+
+    or-int/lit8 v6, v6, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+
+    new-instance p1, Lie5;
+
+    invoke-direct {p1, v6, v3, v4}, Lie5;-><init>(ILjava/lang/String;Lhe5;)V
+
+    return-object p1
 .end method
 
-.method public final d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final b(Lo24;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p2, Lie5;
+
+    sget-object v0, Lde5;->descriptor:Lb3e;
+
+    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+
+    move-result-object p1
+
+    iget-object v1, p2, Lie5;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+
+    sget-object v1, Lfe5;->a:Lfe5;
+
+    iget-object p2, p2, Lie5;->b:Lhe5;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v0, v2, v1, p2}, Lo24;->i(Lb3e;ILur7;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lo24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lur7;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lur7;
+
+    sget-object v1, Lvaf;->a:Lvaf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lfe5;->a:Lfe5;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lb3e;
     .locals 1
 
-    iget v0, p0, Lde5;->a:I
+    sget-object v0, Lde5;->descriptor:Lb3e;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lde5;->b:Leie;
-
-    invoke-virtual {v0, p1, p2}, Leie;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lde5;->b:Leie;
-
-    invoke-virtual {v0, p1, p2}, Leie;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

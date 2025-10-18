@@ -1,76 +1,60 @@
-.class public final Lyd6;
+.class public abstract Lyd6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyd6;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Luxd;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:I
+.field public final a:Luxd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwc4;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
-
-    sput-object v0, Lyd6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Luxd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyd6;->a:Ljava/lang/String;
-
-    iput p2, p0, Lyd6;->b:I
+    iput-object p1, p0, Lyd6;->a:Luxd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final c()Z
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lyd6;->a:Luxd;
+
+    invoke-interface {v0}, Luxd;->c()Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public e(J)Lsxd;
+    .locals 1
 
-    iget-object p2, p0, Lyd6;->a:Ljava/lang/String;
+    iget-object v0, p0, Lyd6;->a:Luxd;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Luxd;->e(J)Lsxd;
 
-    iget p2, p0, Lyd6;->b:I
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    return-object p1
+.end method
 
-    return-void
+.method public f()J
+    .locals 2
+
+    iget-object v0, p0, Lyd6;->a:Luxd;
+
+    invoke-interface {v0}, Luxd;->f()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

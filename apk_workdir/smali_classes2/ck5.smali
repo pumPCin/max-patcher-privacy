@@ -1,145 +1,117 @@
 .class public final Lck5;
-.super Lklf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/Long;
+.field public final a:J
 
-.field public final o:Ljava/lang/String;
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p1, 0x1
 
-    iput-object p2, p0, Lck5;->c:Ljava/lang/Long;
+    if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lck5;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lck5;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lck5;
-
-    iget-object v1, p0, Lck5;->c:Ljava/lang/Long;
-
-    iget-object v3, p1, Lck5;->c:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lck5;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lck5;->o:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lck5;->c:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
+    const-wide/16 v0, 0x1f4
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    const-wide/16 v0, 0x3e8
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    and-int/lit8 p1, p1, 0x4
 
-    iget-object v2, p0, Lck5;->o:Ljava/lang/String;
+    if-eqz p1, :cond_1
 
-    if-nez v2, :cond_1
+    const/high16 p1, 0x3fc00000    # 1.5f
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const/high16 p1, 0x40000000    # 2.0f
 
     :goto_1
-    add-int/2addr v1, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return v1
-.end method
+    iput-wide v0, p0, Lck5;->a:J
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iput p1, p0, Lck5;->b:F
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x1
 
-    const-string v1, "Response(botId="
+    cmp-long v2, v0, v2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ltz v2, :cond_5
 
-    iget-object v1, p0, Lck5;->c:Ljava/lang/Long;
+    const-wide/16 v2, 0x7530
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    cmp-long v0, v2, v0
 
-    const-string v1, ", startParam="
+    if-ltz v0, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    float-to-double v0, p1
 
-    iget-object v1, p0, Lck5;->o:Ljava/lang/String;
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    cmpl-double p1, v0, v2
 
-    const-string v1, ")"
+    if-ltz p1, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const p1, 0x3e4ccccd    # 0.2f
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    float-to-double v0, p1
 
-    move-result-object v0
+    const-wide/16 v4, 0x0
 
-    return-object v0
+    cmpg-double p1, v0, v4
+
+    if-ltz p1, :cond_2
+
+    cmpg-double p1, v2, v0
+
+    if-lez p1, :cond_2
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Range is invalid. Must be greater or equal 0.0 and lower than 1.0."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Multiplier is invalid. Must be greater than 1.0."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "maxInterval is invalid. Must be greater or equal than Interval."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Interval is invalid. Must be greater than 1."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

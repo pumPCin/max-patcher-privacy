@@ -1,93 +1,199 @@
 .class public final Lq3i;
-.super Lw3i;
+.super Lmcg;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final X:I
+.field public final b:I
 
-.field public final o:I
+.field public c:I
+
+.field public final o:Lv3i;
 
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 1
+.method public constructor <init>(Lv3i;I)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lw3i;-><init>([B)V
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
-    add-int v0, p2, p3
+    move-result v0
 
-    array-length p1, p1
+    const/4 v1, 0x4
 
-    invoke-static {p2, v0, p1}, La4i;->o(III)I
+    invoke-direct {p0, v1}, Lmcg;-><init>(I)V
 
-    iput p2, p0, Lq3i;->o:I
+    if-ltz p2, :cond_0
 
-    iput p3, p0, Lq3i;->X:I
+    if-gt p2, v0, :cond_0
+
+    iput v0, p0, Lq3i;->b:I
+
+    iput p2, p0, Lq3i;->c:I
+
+    iput-object p1, p0, Lq3i;->o:Lv3i;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "index"
+
+    invoke-static {p2, v0, v1}, Lohi;->g(IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(I)B
-    .locals 1
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lq3i;->X:I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-static {p1, v0}, La4i;->s(II)V
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget v0, p0, Lq3i;->o:I
-
-    add-int/2addr v0, p1
-
-    iget-object p1, p0, Lw3i;->c:[B
-
-    aget-byte p1, p1, v0
-
-    return p1
+    throw p1
 .end method
 
-.method public final b(I)B
+.method public final b(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lq3i;->o:Lv3i;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final hasNext()Z
     .locals 2
 
-    iget-object v0, p0, Lw3i;->c:[B
+    iget v0, p0, Lq3i;->c:I
 
-    iget v1, p0, Lq3i;->o:I
+    iget v1, p0, Lq3i;->b:I
 
-    add-int/2addr v1, p1
+    if-ge v0, v1, :cond_0
 
-    aget-byte p1, v0, v1
+    const/4 v0, 0x1
 
-    return p1
-.end method
+    return v0
 
-.method public final e()I
-    .locals 1
-
-    iget v0, p0, Lq3i;->X:I
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final f(III[B)V
-    .locals 2
-
-    iget-object v0, p0, Lw3i;->c:[B
-
-    iget v1, p0, Lq3i;->o:I
-
-    add-int/2addr v1, p1
-
-    invoke-static {v0, v1, p4, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
-.end method
-
-.method public final t()I
+.method public final hasPrevious()Z
     .locals 1
 
-    iget v0, p0, Lq3i;->o:I
+    iget v0, p0, Lq3i;->c:I
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
 
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Lq3i;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lq3i;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lq3i;->c:I
+
+    invoke-virtual {p0, v0}, Lq3i;->b(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    iget v0, p0, Lq3i;->c:I
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lq3i;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lq3i;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lq3i;->c:I
+
+    invoke-virtual {p0, v0}, Lq3i;->b(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    iget v0, p0, Lq3i;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

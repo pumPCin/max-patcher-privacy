@@ -1,67 +1,107 @@
-.class public abstract Lnma;
+.class public final Lnma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxw7;
+.implements Lm32;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lhx7;
 
-.field public static final c:I
+.field public final b:Lhma;
 
-.field public static final d:I
+.field public c:Loma;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+.field public final synthetic o:Lpma;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lpma;Lhx7;Lhma;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnma;->o:Lpma;
+
+    iput-object p2, p0, Lnma;->a:Lhx7;
+
+    iput-object p3, p0, Lnma;->b:Lhma;
+
+    invoke-virtual {p2, p0}, Lhx7;->a(Lbx7;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final cancel()V
     .locals 1
 
-    sget v0, Lwlc;->appearance_settings_chat_preview:I
+    iget-object v0, p0, Lnma;->a:Lhx7;
 
-    sput v0, Lnma;->a:I
+    invoke-virtual {v0, p0}, Lhx7;->f(Lbx7;)V
 
-    sget v0, Lwlc;->appearance_settings_current_theme_title:I
+    iget-object v0, p0, Lnma;->b:Lhma;
 
-    sput v0, Lnma;->b:I
+    iget-object v0, v0, Lhma;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    sget v0, Lwlc;->appearance_settings_font_size_reset:I
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    sput v0, Lnma;->c:I
+    iget-object v0, p0, Lnma;->c:Loma;
 
-    sget v0, Lwlc;->appearance_settings_font_size_title:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lnma;->d:I
+    invoke-virtual {v0}, Loma;->cancel()V
 
-    sget v0, Lwlc;->appearance_settings_font_size_view:I
+    :cond_0
+    const/4 v0, 0x0
 
-    sput v0, Lnma;->e:I
+    iput-object v0, p0, Lnma;->c:Loma;
 
-    sget v0, Lwlc;->appearance_settings_recycler:I
+    return-void
+.end method
 
-    sput v0, Lnma;->f:I
+.method public final d(Lfx7;Lgw7;)V
+    .locals 0
 
-    sget v0, Lwlc;->appearance_settings_screen_mode:I
+    sget-object p1, Lgw7;->ON_START:Lgw7;
 
-    sput v0, Lnma;->g:I
+    if-ne p2, p1, :cond_0
 
-    sget v0, Lwlc;->appearance_settings_screen_toolbar:I
+    iget-object p1, p0, Lnma;->o:Lpma;
 
-    sput v0, Lnma;->h:I
+    iget-object p2, p0, Lnma;->b:Lhma;
 
-    sget v0, Lwlc;->appearance_settings_segmented_buttons_group:I
+    invoke-virtual {p1, p2}, Lpma;->b(Lhma;)Loma;
 
-    sput v0, Lnma;->i:I
+    move-result-object p1
 
+    iput-object p1, p0, Lnma;->c:Loma;
+
+    return-void
+
+    :cond_0
+    sget-object p1, Lgw7;->ON_STOP:Lgw7;
+
+    if-ne p2, p1, :cond_1
+
+    iget-object p1, p0, Lnma;->c:Loma;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Loma;->cancel()V
+
+    return-void
+
+    :cond_1
+    sget-object p1, Lgw7;->ON_DESTROY:Lgw7;
+
+    if-ne p2, p1, :cond_2
+
+    invoke-virtual {p0}, Lnma;->cancel()V
+
+    :cond_2
     return-void
 .end method

@@ -1,70 +1,53 @@
 .class public final Libi;
-.super Ljava/lang/Object;
+.super Lgwh;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
-
-# static fields
-.field public static final a:Libi;
+# instance fields
+.field public final synthetic g:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
+    .locals 1
 
-    new-instance v0, Libi;
+    iput-object p1, p0, Libi;->g:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Libi;->a:Libi;
-
-    new-instance v0, Lsvh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
-
-    const-class v1, Llwh;
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2, v0}, Lgwh;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Lrp3;)V
+    .locals 1
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Libi;->g:Lcom/google/android/gms/common/internal/a;
 
-    move-result-object p1
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->r0:Lwj0;
 
-    throw p1
+    invoke-interface {v0, p1}, Lwj0;->d(Lrp3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, Libi;->g:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->r0:Lwj0;
+
+    sget-object v1, Lrp3;->X:Lrp3;
+
+    invoke-interface {v0, v1}, Lwj0;->d(Lrp3;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

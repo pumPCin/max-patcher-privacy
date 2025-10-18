@@ -1,27 +1,23 @@
 .class public final Lp5c;
-.super Ljava/lang/Object;
+.super Lpd0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Luq4;
+# static fields
+.field public static final b:Lp5c;
 
 
 # direct methods
-.method public constructor <init>(JJLuq4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lp5c;
 
-    iput-wide p1, p0, Lp5c;->a:J
+    const/16 v1, 0xd
 
-    iput-wide p3, p0, Lp5c;->b:J
+    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
 
-    iput-object p5, p0, Lp5c;->c:Luq4;
+    sput-object v0, Lp5c;->b:Lp5c;
 
     return-void
 .end method
@@ -29,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -38,117 +34,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lp5c;
+    instance-of p1, p1, Lp5c;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lp5c;
-
-    iget-wide v3, p0, Lp5c;->a:J
-
-    iget-wide v5, p1, Lp5c;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lp5c;->b:J
-
-    iget-wide v5, p1, Lp5c;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lp5c;->c:Luq4;
-
-    iget-object p1, p1, Lp5c;->c:Luq4;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 1
 
-    iget-wide v0, p0, Lp5c;->a:J
+    const v0, 0x5dad53ff
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lp5c;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lp5c;->c:Luq4;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 1
 
-    const-string v0, "ProfileEntity(id="
-
-    const-string v1, ", serverId="
-
-    iget-wide v2, p0, Lp5c;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lp5c;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profileData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp5c;->c:Luq4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "SelectPhotoFromGallery"
 
     return-object v0
 .end method

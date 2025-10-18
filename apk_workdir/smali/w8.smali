@@ -36,7 +36,7 @@
 
 .field public final d:[Landroid/net/Uri;
 
-.field public final e:[Lyr8;
+.field public final e:[Lat8;
 
 .field public final f:[I
 
@@ -55,7 +55,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -150,7 +150,7 @@
     return-void
 .end method
 
-.method public constructor <init>(JII[I[Lyr8;[JJZ[Ljava/lang/String;Z)V
+.method public constructor <init>(JII[I[Lat8;[JJZ[Ljava/lang/String;Z)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -171,7 +171,7 @@
     move v0, v2
 
     :goto_0
-    invoke-static {v0}, Lgfi;->b(Z)V
+    invoke-static {v0}, Lsgi;->d(Z)V
 
     iput-wide p1, p0, Lw8;->a:J
 
@@ -181,7 +181,7 @@
 
     iput-object p5, p0, Lw8;->f:[I
 
-    iput-object p6, p0, Lw8;->e:[Lyr8;
+    iput-object p6, p0, Lw8;->e:[Lat8;
 
     iput-object p7, p0, Lw8;->g:[J
 
@@ -211,11 +211,11 @@
     goto :goto_2
 
     :cond_1
-    iget-object p2, p2, Lyr8;->b:Lor8;
+    iget-object p2, p2, Lat8;->b:Lqs8;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p2, p2, Lor8;->a:Landroid/net/Uri;
+    iget-object p2, p2, Lqs8;->a:Landroid/net/Uri;
 
     :goto_2
     aput-object p2, p1, v2
@@ -317,9 +317,9 @@
 
     if-ne v2, v3, :cond_2
 
-    iget-object v2, p0, Lw8;->e:[Lyr8;
+    iget-object v2, p0, Lw8;->e:[Lat8;
 
-    iget-object v3, p1, Lw8;->e:[Lyr8;
+    iget-object v3, p1, Lw8;->e:[Lat8;
 
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
@@ -411,7 +411,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lw8;->e:[Lyr8;
+    iget-object v1, p0, Lw8;->e:[Lat8;
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 

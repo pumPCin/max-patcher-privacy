@@ -1,39 +1,26 @@
-.class public final Lj34;
+.class public interface abstract Lj34;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object v0, p0, Lj34;->a:Ljava/util/concurrent/atomic/AtomicReference;
+# virtual methods
+.method public B(Li34;)V
+    .locals 0
 
     return-void
 .end method
 
+.method public J(Li34;)V
+    .locals 0
 
-# virtual methods
-.method public final a()Lru/ok/android/externcalls/sdk/Conversation;
-    .locals 1
+    return-void
+.end method
 
-    iget-object v0, p0, Lj34;->a:Ljava/util/concurrent/atomic/AtomicReference;
+.method public abstract N(Lh34;Lh34;)Ljava/util/List;
+.end method
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+.method public U()V
+    .locals 0
 
-    move-result-object v0
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/Conversation;
-
-    return-object v0
+    return-void
 .end method

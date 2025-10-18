@@ -1,68 +1,80 @@
-.class public final synthetic Lk8f;
-.super Ljava/lang/Object;
+.class public final Lk8f;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lfj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/util/List;
 
-.field public final synthetic b:Lm8f;
+.field public synthetic Y:Ljava/util/List;
 
-.field public final synthetic c:I
+.field public synthetic Z:Ljava/util/List;
 
-
-# direct methods
-.method public synthetic constructor <init>(Lm8f;II)V
-    .locals 0
-
-    iput p3, p0, Lk8f;->a:I
-
-    iput-object p1, p0, Lk8f;->b:Lm8f;
-
-    iput p2, p0, Lk8f;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic q0:Lyme;
 
 
 # virtual methods
-.method public final run()V
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ly16;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lk8f;->a:I
+    check-cast p1, Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Ljava/util/List;
 
-    iget-object v0, p0, Lk8f;->b:Lm8f;
+    check-cast p3, Ljava/util/List;
 
-    iget v1, p0, Lk8f;->c:I
+    check-cast p4, Lyme;
 
-    add-int/lit8 v1, v1, 0x4
+    new-instance v0, Lk8f;
 
-    iput v1, v0, Lm8f;->x:I
+    const/4 v1, 0x5
 
-    return-void
+    invoke-direct {v0, v1, p5}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lk8f;->b:Lm8f;
+    iput-object p1, v0, Lk8f;->X:Ljava/util/List;
 
-    iget v1, p0, Lk8f;->c:I
+    iput-object p2, v0, Lk8f;->Y:Ljava/util/List;
 
-    add-int/lit8 v1, v1, 0x4
+    iput-object p3, v0, Lk8f;->Z:Ljava/util/List;
 
-    iput v1, v0, Lm8f;->w:I
+    iput-object p4, v0, Lk8f;->q0:Lyme;
 
-    return-void
+    sget-object p1, Lccg;->a:Lccg;
 
-    nop
+    invoke-virtual {v0, p1}, Lk8f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk8f;->X:Ljava/util/List;
+
+    iget-object v0, p0, Lk8f;->Y:Ljava/util/List;
+
+    iget-object v1, p0, Lk8f;->Z:Ljava/util/List;
+
+    iget-object v2, p0, Lk8f;->q0:Lyme;
+
+    new-instance v3, Ly7f;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v3, Ly7f;->a:Ljava/util/List;
+
+    iput-object v0, v3, Ly7f;->b:Ljava/util/List;
+
+    iput-object v1, v3, Ly7f;->c:Ljava/util/List;
+
+    iput-object v2, v3, Ly7f;->d:Lyme;
+
+    return-object v3
 .end method

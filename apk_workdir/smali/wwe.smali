@@ -1,19 +1,51 @@
-.class public Lwwe;
-.super Lo0;
+.class public final Lwwe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final handleJobException(Ljava/lang/Throwable;)Z
-    .locals 1
+# instance fields
+.field public final a:I
 
-    invoke-virtual {p0}, Lo0;->getContext()Lt44;
+.field public final b:I
 
-    move-result-object v0
+.field public final c:I
 
-    invoke-static {v0, p1}, Lmvi;->a(Lt44;Ljava/lang/Throwable;)V
+.field public final d:I
 
-    const/4 p1, 0x1
+.field public final e:I
 
-    return p1
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+
+# direct methods
+.method public constructor <init>(IIIIIIIII)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lwwe;->a:I
+
+    iput p2, p0, Lwwe;->b:I
+
+    iput p3, p0, Lwwe;->c:I
+
+    iput p4, p0, Lwwe;->d:I
+
+    iput p5, p0, Lwwe;->e:I
+
+    iput p6, p0, Lwwe;->f:I
+
+    iput p7, p0, Lwwe;->g:I
+
+    iput p8, p0, Lwwe;->h:I
+
+    iput p9, p0, Lwwe;->i:I
+
+    return-void
 .end method

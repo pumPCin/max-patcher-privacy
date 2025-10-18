@@ -1,196 +1,489 @@
 .class public final Lwve;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:I
 
-.field public final synthetic Z:J
+.field public final c:Landroidx/fragment/app/a;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public final j:Ljava/util/ArrayList;
+
+.field public final k:Ljava/util/ArrayList;
+
+.field public final l:Landroidx/fragment/app/e;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(IILandroidx/fragment/app/e;)V
+    .locals 1
 
-    iput-wide p1, p0, Lwve;->Z:J
+    iget-object v0, p3, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lwve;->a:I
+
+    iput p2, p0, Lwve;->b:I
+
+    iput-object v0, p0, Lwve;->c:Landroidx/fragment/app/a;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lwve;->d:Ljava/util/ArrayList;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lwve;->i:Z
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lwve;->j:Ljava/util/ArrayList;
+
+    iput-object p1, p0, Lwve;->k:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Lwve;->l:Landroidx/fragment/app/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/view/ViewGroup;)V
+    .locals 4
 
-    check-cast p1, Lb54;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-boolean v0, p0, Lwve;->h:Z
 
-    invoke-virtual {p0, p1, p2}, Lwve;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-boolean v0, p0, Lwve;->e:Z
 
-    move-result-object p1
-
-    check-cast p1, Lwve;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lwve;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lwve;
-
-    iget-wide v1, p0, Lwve;->Z:J
-
-    invoke-direct {v0, v1, v2, p2}, Lwve;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lwve;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object v0, Lc54;->a:Lc54;
-
-    iget v1, p0, Lwve;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v1, p0, Lwve;->Y:Ljava/lang/Object;
-
-    check-cast v1, Lb54;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iput-boolean v0, p0, Lwve;->e:Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lwve;->j:Ljava/util/ArrayList;
 
-    throw p1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Lwve;->b()V
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object v1, p0, Lwve;->k:Ljava/util/ArrayList;
 
-    iget-object p1, p0, Lwve;->Y:Ljava/lang/Object;
+    invoke-static {v1}, Lnb3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
 
-    check-cast p1, Lb54;
+    move-result-object v1
 
-    move-object v1, p1
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lvve;
+
+    iget-boolean v3, v2, Lvve;->b:Z
+
+    if-nez v3, :cond_2
+
+    invoke-virtual {v2, p1}, Lvve;->a(Landroid/view/ViewGroup;)V
 
     :cond_2
-    :goto_0
-    invoke-static {v1}, Lcwi;->e(Lb54;)Z
+    iput-boolean v0, v2, Lvve;->b:Z
 
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    iget-wide v3, p0, Lwve;->Z:J
-
-    iput-object v1, p0, Lwve;->Y:Ljava/lang/Object;
-
-    iput v2, p0, Lwve;->X:I
-
-    invoke-static {v3, v4, p0}, Lpxi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    goto :goto_0
 
     :cond_3
     :goto_1
-    :try_start_0
-    sget-object p1, Lqra;->a:Lqra;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+.method public final b()V
+    .locals 3
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    const-class v3, Lxve;
+    iput-boolean v0, p0, Lwve;->h:Z
 
-    invoke-virtual {p1, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-boolean v1, p0, Lwve;->f:Z
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    check-cast p1, Lxve;
+    goto :goto_1
 
-    check-cast p1, Lyve;
+    :cond_0
+    const/4 v1, 0x2
 
-    iget-object p1, p1, Lyve;->a:Ljava/lang/String;
+    invoke-static {v1}, Landroidx/fragment/app/c;->L(I)Z
 
-    sget-object v3, Lndi;->a:Lkwa;
+    move-result v1
 
-    if-nez v3, :cond_4
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "SpecialEffectsController: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " has called complete."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "FragmentManager"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lwve;->f:Z
+
+    iget-object v1, p0, Lwve;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
+
+    :cond_2
+    :goto_1
+    iget-object v1, p0, Lwve;->c:Landroidx/fragment/app/a;
+
+    iput-boolean v0, v1, Landroidx/fragment/app/a;->v0:Z
+
+    iget-object v0, p0, Lwve;->l:Landroidx/fragment/app/e;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/e;->k()V
+
+    return-void
+.end method
+
+.method public final c(Lvve;)V
+    .locals 1
+
+    iget-object v0, p0, Lwve;->j:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lwve;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 6
+
+    invoke-static {p2}, Ldy1;->v(I)I
+
+    move-result p2
+
+    const-string v0, " mFinalState = "
+
+    iget-object v1, p0, Lwve;->c:Landroidx/fragment/app/a;
+
+    const-string v2, "SpecialEffectsController: For fragment "
+
+    const-string v3, "FragmentManager"
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x2
+
+    if-eqz p2, :cond_4
+
+    if-eq p2, v4, :cond_2
+
+    if-eq p2, v5, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p2, p0, Lwve;->a:I
+
+    invoke-static {p2}, Labd;->n(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " -> REMOVED. mLifecycleImpact  = "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p2, p0, Lwve;->b:I
+
+    invoke-static {p2}, Labd;->m(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " to REMOVING."
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iput v4, p0, Lwve;->a:I
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Lwve;->b:I
+
+    iput-boolean v4, p0, Lwve;->i:Z
+
+    return-void
+
+    :cond_2
+    iget p1, p0, Lwve;->a:I
+
+    if-ne p1, v4, :cond_6
+
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, " mFinalState = REMOVED -> VISIBLE. mLifecycleImpact = "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p2, p0, Lwve;->b:I
+
+    invoke-static {p2}, Labd;->m(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " to ADDING."
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iput v5, p0, Lwve;->a:I
+
+    iput v5, p0, Lwve;->b:I
+
+    iput-boolean v4, p0, Lwve;->i:Z
+
+    return-void
 
     :cond_4
-    sget-object v4, Lf88;->o:Lf88;
+    iget p2, p0, Lwve;->a:I
 
-    invoke-virtual {v3, v4}, Lkwa;->b(Lf88;)Z
+    if-eq p2, v4, :cond_6
 
-    move-result v5
+    invoke-static {v5}, Landroidx/fragment/app/c;->L(I)Z
 
-    if-eqz v5, :cond_2
+    move-result p2
 
-    const-string v5, "verifyIntegrity"
+    if-eqz p2, :cond_5
 
-    const/4 v6, 0x0
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4, p1, v5, v6}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lwve;->a:I
 
-    move-result-object v3
+    invoke-static {v0}, Labd;->n(I)Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "ssl integrity verification failed"
+    const-string v0, " -> "
 
-    invoke-static {v3, v4, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-static {p1}, Labd;->n(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x2e
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v3, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    sget-object p1, Lzag;->a:Lzag;
+    iput p1, p0, Lwve;->a:I
 
-    return-object p1
+    :cond_6
+    :goto_0
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Operation {"
+
+    const-string v2, "} {finalState = "
+
+    invoke-static {v1, v0, v2}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lwve;->a:I
+
+    invoke-static {v1}, Labd;->n(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " lifecycleImpact = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lwve;->b:I
+
+    invoke-static {v1}, Labd;->m(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " fragment = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lwve;->c:Landroidx/fragment/app/a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

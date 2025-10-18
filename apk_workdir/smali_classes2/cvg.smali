@@ -1,69 +1,122 @@
 .class public final Lcvg;
-.super Ldvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lcvg;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lli6;
 
 
 # instance fields
-.field public final a:Legc;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lavg;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lavg;-><init>(I)V
-
-    sput-object v0, Lcvg;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Legc;)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcvg;->a:I
 
-    iput-object p1, p0, Lcvg;->a:Legc;
+    iput-object p1, p0, Lcvg;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lcvg;->a:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    const/16 v2, 0x8
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lcvg;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    sget v0, Lnsa;->z:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    new-instance v0, Lbvg;
 
-    iget-object p2, p0, Lcvg;->a:Legc;
+    invoke-direct {v0, v4, v3}, Lbvg;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-static {p1, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    move-result-object p2
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    return-object v1
 
-    return-void
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
+
+    sget v0, Lnsa;->x:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
+
+    sget v0, Lpjd;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:[Ltr7;
+
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v5, "camera"
+
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    const/4 v5, 0x0
+
+    if-le v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v5
+
+    :goto_0
+    invoke-virtual {p1, v3}, Landroid/view/View;->setEnabled(Z)V
+
+    new-instance v0, Lbvg;
+
+    invoke-direct {v0, v4, v5}, Lbvg;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+
+    invoke-static {p1, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

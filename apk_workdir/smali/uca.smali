@@ -4,22 +4,26 @@
 
 
 # direct methods
-.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/Notification$Action$Builder;I)Landroid/app/Notification$Action$Builder;
+.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setSemanticAction(I)Landroid/app/Notification$Action$Builder;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
+
+    return-void
 .end method

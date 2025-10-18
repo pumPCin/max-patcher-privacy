@@ -1,27 +1,23 @@
-.class public final Loi5;
+.class public abstract Loi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnuf;
-
-.field public final b:I
-
-.field public final c:J
-
-
 # direct methods
-.method public constructor <init>(Lnuf;IJ)V
-    .locals 0
+.method public static a()Liub;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Liub;
 
-    iput-object p1, p0, Loi5;->a:Lnuf;
+    invoke-static {}, Lqu8;->f()Landroid/media/metrics/LogSessionId;
 
-    iput p2, p0, Loi5;->b:I
+    move-result-object v1
 
-    iput-wide p3, p0, Loi5;->c:J
+    new-instance v2, Lhub;
 
-    return-void
+    invoke-direct {v2, v1}, Lhub;-><init>(Landroid/media/metrics/LogSessionId;)V
+
+    invoke-direct {v0, v2}, Liub;-><init>(Lhub;)V
+
+    return-object v0
 .end method

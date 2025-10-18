@@ -1,274 +1,100 @@
-.class public abstract Ldmi;
+.class public final Ldmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Ldmi;
+
 
 # direct methods
-.method public static a()Lst4;
+.method static constructor <clinit>()V
     .locals 3
 
-    sget-object v0, Lst4;->b:Lst4;
+    new-instance v0, Ldmi;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lst4;->b:Lst4;
+    sput-object v0, Ldmi;->a:Ldmi;
 
-    return-object v0
+    new-instance v0, Lr8i;
 
-    :cond_0
-    const-class v0, Lst4;
+    const/4 v1, 0x1
 
-    monitor-enter v0
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    :try_start_0
-    sget-object v1, Lst4;->b:Lst4;
+    const-class v1, Lm9i;
 
-    if-nez v1, :cond_1
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    new-instance v1, Lst4;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2}, Lst4;-><init>(I)V
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    sput-object v1, Lst4;->b:Lst4;
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    :catchall_0
-    move-exception v1
+    move-result-object v0
 
-    goto :goto_1
+    const/4 v2, 0x3
 
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    sget-object v0, Lst4;->b:Lst4;
+    move-result-object v0
 
-    return-object v0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v0
 
-    throw v1
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    if-eq p0, p1, :cond_1
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static c()Ltx6;
-    .locals 2
-
-    sget-object v0, Ltx6;->c:Ltx6;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Ltx6;->c:Ltx6;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Ltx6;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Ltx6;->c:Ltx6;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Ltx6;
-
-    invoke-direct {v1}, Ltx6;-><init>()V
-
-    sput-object v1, Ltx6;->c:Ltx6;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Ltx6;->c:Ltx6;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static d()Ljl7;
-    .locals 2
-
-    sget-object v0, Ljl7;->c:Ljl7;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Ljl7;->c:Ljl7;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Ljl7;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Ljl7;->c:Ljl7;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Ljl7;
-
-    invoke-direct {v1}, Ljl7;-><init>()V
-
-    sput-object v1, Ljl7;->c:Ljl7;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Ljl7;->c:Ljl7;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static e()Lgv6;
-    .locals 4
-
-    sget-object v0, Lke8;->a:Lgv6;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lke8;->a:Lgv6;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lke8;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lke8;->a:Lgv6;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lgv6;
-
-    new-instance v2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v1, v2}, Lgv6;-><init>(Landroid/os/Handler;)V
-
-    sput-object v1, Lke8;->a:Lgv6;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lke8;->a:Lgv6;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static f(Ljava/lang/Object;)Lk68;
-    .locals 2
-
-    new-instance v0, Lk68;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p0, v1}, Lk68;-><init>(Ljava/lang/String;I)V
-
-    return-object v0
+    throw p1
 .end method

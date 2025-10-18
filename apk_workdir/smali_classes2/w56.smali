@@ -1,26 +1,30 @@
 .class public final Lw56;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+.field public final synthetic Y:Ljava/util/Set;
+
+.field public final synthetic Z:Lf66;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+.method public constructor <init>(Ljava/util/Set;Lf66;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lw56;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+    iput-object p1, p0, Lw56;->Y:Ljava/util/Set;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lw56;->Z:Lf66;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lr56;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,143 +44,180 @@
 
     check-cast p1, Lw56;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lw56;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lw56;
+    new-instance p1, Lw56;
 
-    iget-object v1, p0, Lw56;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+    iget-object v0, p0, Lw56;->Y:Ljava/util/Set;
 
-    invoke-direct {v0, p2, v1}, Lw56;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+    iget-object v1, p0, Lw56;->Z:Lf66;
 
-    iput-object p1, v0, Lw56;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lw56;-><init>(Ljava/util/Set;Lf66;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
-    iget-object v0, p0, Lw56;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+    sget-object v0, Lr54;->a:Lr54;
 
-    iget-object v1, v0, Lone/me/folders/picker/FolderMemberPickerScreen;->x0:Lqs;
+    iget v1, p0, Lw56;->X:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lw56;->X:Ljava/lang/Object;
-
-    check-cast p1, Lr56;
-
-    if-eqz p1, :cond_2
-
-    sget-object v2, Lone/me/folders/picker/FolderMemberPickerScreen;->y0:[Lwq7;
+    const/4 v2, 0x2
 
     const/4 v3, 0x1
 
-    aget-object v4, v2, v3
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    if-eq v1, v3, :cond_1
 
-    move-result-object v4
+    if-ne v1, v2, :cond_0
 
-    check-cast v4, Ljava/lang/String;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v4}, Ls9f;->E(Ljava/lang/CharSequence;)Z
+    goto/16 :goto_3
 
-    move-result v4
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez v4, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0}, Lx14;->getRouter()Ljhd;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v4
+    throw p1
 
-    aget-object v2, v2, v3
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw56;->Y:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lw56;->Z:Lf66;
+
+    iget-object p1, p1, Lf66;->A0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    iget-object p1, p0, Lw56;->Z:Lf66;
+
+    iget-object v1, p1, Lf66;->C0:Li46;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v1, Li46;->X:Ljava/util/Set;
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v4, v1}, Ljhd;->g(Ljava/lang/String;)Lx14;
+    move-result v3
 
-    move-result-object v1
+    if-eqz v3, :cond_3
 
-    instance-of v2, v1, Lb66;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    check-cast v3, Ljava/lang/Number;
 
-    check-cast v1, Lb66;
+    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    invoke-virtual {p1, v3, v4}, Lf66;->t(J)V
 
     goto :goto_0
 
-    :cond_0
-    move-object v1, v4
+    :cond_3
+    iget-object p1, p1, Lf66;->A0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :goto_0
-    if-eqz v1, :cond_1
+    new-instance v1, Lqi2;
 
-    iget-object p1, p1, Lr56;->a:Ljava/util/Set;
+    const/4 v3, 0x2
 
-    check-cast v1, Lone/me/folders/edit/FolderEditScreen;
+    invoke-direct {v1, v3}, Lqi2;-><init>(I)V
 
-    invoke-virtual {v1}, Lone/me/folders/edit/FolderEditScreen;->D0()Ll56;
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
 
-    move-result-object v1
+    goto :goto_1
 
-    iget-object v2, v1, Ll56;->o:Lqkf;
+    :cond_4
+    iget-object p1, p0, Lw56;->Y:Ljava/util/Set;
 
-    check-cast v2, Losa;
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-virtual {v2}, Losa;->b()Lv44;
+    move-result p1
 
-    move-result-object v2
+    if-nez p1, :cond_5
 
-    new-instance v5, Lc56;
+    iget-object p1, p0, Lw56;->Z:Lf66;
 
-    invoke-direct {v5, p1, v1, v4}, Lc56;-><init>(Ljava/util/Set;Ll56;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lw56;->Y:Ljava/util/Set;
 
-    iget-object p1, v1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iput v3, p0, Lw56;->X:I
 
-    sget-object v4, Le54;->b:Le54;
-
-    invoke-static {p1, v2, v4, v5}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
+    invoke-static {p1, v1, p0}, Lf66;->r(Lf66;Ljava/util/Set;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v2, v1, Ll56;->F0:Lpzd;
+    if-ne p1, v0, :cond_5
 
-    sget-object v4, Ll56;->G0:[Lwq7;
+    goto :goto_2
 
-    aget-object v3, v4, v3
+    :cond_5
+    :goto_1
+    iget-object p1, p0, Lw56;->Z:Lf66;
 
-    invoke-virtual {v2, v1, v3, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    iput v2, p0, Lw56;->X:I
 
-    :cond_1
-    invoke-virtual {v0}, Lx14;->getRouter()Ljhd;
+    invoke-static {p1, p0}, Lf66;->s(Lf66;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljhd;->C()Z
+    if-ne p1, v0, :cond_6
 
-    sget-object p1, Lzag;->a:Lzag;
+    :goto_2
+    return-object v0
+
+    :cond_6
+    :goto_3
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

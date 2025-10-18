@@ -1,125 +1,61 @@
-.class public final Lh2b;
+.class public abstract Lh2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lh2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:J
 
+.field public static final b:J
 
-# instance fields
-.field public final a:I
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Luj8;
+    sget v0, Lepc;->oneme_settings_media_item_gif:I
 
-    const/16 v1, 0x11
+    int-to-long v0, v0
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
+    sput-wide v0, Lh2b;->a:J
 
-    sput-object v0, Lh2b;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget v0, Lepc;->oneme_settings_media_item_load_in_roaming:I
 
-    return-void
-.end method
+    int-to-long v0, v0
 
-.method public synthetic constructor <init>(I)V
-    .locals 0
+    sput-wide v0, Lh2b;->b:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lepc;->oneme_settings_media_item_photo:I
 
-    iput p1, p0, Lh2b;->a:I
+    int-to-long v0, v0
 
-    return-void
-.end method
+    sput-wide v0, Lh2b;->c:J
 
+    sget v0, Lepc;->oneme_settings_media_item_playlist_enabled:I
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    int-to-long v0, v0
 
-    const/4 v0, 0x0
+    sput-wide v0, Lh2b;->d:J
 
-    return v0
-.end method
+    sget v0, Lepc;->oneme_settings_media_item_video_messages:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    int-to-long v0, v0
 
-    instance-of v0, p1, Lh2b;
+    sput-wide v0, Lh2b;->e:J
 
-    if-nez v0, :cond_0
+    sget v0, Lepc;->oneme_settings_media_screen_autoloading_section_header:I
 
-    goto :goto_0
+    int-to-long v0, v0
 
-    :cond_0
-    check-cast p1, Lh2b;
-
-    iget p1, p1, Lh2b;->a:I
-
-    iget v0, p0, Lh2b;->a:I
-
-    if-eq v0, p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lh2b;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ContainerGravity(value="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lh2b;->a:I
-
-    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lh2b;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput-wide v0, Lh2b;->f:J
 
     return-void
 .end method

@@ -1,76 +1,43 @@
-.class public final Lcuh;
-.super Ljava/lang/Object;
+.class public final synthetic Lcuh;
+.super Leec;
 .source "SourceFile"
 
-# interfaces
-.implements Louh;
 
-
-# instance fields
-.field public final synthetic a:Landroid/widget/FrameLayout;
-
-.field public final synthetic b:Landroid/view/LayoutInflater;
-
-.field public final synthetic c:Landroid/view/ViewGroup;
-
-.field public final synthetic d:Landroid/os/Bundle;
-
-.field public final synthetic e:Lcp4;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lcp4;Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcuh;
 
-    iput-object p1, p0, Lcuh;->e:Lcp4;
+    const-string v1, "getJitterBufferMs()J"
 
-    iput-object p2, p0, Lcuh;->a:Landroid/widget/FrameLayout;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lcuh;->b:Landroid/view/LayoutInflater;
+    const-class v3, Lmxe;
 
-    iput-object p4, p0, Lcuh;->c:Landroid/view/ViewGroup;
+    const-string v4, "jitterBufferMs"
 
-    iput-object p5, p0, Lcuh;->d:Landroid/os/Bundle;
+    invoke-direct {v0, v3, v4, v1, v2}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x2
+    check-cast p1, Lmxe;
 
-    return v0
-.end method
+    iget-wide v0, p1, Lkxe;->k:J
 
-.method public final b()V
-    .locals 5
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, p0, Lcuh;->a:Landroid/widget/FrameLayout;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    iget-object v1, p0, Lcuh;->e:Lcp4;
-
-    iget-object v1, v1, Lcp4;->a:Ljava/lang/Object;
-
-    check-cast v1, Lxv7;
-
-    iget-object v2, p0, Lcuh;->c:Landroid/view/ViewGroup;
-
-    iget-object v3, p0, Lcuh;->d:Landroid/os/Bundle;
-
-    iget-object v4, p0, Lcuh;->b:Landroid/view/LayoutInflater;
-
-    invoke-interface {v1, v4, v2, v3}, Lxv7;->p(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
+    return-object p1
 .end method

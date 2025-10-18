@@ -1,43 +1,142 @@
-.class public abstract synthetic Lr2d;
-.super Ljava/lang/Object;
+.class public final Lr2d;
+.super Lpmf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public c:Ljava/lang/String;
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lpf9;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lr2d;->o:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "tls"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "redirectHost"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lg0i;->p(Lpf9;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr2d;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1}, Lpf9;->p0()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lr2d;->o:Z
+
+    return-void
+.end method
+
+.method public final e()Ljava/lang/String;
     .locals 3
 
-    invoke-static {}, Lr1d;->values()[Lr1d;
+    iget-object v0, p0, Lr2d;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lr2d;->c:Ljava/lang/String;
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v1, p0, Lr2d;->c:Ljava/lang/String;
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
 
-    new-array v0, v0, [I
+    :cond_0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lr2d;->c:Ljava/lang/String;
 
-    :catch_0
-    const/4 v2, 0x2
+    iget-boolean v1, p0, Lr2d;->o:Z
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :catch_1
-    sput-object v0, Lr2d;->$EnumSwitchMapping$0:[I
+    const-string v3, "{redirectHost=\'"
 
-    return-void
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', tls="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

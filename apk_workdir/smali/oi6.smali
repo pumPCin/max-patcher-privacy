@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lej6;

@@ -1,45 +1,48 @@
 .class public final Lw58;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ly14;
 
 
 # instance fields
-.field public a:Lorg/webrtc/PeerConnectionFactory;
+.field public X:I
 
-.field public b:Lp40;
+.field public final synthetic Y:Lmc3;
 
-.field public c:Ljava/util/concurrent/Executor;
+.field public synthetic o:Ljava/lang/Object;
 
-.field public d:Landroid/content/Context;
 
-.field public e:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lmc3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public f:Ljava/lang/String;
+    iput-object p1, p0, Lw58;->Y:Lmc3;
 
-.field public g:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public h:Lyuc;
+    return-void
+.end method
 
-.field public i:Lorg/webrtc/EglBase$Context;
 
-.field public j:Ly58;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public k:Z
+    iput-object p1, p0, Lw58;->o:Ljava/lang/Object;
 
-.field public l:Z
+    iget p1, p0, Lw58;->X:I
 
-.field public m:Lngd;
+    const/high16 v0, -0x80000000
 
-.field public n:Lvtf;
+    or-int/2addr p1, v0
 
-.field public o:Z
+    iput p1, p0, Lw58;->X:I
 
-.field public p:Z
+    iget-object p1, p0, Lw58;->Y:Lmc3;
 
-.field public q:Ln58;
+    const/4 v0, 0x0
 
-.field public r:Ldte;
+    invoke-virtual {p1, v0, p0}, Lmc3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public s:Ljava/lang/Integer;
+    move-result-object p1
 
-.field public t:Z
+    return-object p1
+.end method

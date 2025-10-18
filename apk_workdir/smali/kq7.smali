@@ -1,24 +1,3 @@
-.class public interface abstract Lkq7;
-.super Ljava/lang/Object;
+.class public final Lkq7;
+.super Lxp7;
 .source "SourceFile"
-
-# interfaces
-.implements Lhq7;
-.implements Lji6;
-
-
-# virtual methods
-.method public abstract isExternal()Z
-.end method
-
-.method public abstract isInfix()Z
-.end method
-
-.method public abstract isInline()Z
-.end method
-
-.method public abstract isOperator()Z
-.end method
-
-.method public abstract isSuspend()Z
-.end method

@@ -2,280 +2,123 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh60;
-
 
 # instance fields
-.field public a:Ljava/io/Serializable;
+.field public A:Ljava/lang/String;
 
-.field public b:J
+.field public a:La20;
 
-.field public c:Ljava/io/Serializable;
+.field public b:Ls10;
 
-.field public d:I
+.field public c:Ll10;
 
-.field public e:Ljava/lang/Object;
+.field public d:Ld20;
 
-.field public f:I
+.field public e:Le10;
 
+.field public f:Lz10;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.field public g:Lw10;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public h:Lc10;
 
-    const/4 v0, 0x1
+.field public i:Lx10;
 
-    .line 2
-    iput v0, p0, Lf10;->d:I
+.field public j:J
 
-    .line 3
-    iput v0, p0, Lf10;->f:I
+.field public k:F
 
-    return-void
-.end method
+.field public l:Ljava/lang/String;
 
-.method public constructor <init>(Lf10;)V
-    .locals 2
+.field public m:Ljava/lang/String;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public n:Z
 
-    .line 5
-    iget-object v0, p1, Lf10;->a:Ljava/io/Serializable;
+.field public o:J
 
-    check-cast v0, Ljava/lang/String;
+.field public p:J
 
-    iput-object v0, p0, Lf10;->a:Ljava/io/Serializable;
+.field public q:Lh10;
 
-    .line 6
-    iget-wide v0, p1, Lf10;->b:J
+.field public r:Ln10;
 
-    iput-wide v0, p0, Lf10;->b:J
+.field public s:Li10;
 
-    .line 7
-    iget-object v0, p1, Lf10;->c:Ljava/io/Serializable;
+.field public t:Lt10;
 
-    check-cast v0, Ljava/lang/String;
+.field public u:J
 
-    iput-object v0, p0, Lf10;->c:Ljava/io/Serializable;
+.field public v:Lp10;
 
-    .line 8
-    iget v0, p1, Lf10;->d:I
+.field public w:Lhmh;
 
-    iput v0, p0, Lf10;->d:I
+.field public x:Lu10;
 
-    .line 9
-    iget-object v0, p1, Lf10;->e:Ljava/lang/Object;
+.field public y:Z
 
-    check-cast v0, Ljava/util/List;
-
-    iput-object v0, p0, Lf10;->e:Ljava/lang/Object;
-
-    .line 10
-    iget p1, p1, Lf10;->f:I
-
-    iput p1, p0, Lf10;->f:I
-
-    return-void
-.end method
+.field public z:Z
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public final a()Le20;
+    .locals 1
 
-    iget-object v0, p0, Lf10;->c:Ljava/io/Serializable;
+    iget-object v0, p0, Lf10;->a:La20;
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    sget-object v0, La20;->a:La20;
 
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "AudioStream has been released."
-
-    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public read(Ljava/nio/ByteBuffer;)Lg90;
-    .locals 11
-
-    invoke-virtual {p0}, Lf10;->a()V
-
-    iget-object v0, p0, Lf10;->a:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    const-string v1, "AudioStream has not been started."
-
-    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    iget v2, p0, Lf10;->d:I
-
-    invoke-static {v2, v0, v1}, Lggi;->d(IJ)J
-
-    move-result-wide v0
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v6, v2, v4
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    if-lez v6, :cond_0
-
-    move v6, v7
-
-    goto :goto_0
+    iput-object v0, p0, Lf10;->a:La20;
 
     :cond_0
-    move v6, v8
+    iget-object v0, p0, Lf10;->i:Lx10;
 
-    :goto_0
-    const-string v9, "bytesPerFrame must be greater than 0."
+    if-nez v0, :cond_1
 
-    invoke-static {v9, v6}, Lbui;->a(Ljava/lang/String;Z)V
+    sget-object v0, Lx10;->a:Lx10;
 
-    mul-long/2addr v2, v0
-
-    long-to-int v2, v2
-
-    if-gtz v2, :cond_1
-
-    iget-wide v0, p0, Lf10;->b:J
-
-    new-instance p1, Lg90;
-
-    invoke-direct {p1, v8, v0, v1}, Lg90;-><init>(IJ)V
-
-    return-object p1
+    iput-object v0, p0, Lf10;->i:Lx10;
 
     :cond_1
-    iget v3, p0, Lf10;->f:I
+    iget-object v0, p0, Lf10;->x:Lu10;
 
-    invoke-static {v3, v0, v1}, Lggi;->c(IJ)J
+    if-nez v0, :cond_2
 
-    move-result-wide v0
+    sget-object v0, Lu10;->a:Lu10;
 
-    iget-wide v9, p0, Lf10;->b:J
-
-    add-long/2addr v9, v0
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    sub-long v0, v9, v0
-
-    cmp-long v3, v0, v4
-
-    if-lez v3, :cond_2
-
-    :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "SilentAudioStream"
-
-    const-string v3, "Ignore interruption"
-
-    invoke-static {v1, v3, v0}, Lgth;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object v0, p0, Lf10;->x:Lu10;
 
     :cond_2
-    :goto_1
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    new-instance v0, Le20;
 
-    move-result v0
+    invoke-direct {v0, p0}, Le20;-><init>(Lf10;)V
 
-    if-gt v2, v0, :cond_3
+    return-object v0
+.end method
 
-    goto :goto_2
+.method public final b()Ln10;
+    .locals 1
 
-    :cond_3
-    move v7, v8
+    iget-object v0, p0, Lf10;->r:Ln10;
 
-    :goto_2
-    const/4 v0, 0x0
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v7}, Lbui;->f(Ljava/lang/String;Z)V
+    sget-object v0, Ln10;->f:Ln10;
 
-    iget-object v0, p0, Lf10;->e:Ljava/lang/Object;
+    :cond_0
+    return-object v0
+.end method
 
-    check-cast v0, [B
+.method public final c()Ld20;
+    .locals 1
 
-    if-eqz v0, :cond_4
+    iget-object v0, p0, Lf10;->d:Ld20;
 
-    array-length v0, v0
+    if-nez v0, :cond_0
 
-    if-ge v0, v2, :cond_5
+    sget-object v0, Ld20;->r:Ld20;
 
-    :cond_4
-    new-array v0, v2, [B
-
-    iput-object v0, p0, Lf10;->e:Ljava/lang/Object;
-
-    :cond_5
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result v0
-
-    iget-object v1, p0, Lf10;->e:Ljava/lang/Object;
-
-    check-cast v1, [B
-
-    invoke-virtual {p1, v1, v8, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    add-int v1, v0, v2
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    iget-wide v0, p0, Lf10;->b:J
-
-    new-instance p1, Lg90;
-
-    invoke-direct {p1, v2, v0, v1}, Lg90;-><init>(IJ)V
-
-    iput-wide v9, p0, Lf10;->b:J
-
-    return-object p1
+    :cond_0
+    return-object v0
 .end method

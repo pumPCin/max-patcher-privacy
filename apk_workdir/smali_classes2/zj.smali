@@ -15,11 +15,11 @@
 
     const-class v0, Lzj;
 
-    invoke-static {v0}, Ls6d;->a(Ljava/lang/Class;)Lv63;
+    invoke-static {v0}, Lz7d;->a(Ljava/lang/Class;)Lh73;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lv63;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lh73;->b()Ljava/lang/String;
 
     return-void
 .end method
@@ -82,7 +82,7 @@
     :goto_0
     if-eqz v5, :cond_3
 
-    const-class v6, Lz9g;
+    const-class v6, Lcbg;
 
     invoke-interface {v5, v3, v2, v6}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
@@ -92,7 +92,7 @@
 
     :catchall_0
     :cond_3
-    check-cast v4, [Lz9g;
+    check-cast v4, [Lcbg;
 
     if-eqz v4, :cond_5
 
@@ -152,13 +152,13 @@
     goto :goto_1
 
     :cond_5
-    new-instance p1, Lb25;
+    new-instance p1, Lu25;
 
     const/16 v0, 0x8
 
-    invoke-direct {p1, v0}, Lb25;-><init>(I)V
+    invoke-direct {p1, v0}, Lu25;-><init>(I)V
 
-    invoke-static {v1, p1}, Lab3;->S(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
+    invoke-static {v1, p1}, Lnb3;->S(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
     move-result-object p1
 
@@ -166,7 +166,7 @@
 
     :cond_6
     :goto_3
-    sget-object p1, Ls95;->a:Ls95;
+    sget-object p1, Lka5;->a:Lka5;
 
     return-object p1
 .end method

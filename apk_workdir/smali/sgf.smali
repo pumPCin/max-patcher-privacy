@@ -1,136 +1,55 @@
-.class public final Lsgf;
-.super Ljava/lang/Object;
+.class public abstract Lsgf;
+.super Ly14;
 .source "SourceFile"
 
 # interfaces
-.implements Lnmg;
+.implements Lmj6;
 
 
 # instance fields
-.field public final a:Lnmg;
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lnmg;)V
-    .locals 1
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {p1}, Lnmg;->M()Z
-
-    move-result v0
-
-    invoke-static {v0}, Lbui;->b(Z)V
-
-    iput-object p1, p0, Lsgf;->a:Lnmg;
+    iput p1, p0, Lsgf;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H()I
+.method public final getArity()I
     .locals 1
 
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0}, Lnmg;->V()I
-
-    move-result v0
+    iget v0, p0, Lsgf;->o:I
 
     return v0
 .end method
 
-.method public final I()Landroid/util/Range;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lsgf;->a:Lnmg;
+    iget-object v0, p0, Lkj0;->a:Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Lnmg;->I()Landroid/util/Range;
+    if-nez v0, :cond_0
+
+    sget-object v0, Lz7d;->a:La8d;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, La8d;->a(Lmj6;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final M()Z
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0}, Lnmg;->M()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final R(I)Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0, p1}, Lnmg;->U(I)Landroid/util/Range;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final U(I)Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0, p1}, Lnmg;->R(I)Landroid/util/Range;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final V()I
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0}, Lnmg;->H()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final W()Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0}, Lnmg;->Z()Landroid/util/Range;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final X(II)Z
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0, p2, p1}, Lnmg;->X(II)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final Z()Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Lnmg;
-
-    invoke-interface {v0}, Lnmg;->W()Landroid/util/Range;
+    :cond_0
+    invoke-super {p0}, Lkj0;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,22 +3,28 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method public constructor <init>(I)V
+# virtual methods
+.method public a(Lvk6;)[Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    iput p1, p0, Lbl6;->a:I
-
-    return-void
+    return-object p1
 .end method
 
+.method public abstract b()Ljava/lang/String;
+.end method
 
-# virtual methods
-.method public abstract a()Ljava/lang/Long;
+.method public abstract c()Lf4;
+.end method
+
+.method public abstract d()Ljava/util/List;
+.end method
+
+.method public e(Lvk6;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p1, p1, Lvk6;->a:Ljava/lang/String;
+
+    return-object p1
 .end method

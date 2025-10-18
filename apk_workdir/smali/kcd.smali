@@ -1,104 +1,82 @@
-.class public final Lkcd;
-.super Llff;
+.class public final synthetic Lkcd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Llcd;
+.field public final synthetic a:I
+
+.field public final synthetic b:Llcd;
 
 
 # direct methods
-.method public constructor <init>(Llcd;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Llcd;I)V
     .locals 0
 
-    iput-object p1, p0, Lkcd;->X:Llcd;
+    iput p2, p0, Lkcd;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lkcd;->b:Llcd;
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lkcd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkcd;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lkcd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lkcd;
-
-    iget-object v0, p0, Lkcd;->X:Llcd;
-
-    invoke-direct {p1, v0, p2}, Lkcd;-><init>(Llcd;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lkcd;->a:I
 
-    iget-object p1, p0, Lkcd;->X:Llcd;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p1, Llcd;->X:Ljava/lang/String;
+    iget-object v0, p0, Lkcd;->b:Llcd;
 
-    const-string v1, "executeTasks"
+    iget-object v0, v0, Llcd;->c:Lgb0;
 
-    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v0, Lgb0;->g:Ljava/lang/Object;
 
-    iget-object v0, p1, Llcd;->a:Llt7;
+    check-cast v1, Llcd;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    iget v1, v0, Lgb0;->a:I
 
-    check-cast v0, Lsoh;
+    and-int/lit8 v1, v1, 0x3
 
-    invoke-static {v0}, Lv4e;->x(Lsoh;)V
+    if-nez v1, :cond_0
 
-    iget-object p1, p1, Llcd;->b:Llt7;
+    goto :goto_0
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Lgb0;->b()V
 
-    move-result-object p1
+    :cond_1
+    :goto_0
+    return-void
 
-    check-cast p1, Lre9;
+    :pswitch_0
+    iget-object v0, p0, Lkcd;->b:Llcd;
 
-    invoke-virtual {p1}, Lre9;->a()V
+    iget-object v0, v0, Llcd;->c:Lgb0;
 
-    sget-object p1, Lzag;->a:Lzag;
+    iget-object v1, v0, Lgb0;->g:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v1, Llcd;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lgb0;->b()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

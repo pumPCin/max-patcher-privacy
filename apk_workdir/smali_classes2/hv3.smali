@@ -1,208 +1,101 @@
-.class public final synthetic Lhv3;
+.class public final Lhv3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqh6;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvv3;
-
-.field public final synthetic c:J
+.field public final a:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvv3;JI)V
+.method public constructor <init>(Ljava/lang/Boolean;)V
     .locals 0
 
-    iput p4, p0, Lhv3;->a:I
-
-    iput-object p1, p0, Lhv3;->b:Lvv3;
-
-    iput-wide p2, p0, Lhv3;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhv3;->a:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lhv3;->a:I
-
-    check-cast p1, Lc2b;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Liv3;->$EnumSwitchMapping$1:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lhv3;->b:Lvv3;
-
-    iget-object v0, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lvv3;->c:Lqkf;
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->b()Lv44;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lvv3;->r()Lw44;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lp0;->plus(Lt44;)Lt44;
-
-    move-result-object v1
-
-    new-instance v2, Ljv3;
-
-    iget-wide v3, p0, Lhv3;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Ljv3;-><init>(Lvv3;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    return v0
 
     :cond_0
-    sget-object p1, Lzag;->a:Lzag;
+    instance-of v1, p1, Lhv3;
 
-    return-object p1
+    const/4 v2, 0x0
 
-    :pswitch_0
-    sget-object v0, Liv3;->$EnumSwitchMapping$1:[I
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, p0, Lhv3;->b:Lvv3;
-
-    iget-object v0, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lvv3;->c:Lqkf;
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->b()Lv44;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lvv3;->r()Lw44;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lp0;->plus(Lt44;)Lt44;
-
-    move-result-object v1
-
-    new-instance v2, Lkv3;
-
-    iget-wide v3, p0, Lhv3;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Lkv3;-><init>(Lvv3;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    return v2
 
     :cond_1
-    sget-object p1, Lzag;->a:Lzag;
+    check-cast p1, Lhv3;
 
-    return-object p1
+    iget-object v1, p0, Lhv3;->a:Ljava/lang/Boolean;
 
-    :pswitch_1
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iget-object p1, p1, Lhv3;->a:Ljava/lang/Boolean;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_2
 
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget-object p1, p0, Lhv3;->b:Lvv3;
+    return v0
+.end method
 
-    iget-object v0, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v1, p1, Lvv3;->c:Lqkf;
+    iget-object v0, p0, Lhv3;->a:Ljava/lang/Boolean;
 
-    check-cast v1, Losa;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Losa;->b()Lv44;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    return v0
 
-    sget-object v2, Ls8a;->a:Ls8a;
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v1, v2}, Lp0;->plus(Lt44;)Lt44;
+    move-result v0
 
-    move-result-object v1
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lvv3;->r()Lw44;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object v2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, v2}, Lt44;->plus(Lt44;)Lt44;
+    const-string v1, "Selection(isSelected="
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v2, Luv3;
+    iget-object v1, p0, Lhv3;->a:Ljava/lang/Boolean;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-wide v4, p0, Lhv3;->c:J
+    const-string v1, ")"
 
-    invoke-direct {v2, p1, v4, v5, v3}, Luv3;-><init>(Lvv3;JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Le54;->c:Le54;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v1, p1, v2}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
+    move-result-object v0
 
-    :goto_0
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

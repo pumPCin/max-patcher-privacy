@@ -1,8 +1,15 @@
-.class public interface abstract Lqjf;
+.class public abstract Lqjf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c(Lnjf;I)V
+# direct methods
+.method public static a(Landroid/app/job/JobParameters;)Landroid/net/Network;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/job/JobParameters;->getNetwork()Landroid/net/Network;
+
+    move-result-object p0
+
+    return-object p0
 .end method

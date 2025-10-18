@@ -1,28 +1,30 @@
 .class public final Lnva;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
 .field public X:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Luva;
 
-.field public final synthetic Z:Lova;
+.field public final synthetic Z:Ljava/nio/file/Path;
 
 
 # direct methods
-.method public constructor <init>(Lova;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Luva;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lnva;->Z:Lova;
+    iput-object p1, p0, Lnva;->Y:Luva;
+
+    iput-object p2, p0, Lnva;->Z:Ljava/nio/file/Path;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +44,7 @@
 
     check-cast p1, Lnva;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lnva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -54,35 +56,31 @@
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lnva;
+    new-instance p1, Lnva;
 
-    iget-object v1, p0, Lnva;->Z:Lova;
+    iget-object v0, p0, Lnva;->Y:Luva;
 
-    invoke-direct {v0, v1, p2}, Lnva;-><init>(Lova;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lnva;->Z:Ljava/nio/file/Path;
 
-    iput-object p1, v0, Lnva;->Y:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lnva;-><init>(Luva;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 2
 
-    iget-object v0, p0, Lnva;->Z:Lova;
+    iget v0, p0, Lnva;->X:I
 
-    iget-object v1, v0, Lova;->a:Llt7;
+    const/4 v1, 0x1
 
-    iget v2, p0, Lnva;->X:I
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x1
+    if-ne v0, v1, :cond_0
 
-    if-eqz v2, :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -94,80 +92,29 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lnva;->Y:Ljava/lang/Object;
+    iget-object p1, p0, Lnva;->Z:Ljava/nio/file/Path;
 
-    check-cast p1, Lb54;
+    iget-object v0, p0, Lnva;->Y:Luva;
 
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, p1}, Luva;->c(Luva;Ljava/nio/file/Path;)V
 
-    move-result-object v2
+    iput v1, p0, Lnva;->X:I
 
-    check-cast v2, Lqkf;
-
-    check-cast v2, Losa;
-
-    invoke-virtual {v2}, Losa;->a()Lv44;
-
-    move-result-object v2
-
-    new-instance v4, Llva;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v0, v5}, Llva;-><init>(Lova;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v6, 0x2
-
-    invoke-static {p1, v2, v4, v6}, Lrji;->b(Lb54;Lv44;Lei6;I)Lbp4;
-
-    move-result-object v2
-
-    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqkf;
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->a()Lv44;
-
-    move-result-object v1
-
-    new-instance v4, Lmva;
-
-    invoke-direct {v4, v0, v5}, Lmva;-><init>(Lova;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v1, v4, v6}, Lrji;->b(Lb54;Lv44;Lei6;I)Lbp4;
+    invoke-static {v0, p0}, Luva;->a(Luva;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-array v0, v6, [Lap4;
-
-    const/4 v1, 0x0
-
-    aput-object v2, v0, v1
-
-    aput-object p1, v0, v3
-
-    iput v3, p0, Lnva;->X:I
-
-    new-instance p1, Lke0;
-
-    invoke-direct {p1, v0}, Lke0;-><init>([Lap4;)V
-
-    invoke-virtual {p1, p0}, Lke0;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lc54;->a:Lc54;
+    sget-object v0, Lr54;->a:Lr54;
 
     if-ne p1, v0, :cond_2
 
     return-object v0
 
     :cond_2
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
     return-object p1
 .end method

@@ -1,66 +1,60 @@
-.class public final synthetic Lky3;
-.super Ljava/lang/Object;
+.class public final Lky3;
+.super Lpmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lqf4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public c:Lru3;
 
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+# virtual methods
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 1
 
-    iput p1, p0, Lky3;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Lky3;->b:Ljava/lang/Object;
+    const-string v0, "contact"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lpf9;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lru3;->g(Lpf9;)Lru3;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lky3;->c:Lru3;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Lky3;->a:I
+    iget-object v0, p0, Lky3;->c:Lru3;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lky3;->b:Ljava/lang/Object;
+    const-string v2, "{contact="
 
-    check-cast v0, [J
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lrxe;->b:Lrxe;
+    const-string v0, "}"
 
-    invoke-direct {v1, v0, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLrxe;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lky3;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lny3;
-
-    new-instance v1, Lly3;
-
-    invoke-direct {v1, v0}, Lly3;-><init>(Lny3;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

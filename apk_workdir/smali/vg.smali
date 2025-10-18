@@ -6,11 +6,11 @@
 # static fields
 .field public static final a:Landroid/view/animation/LinearInterpolator;
 
-.field public static final b:Lsm5;
+.field public static final b:Lln5;
 
-.field public static final c:Lrm5;
+.field public static final c:Lkn5;
 
-.field public static final d:Lrm5;
+.field public static final d:Lkn5;
 
 .field public static final e:Landroid/view/animation/DecelerateInterpolator;
 
@@ -25,27 +25,27 @@
 
     sput-object v0, Lvg;->a:Landroid/view/animation/LinearInterpolator;
 
-    new-instance v0, Lsm5;
+    new-instance v0, Lln5;
 
-    invoke-direct {v0}, Lsm5;-><init>()V
+    invoke-direct {v0}, Lln5;-><init>()V
 
-    sput-object v0, Lvg;->b:Lsm5;
+    sput-object v0, Lvg;->b:Lln5;
 
-    new-instance v0, Lrm5;
+    new-instance v0, Lkn5;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lrm5;-><init>(I)V
+    invoke-direct {v0, v1}, Lkn5;-><init>(I)V
 
-    sput-object v0, Lvg;->c:Lrm5;
+    sput-object v0, Lvg;->c:Lkn5;
 
-    new-instance v0, Lrm5;
+    new-instance v0, Lkn5;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lrm5;-><init>(I)V
+    invoke-direct {v0, v1}, Lkn5;-><init>(I)V
 
-    sput-object v0, Lvg;->d:Lrm5;
+    sput-object v0, Lvg;->d:Lkn5;
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
@@ -59,7 +59,7 @@
 .method public static a(FFF)F
     .locals 0
 
-    invoke-static {p1, p0, p2, p0}, Llfb;->h(FFFF)F
+    invoke-static {p1, p0, p2, p0}, Laab;->h(FFFF)F
 
     move-result p0
 

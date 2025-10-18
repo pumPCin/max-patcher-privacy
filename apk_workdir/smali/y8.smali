@@ -53,7 +53,7 @@
 
     new-array v13, v7, [I
 
-    new-array v14, v7, [Lyr8;
+    new-array v14, v7, [Lat8;
 
     new-array v15, v7, [J
 
@@ -73,7 +73,7 @@
 
     move-object/from16 v19, v0
 
-    invoke-direct/range {v8 .. v20}, Lw8;-><init>(JII[I[Lyr8;[JJZ[Ljava/lang/String;Z)V
+    invoke-direct/range {v8 .. v20}, Lw8;-><init>(JII[I[Lat8;[JJZ[Ljava/lang/String;Z)V
 
     iget-object v0, v8, Lw8;->f:[I
 
@@ -107,7 +107,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Ljava/util/Arrays;->fill([JIIJ)V
 
-    iget-object v1, v8, Lw8;->e:[Lyr8;
+    iget-object v1, v8, Lw8;->e:[Lat8;
 
     invoke-static {v1, v12}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
@@ -115,7 +115,7 @@
 
     move-object v15, v1
 
-    check-cast v15, [Lyr8;
+    check-cast v15, [Lat8;
 
     iget-object v1, v8, Lw8;->h:[Ljava/lang/String;
 
@@ -147,11 +147,11 @@
 
     move-wide/from16 v17, v3
 
-    invoke-direct/range {v9 .. v21}, Lw8;-><init>(JII[I[Lyr8;[JJZ[Ljava/lang/String;Z)V
+    invoke-direct/range {v9 .. v21}, Lw8;-><init>(JII[I[Lat8;[JJZ[Ljava/lang/String;Z)V
 
     sput-object v9, Ly8;->g:Lw8;
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
+    sget-object v0, Lnig;->a:Ljava/lang/String;
 
     const/4 v0, 0x1
 

@@ -1,145 +1,125 @@
-.class public final synthetic Luq1;
-.super Ljava/lang/Object;
+.class public final Luq1;
+.super Lmmi;
 .source "SourceFile"
-
-# interfaces
-.implements Lrgd;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Lyq1;
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyq1;I)V
+.method public constructor <init>(JZ)V
     .locals 0
-
-    .line 1
-    iput p2, p0, Luq1;->a:I
-
-    iput-object p1, p0, Luq1;->b:Lyq1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-wide p1, p0, Luq1;->b:J
 
-.method public synthetic constructor <init>(Lyq1;Lugd;)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x1
-
-    iput p2, p0, Luq1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luq1;->b:Lyq1;
+    iput-boolean p3, p0, Luq1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Luq1;->a:I
+    iget-boolean v0, p0, Luq1;->c:Z
 
-    iget-object v1, p0, Luq1;->b:Lyq1;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, v1, Lyq1;->F0:Lxq1;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    check-cast v0, Lj7;
-
-    iget-object v0, v0, Lj7;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->D0()Lbr1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lbr1;->b:Lao1;
-
-    iget-object v0, v0, Lao1;->K0:Lde5;
-
-    sget-object v1, Lem1;->D:Lem1;
-
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Luq1;
 
-    :pswitch_0
-    iget-object v0, v1, Lyq1;->F0:Lxq1;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_1
 
-    check-cast v0, Lj7;
-
-    iget-object v0, v0, Lj7;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->D0()Lbr1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lbr1;->b:Lao1;
-
-    iget-object v0, v0, Lao1;->K0:Lde5;
-
-    sget-object v1, Lvl1;->D:Lvl1;
-
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Luq1;
 
-    :pswitch_1
-    iget-object v0, v1, Lyq1;->F0:Lxq1;
+    iget-wide v3, p0, Luq1;->b:J
 
-    if-eqz v0, :cond_2
+    iget-wide v5, p1, Luq1;->b:J
 
-    check-cast v0, Lj7;
+    cmp-long v1, v3, v5
 
-    iget-object v0, v0, Lj7;->a:Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
-    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    return v2
 
-    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
+    :cond_2
+    iget-boolean v1, p0, Luq1;->c:Z
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->D0()Lbr1;
+    iget-boolean p1, p1, Luq1;->c:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Luq1;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Luq1;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Chat(chatId="
+
+    const-string v1, ", isVideo="
+
+    iget-wide v2, p0, Luq1;->b:J
+
+    iget-boolean v4, p0, Luq1;->c:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v0, v0, Lbr1;->b:Lao1;
+    const-string v1, ")"
 
-    iget-object v0, v0, Lao1;->K0:Lde5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lnl1;->D:Lnl1;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    move-result-object v0
 
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

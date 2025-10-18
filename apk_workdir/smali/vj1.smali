@@ -1,169 +1,92 @@
 .class public final Lvj1;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Integer;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Llz9;
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Integer;Llz9;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lvj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    iput-object p1, p0, Lvj1;->a:Ljava/lang/Integer;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lvj1;->b:Llz9;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Lvj1;Ljava/lang/Integer;Llz9;I)Lvj1;
-    .locals 1
-
-    and-int/lit8 v0, p3, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lvj1;->a:Ljava/lang/Integer;
-
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_1
-
-    iget-object p2, p0, Lvj1;->b:Llz9;
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lvj1;
-
-    invoke-direct {p0, p1, p2}, Lvj1;-><init>(Ljava/lang/Integer;Llz9;)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Lvj1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lvj1;
+    move-result-object p1
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lvj1;
 
-    iget-object v0, p0, Lvj1;->a:Ljava/lang/Integer;
+    sget-object p2, Lccg;->a:Lccg;
 
-    iget-object v1, p1, Lvj1;->a:Ljava/lang/Integer;
+    invoke-virtual {p1, p2}, Lvj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lvj1;->b:Llz9;
-
-    iget-object p1, p1, Lvj1;->b:Llz9;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lvj1;->a:Ljava/lang/Integer;
+    new-instance v0, Lvj1;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lvj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    const/4 v0, 0x0
+    invoke-direct {v0, p2, v1}, Lvj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
 
-    goto :goto_0
+    iput-object p1, v0, Lvj1;->X:Ljava/lang/Object;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lvj1;->b:Llz9;
-
-    invoke-virtual {v1}, Llz9;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "State(selectedEmoji="
+    iget-object p1, p0, Lvj1;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ljava/util/List;
 
-    iget-object v1, p0, Lvj1;->a:Ljava/lang/Integer;
+    iget-object v0, p0, Lvj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->H0:Lh0d;
 
-    const-string v1, ", selectedReasons="
+    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->K0:[Ltr7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x5
 
-    iget-object v1, p0, Lvj1;->b:Llz9;
+    aget-object v2, v2, v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", otherReasonText=null)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lbxc;
+
+    invoke-virtual {v0, p1}, Lbxc;->setButtonToolDataList(Ljava/util/List;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

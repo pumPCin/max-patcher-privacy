@@ -1,99 +1,108 @@
 .class public final Lanh;
-.super Landroid/os/Binder;
+.super Le1h;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Luq6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcnh;
 
 
 # direct methods
-.method public constructor <init>(Luq6;)V
+.method public synthetic constructor <init>(Lcnh;I)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    iput p2, p0, Lanh;->a:I
 
-    iput-object p1, p0, Lanh;->c:Luq6;
+    iput-object p1, p0, Lanh;->b:Lcnh;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbnh;)V
-    .locals 6
+.method public final c()V
+    .locals 4
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    iget v0, p0, Lanh;->a:I
 
-    move-result v0
+    const/4 v1, 0x0
 
-    invoke-static {}, Landroid/os/Process;->myUid()I
+    iget-object v2, p0, Lanh;->b:Lcnh;
 
-    move-result v1
+    packed-switch v0, :pswitch_data_0
 
-    if-ne v0, v1, :cond_1
+    iput-object v1, v2, Lcnh;->s:Las8;
 
-    const/4 v0, 0x3
+    iget-object v0, v2, Lcnh;->d:Landroidx/appcompat/widget/ActionBarContainer;
 
-    const-string v1, "FirebaseMessaging"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "service received new intent via bind strategy"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p1, Lbnh;->a:Landroid/content/Intent;
-
-    iget-object v1, p0, Lanh;->c:Luq6;
-
-    iget-object v1, v1, Luq6;->a:Ljava/lang/Object;
-
-    check-cast v1, Lpc5;
-
-    new-instance v2, Lrnf;
-
-    invoke-direct {v2}, Lrnf;-><init>()V
-
-    iget-object v3, v1, Lpc5;->a:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v4, Lv55;
-
-    const/4 v5, 0x7
-
-    invoke-direct {v4, v1, v0, v2, v5}, Lv55;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    new-instance v0, Lns;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lns;-><init>(I)V
-
-    new-instance v1, Ltjh;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v3, p1}, Ltjh;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, v2, Lrnf;->a:Ld1j;
-
-    invoke-virtual {p1, v0, v1}, Ld1j;->b(Ljava/util/concurrent/Executor;Lpla;)Ld1j;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     return-void
 
+    :pswitch_0
+    iget-boolean v0, v2, Lcnh;->o:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v2, Lcnh;->g:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object v0, v2, Lcnh;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_0
+    iget-object v0, v2, Lcnh;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionBarContainer;->setVisibility(I)V
+
+    iget-object v0, v2, Lcnh;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionBarContainer;->setTransitioning(Z)V
+
+    iput-object v1, v2, Lcnh;->s:Las8;
+
+    iget-object v0, v2, Lcnh;->k:Lu1f;
+
+    if-eqz v0, :cond_1
+
+    iget-object v3, v2, Lcnh;->j:Lbnh;
+
+    invoke-virtual {v0, v3}, Lu1f;->x(Lo7;)V
+
+    iput-object v1, v2, Lcnh;->j:Lbnh;
+
+    iput-object v1, v2, Lcnh;->k:Lu1f;
+
     :cond_1
-    new-instance p1, Ljava/lang/SecurityException;
+    iget-object v0, v2, Lcnh;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
-    const-string v0, "Binding only allowed within app"
+    if-eqz v0, :cond_2
 
-    invoke-direct {p1, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    sget-object v1, Lhzg;->a:Ljava/util/WeakHashMap;
 
-    throw p1
+    invoke-static {v0}, Ltyg;->c(Landroid/view/View;)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

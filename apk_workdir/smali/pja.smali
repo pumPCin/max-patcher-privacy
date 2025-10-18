@@ -1,76 +1,216 @@
 .class public final Lpja;
-.super Lg3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lela;
+.implements Lvv4;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final b:Lela;
 
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-.field public final o:Lqnd;
+.field public c:Lvv4;
 
 
 # direct methods
-.method public constructor <init>(Lsja;JLjava/util/concurrent/TimeUnit;Lqnd;Z)V
+.method public synthetic constructor <init>(Lela;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
+    iput p2, p0, Lpja;->a:I
 
-    iput-wide p2, p0, Lpja;->b:J
+    iput-object p1, p0, Lpja;->b:Lela;
 
-    iput-object p4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lpja;->o:Lqnd;
+    return-void
+.end method
 
-    iput-boolean p6, p0, Lpja;->X:Z
+.method private final a(Ljava/lang/Object;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lcka;)V
-    .locals 7
+.method public final b()V
+    .locals 1
 
-    new-instance v1, Lb2e;
+    iget v0, p0, Lpja;->a:I
 
-    invoke-direct {v1, p1}, Lb2e;-><init>(Lcka;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean p1, p0, Lpja;->X:Z
+    iget-object v0, p0, Lpja;->b:Lela;
 
-    iget-object v6, p0, Lg3;->a:Lsja;
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Lmja;
-
-    iget-object v4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v5, p0, Lpja;->o:Lqnd;
-
-    iget-wide v2, p0, Lpja;->b:J
-
-    invoke-direct/range {v0 .. v5}, Lmja;-><init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
-
-    invoke-interface {v6, v0}, Lsja;->a(Lcka;)V
+    invoke-interface {v0}, Lela;->b()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->b:Lela;
+
+    invoke-interface {v0}, Lela;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lvv4;)V
+    .locals 1
+
+    iget v0, p0, Lpja;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput-object p1, p0, Lpja;->c:Lvv4;
+
+    iget-object p1, p0, Lpja;->b:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->c:Lvv4;
+
+    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lpja;->c:Lvv4;
+
+    iget-object p1, p0, Lpja;->b:Lela;
+
+    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
 
     :cond_0
-    new-instance v0, Lnja;
+    return-void
 
-    iget-object v4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
+    nop
 
-    iget-object v5, p0, Lpja;->o:Lqnd;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-wide v2, p0, Lpja;->b:J
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct/range {v0 .. v5}, Loja;-><init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
+    iget v0, p0, Lpja;->a:I
 
-    invoke-interface {v6, v0}, Lsja;->a(Lcka;)V
+    packed-switch v0, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->b:Lela;
+
+    invoke-interface {v0, p1}, Lela;->d(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Lpja;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpja;->c:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->c:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->g()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lpja;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpja;->c:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->c:Lvv4;
+
+    invoke-interface {v0}, Lvv4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lpja;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpja;->b:Lela;
+
+    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpja;->b:Lela;
+
+    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

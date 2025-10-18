@@ -1,34 +1,86 @@
-.class public interface abstract Lgl5;
-.super Ljava/lang/Object;
+.class public final Lgl5;
+.super Lxzg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final s:Lfai;
+# instance fields
+.field public final X:Lxe5;
+
+.field public Y:Lcye;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Lfai;
+    sget-object v0, Lxk5;->a:Lxk5;
 
-    const/16 v1, 0x9
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-direct {v0, v1}, Lfai;-><init>(I)V
+    move-result-object v1
 
-    sput-object v0, Lgl5;->s:Lfai;
+    const-class v2, Lunf;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const-class v2, Lulf;
+
+    invoke-virtual {v0, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lxzg;-><init>()V
+
+    iput-object v1, p0, Lgl5;->b:Liu7;
+
+    iput-object v0, p0, Lgl5;->c:Liu7;
+
+    const-class v0, Lgl5;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lgl5;->o:Ljava/lang/String;
+
+    new-instance v0, Lxe5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lxe5;-><init>(I)V
+
+    iput-object v0, p0, Lgl5;->X:Lxe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract B(II)Ls0g;
-.end method
+.method public final q()V
+    .locals 2
 
-.method public abstract N(Lmwd;)V
-.end method
+    iget-object v0, p0, Lgl5;->Y:Lcye;
 
-.method public abstract w()V
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Llo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_0
+    iput-object v1, p0, Lgl5;->Y:Lcye;
+
+    return-void
 .end method

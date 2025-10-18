@@ -1,21 +1,50 @@
 .class public final Lvi5;
-.super Lhlf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll29;
 
 
 # instance fields
-.field public final o:Ljava/io/File;
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Lci8;
+
+.field public c:Ltvf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;Lci8;)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p3}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object p1, p0, Lvi5;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Lvi5;->o:Ljava/io/File;
+    iput-object p2, p0, Lvi5;->b:Lci8;
+
+    iget-object p1, p2, Lci8;->o:Lyh8;
+
+    iput-object p1, p0, Lvi5;->c:Ltvf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lvi5;->a:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final b()Ltvf;
+    .locals 1
+
+    iget-object v0, p0, Lvi5;->c:Ltvf;
+
+    return-object v0
 .end method

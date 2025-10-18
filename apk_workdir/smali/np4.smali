@@ -1,340 +1,307 @@
-.class public final Lnp4;
+.class public abstract Lnp4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldnh;
-.implements Lloh;
-
 
 # static fields
-.field public static final w0:Ljava/lang/String;
+.field public static final k:Landroid/util/Size;
+
+.field public static final l:Z
+
+.field public static final m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public static final n:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # instance fields
-.field public final X:Lm29;
+.field public final a:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/Object;
+.field public b:I
 
-.field public Z:I
+.field public c:Z
 
-.field public final a:Landroid/content/Context;
+.field public d:Lgu1;
 
-.field public final b:I
+.field public final e:Lju1;
 
-.field public final c:Lknh;
+.field public f:Lgu1;
 
-.field public final o:Lvhf;
+.field public final g:Lju1;
 
-.field public final r0:Lx1e;
+.field public final h:Landroid/util/Size;
 
-.field public final s0:Ltx6;
+.field public final i:I
 
-.field public t0:Landroid/os/PowerManager$WakeLock;
-
-.field public u0:Z
-
-.field public final v0:Lzye;
+.field public j:Ljava/lang/Class;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-string v0, "DelayMetCommandHandler"
+    new-instance v0, Landroid/util/Size;
 
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
 
-    sput-object v0, Lnp4;->w0:Ljava/lang/String;
+    sput-object v0, Lnp4;->k:Landroid/util/Size;
+
+    const-string v0, "DeferrableSurface"
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lgfi;->f(ILjava/lang/String;)Z
+
+    move-result v0
+
+    sput-boolean v0, Lnp4;->l:Z
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lnp4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lnp4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ILvhf;Lzye;)V
-    .locals 0
+.method public constructor <init>(Landroid/util/Size;I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnp4;->a:Landroid/content/Context;
+    new-instance v0, Ljava/lang/Object;
 
-    iput p2, p0, Lnp4;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lnp4;->o:Lvhf;
+    iput-object v0, p0, Lnp4;->a:Ljava/lang/Object;
 
-    iget-object p1, p4, Lzye;->a:Lknh;
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lnp4;->c:Lknh;
+    iput v0, p0, Lnp4;->b:I
 
-    iput-object p4, p0, Lnp4;->v0:Lzye;
+    iput-boolean v0, p0, Lnp4;->c:Z
 
-    iget-object p1, p3, Lvhf;->X:Lrnh;
+    iput-object p1, p0, Lnp4;->h:Landroid/util/Size;
 
-    iget-object p1, p1, Lrnh;->j:Lj3e;
+    iput p2, p0, Lnp4;->i:I
 
-    iget-object p2, p3, Lvhf;->b:Lxnf;
+    new-instance p1, Lmp4;
 
-    check-cast p2, Ln1c;
+    const/4 p2, 0x0
 
-    iget-object p3, p2, Ln1c;->a:Ljava/lang/Object;
+    invoke-direct {p1, p0, p2}, Lmp4;-><init>(Lnp4;I)V
 
-    check-cast p3, Lx1e;
+    invoke-static {p1}, Lomi;->a(Lhu1;)Lju1;
 
-    iput-object p3, p0, Lnp4;->r0:Lx1e;
+    move-result-object p1
 
-    iget-object p2, p2, Ln1c;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lnp4;->e:Lju1;
 
-    check-cast p2, Ltx6;
+    new-instance p2, Lmp4;
 
-    iput-object p2, p0, Lnp4;->s0:Ltx6;
+    const/4 v0, 0x1
 
-    new-instance p2, Lm29;
+    invoke-direct {p2, p0, v0}, Lmp4;-><init>(Lnp4;I)V
 
-    invoke-direct {p2, p1, p0}, Lm29;-><init>(Lj3e;Ldnh;)V
+    invoke-static {p2}, Lomi;->a(Lhu1;)Lju1;
 
-    iput-object p2, p0, Lnp4;->X:Lm29;
+    move-result-object p2
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Lnp4;->g:Lju1;
 
-    iput-boolean p1, p0, Lnp4;->u0:Z
+    const-string p2, "DeferrableSurface"
 
-    iput p1, p0, Lnp4;->Z:I
+    const/4 v0, 0x3
 
-    new-instance p1, Ljava/lang/Object;
+    invoke-static {v0, p2}, Lgfi;->f(ILjava/lang/String;)Z
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    move-result p2
 
-    iput-object p1, p0, Lnp4;->Y:Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    return-void
-.end method
+    sget-object p2, Lnp4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.method public static a(Lnp4;)V
-    .locals 10
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    iget v0, p0, Lnp4;->b:I
+    move-result p2
 
-    iget-object v1, p0, Lnp4;->s0:Ltx6;
+    sget-object v0, Lnp4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object v2, p0, Lnp4;->a:Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    iget-object v3, p0, Lnp4;->o:Lvhf;
+    move-result v0
 
-    iget-object v4, p0, Lnp4;->c:Lknh;
+    const-string v1, "Surface created"
 
-    iget-object v5, v4, Lknh;->a:Ljava/lang/String;
+    invoke-virtual {p0, p2, v0, v1}, Lnp4;->e(IILjava/lang/String;)V
 
-    iget v6, p0, Lnp4;->Z:I
+    new-instance p2, Ljava/lang/Exception;
 
-    sget-object v7, Lnp4;->w0:Ljava/lang/String;
+    invoke-direct {p2}, Ljava/lang/Exception;-><init>()V
 
-    const/4 v8, 0x2
+    invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    if-ge v6, v8, :cond_1
+    move-result-object p2
 
-    iput v8, p0, Lnp4;->Z:I
+    new-instance v0, Lyo4;
 
-    invoke-static {}, Lwxh;->f()Lwxh;
+    const/4 v1, 0x2
 
-    move-result-object p0
+    invoke-direct {v0, p0, v1, p2}, Lyo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-static {}, Lfni;->a()Lju4;
 
-    const-string v8, "Stopping work for WorkSpec "
+    move-result-object p2
 
-    invoke-direct {v6, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lju1;->b:Liu1;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v7, v6}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p0, Landroid/content/Intent;
-
-    const-class v6, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
-
-    invoke-direct {p0, v2, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v8, "ACTION_STOP_WORK"
-
-    invoke-virtual {p0, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p0, v4}, Lhc3;->d(Landroid/content/Intent;Lknh;)V
-
-    new-instance v8, Lmp;
-
-    const/4 v9, 0x5
-
-    invoke-direct {v8, v3, p0, v0, v9}, Lmp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v1, v8}, Ltx6;->execute(Ljava/lang/Runnable;)V
-
-    iget-object p0, v3, Lvhf;->o:Lpyb;
-
-    invoke-virtual {p0, v5}, Lpyb;->d(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object p0
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "WorkSpec "
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " needs to be rescheduled"
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v7, v5}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p0, Landroid/content/Intent;
-
-    invoke-direct {p0, v2, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v2, "ACTION_SCHEDULE_WORK"
-
-    invoke-virtual {p0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p0, v4}, Lhc3;->d(Landroid/content/Intent;Lknh;)V
-
-    new-instance v2, Lmp;
-
-    const/4 v4, 0x5
-
-    invoke-direct {v2, v3, p0, v0, v4}, Lmp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v1, v2}, Ltx6;->execute(Ljava/lang/Runnable;)V
-
-    return-void
+    invoke-virtual {p1, v0, p2}, Le4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     :cond_0
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Processor does not have WorkSpec "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ". No need to reschedule"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v7, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Already stopped work for "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v7, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public a()V
+    .locals 6
 
-    const-string v0, "Releasing wakelock "
+    const-string v0, "surface closed,  useCount="
 
-    iget-object v1, p0, Lnp4;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lnp4;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, p0, Lnp4;->X:Lm29;
+    iget-boolean v2, p0, Lnp4;->c:Z
 
-    invoke-virtual {v2}, Lm29;->C()V
+    const/4 v3, 0x0
 
-    iget-object v2, p0, Lnp4;->o:Lvhf;
+    if-nez v2, :cond_1
 
-    iget-object v2, v2, Lvhf;->c:Lnoh;
+    const/4 v2, 0x1
 
-    iget-object v3, p0, Lnp4;->c:Lknh;
+    iput-boolean v2, p0, Lnp4;->c:Z
 
-    invoke-virtual {v2, v3}, Lnoh;->a(Lknh;)V
+    iget-object v2, p0, Lnp4;->f:Lgu1;
 
-    iget-object v2, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
+    invoke-virtual {v2, v3}, Lgu1;->b(Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_0
+    iget v2, p0, Lnp4;->b:I
 
-    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+    if-nez v2, :cond_0
 
-    move-result v2
+    iget-object v2, p0, Lnp4;->d:Lgu1;
 
-    if-eqz v2, :cond_0
+    iput-object v3, p0, Lnp4;->d:Lgu1;
 
-    invoke-static {}, Lwxh;->f()Lwxh;
+    goto :goto_0
 
-    move-result-object v2
+    :catchall_0
+    move-exception v0
 
-    sget-object v3, Lnp4;->w0:Ljava/lang/String;
+    goto :goto_2
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    :cond_0
+    move-object v2, v3
 
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_0
+    const-string v4, "DeferrableSurface"
 
-    iget-object v0, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
+    const/4 v5, 0x3
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v4}, Lgfi;->f(ILjava/lang/String;)Z
 
-    const-string v0, "for WorkSpec "
+    move-result v4
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_2
 
-    iget-object v0, p0, Lnp4;->c:Lknh;
+    const-string v4, "DeferrableSurface"
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lnp4;->b:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " closed=true "
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v3, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
+    goto :goto_1
 
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+    :cond_1
+    move-object v2, v3
+
+    :cond_2
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v3}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    :cond_3
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final b()V
+    .locals 6
+
+    const-string v0, "use count-1,  useCount="
+
+    iget-object v1, p0, Lnp4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, p0, Lnp4;->b:I
+
+    if-eqz v2, :cond_3
+
+    add-int/lit8 v2, v2, -0x1
+
+    iput v2, p0, Lnp4;->b:I
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    iget-boolean v2, p0, Lnp4;->c:Z
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lnp4;->d:Lgu1;
+
+    iput-object v3, p0, Lnp4;->d:Lgu1;
 
     goto :goto_0
 
@@ -344,7 +311,245 @@
     goto :goto_1
 
     :cond_0
+    move-object v2, v3
+
     :goto_0
+    const-string v4, "DeferrableSurface"
+
+    const/4 v5, 0x3
+
+    invoke-static {v5, v4}, Lgfi;->f(ILjava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "DeferrableSurface"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lnp4;->b:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " closed="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lnp4;->c:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lnp4;->b:I
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Surface no longer in use"
+
+    sget-object v4, Lnp4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v4
+
+    sget-object v5, Lnp4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v5
+
+    invoke-virtual {p0, v4, v5, v0}, Lnp4;->e(IILjava/lang/String;)V
+
+    :cond_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v3}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Decrementing use count occurs more times than incrementing"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :goto_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final c()Ll28;
+    .locals 4
+
+    iget-object v0, p0, Lnp4;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lnp4;->c:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
+
+    const-string v2, "DeferrableSurface already closed."
+
+    invoke-direct {v1, v2, p0}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Ljava/lang/String;Lnp4;)V
+
+    new-instance v2, Lib7;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3, v1}, Lib7;-><init>(ILjava/lang/Object;)V
+
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lnp4;->f()Ll28;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final d()V
+    .locals 5
+
+    const-string v0, "use count+1, useCount="
+
+    iget-object v1, p0, Lnp4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, p0, Lnp4;->b:I
+
+    if-nez v2, :cond_1
+
+    iget-boolean v3, p0, Lnp4;->c:Z
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
+
+    const-string v2, "Cannot begin use on a closed surface."
+
+    invoke-direct {v0, v2, p0}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Ljava/lang/String;Lnp4;)V
+
+    throw v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v3, 0x1
+
+    add-int/2addr v2, v3
+
+    iput v2, p0, Lnp4;->b:I
+
+    const-string v2, "DeferrableSurface"
+
+    const/4 v4, 0x3
+
+    invoke-static {v4, v2}, Lgfi;->f(ILjava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Lnp4;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    const-string v2, "New surface in use"
+
+    sget-object v3, Lnp4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v3
+
+    sget-object v4, Lnp4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v4
+
+    invoke-virtual {p0, v3, v4, v2}, Lnp4;->e(IILjava/lang/String;)V
+
+    :cond_2
+    const-string v2, "DeferrableSurface"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lnp4;->b:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
     monitor-exit v1
 
     return-void
@@ -357,292 +562,64 @@
     throw v0
 .end method
 
-.method public final c()V
-    .locals 6
-
-    iget-object v0, p0, Lnp4;->c:Lknh;
-
-    iget-object v0, v0, Lknh;->a:Ljava/lang/String;
-
-    const-string v1, " ("
-
-    invoke-static {v0, v1}, Lf67;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lnp4;->b:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lnp4;->a:Landroid/content/Context;
-
-    invoke-static {v2, v1}, Lt2h;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Acquiring wakelock "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, "for WorkSpec "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Lnp4;->w0:Ljava/lang/String;
-
-    invoke-virtual {v1, v3, v2}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnp4;->t0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    iget-object v1, p0, Lnp4;->o:Lvhf;
-
-    iget-object v1, v1, Lvhf;->X:Lrnh;
-
-    iget-object v1, v1, Lrnh;->c:Landroidx/work/impl/WorkDatabase;
-
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Lioh;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lioh;->p(Ljava/lang/String;)Lgoh;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v0, Lmp4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lmp4;-><init>(Lnp4;I)V
-
-    iget-object v1, p0, Lnp4;->r0:Lx1e;
-
-    invoke-virtual {v1, v0}, Lx1e;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v1}, Lgoh;->c()Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lnp4;->u0:Z
-
-    if-nez v2, :cond_1
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "No constraints for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v3, v0}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnp4;->f(Ljava/util/List;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lnp4;->X:Lm29;
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm29;->B(Ljava/util/Collection;)V
-
-    return-void
-.end method
-
-.method public final d(Ljava/util/ArrayList;)V
-    .locals 1
-
-    new-instance p1, Lmp4;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lmp4;-><init>(Lnp4;I)V
-
-    iget-object v0, p0, Lnp4;->r0:Lx1e;
-
-    invoke-virtual {v0, p1}, Lx1e;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final e(Z)V
-    .locals 7
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onExecuted "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lnp4;->c:Lknh;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v3, Lnp4;->w0:Ljava/lang/String;
-
-    invoke-virtual {v0, v3, v1}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lnp4;->b()V
-
-    const-class v0, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
-
-    iget v1, p0, Lnp4;->b:I
-
-    iget-object v3, p0, Lnp4;->o:Lvhf;
-
-    iget-object v4, p0, Lnp4;->s0:Ltx6;
-
-    iget-object v5, p0, Lnp4;->a:Landroid/content/Context;
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-direct {p1, v5, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v6, "ACTION_SCHEDULE_WORK"
-
-    invoke-virtual {p1, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p1, v2}, Lhc3;->d(Landroid/content/Intent;Lknh;)V
-
-    new-instance v2, Lmp;
-
-    const/4 v6, 0x5
-
-    invoke-direct {v2, v3, p1, v1, v6}, Lmp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v4, v2}, Ltx6;->execute(Ljava/lang/Runnable;)V
-
-    :cond_0
-    iget-boolean p1, p0, Lnp4;->u0:Z
-
-    if-eqz p1, :cond_1
-
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-direct {p1, v5, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v0, "ACTION_CONSTRAINTS_CHANGED"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance v0, Lmp;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v3, p1, v1, v2}, Lmp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v4, v0}, Ltx6;->execute(Ljava/lang/Runnable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final f(Ljava/util/List;)V
+.method public final e(IILjava/lang/String;)V
     .locals 2
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sget-boolean v0, Lnp4;->l:Z
 
-    move-result-object p1
+    const-string v1, "DeferrableSurface"
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-nez v0, :cond_0
 
-    move-result v0
+    const/4 v0, 0x3
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgoh;
-
-    invoke-static {v0}, Lkei;->a(Lgoh;)Lknh;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lnp4;->c:Lknh;
-
-    invoke-virtual {v0, v1}, Lknh;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lgfi;->f(ILjava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance p1, Lmp4;
+    const-string v0, "DeferrableSurface usage statistics may be inaccurate since debug logging was not enabled at static initialization time. App restart may be required to enable accurate usage statistics."
 
-    const/4 v0, 0x1
+    invoke-static {v1, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p1, p0, v0}, Lmp4;-><init>(Lnp4;I)V
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lnp4;->r0:Lx1e;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p1}, Lx1e;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
+    const-string p3, "[total_surfaces="
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", used_surfaces="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "]("
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, "}"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
+.end method
+
+.method public abstract f()Ll28;
 .end method

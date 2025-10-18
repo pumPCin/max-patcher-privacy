@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lli6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lu33;
-
-.field public final synthetic c:J
+.field public final synthetic b:Lla2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu33;JI)V
+.method public synthetic constructor <init>(Lla2;I)V
     .locals 0
 
-    iput p4, p0, Le33;->a:I
+    iput p2, p0, Le33;->a:I
 
-    iput-object p1, p0, Le33;->b:Lu33;
-
-    iput-wide p2, p0, Le33;->c:J
+    iput-object p1, p0, Le33;->b:Lla2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,76 +27,31 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, Le33;->a:I
 
+    check-cast p1, Ljava/lang/Long;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Le33;->c:J
+    iget-object p1, p0, Le33;->b:Lla2;
 
-    iget-object v2, p0, Le33;->b:Lu33;
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
-    invoke-virtual {v2}, Lu33;->M()Lkd2;
+    move-result-object p1
 
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Lkd2;->z(J)Lda2;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Le33;->b:Lu33;
+    iget-object p1, p0, Le33;->b:Lla2;
 
-    invoke-virtual {v0}, Lu33;->M()Lkd2;
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-wide v1, p0, Le33;->c:J
-
-    invoke-virtual {v0, v1, v2}, Lkd2;->F(J)Lda2;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Lda2;->E()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v3}, Lda2;->T()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    sget-object v2, Lee2;->a:Lee2;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, v1, v3, v3}, Lkd2;->b(Lee2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lda2;
-
-    move-result-object v3
-
-    :cond_1
-    :goto_0
-    return-object v3
+    return-object p1
 
     nop
 

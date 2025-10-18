@@ -1,56 +1,67 @@
-.class public final synthetic Ln77;
+.class public abstract synthetic Ln77;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Ln77;->a:I
+    invoke-static {}, Lm77;->values()[Lm77;
 
-    iput-object p1, p0, Ln77;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_0
+    sget-object v1, Lm77;->b:Lm77;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lm77;->c:Lm77;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lm77;->o:Lm77;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Ln77;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Ln77;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ln77;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->readCacheFromDisk()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ln77;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->writeCacheToDisk()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

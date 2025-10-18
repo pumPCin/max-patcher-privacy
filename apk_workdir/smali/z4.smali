@@ -112,7 +112,7 @@
     return-object p0
 .end method
 
-.method public static synthetic i(Ls7d;)Landroid/media/RouteDiscoveryPreference$Builder;
+.method public static synthetic i(Lz8d;)Landroid/media/RouteDiscoveryPreference$Builder;
     .locals 2
 
     new-instance v0, Landroid/media/RouteDiscoveryPreference$Builder;

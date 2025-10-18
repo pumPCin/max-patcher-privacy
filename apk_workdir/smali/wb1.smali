@@ -1,88 +1,93 @@
 .class public final Lwb1;
-.super Lgd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvb1;
+.implements Lqq1;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Liu7;
+
+.field public final b:Landroid/graphics/PointF;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Liu7;Liu7;)V
+    .locals 2
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+    iput-object p1, p0, Lwb1;->a:Liu7;
 
-    iput-object p1, p0, Lwb1;->b:Ljava/lang/String;
+    new-instance v0, Luz;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p1, v1}, Luz;-><init>(Liu7;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwb1;->c:Ljava/lang/Object;
+
+    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmw1;
+
+    invoke-virtual {p2, p0}, Lmw1;->d(Lqq1;)V
+
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {p1}, Lmzg;->u(Landroid/content/Context;)Landroid/graphics/PointF;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwb1;->b:Landroid/graphics/PointF;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-super {p0, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lwb1;->a:Liu7;
 
-    return v0
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lwb1;
+    move-result-object p1
 
-    const/4 v2, 0x0
+    check-cast p1, Landroid/content/Context;
 
-    if-nez v1, :cond_1
+    invoke-static {p1}, Lmzg;->u(Landroid/content/Context;)Landroid/graphics/PointF;
 
-    return v2
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Lwb1;
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
-    iget-object v1, p0, Lwb1;->b:Ljava/lang/String;
+    iget-object v1, p0, Lwb1;->b:Landroid/graphics/PointF;
 
-    iget-object p1, p1, Lwb1;->b:Ljava/lang/String;
+    iput v0, v1, Landroid/graphics/PointF;->x:F
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    move-result p1
+    iput p1, v1, Landroid/graphics/PointF;->y:F
 
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lwb1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "StartNewCall(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lwb1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

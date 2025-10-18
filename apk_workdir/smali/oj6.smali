@@ -1,19 +1,27 @@
-.class public final Loj6;
-.super Ljava/lang/Object;
+.class public Loj6;
+.super Lnj6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 7
 
-    iput p1, p0, Loj6;->a:I
+    sget-object v4, Lau1;->NO_RECEIVER:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v3, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    move v2, p5
+
+    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,21 +1,26 @@
 .class public final Lufa;
-.super Lwfa;
+.super Lvpe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lg25;
+# virtual methods
+.method public final A(Ly18;)V
+    .locals 1
 
+    instance-of v0, p1, Lmfa;
 
-# direct methods
-.method public constructor <init>(JJJLg25;)V
-    .locals 0
+    if-nez v0, :cond_0
 
-    invoke-direct/range {p0 .. p6}, Lwfa;-><init>(JJJ)V
+    return-void
 
-    move-object p1, p0
+    :cond_0
+    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
 
-    iput-object p7, p1, Lufa;->d:Lg25;
+    check-cast v0, Lcde;
+
+    check-cast p1, Ltce;
+
+    invoke-virtual {v0, p1}, Lcde;->setModelItem(Ltce;)V
 
     return-void
 .end method

@@ -1,115 +1,116 @@
 .class public final Lof7;
-.super Lqci;
+.super Lee9;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lpf7;
+.field public a:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Integer;Lpf7;)V
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Lee9;-><init>()V
 
-    iput v0, p0, Lof7;->c:I
+    sget-object v0, Lzbi;->e:[B
 
-    iput-object p2, p0, Lof7;->o:Lpf7;
+    iput-object v0, p0, Lof7;->a:[B
 
-    const/16 p2, 0xc
+    const/4 v0, -0x1
 
-    .line 2
-    invoke-direct {p0, p2, p1}, Lqci;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpf7;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lof7;->c:I
-
-    iput-object p1, p0, Lof7;->o:Lpf7;
-
-    const/16 p1, 0xc
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lqci;-><init>(ILjava/lang/Object;)V
+    iput v0, p0, Lee9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final computeSerializedSize()I
+    .locals 2
 
-    iget v0, p0, Lof7;->c:I
+    iget-object v0, p0, Lof7;->a:[B
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Lzbi;->e:[B
 
-    invoke-static {p1, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    check-cast p2, Ljava/lang/Number;
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+    iget-object v1, p0, Lof7;->a:[B
 
-    move-result p2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    iget-object p1, p0, Lof7;->o:Lpf7;
-
-    iget-object v0, p1, Lpf7;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lpa3;->b(I[B)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    return v0
 
-    check-cast p2, Landroid/graphics/drawable/Drawable;
+    :cond_0
+    const/4 v0, 0x0
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    return v0
+.end method
 
-    if-eqz p2, :cond_1
+.method public final mergeFrom(Loa3;)Lee9;
+    .locals 2
 
-    iget-object p1, p0, Lof7;->o:Lpf7;
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Loa3;->s()I
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    move-result v0
 
-    move-result-object p1
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Loa3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
 
     :cond_1
+    invoke-virtual {p1}, Loa3;->g()[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lof7;->a:[B
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lpa3;)V
+    .locals 2
+
+    iget-object v0, p0, Lof7;->a:[B
+
+    sget-object v1, Lzbi;->e:[B
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lof7;->a:[B
+
+    invoke-virtual {p1, v0, v1}, Lpa3;->s(I[B)V
+
+    :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

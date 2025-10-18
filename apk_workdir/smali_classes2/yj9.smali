@@ -1,134 +1,88 @@
 .class public final Lyj9;
-.super Lsyg;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final X:Lgzc;
+.field public final synthetic X:Lhu7;
 
-.field public final Y:Lsze;
-
-.field public final Z:Lgzc;
-
-.field public final b:Lsze;
-
-.field public final c:Lgzc;
-
-.field public final o:Lsze;
-
-.field public final r0:Lde5;
-
-.field public final s0:Lde5;
+.field public final synthetic Y:Lwif;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lhu7;Lwif;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    iput-object p1, p0, Lyj9;->X:Lhu7;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iput-object p2, p0, Lyj9;->Y:Lwif;
 
-    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
+    const/4 p1, 0x2
 
-    move-result-object v0
-
-    iput-object v0, p0, Lyj9;->b:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lyj9;->c:Lgzc;
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lyj9;->o:Lsze;
-
-    new-instance v2, Lgzc;
-
-    invoke-direct {v2, v1}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v2, p0, Lyj9;->X:Lgzc;
-
-    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyj9;->Y:Lsze;
-
-    new-instance v1, Lgzc;
-
-    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
-
-    iput-object v1, p0, Lyj9;->Z:Lgzc;
-
-    new-instance v0, Lde5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lde5;-><init>(I)V
-
-    iput-object v0, p0, Lyj9;->r0:Lde5;
-
-    new-instance v0, Lde5;
-
-    invoke-direct {v0, v1}, Lde5;-><init>(I)V
-
-    iput-object v0, p0, Lyj9;->s0:Lde5;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r(Lqbb;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :cond_0
-    iget-object v0, p0, Lyj9;->o:Lsze;
+    check-cast p1, Lq54;
 
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Lyj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-object v2, v1
+    move-result-object p1
 
-    check-cast v2, Lay6;
+    check-cast p1, Lyj9;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, p2}, Lyj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    return-object p2
+.end method
 
-    :cond_1
-    new-instance v2, Lay6;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v3, p1, Lqbb;->a:Ljava/lang/Object;
+    new-instance p1, Lyj9;
 
-    check-cast v3, Ljava/lang/Number;
+    iget-object v0, p0, Lyj9;->X:Lhu7;
 
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    iget-object v1, p0, Lyj9;->Y:Lwif;
 
-    move-result-wide v3
+    invoke-direct {p1, v0, v1, p2}, Lyj9;-><init>(Lhu7;Lwif;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v5, p1, Lqbb;->b:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    check-cast v5, Ljava/util/List;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {v2, v3, v4, v5}, Lay6;-><init>(JLjava/util/List;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    :goto_0
-    invoke-virtual {v0, v1, v2}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p0, Lyj9;->X:Lhu7;
 
-    move-result v0
+    iget-object p1, p1, Lhu7;->a:Llf9;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lyj9;->Y:Lwif;
 
-    return-void
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/text/Layout;
+
+    invoke-virtual {p1, v0}, Llf9;->b(Landroid/text/Layout;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

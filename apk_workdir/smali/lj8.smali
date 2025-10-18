@@ -1,85 +1,45 @@
-.class public final Llj8;
-.super Lz2;
+.class public interface abstract Llj8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic b:I
-
-.field public final c:Lqnd;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lti8;Lqnd;I)V
-    .locals 0
-
-    iput p3, p0, Llj8;->b:I
-
-    invoke-direct {p0, p1}, Lz2;-><init>(Lti8;)V
-
-    iput-object p2, p0, Llj8;->c:Lqnd;
-
-    return-void
-.end method
+# interfaces
+.implements Lqq6;
 
 
 # virtual methods
-.method public final f(Lmj8;)V
-    .locals 4
+.method public a(Landroid/content/Context;Z)Lwq6;
+    .locals 2
 
-    iget v0, p0, Llj8;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lvt1;
-
-    invoke-direct {v0, p1}, Lvt1;-><init>(Lmj8;)V
-
-    invoke-interface {p1, v0}, Lmj8;->c(Lev4;)V
-
-    iget-object p1, v0, Lvt1;->b:Ljava/lang/Object;
-
-    check-cast p1, Li32;
-
-    new-instance v1, Llj6;
-
-    iget-object v2, p0, Lz2;->a:Lti8;
-
-    const/16 v3, 0xc
-
-    invoke-direct {v1, v0, v3, v2}, Llj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v0, p0, Llj8;->c:Lqnd;
-
-    invoke-virtual {v0, v1}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+    invoke-static {p0}, Lec7;->n(Ljava/lang/Object;)Lz8d;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v1, Lz8d;->X:Lz8d;
 
-    invoke-static {p1, v0}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+    invoke-static {p1, v0, v1, p2}, Lxm4;->j(Landroid/content/Context;Lz8d;Lz8d;Z)Lxm4;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    new-instance v0, Lkj8;
+    return-object p1
+.end method
 
-    iget-object v1, p0, Llj8;->c:Lqnd;
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
 
-    const/4 v2, 0x0
+.method public c()I
+    .locals 1
 
-    invoke-direct {v0, p1, v1, v2}, Lkj8;-><init>(Ljava/lang/Object;Lqnd;I)V
+    const/16 v0, 0x2601
 
-    iget-object p1, p0, Lz2;->a:Lti8;
+    return v0
+.end method
 
-    invoke-virtual {p1, v0}, Lti8;->a(Lmj8;)V
+.method public e(II)Lbse;
+    .locals 1
 
-    return-void
+    new-instance v0, Lbse;
 
-    nop
+    invoke-direct {v0, p1, p2}, Lbse;-><init>(II)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

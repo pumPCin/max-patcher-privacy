@@ -1,73 +1,97 @@
-.class public final enum Lfzd;
-.super Ljava/lang/Enum;
+.class public final Lfzd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhzd;
 
-# static fields
-.field public static final enum a:Lfzd;
 
-.field public static final enum b:Lfzd;
-
-.field public static final synthetic c:[Lfzd;
+# instance fields
+.field public final a:Lcl6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcl6;)V
+    .locals 0
 
-    new-instance v0, Lfzd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "START"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfzd;->a:Lfzd;
-
-    new-instance v1, Lfzd;
-
-    const-string v2, "FINISH"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfzd;->b:Lfzd;
-
-    filled-new-array {v0, v1}, [Lfzd;
-
-    move-result-object v0
-
-    sput-object v0, Lfzd;->c:[Lfzd;
+    iput-object p1, p0, Lfzd;->a:Lcl6;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfzd;
-    .locals 1
 
-    const-class v0, Lfzd;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lfzd;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lfzd;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfzd;
+
+    iget-object v1, p0, Lfzd;->a:Lcl6;
+
+    iget-object p1, p1, Lfzd;->a:Lcl6;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public static values()[Lfzd;
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lfzd;->c:[Lfzd;
+    iget-object v0, p0, Lfzd;->a:Lcl6;
 
-    invoke-virtual {v0}, [Lfzd;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcl6;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnAlbumSelected(album="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfzd;->a:Lcl6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lfzd;
 
     return-object v0
 .end method

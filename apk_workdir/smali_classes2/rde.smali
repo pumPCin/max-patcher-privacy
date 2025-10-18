@@ -1,69 +1,42 @@
-.class public abstract synthetic Lrde;
-.super Ljava/lang/Object;
+.class public final synthetic Lrde;
+.super Lb9;
 .source "SourceFile"
+
+# interfaces
+.implements Lji6;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final q0:Lrde;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    const/4 v0, 0x3
+    new-instance v0, Lrde;
 
-    invoke-static {v0}, Lwx1;->y(I)[I
+    const-class v1, Lv9e;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lrde;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lzc5;->values()[Lzc5;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
+    const-string v2, "<init>(Lru/ok/tamtam/android/SelfId;Lkotlin/Lazy;Lkotlin/Lazy;Lone/me/settings/usecase/GetCurrentUserProfileDataUseCase;Lone/me/sdk/uikit/qr/GetQrCodeUseCase;Lone/me/settings/ProfileEvents;Lkotlin/Lazy;Lkotlin/Lazy;Landroid/app/Application;Lkotlin/Lazy;Lkotlin/Lazy;Lru/ok/tamtam/android/profile/ProfileRepository;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;)V"
 
     const/4 v3, 0x0
 
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {v0, v3, v1, v2, v3}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    :catch_2
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lrde;->$EnumSwitchMapping$1:[I
+    sput-object v0, Lrde;->q0:Lrde;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
+
+    new-instance v0, Lv9e;
+
+    invoke-direct {v0}, Lv9e;-><init>()V
+
+    return-object v0
 .end method

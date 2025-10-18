@@ -1,23 +1,50 @@
 .class public final Lod8;
-.super Lqci;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly18;
 
-# static fields
-.field public static final c:Lod8;
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILjava/lang/CharSequence;)V
+    .locals 0
 
-    new-instance v0, Lod8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
+    iput p1, p0, Lod8;->a:I
 
-    invoke-direct {v0, v1}, Lqci;-><init>(I)V
+    iput-object p2, p0, Lod8;->b:Ljava/lang/CharSequence;
 
-    sput-object v0, Lod8;->c:Lod8;
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Lod8;->c:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lod8;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,81 +1,100 @@
 .class public final Loof;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loof;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lx14;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public b:Ljava/util/List;
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final synthetic c:Lwof;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lavg;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lavg;-><init>(I)V
-
-    sput-object v0, Loof;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/util/List;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lwof;I)V
     .locals 0
 
+    iput p3, p0, Loof;->a:I
+
+    iput-object p1, p0, Loof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p2, p0, Loof;->c:Lwof;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Loof;->a:I
-
-    iput-object p2, p0, Loof;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x4
-
-    const/4 v1, 0x1
-
-    invoke-static {p1, v1, v0}, Ljxi;->m(Landroid/os/Parcel;II)V
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Loof;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Loof;->b:Ljava/util/List;
+    const/4 v1, 0x1
 
-    invoke-static {p1, v1, v0}, Ljxi;->j(Landroid/os/Parcel;Ljava/util/List;I)V
+    iget-object v2, p0, Loof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Loof;->c:Lwof;
+
+    invoke-virtual {v0, p1}, Lwof;->c(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Loof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Loof;->c:Lwof;
+
+    invoke-virtual {v0, p1}, Lwof;->c(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

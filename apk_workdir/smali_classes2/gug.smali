@@ -1,418 +1,317 @@
 .class public final Lgug;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ltwg;
-.implements Lx58;
-.implements Lb8d;
-.implements Lpla;
-.implements Lyvh;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lq54;
+
+.field public final synthetic Z:Lpug;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;II)V
-    .locals 2
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lgug;->a:Ljava/lang/Object;
-
-    .line 5
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p3}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/animation/AnimatorSet;
-
-    const/16 v0, 0x3e8
-
-    int-to-long v0, v0
-
-    .line 6
-    invoke-virtual {p3, v0, v1}, Landroid/animation/AnimatorSet;->setStartDelay(J)V
-
-    .line 7
-    invoke-virtual {p3, p1}, Landroid/animation/AnimatorSet;->setTarget(Ljava/lang/Object;)V
-
-    .line 8
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p2}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/animation/AnimatorSet;
-
-    .line 9
-    invoke-virtual {p2, p1}, Landroid/animation/AnimatorSet;->setTarget(Ljava/lang/Object;)V
-
-    .line 10
-    new-instance p2, Lo42;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p2, v0, p1}, Lo42;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p3, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 11
-    iget-object p1, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    const/high16 p3, 0x3f800000    # 1.0f
-
-    mul-float/2addr p2, p3
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setPivotX(F)V
-
-    .line 12
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    mul-float/2addr p3, p2
-
-    invoke-virtual {p1, p3}, Landroid/view/View;->setPivotY(F)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lq54;Lpug;)V
     .locals 0
 
-    .line 1
-    iput-object p1, p0, Lgug;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lgug;->X:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lgug;->Y:Lq54;
 
-    return-void
-.end method
+    iput-object p4, p0, Lgug;->Z:Lpug;
 
-.method public synthetic constructor <init>(Ltuh;Lgm;)V
-    .locals 0
+    const/4 p1, 0x2
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lgug;->a:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public F()I
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
+    check-cast p1, Lq54;
 
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->y0:Lllg;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lllg;->getHeight()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x160
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public O(Landroid/view/Surface;Limg;)V
-    .locals 5
-
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Y:Ljava/lang/String;
-
-    sget-object v1, Lndi;->a:Lkwa;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Lf88;->o:Lf88;
-
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Video Message screen, set surface "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->J0()Lpug;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lpug;->a0(Landroid/view/Surface;)V
-
-    iget-object p1, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->J0()Lpug;
+    invoke-virtual {p0, p1, p2}, Lgug;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lpug;->O(Limg;)V
+    check-cast p1, Lgug;
 
-    return-void
-.end method
+    sget-object p2, Lccg;->a:Lccg;
 
-.method public a(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast v0, Lyz0;
-
-    sget-object v1, La71;->Z:La71;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, p2}, Lgug;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lyz0;->l(La71;Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public accept(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    check-cast p1, Lzuh;
+    new-instance p1, Lgug;
 
-    check-cast p2, Lrnf;
+    iget-object v0, p0, Lgug;->Y:Lq54;
 
-    new-instance v0, Lwuh;
+    iget-object v1, p0, Lgug;->Z:Lpug;
+
+    iget-object v2, p0, Lgug;->X:Ljava/lang/Object;
+
+    invoke-direct {p1, v2, p2, v0, v1}, Lgug;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lq54;Lpug;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    iget-object v0, p0, Lgug;->Z:Lpug;
+
+    iget-object v0, v0, Lpug;->o:Liu7;
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgug;->X:Ljava/lang/Object;
+
+    check-cast p1, Landroid/net/Uri;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p2}, Lwuh;-><init>(ILrnf;)V
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+    :try_start_0
+    new-instance v4, Landroid/media/MediaMetadataRetriever;
 
-    move-result-object p1
+    invoke-direct {v4}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    check-cast p1, Lhuh;
+    instance-of v5, v4, Ljava/lang/AutoCloseable;
 
-    iget-object p2, p0, Lgug;->a:Ljava/lang/Object;
+    if-eqz v5, :cond_0
 
-    check-cast p2, Lgm;
+    check-cast v4, Ljava/lang/AutoCloseable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    :try_start_1
+    move-object v5, v4
 
-    move-result-object v1
+    check-cast v5, Landroid/media/MediaMetadataRetriever;
 
-    iget-object v2, p1, Lfth;->e:Ljava/lang/String;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    move-result-object v0
 
-    sget v2, Ltth;->a:I
+    check-cast v0, Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    invoke-virtual {v5, v0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    invoke-static {v1, p2}, Ltth;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    invoke-static {v5}, Lpci;->g(Landroid/media/MediaMetadataRetriever;)Landroid/graphics/Point;
 
-    const/4 p2, 0x1
+    move-result-object v6
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    invoke-virtual {p1, v1, p2}, Lfth;->k(Landroid/os/Parcel;I)V
+    :try_start_2
+    invoke-static {v5}, Lpci;->e(Landroid/media/MediaMetadataRetriever;)J
 
-    return-void
-.end method
+    move-result-wide v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-.method public b()Ljava/lang/Object;
-    .locals 2
+    :try_start_3
+    invoke-static {v4, v1}, Leii;->a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
+    :goto_0
+    move-wide v7, v2
 
-    check-cast v0, Lgof;
+    goto :goto_6
 
-    iget-object v0, v0, Lgof;->a:Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    check-cast v0, Lg75;
+    move-object v1, v6
 
-    iget-object v0, v0, Lg75;->a:Landroid/content/Context;
+    goto :goto_5
 
-    new-instance v1, Lcyi;
+    :catchall_1
+    move-exception v0
 
-    invoke-direct {v1, v0}, Lcyi;-><init>(Landroid/content/Context;)V
+    :goto_1
+    move-object v1, v0
 
-    return-object v1
-.end method
+    goto :goto_2
 
-.method public d()I
-    .locals 1
+    :catchall_2
+    move-exception v0
 
-    const/4 v0, 0x2
+    move-object v6, v1
 
-    return v0
-.end method
+    goto :goto_1
 
-.method public f(Lcom/google/android/gms/tasks/Task;)V
-    .locals 0
+    :goto_2
+    :try_start_4
+    throw v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    iget-object p1, p0, Lgug;->a:Ljava/lang/Object;
+    :catchall_3
+    move-exception v0
 
-    check-cast p1, Ljava/util/concurrent/CountDownLatch;
+    :try_start_5
+    invoke-static {v4, v1}, Leii;->a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    return-void
-.end method
+    :catchall_4
+    move-exception v0
 
-.method public n()I
-    .locals 2
-
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->y0:Lllg;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lllg;->getWidth()I
-
-    move-result v0
-
-    return v0
+    goto :goto_5
 
     :cond_0
-    const/16 v0, 0x160
+    :try_start_6
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    int-to-float v0, v0
+    move-result-object v0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    check-cast v0, Landroid/content/Context;
+
+    invoke-virtual {v4, v0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
+
+    invoke-static {v4}, Lpci;->g(Landroid/media/MediaMetadataRetriever;)Landroid/graphics/Point;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v4}, Lpci;->e(Landroid/media/MediaMetadataRetriever;)J
 
-    move-result-object v1
+    move-result-wide v2
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    :try_start_7
+    invoke-virtual {v4}, Landroid/media/MediaMetadataRetriever;->release()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
-    .locals 5
-
-    iget-object v0, p0, Lgug;->a:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Y:Ljava/lang/String;
-
-    sget-object v1, Lndi;->a:Lkwa;
-
-    if-nez v1, :cond_0
+    :goto_3
+    move-object v6, v1
 
     goto :goto_0
 
-    :cond_0
-    sget-object v2, Lf88;->o:Lf88;
+    :catchall_5
+    move-exception v0
 
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+    move-object v5, v1
 
-    move-result v3
+    move-object v1, v0
 
-    if-eqz v3, :cond_1
+    :try_start_8
+    throw v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_6
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    :catchall_6
+    move-exception v0
 
-    const-string v4, "Video Message screen, surface destroyed "
+    move-object v6, v0
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_9
+    invoke-virtual {v4}, Landroid/media/MediaMetadataRetriever;->release()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_7
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catchall_7
+    move-exception v0
 
-    move-result-object p1
+    :try_start_a
+    invoke-static {v1, v0}, Lr0j;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
-    const/4 v3, 0x0
+    :goto_4
+    throw v6
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_8
 
-    invoke-virtual {v1, v2, v0, p1, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catchall_8
+    move-exception v0
+
+    move-object v1, v5
+
+    :goto_5
+    iget-object v4, p0, Lgug;->Y:Lq54;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "Can\'t get video params for path "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    :goto_6
+    new-instance v0, Lpj3;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    const/4 p1, 0x0
+
+    if-eqz v6, :cond_1
+
+    iget v1, v6, Landroid/graphics/Point;->x:I
+
+    move v10, v1
+
+    goto :goto_7
 
     :cond_1
-    :goto_0
-    return-void
+    move v10, p1
+
+    :goto_7
+    if-eqz v6, :cond_2
+
+    iget p1, v6, Landroid/graphics/Point;->y:I
+
+    :cond_2
+    move v11, p1
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Lpj3;-><init>(JLjava/lang/String;II)V
+
+    return-object v6
 .end method

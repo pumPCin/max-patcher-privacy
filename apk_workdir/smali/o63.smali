@@ -1,366 +1,220 @@
 .class public final Lo63;
-.super Lhlf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final v0:[I
-
-.field public static final w0:[I
-
-.field public static final x0:[I
-
-.field public static final y0:Ll62;
-
-.field public static final z0:Ll62;
+# interfaces
+.implements Lwld;
 
 
 # instance fields
-.field public X:Landroid/animation/ObjectAnimator;
+.field public final synthetic X:Ls63;
 
-.field public final Y:Lsm5;
+.field public final a:Ls63;
 
-.field public final Z:Ls63;
+.field public final b:Luld;
 
-.field public o:Landroid/animation/ObjectAnimator;
+.field public final c:I
 
-.field public r0:I
-
-.field public s0:F
-
-.field public t0:F
-
-.field public u0:Lre;
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ls63;Ls63;Luld;I)V
+    .locals 0
 
-    const/16 v0, 0xa8c
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xfd2
+    iput-object p1, p0, Lo63;->X:Ls63;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lo63;->a:Ls63;
 
-    const/16 v3, 0x546
+    iput-object p3, p0, Lo63;->b:Luld;
 
-    filled-new-array {v2, v3, v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lo63;->v0:[I
-
-    const/16 v0, 0xd27
-
-    const/16 v1, 0x126d
-
-    const/16 v2, 0x29b
-
-    const/16 v3, 0x7e1
-
-    filled-new-array {v2, v3, v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lo63;->w0:[I
-
-    const/16 v0, 0xe74
-
-    const/16 v1, 0x13ba
-
-    const/16 v2, 0x3e8
-
-    const/16 v3, 0x92e
-
-    filled-new-array {v2, v3, v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lo63;->x0:[I
-
-    new-instance v0, Ll62;
-
-    const-string v1, "animationFraction"
-
-    const/4 v2, 0x5
-
-    const-class v3, Ljava/lang/Float;
-
-    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lo63;->y0:Ll62;
-
-    new-instance v0, Ll62;
-
-    const-string v1, "completeEndFraction"
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lo63;->z0:Ll62;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ls63;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lhlf;-><init>(I)V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lo63;->r0:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lo63;->u0:Lre;
-
-    iput-object p1, p0, Lo63;->Z:Ls63;
-
-    new-instance p1, Lsm5;
-
-    invoke-direct {p1}, Lsm5;-><init>()V
-
-    iput-object p1, p0, Lo63;->Y:Lsm5;
+    iput p4, p0, Lo63;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()V
-    .locals 1
+.method public final a()V
+    .locals 8
 
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
+    iget-boolean v0, p0, Lo63;->o:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+    iget-object v0, p0, Lo63;->X:Ls63;
+
+    iget-object v1, v0, Ls63;->Z:Lep4;
+
+    iget-object v2, v0, Ls63;->b:[I
+
+    iget v3, p0, Lo63;->c:I
+
+    aget v2, v2, v3
+
+    iget-object v4, v0, Ls63;->c:[Lkb6;
+
+    aget-object v3, v4, v3
+
+    const/4 v5, 0x0
+
+    iget-wide v6, v0, Ls63;->C0:J
+
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v1 .. v7}, Lep4;->b(ILkb6;ILjava/lang/Object;J)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lo63;->o:Z
 
     :cond_0
     return-void
 .end method
 
-.method public final T()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lo63;->r0:I
-
-    iget-object v1, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly05;
-
-    iget-object v2, p0, Lo63;->Z:Ls63;
-
-    iget-object v2, v2, Lmk0;->c:[I
-
-    aget v0, v2, v0
-
-    iput v0, v1, Ly05;->c:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lo63;->t0:F
-
-    return-void
-.end method
-
-.method public final a0(Lkk0;)V
+.method public final b()V
     .locals 0
 
-    iput-object p1, p0, Lo63;->u0:Lre;
-
     return-void
 .end method
 
-.method public final b0()V
-    .locals 1
+.method public final e()Z
+    .locals 2
 
-    iget-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lo63;->X:Ls63;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0}, Ls63;->w()Z
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lo63;->b:Luld;
+
+    iget-boolean v0, v0, Ls63;->F0:Z
+
+    invoke-virtual {v1, v0}, Luld;->r(Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final h(J)I
+    .locals 3
+
+    iget-object v0, p0, Lo63;->X:Ls63;
+
+    invoke-virtual {v0}, Ls63;->w()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget-boolean v1, v0, Ls63;->F0:Z
+
+    iget-object v2, p0, Lo63;->b:Luld;
+
+    invoke-virtual {v2, p1, p2, v1}, Luld;->p(JZ)I
+
+    move-result p1
+
+    iget-object p2, v0, Ls63;->E0:Lzj0;
+
+    if-eqz p2, :cond_1
+
+    iget v0, p0, Lo63;->c:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p2, v0}, Lzj0;->d(I)I
+
+    move-result p2
+
+    invoke-virtual {v2}, Luld;->n()I
+
+    move-result v0
+
+    sub-int/2addr p2, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    :cond_1
+    invoke-virtual {v2, p1}, Luld;->z(I)V
+
+    if-lez p1, :cond_2
+
+    invoke-virtual {p0}, Lo63;->a()V
+
+    :cond_2
+    return p1
+.end method
+
+.method public final n(Lzgd;Lgf4;I)I
+    .locals 4
+
+    iget-object v0, p0, Lo63;->X:Ls63;
+
+    invoke-virtual {v0}, Ls63;->w()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lhlf;->b:Ljava/lang/Object;
+    iget-object v1, v0, Ls63;->E0:Lzj0;
 
-    check-cast v0, Lzd7;
+    iget-object v2, p0, Lo63;->b:Luld;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+    if-eqz v1, :cond_1
 
-    move-result v0
+    iget v3, p0, Lo63;->c:I
 
-    if-eqz v0, :cond_1
+    add-int/lit8 v3, v3, 0x1
 
-    iget-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
+    invoke-virtual {v1, v3}, Lzj0;->d(I)I
 
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+    move-result v1
 
-    return-void
+    invoke-virtual {v2}, Luld;->n()I
 
-    :cond_1
-    invoke-virtual {p0}, Lo63;->A()V
+    move-result v3
 
-    :cond_2
+    if-gt v1, v3, :cond_1
+
     :goto_0
-    return-void
-.end method
+    const/4 p1, -0x3
 
-.method public final d0()V
-    .locals 5
-
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    if-nez v0, :cond_0
-
-    new-array v0, v2, [F
-
-    fill-array-data v0, :array_0
-
-    sget-object v3, Lo63;->y0:Ll62;
-
-    invoke-static {p0, v3, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v3, 0x1518
-
-    invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v0, v3}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
-
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    new-instance v3, Ln63;
-
-    invoke-direct {v3, p0, v1}, Ln63;-><init>(Lo63;I)V
-
-    invoke-virtual {v0, v3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    :cond_0
-    iget-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
-
-    if-nez v0, :cond_1
-
-    new-array v0, v2, [F
-
-    fill-array-data v0, :array_1
-
-    sget-object v2, Lo63;->z0:Ll62;
-
-    invoke-static {p0, v2, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v2, 0x14d
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    iget-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
-
-    iget-object v2, p0, Lo63;->Y:Lsm5;
-
-    invoke-virtual {v0, v2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v0, p0, Lo63;->X:Landroid/animation/ObjectAnimator;
-
-    new-instance v2, Ln63;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3}, Ln63;-><init>(Lo63;I)V
-
-    invoke-virtual {v0, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    return p1
 
     :cond_1
-    iput v1, p0, Lo63;->r0:I
+    invoke-virtual {p0}, Lo63;->a()V
 
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+    iget-boolean v0, v0, Ls63;->F0:Z
 
-    check-cast v0, Ljava/util/ArrayList;
+    invoke-virtual {v2, p1, p2, p3, v0}, Luld;->w(Lzgd;Lgf4;IZ)I
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v0
-
-    check-cast v0, Ly05;
-
-    iget-object v2, p0, Lo63;->Z:Ls63;
-
-    iget-object v2, v2, Lmk0;->c:[I
-
-    aget v1, v2, v1
-
-    iput v1, v0, Ly05;->c:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lo63;->t0:F
-
-    iget-object v0, p0, Lo63;->o:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public final e0()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lo63;->u0:Lre;
-
-    return-void
+    return p1
 .end method

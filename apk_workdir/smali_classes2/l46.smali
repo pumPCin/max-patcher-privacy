@@ -1,64 +1,150 @@
 .class public final Ll46;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Ln46;
+.implements Lzi6;
 
 
-# static fields
-.field public static final a:Ll46;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lm46;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lm46;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ll46;
+    iput-object p1, p0, Ll46;->Y:Lm46;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Ll46;->a:Ll46;
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Li46;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ll46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Ll46;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Ll46;
 
-    const/4 p1, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    return p1
+    invoke-virtual {p1, p2}, Ll46;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x667a69eb
+    new-instance v0, Ll46;
 
-    return v0
-.end method
+    iget-object v1, p0, Ll46;->Y:Lm46;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, v1, p2}, Ll46;-><init>(Lm46;Lkotlin/coroutines/Continuation;)V
 
-    const-string v0, "ConfirmDeletion"
+    iput-object p1, v0, Ll46;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ll46;->X:Ljava/lang/Object;
+
+    check-cast p1, Li46;
+
+    iget-object v0, p0, Ll46;->Y:Lm46;
+
+    iget-object v1, v0, Lm46;->d:Li46;
+
+    if-nez v1, :cond_0
+
+    iput-object p1, v0, Lm46;->d:Li46;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1, p1}, Li46;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v2, v1, Li46;->o:Ljava/util/Set;
+
+    iget-object v3, p1, Li46;->o:Ljava/util/Set;
+
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, v1, Li46;->X:Ljava/util/Set;
+
+    iget-object v3, p1, Li46;->X:Ljava/util/Set;
+
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, v1, Li46;->z0:Ljava/util/Set;
+
+    iget-object v3, p1, Li46;->z0:Ljava/util/Set;
+
+    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v1, v1, Li46;->y0:Ljava/util/Set;
+
+    iget-object v2, p1, Li46;->y0:Ljava/util/Set;
+
+    invoke-static {v1, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    :cond_2
+    sget-object v1, Lux2;->a:Lux2;
+
+    invoke-virtual {v0, v1}, Lgj0;->a(Lvx2;)V
+
+    :cond_3
+    iput-object p1, v0, Lm46;->d:Li46;
+
+    :cond_4
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

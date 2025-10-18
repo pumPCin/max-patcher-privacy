@@ -1,88 +1,71 @@
 .class public final Lbqg;
-.super Llff;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lla2;
 
-.field public final synthetic Y:Lcqg;
+.field public Y:Ljava/lang/String;
 
-.field public final synthetic Z:Ljog;
+.field public Z:Lntg;
+
+.field public o:Liqg;
+
+.field public q0:J
+
+.field public r0:J
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Liqg;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lcqg;Ljog;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Liqg;Ly14;)V
     .locals 0
 
-    iput-object p1, p0, Lbqg;->Y:Lcqg;
+    iput-object p1, p0, Lbqg;->t0:Liqg;
 
-    iput-object p2, p0, Lbqg;->Z:Ljog;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lesg;
+    iput-object p1, p0, Lbqg;->s0:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lbqg;->u0:I
 
-    invoke-virtual {p0, p1, p2}, Lbqg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lbqg;->u0:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Lbqg;->t0:Liqg;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v7, p0
+
+    invoke-virtual/range {v0 .. v7}, Liqg;->b(Lla2;JLjava/lang/String;Lntg;Ljava/lang/Float;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Lbqg;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lbqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lbqg;
-
-    iget-object v1, p0, Lbqg;->Y:Lcqg;
-
-    iget-object v2, p0, Lbqg;->Z:Ljog;
-
-    invoke-direct {v0, v1, v2, p2}, Lbqg;-><init>(Lcqg;Ljog;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lbqg;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbqg;->X:Ljava/lang/Object;
-
-    check-cast p1, Lesg;
-
-    iget-object v0, p0, Lbqg;->Y:Lcqg;
-
-    iget-object v1, p0, Lbqg;->Z:Ljog;
-
-    invoke-static {v0, v1, p1}, Lcqg;->j(Lcqg;Ljog;Lesg;)V
-
-    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

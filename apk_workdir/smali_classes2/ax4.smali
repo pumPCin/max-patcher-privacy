@@ -1,82 +1,33 @@
 .class public final Lax4;
-.super Llj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:J
+.field public a:Lzw4;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Landroid/view/GestureDetector;
 
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lax4;->b:Ljava/lang/String;
+    new-instance v0, Landroid/view/GestureDetector;
 
-    iput-object p6, p0, Lax4;->c:Ljava/lang/String;
+    new-instance v1, Lgx0;
 
-    if-nez p7, :cond_0
+    const/4 v2, 0x7
 
-    const-string p7, ""
+    invoke-direct {v1, v2, p0}, Lgx0;-><init>(ILjava/lang/Object;)V
 
-    :cond_0
-    iput-object p7, p0, Lax4;->o:Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-wide p3, p0, Lax4;->X:J
+    iput-object v0, p0, Lax4;->b:Landroid/view/GestureDetector;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DownloadCompleteEvent{url=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lax4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', path=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lax4;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', attachLocalId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lax4;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', messageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lax4;->X:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Llfb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

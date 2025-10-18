@@ -1,41 +1,29 @@
-.class public final Lx1h;
+.class public abstract Lx1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
 
-    sget-object v0, Ljhg;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lx1h;->b:Ljava/lang/String;
+    invoke-static {p0, p1}, Lcad;->y(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+.method public static b(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p1}, Lcad;->C(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    iput-object p1, p0, Lx1h;->a:Ljava/lang/String;
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcad;->D(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

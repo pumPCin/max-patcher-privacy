@@ -1,330 +1,205 @@
-.class public final Lcaf;
-.super Lvs7;
+.class public abstract Lcaf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final synthetic b:Z
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:I
+
+.field public f:I
+
+.field public g:J
+
+.field public h:Z
+
+.field public i:Z
+
+.field public final j:Ljava/lang/Object;
+
+.field public k:Ljava/lang/Object;
+
+.field public l:Ljava/lang/Object;
+
+.field public m:Ljava/lang/Object;
+
+.field public n:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Z)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    iput-object p1, p0, Lcaf;->a:Ljava/util/List;
+    iput p1, p0, Lcaf;->a:I
 
-    iput-boolean p2, p0, Lcaf;->b:Z
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    new-instance p1, Lnla;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lnla;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->j:Ljava/lang/Object;
+
+    new-instance p1, Lfqe;
+
+    invoke-direct {p1}, Lfqe;-><init>()V
+
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lnla;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Lnla;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->j:Ljava/lang/Object;
+
+    new-instance p1, Liqe;
+
+    invoke-direct {p1, v0}, Liqe;-><init>(I)V
+
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public a(J)V
+    .locals 1
 
-    move-object v2, p1
+    iget v0, p0, Lcaf;->a:I
 
-    check-cast v2, Ljava/lang/CharSequence;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Ljava/lang/Number;
+    iput-wide p1, p0, Lcaf;->d:J
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+    return-void
 
-    move-result p1
+    :pswitch_0
+    iput-wide p1, p0, Lcaf;->d:J
 
-    iget-object p2, p0, Lcaf;->a:Ljava/util/List;
+    return-void
 
-    iget-boolean v4, p0, Lcaf;->b:Z
+    nop
 
-    const/4 v0, 0x0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 v1, 0x1
+.method public abstract b(Ledb;)J
+.end method
 
-    const/4 v9, 0x0
+.method public abstract c(Ldjg;)J
+.end method
 
-    if-nez v4, :cond_3
+.method public abstract d(Ledb;JLiqe;)Z
+.end method
 
-    invoke-interface {p2}, Ljava/util/Collection;->size()I
+.method public abstract e(Ldjg;JLfqe;)Z
+.end method
 
-    move-result v3
+.method public f(Z)V
+    .locals 4
 
-    if-ne v3, v1, :cond_3
+    iget v0, p0, Lcaf;->a:I
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v3
+    const-wide/16 v0, 0x0
 
-    if-eqz v3, :cond_2
+    if-eqz p1, :cond_0
 
-    if-ne v3, v1, :cond_1
+    new-instance p1, Liqe;
 
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object p2
+    invoke-direct {p1, v2}, Liqe;-><init>(I)V
 
-    check-cast p2, Ljava/lang/String;
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
 
-    const/4 v1, 0x4
+    iput-wide v0, p0, Lcaf;->c:J
 
-    invoke-static {v2, p2, p1, v0, v1}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+    const/4 p1, 0x0
 
-    move-result p1
-
-    if-gez p1, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-instance v0, Lqbb;
-
-    invoke-direct {v0, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto/16 :goto_6
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "List has more than one element."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string p2, "List is empty."
-
-    invoke-direct {p1, p2}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance v3, Lxh7;
-
-    if-gez p1, :cond_4
-
-    move p1, v0
-
-    :cond_4
-    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    invoke-direct {v3, p1, v0, v1}, Lvh7;-><init>(III)V
-
-    instance-of v0, v2, Ljava/lang/String;
-
-    iget v10, v3, Lvh7;->c:I
-
-    iget v11, v3, Lvh7;->b:I
-
-    if-eqz v0, :cond_b
-
-    if-lez v10, :cond_5
-
-    if-le p1, v11, :cond_6
-
-    :cond_5
-    if-gez v10, :cond_11
-
-    if-gt v11, p1, :cond_11
-
-    :cond_6
-    move v7, p1
-
-    :goto_0
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_7
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Ljava/lang/String;
-
-    move-object v6, v2
-
-    check-cast v6, Ljava/lang/String;
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v8
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_8
-
-    invoke-virtual {v3, v5, v6, v7, v8}, Ljava/lang/String;->regionMatches(ILjava/lang/String;II)Z
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_8
-    invoke-virtual/range {v3 .. v8}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
-
-    move-result v1
-
-    :goto_1
-    if-eqz v1, :cond_7
-
-    goto :goto_2
-
-    :cond_9
-    move-object v0, v9
-
-    :goto_2
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_a
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-instance p2, Lqbb;
-
-    invoke-direct {p2, p1, v0}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v0, p2
-
-    goto :goto_6
-
-    :cond_a
-    if-eq v7, v11, :cond_11
-
-    add-int/2addr v7, v10
+    iput p1, p0, Lcaf;->e:I
 
     goto :goto_0
 
-    :cond_b
-    if-lez v10, :cond_c
+    :cond_0
+    const/4 p1, 0x1
 
-    if-le p1, v11, :cond_d
+    iput p1, p0, Lcaf;->e:I
 
-    :cond_c
-    if-gez v10, :cond_11
+    :goto_0
+    const-wide/16 v2, -0x1
 
-    if-gt v11, p1, :cond_11
+    iput-wide v2, p0, Lcaf;->b:J
 
-    :cond_d
-    move v3, p1
+    iput-wide v0, p0, Lcaf;->d:J
 
-    :goto_3
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    const-wide/16 v0, 0x0
 
-    :cond_e
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz p1, :cond_1
 
-    move-result v0
+    new-instance p1, Lfqe;
 
-    if-eqz v0, :cond_f
+    invoke-direct {p1}, Lfqe;-><init>()V
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-object p1, p0, Lcaf;->n:Ljava/lang/Object;
 
-    move-result-object v6
+    iput-wide v0, p0, Lcaf;->c:J
 
-    move-object v0, v6
+    const/4 p1, 0x0
 
-    check-cast v0, Ljava/lang/String;
+    iput p1, p0, Lcaf;->e:I
 
-    const/4 v1, 0x0
+    goto :goto_1
 
-    move v5, v4
+    :cond_1
+    const/4 p1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    iput p1, p0, Lcaf;->e:I
 
-    move-result v4
+    :goto_1
+    const-wide/16 v2, -0x1
 
-    invoke-static/range {v0 .. v5}, Ls9f;->K(Ljava/lang/CharSequence;ILjava/lang/CharSequence;IIZ)Z
+    iput-wide v2, p0, Lcaf;->b:J
 
-    move-result v0
+    iput-wide v0, p0, Lcaf;->d:J
 
-    move v4, v5
+    return-void
 
-    if-eqz v0, :cond_e
-
-    goto :goto_4
-
-    :cond_f
-    move-object v6, v9
-
-    :goto_4
-    check-cast v6, Ljava/lang/String;
-
-    if-eqz v6, :cond_10
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-instance v0, Lqbb;
-
-    invoke-direct {v0, p1, v6}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_6
-
-    :cond_10
-    if-eq v3, v11, :cond_11
-
-    add-int/2addr v3, v10
-
-    goto :goto_3
-
-    :cond_11
-    :goto_5
-    move-object v0, v9
-
-    :goto_6
-    if-eqz v0, :cond_12
-
-    iget-object p1, v0, Lqbb;->a:Ljava/lang/Object;
-
-    iget-object p2, v0, Lqbb;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    new-instance v0, Lqbb;
-
-    invoke-direct {v0, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_12
-    return-object v9
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

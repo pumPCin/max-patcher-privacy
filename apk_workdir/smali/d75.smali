@@ -4,8 +4,17 @@
 
 
 # virtual methods
-.method public abstract a()Z
+.method public abstract a()V
 .end method
 
-.method public abstract setEmojiCompatEnabled(Z)V
+.method public abstract d(Ledb;)V
+.end method
+
+.method public abstract e(Z)V
+.end method
+
+.method public abstract f(Lam5;Lq5g;)V
+.end method
+
+.method public abstract h(IJ)V
 .end method

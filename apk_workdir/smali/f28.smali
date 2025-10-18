@@ -1,133 +1,72 @@
 .class public final Lf28;
-.super Ljava/util/AbstractList;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Lai6;
+.field public final synthetic a:Lg28;
 
 
 # direct methods
-.method public constructor <init>(Lai6;Ljava/util/List;)V
+.method public constructor <init>(Lg28;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p2, p0, Lf28;->a:Ljava/util/List;
-
-    iput-object p1, p0, Lf28;->b:Lai6;
+    iput-object p1, p0, Lf28;->a:Lg28;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lf28;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lf28;->b:Lai6;
-
-    invoke-interface {v0, p1}, Lai6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    iget-object v0, p0, Lf28;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
-
-    new-instance v0, Le28;
-
-    iget-object v1, p0, Lf28;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Le28;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-
-    return-object v0
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lf28;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lf28;->b:Lai6;
-
-    invoke-interface {v0, p1}, Lai6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final removeRange(II)V
-    .locals 1
-
-    iget-object v0, p0, Lf28;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+.method public final onScroll(Landroid/widget/AbsListView;III)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 2
 
-    iget-object v0, p0, Lf28;->a:Ljava/util/List;
+    iget-object p1, p0, Lf28;->a:Lg28;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object v0, p1, Lg28;->A0:Le28;
 
-    move-result v0
+    const/4 v1, 0x1
 
-    return v0
+    if-ne p2, v1, :cond_1
+
+    iget-object p2, p1, Lg28;->I0:Luo;
+
+    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+
+    move-result p2
+
+    const/4 v1, 0x2
+
+    if-ne p2, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p2, p1, Lg28;->I0:Luo;
+
+    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    iget-object p1, p1, Lg28;->E0:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Le28;->run()V
+
+    :cond_1
+    return-void
 .end method

@@ -1,60 +1,48 @@
-.class public final synthetic Lru2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqh6;
+.class public final Lru2;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:Luu2;
+.field public X:I
 
-.field public final synthetic b:J
+.field public final synthetic Y:Lfo1;
 
-.field public final synthetic c:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luu2;JLjava/lang/String;)V
+.method public constructor <init>(Lfo1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lru2;->Y:Lfo1;
 
-    iput-object p1, p0, Lru2;->a:Luu2;
-
-    iput-wide p2, p0, Lru2;->b:J
-
-    iput-object p4, p0, Lru2;->c:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Landroid/view/View;
+    iput-object p1, p0, Lru2;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lru2;->a:Luu2;
+    iget p1, p0, Lru2;->X:I
 
-    iget-object p1, p1, Luu2;->b1:Lde5;
+    const/high16 v0, -0x80000000
 
-    new-instance v0, Lgt2;
+    or-int/2addr p1, v0
 
-    const-wide/16 v2, 0x0
+    iput p1, p0, Lru2;->X:I
 
-    const/16 v1, 0x9
+    iget-object p1, p0, Lru2;->Y:Lfo1;
 
-    iget-wide v4, p0, Lru2;->b:J
+    const/4 v0, 0x0
 
-    iget-object v6, p0, Lru2;->c:Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lfo1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v6}, Lgt2;-><init>(IJJLjava/lang/String;)V
-
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object p1
 
     return-object p1
 .end method

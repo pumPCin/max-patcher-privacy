@@ -1,207 +1,300 @@
 .class public final Lwr5;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/io/File;
+.field public final a:Ltt5;
 
-.field public final synthetic Y:Lxr5;
+.field public b:Ljava/io/File;
 
-.field public final synthetic Z:Z
+.field public c:Ljava/io/File;
+
+.field public d:Ljava/io/File;
+
+.field public e:Ljava/io/File;
+
+.field public f:Ljava/io/File;
+
+.field public g:Ljava/io/File;
+
+.field public h:Ljava/io/File;
+
+.field public i:Ljava/io/File;
+
+.field public j:Ljava/io/File;
+
+.field public k:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lxr5;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ltt5;)V
     .locals 0
 
-    iput-object p1, p0, Lwr5;->X:Ljava/io/File;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwr5;->Y:Lxr5;
-
-    iput-boolean p3, p0, Lwr5;->Z:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwr5;->a:Ltt5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lwy0;)Ljava/io/File;
+    .locals 1
 
-    check-cast p1, Lb54;
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    invoke-virtual {p0, p1, p2}, Lwr5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lwr5;->a:Ltt5;
 
-    move-result-object p1
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p1, Lwr5;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lwr5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lwr5;
-
-    iget-object v0, p0, Lwr5;->Y:Lxr5;
-
-    iget-boolean v1, p0, Lwr5;->Z:Z
-
-    iget-object v2, p0, Lwr5;->X:Ljava/io/File;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lwr5;-><init>(Ljava/io/File;Lxr5;ZLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v1, p0, Lwr5;->Y:Lxr5;
-
-    iget-object v0, p0, Lwr5;->X:Ljava/io/File;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcdi;->f(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    move-object v6, p1
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_5
-
-    :cond_1
-    :goto_1
-    const-string p1, "*/*"
-
-    goto :goto_0
-
-    :goto_2
-    iget-boolean v10, p0, Lwr5;->Z:Z
-
-    iget-object p1, v1, Lxr5;->a:Landroid/content/Context;
-
-    const-string v2, "download"
-
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of v2, p1, Landroid/app/DownloadManager;
-
-    if-eqz v2, :cond_2
-
-    check-cast p1, Landroid/app/DownloadManager;
-
-    :goto_3
-    move-object v2, p1
-
-    goto :goto_4
-
-    :cond_2
     const/4 p1, 0x0
 
-    goto :goto_3
+    return-object p1
 
-    :goto_4
-    if-nez v2, :cond_3
+    :pswitch_0
+    iget-object p1, p0, Lwr5;->j:Ljava/io/File;
 
-    goto :goto_6
+    if-nez p1, :cond_0
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ringtones"
+
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->j:Ljava/io/File;
+
+    :cond_0
+    iget-object p1, p0, Lwr5;->j:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object p1, p0, Lwr5;->i:Ljava/io/File;
+
+    if-nez p1, :cond_1
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "videoCache"
+
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->i:Ljava/io/File;
+
+    :cond_1
+    iget-object p1, p0, Lwr5;->i:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_2
+    iget-object p1, p0, Lwr5;->h:Ljava/io/File;
+
+    if-nez p1, :cond_2
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "exo_files_cache"
+
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->h:Ljava/io/File;
+
+    :cond_2
+    iget-object p1, p0, Lwr5;->h:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_3
+    iget-object p1, p0, Lwr5;->c:Ljava/io/File;
+
+    if-nez p1, :cond_3
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "upload"
+
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->c:Ljava/io/File;
 
     :cond_3
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+    iget-object p1, p0, Lwr5;->c:Ljava/io/File;
 
-    move-result-object v3
+    return-object p1
 
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+    :pswitch_4
+    iget-object p1, p0, Lwr5;->f:Ljava/io/File;
 
-    move-result-object v4
+    if-nez p1, :cond_4
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    check-cast v0, Liv5;
 
-    move-result-object v7
+    invoke-virtual {v0}, Liv5;->n()Ljava/io/File;
 
-    invoke-virtual {v0}, Ljava/io/File;->length()J
+    move-result-object p1
 
-    move-result-wide v8
+    iput-object p1, p0, Lwr5;->f:Ljava/io/File;
 
-    const/4 v5, 0x0
+    :cond_4
+    iget-object p1, p0, Lwr5;->f:Ljava/io/File;
 
-    invoke-virtual/range {v2 .. v10}, Landroid/app/DownloadManager;->addCompletedDownload(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;JZ)J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-object p1
 
-    goto :goto_6
+    :pswitch_5
+    iget-object p1, p0, Lwr5;->g:Ljava/io/File;
 
-    :goto_5
-    sget-object v0, Lxr5;->g:Ljava/lang/String;
+    if-nez p1, :cond_5
 
-    const-string v2, "fail!"
+    check-cast v0, Liv5;
 
-    invoke-static {v0, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v1, Lxr5;->b:Lyv4;
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
 
-    sget-object v1, Lxr5;->f:[Lwq7;
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
 
-    const/4 v2, 0x1
+    move-result-object p1
 
-    aget-object v1, v1, v2
+    const-string v0, "gifCache"
 
-    invoke-virtual {v0}, Lyv4;->get()Ljava/lang/Object;
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->g:Ljava/io/File;
+
+    :cond_5
+    iget-object p1, p0, Lwr5;->g:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_6
+    iget-object p1, p0, Lwr5;->e:Ljava/io/File;
+
+    if-nez p1, :cond_6
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "audioCache"
+
+    invoke-static {p1, v0}, Liv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->e:Ljava/io/File;
+
+    :cond_6
+    iget-object p1, p0, Lwr5;->e:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_7
+    iget-object p1, p0, Lwr5;->d:Ljava/io/File;
+
+    if-nez p1, :cond_7
+
+    check-cast v0, Liv5;
+
+    invoke-virtual {v0}, Liv5;->k()Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwr5;->d:Ljava/io/File;
+
+    :cond_7
+    iget-object p1, p0, Lwr5;->d:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_8
+    iget-object p1, p0, Lwr5;->b:Ljava/io/File;
+
+    if-nez p1, :cond_8
+
+    new-instance p1, Ljava/io/File;
+
+    check-cast v0, Liv5;
+
+    iget-object v0, v0, Liv5;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Liv5;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lye5;
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
+    iput-object p1, p0, Lwr5;->b:Ljava/io/File;
 
-    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, v1}, Lye5;->b(Lye5;Ljava/lang/Throwable;)V
-
-    :goto_6
-    sget-object p1, Lzag;->a:Lzag;
+    :cond_8
+    iget-object p1, p0, Lwr5;->b:Ljava/io/File;
 
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

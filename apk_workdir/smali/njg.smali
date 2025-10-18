@@ -1,3 +1,3 @@
-.class public interface abstract Lnjg;
-.super Ljava/lang/Object;
+.class public final Lnjg;
+.super Lrjg;
 .source "SourceFile"

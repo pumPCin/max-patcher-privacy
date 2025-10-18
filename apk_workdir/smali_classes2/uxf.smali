@@ -2,168 +2,140 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lem;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Ljavax/inject/Provider;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>(Ljava/lang/String;Ljavax/inject/Provider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Luxf;->a:I
+    iput-object p1, p0, Luxf;->b:Ljava/lang/String;
 
-    iput p2, p0, Luxf;->b:I
-
-    iput p3, p0, Luxf;->c:I
-
-    iput p4, p0, Luxf;->d:I
+    iput-object p2, p0, Luxf;->a:Ljavax/inject/Provider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final getOkParser()Lpq7;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lk82;->b:Lk82;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Luxf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Luxf;
-
-    iget v0, p0, Luxf;->a:I
-
-    iget v1, p1, Luxf;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Luxf;->b:I
-
-    iget v1, p1, Luxf;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Luxf;->c:I
-
-    iget v1, p1, Luxf;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Luxf;->d:I
-
-    iget p1, p1, Luxf;->d:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final getScope()Ltm;
+    .locals 1
 
-    iget v0, p0, Luxf;->a:I
+    sget-object v0, Ltm;->b:Ltm;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Luxf;->b:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    const v2, -0x33000001    # -1.3421772E8f
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Luxf;->c:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
-
-    iget v1, p0, Luxf;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final getScopeAfter()Lum;
+    .locals 1
 
-    const-string v0, ", neutralFade="
+    sget-object v0, Lum;->b:Lum;
 
-    const-string v1, ", primary=-855638017, themed="
+    return-object v0
+.end method
 
-    const-string v2, "TopbarBackgroundDefaultColors(neutral="
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    iget v3, p0, Luxf;->a:I
+    const-string v0, "auth.anonymLogin"
 
-    iget v4, p0, Luxf;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", topbar="
-
-    const-string v2, ")"
-
-    iget v3, p0, Luxf;->c:I
-
-    iget v4, p0, Luxf;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lwc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final writeParams(Lcr7;)V
+    .locals 2
+
+    const-string v0, "session_data"
+
+    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    invoke-interface {p1}, Lcr7;->s()V
+
+    iget-object v0, p0, Luxf;->a:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "auth_token"
+
+    invoke-interface {p1, v1}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcr7;->h(Ljava/lang/String;)V
+
+    :cond_0
+    const-string v0, "version"
+
+    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    check-cast v0, Le2;
+
+    invoke-virtual {v0, v1}, Le2;->m(I)V
+
+    const-string v0, "device_id"
+
+    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    move-result-object v0
+
+    iget-object v1, p0, Luxf;->b:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Lcr7;->h(Ljava/lang/String;)V
+
+    const-string v0, "client_version"
+
+    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    check-cast v0, Le2;
+
+    invoke-virtual {v0, v1}, Le2;->m(I)V
+
+    const-string v0, "client_type"
+
+    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+
+    move-result-object v0
+
+    const-string v1, "SDK_ANDROID"
+
+    invoke-interface {v0, v1}, Lcr7;->h(Ljava/lang/String;)V
+
+    invoke-interface {p1}, Lcr7;->q()V
+
+    return-void
 .end method

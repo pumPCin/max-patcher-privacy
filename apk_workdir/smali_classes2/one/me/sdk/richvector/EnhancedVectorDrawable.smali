@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvig;
+.implements Lzjg;
 
 
 # annotations
@@ -17,7 +17,7 @@
     d2 = {
         "Lone/me/sdk/richvector/EnhancedVectorDrawable;",
         "Landroid/graphics/drawable/Drawable;",
-        "Lvig;",
+        "Lzjg;",
         "Landroid/content/Context;",
         "context",
         "",
@@ -32,7 +32,7 @@
         "Lone/me/sdk/richvector/internal/element/Shape;",
         "buildShape",
         "(I)Lone/me/sdk/richvector/internal/element/Shape;",
-        "Lzag;",
+        "Lccg;",
         "buildScaleMatrix",
         "()V",
         "scaleAllPaths",
@@ -100,7 +100,7 @@
         "scaleMatrix",
         "Landroid/graphics/Matrix;",
         "Companion",
-        "qc5",
+        "kd5",
         "rich-vector_release"
     }
     k = 0x1
@@ -114,7 +114,7 @@
 
 
 # static fields
-.field private static final Companion:Lqc5;
+.field private static final Companion:Lkd5;
 
 .field private static final TAG:Ljava/lang/String; = "EnhancedVectorDrawable"
 
@@ -145,11 +145,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lqc5;
+    new-instance v0, Lkd5;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Lqc5;
+    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Lkd5;
 
     return-void
 .end method
@@ -209,7 +209,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lufe;
+    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Ldhe;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -436,15 +436,15 @@
         }
     .end annotation
 
-    new-instance v0, Ltig;
+    new-instance v0, Lxjg;
 
     move-object/from16 v1, p0
 
     iget-object v0, v1, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
 
-    sget-object v2, Ltig;->a:Lswe;
+    sget-object v2, Lxjg;->a:Lyxe;
 
-    iget-object v3, v2, Lswe;->b:Ljava/lang/Object;
+    iget-object v3, v2, Lyxe;->b:Ljava/lang/Object;
 
     check-cast v3, Landroid/util/LruCache;
 
@@ -473,15 +473,15 @@
 
     move-result-object v4
 
-    new-instance v0, Lr83;
+    new-instance v0, Le93;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v5, Lr83;
+    new-instance v5, Le93;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    new-instance v6, Lr83;
+    new-instance v6, Le93;
 
     invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
@@ -505,7 +505,7 @@
 
     const/4 v14, 0x0
 
-    invoke-direct/range {v7 .. v16}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILvh4;)V
+    invoke-direct/range {v7 .. v16}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
 
     new-instance v8, Ljava/util/Stack;
 
@@ -542,7 +542,7 @@
     goto/16 :goto_a
 
     :cond_1
-    invoke-static/range {v18 .. v18}, Lwx1;->y(I)[I
+    invoke-static/range {v18 .. v18}, Ldy1;->y(I)[I
 
     move-result-object v9
 
@@ -555,7 +555,7 @@
 
     aget v19, v9, v15
 
-    invoke-static/range {v19 .. v19}, Lfef;->h(I)Ljava/lang/String;
+    invoke-static/range {v19 .. v19}, Lzdf;->h(I)Ljava/lang/String;
 
     move-result-object v13
 
@@ -588,9 +588,9 @@
     goto :goto_4
 
     :cond_4
-    sget-object v9, Lsig;->$EnumSwitchMapping$0:[I
+    sget-object v9, Lwjg;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v15}, Lwx1;->v(I)I
+    invoke-static {v15}, Ldy1;->v(I)I
 
     move-result v10
 
@@ -766,7 +766,7 @@
     :cond_e
     const/4 v10, 0x0
 
-    invoke-static/range {v18 .. v18}, Lwx1;->y(I)[I
+    invoke-static/range {v18 .. v18}, Ldy1;->y(I)[I
 
     move-result-object v9
 
@@ -779,7 +779,7 @@
 
     aget v17, v9, v15
 
-    invoke-static/range {v17 .. v17}, Lfef;->h(I)Ljava/lang/String;
+    invoke-static/range {v17 .. v17}, Lzdf;->h(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -814,9 +814,9 @@
     goto :goto_9
 
     :cond_11
-    sget-object v9, Lsig;->$EnumSwitchMapping$0:[I
+    sget-object v9, Lwjg;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v15}, Lwx1;->v(I)I
+    invoke-static {v15}, Ldy1;->v(I)I
 
     move-result v10
 
@@ -843,7 +843,7 @@
 
     if-ne v10, v13, :cond_12
 
-    invoke-virtual {v6, v4}, Lr83;->d(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-virtual {v6, v4}, Le93;->r(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
     move-result-object v12
 
@@ -857,14 +857,14 @@
     throw v0
 
     :cond_13
-    invoke-virtual {v5, v4}, Lr83;->f(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-virtual {v5, v4}, Le93;->t(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
 
     move-result-object v11
 
     goto :goto_a
 
     :cond_14
-    invoke-virtual {v0, v4}, Lr83;->e(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    invoke-virtual {v0, v4}, Le93;->s(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
 
     move-result-object v9
 
@@ -873,11 +873,11 @@
     goto :goto_a
 
     :cond_15
-    new-instance v9, Lr83;
+    new-instance v9, Le93;
 
     invoke-direct {v9}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v9, v4}, Lr83;->g(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
+    invoke-virtual {v9, v4}, Le93;->u(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
 
     move-result-object v7
 
@@ -913,7 +913,7 @@
     goto :goto_b
 
     :goto_e
-    iget-object v0, v2, Lswe;->b:Ljava/lang/Object;
+    iget-object v0, v2, Lyxe;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/util/LruCache;
 
@@ -1089,7 +1089,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

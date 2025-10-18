@@ -1,59 +1,19 @@
 .class public final Lu6h;
-.super Lk14;
+.super Lz6h;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lj7h;
-
-.field public Y:Lg6h;
-
-.field public Z:Ljava/lang/String;
-
-.field public o:Lx6h;
-
-.field public r0:Lko0;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lx6h;
-
-.field public u0:I
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lx6h;Lk14;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lu6h;->t0:Lx6h;
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lu6h;->a:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lu6h;->s0:Ljava/lang/Object;
-
-    iget p1, p0, Lu6h;->u0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lu6h;->u0:I
-
-    iget-object p1, p0, Lu6h;->t0:Lx6h;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lx6h;->l(Ljava/lang/String;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

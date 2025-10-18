@@ -1,51 +1,31 @@
 .class public final Lb22;
-.super Ljava/lang/Object;
+.super La22;
 .source "SourceFile"
-
-# interfaces
-.implements Lkdd;
-
-
-# instance fields
-.field public final synthetic b:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lb22;->b:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()J
+.method public final v()Ljava/util/Set;
     .locals 2
 
-    iget-wide v0, p0, Lb22;->b:J
+    :try_start_0
+    iget-object v0, p0, Lu1f;->b:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
 
-.method public final b(La22;)Ljdd;
-    .locals 1
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getConcurrentCameraIds()Ljava/util/Set;
 
-    iget p1, p1, La22;->b:I
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x1
+    return-object v0
 
-    if-ne p1, v0, :cond_0
+    :catch_0
+    move-exception v0
 
-    sget-object p1, Ljdd;->d:Ljdd;
+    new-instance v1, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
 
-    return-object p1
+    invoke-direct {v1, v0}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
 
-    :cond_0
-    sget-object p1, Ljdd;->e:Ljdd;
-
-    return-object p1
+    throw v1
 .end method

@@ -3,11 +3,18 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;IIII)V
+# virtual methods
+.method public a(I)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lv8d;->x(Landroid/view/View;IIII)V
+    return-void
+.end method
+
+.method public b(IFI)V
+    .locals 0
 
     return-void
+.end method
+
+.method public abstract c(I)V
 .end method

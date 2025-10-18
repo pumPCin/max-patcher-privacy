@@ -1,115 +1,90 @@
 .class public final Lqpg;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:[B
+
+
+# direct methods
+.method public constructor <init>([B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqpg;->a:[B
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lmnh;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqpg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqpg;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lqpg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lqpg;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqpg;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lqpg;->X:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lmnh;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget-object v1, p1, Lmnh;->b:Llnh;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v1, v0
+    instance-of v1, p1, Lqpg;
 
-    :goto_0
-    sget-object v2, Llnh;->c:Llnh;
+    const/4 v2, 0x0
 
-    if-eq v1, v2, :cond_4
+    if-nez v1, :cond_1
 
-    if-eqz p1, :cond_1
-
-    iget-object v1, p1, Lmnh;->b:Llnh;
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    move-object v1, v0
+    check-cast p1, Lqpg;
 
-    :goto_1
-    sget-object v2, Llnh;->o:Llnh;
+    iget-object v1, p0, Lqpg;->a:[B
 
-    if-eq v1, v2, :cond_4
+    iget-object p1, p1, Lqpg;->a:[B
 
-    if-eqz p1, :cond_2
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p1, Lmnh;->b:Llnh;
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    sget-object p1, Llnh;->Y:Llnh;
+    return v0
+.end method
 
-    if-ne v0, p1, :cond_3
+.method public final hashCode()I
+    .locals 1
 
-    goto :goto_2
+    iget-object v0, p0, Lqpg;->a:[B
 
-    :cond_3
-    const/4 p1, 0x0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
-    goto :goto_3
+    move-result v0
 
-    :cond_4
-    :goto_2
-    const/4 p1, 0x1
+    return v0
+.end method
 
-    :goto_3
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
+    iget-object v0, p0, Lqpg;->a:[B
 
-    return-object p1
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FirstFrameReady(frameByteArray="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,54 +1,42 @@
-.class public final synthetic Lz81;
-.super Ljava/lang/Object;
+.class public final Lz81;
+.super Ljl4;
 .source "SourceFile"
-
-# interfaces
-.implements Lqf4;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Long;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public final synthetic t:Lb91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lb91;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz81;->t:Lb91;
 
-    iput-object p1, p0, Lz81;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lz81;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lz81;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lz81;->o:Z
+    invoke-direct {p0}, Ljl4;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final f()J
+    .locals 2
 
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iget-object v0, p0, Lz81;->t:Lb91;
 
-    iget-object v1, p0, Lz81;->a:Ljava/lang/Long;
+    iget-object v0, v0, Lb91;->J0:Lm9b;
 
-    iget-object v2, p0, Lz81;->b:Ljava/lang/String;
+    iget v0, v0, Lm9b;->a:I
 
-    iget-object v3, p0, Lz81;->c:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iget-boolean v4, p0, Lz81;->o:Z
+    const-wide/16 v0, 0x96
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+    return-wide v0
 
-    return-object v0
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    return-wide v0
 .end method

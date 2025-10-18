@@ -1,117 +1,154 @@
-.class public final Lqo5;
+.class public final synthetic Lqo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxef;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Ljava/io/Serializable;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/io/Serializable;I)V
     .locals 0
 
+    iput p3, p0, Lqo5;->a:I
+
+    iput-object p1, p0, Lqo5;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lqo5;->b:Ljava/io/Serializable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lqo5;->a:J
-
-    iput-wide p3, p0, Lqo5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lqo5;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lqo5;->c:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lqo5;
+    check-cast v0, Lylf;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lqo5;->b:Ljava/io/Serializable;
 
-    if-nez v1, :cond_1
+    check-cast v1, Ljava/io/File;
 
-    return v2
+    iget-object v2, v0, Lylf;->b:Liu7;
 
-    :cond_1
-    check-cast p1, Lqo5;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
-    iget-wide v3, p0, Lqo5;->a:J
+    move-result-object v2
 
-    iget-wide v5, p1, Lqo5;->a:J
+    check-cast v2, Lgnf;
 
-    cmp-long v1, v3, v5
+    iget-object v3, v0, Lylf;->c:Liu7;
 
-    if-eqz v1, :cond_2
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object v3
 
-    :cond_2
-    iget-wide v3, p0, Lqo5;->b:J
+    check-cast v3, Lpxb;
 
-    iget-wide v5, p1, Lqo5;->b:J
+    check-cast v3, Lrxb;
 
-    cmp-long p1, v3, v5
+    iget-object v3, v3, Lrxb;->b:Lgvb;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v2
+    iget-object v0, v0, Lylf;->X:Liu7;
 
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lqo5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lqo5;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "FcmAnalyticsRemovedEntry(chatId="
-
-    const-string v1, ", messageId="
-
-    iget-wide v2, p0, Lqo5;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
+    check-cast v0, Lqmf;
 
-    iget-wide v2, p0, Lqo5;->b:J
+    check-cast v0, Lrmf;
 
-    invoke-static {v0, v2, v3, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lrmf;->b()Lxod;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lc57;
+
+    iget-object v2, v2, Lgnf;->a:Lwif;
+
+    invoke-direct {v3, v2, v1, v0}, Lc57;-><init>(Lwif;Ljava/io/File;Lxod;)V
+
+    return-object v3
+
+    :pswitch_0
+    iget-object v0, p0, Lqo5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvo5;
+
+    iget-object v1, p0, Lqo5;->b:Ljava/io/Serializable;
+
+    check-cast v1, [J
+
+    new-instance v2, Lnre;
+
+    invoke-direct {v2}, Lnre;-><init>()V
+
+    iget-object v3, v0, Lvo5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, v0, Lvo5;->a:Lll;
+
+    const/4 v4, 0x4
+
+    check-cast v0, Lmna;
+
+    invoke-virtual {v0, v4, v1}, Lmna;->e(I[J)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v2
+
+    :pswitch_1
+    iget-object v0, p0, Lqo5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lso5;
+
+    iget-object v1, p0, Lqo5;->b:Ljava/io/Serializable;
+
+    check-cast v1, [J
+
+    new-instance v2, Lf44;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v0, v3, v1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Lso5;->a(Ljava/util/concurrent/Callable;)Lnre;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

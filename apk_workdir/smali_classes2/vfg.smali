@@ -1,89 +1,80 @@
-.class public final synthetic Lvfg;
-.super Ljava/lang/Object;
+.class public final Lvfg;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lug3;
-.implements Lpj8;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic a:Lwfg;
-
-.field public final synthetic b:Ltdg;
+.field public final synthetic X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwfg;Ltdg;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lvfg;->a:Lwfg;
+    iput-object p1, p0, Lvfg;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    iput-object p2, p0, Lvfg;->b:Ltdg;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lxi8;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lvfg;->a:Lwfg;
+    check-cast p1, Luf9;
 
-    iget-object v0, v0, Lwfg;->b:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Ljava/util/Map;
+    invoke-virtual {p0, p1, p2}, Lvfg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lvfg;->b:Ltdg;
+    move-result-object p1
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lvfg;
 
-    move-result-object v0
+    sget-object p2, Lccg;->a:Lccg;
 
-    check-cast v0, Lldg;
+    invoke-virtual {p1, p2}, Lvfg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lxi8;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lxi8;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Lxi8;->b()V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method
 
-.method public c(Llg3;)V
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lvfg;->a:Lwfg;
+    new-instance p1, Lvfg;
 
-    iget-object v0, v0, Lwfg;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lvfg;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    check-cast v0, Ljava/util/Map;
+    invoke-direct {p1, v0, p2}, Lvfg;-><init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lvfg;->b:Ltdg;
+    return-object p1
+.end method
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Llg3;->b()V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lvfg;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    iget-object p1, p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->B0:Lp28;
+
+    instance-of p1, p1, Lm28;
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

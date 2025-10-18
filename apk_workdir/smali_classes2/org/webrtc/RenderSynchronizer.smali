@@ -110,11 +110,11 @@
     iput-object p1, p0, Lorg/webrtc/RenderSynchronizer;->mainThreadHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v0, Lw8d;
+    new-instance v0, Ldad;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lw8d;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
+    invoke-direct {v0, p0, v1}, Ldad;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -380,7 +380,7 @@
     const-wide/16 v0, 0x0
 
     :goto_0
-    invoke-static {v0, v1}, Lv8d;->k(J)V
+    invoke-static {v0, v1}, Lcad;->k(J)V
 
     :cond_1
     return-void
@@ -416,11 +416,11 @@
 
     iget-object v0, p0, Lorg/webrtc/RenderSynchronizer;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lw8d;
+    new-instance v1, Ldad;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lw8d;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
+    invoke-direct {v1, p0, v2}, Ldad;-><init>(Lorg/webrtc/RenderSynchronizer;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

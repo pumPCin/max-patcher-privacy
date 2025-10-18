@@ -1,146 +1,62 @@
-.class public final Lsf4;
-.super Ljava/lang/Object;
+.class public final synthetic Lsf4;
+.super Loj6;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
+.implements Lli6;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lsf4;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Landroid/net/Uri;
+.field public static final a:Lsf4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 6
 
-    new-instance v0, Lwc4;
+    new-instance v0, Lsf4;
+
+    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
+
+    const/4 v5, 0x1
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
+    const-class v2, Lzaf;
 
-    sput-object v0, Lsf4;->CREATOR:Landroid/os/Parcelable$Creator;
+    const-string v3, "isNotEmpty"
 
-    return-void
-.end method
+    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-.method public synthetic constructor <init>(Landroid/net/Uri;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsf4;->a:Landroid/net/Uri;
+    sput-object v0, Lsf4;->a:Lsf4;
 
     return-void
-.end method
-
-.method public static final a(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    const-string p0, ""
-
-    :cond_0
-    const-string v0, "/"
-
-    invoke-static {p0, v0}, Ls9f;->L(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/lang/String;
 
-    return v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    move-result p1
 
-    instance-of v0, p1, Lsf4;
+    if-lez p1, :cond_0
 
-    if-nez v0, :cond_0
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Lsf4;
-
-    iget-object p1, p1, Lsf4;->a:Landroid/net/Uri;
-
-    iget-object v0, p0, Lsf4;->a:Landroid/net/Uri;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :cond_1
-    const/4 p1, 0x1
+    move-result-object p1
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lsf4;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lsf4;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lsf4;->a:Landroid/net/Uri;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
+    return-object p1
 .end method

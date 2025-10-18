@@ -1,283 +1,113 @@
-.class public abstract Lixa;
-.super Ljava/lang/Object;
+.class public final Lixa;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public synthetic X:Z
 
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic Y:Lmxa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lmxa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lzmc;->chat_screen_message_send_error_delete_action:I
+    iput-object p1, p0, Lixa;->Y:Lmxa;
 
-    sput v0, Lixa;->a:I
+    const/4 p1, 0x2
 
-    sget v0, Lzmc;->chat_screen_message_send_error_resend_action_multi:I
-
-    sput v0, Lixa;->b:I
-
-    sget v0, Lzmc;->chat_screen_message_send_error_resend_action_solo:I
-
-    sput v0, Lixa;->c:I
-
-    sget v0, Lzmc;->messages_list_chat_description_view_id:I
-
-    sput v0, Lixa;->d:I
-
-    sget v0, Lzmc;->messages_list_chat_description_view_type:I
-
-    sput v0, Lixa;->e:I
-
-    sget v0, Lzmc;->messages_list_confirm_cancel:I
-
-    sput v0, Lixa;->f:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_extremism:I
-
-    sput v0, Lixa;->g:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_fake:I
-
-    sput v0, Lixa;->h:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_other:I
-
-    sput v0, Lixa;->i:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_porno:I
-
-    sput v0, Lixa;->j:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_spam:I
-
-    sput v0, Lixa;->k:I
-
-    sget v0, Lzmc;->messages_list_confirm_complaint_threat:I
-
-    sput v0, Lixa;->l:I
-
-    sget v0, Lzmc;->messages_list_confirm_delete:I
-
-    sput v0, Lixa;->m:I
-
-    sget v0, Lzmc;->messages_list_confirm_delete_for_all:I
-
-    sput v0, Lixa;->n:I
-
-    sget v0, Lzmc;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Lixa;->o:I
-
-    sget v0, Lzmc;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Lixa;->p:I
-
-    sget v0, Lzmc;->messages_list_context_action_copy:I
-
-    sput v0, Lixa;->q:I
-
-    sget v0, Lzmc;->messages_list_context_action_copy_photo:I
-
-    sput v0, Lixa;->r:I
-
-    sget v0, Lzmc;->messages_list_context_action_delete:I
-
-    sput v0, Lixa;->s:I
-
-    sget v0, Lzmc;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Lixa;->t:I
-
-    sget v0, Lzmc;->messages_list_context_action_edit:I
-
-    sput v0, Lixa;->u:I
-
-    sget v0, Lzmc;->messages_list_context_action_forward:I
-
-    sput v0, Lixa;->v:I
-
-    sget v0, Lzmc;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Lixa;->w:I
-
-    sget v0, Lzmc;->messages_list_context_action_pin:I
-
-    sput v0, Lixa;->x:I
-
-    sget v0, Lzmc;->messages_list_context_action_reply:I
-
-    sput v0, Lixa;->y:I
-
-    sget v0, Lzmc;->messages_list_context_action_report:I
-
-    sput v0, Lixa;->z:I
-
-    sget v0, Lzmc;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Lixa;->A:I
-
-    sget v0, Lzmc;->messages_list_context_action_select:I
-
-    sput v0, Lixa;->B:I
-
-    sget v0, Lzmc;->messages_list_context_action_unpin:I
-
-    sput v0, Lixa;->C:I
-
-    sget v0, Lzmc;->messages_list_context_actions_view_type:I
-
-    sput v0, Lixa;->D:I
-
-    sget v0, Lzmc;->messages_list_context_content_container:I
-
-    sput v0, Lixa;->E:I
-
-    sget v0, Lzmc;->messages_list_context_member_view_type:I
-
-    sput v0, Lixa;->F:I
-
-    sget v0, Lzmc;->messages_list_context_members_member_cell:I
-
-    sput v0, Lixa;->G:I
-
-    sget v0, Lzmc;->messages_list_context_members_member_reaction:I
-
-    sput v0, Lixa;->H:I
-
-    sget v0, Lzmc;->messages_list_context_reactions_container:I
-
-    sput v0, Lixa;->I:I
-
-    sget v0, Lzmc;->messages_list_item_alias:I
-
-    sput v0, Lixa;->J:I
-
-    sget v0, Lzmc;->messages_list_item_date:I
-
-    sput v0, Lixa;->K:I
-
-    sget v0, Lzmc;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Lixa;->L:I
-
-    sget v0, Lzmc;->messages_list_item_single_image:I
-
-    sput v0, Lixa;->M:I
-
-    sget v0, Lzmc;->messages_list_item_text:I
-
-    sput v0, Lixa;->N:I
-
-    sget v0, Lzmc;->messages_list_item_title:I
-
-    sput v0, Lixa;->O:I
-
-    sget v0, Lzmc;->messages_list_item_video_duration:I
-
-    sput v0, Lixa;->P:I
-
-    sget v0, Lzmc;->messages_list_recycler_view:I
-
-    sput v0, Lixa;->Q:I
-
-    sget v0, Lzmc;->messages_list_scroll_btn:I
-
-    sput v0, Lixa;->R:I
-
-    sget v0, Lzmc;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Lixa;->S:I
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lixa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lixa;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lixa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lixa;
+
+    iget-object v1, p0, Lixa;->Y:Lmxa;
+
+    invoke-direct {v0, v1, p2}, Lixa;-><init>(Lmxa;Lkotlin/coroutines/Continuation;)V
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lixa;->X:Z
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Lixa;->X:Z
+
+    iget-object v0, p0, Lixa;->Y:Lmxa;
+
+    iget-object v0, v0, Lmxa;->b:Ljava/lang/String;
+
+    sget-object v1, Ltei;->a:Lmxa;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lc98;->X:Lc98;
+
+    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "allowSensitive="
+
+    invoke-static {v3, p1}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

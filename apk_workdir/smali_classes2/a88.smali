@@ -2,90 +2,481 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "La88;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/util/Map;
-
-.field public final f:J
+.field public final a:Lz78;
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
+    new-instance v0, Ldu7;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+
+    sput-object v0, La88;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 6
+
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, La88;->a:J
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    iput-wide p3, p0, La88;->b:J
+    move-result v0
 
-    iput-object p7, p0, La88;->c:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iput-object p8, p0, La88;->d:Ljava/lang/String;
+    if-ne v0, v1, :cond_0
 
-    iput-object p9, p0, La88;->e:Ljava/util/Map;
+    const/4 p1, 0x0
 
-    iput-wide p5, p0, La88;->f:J
+    .line 5
+    iput-object p1, p0, La88;->a:Lz78;
+
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance v0, Lx78;
+
+    invoke-direct {v0}, Lx78;-><init>()V
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-ne v2, v1, :cond_1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v3
+
+    .line 8
+    :goto_0
+    iput-boolean v2, v0, Lx78;->a:Z
+
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_2
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v3
+
+    .line 10
+    :goto_1
+    iput-boolean v2, v0, Lx78;->b:Z
+
+    const/4 v2, 0x3
+
+    .line 11
+    invoke-static {v2}, Ldy1;->y(I)[I
+
+    move-result-object v4
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v5
+
+    aget v4, v4, v5
+
+    .line 13
+    iput v4, v0, Lx78;->c:I
+
+    .line 14
+    invoke-static {v2}, Ldy1;->y(I)[I
+
+    move-result-object v2
+
+    .line 15
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    aget v2, v2, v4
+
+    .line 16
+    iput v2, v0, Lx78;->d:I
+
+    .line 17
+    invoke-static {}, Ly78;->values()[Ly78;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    aget-object v2, v2, v4
+
+    .line 18
+    iput-object v2, v0, Lx78;->e:Ly78;
+
+    .line 19
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_3
+
+    move v2, v1
+
+    goto :goto_2
+
+    :cond_3
+    move v2, v3
+
+    .line 20
+    :goto_2
+    iput-boolean v2, v0, Lx78;->f:Z
+
+    .line 21
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_4
+
+    move v2, v1
+
+    goto :goto_3
+
+    :cond_4
+    move v2, v3
+
+    .line 22
+    :goto_3
+    iput-boolean v2, v0, Lx78;->g:Z
+
+    .line 23
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v4
+
+    .line 24
+    iput-wide v4, v0, Lx78;->h:J
+
+    .line 25
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_5
+
+    move v2, v1
+
+    goto :goto_4
+
+    :cond_5
+    move v2, v3
+
+    .line 26
+    :goto_4
+    iput-boolean v2, v0, Lx78;->i:Z
+
+    .line 27
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_6
+
+    move v2, v1
+
+    goto :goto_5
+
+    :cond_6
+    move v2, v3
+
+    .line 28
+    :goto_5
+    iput-boolean v2, v0, Lx78;->j:Z
+
+    .line 29
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_7
+
+    move v2, v1
+
+    goto :goto_6
+
+    :cond_7
+    move v2, v3
+
+    .line 30
+    :goto_6
+    iput-boolean v2, v0, Lx78;->k:Z
+
+    .line 31
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_8
+
+    move v2, v1
+
+    goto :goto_7
+
+    :cond_8
+    move v2, v3
+
+    .line 32
+    :goto_7
+    iput-boolean v2, v0, Lx78;->l:Z
+
+    .line 33
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_9
+
+    move v2, v1
+
+    goto :goto_8
+
+    :cond_9
+    move v2, v3
+
+    .line 34
+    :goto_8
+    iput-boolean v2, v0, Lx78;->m:Z
+
+    .line 35
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_a
+
+    move v2, v1
+
+    goto :goto_9
+
+    :cond_a
+    move v2, v3
+
+    .line 36
+    :goto_9
+    iput-boolean v2, v0, Lx78;->n:Z
+
+    .line 37
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v4
+
+    .line 38
+    iput-wide v4, v0, Lx78;->o:J
+
+    .line 39
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v4
+
+    .line 40
+    iput-wide v4, v0, Lx78;->p:J
+
+    .line 41
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v4
+
+    .line 42
+    iput-wide v4, v0, Lx78;->q:J
+
+    .line 43
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-ne p1, v1, :cond_b
+
+    goto :goto_a
+
+    :cond_b
+    move v1, v3
+
+    .line 44
+    :goto_a
+    iput-boolean v1, v0, Lx78;->r:Z
+
+    .line 45
+    new-instance p1, Lz78;
+
+    invoke-direct {p1, v0}, Lz78;-><init>(Lx78;)V
+
+    .line 46
+    iput-object p1, p0, La88;->a:Lz78;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lz78;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, La88;->a:Lz78;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final describeContents()I
+    .locals 1
 
-    const-string v0, "LogEntry{time="
+    const/4 v0, 0x0
 
-    const-string v1, ", userId="
+    return v0
+.end method
 
-    iget-wide v2, p0, La88;->a:J
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p2, p0, La88;->a:Lz78;
 
-    move-result-object v0
+    if-nez p2, :cond_0
 
-    iget-wide v1, p0, La88;->b:J
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v1, ", sessionId="
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v2, ", type=\'"
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-wide v3, p0, La88;->f:J
+    if-eqz p2, :cond_1
 
-    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    iget-boolean v0, p2, Lz78;->a:Z
 
-    const-string v1, "\', event=\'"
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    const-string v2, "\', params="
+    iget-boolean v0, p2, Lz78;->b:Z
 
-    iget-object v3, p0, La88;->c:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-object v4, p0, La88;->d:Ljava/lang/String;
+    iget v0, p2, Lz78;->c:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Ldy1;->v(I)I
 
-    iget-object v1, p0, La88;->e:Ljava/util/Map;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-string v1, "}"
+    iget v0, p2, Lz78;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ldy1;->v(I)I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object v0
+    iget-object v0, p2, Lz78;->e:Ly78;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-wide v0, p2, Lz78;->h:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-boolean v0, p2, Lz78;->i:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->f:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->g:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->j:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->k:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->l:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->m:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lz78;->n:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-wide v0, p2, Lz78;->o:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p2, Lz78;->p:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p2, Lz78;->q:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-boolean p2, p2, Lz78;->r:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    :cond_1
+    return-void
 .end method

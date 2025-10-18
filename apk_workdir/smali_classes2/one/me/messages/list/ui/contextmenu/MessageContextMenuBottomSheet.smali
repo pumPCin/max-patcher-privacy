@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt04;
-.implements Lwxc;
+.implements Lh14;
+.implements Ldzc;
 
 
 # annotations
@@ -21,8 +21,8 @@
     d2 = {
         "Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;",
         "Lone/me/sdk/bottomsheet/BottomSheetWidget;",
-        "Lt04;",
-        "Lwxc;",
+        "Lh14;",
+        "Ldzc;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -40,15 +40,17 @@
 
 
 # static fields
-.field public static final synthetic c1:[Lwq7;
+.field public static final synthetic b1:[Ltr7;
 
 
 # instance fields
-.field public final B0:Lkh7;
+.field public final A0:Lgi7;
 
-.field public final C0:Lkh7;
+.field public final B0:Lgi7;
 
-.field public final D0:Lkh7;
+.field public final C0:Lgi7;
+
+.field public final D0:Lqs;
 
 .field public final E0:Lqs;
 
@@ -68,42 +70,40 @@
 
 .field public final M0:Lqs;
 
-.field public final N0:Lqs;
+.field public final N0:Landroid/graphics/drawable/ColorDrawable;
 
-.field public final O0:Landroid/graphics/drawable/ColorDrawable;
+.field public final O0:Lh0d;
 
-.field public final P0:Lazc;
+.field public P0:Landroid/view/ViewGroup;
 
-.field public Q0:Landroid/view/ViewGroup;
+.field public Q0:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public R0:Landroidx/recyclerview/widget/RecyclerView;
+.field public R0:Lezc;
 
-.field public S0:Lxxc;
+.field public final S0:Liu7;
 
-.field public final T0:Llt7;
+.field public final T0:Liu7;
 
-.field public final U0:Llt7;
+.field public final U0:Liu7;
 
-.field public final V0:Llt7;
+.field public final V0:Ljava/lang/Object;
 
-.field public final W0:Ljava/lang/Object;
+.field public final W0:Lux6;
 
-.field public final X0:Lax6;
+.field public X0:Lji6;
 
-.field public Y0:Loh6;
+.field public final Y0:Ls76;
 
-.field public final Z0:Ly66;
+.field public final Z0:Lhs0;
 
-.field public final a1:Lyr0;
-
-.field public final b1:I
+.field public final a1:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 15
 
-    new-instance v0, Lxcc;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
@@ -113,93 +113,93 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ls6d;->a:Lt6d;
+    sget-object v2, Lz7d;->a:La8d;
 
     const-string v3, "anchorClass"
 
     const-string v5, "getAnchorClass()Ljava/lang/Class;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
     move-result-object v2
 
-    new-instance v3, Lxcc;
+    new-instance v3, Leec;
 
     const-string v5, "highlightPadding"
 
     const-string v6, "getHighlightPadding()Landroid/graphics/Rect;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lxcc;
+    new-instance v5, Leec;
 
     const-string v6, "highlightRadius"
 
     const-string v7, "getHighlightRadius()Ljava/lang/Float;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lxcc;
+    new-instance v6, Leec;
 
     const-string v7, "parentId"
 
     const-string v8, "getParentId()Ljava/lang/Integer;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Lxcc;
+    new-instance v7, Leec;
 
     const-string v8, "showReactionsSelector"
 
     const-string v9, "getShowReactionsSelector()Z"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lxcc;
+    new-instance v8, Leec;
 
     const-string v9, "chatId"
 
     const-string v10, "getChatId()J"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Lxcc;
+    new-instance v9, Leec;
 
     const-string v10, "messageId"
 
     const-string v11, "getMessageId()J"
 
-    invoke-direct {v9, v1, v10, v11, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v10, Lxcc;
+    new-instance v10, Leec;
 
     const-string v11, "messageServerId"
 
     const-string v12, "getMessageServerId()J"
 
-    invoke-direct {v10, v1, v11, v12, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v11, Lc0a;
+    new-instance v11, Le1a;
 
     const-string v12, "isCallbackSent"
 
     const-string v13, "isCallbackSent()Z"
 
-    invoke-direct {v11, v1, v12, v13}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v11, v1, v12, v13}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v12, Lxcc;
+    new-instance v12, Leec;
 
     const-string v13, "contentContainer"
 
     const-string v14, "getContentContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v12, v1, v13, v14, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v12, v1, v13, v14, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0xb
 
-    new-array v1, v1, [Lwq7;
+    new-array v1, v1, [Ltr7;
 
     aput-object v0, v1, v4
 
@@ -243,7 +243,7 @@
 
     aput-object v12, v1, v0
 
-    sput-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sput-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     return-void
 .end method
@@ -256,7 +256,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;-><init>(Landroid/os/Bundle;ILvh4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;-><init>(Landroid/os/Bundle;ILki4;)V
 
     return-void
 .end method
@@ -268,7 +268,7 @@
     invoke-direct {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;)V
 
     .line 4
-    new-instance p1, Lkh7;
+    new-instance p1, Lgi7;
 
     const/4 v0, 0x4
 
@@ -276,34 +276,34 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, v0, v2, v1}, Lkh7;-><init>(ILzr0;I)V
+    invoke-direct {p1, v0, v2, v1}, Lgi7;-><init>(ILis0;I)V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->B0:Lkh7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->A0:Lgi7;
 
     .line 5
-    new-instance p1, Lkh7;
+    new-instance p1, Lgi7;
 
     .line 6
-    new-instance v0, Lzr0;
+    new-instance v0, Lis0;
 
     const/4 v1, 0x3
 
     const/4 v3, 0x0
 
     .line 7
-    invoke-direct {v0, v1, v1, v3}, Lzr0;-><init>(IIZ)V
+    invoke-direct {v0, v1, v1, v3}, Lis0;-><init>(IIZ)V
 
     const/4 v4, 0x7
 
     .line 8
-    invoke-direct {p1, v3, v0, v4}, Lkh7;-><init>(ILzr0;I)V
+    invoke-direct {p1, v3, v0, v4}, Lgi7;-><init>(ILis0;I)V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->C0:Lkh7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->B0:Lgi7;
 
     .line 9
-    sget-object p1, Lkh7;->e:Lkh7;
+    sget-object p1, Lgi7;->e:Lgi7;
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->D0:Lkh7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->C0:Lgi7;
 
     .line 10
     new-instance p1, Lqs;
@@ -315,7 +315,7 @@
     invoke-direct {p1, v0, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 11
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->E0:Lqs;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->D0:Lqs;
 
     .line 12
     new-instance p1, Lqs;
@@ -327,7 +327,7 @@
     invoke-direct {p1, v4, v5}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 13
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->F0:Lqs;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->E0:Lqs;
 
     .line 14
     new-instance p1, Lqs;
@@ -339,7 +339,7 @@
     invoke-direct {p1, v4, v5}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 15
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->G0:Lqs;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->F0:Lqs;
 
     .line 16
     new-instance p1, Lqs;
@@ -351,7 +351,7 @@
     invoke-direct {p1, v4, v5}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 17
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->H0:Lqs;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->G0:Lqs;
 
     .line 18
     new-instance p1, Lqs;
@@ -361,7 +361,7 @@
     invoke-direct {p1, v0, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 19
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->I0:Lqs;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->H0:Lqs;
 
     .line 20
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -376,7 +376,7 @@
     invoke-direct {v0, v4, p1, v5}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
-    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->J0:Lqs;
+    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->I0:Lqs;
 
     const-wide/16 v5, 0x0
 
@@ -395,7 +395,7 @@
     invoke-direct {v6, v7, v5, v8}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
-    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->K0:Lqs;
+    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->J0:Lqs;
 
     .line 26
     new-instance v6, Lqs;
@@ -405,7 +405,7 @@
     invoke-direct {v6, v7, v5, v8}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
-    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->L0:Lqs;
+    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->K0:Lqs;
 
     .line 28
     new-instance v6, Lqs;
@@ -415,7 +415,7 @@
     invoke-direct {v6, v7, v5, v8}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
-    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->M0:Lqs;
+    iput-object v6, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->L0:Lqs;
 
     .line 30
     new-instance v5, Lqs;
@@ -425,47 +425,47 @@
     invoke-direct {v5, v4, p1, v6}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    iput-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Lqs;
+    iput-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->M0:Lqs;
 
     .line 32
     new-instance p1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {p1}, Landroid/graphics/drawable/ColorDrawable;-><init>()V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Landroid/graphics/drawable/ColorDrawable;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Landroid/graphics/drawable/ColorDrawable;
 
     .line 33
-    sget p1, Lixa;->E:I
+    sget p1, Lkya;->E:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Lazc;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Lh0d;
 
     .line 34
-    invoke-virtual {p0}, Lx14;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Ll24;->getArgs()Landroid/os/Bundle;
 
     move-result-object p1
 
     .line 35
     const-string v4, "arg_key_scope_id"
 
-    const-class v5, Ljod;
+    const-class v5, Lqpd;
 
-    invoke-static {p1, v4, v5}, Lyji;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v4, v5}, Lbli;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/os/Parcelable;
 
     .line 36
-    check-cast p1, Ljod;
+    check-cast p1, Lqpd;
 
     if-eqz p1, :cond_0
 
     .line 37
-    iget-object p1, p1, Ljod;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -482,35 +482,35 @@
 
     .line 39
     :cond_1
-    const-class v6, Lwyc;
+    const-class v6, Ld0d;
 
     .line 40
-    invoke-virtual {p0, p1, v6, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v6, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 41
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Llt7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Liu7;
 
     .line 42
-    invoke-virtual {p0}, Lx14;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Ll24;->getArgs()Landroid/os/Bundle;
 
     move-result-object p1
 
     .line 43
-    invoke-static {p1, v4, v5}, Lyji;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v4, v5}, Lbli;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/os/Parcelable;
 
     .line 44
-    check-cast p1, Ljod;
+    check-cast p1, Lqpd;
 
     if-eqz p1, :cond_2
 
     .line 45
-    iget-object p1, p1, Ljod;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqpd;->a:Ljava/lang/String;
 
     goto :goto_1
 
@@ -527,70 +527,70 @@
 
     .line 47
     :cond_3
-    const-class v4, Lim9;
+    const-class v4, Ljn9;
 
     .line 48
-    invoke-virtual {p0, p1, v4, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v4, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 49
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0:Llt7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Liu7;
 
     .line 50
-    new-instance p1, Lga9;
+    new-instance p1, Lib9;
 
     const/4 v2, 0x1
 
-    invoke-direct {p1, p0, v2}, Lga9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {p1, p0, v2}, Lib9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
     .line 51
-    new-instance v2, Lxm8;
+    new-instance v2, Lyn8;
 
     const/16 v4, 0x9
 
-    invoke-direct {v2, v4, p1}, Lxm8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v4, p1}, Lyn8;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lc79;
+    const-class p1, Le89;
 
-    invoke-virtual {p0, p1, v2}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v2}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 52
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->V0:Llt7;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0:Liu7;
 
     .line 53
-    new-instance p1, Lga9;
+    new-instance p1, Lib9;
 
     const/4 v2, 0x2
 
-    invoke-direct {p1, p0, v2}, Lga9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {p1, p0, v2}, Lib9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
     .line 54
-    invoke-static {v1, p1}, Lmbi;->b(ILoh6;)Llt7;
+    invoke-static {v1, p1}, Lrci;->b(ILji6;)Liu7;
 
     move-result-object p1
 
     .line 55
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->V0:Ljava/lang/Object;
 
     .line 56
-    new-instance p1, Lax6;
+    new-instance p1, Lux6;
 
     const/16 v1, 0x8
 
     .line 57
-    invoke-direct {p1, v1}, Lax6;-><init>(I)V
+    invoke-direct {p1, v1}, Lux6;-><init>(I)V
 
     .line 58
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Lax6;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:Lux6;
 
     .line 59
-    new-instance v1, Ly66;
+    new-instance v1, Ls76;
 
     .line 60
-    sget-object v2, Lci9;->a:Lci9;
+    sget-object v2, Ldj9;->a:Ldj9;
 
     .line 61
     invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
@@ -598,23 +598,23 @@
     move-result-object v2
 
     .line 62
-    const-class v4, Lcua;
+    const-class v4, Leva;
 
     invoke-virtual {v2, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcua;
+    check-cast v2, Leva;
 
     .line 63
-    invoke-virtual {v2}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v2}, Leva;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v2
 
     .line 64
-    new-instance v4, Lww0;
+    new-instance v4, Lfx0;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Lc79;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Le89;
 
     move-result-object v6
 
@@ -625,31 +625,31 @@
     const/4 v5, 0x1
 
     .line 65
-    const-class v7, Lc79;
+    const-class v7, Le89;
 
     const-string v8, "onMemberClicked"
 
     const-string v9, "onMemberClicked$message_list_release(J)V"
 
-    invoke-direct/range {v4 .. v11}, Lww0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v4 .. v11}, Lfx0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 66
-    new-instance v5, Lfa9;
+    new-instance v5, Lhb9;
 
     const/4 v6, 0x2
 
-    invoke-direct {v5, p0, v6}, Lfa9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {v5, p0, v6}, Lhb9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
     .line 67
-    invoke-direct {v1, v2, p1, v4, v5}, Ly66;-><init>(Ljava/util/concurrent/ExecutorService;Lax6;Lww0;Lfa9;)V
+    invoke-direct {v1, v2, p1, v4, v5}, Ls76;-><init>(Ljava/util/concurrent/ExecutorService;Lux6;Lfx0;Lhb9;)V
 
-    iput-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Z0:Ly66;
+    iput-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Y0:Ls76;
 
     .line 68
-    new-instance p1, Lyr0;
+    new-instance p1, Lhs0;
 
     .line 69
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -666,12 +666,12 @@
     const/4 v2, 0x1
 
     .line 70
-    invoke-direct {p1, v2, v1}, Lyr0;-><init>(IF)V
+    invoke-direct {p1, v2, v1}, Lhs0;-><init>(IF)V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:Lyr0;
+    iput-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Z0:Lhs0;
 
     .line 71
-    sget-object p1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sget-object p1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/4 v1, 0x5
 
@@ -694,7 +694,7 @@
     int-to-float p1, p1
 
     .line 72
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -706,7 +706,7 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Lagi;->d(F)I
+    invoke-static {p1}, Lfhi;->b(F)I
 
     move-result p1
 
@@ -716,7 +716,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -727,7 +727,7 @@
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
     .line 73
-    invoke-static {v0, v1, p1}, Ld15;->c(FFI)I
+    invoke-static {v0, v1, p1}, Lu15;->c(FFI)I
 
     move-result p1
 
@@ -736,7 +736,7 @@
     int-to-float v0, v0
 
     .line 74
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -747,7 +747,7 @@
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
     .line 75
-    invoke-static {v0, v1, p1}, Ld15;->c(FFI)I
+    invoke-static {v0, v1, p1}, Lu15;->c(FFI)I
 
     move-result p1
 
@@ -758,7 +758,7 @@
 
     .line 76
     :goto_2
-    iput p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:I
+    iput p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:I
 
     .line 77
     invoke-virtual {p0, v3}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->N0(Z)V
@@ -766,7 +766,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Bundle;ILvh4;)V
+.method public synthetic constructor <init>(Landroid/os/Bundle;ILki4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -784,7 +784,7 @@
 
 
 # virtual methods
-.method public final C0(Landroid/view/LayoutInflater;Landroid/os/Bundle;)Landroid/view/View;
+.method public final C0(Landroid/view/LayoutInflater;Landroid/os/Bundle;)Landroid/widget/FrameLayout;
     .locals 12
 
     new-instance v0, Landroid/widget/FrameLayout;
@@ -795,7 +795,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lsza;->b:I
+    sget v1, Lu0b;->b:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
@@ -811,13 +811,13 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
 
-    new-instance v3, Lz66;
+    new-instance v3, Lt76;
 
     const/16 v4, 0x15
 
-    invoke-direct {v3, v4, p0}, Lz66;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, p0}, Lt76;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v0, v3}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v0, v3}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     new-instance v3, Landroid/widget/FrameLayout;
 
@@ -827,7 +827,7 @@
 
     invoke-direct {v3, v4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v4, Lixa;->I:I
+    sget v4, Lkya;->I:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
@@ -841,7 +841,7 @@
 
     int-to-float v6, v6
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -853,7 +853,7 @@
 
     mul-float/2addr v7, v6
 
-    invoke-static {v7}, Lagi;->d(F)I
+    invoke-static {v7}, Lfhi;->b(F)I
 
     move-result v7
 
@@ -861,15 +861,15 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Llt7;
+    iget-object v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Liu7;
 
-    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lwyc;
+    check-cast v4, Ld0d;
 
-    invoke-virtual {v4}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {v4}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object v4
 
@@ -881,7 +881,7 @@
 
     if-eqz v7, :cond_0
 
-    iget-object v7, v7, Lone/me/messages/list/loader/MessageModel;->D0:Lvd9;
+    iget-object v7, v7, Lone/me/messages/list/loader/MessageModel;->C0:Lwe9;
 
     goto :goto_0
 
@@ -891,17 +891,17 @@
     :goto_0
     const/4 v9, 0x1
 
-    invoke-virtual {v4, v7, v9}, Lru/ok/onechat/reactions/ReactionsViewModel;->j(Lvd9;Z)Lx08;
+    invoke-virtual {v4, v7, v9}, Lru/ok/onechat/reactions/ReactionsViewModel;->j(Lwe9;Z)Lu18;
 
     move-result-object v4
 
-    sget-object v7, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sget-object v7, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/4 v10, 0x5
 
     aget-object v7, v7, v10
 
-    iget-object v7, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->J0:Lqs;
+    iget-object v7, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->I0:Lqs;
 
     invoke-virtual {v7, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -915,7 +915,7 @@
 
     if-eqz v7, :cond_2
 
-    invoke-virtual {v4}, Lx08;->isEmpty()Z
+    invoke-virtual {v4}, Lu18;->isEmpty()Z
 
     move-result v7
 
@@ -925,31 +925,31 @@
 
     move-result-object v7
 
-    sget-object v10, Lci9;->a:Lci9;
+    sget-object v10, Ldj9;->a:Ldj9;
 
     invoke-virtual {v10}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v10
 
-    const-class v11, Lcua;
+    const-class v11, Leva;
 
     invoke-virtual {v10, v11}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v10
 
-    check-cast v10, Lcua;
+    check-cast v10, Leva;
 
-    invoke-virtual {v10}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v10}, Leva;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v10
 
-    new-instance v11, Lxxc;
+    new-instance v11, Lezc;
 
-    invoke-direct {v11, v7, v10}, Lxxc;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
+    invoke-direct {v11, v7, v10}, Lezc;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
 
-    invoke-virtual {v11, v4, v8}, Lxxc;->a(Ljava/util/List;Ljava/lang/Integer;)V
+    invoke-virtual {v11, v4, v8}, Lezc;->a(Ljava/util/List;Ljava/lang/Integer;)V
 
-    iput-object p0, v11, Lxxc;->b:Lwxc;
+    iput-object p0, v11, Lezc;->b:Ldzc;
 
     new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -959,7 +959,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -971,13 +971,13 @@
 
     mul-float/2addr v7, v5
 
-    invoke-static {v7}, Lagi;->d(F)I
+    invoke-static {v7}, Lfhi;->b(F)I
 
     move-result v7
 
     iput v7, v4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -989,7 +989,7 @@
 
     mul-float/2addr v5, v7
 
-    invoke-static {v5}, Lagi;->d(F)I
+    invoke-static {v5}, Lfhi;->b(F)I
 
     move-result v5
 
@@ -1001,7 +1001,7 @@
 
     if-eqz v5, :cond_1
 
-    iget-boolean v5, v5, Lone/me/messages/list/loader/MessageModel;->F0:Z
+    iget-boolean v5, v5, Lone/me/messages/list/loader/MessageModel;->E0:Z
 
     if-ne v5, v9, :cond_1
 
@@ -1015,13 +1015,13 @@
     :goto_1
     iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    iget-object v5, v11, Lxxc;->d:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v5, v11, Lezc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v3, v5, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iput-object v11, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Lxxc;
+    iput-object v11, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Lezc;
 
     :cond_2
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -1034,7 +1034,7 @@
 
     invoke-direct {v3, v4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v4, Lixa;->E:I
+    sget v4, Lkya;->E:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
@@ -1042,7 +1042,7 @@
 
     invoke-direct {v4, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    iget v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:I
+    iget v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:I
 
     iput v2, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
@@ -1050,7 +1050,7 @@
 
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:Lyr0;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Z0:Lhs0;
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -1062,7 +1062,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -1074,7 +1074,7 @@
 
     mul-float/2addr v6, p1
 
-    invoke-static {v6}, Lagi;->d(F)I
+    invoke-static {v6}, Lfhi;->b(F)I
 
     move-result p1
 
@@ -1083,9 +1083,9 @@
     goto :goto_2
 
     :cond_3
-    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->C0:Lkh7;
+    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->B0:Lgi7;
 
-    invoke-static {v3, p1, v8}, Lqzh;->b(Landroid/view/View;Lkh7;Lqh6;)V
+    invoke-static {v3, p1, v8}, Lt0i;->b(Landroid/view/View;Lgi7;Lli6;)V
 
     :goto_2
     new-instance p1, Lo3;
@@ -1094,14 +1094,14 @@
 
     invoke-direct {p1, p0, v8, p2}, Lo3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v3}, Lkci;->m(Lgi6;Landroid/view/View;)V
+    invoke-static {p1, v3}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public final D0()Lxub;
+.method public final D0()Lcwb;
     .locals 2
 
     new-instance v0, Ly9;
@@ -1113,10 +1113,10 @@
     return-object v0
 .end method
 
-.method public final E0()Lkh7;
+.method public final E0()Lgi7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->D0:Lkh7;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->C0:Lgi7;
 
     return-object v0
 .end method
@@ -1124,25 +1124,25 @@
 .method public final L0()V
     .locals 3
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0:Llt7;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lim9;
+    check-cast v0, Ljn9;
 
-    iget-object v0, v0, Lim9;->I1:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v0, v0, Ljn9;->I1:Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x0
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Y0:Loh6;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Lji6;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -1167,7 +1167,7 @@
 
     invoke-direct {p2, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Ls5b;
+    new-instance v1, Lu6b;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1175,15 +1175,15 @@
 
     const/4 v3, 0x6
 
-    invoke-direct {v1, v2, v3}, Ls5b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, v2, v3}, Lu6b;-><init>(Landroid/content/Context;I)V
 
-    sget v2, Lsza;->c:I
+    sget v2, Lu0b;->c:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    sget-object v2, Lk5b;->a:Lk5b;
+    sget-object v2, Lm6b;->a:Lm6b;
 
-    invoke-virtual {v1, v2}, Ls5b;->setForm(Lk5b;)V
+    invoke-virtual {v1, v2}, Lu6b;->setForm(Lm6b;)V
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
@@ -1199,25 +1199,25 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    sget v2, Lkxa;->L:I
+    sget v2, Lmya;->L:I
 
-    invoke-virtual {v1, v2}, Ls5b;->setTitle(I)V
+    invoke-virtual {v1, v2}, Lu6b;->setTitle(I)V
 
-    new-instance v2, Lb5b;
+    new-instance v2, Ld6b;
 
-    new-instance v3, Lfa9;
+    new-instance v3, Lhb9;
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, p0, v5}, Lfa9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {v3, p0, v5}, Lhb9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
-    invoke-direct {v2, v3}, Lb5b;-><init>(Lqh6;)V
+    invoke-direct {v2, v3}, Ld6b;-><init>(Lli6;)V
 
-    invoke-virtual {v1, v2}, Ls5b;->setLeftActions(Lg5b;)V
+    invoke-virtual {v1, v2}, Lu6b;->setLeftActions(Li6b;)V
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->B0:Lkh7;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->A0:Lgi7;
 
-    invoke-static {v1, v2, v0}, Lqzh;->b(Landroid/view/View;Lkh7;Lqh6;)V
+    invoke-static {v1, v2, v0}, Lt0i;->b(Landroid/view/View;Lgi7;Lli6;)V
 
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1239,9 +1239,9 @@
 
     invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Z0:Ly66;
+    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Y0:Ls76;
 
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
+    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
 
     new-instance v2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -1251,13 +1251,13 @@
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lr5d;)V
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Ly6d;)V
 
     const/16 v2, 0xc
 
     int-to-float v2, v2
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1269,7 +1269,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lagi;->d(F)I
+    invoke-static {v2}, Lfhi;->b(F)I
 
     move-result v2
 
@@ -1283,53 +1283,53 @@
 
     invoke-virtual {v1, v2, v3, v2, v4}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance v2, Lxr6;
+    new-instance v2, Lrs6;
 
     new-instance v3, Lla;
 
-    const/16 v4, 0x16
+    const/16 v4, 0x15
 
     invoke-direct {v3, p0, v4, v1}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/16 v4, 0x1b
+    const/16 v4, 0x1a
 
-    invoke-direct {v2, v4, v3}, Lxr6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v4, v3}, Lrs6;-><init>(ILjava/lang/Object;)V
 
-    new-instance v3, Lo7f;
+    new-instance v3, Lw8f;
 
-    invoke-direct {v3, v1, p1, v2}, Lo7f;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lm5d;Lp7f;)V
+    invoke-direct {v3, v1, p1, v2}, Lw8f;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lt6d;Lx8f;)V
 
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
 
-    new-instance p1, Lp49;
+    new-instance p1, Lr59;
 
-    sget-object v2, Lsz4;->t0:Lc82;
+    sget-object v2, Ll05;->s0:Lk82;
 
-    invoke-virtual {v2, v1}, Lc82;->g(Landroid/view/View;)Lu4b;
+    invoke-virtual {v2, v1}, Lk82;->n(Landroid/view/View;)Lv5b;
 
     move-result-object v2
 
     const/4 v4, 0x0
 
-    invoke-direct {p1, v4, v2}, Lp49;-><init>(ILu4b;)V
+    invoke-direct {p1, v4, v2}, Lr59;-><init>(ILv5b;)V
 
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
 
-    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->C0:Lkh7;
+    iget-object p1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->B0:Lgi7;
 
-    invoke-static {v1, p1, v0}, Lqzh;->b(Landroid/view/View;Lkh7;Lqh6;)V
+    invoke-static {v1, p1, v0}, Lt0i;->b(Landroid/view/View;Lgi7;Lli6;)V
 
     new-instance p1, Lub;
 
     const/4 v2, 0x1
 
-    invoke-direct {p1, v3, v0, v2}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {p1, v3, v0, v2}, Lub;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v1}, Lkci;->m(Lgi6;Landroid/view/View;)V
+    invoke-static {p1, v1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
 
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iput-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Landroidx/recyclerview/widget/RecyclerView;
 
     goto :goto_0
 
@@ -1338,7 +1338,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lx14;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Ll24;->getArgs()Landroid/os/Bundle;
 
     move-result-object p2
 
@@ -1350,32 +1350,32 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {p2}, Lbvi;->b(Landroid/os/Bundle;)Ljava/util/List;
+    invoke-static {p2}, Lcwi;->b(Landroid/os/Bundle;)Ljava/util/List;
 
     move-result-object v0
 
     :cond_1
     if-nez v0, :cond_2
 
-    sget-object v0, Ls95;->a:Ls95;
+    sget-object v0, Lka5;->a:Lka5;
 
     :cond_2
-    new-instance p2, Lfa9;
+    new-instance p2, Lhb9;
 
     const/4 v1, 0x1
 
-    invoke-direct {p2, p0, v1}, Lfa9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {p2, p0, v1}, Lhb9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
-    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Lax6;
+    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:Lux6;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, v0, p2}, Lax6;->g(Landroid/content/Context;Ljava/util/List;Lqh6;)Landroid/widget/LinearLayout;
+    invoke-static {p1, v0, p2}, Lux6;->g(Landroid/content/Context;Ljava/util/List;Lli6;)Landroid/widget/LinearLayout;
 
     move-result-object p2
 
     :goto_0
-    iput-object p2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Landroid/view/ViewGroup;
+    iput-object p2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Landroid/view/ViewGroup;
 
     return-object p2
 .end method
@@ -1391,24 +1391,24 @@
 .method public final R()V
     .locals 6
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Lxxc;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Lezc;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v1, v0, Lxxc;->d:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v1, v0, Lezc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Llt7;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Liu7;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lwyc;
+    check-cast v2, Ld0d;
 
-    invoke-virtual {v2}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {v2}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object v2
 
@@ -1418,7 +1418,7 @@
 
     if-eqz v3, :cond_1
 
-    iget-object v3, v3, Lone/me/messages/list/loader/MessageModel;->D0:Lvd9;
+    iget-object v3, v3, Lone/me/messages/list/loader/MessageModel;->C0:Lwe9;
 
     goto :goto_0
 
@@ -1428,7 +1428,7 @@
     :goto_0
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v3, v4}, Lru/ok/onechat/reactions/ReactionsViewModel;->j(Lvd9;Z)Lx08;
+    invoke-virtual {v2, v3, v4}, Lru/ok/onechat/reactions/ReactionsViewModel;->j(Lwe9;Z)Lu18;
 
     move-result-object v2
 
@@ -1440,24 +1440,24 @@
 
     move-result v3
 
-    iget-object v5, p0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->a:Ldvb;
+    iget-object v5, p0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->a:Liwb;
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v5}, Ldvb;->getCallback()Lxub;
+    invoke-virtual {v5}, Liwb;->getCallback()Lcwb;
 
     move-result-object v5
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v5}, Lxub;->c()I
+    invoke-virtual {v5}, Lcwb;->c()I
 
     move-result v4
 
     :cond_2
     sub-int/2addr v3, v4
 
-    iget v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:I
+    iget v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:I
 
     sub-int/2addr v3, v4
 
@@ -1465,19 +1465,19 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v2, v3}, Lxxc;->a(Ljava/util/List;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v2, v3}, Lezc;->a(Ljava/util/List;Ljava/lang/Integer;)V
 
-    sget-object v0, Lvv6;->c:Lvv6;
+    sget-object v0, Lpw6;->c:Lpw6;
 
-    invoke-static {v1, v0}, Ltsd;->f(Landroid/view/View;Lxv6;)Z
+    invoke-static {v1, v0}, Lzpe;->h(Landroid/view/View;Lrw6;)Z
 
-    new-instance v0, Lmj6;
+    new-instance v0, Lhk6;
 
     const/16 v2, 0xd
 
-    invoke-direct {v0, v1, v2, p0}, Lmj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, p0}, Lhk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v1, v0}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+    invoke-static {v1, v0}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
 
     return-void
 .end method
@@ -1485,13 +1485,13 @@
 .method public final S0(I)V
     .locals 4
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/16 v1, 0x9
 
     aget-object v2, v0, v1
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Lqs;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->M0:Lqs;
 
     invoke-virtual {v2, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1511,17 +1511,17 @@
 
     invoke-virtual {v2, p0, v0}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lx14;->getTargetController()Lx14;
+    invoke-virtual {p0}, Ll24;->getTargetController()Ll24;
 
     move-result-object v0
 
-    instance-of v1, v0, Lz04;
+    instance-of v1, v0, Lo14;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lz04;
+    check-cast v0, Lo14;
 
     goto :goto_0
 
@@ -1531,7 +1531,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, v2}, Lz04;->F(ILandroid/os/Bundle;)V
+    invoke-interface {v0, p1, v2}, Lo14;->F(ILandroid/os/Bundle;)V
 
     :cond_1
     const/4 p1, 0x1
@@ -1544,15 +1544,15 @@
 .method public final T0()Landroid/view/ViewGroup;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/16 v1, 0xa
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Lazc;
+    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Lh0d;
 
-    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1564,31 +1564,31 @@
 .method public final U0()Lone/me/messages/list/loader/MessageModel;
     .locals 3
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0:Llt7;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lim9;
-
-    iget-object v0, v0, Lim9;->y1:Lgzc;
-
-    iget-object v0, v0, Lgzc;->a:Llze;
-
-    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ldj9;
+    check-cast v0, Ljn9;
 
-    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    iget-object v0, v0, Ljn9;->y1:Ln0d;
+
+    iget-object v0, v0, Ln0d;->a:Lq0f;
+
+    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldk9;
+
+    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/4 v2, 0x7
 
     aget-object v1, v1, v2
 
-    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->L0:Lqs;
+    iget-object v1, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->K0:Lqs;
 
     invoke-virtual {v1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1600,7 +1600,7 @@
 
     move-result-wide v1
 
-    invoke-interface {v0, v1, v2}, Lij9;->e(J)Lone/me/messages/list/loader/MessageModel;
+    invoke-interface {v0, v1, v2}, Ljk9;->e(J)Lone/me/messages/list/loader/MessageModel;
 
     move-result-object v0
 
@@ -1610,9 +1610,9 @@
 .method public final V0()Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->V0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1625,16 +1625,16 @@
     return v0
 .end method
 
-.method public final W0()Lc79;
+.method public final W0()Le89;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->V0:Llt7;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc79;
+    check-cast v0, Le89;
 
     return-object v0
 .end method
@@ -1649,16 +1649,16 @@
     return-void
 .end method
 
-.method public final e0(Llxc;)V
+.method public final e0(Lsyc;)V
     .locals 11
 
     invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0()Lone/me/messages/list/loader/MessageModel;
 
     move-result-object v0
 
-    new-instance v1, Lpyc;
+    new-instance v1, Lwzc;
 
-    iget-object v2, p1, Llxc;->b:Lwwc;
+    iget-object v2, p1, Lsyc;->b:Ldyc;
 
     const-wide/16 v3, 0x0
 
@@ -1681,7 +1681,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v7, v0, Lone/me/messages/list/loader/MessageModel;->D0:Lvd9;
+    iget-object v7, v0, Lone/me/messages/list/loader/MessageModel;->C0:Lwe9;
 
     :goto_1
     move-wide v9, v5
@@ -1698,21 +1698,21 @@
     goto :goto_1
 
     :goto_2
-    invoke-direct/range {v1 .. v7}, Lpyc;-><init>(Lwwc;JJLvd9;)V
+    invoke-direct/range {v1 .. v7}, Lwzc;-><init>(Ldyc;JJLwe9;)V
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Llt7;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Liu7;
 
-    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwyc;
-
-    invoke-virtual {v2}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lru/ok/onechat/reactions/ReactionsViewModel;->l(Lpyc;)V
+    check-cast v2, Ld0d;
+
+    invoke-virtual {v2}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lru/ok/onechat/reactions/ReactionsViewModel;->l(Lwzc;)V
 
     const/4 v1, 0x1
 
@@ -1720,20 +1720,20 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, v0, Lone/me/messages/list/loader/MessageModel;->D0:Lvd9;
+    iget-object v0, v0, Lone/me/messages/list/loader/MessageModel;->C0:Lwe9;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, v0, Lvd9;->c:Lexc;
+    iget-object v0, v0, Lwe9;->c:Llyc;
 
     if-eqz v0, :cond_3
 
-    iget-object v8, v0, Lexc;->b:Lwwc;
+    iget-object v8, v0, Llyc;->b:Ldyc;
 
     :cond_3
-    iget-object p1, p1, Llxc;->b:Lwwc;
+    iget-object p1, p1, Lsyc;->b:Ldyc;
 
-    invoke-static {v8, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1742,27 +1742,27 @@
     goto :goto_3
 
     :cond_4
-    sget-object p1, Lci9;->a:Lci9;
+    sget-object p1, Ldj9;->a:Ldj9;
 
-    invoke-virtual {p1}, Lci9;->a()Ldc7;
+    invoke-virtual {p1}, Ldj9;->a()Lad7;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    new-instance v0, Lcc7;
+    new-instance v0, Lzc7;
 
-    sget-object v2, Lac7;->X:Lac7;
+    sget-object v2, Lxc7;->X:Lxc7;
 
-    invoke-direct {v0, v2, v1}, Lcc7;-><init>(Lac7;I)V
+    invoke-direct {v0, v2, v1}, Lzc7;-><init>(Lxc7;I)V
 
     invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
 
-    sget-object v1, Lnod;->N0:Lnod;
+    sget-object v1, Lupd;->M0:Lupd;
 
-    invoke-virtual {p1, v0, v1}, Ldc7;->f(Ljava/util/Set;Lnod;)V
+    invoke-virtual {p1, v0, v1}, Lad7;->f(Ljava/util/Set;Lupd;)V
 
     :cond_5
     :goto_3
@@ -1774,27 +1774,27 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->onAttach(Landroid/view/View;)V
 
-    new-instance p1, Lga9;
+    new-instance p1, Lib9;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lga9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+    invoke-direct {p1, p0, v0}, Lib9;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
 
-    new-instance v0, Lks0;
+    new-instance v0, Lts0;
 
-    invoke-direct {v0, p0, p1}, Lks0;-><init>(Lx14;Loh6;)V
+    invoke-direct {v0, p0, p1}, Lts0;-><init>(Ll24;Lji6;)V
 
-    invoke-virtual {p0}, Lx14;->getRouter()Ljhd;
+    invoke-virtual {p0}, Ll24;->getRouter()Lqid;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lx14;->getRouter()Ljhd;
+    invoke-virtual {p0}, Ll24;->getRouter()Lqid;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Ljhd;->a(Lb24;)V
+    invoke-virtual {p1, v0}, Lqid;->a(Lp24;)V
 
     return-void
 
@@ -1805,7 +1805,7 @@
 
     invoke-direct {p1, p0, v1, v0}, Lt9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lx14;->addLifecycleListener(Lv14;)V
+    invoke-virtual {p0, p1}, Ll24;->addLifecycleListener(Lj24;)V
 
     return-void
 .end method
@@ -1815,13 +1815,13 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Lxxc;
+    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Lezc;
 
-    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Y0:Loh6;
+    iput-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Lji6;
 
     invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->onDestroyView(Landroid/view/View;)V
 
@@ -1833,13 +1833,13 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:[Ltr7;
 
     const/4 v1, 0x0
 
     aget-object v2, v0, v1
 
-    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->E0:Lqs;
+    iget-object v2, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->D0:Lqs;
 
     invoke-virtual {v2, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1857,7 +1857,7 @@
 
     aget-object v3, v0, v3
 
-    iget-object v3, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->F0:Lqs;
+    iget-object v3, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->E0:Lqs;
 
     invoke-virtual {v3, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1870,23 +1870,23 @@
     goto/16 :goto_0
 
     :cond_0
-    new-instance v4, Ljy;
+    new-instance v4, Lky;
 
-    invoke-direct {v4, v3, v2}, Ljy;-><init>(Ljava/lang/Class;I)V
+    invoke-direct {v4, v3, v2}, Lky;-><init>(Ljava/lang/Class;I)V
 
-    invoke-virtual {v4, p0}, Ljy;->p(Lone/me/sdk/arch/Widget;)Loh6;
+    invoke-virtual {v4, p0}, Lky;->r(Lone/me/sdk/arch/Widget;)Lji6;
 
     move-result-object v5
 
-    iput-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Y0:Loh6;
+    iput-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Lji6;
 
-    new-instance v7, Ldg8;
+    new-instance v7, Ld09;
 
     invoke-virtual {p0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0()Landroid/view/View;
 
     move-result-object v5
 
-    invoke-direct {v7, v4, v5}, Ldg8;-><init>(Ljy;Landroid/view/View;)V
+    invoke-direct {v7, v4, v5}, Ld09;-><init>(Lky;Landroid/view/View;)V
 
     new-instance v9, Landroid/graphics/Rect;
 
@@ -1904,7 +1904,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -1916,35 +1916,35 @@
 
     mul-float/2addr v5, v6
 
-    invoke-static {v5}, Lagi;->d(F)I
+    invoke-static {v5}, Lfhi;->b(F)I
 
     move-result v11
 
-    new-instance v6, Luqd;
+    new-instance v6, Lbsd;
 
-    invoke-direct/range {v6 .. v11}, Luqd;-><init>(Ldg8;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-direct/range {v6 .. v11}, Lbsd;-><init>(Ld09;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    iget-object v4, v4, Ljy;->Y:Ljava/lang/Object;
+    iget-object v4, v4, Lky;->Y:Ljava/lang/Object;
 
     check-cast v4, Ljava/util/ArrayList;
 
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v4, Ljy;
+    new-instance v4, Lky;
 
-    invoke-direct {v4, v3, v2}, Ljy;-><init>(Ljava/lang/Class;I)V
+    invoke-direct {v4, v3, v2}, Lky;-><init>(Ljava/lang/Class;I)V
 
-    invoke-virtual {v4, p0}, Ljy;->p(Lone/me/sdk/arch/Widget;)Loh6;
+    invoke-virtual {v4, p0}, Lky;->r(Lone/me/sdk/arch/Widget;)Lji6;
 
-    new-instance v2, Lwx6;
+    new-instance v2, Lqy6;
 
-    invoke-direct {v2, v4}, Lwx6;-><init>(Ljy;)V
+    invoke-direct {v2, v4}, Lqy6;-><init>(Lky;)V
 
     const/4 v3, 0x2
 
     aget-object v4, v0, v3
 
-    iget-object v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->G0:Lqs;
+    iget-object v4, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->F0:Lqs;
 
     invoke-virtual {v4, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1956,7 +1956,7 @@
 
     aget-object v5, v0, v5
 
-    iget-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->H0:Lqs;
+    iget-object v5, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->G0:Lqs;
 
     invoke-virtual {v5, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1968,7 +1968,7 @@
 
     aget-object v0, v0, v6
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->I0:Lqs;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->H0:Lqs;
 
     invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
@@ -1976,7 +1976,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2, p1, v4, v5, v0}, Lwx6;->a(Landroid/view/View;Landroid/graphics/Rect;Ljava/lang/Float;Ljava/lang/Integer;)V
+    invoke-virtual {v2, p1, v4, v5, v0}, Lqy6;->a(Landroid/view/View;Landroid/graphics/Rect;Ljava/lang/Float;Ljava/lang/Integer;)V
 
     invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->V0()Z
 
@@ -1984,19 +1984,19 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Lc79;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Le89;
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->T0:Llt7;
+    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lwyc;
+    check-cast v2, Ld0d;
 
-    invoke-virtual {v2}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {v2}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object v2
 
@@ -2004,45 +2004,45 @@
 
     move-result v2
 
-    iget-object v4, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v4, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v5, p1, Lc79;->Z:Lqkf;
+    iget-object v5, p1, Le89;->Z:Lulf;
 
-    check-cast v5, Losa;
+    check-cast v5, Lqta;
 
-    invoke-virtual {v5}, Losa;->a()Lv44;
+    invoke-virtual {v5}, Lqta;->a()Lk54;
 
     move-result-object v5
 
-    new-instance v6, Lv69;
+    new-instance v6, Lx79;
 
     const/4 v7, 0x0
 
-    invoke-direct {v6, p1, v2, v7}, Lv69;-><init>(Lc79;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {v6, p1, v2, v7}, Lx79;-><init>(Le89;ZLkotlin/coroutines/Continuation;)V
 
-    invoke-static {v4, v5, v7, v6, v3}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    invoke-static {v4, v5, v7, v6, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
 
     move-result-object v2
 
-    iget-object v3, p1, Lc79;->B0:Lpzd;
+    iget-object v3, p1, Le89;->A0:Lw0e;
 
-    sget-object v4, Lc79;->K0:[Lwq7;
+    sget-object v4, Le89;->J0:[Ltr7;
 
     aget-object v1, v4, v1
 
-    invoke-virtual {v3, p1, v1, v2}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    invoke-virtual {v3, p1, v1, v2}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Lc79;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Le89;
 
     move-result-object p1
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lwyc;
+    check-cast v0, Ld0d;
 
-    invoke-virtual {v0}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {v0}, Ld0d;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object v0
 
@@ -2050,95 +2050,95 @@
 
     move-result v0
 
-    iget-object v1, p1, Lc79;->A0:Lm49;
+    iget-object v1, p1, Le89;->z0:Lo59;
 
-    iget-object v1, v1, Lm49;->d:Leie;
+    iget-object v1, v1, Lo59;->d:Lnje;
 
-    new-instance v2, Lfzc;
+    new-instance v2, Lm0d;
 
-    invoke-direct {v2, v1}, Lfzc;-><init>(Lg0a;)V
+    invoke-direct {v2, v1}, Lm0d;-><init>(Li1a;)V
 
-    new-instance v1, Lb79;
+    new-instance v1, Ld89;
 
-    invoke-direct {v1, p1, v0, v7}, Lb79;-><init>(Lc79;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, v0, v7}, Ld89;-><init>(Le89;ZLkotlin/coroutines/Continuation;)V
 
-    new-instance v0, Lh06;
+    new-instance v0, Lb16;
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v2, v1, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
+    invoke-direct {v0, v2, v1, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    iget-object p1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object p1, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {v0, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {v0, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Lc79;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Le89;
 
     move-result-object p1
 
-    iget-object p1, p1, Lc79;->G0:Lgzc;
+    iget-object p1, p1, Le89;->F0:Ln0d;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Liw7;->x()Lkw7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    sget-object v1, Lkv7;->o:Lkv7;
+    sget-object v1, Lhw7;->o:Lhw7;
 
-    invoke-static {p1, v0, v1}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
-
-    move-result-object p1
-
-    new-instance v0, Lia9;
-
-    invoke-direct {v0, v7, p0}, Lia9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
-
-    new-instance v2, Lh06;
-
-    invoke-direct {v2, p1, v0, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    new-instance v0, Lkb9;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Lc79;
+    invoke-direct {v0, v7, p0}, Lkb9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+
+    new-instance v2, Lb16;
+
+    invoke-direct {v2, p1, v0, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lc79;->H0:Lde5;
+    invoke-static {v2, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0()Le89;
+
+    move-result-object p1
+
+    iget-object p1, p1, Le89;->G0:Lxe5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Liw7;->x()Lkw7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
-    new-instance v0, Lja9;
+    new-instance v0, Llb9;
 
-    invoke-direct {v0, v7, p0}, Lja9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+    invoke-direct {v0, v7, p0}, Llb9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
 
-    new-instance v1, Lh06;
+    new-instance v1, Lb16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     :cond_1
     :goto_0
@@ -2148,31 +2148,31 @@
 .method public final v(Lone/me/sdk/arch/Widget;)V
     .locals 10
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->setTargetController(Lx14;)V
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
 
     move-object v0, p1
 
     :goto_0
-    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
+    invoke-virtual {v0}, Ll24;->getParentController()Ll24;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
+    invoke-virtual {v0}, Ll24;->getParentController()Ll24;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    instance-of v1, v0, Lphd;
+    instance-of v1, v0, Lwid;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lphd;
+    check-cast v0, Lwid;
 
     goto :goto_1
 
@@ -2182,7 +2182,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lphd;->f0()Ljhd;
+    invoke-interface {v0}, Lwid;->f0()Lqid;
 
     move-result-object v2
 
@@ -2191,7 +2191,7 @@
 
     if-eqz v2, :cond_3
 
-    new-instance v3, Lmhd;
+    new-instance v3, Ltid;
 
     const/4 v8, 0x0
 
@@ -2205,7 +2205,7 @@
 
     move-object v4, p0
 
-    invoke-direct/range {v3 .. v9}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
+    invoke-direct/range {v3 .. v9}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
     const/4 p1, 0x0
 
@@ -2213,9 +2213,9 @@
 
     const-string v1, "BottomSheetWidget"
 
-    invoke-static {p1, v3, v0, v1}, Lwx1;->u(ZLmhd;ZLjava/lang/String;)V
+    invoke-static {p1, v3, v0, v1}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Ljhd;->G(Lmhd;)V
+    invoke-virtual {v2, v3}, Lqid;->G(Ltid;)V
 
     :cond_3
     return-void

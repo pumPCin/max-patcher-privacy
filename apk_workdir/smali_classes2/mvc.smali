@@ -1,30 +1,92 @@
-.class public final Lmvc;
+.class public abstract Lmvc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Supplier;
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static AsyncViewStub:[I = null
+
+.field public static AsyncViewStub_layout:I = 0x0
+
+.field public static LongRoundedTitleSubtitleButton:[I = null
+
+.field public static LongRoundedTitleSubtitleButton_lrts_subtitle:I = 0x0
+
+.field public static LongRoundedTitleSubtitleButton_lrts_title:I = 0x1
+
+.field public static PopupLayout:[I = null
+
+.field public static PopupLayout_sensitivity:I = 0x0
+
+.field public static RoundedRectConstraintLayout:[I = null
+
+.field public static RoundedRectConstraintLayout_roundRadius:I = 0x0
+
+.field public static RoundedRectFrameLayout:[I = null
+
+.field public static RoundedRectFrameLayout_cornersRadius:I = 0x0
+
+.field public static TamLoadingView:[I = null
+
+.field public static TamLoadingView_tlv_auto_repeat:I = 0x0
+
+.field public static TamLoadingView_tlv_network_fetch:I = 0x1
 
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 4
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
 
-    iget-wide v0, p0, Lmvc;->a:J
+    const v0, 0x7f040594
 
-    const-wide/16 v2, 0x1
-
-    sub-long v2, v0, v2
-
-    iput-wide v2, p0, Lmvc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    filled-new-array {v0}, [I
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lmvc;->AsyncViewStub:[I
+
+    const v0, 0x7f040609
+
+    const v1, 0x7f04060a
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lmvc;->LongRoundedTitleSubtitleButton:[I
+
+    const v0, 0x7f04074f
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lmvc;->PopupLayout:[I
+
+    const v0, 0x7f040728
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lmvc;->RoundedRectConstraintLayout:[I
+
+    const v0, 0x7f04031a
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lmvc;->RoundedRectFrameLayout:[I
+
+    const v0, 0x7f040898
+
+    const v1, 0x7f040899
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lmvc;->TamLoadingView:[I
+
+    return-void
 .end method

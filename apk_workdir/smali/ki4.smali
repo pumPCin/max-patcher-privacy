@@ -1,3 +1,3 @@
-.class public final Lki4;
-.super Ljava/io/IOException;
+.class public abstract Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"

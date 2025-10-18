@@ -3,433 +3,443 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lljf;
+.implements Llcf;
+
+
+# static fields
+.field public static final c:Lix0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lec7;
 
-.field public final b:Landroidx/viewpager2/widget/ViewPager2;
+.field public final b:[J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Ld94;->a:I
+    sget-object v0, La5a;->b:La5a;
 
-    iput-object p1, p0, Ld94;->b:Landroidx/viewpager2/widget/ViewPager2;
+    new-instance v1, Laz1;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v2, 0x1d
+
+    invoke-direct {v1, v2}, Laz1;-><init>(I)V
+
+    new-instance v2, Lix0;
+
+    invoke-direct {v2, v1, v0}, Lix0;-><init>(Lvi6;Lv9b;)V
+
+    sput-object v2, Ld94;->c:Lix0;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lz8d;)V
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget v2, v1, Lz8d;->o:I
+
+    const/4 v3, 0x2
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    if-ne v2, v9, :cond_5
+
+    invoke-virtual {v1, v8}, Lec7;->m(I)Lv36;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Lb2;->hasNext()Z
+
+    move-result v10
+
+    if-nez v10, :cond_2
+
+    check-cast v2, Lc94;
+
+    iget-wide v10, v2, Lc94;->b:J
+
+    iget-object v1, v2, Lc94;->a:Lec7;
+
+    iget-wide v12, v2, Lc94;->c:J
+
+    cmp-long v2, v10, v6
+
+    if-nez v2, :cond_0
+
+    const-wide/16 v4, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v4, v10
+
+    :goto_0
+    cmp-long v2, v12, v6
+
+    if-nez v2, :cond_1
+
+    invoke-static {v1}, Lec7;->n(Ljava/lang/Object;)Lz8d;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ld94;->a:Lec7;
+
+    new-array v1, v9, [J
+
+    aput-wide v4, v1, v8
+
+    iput-object v1, v0, Ld94;->b:[J
+
+    return-void
+
+    :cond_1
+    sget-object v2, Lec7;->b:Lv36;
+
+    sget-object v2, Lz8d;->X:Lz8d;
+
+    invoke-static {v1, v2}, Lec7;->o(Ljava/lang/Object;Ljava/lang/Object;)Lz8d;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ld94;->a:Lec7;
+
+    add-long/2addr v12, v4
+
+    new-array v1, v3, [J
+
+    aput-wide v4, v1, v8
+
+    aput-wide v12, v1, v9
+
+    iput-object v1, v0, Ld94;->b:[J
+
+    return-void
+
+    :cond_2
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "expected one element but was: <"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    :goto_1
+    const/4 v2, 0x4
+
+    if-ge v8, v2, :cond_3
+
+    invoke-virtual {v1}, Lb2;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const-string v2, ", "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v1}, Lb2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string v1, ", ..."
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    const/16 v1, 0x3e
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_5
+    mul-int/2addr v2, v3
+
+    new-array v2, v2, [J
+
+    iput-object v2, v0, Ld94;->b:[J
+
+    const-wide v9, 0x7fffffffffffffffL
+
+    invoke-static {v2, v9, v10}, Ljava/util/Arrays;->fill([JJ)V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    sget-object v3, Ld94;->c:Lix0;
+
+    invoke-static {v3, v1}, Lec7;->q(Ljava/util/Comparator;Ljava/util/List;)Lz8d;
+
+    move-result-object v1
+
+    move v3, v8
+
+    :goto_2
+    iget v9, v1, Lz8d;->o:I
+
+    if-ge v8, v9, :cond_b
+
+    invoke-virtual {v1, v8}, Lz8d;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lc94;
+
+    iget-wide v10, v9, Lc94;->b:J
+
+    iget-wide v12, v9, Lc94;->c:J
+
+    iget-object v9, v9, Lc94;->a:Lec7;
+
+    cmp-long v14, v10, v6
+
+    if-nez v14, :cond_6
+
+    const-wide/16 v10, 0x0
+
+    :cond_6
+    add-long v14, v10, v12
+
+    if-eqz v3, :cond_7
+
+    iget-object v4, v0, Ld94;->b:[J
+
+    add-int/lit8 v5, v3, -0x1
+
+    aget-wide v16, v4, v5
+
+    cmp-long v4, v16, v10
+
+    if-gez v4, :cond_8
+
+    :cond_7
+    move-wide/from16 v16, v6
+
+    goto :goto_3
+
+    :cond_8
+    if-nez v4, :cond_9
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lec7;
+
+    invoke-virtual {v4}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    invoke-virtual {v2, v5, v9}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-wide/from16 v16, v6
+
+    goto :goto_4
+
+    :cond_9
+    const-string v4, "CuesWithTimingSubtitle"
+
+    move-wide/from16 v16, v6
+
+    const-string v6, "Truncating unsupported overlapping cues."
+
+    invoke-static {v4, v6}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v4, v0, Ld94;->b:[J
+
+    aput-wide v10, v4, v5
+
+    invoke-virtual {v2, v5, v9}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_4
+
+    :goto_3
+    iget-object v4, v0, Ld94;->b:[J
+
+    add-int/lit8 v5, v3, 0x1
+
+    aput-wide v10, v4, v3
+
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v3, v5
+
+    :goto_4
+    cmp-long v4, v12, v16
+
+    if-eqz v4, :cond_a
+
+    iget-object v4, v0, Ld94;->b:[J
+
+    add-int/lit8 v5, v3, 0x1
+
+    aput-wide v14, v4, v3
+
+    sget-object v3, Lz8d;->X:Lz8d;
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v3, v5
+
+    :cond_a
+    add-int/lit8 v8, v8, 0x1
+
+    move-wide/from16 v6, v16
+
+    goto :goto_2
+
+    :cond_b
+    invoke-static {v2}, Lec7;->k(Ljava/util/Collection;)Lec7;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ld94;->a:Lec7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lnjf;)V
-    .locals 17
+.method public final f(J)I
+    .locals 2
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ld94;->b:[J
 
-    move-object/from16 v1, p1
+    const/4 v1, 0x0
 
-    iget v2, v0, Ld94;->a:I
+    invoke-static {v0, p1, p2, v1}, Lnig;->a([JJZ)I
 
-    packed-switch v2, :pswitch_data_0
+    move-result p1
 
-    iget v1, v1, Lnjf;->a:I
+    iget-object p2, p0, Ld94;->a:Lec7;
 
-    const/4 v2, 0x1
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
 
-    iget-object v3, v0, Ld94;->b:Landroidx/viewpager2/widget/ViewPager2;
+    move-result p2
 
-    invoke-virtual {v3, v1, v2}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+    if-ge p1, p2, :cond_0
 
-    return-void
-
-    :pswitch_0
-    iget v1, v1, Lnjf;->a:I
-
-    iget-object v2, v0, Ld94;->b:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v2}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
-
-    move-result v3
-
-    sub-int/2addr v3, v1
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-le v4, v5, :cond_f
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v4
-
-    invoke-static {v3}, Ljava/lang/Integer;->signum(I)I
-
-    move-result v6
-
-    mul-int/2addr v6, v4
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
-
-    move-result v3
-
-    sub-int/2addr v3, v5
-
-    mul-int/2addr v3, v6
-
-    iget-object v4, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lcm5;
-
-    iget-object v6, v4, Lcm5;->b:Lqqd;
-
-    iget v7, v6, Lqqd;->f:I
-
-    const/4 v8, 0x0
-
-    if-ne v7, v5, :cond_0
-
-    goto :goto_2
+    return p1
 
     :cond_0
-    iput v8, v4, Lcm5;->g:I
+    const/4 p1, -0x1
 
-    int-to-float v7, v8
+    return p1
+.end method
 
-    iput v7, v4, Lcm5;->f:F
+.method public final h(I)J
+    .locals 3
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    iget-object v0, p0, Ld94;->a:Lec7;
 
-    move-result-wide v9
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
-    iput-wide v9, v4, Lcm5;->h:J
+    move-result v0
 
-    iget-object v7, v4, Lcm5;->d:Landroid/view/VelocityTracker;
+    if-ge p1, v0, :cond_0
 
-    if-nez v7, :cond_1
-
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
-
-    move-result-object v7
-
-    iput-object v7, v4, Lcm5;->d:Landroid/view/VelocityTracker;
-
-    iget-object v7, v4, Lcm5;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-static {v7}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
-
-    move-result v7
-
-    iput v7, v4, Lcm5;->e:I
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v7}, Landroid/view/VelocityTracker;->clear()V
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    const/4 v7, 0x4
+    invoke-static {v0}, Lsgi;->d(Z)V
 
-    iput v7, v6, Lqqd;->e:I
+    iget-object v0, p0, Ld94;->b:[J
 
-    invoke-virtual {v6, v5}, Lqqd;->f(Z)V
+    aget-wide v1, v0, p1
 
-    iget v6, v6, Lqqd;->f:I
+    return-wide v1
+.end method
 
-    if-nez v6, :cond_2
+.method public final m(J)Ljava/util/List;
+    .locals 2
 
-    goto :goto_1
+    iget-object v0, p0, Ld94;->b:[J
 
-    :cond_2
-    iget-object v6, v4, Lcm5;->c:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v1, 0x0
 
-    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->E0()V
+    invoke-static {v0, p1, p2, v1}, Lnig;->e([JJZ)I
 
-    :goto_1
-    iget-wide v9, v4, Lcm5;->h:J
+    move-result p1
 
-    const/4 v15, 0x0
+    const/4 p2, -0x1
 
-    const/16 v16, 0x0
+    if-ne p1, p2, :cond_0
 
-    const/4 v13, 0x0
+    sget-object p1, Lec7;->b:Lv36;
 
-    const/4 v14, 0x0
+    sget-object p1, Lz8d;->X:Lz8d;
 
-    move-wide v11, v9
+    return-object p1
 
-    invoke-static/range {v9 .. v16}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+    :cond_0
+    iget-object p2, p0, Ld94;->a:Lec7;
 
-    move-result-object v6
+    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v4, v4, Lcm5;->d:Landroid/view/VelocityTracker;
+    move-result-object p1
 
-    invoke-virtual {v4, v6}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+    check-cast p1, Lec7;
 
-    invoke-virtual {v6}, Landroid/view/MotionEvent;->recycle()V
+    return-object p1
+.end method
 
-    :goto_2
-    int-to-float v3, v3
+.method public final s()I
+    .locals 1
 
-    iget-object v4, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lcm5;
+    iget-object v0, p0, Ld94;->a:Lec7;
 
-    iget-object v6, v4, Lcm5;->b:Lqqd;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
-    iget-boolean v6, v6, Lqqd;->m:Z
+    move-result v0
 
-    if-nez v6, :cond_3
-
-    goto :goto_8
-
-    :cond_3
-    iget v6, v4, Lcm5;->f:F
-
-    sub-float/2addr v6, v3
-
-    iput v6, v4, Lcm5;->f:F
-
-    iget v3, v4, Lcm5;->g:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v6, v3
-
-    invoke-static {v6}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iget v6, v4, Lcm5;->g:I
-
-    add-int/2addr v6, v3
-
-    iput v6, v4, Lcm5;->g:I
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v11
-
-    iget-object v6, v4, Lcm5;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v6}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
-
-    move-result v6
-
-    if-nez v6, :cond_4
-
-    move v6, v5
-
-    goto :goto_3
-
-    :cond_4
-    move v6, v8
-
-    :goto_3
-    if-eqz v6, :cond_5
-
-    move v7, v3
-
-    goto :goto_4
-
-    :cond_5
-    move v7, v8
-
-    :goto_4
-    if-eqz v6, :cond_6
-
-    move v3, v8
-
-    :cond_6
-    const/4 v9, 0x0
-
-    if-eqz v6, :cond_7
-
-    iget v10, v4, Lcm5;->f:F
-
-    move v14, v10
-
-    goto :goto_5
-
-    :cond_7
-    move v14, v9
-
-    :goto_5
-    if-eqz v6, :cond_8
-
-    :goto_6
-    move v15, v9
-
-    goto :goto_7
-
-    :cond_8
-    iget v9, v4, Lcm5;->f:F
-
-    goto :goto_6
-
-    :goto_7
-    iget-object v6, v4, Lcm5;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v6, v7, v3}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
-
-    iget-wide v9, v4, Lcm5;->h:J
-
-    const/16 v16, 0x0
-
-    const/4 v13, 0x2
-
-    invoke-static/range {v9 .. v16}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
-
-    move-result-object v3
-
-    iget-object v4, v4, Lcm5;->d:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v4, v3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    invoke-virtual {v3}, Landroid/view/MotionEvent;->recycle()V
-
-    :goto_8
-    iget-object v3, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lcm5;
-
-    iget-object v4, v3, Lcm5;->b:Lqqd;
-
-    iget-boolean v6, v4, Lqqd;->m:Z
-
-    if-nez v6, :cond_9
-
-    goto :goto_a
-
-    :cond_9
-    iget v7, v4, Lqqd;->f:I
-
-    if-ne v7, v5, :cond_a
-
-    if-nez v6, :cond_a
-
-    goto :goto_9
-
-    :cond_a
-    iput-boolean v8, v4, Lqqd;->m:Z
-
-    invoke-virtual {v4}, Lqqd;->g()V
-
-    iget-object v6, v4, Lqqd;->g:Lpqd;
-
-    iget v7, v6, Lpqd;->c:I
-
-    if-nez v7, :cond_c
-
-    iget v6, v6, Lpqd;->b:I
-
-    iget v7, v4, Lqqd;->h:I
-
-    if-eq v6, v7, :cond_b
-
-    invoke-virtual {v4, v6}, Lqqd;->c(I)V
-
-    :cond_b
-    invoke-virtual {v4, v8}, Lqqd;->d(I)V
-
-    invoke-virtual {v4}, Lqqd;->e()V
-
-    goto :goto_9
-
-    :cond_c
-    const/4 v6, 0x2
-
-    invoke-virtual {v4, v6}, Lqqd;->d(I)V
-
-    :goto_9
-    iget-object v4, v3, Lcm5;->d:Landroid/view/VelocityTracker;
-
-    iget v6, v3, Lcm5;->e:I
-
-    int-to-float v6, v6
-
-    const/16 v7, 0x3e8
-
-    invoke-virtual {v4, v7, v6}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
-
-    invoke-virtual {v4}, Landroid/view/VelocityTracker;->getXVelocity()F
-
-    move-result v6
-
-    float-to-int v6, v6
-
-    invoke-virtual {v4}, Landroid/view/VelocityTracker;->getYVelocity()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    iget-object v7, v3, Lcm5;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v7, v6, v4}, Landroidx/recyclerview/widget/RecyclerView;->O(II)Z
-
-    move-result v4
-
-    if-nez v4, :cond_f
-
-    iget-object v3, v3, Lcm5;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v4, v3, Landroidx/viewpager2/widget/ViewPager2;->x0:Ltzg;
-
-    iget-object v6, v3, Landroidx/viewpager2/widget/ViewPager2;->t0:Lqzg;
-
-    invoke-virtual {v4, v6}, Ltzg;->g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
-
-    move-result-object v4
-
-    if-nez v4, :cond_d
-
-    goto :goto_a
-
-    :cond_d
-    iget-object v6, v3, Landroidx/viewpager2/widget/ViewPager2;->x0:Ltzg;
-
-    iget-object v7, v3, Landroidx/viewpager2/widget/ViewPager2;->t0:Lqzg;
-
-    invoke-virtual {v6, v7, v4}, Lfc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
-
-    move-result-object v4
-
-    aget v6, v4, v8
-
-    if-nez v6, :cond_e
-
-    aget v7, v4, v5
-
-    if-eqz v7, :cond_f
-
-    :cond_e
-    iget-object v3, v3, Landroidx/viewpager2/widget/ViewPager2;->w0:Luzg;
-
-    aget v4, v4, v5
-
-    invoke-virtual {v3, v6, v4, v8}, Landroidx/recyclerview/widget/RecyclerView;->A0(IIZ)V
-
-    :cond_f
-    :goto_a
-    invoke-virtual {v2, v1, v5}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

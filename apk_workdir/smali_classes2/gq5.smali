@@ -1,32 +1,99 @@
-.class public final synthetic Lgq5;
-.super Ljava/lang/Object;
+.class public final Lgq5;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
+.implements Lzi6;
+
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final load(Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :try_start_0
-    const-string p1, "ffmpg"
+    check-cast p1, Lvy5;
 
-    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lgq5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :catchall_0
-    move-exception p1
+    move-result-object p1
 
-    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lq3a;
+    check-cast p1, Lgq5;
 
-    move-result-object v0
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-interface {v0, p1}, Lq3a;->k(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Lgq5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lgq5;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lgq5;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lgq5;->X:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgq5;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lvy5;
+
+    iput v2, p0, Lgq5;->X:I
+
+    invoke-interface {p1, v1, p0}, Lvy5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object v1
 .end method

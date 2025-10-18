@@ -1,122 +1,159 @@
-.class public final synthetic Lhg8;
+.class public final Lhg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
+.field public final b:Luh8;
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
+.method public constructor <init>(JLuh8;Z)V
     .locals 0
 
-    iput p2, p0, Lhg8;->a:I
-
-    iput-object p1, p0, Lhg8;->b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lhg8;->a:J
+
+    iput-object p3, p0, Lhg8;->b:Luh8;
+
+    iput-boolean p4, p0, Lhg8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget v0, p0, Lhg8;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lhg8;->b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    if-eqz p1, :cond_4
 
-    move-result-object p1
+    const-class v2, Lhg8;
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    move-result-object v3
 
-    move-result p1
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
+    move-result v2
 
-    iput p1, v0, Landroid/graphics/RectF;->bottom:F
+    if-nez v2, :cond_1
 
-    invoke-virtual {v1}, Landroid/view/View;->postInvalidate()V
+    goto :goto_0
 
-    return-void
+    :cond_1
+    check-cast p1, Lhg8;
 
-    :pswitch_0
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    iget-wide v2, p0, Lhg8;->a:J
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-wide v4, p1, Lhg8;->a:J
 
-    move-result-object p1
+    cmp-long v2, v2, v4
 
-    check-cast p1, Ljava/lang/Float;
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    return v1
 
-    move-result p1
+    :cond_2
+    iget-boolean v2, p0, Lhg8;->c:Z
 
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
+    iget-boolean v3, p1, Lhg8;->c:Z
 
-    iput p1, v0, Landroid/graphics/RectF;->right:F
+    if-eq v2, v3, :cond_3
 
-    return-void
+    return v1
 
-    :pswitch_1
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    :cond_3
+    iget-object v2, p0, Lhg8;->b:Luh8;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object p1, p1, Lhg8;->b:Luh8;
 
-    move-result-object p1
+    if-ne v2, p1, :cond_4
 
-    check-cast p1, Ljava/lang/Float;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    :cond_4
+    :goto_0
+    return v1
+.end method
 
-    move-result p1
+.method public final hashCode()I
+    .locals 5
 
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
+    const/16 v0, 0x20
 
-    iput p1, v0, Landroid/graphics/RectF;->left:F
+    iget-wide v1, p0, Lhg8;->a:J
 
-    return-void
+    ushr-long v3, v1, v0
 
-    :pswitch_2
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    xor-long v0, v1, v3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    long-to-int v0, v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast p1, Ljava/lang/Float;
+    iget-object v1, p0, Lhg8;->b:Luh8;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result p1
+    move-result v1
 
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
+    add-int/2addr v1, v0
 
-    iput p1, v0, Landroid/graphics/RectF;->top:F
+    mul-int/lit8 v1, v1, 0x1f
 
-    return-void
+    iget-boolean v0, p0, Lhg8;->c:Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Key{contactId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lhg8;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", markerWeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhg8;->b:Luh8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", active="
+
+    const-string v2, "}"
+
+    iget-boolean v3, p0, Lhg8;->c:Z
+
+    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

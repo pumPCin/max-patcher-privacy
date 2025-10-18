@@ -1,132 +1,49 @@
 .class public final Ly33;
-.super Lj7f;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lrrf;
 
 
 # instance fields
-.field public final o:Landroid/widget/TextView;
+.field public final synthetic X:Ld43;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 3
+.method public constructor <init>(Ld43;Ly14;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lj7f;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Ly33;->X:Ld43;
 
-    iput-object p1, p0, Ly33;->o:Landroid/widget/TextView;
-
-    new-instance v0, Lu5d;
-
-    const/16 v1, 0x28
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    invoke-direct {v0, v2, v1}, Lu5d;-><init>(II)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v0, 0x10
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    sget-object v0, Lsz4;->t0:Lc82;
-
-    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ly33;->onThemeChanged(Lu4b;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lu4b;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Ldag;->t:Lpqf;
+    iput-object p1, p0, Ly33;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Ly33;->o:Landroid/widget/TextView;
+    iget p1, p0, Ly33;->Y:I
 
-    invoke-static {v0, v1}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p1}, Lu4b;->getText()Lapf;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Ly33;->Y:I
 
-    iget v0, v0, Lapf;->i:I
+    iget-object p1, p0, Ly33;->X:Ld43;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    const/4 v0, 0x0
 
-    invoke-interface {p1}, Lu4b;->b()Lwe0;
+    invoke-virtual {p1, v0, p0}, Ld43;->Q(Ljava/util/Set;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget p1, p1, Lwe0;->l:I
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-void
+    return-object p1
 .end method

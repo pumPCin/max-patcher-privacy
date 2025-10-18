@@ -4,22 +4,22 @@
 
 
 # virtual methods
-.method public final h()Lx85;
+.method public final h()Lp95;
     .locals 3
 
-    new-instance v0, Lzsa;
+    new-instance v0, Lbua;
 
     const-string v1, "HmacSHA384"
 
     const/16 v2, 0xf
 
-    invoke-direct {v0, v2, v1}, Lzsa;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, v1}, Lbua;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Lx85;
+    new-instance v1, Lp95;
 
     const/16 v2, 0x11
 
-    invoke-direct {v1, v2, v0}, Lx85;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lp95;-><init>(ILjava/lang/Object;)V
 
     return-object v1
 .end method

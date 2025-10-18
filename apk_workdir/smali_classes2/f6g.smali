@@ -1,15 +1,3 @@
-.class public abstract Lf6g;
-.super Lb4a;
+.class public interface abstract Lf6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    sget-object v0, Lzag;->a:Lzag;
-
-    invoke-direct {p0, v0}, Lb4a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-.end method

@@ -1,5 +1,5 @@
 .class public final synthetic Lb;
-.super Lxcc;
+.super Leec;
 .source "SourceFile"
 
 
@@ -17,11 +17,11 @@
 
     const/4 v2, 0x0
 
-    const-class v3, Lfwe;
+    const-class v3, Lmxe;
 
     const-string v4, "freezeCount"
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v4, v1, v2}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Lb;->a:Lb;
 
@@ -33,9 +33,9 @@
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    check-cast p1, Lfwe;
+    check-cast p1, Lmxe;
 
-    iget-wide v0, p1, Lfwe;->v:J
+    iget-wide v0, p1, Lmxe;->v:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

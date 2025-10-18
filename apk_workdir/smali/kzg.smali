@@ -1,9 +1,25 @@
-.class public final Lkzg;
-.super Landroid/view/ViewGroup$LayoutParams;
+.class public abstract Lkzg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# direct methods
+.method public static a(Landroid/view/ViewConfiguration;III)I
+    .locals 0
 
-.field public b:I
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity(III)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/view/ViewConfiguration;III)I
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity(III)I
+
+    move-result p0
+
+    return p0
+.end method

@@ -3,88 +3,71 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld12;
+.implements Ljava/util/concurrent/RejectedExecutionHandler;
 
 
 # instance fields
-.field public final synthetic b:Lj12;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj12;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Li12;->a:I
 
-    iput-object p1, p0, Li12;->b:Lj12;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Ljava/util/List;
-    .locals 3
+.method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 1
 
-    iget-object v0, p0, Li12;->b:Lj12;
+    iget v0, p0, Li12;->a:I
 
-    invoke-interface {v0}, Lj12;->d()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    :try_start_0
+    invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object p2
 
-    move-result-object p1
+    invoke-interface {p2, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    goto :goto_0
 
-    move-result v1
+    :catch_0
+    move-exception p1
 
-    if-eqz v1, :cond_1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v1
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
 
-    check-cast v1, Lj12;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    instance-of v2, v1, Lj12;
+    :goto_0
+    return-void
 
-    invoke-static {v2}, Lbui;->b(Z)V
+    :pswitch_0
+    const-string p1, "CameraExecutor"
 
-    move-object v2, v1
+    const-string p2, "A rejected execution occurred in CameraExecutor!"
 
-    check-cast v2, Lj12;
+    invoke-static {p1, p2}, Lgfi;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v2}, Lj12;->d()Ljava/lang/String;
+    return-void
 
-    move-result-object v2
+    nop
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Unable to find camera with id "
-
-    const-string v2, " from list of available cameras."
-
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,334 +1,412 @@
 .class public final Lsdd;
-.super Li2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/RandomAccess;
+.implements Lx02;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final b:Lx02;
 
-.field public final b:I
+.field public final synthetic c:I
 
-.field public c:I
-
-.field public o:I
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 2
+.method public constructor <init>(Lx02;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lsdd;->a:[Ljava/lang/Object;
+    iput v0, p0, Lsdd;->c:I
 
-    if-ltz p1, :cond_1
+    .line 1
+    invoke-direct {p0, p1, v0}, Lsdd;-><init>(Lx02;B)V
 
-    array-length v0, p2
-
-    if-gt p1, v0, :cond_0
-
-    array-length p2, p2
-
-    iput p2, p0, Lsdd;->b:I
-
-    iput p1, p0, Lsdd;->o:I
+    .line 2
+    iput-object p1, p0, Lsdd;->d:Ljava/lang/Object;
 
     return-void
+.end method
 
-    :cond_0
-    const-string v0, "ring buffer filled size: "
+.method public constructor <init>(Lx02;B)V
+    .locals 0
 
-    const-string v1, " cannot be larger than the buffer size: "
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, v0, v1}, Lf67;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 4
+    iput-object p1, p0, Lsdd;->b:Lx02;
 
-    move-result-object p1
+    return-void
+.end method
 
-    array-length p2, p2
+.method public constructor <init>(Lx02;Le2d;)V
+    .locals 1
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput v0, p0, Lsdd;->c:I
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    .line 5
+    invoke-direct {p0, p1, v0}, Lsdd;-><init>(Lx02;B)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 6
+    iput-object p2, p0, Lsdd;->d:Ljava/lang/Object;
 
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_1
-    const-string p2, "ring buffer filled size should not be negative but it is "
-
-    invoke-static {p1, p2}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 5
+.method public final a()V
+    .locals 1
 
-    if-ltz p1, :cond_3
+    iget-object v0, p0, Lsdd;->b:Lx02;
 
-    iget v0, p0, Lsdd;->o:I
+    invoke-interface {v0}, Lx02;->a()V
 
-    if-gt p1, v0, :cond_2
-
-    if-lez p1, :cond_1
-
-    iget v0, p0, Lsdd;->c:I
-
-    add-int v1, v0, p1
-
-    iget v2, p0, Lsdd;->b:I
-
-    rem-int/2addr v1, v2
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lsdd;->a:[Ljava/lang/Object;
-
-    if-le v0, v1, :cond_0
-
-    invoke-static {v4, v0, v2, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
-
-    const/4 v0, 0x0
-
-    invoke-static {v4, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v4, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
-
-    :goto_0
-    iput v1, p0, Lsdd;->c:I
-
-    iget v0, p0, Lsdd;->o:I
-
-    sub-int/2addr v0, p1
-
-    iput v0, p0, Lsdd;->o:I
-
-    :cond_1
     return-void
-
-    :cond_2
-    const-string v0, "n shouldn\'t be greater than the buffer size: n = "
-
-    const-string v1, ", size = "
-
-    invoke-static {p1, v0, v1}, Lf67;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v0, p0, Lsdd;->o:I
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    const-string v0, "n shouldn\'t be negative but it is "
-
-    invoke-static {p1, v0}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
-
-    invoke-virtual {p0}, Lsdd;->getSize()I
-
-    move-result v0
-
-    if-ltz p1, :cond_0
-
-    if-ge p1, v0, :cond_0
+.method public b(F)Ll28;
+    .locals 1
 
     iget v0, p0, Lsdd;->c:I
 
-    add-int/2addr v0, p1
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p0, Lsdd;->b:I
+    iget-object v0, p0, Lsdd;->b:Lx02;
 
-    rem-int/2addr v0, p1
+    invoke-interface {v0, p1}, Lx02;->b(F)Ll28;
 
-    iget-object p1, p0, Lsdd;->a:[Ljava/lang/Object;
-
-    aget-object p1, p1, v0
+    move-result-object p1
 
     return-object p1
 
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+    :pswitch_0
+    iget-object v0, p0, Lsdd;->d:Ljava/lang/Object;
 
-    const-string v2, "index: "
+    check-cast v0, Lx02;
 
-    const-string v3, ", size: "
-
-    invoke-static {v2, p1, v0, v3}, Lf67;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lx02;->b(F)Ll28;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    return-object p1
 
-    throw v1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getSize()I
+.method public final c(Lpk3;)V
     .locals 1
 
-    iget v0, p0, Lsdd;->o:I
+    iget-object v0, p0, Lsdd;->b:Lx02;
 
-    return v0
+    invoke-interface {v0, p1}, Lx02;->c(Lpk3;)V
+
+    return-void
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
+.method public d(F)Ll28;
     .locals 1
 
-    new-instance v0, Lrdd;
+    iget v0, p0, Lsdd;->c:I
 
-    invoke-direct {v0, p0}, Lrdd;-><init>(Lsdd;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->d(F)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lsdd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->d(F)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toArray()[Ljava/lang/Object;
+.method public final e()Landroid/graphics/Rect;
     .locals 1
 
-    .line 1
-    invoke-virtual {p0}, Lsdd;->getSize()I
+    iget-object v0, p0, Lsdd;->b:Lx02;
 
-    move-result v0
-
-    .line 2
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lsdd;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v0}, Lx02;->e()Landroid/graphics/Rect;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 6
+.method public final f(I)V
+    .locals 1
 
-    .line 3
-    array-length v0, p1
+    iget-object v0, p0, Lsdd;->b:Lx02;
 
-    .line 4
-    iget v1, p0, Lsdd;->o:I
+    invoke-interface {v0, p1}, Lx02;->f(I)V
 
-    if-ge v0, v1, :cond_0
+    return-void
+.end method
 
-    .line 5
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+.method public final g(Lm97;)V
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->g(Lm97;)V
+
+    return-void
+.end method
+
+.method public h(Lb75;)Ll28;
+    .locals 1
+
+    iget v0, p0, Lsdd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->h(Lb75;)Ll28;
 
     move-result-object p1
 
-    .line 6
-    :cond_0
-    iget v0, p0, Lsdd;->o:I
+    return-object p1
 
-    .line 7
-    iget v1, p0, Lsdd;->c:I
+    :pswitch_0
+    iget-object v0, p0, Lsdd;->d:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v0, Lx02;
 
-    move v3, v2
+    invoke-interface {v0, p1}, Lx02;->h(Lb75;)Ll28;
 
-    .line 8
-    :goto_0
-    iget-object v4, p0, Lsdd;->a:[Ljava/lang/Object;
+    move-result-object p1
 
-    if-ge v3, v0, :cond_1
+    return-object p1
 
-    iget v5, p0, Lsdd;->b:I
+    nop
 
-    if-ge v1, v5, :cond_1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    .line 9
-    aget-object v4, v4, v1
+.method public i(Ljava/util/ArrayList;II)Ll28;
+    .locals 2
 
-    aput-object v4, p1, v3
+    iget v0, p0, Lsdd;->c:I
 
-    add-int/lit8 v3, v3, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    add-int/lit8 v1, v1, 0x1
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1, p2, p3}, Lx02;->i(Ljava/util/ArrayList;II)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    if-ge v3, v0, :cond_2
-
-    .line 10
-    aget-object v1, v4, v2
-
-    aput-object v1, p1, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 11
-    :cond_2
-    array-length v1, p1
-
-    if-ge v0, v1, :cond_3
-
+    :cond_0
     const/4 v1, 0x0
 
-    .line 12
-    aput-object v1, p1, v0
+    :goto_0
+    const-string v0, "Only support one capture config."
 
-    :cond_3
+    invoke-static {v0, v1}, Ldvi;->a(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p2, p3}, Lx02;->l(II)Ll28;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lak6;->a(Ll28;)Lak6;
+
+    move-result-object p3
+
+    new-instance v0, Lek6;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p2, v1}, Lek6;-><init>(Ll28;I)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p3, v0, v1}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object p3
+
+    new-instance v0, Lvlf;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p0, v1, p1}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object p1
+
+    invoke-static {p3, v0, p1}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object p1
+
+    new-instance p3, Lek6;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p3, p2, v0}, Lek6;-><init>(Ll28;I)V
+
+    invoke-static {}, Lfni;->a()Lju4;
+
+    move-result-object p2
+
+    invoke-static {p1, p3, p2}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lwag;->b(Ljava/util/List;)Lx18;
+
+    move-result-object p1
+
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j(Ln6e;)V
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->j(Ln6e;)V
+
+    return-void
+.end method
+
+.method public k(Z)Ll28;
+    .locals 1
+
+    iget v0, p0, Lsdd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->k(Z)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lsdd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lx02;
+
+    invoke-interface {v0, p1}, Lx02;->k(Z)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(II)Ll28;
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0, p1, p2}, Lx02;->l(II)Ll28;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m()Lpk3;
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0}, Lx02;->m()Lpk3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0}, Lx02;->n()V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lsdd;->b:Lx02;
+
+    invoke-interface {v0}, Lx02;->o()V
+
+    return-void
 .end method

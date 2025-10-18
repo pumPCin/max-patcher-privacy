@@ -1,94 +1,48 @@
-.class public final synthetic Lg8f;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
+.class public final Lg8f;
+.super Ly14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lh8f;
+.field public final synthetic Y:Ls3a;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh8f;I)V
+.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lg8f;->a:I
+    iput-object p1, p0, Lg8f;->Y:Ls3a;
 
-    iput-object p1, p0, Lg8f;->b:Lh8f;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lg8f;->a:I
+    iput-object p1, p0, Lg8f;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lg8f;->X:I
 
-    iget-object v0, p0, Lg8f;->b:Lh8f;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Lxgc;
+    or-int/2addr p1, v0
 
-    iget-object v1, v0, Lh8f;->Y:Lzzc;
+    iput p1, p0, Lg8f;->X:I
 
-    iget-wide v2, v1, Lzzc;->e:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-ltz v2, :cond_0
-
-    iget-wide v2, v1, Lzzc;->c:J
-
-    iget-wide v4, v1, Lzzc;->e:J
-
-    cmp-long v1, v2, v4
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v0, Lh8f;->a:Lzgc;
-
-    iget-object v1, v1, Lzgc;->b:Lvgc;
-
-    new-instance v2, Lg8f;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Lg8f;-><init>(Lh8f;I)V
+    iget-object p1, p0, Lg8f;->Y:Ls3a;
 
     const/4 v0, 0x0
 
-    invoke-virtual {v1, p1, v2, v0}, Lvgc;->k(Lxgc;Ljava/util/function/Consumer;Z)V
+    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :goto_0
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    iget-object v0, p0, Lg8f;->b:Lh8f;
-
-    check-cast p1, Lxgc;
-
-    invoke-static {v0, p1}, Lh8f;->Z(Lh8f;Lxgc;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

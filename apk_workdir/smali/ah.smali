@@ -21,14 +21,14 @@
 
 .field public final synthetic g:Z
 
-.field public final synthetic h:Lqh6;
+.field public final synthetic h:Lli6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFFFZLqh6;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFFFZLli6;)V
     .locals 1
 
-    sget v0, Lhqa;->a:I
+    sget v0, Lkra;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
 
     iput-boolean p7, p0, Lah;->g:Z
 
-    iput-object p8, p0, Lah;->h:Lqh6;
+    iput-object p8, p0, Lah;->h:Lli6;
 
     return-void
 .end method
@@ -84,7 +84,7 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lah;->h:Lqh6;
+    iget-object v0, p0, Lah;->h:Lli6;
 
     if-eqz v0, :cond_2
 
@@ -101,10 +101,10 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    sget v0, Lhqa;->m:I
+    sget v0, Lkra;->m:I
 
     const/4 v1, 0x0
 
@@ -144,7 +144,7 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lah;->h:Lqh6;
+    iget-object v0, p0, Lah;->h:Lli6;
 
     if-eqz v0, :cond_2
 
@@ -161,10 +161,10 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    sget v0, Lhqa;->m:I
+    sget v0, Lkra;->m:I
 
     const/4 v1, 0x0
 
@@ -182,7 +182,7 @@
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    sget p1, Lhqa;->m:I
+    sget p1, Lkra;->m:I
 
     iget-object v0, p0, Lah;->b:Ljava/lang/String;
 

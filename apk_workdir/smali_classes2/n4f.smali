@@ -1,21 +1,39 @@
 .class public final Ln4f;
-.super Lcq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ln4f;
+# instance fields
+.field public final a:Lfgd;
+
+.field public final b:Lei;
+
+.field public final c:Lxfd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    new-instance v0, Ln4f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcq;-><init>()V
+    iput-object p1, p0, Ln4f;->a:Lfgd;
 
-    sput-object v0, Ln4f;->a:Ln4f;
+    new-instance v0, Lei;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln4f;->b:Lei;
+
+    new-instance v0, Lxfd;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Ln4f;->c:Lxfd;
 
     return-void
 .end method

@@ -1,117 +1,88 @@
-.class public abstract Llh7;
-.super Ljava/lang/Object;
+.class public final Llh7;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final a:Lf0a;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/login/inputphone/InputPhoneScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+    .locals 0
 
-    sget-object v0, Lnmd;->a:Lf0a;
+    iput-object p2, p0, Llh7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
 
-    new-instance v0, Lf0a;
+    const/4 p2, 0x2
 
-    invoke-direct {v0}, Lf0a;-><init>()V
-
-    sput-object v0, Llh7;->a:Lf0a;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a()V
-    .locals 14
 
-    sget-object v0, Llh7;->a:Lf0a;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v1, v0, Lf0a;->b:[Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lf0a;->a:[J
+    invoke-virtual {p0, p1, p2}, Llh7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    array-length v2, v0
+    move-result-object p1
 
-    add-int/lit8 v2, v2, -0x2
+    check-cast p1, Llh7;
 
-    if-ltz v2, :cond_3
+    sget-object p2, Lccg;->a:Lccg;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Llh7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v4, v3
+    return-object p2
+.end method
 
-    :goto_0
-    aget-wide v5, v0, v4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    not-long v7, v5
+    new-instance v0, Llh7;
 
-    const/4 v9, 0x7
+    iget-object v1, p0, Llh7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
 
-    shl-long/2addr v7, v9
+    invoke-direct {v0, p2, v1}, Llh7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
 
-    and-long/2addr v7, v5
+    iput-object p1, v0, Llh7;->X:Ljava/lang/Object;
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    return-object v0
+.end method
 
-    and-long/2addr v7, v9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    cmp-long v7, v7, v9
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-eqz v7, :cond_2
+    iget-object p1, p0, Llh7;->X:Ljava/lang/Object;
 
-    sub-int v7, v4, v2
+    check-cast p1, Ljava/lang/Boolean;
 
-    not-int v7, v7
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    ushr-int/lit8 v7, v7, 0x1f
+    move-result p1
 
-    const/16 v8, 0x8
+    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->C0:[Ltr7;
 
-    rsub-int/lit8 v7, v7, 0x8
+    iget-object v0, p0, Llh7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
 
-    move v9, v3
+    invoke-virtual {v0}, Lone/me/login/inputphone/InputPhoneScreen;->E0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    :goto_1
-    if-ge v9, v7, :cond_1
+    move-result-object v0
 
-    const-wide/16 v10, 0xff
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
 
-    and-long/2addr v10, v5
+    sget-object p1, Lccg;->a:Lccg;
 
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    aget-object v10, v1, v10
-
-    check-cast v10, Ll0f;
-
-    invoke-virtual {v10}, Ll0f;->e()V
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

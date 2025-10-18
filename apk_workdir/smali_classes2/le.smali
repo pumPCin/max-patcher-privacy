@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqsf;
+.implements Lutf;
 
 
 # static fields
 .field public static final a:Lle;
 
-.field public static final b:Liz9;
+.field public static final b:Lk0a;
 
 
 # direct methods
@@ -22,67 +22,67 @@
 
     sput-object v0, Lle;->a:Lle;
 
-    new-instance v0, Liz9;
+    new-instance v0, Lk0a;
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Liz9;-><init>(I)V
+    invoke-direct {v0, v1}, Lk0a;-><init>(I)V
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2, v1}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v1}, Lk0a;->e(II)V
 
     const/4 v2, 0x2
 
     const/16 v3, 0x10
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/4 v2, 0x3
 
     const/16 v4, 0xd
 
-    invoke-virtual {v0, v2, v4}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v4}, Lk0a;->e(II)V
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/4 v2, 0x5
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/4 v2, 0x6
 
     const/4 v3, -0x2
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/4 v2, 0x7
 
     const/4 v3, -0x4
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/16 v2, 0x8
 
     const/4 v3, -0x6
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/16 v2, 0x9
 
     const/4 v3, -0x5
 
-    invoke-virtual {v0, v2, v3}, Liz9;->e(II)V
+    invoke-virtual {v0, v2, v3}, Lk0a;->e(II)V
 
     const/4 v2, -0x8
 
-    invoke-virtual {v0, v1, v2}, Liz9;->e(II)V
+    invoke-virtual {v0, v1, v2}, Lk0a;->e(II)V
 
-    sput-object v0, Lle;->b:Liz9;
+    sput-object v0, Lle;->b:Lk0a;
 
     return-void
 .end method
@@ -92,9 +92,9 @@
 .method public final a(I)V
     .locals 2
 
-    sget-object v0, Lle;->b:Liz9;
+    sget-object v0, Lle;->b:Lk0a;
 
-    invoke-virtual {v0, p1}, Liz9;->b(I)I
+    invoke-virtual {v0, p1}, Lk0a;->b(I)I
 
     move-result p1
 
@@ -102,7 +102,7 @@
 
     if-ltz p1, :cond_0
 
-    iget-object v0, v0, Liz9;->c:[I
+    iget-object v0, v0, Lk0a;->c:[I
 
     aget p1, v0, p1
 

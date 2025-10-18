@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfi6;
-.implements Llwe;
+.implements Laj6;
+.implements Lrxe;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 .method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    check-cast p1, Lvz4;
+    check-cast p1, Lo05;
 
     iget-wide v0, p0, Lq7;->a:J
 
@@ -35,31 +35,31 @@
 
     const-string v3, "SELECT * FROM draft_uploads WHERE chat_id = ?"
 
-    invoke-static {v2, v3}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+    invoke-static {v2, v3}, Lvgd;->c(ILjava/lang/String;)Lvgd;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, v0, v1}, Lpfd;->k(IJ)V
+    invoke-virtual {v3, v2, v0, v1}, Lvgd;->k(IJ)V
 
-    new-instance v0, Luz4;
+    new-instance v0, Ln05;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p1, v3, v1}, Luz4;-><init>(Lvz4;Lpfd;I)V
+    invoke-direct {v0, p1, v3, v1}, Ln05;-><init>(Lo05;Lvgd;I)V
 
-    new-instance p1, Lej8;
+    new-instance p1, Lfk8;
 
-    invoke-direct {p1, v0}, Lej8;-><init>(Ljava/util/concurrent/Callable;)V
+    invoke-direct {p1, v0}, Lfk8;-><init>(Ljava/util/concurrent/Callable;)V
 
     return-object p1
 .end method
 
-.method public h()Lkwe;
+.method public j()Lqxe;
     .locals 1
 
-    new-instance v0, Liwe;
+    new-instance v0, Lpxe;
 
-    invoke-direct {v0, p0}, Liwe;-><init>(Lq7;)V
+    invoke-direct {v0, p0}, Lpxe;-><init>(Lq7;)V
 
     return-object v0
 .end method

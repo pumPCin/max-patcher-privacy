@@ -1,74 +1,123 @@
-.class public final Lll4;
+.class public abstract synthetic Lll4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq0a;
 
-
-# instance fields
-.field public final a:Llw3;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Llw3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lll4;->a:Llw3;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)Ls7d;
-    .locals 1
-
-    iget-object v0, p0, Lll4;->a:Llw3;
-
-    invoke-virtual {v0, p1}, Llw3;->a(I)Ls7d;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final k(Ljava/lang/String;)Lt0a;
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lml4;
+    invoke-static {}, Lgw7;->values()[Lgw7;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
 
     :try_start_0
-    new-instance v1, Landroid/media/MediaMuxer;
+    sget-object v1, Lgw7;->ON_CREATE:Lgw7;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {v1, p1, v2}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    new-instance p1, Lwf6;
-
-    invoke-direct {p1, v1}, Lwf6;-><init>(Landroid/media/MediaMuxer;)V
-
-    invoke-direct {v0, p1}, Lml4;-><init>(Lwf6;)V
-
-    return-object v0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    move-exception p1
+    :try_start_1
+    sget-object v1, Lgw7;->ON_START:Lgw7;
 
-    new-instance v0, Landroidx/media3/muxer/MuxerException;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    const-string v1, "Error creating muxer"
+    move-result v1
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v2, 0x2
 
-    throw v0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lgw7;->ON_RESUME:Lgw7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Lgw7;->ON_PAUSE:Lgw7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lgw7;->ON_STOP:Lgw7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Lgw7;->ON_DESTROY:Lgw7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Lgw7;->ON_ANY:Lgw7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lll4;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

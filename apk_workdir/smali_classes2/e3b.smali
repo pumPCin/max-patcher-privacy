@@ -1,56 +1,109 @@
-.class public final Le3b;
-.super Ljava/lang/Object;
+.class public final enum Le3b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum X:Le3b;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic Y:[Le3b;
 
-.field public final synthetic b:Lf3b;
+.field public static final enum a:Le3b;
+
+.field public static final enum b:Le3b;
+
+.field public static final enum c:Le3b;
+
+.field public static final enum o:Le3b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf3b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p2, p0, Le3b;->a:I
+    new-instance v0, Le3b;
 
-    iput-object p1, p0, Le3b;->b:Lf3b;
+    const-string v1, "TIMEOUT"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Le3b;->a:Le3b;
+
+    new-instance v1, Le3b;
+
+    const-string v2, "SWIPE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Le3b;->b:Le3b;
+
+    new-instance v2, Le3b;
+
+    const-string v3, "MANUAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Le3b;->c:Le3b;
+
+    new-instance v3, Le3b;
+
+    const-string v4, "ROOT_VIEW_DETACHED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Le3b;->o:Le3b;
+
+    new-instance v4, Le3b;
+
+    const-string v5, "RIGHT_ELEMENT_CLICK"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Le3b;->X:Le3b;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Le3b;
+
+    move-result-object v0
+
+    sput-object v0, Le3b;->Y:[Le3b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static valueOf(Ljava/lang/String;)Le3b;
     .locals 1
 
-    iget v0, p0, Le3b;->a:I
+    const-class v0, Le3b;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Le3b;->b:Lf3b;
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    check-cast p0, Le3b;
 
-    return-void
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Le3b;->b:Lf3b;
+.method public static values()[Le3b;
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sget-object v0, Le3b;->Y:[Le3b;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast v0, [Le3b;
+
+    return-object v0
 .end method

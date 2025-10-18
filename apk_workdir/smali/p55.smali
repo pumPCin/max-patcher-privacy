@@ -1,100 +1,63 @@
-.class public final Lp55;
-.super Ljava/lang/Object;
+.class public Lp55;
+.super Lo55;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ls7d;
-
-
-# direct methods
-.method public constructor <init>(Lpzd;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object p1, p1, Lpzd;->b:Ljava/lang/Object;
-
-    check-cast p1, Leb7;
-
-    invoke-virtual {p1}, Leb7;->i()Ls7d;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lp55;->a:Ls7d;
-
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "The sequence must contain at least one EditedMediaItem."
-
-    invoke-static {v1, v0}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ls7d;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lo55;
-
-    iget-object p1, p1, Lo55;->a:Lyr8;
-
-    invoke-static {p1}, Lo55;->c(Lyr8;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    const-string v0, "If the first item in the sequence is a Gap, then forceAudioTrack or forceVideoTrack flag must be set"
-
-    invoke-static {v0, p1}, Lgfi;->a(Ljava/lang/Object;Z)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method public b(Lajf;Lajf;Landroid/view/Window;Landroid/view/View;ZZ)V
+    .locals 1
 
     const/4 v0, 0x0
 
-    move v1, v0
+    invoke-static {p3, v0}, Lefi;->d(Landroid/view/Window;Z)V
 
-    :goto_0
-    iget-object v2, p0, Lp55;->a:Ls7d;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v3, v2, Ls7d;->o:I
+    invoke-virtual {p3, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    if-ge v1, v3, :cond_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, v1}, Ls7d;->get(I)Ljava/lang/Object;
+    invoke-virtual {p3, v0}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    move-result-object v2
+    invoke-static {p3}, La15;->s(Landroid/view/Window;)V
 
-    check-cast v2, Lo55;
+    invoke-static {p3}, La15;->z(Landroid/view/Window;)V
 
-    iget-object v2, v2, Lo55;->a:Lyr8;
+    new-instance p1, Litb;
 
-    invoke-static {v2}, Lo55;->c(Lyr8;)Z
+    invoke-direct {p1, p4}, Litb;-><init>(Landroid/view/View;)V
 
-    move-result v2
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz v2, :cond_0
+    const/16 p4, 0x1e
 
-    const/4 v0, 0x1
+    if-lt p2, p4, :cond_0
 
-    return v0
+    new-instance p2, Lznh;
 
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {p3}, Lnnh;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+
+    move-result-object p4
+
+    invoke-direct {p2, p4, p1}, Lznh;-><init>(Landroid/view/WindowInsetsController;Litb;)V
+
+    iput-object p3, p2, Lznh;->c:Landroid/view/Window;
 
     goto :goto_0
 
-    :cond_1
-    return v0
+    :cond_0
+    new-instance p2, Lynh;
+
+    invoke-direct {p2, p3, p1}, Lynh;-><init>(Landroid/view/Window;Litb;)V
+
+    :goto_0
+    xor-int/lit8 p1, p5, 0x1
+
+    invoke-virtual {p2, p1}, Ljfi;->g(Z)V
+
+    xor-int/lit8 p1, p6, 0x1
+
+    invoke-virtual {p2, p1}, Ljfi;->f(Z)V
+
+    return-void
 .end method

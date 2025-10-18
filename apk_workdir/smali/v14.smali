@@ -3,123 +3,33 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Lx14;Lc24;Ld24;)V
+# direct methods
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public b(Lx14;Lc24;Ld24;)V
+.method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    return-void
+    invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public c(Lx14;Landroid/os/Bundle;)V
-    .locals 0
+.method public static c(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
+    .locals 1
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public d(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public e(Lx14;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(Lx14;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Lx14;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(Lx14;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lx14;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lx14;)V
-    .locals 0
+    invoke-virtual {p0, p1, v0}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

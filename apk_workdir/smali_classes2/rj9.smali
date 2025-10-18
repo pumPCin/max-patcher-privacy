@@ -2,86 +2,64 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsj9;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Liu7;
+
+.field public final b:Liu7;
+
+.field public final c:Liu7;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Liu7;Liu7;Liu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lrj9;->a:J
+    iput-object p1, p0, Lrj9;->a:Liu7;
+
+    iput-object p2, p0, Lrj9;->b:Liu7;
+
+    iput-object p3, p0, Lrj9;->c:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(JLjava/lang/Long;Lsgf;)Ljava/lang/Object;
     .locals 7
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lrj9;->c:Liu7;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrj9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrj9;
-
-    iget-wide v3, p0, Lrj9;->a:J
-
-    iget-wide v5, p1, Lrj9;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lrj9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ShowReactions(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lrj9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lulf;
+
+    check-cast v0, Lqta;
+
+    invoke-virtual {v0}, Lqta;->b()Lk54;
+
+    move-result-object v0
+
+    new-instance v1, Lqj9;
+
+    const/4 v6, 0x0
+
+    move-object v3, p0
+
+    move-wide v4, p1
+
+    move-object v2, p3
+
+    invoke-direct/range {v1 .. v6}, Lqj9;-><init>(Ljava/lang/Long;Lrj9;JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p4}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

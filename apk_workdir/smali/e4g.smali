@@ -1,49 +1,69 @@
 .class public final Le4g;
-.super Ljava/lang/Object;
+.super La4g;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[B
+.field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:I
-
-.field public d:J
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
+.field public b:Lf4g;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    packed-switch p1, :pswitch_data_0
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Le4g;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0xa
+    return-void
+.end method
 
-    new-array p1, p1, [B
+.method public constructor <init>(Lf4g;)V
+    .locals 1
 
-    iput-object p1, p0, Le4g;->a:[B
+    const/4 v0, 0x0
+
+    iput v0, p0, Le4g;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Le4g;->b:Lf4g;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lx3g;)V
+    .locals 1
+
+    iget p1, p0, Le4g;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Le4g;->b:Lf4g;
 
-    const/16 p1, 0xa
+    iget-boolean v0, p1, Lf4g;->S0:Z
 
-    new-array p1, p1, [B
+    if-nez v0, :cond_0
 
-    iput-object p1, p0, Le4g;->a:[B
+    invoke-virtual {p1}, Lx3g;->P()V
 
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lf4g;->S0:Z
+
+    :cond_0
     return-void
 
     nop
@@ -54,399 +74,84 @@
     .end packed-switch
 .end method
 
+.method public c(Lx3g;)V
+    .locals 2
 
-# virtual methods
-.method public a(Ls0g;Lq0g;)V
-    .locals 8
+    iget v0, p0, Le4g;->a:I
 
-    iget v0, p0, Le4g;->c:I
+    packed-switch v0, :pswitch_data_0
 
-    if-lez v0, :cond_0
-
-    iget-wide v2, p0, Le4g;->d:J
-
-    iget v4, p0, Le4g;->e:I
-
-    iget v5, p0, Le4g;->f:I
-
-    iget v6, p0, Le4g;->g:I
-
-    move-object v1, p1
-
-    move-object v7, p2
-
-    invoke-interface/range {v1 .. v7}, Ls0g;->b(JIIILq0g;)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Le4g;->c:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public b(Lt0g;Lr0g;)V
-    .locals 8
-
-    iget v0, p0, Le4g;->c:I
-
-    if-lez v0, :cond_0
-
-    iget-wide v2, p0, Le4g;->d:J
-
-    iget v4, p0, Le4g;->e:I
-
-    iget v5, p0, Le4g;->f:I
-
-    iget v6, p0, Le4g;->g:I
-
-    move-object v1, p1
-
-    move-object v7, p2
-
-    invoke-interface/range {v1 .. v7}, Lt0g;->a(JIIILr0g;)V
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Le4g;->c:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public c(Ls0g;JIIILq0g;)V
-    .locals 3
-
-    iget v0, p0, Le4g;->g:I
-
-    add-int v1, p5, p6
-
-    const/4 v2, 0x0
-
-    if-gt v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_4
-
-    iget-boolean v0, p0, Le4g;->b:Z
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, p0, Le4g;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Le4g;->c:I
-
-    if-nez v0, :cond_2
-
-    iput-wide p2, p0, Le4g;->d:J
-
-    iput p4, p0, Le4g;->e:I
-
-    iput v2, p0, Le4g;->f:I
-
-    :cond_2
-    iget p2, p0, Le4g;->f:I
-
-    add-int/2addr p2, p5
-
-    iput p2, p0, Le4g;->f:I
-
-    iput p6, p0, Le4g;->g:I
-
-    const/16 p2, 0x10
-
-    if-lt v1, p2, :cond_3
-
-    invoke-virtual {p0, p1, p7}, Le4g;->a(Ls0g;Lq0g;)V
-
-    :cond_3
-    :goto_1
     return-void
 
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    iget-object v0, p0, Le4g;->b:Lf4g;
 
-    const-string p2, "TrueHD chunk samples must be contiguous in the sample queue."
+    iget v1, v0, Lf4g;->R0:I
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    add-int/lit8 v1, v1, -0x1
 
-    throw p1
-.end method
+    iput v1, v0, Lf4g;->R0:I
 
-.method public d(Lt0g;JIIILr0g;)V
-    .locals 3
-
-    iget v0, p0, Le4g;->g:I
-
-    add-int v1, p5, p6
-
-    const/4 v2, 0x0
-
-    if-gt v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    const-string v1, "TrueHD chunk samples must be contiguous in the sample queue."
-
-    invoke-static {v1, v0}, Lgfi;->f(Ljava/lang/Object;Z)V
-
-    iget-boolean v0, p0, Le4g;->b:Z
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, p0, Le4g;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Le4g;->c:I
-
-    if-nez v0, :cond_2
-
-    iput-wide p2, p0, Le4g;->d:J
-
-    iput p4, p0, Le4g;->e:I
-
-    iput v2, p0, Le4g;->f:I
-
-    :cond_2
-    iget p2, p0, Le4g;->f:I
-
-    add-int/2addr p2, p5
-
-    iput p2, p0, Le4g;->f:I
-
-    iput p6, p0, Le4g;->g:I
-
-    const/16 p2, 0x10
-
-    if-lt v1, p2, :cond_3
-
-    invoke-virtual {p0, p1, p7}, Le4g;->b(Lt0g;Lr0g;)V
-
-    :cond_3
-    :goto_1
-    return-void
-.end method
-
-.method public e(Lel5;)V
-    .locals 7
-
-    iget-boolean v0, p0, Le4g;->b:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/16 v0, 0xa
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Le4g;->a:[B
+    iput-boolean v1, v0, Lf4g;->S0:Z
 
-    invoke-interface {p1, v1, v2, v0}, Lel5;->i(I[BI)V
-
-    invoke-interface {p1}, Lel5;->y()V
-
-    const/4 p1, 0x4
-
-    aget-byte v0, v2, p1
-
-    const/4 v3, -0x8
-
-    const/4 v4, 0x1
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x5
-
-    aget-byte v0, v2, v0
-
-    const/16 v3, 0x72
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x6
-
-    aget-byte v0, v2, v0
-
-    const/16 v3, 0x6f
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x7
-
-    aget-byte v3, v2, v0
-
-    and-int/lit16 v5, v3, 0xfe
-
-    const/16 v6, 0xba
-
-    if-eq v5, v6, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    and-int/lit16 v3, v3, 0xff
-
-    const/16 v5, 0xbb
-
-    if-ne v3, v5, :cond_2
-
-    move v1, v4
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    const/16 v1, 0x9
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v1, 0x8
-
-    :goto_0
-    aget-byte v1, v2, v1
-
-    shr-int/lit8 p1, v1, 0x4
-
-    and-int/2addr p1, v0
-
-    const/16 v0, 0x28
-
-    shl-int v1, v0, p1
-
-    :cond_4
-    :goto_1
-    if-nez v1, :cond_5
-
-    :goto_2
-    return-void
-
-    :cond_5
-    iput-boolean v4, p0, Le4g;->b:Z
-
-    return-void
-.end method
-
-.method public f(Lfl5;)V
-    .locals 7
-
-    iget-boolean v0, p0, Le4g;->b:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_2
+    invoke-virtual {v0}, Lx3g;->n()V
 
     :cond_0
-    const/16 v0, 0xa
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Le4g;->a:[B
-
-    invoke-interface {p1, v1, v2, v0}, Lfl5;->i(I[BI)V
-
-    invoke-interface {p1}, Lfl5;->y()V
-
-    const/4 p1, 0x4
-
-    aget-byte v0, v2, p1
-
-    const/4 v3, -0x8
-
-    const/4 v4, 0x1
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x5
-
-    aget-byte v0, v2, v0
-
-    const/16 v3, 0x72
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x6
-
-    aget-byte v0, v2, v0
-
-    const/16 v3, 0x6f
-
-    if-ne v0, v3, :cond_4
-
-    const/4 v0, 0x7
-
-    aget-byte v3, v2, v0
-
-    and-int/lit16 v5, v3, 0xfe
-
-    const/16 v6, 0xba
-
-    if-eq v5, v6, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    and-int/lit16 v3, v3, 0xff
-
-    const/16 v5, 0xbb
-
-    if-ne v3, v5, :cond_2
-
-    move v1, v4
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    const/16 v1, 0x9
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v1, 0x8
-
-    :goto_0
-    aget-byte v1, v2, v1
-
-    shr-int/lit8 p1, v1, 0x4
-
-    and-int/2addr p1, v0
-
-    const/16 v0, 0x28
-
-    shl-int v1, v0, p1
-
-    :cond_4
-    :goto_1
-    if-nez v1, :cond_5
-
-    :goto_2
-    return-void
-
-    :cond_5
-    iput-boolean v4, p0, Le4g;->b:Z
+    invoke-virtual {p1, p0}, Lx3g;->E(Lw3g;)Lx3g;
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Lx3g;)V
+    .locals 2
+
+    iget v0, p0, Le4g;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Le4g;->b:Lf4g;
+
+    iget-object v1, v0, Lf4g;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Lf4g;->w()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Ln2g;->o:Ln2g;
+
+    invoke-virtual {v0, p1}, Lx3g;->B(Ln2g;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lx3g;->C0:Z
+
+    sget-object p1, Ln2g;->c:Ln2g;
+
+    invoke-virtual {v0, p1}, Lx3g;->B(Ln2g;)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

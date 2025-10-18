@@ -3,16 +3,18 @@
 
 
 # static fields
-.field public static copy:I = 0x7f13042c
+.field public static call_notification_answer_action:I = 0x7f1301b7
 
-.field public static expand_button_title:I = 0x7f1304e2
+.field public static call_notification_answer_video_action:I = 0x7f1301b8
 
-.field public static not_set:I = 0x7f13076f
+.field public static call_notification_decline_action:I = 0x7f1301bb
 
-.field public static preference_copied:I = 0x7f130b39
+.field public static call_notification_hang_up_action:I = 0x7f1301bc
 
-.field public static summary_collapsed_preference_list:I = 0x7f130d38
+.field public static call_notification_incoming_text:I = 0x7f1301c0
 
-.field public static v7_preference_off:I = 0x7f130e41
+.field public static call_notification_ongoing_text:I = 0x7f1301c3
 
-.field public static v7_preference_on:I = 0x7f130e42
+.field public static call_notification_screening_text:I = 0x7f1301c4
+
+.field public static status_bar_notification_info_overflow:I = 0x7f130d17

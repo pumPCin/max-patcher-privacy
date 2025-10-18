@@ -2,243 +2,156 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxr8;
-
 
 # instance fields
-.field public final X:I
+.field public final a:Lnq8;
 
-.field public final Y:J
+.field public final b:Lzsb;
 
-.field public final a:J
+.field public final c:Lou8;
 
-.field public final b:J
+.field public final d:Ljava/util/List;
 
-.field public final c:Ls00;
+.field public final e:Ljava/lang/CharSequence;
 
-.field public final o:Ljava/lang/String;
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(JJLs00;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lir8;->a:J
+    const/4 v0, 0x0
 
-    iput-wide p3, p0, Lir8;->b:J
+    .line 2
+    iput-object v0, p0, Lir8;->a:Lnq8;
 
-    iput-object p5, p0, Lir8;->c:Ls00;
+    .line 3
+    iput-object v0, p0, Lir8;->b:Lzsb;
 
-    iput-object p6, p0, Lir8;->o:Ljava/lang/String;
+    .line 4
+    iput-object v0, p0, Lir8;->c:Lou8;
 
-    sget p1, Lcra;->a:I
+    .line 5
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput p1, p0, Lir8;->X:I
+    iput-object v1, p0, Lir8;->d:Ljava/util/List;
 
-    iput-wide p3, p0, Lir8;->Y:J
+    .line 6
+    iput-object v0, p0, Lir8;->e:Ljava/lang/CharSequence;
+
+    const/4 v0, 0x0
+
+    .line 7
+    iput v0, p0, Lir8;->f:I
+
+    .line 8
+    iput v0, p0, Lir8;->g:I
+
+    .line 9
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    iput-object v0, p0, Lir8;->h:Landroid/os/Bundle;
 
     return-void
 .end method
 
+.method public constructor <init>(Lir8;)V
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    .line 21
+    iget-object v0, p1, Lir8;->a:Lnq8;
 
-    if-ne p0, p1, :cond_0
+    iput-object v0, p0, Lir8;->a:Lnq8;
 
-    return v0
+    .line 22
+    iget-object v0, p1, Lir8;->b:Lzsb;
 
+    iput-object v0, p0, Lir8;->b:Lzsb;
+
+    .line 23
+    iget-object v0, p1, Lir8;->c:Lou8;
+
+    iput-object v0, p0, Lir8;->c:Lou8;
+
+    .line 24
+    iget-object v0, p1, Lir8;->d:Ljava/util/List;
+
+    iput-object v0, p0, Lir8;->d:Ljava/util/List;
+
+    .line 25
+    iget-object v0, p1, Lir8;->e:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lir8;->e:Ljava/lang/CharSequence;
+
+    .line 26
+    iget v0, p1, Lir8;->f:I
+
+    iput v0, p0, Lir8;->f:I
+
+    .line 27
+    iget v0, p1, Lir8;->g:I
+
+    iput v0, p0, Lir8;->g:I
+
+    .line 28
+    iget-object p1, p1, Lir8;->h:Landroid/os/Bundle;
+
+    iput-object p1, p0, Lir8;->h:Landroid/os/Bundle;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnq8;Lzsb;Lou8;Ljava/util/List;Ljava/lang/CharSequence;IILandroid/os/Bundle;)V
+    .locals 0
+
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    iput-object p1, p0, Lir8;->a:Lnq8;
+
+    .line 12
+    iput-object p2, p0, Lir8;->b:Lzsb;
+
+    .line 13
+    iput-object p3, p0, Lir8;->c:Lou8;
+
+    .line 14
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 15
+    iput-object p4, p0, Lir8;->d:Ljava/util/List;
+
+    .line 16
+    iput-object p5, p0, Lir8;->e:Ljava/lang/CharSequence;
+
+    .line 17
+    iput p6, p0, Lir8;->f:I
+
+    .line 18
+    iput p7, p0, Lir8;->g:I
+
+    if-eqz p8, :cond_0
+
+    goto :goto_0
+
+    .line 19
     :cond_0
-    instance-of v1, p1, Lir8;
+    sget-object p8, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    const/4 v2, 0x0
+    :goto_0
+    iput-object p8, p0, Lir8;->h:Landroid/os/Bundle;
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lir8;
-
-    iget-wide v3, p0, Lir8;->a:J
-
-    iget-wide v5, p1, Lir8;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lir8;->b:J
-
-    iget-wide v5, p1, Lir8;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lir8;->c:Ls00;
-
-    iget-object v3, p1, Lir8;->c:Ls00;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lir8;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lir8;->o:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lir8;->Y:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lir8;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lir8;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lir8;->c:Ls00;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lir8;->o:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final i()J
-    .locals 2
-
-    iget-wide v0, p0, Lir8;->b:J
-
-    return-wide v0
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lir8;->a:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lir8;->X:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ContentLevel(messageId="
-
-    const-string v1, ", attachId="
-
-    iget-wide v2, p0, Lir8;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lir8;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", attachModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lir8;->c:Ls00;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", localId="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lir8;->o:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lfef;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final v()Ls00;
-    .locals 1
-
-    iget-object v0, p0, Lir8;->c:Ls00;
-
-    return-object v0
-.end method
-
-.method public final w()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lir8;->o:Ljava/lang/String;
-
-    return-object v0
+    return-void
 .end method

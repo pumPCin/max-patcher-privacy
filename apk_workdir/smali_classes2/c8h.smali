@@ -1,35 +1,65 @@
-.class public abstract synthetic Lc8h;
-.super Ljava/lang/Object;
+.class public final Lc8h;
+.super Lbki;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final synthetic a:Ld8h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ld8h;)V
+    .locals 0
 
-    invoke-static {}, Lb8h;->values()[Lb8h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lc8h;->a:Ld8h;
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    const/4 v1, 0x1
+# virtual methods
+.method public final a()V
+    .locals 1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lc8h;->a:Ld8h;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Ld8h;->c:Ljava/lang/Object;
 
-    :catch_0
-    sput-object v0, Lc8h;->$EnumSwitchMapping$0:[I
+    check-cast v0, Loj6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Lc8h;->a:Ld8h;
+
+    iget-object v0, v0, Ld8h;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    const-string v1, "onAuthenticationFailed"
+
+    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Lc8h;->a:Ld8h;
+
+    iget-object v0, v0, Ld8h;->b:Ljava/lang/Object;
+
+    check-cast v0, Loj6;
+
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

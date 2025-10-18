@@ -1,26 +1,25 @@
 .class public final Ll06;
-.super Lk14;
+.super Ly14;
+.source "SourceFile"
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public Y:I
+.field public final synthetic Y:Lm06;
 
-.field public final synthetic Z:Lm06;
+.field public Z:I
 
 .field public o:Lm06;
-
-.field public r0:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lm06;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ll06;->Z:Lm06;
+    iput-object p1, p0, Ll06;->Y:Lm06;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,15 +31,15 @@
 
     iput-object p1, p0, Ll06;->X:Ljava/lang/Object;
 
-    iget p1, p0, Ll06;->Y:I
+    iget p1, p0, Ll06;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Ll06;->Y:I
+    iput p1, p0, Ll06;->Z:I
 
-    iget-object p1, p0, Ll06;->Z:Lm06;
+    iget-object p1, p0, Ll06;->Y:Lm06;
 
     const/4 v0, 0x0
 

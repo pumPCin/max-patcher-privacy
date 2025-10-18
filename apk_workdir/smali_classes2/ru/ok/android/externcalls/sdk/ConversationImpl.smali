@@ -29,7 +29,7 @@
 
 .field private anonToken:Ljava/lang/String;
 
-.field private final api:Lpka;
+.field private final api:Lrla;
 
 .field private final apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
@@ -45,11 +45,11 @@
 
 .field private audioSampleEnergyCalculatorRegistered:Z
 
-.field private final call:Lyz0;
+.field private final call:Lh01;
 
 .field private callInfo:Lru/ok/android/externcalls/sdk/api/CallInfo;
 
-.field private final callParams:Lyh1;
+.field private final callParams:Lgi1;
 
 .field private final callParticipantResolutionRunnable:Ljava/lang/Runnable;
 
@@ -61,7 +61,7 @@
 
 .field private final chatStateListener:Lru/ok/android/externcalls/sdk/chat/ChatStateListener;
 
-.field private final cidProvider:Lk34;
+.field private final cidProvider:Ly34;
 
 .field private final clientCapabilities:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
@@ -83,7 +83,7 @@
 
 .field private final displayLayoutSender:Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender;
 
-.field private final disposable:Lai3;
+.field private final disposable:Lni3;
 
 .field private final eventListener:Lru/ok/android/externcalls/sdk/events/MultiEventListener;
 
@@ -93,7 +93,7 @@
 
 .field private expectedChat:Z
 
-.field private final experiments:Lwh1;
+.field private final experiments:Lei1;
 
 .field private final externalIdsResolver:Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;
 
@@ -118,7 +118,7 @@
         value = {
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lzh1;",
+            "Lhi1;",
             ">;"
         }
     .end annotation
@@ -142,9 +142,9 @@
 
 .field private final locale:Ljava/util/Locale;
 
-.field private final log:Lyuc;
+.field private final log:Lfwc;
 
-.field private final logConfiguration:Lzuc;
+.field private final logConfiguration:Lgwc;
 
 .field private final mainThreadHandler:Landroid/os/Handler;
 
@@ -168,7 +168,7 @@
 
 .field private final peerIdGenerator:Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;
 
-.field private final preferencesHelper:Lgwb;
+.field private final preferencesHelper:Llxb;
 
 .field private volatile prepared:Z
 
@@ -186,7 +186,7 @@
 
 .field private final sessionRoomWatchTogetherHandler:Lru/ok/android/externcalls/sdk/watch_together/internal/sessionroom/SessionRoomWatchTogetherHandler;
 
-.field private signalingTransport:Lime;
+.field private signalingTransport:Lqne;
 
 .field private final startCallApiParams:Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;
 
@@ -210,9 +210,9 @@
 
 .field private final store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-.field private final timeProvider:Lvtf;
+.field private final timeProvider:Lavf;
 
-.field private final topologyUpgradeStatEventListener:Ltyf;
+.field private final topologyUpgradeStatEventListener:Lxzf;
 
 .field private final urlSharingListenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;
 
@@ -222,7 +222,7 @@
 
 .field private final videoRenderManager:Lru/ok/android/externcalls/sdk/video/VideoRenderManager;
 
-.field private final videoRendererProvider:Lsp4;
+.field private final videoRendererProvider:Lgq4;
 
 .field private final waitingRoomParticipants:Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;
 
@@ -297,9 +297,9 @@
 
     iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->creator:Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lpka;
+    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lrla;
 
-    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->api:Lpka;
+    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->api:Lrla;
 
     iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->executorService:Ljava/util/concurrent/ExecutorService;
 
@@ -317,7 +317,7 @@
 
     iput-boolean v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->isAnswer:Z
 
-    new-instance v13, Ll34;
+    new-instance v13, Lz34;
 
     iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cid:Ljava/lang/String;
 
@@ -331,9 +331,9 @@
     :goto_0
     invoke-direct {v13}, Ljava/lang/Object;-><init>()V
 
-    iput-object v6, v13, Ll34;->a:Ljava/lang/String;
+    iput-object v6, v13, Lz34;->a:Ljava/lang/String;
 
-    iput-object v13, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iput-object v13, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
     iget-boolean v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->hotStart:Z
 
@@ -343,31 +343,31 @@
 
     iput-boolean v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->forceRelayPolicy:Z
 
-    new-instance v6, Lai3;
+    new-instance v6, Lni3;
 
     invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
-    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
     iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    new-instance v7, Lgwb;
+    new-instance v7, Llxb;
 
     iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->context:Landroid/content/Context;
 
-    invoke-direct {v7, v8}, Lgwb;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, v8}, Llxb;-><init>(Landroid/content/Context;)V
 
-    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->preferencesHelper:Lgwb;
+    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->preferencesHelper:Llxb;
 
-    iget-object v15, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lyuc;
+    iget-object v15, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lfwc;
 
-    iput-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iput-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->logConfiguration:Lzuc;
+    iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->logConfiguration:Lgwc;
 
-    iput-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->logConfiguration:Lzuc;
+    iput-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->logConfiguration:Lgwc;
 
     iget-object v9, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
@@ -383,7 +383,7 @@
 
     new-instance v11, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;
 
-    invoke-direct {v11, v15}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;-><init>(Lyuc;)V
+    invoke-direct {v11, v15}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;-><init>(Lfwc;)V
 
     iput-object v11, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
@@ -407,21 +407,21 @@
 
     move-object v14, v9
 
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/CallUtil;->createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lyh1;
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/CallUtil;->createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lgi1;
 
     move-result-object v9
 
-    iput-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iput-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
     move-object/from16 v21, v6
 
-    iget-object v6, v9, Lyh1;->z:Lwh1;
+    iget-object v6, v9, Lgi1;->z:Lei1;
 
     move-object/from16 v67, v2
 
-    iget-object v2, v9, Lyh1;->z:Lwh1;
+    iget-object v2, v9, Lgi1;->z:Lei1;
 
-    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lwh1;
+    iput-object v6, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lei1;
 
     move-object/from16 v25, v7
 
@@ -439,11 +439,11 @@
 
     move-object/from16 v22, v7
 
-    new-instance v7, Ldi1;
+    new-instance v7, Lli1;
 
     move-object/from16 v18, v8
 
-    invoke-virtual {v12}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v12}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v8
 
@@ -451,9 +451,9 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v7, v8, v5, v5, v5}, Ldi1;-><init>(Lzh1;Lqbb;Lsz9;Luz9;)V
+    invoke-direct {v7, v8, v5, v5, v5}, Lli1;-><init>(Lhi1;Ltcb;Lu0a;Lw0a;)V
 
-    invoke-virtual {v12, v7, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->setCallParticipant(Ldi1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-virtual {v12, v7, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->setCallParticipant(Lli1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->initialOpponent:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -522,9 +522,9 @@
 
     iput-object v3, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->timeProvider:Lvtf;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->timeProvider:Lavf;
 
-    iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lvtf;
+    iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lavf;
 
     move-object/from16 v23, v5
 
@@ -532,7 +532,7 @@
 
     iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->clientCapabilities:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
-    iget-boolean v5, v6, Lwh1;->D:Z
+    iget-boolean v5, v6, Lei1;->D:Z
 
     if-eqz v5, :cond_7
 
@@ -540,7 +540,7 @@
 
     move-object v12, v7
 
-    new-instance v7, Llf1;
+    new-instance v7, Ltf1;
 
     move-object v5, v8
 
@@ -570,13 +570,13 @@
 
     move/from16 v17, v5
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lkga;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lmha;
 
     if-nez v5, :cond_5
 
-    new-instance v5, Lqt1;
+    new-instance v5, Lyt1;
 
-    invoke-direct {v5, v15}, Lqt1;-><init>(Lyuc;)V
+    invoke-direct {v5, v15}, Lyt1;-><init>(Lfwc;)V
 
     :cond_5
     move-object/from16 v26, v5
@@ -585,7 +585,7 @@
 
     move/from16 v29, v5
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lngd;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Luhd;
 
     move-object/from16 v30, v5
 
@@ -593,7 +593,7 @@
 
     move-object/from16 v31, v5
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lpod;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lwpd;
 
     move/from16 v16, v17
 
@@ -629,7 +629,7 @@
 
     move/from16 v14, v47
 
-    invoke-direct/range {v7 .. v26}, Llf1;-><init>(Landroid/content/Context;Lyh1;ZZLdi1;Ll34;ZZLbvc;Lyuc;Lzuc;Lkga;ZLngd;Lpi;Lvtf;Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lgwb;Lpod;)V
+    invoke-direct/range {v7 .. v26}, Ltf1;-><init>(Landroid/content/Context;Lgi1;ZZLli1;Lz34;ZZLiwc;Lfwc;Lgwc;Lmha;ZLuhd;Lpi;Lavf;Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Llxb;Lwpd;)V
 
     move-object/from16 v73, v21
 
@@ -649,41 +649,41 @@
 
     move-object/from16 v15, v17
 
-    new-instance v24, Lyz0;
+    new-instance v24, Lh01;
 
     sget-object v3, Lo8;->c:Lo8;
 
     move/from16 v26, v10
 
-    new-instance v10, Lrhf;
+    new-instance v10, Lwif;
 
-    invoke-direct {v10, v3}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v10, v3}, Lwif;-><init>(Lji6;)V
 
-    new-instance v3, Lpr0;
+    new-instance v3, Lyr0;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     move-object/from16 v30, v3
 
-    iget-boolean v3, v9, Lyh1;->i:Z
+    iget-boolean v3, v9, Lgi1;->i:Z
 
     move/from16 v31, v3
 
-    new-instance v3, Lqt1;
+    new-instance v3, Lyt1;
 
-    invoke-direct {v3, v15}, Lqt1;-><init>(Lyuc;)V
+    invoke-direct {v3, v15}, Lyt1;-><init>(Lfwc;)V
 
     move-object/from16 v32, v3
 
-    new-instance v3, Lcg0;
+    new-instance v3, Llg0;
 
     move-object/from16 v33, v10
 
-    iget-object v10, v9, Lyh1;->y:Lfg0;
+    iget-object v10, v9, Lgi1;->y:Log0;
 
     move-object/from16 v34, v13
 
-    iget-object v13, v10, Lfg0;->a:Lyy0;
+    iget-object v13, v10, Log0;->a:Lhz0;
 
     if-eqz v13, :cond_6
 
@@ -695,59 +695,59 @@
     const/4 v13, 0x0
 
     :goto_4
-    iget-object v10, v10, Lfg0;->c:Leg0;
+    iget-object v10, v10, Log0;->c:Lng0;
 
-    iget-boolean v10, v10, Leg0;->a:Z
+    iget-boolean v10, v10, Lng0;->a:Z
 
-    invoke-direct {v3, v13, v10}, Lcg0;-><init>(ZZ)V
+    invoke-direct {v3, v13, v10}, Llg0;-><init>(ZZ)V
 
-    new-instance v10, Lu43;
+    new-instance v10, Lg53;
 
     const/4 v13, 0x1
 
-    invoke-direct {v10, v13, v15}, Lu43;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v10, v13, v15}, Lg53;-><init>(ILjava/lang/Object;)V
 
-    new-instance v13, Lm29;
+    new-instance v13, Lt2c;
 
     move-object/from16 v35, v3
 
-    iget-object v3, v11, Llf1;->i:Lipe;
+    iget-object v3, v11, Ltf1;->i:Lqqe;
 
-    invoke-direct {v13, v3, v15, v8}, Lm29;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v13, v3, v15, v8}, Lt2c;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v3, v11, Llf1;->m:Lkq1;
+    iget-object v3, v11, Ltf1;->m:Lsq1;
 
-    iget-object v3, v3, Lkq1;->b:Lrhf;
+    iget-object v3, v3, Lsq1;->b:Lwif;
 
-    invoke-virtual {v3}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Ljq1;
+    check-cast v3, Lrq1;
 
     move-object/from16 v27, v3
 
-    new-instance v3, Lvr6;
+    new-instance v3, Lps6;
 
     move-object/from16 v36, v10
 
-    iget-object v10, v11, Llf1;->h:Lii1;
+    iget-object v10, v11, Ltf1;->h:Lqi1;
 
-    iget-object v10, v10, Lii1;->a:Ldi1;
+    iget-object v10, v10, Lqi1;->a:Lli1;
 
-    invoke-direct {v3, v9, v15, v7, v10}, Lvr6;-><init>(Lyh1;Lyuc;Lbvc;Ldi1;)V
+    invoke-direct {v3, v9, v15, v7, v10}, Lps6;-><init>(Lgi1;Lfwc;Liwc;Lli1;)V
 
-    new-instance v10, Lymi;
+    new-instance v10, Lyni;
 
-    invoke-direct {v10, v15, v7}, Lymi;-><init>(Lyuc;Lbvc;)V
+    invoke-direct {v10, v15, v7}, Lyni;-><init>(Lfwc;Liwc;)V
 
     move-object/from16 v37, v3
 
-    new-instance v3, Lgg1;
+    new-instance v3, Log1;
 
     move-object/from16 v38, v7
 
-    iget-object v7, v11, Llf1;->n:Lorg/webrtc/EglBase;
+    iget-object v7, v11, Ltf1;->n:Lorg/webrtc/EglBase;
 
     move-object/from16 v39, v7
 
@@ -763,89 +763,89 @@
 
     const/4 v13, 0x0
 
-    invoke-direct {v3, v15, v7, v10, v13}, Lgg1;-><init>(Lyuc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
+    invoke-direct {v3, v15, v7, v10, v13}, Log1;-><init>(Lfwc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
 
-    new-instance v7, Li9h;
+    new-instance v7, Liah;
 
     const-string v10, "pc_created"
 
-    invoke-direct {v7, v10, v15}, Li9h;-><init>(Ljava/lang/String;Lyuc;)V
+    invoke-direct {v7, v10, v15}, Liah;-><init>(Ljava/lang/String;Lfwc;)V
 
-    new-instance v10, Li9h;
+    new-instance v10, Liah;
 
     const-string v13, "accepted"
 
-    invoke-direct {v10, v13, v15}, Li9h;-><init>(Ljava/lang/String;Lyuc;)V
+    invoke-direct {v10, v13, v15}, Liah;-><init>(Ljava/lang/String;Lfwc;)V
 
-    new-instance v13, Lhie;
+    new-instance v13, Lqje;
 
     invoke-direct {v13}, Ljava/lang/Object;-><init>()V
 
     move-object/from16 v28, v3
 
-    iget-object v3, v11, Llf1;->r:Lmie;
+    iget-object v3, v11, Ltf1;->r:Lvje;
 
-    iput-object v3, v13, Lhie;->a:Lmie;
+    iput-object v3, v13, Lqje;->a:Lvje;
 
     move-object/from16 v43, v3
 
-    iget-object v3, v11, Llf1;->t:Lp40;
+    iget-object v3, v11, Ltf1;->t:Lq40;
 
-    iput-object v3, v13, Lhie;->b:Lp40;
+    iput-object v3, v13, Lqje;->b:Lq40;
 
     move-object/from16 v45, v3
 
-    iget v3, v2, Lwh1;->e:I
+    iget v3, v2, Lei1;->e:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    iput-object v3, v13, Lhie;->i:Ljava/lang/Integer;
+    iput-object v3, v13, Lqje;->i:Ljava/lang/Integer;
 
-    iget-object v3, v12, Ldi1;->c:Luz9;
+    iget-object v3, v12, Lli1;->c:Lw0a;
 
-    iput-object v3, v13, Lhie;->c:Luz9;
+    iput-object v3, v13, Lqje;->c:Lw0a;
 
-    iput-object v14, v13, Lhie;->d:Landroid/content/Context;
+    iput-object v14, v13, Lqje;->d:Landroid/content/Context;
 
-    iput-object v15, v13, Lhie;->e:Lyuc;
+    iput-object v15, v13, Lqje;->e:Lfwc;
 
     const/4 v3, 0x1
 
-    iput-boolean v3, v13, Lhie;->j:Z
+    iput-boolean v3, v13, Lqje;->j:Z
 
     invoke-interface/range {v39 .. v39}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
     move-result-object v3
 
-    iput-object v3, v13, Lhie;->k:Lorg/webrtc/EglBase$Context;
+    iput-object v3, v13, Lqje;->k:Lorg/webrtc/EglBase$Context;
 
-    iput-object v9, v13, Lhie;->f:Lyh1;
+    iput-object v9, v13, Lqje;->f:Lgi1;
 
-    new-instance v3, Lkf1;
+    new-instance v3, Lsf1;
 
-    invoke-direct {v3, v11}, Lkf1;-><init>(Llf1;)V
+    invoke-direct {v3, v11}, Lsf1;-><init>(Ltf1;)V
 
-    iput-object v3, v13, Lhie;->g:Ly58;
+    iput-object v3, v13, Lqje;->g:Lv68;
 
-    iget-object v3, v11, Llf1;->s:Ln58;
+    iget-object v3, v11, Ltf1;->s:Lk68;
 
-    iput-object v3, v13, Lhie;->l:Ln58;
+    iput-object v3, v13, Lqje;->l:Lk68;
 
     move-object/from16 v3, v73
 
-    iput-object v3, v13, Lhie;->n:Lngd;
+    iput-object v3, v13, Lqje;->n:Luhd;
 
-    iput-object v8, v13, Lhie;->m:Lvtf;
+    iput-object v8, v13, Lqje;->m:Lavf;
 
-    new-instance v3, Lkf1;
+    new-instance v3, Lsf1;
 
-    invoke-direct {v3, v11}, Lkf1;-><init>(Llf1;)V
+    invoke-direct {v3, v11}, Lsf1;-><init>(Ltf1;)V
 
-    iput-object v3, v13, Lhie;->o:Liie;
+    iput-object v3, v13, Lqje;->o:Lrje;
 
-    iget-boolean v3, v9, Lyh1;->f:Z
+    iget-boolean v3, v9, Lgi1;->f:Z
 
     move/from16 v48, v3
 
@@ -855,31 +855,37 @@
 
     const/4 v7, 0x5
 
-    invoke-direct {v3, v11, v7}, Ld;-><init>(Llf1;I)V
+    invoke-direct {v3, v11, v7}, Ld;-><init>(Ltf1;I)V
 
-    new-instance v7, Lrhf;
+    new-instance v7, Lwif;
 
-    invoke-direct {v7, v3}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v7, v3}, Lwif;-><init>(Lji6;)V
 
-    new-instance v50, Lz1j;
+    new-instance v3, Lb3j;
 
-    invoke-direct/range {v50 .. v50}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v49, v7
 
-    new-instance v51, Lm73;
+    const/16 v7, 0xd
 
-    iget-object v3, v12, Ldi1;->c:Luz9;
+    invoke-direct {v3, v7}, Lb3j;-><init>(I)V
 
-    move-object/from16 v19, v3
+    new-instance v51, Lz73;
 
-    iget-object v3, v11, Llf1;->n:Lorg/webrtc/EglBase;
+    iget-object v7, v12, Lli1;->c:Lw0a;
+
+    move-object/from16 v50, v3
+
+    iget-object v3, v11, Ltf1;->n:Lorg/webrtc/EglBase;
 
     move-object/from16 v17, v15
 
-    iget-object v15, v11, Llf1;->r:Lmie;
+    iget-object v15, v11, Ltf1;->r:Lvje;
 
     move-object/from16 v20, v3
 
-    iget-object v3, v11, Llf1;->j:Lzsa;
+    iget-object v3, v11, Ltf1;->j:Lbua;
+
+    move-object/from16 v19, v7
 
     move-object/from16 v16, v17
 
@@ -891,33 +897,33 @@
 
     move-object/from16 v14, v51
 
-    invoke-direct/range {v14 .. v20}, Lm73;-><init>(Lmie;Lyuc;Lzsa;Lpi;Luz9;Lorg/webrtc/EglBase;)V
+    invoke-direct/range {v14 .. v20}, Lz73;-><init>(Lvje;Lfwc;Lbua;Lpi;Lw0a;Lorg/webrtc/EglBase;)V
 
     move-object/from16 v15, v16
 
-    new-instance v14, Ly30;
+    new-instance v14, Lz30;
+
+    iget-object v7, v11, Ltf1;->h:Lqi1;
 
     move-object/from16 v44, v3
 
-    iget-object v3, v11, Llf1;->h:Lii1;
-
-    move-object/from16 v16, v3
-
-    iget-object v3, v11, Llf1;->g:Lar8;
+    iget-object v3, v11, Ltf1;->g:Lcs8;
 
     move-object/from16 v17, v3
 
-    iget-object v3, v11, Llf1;->u:Lye1;
+    iget-object v3, v11, Ltf1;->u:Lgf1;
 
     move-object/from16 v18, v3
 
-    iget-object v3, v11, Llf1;->f:Lwe1;
+    iget-object v3, v11, Ltf1;->f:Lef1;
 
     move-object/from16 v19, v3
 
+    move-object/from16 v16, v7
+
     move-object/from16 v20, v8
 
-    invoke-direct/range {v14 .. v20}, Ly30;-><init>(Lyuc;Lii1;Lar8;Lye1;Lwe1;Lvtf;)V
+    invoke-direct/range {v14 .. v20}, Lz30;-><init>(Lfwc;Lqi1;Lcs8;Lgf1;Lef1;Lavf;)V
 
     move-object/from16 v55, v14
 
@@ -925,9 +931,9 @@
 
     move-object/from16 v17, v19
 
-    new-instance v14, Lep4;
+    new-instance v14, Lsp4;
 
-    iget-object v3, v11, Llf1;->v:Lzme;
+    iget-object v3, v11, Ltf1;->v:Lhoe;
 
     move-object/from16 v19, v9
 
@@ -937,39 +943,37 @@
 
     move-object/from16 v16, v3
 
-    invoke-direct/range {v14 .. v19}, Lep4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct/range {v14 .. v19}, Lsp4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object/from16 v3, v17
 
     move-object/from16 v15, v18
 
-    new-instance v8, Lr22;
+    new-instance v7, Lz22;
 
-    invoke-direct {v8, v3}, Lr22;-><init>(Lwe1;)V
-
-    new-instance v3, Ld;
-
-    move-object/from16 v49, v7
-
-    const/4 v7, 0x3
-
-    invoke-direct {v3, v11, v7}, Ld;-><init>(Llf1;I)V
-
-    new-instance v7, Lrhf;
-
-    invoke-direct {v7, v3}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v7, v3}, Lz22;-><init>(Lef1;)V
 
     new-instance v3, Ld;
 
-    move-object/from16 v58, v7
+    const/4 v8, 0x3
+
+    invoke-direct {v3, v11, v8}, Ld;-><init>(Ltf1;I)V
+
+    new-instance v8, Lwif;
+
+    invoke-direct {v8, v3}, Lwif;-><init>(Lji6;)V
+
+    new-instance v3, Ld;
+
+    move-object/from16 v57, v7
 
     const/4 v7, 0x0
 
-    invoke-direct {v3, v11, v7}, Ld;-><init>(Llf1;I)V
+    invoke-direct {v3, v11, v7}, Ld;-><init>(Ltf1;I)V
 
-    new-instance v7, Lrhf;
+    new-instance v7, Lwif;
 
-    invoke-direct {v7, v3}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v7, v3}, Lwif;-><init>(Lji6;)V
 
     new-instance v3, Ld;
 
@@ -977,41 +981,41 @@
 
     const/4 v7, 0x4
 
-    invoke-direct {v3, v11, v7}, Ld;-><init>(Llf1;I)V
+    invoke-direct {v3, v11, v7}, Ld;-><init>(Ltf1;I)V
 
-    new-instance v7, Lrhf;
+    new-instance v7, Lwif;
 
-    invoke-direct {v7, v3}, Lrhf;-><init>(Loh6;)V
+    invoke-direct {v7, v3}, Lwif;-><init>(Lji6;)V
 
-    iget-object v3, v11, Llf1;->w:Law5;
+    iget-object v3, v11, Ltf1;->w:Luw5;
 
     move-object/from16 v60, v7
 
-    iget-object v7, v3, Law5;->b:Lbw5;
+    iget-object v7, v3, Luw5;->b:Lvw5;
 
-    iget-object v3, v3, Law5;->c:Lyv5;
+    iget-object v3, v3, Luw5;->c:Lsw5;
 
     move-object/from16 v62, v3
 
-    new-instance v3, Lgl4;
+    new-instance v3, Lul4;
 
     move-object/from16 v61, v7
 
     new-instance v7, Ld;
 
-    move-object/from16 v57, v8
+    move-object/from16 v58, v8
 
     const/4 v8, 0x2
 
-    invoke-direct {v7, v11, v8}, Ld;-><init>(Llf1;I)V
+    invoke-direct {v7, v11, v8}, Ld;-><init>(Ltf1;I)V
 
-    invoke-direct {v3, v15, v7}, Lgl4;-><init>(Lyuc;Loh6;)V
+    invoke-direct {v3, v15, v7}, Lul4;-><init>(Lfwc;Lji6;)V
 
-    new-instance v7, Lcz8;
+    new-instance v7, Ld09;
 
     const/4 v8, 0x5
 
-    invoke-direct {v7, v8, v15}, Lcz8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v8, v15}, Ld09;-><init>(ILjava/lang/Object;)V
 
     invoke-static {}, Landroid/hardware/Camera;->getNumberOfCameras()I
 
@@ -1023,41 +1027,41 @@
 
     move-object/from16 v41, v10
 
-    iget-object v10, v11, Llf1;->f:Lwe1;
+    iget-object v10, v11, Ltf1;->f:Lef1;
 
-    iget-object v8, v11, Llf1;->g:Lar8;
+    iget-object v8, v11, Ltf1;->g:Lcs8;
 
     move-object/from16 v64, v3
 
-    iget-object v3, v11, Llf1;->h:Lii1;
+    iget-object v3, v11, Ltf1;->h:Lqi1;
 
-    iget-object v12, v12, Ldi1;->c:Luz9;
+    iget-object v12, v12, Lli1;->c:Lw0a;
 
     move-object/from16 v17, v3
 
-    iget-object v3, v11, Llf1;->j:Lzsa;
+    iget-object v3, v11, Ltf1;->j:Lbua;
 
     move-object/from16 v19, v3
 
-    iget-object v3, v11, Llf1;->k:Lv25;
+    iget-object v3, v11, Ltf1;->k:Lo35;
 
     move-object/from16 v46, v3
 
-    iget-object v3, v11, Llf1;->l:Lryf;
+    iget-object v3, v11, Ltf1;->l:Lo7f;
 
     move-object/from16 v52, v3
 
-    iget-object v3, v11, Llf1;->o:Ljava/util/concurrent/ExecutorService;
+    iget-object v3, v11, Ltf1;->o:Ljava/util/concurrent/ExecutorService;
 
     move-object/from16 v54, v3
 
-    iget-object v3, v11, Llf1;->p:Ljava/util/concurrent/ExecutorService;
+    iget-object v3, v11, Ltf1;->p:Ljava/util/concurrent/ExecutorService;
 
     move-object/from16 v56, v3
 
-    iget-object v3, v11, Llf1;->q:Lwp4;
+    iget-object v3, v11, Ltf1;->q:Lkq4;
 
-    iget-object v11, v11, Llf1;->s:Ln58;
+    iget-object v11, v11, Ltf1;->s:Lk68;
 
     move-object/from16 v65, v11
 
@@ -1141,7 +1145,7 @@
 
     move-object/from16 v42, v3
 
-    invoke-direct/range {v7 .. v66}, Lyz0;-><init>(Landroid/content/Context;Lvtf;Lwe1;Lar8;Lii1;Lyh1;Lrhf;ZZLuz9;Lpr0;Ll34;ZLbvc;Lyuc;ZLgwb;ZLzsa;Lqt1;Lcg0;Lu43;Lm29;Ljq1;Lv25;Lryf;Lvr6;Lymi;Lorg/webrtc/EglBase;Lgg1;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ExecutorService;Li9h;Li9h;Lwp4;Lmie;Ln58;Lp40;Lhie;ZZLrhf;Lz1j;Lm73;Lpi;Lye1;Lzme;Ly30;Lep4;Lr22;Lrhf;Lrhf;Lrhf;Lxv5;Lyv5;Lpod;Lgl4;Lcz8;I)V
+    invoke-direct/range {v7 .. v66}, Lh01;-><init>(Landroid/content/Context;Lavf;Lef1;Lcs8;Lqi1;Lgi1;Lwif;ZZLw0a;Lyr0;Lz34;ZLiwc;Lfwc;ZLlxb;ZLbua;Lyt1;Llg0;Lg53;Lt2c;Lrq1;Lo35;Lo7f;Lps6;Lyni;Lorg/webrtc/EglBase;Log1;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ExecutorService;Liah;Liah;Lkq4;Lvje;Lk68;Lq40;Lqje;ZZLwif;Lb3j;Lz73;Lpi;Lgf1;Lhoe;Lz30;Lsp4;Lz22;Lwif;Lwif;Lwif;Lrw5;Lsw5;Lwpd;Lul4;Ld09;I)V
 
     move-object/from16 v23, v9
 
@@ -1151,7 +1155,7 @@
 
     move-object/from16 v15, v22
 
-    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     move-object/from16 v8, v23
 
@@ -1176,7 +1180,7 @@
 
     move-object v12, v7
 
-    new-instance v7, Lyz0;
+    new-instance v7, Lh01;
 
     iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->context:Landroid/content/Context;
 
@@ -1200,13 +1204,13 @@
 
     move/from16 v17, v3
 
-    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lkga;
+    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lmha;
 
     if-nez v3, :cond_9
 
-    new-instance v3, Lqt1;
+    new-instance v3, Lyt1;
 
-    invoke-direct {v3, v15}, Lqt1;-><init>(Lyuc;)V
+    invoke-direct {v3, v15}, Lyt1;-><init>(Lfwc;)V
 
     :cond_9
     move-object/from16 v19, v3
@@ -1215,7 +1219,7 @@
 
     move/from16 v20, v3
 
-    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lngd;
+    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Luhd;
 
     move-object/from16 v21, v3
 
@@ -1223,7 +1227,7 @@
 
     move-object/from16 v24, v3
 
-    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lpod;
+    iget-object v3, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lwpd;
 
     move/from16 v26, v17
 
@@ -1233,28 +1237,28 @@
 
     move-object/from16 v26, v3
 
-    invoke-direct/range {v7 .. v26}, Lyz0;-><init>(Landroid/content/Context;Lyh1;ZZLdi1;Ll34;ZZLbvc;Lyuc;Lzuc;Lkga;ZLngd;Lpi;Lvtf;Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lgwb;Lpod;)V
+    invoke-direct/range {v7 .. v26}, Lh01;-><init>(Landroid/content/Context;Lgi1;ZZLli1;Lz34;ZZLiwc;Lfwc;Lgwc;Lmha;ZLuhd;Lpi;Lavf;Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Llxb;Lwpd;)V
 
     move-object/from16 v15, v17
 
     move-object/from16 v8, v23
 
-    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     :goto_6
     new-instance v3, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
 
-    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v9, Lfz0;
+    new-instance v9, Loz0;
 
     const/16 v10, 0xc
 
-    invoke-direct {v9, v7, v10}, Lfz0;-><init>(Lyz0;I)V
+    invoke-direct {v9, v7, v10}, Loz0;-><init>(Lh01;I)V
 
-    invoke-direct {v3, v9}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;-><init>(Loh6;)V
+    invoke-direct {v3, v9}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;-><init>(Lji6;)V
 
     iget-object v7, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->executionTimeInterceptor:Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;
 
@@ -1266,37 +1270,37 @@
 
     iput-object v3, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    invoke-virtual {v3, v15}, Lru/ok/android/externcalls/sdk/api/OkApiService;->setRtcLog(Lyuc;)V
+    invoke-virtual {v3, v15}, Lru/ok/android/externcalls/sdk/api/OkApiService;->setRtcLog(Lfwc;)V
 
-    invoke-virtual {v3, v8}, Lru/ok/android/externcalls/sdk/api/OkApiService;->setTimeProvider(Lvtf;)V
+    invoke-virtual {v3, v8}, Lru/ok/android/externcalls/sdk/api/OkApiService;->setTimeProvider(Lavf;)V
 
     new-instance v7, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v9}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v10, Lfz0;
+    new-instance v10, Loz0;
 
     const/16 v11, 0xc
 
-    invoke-direct {v10, v9, v11}, Lfz0;-><init>(Lyz0;I)V
+    invoke-direct {v10, v9, v11}, Loz0;-><init>(Lh01;I)V
 
-    invoke-direct {v7, v10}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;-><init>(Loh6;)V
+    invoke-direct {v7, v10}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;-><init>(Lji6;)V
 
     invoke-virtual {v3, v7}, Lru/ok/android/externcalls/sdk/api/OkApiService;->setApiStats(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;)V
 
     new-instance v7, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;-><init>(Lyz0;)V
+    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/video/internal/ScreenCaptureManagerImpl;-><init>(Lh01;)V
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->screenCaptureManager:Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
 
     new-instance v7, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     new-instance v10, Lru/ok/android/externcalls/sdk/a;
 
@@ -1310,35 +1314,35 @@
 
     invoke-direct {v11, v0, v12}, Lru/ok/android/externcalls/sdk/a;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;I)V
 
-    invoke-direct {v7, v9, v10, v11}, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;-><init>(Lyz0;Loh6;Loh6;)V
+    invoke-direct {v7, v9, v10, v11}, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;-><init>(Lh01;Lji6;Lji6;)V
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cameraManager:Lru/ok/android/externcalls/sdk/video/CameraManager;
 
     new-instance v7, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;
 
-    new-instance v9, Lp34;
+    new-instance v9, Ld44;
 
     const/4 v10, 0x0
 
     move-object/from16 v11, v68
 
-    invoke-direct {v9, v11, v10}, Lp34;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    invoke-direct {v9, v11, v10}, Ld44;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
 
-    iget-object v10, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v10, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     new-instance v12, Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;
 
     invoke-direct {v12}, Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;-><init>()V
 
-    invoke-direct {v7, v9, v10, v12, v4}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;-><init>(Loh6;Lyz0;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V
+    invoke-direct {v7, v9, v10, v12, v4}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;-><init>(Lji6;Lh01;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V
 
-    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->videoRendererProvider:Lsp4;
+    iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->videoRendererProvider:Lgq4;
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->videoRenderManager:Lru/ok/android/externcalls/sdk/video/VideoRenderManager;
 
     new-instance v7, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     new-instance v10, Lru/ok/android/externcalls/sdk/a;
 
@@ -1346,23 +1350,23 @@
 
     invoke-direct {v10, v0, v12}, Lru/ok/android/externcalls/sdk/a;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;I)V
 
-    invoke-direct {v7, v9, v10}, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;-><init>(Lyz0;Loh6;)V
+    invoke-direct {v7, v9, v10}, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;-><init>(Lh01;Lji6;)V
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->microphoneManager:Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
 
     new-instance v7, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;-><init>(Lyz0;)V
+    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;-><init>(Lh01;)V
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->noiseSuppressionManager:Lru/ok/android/externcalls/sdk/audio/NoiseSuppressionManager;
 
     new-instance v7, Lru/ok/android/externcalls/sdk/net/internal/NetworkConnectionManagerImpl;
 
-    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v9, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/net/internal/NetworkConnectionManagerImpl;-><init>(Lyz0;)V
+    invoke-direct {v7, v9}, Lru/ok/android/externcalls/sdk/net/internal/NetworkConnectionManagerImpl;-><init>(Lh01;)V
 
     iput-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->networkConnectionManager:Lru/ok/android/externcalls/sdk/net/NetworkConnectionManager;
 
@@ -1374,7 +1378,7 @@
 
     new-instance v11, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;
 
-    iget-object v12, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v12, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     move-object v14, v13
 
@@ -1382,7 +1386,7 @@
 
     move-object/from16 v9, v68
 
-    invoke-direct/range {v11 .. v16}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;-><init>(Lyz0;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lk34;Lyuc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+    invoke-direct/range {v11 .. v16}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;-><init>(Lh01;Lru/ok/android/externcalls/sdk/log/ExtLogger;Ly34;Lfwc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
 
     move-object v12, v11
 
@@ -1431,9 +1435,9 @@
     :cond_a
     new-instance v14, Lru/ok/android/externcalls/sdk/id/mapping/ExternalToInternalIdsMapper;
 
-    iget-object v15, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lyuc;
+    iget-object v15, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lfwc;
 
-    invoke-direct {v14, v3, v15}, Lru/ok/android/externcalls/sdk/id/mapping/ExternalToInternalIdsMapper;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lyuc;)V
+    invoke-direct {v14, v3, v15}, Lru/ok/android/externcalls/sdk/id/mapping/ExternalToInternalIdsMapper;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lfwc;)V
 
     :goto_7
     iput-object v14, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->internalIdsMapper:Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper;
@@ -1454,19 +1458,19 @@
 
     new-instance v14, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    iget-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     move-object/from16 v16, v3
 
-    new-instance v3, Lp34;
+    new-instance v3, Ld44;
 
     move-object/from16 v23, v8
 
     const/4 v8, 0x0
 
-    invoke-direct {v3, v9, v8}, Lp34;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    invoke-direct {v3, v9, v8}, Ld44;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
 
-    invoke-direct {v14, v11, v15, v5, v3}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lyz0;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Loh6;)V
+    invoke-direct {v14, v11, v15, v5, v3}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lh01;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lji6;)V
 
     iput-object v14, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->addParticipantsCommands:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
@@ -1618,11 +1622,11 @@
 
     new-instance v5, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;
 
-    new-instance v6, Lma2;
+    new-instance v6, Lua2;
 
     const/16 v8, 0xf
 
-    invoke-direct {v6, v8, v4}, Lma2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v8, v4}, Lua2;-><init>(ILjava/lang/Object;)V
 
     new-instance v8, Lru/ok/android/externcalls/sdk/q;
 
@@ -1630,21 +1634,21 @@
 
     invoke-direct {v8, v0, v9}, Lru/ok/android/externcalls/sdk/q;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;I)V
 
-    invoke-direct {v5, v6, v8}, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;-><init>(Lqh6;Lqh6;)V
+    invoke-direct {v5, v6, v8}, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;-><init>(Lli6;Lli6;)V
 
     iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->displayLayoutSender:Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender;
 
     new-instance v11, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lpka;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lrla;
 
-    invoke-virtual {v5}, Lpka;->d()Ldm;
+    invoke-virtual {v5}, Lrla;->d()Ldm;
 
     move-result-object v5
 
-    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lpka;
+    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lrla;
 
-    invoke-virtual {v6}, Lpka;->c()Lrl;
+    invoke-virtual {v6}, Lrla;->c()Lrl;
 
     move-result-object v14
 
@@ -1652,7 +1656,7 @@
 
     move-object/from16 v6, v71
 
-    iget-boolean v6, v6, Lwh1;->k:Z
+    iget-boolean v6, v6, Lei1;->k:Z
 
     move-object/from16 v18, v4
 
@@ -1666,7 +1670,7 @@
 
     move-object v13, v5
 
-    invoke-direct/range {v11 .. v19}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Lk34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+    invoke-direct/range {v11 .. v19}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Ldm;Lrl;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;Ly34;ZLru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
 
     iput-object v11, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->conversationStart:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
 
@@ -1680,7 +1684,7 @@
 
     new-instance v4, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl;
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lyuc;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lfwc;
 
     new-instance v6, Lru/ok/android/externcalls/sdk/a;
 
@@ -1690,27 +1694,27 @@
 
     iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationBuilder;->mediaConnectionSettings:Lru/ok/android/externcalls/sdk/connection/MediaConnectionSettings;
 
-    invoke-direct {v4, v5, v6, v8}, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl;-><init>(Lyuc;Loh6;Lru/ok/android/externcalls/sdk/connection/MediaConnectionSettings;)V
+    invoke-direct {v4, v5, v6, v8}, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl;-><init>(Lfwc;Lji6;Lru/ok/android/externcalls/sdk/connection/MediaConnectionSettings;)V
 
     iput-object v4, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->mediaConnectionManager:Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl;
 
-    invoke-interface {v7, v4}, Lru/ok/android/externcalls/sdk/net/NetworkConnectionManager;->plusAssign(Lqyf;)V
+    invoke-interface {v7, v4}, Lru/ok/android/externcalls/sdk/net/NetworkConnectionManager;->plusAssign(Lvzf;)V
 
     new-instance v4, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
-    invoke-direct {v4, v12, v10}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lyuc;)V
+    invoke-direct {v4, v12, v10}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lfwc;)V
 
     iput-object v4, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->remoteSettings:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
     new-instance v14, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    iget-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v15, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object v5, v3, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->kwsStat:Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;
 
     new-instance v6, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl;
 
-    invoke-direct {v6, v4, v10}, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;)V
+    invoke-direct {v6, v4, v10}, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;)V
 
     move-object/from16 v16, v5
 
@@ -1720,7 +1724,7 @@
 
     move-object/from16 v18, v23
 
-    invoke-direct/range {v14 .. v19}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;-><init>(Lyz0;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Lvtf;Lyuc;)V
+    invoke-direct/range {v14 .. v19}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;-><init>(Lh01;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Lavf;Lfwc;)V
 
     move-object/from16 v15, v19
 
@@ -1730,21 +1734,21 @@
 
     new-instance v6, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl;
 
-    invoke-direct {v6, v4, v15}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lyuc;)V
+    invoke-direct {v6, v4, v15}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;)V
 
-    iget-object v4, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v7, Lfz0;
+    new-instance v7, Loz0;
 
     const/16 v8, 0xe
 
-    invoke-direct {v7, v4, v8}, Lfz0;-><init>(Lyz0;I)V
+    invoke-direct {v7, v4, v8}, Loz0;-><init>(Lh01;I)V
 
     move-object/from16 v4, v69
 
-    invoke-direct {v5, v15, v6, v7, v4}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;-><init>(Lyuc;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Loh6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
+    invoke-direct {v5, v15, v6, v7, v4}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;-><init>(Lfwc;Lru/ok/android/externcalls/sdk/rate/RateManagerConfigProvider;Lji6;Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;)V
 
     iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->rateManager:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;
 
@@ -1752,17 +1756,17 @@
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lo34;
+    new-instance v5, Lc44;
 
-    invoke-direct {v5, v4}, Lo34;-><init>(Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;)V
+    invoke-direct {v5, v4}, Lc44;-><init>(Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;)V
 
-    iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->topologyUpgradeStatEventListener:Ltyf;
+    iput-object v5, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->topologyUpgradeStatEventListener:Lxzf;
 
     iget-object v3, v3, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->callInitStat:Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;
 
     invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;->onCallInitialized()V
 
-    iget-boolean v2, v2, Lwh1;->F:Z
+    iget-boolean v2, v2, Lei1;->F:Z
 
     if-eqz v2, :cond_b
 
@@ -1778,18 +1782,18 @@
     return-void
 .end method
 
-.method public static synthetic A(Lfr3;Lorg/json/JSONObject;)V
+.method public static synthetic A(Ltr3;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$24(Lfr3;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$24(Ltr3;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic B(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLfr3;ZLfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+.method public static synthetic B(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;ZLtr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepare$7(ZLfr3;ZLfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepare$7(ZLtr3;ZLtr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
 
     return-void
 .end method
@@ -1812,26 +1816,26 @@
     return-object p0
 .end method
 
-.method public static synthetic E(Ljme;ZLzh1;)V
+.method public static synthetic E(Lrne;ZLhi1;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setMuteState$37(Ljme;ZLzh1;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setMuteState$37(Lrne;ZLhi1;)V
 
     return-void
 .end method
 
-.method public static synthetic F(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqh6;Lqh6;Ljava/util/Collection;)V
+.method public static synthetic F(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLli6;Lli6;Ljava/util/Collection;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipants$27(Ljava/lang/Boolean;ZLqh6;Lqh6;Ljava/util/Collection;)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipants$27(Ljava/lang/Boolean;ZLli6;Lli6;Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method public static synthetic G(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLwz0;Lfr3;Lorg/json/JSONObject;)V
+.method public static synthetic G(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLf01;Ltr3;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setCallOptionEnabled$20(ZLwz0;Lfr3;Lorg/json/JSONObject;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setCallOptionEnabled$20(ZLf01;Ltr3;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -1844,44 +1848,44 @@
     return-void
 .end method
 
-.method public static synthetic I(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLfr3;Ljava/util/Collection;)V
+.method public static synthetic I(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLtr3;Ljava/util/Collection;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$23(Ljava/lang/Boolean;ZLfr3;Ljava/util/Collection;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$23(Ljava/lang/Boolean;ZLtr3;Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method public static synthetic J(Lfr3;Ljava/lang/Throwable;)V
+.method public static synthetic J(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConfroomJoin$11(Lfr3;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConfroomJoin$11(Ltr3;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public static synthetic K(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/List;)Lzag;
+.method public static synthetic K(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/List;)Lccg;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$new$3(Ljava/util/List;)Lzag;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$new$3(Ljava/util/List;)Lccg;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic L(Lfr3;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method public static synthetic L(Ltr3;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$withInternalIds$33(Lfr3;Ljava/util/ArrayList;Ljava/util/Map;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$withInternalIds$33(Ltr3;Ljava/util/ArrayList;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public static synthetic M(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLzh1;)V
+.method public static synthetic M(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhi1;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$promoteParticipant$29(ZLzh1;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$promoteParticipant$29(ZLhi1;)V
 
     return-void
 .end method
@@ -1902,10 +1906,10 @@
     return-void
 .end method
 
-.method public static synthetic P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lyz0;
+.method public static synthetic P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
     .locals 0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createAsrOnlineManager$6()Lyz0;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createAsrOnlineManager$6()Lh01;
 
     move-result-object p0
 
@@ -1954,10 +1958,10 @@
     return p0
 .end method
 
-.method public static bridge synthetic V(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lyz0;
+.method public static bridge synthetic V(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     return-object p0
 .end method
@@ -1994,10 +1998,10 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lfr3;Ljava/lang/Throwable;)V
+.method public static synthetic a(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepareJoinByLink$9(Lfr3;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepareJoinByLink$9(Ltr3;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -2088,18 +2092,18 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic b0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lwh1;
+.method public static bridge synthetic b0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lei1;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lwh1;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lei1;
 
     return-object p0
 .end method
 
-.method public static synthetic c(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLzh1;)V
+.method public static synthetic c(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhi1;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$removeParticipant$28(ZLzh1;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$removeParticipant$28(ZLhi1;)V
 
     return-void
 .end method
@@ -2142,9 +2146,9 @@
     :cond_0
     sget-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->VIDEO_TRACKS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget v2, v2, Lyh1;->j:I
+    iget v2, v2, Lgi1;->j:I
 
     const/4 v3, 0x0
 
@@ -2164,9 +2168,9 @@
 
     sget-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->WAITING_HALL:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-boolean v2, v2, Lyh1;->l:Z
+    iget-boolean v2, v2, Lgi1;->l:Z
 
     invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
@@ -2174,9 +2178,9 @@
 
     sget-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->FILTER_DEFAULTS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-boolean v2, v2, Lyh1;->m:Z
+    iget-boolean v2, v2, Lgi1;->m:Z
 
     invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
@@ -2184,9 +2188,9 @@
 
     sget-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->SESSION_ROOMS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-boolean v2, v2, Lyh1;->r:Z
+    iget-boolean v2, v2, Lgi1;->r:Z
 
     invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
@@ -2204,9 +2208,9 @@
 
     sget-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->AUDIENCE_MODE:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-boolean v2, v2, Lyh1;->u:Z
+    iget-boolean v2, v2, Lgi1;->u:Z
 
     invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->set(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;Z)Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
@@ -2260,7 +2264,7 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;-><init>(Loh6;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+    invoke-direct {v1, v2, v3}, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;-><init>(Lji6;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
 
     new-instance v2, Lru/ok/android/externcalls/sdk/a;
 
@@ -2268,7 +2272,7 @@
 
     invoke-direct {v2, p0, v3}, Lru/ok/android/externcalls/sdk/a;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;I)V
 
-    invoke-direct {p1, v1, v0, v2}, Lru/ok/android/externcalls/sdk/asr_online/internal/AsrOnlineManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutor;Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;Loh6;)V
+    invoke-direct {p1, v1, v0, v2}, Lru/ok/android/externcalls/sdk/asr_online/internal/AsrOnlineManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutor;Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;Lji6;)V
 
     return-object p1
 .end method
@@ -2318,7 +2322,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->internalIdsResolver:Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;
 
@@ -2336,9 +2340,9 @@
 
     iget-boolean v10, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->isCaller:Z
 
-    iget-object v11, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v11, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    iget-object v12, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v12, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->conversationStart:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
 
@@ -2348,7 +2352,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lk34;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLyuc;Lyh1;Z)V
+    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Ly34;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLfwc;Lgi1;Z)V
 
     return-object v0
 .end method
@@ -2358,27 +2362,27 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v2, v1
 
-    new-instance v1, Lfz0;
+    new-instance v1, Loz0;
 
     const/16 v3, 0xc
 
-    invoke-direct {v1, v2, v3}, Lfz0;-><init>(Lyz0;I)V
+    invoke-direct {v1, v2, v3}, Loz0;-><init>(Lh01;I)V
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallType()Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
     move-result-object v4
 
-    iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lvtf;
+    iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lavf;
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->anonToken:Ljava/lang/String;
 
@@ -2392,7 +2396,7 @@
     const/4 v6, 0x0
 
     :goto_0
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/stat/ConversationStats;-><init>(Loh6;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lk34;Lru/ok/android/externcalls/sdk/Conversation$CallType;Lvtf;Z)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/stat/ConversationStats;-><init>(Lji6;Lru/ok/android/externcalls/sdk/log/ExtLogger;Ly34;Lru/ok/android/externcalls/sdk/Conversation$CallType;Lavf;Z)V
 
     return-object v0
 .end method
@@ -2405,7 +2409,7 @@
             "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
             "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
-            "Lzh1;",
+            "Lhi1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;"
@@ -2418,17 +2422,17 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Lq34;
+    new-instance v3, Le44;
 
     const/4 v2, 0x0
 
-    invoke-direct {v3, v2, v1}, Lq34;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v2, v1}, Le44;-><init>(ILjava/lang/Object;)V
 
-    new-instance v4, Lty1;
+    new-instance v4, Laz1;
 
     const/16 v1, 0x19
 
-    invoke-direct {v4, v1}, Lty1;-><init>(I)V
+    invoke-direct {v4, v1}, Laz1;-><init>(I)V
 
     iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
@@ -2507,7 +2511,7 @@
             "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lzh1;",
+            "Lhi1;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;"
         }
@@ -2515,11 +2519,11 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;
 
-    new-instance v3, Lty1;
+    new-instance v3, Laz1;
 
     const/16 v1, 0x18
 
-    invoke-direct {v3, v1}, Lty1;-><init>(I)V
+    invoke-direct {v3, v1}, Laz1;-><init>(I)V
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
@@ -2537,23 +2541,23 @@
 .method private createMLFeatureManager(Landroid/content/Context;)Lru/ok/android/externcalls/sdk/ml/MLFeaturesManager;
     .locals 8
 
-    new-instance v1, Luq4;
+    new-instance v1, Lcs8;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v1, p1, v0}, Luq4;-><init>(Landroid/content/Context;Lyuc;)V
+    invoke-direct {v1, p1, v0}, Lcs8;-><init>(Landroid/content/Context;Lfwc;)V
 
     new-instance v2, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v2, v0}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;-><init>(Lyuc;)V
+    invoke-direct {v2, v0}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;-><init>(Lfwc;)V
 
     new-instance v0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->keywordSpotterManager:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->remoteSettings:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
@@ -2561,7 +2565,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;-><init>(Lsc8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Lyuc;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V
+    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;-><init>(Lpd8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Lfwc;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V
 
     return-object v0
 .end method
@@ -2599,13 +2603,13 @@
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lc14;
+    new-instance v5, Lm14;
 
-    const/4 v6, 0x1
+    const/4 v6, 0x2
 
-    invoke-direct {v5, v6, v4}, Lc14;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v5, v6, v4}, Lm14;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v1, p1, v2, v3, v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Loh6;Lqh6;Loh6;)V
+    invoke-direct {v1, p1, v2, v3, v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lji6;Lli6;Lji6;)V
 
     invoke-direct {v0, v1, p2}, Lru/ok/android/externcalls/sdk/media/mute/internal/MediaMuteManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;Lru/ok/android/externcalls/sdk/media/mute/internal/listener/MediaMuteListenerManager;)V
 
@@ -2623,7 +2627,7 @@
 
     invoke-direct {v1, p0, v2}, Lru/ok/android/externcalls/sdk/a;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;I)V
 
-    invoke-direct {v0, p1, v1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantStatesHandler;-><init>(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Loh6;)V
+    invoke-direct {v0, p1, v1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantStatesHandler;-><init>(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lji6;)V
 
     return-object v0
 .end method
@@ -2661,17 +2665,17 @@
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v7, Lb42;
+    new-instance v7, Lj42;
 
     const/16 v8, 0x1d
 
-    invoke-direct {v7, v8, v3}, Lb42;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v8, v3}, Lj42;-><init>(ILjava/lang/Object;)V
 
-    iget-object v8, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v8, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
     move-object v3, p1
 
-    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;-><init>(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lyh1;)V
+    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;-><init>(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lgi1;)V
 
     return-object v0
 .end method
@@ -2681,7 +2685,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -2693,7 +2697,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;-><init>(Lyuc;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;-><init>(Lfwc;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V
 
     return-object v0
 .end method
@@ -2727,13 +2731,13 @@
 .method private createSignalingProvider()Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Ldz0;
+    new-instance v1, Lmz0;
 
-    invoke-direct {v1, v0}, Ldz0;-><init>(Lyz0;)V
+    invoke-direct {v1, v0}, Lmz0;-><init>(Lh01;)V
 
     return-object v1
 .end method
@@ -2767,9 +2771,9 @@
 
     new-instance v5, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v5, p1, v0}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lyuc;)V
+    invoke-direct {v5, p1, v0}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lfwc;)V
 
     new-instance v7, Lru/ok/android/externcalls/sdk/stereo/internal/listener/StereoRoomListenerManagerImpl;
 
@@ -2777,7 +2781,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -2787,11 +2791,11 @@
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    iget-object v8, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lvtf;
+    iget-object v8, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->timeProvider:Lavf;
 
     move-object v3, p2
 
-    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;-><init>(Lyuc;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/stereo/internal/listener/StereoRoomListenerManagerImpl;Lvtf;)V
+    invoke-direct/range {v0 .. v8}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;-><init>(Lfwc;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/stereo/internal/listener/StereoRoomListenerManagerImpl;Lavf;)V
 
     return-object v0
 .end method
@@ -2807,9 +2811,9 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lyuc;)V
+    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lfwc;)V
 
     return-object v0
 .end method
@@ -2843,9 +2847,9 @@
 
     invoke-direct {v1, p0, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl$3;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;)V
 
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v0, v1, p1, p2, p3}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;-><init>(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$Listener;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lyuc;)V
+    invoke-direct {v0, v1, p1, p2, p3}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;-><init>(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants$Listener;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/mapping/IdMappingResolver;Lfwc;)V
 
     return-object v0
 .end method
@@ -2855,17 +2859,17 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lfz0;
+    new-instance v2, Loz0;
 
     const/16 v3, 0xd
 
-    invoke-direct {v2, v1, v3}, Lfz0;-><init>(Lyz0;I)V
+    invoke-direct {v2, v1, v3}, Loz0;-><init>(Lh01;I)V
 
-    invoke-direct {v0, p2, v2}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Loh6;)V
+    invoke-direct {v0, p2, v2}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;-><init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lji6;)V
 
     new-instance p2, Lru/ok/android/externcalls/sdk/watch_together/internal/WatchTogetherPlayerImpl;
 
@@ -2906,13 +2910,13 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v2, "Conversation"
 
     const-string v3, "attempted to continue init after release, ignoring"
 
-    invoke-interface {v1, v2, v3}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -2930,7 +2934,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v1
 
@@ -2938,28 +2942,28 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->initialOpponent:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v3
 
-    iget-object v2, v2, Lyz0;->j0:Lii1;
+    iget-object v2, v2, Lh01;->j0:Lqi1;
 
-    invoke-virtual {v2, v3}, Lii1;->j(Lzh1;)Ldi1;
+    invoke-virtual {v2, v3}, Lqi1;->j(Lhi1;)Lli1;
 
     move-result-object v2
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-virtual {v1, v2, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->setCallParticipant(Ldi1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-virtual {v1, v2, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->setCallParticipant(Lli1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     :cond_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->videoRendererProvider:Lsp4;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->videoRendererProvider:Lgq4;
 
-    invoke-virtual {v1}, Lyz0;->j()Z
+    invoke-virtual {v1}, Lh01;->j()Z
 
     move-result v3
 
@@ -2968,13 +2972,13 @@
     goto :goto_0
 
     :cond_2
-    iput-object v2, v1, Lyz0;->q0:Lsp4;
+    iput-object v2, v1, Lh01;->q0:Lgq4;
 
     if-nez v2, :cond_3
 
-    iget-object v1, v1, Lyz0;->n0:Lhr1;
+    iget-object v1, v1, Lh01;->n0:Lpr1;
 
-    invoke-virtual {v1}, Lhr1;->p()V
+    invoke-virtual {v1}, Lpr1;->p()V
 
     :cond_3
     :goto_0
@@ -2982,9 +2986,9 @@
 
     if-nez v1, :cond_4
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v1}, Lyz0;->C()V
+    invoke-virtual {v1}, Lh01;->C()V
 
     :cond_4
     const/4 v1, 0x1
@@ -3003,10 +3007,10 @@
     throw v1
 .end method
 
-.method public static synthetic e(Ljava/lang/Runnable;Lfr3;Ljava/lang/Boolean;)V
+.method public static synthetic e(Ljava/lang/Runnable;Ltr3;Ljava/lang/Boolean;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$removeJoinLink$34(Ljava/lang/Runnable;Lfr3;Ljava/lang/Boolean;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$removeJoinLink$34(Ljava/lang/Runnable;Ltr3;Ljava/lang/Boolean;)V
 
     return-void
 .end method
@@ -3019,32 +3023,32 @@
     return p0
 .end method
 
-.method private executeOnBg(Loh6;Lfr3;Ljava/lang/Runnable;)V
+.method private executeOnBg(Lji6;Ltr3;Ljava/lang/Runnable;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Loh6;",
-            "Lfr3;",
+            "Lji6;",
+            "Ltr3;",
             "Ljava/lang/Runnable;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
-    invoke-static {p1, p2, p3}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Loh6;Lfr3;Ljava/lang/Runnable;)Lev4;
+    invoke-static {p1, p2, p3}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Lji6;Ltr3;Ljava/lang/Runnable;)Lvv4;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p1}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
 
-.method private executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lqoe;
+.method private executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lwpe;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3057,7 +3061,7 @@
             "Lru/ok/android/externcalls/sdk/Conversation$State;",
             "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action<",
             "TP;TR;>;TP;)",
-            "Lqoe;"
+            "Lwpe;"
         }
     .end annotation
 
@@ -3070,7 +3074,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-interface {p3, p4}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lqoe;
+    invoke-interface {p3, p4}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lwpe;
 
     move-result-object p1
 
@@ -3111,17 +3115,17 @@
 
     invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p2}, Lqoe;->f(Ljava/lang/Throwable;)Lrja;
+    invoke-static {p2}, Lwpe;->f(Ljava/lang/Throwable;)Ltka;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic f(Lfr3;Lorg/json/JSONObject;)V
+.method public static synthetic f(Ltr3;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$22(Lfr3;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$22(Ltr3;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -3134,10 +3138,10 @@
     return-object p0
 .end method
 
-.method public static synthetic g(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lyz0;)V
+.method public static synthetic g(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Lh01;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConnect$19(Lfr3;Lyz0;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConnect$19(Ltr3;Lh01;)V
 
     return-void
 .end method
@@ -3150,22 +3154,22 @@
     return-object p0
 .end method
 
-.method private getCallEndInfo(Lsv6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
+.method private getCallEndInfo(Lmw6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
     .locals 3
 
-    instance-of v0, p2, Lqv6;
+    instance-of v0, p2, Lkw6;
 
     if-eqz v0, :cond_1
 
-    check-cast p2, Lqv6;
+    check-cast p2, Lkw6;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iget-object v1, p2, Lqv6;->a:Ljava/util/Set;
+    iget-object v1, p2, Lkw6;->a:Ljava/util/Set;
 
-    sget-object v2, Lpv6;->a:Lpv6;
+    sget-object v2, Ljw6;->a:Ljw6;
 
     invoke-interface {v1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -3178,7 +3182,7 @@
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    iget-object p2, p2, Lqv6;->b:Ljava/lang/String;
+    iget-object p2, p2, Lkw6;->b:Ljava/lang/String;
 
     goto :goto_0
 
@@ -3190,12 +3194,12 @@
     :goto_0
     new-instance v1, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
 
-    invoke-direct {v1, p1, v0, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;-><init>(Lsv6;Ljava/util/Set;Ljava/lang/String;)V
+    invoke-direct {v1, p1, v0, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;-><init>(Lmw6;Ljava/util/Set;Ljava/lang/String;)V
 
     return-object v1
 .end method
 
-.method private getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ldi1;
+.method private getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lli1;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
@@ -3206,7 +3210,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
@@ -3218,7 +3222,7 @@
     return-object p1
 .end method
 
-.method private getCallParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzh1;
+.method private getCallParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
     .locals 2
 
     const/4 v0, 0x0
@@ -3239,7 +3243,7 @@
     return-object v0
 
     :cond_1
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
@@ -3248,7 +3252,7 @@
     return-object v0
 
     :cond_2
-    iget-object p1, p1, Ldi1;->a:Lzh1;
+    iget-object p1, p1, Lli1;->a:Lhi1;
 
     return-object p1
 .end method
@@ -3271,21 +3275,21 @@
     return-object p1
 .end method
 
-.method private grantRoles(Lzh1;Z[Lci1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+.method private grantRoles(Lhi1;Z[Lki1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 7
 
     .line 4
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
 
     .line 5
-    iget-object p3, v1, Lyz0;->n0:Lhr1;
+    iget-object p3, v1, Lh01;->n0:Lpr1;
 
     .line 6
-    new-instance v0, Liz0;
+    new-instance v0, Lrz0;
 
     move-object v2, p1
 
@@ -3295,9 +3299,9 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Liz0;-><init>(Lyz0;Lzh1;ZLjava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-direct/range {v0 .. v6}, Lrz0;-><init>(Lh01;Lhi1;ZLjava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    invoke-virtual {p3, v2, v4, v3, v0}, Lhr1;->B(Lzh1;Ljava/util/List;ZLiz0;)V
+    invoke-virtual {p3, v2, v4, v3, v0}, Lpr1;->B(Lhi1;Ljava/util/List;ZLrz0;)V
 
     return-void
 .end method
@@ -3310,22 +3314,22 @@
     return-void
 .end method
 
-.method public static bridge synthetic h0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lyuc;
+.method public static bridge synthetic h0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lfwc;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     return-object p0
 .end method
 
-.method private hasNoInternalId(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;Ljava/lang/Boolean;Lfr3;)Z
+.method private hasNoInternalId(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;Ljava/lang/Boolean;Ltr3;)Z
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;",
             "Ljava/lang/Boolean;",
-            "Lfr3;",
+            "Ltr3;",
             ")Z"
         }
     .end annotation
@@ -3400,7 +3404,7 @@
 
     move-result v4
 
-    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v3
 
@@ -3457,7 +3461,7 @@
 
     invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/CallFailedException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p3, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p3, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return v0
 
@@ -3483,7 +3487,7 @@
 
     check-cast p3, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {p3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {p3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v0
 
@@ -3530,11 +3534,11 @@
 .method private isWebTransportEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-object v0, v0, Lyh1;->z:Lwh1;
+    iget-object v0, v0, Lgi1;->z:Lei1;
 
-    iget-boolean v0, v0, Lwh1;->E:Z
+    iget-boolean v0, v0, Lei1;->E:Z
 
     if-eqz v0, :cond_0
 
@@ -3570,10 +3574,10 @@
     return-object p0
 .end method
 
-.method public static synthetic k(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+.method public static synthetic k(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepareJoinByLink$8(Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$prepareJoinByLink$8(Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
 
     return-void
 .end method
@@ -3602,7 +3606,7 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$addParticipant$22(Lfr3;Lorg/json/JSONObject;)V
+.method private static synthetic lambda$addParticipant$22(Ltr3;Lorg/json/JSONObject;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3620,16 +3624,16 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method private synthetic lambda$addParticipant$23(Ljava/lang/Boolean;ZLfr3;Ljava/util/Collection;)V
+.method private synthetic lambda$addParticipant$23(Ljava/lang/Boolean;ZLtr3;Ljava/util/Collection;)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-interface {p4}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -3639,7 +3643,7 @@
 
     move-result-object p4
 
-    check-cast p4, Lzh1;
+    check-cast p4, Lhi1;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -3649,14 +3653,14 @@
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p3, v2}, Lru/ok/android/externcalls/sdk/g;-><init>(Lfr3;I)V
+    invoke-direct {v1, p3, v2}, Lru/ok/android/externcalls/sdk/g;-><init>(Ltr3;I)V
 
-    invoke-virtual {v0, p4, p1, p2, v1}, Lyz0;->k(Lzh1;Ljava/lang/Boolean;Ljava/lang/Boolean;Lgme;)V
+    invoke-virtual {v0, p4, p1, p2, v1}, Lh01;->k(Lhi1;Ljava/lang/Boolean;Ljava/lang/Boolean;Lone;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$addParticipant$24(Lfr3;Lorg/json/JSONObject;)V
+.method private static synthetic lambda$addParticipant$24(Ltr3;Lorg/json/JSONObject;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3674,13 +3678,13 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method private synthetic lambda$addParticipant$25(ZLfr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
+.method private synthetic lambda$addParticipant$25(ZLtr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3688,7 +3692,7 @@
         }
     .end annotation
 
-    new-instance v0, Lzh1;
+    new-instance v0, Lhi1;
 
     invoke-virtual {p3}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->getOkId()J
 
@@ -3698,9 +3702,9 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p3, v3, v1, v2}, Lzh1;-><init>(IIJ)V
+    invoke-direct {v0, p3, v3, v1, v2}, Lhi1;-><init>(IIJ)V
 
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -3710,9 +3714,9 @@
 
     new-instance v2, Lru/ok/android/externcalls/sdk/g;
 
-    invoke-direct {v2, p2, v3}, Lru/ok/android/externcalls/sdk/g;-><init>(Lfr3;I)V
+    invoke-direct {v2, p2, v3}, Lru/ok/android/externcalls/sdk/g;-><init>(Ltr3;I)V
 
-    invoke-virtual {p3, v0, p1, v1, v2}, Lyz0;->k(Lzh1;Ljava/lang/Boolean;Ljava/lang/Boolean;Lgme;)V
+    invoke-virtual {p3, v0, p1, v1, v2}, Lh01;->k(Lhi1;Ljava/lang/Boolean;Ljava/lang/Boolean;Lone;)V
 
     return-void
 .end method
@@ -3725,18 +3729,18 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v1, "Conversation"
 
     const-string v2, "failed to add participant"
 
-    invoke-interface {v0, v1, v2, p1}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$addParticipants$27(Ljava/lang/Boolean;ZLqh6;Lqh6;Ljava/util/Collection;)V
+.method private synthetic lambda$addParticipants$27(Ljava/lang/Boolean;ZLli6;Lli6;Ljava/util/Collection;)V
     .locals 6
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->addParticipantsCommands:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
@@ -3751,31 +3755,31 @@
 
     move-object v1, p5
 
-    invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
+    invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLli6;Lli6;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$createAsrOnlineManager$5()Lyz0;
+.method private synthetic lambda$createAsrOnlineManager$5()Lh01;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     return-object v0
 .end method
 
-.method private synthetic lambda$createAsrOnlineManager$6()Lyz0;
+.method private synthetic lambda$createAsrOnlineManager$6()Lh01;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     return-object v0
 .end method
 
-.method private synthetic lambda$createMediaMuteManager$4()Lyz0;
+.method private synthetic lambda$createMediaMuteManager$4()Lh01;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     return-object v0
 .end method
@@ -3816,10 +3820,10 @@
     return-object v0
 .end method
 
-.method private lambda$new$3(Ljava/util/List;)Lzag;
+.method private lambda$new$3(Ljava/util/List;)Lccg;
     .locals 12
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -3835,13 +3839,13 @@
 
     move-result-object v1
 
-    iget-object v2, v0, Lyz0;->O:Lyuc;
+    iget-object v2, v0, Lh01;->O:Lfwc;
 
     const-string v3, "OKRTCCall"
 
-    invoke-interface {v2, v3, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v3, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lyz0;->j()Z
+    invoke-virtual {v0}, Lh01;->j()Z
 
     move-result v1
 
@@ -3850,11 +3854,11 @@
     goto/16 :goto_3
 
     :cond_0
-    iget-object v1, v0, Lyz0;->n0:Lhr1;
+    iget-object v1, v0, Lh01;->n0:Lpr1;
 
-    invoke-virtual {v1, p1}, Lhr1;->Q(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lpr1;->Q(Ljava/util/List;)V
 
-    iget-object v1, v0, Lyz0;->z0:Ldi;
+    iget-object v1, v0, Lh01;->z0:Ldi;
 
     iget-boolean v2, v1, Ldi;->i:Z
 
@@ -3887,7 +3891,7 @@
 
     invoke-direct {v5, v6, v1}, Lj0;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v4, v5}, Lo1e;->d(Ld1e;Lqh6;)Luu5;
+    invoke-static {v4, v5}, Lv2e;->d(Lk2e;Lli6;)Lov5;
 
     move-result-object v4
 
@@ -3897,18 +3901,18 @@
 
     invoke-direct {v5, v6, v2}, Lj0;-><init>(ILjava/lang/Object;)V
 
-    new-instance v6, Ltu5;
+    new-instance v6, Lnv5;
 
-    invoke-direct {v6, v4}, Ltu5;-><init>(Luu5;)V
+    invoke-direct {v6, v4}, Lnv5;-><init>(Lov5;)V
 
     :goto_0
-    invoke-virtual {v6}, Ltu5;->hasNext()Z
+    invoke-virtual {v6}, Lnv5;->hasNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    invoke-virtual {v6}, Ltu5;->next()Ljava/lang/Object;
+    invoke-virtual {v6}, Lnv5;->next()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3916,33 +3920,33 @@
 
     move-result-object v4
 
-    check-cast v4, Lx51;
+    check-cast v4, Lf61;
 
-    iget-object v7, v4, Lx51;->a:Lrs1;
+    iget-object v7, v4, Lf61;->a:Lzs1;
 
-    iget-object v7, v7, Lrs1;->b:Lzh1;
+    iget-object v7, v7, Lzs1;->b:Lhi1;
 
     invoke-virtual {v3, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Lx51;
+    check-cast v8, Lf61;
 
     if-eqz v8, :cond_2
 
-    iget-object v9, v8, Lx51;->b:Llmg;
+    iget-object v9, v8, Lf61;->b:Lqng;
 
-    iget-object v10, v4, Lx51;->b:Llmg;
+    iget-object v10, v4, Lf61;->b:Lqng;
 
-    iget v11, v9, Llmg;->a:I
+    iget v11, v9, Lqng;->a:I
 
-    iget v9, v9, Llmg;->b:I
+    iget v9, v9, Lqng;->b:I
 
     mul-int/2addr v9, v11
 
-    iget v11, v10, Llmg;->a:I
+    iget v11, v10, Lqng;->a:I
 
-    iget v10, v10, Llmg;->b:I
+    iget v10, v10, Lqng;->b:I
 
     mul-int/2addr v10, v11
 
@@ -3987,9 +3991,9 @@
 
     move-result-object v7
 
-    check-cast v7, Lzh1;
+    check-cast v7, Lhi1;
 
-    iget-wide v7, v7, Lzh1;->a:J
+    iget-wide v7, v7, Lhi1;->a:J
 
     invoke-virtual {v4, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4001,11 +4005,11 @@
 
     move-result-object v7
 
-    check-cast v7, Lx51;
+    check-cast v7, Lf61;
 
-    iget-object v7, v7, Lx51;->b:Llmg;
+    iget-object v7, v7, Lf61;->b:Lqng;
 
-    iget v7, v7, Llmg;->a:I
+    iget v7, v7, Lqng;->a:I
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4017,11 +4021,11 @@
 
     move-result-object v6
 
-    check-cast v6, Lx51;
+    check-cast v6, Lf61;
 
-    iget-object v6, v6, Lx51;->b:Llmg;
+    iget-object v6, v6, Lf61;->b:Lqng;
 
-    iget v6, v6, Llmg;->b:I
+    iget v6, v6, Lqng;->b:I
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4040,11 +4044,11 @@
 
     move-result-object v4
 
-    iget-object v5, v1, Lij;->n:Lyuc;
+    iget-object v5, v1, Lij;->n:Lfwc;
 
     const-string v6, "AniRenderDispatch"
 
-    invoke-interface {v5, v6, v4}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v6, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v4, v1, Lij;->g:Landroid/os/Handler;
 
@@ -4057,43 +4061,43 @@
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :goto_2
-    iget-object v0, v0, Lyz0;->X0:Lrhf;
+    iget-object v0, v0, Lh01;->X0:Lwif;
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v2, v0
 
-    check-cast v2, Lupd;
+    check-cast v2, Lbrd;
 
-    iget-object v0, v2, Lupd;->b:Lvtf;
+    iget-object v0, v2, Lbrd;->b:Lavf;
 
-    invoke-interface {v0}, Lvtf;->getMsSinceBoot()J
+    invoke-interface {v0}, Lavf;->getMsSinceBoot()J
 
     move-result-wide v4
 
-    invoke-static {}, Ldod;->a()Lqnd;
+    invoke-static {}, Lkpd;->a()Lxod;
 
     move-result-object v0
 
-    new-instance v1, Lcg2;
+    new-instance v1, Llg2;
 
     const/4 v6, 0x3
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v6}, Lcg2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+    invoke-direct/range {v1 .. v6}, Llg2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
 
-    invoke-virtual {v0, v1}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+    invoke-virtual {v0, v1}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
 
     :goto_3
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method
 
-.method private synthetic lambda$performConfroomJoin$10(Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
+.method private synthetic lambda$performConfroomJoin$10(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4127,12 +4131,12 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$performConfroomJoin$11(Lfr3;Ljava/lang/Throwable;)V
+.method private static synthetic lambda$performConfroomJoin$11(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4140,7 +4144,7 @@
         }
     .end annotation
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -4150,11 +4154,11 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->recordManager:Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    new-instance v1, Lzj1;
+    new-instance v1, Lhk1;
 
-    invoke-direct {v1, p1}, Lzj1;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lhk1;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->onRecordError(Lzj1;)V
+    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->onRecordError(Lhk1;)V
 
     return-void
 .end method
@@ -4170,13 +4174,13 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lrv6;
+    new-instance v0, Llw6;
 
-    sget-object v1, Lsv6;->a:Lsv6;
+    sget-object v1, Lmw6;->a:Lmw6;
 
-    invoke-direct {v0, v1}, Lrv6;-><init>(Lsv6;)V
+    invoke-direct {v0, v1}, Llw6;-><init>(Lmw6;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->hangup(Lrv6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->hangup(Llw6;)V
 
     :cond_0
     return-void
@@ -4198,7 +4202,7 @@
     return-void
 .end method
 
-.method private lambda$performConnect$19(Lfr3;Lyz0;)V
+.method private lambda$performConnect$19(Ltr3;Lh01;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
@@ -4207,7 +4211,7 @@
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/stat/connect/ConversationConnectedToSignalingStat;->onConnectedToSignaling()V
 
-    iget-boolean v0, p2, Lyz0;->K:Z
+    iget-boolean v0, p2, Lh01;->K:Z
 
     iput-boolean v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->isConcurrent:Z
 
@@ -4225,11 +4229,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
     const-string v3, "vcid"
 
@@ -4263,19 +4267,19 @@
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1, p0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_1
-    invoke-static {}, Lds9;->f()V
+    invoke-static {}, Let9;->f()V
 
     const/4 p1, 0x0
 
-    iput-object p1, p2, Lyz0;->U:Lru/ok/android/externcalls/sdk/o;
+    iput-object p1, p2, Lh01;->U:Lru/ok/android/externcalls/sdk/o;
 
     return-void
 .end method
 
-.method private synthetic lambda$prepare$7(ZLfr3;ZLfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+.method private synthetic lambda$prepare$7(ZLtr3;ZLtr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4295,7 +4299,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, p5, v0, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->hasNoInternalId(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;Ljava/lang/Boolean;Lfr3;)Z
+    invoke-direct {p0, p5, v0, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->hasNoInternalId(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;Ljava/lang/Boolean;Ltr3;)Z
 
     move-result v0
 
@@ -4320,7 +4324,7 @@
 
     invoke-direct {p1, p3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 
@@ -4339,7 +4343,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->runStartConversation(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLfr3;Lfr3;)V
+    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->runStartConversation(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLtr3;Ltr3;)V
 
     return-void
 
@@ -4354,7 +4358,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-direct {p0, v2, v5, v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConfroomJoin(Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct {p0, v2, v5, v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConfroomJoin(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
     return-void
 
@@ -4365,12 +4369,12 @@
 
     iget-object v3, v4, Lru/ok/android/externcalls/sdk/api/ConversationParams;->wtEndpoint:Ljava/lang/String;
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$prepareJoinByLink$8(Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+.method private synthetic lambda$prepareJoinByLink$8(Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4390,7 +4394,7 @@
 
     invoke-direct {p2, p3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 
@@ -4413,18 +4417,18 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
-    iget-object p1, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p1, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object p2, v0, Lru/ok/android/externcalls/sdk/ConversationImpl;->initialJoinLink:Ljava/lang/String;
 
-    iput-object p2, p1, Lyz0;->y:Ljava/lang/String;
+    iput-object p2, p1, Lh01;->y:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private static synthetic lambda$prepareJoinByLink$9(Lfr3;Ljava/lang/Throwable;)V
+.method private static synthetic lambda$prepareJoinByLink$9(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4432,33 +4436,33 @@
         }
     .end annotation
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private lambda$promoteParticipant$29(ZLzh1;)V
+.method private lambda$promoteParticipant$29(ZLhi1;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v1, v0, Lyz0;->j:Ljme;
+    iget-object v1, v0, Lh01;->j:Lrne;
 
-    invoke-static {p2, p1}, Lazi;->o(Lzh1;Z)Lrm6;
+    invoke-static {p2, p1}, Li0j;->o(Lhi1;Z)Lmn6;
 
     move-result-object p1
 
-    new-instance v2, Lmz0;
+    new-instance v2, Lvz0;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v0, p2, v3}, Lmz0;-><init>(Lyz0;Lzh1;I)V
+    invoke-direct {v2, v0, p2, v3}, Lvz0;-><init>(Lh01;Lhi1;I)V
 
-    iget-object p2, v0, Lyz0;->f:Lgme;
+    iget-object p2, v0, Lh01;->f:Lone;
 
     const/4 v0, 0x0
 
-    invoke-virtual {v1, p1, v0, v2, p2}, Ljme;->d(Lnme;ZLgme;Lgme;)V
+    invoke-virtual {v1, p1, v0, v2, p2}, Lrne;->d(Lvne;ZLone;Lone;)V
 
     return-void
 .end method
@@ -4504,13 +4508,13 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v4}, Lazi;->v(Lorg/json/JSONObject;)Lzh1;
+    invoke-static {v4}, Li0j;->v(Lorg/json/JSONObject;)Lhi1;
 
     move-result-object v5
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v6, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v6, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lhi1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v6
 
@@ -4518,7 +4522,7 @@
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-static {v5, v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->fromInternal(Lzh1;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-static {v5, v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->fromInternal(Lhi1;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v6
 
@@ -4549,7 +4553,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-interface {p1, v1}, Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;->onResponse([Lmme;)V
+    invoke-interface {p1, v1}, Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;->onResponse([Lune;)V
 
     return-void
 .end method
@@ -4573,7 +4577,7 @@
     return-void
 .end method
 
-.method private static synthetic lambda$refreshParams$13(Lfr3;Ljava/lang/Throwable;)V
+.method private static synthetic lambda$refreshParams$13(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4581,12 +4585,12 @@
         }
     .end annotation
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$removeJoinLink$34(Ljava/lang/Runnable;Lfr3;Ljava/lang/Boolean;)V
+.method private static synthetic lambda$removeJoinLink$34(Ljava/lang/Runnable;Ltr3;Ljava/lang/Boolean;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4611,15 +4615,15 @@
 
     invoke-direct {p0, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    invoke-interface {p1, p0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private lambda$removeParticipant$28(ZLzh1;)V
+.method private lambda$removeParticipant$28(ZLhi1;)V
     .locals 9
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -4635,13 +4639,13 @@
 
     move-result-object v1
 
-    iget-object v2, v0, Lyz0;->O:Lyuc;
+    iget-object v2, v0, Lh01;->O:Lfwc;
 
     const-string v3, "OKRTCCall"
 
-    invoke-interface {v2, v3, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v3, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lyz0;->j()Z
+    invoke-virtual {v0}, Lh01;->j()Z
 
     move-result v1
 
@@ -4650,29 +4654,29 @@
     return-void
 
     :cond_0
-    iget-object v1, v0, Lyz0;->O0:Ljq1;
+    iget-object v1, v0, Lh01;->O0:Lrq1;
 
-    iget-object v2, v0, Lyz0;->j0:Lii1;
+    iget-object v2, v0, Lh01;->j0:Lqi1;
 
-    invoke-virtual {v2, p2}, Lii1;->j(Lzh1;)Ldi1;
+    invoke-virtual {v2, p2}, Lqi1;->j(Lhi1;)Lli1;
 
     move-result-object v2
 
-    iget-object v1, v1, Ljq1;->g:Lznh;
+    iget-object v1, v1, Lrq1;->g:Laph;
 
-    iget-object v3, v1, Lznh;->a:Ljava/lang/Object;
+    iget-object v3, v1, Laph;->a:Ljava/lang/Object;
 
-    check-cast v3, Lv11;
+    check-cast v3, Le21;
 
-    iget-object v3, v3, Lv11;->d:Ljava/lang/Object;
+    iget-object v3, v3, Le21;->d:Ljava/lang/Object;
 
-    check-cast v3, Lbvc;
+    check-cast v3, Liwc;
 
-    iget-object v4, v1, Lznh;->o:Ljava/lang/Object;
+    iget-object v4, v1, Laph;->o:Ljava/lang/Object;
 
-    check-cast v4, Lhbf;
+    check-cast v4, Locf;
 
-    invoke-virtual {v4}, Lhbf;->e()Ljava/lang/Long;
+    invoke-virtual {v4}, Locf;->b()Ljava/lang/Long;
 
     move-result-object v4
 
@@ -4686,7 +4690,7 @@
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    iget-object v7, v3, Lbvc;->conversationId:Ljava/lang/String;
+    iget-object v7, v3, Liwc;->conversationId:Ljava/lang/String;
 
     const-string v8, "vcid"
 
@@ -4700,15 +4704,15 @@
 
     invoke-virtual {v6, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v4, v1, Lznh;->b:Ljava/lang/Object;
+    iget-object v4, v1, Laph;->b:Ljava/lang/Object;
 
     check-cast v4, Landroid/net/ConnectivityManager;
 
-    iget-object v1, v1, Lznh;->c:Ljava/lang/Object;
+    iget-object v1, v1, Laph;->c:Ljava/lang/Object;
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    invoke-static {v4, v1}, Lds9;->b(Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;)Ljava/lang/String;
+    invoke-static {v4, v1}, Let9;->b(Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4716,19 +4720,19 @@
 
     invoke-virtual {v6, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p2, v2, v6}, Lznh;->c(Lzh1;Ldi1;Ljava/util/HashMap;)V
+    invoke-static {p2, v2, v6}, Laph;->a(Lhi1;Lli1;Ljava/util/HashMap;)V
 
-    sget-object v1, Lbvc;->COLLECTOR_WEBRTC:Ljava/lang/String;
+    sget-object v1, Liwc;->COLLECTOR_WEBRTC:Ljava/lang/String;
 
     const-string v2, "callRemoveParticipant"
 
-    invoke-virtual {v3, v1, v2, v6}, Lbvc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v3, v1, v2, v6}, Liwc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     :cond_1
     :try_start_0
-    iget-object v1, v0, Lyz0;->E0:Lzh1;
+    iget-object v1, v0, Lh01;->E0:Lhi1;
 
-    invoke-virtual {p2, v1}, Lzh1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v1}, Lhi1;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -4736,11 +4740,11 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lyz0;->E0:Lzh1;
+    iput-object v1, v0, Lh01;->E0:Lhi1;
 
-    sget-object v2, La71;->H0:La71;
+    sget-object v2, Li71;->G0:Li71;
 
-    invoke-virtual {v0, v2, v1}, Lyz0;->l(La71;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lh01;->l(Li71;Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -4751,7 +4755,7 @@
 
     :cond_2
     :goto_0
-    iget-object v1, v0, Lyz0;->j:Ljme;
+    iget-object v1, v0, Lh01;->j:Lrne;
 
     new-instance v2, Lorg/json/JSONObject;
 
@@ -4759,7 +4763,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p2, v2, v3}, Lazi;->c(Lzh1;Lorg/json/JSONObject;Z)V
+    invoke-static {p2, v2, v3}, Li0j;->c(Lhi1;Lorg/json/JSONObject;Z)V
 
     const-string v3, "ban"
 
@@ -4767,17 +4771,17 @@
 
     const-string p1, "remove-participant"
 
-    invoke-static {v2, p1}, Lazi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lrm6;
+    invoke-static {v2, p1}, Li0j;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lmn6;
 
     move-result-object p1
 
-    new-instance v2, Lmz0;
+    new-instance v2, Lvz0;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v0, p2, v3}, Lmz0;-><init>(Lyz0;Lzh1;I)V
+    invoke-direct {v2, v0, p2, v3}, Lvz0;-><init>(Lh01;Lhi1;I)V
 
-    invoke-virtual {v1, p1, v2}, Ljme;->h(Lrm6;Lgme;)V
+    invoke-virtual {v1, p1, v2}, Lrne;->h(Lmn6;Lone;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4806,18 +4810,18 @@
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v0, "Conversation"
 
     const-string v1, "failed to get mapping"
 
-    invoke-interface {p1, v0, v1, p2}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0, v1, p2}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method private lambda$runStartConversation$14(Lfr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
+.method private lambda$runStartConversation$14(Ltr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4843,11 +4847,11 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4876,15 +4880,15 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    instance-of v2, v1, Ll34;
+    instance-of v2, v1, Lz34;
 
     if-eqz v2, :cond_2
 
-    check-cast v1, Ll34;
+    check-cast v1, Lz34;
 
-    iput-object v0, v1, Ll34;->a:Ljava/lang/String;
+    iput-object v0, v1, Lz34;->a:Ljava/lang/String;
 
     :cond_2
     iget-object v3, p4, Lru/ok/android/externcalls/sdk/api/CallInfo;->endpoint:Ljava/lang/String;
@@ -4908,7 +4912,7 @@
 
     invoke-direct {p2, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Ltr3;->accept(Ljava/lang/Object;)V
 
     return-void
 
@@ -4934,18 +4938,18 @@
     goto :goto_1
 
     :goto_2
-    invoke-direct/range {v2 .. v7}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct/range {v2 .. v7}, Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
-    iget-object p1, v2, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p1, v2, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object p2, p4, Lru/ok/android/externcalls/sdk/api/CallInfo;->joinLink:Ljava/lang/String;
 
-    iput-object p2, p1, Lyz0;->y:Ljava/lang/String;
+    iput-object p2, p1, Lh01;->y:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private lambda$runStartConversation$15(Lfr3;Ljava/lang/Throwable;)V
+.method private lambda$runStartConversation$15(Ltr3;Ljava/lang/Throwable;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4985,9 +4989,9 @@
 
     new-instance v2, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-direct {v2, v3}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;-><init>(Lyuc;)V
+    invoke-direct {v2, v3}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;-><init>(Lfwc;)V
 
     invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->parse(Lru/ok/android/api/core/ApiInvocationException;)Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;
 
@@ -5024,17 +5028,17 @@
 
     invoke-direct {v3, v5, v1, v4, v2}, Lru/ok/android/externcalls/sdk/api/ExternApiException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
 
-    invoke-interface {p1, v3}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, v3}, Ltr3;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {p1, p2}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Ltr3;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {p1, p2}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :goto_0
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
@@ -5062,7 +5066,7 @@
     return-void
 .end method
 
-.method private lambda$setCallOptionEnabled$20(ZLwz0;Lfr3;Lorg/json/JSONObject;)V
+.method private lambda$setCallOptionEnabled$20(ZLf01;Ltr3;Lorg/json/JSONObject;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -5072,37 +5076,37 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object p4, p1, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object p4, p1, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {p4, p2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p2}, Lyz0;->c(Lwz0;)V
+    invoke-virtual {p1, p2}, Lh01;->c(Lf01;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object p4, p1, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object p4, p1, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {p4, p2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p2}, Lyz0;->c(Lwz0;)V
+    invoke-virtual {p1, p2}, Lh01;->c(Lf01;)V
 
     :goto_0
     if-eqz p3, :cond_1
 
     const/4 p1, 0x0
 
-    invoke-interface {p3, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p3, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_1
     return-void
 .end method
 
-.method private static synthetic lambda$setCallOptionEnabled$21(Lfr3;Lorg/json/JSONObject;)V
+.method private static synthetic lambda$setCallOptionEnabled$21(Ltr3;Lorg/json/JSONObject;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -5118,13 +5122,13 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method private static lambda$setMuteState$37(Ljme;ZLzh1;)V
+.method private static lambda$setMuteState$37(Lrne;ZLhi1;)V
     .locals 3
 
     :try_start_0
@@ -5136,7 +5140,7 @@
 
     const-string v2, "eId"
 
-    invoke-virtual {p2}, Lzh1;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lhi1;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -5150,13 +5154,13 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lazi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lrm6;
+    invoke-static {p1, v0}, Li0j;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lmn6;
 
     move-result-object p1
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0, p1}, Ljme;->i(Lnme;)V
+    invoke-virtual {p0, p1}, Lrne;->i(Lvne;)V
 
     return-void
 
@@ -5186,18 +5190,18 @@
     return-object p1
 .end method
 
-.method private static synthetic lambda$withInternalId$31(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/util/Map;)V
+.method private static synthetic lambda$withInternalId$31(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/util/Map;)V
     .locals 0
 
     invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lzh1;
+    check-cast p0, Lhi1;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p1, p0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -5215,7 +5219,7 @@
     return-object p1
 .end method
 
-.method private static synthetic lambda$withInternalIds$33(Lfr3;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method private static synthetic lambda$withInternalIds$33(Ltr3;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 0
 
     if-eqz p0, :cond_0
@@ -5226,16 +5230,16 @@
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    invoke-interface {p0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic m(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzh1;
+.method public static synthetic m(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzh1;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
 
     move-result-object p0
 
@@ -5250,10 +5254,10 @@
     return-object p0
 .end method
 
-.method public static synthetic n(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
+.method public static synthetic n(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConfroomJoin$10(Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$performConfroomJoin$10(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;)V
 
     return-void
 .end method
@@ -5287,13 +5291,13 @@
 .method private onSignalingRefresh()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->t:Z
+    iget-boolean v0, v0, Lh01;->t:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lime;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lqne;
 
     if-eqz v0, :cond_0
 
@@ -5303,16 +5307,16 @@
 
     iget-object v1, v1, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lime;->restart(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lqne;->restart(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic p(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Ljava/lang/Throwable;)V
+.method public static synthetic p(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$runStartConversation$15(Lfr3;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$runStartConversation$15(Ltr3;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -5325,27 +5329,27 @@
     return-object p0
 .end method
 
-.method private performConfroomJoin(Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+.method private performConfroomJoin(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->peerIdGenerator:Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;
 
@@ -5355,42 +5359,42 @@
 
     iget-object v5, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->startCallApiParams:Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;
 
-    invoke-virtual {v1, v2, v3, v4, v5}, Lru/ok/android/externcalls/sdk/api/OkApiService;->joinToConversation(Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lqoe;
+    invoke-virtual {v1, v2, v3, v4, v5}, Lru/ok/android/externcalls/sdk/api/OkApiService;->joinToConversation(Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lwpe;
 
     move-result-object v1
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {v1, v2}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object v1
 
     new-instance v2, Lru/ok/android/externcalls/sdk/s;
 
-    invoke-direct {v2, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/s;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    invoke-direct {v2, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/s;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/l;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p3, p2}, Lru/ok/android/externcalls/sdk/l;-><init>(Lfr3;I)V
+    invoke-direct {p1, p3, p2}, Lru/ok/android/externcalls/sdk/l;-><init>(Ltr3;I)V
 
-    new-instance p2, Lvt1;
+    new-instance p2, Ldu1;
 
     const/4 p3, 0x2
 
-    invoke-direct {p2, v2, p3, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v2, p3, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p2}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {v1, p2}, Lwpe;->k(Lsqe;)V
 
-    invoke-virtual {v0, p2}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p2}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
 
-.method private performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+.method private performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
     .locals 23
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -5398,8 +5402,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -5439,15 +5443,15 @@
 
     invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v5, "Conversation"
 
     const-string v6, "An attempt to connect without conversation parameters"
 
-    invoke-interface {v4, v5, v6, v0}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v5, v6, v0}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v2, v0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v2, v0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     monitor-exit v3
 
@@ -5500,17 +5504,17 @@
 
     iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object v4
 
     iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v5}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v5}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v5
 
-    iput-object v5, v4, Ldi1;->a:Lzh1;
+    iput-object v5, v4, Lli1;->a:Lhi1;
 
     iget-boolean v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->isCaller:Z
 
@@ -5521,30 +5525,30 @@
     if-eqz v5, :cond_5
 
     :cond_4
-    sget-object v5, Ldi1;->s:Lqbb;
+    sget-object v5, Lli1;->s:Ltcb;
 
-    invoke-virtual {v4, v5}, Ldi1;->e(Lqbb;)Z
+    invoke-virtual {v4, v5}, Lli1;->e(Ltcb;)Z
 
     :cond_5
     iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->initialOpponent:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     if-eqz v4, :cond_6
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v4
 
     if-eqz v4, :cond_6
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->initialOpponent:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v5}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v5}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lyz0;->H(Lzh1;)V
+    invoke-virtual {v4, v5}, Lh01;->H(Lhi1;)V
 
     :cond_6
     iget-boolean v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->isConcurrentByApi:Z
@@ -5553,46 +5557,46 @@
 
     if-eqz v4, :cond_7
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iput-boolean v5, v4, Lyz0;->K:Z
+    iput-boolean v5, v4, Lh01;->K:Z
 
     :cond_7
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v4, v4, Lyz0;->F:Ljava/util/ArrayList;
+    iget-object v4, v4, Lh01;->F:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iput-object v6, v4, Lyz0;->r0:Ltz0;
+    iput-object v6, v4, Lh01;->r0:Lc01;
 
     invoke-direct {v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->subscribeCallListeners()V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-direct {v1, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setupSessionRoomWatchTogetherHandler(Lyz0;)V
+    invoke-direct {v1, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setupSessionRoomWatchTogetherHandler(Lh01;)V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-direct {v1, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setupSessionRoomHandHandler(Lyz0;)V
+    invoke-direct {v1, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setupSessionRoomHandHandler(Lh01;)V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     new-instance v6, Lru/ok/android/externcalls/sdk/m;
 
     invoke-direct {v6, v1}, Lru/ok/android/externcalls/sdk/m;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
-    iput-object v6, v4, Lyz0;->X:Lru/ok/android/externcalls/sdk/m;
+    iput-object v6, v4, Lh01;->X:Lru/ok/android/externcalls/sdk/m;
 
     iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v4
 
@@ -5600,11 +5604,11 @@
 
     iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lzh1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lhi1;
 
     move-result-object v4
 
-    iget-wide v7, v4, Lzh1;->a:J
+    iget-wide v7, v4, Lhi1;->a:J
 
     invoke-static {v7, v8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -5634,11 +5638,11 @@
     const/4 v4, 0x0
 
     :goto_1
-    iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v8, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v8, Ll34;
+    check-cast v8, Lz34;
 
-    iget-object v8, v8, Ll34;->a:Ljava/lang/String;
+    iget-object v8, v8, Lz34;->a:Ljava/lang/String;
 
     iget-object v10, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
 
@@ -5696,7 +5700,7 @@
 
     if-eqz v4, :cond_b
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     move-object/from16 v19, v5
 
@@ -5706,7 +5710,7 @@
 
     const-string v6, "FEATURE_VOIP_MULTIPLE_DEVICES: Using protocolVersion = 6"
 
-    invoke-interface {v4, v5, v6}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v5, v6}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v4, 0x6
 
@@ -5742,7 +5746,7 @@
     goto :goto_5
 
     :cond_c
-    new-instance v5, Lj2h;
+    new-instance v5, Ll3h;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
     :try_end_0
@@ -5778,7 +5782,7 @@
 
     move-object/from16 v22, v6
 
-    new-instance v6, Lic5;
+    new-instance v6, Lad5;
 
     move-object/from16 v18, v19
 
@@ -5796,17 +5800,17 @@
 
     move/from16 v15, p1
 
-    invoke-direct/range {v6 .. v22}, Lic5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;)V
+    invoke-direct/range {v6 .. v22}, Lad5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;)V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-object v4, v4, Lyh1;->b:Lxh1;
+    iget-object v4, v4, Lgi1;->b:Lfi1;
 
     const/16 v4, 0x7530
 
     int-to-long v7, v4
 
-    invoke-virtual {v5, v7, v8}, Lkme;->setTimeoutMS(J)Lkme;
+    invoke-virtual {v5, v7, v8}, Lsne;->setTimeoutMS(J)Lsne;
 
     move-result-object v4
 
@@ -5816,7 +5820,7 @@
 
     invoke-direct {v5, v7, v1}, Lru/ok/android/externcalls/sdk/n;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v4, v5}, Lkme;->setReconnectTimeoutAction(Ljava/lang/Runnable;)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setReconnectTimeoutAction(Ljava/lang/Runnable;)Lsne;
 
     move-result-object v4
 
@@ -5824,47 +5828,47 @@
 
     iget-object v5, v5, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->wsSignalingStat:Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTransportStat;
 
-    invoke-virtual {v4, v5}, Lkme;->setSignalingStat(Lgne;)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setSignalingStat(Looe;)Lsne;
 
     move-result-object v4
 
     iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->executorService:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v4, v5}, Lkme;->setExecutor(Ljava/util/concurrent/ExecutorService;)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setExecutor(Ljava/util/concurrent/ExecutorService;)Lsne;
 
     move-result-object v4
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-virtual {v4, v5}, Lkme;->setLog(Lyuc;)Lkme;
-
-    move-result-object v4
-
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->logConfiguration:Lzuc;
-
-    invoke-virtual {v4, v5}, Lkme;->setLogConfiguration(Lzuc;)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setLog(Lfwc;)Lsne;
 
     move-result-object v4
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->logConfiguration:Lgwc;
 
-    iget-object v5, v5, Lyh1;->b:Lxh1;
+    invoke-virtual {v4, v5}, Lsne;->setLogConfiguration(Lgwc;)Lsne;
+
+    move-result-object v4
+
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
+
+    iget-object v5, v5, Lgi1;->b:Lfi1;
 
     const-wide/16 v7, 0x4e20
 
-    invoke-virtual {v4, v7, v8}, Lkme;->setServerPingTimeoutMs(J)Lkme;
+    invoke-virtual {v4, v7, v8}, Lsne;->setServerPingTimeoutMs(J)Lsne;
 
     move-result-object v4
 
-    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lyh1;
+    iget-object v5, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->callParams:Lgi1;
 
-    iget-boolean v5, v5, Lyh1;->k:Z
+    iget-boolean v5, v5, Lgi1;->k:Z
 
-    invoke-virtual {v4, v5}, Lkme;->setFastRecoverEnabled(Z)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setFastRecoverEnabled(Z)Lsne;
 
     move-result-object v4
 
-    invoke-virtual {v4, v6}, Lkme;->setEndpointParameters(Lic5;)Lkme;
+    invoke-virtual {v4, v6}, Lsne;->setEndpointParameters(Lad5;)Lsne;
 
     move-result-object v4
 
@@ -5874,41 +5878,41 @@
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lkme;->setIsReplaceParametersInEndpointEnabled(Z)Lkme;
+    invoke-virtual {v4, v5}, Lsne;->setIsReplaceParametersInEndpointEnabled(Z)Lsne;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lkme;->build()Lime;
+    invoke-virtual {v4}, Lsne;->build()Lqne;
 
     move-result-object v4
 
-    iput-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lime;
+    iput-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lqne;
 
     new-instance v4, Lru/ok/android/externcalls/sdk/o;
 
     move-object/from16 v7, p4
 
-    invoke-direct {v4, v1, v7}, Lru/ok/android/externcalls/sdk/o;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;)V
+    invoke-direct {v4, v1, v7}, Lru/ok/android/externcalls/sdk/o;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;)V
 
     new-instance v5, Lru/ok/android/externcalls/sdk/ConversationImpl$4;
 
     invoke-direct {v5, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl$4;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
-    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v7, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lime;
+    iget-object v7, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->signalingTransport:Lqne;
 
     iget-object v0, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
 
     iget-boolean v8, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->hotStart:Z
 
-    invoke-virtual {v6, v7, v0, v8}, Lyz0;->t(Lime;Ljava/util/List;Z)V
+    invoke-virtual {v6, v7, v0, v8}, Lh01;->t(Lqne;Ljava/util/List;Z)V
 
     iget-object v0, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->waitingRoomParticipants:Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;
 
-    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v6, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v0, v6}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->setCall(Lyz0;)V
+    invoke-virtual {v0, v6}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->setCall(Lh01;)V
 
     const/4 v0, 0x1
 
@@ -5922,27 +5926,27 @@
 
     invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lds9;->f()V
+    invoke-static {}, Let9;->f()V
 
-    iget-boolean v6, v0, Lyz0;->p:Z
+    iget-boolean v6, v0, Lh01;->p:Z
 
     if-eqz v6, :cond_d
 
-    invoke-virtual {v4, v0}, Lru/ok/android/externcalls/sdk/o;->a(Lyz0;)V
+    invoke-virtual {v4, v0}, Lru/ok/android/externcalls/sdk/o;->a(Lh01;)V
 
     goto :goto_6
 
     :cond_d
-    iput-object v4, v0, Lyz0;->U:Lru/ok/android/externcalls/sdk/o;
+    iput-object v4, v0, Lh01;->U:Lru/ok/android/externcalls/sdk/o;
 
     :goto_6
-    iget-object v0, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iput-object v5, v0, Lyz0;->V:Lxz0;
+    iput-object v5, v0, Lh01;->V:Lg01;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -5952,15 +5956,15 @@
     move-exception v0
 
     :try_start_2
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v5, "Conversation"
 
     const-string v6, "Can\'t connect conversation"
 
-    invoke-interface {v4, v5, v6, v0}, Lyuc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v5, v6, v0}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v2, v0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v2, v0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :goto_7
     monitor-exit v3
@@ -6008,15 +6012,15 @@
 
     invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v4, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v5, "Conversation"
 
     const-string v6, "An attempt to connect while conversation not in preparing state"
 
-    invoke-interface {v4, v5, v6, v0}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v5, v6, v0}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v2, v0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v2, v0}, Ltr3;->accept(Ljava/lang/Object;)V
 
     monitor-exit v3
 
@@ -6030,10 +6034,10 @@
     throw v0
 .end method
 
-.method public static synthetic q(Lru/ok/android/externcalls/sdk/ConversationImpl;Lzh1;Z[Lci1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+.method public static synthetic q(Lru/ok/android/externcalls/sdk/ConversationImpl;Lhi1;Z[Lki1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->grantRoles(Lzh1;Z[Lci1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->grantRoles(Lhi1;Z[Lki1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -6046,10 +6050,10 @@
     return-object p0
 .end method
 
-.method public static synthetic r(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLfr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
+.method public static synthetic r(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$25(ZLfr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$addParticipant$25(ZLtr3;Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;)V
 
     return-void
 .end method
@@ -6064,15 +6068,15 @@
     return-void
 .end method
 
-.method private refreshParams(Ljava/lang/Runnable;Lfr3;)Lev4;
+.method private refreshParams(Ljava/lang/Runnable;Ltr3;)Lvv4;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Runnable;",
-            "Lfr3;",
+            "Ltr3;",
             ")",
-            "Lev4;"
+            "Lvv4;"
         }
     .end annotation
 
@@ -6084,15 +6088,15 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Lqoe;
+    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Lwpe;
 
     move-result-object v0
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {v0, v1}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object v0
 
@@ -6102,15 +6106,15 @@
 
     new-instance p1, Lru/ok/android/externcalls/sdk/l;
 
-    invoke-direct {p1, p2, v2}, Lru/ok/android/externcalls/sdk/l;-><init>(Lfr3;I)V
+    invoke-direct {p1, p2, v2}, Lru/ok/android/externcalls/sdk/l;-><init>(Ltr3;I)V
 
-    new-instance p2, Lvt1;
+    new-instance p2, Ldu1;
 
     const/4 v2, 0x2
 
-    invoke-direct {p2, v1, v2, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v1, v2, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, p2}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {v0, p2}, Lwpe;->k(Lsqe;)V
 
     return-object p2
 .end method
@@ -6204,7 +6208,7 @@
 .method private resetSignaling()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     new-instance v1, Lru/ok/android/externcalls/sdk/n;
 
@@ -6212,15 +6216,15 @@
 
     invoke-direct {v1, v2, p0}, Lru/ok/android/externcalls/sdk/n;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Ln34;
+    new-instance v2, Lb44;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v1, v2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->refreshParams(Ljava/lang/Runnable;Lfr3;)Lev4;
+    invoke-direct {p0, v1, v2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->refreshParams(Ljava/lang/Runnable;Ltr3;)Lvv4;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, v1}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
@@ -6231,7 +6235,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lzh1;",
+            "Lhi1;",
             ">;",
             "Ljava/lang/Runnable;",
             "Ljava/lang/Runnable;",
@@ -6252,11 +6256,11 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->externalIdsResolver:Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;->resolveIds(Ljava/util/List;)Ljg3;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;->resolveIds(Ljava/util/List;)Lwg3;
 
     move-result-object p1
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v0
 
@@ -6264,11 +6268,11 @@
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lak0;
+    new-instance v1, Ljk0;
 
     const/4 v2, 0x5
 
-    invoke-direct {v1, v2, p2}, Lak0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p2}, Ljk0;-><init>(ILjava/lang/Object;)V
 
     new-instance p2, Lru/ok/android/externcalls/sdk/k;
 
@@ -6276,34 +6280,34 @@
 
     invoke-direct {p2, p0, p3, v2}, Lru/ok/android/externcalls/sdk/k;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;I)V
 
-    new-instance p3, Lvt1;
+    new-instance p3, Ldu1;
 
     const/4 v2, 0x0
 
-    invoke-direct {p3, p2, v2, v1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p3, p2, v2, v1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     :try_start_0
-    new-instance p2, Lrg3;
+    new-instance p2, Leh3;
 
-    invoke-direct {p2, p3, v0}, Lrg3;-><init>(Ltg3;Lqnd;)V
+    invoke-direct {p2, p3, v0}, Leh3;-><init>(Lgh3;Lxod;)V
 
-    invoke-virtual {p1, p2}, Ljg3;->h(Ltg3;)V
+    invoke-virtual {p1, p2}, Lwg3;->h(Lgh3;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
-    invoke-virtual {p1, p3}, Lai3;->a(Lev4;)Z
+    invoke-virtual {p1, p3}, Lni3;->a(Lvv4;)Z
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    invoke-static {p1}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
 
     new-instance p2, Ljava/lang/NullPointerException;
 
@@ -6343,15 +6347,15 @@
     return-void
 .end method
 
-.method private runStartConversation(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLfr3;Lfr3;)V
+.method private runStartConversation(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLtr3;Ltr3;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
             "ZZ",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -6366,37 +6370,37 @@
 
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->conversationStart:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
 
-    invoke-virtual {p2, p3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lqoe;
+    invoke-virtual {p2, p3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lwpe;
 
     move-result-object p2
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {p2, p3}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object p2
 
     new-instance p3, Lru/ok/android/externcalls/sdk/s;
 
-    invoke-direct {p3, p0, p5, p1, p4}, Lru/ok/android/externcalls/sdk/s;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;)V
+    invoke-direct {p3, p0, p5, p1, p4}, Lru/ok/android/externcalls/sdk/s;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/o;
 
-    invoke-direct {p1, p0, p5}, Lru/ok/android/externcalls/sdk/o;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;)V
+    invoke-direct {p1, p0, p5}, Lru/ok/android/externcalls/sdk/o;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;)V
 
-    new-instance p4, Lvt1;
+    new-instance p4, Ldu1;
 
     const/4 p5, 0x2
 
-    invoke-direct {p4, p3, p5, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p4, p3, p5, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p2, p4}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {p2, p4}, Lwpe;->k(Lsqe;)V
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
-    invoke-virtual {p1, p4}, Lai3;->a(Lev4;)Z
+    invoke-virtual {p1, p4}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
@@ -6409,30 +6413,30 @@
     return-void
 .end method
 
-.method public static bridge synthetic s0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lsv6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
+.method public static bridge synthetic s0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lmw6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallEndInfo(Lsv6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallEndInfo(Lmw6;Ljava/lang/Object;)Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private setupSessionRoomHandHandler(Lyz0;)V
+.method private setupSessionRoomHandHandler(Lh01;)V
     .locals 2
 
-    iget-object v0, p1, Lyz0;->S0:Lwe1;
+    iget-object v0, p1, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->sessionRoomParticipantStatesHandler:Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantStatesHandler;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
 
-    iget-object p1, p1, Lyz0;->S0:Lwe1;
+    iget-object p1, p1, Lh01;->S0:Lef1;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->sessionRoomParticipantStatesHandler:Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantStatesHandler;
 
-    iget-object p1, p1, Lwe1;->a:Lv7;
+    iget-object p1, p1, Lef1;->a:Lv7;
 
     iget-object p1, p1, Lv7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -6441,14 +6445,14 @@
     return-void
 .end method
 
-.method private setupSessionRoomWatchTogetherHandler(Lyz0;)V
+.method private setupSessionRoomWatchTogetherHandler(Lh01;)V
     .locals 1
 
-    iget-object p1, p1, Lyz0;->S0:Lwe1;
+    iget-object p1, p1, Lh01;->S0:Lef1;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->sessionRoomWatchTogetherHandler:Lru/ok/android/externcalls/sdk/watch_together/internal/sessionroom/SessionRoomWatchTogetherHandler;
 
-    invoke-virtual {p1, v0}, Lwe1;->a(Lno1;)V
+    invoke-virtual {p1, v0}, Lef1;->a(Lvo1;)V
 
     return-void
 .end method
@@ -6456,285 +6460,285 @@
 .method private subscribeCallListeners()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
-
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
-
-    iget-object v0, v0, Lwe1;->b:Lev5;
-
-    iget-object v0, v0, Lev5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
-
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v0, v0, Lwe1;->e:Lg5a;
+    iget-object v0, v0, Lef1;->b:Lyv5;
 
-    iget-object v0, v0, Lg5a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lyv5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
+
+    iget-object v0, v0, Lef1;->e:Lj6a;
+
+    iget-object v0, v0, Lj6a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
+
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->participantsUpdater:Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;
 
-    iget-object v0, v0, Lwe1;->c:Lrcb;
+    iget-object v0, v0, Lef1;->c:Ludb;
 
-    iget-object v0, v0, Lrcb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ludb;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->participantsUpdater:Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;
 
-    iget-object v0, v0, Lwe1;->a:Lv7;
+    iget-object v0, v0, Lef1;->a:Lv7;
 
     iget-object v0, v0, Lv7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->participantsUpdater:Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->sessionRoomManager:Lru/ok/android/externcalls/sdk/sessionroom/internal/SessionRoomsManagerImpl;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->recordManager:Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->asrListenerManager:Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->recordManager:Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
 
-    iget-object v0, v0, Lwe1;->i:Ll4d;
+    iget-object v0, v0, Lef1;->i:Ls5d;
 
-    iget-object v0, v0, Ll4d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Ls5d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->feedbackListenerManager:Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;
 
-    iget-object v0, v0, Lwe1;->j:Ltp5;
+    iget-object v0, v0, Lef1;->j:Lmq5;
 
-    iget-object v0, v0, Ltp5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lmq5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->asrListenerManager:Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;
 
-    iget-object v0, v0, Lwe1;->m:Lzt;
+    iget-object v0, v0, Lef1;->m:Lzt;
 
     iget-object v0, v0, Lzt;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v0, v0, Lwe1;->n:Llcb;
+    iget-object v0, v0, Lef1;->n:Lodb;
 
-    iget-object v0, v0, Llcb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lodb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->asrOnlineManager:Lru/ok/android/externcalls/sdk/asr_online/internal/AsrOnlineManagerImpl;
 
-    iget-object v0, v0, Lwe1;->o:Lau;
+    iget-object v0, v0, Lef1;->o:Lau;
 
     iget-object v0, v0, Lau;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->contactCallManager:Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;
 
-    iget-object v0, v0, Lwe1;->k:Lw41;
+    iget-object v0, v0, Lef1;->k:Le51;
 
-    iget-object v0, v0, Lw41;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Le51;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v0, v0, Lwe1;->p:Lcwc;
+    iget-object v0, v0, Lef1;->p:Ljxc;
 
-    iget-object v0, v0, Lcwc;->a:Ljava/util/HashSet;
+    iget-object v0, v0, Ljxc;->a:Ljava/util/HashSet;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->waitingRoomParticipants:Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;
 
-    iget-object v0, v0, Lwe1;->d:Lp2h;
+    iget-object v0, v0, Lef1;->d:Lr3h;
 
-    iget-object v0, v0, Lp2h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->stereoRoomManager:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
 
-    iget-object v0, v0, Lwe1;->d:Lp2h;
+    iget-object v0, v0, Lef1;->d:Lr3h;
 
-    iget-object v0, v0, Lp2h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
-
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
-
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->urlSharingListenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;
-
-    iget-object v0, v0, Lwe1;->q:Lcgg;
-
-    iget-object v0, v0, Lcgg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->urlSharingListenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;
 
-    invoke-virtual {v0, v1}, Lwe1;->a(Lno1;)V
+    iget-object v0, v0, Lef1;->q:Lghg;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, v0, Lghg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
+
+    iget-object v0, v0, Lh01;->S0:Lef1;
+
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->urlSharingListenerManager:Lru/ok/android/externcalls/sdk/urlsharing/external/internal/listener/UrlSharingListenerManagerImpl;
+
+    invoke-virtual {v0, v1}, Lef1;->a(Lvo1;)V
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
+
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->chatListenerManager:Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;
 
-    iget-object v0, v0, Lwe1;->r:Ldh2;
+    iget-object v0, v0, Lef1;->r:Lmh2;
 
-    iget-object v0, v0, Ldh2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lmh2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->mediaMuteListenerManager:Lru/ok/android/externcalls/sdk/media/mute/internal/listener/MediaMuteListenerManagerImpl;
 
-    iget-object v0, v0, Lwe1;->s:Ll8d;
+    iget-object v0, v0, Lef1;->s:Ls9d;
 
-    iget-object v0, v0, Ll8d;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ls9d;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->mediaConnectionManager:Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl;
 
-    iget-object v0, v0, Lwe1;->t:Lc1f;
+    iget-object v0, v0, Lef1;->t:Li2f;
 
-    iget-object v0, v0, Lc1f;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Li2f;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
-    iget-object v0, v0, Lwe1;->u:Lcid;
+    iget-object v0, v0, Lef1;->u:Ljjd;
 
-    iget-object v0, v0, Lcid;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Ljjd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->S0:Lwe1;
+    iget-object v0, v0, Lh01;->S0:Lef1;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->topologyUpgradeStatEventListener:Ltyf;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->topologyUpgradeStatEventListener:Lxzf;
 
-    iget-object v0, v0, Lwe1;->v:Luyf;
+    iget-object v0, v0, Lef1;->v:Lyzf;
 
-    iget-object v0, v0, Luyf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, v0, Lyzf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public static synthetic t(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
+.method public static synthetic t(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$runStartConversation$14(Lfr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$runStartConversation$14(Ltr3;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Result;)V
 
     return-void
 .end method
@@ -6747,10 +6751,10 @@
     return-void
 .end method
 
-.method public static synthetic u(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lyz0;
+.method public static synthetic u(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
     .locals 0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createAsrOnlineManager$5()Lyz0;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createAsrOnlineManager$5()Lh01;
 
     move-result-object p0
 
@@ -6768,7 +6772,7 @@
 .method private updateTalkingParticipants()V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -6798,7 +6802,7 @@
 
     check-cast v3, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object v4
 
@@ -6824,24 +6828,24 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v3, v4, Ldi1;->a:Lzh1;
+    iget-object v3, v4, Lli1;->a:Lhi1;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, v0, Lyz0;->j0:Lii1;
+    iget-object v0, v0, Lh01;->j0:Lqi1;
 
-    invoke-virtual {v0, v1}, Lii1;->p(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lqi1;->p(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static synthetic v(Lfr3;Lorg/json/JSONObject;)V
+.method public static synthetic v(Ltr3;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setCallOptionEnabled$21(Lfr3;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$setCallOptionEnabled$21(Ltr3;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -6854,10 +6858,10 @@
     return-void
 .end method
 
-.method public static synthetic w(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lyz0;
+.method public static synthetic w(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lh01;
     .locals 0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createMediaMuteManager$4()Lyz0;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$createMediaMuteManager$4()Lh01;
 
     move-result-object p0
 
@@ -6872,13 +6876,13 @@
     return-void
 .end method
 
-.method private withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;)V
+.method private withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -6886,18 +6890,18 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, p2, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
+    invoke-direct {p0, p1, p2, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
+.method private withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/lang/Runnable;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lfr3;",
+            "Ltr3;",
             "Ljava/lang/Runnable;",
             ")V"
         }
@@ -6906,7 +6910,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzh1;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
 
     move-result-object v0
 
@@ -6921,16 +6925,16 @@
 
     new-instance v1, Lru/ok/android/externcalls/sdk/e;
 
-    invoke-direct {v1, p1, p2}, Lru/ok/android/externcalls/sdk/e;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;)V
+    invoke-direct {v1, p1, p2}, Lru/ok/android/externcalls/sdk/e;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
 
-    invoke-direct {p0, v0, v1, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeOnBg(Loh6;Lfr3;Ljava/lang/Runnable;)V
+    invoke-direct {p0, v0, v1, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeOnBg(Lji6;Ltr3;Ljava/lang/Runnable;)V
 
     return-void
 
     .line 4
     :cond_0
     :try_start_0
-    invoke-interface {p2, v0}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p2, v0}, Ltr3;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -6946,18 +6950,18 @@
 
     .line 6
     :cond_1
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string p3, "Conversation"
 
     const-string v0, "unable to use internal id"
 
-    invoke-interface {p2, p3, v0, p1}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p2, p3, v0, p1}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method private withInternalIds(Ljava/util/Collection;Lfr3;)V
+.method private withInternalIds(Ljava/util/Collection;Ltr3;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -6965,7 +6969,7 @@
             "Ljava/util/Collection<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -7005,7 +7009,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-virtual {v3, v2}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lzh1;
+    invoke-virtual {v3, v2}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lhi1;
 
     move-result-object v3
 
@@ -7030,7 +7034,7 @@
     if-eqz p2, :cond_2
 
     :try_start_0
-    invoke-interface {p2, v1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p2, v1}, Ltr3;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -7039,13 +7043,13 @@
     :catch_0
     move-exception p1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v0, "Conversation"
 
     const-string v1, "unable to use internal id"
 
-    invoke-interface {p2, v0, v1, p1}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p2, v0, v1, p1}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     return-void
@@ -7059,11 +7063,11 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/e;
 
-    invoke-direct {v0, p2, v1}, Lru/ok/android/externcalls/sdk/e;-><init>(Lfr3;Ljava/util/ArrayList;)V
+    invoke-direct {v0, p2, v1}, Lru/ok/android/externcalls/sdk/e;-><init>(Ltr3;Ljava/util/ArrayList;)V
 
     const/4 p2, 0x0
 
-    invoke-direct {p0, p1, v0, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeOnBg(Loh6;Lfr3;Ljava/lang/Runnable;)V
+    invoke-direct {p0, p1, v0, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeOnBg(Lji6;Ltr3;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -7076,26 +7080,26 @@
     return-void
 .end method
 
-.method public static bridge synthetic x0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
+.method public static bridge synthetic x0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/lang/Runnable;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public static synthetic y(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/util/Map;)V
+.method public static synthetic y(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/util/Map;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$withInternalId$31(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/util/Map;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$withInternalId$31(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public static synthetic z(Lfr3;Ljava/lang/Throwable;)V
+.method public static synthetic z(Ltr3;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$refreshParams$13(Lfr3;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->lambda$refreshParams$13(Ltr3;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -7112,14 +7116,14 @@
     return-void
 .end method
 
-.method public addParticipant(Ljava/lang/String;ZLfr3;)V
+.method public addParticipant(Ljava/lang/String;ZLtr3;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -7128,49 +7132,49 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
     .line 3
-    invoke-virtual {v1, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getOkIdByExternalId(Ljava/lang/String;)Lqoe;
+    invoke-virtual {v1, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getOkIdByExternalId(Ljava/lang/String;)Lwpe;
 
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {p1, v1}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object p1
 
     new-instance v1, Lru/ok/android/externcalls/sdk/i;
 
-    invoke-direct {v1, p0, p2, p3}, Lru/ok/android/externcalls/sdk/i;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLfr3;)V
+    invoke-direct {v1, p0, p2, p3}, Lru/ok/android/externcalls/sdk/i;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;)V
 
     new-instance p2, Lru/ok/android/externcalls/sdk/p;
 
     invoke-direct {p2, p0}, Lru/ok/android/externcalls/sdk/p;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     .line 5
-    new-instance p3, Lvt1;
+    new-instance p3, Ldu1;
 
     const/4 v2, 0x2
 
-    invoke-direct {p3, v1, v2, p2}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p3, v1, v2, p2}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 6
-    invoke-virtual {p1, p3}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {p1, p3}, Lwpe;->k(Lsqe;)V
 
     .line 7
-    invoke-virtual {v0, p3}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p3}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
 
-.method public addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLfr3;)V
+.method public addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLtr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -7178,7 +7182,7 @@
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -7190,33 +7194,33 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/b;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lru/ok/android/externcalls/sdk/b;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLfr3;)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lru/ok/android/externcalls/sdk/b;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLtr3;)V
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalIds(Ljava/util/Collection;Lfr3;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalIds(Ljava/util/Collection;Ltr3;)V
 
     return-void
 .end method
 
-.method public addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lfr3;)V
+.method public addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Ltr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Runnable;",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->addParticipantsCommands:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-virtual {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lfr3;)V
+    invoke-virtual {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Ltr3;)V
 
     return-void
 .end method
 
-.method public addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
+.method public addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLli6;Lli6;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -7226,15 +7230,15 @@
             ">;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Lqh6;",
-            "Lqh6;",
+            "Lli6;",
+            "Lli6;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lwh1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->experiments:Lei1;
 
-    iget-boolean v0, v0, Lwh1;->n:Z
+    iget-boolean v0, v0, Lei1;->n:Z
 
     if-nez v0, :cond_0
 
@@ -7250,9 +7254,9 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/r;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
+    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/r;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLli6;Lli6;)V
 
-    invoke-direct {p0, p1, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalIds(Ljava/util/Collection;Lfr3;)V
+    invoke-direct {p0, p1, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalIds(Ljava/util/Collection;Ltr3;)V
 
     return-void
 
@@ -7292,7 +7296,7 @@
 
     check-cast p3, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    new-instance p4, Lr71;
+    new-instance p4, Lz71;
 
     iget-object p5, p3, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
 
@@ -7310,7 +7314,7 @@
     :goto_1
     iget p3, p3, Lru/ok/android/externcalls/sdk/id/ParticipantId;->deviceIndex:I
 
-    invoke-direct {p4, p5, v0, p3}, Lr71;-><init>(Ljava/lang/String;II)V
+    invoke-direct {p4, p5, v0, p3}, Lz71;-><init>(Ljava/lang/String;II)V
 
     invoke-virtual {p2, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -7331,7 +7335,7 @@
 
     move-object v4, p2
 
-    invoke-virtual/range {v3 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
+    invoke-virtual/range {v3 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLli6;Lli6;)V
 
     return-void
 .end method
@@ -7351,12 +7355,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->changeMyState(Ljava/util/Map;Lgme;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->changeMyState(Ljava/util/Map;Lone;)V
 
     return-void
 .end method
 
-.method public changeMyState(Ljava/util/Map;Lgme;)V
+.method public changeMyState(Ljava/util/Map;Lone;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -7365,7 +7369,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Lgme;",
+            "Lone;",
             ")V"
         }
     .end annotation
@@ -7373,7 +7377,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->participantStatesManager:Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;
 
-    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Ljava/util/Map;Lgme;)V
+    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->updateOwnState(Ljava/util/Map;Lone;)V
 
     return-void
 .end method
@@ -7383,9 +7387,9 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->assertInited()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v0}, Lyz0;->j()Z
+    invoke-virtual {v0}, Lh01;->j()Z
 
     move-result v1
 
@@ -7394,7 +7398,7 @@
     goto :goto_0
 
     :cond_0
-    iget-boolean v1, v0, Lyz0;->e1:Z
+    iget-boolean v1, v0, Lh01;->e1:Z
 
     if-eqz v1, :cond_1
 
@@ -7404,42 +7408,42 @@
     :cond_1
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lyz0;->e1:Z
+    iput-boolean v1, v0, Lh01;->e1:Z
 
-    iget-object v2, v0, Lyz0;->h0:Ln58;
+    iget-object v2, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v2, v2, Ln58;->c:Z
+    iget-boolean v2, v2, Lk68;->c:Z
 
     const/4 v3, 0x0
 
     if-nez v2, :cond_2
 
-    iget-object v2, v0, Lyz0;->t0:Luz9;
+    iget-object v2, v0, Lh01;->t0:Lw0a;
 
-    iget-boolean v4, v2, Luz9;->e:Z
+    iget-boolean v4, v2, Lw0a;->e:Z
 
     if-eqz v4, :cond_2
 
-    iput-boolean v3, v2, Luz9;->e:Z
+    iput-boolean v3, v2, Lw0a;->e:Z
 
-    invoke-virtual {v2}, Luz9;->a()V
+    invoke-virtual {v2}, Lw0a;->a()V
 
     :cond_2
-    iget-object v2, v0, Lyz0;->h0:Ln58;
+    iget-object v2, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v2, v2, Ln58;->d:Z
+    iget-boolean v2, v2, Lk68;->d:Z
 
     if-nez v2, :cond_4
 
-    iget-object v2, v0, Lyz0;->t0:Luz9;
+    iget-object v2, v0, Lh01;->t0:Lw0a;
 
-    iget-boolean v4, v2, Luz9;->f:Z
+    iget-boolean v4, v2, Lw0a;->f:Z
 
     if-eqz v4, :cond_3
 
-    iput-boolean v3, v2, Luz9;->f:Z
+    iput-boolean v3, v2, Lw0a;->f:Z
 
-    invoke-virtual {v2}, Luz9;->a()V
+    invoke-virtual {v2}, Lw0a;->a()V
 
     :cond_3
     move v2, v3
@@ -7447,40 +7451,40 @@
     goto :goto_3
 
     :cond_4
-    iget-boolean v2, v0, Lyz0;->x:Z
+    iget-boolean v2, v0, Lh01;->x:Z
 
     if-eqz v2, :cond_6
 
-    iget-object v2, v0, Lyz0;->H0:Lye1;
+    iget-object v2, v0, Lh01;->H0:Lgf1;
 
-    iget-object v4, v2, Lye1;->i:Lsz9;
+    iget-object v4, v2, Lgf1;->i:Lu0a;
 
-    iget-object v4, v4, Lsz9;->b:Lyt8;
+    iget-object v4, v4, Lu0a;->b:Lzu8;
 
-    sget-object v5, Lyt8;->a:Lyt8;
+    sget-object v5, Lzu8;->a:Lzu8;
 
     if-ne v4, v5, :cond_5
 
-    iget-object v4, v0, Lyz0;->j0:Lii1;
+    iget-object v4, v0, Lh01;->j0:Lqi1;
 
-    iget-object v4, v4, Lii1;->k:Ll6e;
+    iget-object v4, v4, Lqi1;->k:Ls7e;
 
-    invoke-virtual {v2, v4}, Lye1;->h(Ll6e;)Lsz9;
+    invoke-virtual {v2, v4}, Lgf1;->h(Ls7e;)Lu0a;
 
     move-result-object v2
 
-    iget-object v2, v2, Lsz9;->b:Lyt8;
+    iget-object v2, v2, Lu0a;->b:Lzu8;
 
     if-ne v2, v5, :cond_5
 
     goto :goto_1
 
     :cond_5
-    iget-object v2, v0, Lyz0;->j0:Lii1;
+    iget-object v2, v0, Lh01;->j0:Lqi1;
 
-    iget-object v2, v2, Lii1;->a:Ldi1;
+    iget-object v2, v2, Lqi1;->a:Lli1;
 
-    invoke-static {v2}, Lyz0;->v(Ldi1;)Z
+    invoke-static {v2}, Lh01;->v(Lli1;)Z
 
     move-result v2
 
@@ -7497,11 +7501,11 @@
     :goto_2
     if-eqz v2, :cond_7
 
-    invoke-virtual {v0, v1}, Lyz0;->n(Z)V
+    invoke-virtual {v0, v1}, Lh01;->n(Z)V
 
     :cond_7
     :goto_3
-    sget-object v4, Lgze;->Z:Lgze;
+    sget-object v4, Ll0f;->Z:Ll0f;
 
     if-eqz v2, :cond_8
 
@@ -7513,158 +7517,158 @@
     const-string v2, "audio"
 
     :goto_4
-    invoke-virtual {v0, v4, v2}, Lyz0;->w(Lgze;Ljava/lang/String;)V
+    invoke-virtual {v0, v4, v2}, Lh01;->w(Ll0f;Ljava/lang/String;)V
 
-    invoke-static {}, Lbfb;->D()Z
+    invoke-static {}, Legb;->D()Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    iget-object v2, v0, Lyz0;->t0:Luz9;
+    iget-object v2, v0, Lh01;->t0:Lw0a;
 
-    iget-boolean v2, v2, Luz9;->e:Z
+    iget-boolean v2, v2, Lw0a;->e:Z
 
     if-eqz v2, :cond_b
 
-    iget-object v2, v0, Lyz0;->h0:Ln58;
+    iget-object v2, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v2, v2, Ln58;->c:Z
+    iget-boolean v2, v2, Lk68;->c:Z
 
     if-nez v2, :cond_9
 
-    iget-object v2, v0, Lyz0;->h0:Ln58;
+    iget-object v2, v0, Lh01;->h0:Lk68;
 
-    invoke-virtual {v2}, Ln58;->a()Z
+    invoke-virtual {v2}, Lk68;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    iget-object v2, v0, Lyz0;->h0:Ln58;
+    iget-object v2, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v2, v2, Ln58;->c:Z
+    iget-boolean v2, v2, Lk68;->c:Z
 
     if-eqz v2, :cond_9
 
-    iget-object v2, v0, Lyz0;->e0:Lmie;
+    iget-object v2, v0, Lh01;->e0:Lvje;
 
-    iget-object v4, v2, Lmie;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v4, v2, Lvje;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v5, Llie;
+    new-instance v5, Luje;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, v2, v6}, Llie;-><init>(Lmie;I)V
+    invoke-direct {v5, v2, v6}, Luje;-><init>(Lvje;I)V
 
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_5
 
     :cond_9
-    invoke-static {}, Lbfb;->D()Z
+    invoke-static {}, Legb;->D()Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    iget-object v2, v0, Lyz0;->e0:Lmie;
+    iget-object v2, v0, Lh01;->e0:Lvje;
 
-    iget-object v4, v2, Lmie;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v4, v2, Lvje;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v5, Llie;
+    new-instance v5, Luje;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, v2, v6}, Llie;-><init>(Lmie;I)V
+    invoke-direct {v5, v2, v6}, Luje;-><init>(Lvje;I)V
 
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_a
     :goto_5
-    iget-object v2, v0, Lyz0;->e0:Lmie;
+    iget-object v2, v0, Lh01;->e0:Lvje;
 
-    iget-object v4, v2, Lmie;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v4, v2, Lvje;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v5, Lkie;
+    new-instance v5, Ltje;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, v2, v3, v6}, Lkie;-><init>(Lmie;ZI)V
+    invoke-direct {v5, v2, v3, v6}, Ltje;-><init>(Lvje;ZI)V
 
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_b
-    iget-object v2, v0, Lyz0;->O:Lyuc;
+    iget-object v2, v0, Lh01;->O:Lfwc;
 
     const-string v3, "createPeerConnectionIfReady"
 
     const-string v4, "OKRTCCall"
 
-    invoke-interface {v2, v4, v3}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v4, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lds9;->f()V
+    invoke-static {}, Let9;->f()V
 
-    iget-boolean v2, v0, Lyz0;->I:Z
+    iget-boolean v2, v0, Lh01;->I:Z
 
     if-eqz v2, :cond_c
 
-    iget-object v1, v0, Lyz0;->O:Lyuc;
+    iget-object v1, v0, Lh01;->O:Lfwc;
 
     const-string v2, "   peerConnectionCreated"
 
-    invoke-interface {v1, v4, v2}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v4, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_6
 
     :cond_c
-    iget-object v2, v0, Lyz0;->E:Ljava/util/List;
+    iget-object v2, v0, Lh01;->E:Ljava/util/List;
 
     if-eqz v2, :cond_e
 
-    iget-object v2, v0, Lyz0;->O:Lyuc;
+    iget-object v2, v0, Lh01;->O:Lfwc;
 
     const-string v3, "createPeerConnectionIfReady impl"
 
-    invoke-interface {v2, v4, v3}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v4, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v1, v0, Lyz0;->I:Z
+    iput-boolean v1, v0, Lh01;->I:Z
 
-    iput-boolean v1, v0, Lyz0;->W:Z
+    iput-boolean v1, v0, Lh01;->W:Z
 
-    iget-object v1, v0, Lyz0;->n0:Lhr1;
+    iget-object v1, v0, Lh01;->n0:Lpr1;
 
-    invoke-virtual {v0, v1}, Lyz0;->d(Lhr1;)V
+    invoke-virtual {v0, v1}, Lh01;->d(Lpr1;)V
 
-    iget-object v1, v0, Lyz0;->h0:Ln58;
+    iget-object v1, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v1, v1, Ln58;->d:Z
+    iget-boolean v1, v1, Lk68;->d:Z
 
     if-eqz v1, :cond_d
 
-    sget-object v1, La71;->Z:La71;
+    sget-object v1, Li71;->Z:Li71;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lyz0;->l(La71;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lh01;->l(Li71;Ljava/lang/Object;)V
 
     :cond_d
     :goto_6
-    iget-object v1, v0, Lyz0;->O:Lyuc;
+    iget-object v1, v0, Lh01;->O:Lfwc;
 
     const-string v2, "apply local media settings once connection requested"
 
-    invoke-interface {v1, v4, v2}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v4, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v0, Lyz0;->f0:Ljie;
+    iget-object v1, v0, Lh01;->f0:Lsje;
 
-    iget-object v2, v1, Ljie;->e:Luz9;
+    iget-object v2, v1, Lsje;->e:Lw0a;
 
-    invoke-virtual {v2, v1}, Luz9;->b(Ltz9;)V
+    invoke-virtual {v2, v1}, Lw0a;->b(Lv0a;)V
 
-    invoke-virtual {v1, v2}, Ljie;->h(Luz9;)V
+    invoke-virtual {v1, v2}, Lsje;->h(Lw0a;)V
 
-    invoke-virtual {v0}, Lyz0;->J()V
+    invoke-virtual {v0}, Lh01;->J()V
 
     return-void
 
@@ -7678,64 +7682,64 @@
     throw v0
 .end method
 
-.method public createJoinLink(Lfr3;Lfr3;)V
+.method public createJoinLink(Ltr3;Ltr3;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->createJoinLink(Ljava/lang/String;)Lqoe;
+    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->createJoinLink(Ljava/lang/String;)Lwpe;
 
     move-result-object v1
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {v1, v2}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object v1
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lm34;
+    new-instance v2, La44;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p1, v3}, Lm34;-><init>(Lfr3;I)V
+    invoke-direct {v2, p1, v3}, La44;-><init>(Ltr3;I)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lm34;
+    new-instance p1, La44;
 
     const/4 v3, 0x0
 
-    invoke-direct {p1, p2, v3}, Lm34;-><init>(Lfr3;I)V
+    invoke-direct {p1, p2, v3}, La44;-><init>(Ltr3;I)V
 
-    new-instance p2, Lvt1;
+    new-instance p2, Ldu1;
 
     const/4 v3, 0x2
 
-    invoke-direct {p2, v2, v3, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v2, v3, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p2}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {v1, p2}, Lwpe;->k(Lsqe;)V
 
-    invoke-virtual {v0, p2}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p2}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
@@ -7743,7 +7747,7 @@
 .method public getAdjustedAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)F
     .locals 3
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lr50;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Ls50;
 
     move-result-object v0
 
@@ -7754,7 +7758,7 @@
     return v1
 
     :cond_0
-    iget v0, v0, Lr50;->b:F
+    iget v0, v0, Ls50;->b:F
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -7795,9 +7799,9 @@
 .method public getAnimojiControl()Lbi;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j1:Lsnd;
+    iget-object v0, v0, Lh01;->j1:Lzod;
 
     return-object v0
 .end method
@@ -7818,7 +7822,7 @@
     return-object v0
 .end method
 
-.method public getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lr50;
+.method public getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Ls50;
     .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
@@ -7827,20 +7831,20 @@
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->audioSampleEnergyCalculator:Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->getProcessor()Lr50;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->getProcessor()Ls50;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
-    iget-boolean v1, v0, Lyz0;->t:Z
+    iget-boolean v1, v0, Lh01;->t:Z
 
     const/4 v2, 0x0
 
@@ -7852,11 +7856,11 @@
     goto :goto_1
 
     :cond_1
-    iget-object v0, v0, Lyz0;->d0:Lvr6;
+    iget-object v0, v0, Lh01;->d0:Lps6;
 
     if-eqz p1, :cond_2
 
-    iget-object v0, v0, Lvr6;->d:Ljava/lang/Object;
+    iget-object v0, v0, Lps6;->d:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/Hashtable;
 
@@ -7864,7 +7868,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lv19;
+    check-cast p1, Lw29;
 
     goto :goto_1
 
@@ -7879,7 +7883,7 @@
     return-object v2
 
     :cond_3
-    iget-object p1, p1, Lv19;->a:Lr50;
+    iget-object p1, p1, Lw29;->a:Ls50;
 
     return-object p1
 .end method
@@ -7934,30 +7938,30 @@
     return-object v0
 .end method
 
-.method public getCameraStatProvider()Lf22;
+.method public getCameraStatProvider()Ln22;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->f0:Ljie;
+    iget-object v0, v0, Lh01;->f0:Lsje;
 
-    iget-object v0, v0, Ljie;->o:Lz58;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lz58;->r:Lb02;
+    iget-object v0, v0, Lsje;->o:Lw68;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lb02;->c:Ltui;
+    iget-object v0, v0, Lw68;->r:Li02;
 
-    iget-object v0, v0, Ltui;->a:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lpdb;
+    iget-object v0, v0, Li02;->c:Ltvi;
 
-    iget-object v0, v0, Lpdb;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ltvi;->a:Ljava/lang/Object;
 
-    check-cast v0, Le22;
+    check-cast v0, Lseb;
+
+    iget-object v0, v0, Lseb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lm22;
 
     return-object v0
 
@@ -7986,11 +7990,11 @@
 .method public getConversationId()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v0, Ll34;
+    check-cast v0, Lz34;
 
-    iget-object v0, v0, Ll34;->a:Ljava/lang/String;
+    iget-object v0, v0, Lz34;->a:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -8006,9 +8010,9 @@
 .method public getDestroyReason()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->o:Ljava/lang/String;
+    iget-object v0, v0, Lh01;->o:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -8040,9 +8044,9 @@
 .method public getJoinLink()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->y:Ljava/lang/String;
+    iget-object v0, v0, Lh01;->y:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
@@ -8153,16 +8157,16 @@
     return-object v0
 .end method
 
-.method public getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lv19;
+.method public getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lw29;
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
-    iget-boolean v1, v0, Lyz0;->t:Z
+    iget-boolean v1, v0, Lh01;->t:Z
 
     const/4 v2, 0x0
 
@@ -8171,11 +8175,11 @@
     return-object v2
 
     :cond_0
-    iget-object v0, v0, Lyz0;->d0:Lvr6;
+    iget-object v0, v0, Lh01;->d0:Lps6;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, v0, Lvr6;->d:Ljava/lang/Object;
+    iget-object v0, v0, Lps6;->d:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/Hashtable;
 
@@ -8183,7 +8187,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lv19;
+    check-cast p1, Lw29;
 
     return-object p1
 
@@ -8212,23 +8216,23 @@
 .method public getPinnedParticipant()Lru/ok/android/externcalls/sdk/ConversationParticipant;
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v1, v0, Lyz0;->j0:Lii1;
+    iget-object v1, v0, Lh01;->j0:Lqi1;
 
-    iget-object v1, v1, Lii1;->k:Ll6e;
+    iget-object v1, v1, Lqi1;->k:Ls7e;
 
-    instance-of v2, v1, Lk6e;
+    instance-of v2, v1, Lr7e;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    iget-object v0, v0, Lyz0;->T0:Lar8;
+    iget-object v0, v0, Lh01;->T0:Lcs8;
 
-    check-cast v1, Lk6e;
+    check-cast v1, Lr7e;
 
-    invoke-virtual {v0, v1}, Lar8;->r(Lk6e;)Lf6e;
+    invoke-virtual {v0, v1}, Lcs8;->A(Lr7e;)Lm7e;
 
     move-result-object v0
 
@@ -8239,19 +8243,19 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, v0, Lf6e;->f:Lzh1;
+    iget-object v0, v0, Lm7e;->f:Lhi1;
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, v0, Lyz0;->E0:Lzh1;
+    iget-object v0, v0, Lh01;->E0:Lhi1;
 
     :goto_0
     if-eqz v0, :cond_2
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lhi1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
@@ -8277,12 +8281,12 @@
     return-object v0
 .end method
 
-.method public getRejectReason()Lsv6;
+.method public getRejectReason()Lmw6;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->J:Lsv6;
+    iget-object v0, v0, Lh01;->J:Lmw6;
 
     return-object v0
 .end method
@@ -8325,12 +8329,12 @@
     return-object v0
 .end method
 
-.method public getUnderlyingCall()Lyz0;
+.method public getUnderlyingCall()Lh01;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->debugManager:Lru/ok/android/externcalls/sdk/dev/DebugManager;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/dev/DebugManager;->getUnderlyingCall()Lyz0;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/dev/DebugManager;->getUnderlyingCall()Lh01;
 
     move-result-object v0
 
@@ -8361,18 +8365,18 @@
     return-object v0
 .end method
 
-.method public varargs grantRoles(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lci1;)V
+.method public varargs grantRoles(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lki1;)V
     .locals 6
 
     .line 1
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ldi1;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lli1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v1, p1, Ldi1;->a:Lzh1;
+    iget-object v1, p1, Lli1;->a:Lhi1;
 
     if-eqz v1, :cond_0
 
@@ -8387,48 +8391,48 @@
     move-object v3, p3
 
     .line 3
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->grantRoles(Lzh1;Z[Lci1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->grantRoles(Lhi1;Z[Lki1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public hangup(Lrv6;)V
+.method public hangup(Llw6;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lsv6;->o:Lsv6;
+    sget-object v1, Lmw6;->o:Lmw6;
 
-    iget-object p1, p1, Lrv6;->a:Lsv6;
+    iget-object p1, p1, Llw6;->a:Lmw6;
 
     if-nez p1, :cond_3
 
-    iget-boolean p1, v0, Lyz0;->u:Z
+    iget-boolean p1, v0, Lh01;->u:Z
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {v0}, Lyz0;->u()Z
+    invoke-virtual {v0}, Lh01;->u()Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
-    iget-boolean p1, v0, Lyz0;->x0:Z
+    iget-boolean p1, v0, Lh01;->x0:Z
 
     if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lsv6;->X:Lsv6;
+    sget-object v1, Lmw6;->X:Lmw6;
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lyz0;->u()Z
+    invoke-virtual {v0}, Lh01;->u()Z
 
     move-result p1
 
@@ -8437,7 +8441,7 @@
     goto :goto_0
 
     :cond_2
-    sget-object v1, Lsv6;->c:Lsv6;
+    sget-object v1, Lmw6;->c:Lmw6;
 
     goto :goto_0
 
@@ -8446,7 +8450,7 @@
 
     :cond_4
     :goto_0
-    invoke-virtual {v0, v1}, Lyz0;->e(Lsv6;)V
+    invoke-virtual {v0, v1}, Lh01;->e(Lmw6;)V
 
     const/4 p1, 0x1
 
@@ -8456,11 +8460,11 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->callFinish:Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->g1:Lcz8;
+    iget-object v0, v0, Lh01;->g1:Ld09;
 
-    invoke-virtual {v0}, Lcz8;->p()Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;
+    invoke-virtual {v0}, Ld09;->x()Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;
 
     move-result-object v0
 
@@ -8482,11 +8486,11 @@
 .method public hasRegisteredParticipnats()Z
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j0:Lii1;
+    iget-object v0, v0, Lh01;->j0:Lqi1;
 
-    invoke-virtual {v0}, Lii1;->i()Ljava/util/Collection;
+    invoke-virtual {v0}, Lqi1;->i()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -8505,13 +8509,13 @@
 
     move-result-object v1
 
-    check-cast v1, Ldi1;
+    check-cast v1, Lli1;
 
-    iget-object v2, v1, Ldi1;->j:Lqbb;
+    iget-object v2, v1, Lli1;->j:Ltcb;
 
     if-nez v2, :cond_1
 
-    iget-object v1, v1, Ldi1;->f:Ljava/util/HashMap;
+    iget-object v1, v1, Lli1;->f:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->isEmpty()Z
 
@@ -8533,19 +8537,19 @@
 .method public init()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string v1, "Conversation"
 
     const-string v2, "init called"
 
-    invoke-interface {v0, v1, v2}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->doStartCall()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v0}, Lyz0;->C()V
+    invoke-virtual {v0}, Lh01;->C()V
 
     return-void
 .end method
@@ -8595,17 +8599,17 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    sget-object v3, Lgze;->v0:Lgze;
+    sget-object v3, Ll0f;->u0:Ll0f;
 
-    invoke-static {v3}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Lgze;)Lru/ok/android/onelog/OneLogItem$Builder;
+    invoke-static {v3}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Ll0f;)Lru/ok/android/onelog/OneLogItem$Builder;
 
     move-result-object v3
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v4, Ll34;
+    check-cast v4, Lz34;
 
-    iget-object v4, v4, Ll34;->a:Ljava/lang/String;
+    iget-object v4, v4, Lz34;->a:Ljava/lang/String;
 
     const-string v5, "vcid"
 
@@ -8663,11 +8667,11 @@
 .method public isAnonJoinForbidden()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    sget-object v1, Lwz0;->a:Lwz0;
+    sget-object v1, Lf01;->a:Lf01;
 
-    iget-object v0, v0, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object v0, v0, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
@@ -8679,9 +8683,9 @@
 .method public isAnswered()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    invoke-virtual {v0}, Lyz0;->u()Z
+    invoke-virtual {v0}, Lh01;->u()Z
 
     move-result v0
 
@@ -8691,13 +8695,13 @@
 .method public isAudioMixEnabled()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->n0:Lhr1;
+    iget-object v0, v0, Lh01;->n0:Lpr1;
 
-    sget-object v1, Lmyf;->c:Lmyf;
+    sget-object v1, Lrzf;->c:Lrzf;
 
-    invoke-virtual {v0, v1}, Lhr1;->E(Lmyf;)Z
+    invoke-virtual {v0, v1}, Lpr1;->E(Lrzf;)Z
 
     move-result v0
 
@@ -8725,11 +8729,11 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->M:Li9h;
+    iget-object v0, v0, Lh01;->M:Liah;
 
-    iget-boolean v0, v0, Li9h;->a:Z
+    iget-boolean v0, v0, Liah;->a:Z
 
     return v0
 .end method
@@ -8737,9 +8741,9 @@
 .method public isConnected()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->D:Z
+    iget-boolean v0, v0, Lh01;->D:Z
 
     return v0
 .end method
@@ -8770,9 +8774,9 @@
 .method public isFeatureAddParticipantEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->s0:Z
+    iget-boolean v0, v0, Lh01;->s0:Z
 
     return v0
 .end method
@@ -8780,11 +8784,11 @@
 .method public isFeedbackEnabled()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    sget-object v1, Lwz0;->o:Lwz0;
+    sget-object v1, Lf01;->o:Lf01;
 
-    iget-object v0, v0, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object v0, v0, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
@@ -8796,11 +8800,11 @@
 .method public isGroupCall()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j0:Lii1;
+    iget-object v0, v0, Lh01;->j0:Lqi1;
 
-    invoke-virtual {v0}, Lii1;->q()I
+    invoke-virtual {v0}, Lqi1;->q()I
 
     move-result v0
 
@@ -8827,9 +8831,9 @@
 .method public isInitialVideoEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->x:Z
+    iget-boolean v0, v0, Lh01;->x:Z
 
     return v0
 .end method
@@ -8837,13 +8841,13 @@
 .method public isMeCreatorOrAdmin()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j0:Lii1;
+    iget-object v0, v0, Lh01;->j0:Lqi1;
 
-    iget-object v0, v0, Lii1;->a:Ldi1;
+    iget-object v0, v0, Lqi1;->a:Lli1;
 
-    invoke-static {v0}, Lyz0;->v(Ldi1;)Z
+    invoke-static {v0}, Lh01;->v(Lli1;)Z
 
     move-result v0
 
@@ -8853,9 +8857,9 @@
 .method public isMeInWaitingRoom()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->G0:Z
+    iget-boolean v0, v0, Lh01;->G0:Z
 
     return v0
 .end method
@@ -8863,9 +8867,9 @@
 .method public isMuteParticipantsPermitted()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->a:Z
+    iget-boolean v0, v0, Lh01;->a:Z
 
     return v0
 .end method
@@ -8883,17 +8887,17 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Ldi1;->e:Ljava/util/List;
+    iget-object p1, p1, Lli1;->e:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -8910,9 +8914,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lci1;
+    check-cast v1, Lki1;
 
-    sget-object v2, Lci1;->b:Lci1;
+    sget-object v2, Lki1;->b:Lki1;
 
     if-ne v1, v2, :cond_0
 
@@ -8937,17 +8941,17 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Ldi1;->e:Ljava/util/List;
+    iget-object p1, p1, Lli1;->e:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -8964,9 +8968,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lci1;
+    check-cast v1, Lki1;
 
-    sget-object v2, Lci1;->a:Lci1;
+    sget-object v2, Lki1;->a:Lki1;
 
     if-ne v1, v2, :cond_0
 
@@ -8987,17 +8991,17 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Lyz0;->v(Ldi1;)Z
+    invoke-static {p1}, Lh01;->v(Lli1;)Z
 
     move-result p1
 
@@ -9012,32 +9016,32 @@
 .method public isPermissionsGranted()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->h0:Ln58;
+    iget-object v0, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v1, v0, Ln58;->d:Z
+    iget-boolean v1, v0, Lk68;->d:Z
 
     if-nez v1, :cond_2
 
-    iget-boolean v1, v0, Ln58;->c:Z
+    iget-boolean v1, v0, Lk68;->c:Z
 
     if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ln58;->a()Z
+    invoke-virtual {v0}, Lk68;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-boolean v1, v0, Ln58;->d:Z
+    iget-boolean v1, v0, Lk68;->d:Z
 
     if-nez v1, :cond_2
 
-    iget-boolean v0, v0, Ln58;->c:Z
+    iget-boolean v0, v0, Lk68;->c:Z
 
     if-eqz v0, :cond_1
 
@@ -9066,11 +9070,11 @@
 .method public isRecurring()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    sget-object v1, Lwz0;->c:Lwz0;
+    sget-object v1, Lf01;->c:Lf01;
 
-    iget-object v0, v0, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object v0, v0, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
@@ -9082,25 +9086,25 @@
 .method public isVideoPermissionGranted()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v1, v0, Lyz0;->h0:Ln58;
+    iget-object v1, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v1, v1, Ln58;->d:Z
+    iget-boolean v1, v1, Lk68;->d:Z
 
     if-nez v1, :cond_1
 
-    iget-object v1, v0, Lyz0;->h0:Ln58;
+    iget-object v1, v0, Lh01;->h0:Lk68;
 
-    invoke-virtual {v1}, Ln58;->a()Z
+    invoke-virtual {v1}, Lk68;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lyz0;->h0:Ln58;
+    iget-object v0, v0, Lh01;->h0:Lk68;
 
-    iget-boolean v0, v0, Ln58;->d:Z
+    iget-boolean v0, v0, Lk68;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -9121,11 +9125,11 @@
 .method public isWaitingRoomEnabled()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    sget-object v1, Lwz0;->b:Lwz0;
+    sget-object v1, Lf01;->b:Lf01;
 
-    iget-object v0, v0, Lyz0;->s:Ljava/util/EnumSet;
+    iget-object v0, v0, Lh01;->s:Ljava/util/EnumSet;
 
     invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
 
@@ -9137,9 +9141,9 @@
 .method public muteAll()V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j:Ljme;
+    iget-object v0, v0, Lh01;->j:Lrne;
 
     if-eqz v0, :cond_0
 
@@ -9164,13 +9168,13 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lazi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lrm6;
+    invoke-static {v2, v1}, Li0j;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lmn6;
 
     move-result-object v1
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v1}, Ljme;->i(Lnme;)V
+    invoke-virtual {v0, v1}, Lrne;->i(Lvne;)V
 
     return-void
 
@@ -9190,42 +9194,42 @@
 .method public pinParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
     .locals 4
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ldi1;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->getCallParticipantByExternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lli1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p1, Ldi1;->a:Lzh1;
+    iget-object p1, p1, Lli1;->a:Lhi1;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v1, v0, Lyz0;->j0:Lii1;
+    iget-object v1, v0, Lh01;->j0:Lqi1;
 
-    iget-object v1, v1, Lii1;->k:Ll6e;
+    iget-object v1, v1, Lqi1;->k:Ls7e;
 
-    iget-object v2, v0, Lyz0;->n0:Lhr1;
+    iget-object v2, v0, Lh01;->n0:Lpr1;
 
-    new-instance v3, Ljz0;
+    new-instance v3, Lsz0;
 
-    invoke-direct {v3, v0, p2, p1, v1}, Ljz0;-><init>(Lyz0;ZLzh1;Ll6e;)V
+    invoke-direct {v3, v0, p2, p1, v1}, Lsz0;-><init>(Lh01;ZLhi1;Ls7e;)V
 
-    invoke-virtual {v2, p1, v1, p2, v3}, Lhr1;->H(Lzh1;Ll6e;ZLjz0;)V
+    invoke-virtual {v2, p1, v1, p2, v3}, Lpr1;->H(Lhi1;Ls7e;ZLsz0;)V
 
     :cond_0
     return-void
 .end method
 
-.method public prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+.method public prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -9243,20 +9247,20 @@
     move-object v5, p3
 
     .line 1
-    invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLfr3;Lfr3;)V
+    invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLtr3;Ltr3;)V
 
     return-void
 .end method
 
-.method public prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLfr3;Lfr3;)V
+.method public prepare(Lru/ok/android/externcalls/sdk/api/ConversationParams;ZZLtr3;Ltr3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
             "ZZ",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
@@ -9274,7 +9278,7 @@
     sget-object v2, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams$Prepare;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams$Prepare;
 
     .line 4
-    invoke-direct {p0, v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lqoe;
+    invoke-direct {p0, v0, v1, p1, v2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lwpe;
 
     move-result-object p1
 
@@ -9290,50 +9294,50 @@
 
     move-object v3, p5
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/h;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLfr3;ZLfr3;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/h;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;ZLtr3;)V
 
     .line 5
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p2, Lm34;
+    new-instance p2, La44;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, v3, p3}, Lm34;-><init>(Lfr3;I)V
+    invoke-direct {p2, v3, p3}, La44;-><init>(Ltr3;I)V
 
     .line 6
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
-    new-instance p3, Lvt1;
+    new-instance p3, Ldu1;
 
     const/4 p4, 0x2
 
-    invoke-direct {p3, v0, p4, p2}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p3, v0, p4, p2}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 8
-    invoke-virtual {p1, p3}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {p1, p3}, Lwpe;->k(Lsqe;)V
 
     .line 9
-    iget-object p1, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object p1, v1, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
-    invoke-virtual {p1, p3}, Lai3;->a(Lev4;)Z
+    invoke-virtual {p1, p3}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
 
-.method public prepareJoinByLink(Lfr3;Lfr3;)V
+.method public prepareJoinByLink(Ltr3;Ltr3;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lfr3;",
-            "Lfr3;",
+            "Ltr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     sget-object v1, Lru/ok/android/externcalls/sdk/Conversation$State;->None:Lru/ok/android/externcalls/sdk/Conversation$State;
 
@@ -9353,29 +9357,29 @@
 
     invoke-direct {v4, v5, v6}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams$PrepareJoin;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lqoe;
+    invoke-direct {p0, v1, v2, v3, v4}, Lru/ok/android/externcalls/sdk/ConversationImpl;->executeWithState(Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/Conversation$State;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lwpe;
 
     move-result-object v1
 
     new-instance v2, Lru/ok/android/externcalls/sdk/t;
 
-    invoke-direct {v2, p0, p2, p1}, Lru/ok/android/externcalls/sdk/t;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lfr3;)V
+    invoke-direct {v2, p0, p2, p1}, Lru/ok/android/externcalls/sdk/t;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ltr3;Ltr3;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/l;
 
     const/4 v3, 0x2
 
-    invoke-direct {p1, p2, v3}, Lru/ok/android/externcalls/sdk/l;-><init>(Lfr3;I)V
+    invoke-direct {p1, p2, v3}, Lru/ok/android/externcalls/sdk/l;-><init>(Ltr3;I)V
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p2, Lvt1;
+    new-instance p2, Ldu1;
 
-    invoke-direct {p2, v2, v3, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v2, v3, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p2}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {v1, p2}, Lwpe;->k(Lsqe;)V
 
-    invoke-virtual {v0, p2}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p2}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
@@ -9389,7 +9393,7 @@
 
     invoke-direct {v0, v1, p0, p2}, Lru/ok/android/externcalls/sdk/c;-><init>(ILjava/lang/Object;Z)V
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
 
     return-void
 .end method
@@ -9397,9 +9401,9 @@
 .method public queryChatHistory(Ljava/lang/Integer;Ljava/lang/Integer;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j:Ljme;
+    iget-object v0, v0, Lh01;->j:Lrne;
 
     if-eqz v0, :cond_0
 
@@ -9408,11 +9412,11 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lazi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lrm6;
+    invoke-static {v2, v1}, Li0j;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lmn6;
 
     move-result-object v1
 
-    iget-object v2, v1, Lrm6;->a:Lorg/json/JSONObject;
+    iget-object v2, v1, Lmn6;->a:Lorg/json/JSONObject;
 
     const-string v3, "offset"
 
@@ -9436,7 +9440,7 @@
 
     invoke-direct {p1, p0, p3}, Lru/ok/android/externcalls/sdk/f;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;)V
 
-    invoke-virtual {v0, v1, p1}, Ljme;->h(Lrm6;Lgme;)V
+    invoke-virtual {v0, v1, p1}, Lrne;->h(Lmn6;Lone;)V
 
     return-void
 
@@ -9458,19 +9462,19 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->preferencesHelper:Lgwb;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->preferencesHelper:Llxb;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
-    invoke-static {v0, v1, v2}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiService;Lgwb;Lyuc;)V
+    invoke-static {v0, v1, v2}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiService;Llxb;Lfwc;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->rateManager:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;
 
     invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->logHints()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
-    invoke-virtual {v0}, Lai3;->d()V
+    invoke-virtual {v0}, Lni3;->d()V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->waitingRoomParticipants:Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;
 
@@ -9513,13 +9517,13 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v1, v1, Lyz0;->J:Lsv6;
+    iget-object v1, v1, Lh01;->J:Lmw6;
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lsv6;->X:Lsv6;
+    sget-object v1, Lmw6;->X:Lmw6;
 
     goto :goto_0
 
@@ -9532,54 +9536,54 @@
     :goto_0
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->creator:Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v3, Ll34;
+    check-cast v3, Lz34;
 
-    iget-object v3, v3, Ll34;->a:Ljava/lang/String;
+    iget-object v3, v3, Lz34;->a:Ljava/lang/String;
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->anonToken:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v3, v4}, Lru/ok/android/externcalls/sdk/ConversationFactory;->hangup(Lsv6;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v1, v3, v4}, Lru/ok/android/externcalls/sdk/ConversationFactory;->hangup(Lmw6;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     const/4 v2, 0x0
 
-    iput-object v2, v1, Lyz0;->r0:Ltz0;
+    iput-object v2, v1, Lh01;->r0:Lc01;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iput-object v2, v1, Lyz0;->X:Lru/ok/android/externcalls/sdk/m;
+    iput-object v2, v1, Lh01;->X:Lru/ok/android/externcalls/sdk/m;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->listener:Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
-    iget-object v1, v1, Lyz0;->F:Ljava/util/ArrayList;
+    iget-object v1, v1, Lh01;->F:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->audioSampleEnergyCalculator:Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;
 
-    iget-object v1, v1, Lyz0;->e0:Lmie;
+    iget-object v1, v1, Lh01;->e0:Lvje;
 
-    iget-object v4, v1, Lmie;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v4, v1, Lvje;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v5, Le1e;
+    new-instance v5, Ll2e;
 
     const/16 v6, 0xb
 
-    invoke-direct {v5, v1, v6, v3}, Le1e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v5, v1, v6, v3}, Ll2e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
     const-string v3, "release"
 
-    invoke-virtual {v1, v2, v3}, Lyz0;->q(Lsv6;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lh01;->q(Lmw6;Ljava/lang/String;)V
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->state:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -9617,60 +9621,60 @@
     return-void
 .end method
 
-.method public removeJoinLink(Ljava/lang/Runnable;Lfr3;)V
+.method public removeJoinLink(Ljava/lang/Runnable;Ltr3;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Runnable;",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lai3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->disposable:Lni3;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->apiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Lk34;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->cidProvider:Ly34;
 
-    check-cast v2, Ll34;
+    check-cast v2, Lz34;
 
-    iget-object v2, v2, Ll34;->a:Ljava/lang/String;
+    iget-object v2, v2, Lz34;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->removeJoinLink(Ljava/lang/String;)Lqoe;
+    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->removeJoinLink(Ljava/lang/String;)Lwpe;
 
     move-result-object v1
 
-    invoke-static {}, Lie;->a()Lqnd;
+    invoke-static {}, Lie;->a()Lxod;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lqoe;->i(Lqnd;)Ljpe;
+    invoke-virtual {v1, v2}, Lwpe;->i(Lxod;)Lrqe;
 
     move-result-object v1
 
     new-instance v2, Lru/ok/android/externcalls/sdk/k;
 
-    invoke-direct {v2, p1, p2}, Lru/ok/android/externcalls/sdk/k;-><init>(Ljava/lang/Runnable;Lfr3;)V
+    invoke-direct {v2, p1, p2}, Lru/ok/android/externcalls/sdk/k;-><init>(Ljava/lang/Runnable;Ltr3;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lm34;
+    new-instance p1, La44;
 
     const/4 v3, 0x0
 
-    invoke-direct {p1, p2, v3}, Lm34;-><init>(Lfr3;I)V
+    invoke-direct {p1, p2, v3}, La44;-><init>(Ltr3;I)V
 
-    new-instance p2, Lvt1;
+    new-instance p2, Ldu1;
 
     const/4 v3, 0x2
 
-    invoke-direct {p2, v2, v3, p1}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v2, v3, p1}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p2}, Lqoe;->k(Lkpe;)V
+    invoke-virtual {v1, p2}, Lwpe;->k(Lsqe;)V
 
-    invoke-virtual {v0, p2}, Lai3;->a(Lev4;)Z
+    invoke-virtual {v0, p2}, Lni3;->a(Lvv4;)Z
 
     return-void
 .end method
@@ -9696,7 +9700,7 @@
 
     invoke-direct {v0, v1, p0, p2}, Lru/ok/android/externcalls/sdk/c;-><init>(ILjava/lang/Object;Z)V
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
 
     return-void
 .end method
@@ -9704,31 +9708,31 @@
 .method public sendData(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lorg/json/JSONObject;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-boolean v0, v0, Lyz0;->t:Z
+    iget-boolean v0, v0, Lh01;->t:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lli1;
 
     move-result-object p1
 
-    iget-object p1, p1, Ldi1;->a:Lzh1;
+    iget-object p1, p1, Lli1;->a:Lhi1;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j:Ljme;
+    iget-object v0, v0, Lh01;->j:Lrne;
 
-    invoke-static {p1, p2}, Lazi;->g(Lzh1;Lorg/json/JSONObject;)Lrm6;
+    invoke-static {p1, p2}, Li0j;->g(Lhi1;Lorg/json/JSONObject;)Lmn6;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljme;->i(Lnme;)V
+    invoke-virtual {v0, p1}, Lrne;->i(Lvne;)V
 
     :cond_0
     return-void
@@ -9740,25 +9744,25 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setAnonJoinForbidden(ZLfr3;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setAnonJoinForbidden(ZLtr3;)V
 
     return-void
 .end method
 
-.method public setAnonJoinForbidden(ZLfr3;)V
+.method public setAnonJoinForbidden(ZLtr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lwz0;->a:Lwz0;
+    sget-object v0, Lf01;->a:Lf01;
 
-    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lwz0;ZLfr3;)V
+    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lf01;ZLtr3;)V
 
     return-void
 .end method
@@ -9773,21 +9777,21 @@
     return-void
 .end method
 
-.method public setCallOptionEnabled(Lwz0;ZLfr3;)V
+.method public setCallOptionEnabled(Lf01;ZLtr3;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwz0;",
+            "Lf01;",
             "Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j:Ljme;
+    iget-object v0, v0, Lh01;->j:Lrne;
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->isMeCreatorOrAdmin()Z
 
@@ -9799,14 +9803,14 @@
 
     if-eqz p3, :cond_0
 
-    invoke-interface {p3, p1}, Lfr3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p3, p1}, Ltr3;->accept(Ljava/lang/Object;)V
 
     :cond_0
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lyuc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->log:Lfwc;
 
     const-string p3, "Conversation"
 
-    invoke-interface {p2, p3, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, p3, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -9821,31 +9825,31 @@
 
     if-eqz p2, :cond_2
 
-    invoke-static {v1, v2}, Lazi;->e(Ljava/util/Set;Ljava/util/Set;)Lrm6;
+    invoke-static {v1, v2}, Li0j;->e(Ljava/util/Set;Ljava/util/Set;)Lmn6;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v2, v1}, Lazi;->e(Ljava/util/Set;Ljava/util/Set;)Lrm6;
+    invoke-static {v2, v1}, Li0j;->e(Ljava/util/Set;Ljava/util/Set;)Lmn6;
 
     move-result-object v1
 
     :goto_0
     new-instance v2, Lru/ok/android/externcalls/sdk/j;
 
-    invoke-direct {v2, p0, p2, p1, p3}, Lru/ok/android/externcalls/sdk/j;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLwz0;Lfr3;)V
+    invoke-direct {v2, p0, p2, p1, p3}, Lru/ok/android/externcalls/sdk/j;-><init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLf01;Ltr3;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/g;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p3, p2}, Lru/ok/android/externcalls/sdk/g;-><init>(Lfr3;I)V
+    invoke-direct {p1, p3, p2}, Lru/ok/android/externcalls/sdk/g;-><init>(Ltr3;I)V
 
     const/4 p2, 0x0
 
-    invoke-virtual {v0, v1, p2, v2, p1}, Ljme;->d(Lnme;ZLgme;Lgme;)V
+    invoke-virtual {v0, v1, p2, v2, p1}, Lrne;->d(Lvne;ZLone;Lone;)V
 
     :cond_3
     return-void
@@ -9857,25 +9861,25 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setFeedbackEnabled(ZLfr3;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setFeedbackEnabled(ZLtr3;)V
 
     return-void
 .end method
 
-.method public setFeedbackEnabled(ZLfr3;)V
+.method public setFeedbackEnabled(ZLtr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lwz0;->o:Lwz0;
+    sget-object v0, Lf01;->o:Lf01;
 
-    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lwz0;ZLfr3;)V
+    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lf01;ZLtr3;)V
 
     return-void
 .end method
@@ -9883,9 +9887,9 @@
 .method public setMuteState(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lyz0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl;->call:Lh01;
 
-    iget-object v0, v0, Lyz0;->j:Ljme;
+    iget-object v0, v0, Lh01;->j:Lrne;
 
     if-eqz v0, :cond_0
 
@@ -9895,7 +9899,7 @@
 
     invoke-direct {v1, v2, v0, p2}, Lru/ok/android/externcalls/sdk/c;-><init>(ILjava/lang/Object;Z)V
 
-    invoke-direct {p0, p1, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;)V
+    invoke-direct {p0, p1, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ltr3;)V
 
     :cond_0
     return-void
@@ -9907,25 +9911,25 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setWaitingRoomEnabled(ZLfr3;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setWaitingRoomEnabled(ZLtr3;)V
 
     return-void
 .end method
 
-.method public setWaitingRoomEnabled(ZLfr3;)V
+.method public setWaitingRoomEnabled(ZLtr3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lfr3;",
+            "Ltr3;",
             ")V"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lwz0;->b:Lwz0;
+    sget-object v0, Lf01;->b:Lf01;
 
-    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lwz0;ZLfr3;)V
+    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/ConversationImpl;->setCallOptionEnabled(Lf01;ZLtr3;)V
 
     return-void
 .end method

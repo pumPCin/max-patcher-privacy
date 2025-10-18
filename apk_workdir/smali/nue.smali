@@ -2,164 +2,320 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public X:F
 
-.field public final b:Lge8;
+.field public Y:Z
 
-.field public final c:Li8b;
+.field public final Z:[F
 
-.field public final d:Z
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public o:I
+
+.field public final q0:[F
+
+.field public r0:[Lgt;
+
+.field public s0:I
+
+.field public t0:I
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lge8;Li8b;Z)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnue;->a:Ljava/util/List;
+    const/4 v0, -0x1
 
-    iput-object p2, p0, Lnue;->b:Lge8;
+    iput v0, p0, Lnue;->b:I
 
-    iput-object p3, p0, Lnue;->c:Li8b;
+    iput v0, p0, Lnue;->c:I
 
-    iput-boolean p4, p0, Lnue;->d:Z
+    const/4 v0, 0x0
+
+    iput v0, p0, Lnue;->o:I
+
+    iput-boolean v0, p0, Lnue;->Y:Z
+
+    const/16 v1, 0x9
+
+    new-array v2, v1, [F
+
+    iput-object v2, p0, Lnue;->Z:[F
+
+    new-array v1, v1, [F
+
+    iput-object v1, p0, Lnue;->q0:[F
+
+    const/16 v1, 0x10
+
+    new-array v1, v1, [Lgt;
+
+    iput-object v1, p0, Lnue;->r0:[Lgt;
+
+    iput v0, p0, Lnue;->s0:I
+
+    iput v0, p0, Lnue;->t0:I
+
+    iput p1, p0, Lnue;->u0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnue;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnue;
-
-    iget-object v1, p0, Lnue;->a:Ljava/util/List;
-
-    iget-object v3, p1, Lnue;->a:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lnue;->b:Lge8;
-
-    iget-object v3, p1, Lnue;->b:Lge8;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lnue;->c:Li8b;
-
-    iget-object v3, p1, Lnue;->c:Li8b;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lnue;->d:Z
-
-    iget-boolean p1, p1, Lnue;->d:Z
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a(Lgt;)V
     .locals 3
 
-    iget-object v0, p0, Lnue;->a:Ljava/util/List;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    :goto_0
+    iget v1, p0, Lnue;->s0:I
 
-    move-result v0
+    if-ge v0, v1, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Lnue;->r0:[Lgt;
+
+    aget-object v1, v1, v0
+
+    if-ne v1, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lnue;->r0:[Lgt;
+
+    array-length v2, v0
+
+    if-lt v1, v2, :cond_2
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgt;
+
+    iput-object v0, p0, Lnue;->r0:[Lgt;
+
+    :cond_2
+    iget-object v0, p0, Lnue;->r0:[Lgt;
+
+    iget v1, p0, Lnue;->s0:I
+
+    aput-object p1, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lnue;->s0:I
+
+    return-void
+.end method
+
+.method public final c(Lgt;)V
+    .locals 4
+
+    iget v0, p0, Lnue;->s0:I
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lnue;->b:Lge8;
+    :goto_0
+    if-ge v1, v0, :cond_2
 
-    if-nez v2, :cond_0
+    iget-object v2, p0, Lnue;->r0:[Lgt;
 
-    move v2, v1
+    aget-object v2, v2, v1
+
+    if-ne v2, p1, :cond_1
+
+    :goto_1
+    add-int/lit8 p1, v0, -0x1
+
+    if-ge v1, p1, :cond_0
+
+    iget-object p1, p0, Lnue;->r0:[Lgt;
+
+    add-int/lit8 v2, v1, 0x1
+
+    aget-object v3, p1, v2
+
+    aput-object v3, p1, v1
+
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_0
+    iget p1, p0, Lnue;->s0:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lnue;->s0:I
+
+    return-void
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lnue;
+
+    iget v0, p0, Lnue;->b:I
+
+    iget p1, p1, Lnue;->b:I
+
+    sub-int/2addr v0, p1
+
+    return v0
+.end method
+
+.method public final d()V
+    .locals 6
+
+    const/4 v0, 0x5
+
+    iput v0, p0, Lnue;->u0:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lnue;->o:I
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lnue;->b:I
+
+    iput v1, p0, Lnue;->c:I
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lnue;->X:F
+
+    iput-boolean v0, p0, Lnue;->Y:Z
+
+    iget v2, p0, Lnue;->s0:I
+
+    move v3, v0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    iget-object v4, p0, Lnue;->r0:[Lgt;
+
+    const/4 v5, 0x0
+
+    aput-object v5, v4, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Lge8;->hashCode()I
+    iput v0, p0, Lnue;->s0:I
 
-    move-result v2
+    iput v0, p0, Lnue;->t0:I
+
+    iput-boolean v0, p0, Lnue;->a:Z
+
+    iget-object v0, p0, Lnue;->q0:[F
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
+
+    return-void
+.end method
+
+.method public final e(Lay7;F)V
+    .locals 3
+
+    iput p2, p0, Lnue;->X:F
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p0, Lnue;->Y:Z
+
+    iget p2, p0, Lnue;->s0:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lnue;->c:I
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :goto_0
-    add-int/2addr v0, v2
+    if-ge v1, p2, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v2, p0, Lnue;->r0:[Lgt;
 
-    iget-object v2, p0, Lnue;->c:Li8b;
+    aget-object v2, v2, v1
 
-    if-nez v2, :cond_1
+    invoke-virtual {v2, p1, p0, v0}, Lgt;->h(Lay7;Lnue;Z)V
 
-    goto :goto_1
+    add-int/lit8 v1, v1, 0x1
 
-    :cond_1
-    invoke-virtual {v2}, Li8b;->hashCode()I
+    goto :goto_0
 
-    move-result v1
+    :cond_0
+    iput v0, p0, Lnue;->s0:I
 
-    :goto_1
-    add-int/2addr v0, v1
+    return-void
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public final f(Lay7;Lgt;)V
+    .locals 4
 
-    iget-boolean v1, p0, Lnue;->d:Z
+    iget v0, p0, Lnue;->s0:I
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    const/4 v1, 0x0
 
-    move-result v1
+    move v2, v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    return v1
+    iget-object v3, p0, Lnue;->r0:[Lgt;
+
+    aget-object v3, v3, v2
+
+    invoke-virtual {v3, p1, p2, v1}, Lgt;->i(Lay7;Lgt;Z)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, p0, Lnue;->s0:I
+
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -167,41 +323,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SpeakerModeState(opponentsPages="
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lnue;->a:Ljava/util/List;
+    iget v1, p0, Lnue;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mainOpponentState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnue;->b:Lge8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", opponentPipState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnue;->c:Li8b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isP2GCallAnimationDepended="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lnue;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

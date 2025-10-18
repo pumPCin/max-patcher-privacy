@@ -1,51 +1,32 @@
 .class public final Ljqg;
-.super Lk14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmqg;
 
-# instance fields
-.field public X:Lo0a;
 
-.field public synthetic Y:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljqg;
 
-.field public final synthetic Z:Lrqg;
-
-.field public o:Lrqg;
-
-.field public r0:I
+.field public static final b:Ljqg;
 
 
 # direct methods
-.method public constructor <init>(Lrqg;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Ljqg;->Z:Lrqg;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Ljqg;->Y:Ljava/lang/Object;
+    new-instance v0, Ljqg;
 
-    iget p1, p0, Ljqg;->r0:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Ljqg;->a:Ljqg;
 
-    or-int/2addr p1, v0
+    new-instance v0, Ljqg;
 
-    iput p1, p0, Ljqg;->r0:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Ljqg;->Z:Lrqg;
+    sput-object v0, Ljqg;->b:Ljqg;
 
-    invoke-virtual {p1, p0}, Lrqg;->c(Lk14;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

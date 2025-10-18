@@ -2,58 +2,89 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llcf;
+
 
 # instance fields
-.field public final a:Lwq3;
-
-.field public b:Lwq3;
-
-.field public c:Lwq3;
-
-.field public d:Lwq3;
-
-.field public e:Lwq3;
-
-.field public f:Lwq3;
-
-.field public g:Lwq3;
-
-.field public h:Ljava/util/ArrayList;
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public final l:I
-
-.field public final m:Z
-
-.field public n:Z
-
-.field public o:Z
-
-.field public p:Z
-
-.field public q:Z
+.field public a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lwq3;IZ)V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Le62;->k:F
-
-    iput-object p1, p0, Le62;->a:Lwq3;
-
-    iput p2, p0, Le62;->l:I
-
-    iput-boolean p3, p0, Le62;->m:Z
+    iput-object p1, p0, Le62;->a:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public f(J)I
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public h(I)J
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Lsgi;->d(Z)V
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public m(J)Ljava/util/List;
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-ltz p1, :cond_0
+
+    iget-object p1, p0, Le62;->a:Ljava/util/List;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method public s()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -1,144 +1,175 @@
-.class public final synthetic Ljn5;
-.super Ljava/lang/Object;
+.class public final Ljn5;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Lr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic b:J
+.field public final b:Landroid/graphics/Bitmap;
+
+.field public c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    iput p3, p0, Ljn5;->a:I
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    iput-wide p1, p0, Ljn5;->b:J
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Ljn5;->a:Landroid/graphics/Paint;
+
+    const/16 v0, 0xff
+
+    iput v0, p0, Ljn5;->c:I
+
+    iput-object p1, p0, Ljn5;->b:Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    iput p1, p0, Ljn5;->d:I
+
+    iget-object p1, p0, Ljn5;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result p1
+
+    iput p1, p0, Ljn5;->e:I
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput p1, p0, Ljn5;->e:I
+
+    iput p1, p0, Ljn5;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    iget v0, p0, Ljn5;->a:I
+    iget-object v0, p0, Ljn5;->b:Landroid/graphics/Bitmap;
 
-    const-string v1, "nn5"
+    if-eqz v0, :cond_0
 
-    const-string v2, "loadFromMarker: success marker=d"
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    const-string v3, "ho5"
+    move-result v0
 
-    iget-wide v4, p0, Ljn5;->b:J
+    if-nez v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    iget-object v1, p0, Ljn5;->a:Landroid/graphics/Paint;
 
-    move-result-object v0
+    iget-object v2, p0, Ljn5;->b:Landroid/graphics/Bitmap;
 
-    const-string v1, "n1a"
+    const/4 v3, 0x0
 
-    const-string v2, "Update track for message %d: track is empty"
+    invoke-virtual {p1, v2, v3, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    invoke-static {v1, v2, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    return-void
+.end method
+
+.method public final getAlpha()I
+    .locals 1
+
+    iget v0, p0, Ljn5;->c:I
+
+    return v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    iget v0, p0, Ljn5;->e:I
+
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    iget v0, p0, Ljn5;->d:I
+
+    return v0
+.end method
+
+.method public final getMinimumHeight()I
+    .locals 1
+
+    iget v0, p0, Ljn5;->e:I
+
+    return v0
+.end method
+
+.method public final getMinimumWidth()I
+    .locals 1
+
+    iget v0, p0, Ljn5;->d:I
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    iput p1, p0, Ljn5;->c:I
+
+    iget-object v0, p0, Ljn5;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Ljn5;->a:Landroid/graphics/Paint;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v3, v2, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     return-void
+.end method
 
-    :pswitch_1
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final setFilterBitmap(Z)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Ljn5;->a:Landroid/graphics/Paint;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "onNotifAdded: added sticker %d to cache"
-
-    invoke-static {v3, v1, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
     return-void
-
-    :pswitch_2
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "zn5"
-
-    const-string v2, "assetsUpdate: queued on api, sync=%d"
-
-    invoke-static {v1, v2, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_3
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v2, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_4
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v2, "onNotifAdded: added sticker set %d to cache"
-
-    invoke-static {v1, v2, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

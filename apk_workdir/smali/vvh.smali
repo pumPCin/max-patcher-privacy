@@ -1,137 +1,134 @@
 .class public final Lvvh;
-.super Lawh;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lawh;
-
-.field public final transient c:I
-
-.field public final transient o:I
+.field public final H0:Lupf;
 
 
 # direct methods
-.method public constructor <init>(Lawh;II)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcq3;Lupf;Louh;Louh;)V
+    .locals 8
 
-    iput-object p1, p0, Lvvh;->X:Lawh;
+    const/16 v3, 0x10e
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    const/4 v7, 0x0
 
-    iput p2, p0, Lvvh;->c:I
+    move-object v0, p0
 
-    iput p3, p0, Lvvh;->o:I
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcq3;Lbs6;Lcs6;I)V
+
+    iput-object p4, v0, Lvvh;->H0:Lupf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()I
-    .locals 2
-
-    iget-object v0, p0, Lvvh;->X:Lawh;
-
-    invoke-virtual {v0}, Ljvh;->d()I
-
-    move-result v0
-
-    iget v1, p0, Lvvh;->c:I
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, Lvvh;->o:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 2
-
-    iget-object v0, p0, Lvvh;->X:Lawh;
-
-    invoke-virtual {v0}, Ljvh;->d()I
-
-    move-result v0
-
-    iget v1, p0, Lvvh;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final e()[Ljava/lang/Object;
+.method public final g()I
     .locals 1
 
-    iget-object v0, p0, Lvvh;->X:Lawh;
+    const v0, 0xc1fa340
 
-    invoke-virtual {v0}, Ljvh;->e()[Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lqvh;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lqvh;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lqvh;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v0, v2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public final m()[Lcq5;
+    .locals 1
+
+    sget-object v0, Lici;->b:[Lcq5;
 
     return-object v0
 .end method
 
-.method public final f(II)Lawh;
-    .locals 1
+.method public final n()Landroid/os/Bundle;
+    .locals 3
 
-    iget v0, p0, Lvvh;->o:I
+    iget-object v0, p0, Lvvh;->H0:Lupf;
 
-    invoke-static {p1, p2, v0}, Lwii;->e(III)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v0, p0, Lvvh;->c:I
+    new-instance v1, Landroid/os/Bundle;
 
-    add-int/2addr p1, v0
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    add-int/2addr p2, v0
+    iget-object v0, v0, Lupf;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lvvh;->X:Lawh;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lawh;->f(II)Lawh;
+    const-string v2, "api"
 
-    move-result-object p1
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p1
+    :cond_0
+    return-object v1
 .end method
 
-.method public final get(I)Ljava/lang/Object;
+.method public final p()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lvvh;->o:I
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
 
-    invoke-static {p1, v0}, Lwii;->c(II)V
-
-    iget v0, p0, Lvvh;->c:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Lvvh;->X:Lawh;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final size()I
+.method public final q()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lvvh;->o:I
+    const-string v0, "com.google.android.gms.common.telemetry.service.START"
+
+    return-object v0
+.end method
+
+.method public final r()Z
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
-.end method
-
-.method public final bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lvvh;->f(II)Lawh;
-
-    move-result-object p1
-
-    return-object p1
 .end method

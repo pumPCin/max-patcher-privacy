@@ -1,507 +1,415 @@
-.class public Ll89;
-.super Lhlf;
+.class public final Ll89;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/Menu;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final o:Lr79;
+.field public final a:I
+
+.field public b:Lda3;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr79;)V
-    .locals 0
+.method public constructor <init>(ILhi4;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lhlf;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Ll89;->o:Lr79;
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p2}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj89;
+
+    invoke-interface {v0}, Lj89;->getSize()I
+
+    move-result v0
+
+    if-gt p1, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Lhi4;->m()Lda3;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ll89;->b:Lda3;
+
+    iput p1, p0, Ll89;->a:I
 
     return-void
 
-    :cond_0
+    :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Wrapped Object can not be null."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p1
 .end method
 
 
 # virtual methods
-.method public final add(I)Landroid/view/MenuItem;
-    .locals 1
-
-    .line 4
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1}, Lr79;->add(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final add(IIII)Landroid/view/MenuItem;
-    .locals 1
-
-    .line 8
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lr79;->add(IIII)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 1
-
-    .line 5
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    .line 6
-    invoke-virtual {v0, p1, p2, p3, p4}, Lr79;->a(IIILjava/lang/CharSequence;)Lv79;
-
-    move-result-object p1
-
-    .line 7
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final add(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+.method public final declared-synchronized P(III[B)V
     .locals 2
 
-    .line 1
-    iget-object v0, p0, Ll89;->o:Lr79;
+    monitor-enter p0
 
-    const/4 v1, 0x0
+    :try_start_0
+    invoke-virtual {p0}, Ll89;->m()V
 
-    .line 2
-    invoke-virtual {v0, v1, v1, v1, p1}, Lr79;->a(IIILjava/lang/CharSequence;)Lv79;
+    add-int v0, p1, p3
 
-    move-result-object p1
+    iget v1, p0, Ll89;->a:I
 
-    .line 3
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    if-gt v0, v1, :cond_0
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
-    .locals 11
-
-    move-object/from16 v0, p8
-
-    if-eqz v0, :cond_0
-
-    array-length v1, v0
-
-    new-array v1, v1, [Landroid/view/MenuItem;
-
-    :goto_0
-    move-object v10, v1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
     goto :goto_0
-
-    :goto_1
-    iget-object v2, p0, Ll89;->o:Lr79;
-
-    move v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    move-object v6, p4
-
-    move-object/from16 v7, p5
-
-    move-object/from16 v8, p6
-
-    move/from16 v9, p7
-
-    invoke-virtual/range {v2 .. v10}, Lr79;->addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
-
-    move-result p1
-
-    if-eqz v10, :cond_1
-
-    array-length p2, v10
-
-    const/4 p3, 0x0
-
-    :goto_2
-    if-ge p3, p2, :cond_1
-
-    aget-object p4, v10, p3
-
-    invoke-virtual {p0, p4}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p4
-
-    aput-object p4, v0, p3
-
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_2
-
-    :cond_1
-    return p1
-.end method
-
-.method public final addSubMenu(I)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 3
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1}, Lr79;->addSubMenu(I)Landroid/view/SubMenu;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final addSubMenu(IIII)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 5
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    .line 6
-    invoke-virtual {v0, p1, p2, p3, p4}, Lr79;->addSubMenu(IIII)Landroid/view/SubMenu;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 4
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lr79;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final addSubMenu(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-virtual {v0, v1, v1, v1, p1}, Lr79;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsne;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lsne;->clear()V
-
-    :cond_0
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0}, Lr79;->clear()V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0}, Lr79;->close()V
-
-    return-void
-.end method
-
-.method public final findItem(I)Landroid/view/MenuItem;
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1}, Lr79;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getItem(I)Landroid/view/MenuItem;
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1}, Lr79;->getItem(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhlf;->N(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final hasVisibleItems()Z
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0}, Lr79;->hasVisibleItems()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isShortcutKey(ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2}, Lr79;->isShortcutKey(ILandroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final performIdentifierAction(II)Z
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2}, Lr79;->performIdentifierAction(II)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final performShortcut(ILandroid/view/KeyEvent;I)Z
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2, p3}, Lr79;->performShortcut(ILandroid/view/KeyEvent;I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final removeGroup(I)V
-    .locals 3
-
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsne;
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
 
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lhlf;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    check-cast v1, Lsne;
+    iget-object v0, p0, Ll89;->b:Lda3;
 
-    iget v2, v1, Lsne;->c:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ge v0, v2, :cond_2
+    iget-object v0, p0, Ll89;->b:Lda3;
 
-    invoke-virtual {v1, v0}, Lsne;->f(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Lda3;->Z()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Lzdf;
+    check-cast v0, Lj89;
 
-    invoke-interface {v1}, Landroid/view/MenuItem;->getGroupId()I
+    invoke-interface {v0, p1, p2, p3, p4}, Lj89;->P(III[B)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v1
-
-    if-ne v1, p1, :cond_1
-
-    iget-object v1, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v1, Lsne;
-
-    invoke-virtual {v1, v0}, Lsne;->g(I)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1}, Lr79;->removeGroup(I)V
+    monitor-exit p0
 
     return-void
-.end method
 
-.method public final removeItem(I)V
-    .locals 3
-
-    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsne;
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v1, Lsne;
-
-    iget v2, v1, Lsne;->c:I
-
-    if-ge v0, v2, :cond_2
-
-    invoke-virtual {v1, v0}, Lsne;->f(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzdf;
-
-    invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v1
-
-    if-ne v1, p1, :cond_1
-
-    iget-object v1, p0, Lhlf;->c:Ljava/lang/Object;
-
-    check-cast v1, Lsne;
-
-    invoke-virtual {v1, v0}, Lsne;->g(I)Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
     :cond_1
-    add-int/lit8 v0, v0, 0x1
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_0
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    :cond_2
+    throw p1
+
     :goto_1
-    iget-object v0, p0, Ll89;->o:Lr79;
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0, p1}, Lr79;->removeItem(I)V
-
-    return-void
+    throw p1
 .end method
 
-.method public final setGroupCheckable(IZZ)V
+.method public final declared-synchronized Q()I
     .locals 1
 
-    iget-object v0, p0, Ll89;->o:Lr79;
+    monitor-enter p0
 
-    invoke-virtual {v0, p1, p2, p3}, Lr79;->setGroupCheckable(IZZ)V
+    :try_start_0
+    invoke-virtual {p0}, Ll89;->m()V
 
-    return-void
-.end method
+    iget v0, p0, Ll89;->a:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final setGroupEnabled(IZ)V
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2}, Lr79;->setGroupEnabled(IZ)V
-
-    return-void
-.end method
-
-.method public final setGroupVisible(IZ)V
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0, p1, p2}, Lr79;->setGroupVisible(IZ)V
-
-    return-void
-.end method
-
-.method public final setQwertyMode(Z)V
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-interface {v0, p1}, Landroid/view/Menu;->setQwertyMode(Z)V
-
-    return-void
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ll89;->o:Lr79;
-
-    invoke-virtual {v0}, Lr79;->size()I
-
-    move-result v0
+    monitor-exit p0
 
     return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized close()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-static {v0}, Lda3;->P(Lda3;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ll89;->b:Lda3;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized m()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-static {v0}, Lda3;->i0(Lda3;)Z
+
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_3
+    new-instance v0, Lcom/facebook/common/memory/PooledByteBuffer$ClosedException;
+
+    invoke-direct {v0}, Lcom/facebook/common/memory/PooledByteBuffer$ClosedException;-><init>()V
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :try_start_5
+    throw v0
+
+    :goto_0
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized n()J
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Ll89;->m()V
+
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj89;
+
+    invoke-interface {v0}, Lj89;->Z()J
+
+    move-result-wide v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-wide v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized o(I)B
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Ll89;->m()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ltz p1, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Ll89;->a:I
+
+    if-ge p1, v2, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj89;
+
+    invoke-interface {v0, p1}, Lj89;->o(I)B
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :goto_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized r()Ljava/nio/ByteBuffer;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ll89;->b:Lda3;
+
+    invoke-virtual {v0}, Lda3;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj89;
+
+    invoke-interface {v0}, Lj89;->r()Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

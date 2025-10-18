@@ -1,99 +1,230 @@
 .class public final Lmk7;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Ly18;
 
 
 # instance fields
-.field public final synthetic X:Llt7;
+.field public final X:J
 
-.field public final synthetic Y:Lxsa;
+.field public final a:Llk7;
+
+.field public final b:Lorf;
+
+.field public final c:Ljava/lang/Integer;
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Llt7;Lxsa;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Llk7;Lorf;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lmk7;->X:Llt7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lmk7;->Y:Lxsa;
+    iput-object p1, p0, Lmk7;->a:Llk7;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lmk7;->b:Lorf;
 
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lmk7;->c:Ljava/lang/Integer;
+
+    sget p2, Lswa;->c:I
+
+    iput p2, p0, Lmk7;->o:I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Lmk7;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lb54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmk7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmk7;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lmk7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance p1, Lmk7;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lmk7;->X:Llt7;
+    goto :goto_1
 
-    iget-object v1, p0, Lmk7;->Y:Lxsa;
+    :cond_0
+    instance-of v0, p1, Lmk7;
 
-    invoke-direct {p1, v0, v1, p2}, Lmk7;-><init>(Llt7;Lxsa;Lkotlin/coroutines/Continuation;)V
+    if-nez v0, :cond_1
 
-    return-object p1
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lmk7;
+
+    iget-object v0, p0, Lmk7;->a:Llk7;
+
+    iget-object v1, p1, Lmk7;->a:Llk7;
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lmk7;->b:Lorf;
+
+    iget-object v1, p1, Lmk7;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lmk7;->c:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lmk7;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final getItemId()J
+    .locals 2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lmk7;->X:J
 
-    iget-object p1, p0, Lmk7;->X:Llt7;
+    return-wide v0
+.end method
 
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+.method public final h(Ly18;)Z
+    .locals 4
 
-    move-result-object p1
+    iget-wide v0, p0, Lmk7;->X:J
 
-    check-cast p1, Lwib;
+    invoke-interface {p1}, Ly18;->getItemId()J
 
-    iget-object v0, p0, Lmk7;->Y:Lxsa;
+    move-result-wide v2
 
-    iget-object v0, v0, Lxsa;->a:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lpti;->c(Lwib;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
+    cmp-long p1, v0, v2
 
     if-nez p1, :cond_0
 
-    const-string p1, ""
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    new-instance v0, Lnqf;
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lmk7;->a:Llk7;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmk7;->b:Lorf;
+
+    iget v2, v2, Lorf;->c:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmk7;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lmk7;->o:I
+
+    return v0
+.end method
+
+.method public final q(Ly18;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lmk7;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "InviteActionListItem(type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmk7;->a:Llk7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmk7;->b:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmk7;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,156 +1,113 @@
 .class public final Lvd1;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lwd1;
+.implements Lzi6;
 
 
-# static fields
-.field public static final X:Ljbe;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final a:Lvd1;
-
-.field public static final b:J
-
-.field public static final c:Ljqf;
-
-.field public static final o:Ltt7;
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+    .locals 0
 
-    new-instance v0, Lvd1;
+    iput-object p2, p0, Lvd1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lvd1;->a:Lvd1;
-
-    sget-wide v0, Lxpa;->e:J
-
-    sput-wide v0, Lvd1;->b:J
-
-    sget v0, Lzpa;->j:I
-
-    new-instance v1, Ljqf;
-
-    invoke-direct {v1, v0}, Ljqf;-><init>(I)V
-
-    sput-object v1, Lvd1;->c:Ljqf;
-
-    new-instance v0, Ltt7;
-
-    sget v1, Lvpa;->j:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Ltt7;-><init>(III)V
-
-    sput-object v0, Lvd1;->o:Ltt7;
-
-    sget-object v0, Ljbe;->a:Ljbe;
-
-    sput-object v0, Lvd1;->X:Ljbe;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Lvt7;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lvd1;->o:Ltt7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    invoke-virtual {p0, p1, p2}, Lvd1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvd1;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lvd1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lvd1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget-wide v0, Lvd1;->b:J
+    new-instance v0, Lvd1;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lvd1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-.method public final getTitle()Loqf;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lvd1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
 
-    sget-object v0, Lvd1;->c:Ljqf;
+    iput-object p1, v0, Lvd1;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getType()Ljbe;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    sget-object v0, Lvd1;->X:Ljbe;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lvd1;->X:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    check-cast p1, Le5a;
 
-    const v0, 0x1553d49d
+    instance-of v0, p1, Lzb1;
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final m()I
-    .locals 1
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
 
-    sget v0, Lwpa;->m:I
+    iget-object v0, p0, Lvd1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    return v0
-.end method
+    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->c:Ljava/lang/Object;
 
-.method public final t()I
-    .locals 1
+    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object v1
 
-    return v0
-.end method
+    move-object v2, v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    check-cast v2, Lwi1;
 
-    const-string v0, "ShareLink"
+    move-object v1, p1
 
-    return-object v0
-.end method
+    check-cast v1, Lzb1;
 
-.method public final u()I
-    .locals 1
+    iget-object v3, v1, Lzb1;->b:Ljava/lang/String;
 
-    const/4 v0, 0x3
+    new-instance v7, Lxd1;
 
-    return v0
+    const/4 v1, 0x0
+
+    invoke-direct {v7, p1, v1, v0}, Lxd1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    invoke-virtual/range {v2 .. v7}, Lwi1;->j(Ljava/lang/String;ZZZLji6;)V
+
+    :cond_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

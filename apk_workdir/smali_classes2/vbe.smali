@@ -1,231 +1,165 @@
 .class public final Lvbe;
-.super Lpoe;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public E0:Llbe;
+.field public X:I
+
+.field public final synthetic Y:Lwbe;
+
+.field public final synthetic Z:J
+
+
+# direct methods
+.method public constructor <init>(Lwbe;JLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lvbe;->Y:Lwbe;
+
+    iput-wide p2, p0, Lvbe;->Z:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final A(Lb18;)V
-    .locals 1
-
-    check-cast p1, Lkbe;
-
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
-
-    check-cast v0, Ltbe;
-
-    invoke-virtual {v0, p1}, Ltbe;->setModelItem(Lkbe;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic B(Lb18;Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lkbe;
+    check-cast p1, Lq54;
 
-    invoke-virtual {p0, p1, p2}, Lvbe;->G(Lkbe;Ljava/lang/Object;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lvbe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvbe;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lvbe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final F()V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance p1, Lvbe;
 
-    iput-object v0, p0, Lvbe;->E0:Llbe;
+    iget-object v0, p0, Lvbe;->Y:Lwbe;
 
-    return-void
+    iget-wide v1, p0, Lvbe;->Z:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lvbe;-><init>(Lwbe;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final G(Lkbe;Ljava/lang/Object;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    instance-of v0, p2, Libe;
+    iget v0, p0, Lvbe;->X:I
 
-    const/4 v1, 0x0
+    sget-object v1, Lccg;->a:Lccg;
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x1
 
-    check-cast p2, Libe;
+    iget-object v3, p0, Lvbe;->Y:Lwbe;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    move-object p2, v1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eqz p2, :cond_8
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p2, Lqci;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljava/util/BitSet;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    move-object v2, v0
-
-    check-cast v2, Ltbe;
-
-    invoke-interface {p1}, Lkbe;->getTitle()Loqf;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ltbe;->setTitle(Loqf;)V
+    throw p1
 
     :cond_1
-    const/4 v2, 0x2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    move-object v2, v0
-
-    check-cast v2, Ltbe;
-
-    invoke-interface {p1}, Lkbe;->getType()Ljbe;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ltbe;->setType(Ljbe;)V
+    iget-object p1, v3, Lwbe;->r0:Lx0f;
 
     :cond_2
-    const/4 v2, 0x3
+    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+    move-result-object v0
 
-    move-result v2
+    move-object v4, v0
 
-    if-eqz v2, :cond_3
+    check-cast v4, Ljava/util/Map;
 
-    move-object v2, v0
+    new-instance v5, Ljava/util/LinkedHashMap;
 
-    check-cast v2, Ltbe;
+    invoke-direct {v5, v4}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
-    invoke-interface {p1}, Lkbe;->a()Loqf;
+    new-instance v4, Ljava/lang/Long;
 
-    move-result-object v3
+    iget-wide v6, p0, Lvbe;->Z:J
 
-    invoke-virtual {v2, v3}, Ltbe;->setDescription(Loqf;)V
+    invoke-direct {v4, v6, v7}, Ljava/lang/Long;-><init>(J)V
 
-    :cond_3
-    const/4 v2, 0x4
+    invoke-interface {v5, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
+    invoke-virtual {p1, v0, v5}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_4
+    if-eqz v0, :cond_2
 
-    move-object v2, v0
+    iget-object p1, v3, Lwbe;->Z:Liu7;
 
-    check-cast v2, Ltbe;
-
-    invoke-virtual {v2, v1}, Ltbe;->setOnSwitchListener(Lqbe;)V
-
-    invoke-interface {p1}, Lkbe;->d()Lhbe;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ltbe;->setEndView(Lhbe;)V
-
-    invoke-interface {p1}, Lkbe;->d()Lhbe;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lfbe;
-
-    if-eqz v1, :cond_4
-
-    new-instance v1, Lvk;
-
-    const/16 v3, 0x10
-
-    invoke-direct {v1, v3, p0}, Lvk;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v1}, Ltbe;->setOnSwitchCheckedListener(Lei6;)V
-
-    :cond_4
-    const/4 v1, 0x5
-
-    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    move-object v1, v0
-
-    check-cast v1, Ltbe;
-
-    invoke-interface {p1}, Lkbe;->b()Labe;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ltbe;->setCounter(Labe;)V
-
-    :cond_5
-    const/4 v1, 0x6
-
-    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    move-object v1, v0
-
-    check-cast v1, Ltbe;
-
-    invoke-interface {p1}, Lkbe;->c()Loqf;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ltbe;->setUpperText(Loqf;)V
-
-    :cond_6
-    const/4 v1, 0x7
-
-    invoke-virtual {p2, v1}, Ljava/util/BitSet;->get(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_7
-
-    check-cast v0, Ltbe;
-
-    invoke-interface {p1}, Lkbe;->e()Lvt7;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ltbe;->setStartIcon(Lvt7;)V
+    check-cast p1, Lhy3;
 
-    :cond_7
-    return-void
+    iput v2, p0, Lvbe;->X:I
 
-    :cond_8
-    check-cast v0, Ltbe;
+    invoke-virtual {p1, v6, v7}, Lhy3;->a(J)V
 
-    invoke-virtual {v0, p1}, Ltbe;->setModelItem(Lkbe;)V
+    sget-object p1, Lr54;->a:Lr54;
 
-    return-void
+    if-ne v1, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_0
+    iget-object p1, v3, Lwbe;->w0:Lxe5;
+
+    new-instance v0, Lzae;
+
+    sget v2, Ln2b;->f:I
+
+    new-instance v3, Lorf;
+
+    invoke-direct {v3, v2}, Lorf;-><init>(I)V
+
+    invoke-direct {v0, v3}, Lzae;-><init>(Lorf;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    return-object v1
 .end method

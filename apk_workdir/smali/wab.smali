@@ -1,99 +1,55 @@
-.class public final Lwab;
-.super Ljava/lang/Object;
+.class public Lwab;
+.super Luab;
 .source "SourceFile"
 
-# interfaces
-.implements Lt63;
 
+# virtual methods
+.method public a()Ljava/lang/Object;
+    .locals 2
 
-# instance fields
-.field public final a:Ljava/lang/Class;
+    iget-object v0, p0, Luab;->a:Ljava/lang/Object;
 
+    instance-of v1, v0, Lvab;
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
+    invoke-static {v1}, Ldvi;->b(Z)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast v0, Lvab;
 
-    iput-object p1, p0, Lwab;->a:Ljava/lang/Class;
+    iget-object v0, v0, Lvab;->a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public d(J)V
+    .locals 1
+
+    iget-object v0, p0, Luab;->a:Ljava/lang/Object;
+
+    check-cast v0, Lvab;
+
+    iput-wide p1, v0, Lvab;->b:J
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Ljava/lang/Class;
+.method public final f(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lwab;->a:Ljava/lang/Class;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lwab;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lwab;
-
-    iget-object p1, p1, Lwab;->a:Ljava/lang/Class;
-
-    iget-object v0, p0, Lwab;->a:Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lwab;->a:Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lwab;->a:Ljava/lang/Class;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " (Kotlin reflection is not available)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lwab;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->setPhysicalCameraId(Ljava/lang/String;)V
+
+    return-void
 .end method

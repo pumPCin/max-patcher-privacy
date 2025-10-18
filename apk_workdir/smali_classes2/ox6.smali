@@ -1,122 +1,125 @@
 .class public final Lox6;
-.super Lzd5;
+.super Landroid/text/style/RelativeSizeSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Llh8;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lox6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:I
+.field public final a:F
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lld4;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lld4;-><init>(I)V
+
+    sput-object v0, Lox6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const v0, 0x3fa66666    # 1.3f
+
+    .line 1
+    invoke-direct {p0, v0}, Lox6;-><init>(F)V
+
+    return-void
+.end method
+
+.method public constructor <init>(F)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
-    iput p1, p0, Lox6;->a:I
+    .line 3
+    iput p1, p0, Lox6;->a:F
+
+    const/16 p1, 0x8
+
+    .line 4
+    iput p1, p0, Lox6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final copy()Lr44;
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lox6;
 
-    goto :goto_1
+    iget v1, p0, Lox6;->a:F
 
-    :cond_0
-    instance-of v0, p1, Lox6;
+    invoke-direct {v0, v1}, Lox6;-><init>(F)V
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lox6;
-
-    iget v0, p0, Lox6;->a:I
-
-    iget p1, p1, Lox6;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
+.method public final getType()I
     .locals 1
 
-    iget v0, p0, Lox6;->a:I
-
-    invoke-static {v0}, Lwx1;->v(I)I
-
-    move-result v0
+    iget v0, p0, Lox6;->b:I
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    const-string v1, "HideErrorInputEvent(typeInput="
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    iget v2, p0, Lox6;->a:I
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    if-eq v2, v1, :cond_2
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
-    const/4 v1, 0x2
+    const/4 v0, 0x1
 
-    if-eq v2, v1, :cond_1
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    const/4 v1, 0x3
+    return-void
+.end method
 
-    if-eq v2, v1, :cond_0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const-string v1, "null"
+    iget p2, p0, Lox6;->a:F
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    :cond_0
-    const-string v1, "TITLE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "SURNAME"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NAME"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

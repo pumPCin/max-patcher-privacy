@@ -3,152 +3,234 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lklg;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:J
-
-.field public final Z:J
-
-.field public final a:Ldu3;
+.field public final a:J
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/String;
+.field public final c:Lt00;
 
-.field public final o:Ljava/lang/String;
+.field public final d:J
 
-.field public final r0:I
+.field public final e:J
 
-.field public final s0:Ljava/util/List;
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Lhlg;)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;Lt00;JJZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lhlg;->a:Ldu3;
+    iput-wide p1, p0, Lilg;->a:J
 
-    iput-object v0, p0, Lilg;->a:Ldu3;
+    iput-object p3, p0, Lilg;->b:Ljava/lang/String;
 
-    iget-object v0, p1, Lhlg;->b:Ljava/lang/String;
+    iput-object p4, p0, Lilg;->c:Lt00;
 
-    iput-object v0, p0, Lilg;->b:Ljava/lang/String;
+    iput-wide p5, p0, Lilg;->d:J
 
-    iget-object v0, p1, Lhlg;->c:Ljava/lang/String;
+    iput-wide p7, p0, Lilg;->e:J
 
-    iput-object v0, p0, Lilg;->o:Ljava/lang/String;
-
-    iget-object v0, p1, Lhlg;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lilg;->c:Ljava/lang/String;
-
-    iget v0, p1, Lhlg;->e:I
-
-    iput v0, p0, Lilg;->X:I
-
-    iget-wide v0, p1, Lhlg;->f:J
-
-    iput-wide v0, p0, Lilg;->Y:J
-
-    iget-byte v0, p1, Lhlg;->h:B
-
-    iput v0, p0, Lilg;->r0:I
-
-    iget-wide v0, p1, Lhlg;->i:J
-
-    iput-wide v0, p0, Lilg;->Z:J
-
-    iget-object p1, p1, Lhlg;->g:Ljava/util/List;
-
-    iput-object p1, p0, Lilg;->s0:Ljava/util/List;
+    iput-boolean p9, p0, Lilg;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lilg;->s0:Ljava/util/List;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lwdi;->b(Ljava/util/Collection;)I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lilg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lilg;
+
+    iget-wide v3, p0, Lilg;->a:J
+
+    iget-wide v5, p1, Lilg;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lilg;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lilg;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lilg;->c:Lt00;
+
+    iget-object v3, p1, Lilg;->c:Lt00;
+
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lilg;->d:J
+
+    iget-wide v5, p1, Lilg;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lilg;->e:J
+
+    iget-wide v5, p1, Lilg;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lilg;->f:Z
+
+    iget-boolean p1, p1, Lilg;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Lilg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v1, 0x1f
 
-    const-string v2, "VideoConference{owner="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lilg;->a:Ldu3;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", joinLink=\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/2addr v0, v1
 
     iget-object v2, p0, Lilg;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
 
-    const-string v2, "\', conversationId=\'"
+    move-result v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lilg;->c:Lt00;
 
-    const-string v2, "\', callName=\'"
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    const-string v3, "\', participantsCount="
+    move-result v2
 
-    iget-object v4, p0, Lilg;->c:Ljava/lang/String;
+    add-int/2addr v2, v0
 
-    iget-object v5, p0, Lilg;->o:Ljava/lang/String;
+    mul-int/2addr v2, v1
 
-    invoke-static {v1, v4, v2, v5, v3}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iget-wide v3, p0, Lilg;->d:J
 
-    iget v2, p0, Lilg;->X:I
+    invoke-static {v2, v1, v3, v4}, Lrtg;->c(IIJ)I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v2, ", startedAt="
+    iget-wide v2, p0, Lilg;->e:J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
 
-    iget-wide v2, p0, Lilg;->Y:J
+    move-result v0
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lilg;->f:Z
 
-    const-string v2, ", type="
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    iget v2, p0, Lilg;->r0:I
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return v1
+.end method
 
-    const-string v2, ", chatId="
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "OpenVideo(msgId="
 
-    const-string v2, ", previewParticipantIds="
+    const-string v1, ", attachLocalId="
 
-    iget-wide v3, p0, Lilg;->Z:J
+    iget-wide v2, p0, Lilg;->a:J
 
-    invoke-static {v1, v3, v4, v2, v0}, Llfb;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    iget-object v4, p0, Lilg;->b:Ljava/lang/String;
 
-    const-string v0, "}"
+    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, ", attachModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lilg;->c:Lt00;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", playerPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lilg;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoDuration="
+
+    const-string v2, ", isVideoLive="
+
+    iget-wide v3, p0, Lilg;->e:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lilg;->f:Z
+
+    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

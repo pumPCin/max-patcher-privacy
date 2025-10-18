@@ -17,19 +17,19 @@
 .method private native createNativeWithClientOptions([B)J
 .end method
 
-.method public static n([B)Lhi0;
+.method public static n([B)Lqi0;
     .locals 2
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :try_start_0
-    sget-object v0, Lx4i;->b:Lx4i;
+    sget-object v0, Ly5i;->b:Ly5i;
 
-    sget-object v0, Lr9i;->c:Lr9i;
+    sget-object v0, Lsai;->c:Lsai;
 
-    sget-object v0, Lx4i;->b:Lx4i;
+    sget-object v0, Ly5i;->b:Ly5i;
 
-    invoke-static {p0, v0}, Lhi0;->n([BLx4i;)Lhi0;
+    invoke-static {p0, v0}, Lqi0;->n([BLy5i;)Lqi0;
 
     move-result-object p0
     :try_end_0
@@ -60,7 +60,7 @@
 
 
 # virtual methods
-.method public final c(Lii0;)V
+.method public final c(Lri0;)V
     .locals 5
 
     iget-wide v0, p0, Lcom/google/android/libraries/barhopper/BarhopperV3;->a:J
@@ -81,19 +81,19 @@
 
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, Li6i;->c()I
+    invoke-virtual {p1}, Lj7i;->c()I
 
     move-result v0
 
     new-array v1, v0, [B
 
-    new-instance v4, Lh4i;
+    new-instance v4, Li5i;
 
-    invoke-direct {v4, v0, v1}, Lh4i;-><init>(I[B)V
+    invoke-direct {v4, v0, v1}, Li5i;-><init>(I[B)V
 
-    invoke-virtual {p1, v4}, Li6i;->l(Lh4i;)V
+    invoke-virtual {p1, v4}, Lj7i;->l(Li5i;)V
 
-    iget p1, v4, Lh4i;->d:I
+    iget p1, v4, Li5i;->d:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -139,7 +139,7 @@
 
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-class v1, Lii0;
+    const-class v1, Lri0;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     const-string v3, " to a byte array threw an IOException (should never happen)."
 
-    invoke-static {v2, v1, v3}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v3}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -177,7 +177,7 @@
     return-void
 .end method
 
-.method public final d(IILjava/nio/ByteBuffer;Lcom/google/android/libraries/barhopper/RecognitionOptions;)Lhi0;
+.method public final d(IILjava/nio/ByteBuffer;Lcom/google/android/libraries/barhopper/RecognitionOptions;)Lqi0;
     .locals 7
 
     iget-wide v1, p0, Lcom/google/android/libraries/barhopper/BarhopperV3;->a:J
@@ -202,7 +202,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lhi0;
+    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lqi0;
 
     move-result-object p1
 
@@ -218,7 +218,7 @@
     throw p1
 .end method
 
-.method public final i(II[BLcom/google/android/libraries/barhopper/RecognitionOptions;)Lhi0;
+.method public final i(II[BLcom/google/android/libraries/barhopper/RecognitionOptions;)Lqi0;
     .locals 7
 
     iget-wide v1, p0, Lcom/google/android/libraries/barhopper/BarhopperV3;->a:J
@@ -243,7 +243,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lhi0;
+    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lqi0;
 
     move-result-object p1
 
@@ -259,7 +259,7 @@
     throw p1
 .end method
 
-.method public final m(Landroid/graphics/Bitmap;Lcom/google/android/libraries/barhopper/RecognitionOptions;)Lhi0;
+.method public final m(Landroid/graphics/Bitmap;Lcom/google/android/libraries/barhopper/RecognitionOptions;)Lqi0;
     .locals 4
 
     iget-wide v0, p0, Lcom/google/android/libraries/barhopper/BarhopperV3;->a:J
@@ -311,7 +311,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lhi0;
+    invoke-static {p1}, Lcom/google/android/libraries/barhopper/BarhopperV3;->n([B)Lqi0;
 
     move-result-object p1
 

@@ -1,24 +1,30 @@
 .class public final Lw6g;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Ld7g;
+.field public X:I
+
+.field public final synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:La7g;
 
 
 # direct methods
-.method public constructor <init>(Ld7g;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;La7g;)V
     .locals 0
 
-    iput-object p1, p0, Lw6g;->X:Ld7g;
+    iput-object p1, p0, Lw6g;->Y:Ljava/lang/Object;
+
+    iput-object p3, p0, Lw6g;->Z:La7g;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,72 +44,88 @@
 
     check-cast p1, Lw6g;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lw6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Lw6g;
 
-    iget-object v0, p0, Lw6g;->X:Ld7g;
+    iget-object v0, p0, Lw6g;->Y:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Lw6g;-><init>(Ld7g;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lw6g;->Z:La7g;
+
+    invoke-direct {p1, v0, p2, v1}, Lw6g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;La7g;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 3
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lw6g;->X:I
 
-    iget-object p1, p0, Lw6g;->X:Ld7g;
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Ld7g;->w0:Lsze;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    check-cast v0, Lj9g;
-
-    instance-of v1, v0, Lg9g;
-
-    sget-object v2, Lzag;->a:Lzag;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lg9g;
-
-    iget-object v1, v0, Lg9g;->c:Lh9g;
-
-    iget-object v3, v1, Lh9g;->c:Loqf;
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 v3, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static {v1, v3}, Lh9g;->a(Lh9g;Loqf;)Lh9g;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v4, 0x7
-
-    invoke-static {v0, v3, v1, v4}, Lg9g;->c(Lg9g;Lh9g;Lh9g;I)Lg9g;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v3, v0}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    throw p1
 
     :cond_1
-    :goto_0
-    return-object v2
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw6g;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lq54;
+
+    sget-object p1, La7g;->D0:[Ltr7;
+
+    iget-object p1, p0, Lw6g;->Z:La7g;
+
+    invoke-virtual {p1}, La7g;->v()Lll;
+
+    move-result-object p1
+
+    new-instance v0, Lmu;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lmu;-><init>(Ljava/lang/String;)V
+
+    iput v1, p0, Lw6g;->X:I
+
+    check-cast p1, Lmna;
+
+    invoke-virtual {p1, v0, p0}, Lmna;->I(Lmmf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

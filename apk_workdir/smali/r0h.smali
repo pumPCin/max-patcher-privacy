@@ -1,91 +1,103 @@
-.class public abstract Lr0h;
-.super Ljava/lang/Object;
+.class public final Lr0h;
+.super Lv6d;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lx0h;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:Ll62;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput p1, p0, Lr0h;->a:I
 
-    const/16 v1, 0x1d
+    iput-object p2, p0, Lr0h;->b:Ljava/lang/Object;
 
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Ly0h;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lr0h;->a:Lx0h;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lx0h;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lr0h;->a:Lx0h;
-
-    :goto_0
-    new-instance v0, Ll62;
-
-    const-string v1, "translationAlpha"
-
-    const/16 v2, 0xb
-
-    const-class v3, Ljava/lang/Float;
-
-    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lr0h;->b:Ll62;
-
-    new-instance v0, Ll62;
-
-    const-string v1, "clipBounds"
-
-    const/16 v2, 0xc
-
-    const-class v3, Landroid/graphics/Rect;
-
-    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/view/View;IIII)V
-    .locals 6
 
-    sget-object v0, Lr0h;->a:Lx0h;
+# virtual methods
+.method public final a()V
+    .locals 2
 
-    move-object v1, p0
+    iget v0, p0, Lr0h;->a:I
 
-    move v2, p1
+    packed-switch v0, :pswitch_data_0
 
-    move v3, p2
+    iget-object v0, p0, Lr0h;->b:Ljava/lang/Object;
 
-    move v4, p3
+    check-cast v0, Lr1e;
 
-    move v5, p4
+    invoke-virtual {v0}, Lr1e;->F()V
 
-    invoke-virtual/range {v0 .. v5}, Lx0h;->f(Landroid/view/View;IIII)V
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lr0h;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->q0:Z
+
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->x0:Lxrd;
+
+    iput-boolean v1, v0, Lxrd;->l:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lr0h;->a()V
 
     return-void
 .end method
 
-.method public static b(Landroid/view/View;I)V
-    .locals 1
+.method public final c(IILjava/lang/Object;)V
+    .locals 0
 
-    sget-object v0, Lr0h;->a:Lx0h;
+    invoke-virtual {p0}, Lr0h;->a()V
 
-    invoke-virtual {v0, p0, p1}, Lx0h;->c(Landroid/view/View;I)V
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lr0h;->a()V
+
+    return-void
+.end method
+
+.method public final e(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lr0h;->a()V
+
+    return-void
+.end method
+
+.method public final f(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lr0h;->a()V
 
     return-void
 .end method

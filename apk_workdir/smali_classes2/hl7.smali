@@ -1,19 +1,35 @@
 .class public final Lhl7;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lv44;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public Y:I
+
+.field public o:Ljava/lang/Long;
 
 
-# direct methods
-.method public constructor <init>(Lv44;)V
-    .locals 0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhl7;->X:Ljava/lang/Object;
 
-    iput-object p1, p0, Lhl7;->a:Lv44;
+    iget p1, p0, Lhl7;->Y:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lhl7;->Y:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p0}, Lpl7;->s(Ljava/lang/String;Lpl7;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

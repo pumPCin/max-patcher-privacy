@@ -1,585 +1,188 @@
-.class public final synthetic Lreb;
+.class public final Lreb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfr3;
+.implements Landroid/view/ActionMode$Callback;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Lbfb;
+.field public final b:Lng7;
 
-.field public final synthetic c:Lorg/webrtc/IceCandidate;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbfb;Lorg/webrtc/IceCandidate;I)V
+.method public constructor <init>(Landroid/content/Context;Lng7;II)V
     .locals 0
 
-    iput p3, p0, Lreb;->a:I
-
-    iput-object p1, p0, Lreb;->b:Lbfb;
-
-    iput-object p2, p0, Lreb;->c:Lorg/webrtc/IceCandidate;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lreb;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lreb;->b:Lng7;
+
+    iput p3, p0, Lreb;->c:I
+
+    iput p4, p0, Lreb;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 17
+.method public final onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
+    .locals 5
 
-    move-object/from16 v0, p0
+    if-eqz p2, :cond_0
 
-    iget v1, v0, Lreb;->a:I
+    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
-    const-string v2, "PCRTCClient"
+    move-result p1
 
-    iget-object v3, v0, Lreb;->c:Lorg/webrtc/IceCandidate;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v4, v0, Lreb;->b:Lbfb;
+    move-result-object p1
 
-    packed-switch v1, :pswitch_data_0
-
-    move-object/from16 v1, p1
-
-    check-cast v1, Lorg/webrtc/PeerConnection;
-
-    iget-object v1, v4, Lbfb;->A:Lbvc;
-
-    iget-object v5, v4, Lbfb;->z:Landroid/content/Context;
-
-    iget-object v6, v4, Lbfb;->F:Le67;
-
-    iget-object v7, v6, Le67;->b:Lyuc;
-
-    iget-object v8, v6, Le67;->c:Ljava/util/HashMap;
-
-    iget-boolean v9, v6, Le67;->f:Z
-
-    if-eqz v9, :cond_0
-
-    goto/16 :goto_7
+    goto :goto_0
 
     :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v9
-
-    iget-wide v11, v6, Le67;->d:J
-
-    sub-long/2addr v9, v11
-
-    sget-object v11, Le67;->h:Ljava/util/regex/Pattern;
-
-    iget-object v12, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    invoke-virtual {v11, v12}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v12
-
-    if-nez v12, :cond_1
-
-    goto/16 :goto_7
-
-    :cond_1
-    const/4 v12, 0x1
-
-    invoke-virtual {v11, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v11
-
-    if-nez v11, :cond_2
-
-    goto/16 :goto_7
-
-    :cond_2
-    invoke-virtual {v11}, Ljava/lang/String;->hashCode()I
-
-    move-result v13
-
-    const-string v14, "srflx"
-
-    const-string v15, "relay"
-
-    const/16 v16, -0x1
-
-    sparse-switch v13, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    invoke-virtual {v11, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v16, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/16 v16, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v13, "prflx"
-
-    invoke-virtual {v11, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move/from16 v16, v12
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v13, "host"
-
-    invoke-virtual {v11, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    const/16 v16, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    packed-switch v16, :pswitch_data_1
+    const/4 p2, 0x0
 
-    const/4 v12, 0x0
-
-    goto :goto_2
-
-    :pswitch_0
-    iget-object v13, v3, Lorg/webrtc/IceCandidate;->serverUrl:Ljava/lang/String;
-
-    if-eqz v13, :cond_7
-
-    sget-object v12, Le67;->i:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v12, v13}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_7
-
-    const/4 v13, 0x1
-
-    invoke-virtual {v12, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    goto :goto_1
-
-    :cond_7
-    const/4 v12, 0x0
-
-    :goto_1
-    if-nez v12, :cond_8
-
-    const-string v12, "udp"
+    if-nez p1, :cond_1
 
     goto :goto_2
 
-    :cond_8
-    invoke-virtual {v12}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object v12
+    move-result p1
 
-    :goto_2
-    invoke-virtual {v15, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const v0, 0x1020022
 
-    move-result v13
+    if-ne p1, v0, :cond_5
 
-    if-eqz v13, :cond_b
+    iget-object p1, p0, Lreb;->a:Landroid/content/Context;
 
-    const-string v7, "tcp"
+    invoke-static {p1}, Lg93;->c(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v7, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v7
+    if-nez p1, :cond_2
 
-    if-eqz v7, :cond_9
+    goto :goto_2
 
-    sget-object v7, Ldsh;->b:Ldsh;
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_3
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_9
-    sget-object v7, Ldsh;->c:Ldsh;
-
-    :goto_3
-    sget-object v11, Le67;->j:Ljava/util/regex/Pattern;
-
-    iget-object v12, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    invoke-virtual {v11, v12}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_a
-
-    const/4 v13, 0x1
-
-    invoke-virtual {v11, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    goto :goto_5
-
-    :cond_a
-    :goto_4
-    const/4 v13, 0x0
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {v14, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_e
-
-    sget-object v7, Ldsh;->o:Ldsh;
-
-    goto :goto_4
-
-    :goto_5
-    invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/lang/Integer;
-
-    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
-
-    move-result v11
-
-    add-int/lit8 v12, v11, 0x1
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    invoke-virtual {v8, v7, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v8, v6, Le67;->g:Ljava/lang/String;
-
-    if-eqz v8, :cond_c
-
-    goto :goto_6
-
-    :cond_c
-    const-string v8, "direct"
-
-    iput-object v8, v6, Le67;->g:Ljava/lang/String;
-
-    :goto_6
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v8, ":"
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v7, v7, Ldsh;->a:Ljava/lang/String;
-
-    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez v13, :cond_d
-
-    const-string v13, "0.0.0.0"
-
-    :cond_d
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v8, "param"
-
-    invoke-static {v8, v7}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
-
-    move-result-object v7
-
-    iget-object v6, v6, Le67;->a:Lbvc;
-
-    sget-object v8, Lbvc;->COLLECTOR_VIDEO:Ljava/lang/String;
-
-    const-string v9, "callCandidatesGenerate"
-
-    invoke-virtual {v6, v8, v9, v7}, Lbvc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    goto :goto_7
-
-    :cond_e
-    const-string v6, "not logging (unknown?) type: "
-
-    invoke-virtual {v6, v11}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v8, "CandidateLog"
-
-    invoke-interface {v7, v8, v6}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_7
-    :pswitch_1
-    iget-wide v6, v4, Lbfb;->M:J
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v6, v6, v8
-
-    if-nez v6, :cond_f
-
-    goto :goto_8
-
-    :cond_f
-    const-string v6, "connectivity"
-
-    invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/net/ConnectivityManager;
-
-    const-string v7, "phone"
-
-    invoke-virtual {v5, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/telephony/TelephonyManager;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    iget-wide v9, v4, Lbfb;->M:J
-
-    sub-long/2addr v7, v9
-
-    new-instance v9, Ljava/util/HashMap;
-
-    invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v10, v1, Lbvc;->conversationId:Ljava/lang/String;
-
-    const-string v11, "vcid"
-
-    invoke-virtual {v9, v11, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v10, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    const-string v11, "candidate_sdp"
-
-    invoke-virtual {v9, v11, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v10, v3, Lorg/webrtc/IceCandidate;->sdpMid:Ljava/lang/String;
-
-    const-string v11, "candidate_sdp_mid"
-
-    invoke-virtual {v9, v11, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget v10, v3, Lorg/webrtc/IceCandidate;->sdpMLineIndex:I
-
-    invoke-static {v10}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    const-string v11, "candidate_sdp_m_line_index"
-
-    invoke-virtual {v9, v11, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v7, v8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v8, "stat_time_delta"
-
-    invoke-virtual {v9, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v6, v5}, Lds9;->b(Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "network_type"
-
-    invoke-virtual {v9, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v5, Lbvc;->COLLECTOR_WEBRTC:Ljava/lang/String;
-
-    const-string v6, "callStatCandidate"
-
-    invoke-virtual {v1, v5, v6, v9}, Lbvc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    :goto_8
-    iget-object v1, v4, Lbfb;->X:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, v4, Lbfb;->B:Lyuc;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "\u2744 -> ice candidate: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v1, v2, v5}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v4, Lbfb;->u:Landroid/os/Handler;
-
-    new-instance v2, Lpt8;
-
-    const/16 v5, 0x18
-
-    invoke-direct {v2, v4, v5, v3}, Lpt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    move-object/from16 v1, p1
-
-    check-cast v1, Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v1, v3}, Lorg/webrtc/PeerConnection;->addIceCandidate(Lorg/webrtc/IceCandidate;)Z
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    iget-object v5, v4, Lbfb;->F:Le67;
+    move v2, p2
 
-    iget-wide v6, v5, Le67;->e:J
+    :goto_1
+    if-ge v2, v1, :cond_4
 
-    const-wide/16 v8, 0x0
+    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
-    cmp-long v6, v6, v8
+    move-result v3
 
-    if-nez v6, :cond_10
+    invoke-static {v3}, Ljava/lang/Character;->isDigit(C)Z
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    move-result v4
 
-    move-result-wide v6
+    if-eqz v4, :cond_3
 
-    iput-wide v6, v5, Le67;->e:J
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;
 
-    :cond_10
-    if-nez v1, :cond_11
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
 
-    iget-object v1, v4, Lbfb;->B:Lyuc;
+    goto :goto_1
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    :cond_4
+    iget p1, p0, Lreb;->d:I
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p1, v0}, Lzaf;->e0(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v4}, Lbfb;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v4
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v4, ": \u2744\ufe0f FAILED to add remote ice candidate "
+    iget v0, p0, Lreb;->c:I
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lreb;->b:Lng7;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v1, Lco3;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0, p1}, Lco3;->I0(ILjava/lang/String;)V
 
-    move-result-object v3
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    new-instance v4, Ljava/lang/Exception;
+    move-result p1
 
-    const-string v5, "add.ice.candidate.fail"
+    if-lez p1, :cond_5
 
-    invoke-direct {v4, v5}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x1
 
-    invoke-interface {v1, v2, v3, v4}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return p1
 
-    :cond_11
+    :cond_5
+    :goto_2
+    return p2
+.end method
+
+.method public final onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onDestroyActionMode(Landroid/view/ActionMode;)V
+    .locals 0
+
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-    .end packed-switch
+.method public final onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    .locals 2
 
-    :sswitch_data_0
-    .sparse-switch
-        0x30f5a8 -> :sswitch_3
-        0x65fa730 -> :sswitch_2
-        0x6760291 -> :sswitch_1
-        0x689edb3 -> :sswitch_0
-    .end sparse-switch
+    const p1, 0x1020022
 
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p2, p1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-interface {p2}, Landroid/view/Menu;->clear()V
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {p2, v1, p1, v1, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

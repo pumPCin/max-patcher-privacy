@@ -3,86 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyv0;
+.implements Lfc4;
 
 
-# instance fields
-.field public final a:Lex5;
+# static fields
+.field public static final a:Lesb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Landroid/util/SparseBooleanArray;
+    new-instance v0, Lesb;
 
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    xor-int/lit8 v1, v1, 0x1
-
-    invoke-static {v1}, Lefi;->f(Z)V
-
-    new-instance v1, Lex5;
-
-    invoke-direct {v1, v0}, Lex5;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lex5;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lesb;->a:Lex5;
+    sput-object v0, Lesb;->a:Lesb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final H(Lmc4;)J
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    new-instance p1, Ljava/io/IOException;
 
-    const/4 p1, 0x1
+    const-string v0, "PlaceholderDataSource cannot be opened"
 
-    return p1
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    instance-of v0, p1, Lesb;
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lesb;
-
-    iget-object v0, p0, Lesb;->a:Lex5;
-
-    iget-object p1, p1, Lesb;->a:Lex5;
-
-    invoke-virtual {v0, p1}, Lex5;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    throw p1
 .end method
 
-.method public final hashCode()I
+.method public final I(Lc3g;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lesb;->a:Lex5;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lex5;->hashCode()I
+    return-object v0
+.end method
 
-    move-result v0
+.method public final read([BII)I
+    .locals 0
 
-    return v0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

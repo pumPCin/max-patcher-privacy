@@ -1,120 +1,31 @@
-.class public final synthetic Lzp4;
-.super Ljava/lang/Object;
+.class public final Lzp4;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/lang/Runnable;
-
-.field public final synthetic c:Lswe;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Lswe;I)V
-    .locals 0
-
-    iput p3, p0, Lzp4;->a:I
-
-    iput-object p1, p0, Lzp4;->b:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Lzp4;->c:Lswe;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lzp4;->a:I
+    iput-object p1, p0, Lzp4;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lzp4;->X:I
 
-    iget-object v0, p0, Lzp4;->b:Ljava/lang/Runnable;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lzp4;->c:Lswe;
+    or-int/2addr p1, v0
 
-    iget-object v1, v1, Lswe;->b:Ljava/lang/Object;
+    iput p1, p0, Lzp4;->X:I
 
-    check-cast v1, Lfq4;
+    invoke-static {p0}, Lqyi;->a(Ly14;)V
 
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    sget-object p1, Lr54;->a:Lr54;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Le4;->l(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzp4;->b:Ljava/lang/Runnable;
-
-    :try_start_1
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    iget-object v1, p0, Lzp4;->c:Lswe;
-
-    iget-object v1, v1, Lswe;->b:Ljava/lang/Object;
-
-    check-cast v1, Lfq4;
-
-    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lzp4;->b:Ljava/lang/Runnable;
-
-    :try_start_2
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    return-void
-
-    :catch_2
-    move-exception v0
-
-    iget-object v1, p0, Lzp4;->c:Lswe;
-
-    iget-object v1, v1, Lswe;->b:Ljava/lang/Object;
-
-    check-cast v1, Lfq4;
-
-    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

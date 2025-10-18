@@ -4,36 +4,88 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final synthetic d:I
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lbnc;->oneme_notifications_settings_open_settings_call_ringtone_title:I
+    sget v0, Leoc;->media_editor_bottom_background_id:I
 
-    int-to-long v0, v0
+    sput v0, Lyxa;->a:I
 
-    sput-wide v0, Lyxa;->a:J
+    sget v0, Leoc;->media_editor_close_id:I
 
-    sget v0, Lbnc;->oneme_notifications_settings_open_settings_calls_ringtone:I
+    sput v0, Lyxa;->b:I
 
-    int-to-long v0, v0
+    sget v0, Leoc;->media_editor_content_id:I
 
-    sput-wide v0, Lyxa;->b:J
+    sput v0, Lyxa;->c:I
 
-    sget v0, Lbnc;->oneme_notifications_settings_open_settings_calls_vibration:I
+    sget v0, Leoc;->media_editor_crop_id:I
 
-    int-to-long v0, v0
+    sput v0, Lyxa;->d:I
 
-    sput-wide v0, Lyxa;->c:J
+    sget v0, Leoc;->media_editor_done_id:I
+
+    sput v0, Lyxa;->e:I
+
+    sget v0, Leoc;->media_editor_flip_horizontally_id:I
+
+    sput v0, Lyxa;->f:I
+
+    sget v0, Leoc;->media_editor_reset_id:I
+
+    sput v0, Lyxa;->g:I
+
+    sget v0, Leoc;->media_editor_rotate_id:I
+
+    sput v0, Lyxa;->h:I
+
+    sget v0, Leoc;->media_picker_album_container_id:I
+
+    sput v0, Lyxa;->i:I
+
+    sget v0, Leoc;->media_picker_container_id:I
+
+    sput v0, Lyxa;->j:I
+
+    sget v0, Leoc;->media_picker_content_id:I
+
+    sput v0, Lyxa;->k:I
+
+    sget v0, Leoc;->media_picker_divider_id:I
+
+    sput v0, Lyxa;->l:I
+
+    sget v0, Leoc;->media_picker_toolbar_id:I
+
+    sput v0, Lyxa;->m:I
 
     return-void
 .end method

@@ -1,128 +1,39 @@
 .class public final Laei;
-.super Ljava/lang/Object;
+.super Lmuh;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
+# instance fields
+.field public final d:Lo7f;
 
-# static fields
-.field public static final a:Laei;
+.field public final e:Lvof;
 
-.field public static final b:Liq5;
-
-.field public static final c:Liq5;
-
-.field public static final d:Liq5;
+.field public final synthetic f:Lkgi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Laei;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Laei;->a:Laei;
-
-    new-instance v0, Lq7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
-
-    const-class v1, Ll8i;
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "logEventKey"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Laei;->b:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "eventCount"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Laei;->c:Liq5;
-
-    new-instance v0, Lq7i;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lq7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "inferenceDurationStats"
-
-    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Laei;->d:Liq5;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Lkgi;Lvof;)V
     .locals 2
 
-    check-cast p1, Lu9i;
+    new-instance v0, Lo7f;
 
-    check-cast p2, Lsga;
+    const-string v1, "OnRequestInstallCallback"
 
-    sget-object v0, Laei;->b:Liq5;
+    invoke-direct {v0, v1}, Lo7f;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p1, Lu9i;->a:Lp9i;
+    iput-object p1, p0, Laei;->f:Lkgi;
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    const/4 p1, 0x4
 
-    sget-object v0, Laei;->c:Liq5;
+    invoke-direct {p0, p1}, Lmuh;-><init>(I)V
 
-    iget-object v1, p1, Lu9i;->b:Ljava/lang/Integer;
+    const-string p1, "com.google.android.play.core.inappreview.protocol.IInAppReviewServiceCallback"
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    sget-object v0, Laei;->d:Liq5;
+    iput-object v0, p0, Laei;->d:Lo7f;
 
-    iget-object p1, p1, Lu9i;->c:Lvui;
-
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    iput-object p2, p0, Laei;->e:Lvof;
 
     return-void
 .end method

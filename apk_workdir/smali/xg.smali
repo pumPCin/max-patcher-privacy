@@ -42,11 +42,11 @@
 
     packed-switch p1, :pswitch_data_0
 
-    sget p1, Lnp1;->w0:I
+    sget p1, Lvp1;->v0:I
 
     new-instance p1, Landroid/graphics/Rect;
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -74,7 +74,7 @@
 
     invoke-direct {p1, v5, v2, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
 
     mul-float/2addr v0, v3
 
-    invoke-static {v1, p1, v0}, Lhyg;->d(Landroid/view/View;Landroid/graphics/Rect;F)V
+    invoke-static {v1, p1, v0}, Lmzg;->d(Landroid/view/View;Landroid/graphics/Rect;F)V
 
     return-void
 

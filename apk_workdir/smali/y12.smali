@@ -1,300 +1,164 @@
 .class public final Ly12;
-.super Lok0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final C0:Lse4;
+.field public final a:Lu1f;
 
-.field public final D0:Lbcb;
-
-.field public E0:Lzh5;
-
-.field public F0:J
+.field public final b:Landroid/util/ArrayMap;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lu1f;)V
     .locals 2
 
-    const/4 v0, 0x6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lok0;-><init>(I)V
+    new-instance v0, Landroid/util/ArrayMap;
 
-    new-instance v0, Lse4;
+    const/4 v1, 0x4
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1}, Landroid/util/ArrayMap;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lse4;-><init>(I)V
+    iput-object v0, p0, Ly12;->b:Landroid/util/ArrayMap;
 
-    iput-object v0, p0, Ly12;->C0:Lse4;
-
-    new-instance v0, Lbcb;
-
-    invoke-direct {v0}, Lbcb;-><init>()V
-
-    iput-object v0, p0, Ly12;->D0:Lbcb;
+    iput-object p1, p0, Ly12;->a:Lu1f;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Landroid/os/Handler;)Ly12;
+    .locals 4
 
-# virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+    new-instance v0, Ly12;
 
-    const/16 v0, 0x8
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ne p1, v0, :cond_0
+    const/16 v2, 0x1e
 
-    check-cast p2, Lzh5;
+    const/4 v3, 0x0
 
-    iput-object p2, p0, Ly12;->E0:Lzh5;
+    if-lt v1, v2, :cond_0
+
+    new-instance p1, Lb22;
+
+    invoke-direct {p1, p0, v3}, Lu1f;-><init>(Landroid/content/Context;Lc22;)V
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    const/16 v2, 0x1d
 
-.method public final h()Ljava/lang/String;
-    .locals 1
+    if-lt v1, v2, :cond_1
 
-    const-string v0, "CameraMotionRenderer"
+    new-instance p1, La22;
+
+    invoke-direct {p1, p0, v3}, Lu1f;-><init>(Landroid/content/Context;Lc22;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v2, 0x1c
+
+    if-lt v1, v2, :cond_2
+
+    new-instance p1, Lz12;
+
+    invoke-direct {p1, p0, v3}, Lu1f;-><init>(Landroid/content/Context;Lc22;)V
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v1, Lu1f;
+
+    new-instance v2, Lc22;
+
+    invoke-direct {v2, p1}, Lc22;-><init>(Landroid/os/Handler;)V
+
+    invoke-direct {v1, p0, v2}, Lu1f;-><init>(Landroid/content/Context;Lc22;)V
+
+    move-object p1, v1
+
+    :goto_0
+    invoke-direct {v0, p1}, Ly12;-><init>(Lu1f;)V
 
     return-object v0
 .end method
 
-.method public final j()Z
-    .locals 1
 
-    invoke-virtual {p0}, Lok0;->i()Z
+# virtual methods
+.method public final b(Ljava/lang/String;)Ln02;
+    .locals 3
 
-    move-result v0
+    iget-object v0, p0, Ly12;->b:Landroid/util/ArrayMap;
 
-    return v0
-.end method
+    monitor-enter v0
 
-.method public final l()Z
-    .locals 1
+    :try_start_0
+    iget-object v1, p0, Ly12;->b:Landroid/util/ArrayMap;
 
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final m()V
-    .locals 1
-
-    iget-object v0, p0, Ly12;->E0:Lzh5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lzh5;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final o(JZ)V
-    .locals 0
-
-    const-wide/high16 p1, -0x8000000000000000L
-
-    iput-wide p1, p0, Ly12;->F0:J
-
-    iget-object p1, p0, Ly12;->E0:Lzh5;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lzh5;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w(JJ)V
-    .locals 5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p0}, Lok0;->i()Z
-
-    move-result p3
-
-    if-nez p3, :cond_7
-
-    iget-wide p3, p0, Ly12;->F0:J
-
-    const-wide/32 v0, 0x186a0
-
-    add-long/2addr v0, p1
-
-    cmp-long p3, p3, v0
-
-    if-gez p3, :cond_7
-
-    iget-object p3, p0, Ly12;->C0:Lse4;
-
-    invoke-virtual {p3}, Lse4;->w()V
-
-    iget-object p4, p0, Lok0;->c:Lsfd;
-
-    invoke-virtual {p4}, Lsfd;->m()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p4, p3, v0}, Lok0;->v(Lsfd;Lse4;I)I
-
-    move-result p4
-
-    const/4 v1, -0x4
-
-    if-ne p4, v1, :cond_7
-
-    const/4 p4, 0x4
-
-    invoke-virtual {p3, p4}, Luy;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    iget-wide v1, p3, Lse4;->Z:J
-
-    iput-wide v1, p0, Ly12;->F0:J
-
-    iget-wide v3, p0, Lok0;->v0:J
-
-    cmp-long v1, v1, v3
-
-    if-gez v1, :cond_2
-
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v0
-
-    :goto_1
-    iget-object v2, p0, Ly12;->E0:Lzh5;
-
-    if-eqz v2, :cond_0
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p3}, Lse4;->z()V
-
-    iget-object p3, p3, Lse4;->X:Ljava/nio/ByteBuffer;
-
-    sget-object v1, Ljhg;->a:Ljava/lang/String;
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    if-eq v1, v2, :cond_4
-
-    const/4 p3, 0x0
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
+    invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
+    check-cast v1, Ln02;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v2
+    if-nez v1, :cond_0
 
-    iget-object v3, p0, Ly12;->D0:Lbcb;
+    :try_start_1
+    iget-object v1, p0, Ly12;->a:Lu1f;
 
-    invoke-virtual {v3, v2, v1}, Lbcb;->H(I[B)V
+    invoke-virtual {v1, p1}, Lu1f;->u(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
 
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
+    move-result-object v1
 
-    move-result p3
+    new-instance v2, Ln02;
 
-    add-int/2addr p3, p4
+    invoke-direct {v2, v1, p1}, Ln02;-><init>(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;)V
 
-    invoke-virtual {v3, p3}, Lbcb;->J(I)V
+    iget-object v1, p0, Ly12;->b:Landroid/util/ArrayMap;
 
-    const/4 p3, 0x3
+    invoke-virtual {v1, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/AssertionError; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-array p4, p3, [F
-
-    :goto_2
-    if-ge v0, p3, :cond_5
-
-    invoke-virtual {v3}, Lbcb;->l()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result v1
-
-    aput v1, p4, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    move-object p3, p4
-
-    :goto_3
-    if-nez p3, :cond_6
+    move-object v1, v2
 
     goto :goto_0
 
-    :cond_6
-    iget-object p3, p0, Ly12;->E0:Lzh5;
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p3}, Lzh5;->c()V
+    goto :goto_1
 
-    goto :goto_0
+    :catch_0
+    move-exception p1
 
-    :cond_7
-    :goto_4
-    return-void
-.end method
+    :try_start_2
+    new-instance v1, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
 
-.method public final z(Lsa6;)I
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    const-string v0, "application/x-camera-motion"
+    move-result-object v2
 
-    iget-object p1, p1, Lsa6;->n:Ljava/lang/String;
+    invoke-direct {v1, v2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/String;Ljava/lang/AssertionError;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x4
-
-    invoke-static {p1, v0, v0, v0}, Lok0;->b(IIII)I
-
-    move-result p1
-
-    return p1
+    throw v1
 
     :cond_0
-    invoke-static {v0, v0, v0, v0}, Lok0;->b(IIII)I
+    :goto_0
+    monitor-exit v0
 
-    move-result p1
+    return-object v1
 
-    return p1
+    :goto_1
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method

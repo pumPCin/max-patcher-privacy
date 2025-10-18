@@ -1,24 +1,20 @@
-.class public final Lxuc;
+.class public abstract Lxuc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lyuc;
 
 
 # static fields
-.field public static final a:Lxuc;
+.field public static UiUtils:I = 0x7f1404f3
 
+.field public static UiUtils_BottomSheet:I = 0x7f1404f4
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static UiUtils_DarkBottomSheetDialog:I = 0x7f1404f5
 
-    new-instance v0, Lxuc;
+.field public static UiUtils_LightBottomSheetDialog:I = 0x7f1404f6
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static UiUtils_TextAppearance:I = 0x7f1404f7
 
-    sput-object v0, Lxuc;->a:Lxuc;
+.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton:I = 0x7f1404f8
 
-    return-void
-.end method
+.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I = 0x7f1404f9
+
+.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I = 0x7f1404fa

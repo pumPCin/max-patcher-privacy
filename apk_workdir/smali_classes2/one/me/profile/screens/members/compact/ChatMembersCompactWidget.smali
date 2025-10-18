@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltn3;
+.implements Lgo3;
 
 
 # annotations
@@ -20,7 +20,7 @@
     d2 = {
         "Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Ltn3;",
+        "Lgo3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -41,28 +41,28 @@
 
 
 # static fields
-.field public static final synthetic Z:[Lwq7;
+.field public static final synthetic Z:[Ltr7;
 
 
 # instance fields
-.field public final X:Llt7;
+.field public final X:Liu7;
 
-.field public final Y:Lazc;
+.field public final Y:Lh0d;
 
 .field public final a:Lqs;
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:Llt7;
+.field public final c:Liu7;
 
-.field public o:Lz1b;
+.field public o:Lb3b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lxcc;
+    new-instance v0, Leec;
 
     const-class v1, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
 
@@ -72,21 +72,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ls6d;->a:Lt6d;
+    sget-object v2, Lz7d;->a:La8d;
 
     const-string v3, "membersListRouter"
 
     const-string v5, "getMembersListRouter()Lone/me/sdk/arch/navigation/ChildSlotRouter;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
+    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lwq7;
+    new-array v2, v2, [Ltr7;
 
     aput-object v0, v2, v4
 
@@ -94,7 +94,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Lwq7;
+    sput-object v2, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltr7;
 
     return-void
 .end method
@@ -108,19 +108,19 @@
     move-result-object p1
 
     .line 37
-    new-instance p2, Lqbb;
+    new-instance p2, Ltcb;
 
     const-string v0, "id"
 
-    invoke-direct {p2, v0, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 38
-    filled-new-array {p2}, [Lqbb;
+    filled-new-array {p2}, [Ltcb;
 
     move-result-object p1
 
     .line 39
-    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -140,7 +140,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
 
     .line 2
     new-instance p1, Lqs;
@@ -164,7 +164,7 @@
     const-string v3, "}"
 
     .line 5
-    invoke-static {v0, v1, p1, v3}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, p1, v3}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -172,138 +172,138 @@
     iput-object p1, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->b:Ljava/lang/String;
 
     .line 7
-    new-instance p1, Ljo2;
+    new-instance p1, Lto2;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Ljo2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
+    invoke-direct {p1, p0, v0}, Lto2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
 
     .line 8
-    new-instance v0, Luk2;
+    new-instance v0, Ldl2;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p1}, Luk2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ldl2;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lbp2;
+    const-class p1, Llp2;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 9
-    iput-object p1, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->c:Llt7;
+    iput-object p1, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->c:Liu7;
 
     .line 10
-    new-instance p1, Ljo2;
+    new-instance p1, Lto2;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Ljo2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
+    invoke-direct {p1, p0, v0}, Lto2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
 
     .line 11
-    new-instance v0, Luk2;
+    new-instance v0, Ldl2;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1, p1}, Luk2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ldl2;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Ln59;
+    const-class p1, Lp69;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
 
     move-result-object p1
 
     .line 12
-    iput-object p1, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->X:Llt7;
+    iput-object p1, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->X:Liu7;
 
     .line 13
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Lbp2;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Llp2;
 
     move-result-object p1
 
     .line 14
-    iget-object p1, p1, Lbp2;->x0:Lzx5;
+    iget-object p1, p1, Llp2;->w0:Lty5;
 
     .line 15
-    iget-object v0, p0, Lx14;->lifecycleOwner:Liw7;
+    iget-object v0, p0, Ll24;->lifecycleOwner:Lfx7;
 
-    invoke-interface {v0}, Liw7;->x()Lkw7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    sget-object v1, Lkv7;->o:Lkv7;
+    sget-object v1, Lhw7;->o:Lhw7;
 
-    invoke-static {p1, v0, v1}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
     .line 16
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Luv7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {p1, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     .line 17
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Ln59;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Lp69;
 
     move-result-object p1
 
     .line 18
-    iget-object p1, p1, Ln59;->X:Lde5;
+    iget-object p1, p1, Lp69;->X:Lxe5;
 
     .line 19
-    iget-object v0, p0, Lx14;->lifecycleOwner:Liw7;
+    iget-object v0, p0, Ll24;->lifecycleOwner:Lfx7;
 
-    invoke-interface {v0}, Liw7;->x()Lkw7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
     .line 20
-    new-instance v0, Lko2;
+    new-instance v0, Luo2;
 
-    invoke-direct {v0, p0, v2}, Lko2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Luo2;-><init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;Lkotlin/coroutines/Continuation;)V
 
     .line 21
-    new-instance v2, Lh06;
+    new-instance v2, Lb16;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p1, v0, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
+    invoke-direct {v2, p1, v0, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
 
     .line 22
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Luv7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {v2, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     .line 23
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Lbp2;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Llp2;
 
     move-result-object p1
 
     .line 24
-    iget-object p1, p1, Lbp2;->w0:Lde5;
+    iget-object p1, p1, Llp2;->v0:Lxe5;
 
     .line 25
-    iget-object v0, p0, Lx14;->lifecycleOwner:Liw7;
+    iget-object v0, p0, Ll24;->lifecycleOwner:Lfx7;
 
-    invoke-interface {v0}, Liw7;->x()Lkw7;
+    invoke-interface {v0}, Lfx7;->x()Lhx7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
 
     move-result-object p1
 
     .line 26
-    new-instance v0, Lmr0;
+    new-instance v0, Lvr0;
 
     const/4 v6, 0x4
 
@@ -320,30 +320,30 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Lmr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lvr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 28
-    new-instance v1, Lh06;
+    new-instance v1, Lb16;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, p1, v0, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
+    invoke-direct {v1, p1, v0, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
 
     .line 29
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Luv7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     .line 30
-    sget p1, Ltya;->z0:I
+    sget p1, Lvza;->z0:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->childSlotRouter(I)Lazc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->childSlotRouter(I)Lh0d;
 
     move-result-object p1
 
-    iput-object p1, v2, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:Lazc;
+    iput-object p1, v2, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:Lh0d;
 
     return-void
 .end method
@@ -353,7 +353,7 @@
 .method public final C0()J
     .locals 2
 
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Lwq7;
+    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltr7;
 
     const/4 v1, 0x0
 
@@ -374,40 +374,40 @@
     return-wide v0
 .end method
 
-.method public final D0()Lbp2;
+.method public final D0()Llp2;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->c:Llt7;
+    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->c:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lbp2;
+    check-cast v0, Llp2;
 
     return-object v0
 .end method
 
-.method public final E0()Ln59;
+.method public final E0()Lp69;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->X:Llt7;
+    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->X:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ln59;
+    check-cast v0, Lp69;
 
     return-object v0
 .end method
 
-.method public final f(ILandroid/os/Bundle;)V
+.method public final g(ILandroid/os/Bundle;)V
     .locals 4
 
-    sget v0, Ltya;->E0:I
+    sget v0, Lvza;->E0:I
 
-    sget-object v1, Ls95;->a:Ls95;
+    sget-object v1, Lka5;->a:Lka5;
 
     const-string v2, "profile:memberslist:ids_to_delete"
 
@@ -423,7 +423,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Ljt;->B([J)Ljava/util/List;
+    invoke-static {p1}, Ljt;->E([J)Ljava/util/List;
 
     move-result-object v3
 
@@ -436,30 +436,30 @@
     move-object v1, v3
 
     :goto_0
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Ln59;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Lp69;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ln59;->r()V
+    invoke-virtual {p1}, Lp69;->r()V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Ln59;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Lp69;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Ln59;->t(Ljava/util/List;)V
+    invoke-virtual {p1, v1}, Lp69;->t(Ljava/util/List;)V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Lbp2;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Llp2;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, v1, p2}, Lbp2;->v(Ljava/util/List;Z)V
+    invoke-virtual {p1, v1, p2}, Llp2;->v(Ljava/util/List;Z)V
 
     return-void
 
     :cond_2
-    sget v0, Ltya;->G0:I
+    sget v0, Lvza;->G0:I
 
     if-ne p1, v0, :cond_5
 
@@ -471,7 +471,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p1}, Ljt;->B([J)Ljava/util/List;
+    invoke-static {p1}, Ljt;->E([J)Ljava/util/List;
 
     move-result-object v3
 
@@ -484,36 +484,36 @@
     move-object v1, v3
 
     :goto_1
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Ln59;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Lp69;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ln59;->r()V
+    invoke-virtual {p1}, Lp69;->r()V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Ln59;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->E0()Lp69;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Ln59;->t(Ljava/util/List;)V
+    invoke-virtual {p1, v1}, Lp69;->t(Ljava/util/List;)V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Lbp2;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Llp2;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, v1, p2}, Lbp2;->v(Ljava/util/List;Z)V
+    invoke-virtual {p1, v1, p2}, Llp2;->v(Ljava/util/List;Z)V
 
     :cond_5
     return-void
 .end method
 
-.method public final getInsetsConfig()Lkh7;
+.method public final getInsetsConfig()Lgi7;
     .locals 1
 
-    sget-object v0, Lkh7;->e:Lkh7;
+    sget-object v0, Lgi7;->e:Lgi7;
 
-    sget-object v0, Lkh7;->e:Lkh7;
+    sget-object v0, Lgi7;->e:Lgi7;
 
     return-object v0
 .end method
@@ -529,7 +529,7 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    new-instance p1, Lw62;
+    new-instance p1, Le72;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
@@ -537,7 +537,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Ltya;->z0:I
+    sget p2, Lvza;->z0:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -555,24 +555,24 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->o:Lz1b;
+    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->o:Lb3b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lz1b;->a()V
+    invoke-virtual {v0}, Lb3b;->a()V
 
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->o:Lz1b;
+    iput-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->o:Lb3b;
 
-    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Lbp2;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->D0()Llp2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lbp2;->x()V
+    invoke-virtual {v0}, Llp2;->x()V
 
-    invoke-super {p0, p1}, Lx14;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -580,29 +580,29 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 9
 
-    sget-object p1, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Lwq7;
+    sget-object p1, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltr7;
 
     const/4 v0, 0x1
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:Lazc;
+    iget-object v0, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:Lh0d;
 
-    invoke-interface {v0, p0, p1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lx43;
+    check-cast p1, Lj53;
 
-    iget-object v0, p1, Lx43;->a:Ljhd;
+    iget-object v0, p1, Lj53;->a:Lqid;
 
-    invoke-virtual {p1}, Lx43;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lj53;->c()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "compact_members_list_widget"
 
-    invoke-static {p1, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -610,29 +610,29 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Ljhd;->Q(Z)V
+    invoke-virtual {v0, p1}, Lqid;->Q(Z)V
 
     new-instance v3, Lone/me/members/list/MembersListWidget;
 
-    new-instance p1, Lb59;
+    new-instance p1, Ld69;
 
     invoke-virtual {p0}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->C0()J
 
     move-result-wide v4
 
-    sget-object v2, Lho2;->b:Lho2;
+    sget-object v2, Lro2;->b:Lro2;
 
     const/4 v6, 0x4
 
-    invoke-direct {p1, v4, v5, v2, v6}, Lb59;-><init>(JLho2;I)V
+    invoke-direct {p1, v4, v5, v2, v6}, Ld69;-><init>(JLro2;I)V
 
     const/4 v2, 0x0
 
     iget-object v4, p0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->b:Ljava/lang/String;
 
-    invoke-direct {v3, v4, p1, v2}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Lb59;Lvh4;)V
+    invoke-direct {v3, v4, p1, v2}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Ld69;Lki4;)V
 
-    new-instance v2, Lmhd;
+    new-instance v2, Ltid;
 
     const/4 v7, 0x0
 
@@ -644,11 +644,11 @@
 
     const/4 v6, 0x0
 
-    invoke-direct/range {v2 .. v8}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
+    invoke-direct/range {v2 .. v8}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
 
-    invoke-virtual {v2, v1}, Lmhd;->d(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Ltid;->d(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Ljhd;->R(Lmhd;)V
+    invoke-virtual {v0, v2}, Lqid;->R(Ltid;)V
 
     :cond_0
     return-void

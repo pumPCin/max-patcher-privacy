@@ -44,7 +44,7 @@
 
     iput-object p1, p0, Lm2;->c:Ljava/util/Collection;
 
-    sget-object p1, Ldm7;->a:Ldm7;
+    sget-object p1, Lan7;->a:Lan7;
 
     iput-object p1, p0, Lm2;->o:Ljava/util/Iterator;
 

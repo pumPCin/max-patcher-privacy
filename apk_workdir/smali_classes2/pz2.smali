@@ -1,9 +1,9 @@
 .class public final Lpz2;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
@@ -11,24 +11,20 @@
 
 .field public final synthetic Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-.field public final synthetic Z:J
-
-.field public final synthetic r0:Landroid/view/View;
+.field public final synthetic Z:Laf9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;Laf9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput-object p1, p0, Lpz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    iput-wide p2, p0, Lpz2;->Z:J
-
-    iput-object p4, p0, Lpz2;->r0:Landroid/view/View;
+    iput-object p2, p0, Lpz2;->Z:Laf9;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p5}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb54;
+    check-cast p1, Lq54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -48,7 +44,7 @@
 
     check-cast p1, Lpz2;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lpz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,39 +54,33 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+    .locals 2
 
-    new-instance v0, Lpz2;
+    new-instance p1, Lpz2;
 
-    iget-wide v2, p0, Lpz2;->Z:J
+    iget-object v0, p0, Lpz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    iget-object v4, p0, Lpz2;->r0:Landroid/view/View;
+    iget-object v1, p0, Lpz2;->Z:Laf9;
 
-    iget-object v1, p0, Lpz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-direct {p1, v0, v1, p2}, Lpz2;-><init>(Lone/me/chats/search/ChatsListSearchScreen;Laf9;Lkotlin/coroutines/Continuation;)V
 
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lpz2;-><init>(Lone/me/chats/search/ChatsListSearchScreen;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 13
 
     iget v0, p0, Lpz2;->X:I
 
-    iget-wide v1, p0, Lpz2;->Z:J
+    iget-object v1, p0, Lpz2;->Z:Laf9;
 
-    iget-object v3, p0, Lpz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
-
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v4, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -104,35 +94,43 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    sget-object p1, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Lwq7;
+    sget-object p1, Lone/me/chats/search/ChatsListSearchScreen;->H0:[Ltr7;
 
-    invoke-virtual {v3}, Lone/me/chats/search/ChatsListSearchScreen;->D0()Lr03;
+    iget-object p1, p0, Lpz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    move-result-object p1
+    invoke-virtual {p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0()La13;
 
-    iput v4, p0, Lpz2;->X:I
+    move-result-object v4
 
-    iget-object v0, p1, Lr03;->Z:Lqkf;
+    iget-object p1, v1, Laf9;->Y:Lla2;
 
-    check-cast v0, Losa;
+    iget-wide v5, p1, Lla2;->a:J
 
-    invoke-virtual {v0}, Losa;->a()Lv44;
+    iget-object v7, v1, Laf9;->X:Lda9;
 
-    move-result-object v0
+    iput v2, p0, Lpz2;->X:I
 
-    new-instance v4, Lwz2;
+    iget-object p1, v4, La13;->Z:Lulf;
 
-    const/4 v5, 0x0
+    check-cast p1, Lqta;
 
-    invoke-direct {v4, p1, v1, v2, v5}, Lwz2;-><init>(Lr03;JLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v4, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lqta;->b()Lk54;
 
     move-result-object p1
 
-    sget-object v0, Lc54;->a:Lc54;
+    new-instance v3, Lh03;
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v3 .. v8}, Lh03;-><init>(La13;JLda9;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v3, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
 
     if-ne p1, v0, :cond_2
 
@@ -140,105 +138,38 @@
 
     :cond_2
     :goto_0
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Ljava/lang/Long;
 
-    new-instance v0, Ljava/lang/Long;
+    if-eqz p1, :cond_3
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    sget-object v1, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Lwq7;
+    move-result-wide v2
 
-    iget-object v1, v3, Lone/me/chats/search/ChatsListSearchScreen;->o:Lqs;
+    sget-object v4, Lc33;->c:Lc33;
 
-    sget-object v2, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Lwq7;
+    iget-object p1, v1, Laf9;->Y:Lla2;
 
-    const/4 v4, 0x0
+    iget-wide v5, p1, Lla2;->a:J
 
-    aget-object v2, v2, v4
+    new-instance v8, Ljava/lang/Long;
 
-    invoke-virtual {v1, v3, v0}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-direct {v8, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
-    const/4 v0, 0x2
+    iget-object v10, v1, Lwud;->b:Ljava/util/List;
 
-    invoke-static {v0}, Lcvi;->a(I)Ls04;
+    const/4 v11, 0x0
 
-    move-result-object v0
+    const/16 v12, 0x68
 
-    invoke-interface {v0, p1}, Ls04;->i(Ljava/util/Collection;)Ls04;
+    const-string v7, "local"
 
-    move-result-object p1
+    const/4 v9, 0x0
 
-    iget-object v0, p0, Lpz2;->r0:Landroid/view/View;
+    invoke-static/range {v4 .. v12}, Lc33;->U0(Lc33;JLjava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/lang/String;I)V
 
-    invoke-interface {p1, v0}, Ls04;->t(Landroid/view/View;)Ls04;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    const/4 v1, 0x6
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v5
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    invoke-direct {v0, v2, v4, v1, v4}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41400000    # 12.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-interface {p1, v0, v1}, Ls04;->d(Landroid/graphics/Rect;F)Ls04;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ls04;->build()Lt04;
-
-    move-result-object p1
-
-    invoke-interface {p1, v3}, Lt04;->v(Lone/me/sdk/arch/Widget;)V
-
-    sget-object p1, Lzag;->a:Lzag;
+    :cond_3
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

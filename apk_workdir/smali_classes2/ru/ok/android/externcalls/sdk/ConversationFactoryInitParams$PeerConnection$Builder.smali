@@ -22,10 +22,10 @@
         "",
         "<init>",
         "()V",
-        "Lyuc;",
+        "Lfwc;",
         "log",
         "setLogger",
-        "(Lyuc;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;",
+        "(Lfwc;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;",
         "Lorg/webrtc/NativeLibraryLoader;",
         "libraryLoader",
         "setNativeLibraryLoader",
@@ -66,7 +66,7 @@
         "udpMarker",
         "tcpMarker",
         "logger",
-        "Lyuc;",
+        "Lfwc;",
         "isEarlyAudioPlayoutEnabled",
         "isEarlyAudioRecordingEnabled",
         "isOpusDREDEnabledP2p",
@@ -109,7 +109,7 @@
 
 .field private libraryLoader:Lorg/webrtc/NativeLibraryLoader;
 
-.field private logger:Lyuc;
+.field private logger:Lfwc;
 
 .field private rttMultCapMs:Ljava/lang/Integer;
 
@@ -170,9 +170,9 @@
 
     iget-boolean v13, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->isSharedSocketDisabledForICE:Z
 
-    iget-object v14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lyuc;
+    iget-object v14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lfwc;
 
-    invoke-direct/range {v0 .. v14}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;-><init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLyuc;)V
+    invoke-direct/range {v0 .. v14}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;-><init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLfwc;)V
 
     return-object v0
 .end method
@@ -217,10 +217,10 @@
     return-object p0
 .end method
 
-.method public final setLogger(Lyuc;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+.method public final setLogger(Lfwc;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lyuc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lfwc;
 
     return-object p0
 .end method

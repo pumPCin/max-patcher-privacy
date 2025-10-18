@@ -1,134 +1,103 @@
 .class public final Lrce;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljqf;
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(ILjqf;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lrce;->a:Ljqf;
-
-    iput p1, p0, Lrce;->b:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 11
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrce;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrce;
-
-    iget-object v1, p0, Lrce;->a:Ljqf;
-
-    iget-object v2, p1, Lrce;->a:Ljqf;
-
-    invoke-virtual {v1, v2}, Ljqf;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v1, p0, Lrce;->b:I
-
-    iget p1, p1, Lrce;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lrce;->a:Ljqf;
-
-    iget v0, v0, Ljqf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lrce;->b:I
-
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
-
-    move-result v0
+    check-cast v0, Ljava/util/BitSet;
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    const/4 v2, 0x1
 
-    return v1
-.end method
+    invoke-virtual {v0, v2}, Ljava/util/BitSet;->get(I)Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result v2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v3, 0x2
 
-    const-string v1, "Button(title="
+    invoke-virtual {v0, v3}, Ljava/util/BitSet;->get(I)Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    iget-object v1, p0, Lrce;->a:Ljqf;
+    const/4 v4, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/util/BitSet;->get(I)Z
 
-    const-string v1, ", id="
+    move-result v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v5, 0x4
 
-    iget v1, p0, Lrce;->b:I
+    invoke-virtual {v0, v5}, Ljava/util/BitSet;->get(I)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v5
 
-    const-string v1, ", isNegative=false)"
+    const/4 v6, 0x5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6}, Ljava/util/BitSet;->get(I)Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v6
+
+    const/4 v7, 0x6
+
+    invoke-virtual {v0, v7}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v7
+
+    const/4 v8, 0x7
+
+    invoke-virtual {v0, v8}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    const-string v8, ",\n                isTitleChanged="
+
+    const-string v9, ",\n                isTypeChanged="
+
+    const-string v10, "\n            Payload(\n                isSectionChanged="
+
+    invoke-static {v10, v1, v8, v2, v9}, Li57;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",\n                isDescriptionResChanged="
+
+    const-string v8, ",\n                isEndViewChanged="
+
+    invoke-static {v2, v8, v1, v3, v4}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v2, ",\n                isCounterTypeChanged="
+
+    const-string v3, ",\n                isUpperTextChanged="
+
+    invoke-static {v2, v3, v1, v5, v6}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ",\n                isStartIconChanged="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ",\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Labf;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

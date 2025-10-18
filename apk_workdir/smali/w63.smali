@@ -4,177 +4,116 @@
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public final b:Ljava/util/HashMap;
+.field public final a:Lyri;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/HashMap;)V
-    .locals 4
+.method public constructor <init>(Lyri;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw63;->b:Ljava/util/HashMap;
+    invoke-static {p1}, Lzui;->i(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lw63;->a:Lyri;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lw63;->a:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Lw63;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lw63;->a:Lyri;
+
+    check-cast p1, Lw63;
+
+    iget-object p1, p1, Lw63;->a:Lyri;
+
+    check-cast v0, Lboi;
+
+    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Lz1i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x11
+
+    invoke-virtual {v0, v2, p1}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object p1
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v0, Ljava/util/Map$Entry;
+    return v1
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lw63;->a:Lyri;
+
+    check-cast v0, Lboi;
+
+    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
 
     move-result-object v1
 
-    check-cast v1, Ljv7;
+    const/16 v2, 0x12
 
-    iget-object v2, p0, Lw63;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/List;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v3, p0, Lw63;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object v0
 
-    check-cast v0, Lx63;
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
 
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result v1
 
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public static a(Ljava/util/List;Liw7;Ljv7;Ljava/lang/Object;)V
-    .locals 5
-
-    if-eqz p0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    sub-int/2addr v0, v1
-
-    :goto_0
-    if-ltz v0, :cond_3
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lx63;
-
-    iget-object v3, v2, Lx63;->b:Ljava/lang/reflect/Method;
-
-    :try_start_0
-    iget v2, v2, Lx63;->a:I
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v4, 0x2
-
-    if-eq v2, v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_1
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v2, 0x0
-
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_1
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
+    return v1
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "Failed to call observer method"
-
-    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :cond_3
-    return-void
+    throw v1
 .end method

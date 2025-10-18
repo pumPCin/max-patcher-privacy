@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lldi;
+.field public final synthetic b:Lmei;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lldi;I)V
+.method public synthetic constructor <init>(Lmei;I)V
     .locals 0
 
     iput p2, p0, Lsg;->a:I
 
-    iput-object p1, p0, Lsg;->b:Lldi;
+    iput-object p1, p0, Lsg;->b:Lmei;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,16 +34,16 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lsg;->b:Lldi;
+    iget-object v0, p0, Lsg;->b:Lmei;
 
-    invoke-virtual {v0}, Lldi;->d()V
+    invoke-virtual {v0}, Lmei;->e()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lsg;->b:Lldi;
+    iget-object v0, p0, Lsg;->b:Lmei;
 
-    invoke-virtual {v0}, Lldi;->e()V
+    invoke-virtual {v0}, Lmei;->f()V
 
     return-void
 

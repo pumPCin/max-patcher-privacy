@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxz0;
+.implements Lg01;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lfr3;Lfr3;)V
+    value = Lru/ok/android/externcalls/sdk/ConversationImpl;->performConnect(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/externcalls/sdk/api/ConversationParams;Ltr3;Ltr3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public onNegotiationError(Lj4a;)V
+.method public onNegotiationError(Lm5a;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$4;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
@@ -61,7 +61,7 @@
 
     iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->negotiationErrorStat:Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->onError(Lj4a;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->onError(Lm5a;)V
 
     return-void
 .end method

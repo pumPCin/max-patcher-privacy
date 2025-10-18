@@ -1,190 +1,80 @@
-.class public abstract Lrti;
+.class public final Lrti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lrti;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;FFIILzpb;)Lkqb;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0}, Lrxi;->a(Landroid/content/Context;)Lapd;
+    new-instance v0, Lrti;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    neg-float v0, p1
+    sput-object v0, Lrti;->a:Lrti;
 
-    const/16 v1, 0x10
+    new-instance v0, Lr8i;
 
-    int-to-float v1, v1
+    const/4 v1, 0x1
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    move-result-object v2
+    const-class v1, Lm9i;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    move-result-object v2
+    move-result-object v0
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    const/4 v2, 0x2
 
-    mul-float/2addr v2, v1
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    invoke-static {v2}, Lagi;->d(F)I
+    move-result-object v0
 
-    move-result v2
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    int-to-float v2, v2
+    move-result-object v0
 
-    add-float/2addr v0, v2
+    const/4 v2, 0x3
 
-    neg-float v2, p2
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object v0
 
-    move-result-object v3
+    const/4 v2, 0x4
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    mul-float/2addr v3, v1
+    move-result-object v0
 
-    invoke-static {v3}, Lagi;->d(F)I
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    move-result v3
+    move-result-object v0
 
-    int-to-float v3, v3
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
-    add-float/2addr v2, v3
-
-    iget v3, p0, Lapd;->c:I
-
-    int-to-float v3, v3
-
-    add-float/2addr v2, v3
-
-    iget v3, p5, Lzpb;->a:I
-
-    int-to-float v3, v3
-
-    add-float/2addr v2, v3
-
-    iget v3, p0, Lapd;->b:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v3, p1
-
-    int-to-float p1, p3
-
-    sub-float/2addr v3, p1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lagi;->d(F)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    sub-float/2addr v3, p1
-
-    iget p1, p0, Lapd;->a:I
-
-    iget p0, p0, Lapd;->d:I
-
-    sub-int/2addr p1, p0
-
-    int-to-float p0, p1
-
-    sub-float/2addr p0, p2
-
-    int-to-float p1, p4
-
-    sub-float/2addr p0, p1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    sub-float/2addr p0, p1
-
-    iget p1, p5, Lzpb;->b:I
-
-    int-to-float p1, p1
-
-    sub-float/2addr p0, p1
-
-    new-instance p1, Lkqb;
-
-    invoke-direct {p1, v0, v3, v2, p0}, Lkqb;-><init>(FFFF)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public static final b(Lby5;Loh6;Lgi6;Lkotlin/coroutines/Continuation;[Lzx5;)Ljava/lang/Object;
-    .locals 6
 
-    new-instance v0, Lbc3;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v4, 0x0
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lbc3;-><init>(Lby5;Loh6;Lgi6;Lkotlin/coroutines/Continuation;[Lzx5;)V
-
-    new-instance p0, Lfy5;
-
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lt44;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p0, p0, v0}, Luzh;->c(Lkotlinx/coroutines/internal/ScopeCoroutine;Lkotlinx/coroutines/internal/ScopeCoroutine;Lei6;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lc54;->a:Lc54;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lzag;->a:Lzag;
-
-    return-object p0
+    throw p1
 .end method

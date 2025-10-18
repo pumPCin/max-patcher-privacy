@@ -3,9 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
-
-
-# virtual methods
-.method public abstract getArity()I
-.end method
+.implements Lej6;

@@ -1,181 +1,93 @@
 .class public final Llja;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lyha;
 .source "SourceFile"
 
 # interfaces
-.implements Lcka;
+.implements Lxef;
 
 
 # instance fields
-.field public X:J
-
-.field public final a:Lcka;
-
-.field public final b:Li32;
-
-.field public final c:Lsja;
-
-.field public final o:Lzvb;
+.field public final a:Lc6;
 
 
 # direct methods
-.method public constructor <init>(Lcka;JLzvb;Li32;Lsja;)V
+.method public constructor <init>(Lc6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llja;->a:Lcka;
-
-    iput-object p5, p0, Llja;->b:Li32;
-
-    iput-object p6, p0, Llja;->c:Lsja;
-
-    iput-object p4, p0, Llja;->o:Lzvb;
-
-    iput-wide p2, p0, Llja;->X:J
+    iput-object p1, p0, Llja;->a:Lc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final get()Ljava/lang/Object;
     .locals 2
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-object v0, p0, Llja;->a:Lc6;
 
-    move-result v0
+    invoke-virtual {v0}, Lc6;->call()Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    move-result-object v0
 
-    const/4 v0, 0x1
+    sget-object v1, Luf5;->a:Ltf5;
 
-    :cond_0
-    iget-object v1, p0, Llja;->b:Li32;
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Li32;->h()Z
+.method public final o(Lela;)V
+    .locals 2
+
+    new-instance v0, Ltp4;
+
+    invoke-direct {v0, p1}, Ltp4;-><init>(Lela;)V
+
+    invoke-interface {p1, v0}, Lela;->c(Lvv4;)V
+
+    invoke-virtual {v0}, Ltp4;->h()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Llja;->c:Lsja;
-
-    invoke-interface {v1, p0}, Lsja;->a(Lcka;)V
-
-    neg-int v0, v0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Llja;->a:Lcka;
-
-    invoke-interface {v0}, Lcka;->b()V
-
-    return-void
-.end method
-
-.method public final c(Lev4;)V
-    .locals 1
-
-    iget-object v0, p0, Llja;->b:Li32;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Llja;->a:Lcka;
-
-    invoke-interface {v0, p1}, Lcka;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-wide v0, p0, Llja;->X:J
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    sub-long v2, v0, v2
-
-    iput-wide v2, p0, Llja;->X:J
-
     :cond_0
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    iget-object v1, p0, Llja;->a:Lcka;
-
-    if-nez v0, :cond_1
-
-    invoke-interface {v1, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
     :try_start_0
-    iget-object v0, p0, Llja;->o:Lzvb;
+    iget-object v1, p0, Llja;->a:Lc6;
 
-    invoke-interface {v0, p1}, Lzvb;->test(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lc6;->call()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
+
+    sget-object p1, Luf5;->a:Ltf5;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_2
-
-    invoke-interface {v1, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0}, Llja;->a()V
+    invoke-virtual {v0, v1}, Ltp4;->e(Ljava/lang/Object;)V
 
     return-void
 
     :catchall_0
-    move-exception v0
+    move-exception v1
 
-    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+    invoke-virtual {v0}, Ltp4;->h()Z
 
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
-    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    invoke-interface {p1, v1}, Lela;->onError(Ljava/lang/Throwable;)V
 
-    invoke-interface {v1, v2}, Lcka;->onError(Ljava/lang/Throwable;)V
+    goto :goto_0
 
+    :cond_1
+    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
     return-void
 .end method

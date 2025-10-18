@@ -1,125 +1,181 @@
-.class public final Lk10;
-.super Ljava/lang/Object;
+.class public final enum Lk10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic p:I
+.field public static final enum X:Lk10;
 
+.field public static final enum Y:Lk10;
 
-# instance fields
-.field public final a:Lj10;
+.field public static final enum Z:Lk10;
 
-.field public final b:J
+.field public static final enum a:Lk10;
 
-.field public final c:Ljava/util/ArrayList;
+.field public static final enum b:Lk10;
 
-.field public final d:Ljava/lang/String;
+.field public static final enum c:Lk10;
 
-.field public final e:Ljava/lang/String;
+.field public static final enum o:Lk10;
 
-.field public final f:Ljava/lang/String;
+.field public static final enum q0:Lk10;
 
-.field public final g:Ljava/lang/String;
+.field public static final enum r0:Lk10;
 
-.field public final h:Lu10;
+.field public static final enum s0:Lk10;
 
-.field public final i:Ljava/lang/String;
+.field public static final enum t0:Lk10;
 
-.field public final j:Ljava/lang/String;
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Ljava/lang/String;
+.field public static final synthetic u0:[Lk10;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 13
 
-    new-instance v0, Li10;
+    new-instance v0, Lk10;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "UNKNOWN"
 
-    invoke-virtual {v0}, Li10;->a()Lk10;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lk10;->a:Lk10;
+
+    new-instance v1, Lk10;
+
+    const-string v2, "NEW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lk10;->b:Lk10;
+
+    new-instance v2, Lk10;
+
+    const-string v3, "ADD"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lk10;->c:Lk10;
+
+    new-instance v3, Lk10;
+
+    const-string v4, "REMOVE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lk10;->o:Lk10;
+
+    new-instance v4, Lk10;
+
+    const-string v5, "LEAVE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lk10;->X:Lk10;
+
+    new-instance v5, Lk10;
+
+    const-string v6, "TITLE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lk10;->Y:Lk10;
+
+    new-instance v6, Lk10;
+
+    const-string v7, "ICON"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lk10;->Z:Lk10;
+
+    new-instance v7, Lk10;
+
+    const-string v8, "SYSTEM"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lk10;->q0:Lk10;
+
+    new-instance v8, Lk10;
+
+    const-string v9, "JOIN_BY_LINK"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lk10;->r0:Lk10;
+
+    new-instance v9, Lk10;
+
+    const-string v10, "PIN"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lk10;->s0:Lk10;
+
+    new-instance v10, Lk10;
+
+    const-string v11, "BOT_STARTED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lk10;->t0:Lk10;
+
+    filled-new-array/range {v0 .. v10}, [Lk10;
+
+    move-result-object v0
+
+    sput-object v0, Lk10;->u0:[Lk10;
 
     return-void
 .end method
 
-.method public constructor <init>(Li10;)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lk10;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lk10;
 
-    iget-object v0, p1, Li10;->a:Lj10;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object v0, p0, Lk10;->a:Lj10;
+    move-result-object p0
 
-    iget-wide v0, p1, Li10;->b:J
+    check-cast p0, Lk10;
 
-    iput-wide v0, p0, Lk10;->b:J
+    return-object p0
+.end method
 
-    new-instance v0, Ljava/util/ArrayList;
+.method public static values()[Lk10;
+    .locals 1
 
-    iget-object v1, p1, Li10;->c:Ljava/util/Collection;
+    sget-object v0, Lk10;->u0:[Lk10;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v0}, [Lk10;->clone()Ljava/lang/Object;
 
-    iput-object v0, p0, Lk10;->c:Ljava/util/ArrayList;
+    move-result-object v0
 
-    iget-object v0, p1, Li10;->d:Ljava/lang/String;
+    check-cast v0, [Lk10;
 
-    iput-object v0, p0, Lk10;->d:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Lk10;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lk10;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Lk10;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->h:Lu10;
-
-    iput-object v0, p0, Lk10;->h:Lu10;
-
-    iget-object v0, p1, Li10;->i:Ljava/lang/String;
-
-    iput-object v0, p0, Lk10;->i:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->j:Ljava/lang/String;
-
-    iput-object v0, p0, Lk10;->j:Ljava/lang/String;
-
-    iget-boolean v0, p1, Li10;->k:Z
-
-    iput-boolean v0, p0, Lk10;->k:Z
-
-    iget v0, p1, Li10;->l:I
-
-    iput v0, p0, Lk10;->l:I
-
-    iget-wide v0, p1, Li10;->m:J
-
-    iput-wide v0, p0, Lk10;->m:J
-
-    iget-wide v0, p1, Li10;->n:J
-
-    iput-wide v0, p0, Lk10;->n:J
-
-    iget-object p1, p1, Li10;->o:Ljava/lang/String;
-
-    iput-object p1, p0, Lk10;->o:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

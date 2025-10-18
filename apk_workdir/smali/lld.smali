@@ -2,409 +2,130 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu7;
+.implements Ljava/io/Serializable;
+
 
 # static fields
-.field public static final f:[Ljava/lang/Class;
+.field public static final c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public volatile a:Lji6;
 
-.field public final b:Ljava/util/LinkedHashMap;
-
-.field public final c:Ljava/util/LinkedHashMap;
-
-.field public final d:Ljava/util/LinkedHashMap;
-
-.field public final e:Lqld;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 30
-
-    const-class v28, Landroid/util/Size;
-
-    const-class v29, Landroid/util/SizeF;
-
-    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-class v2, [Z
-
-    sget-object v3, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
-
-    const-class v4, [D
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-class v6, [I
-
-    sget-object v7, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const-class v8, [J
-
-    const-class v9, Ljava/lang/String;
-
-    const-class v10, [Ljava/lang/String;
-
-    const-class v11, Landroid/os/Binder;
-
-    const-class v12, Landroid/os/Bundle;
-
-    sget-object v13, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
-
-    const-class v14, [B
-
-    sget-object v15, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    const-class v16, [C
-
-    const-class v17, Ljava/lang/CharSequence;
-
-    const-class v18, [Ljava/lang/CharSequence;
-
-    const-class v19, Ljava/util/ArrayList;
-
-    sget-object v20, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    const-class v21, [F
-
-    const-class v22, Landroid/os/Parcelable;
-
-    const-class v23, [Landroid/os/Parcelable;
-
-    const-class v24, Ljava/io/Serializable;
-
-    sget-object v25, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
-    const-class v26, [S
-
-    const-class v27, Landroid/util/SparseArray;
-
-    filled-new-array/range {v1 .. v29}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Llld;->f:[Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Llld;->a:Ljava/util/LinkedHashMap;
-
-    .line 10
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Llld;->b:Ljava/util/LinkedHashMap;
-
-    .line 11
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Llld;->c:Ljava/util/LinkedHashMap;
-
-    .line 12
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Llld;->d:Ljava/util/LinkedHashMap;
-
-    .line 13
-    new-instance v0, Ltd6;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Ltd6;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Llld;->e:Lqld;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/HashMap;)V
     .locals 3
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Ljava/lang/Object;
 
-    .line 2
-    new-instance v0, Ljava/util/LinkedHashMap;
+    const-string v1, "b"
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    const-class v2, Llld;
 
-    iput-object v0, p0, Llld;->a:Ljava/util/LinkedHashMap;
+    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 3
-    new-instance v1, Ljava/util/LinkedHashMap;
+    move-result-object v0
 
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Llld;->b:Ljava/util/LinkedHashMap;
-
-    .line 4
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Llld;->c:Ljava/util/LinkedHashMap;
-
-    .line 5
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Llld;->d:Ljava/util/LinkedHashMap;
-
-    .line 6
-    new-instance v1, Ltd6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, p0}, Ltd6;-><init>(ILjava/lang/Object;)V
-
-    iput-object v1, p0, Llld;->e:Lqld;
-
-    .line 7
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    sput-object v0, Llld;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     return-void
 .end method
 
-.method public static a(Llld;)Landroid/os/Bundle;
-    .locals 6
 
-    iget-object v0, p0, Llld;->a:Ljava/util/LinkedHashMap;
+# virtual methods
+.method public final e()Z
+    .locals 2
 
-    iget-object v1, p0, Llld;->b:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Llld;->b:Ljava/lang/Object;
 
-    invoke-static {v1}, Lyf8;->k(Ljava/util/Map;)Ljava/util/Map;
+    sget-object v1, Lzod;->Y:Lzod;
 
-    move-result-object v1
+    if-eq v0, v1, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    const/4 v0, 0x1
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqld;
-
-    invoke-interface {v2}, Lqld;->a()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    const/4 v4, 0x0
+    return v0
+.end method
 
-    :goto_1
-    const/16 v5, 0x1d
+.method public final getValue()Ljava/lang/Object;
+    .locals 4
 
-    if-ge v4, v5, :cond_5
+    iget-object v0, p0, Llld;->b:Ljava/lang/Object;
 
-    sget-object v5, Llld;->f:[Ljava/lang/Class;
+    sget-object v1, Lzod;->Y:Lzod;
 
-    aget-object v5, v5, v4
+    if-eq v0, v1, :cond_0
 
-    invoke-virtual {v5, v2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result v5
+    :cond_0
+    iget-object v0, p0, Llld;->a:Lji6;
 
-    if-eqz v5, :cond_4
+    if-eqz v0, :cond_3
 
-    :goto_2
-    iget-object v4, p0, Llld;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v5, v4, Lmz9;
-
-    if-eqz v5, :cond_1
-
-    check-cast v4, Lmz9;
-
-    goto :goto_3
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_3
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4, v2}, Lk28;->k(Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_2
-    iget-object v4, p0, Llld;->a:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v4, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_4
-    iget-object v4, p0, Llld;->d:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lh0a;
-
-    if-nez v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {v3, v2}, Lh0a;->setValue(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_4
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Can\'t put value with type "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " into saved state"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    sget-object v2, Llld;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    throw p0
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object p0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    :cond_1
+    invoke-virtual {v2, p0, v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+    if-eqz v3, :cond_2
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    iput-object v1, p0, Llld;->a:Lji6;
 
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
 
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_2
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    if-eq v3, v1, :cond_1
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :cond_3
+    iget-object v0, p0, Llld;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v3
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Llld;->e()Z
 
-    goto :goto_5
+    move-result v0
 
-    :cond_7
-    new-instance p0, Lqbb;
+    if-eqz v0, :cond_0
 
-    const-string v0, "keys"
+    invoke-virtual {p0}, Llld;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p0, v0, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
 
-    new-instance v0, Lqbb;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v1, "values"
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    return-object v0
 
-    filled-new-array {p0, v0}, [Lqbb;
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
 
-    move-result-object p0
-
-    invoke-static {p0}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

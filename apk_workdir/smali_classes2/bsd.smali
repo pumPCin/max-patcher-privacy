@@ -3,398 +3,228 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Lc2h;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ld09;
 
-.field public final synthetic b:Lr5;
+.field public final synthetic b:Landroid/graphics/Rect;
+
+.field public final synthetic c:Landroid/graphics/Rect;
+
+.field public final synthetic d:Landroid/graphics/Rect;
+
+.field public final synthetic e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr5;I)V
+.method public constructor <init>(Ld09;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;I)V
     .locals 0
 
-    iput p2, p0, Lbsd;->a:I
-
-    iput-object p1, p0, Lbsd;->b:Lr5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbsd;->a:Ld09;
+
+    iput-object p2, p0, Lbsd;->b:Landroid/graphics/Rect;
+
+    iput-object p3, p0, Lbsd;->c:Landroid/graphics/Rect;
+
+    iput-object p4, p0, Lbsd;->d:Landroid/graphics/Rect;
+
+    iput p5, p0, Lbsd;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final a()V
+    .locals 0
 
-    iget v0, p0, Lbsd;->a:I
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final b()V
+    .locals 5
 
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    iget-object v0, p0, Lbsd;->a:Ld09;
 
-    const-class v1, Lms3;
+    iget-object v1, v0, Ld09;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    check-cast v1, Landroid/view/View;
 
-    move-result-object v0
+    instance-of v2, v1, Landroidx/recyclerview/widget/RecyclerView;
 
-    return-object v0
+    const/4 v3, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    if-eqz v2, :cond_0
 
-    const-class v1, Lkp5;
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    move-object v1, v3
 
-    return-object v0
+    :goto_0
+    if-eqz v1, :cond_1
 
-    :pswitch_1
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    new-instance v2, Lrob;
 
-    const-class v1, Lye5;
+    const/4 v4, 0x1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-direct {v2, v1, v4}, Lrob;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
 
-    move-result-object v0
+    const/4 v4, 0x5
 
-    return-object v0
+    invoke-static {v4, v1, v2, v3}, Lhxi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    :pswitch_2
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    :cond_1
+    iput-object v3, v0, Ld09;->c:Ljava/lang/Object;
 
-    const-class v1, Lhd;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
+    .locals 6
 
-    move-result-object v0
+    iget-object v0, p0, Lbsd;->a:Ld09;
 
-    return-object v0
+    iget-object v1, v0, Ld09;->b:Ljava/lang/Object;
 
-    :pswitch_3
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    check-cast v1, Landroid/view/View;
 
-    const-class v1, Lxr4;
+    iget-object v2, v0, Ld09;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    check-cast v2, Landroid/view/View;
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    return-object v0
+    if-nez v2, :cond_2
 
-    :pswitch_4
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    invoke-static {p2}, Ld09;->s(Landroid/view/View;)Landroid/view/View;
 
-    const-class v1, Lmo3;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-nez v2, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    return-object v0
+    move-result-object v2
 
-    :pswitch_5
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    check-cast v2, Landroid/view/View;
 
-    const-class v1, Llz4;
+    :cond_0
+    iput-object v2, v0, Ld09;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    instance-of v4, v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v0
+    if-eqz v4, :cond_1
 
-    return-object v0
+    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    :pswitch_6
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    goto :goto_0
 
-    const-class v1, Lms3;
+    :cond_1
+    move-object v2, v3
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :goto_0
+    if-eqz v2, :cond_2
 
-    move-result-object v0
+    new-instance v4, Lrob;
 
-    return-object v0
+    const/4 v5, 0x2
 
-    :pswitch_7
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    invoke-direct {v4, v2, v5}, Lrob;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
 
-    const-class v1, Lkd2;
+    const/4 v5, 0x5
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v5, v2, v4, v3}, Lhxi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    move-result-object v0
+    :cond_2
+    iget-object v2, p0, Lbsd;->b:Landroid/graphics/Rect;
 
-    return-object v0
+    invoke-static {v2, v1}, Lr1h;->d(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    :pswitch_8
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    const-class v1, Lgmf;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    instance-of v4, v1, Liwb;
 
-    move-result-object v0
+    if-eqz v4, :cond_3
 
-    return-object v0
+    move-object v3, v1
 
-    :pswitch_9
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    check-cast v3, Liwb;
 
-    const-class v1, Lll;
+    :cond_3
+    if-eqz v3, :cond_4
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3}, Liwb;->getCallback()Lcwb;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    if-eqz v1, :cond_4
 
-    :pswitch_a
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    invoke-virtual {v1}, Lcwb;->c()I
 
-    const-class v1, Lma9;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_4
+    iget v1, v2, Landroid/graphics/Rect;->top:I
 
-    return-object v0
+    :goto_1
+    iget-object v0, v0, Ld09;->c:Ljava/lang/Object;
 
-    :pswitch_b
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    check-cast v0, Landroid/view/View;
 
-    const-class v1, Lwz4;
+    iget-object v2, p0, Lbsd;->c:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-eqz v0, :cond_5
 
-    move-result-object v0
+    invoke-static {v2, v0}, Lr1h;->d(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    return-object v0
+    :cond_5
+    iget v0, v2, Landroid/graphics/Rect;->top:I
 
-    :pswitch_c
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    iget v3, p0, Lbsd;->e:I
 
-    const-class v1, Lgna;
+    add-int/2addr v0, v3
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v4, p0, Lbsd;->d:Landroid/graphics/Rect;
 
-    move-result-object v0
+    iput v0, v4, Landroid/graphics/Rect;->top:I
 
-    return-object v0
+    sub-int/2addr v1, v3
 
-    :pswitch_d
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    iput v1, v4, Landroid/graphics/Rect;->bottom:I
 
-    const-class v1, Lxq5;
+    iget v0, v2, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iput v0, v4, Landroid/graphics/Rect;->left:I
 
-    move-result-object v0
+    iget v0, v2, Landroid/graphics/Rect;->right:I
 
-    return-object v0
+    iput v0, v4, Landroid/graphics/Rect;->right:I
 
-    :pswitch_e
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    invoke-virtual {v4, p1}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
-    const-class v1, Lbx4;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-nez v0, :cond_6
 
-    move-result-object v0
+    invoke-static {p2, p2}, Ld09;->r(Landroid/view/View;Landroid/view/View;)Lrdi;
 
-    return-object v0
+    move-result-object p2
 
-    :pswitch_f
-    iget-object v0, p0, Lbsd;->b:Lr5;
+    if-eqz p2, :cond_6
 
-    const-class v1, Lxt4;
+    invoke-virtual {p2, p1, v4}, Lrdi;->l0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Ljwb;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lho5;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lnn5;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Ls1f;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Li1d;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lll;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Ll83;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lp28;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lkd2;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lma9;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lkd2;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lh73;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Lbsd;->b:Lr5;
-
-    const-class v1, Lwxa;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_6
+    return-void
 .end method

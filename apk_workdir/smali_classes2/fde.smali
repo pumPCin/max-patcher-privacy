@@ -1,39 +1,17 @@
 .class public final Lfde;
-.super Lcq;
+.super Lvpe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfde;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lfde;
-
-    invoke-direct {v0}, Lcq;-><init>()V
-
-    sput-object v0, Lfde;->a:Lfde;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a()Llt7;
-    .locals 2
+.method public final A(Ly18;)V
+    .locals 0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    const-class v1, Lqkf;
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lrhf;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

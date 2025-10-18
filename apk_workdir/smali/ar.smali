@@ -1,19 +1,39 @@
 .class public final Lar;
-.super Ljava/lang/Object;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final b:Lar;
+
+.field public static final c:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lar;
 
-    iput p1, p0, Lar;->a:I
+    invoke-direct {v0}, Ldg4;-><init>()V
+
+    sput-object v0, Lar;->b:Lar;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xa
+
+    const-string v4, ":app-update/force"
+
+    invoke-static {v0, v4, v1, v2, v3}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+
+    move-result-object v0
+
+    sput-object v0, Lar;->c:Lyf4;
 
     return-void
 .end method

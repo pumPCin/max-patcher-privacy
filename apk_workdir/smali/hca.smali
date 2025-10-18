@@ -4,18 +4,40 @@
 
 
 # direct methods
-.method public static a(Landroid/app/Person;)Landroid/os/Parcelable;
+.method public static a(Landroid/app/NotificationChannel;)Ljava/lang/String;
     .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method public static b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
-    .locals 1
+.method public static b(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    new-instance v0, Landroid/app/Notification$MessagingStyle$Message;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLandroid/app/Person;)V
+    move-result-object p0
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public static c(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->isImportantConversation()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static d(Landroid/app/NotificationChannel;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setConversationId(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

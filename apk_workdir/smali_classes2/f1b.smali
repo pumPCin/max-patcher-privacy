@@ -4,58 +4,22 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
+.field public static final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lxnc;->oneme_settings_media_item_gif:I
+    sget v0, Lklc;->attach_bar_thumbnail_size:I
 
-    int-to-long v0, v0
+    sput v0, Lf1b;->a:I
 
-    sput-wide v0, Lf1b;->a:J
+    sget v0, Lklc;->gallery_album_cover_size:I
 
-    sget v0, Lxnc;->oneme_settings_media_item_load_in_roaming:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lf1b;->b:J
-
-    sget v0, Lxnc;->oneme_settings_media_item_photo:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lf1b;->c:J
-
-    sget v0, Lxnc;->oneme_settings_media_item_playlist_enabled:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lf1b;->d:J
-
-    sget v0, Lxnc;->oneme_settings_media_item_video_messages:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lf1b;->e:J
-
-    sget v0, Lxnc;->oneme_settings_media_screen_autoloading_section_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lf1b;->f:J
+    sput v0, Lf1b;->b:I
 
     return-void
 .end method

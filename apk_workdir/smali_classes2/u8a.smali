@@ -1,294 +1,198 @@
 .class public final Lu8a;
-.super Llff;
+.super Lhw6;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public a:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:[B
 
-.field public final synthetic Z:Lv8a;
+.field public c:[B
+
+.field public d:I
+
+.field public e:Lh55;
 
 
 # direct methods
-.method public constructor <init>(Lv8a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static e(Ljava/lang/String;Ljava/nio/ByteBuffer;II)[B
+    .locals 3
 
-    iput-object p1, p0, Lu8a;->Z:Lv8a;
+    if-lt p3, p2, :cond_2
 
-    const/4 p1, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    move v1, v0
 
-    return-void
-.end method
+    :goto_0
+    if-ge v0, p2, :cond_0
 
+    shl-int/lit8 v1, v1, 0x8
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    check-cast p1, Lb54;
+    move-result v2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    and-int/lit16 v2, v2, 0xff
 
-    invoke-virtual {p0, p1, p2}, Lu8a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    or-int/2addr v1, v2
 
-    move-result-object p1
-
-    check-cast p1, Lu8a;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lu8a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lu8a;
-
-    iget-object v1, p0, Lu8a;->Z:Lv8a;
-
-    invoke-direct {v0, v1, p2}, Lu8a;-><init>(Lv8a;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lu8a;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lu8a;->Z:Lv8a;
-
-    iget-object v1, v0, Lv8a;->e:Lqz9;
-
-    iget-object v2, v0, Lv8a;->f:Ljava/util/concurrent/locks/ReentrantLock;
-
-    iget v3, p0, Lu8a;->X:I
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lc54;->a:Lc54;
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    iget-object v3, p0, Lu8a;->Y:Ljava/lang/Object;
-
-    check-cast v3, Lb54;
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    move-object p1, v3
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sub-int/2addr p3, p2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-lt p3, v1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-array p0, v1, [B
 
-    throw p1
+    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    return-object p0
 
     :cond_1
-    iget-object v3, p0, Lu8a;->Y:Ljava/lang/Object;
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    check-cast v3, Lb54;
+    const-string p2, "Message too short for given length of "
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-object p1, v3
+    move-result-object p0
 
-    goto :goto_1
+    invoke-direct {p1, p0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    iget-object p1, p0, Lu8a;->Y:Ljava/lang/Object;
+    const-string p2, "No length specified for "
 
-    check-cast p1, Lb54;
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_3
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final a()[B
+    .locals 5
+
+    iget-object v0, p0, Lu8a;->e:Lh55;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lh55;->a()[B
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
     :goto_0
-    sget-object v3, Lv8a;->i:[Lwq7;
+    iget-object v1, p0, Lu8a;->c:[B
 
-    invoke-virtual {v0}, Lv8a;->e()Z
+    array-length v1, v1
 
-    move-result v3
+    add-int/lit8 v1, v1, 0xb
 
-    if-eqz v3, :cond_8
+    iget-object v2, p0, Lu8a;->b:[B
 
-    invoke-static {p1}, Lcwi;->e(Lb54;)Z
+    array-length v2, v2
 
-    move-result v3
+    add-int/2addr v1, v2
 
-    if-eqz v3, :cond_8
+    add-int/lit8 v1, v1, 0x2
 
-    invoke-virtual {v0}, Lx8a;->b()J
+    add-int/2addr v1, v0
 
-    move-result-wide v7
+    add-int/lit8 v2, v1, 0x4
 
-    iput-object p1, p0, Lu8a;->Y:Ljava/lang/Object;
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    iput v5, p0, Lu8a;->X:I
+    move-result-object v2
 
-    invoke-static {v7, v8, p0}, Lpxi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sget-object v3, Lmxf;->o:Lmxf;
 
-    move-result-object v3
+    iget-byte v3, v3, Lmxf;->a:B
 
-    if-ne v3, v6, :cond_4
+    shl-int/lit8 v3, v3, 0x18
 
-    goto :goto_3
+    or-int/2addr v1, v3
 
-    :cond_4
-    :goto_1
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    :try_start_0
-    invoke-virtual {v1}, Lqz9;->i()Z
+    iget v1, p0, Lu8a;->d:I
 
-    move-result v3
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    if-nez v3, :cond_5
+    iget-wide v3, p0, Lu8a;->a:J
 
-    invoke-static {v1}, Lpei;->a(Lqz9;)Lqz9;
+    long-to-int v1, v3
 
-    move-result-object v3
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1}, Lqz9;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v1, p0, Lu8a;->c:[B
 
-    goto :goto_2
+    array-length v1, v1
 
-    :catchall_0
-    move-exception p1
+    int-to-byte v1, v1
 
-    goto :goto_4
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    :cond_5
-    const/4 v3, 0x0
+    iget-object v1, p0, Lu8a;->c:[B
 
-    :goto_2
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    if-eqz v3, :cond_3
+    iget-object v1, p0, Lu8a;->b:[B
 
-    invoke-virtual {v3}, Lqz9;->i()Z
+    array-length v1, v1
 
-    move-result v7
+    int-to-short v1, v1
 
-    if-eqz v7, :cond_6
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    goto :goto_0
+    iget-object v1, p0, Lu8a;->b:[B
 
-    :cond_6
-    iget-object v7, v0, Lv8a;->g:Lpzd;
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    sget-object v8, Lv8a;->i:[Lwq7;
+    int-to-short v0, v0
 
-    const/4 v9, 0x0
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    aget-object v8, v8, v9
+    iget-object v0, p0, Lu8a;->e:Lh55;
 
-    invoke-virtual {v7, v0, v8}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v7
+    invoke-virtual {v0}, Lh55;->a()[B
 
-    check-cast v7, Lmm7;
+    move-result-object v0
 
-    if-eqz v7, :cond_7
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    invoke-interface {v7}, Lmm7;->isActive()Z
+    :cond_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
-    move-result v7
+    move-result-object v0
 
-    if-nez v7, :cond_7
+    return-object v0
+.end method
 
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+.method public final b()Lmxf;
+    .locals 1
 
-    :try_start_1
-    sget v7, Lb35;->o:I
+    sget-object v0, Lmxf;->o:Lmxf;
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v7
-
-    sget-object v9, Lg35;->b:Lg35;
-
-    invoke-static {v7, v8, v9}, Lsyi;->f(JLg35;)J
-
-    move-result-wide v7
-
-    iput-wide v7, v0, Lv8a;->h:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    iput-object p1, p0, Lu8a;->Y:Ljava/lang/Object;
-
-    iput v4, p0, Lu8a;->X:I
-
-    invoke-virtual {v0, v3, p0}, Lx8a;->c(Lqz9;Lk14;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, v6, :cond_3
-
-    :goto_3
-    return-object v6
-
-    :catchall_1
-    move-exception p1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :cond_7
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_2
-    invoke-virtual {v1, v3}, Lqz9;->b(Lqz9;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :goto_4
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :cond_8
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,14 +1,23 @@
-.class public interface abstract Lx1f;
+.class public final Lx1f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ld2f;)V
-.end method
+# instance fields
+.field public final synthetic a:I
 
-.method public abstract b(Lzb8;)V
-.end method
+.field public final synthetic b:Ljava/lang/Object;
 
-.method public abstract setParent(Landroid/view/ViewGroup;)V
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lx1f;->a:I
+
+    iput-object p2, p0, Lx1f;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

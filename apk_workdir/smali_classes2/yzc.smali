@@ -1,159 +1,155 @@
 .class public final Lyzc;
-.super Ljava/lang/Object;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lc8f;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:[B
-
-.field public final c:Z
+.field public final synthetic Y:Lru/ok/onechat/reactions/ReactionsViewModel;
 
 
 # direct methods
-.method public constructor <init>(J[BZ)V
+.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    iput-wide p1, p0, Lyzc;->a:J
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lyzc;->b:[B
-
-    iput-boolean p4, p0, Lyzc;->c:Z
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()J
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyzc;->b:[B
+    check-cast p1, Lq54;
 
-    array-length v0, v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    int-to-long v0, v0
+    invoke-virtual {p0, p1, p2}, Lyzc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, p0, Lyzc;->a:J
+    move-result-object p1
 
-    add-long/2addr v2, v0
+    check-cast p1, Lyzc;
 
-    return-wide v2
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lyzc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final compareTo(Ljava/lang/Object;)I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lyzc;
+
+    iget-object v0, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    invoke-direct {p1, v0, p2}, Lyzc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    check-cast p1, Lc8f;
+    iget v0, p0, Lyzc;->X:I
 
-    invoke-interface {p1}, Lc8f;->getOffset()J
+    sget-object v1, Lccg;->a:Lccg;
 
-    move-result-wide v0
+    const/4 v2, 0x1
 
-    iget-wide v2, p0, Lyzc;->a:J
+    if-eqz v0, :cond_1
 
-    cmp-long v0, v2, v0
+    if-ne v0, v2, :cond_0
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {p1}, Lc8f;->getOffset()J
+    return-object v1
 
-    move-result-wide v0
+    :catchall_0
+    move-exception p1
 
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    return p1
+    goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lyzc;->b:[B
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    array-length v0, v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-interface {p1}, Lc8f;->getLength()I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result p1
+    throw p1
 
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result p1
+    :try_start_1
+    iget-object p1, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    return p1
-.end method
+    iget-object p1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->s:Lwif;
 
-.method public final f()[B
-    .locals 1
+    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lyzc;->b:[B
+    move-result-object p1
 
-    return-object v0
-.end method
+    check-cast p1, Lvv2;
 
-.method public final getLength()I
-    .locals 1
+    iput v2, p0, Lyzc;->X:I
 
-    iget-object v0, p0, Lyzc;->b:[B
+    iget-object v0, p1, Lvv2;->l:Li54;
 
-    array-length v0, v0
+    new-instance v2, Lsv2;
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method public final getOffset()J
-    .locals 2
+    invoke-direct {v2, p1, v3}, Lsv2;-><init>(Lvv2;Lkotlin/coroutines/Continuation;)V
 
-    iget-wide v0, p0, Lyzc;->a:J
+    invoke-static {v0, v2, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.method public final isFinal()Z
-    .locals 1
+    sget-object v0, Lr54;->a:Lr54;
 
-    iget-boolean v0, p0, Lyzc;->c:Z
+    if-ne p1, v0, :cond_2
 
-    return v0
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+    :cond_2
+    move-object p1, v1
 
-    iget-object v0, p0, Lyzc;->b:[B
-
-    array-length v0, v0
-
-    int-to-long v0, v0
-
-    iget-wide v2, p0, Lyzc;->a:J
-
-    add-long/2addr v0, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v0, v4
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ".."
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    if-ne p1, v0, :cond_3
 
     return-object v0
+
+    :goto_1
+    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+
+    if-nez v0, :cond_3
+
+    const-string v0, "ru.ok.onechat.reactions.ReactionsViewModel"
+
+    const-string v2, "runChatSubscribeNotifObserving: fail to run()"
+
+    invoke-static {v0, v2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    return-object v1
 .end method

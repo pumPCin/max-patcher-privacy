@@ -1,277 +1,155 @@
-.class public final Lmnh;
-.super Ljava/lang/Object;
+.class public Lmnh;
+.super Lpnh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/UUID;
-
-.field public final b:Llnh;
-
-.field public final c:Lya4;
-
-.field public final d:Ljava/util/HashSet;
-
-.field public final e:Lya4;
-
-.field public final f:I
-
-.field public final g:I
+.field public final c:Landroid/view/WindowInsets$Builder;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/UUID;Llnh;Lya4;Ljava/util/ArrayList;Lya4;II)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lpnh;-><init>()V
+
+    .line 2
+    invoke-static {}, Lyjh;->f()Landroid/view/WindowInsets$Builder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxnh;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    invoke-direct {p0, p1}, Lpnh;-><init>(Lxnh;)V
 
-    iput-object p1, p0, Lmnh;->a:Ljava/util/UUID;
+    .line 4
+    invoke-virtual {p1}, Lxnh;->g()Landroid/view/WindowInsets;
 
-    iput-object p2, p0, Lmnh;->b:Llnh;
+    move-result-object p1
 
-    iput-object p3, p0, Lmnh;->c:Lya4;
+    if-eqz p1, :cond_0
 
-    new-instance p1, Ljava/util/HashSet;
+    .line 5
+    invoke-static {p1}, Lyjh;->g(Landroid/view/WindowInsets;)Landroid/view/WindowInsets$Builder;
 
-    invoke-direct {p1, p4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    move-result-object p1
 
-    iput-object p1, p0, Lmnh;->d:Ljava/util/HashSet;
+    goto :goto_0
 
-    iput-object p5, p0, Lmnh;->e:Lya4;
+    .line 6
+    :cond_0
+    invoke-static {}, Lyjh;->f()Landroid/view/WindowInsets$Builder;
 
-    iput p6, p0, Lmnh;->f:I
+    move-result-object p1
 
-    iput p7, p0, Lmnh;->g:I
+    :goto_0
+    iput-object p1, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public b()Lxnh;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Lpnh;->a()V
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
 
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_8
-
-    const-class v0, Lmnh;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lmnh;
-
-    iget v0, p0, Lmnh;->f:I
-
-    iget v1, p1, Lmnh;->f:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lmnh;->g:I
-
-    iget v1, p1, Lmnh;->g:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lmnh;->a:Ljava/util/UUID;
-
-    iget-object v1, p1, Lmnh;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lmnh;->b:Llnh;
-
-    iget-object v1, p1, Lmnh;->b:Llnh;
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lmnh;->c:Lya4;
-
-    iget-object v1, p1, Lmnh;->c:Lya4;
-
-    invoke-virtual {v0, v1}, Lya4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lmnh;->d:Ljava/util/HashSet;
-
-    iget-object v1, p1, Lmnh;->d:Ljava/util/HashSet;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Lmnh;->e:Lya4;
-
-    iget-object p1, p1, Lmnh;->e:Lya4;
-
-    invoke-virtual {v0, p1}, Lya4;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_8
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lmnh;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lmnh;->b:Llnh;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lmnh;->c:Lya4;
-
-    invoke-virtual {v0}, Lya4;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lmnh;->d:Ljava/util/HashSet;
-
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lmnh;->e:Lya4;
-
-    invoke-virtual {v0}, Lya4;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmnh;->f:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmnh;->g:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WorkInfo{mId=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lmnh;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', mState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmnh;->b:Llnh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mOutputData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmnh;->c:Lya4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mTags="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmnh;->d:Ljava/util/HashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mProgress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmnh;->e:Lya4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lyjh;->h(Landroid/view/WindowInsets$Builder;)Landroid/view/WindowInsets;
 
     move-result-object v0
 
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lxnh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lxnh;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lpnh;->b:[Lei7;
+
+    iget-object v2, v0, Lxnh;->a:Lvnh;
+
+    invoke-virtual {v2, v1}, Lvnh;->p([Lei7;)V
+
     return-object v0
+.end method
+
+.method public d(Lei7;)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lei7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lyjh;->r(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public e(Lei7;)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lei7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lyjh;->o(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public f(Lei7;)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lei7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lyjh;->q(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public g(Lei7;)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lei7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lyjh;->m(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public h(Lei7;)V
+    .locals 1
+
+    iget-object v0, p0, Lmnh;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lei7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lyjh;->s(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
 .end method

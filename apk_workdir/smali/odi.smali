@@ -1,110 +1,134 @@
 .class public final Lodi;
-.super Ljava/lang/Object;
+.super Lrdi;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
+# virtual methods
+.method public final L0(JLjava/lang/Object;)D
+    .locals 1
 
-# static fields
-.field public static final a:Lodi;
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
 
+    check-cast v0, Lsun/misc/Unsafe;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    new-instance v0, Lodi;
+    move-result-wide p1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
 
-    sput-object v0, Lodi;->a:Lodi;
+    move-result-wide p1
 
-    new-instance v0, Lq7i;
+    return-wide p1
+.end method
 
-    const/4 v1, 0x1
+.method public final M0(JLjava/lang/Object;)F
+    .locals 1
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
 
-    const-class v1, Ll8i;
+    check-cast v0, Lsun/misc/Unsafe;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    move-result-object v0
+    move-result p1
 
-    const/4 v2, 0x2
+    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    move-result p1
 
-    move-result-object v0
+    return p1
+.end method
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+.method public final N0(Ljava/lang/Object;JZ)V
+    .locals 1
 
-    move-result-object v0
+    sget-boolean v0, Ludi;->g:Z
 
-    const/4 v2, 0x3
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
 
-    move-result-object v0
+    return-void
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    :cond_0
+    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
 
     return-void
 .end method
 
+.method public final O0(Ljava/lang/Object;JB)V
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    sget-boolean v0, Ludi;->g:Z
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
 
-    throw p1
+    return-void
+
+    :cond_0
+    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
+
+    return-void
+.end method
+
+.method public final P0(Ljava/lang/Object;JD)V
+    .locals 6
+
+    invoke-static {p4, p5}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v4
+
+    iget-object p4, p0, Lrdi;->b:Ljava/lang/Object;
+
+    move-object v0, p4
+
+    check-cast v0, Lsun/misc/Unsafe;
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
+
+    return-void
+.end method
+
+.method public final Q0(Ljava/lang/Object;JF)V
+    .locals 1
+
+    invoke-static {p4}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p4
+
+    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsun/misc/Unsafe;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
+
+    return-void
+.end method
+
+.method public final R0(JLjava/lang/Object;)Z
+    .locals 1
+
+    sget-boolean v0, Ludi;->g:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1, p2, p3}, Ludi;->m(JLjava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-static {p1, p2, p3}, Ludi;->n(JLjava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

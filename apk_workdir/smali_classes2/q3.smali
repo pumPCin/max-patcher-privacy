@@ -28,11 +28,11 @@
 
     iget-object p1, p0, Lq3;->a:Lw3;
 
-    iget-object p1, p1, Lw3;->f:Leie;
+    iget-object p1, p1, Lw3;->f:Lnje;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-virtual {p1, p2}, Leie;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lnje;->h(Ljava/lang/Object;)Z
 
     return-void
 .end method

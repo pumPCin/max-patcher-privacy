@@ -1,39 +1,105 @@
-.class public final Lnr6;
-.super Ljava/lang/Object;
+.class public final enum Lnr6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltuh;
+# static fields
+.field public static final synthetic X:[Lnr6;
 
-.field public final b:Ljava/util/HashMap;
+.field public static final enum b:Lnr6;
+
+.field public static final enum c:Lnr6;
+
+.field public static final enum o:Lnr6;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnr6;
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const-string v2, "int_data"
 
-    iput-object v0, p0, Lnr6;->b:Ljava/util/HashMap;
+    const-string v3, "INTERNAL_DATA"
 
-    sget v0, Lj78;->a:I
+    invoke-direct {v0, v3, v1, v2}, Lnr6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Ltuh;
+    sput-object v0, Lnr6;->b:Lnr6;
 
-    sget-object v1, Ltuh;->w0:Lfwb;
+    new-instance v1, Lnr6;
 
-    sget-object v2, Ljl;->d:Lil;
+    const/4 v2, 0x1
 
-    sget-object v3, Ldr6;->c:Ldr6;
+    const-string v3, "ext_data"
 
-    invoke-direct {v0, p1, v1, v2, v3}, Ler6;-><init>(Landroid/content/Context;Lfwb;Ljl;Ldr6;)V
+    const-string v4, "EXTERNAL_DATA"
 
-    iput-object v0, p0, Lnr6;->a:Ltuh;
+    invoke-direct {v1, v4, v2, v3}, Lnr6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lnr6;->c:Lnr6;
+
+    new-instance v2, Lnr6;
+
+    const/4 v3, 0x2
+
+    const-string v4, "src_data"
+
+    const-string v5, "SRC"
+
+    invoke-direct {v2, v5, v3, v4}, Lnr6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lnr6;->o:Lnr6;
+
+    filled-new-array {v0, v1, v2}, [Lnr6;
+
+    move-result-object v0
+
+    sput-object v0, Lnr6;->X:[Lnr6;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lnr6;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnr6;
+    .locals 1
+
+    const-class v0, Lnr6;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnr6;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnr6;
+    .locals 1
+
+    sget-object v0, Lnr6;->X:[Lnr6;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnr6;
+
+    return-object v0
 .end method

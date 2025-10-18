@@ -1,149 +1,63 @@
 .class public final Ljy4;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
-
-# interfaces
-.implements Lky4;
 
 
 # instance fields
-.field public final a:I
+.field public X:F
 
-.field public final b:J
+.field public Y:J
 
-.field public final c:J
+.field public Z:J
+
+.field public o:Lpy4;
+
+.field public synthetic q0:Ljava/lang/Object;
+
+.field public final synthetic r0:Lpy4;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
+.method public constructor <init>(Lpy4;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljy4;->r0:Lpy4;
 
-    iput p1, p0, Ljy4;->a:I
-
-    iput-wide p2, p0, Ljy4;->b:J
-
-    iput-wide p4, p0, Ljy4;->c:J
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ljy4;->q0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ljy4;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ljy4;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ljy4;->s0:I
 
-    if-nez v1, :cond_1
+    const-wide/16 v2, 0x0
 
-    return v2
+    const-wide/16 v4, 0x0
 
-    :cond_1
-    check-cast p1, Ljy4;
+    iget-object v0, p0, Ljy4;->r0:Lpy4;
 
-    iget v1, p0, Ljy4;->a:I
+    const/4 v1, 0x0
 
-    iget v3, p1, Ljy4;->a:I
+    move-object v6, p0
 
-    if-ne v1, v3, :cond_4
+    invoke-virtual/range {v0 .. v6}, Lpy4;->a(FJJLy14;)Ljava/lang/Object;
 
-    iget-wide v3, p0, Ljy4;->b:J
+    move-result-object p1
 
-    iget-wide v5, p1, Ljy4;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Ljy4;->c:J
-
-    iget-wide v5, p1, Ljy4;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-
-    :cond_4
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Ljy4;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ljy4;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ljy4;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget v0, p0, Ljy4;->a:I
-
-    invoke-static {v0}, Lfa6;->a(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Loading(progress="
-
-    const-string v2, ", time="
-
-    iget-wide v3, p0, Ljy4;->b:J
-
-    invoke-static {v1, v3, v4, v0, v2}, Lfef;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", botId="
-
-    const-string v2, ")"
-
-    iget-wide v3, p0, Ljy4;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Ld15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

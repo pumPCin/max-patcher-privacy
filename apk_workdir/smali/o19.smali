@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lu19;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lq19;
-
-.field public final synthetic c:Landroid/util/Pair;
+.field public final synthetic b:Lu19;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq19;Landroid/util/Pair;I)V
+.method public synthetic constructor <init>(Lu19;I)V
     .locals 0
 
-    iput p3, p0, Lo19;->a:I
+    iput p2, p0, Lo19;->a:I
 
-    iput-object p1, p0, Lo19;->b:Lq19;
-
-    iput-object p2, p0, Lo19;->c:Landroid/util/Pair;
+    iput-object p1, p0, Lo19;->b:Lu19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,98 +27,55 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final m(Lj09;Lqz8;I)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lo19;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lo19;->b:Lq19;
+    new-instance v0, Lty1;
 
-    iget-object v0, v0, Lq19;->b:La96;
+    const/16 v1, 0x8
 
-    iget-object v0, v0, La96;->b:Ljava/lang/Object;
+    invoke-direct {v0, p1, p2, p3, v1}, Lty1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
 
-    check-cast v0, Lpg4;
+    iget-object v1, p0, Lo19;->b:Lu19;
 
-    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
+    invoke-static {p1, p2, p3, v1, v0}, Lv19;->W(Lj09;Lqz8;ILu19;Lrr3;)Ll28;
 
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Ly09;
-
-    invoke-virtual {v0, v2, v1}, Lpg4;->w(ILy09;)V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lo19;->b:Lq19;
+    if-nez p1, :cond_0
 
-    iget-object v0, v0, Lq19;->b:La96;
+    new-instance p1, Lhd0;
 
-    iget-object v0, v0, La96;->b:Ljava/lang/Object;
+    const/16 v0, 0xb
 
-    check-cast v0, Lpg4;
+    invoke-direct {p1, p2, p3, v0}, Lhd0;-><init>(Ljava/lang/Object;II)V
 
-    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
+    const/4 v0, 0x0
 
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+    iget-object v1, p0, Lo19;->b:Lu19;
 
-    check-cast v2, Ljava/lang/Integer;
+    invoke-static {v0, p2, p3, v1, p1}, Lv19;->W(Lj09;Lqz8;ILu19;Lrr3;)Ll28;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    throw v0
 
-    move-result v2
+    :cond_0
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    check-cast v1, Ly09;
-
-    invoke-virtual {v0, v2, v1}, Lpg4;->B(ILy09;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lo19;->b:Lq19;
-
-    iget-object v0, v0, Lq19;->b:La96;
-
-    iget-object v0, v0, La96;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpg4;
-
-    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Ly09;
-
-    invoke-virtual {v0, v2, v1}, Lpg4;->A(ILy09;)V
-
-    return-void
+    throw p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

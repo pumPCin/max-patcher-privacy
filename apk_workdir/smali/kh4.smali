@@ -1,69 +1,102 @@
-.class public abstract Lkh4;
+.class public final Lkh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/SparseIntArray;
+# instance fields
+.field public final a:Lmb6;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Lo50;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lmb6;IIIIIIILo50;ZZZ)V
+    .locals 0
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lkh4;->a:Lmb6;
 
-    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+    iput p2, p0, Lkh4;->b:I
 
-    sput-object v0, Lkh4;->a:Landroid/util/SparseIntArray;
+    iput p3, p0, Lkh4;->c:I
+
+    iput p4, p0, Lkh4;->d:I
+
+    iput p5, p0, Lkh4;->e:I
+
+    iput p6, p0, Lkh4;->f:I
+
+    iput p7, p0, Lkh4;->g:I
+
+    iput p8, p0, Lkh4;->h:I
+
+    iput-object p9, p0, Lkh4;->i:Lo50;
+
+    iput-boolean p10, p0, Lkh4;->j:Z
+
+    iput-boolean p11, p0, Lkh4;->k:Z
+
+    iput-boolean p12, p0, Lkh4;->l:Z
 
     return-void
 .end method
 
-.method public static final a()Llub;
-    .locals 5
 
-    new-instance v0, Llub;
+# virtual methods
+.method public final a()Le60;
+    .locals 7
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    new-instance v0, Le60;
 
-    move-result-object v1
+    iget v1, p0, Lkh4;->c:I
 
-    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
+    const/4 v2, 0x1
 
-    move-result-wide v1
+    if-ne v1, v2, :cond_0
 
-    const-wide/32 v3, 0x7fffffff
+    :goto_0
+    move v5, v2
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+    goto :goto_1
 
-    move-result-wide v1
-
-    long-to-int v1, v1
-
-    const/high16 v2, 0x1000000
-
-    if-le v1, v2, :cond_0
-
-    div-int/lit8 v1, v1, 0x4
-
-    mul-int/lit8 v1, v1, 0x3
+    :cond_0
+    const/4 v2, 0x0
 
     goto :goto_0
 
-    :cond_0
-    div-int/lit8 v1, v1, 0x2
+    :goto_1
+    iget v6, p0, Lkh4;->h:I
 
-    :goto_0
-    sget-object v2, Lkh4;->a:Landroid/util/SparseIntArray;
+    iget v1, p0, Lkh4;->g:I
 
-    const/4 v3, -0x1
+    iget v2, p0, Lkh4;->e:I
 
-    const/4 v4, 0x0
+    iget v3, p0, Lkh4;->f:I
 
-    invoke-direct {v0, v4, v1, v2, v3}, Llub;-><init>(IILandroid/util/SparseIntArray;I)V
+    iget-boolean v4, p0, Lkh4;->l:Z
+
+    invoke-direct/range {v0 .. v6}, Le60;-><init>(IIIZZI)V
 
     return-object v0
 .end method

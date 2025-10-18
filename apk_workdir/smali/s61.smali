@@ -1,9 +1,9 @@
 .class public final Ls61;
-.super Ls1h;
+.super Lv2h;
 .source "SourceFile"
 
 # interfaces
-.implements Lu61;
+.implements Lt61;
 
 
 # static fields
@@ -16,11 +16,11 @@
 
     new-instance v0, Ls61;
 
-    sget v1, Lbrc;->call_main_speaker_phone_disabled:I
+    sget v1, Lisc;->call_screen_connection_restoring:I
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v1}, Ls1h;-><init>(Ljava/lang/Long;I)V
+    invoke-direct {v0, v2, v1}, Lv2h;-><init>(Ljava/lang/Long;I)V
 
     sput-object v0, Ls61;->c:Ls61;
 
@@ -54,7 +54,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x6535960a
+    const v0, 0x9c8d45e
 
     return v0
 .end method
@@ -62,7 +62,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Muted"
+    const-string v0, "Restoring"
 
     return-object v0
 .end method

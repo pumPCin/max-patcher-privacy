@@ -2,111 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk2e;
+
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public b:I
 
-.field public c:F
+# direct methods
+.method public constructor <init>(Lk2e;)V
+    .locals 1
 
-.field public d:F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lqq3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 3
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
 
-    sget-object v0, Lhuc;->PropertySet:[I
+    iget-object v0, p0, Lqq3;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+    move-result-object v0
 
-    move-result p2
+    check-cast v0, Lk2e;
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    if-ge v0, p2, :cond_4
+    invoke-interface {v0}, Lk2e;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
+    move-result-object v0
 
-    move-result v1
-
-    sget v2, Lhuc;->PropertySet_android_alpha:I
-
-    if-ne v1, v2, :cond_0
-
-    iget v2, p0, Lqq3;->c:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lqq3;->c:F
-
-    goto :goto_1
+    return-object v0
 
     :cond_0
-    sget v2, Lhuc;->PropertySet_android_visibility:I
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    if-ne v1, v2, :cond_1
+    const-string v1, "This sequence can be consumed only once."
 
-    iget v2, p0, Lqq3;->a:I
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v1
-
-    iput v1, p0, Lqq3;->a:I
-
-    sget-object v2, Lsq3;->d:[I
-
-    aget v1, v2, v1
-
-    iput v1, p0, Lqq3;->a:I
-
-    goto :goto_1
-
-    :cond_1
-    sget v2, Lhuc;->PropertySet_visibilityMode:I
-
-    if-ne v1, v2, :cond_2
-
-    iget v2, p0, Lqq3;->b:I
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v1
-
-    iput v1, p0, Lqq3;->b:I
-
-    goto :goto_1
-
-    :cond_2
-    sget v2, Lhuc;->PropertySet_motionProgress:I
-
-    if-ne v1, v2, :cond_3
-
-    iget v2, p0, Lqq3;->d:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lqq3;->d:F
-
-    :cond_3
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
+    throw v0
 .end method

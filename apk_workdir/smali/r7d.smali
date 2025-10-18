@@ -1,265 +1,334 @@
 .class public final Lr7d;
-.super Lra7;
+.super Lt4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final s0:Lr7d;
-
-
 # instance fields
-.field public final transient X:[Ljava/lang/Object;
+.field public final d:Ls7d;
 
-.field public final transient Y:I
-
-.field public final transient Z:I
-
-.field public final transient o:Ljava/lang/Object;
-
-.field public final transient r0:Lr7d;
+.field public final e:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ls7d;)V
     .locals 1
 
-    new-instance v0, Lr7d;
+    invoke-direct {p0}, Lt4;-><init>()V
 
-    invoke-direct {v0}, Lr7d;-><init>()V
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    sput-object v0, Lr7d;->s0:Lr7d;
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    return-void
-.end method
+    iput-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
 
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Lr7d;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 3
-    new-array v1, v0, [Ljava/lang/Object;
-
-    iput-object v1, p0, Lr7d;->X:[Ljava/lang/Object;
-
-    .line 4
-    iput v0, p0, Lr7d;->Y:I
-
-    .line 5
-    iput v0, p0, Lr7d;->Z:I
-
-    .line 6
-    iput-object p0, p0, Lr7d;->r0:Lr7d;
-
-    return-void
-.end method
-
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 4
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    iput-object p2, p0, Lr7d;->X:[Ljava/lang/Object;
-
-    .line 9
-    iput p1, p0, Lr7d;->Z:I
-
-    const/4 v0, 0x0
-
-    .line 10
-    iput v0, p0, Lr7d;->Y:I
-
-    const/4 v1, 0x2
-
-    if-lt p1, v1, :cond_0
-
-    .line 11
-    invoke-static {p1}, Lsb7;->i(I)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    .line 12
-    :goto_0
-    invoke-static {p2, p1, v2, v0}, Lx7d;->i([Ljava/lang/Object;III)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 13
-    instance-of v3, v0, [Ljava/lang/Object;
-
-    if-nez v3, :cond_2
-
-    .line 14
-    iput-object v0, p0, Lr7d;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x1
-
-    .line 15
-    invoke-static {p2, p1, v2, v0}, Lx7d;->i([Ljava/lang/Object;III)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 16
-    instance-of v2, v0, [Ljava/lang/Object;
-
-    if-nez v2, :cond_1
-
-    .line 17
-    new-instance v1, Lr7d;
-
-    invoke-direct {v1, v0, p2, p1, p0}, Lr7d;-><init>(Ljava/lang/Object;[Ljava/lang/Object;ILr7d;)V
-
-    iput-object v1, p0, Lr7d;->r0:Lr7d;
-
-    return-void
-
-    .line 18
-    :cond_1
-    check-cast v0, [Ljava/lang/Object;
-
-    .line 19
-    aget-object p1, v0, v1
-
-    check-cast p1, Lkb7;
-
-    .line 20
-    invoke-virtual {p1}, Lkb7;->a()Ljava/lang/IllegalArgumentException;
-
-    move-result-object p1
-
-    throw p1
-
-    .line 21
-    :cond_2
-    check-cast v0, [Ljava/lang/Object;
-
-    .line 22
-    aget-object p1, v0, v1
-
-    check-cast p1, Lkb7;
-
-    .line 23
-    invoke-virtual {p1}, Lkb7;->a()Ljava/lang/IllegalArgumentException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;[Ljava/lang/Object;ILr7d;)V
-    .locals 0
-
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 25
-    iput-object p1, p0, Lr7d;->o:Ljava/lang/Object;
-
-    .line 26
-    iput-object p2, p0, Lr7d;->X:[Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    .line 27
-    iput p1, p0, Lr7d;->Y:I
-
-    .line 28
-    iput p3, p0, Lr7d;->Z:I
-
-    .line 29
-    iput-object p4, p0, Lr7d;->r0:Lr7d;
+    iput-object p1, p0, Lr7d;->d:Ls7d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lsb7;
-    .locals 4
-
-    new-instance v0, Lu7d;
-
-    iget v1, p0, Lr7d;->Y:I
-
-    iget v2, p0, Lr7d;->Z:I
-
-    iget-object v3, p0, Lr7d;->X:[Ljava/lang/Object;
-
-    invoke-direct {v0, p0, v3, v1, v2}, Lu7d;-><init>(Llb7;[Ljava/lang/Object;II)V
-
-    return-object v0
-.end method
-
-.method public final c()Lsb7;
-    .locals 4
-
-    new-instance v0, Lw7d;
-
-    iget v1, p0, Lr7d;->Y:I
-
-    iget v2, p0, Lr7d;->Z:I
-
-    iget-object v3, p0, Lr7d;->X:[Ljava/lang/Object;
-
-    invoke-direct {v0, v1, v2, v3}, Lw7d;-><init>(II[Ljava/lang/Object;)V
-
-    new-instance v1, Lv7d;
-
-    invoke-direct {v1, p0, v0}, Lv7d;-><init>(Llb7;Lw7d;)V
-
-    return-object v1
-.end method
-
-.method public final f()Z
+.method public final a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
 
-    return v0
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lt4;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    iget-object v0, p0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->dispatchPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final b(Landroid/view/View;)Li5;
+    .locals 1
 
-    iget v0, p0, Lr7d;->Z:I
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
 
-    iget v1, p0, Lr7d;->Y:I
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lr7d;->o:Ljava/lang/Object;
+    move-result-object v0
 
-    iget-object v3, p0, Lr7d;->X:[Ljava/lang/Object;
+    check-cast v0, Lt4;
 
-    invoke-static {v2, v3, v0, v1, p1}, Lx7d;->j(Ljava/lang/Object;[Ljava/lang/Object;IILjava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lt4;->b(Landroid/view/View;)Li5;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
+    return-object p1
 
     :cond_0
+    invoke-super {p0, p1}, Lt4;->b(Landroid/view/View;)Li5;
+
+    move-result-object p1
+
     return-object p1
 .end method
 
-.method public final size()I
+.method public final c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    iget v0, p0, Lr7d;->Z:I
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
 
-    return v0
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lt4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lt4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+.end method
+
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 4
+
+    iget-object v0, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    iget-object v1, p0, Lr7d;->d:Ls7d;
+
+    iget-object v2, v1, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, v1, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
+
+    move-result v2
+
+    iget-object v3, p0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1, p2}, Landroidx/recyclerview/widget/a;->c0(Landroid/view/View;Lg5;)V
+
+    iget-object v1, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lt4;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1, p2}, Lt4;->d(Landroid/view/View;Lg5;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    return-void
+.end method
+
+.method public final e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
+
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lt4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lt4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+.end method
+
+.method public final f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    .locals 1
+
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2, p3}, Lt4;->f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    iget-object v0, p0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 2
+
+    iget-object v0, p0, Lr7d;->d:Ls7d;
+
+    iget-object v1, v0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v0, v0, Ls7d;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lt4;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1, p2, p3}, Lt4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Lt4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->c:Lh7d;
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    invoke-super {p0, p1, p2, p3}, Lt4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final h(Landroid/view/View;I)V
+    .locals 1
+
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lt4;->h(Landroid/view/View;I)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lt4;->h(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public final i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
+
+    iget-object v0, p0, Lr7d;->e:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt4;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lt4;->i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lt4;->i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
 .end method

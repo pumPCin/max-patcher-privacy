@@ -4,234 +4,110 @@
 
 
 # direct methods
-.method public static final a(Lwbg;)V
-    .locals 2
+.method public static final a(Ljava/lang/CharSequence;Ljava/lang/Long;)Ltc0;
+    .locals 4
 
-    new-instance v0, Llr4;
+    const-wide/16 v0, 0x0
 
-    const/16 v1, 0x14
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0, v1}, Llr4;-><init>(I)V
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    const-class v1, Lgf4;
+    move-result-wide v2
 
-    invoke-virtual {p0, v1, v0}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
+    cmp-long v2, v2, v0
 
-    new-instance v0, Llr4;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Llr4;-><init>(I)V
-
-    const-class v1, Lvr4;
-
-    invoke-virtual {p0, v1, v0}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
-
-    return-void
-.end method
-
-.method public static b(II)V
-    .locals 2
-
-    if-ltz p0, :cond_1
-
-    if-lt p0, p1, :cond_0
-
-    goto :goto_0
+    if-nez v2, :cond_1
 
     :cond_0
-    return-void
+    if-eqz p0, :cond_4
 
     :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    if-eqz p1, :cond_2
 
-    const-string v1, "index"
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    if-ltz p0, :cond_3
-
-    if-gez p1, :cond_2
-
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "negative size: "
-
-    invoke-static {p1, v0}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    move-result-wide v0
 
     :cond_2
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez p0, :cond_3
 
-    move-result-object p0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {v1, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must be less than size (%s)"
-
-    invoke-static {p1, p0}, Loii;->o(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_1
+    const-string p0, ""
 
     :cond_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance p1, Ltc0;
 
-    move-result-object p0
+    invoke-direct {p1, p0, v0, v1}, Ltc0;-><init>(Ljava/lang/CharSequence;J)V
 
-    filled-new-array {v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be negative"
-
-    invoke-static {p1, p0}, Loii;->o(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static c(III)V
-    .locals 1
-
-    if-ltz p0, :cond_1
-
-    if-lt p1, p0, :cond_1
-
-    if-le p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    if-ltz p0, :cond_4
-
-    if-gt p0, p2, :cond_4
-
-    if-ltz p1, :cond_3
-
-    if-le p1, p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {p1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "end index (%s) must not be less than start index (%s)"
-
-    invoke-static {p1, p0}, Loii;->o(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    const-string p0, "end index"
-
-    invoke-static {p1, p2, p0}, Ljii;->d(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_2
+    return-object p1
 
     :cond_4
-    const-string p1, "start index"
+    sget-object p0, Ltc0;->c:Ltc0;
 
-    invoke-static {p0, p2, p1}, Ljii;->d(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 .end method
 
-.method public static d(IILjava/lang/String;)Ljava/lang/String;
-    .locals 0
+.method public static b(Landroid/content/Context;)Z
+    .locals 5
 
-    if-gez p0, :cond_0
+    const-string v0, "display"
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {p2, p0}, [Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    const-string p1, "%s (%s) must not be negative"
+    check-cast p0, Landroid/hardware/display/DisplayManager;
 
-    invoke-static {p1, p0}, Loii;->o(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p0
 
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    if-ltz p1, :cond_1
+    const/4 p0, 0x0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :goto_0
+    if-eqz p0, :cond_2
 
-    move-result-object p0
+    invoke-virtual {p0}, Landroid/view/Display;->isHdr()Z
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    filled-new-array {p2, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be greater than size (%s)"
-
-    invoke-static {p1, p0}, Loii;->o(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/Display;->getHdrCapabilities()Landroid/view/Display$HdrCapabilities;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {p0}, Landroid/view/Display$HdrCapabilities;->getSupportedHdrTypes()[I
+
+    move-result-object p0
+
+    array-length v1, p0
+
+    move v2, v0
+
+    :goto_1
+    if-ge v2, v1, :cond_2
+
+    aget v3, p0, v2
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_1
+
+    return v4
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    add-int/lit8 v2, v2, 0x1
 
-    const-string p2, "negative size: "
+    goto :goto_1
 
-    invoke-static {p1, p2}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    :cond_2
+    return v0
 .end method

@@ -1,21 +1,21 @@
 .class public final Lgac;
-.super Lpac;
+.super Lpd0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgac;
+# instance fields
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lgac;
+    const/16 v0, 0xf
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    sput-object v0, Lgac;->a:Lgac;
+    iput-object p1, p0, Lgac;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -32,30 +32,57 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lgac;
+    instance-of v1, p1, Lgac;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lgac;
+
+    iget-object v1, p0, Lgac;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lgac;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x399cc60
+    iget-object v0, p0, Lgac;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "OpenCameraPermission"
+    const-string v0, "ExternalCallback(params="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lgac;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

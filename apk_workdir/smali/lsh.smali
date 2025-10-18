@@ -1,29 +1,7 @@
-.class public final Llsh;
-.super Ljava/lang/Object;
+.class public abstract Llsh;
+.super Lhth;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:Ljava/util/concurrent/TimeUnit;
-
-.field public c:J
-
-
-# direct methods
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Llsh;->a:J
-
-    iput-object p3, p0, Llsh;->b:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Llsh;->c:J
-
-    return-void
-.end method
+# static fields
+.field private static final VERTEX_SOURCE:Ljava/lang/String; = "precision mediump float;\nuniform mat4 mvpMatrix;\nuniform mat4 texMatrix;\nattribute vec4 aVertexCoord;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = mvpMatrix * aVertexCoord;\n   vTextureCoord = (texMatrix * aTextureCoord).xy;\n}\n"

@@ -1,30 +1,29 @@
-.class public abstract Lg3e;
-.super Ljava/lang/Object;
+.class public final Lg3e;
+.super Ljzi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lg3e;
+
+.field public static final c:Lg3e;
+
+
 # direct methods
-.method public static a(Landroid/app/Service;ILandroid/app/Notification;I)V
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    if-eqz p3, :cond_1
+    new-instance v0, Lg3e;
 
-    const/4 v0, -0x1
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-    if-ne p3, v0, :cond_0
+    sput-object v0, Lg3e;->b:Lg3e;
 
-    goto :goto_0
+    new-instance v0, Lg3e;
 
-    :cond_0
-    and-int/lit16 p3, p3, 0xff
+    invoke-direct {v0}, Ljzi;-><init>()V
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+    sput-object v0, Lg3e;->c:Lg3e;
 
     return-void
 .end method

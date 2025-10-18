@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/List;
-.implements Lnq7;
+.implements Lkr7;
 
 
 # direct methods

@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+.method public static a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object p0
 

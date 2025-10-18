@@ -1,55 +1,65 @@
 .class public final Ly8h;
-.super Lk14;
+.super La9h;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Le9h;
-
-.field public Y:Lm8h;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lb9h;
-
-.field public final synthetic r0:Lb9h;
-
-.field public s0:I
+# static fields
+.field public static final c:Ly8h;
 
 
 # direct methods
-.method public constructor <init>(Lb9h;Lk14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ly8h;->r0:Lb9h;
+    new-instance v0, Ly8h;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "not_supported"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, La9h;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ly8h;->c:Ly8h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Ly8h;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ly8h;->s0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Ly8h;
 
-    iput p1, p0, Ly8h;->s0:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Ly8h;->r0:Lb9h;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lb9h;->g(Ljava/lang/String;Lk14;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0xa6195d7
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "NotSupported"
+
+    return-object v0
 .end method

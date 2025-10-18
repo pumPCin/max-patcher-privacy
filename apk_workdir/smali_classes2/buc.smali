@@ -3,22 +3,14 @@
 
 
 # static fields
-.field public static IconSwitch:[I
+.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a56
 
-.field public static IconSwitch_icon_switch_start_drawable:I
+.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a57
 
+.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a58
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a59
 
-    const v0, 0x7f040548
+.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a5a
 
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lbuc;->IconSwitch:[I
-
-    return-void
-.end method
+.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a5b

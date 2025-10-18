@@ -2,117 +2,214 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmwd;
-
 
 # instance fields
-.field public final synthetic a:Lrl4;
+.field public final a:Lig4;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:I
+
+.field public final g:J
+
+.field public h:I
+
+.field public i:Z
 
 
 # direct methods
-.method public constructor <init>(Lrl4;)V
-    .locals 0
+.method public constructor <init>(Lig4;IIII)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpl4;->a:Lrl4;
+    const-string v0, "bufferForPlaybackMs"
+
+    const/4 v1, 0x0
+
+    const-string v2, "0"
+
+    invoke-static {v0, p4, v1, v2}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v3, "bufferForPlaybackAfterRebufferMs"
+
+    invoke-static {v3, p5, v1, v2}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v4, "minBufferMs"
+
+    invoke-static {v4, p2, p4, v0}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    invoke-static {v4, p2, p5, v3}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "maxBufferMs"
+
+    invoke-static {v0, p3, p2, v4}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "backBufferDurationMs"
+
+    invoke-static {v0, v1, v1, v2}, Lpl4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput-object p1, p0, Lpl4;->a:Lig4;
+
+    int-to-long p1, p2
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpl4;->b:J
+
+    int-to-long p1, p3
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpl4;->c:J
+
+    int-to-long p1, p4
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpl4;->d:J
+
+    int-to-long p1, p5
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpl4;->e:J
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lpl4;->f:I
+
+    const/high16 p1, 0xc80000
+
+    iput p1, p0, Lpl4;->h:I
+
+    int-to-long p1, v1
+
+    invoke-static {p1, p2}, Llig;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpl4;->g:J
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 1
+
+    if-lt p1, p2, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x15
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/2addr v0, p2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " cannot be less than "
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, p1}, Lzg8;->b(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final b(Z)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpl4;->f:I
 
-    return v0
-.end method
+    const/4 v1, -0x1
 
-.method public final e(J)Lkwd;
-    .locals 11
+    if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lpl4;->a:Lrl4;
+    const/high16 v0, 0xc80000
 
-    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
+    :cond_0
+    iput v0, p0, Lpl4;->h:I
 
-    check-cast v1, Lu8f;
+    const/4 v0, 0x0
 
-    iget v1, v1, Lu8f;->f:I
+    iput-boolean v0, p0, Lpl4;->i:Z
 
-    int-to-long v1, v1
+    if-eqz p1, :cond_2
 
-    mul-long/2addr v1, p1
+    iget-object p1, p0, Lpl4;->a:Lig4;
 
-    const-wide/32 v3, 0xf4240
+    monitor-enter p1
 
-    div-long/2addr v1, v3
+    :try_start_0
+    iget-boolean v1, p1, Lig4;->a:Z
 
-    iget-wide v5, v0, Lrl4;->b:J
+    if-eqz v1, :cond_1
 
-    iget-wide v3, v0, Lrl4;->c:J
+    invoke-virtual {p1, v0}, Lig4;->a(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sub-long v7, v3, v5
+    goto :goto_0
 
-    mul-long/2addr v7, v1
+    :catchall_0
+    move-exception v0
 
-    iget-wide v0, v0, Lrl4;->X:J
+    goto :goto_1
 
-    div-long/2addr v7, v0
+    :cond_1
+    :goto_0
+    monitor-exit p1
 
-    add-long/2addr v7, v5
+    return-void
 
-    const-wide/16 v0, 0x7530
+    :goto_1
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sub-long/2addr v7, v0
+    throw v0
 
-    const-wide/16 v0, 0x1
-
-    sub-long/2addr v3, v0
-
-    move-wide v9, v7
-
-    move-wide v7, v3
-
-    move-wide v3, v9
-
-    invoke-static/range {v3 .. v8}, Lhhg;->j(JJJ)J
-
-    move-result-wide v0
-
-    new-instance v2, Lkwd;
-
-    new-instance v3, Lqwd;
-
-    invoke-direct {v3, p1, p2, v0, v1}, Lqwd;-><init>(JJ)V
-
-    invoke-direct {v2, v3, v3}, Lkwd;-><init>(Lqwd;Lqwd;)V
-
-    return-object v2
-.end method
-
-.method public final f()J
-    .locals 6
-
-    iget-object v0, p0, Lpl4;->a:Lrl4;
-
-    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
-
-    check-cast v1, Lu8f;
-
-    iget-wide v2, v0, Lrl4;->X:J
-
-    const-wide/32 v4, 0xf4240
-
-    mul-long/2addr v2, v4
-
-    iget v0, v1, Lu8f;->f:I
-
-    int-to-long v0, v0
-
-    div-long/2addr v2, v0
-
-    return-wide v2
+    :cond_2
+    return-void
 .end method

@@ -1,68 +1,39 @@
 .class public final Lsib;
-.super Ljava/lang/Object;
+.super Ldq;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final a:Lsib;
 
-.field public b:I
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public d:J
+    new-instance v0, Lsib;
 
-.field public e:Ljava/lang/String;
+    invoke-direct {v0}, Ldq;-><init>()V
 
-.field public f:Ljava/lang/String;
+    sput-object v0, Lsib;->a:Lsib;
 
-.field public g:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public final a()Liu7;
     .locals 2
 
-    iget-object v0, p0, Lsib;->e:Ljava/lang/String;
-
-    invoke-static {v0}, Lke8;->d(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lsib;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Lke8;->d(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lsib;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsib;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    return-object v0
+    const-class v1, Lrib;
 
-    :cond_0
-    iget-object v0, p0, Lsib;->e:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v0
 
     return-object v0
 .end method

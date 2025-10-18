@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Set;
-.implements Lmq7;
+.implements Ljr7;
 
 
 # direct methods

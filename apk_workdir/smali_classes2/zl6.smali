@@ -1,171 +1,95 @@
-.class public final Lzl6;
-.super Llff;
+.class public final synthetic Lzl6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Landroid/view/ViewStub$OnInflateListener;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lfm6;
-
-.field public final synthetic Z:Ljava/util/Set;
+.field public final synthetic a:Lam6;
 
 
 # direct methods
-.method public constructor <init>(Lfm6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lam6;)V
     .locals 0
 
-    iput-object p1, p0, Lzl6;->Y:Lfm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzl6;->Z:Ljava/util/Set;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzl6;->a:Lam6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
+    .locals 8
 
-    check-cast p1, Lb54;
+    sget p1, Lg1b;->b:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p0, p1, p2}, Lzl6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v6
 
-    move-result-object p1
+    sget p1, Lg1b;->a:I
 
-    check-cast p1, Lzl6;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lzl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    move-object v1, p1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
 
-    new-instance p1, Lzl6;
+    iget-object p1, p0, Lzl6;->a:Lam6;
 
-    iget-object v0, p0, Lzl6;->Y:Lfm6;
+    iput-object v1, p1, Lam6;->E0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-    iget-object v1, p0, Lzl6;->Z:Ljava/util/Set;
+    iget-object p1, p1, Lq7d;->a:Landroid/view/View;
 
-    invoke-direct {p1, v0, v1, p2}, Lzl6;-><init>(Lfm6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object p1
-.end method
+    move-result-object p1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget v0, p0, Lzl6;->X:I
+    move-result-object p1
 
-    sget-object v1, Lzag;->a:Lzag;
+    const/16 p2, 0xa
 
-    iget-object v2, p0, Lzl6;->Y:Lfm6;
+    int-to-float p2, p2
 
-    const/4 v3, 0x2
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/4 v4, 0x1
+    move-result-object p1
 
-    sget-object v5, Lc54;->a:Lc54;
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
 
-    if-eqz v0, :cond_2
+    mul-float/2addr p2, p1
 
-    if-eq v0, v4, :cond_1
+    invoke-static {p2}, Lfhi;->b(F)I
 
-    if-ne v0, v3, :cond_0
+    move-result v2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    if-nez v6, :cond_0
 
-    return-object v1
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Lbj3;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v7, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move v3, v2
 
-    throw p1
+    move v4, v2
 
-    :cond_1
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    move v5, v2
 
-    goto :goto_0
+    invoke-direct/range {v0 .. v7}, Lbj3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
 
-    :cond_2
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    iget-object p1, v2, Lfm6;->v0:Lsze;
-
-    new-instance v0, Ln23;
-
-    const/16 v6, 0xc
-
-    invoke-direct {v0, p1, v6}, Ln23;-><init>(Lzx5;I)V
-
-    iput v4, p0, Lzl6;->X:I
-
-    invoke-static {v0, p0}, Ly1j;->o(Lzx5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_0
-    iput v3, p0, Lzl6;->X:I
-
-    invoke-virtual {v2}, Lfm6;->t()Lqkf;
-
-    move-result-object p1
-
-    check-cast p1, Losa;
-
-    invoke-virtual {p1}, Losa;->f()Lv44;
-
-    move-result-object p1
-
-    new-instance v0, Lll6;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lzl6;->Z:Ljava/util/Set;
-
-    invoke-direct {v0, v2, v4, v3}, Lll6;-><init>(Lfm6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v0, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move-object p1, v1
-
-    :goto_1
-    if-ne p1, v5, :cond_5
-
-    :goto_2
-    return-object v5
-
-    :cond_5
-    return-object v1
+    return-void
 .end method

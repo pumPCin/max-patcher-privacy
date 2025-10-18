@@ -7,18 +7,18 @@
 
 
 # instance fields
-.field public final a:Lei1;
+.field public final a:Lmi1;
 
 .field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lei1;Z)V
+.method public constructor <init>(Lmi1;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkb;->a:Lei1;
+    iput-object p1, p0, Lkb;->a:Lmi1;
 
     iput-boolean p2, p0, Lkb;->b:Z
 
@@ -44,11 +44,11 @@
     :cond_1
     check-cast p1, Lkb;
 
-    iget-object v0, p0, Lkb;->a:Lei1;
+    iget-object v0, p0, Lkb;->a:Lmi1;
 
-    iget-object v1, p1, Lkb;->a:Lei1;
+    iget-object v1, p1, Lkb;->a:Lmi1;
 
-    invoke-virtual {v0, v1}, Lei1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lmi1;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -78,9 +78,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lkb;->a:Lei1;
+    iget-object v0, p0, Lkb;->a:Lmi1;
 
-    invoke-virtual {v0}, Lei1;->hashCode()I
+    invoke-virtual {v0}, Lmi1;->hashCode()I
 
     move-result v0
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lkb;->a:Lei1;
+    iget-object v1, p0, Lkb;->a:Lmi1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

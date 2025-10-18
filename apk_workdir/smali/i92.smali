@@ -1,177 +1,136 @@
 .class public final Li92;
-.super Lj77;
+.super Lzi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:[Lj77;
+.field public final i:Landroid/util/SparseArray;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IIJJ[Lj77;)V
+.method public constructor <init>()V
     .locals 1
 
-    const-string v0, "CHAP"
+    invoke-direct {p0}, Lzi0;-><init>()V
 
-    invoke-direct {p0, v0}, Lj77;-><init>(Ljava/lang/String;)V
+    new-instance v0, Landroid/util/SparseArray;
 
-    iput-object p1, p0, Li92;->b:Ljava/lang/String;
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput p2, p0, Li92;->c:I
-
-    iput p3, p0, Li92;->d:I
-
-    iput-wide p4, p0, Li92;->e:J
-
-    iput-wide p6, p0, Li92;->f:J
-
-    iput-object p8, p0, Li92;->g:[Lj77;
+    iput-object v0, p0, Li92;->i:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lzi0;->b:Lq50;
 
-    if-ne p0, p1, :cond_0
+    iget v0, v0, Lq50;->b:I
 
-    return v0
+    iget-object v1, p0, Li92;->i:Landroid/util/SparseArray;
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    if-eqz p1, :cond_2
+    move-result-object v0
 
-    const-class v2, Li92;
+    move-object v5, v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v5, Lj92;
+
+    invoke-static {v5}, Lsgi;->j(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    iget-object v1, p0, Lzi0;->b:Lq50;
+
+    iget v1, v1, Lq50;->d:I
+
+    div-int v6, v0, v1
+
+    iget-object v0, p0, Lzi0;->c:Lq50;
+
+    iget v0, v0, Lq50;->d:I
+
+    mul-int/2addr v0, v6
+
+    invoke-virtual {p0, v0}, Lzi0;->k(I)Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    if-eq v2, v3, :cond_1
+    iget-object v2, p0, Lzi0;->b:Lq50;
 
-    goto :goto_0
+    iget-object v4, p0, Lzi0;->c:Lq50;
 
-    :cond_1
-    check-cast p1, Li92;
+    const/4 v7, 0x0
 
-    iget v2, p0, Li92;->c:I
+    move-object v1, p1
 
-    iget v3, p1, Li92;->c:I
+    invoke-static/range {v1 .. v7}, Lhhi;->d(Ljava/nio/ByteBuffer;Lq50;Ljava/nio/ByteBuffer;Lq50;Lj92;IZ)V
 
-    if-ne v2, v3, :cond_2
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    iget v2, p0, Li92;->d:I
-
-    iget v3, p1, Li92;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Li92;->e:J
-
-    iget-wide v4, p1, Li92;->e:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Li92;->f:J
-
-    iget-wide v4, p1, Li92;->f:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Li92;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Li92;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Li92;->g:[Lj77;
-
-    iget-object p1, p1, Li92;->g:[Lj77;
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final g(Lq50;)Lq50;
     .locals 3
 
-    const/16 v0, 0x20f
+    iget v0, p1, Lq50;->c:I
 
-    iget v1, p0, Li92;->c:I
+    const/4 v1, 0x2
 
-    add-int/2addr v0, v1
+    if-ne v0, v1, :cond_2
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v0, p0, Li92;->i:Landroid/util/SparseArray;
 
-    iget v1, p0, Li92;->d:I
+    iget v2, p1, Lq50;->b:I
 
-    add-int/2addr v0, v1
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object v0
 
-    iget-wide v1, p0, Li92;->e:J
+    check-cast v0, Lj92;
 
-    long-to-int v1, v1
+    if-eqz v0, :cond_1
 
-    add-int/2addr v0, v1
+    iget-boolean v2, v0, Lj92;->e:Z
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v2, :cond_0
 
-    iget-wide v1, p0, Li92;->f:J
+    sget-object p1, Lq50;->e:Lq50;
 
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Li92;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 v1, 0x0
+    new-instance v2, Lq50;
 
-    :goto_0
-    add-int/2addr v0, v1
+    iget p1, p1, Lq50;->a:I
 
-    return v0
+    iget v0, v0, Lj92;->b:I
+
+    invoke-direct {v2, p1, v0, v1}, Lq50;-><init>(III)V
+
+    return-object v2
+
+    :cond_1
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    const-string v1, "No mixing matrix for input channel count"
+
+    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Lq50;)V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lq50;)V
+
+    throw v0
 .end method

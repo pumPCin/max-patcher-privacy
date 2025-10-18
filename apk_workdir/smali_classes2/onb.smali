@@ -1,92 +1,101 @@
 .class public final Lonb;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lpnb;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+.field public final a:Lorf;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lorf;)V
     .locals 0
 
-    iput-object p1, p0, Lonb;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lonb;->a:Lorf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lonb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lonb;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lonb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lonb;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lonb;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    goto :goto_1
 
-    invoke-direct {p1, v0, p2}, Lonb;-><init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    instance-of v0, p1, Lonb;
 
-    return-object p1
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lonb;
+
+    iget-object v0, p0, Lonb;->a:Lorf;
+
+    iget-object p1, p1, Lonb;->a:Lorf;
+
+    invoke-virtual {v0, p1}, Lorf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lonb;->a:Lorf;
 
-    sget-object p1, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lwq7;
+    iget v0, v0, Lorf;->c:I
 
-    iget-object p1, p0, Lonb;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {p1}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->E0()Landroidx/recyclerview/widget/RecyclerView;
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lonb;->a:Lorf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->E0()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object p1
-
-    new-instance v1, Lnnb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lnnb;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    const/4 p1, 0x0
-
-    const/4 v2, 0x5
-
-    invoke-static {v2, v0, v1, p1}, Lfwi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-object v0
 .end method

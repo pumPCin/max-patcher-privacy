@@ -1,133 +1,83 @@
 .class public final Lc8b;
-.super Lgd0;
+.super Lpm4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljqf;
-
-.field public final c:I
+.field public final e:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljqf;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
+    .locals 0
 
-    sget v0, Liid;->c1:I
+    invoke-direct {p0, p1}, Lpm4;-><init>(Landroid/content/Context;)V
 
-    const/16 v1, 0xc
-
-    invoke-direct {p0, v1}, Lgd0;-><init>(I)V
-
-    iput-object p1, p0, Lc8b;->b:Ljqf;
-
-    iput v0, p0, Lc8b;->c:I
+    iput-object p2, p0, Lc8b;->e:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lc8b;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lc8b;
-
-    iget-object v0, p0, Lc8b;->b:Ljqf;
-
-    iget-object v1, p1, Lc8b;->b:Ljqf;
-
-    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lc8b;->c:I
-
-    iget p1, p1, Lc8b;->c:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final c(Landroid/content/Context;)Lqh4;
     .locals 3
 
-    iget-object v0, p0, Lc8b;->b:Ljqf;
+    new-instance v0, Lq40;
 
-    iget v0, v0, Ljqf;->c:I
+    invoke-direct {v0, p1}, Lq40;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    new-instance p1, Lyni;
 
-    move-result v0
+    const/4 v1, 0x0
 
-    const/16 v1, 0x1f
+    new-array v1, v1, [Lt50;
 
-    mul-int/2addr v0, v1
+    iget-object v2, p0, Lc8b;->e:Ljava/util/ArrayList;
 
-    iget v2, p0, Lc8b;->c:I
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+    move-result-object v1
 
-    move-result v0
+    check-cast v1, [Lt50;
 
-    return v0
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lt50;
+
+    invoke-direct {p1, v1}, Lyni;-><init>([Lt50;)V
+
+    iput-object p1, v0, Lq40;->e:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lq40;->c()Lqh4;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final d(Lri5;Landroid/os/Looper;Ljava/util/ArrayList;)V
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lgrf;
 
-    const-string v1, "ShowSnackbar(text="
+    new-instance v1, Ltvi;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v2, 0x17
 
-    iget-object v1, p0, Lc8b;->b:Ljqf;
+    invoke-direct {v1, v2}, Ltvi;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1, p2, v1}, Lgrf;-><init>(Lri5;Landroid/os/Looper;Lpcf;)V
 
-    const-string v1, ", icon="
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-boolean p1, v0, Lgrf;->U0:Z
 
-    iget v1, p0, Lc8b;->c:I
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description=null)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

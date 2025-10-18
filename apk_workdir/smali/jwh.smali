@@ -1,397 +1,117 @@
 .class public final Ljwh;
-.super Ljava/lang/Object;
+.super Lj7i;
 .source "SourceFile"
 
 # interfaces
-.implements Lxv7;
+.implements Lbai;
+
+
+# static fields
+.field private static final zzb:Ljwh;
 
 
 # instance fields
-.field public final a:Landroid/view/ViewGroup;
+.field private zzd:I
 
-.field public final b:Lvmi;
+.field private zze:Lswh;
 
-.field public c:Landroid/view/View;
+.field private zzf:Z
 
 
 # direct methods
-.method public constructor <init>(Lqwa;Lvmi;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljwh;
 
-    iput-object p2, p0, Ljwh;->b:Lvmi;
+    invoke-direct {v0}, Lj7i;-><init>()V
 
-    invoke-static {p1}, Lbi3;->i(Ljava/lang/Object;)V
+    sput-object v0, Ljwh;->zzb:Ljwh;
 
-    iput-object p1, p0, Ljwh;->a:Landroid/view/ViewGroup;
+    const-class v1, Ljwh;
+
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x5
-
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final b(Ltla;)V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    new-instance v1, Ldwh;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Ldwh;-><init>(Ltla;I)V
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-static {p1, v1}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 v1, 0x9
-
-    invoke-virtual {v0, p1, v1}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final e()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/16 v2, 0xd
-
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final m()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final n(Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "onInflate not allowed on MapViewDelegate"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final o()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final onLowMemory()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x6
-
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public final p(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "onCreateView not allowed on MapViewDelegate"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final q(Landroid/os/Bundle;)V
-    .locals 4
-
-    :try_start_0
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    invoke-static {p1, v0}, Lq1i;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
-
-    iget-object v1, p0, Ljwh;->b:Lvmi;
-
-    invoke-virtual {v1}, Lfth;->W()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Ly0i;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-
-    const/4 v3, 0x7
-
-    invoke-virtual {v1, v2, v3}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->readFromParcel(Landroid/os/Parcel;)V
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-static {v0, p1}, Lq1i;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final r()V
+.method public final m(ILj7i;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    add-int/lit8 p1, p1, -0x1
 
-    const-string v1, "onDestroyView not allowed on MapViewDelegate"
+    if-eqz p1, :cond_4
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const/4 p2, 0x2
 
-    throw v0
-.end method
+    if-eq p1, p2, :cond_3
 
-.method public final s()V
-    .locals 3
+    const/4 p2, 0x3
 
-    :try_start_0
-    iget-object v0, p0, Ljwh;->b:Lvmi;
+    if-eq p1, p2, :cond_2
 
-    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+    const/4 p2, 0x4
 
-    move-result-object v1
+    if-eq p1, p2, :cond_1
 
-    const/16 v2, 0xc
+    const/4 p2, 0x5
 
-    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eq p1, p2, :cond_0
 
-    return-void
+    const/4 p1, 0x0
 
-    :catch_0
-    move-exception v0
+    return-object p1
 
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    :cond_0
+    sget-object p1, Ljwh;->zzb:Ljwh;
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    return-object p1
 
-    throw v1
-.end method
+    :cond_1
+    new-instance p1, Leji;
 
-.method public final t(Landroid/os/Bundle;)V
-    .locals 4
+    sget-object p2, Ljwh;->zzb:Ljwh;
 
-    :try_start_0
-    new-instance v0, Landroid/os/Bundle;
+    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    return-object p1
 
-    invoke-static {p1, v0}, Lq1i;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :cond_2
+    new-instance p1, Ljwh;
 
-    iget-object v1, p0, Ljwh;->b:Lvmi;
+    invoke-direct {p1}, Lj7i;-><init>()V
 
-    invoke-virtual {v1}, Lfth;->W()Landroid/os/Parcel;
+    return-object p1
 
-    move-result-object v2
+    :cond_3
+    const-string p1, "zze"
 
-    invoke-static {v2, v0}, Ly0i;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    const-string p2, "zzf"
 
-    const/4 v3, 0x2
+    const-string v0, "zzd"
 
-    invoke-virtual {v1, v2, v3}, Lfth;->Y(Landroid/os/Parcel;I)V
-
-    invoke-static {v0, p1}, Lq1i;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
-
-    invoke-virtual {v1}, Lfth;->W()Landroid/os/Parcel;
+    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    const/16 v0, 0x8
+    sget-object p2, Ljwh;->zzb:Ljwh;
 
-    invoke-virtual {v1, p1, v0}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    new-instance v0, Lwai;
 
-    move-result-object p1
+    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1007\u0001"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v0
+    return-object v0
 
-    invoke-static {v0}, Luga;->Z(Landroid/os/IBinder;)Lc67;
+    :cond_4
+    const/4 p1, 0x1
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    invoke-static {v0}, Luga;->a0(Lc67;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1
 
-    check-cast p1, Landroid/view/View;
-
-    iput-object p1, p0, Ljwh;->c:Landroid/view/View;
-
-    iget-object p1, p0, Ljwh;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    iget-object v0, p0, Ljwh;->c:Landroid/view/View;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p1
 .end method

@@ -1,117 +1,198 @@
-.class public abstract synthetic Lcsh;
+.class public final Lcsh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final synthetic a:[I
 
-.field public static final synthetic b:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsoe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lsoe;I)V
+    .locals 0
 
-    invoke-static {}, Lowg;->values()[Lowg;
+    iput p2, p0, Lcsh;->a:I
+
+    iput-object p1, p0, Lcsh;->b:Lsoe;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 8
+
+    iget v0, p0, Lcsh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcsh;->b:Lsoe;
+
+    invoke-virtual {v0}, Lsoe;->getSocketLock()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcsh;->b:Lsoe;
 
-    new-array v0, v0, [I
-
-    sput-object v0, Lcsh;->b:[I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
+    monitor-enter v0
 
     :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1}, Lsoe;->getSignalingLogger()Ldoe;
 
-    :catch_0
-    const/4 v0, 0x2
+    move-result-object v2
+
+    const-string v3, "transport.DISCONNECT"
+
+    invoke-virtual {v2, v3}, Ldoe;->a(Ljava/lang/String;)V
+
+    const-string v2, "dispose"
+
+    const/16 v3, 0x3e9
+
+    invoke-virtual {v1, v3, v2}, Lsoe;->safelyCloseSocketWithCodeAndReason(ILjava/lang/String;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+
+    :pswitch_0
+    invoke-static {}, Landroid/os/Process;->myTid()I
+
+    move-result v0
+
+    invoke-static {v0}, Landroid/os/Process;->getThreadPriority(I)I
+
+    move-result v0
+
+    const/16 v1, 0xa
 
     :try_start_1
-    sget-object v3, Lcsh;->b:[I
+    invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    aput v0, v3, v1
+    iget-object v1, p0, Lcsh;->b:Lsoe;
+
+    invoke-virtual {v1}, Lsoe;->getSocketLock()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcsh;->b:Lsoe;
+
+    monitor-enter v1
     :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v3, 0x3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    sget-object v4, Lcsh;->b:[I
+    new-instance v3, Lath;
 
-    aput v3, v4, v3
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v2, v4}, Lath;-><init>(Lsoe;I)V
+
+    invoke-virtual {v2, v3}, Lsoe;->safelyDoIfSocketExists(Lli6;)V
+
+    invoke-virtual {v2}, Lsoe;->getSignalingLogger()Ldoe;
+
+    move-result-object v3
+
+    invoke-static {v2}, Lsoe;->access$getEndpoint$p(Lsoe;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v5, v3, Ldoe;->c:Lgwc;
+
+    invoke-interface {v5}, Lgwc;->shouldHideSensitiveInformation()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-static {v4}, Lj0j;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_0
+    iget-object v5, v3, Ldoe;->b:Lfwc;
+
+    iget-object v3, v3, Ldoe;->a:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "Connect to "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v5, v3, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v2}, Lsoe;->access$getEndpoint$p(Lsoe;)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Lyxe;
+
+    const/16 v5, 0x1c
+
+    invoke-direct {v4, v5, v2}, Lyxe;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v3, v4}, Lsoe;->safelyCreateNewSocket(Ljava/lang/String;Lroe;)V
     :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v4, 0x4
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     :try_start_3
-    sget-object v5, Lcsh;->b:[I
-
-    aput v4, v5, v4
+    monitor-exit v1
     :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :catch_3
-    :try_start_4
-    sget-object v5, Lcsh;->b:[I
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    const/4 v6, 0x5
-
-    aput v6, v5, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    invoke-static {}, Lyt8;->values()[Lyt8;
-
-    move-result-object v5
-
-    array-length v5, v5
-
-    new-array v5, v5, [I
-
-    sput-object v5, Lcsh;->a:[I
-
-    :try_start_5
-    aput v1, v5, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v2, Lcsh;->a:[I
-
-    aput v0, v2, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v1, Lcsh;->a:[I
-
-    aput v3, v1, v0
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
-    sget-object v0, Lcsh;->a:[I
-
-    aput v4, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
     return-void
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v2
+
+    :try_start_4
+    monitor-exit v1
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :goto_0
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

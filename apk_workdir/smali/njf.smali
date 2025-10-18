@@ -3,36 +3,45 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljava/lang/String;
+
+
 # instance fields
-.field public a:I
-
-.field public b:Landroid/view/View;
-
-.field public c:Lcom/google/android/material/tabs/TabLayout;
-
-.field public d:Lpjf;
+.field public final a:Landroid/content/ComponentName;
 
 
-# virtual methods
-.method public final a()V
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object v0, p0, Lnjf;->c:Lcom/google/android/material/tabs/TabLayout;
+    const-string v0, "SystemJobInfoConverter"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/tabs/TabLayout;->n(Lnjf;Z)V
+    sput-object v0, Lnjf;->b:Ljava/lang/String;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    const-string v1, "Tab not attached to a TabLayout"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    throw v0
+    move-result-object p1
+
+    new-instance v0, Landroid/content/ComponentName;
+
+    const-class v1, Landroidx/work/impl/background/systemjob/SystemJobService;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iput-object v0, p0, Lnjf;->a:Landroid/content/ComponentName;
+
+    return-void
 .end method

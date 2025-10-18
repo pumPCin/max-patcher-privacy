@@ -1,49 +1,62 @@
 .class public final Ltx4;
-.super Lk14;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Y:Lyx4;
+.field public final c:Ljava/lang/String;
 
-.field public Z:I
-
-.field public o:Lyx4;
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lyx4;Lk14;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJ)V
     .locals 0
 
-    iput-object p1, p0, Ltx4;->Y:Lyx4;
+    invoke-direct {p0, p3, p4}, Luj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltx4;->b:Ljava/lang/String;
+
+    if-nez p2, :cond_0
+
+    const-string p2, ""
+
+    :cond_0
+    iput-object p2, p0, Ltx4;->c:Ljava/lang/String;
+
+    iput-wide p5, p0, Ltx4;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Ltx4;->X:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Ltx4;->Z:I
+    const-string v1, "DownloadErrorEvent{url=\'"
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Ltx4;->b:Ljava/lang/String;
 
-    iput p1, p0, Ltx4;->Z:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Ltx4;->Y:Lyx4;
+    const-string v1, "\', attachLocalId=\'"
 
-    invoke-virtual {p1, p0}, Lyx4;->d(Lk14;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Ltx4;->c:Ljava/lang/String;
 
-    return-object p1
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

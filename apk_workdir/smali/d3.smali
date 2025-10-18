@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Map;
-.implements Lpq7;
+.implements Lmr7;
 
 
 # virtual methods

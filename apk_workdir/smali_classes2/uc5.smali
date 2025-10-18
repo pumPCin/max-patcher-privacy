@@ -1,259 +1,104 @@
-.class public final Luc5;
-.super Llff;
+.class public final synthetic Luc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lji6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
     .locals 0
 
-    iput-object p2, p0, Luc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+    iput p2, p0, Luc5;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Luc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Luc5;->a:I
 
-    invoke-virtual {p0, p1, p2}, Luc5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Luc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Luc5;
+    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->x0:[Ltr7;
 
-    sget-object p2, Lzag;->a:Lzag;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Luc5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    return-object p2
-.end method
+    invoke-static {v0}, Lev7;->d(Landroid/content/Context;)Lb1f;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Luc5;
-
-    iget-object v1, p0, Luc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    invoke-direct {v0, p2, v1}, Luc5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
-
-    iput-object p1, v0, Luc5;->X:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    :pswitch_0
+    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->g2:I
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-object p1, p0, Luc5;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    check-cast p1, Lzc5;
+    move-result-object v0
 
-    iget-object v0, p0, Luc5;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    iget-object v1, v0, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->o:Lazc;
-
-    invoke-virtual {v0}, Lx14;->getTargetController()Lx14;
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    instance-of v3, v2, Ltc5;
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
 
-    const/4 v4, 0x0
+    move-result v1
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
-    check-cast v2, Ltc5;
+    move-result-object v1
 
-    goto :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :cond_0
-    move-object v2, v4
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string v0, "-"
 
-    const/4 v5, 0x0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x1
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_2
-
-    if-ne v3, v6, :cond_1
-
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->X:[Lwq7;
-
-    aget-object v3, v3, v5
-
-    invoke-interface {v1, v0, v3}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lapb;
+    const-string v1, "."
 
-    sget-object v1, Lmn3;->c:Lmn3;
+    const-string v2, "_"
 
-    invoke-virtual {v0, v1}, Lapb;->setState(Lmn3;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->X:[Lwq7;
-
-    aget-object v3, v3, v5
-
-    invoke-interface {v1, v0, v3}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lhbf;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lapb;
+    return-object v0
 
-    sget-object v1, Lmn3;->b:Lmn3;
+    nop
 
-    invoke-virtual {v0, v1}, Lapb;->setState(Lmn3;)V
-
-    :goto_1
-    if-eqz v2, :cond_a
-
-    check-cast v2, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
-    invoke-virtual {v2}, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->C0()Lhee;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lhee;->O0:Leie;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    if-ne p1, v6, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_4
-    iget-wide v1, v0, Lhee;->N0:J
-
-    sget-wide v5, Lj1b;->i:J
-
-    cmp-long p1, v1, v5
-
-    if-nez p1, :cond_5
-
-    iget-object p1, v0, Lhee;->o:Lqkf;
-
-    check-cast p1, Losa;
-
-    invoke-virtual {p1}, Losa;->a()Lv44;
-
-    move-result-object p1
-
-    new-instance v1, Lyde;
-
-    invoke-direct {v1, v0, v4}, Lyde;-><init>(Lhee;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, p1, v1, v2}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
-
-    goto :goto_2
-
-    :cond_5
-    sget-wide v3, Lj1b;->j:J
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_6
-
-    sget-object p1, Lp9e;->i:Lp9e;
-
-    invoke-virtual {v0, p1}, Lhee;->y(Lb4a;)V
-
-    goto :goto_2
-
-    :cond_6
-    sget-wide v3, Lj1b;->f:J
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_7
-
-    sget-object p1, Lp9e;->h:Lp9e;
-
-    invoke-virtual {v0, p1}, Lhee;->y(Lb4a;)V
-
-    goto :goto_2
-
-    :cond_7
-    sget-wide v3, Lj1b;->d:J
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_8
-
-    sget-object p1, Lp9e;->j:Lp9e;
-
-    invoke-virtual {v0, p1}, Lhee;->y(Lb4a;)V
-
-    goto :goto_2
-
-    :cond_8
-    sget-wide v3, Lj1b;->c:J
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_9
-
-    sget-object p1, Lp9e;->l:Lp9e;
-
-    invoke-virtual {v0, p1}, Lhee;->y(Lb4a;)V
-
-    :cond_9
-    :goto_2
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, v0, Lhee;->N0:J
-
-    :cond_a
-    :goto_3
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

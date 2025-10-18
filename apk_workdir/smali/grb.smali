@@ -1,87 +1,79 @@
-.class public abstract synthetic Lgrb;
+.class public final Lgrb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static final a(Lgrb;Landroid/view/View;Lcj1;Landroid/graphics/RectF;)V
+    .locals 0
+
+    iget p0, p3, Landroid/graphics/RectF;->top:F
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
+
+    iget p0, p3, Landroid/graphics/RectF;->left:F
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
+
+    iget p0, p3, Landroid/graphics/RectF;->top:F
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
+
+    iget p0, p3, Landroid/graphics/RectF;->left:F
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
+
+    const/high16 p0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
+
+    const/4 p3, 0x0
+
+    invoke-static {p1, p3}, Lmzg;->A(Landroid/view/View;F)V
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method public static b()Z
     .locals 3
 
-    invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    const-string v2, "huawei"
 
-    new-array v0, v0, [I
+    invoke-static {v0, v2, v1}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    sput-object v0, Lgrb;->a:[I
+    move-result v2
 
-    :try_start_0
-    sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+    if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const-string v2, "honor"
 
-    move-result v1
+    invoke-static {v0, v2, v1}, Lzaf;->x(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    const/4 v2, 0x1
+    move-result v0
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_1
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Lgrb;->a:[I
+    :cond_0
+    const/4 v0, 0x1
 
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
+    return v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Lgrb;->a:[I
-
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v0, Lgrb;->a:[I
-
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    return-void
+    :cond_1
+    return v1
 .end method

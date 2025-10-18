@@ -1,391 +1,335 @@
-.class public abstract Lacd;
+.class public final Lacd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/ThreadLocal;
+.field public static final d:J
 
-.field public static final b:Ljava/util/WeakHashMap;
+.field public static final e:J
 
-.field public static final c:Ljava/lang/Object;
+
+# instance fields
+.field public final a:Lrig;
+
+.field public b:J
+
+.field public c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    const-wide/16 v1, 0x18
 
-    sput-object v0, Lacd;->a:Ljava/lang/ThreadLocal;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    move-result-wide v0
 
-    const/4 v1, 0x0
+    sput-wide v0, Lacd;->d:J
 
-    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    sput-object v0, Lacd;->b:Ljava/util/WeakHashMap;
+    const-wide/16 v1, 0x1e
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-wide v0
 
-    sput-object v0, Lacd;->c:Ljava/lang/Object;
+    sput-wide v0, Lacd;->e:J
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;I)Landroid/graphics/Typeface;
-    .locals 7
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->isRestricted()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v2, Landroid/util/TypedValue;
-
-    invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v0, p0
-
-    move v1, p1
-
-    invoke-static/range {v0 .. v6}, Lacd;->b(Landroid/content/Context;ILandroid/util/TypedValue;ILrwi;ZZ)Landroid/graphics/Typeface;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;ILandroid/util/TypedValue;ILrwi;ZZ)Landroid/graphics/Typeface;
-    .locals 12
-
-    move-object/from16 v7, p4
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v2, p1, p2, v0}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
-
-    const-string v9, "ResourcesCompat"
-
-    iget-object v0, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_c
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v0, "res/"
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    const/4 v10, 0x0
-
-    const/4 v11, -0x3
+    sget-object v0, Ln9a;->q0:Ln9a;
 
     if-nez v0, :cond_0
 
-    if-eqz v7, :cond_9
+    sget-object v0, Lrig;->c:Ljava/util/regex/Pattern;
 
-    invoke-virtual {v7, v11}, Lrwi;->a(I)V
+    new-instance v0, Ln9a;
 
-    goto/16 :goto_4
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Ln9a;-><init>(I)V
+
+    sput-object v0, Ln9a;->q0:Ln9a;
 
     :cond_0
-    iget v0, p2, Landroid/util/TypedValue;->assetCookie:I
+    sget-object v0, Ln9a;->q0:Ln9a;
 
-    sget-object v6, Lu9g;->b:Lhc8;
+    sget-object v1, Lrig;->d:Lrig;
 
-    invoke-static {v2, p1, v4, v0, p3}, Lu9g;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    move-result-object v0
+    new-instance v1, Lrig;
 
-    invoke-virtual {v6, v0}, Lhc8;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v0}, Lrig;-><init>(Ln9a;)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Typeface;
-
-    if-eqz v0, :cond_2
-
-    if-eqz v7, :cond_1
-
-    new-instance p0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance p2, Lpwb;
-
-    const/16 p3, 0x12
-
-    invoke-direct {p2, v7, p3, v0}, Lpwb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput-object v1, Lrig;->d:Lrig;
 
     :cond_1
-    move-object v10, v0
+    sget-object v0, Lrig;->d:Lrig;
 
-    goto/16 :goto_4
+    iput-object v0, p0, Lacd;->a:Lrig;
 
-    :cond_2
-    if-eqz p6, :cond_3
+    return-void
+.end method
 
-    goto/16 :goto_4
 
-    :cond_3
+# virtual methods
+.method public final declared-synchronized a()Z
+    .locals 4
+
+    monitor-enter p0
+
     :try_start_0
-    invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    iget v0, p0, Lacd;->c:I
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    const-string v1, ".xml"
+    iget-object v0, p0, Lacd;->a:Lrig;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    iget-object v0, v0, Lrig;->a:Ln9a;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v0, :cond_5
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+    move-result-wide v0
 
-    move-result-object v0
-
-    invoke-static {v0, v2}, Lzv0;->c(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;)Lt96;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    const-string p0, "Failed to find font-family tag"
-
-    invoke-static {v9, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz v7, :cond_9
-
-    invoke-virtual {v7, v11}, Lrwi;->a(I)V
-
-    goto/16 :goto_4
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_2
-
-    :cond_4
-    iget v5, p2, Landroid/util/TypedValue;->assetCookie:I
-
-    move-object v0, p0
-
-    move v3, p1
-
-    move v6, p3
-
-    move/from16 v8, p5
-
-    invoke-static/range {v0 .. v8}, Lu9g;->b(Landroid/content/Context;Lt96;Landroid/content/res/Resources;ILjava/lang/String;IILrwi;Z)Landroid/graphics/Typeface;
-
-    move-result-object v10
-
-    goto :goto_4
-
-    :cond_5
-    iget p2, p2, Landroid/util/TypedValue;->assetCookie:I
-
-    sget-object v0, Lu9g;->a:Lqci;
-
-    move-object v1, p0
-
-    move v3, p1
-
-    move v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Lqci;->h0(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_6
-
-    invoke-static {v2, p1, v4, p2, p3}, Lu9g;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v6, p2, p0}, Lhc8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_6
-    if-eqz v7, :cond_7
-
-    if-eqz p0, :cond_8
-
-    new-instance p2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance p3, Lpwb;
-
-    const/16 v0, 0x12
-
-    invoke-direct {p3, v7, v0, p0}, Lpwb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p2, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_7
-    :goto_0
-    move-object v10, p0
-
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {v7, v11}, Lrwi;->a(I)V
+    iget-wide v2, p0, Lacd;->b:J
     :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
     :goto_1
-    const-string p2, "Failed to read xml resource "
+    monitor-exit p0
 
-    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    return v0
 
-    move-result-object p2
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    throw v0
+.end method
+
+.method public final declared-synchronized b(I)V
+    .locals 6
+
+    monitor-enter p0
+
+    const/16 v0, 0xc8
+
+    if-lt p1, v0, :cond_0
+
+    const/16 v0, 0x12c
+
+    if-lt p1, v0, :cond_4
+
+    :cond_0
+    const/16 v0, 0x191
+
+    if-eq p1, v0, :cond_4
+
+    const/16 v0, 0x194
+
+    if-ne p1, v0, :cond_1
 
     goto :goto_3
 
+    :cond_1
+    :try_start_0
+    iget v0, p0, Lacd;->c:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lacd;->c:I
+
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/16 v0, 0x1ad
+
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0x1f4
+
+    if-lt p1, v0, :cond_2
+
+    const/16 v0, 0x258
+
+    if-ge p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_1
+    sget-wide v0, Lacd;->d:J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_3
+    :goto_0
+    :try_start_3
+    iget p1, p0, Lacd;->c:I
+
+    int-to-double v0, p1
+
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lacd;->a:Lrig;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/Math;->random()D
+
+    move-result-wide v2
+
+    const-wide v4, 0x408f400000000000L    # 1000.0
+
+    mul-double/2addr v2, v4
+
+    double-to-long v2, v2
+
+    long-to-double v2, v2
+
+    add-double/2addr v0, v2
+
+    sget-wide v2, Lacd;->e:J
+
+    long-to-double v2, v2
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    double-to-long v0, v0
+
+    :try_start_4
+    monitor-exit p0
+
+    :goto_1
+    iget-object p1, p0, Lacd;->a:Lrig;
+
+    iget-object p1, p1, Lrig;->a:Ln9a;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lacd;->b:J
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
     :goto_2
-    const-string p2, "Failed to parse xml resource "
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_6
+    throw p1
 
-    move-result-object p2
-
-    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
+    :cond_4
     :goto_3
-    if-eqz v7, :cond_9
+    monitor-enter p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    invoke-virtual {v7, v11}, Lrwi;->a(I)V
+    const/4 p1, 0x0
 
-    :cond_9
+    :try_start_7
+    iput p1, p0, Lacd;->c:I
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :try_start_8
+    monitor-exit p0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_9
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    :try_start_a
+    throw p1
+
     :goto_4
-    if-nez v10, :cond_b
+    monitor-exit p0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    if-nez v7, :cond_b
-
-    if-eqz p6, :cond_a
-
-    goto :goto_5
-
-    :cond_a
-    new-instance p0, Landroid/content/res/Resources$NotFoundException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string p3, "Font resource ID #0x"
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " could not be retrieved."
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_b
-    :goto_5
-    return-object v10
-
-    :cond_c
-    new-instance p0, Landroid/content/res/Resources$NotFoundException;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    const-string v0, "Resource \""
-
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\" ("
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ") is not a Font: "
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw p1
 .end method

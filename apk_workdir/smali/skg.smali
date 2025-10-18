@@ -1,75 +1,126 @@
 .class public final Lskg;
-.super Ljava/lang/Object;
+.super Lmh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lvkg;
-
-.field public static final b:Landroid/util/Range;
-
-.field public static final c:Lc45;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lmh;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    const-wide/16 v0, 0xc8
+
+    const/4 p1, 0x2
+
+    .line 2
+    invoke-direct {p0, v0, v1, p1}, Lmh;-><init>(JI)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lq24;
     .locals 4
 
-    new-instance v0, Lrkg;
+    new-instance v0, Lskg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-wide v1, p0, Lmh;->o:J
 
-    new-instance v1, Landroid/util/Range;
+    iget-boolean v3, p0, Lmh;->s0:Z
 
-    const/16 v2, 0x1e
+    invoke-direct {v0, v1, v2, v3}, Lmh;-><init>(JZ)V
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+    .locals 3
 
-    invoke-direct {v1, v2, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    sput-object v1, Lskg;->b:Landroid/util/Range;
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    sget-object v1, Lc45;->d:Lc45;
+    new-instance p5, Ljava/util/ArrayList;
 
-    sput-object v1, Lskg;->c:Lc45;
+    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v2, Lv77;
+    const/4 v0, 0x1
 
-    invoke-direct {v2, v0}, Lv77;-><init>(Liug;)V
+    const/4 v1, 0x0
 
-    sget-object v0, Ligg;->k0:Lq90;
+    if-eqz p4, :cond_0
 
-    const/4 v3, 0x5
+    if-eqz p3, :cond_0
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object p2, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
 
-    move-result-object v3
+    invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
-    iget-object v2, v2, Lv77;->b:La0a;
+    move-result p4
 
-    invoke-virtual {v2, v0, v3}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    int-to-float p4, p4
 
-    sget-object v0, Lvkg;->c:Lq90;
+    const/4 v2, 0x2
 
-    sget-object v3, Lomg;->o:Liy1;
+    new-array v2, v2, [F
 
-    invoke-virtual {v2, v0, v3}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    aput p4, v2, v1
 
-    sget-object v0, Ld97;->y:Lq90;
+    const/4 p4, 0x0
 
-    invoke-virtual {v2, v0, v1}, La0a;->k(Lq90;Ljava/lang/Object;)V
+    aput p4, v2, v0
 
-    new-instance v0, Lvkg;
+    invoke-static {p3, p2, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-static {v2}, Lq8b;->a(Lck3;)Lq8b;
+    move-result-object p2
 
-    move-result-object v1
+    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1}, Lvkg;-><init>(Lq8b;)V
+    goto :goto_0
 
-    sput-object v0, Lskg;->a:Lvkg;
+    :cond_0
+    if-nez p4, :cond_1
+
+    if-eqz p2, :cond_1
+
+    sget-object p3, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
+
+    move-result p4
+
+    int-to-float p4, p4
+
+    new-array v0, v0, [F
+
+    aput p4, v0, v1
+
+    invoke-static {p2, p3, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    return-object p1
+.end method
+
+.method public final n(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method

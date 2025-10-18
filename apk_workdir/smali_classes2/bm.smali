@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract f(Lzl;)Lzl;
+.method public abstract d(Lzl;)Lzl;
 .end method

@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf68;
+.implements Lc78;
 
 
 # instance fields
-.field public E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+.field public D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 .method public final X(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    sget p3, Llpc;->frg_local_gif:I
+    sget p3, Lsqc;->frg_local_gif:I
 
     const/4 v0, 0x0
 
@@ -34,9 +34,9 @@
 
     check-cast p1, Lru/ok/messages/views/widgets/SlideOutLayout;
 
-    invoke-virtual {p1, p0}, Lru/ok/messages/views/widgets/SlideOutLayout;->setSlideOutListener(Lbre;)V
+    invoke-virtual {p1, p0}, Lru/ok/messages/views/widgets/SlideOutLayout;->setSlideOutListener(Ljse;)V
 
-    sget p2, Looc;->frg_local_gif__drawee:I
+    sget p2, Lvpc;->frg_local_gif__drawee:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -44,15 +44,15 @@
 
     check-cast p2, Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    iput-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iput-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p2}, Lx05;->getHierarchy()Lu05;
+    invoke-virtual {p2}, Lq15;->getHierarchy()Ln15;
 
     move-result-object p2
 
-    check-cast p2, Lsm6;
+    check-cast p2, Lnn6;
 
-    new-instance p3, Lj20;
+    new-instance p3, Lk20;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->E()Landroid/content/Context;
 
@@ -60,29 +60,29 @@
 
     const/4 v1, -0x1
 
-    invoke-direct {p3, v0, v1}, Lj20;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p3, v0, v1}, Lk20;-><init>(Landroid/content/Context;I)V
 
     const/4 v0, 0x3
 
-    invoke-virtual {p2, p3, v0}, Lsm6;->i(Landroid/graphics/drawable/Drawable;I)V
+    invoke-virtual {p2, p3, v0}, Lnn6;->i(Landroid/graphics/drawable/Drawable;I)V
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    new-instance p3, Lz66;
+    new-instance p3, Lt76;
 
-    invoke-direct {p3, v0, p0}, Lz66;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p3, v0, p0}, Lt76;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p2, p3}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    iget-boolean p3, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->z1:Z
+    iget-boolean p3, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->y1:Z
 
     if-eqz p3, :cond_0
 
-    iget-object p3, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->y1:Lg58;
+    iget-object p3, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->x1:Ld68;
 
-    invoke-virtual {p3}, Lg58;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Ld68;->a()Ljava/lang/String;
 
     move-result-object p3
 
@@ -95,25 +95,25 @@
 .method public final c()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lch6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lch6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lxh6;
 
     move-result-object v0
 
     check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Z
 
     xor-int/lit8 v1, v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(ZZ)V
 
     :cond_0
     return-void
@@ -133,7 +133,7 @@
     goto :goto_0
 
     :cond_0
-    iget-boolean p1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Z
+    iget-boolean p1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->k1:Z
 
     if-eqz p1, :cond_1
 
@@ -151,19 +151,19 @@
 
     invoke-super {p0}, Lru/ok/messages/media/mediabar/FrgLocalMedia;->j0()V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->A1:Lq58;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/FrgLocalMedia;->z1:Ln68;
 
-    invoke-virtual {v0}, Lq58;->b()V
+    invoke-virtual {v0}, Ln68;->b()V
 
     return-void
 .end method
 
-.method public final v(Lg58;Landroid/net/Uri;ILandroid/net/Uri;)V
+.method public final v(Ld68;Landroid/net/Uri;ILandroid/net/Uri;)V
     .locals 0
 
-    sget-object p3, Lhg6;->a:Lo97;
+    sget-object p3, Lbh6;->a:Lla7;
 
-    invoke-virtual {p3}, Lo97;->a()Lsqb;
+    invoke-virtual {p3}, Lla7;->a()Lxrb;
 
     move-result-object p3
 
@@ -171,52 +171,52 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lkzh;->e(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {p2}, Ln0i;->g(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p2
 
-    invoke-virtual {p3, p2}, Lsqb;->c(Landroid/net/Uri;)V
+    invoke-virtual {p3, p2}, Lxrb;->c(Landroid/net/Uri;)V
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p2}, Lx05;->getController()Lr05;
+    invoke-virtual {p2}, Lq15;->getController()Lk15;
 
     move-result-object p2
 
-    iput-object p2, p3, Ly0;->i:Lr05;
+    iput-object p2, p3, Ly0;->i:Lk15;
 
     const/4 p2, 0x1
 
     iput-boolean p2, p3, Ly0;->g:Z
 
-    iget-object p2, p1, Lg58;->o:Ljava/lang/String;
+    iget-object p2, p1, Ld68;->o:Ljava/lang/String;
 
-    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Li79;->b(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    iget-object p1, p1, Lg58;->o:Ljava/lang/String;
+    iget-object p1, p1, Ld68;->o:Ljava/lang/String;
 
-    invoke-static {p1}, Lkzh;->e(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lda7;->a(Landroid/net/Uri;)Lda7;
+    invoke-static {p1}, Ln0i;->g(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    iput-object p1, p3, Ly0;->c:Lda7;
+    invoke-static {p1}, Lab7;->a(Landroid/net/Uri;)Lab7;
+
+    move-result-object p1
+
+    iput-object p1, p3, Ly0;->c:Lab7;
 
     :cond_0
-    invoke-virtual {p3}, Ly0;->a()Lrqb;
+    invoke-virtual {p3}, Ly0;->a()Lwrb;
 
     move-result-object p1
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->E1:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/FrgLocalGif;->D1:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p2, p1}, Lx05;->setController(Lr05;)V
+    invoke-virtual {p2, p1}, Lq15;->setController(Lk15;)V
 
     return-void
 .end method

@@ -1,158 +1,81 @@
 .class public final Lg83;
-.super Lf4;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lg83;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lh83;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lavg;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lavg;-><init>(I)V
-
-    sput-object v0, Lg83;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lh83;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lg83;->a:I
 
-    iput p1, p0, Lg83;->a:I
+    iput-object p1, p0, Lg83;->b:Lh83;
 
-    iput-object p2, p0, Lg83;->b:Ljava/lang/String;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lg83;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lg83;
-
-    iget v1, p1, Lg83;->a:I
-
-    iget v3, p0, Lg83;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object p1, p1, Lg83;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lg83;->b:Ljava/lang/String;
-
-    invoke-static {p1, v1}, Lxli;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
     iget v0, p0, Lg83;->a:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lg83;->b:Lh83;
+
+    iget-object p1, p1, Lnc5;->b:Lmc5;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lmc5;->h(Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v1, p0, Lg83;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lg83;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x4
-
-    invoke-static {p1, v0, v1}, Ljxi;->m(Landroid/os/Parcel;II)V
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
     iget v0, p0, Lg83;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x2
-
-    iget-object v1, p0, Lg83;->b:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lg83;->b:Lh83;
+
+    iget-object p1, p1, Lnc5;->b:Lmc5;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lmc5;->h(Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

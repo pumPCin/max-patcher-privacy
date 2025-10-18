@@ -3,22 +3,9 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final J:Loe7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Loe7;->a:Loe7;
-
-    sput-object v0, Lpe7;->J:Loe7;
-
-    return-void
+# virtual methods
+.method public abstract b()Lq9a;
 .end method
 
-
-# virtual methods
-.method public abstract z()Lpx2;
+.method public abstract isActive()Z
 .end method

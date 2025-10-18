@@ -1,134 +1,88 @@
-.class public final Luuh;
-.super Lcom/google/android/gms/common/internal/a;
+.class public abstract Luuh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final I0:Lqof;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lop3;Lqof;Lnth;Lnth;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/16 v3, 0x10e
+    const-class v0, Luuh;
 
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILop3;Lhr6;Lir6;I)V
-
-    iput-object p4, v0, Luuh;->I0:Lqof;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final g()I
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
     .locals 1
 
-    const v0, 0xc1fa340
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
-    return v0
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Parcelable;
+
+    return-object p0
 .end method
 
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 3
+.method public static b(Landroid/os/Parcel;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+
+    move-result p0
+
+    if-gtz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
+
+    const-string v1, "Parcel data not fully consumed, unread size: "
+
+    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    .locals 2
+
+    const/4 v0, 0x0
 
     if-nez p1, :cond_0
 
-    const/4 p1, 0x0
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object p1
-
-    :cond_0
-    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
-
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v1
-
-    instance-of v2, v1, Lpuh;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Lpuh;
-
-    return-object v1
-
-    :cond_1
-    new-instance v1, Lpuh;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v0, v2}, Lfth;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    return-object v1
-.end method
-
-.method public final m()[Ljp5;
-    .locals 1
-
-    sget-object v0, Lhbi;->b:[Ljp5;
-
-    return-object v0
-.end method
-
-.method public final n()Landroid/os/Bundle;
-    .locals 3
-
-    iget-object v0, p0, Luuh;->I0:Lqof;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    iget-object v0, v0, Lqof;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const-string v2, "api"
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    return-void
 
     :cond_0
-    return-object v1
-.end method
+    const/4 v1, 0x1
 
-.method public final p()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.common.telemetry.service.START"
-
-    return-object v0
-.end method
-
-.method public final r()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

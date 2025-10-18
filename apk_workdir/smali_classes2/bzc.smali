@@ -1,154 +1,286 @@
 .class public final Lbzc;
-.super Lj7f;
+.super Lmmf;
 .source "SourceFile"
 
 # interfaces
-.implements Lrrf;
+.implements Lb0d;
 
 
 # instance fields
-.field public final o:Landroid/widget/TextView;
+.field public X:Lli6;
+
+.field public Y:Leyc;
+
+.field public Z:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lj7f;-><init>(Landroid/view/View;)V
+    new-instance v0, Lazc;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-direct {v0, v1}, Lazc;-><init>(I)V
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Lmmf;-><init>(Lli6;)V
 
-    check-cast v0, Landroid/widget/TextView;
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lbzc;->o:Landroid/widget/TextView;
-
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {p1, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/4 v1, 0x4
-
-    int-to-float v2, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lagi;->d(F)I
-
-    move-result v2
-
-    iput v2, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    iput v2, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
-
-    sget-object p1, Ldag;->q:Lpqf;
-
-    invoke-static {p1, v0}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
-
-    const/4 p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lagi;->d(F)I
-
-    move-result p1
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lagi;->d(F)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p1, v1, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    sget-object p1, Lsz4;->t0:Lc82;
-
-    invoke-virtual {p1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lbzc;->onThemeChanged(Lu4b;)V
+    iput-boolean v0, p0, Lbzc;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lu4b;)V
+.method public final g(Lwe9;Z)V
     .locals 2
 
-    invoke-interface {p1}, Lu4b;->getText()Lapf;
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
 
     move-result-object v0
 
-    iget v0, v0, Lapf;->i:I
+    check-cast v0, Lkyc;
 
-    iget-object v1, p0, Lbzc;->o:Landroid/widget/TextView;
+    iget-object v1, p0, Lbzc;->X:Lli6;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0, v1}, Lkyc;->setOnChipClickListener(Lli6;)V
 
-    invoke-interface {p1}, Lu4b;->b()Lwe0;
+    iget-object v0, p0, Lbzc;->Y:Leyc;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    iget p1, p1, Lwe0;->h:I
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
 
-    iget-object v0, p0, Lj7f;->a:Landroid/view/View;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    check-cast v1, Lkyc;
+
+    invoke-virtual {v1, v0}, Lkyc;->setChipObserver(Leyc;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    iget-boolean v1, p0, Lbzc;->Z:Z
+
+    invoke-virtual {v0, v1}, Lkyc;->setStackFromEnd(Z)V
+
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    iget-boolean v1, p0, Lbzc;->o:Z
+
+    invoke-virtual {v0, v1}, Lkyc;->setIncoming(Z)V
+
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    invoke-virtual {v0, p1, p2}, Lkyc;->f(Lwe9;Z)V
+
+    invoke-virtual {p0}, Lmmf;->y()V
+
+    return-void
+.end method
+
+.method public final l(Lvt0;Z)V
+    .locals 6
+
+    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_2
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    check-cast v1, Liyc;
+
+    iget-object v3, p1, Lvt0;->d:Lyt0;
+
+    iget-object v3, v3, Lyt0;->a:Lzt0;
+
+    iget-object v4, p1, Lvt0;->a:Lot0;
+
+    iget-object v4, v4, Lot0;->c:Ltt0;
+
+    if-eqz p2, :cond_0
+
+    iget v5, v4, Ltt0;->a:I
+
+    iput v5, v1, Liyc;->q0:I
+
+    iget v4, v4, Ltt0;->b:I
+
+    iput v4, v1, Liyc;->r0:I
+
+    iget v4, v3, Lzt0;->a:I
+
+    iput v4, v1, Liyc;->s0:I
+
+    iget v3, v3, Lzt0;->b:I
+
+    iput v3, v1, Liyc;->t0:I
+
+    goto :goto_1
+
+    :cond_0
+    iget v5, v4, Ltt0;->c:I
+
+    iput v5, v1, Liyc;->q0:I
+
+    iget v4, v4, Ltt0;->d:I
+
+    iput v4, v1, Liyc;->r0:I
+
+    iget v4, v3, Lzt0;->c:I
+
+    iput v4, v1, Liyc;->s0:I
+
+    iget v3, v3, Lzt0;->d:I
+
+    iput v3, v1, Liyc;->t0:I
+
+    :goto_1
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    return-void
+.end method
+
+.method public final r(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lkyc;->f(Lwe9;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setChipObserver(Leyc;)V
+    .locals 1
+
+    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Liu7;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lkyc;
+
+    invoke-virtual {v0, p1}, Lkyc;->setChipObserver(Leyc;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lbzc;->Y:Leyc;
+
+    return-void
+.end method
+
+.method public final setIsIncoming(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lbzc;->o:Z
+
+    return-void
+.end method
+
+.method public final setOnClickListener(Lli6;)V
+    .locals 0
+
+    iput-object p1, p0, Lbzc;->X:Lli6;
+
+    return-void
+.end method
+
+.method public final setStackFromEnd(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lbzc;->Z:Z
 
     return-void
 .end method

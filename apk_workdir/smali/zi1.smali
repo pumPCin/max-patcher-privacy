@@ -1,120 +1,85 @@
-.class public final Lzi1;
-.super Ls5d;
+.class public final enum Lzi1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final enum a:Lzi1;
 
-.field public final b:I
+.field public static final enum b:Lzi1;
+
+.field public static final enum c:Lzi1;
+
+.field public static final synthetic o:[Lzi1;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzi1;
 
-    const/16 v0, 0x10
+    const-string v1, "NONE"
 
-    int-to-float v0, v0
+    const/4 v2, 0x0
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v1
+    sput-object v0, Lzi1;->a:Lzi1;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    new-instance v1, Lzi1;
 
-    move-result-object v1
+    const-string v2, "LOCAL"
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    const/4 v3, 0x1
 
-    mul-float/2addr v0, v1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v0}, Lagi;->d(F)I
+    sput-object v1, Lzi1;->b:Lzi1;
 
-    move-result v0
+    new-instance v2, Lzi1;
 
-    iput v0, p0, Lzi1;->a:I
+    const-string v3, "APPLICATION"
 
-    const/16 v0, 0xc
+    const/4 v4, 0x2
 
-    int-to-float v0, v0
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    sput-object v2, Lzi1;->c:Lzi1;
 
-    move-result-object v1
+    filled-new-array {v0, v1, v2}, [Lzi1;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object v0
 
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    iput v0, p0, Lzi1;->b:I
+    sput-object v0, Lzi1;->o:[Lzi1;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lzi1;
+    .locals 1
 
-# virtual methods
-.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lf6d;)V
-    .locals 0
+    const-class v0, Lzi1;
 
-    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result p2
+    move-result-object p0
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
+    check-cast p0, Lzi1;
 
-    move-result-object p3
+    return-object p0
+.end method
 
-    instance-of p4, p3, Lwi1;
+.method public static values()[Lzi1;
+    .locals 1
 
-    if-eqz p4, :cond_0
+    sget-object v0, Lzi1;->o:[Lzi1;
 
-    check-cast p3, Lwi1;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/4 p3, 0x0
+    check-cast v0, [Lzi1;
 
-    :goto_0
-    if-nez p3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    if-ltz p2, :cond_2
-
-    invoke-virtual {p3}, Lu08;->j()I
-
-    move-result p3
-
-    if-ge p2, p3, :cond_2
-
-    iget p2, p0, Lzi1;->b:I
-
-    iput p2, p1, Landroid/graphics/Rect;->left:I
-
-    iput p2, p1, Landroid/graphics/Rect;->right:I
-
-    iget p2, p0, Lzi1;->a:I
-
-    iput p2, p1, Landroid/graphics/Rect;->top:I
-
-    const/4 p2, 0x0
-
-    iput p2, p1, Landroid/graphics/Rect;->bottom:I
-
-    :cond_2
-    :goto_1
-    return-void
+    return-object v0
 .end method

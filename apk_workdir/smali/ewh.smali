@@ -1,75 +1,71 @@
-.class public final Lewh;
+.class public abstract Lewh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p1, p0, Lewh;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p2, p0, Lewh;->b:Ljava/lang/Object;
+    sput-object v0, Lewh;->a:Ljava/util/HashMap;
 
-    iput-object p3, p0, Lewh;->c:Ljava/lang/Object;
+    new-instance v1, Ljava/util/HashMap;
 
-    return-void
-.end method
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
+    sput-object v1, Lewh;->b:Ljava/util/HashMap;
 
-# virtual methods
-.method public final a()Ljava/lang/IllegalArgumentException;
-    .locals 8
+    const/4 v2, -0x1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    iget-object v1, p0, Lewh;->a:Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget-object v3, p0, Lewh;->b:Ljava/lang/Object;
+    const-string v3, "The Play Store app is either not installed or not the official version."
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v3, -0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v4, "Call first requestReviewFlow to get the ReviewInfo."
 
-    move-result-object v1
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v4, p0, Lewh;->c:Ljava/lang/Object;
+    const/16 v4, -0x64
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    const-string v5, " and "
+    const-string v5, "Retry with an exponential backoff. Consider filing a bug if fails consistently."
 
-    const-string v6, "Multiple entries with same key: "
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v7, "="
+    const-string v0, "PLAY_STORE_NOT_FOUND"
 
-    invoke-static {v6, v2, v7, v3, v5}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    const-string v0, "INVALID_REQUEST"
 
-    invoke-static {v2, v1, v7, v4}, Lfef;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    const-string v0, "INTERNAL_ERROR"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
+    return-void
 .end method

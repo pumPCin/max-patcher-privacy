@@ -1,181 +1,212 @@
-.class public abstract Ler8;
+.class public final synthetic Ler8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyv0;
-
-
-# static fields
-.field public static final Y:Lko8;
+.implements Lu28;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic a:I
 
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Z
-
-.field public final o:Z
+.field public final synthetic b:Lf76;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lf76;I)V
+    .locals 0
 
-    new-instance v0, Lcr8;
+    iput p2, p0, Ler8;->a:I
 
-    invoke-direct {v0}, Lcr8;-><init>()V
-
-    invoke-virtual {v0}, Lcr8;->a()Lgr8;
-
-    new-instance v0, Lko8;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lko8;-><init>(I)V
-
-    sput-object v0, Ler8;->Y:Lko8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcr8;)V
-    .locals 2
+    iput-object p1, p0, Ler8;->b:Lf76;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Lcr8;->a:J
-
-    iput-wide v0, p0, Ler8;->a:J
-
-    iget-wide v0, p1, Lcr8;->b:J
-
-    iput-wide v0, p0, Ler8;->b:J
-
-    iget-boolean v0, p1, Lcr8;->c:Z
-
-    iput-boolean v0, p0, Ler8;->c:Z
-
-    iget-boolean v0, p1, Lcr8;->d:Z
-
-    iput-boolean v0, p0, Ler8;->o:Z
-
-    iget-boolean p1, p1, Lcr8;->e:Z
-
-    iput-boolean p1, p0, Ler8;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ler8;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lntb;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Ler8;
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v0, Lmub;
 
-    return v2
+    iget-boolean v0, v0, Lmub;->i:Z
 
-    :cond_1
-    check-cast p1, Ler8;
+    invoke-interface {p1, v0}, Lntb;->T(Z)V
 
-    iget-wide v3, p0, Ler8;->a:J
+    return-void
 
-    iget-wide v5, p1, Ler8;->a:J
+    :pswitch_0
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    cmp-long v1, v3, v5
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    if-nez v1, :cond_2
+    check-cast v0, Lmub;
 
-    iget-wide v3, p0, Ler8;->b:J
+    iget v0, v0, Lmub;->h:I
 
-    iget-wide v5, p1, Ler8;->b:J
+    invoke-interface {p1, v0}, Lntb;->onRepeatModeChanged(I)V
 
-    cmp-long v1, v3, v5
+    return-void
 
-    if-nez v1, :cond_2
+    :pswitch_1
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    iget-boolean v1, p0, Ler8;->c:Z
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    iget-boolean v3, p1, Ler8;->c:Z
+    check-cast v0, Lmub;
 
-    if-ne v1, v3, :cond_2
+    iget-object v0, v0, Lmub;->g:Lwsb;
 
-    iget-boolean v1, p0, Ler8;->o:Z
+    invoke-interface {p1, v0}, Lntb;->A0(Lwsb;)V
 
-    iget-boolean v3, p1, Ler8;->o:Z
+    return-void
 
-    if-ne v1, v3, :cond_2
+    :pswitch_2
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    iget-boolean v1, p0, Ler8;->X:Z
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    iget-boolean p1, p1, Ler8;->X:Z
+    check-cast v0, Lmub;
 
-    if-ne v1, p1, :cond_2
+    iget-boolean v0, v0, Lmub;->v:Z
 
-    return v0
+    invoke-interface {p1, v0}, Lntb;->q(Z)V
 
-    :cond_2
-    return v2
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 5
+    :pswitch_3
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    iget-wide v0, p0, Ler8;->a:J
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    const/16 v2, 0x20
+    check-cast v0, Lmub;
 
-    ushr-long v3, v0, v2
+    iget-boolean v0, v0, Lmub;->t:Z
 
-    xor-long/2addr v0, v3
+    const/4 v1, 0x4
 
-    long-to-int v0, v0
+    invoke-interface {p1, v1, v0}, Lntb;->i(IZ)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-void
 
-    iget-wide v3, p0, Ler8;->b:J
+    :pswitch_4
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    ushr-long v1, v3, v2
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    xor-long/2addr v1, v3
+    check-cast v0, Lmub;
 
-    long-to-int v1, v1
+    iget v0, v0, Lmub;->y:I
 
-    add-int/2addr v0, v1
+    invoke-interface {p1, v0}, Lntb;->k(I)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-void
 
-    iget-boolean v1, p0, Ler8;->c:Z
+    :pswitch_5
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    add-int/2addr v0, v1
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast v0, Lmub;
 
-    iget-boolean v1, p0, Ler8;->o:Z
+    iget-object v0, v0, Lmub;->m:Lnu8;
 
-    add-int/2addr v0, v1
+    invoke-interface {p1, v0}, Lntb;->j0(Lnu8;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-void
 
-    iget-boolean v1, p0, Ler8;->X:Z
+    :pswitch_6
+    iget-object v0, p0, Ler8;->b:Lf76;
 
-    add-int/2addr v0, v1
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
 
-    return v0
+    check-cast v0, Lmub;
+
+    iget-object v1, v0, Lmub;->j:Ltvf;
+
+    iget v0, v0, Lmub;->k:I
+
+    invoke-interface {p1, v1, v0}, Lntb;->m0(Ltvf;I)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Ler8;->b:Lf76;
+
+    iget-object v0, v0, Lf76;->c:Ljava/lang/Object;
+
+    check-cast v0, Lktb;
+
+    invoke-interface {p1, v0}, Lntb;->B0(Lktb;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Ler8;->b:Lf76;
+
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmub;
+
+    iget v1, v0, Lmub;->r:I
+
+    iget-boolean v0, v0, Lmub;->s:Z
+
+    invoke-interface {p1, v1, v0}, Lntb;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Ler8;->b:Lf76;
+
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmub;
+
+    iget-object v0, v0, Lmub;->q:Lrs4;
+
+    invoke-interface {p1, v0}, Lntb;->E0(Lrs4;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Ler8;->b:Lf76;
+
+    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmub;
+
+    iget-object v0, v0, Lmub;->o:Ls20;
+
+    invoke-interface {p1, v0}, Lntb;->x(Ls20;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

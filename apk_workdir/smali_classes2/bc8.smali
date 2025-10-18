@@ -1,255 +1,702 @@
-.class public final Lbc8;
-.super Landroid/widget/FrameLayout;
+.class public abstract Lbc8;
+.super Lfic;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxr6;
-
-.field public final b:Lwb8;
-
-.field public c:Z
-
-.field public o:Z
-
-.field public r0:Lm3f;
+.field public g:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(Lkkg;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 1
+    invoke-direct {p0}, Lfic;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 2
+    iput-object p1, p0, Lfic;->a:Lkkg;
 
-    new-instance v1, Lxr6;
+    return-void
+.end method
 
-    const/16 v2, 0xf
+.method public constructor <init>(Lkkg;[B[B)V
+    .locals 0
 
-    invoke-direct {v1, p1, v2}, Lxr6;-><init>(Landroid/content/Context;I)V
+    .line 3
+    invoke-direct {p0}, Lfic;-><init>()V
 
-    iput-object v1, p0, Lbc8;->a:Lxr6;
+    .line 4
+    iput-object p1, p0, Lfic;->a:Lkkg;
 
-    new-instance v2, Lwb8;
+    .line 5
+    iput-object p2, p0, Lbc8;->g:[B
 
-    invoke-direct {v2, p1, v0}, Lone/me/rlottie/RLottieImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 6
+    iput-object p3, p0, Lfic;->e:[B
 
-    sget p1, Ls0b;->b:I
+    .line 7
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-virtual {v2, p1}, Landroid/view/View;->setId(I)V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v0, -0x1
-
-    invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v2, p0, Lbc8;->b:Lwb8;
-
-    iget-object p1, v1, Lxr6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput-object p1, p0, Lfic;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld2f;I)V
-    .locals 7
+.method public final d(B)V
+    .locals 2
 
-    iget-object v0, p0, Lbc8;->r0:Lm3f;
+    and-int/lit8 p1, p1, 0xc
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ltech/kwik/core/impl/TransportError;
+
+    const/16 v0, 0xb
+
+    const-string v1, "Reserved bits in long header packet are not zero"
+
+    invoke-direct {p1, v0, v1}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final h(I)I
+    .locals 5
+
+    iget-wide v0, p0, Lfic;->b:J
+
+    invoke-static {v0, v1}, Lfic;->e(J)I
+
+    move-result v0
+
+    iget-object v1, p0, Lfic;->c:Ljava/util/ArrayList;
+
+    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    add-int/2addr v1, p1
+
+    rsub-int/lit8 p1, v0, 0x4
+
+    sub-int/2addr p1, v1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p1}, Ljava/lang/Integer;->max(II)I
+
+    move-result p1
+
+    iget-object v0, p0, Lfic;->e:[B
+
+    array-length v0, v0
+
+    add-int/lit8 v0, v0, 0x7
+
+    iget-object v2, p0, Lbc8;->g:[B
+
+    array-length v2, v2
+
+    add-int/2addr v0, v2
+
+    invoke-virtual {p0}, Lbc8;->w()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    const/16 v3, 0x3f
+
+    if-le v0, v3, :cond_0
+
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    add-int/2addr v2, v0
+
+    iget-wide v3, p0, Lfic;->b:J
+
+    invoke-static {v3, v4}, Lfic;->e(J)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    add-int/2addr v0, v1
+
+    add-int/2addr v0, p1
+
+    add-int/lit8 v0, v0, 0x10
+
+    return v0
+.end method
+
+.method public final i(Llc;)[B
+    .locals 5
+
+    const/16 v0, 0x5dc
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lbc8;->y()B
+
+    move-result v1
+
+    shl-int/lit8 v1, v1, 0x4
+
+    or-int/lit16 v1, v1, 0xc0
+
+    int-to-byte v1, v1
+
+    iget-wide v2, p0, Lfic;->b:J
+
+    invoke-static {v2, v3, v1}, Lfic;->g(JB)B
+
+    move-result v1
+
+    iget-wide v2, p0, Lfic;->b:J
+
+    invoke-static {v2, v3, v1}, Lfic;->g(JB)B
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Lfic;->a:Lkkg;
+
+    invoke-virtual {v1}, Lkkg;->a()[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Lfic;->e:[B
+
+    array-length v1, v1
+
+    int-to-byte v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Lfic;->e:[B
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Lbc8;->g:[B
+
+    array-length v1, v1
+
+    int-to-byte v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Lbc8;->g:[B
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p0, v0}, Lbc8;->x(Ljava/nio/ByteBuffer;)V
+
+    iget-wide v1, p0, Lfic;->b:J
+
+    invoke-static {v1, v2}, Lfic;->f(J)[B
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-virtual {p0, v2}, Lfic;->j(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    array-length v3, v1
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x10
+
+    add-int/2addr v4, v3
+
+    invoke-static {v4, v0}, Lubi;->f(ILjava/nio/ByteBuffer;)I
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    array-length v1, v1
+
+    invoke-virtual {p0, v0, v1, v2, p1}, Lfic;->u(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;Llc;)V
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result p1
+
+    iput p1, p0, Lfic;->d:I
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result p1
+
+    new-array v1, p1, [B
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    iput p1, p0, Lfic;->d:I
+
+    return-object v1
+.end method
+
+.method public final s(Ljava/nio/ByteBuffer;Llc;JLq98;I)V
+    .locals 9
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p6
+
+    invoke-virtual {p6}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p6
+
+    const-string v0, "Parsing "
+
+    invoke-virtual {v0, p6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p6
+
+    invoke-interface {p5, p6}, Lq98;->debug(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result p6
+
+    if-nez p6, :cond_7
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result p6
+
+    const/16 v0, 0xa
+
+    if-lt p6, v0, :cond_6
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v3
+
+    and-int/lit8 p6, v3, 0x30
+
+    shr-int/lit8 p6, p6, 0x4
+
+    invoke-virtual {p0}, Lbc8;->y()B
+
+    move-result v0
+
+    if-ne p6, v0, :cond_5
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
+
+    move-result p6
+
+    new-instance v0, Lkkg;
+
+    invoke-direct {v0, p6}, Lkkg;-><init>(I)V
+
+    iget-object p6, p0, Lfic;->a:Lkkg;
+
+    invoke-virtual {v0, p6}, Lkkg;->equals(Ljava/lang/Object;)Z
+
+    move-result p6
+
+    if-eqz p6, :cond_4
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result p6
+
+    if-ltz p6, :cond_3
+
+    const/16 v0, 0x14
+
+    if-gt p6, v0, :cond_3
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    if-lt v1, p6, :cond_2
+
+    new-array p6, p6, [B
+
+    iput-object p6, p0, Lfic;->e:[B
+
+    invoke-virtual {p1, p6}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result p6
+
+    if-ltz p6, :cond_1
+
+    if-gt p6, v0, :cond_1
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    if-lt v0, p6, :cond_0
+
+    new-array p6, p6, [B
+
+    iput-object p6, p0, Lbc8;->g:[B
+
+    invoke-virtual {p1, p6}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    const-string p6, "Destination connection id"
+
+    iget-object v0, p0, Lfic;->e:[B
+
+    invoke-interface {p5, p6, v0}, Lq98;->debug(Ljava/lang/String;[B)V
+
+    const-string p6, "Source connection id"
+
+    iget-object v0, p0, Lbc8;->g:[B
+
+    invoke-interface {p5, p6, v0}, Lq98;->debug(Ljava/lang/String;[B)V
+
+    invoke-virtual {p0, p1}, Lbc8;->z(Ljava/nio/ByteBuffer;)V
+
+    :try_start_0
+    invoke-static {p1}, Lubi;->n(Ljava/nio/ByteBuffer;)I
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ltech/kwik/core/generic/InvalidIntegerEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ltech/kwik/core/generic/IntegerTooLargeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p6, Ljava/lang/StringBuilder;
+
+    const-string v0, "Length (PN + payload): "
+
+    invoke-direct {p6, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p6
+
+    invoke-interface {p5, p6}, Lq98;->debug(Ljava/lang/String;)V
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v5, p2
+
+    move-wide v6, p3
+
+    move-object v8, p5
+
+    :try_start_1
+    invoke-virtual/range {v1 .. v8}, Lfic;->t(Ljava/nio/ByteBuffer;BILlc;JLq98;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+
+    move-result p1
+
+    iput p1, v1, Lfic;->d:I
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+
+    move-result p2
+
+    iput p2, v1, Lfic;->d:I
+
+    throw p1
+
+    :catch_0
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/TransportError;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2}, Ltech/kwik/core/impl/TransportError;-><init>(I)V
+
+    throw p1
+
+    :cond_0
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    const-string p2, "Version does not match version of the connection"
+
+    invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    move-object v1, p0
+
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :cond_6
+    move-object v1, p0
+
+    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+
+    throw p1
+
+    :cond_7
+    move-object v1, p0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 8
+
+    iget-boolean v0, p0, Lfic;->f:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lm3f;->b(Ld2f;)V
+    const-string v0, "P"
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Ld2f;->X:Ljava/lang/String;
+    const-string v0, ""
 
-    const/4 v1, 0x0
+    :goto_0
+    invoke-virtual {p0}, Lfic;->l()Lic5;
 
-    iget-object v2, p0, Lbc8;->a:Lxr6;
+    move-result-object v1
 
-    const/4 v3, 0x1
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget-object v4, p0, Lbc8;->b:Lwb8;
+    move-result-object v1
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
 
-    move-result v5
+    move-result v1
 
-    if-nez v5, :cond_1
+    iget-wide v2, p0, Lfic;->b:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
+
+    const-string v5, "."
+
+    if-ltz v4, :cond_1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v4, v3}, Lone/me/rlottie/RLottieImageView;->setAutoRepeat(Z)V
+    move-object v2, v5
 
-    new-instance v5, Lj36;
+    :goto_1
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const/16 v6, 0x12
+    move-result-object v2
 
-    invoke-direct {v5, v6, p0}, Lj36;-><init>(ILjava/lang/Object;)V
+    iget v3, p0, Lfic;->d:I
 
-    invoke-virtual {v4, v5}, Lwb8;->setOnFirstFrameListener(Lvb8;)V
+    if-ltz v3, :cond_2
 
-    new-instance v5, Lex6;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/16 v6, 0x10
-
-    invoke-direct {v5, v6}, Lex6;-><init>(I)V
-
-    invoke-virtual {v4, v5}, Lwb8;->setFailureListener(Lub8;)V
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iput-boolean v3, p0, Lbc8;->c:Z
-
-    invoke-virtual {v4, p2, p2, v0}, Lwb8;->f(IILjava/lang/String;)Z
-
-    move-result p2
-
-    iput-boolean v1, p0, Lbc8;->c:Z
-
-    if-eqz p2, :cond_2
-
-    iget-boolean p2, p0, Lbc8;->o:Z
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
+    move-result-object v5
 
     :cond_2
-    move v3, v1
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    :goto_0
-    iput-boolean v1, p0, Lbc8;->o:Z
+    move-result-object v3
 
-    goto :goto_2
+    iget-object v4, p0, Lfic;->c:Ljava/util/ArrayList;
 
-    :cond_3
-    :goto_1
-    invoke-virtual {v4}, Lwb8;->c()V
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    const/16 p2, 0x8
+    move-result v4
 
-    invoke-virtual {v4, p2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v5, p0, Lfic;->c:Ljava/util/ArrayList;
 
-    iget-object p2, v2, Lxr6;->b:Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    move-result-object v5
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+    new-instance v6, Lm0;
 
-    :goto_2
-    if-eqz v3, :cond_4
+    const/16 v7, 0x1b
 
-    iget-object p1, p1, Ld2f;->o:Ljava/lang/String;
+    invoke-direct {v6, v7}, Lm0;-><init>(I)V
 
-    iget-object p2, v2, Lxr6;->b:Ljava/lang/Object;
+    invoke-interface {v5, v6}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    move-result-object v5
 
-    invoke-static {p1}, Lda7;->b(Ljava/lang/String;)Lda7;
+    const-string v6, " "
 
-    move-result-object p1
+    invoke-static {v6}, Ljava/util/stream/Collectors;->joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
 
-    sget v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
+    move-result-object v6
 
-    const/4 v0, 0x0
+    invoke-interface {v5, v6}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
 
-    invoke-virtual {p2, p1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
+    move-result-object v5
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+    check-cast v5, Ljava/lang/String;
 
-    :cond_4
-    return-void
-.end method
+    new-instance v6, Ljava/lang/StringBuilder;
 
-.method public final b(Lzb8;)V
-    .locals 1
+    const-string v7, "Packet "
 
-    iget-object v0, p1, Lzb8;->a:Ljava/util/Set;
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    const-string v0, "|"
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "|L|"
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "  "
+
+    invoke-static {v6, v0, v5}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    iput-object v0, p1, Lzb8;->a:Ljava/util/Set;
-
-    :cond_0
-    iget-object p1, p1, Lzb8;->a:Ljava/util/Set;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lbc8;->b:Lwb8;
-
-    invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final getSizeConfigurator()Lm3f;
-    .locals 1
-
-    iget-object v0, p0, Lbc8;->r0:Lm3f;
 
     return-object v0
 .end method
 
-.method public final onMeasure(II)V
-    .locals 1
-
-    iget-object v0, p0, Lbc8;->r0:Lm3f;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lm3f;->a(II)Lut;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget p1, v0, Lut;->b:I
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    iget p2, v0, Lut;->c:I
-
-    :cond_2
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    return-void
+.method public abstract w()I
 .end method
 
-.method public final setSizeConfigurator(Lm3f;)V
-    .locals 0
+.method public abstract x(Ljava/nio/ByteBuffer;)V
+.end method
 
-    iput-object p1, p0, Lbc8;->r0:Lm3f;
+.method public abstract y()B
+.end method
 
-    return-void
+.method public abstract z(Ljava/nio/ByteBuffer;)V
 .end method

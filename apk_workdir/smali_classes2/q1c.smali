@@ -1,68 +1,105 @@
-.class public final synthetic Lq1c;
+.class public final Lq1c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqf4;
+.implements Lt1c;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJZ)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput p1, p0, Lq1c;->a:I
-
-    iput-wide p2, p0, Lq1c;->b:J
-
-    iput-boolean p4, p0, Lq1c;->c:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lq1c;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lq1c;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
+    :cond_0
+    instance-of v0, p1, Lq1c;
 
-    iget-wide v1, p0, Lq1c;->b:J
+    if-nez v0, :cond_1
 
-    iget-boolean v3, p0, Lq1c;->c:Z
+    goto :goto_0
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
+    :cond_1
+    check-cast p1, Lq1c;
+
+    iget-object v0, p0, Lq1c;->a:Landroid/net/Uri;
+
+    iget-object p1, p1, Lq1c;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lq1c;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, 0x71f5c476
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareMedia(localUrl="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq1c;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mimetype=image/*)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
-
-    iget-wide v1, p0, Lq1c;->b:J
-
-    iget-boolean v3, p0, Lq1c;->c:Z
-
-    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

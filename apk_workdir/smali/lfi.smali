@@ -1,99 +1,79 @@
-.class public final Llfi;
-.super Lqci;
+.class public abstract Llfi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lws9;
-
-
 # direct methods
-.method public constructor <init>(Lws9;)V
-    .locals 1
+.method public static a(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
+    .locals 0
 
-    const/16 v0, 0x8
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0, v0}, Lqci;-><init>(I)V
+    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Llfi;->c:Lws9;
+    if-nez p0, :cond_0
 
-    return-void
-.end method
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
+    move-result-object p0
 
-# virtual methods
-.method public final e0(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    :goto_0
+    instance-of p1, p0, Landroid/view/View;
 
-    check-cast p1, Lfi0;
+    if-eqz p1, :cond_0
 
-    iget-object v0, p0, Llfi;->c:Lws9;
+    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
-    invoke-virtual {v0}, Lws9;->b()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-static {}, Lwyh;->c()Z
-
-    move-result v3
-
-    if-eq v2, v3, :cond_0
-
-    const-string v2, "play-services-mlkit-barcode-scanning"
+    move-result-object p0
 
     goto :goto_0
 
     :cond_0
-    const-string v2, "barcode-scanning"
+    return-void
+.end method
 
-    :goto_0
-    invoke-static {v2}, Ly1j;->F(Ljava/lang/String;)Lq1j;
+.method public static final b(Lzcg;)V
+    .locals 2
 
-    move-result-object v2
+    new-instance v0, Lbs4;
 
-    sget-object v3, Lcsi;->r0:Lg4i;
+    const/16 v1, 0x11
 
-    const-string v3, "com.google.mlkit.dynamite.barcode"
+    invoke-direct {v0, v1}, Lbs4;-><init>(I)V
 
-    invoke-static {v1, v3}, Ll45;->a(Landroid/content/Context;Ljava/lang/String;)I
+    const-class v1, Lvf4;
 
-    move-result v3
+    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
 
-    if-lez v3, :cond_1
+    new-instance v0, Lzu7;
 
-    goto :goto_1
+    const/4 v1, 0x2
 
-    :cond_1
-    sget-object v3, Lgr6;->b:Lgr6;
+    invoke-direct {v0, v1}, Lzu7;-><init>(I)V
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v1, Loq5;
 
-    invoke-static {v1}, Lgr6;->a(Landroid/content/Context;)I
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
-    move-result v3
+    new-instance v0, Lzu7;
 
-    const v4, 0xc306c20
+    const/4 v1, 0x3
 
-    if-lt v3, v4, :cond_2
+    invoke-direct {v0, v1}, Lzu7;-><init>(I)V
 
-    :goto_1
-    new-instance v3, Lcsi;
+    const-class v1, Lw70;
 
-    invoke-direct {v3, v1, p1, v2}, Lcsi;-><init>(Landroid/content/Context;Lfi0;Lq1j;)V
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
-    goto :goto_2
+    new-instance v0, Lzu7;
 
-    :cond_2
-    new-instance v3, Li9h;
+    const/4 v1, 0x4
 
-    invoke-direct {v3, v1, p1, v2}, Li9h;-><init>(Landroid/content/Context;Lfi0;Lq1j;)V
+    invoke-direct {v0, v1}, Lzu7;-><init>(I)V
 
-    :goto_2
-    new-instance v1, Lwmi;
+    const-class v1, Lva8;
 
-    invoke-direct {v1, v0, p1, v3, v2}, Lwmi;-><init>(Lws9;Lfi0;Lbpi;Lq1j;)V
+    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
 
-    return-object v1
+    return-void
 .end method

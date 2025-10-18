@@ -1,98 +1,53 @@
 .class public final Lt0e;
-.super Landroid/view/View;
+.super Lq7d;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic J0:I
+
+
 # instance fields
-.field public a:Landroid/text/Layout;
+.field public final D0:Lbn8;
 
-.field public b:I
+.field public final E0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final F0:Landroidx/appcompat/widget/AppCompatImageView;
+
+.field public G0:Lp0e;
+
+.field public H0:Landroid/net/Uri;
+
+.field public I0:Landroid/net/Uri;
 
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    iget-object v0, p0, Lt0e;->a:Landroid/text/Layout;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onMeasure(II)V
+# direct methods
+.method public constructor <init>(Lbn8;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatImageView;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/FrameLayout;)V
     .locals 0
 
-    iget-object p1, p0, Lt0e;->a:Landroid/text/Layout;
+    invoke-direct {p0, p5}, Lq7d;-><init>(Landroid/view/View;)V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lt0e;->D0:Lbn8;
 
-    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
+    iput-object p2, p0, Lt0e;->E0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    move-result p2
+    iput-object p4, p0, Lt0e;->F0:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+    new-instance p1, Ls0e;
 
-    move-result p1
+    const/4 p4, 0x0
 
-    goto :goto_0
+    invoke-direct {p1, p0, p4}, Ls0e;-><init>(Lt0e;I)V
 
-    :cond_0
-    const/4 p2, 0x0
+    invoke-static {p2, p1}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    move p1, p2
+    new-instance p1, Ls0e;
 
-    :goto_0
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
+    const/4 p2, 0x1
 
-    return-void
-.end method
+    invoke-direct {p1, p0, p2}, Ls0e;-><init>(Lt0e;I)V
 
-.method public final setLayout(Landroid/text/Layout;)V
-    .locals 1
-
-    iput-object p1, p0, Lt0e;->a:Landroid/text/Layout;
-
-    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget v0, p0, Lt0e;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final setTextColor(I)V
-    .locals 1
-
-    iput p1, p0, Lt0e;->b:I
-
-    iget-object v0, p0, Lt0e;->a:Landroid/text/Layout;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-static {p3, p1}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

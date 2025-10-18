@@ -1,289 +1,88 @@
-.class public final synthetic Laac;
-.super Ljava/lang/Object;
+.class public final Laac;
+.super Lpd0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Leac;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leac;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput p2, p0, Laac;->a:I
+    const/16 v0, 0xf
 
-    iput-object p1, p0, Laac;->b:Leac;
+    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laac;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget p1, p0, Laac;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Laac;->b:Leac;
-
-    iget-object p1, p1, Leac;->X:Ldac;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Ltbc;->R0:Lezb;
-
-    invoke-virtual {v0}, Lezb;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Ltbc;->D0:Lde5;
-
-    new-instance v2, Lw8c;
-
-    sget-object v3, Lho2;->b:Lho2;
-
-    invoke-direct {v2, v0, v1, v3}, Lw8c;-><init>(JLho2;)V
-
-    invoke-static {p1, v2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Laac;
 
-    :pswitch_0
-    iget-object p1, p0, Laac;->b:Leac;
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Leac;->X:Ldac;
+    if-nez v1, :cond_1
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Ltbc;->C0:Lde5;
-
-    new-instance v1, Lmac;
-
-    iget-object p1, p1, Ltbc;->I0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm1c;
-
-    iget-object p1, p1, Lm1c;->l:Lrhf;
-
-    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-direct {v1, p1}, Lmac;-><init>(Ljava/util/List;)V
-
-    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Laac;->b:Leac;
-
-    iget-object p1, p1, Leac;->X:Ldac;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1}, Ltbc;->v()Lqkf;
-
-    move-result-object v1
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->b()Lv44;
-
-    move-result-object v1
-
-    new-instance v2, Labc;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Labc;-><init>(Ltbc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v4, 0x2
-
-    invoke-static {v0, v1, v3, v2, v4}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    move-result-object v0
-
-    iget-object v1, p1, Ltbc;->F0:Lpzd;
-
-    sget-object v2, Ltbc;->V0:[Lwq7;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Laac;->b:Leac;
-
-    iget-object p1, p1, Leac;->X:Ldac;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Ltbc;->R0:Lezb;
-
-    invoke-virtual {v0}, Lezb;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Ltbc;->D0:Lde5;
-
-    new-instance v2, Lw8c;
-
-    sget-object v3, Lho2;->c:Lho2;
-
-    invoke-direct {v2, v0, v1, v3}, Lw8c;-><init>(JLho2;)V
-
-    invoke-static {p1, v2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Laac;
 
-    :pswitch_3
-    iget-object p1, p0, Laac;->b:Leac;
+    iget-object v1, p0, Laac;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Leac;->X:Ldac;
+    iget-object p1, p1, Laac;->b:Ljava/lang/String;
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
+    move-result p1
 
-    move-result-object p1
+    if-nez p1, :cond_2
 
-    iget-object v0, p1, Ltbc;->R0:Lezb;
+    return v2
 
-    invoke-virtual {v0}, Lezb;->i()Ljava/lang/Long;
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Laac;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CallByNumber(phone="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Laac;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Ltbc;->D0:Lde5;
-
-    new-instance v2, Lb9c;
-
-    invoke-direct {v2, v0, v1}, Lb9c;-><init>(J)V
-
-    invoke-static {p1, v2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_4
-    iget-object p1, p0, Laac;->b:Leac;
-
-    iget-object p1, p1, Leac;->X:Ldac;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ltbc;->C0:Lde5;
-
-    sget-object v0, Lnac;->a:Lnac;
-
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_5
-    iget-object p1, p0, Laac;->b:Leac;
-
-    iget-object p1, p1, Leac;->X:Ldac;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->H0()Ltbc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1}, Ltbc;->v()Lqkf;
-
-    move-result-object v1
-
-    check-cast v1, Losa;
-
-    invoke-virtual {v1}, Losa;->a()Lv44;
-
-    move-result-object v1
-
-    new-instance v2, Lhbc;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Lhbc;-><init>(Ltbc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v3, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,51 +1,31 @@
-.class public final Lhua;
-.super Lk14;
+.class public abstract Lhua;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ll0a;
+# static fields
+.field public static final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic Z:Lsua;
-
-.field public o:Lsua;
-
-.field public r0:I
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lsua;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lhua;->Z:Lsua;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lhua;->Y:Ljava/lang/Object;
+    sget v0, Lpsc;->oneme_chat_complaint_description:I
 
-    iget p1, p0, Lhua;->r0:I
+    sput v0, Lhua;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lpsc;->oneme_chat_complaint_success_snackbar_title:I
 
-    or-int/2addr p1, v0
+    sput v0, Lhua;->b:I
 
-    iput p1, p0, Lhua;->r0:I
+    sget v0, Lpsc;->oneme_chat_complaint_title:I
 
-    iget-object p1, p0, Lhua;->Z:Lsua;
+    sput v0, Lhua;->c:I
 
-    invoke-virtual {p1, p0}, Lsua;->d(Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

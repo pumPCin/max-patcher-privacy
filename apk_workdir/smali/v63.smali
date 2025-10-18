@@ -2,840 +2,634 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liq7;
-.implements Lt63;
-
 
 # static fields
-.field public static final b:Ljava/util/Map;
+.field public static final b:Lu25;
 
-.field public static final c:Ljava/util/HashMap;
+.field public static final c:Ljava/util/LinkedHashMap;
 
-.field public static final o:Ljava/util/LinkedHashMap;
+.field public static final d:Lv63;
+
+.field public static final e:Lv63;
+
+.field public static final f:Lv63;
+
+.field public static final g:Lv63;
+
+.field public static final h:Lv63;
+
+.field public static final i:Lv63;
+
+.field public static final j:Lv63;
+
+.field public static final k:Lv63;
+
+.field public static final l:Lv63;
+
+.field public static final m:Lv63;
+
+.field public static final n:Lv63;
+
+.field public static final o:Lv63;
+
+.field public static final p:Lv63;
+
+.field public static final q:Lv63;
+
+.field public static final r:Lv63;
+
+.field public static final s:Lv63;
+
+.field public static final t:Lnh2;
 
 
 # instance fields
-.field public final a:Ljava/lang/Class;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 24
+    .locals 3
 
-    const-class v22, Lci6;
+    new-instance v0, Lnh2;
 
-    const-class v23, Ldi6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-class v1, Loh6;
+    sput-object v0, Lv63;->t:Lnh2;
 
-    const-class v2, Lqh6;
+    new-instance v1, Lu25;
 
-    const-class v3, Lei6;
+    const/16 v2, 0x11
 
-    const-class v4, Lgi6;
+    invoke-direct {v1, v2}, Lu25;-><init>(I)V
 
-    const-class v5, Lii6;
+    sput-object v1, Lv63;->b:Lu25;
 
-    const-class v6, Lki6;
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    const-class v7, Lli6;
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const-class v8, Lmi6;
+    sput-object v1, Lv63;->c:Ljava/util/LinkedHashMap;
 
-    const-class v9, Lni6;
+    const-string v1, "SSL_RSA_WITH_NULL_MD5"
 
-    const-class v10, Loi6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v11, Lph6;
+    const-string v1, "SSL_RSA_WITH_NULL_SHA"
 
-    const-class v12, Lrh6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v13, Lsh6;
+    const-string v1, "SSL_RSA_EXPORT_WITH_RC4_40_MD5"
 
-    const-class v14, Lth6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v15, Luh6;
+    const-string v1, "SSL_RSA_WITH_RC4_128_MD5"
 
-    const-class v16, Lvh6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v17, Lwh6;
+    const-string v1, "SSL_RSA_WITH_RC4_128_SHA"
 
-    const-class v18, Lxh6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v19, Lyh6;
+    const-string v1, "SSL_RSA_EXPORT_WITH_DES40_CBC_SHA"
 
-    const-class v20, Lzh6;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    const-class v21, Lbi6;
+    const-string v1, "SSL_RSA_WITH_DES_CBC_SHA"
 
-    filled-new-array/range {v1 .. v23}, [Ljava/lang/Class;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v0
+    const-string v1, "SSL_RSA_WITH_3DES_EDE_CBC_SHA"
 
-    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lcb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    add-int/lit8 v5, v3, 0x1
-
-    if-ltz v3, :cond_0
-
-    check-cast v4, Ljava/lang/Class;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    new-instance v6, Lqbb;
-
-    invoke-direct {v6, v4, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v3, v5
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lbb3;->k()V
-
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    invoke-static {v1}, Lyf8;->j(Ljava/util/ArrayList;)Ljava/util/Map;
-
-    move-result-object v0
-
-    sput-object v0, Lv63;->b:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    const-string v1, "boolean"
-
-    const-string v3, "kotlin.Boolean"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "char"
-
-    const-string v4, "kotlin.Char"
-
-    invoke-virtual {v0, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "byte"
-
-    const-string v5, "kotlin.Byte"
-
-    invoke-virtual {v0, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "short"
-
-    const-string v6, "kotlin.Short"
-
-    invoke-virtual {v0, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "int"
-
-    const-string v7, "kotlin.Int"
-
-    invoke-virtual {v0, v1, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "float"
-
-    const-string v8, "kotlin.Float"
-
-    invoke-virtual {v0, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "long"
-
-    const-string v9, "kotlin.Long"
-
-    invoke-virtual {v0, v1, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "double"
-
-    const-string v10, "kotlin.Double"
-
-    invoke-virtual {v0, v1, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    const-string v11, "java.lang.Boolean"
-
-    invoke-virtual {v1, v11, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Character"
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Byte"
-
-    invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Short"
-
-    invoke-virtual {v1, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Integer"
-
-    invoke-virtual {v1, v3, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Float"
-
-    invoke-virtual {v1, v3, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Long"
-
-    invoke-virtual {v1, v3, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Double"
-
-    invoke-virtual {v1, v3, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    const-string v4, "java.lang.Object"
-
-    const-string v5, "kotlin.Any"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.String"
-
-    const-string v5, "kotlin.String"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.CharSequence"
-
-    const-string v5, "kotlin.CharSequence"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Throwable"
-
-    const-string v5, "kotlin.Throwable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Cloneable"
-
-    const-string v5, "kotlin.Cloneable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Number"
-
-    const-string v5, "kotlin.Number"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Comparable"
-
-    const-string v5, "kotlin.Comparable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Enum"
-
-    const-string v5, "kotlin.Enum"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.annotation.Annotation"
-
-    const-string v5, "kotlin.Annotation"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Iterable"
-
-    const-string v5, "kotlin.collections.Iterable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Iterator"
-
-    const-string v5, "kotlin.collections.Iterator"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Collection"
-
-    const-string v5, "kotlin.collections.Collection"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.List"
-
-    const-string v5, "kotlin.collections.List"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Set"
-
-    const-string v5, "kotlin.collections.Set"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.ListIterator"
-
-    const-string v5, "kotlin.collections.ListIterator"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Map"
-
-    const-string v5, "kotlin.collections.Map"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Map$Entry"
-
-    const-string v5, "kotlin.collections.Map.Entry"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "kotlin.jvm.internal.StringCompanionObject"
-
-    const-string v5, "kotlin.String.Companion"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "kotlin.jvm.internal.EnumCompanionObject"
-
-    const-string v5, "kotlin.Enum.Companion"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {v3, v1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    const/4 v4, -0x1
-
-    const/4 v5, 0x6
-
-    const/16 v6, 0x2e
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    sput-object v1, Lv63;->d:Lv63;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    const-string v1, "SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA"
 
-    const-string v8, "kotlin.jvm.internal."
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "SSL_DHE_DSS_WITH_DES_CBC_SHA"
 
-    invoke-static {v1, v6, v2, v5}, Ls9f;->F(Ljava/lang/CharSequence;CII)I
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result v5
+    const-string v1, "SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA"
 
-    if-ne v5, v4, :cond_2
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-object v4, v1
+    const-string v1, "SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA"
 
-    goto :goto_2
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
+    const-string v1, "SSL_DHE_RSA_WITH_DES_CBC_SHA"
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result v4
+    const-string v1, "SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA"
 
-    invoke-virtual {v1, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v4
+    const-string v1, "SSL_DH_anon_EXPORT_WITH_RC4_40_MD5"
 
-    :goto_2
-    const-string v5, "CompanionObject"
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-static {v7, v4, v5}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, "SSL_DH_anon_WITH_RC4_128_MD5"
 
-    move-result-object v4
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v1, "SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA"
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "SSL_DH_anon_WITH_DES_CBC_SHA"
 
-    const-string v1, ".Companion"
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "SSL_DH_anon_WITH_3DES_EDE_CBC_SHA"
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v1
+    const-string v1, "TLS_KRB5_WITH_DES_CBC_SHA"
 
-    invoke-virtual {v3, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    goto :goto_1
+    const-string v1, "TLS_KRB5_WITH_3DES_EDE_CBC_SHA"
 
-    :cond_3
-    sget-object v0, Lv63;->b:Ljava/util/Map;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    const-string v1, "TLS_KRB5_WITH_RC4_128_SHA"
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-string v1, "TLS_KRB5_WITH_DES_CBC_MD5"
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v1, "TLS_KRB5_WITH_3DES_EDE_CBC_MD5"
 
-    move-result v1
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    if-eqz v1, :cond_4
+    const-string v1, "TLS_KRB5_WITH_RC4_128_MD5"
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v1
+    const-string v1, "TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA"
 
-    check-cast v1, Ljava/util/Map$Entry;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    const-string v1, "TLS_KRB5_EXPORT_WITH_RC4_40_SHA"
 
-    move-result-object v7
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    check-cast v7, Ljava/lang/Class;
+    const-string v1, "TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5"
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v1
+    const-string v1, "TLS_KRB5_EXPORT_WITH_RC4_40_MD5"
 
-    check-cast v1, Ljava/lang/Number;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    const-string v1, "TLS_RSA_WITH_AES_128_CBC_SHA"
 
-    move-result v1
-
-    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "kotlin.Function"
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
     move-result-object v1
 
-    invoke-virtual {v3, v7, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v1, Lv63;->e:Lv63;
 
-    goto :goto_3
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_CBC_SHA"
 
-    :cond_4
-    sput-object v3, Lv63;->c:Ljava/util/HashMap;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_CBC_SHA"
 
-    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result v1
+    const-string v1, "TLS_DH_anon_WITH_AES_128_CBC_SHA"
 
-    invoke-static {v1}, Lyf8;->e(I)I
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result v1
+    const-string v1, "TLS_RSA_WITH_AES_256_CBC_SHA"
 
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    sput-object v1, Lv63;->f:Lv63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_NULL_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_PSK_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_PSK_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_PSK_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_PSK_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_SEED_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
     move-result-object v1
 
-    :goto_4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sput-object v1, Lv63;->g:Lv63;
 
-    move-result v3
+    const-string v1, "TLS_RSA_WITH_AES_256_GCM_SHA384"
 
-    if-eqz v3, :cond_6
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v3
+    sput-object v1, Lv63;->h:Lv63;
 
-    check-cast v3, Ljava/util/Map$Entry;
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v7
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v3
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_GCM_SHA256"
 
-    check-cast v3, Ljava/lang/String;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    invoke-static {v3, v6, v2, v5}, Ls9f;->F(Ljava/lang/CharSequence;CII)I
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_GCM_SHA384"
 
-    move-result v8
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    if-ne v8, v4, :cond_5
+    const-string v1, "TLS_DH_anon_WITH_AES_128_GCM_SHA256"
 
-    goto :goto_5
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    :cond_5
-    add-int/lit8 v8, v8, 0x1
+    const-string v1, "TLS_DH_anon_WITH_AES_256_GCM_SHA384"
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result v9
+    const-string v1, "TLS_EMPTY_RENEGOTIATION_INFO_SCSV"
 
-    invoke-virtual {v3, v8, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    move-result-object v3
+    const-string v1, "TLS_FALLBACK_SCSV"
 
-    :goto_5
-    invoke-interface {v0, v7, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
-    goto :goto_4
+    const-string v1, "TLS_ECDH_ECDSA_WITH_NULL_SHA"
 
-    :cond_6
-    sput-object v0, Lv63;->o:Ljava/util/LinkedHashMap;
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->i:Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->j:Lv63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->k:Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->l:Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->m:Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->n:Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->o:Lv63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->p:Lv63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->q:Lv63;
+
+    const-string v1, "TLS_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->r:Lv63;
+
+    const-string v1, "TLS_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    move-result-object v1
+
+    sput-object v1, Lv63;->s:Lv63;
+
+    const-string v1, "TLS_AES_128_CCM_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
+
+    const-string v1, "TLS_AES_128_CCM_8_SHA256"
+
+    invoke-static {v0, v1}, Lnh2;->b(Lnh2;Ljava/lang/String;)Lv63;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Class;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lv63;->a:Ljava/lang/Class;
+    iput-object p1, p0, Lv63;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Class;
-    .locals 1
-
-    iget-object v0, p0, Lv63;->a:Ljava/lang/Class;
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lv63;->a:Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isAnonymousClass()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    return-object v2
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Class;->isLocalClass()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    const/16 v3, 0x24
-
-    if-eqz v2, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Ls9f;->V(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingConstructor()Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Ls9f;->V(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    const/4 v2, 0x6
-
-    invoke-static {v1, v3, v0, v2}, Ls9f;->B(Ljava/lang/CharSequence;CII)I
-
-    move-result v0
-
-    const/4 v2, -0x1
-
-    if-ne v0, v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    return-object v1
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
-
-    move-result v1
-
-    sget-object v3, Lv63;->o:Ljava/util/LinkedHashMap;
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
-
-    move-result v1
-
-    const-string v4, "Array"
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_5
-    if-nez v2, :cond_6
-
-    return-object v4
-
-    :cond_6
-    return-object v2
-
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    if-nez v1, :cond_8
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_8
-    return-object v1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lv63;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0}, Ltai;->g(Liq7;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    check-cast p1, Liq7;
-
-    invoke-static {p1}, Ltai;->g(Liq7;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-static {p0}, Ltai;->g(Liq7;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lv63;->a:Ljava/lang/Class;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " (Kotlin reflection is not available)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lv63;->a:Ljava/lang/String;
 
     return-object v0
 .end method

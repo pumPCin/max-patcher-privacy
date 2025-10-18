@@ -1,176 +1,125 @@
 .class public final Lblg;
-.super Lklf;
+.super Lez;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final X:Ljava/lang/Integer;
 
-.field public final c:Ljava/lang/String;
+.field public final Y:Ljava/lang/Long;
 
-.field public final o:Ljava/lang/String;
+.field public final Z:Ljava/lang/String;
+
+.field public final o:Ljava/lang/Long;
+
+.field public final q0:Ljava/lang/Integer;
+
+.field public final r0:Ljava/lang/Integer;
+
+.field public final s0:Z
+
+.field public final t0:Ljava/lang/String;
+
+.field public final u0:Ljava/lang/String;
+
+.field public final v0:[B
+
+.field public final w0:Ljava/lang/Long;
+
+.field public final x0:Ljava/lang/String;
+
+.field public final y0:Lgmg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(JILjava/lang/Long;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ZLjava/lang/String;Ljava/lang/String;[BLjava/lang/Long;ZLjava/lang/String;Lgmg;Z)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, La10;->X:La10;
 
-    iput-object p1, p0, Lblg;->c:Ljava/lang/String;
+    move/from16 v1, p13
 
-    iput-object p2, p0, Lblg;->o:Ljava/lang/String;
+    move/from16 v2, p16
 
-    iput-object p3, p0, Lblg;->X:Ljava/util/List;
+    invoke-direct {p0, v0, v1, v2}, Lez;-><init>(La10;ZZ)V
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lblg;->o:Ljava/lang/Long;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lblg;->X:Ljava/lang/Integer;
+
+    iput-object p4, p0, Lblg;->Y:Ljava/lang/Long;
+
+    iput-object p5, p0, Lblg;->Z:Ljava/lang/String;
+
+    iput-object p6, p0, Lblg;->q0:Ljava/lang/Integer;
+
+    iput-object p7, p0, Lblg;->r0:Ljava/lang/Integer;
+
+    iput-boolean p8, p0, Lblg;->s0:Z
+
+    iput-object p9, p0, Lblg;->t0:Ljava/lang/String;
+
+    iput-object p10, p0, Lblg;->u0:Ljava/lang/String;
+
+    iput-object p12, p0, Lblg;->w0:Ljava/lang/Long;
+
+    iput-object p11, p0, Lblg;->v0:[B
+
+    move-object/from16 p1, p14
+
+    iput-object p1, p0, Lblg;->x0:Ljava/lang/String;
+
+    move-object/from16 p1, p15
+
+    iput-object p1, p0, Lblg;->y0:Lgmg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lblg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lblg;
-
-    iget-object v1, p0, Lblg;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lblg;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lblg;->o:Ljava/lang/String;
-
-    iget-object v3, p1, Lblg;->o:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lblg;->X:Ljava/util/List;
-
-    iget-object p1, p1, Lblg;->X:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Ljava/util/HashMap;
     .locals 3
 
-    const/4 v0, 0x0
+    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
 
-    iget-object v1, p0, Lblg;->c:Ljava/lang/String;
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    iget-object v1, p0, Lblg;->x0:Ljava/lang/String;
 
-    move v1, v0
+    invoke-static {v1}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "token"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    const-string v1, "videoId"
 
-    move-result v1
+    iget-object v2, p0, Lblg;->o:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    const-string v1, "videoType"
 
-    iget-object v2, p0, Lblg;->o:Ljava/lang/String;
+    iget-object v2, p0, Lblg;->X:Ljava/lang/Integer;
 
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lblg;->X:Ljava/util/List;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", internalCallerParams="
-
-    const-string v1, ", error="
-
-    const-string v2, "Response(conversationId="
-
-    iget-object v3, p0, Lblg;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lblg;->o:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lblg;->X:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lwx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
 .end method

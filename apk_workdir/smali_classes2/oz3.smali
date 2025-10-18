@@ -1,80 +1,59 @@
-.class public final Loz3;
+.class public abstract synthetic Loz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgdf;
 
-
-# instance fields
-.field public final a:Lms3;
-
-.field public final b:Lqkf;
-
-.field public final c:Lsse;
-
-.field public final d:Lrhf;
-
-.field public final e:Lm73;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lee2;Lms3;Lqkf;Luud;Lexa;Ljwb;Lrwb;Llt7;Llt7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x5
 
-    iput-object p2, p0, Loz3;->a:Lms3;
+    invoke-static {v0}, Ldy1;->y(I)[I
 
-    iput-object p3, p0, Loz3;->b:Lqkf;
+    move-result-object v0
 
-    new-instance p2, Lsse;
+    array-length v0, v0
 
-    invoke-direct {p2, p1}, Lsse;-><init>(Ljava/lang/Object;)V
+    new-array v0, v0, [I
 
-    iput-object p2, p0, Loz3;->c:Lsse;
+    const/4 v1, 0x1
 
-    new-instance p1, Lh33;
+    const/4 v2, 0x2
 
-    const/4 p2, 0x2
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {p1, p0, p2, p8}, Lh33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :catch_0
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance p2, Lrhf;
+    :catch_1
+    const/4 v1, 0x3
 
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iput-object p2, p0, Loz3;->d:Lrhf;
+    :catch_2
+    const/4 v1, 0x4
 
-    new-instance p3, Lm73;
+    :try_start_3
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-object p1, p5
-
-    new-instance p5, Liwe;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p5, p4, p2, p1}, Liwe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    move-object p8, p9
-
-    new-instance p9, Lb42;
-
-    const/16 p1, 0x19
-
-    invoke-direct {p9, p1, p0}, Lb42;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct/range {p3 .. p9}, Lm73;-><init>(Luud;Liwe;Ljwb;Lrwb;Llt7;Lhcf;)V
-
-    iput-object p3, p0, Loz3;->e:Lm73;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final clear()V
-    .locals 0
+    :catch_3
+    sput-object v0, Loz3;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

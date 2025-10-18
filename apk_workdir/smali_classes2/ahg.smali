@@ -2,781 +2,521 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvgg;
+
 
 # instance fields
-.field public final a:Ljava/lang/Boolean;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Long;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Integer;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
-
-.field public final l:Ljava/lang/Boolean;
-
-.field public final m:Ljava/lang/Boolean;
-
-.field public final n:Ljava/lang/Boolean;
-
-.field public final o:I
-
-.field public final p:I
-
-.field public final q:Lzgg;
-
-.field public final r:I
-
-.field public final s:I
-
-.field public final t:Ljava/lang/Boolean;
-
-.field public final u:Ljava/lang/Boolean;
-
-.field public final v:Ljava/lang/Boolean;
-
-.field public final w:I
-
-.field public final x:Ljava/lang/Boolean;
-
-.field public final y:Ljava/lang/Boolean;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lygg;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lahg;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lygg;->a:Ljava/lang/Boolean;
+    .line 2
+    new-instance v0, Lqj8;
 
-    iput-object v0, p0, Lahg;->a:Ljava/lang/Boolean;
+    const/16 v1, 0x3e8
 
-    iget-object v0, p1, Lygg;->b:Ljava/lang/Long;
+    invoke-direct {v0, v1}, Lqj8;-><init>(I)V
 
-    iput-object v0, p0, Lahg;->b:Ljava/lang/Long;
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
-    iget-object v0, p1, Lygg;->c:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object v0, p0, Lahg;->c:Ljava/lang/String;
+    iput-object v0, p0, Lahg;->b:Ljava/lang/Object;
 
-    iget-object v0, p1, Lygg;->d:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object v0, p0, Lahg;->d:Ljava/lang/String;
+.method public constructor <init>(Lggd;)V
+    .locals 1
 
-    iget-object v0, p1, Lygg;->e:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lahg;->e:Ljava/lang/String;
+    iput v0, p0, Lahg;->a:I
 
-    iget-object v0, p1, Lygg;->f:Ljava/lang/String;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lahg;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Lygg;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Lahg;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Lygg;->h:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->h:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Lygg;->i:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lahg;->i:Ljava/lang/Integer;
-
-    iget-object v0, p1, Lygg;->j:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lahg;->j:Ljava/lang/Integer;
-
-    iget-object v0, p1, Lygg;->k:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lahg;->k:Ljava/lang/Integer;
-
-    iget-object v0, p1, Lygg;->l:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->l:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Lygg;->m:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->m:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Lygg;->n:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->n:Ljava/lang/Boolean;
-
-    iget v0, p1, Lygg;->o:I
-
-    iput v0, p0, Lahg;->o:I
-
-    iget v0, p1, Lygg;->p:I
-
-    iput v0, p0, Lahg;->p:I
-
-    iget-object v0, p1, Lygg;->q:Lzgg;
-
-    iput-object v0, p0, Lahg;->q:Lzgg;
-
-    iget v0, p1, Lygg;->r:I
-
-    iput v0, p0, Lahg;->r:I
-
-    iget v0, p1, Lygg;->s:I
-
-    iput v0, p0, Lahg;->s:I
-
-    iget-object v0, p1, Lygg;->t:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->t:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Lygg;->u:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->u:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Lygg;->v:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->v:Ljava/lang/Boolean;
-
-    iget v0, p1, Lygg;->w:I
-
-    iput v0, p0, Lahg;->w:I
-
-    iget-object v0, p1, Lygg;->x:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lahg;->x:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lygg;->y:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lahg;->y:Ljava/lang/Boolean;
+    .line 4
+    iput-object p1, p0, Lahg;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Loeg;)Lwg3;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lahg;->a:I
 
-    goto/16 :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    if-eqz p1, :cond_2
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    const-class v0, Lahg;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Lteg;
 
-    move-result-object v1
+    const/4 v2, 0x4
 
-    if-eq v0, v1, :cond_1
+    invoke-direct {v1, p1, v2}, Lteg;-><init>(Loeg;I)V
 
-    goto/16 :goto_1
+    new-instance p1, Lxg3;
 
-    :cond_1
-    check-cast p1, Lahg;
+    const/4 v2, 0x2
 
-    iget-object v0, p0, Lahg;->a:Ljava/lang/Boolean;
+    invoke-direct {p1, v0, v2, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v1, p1, Lahg;->a:Ljava/lang/Boolean;
+    return-object p1
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    new-instance v0, Lvlf;
 
-    move-result v0
+    const/16 v1, 0xc
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, p0, v1, p1}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lahg;->b:Ljava/lang/Long;
+    new-instance p1, Lzg3;
 
-    iget-object v1, p1, Lahg;->b:Ljava/lang/Long;
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    move-result v0
+    return-object p1
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lahg;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lahg;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->e:Ljava/lang/String;
-
-    iget-object v1, p1, Lahg;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lahg;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->g:Ljava/lang/String;
-
-    iget-object v1, p1, Lahg;->g:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->h:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->h:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->i:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lahg;->i:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->j:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lahg;->j:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->k:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lahg;->k:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->l:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->l:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->m:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->m:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->n:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->n:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lahg;->o:I
-
-    iget v1, p1, Lahg;->o:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lahg;->p:I
-
-    iget v1, p1, Lahg;->p:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lahg;->q:Lzgg;
-
-    iget-object v1, p1, Lahg;->q:Lzgg;
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lahg;->r:I
-
-    iget v1, p1, Lahg;->r:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lahg;->s:I
-
-    iget v1, p1, Lahg;->s:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lahg;->t:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->t:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->u:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->u:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->v:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->v:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lahg;->w:I
-
-    iget v1, p1, Lahg;->w:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lahg;->x:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lahg;->x:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lahg;->y:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lahg;->y:Ljava/lang/Boolean;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 27
+.method public final b(J)Lwg3;
+    .locals 3
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lahg;->a:I
 
-    iget v1, v0, Lahg;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1}, Lwx1;->a(I)Ljava/lang/Integer;
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    move-result-object v16
+    move-result-object v0
 
-    iget v1, v0, Lahg;->p:I
+    new-instance v1, Lb10;
 
-    invoke-static {v1}, Lwx1;->a(I)Ljava/lang/Integer;
+    const/16 v2, 0x1b
 
-    move-result-object v17
+    invoke-direct {v1, p1, p2, v2}, Lb10;-><init>(JI)V
 
-    iget v1, v0, Lahg;->r:I
+    new-instance p1, Lxg3;
 
-    invoke-static {v1}, Lwx1;->a(I)Ljava/lang/Integer;
+    const/4 p2, 0x2
 
-    move-result-object v19
+    invoke-direct {p1, v0, p2, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget v1, v0, Lahg;->s:I
+    return-object p1
 
-    invoke-static {v1}, Lwx1;->a(I)Ljava/lang/Integer;
+    :pswitch_0
+    new-instance v0, Lb10;
 
-    move-result-object v20
+    const/16 v1, 0x1a
 
-    iget v1, v0, Lahg;->w:I
+    invoke-direct {v0, p1, p2, v1}, Lb10;-><init>(JI)V
 
-    invoke-static {v1}, Lwx1;->a(I)Ljava/lang/Integer;
+    new-instance p1, Lvlf;
 
-    move-result-object v24
+    const/16 p2, 0xd
 
-    iget-object v2, v0, Lahg;->a:Ljava/lang/Boolean;
+    invoke-direct {p1, p0, p2, v0}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v3, v0, Lahg;->b:Ljava/lang/Long;
+    new-instance p2, Lzg3;
 
-    iget-object v4, v0, Lahg;->c:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iget-object v5, v0, Lahg;->d:Ljava/lang/String;
+    invoke-direct {p2, v0, p1}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    iget-object v6, v0, Lahg;->e:Ljava/lang/String;
+    return-object p2
 
-    iget-object v7, v0, Lahg;->f:Ljava/lang/String;
-
-    iget-object v8, v0, Lahg;->g:Ljava/lang/String;
-
-    iget-object v9, v0, Lahg;->h:Ljava/lang/Boolean;
-
-    iget-object v10, v0, Lahg;->i:Ljava/lang/Integer;
-
-    iget-object v11, v0, Lahg;->j:Ljava/lang/Integer;
-
-    iget-object v12, v0, Lahg;->k:Ljava/lang/Integer;
-
-    iget-object v13, v0, Lahg;->l:Ljava/lang/Boolean;
-
-    iget-object v14, v0, Lahg;->m:Ljava/lang/Boolean;
-
-    iget-object v15, v0, Lahg;->n:Ljava/lang/Boolean;
-
-    iget-object v1, v0, Lahg;->q:Lzgg;
-
-    move-object/from16 v18, v1
-
-    iget-object v1, v0, Lahg;->t:Ljava/lang/Boolean;
-
-    move-object/from16 v21, v1
-
-    iget-object v1, v0, Lahg;->u:Ljava/lang/Boolean;
-
-    move-object/from16 v22, v1
-
-    iget-object v1, v0, Lahg;->v:Ljava/lang/Boolean;
-
-    move-object/from16 v23, v1
-
-    iget-object v1, v0, Lahg;->x:Ljava/lang/Boolean;
-
-    move-object/from16 v25, v1
-
-    iget-object v1, v0, Lahg;->y:Ljava/lang/Boolean;
-
-    move-object/from16 v26, v1
-
-    filled-new-array/range {v2 .. v26}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v1
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final c(Lweg;)Lwg3;
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lahg;->a:I
 
-    const-string v1, "UserSettings{pushNewContacts="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    iget-object v1, p0, Lahg;->a:Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Lueg;
 
-    const-string v1, ", dontDustirbUntil="
+    const/4 v2, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1, v2}, Lueg;-><init>(Lweg;I)V
 
-    iget-object v1, p0, Lahg;->b:Ljava/lang/Long;
+    new-instance p1, Lxg3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x2
 
-    const-string v1, ", dialogsPushNotification=\'"
+    invoke-direct {p1, v0, v2, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, "\', chatsPushNotification=\'"
+    :pswitch_0
+    new-instance v0, Lzgg;
 
-    const-string v2, "\', pushSound=\'"
+    invoke-direct {v0, p0, p1}, Lzgg;-><init>(Lahg;Lweg;)V
 
-    iget-object v3, p0, Lahg;->c:Ljava/lang/String;
+    new-instance p1, Lzg3;
 
-    iget-object v4, p0, Lahg;->d:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    const-string v1, "\', dialogsPushSound=\'"
+    return-object p1
 
-    const-string v2, "\', chatsPushSound=\'"
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-object v3, p0, Lahg;->e:Ljava/lang/String;
+.method public final clear()Lwg3;
+    .locals 4
 
-    iget-object v4, p0, Lahg;->f:Ljava/lang/String;
+    iget v0, p0, Lahg;->a:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lahg;->g:Ljava/lang/String;
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "\', hiddenOnline="
+    new-instance v1, Ln2g;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v2, 0x19
 
-    iget-object v1, p0, Lahg;->h:Ljava/lang/Boolean;
+    invoke-direct {v1, v2}, Ln2g;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v2, Lxg3;
 
-    const-string v1, ", led="
+    const/4 v3, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v0, v3, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lahg;->i:Ljava/lang/Integer;
+    return-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v0, Lvcf;
 
-    const-string v1, ", dialogsLed="
+    const/16 v1, 0x12
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, p0}, Lvcf;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lahg;->j:Ljava/lang/Integer;
+    new-instance v1, Lzg3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v1, ", chatsLed="
+    invoke-direct {v1, v2, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v1
 
-    iget-object v1, p0, Lahg;->k:Ljava/lang/Integer;
+    nop
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v1, ", vibration="
+.method public final d(Lweg;)Luj8;
+    .locals 3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lahg;->a:I
 
-    iget-object v1, p0, Lahg;->l:Ljava/lang/Boolean;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    const-string v1, ", dialogsVibration="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Lueg;
 
-    iget-object v1, p0, Lahg;->m:Ljava/lang/Boolean;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1, v2}, Lueg;-><init>(Lweg;I)V
 
-    const-string v1, ", chatsVibration="
+    new-instance p1, Ldk8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lahg;->n:Ljava/lang/Boolean;
+    invoke-direct {p1, v0, v1, v2}, Ldk8;-><init>(Ljava/lang/Object;Laj6;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v0, Ln2g;
 
-    const-string v1, ", chatsInvite="
+    const/16 v1, 0x1c
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ln2g;-><init>(I)V
 
-    iget v1, p0, Lahg;->o:I
+    new-instance v1, Lek8;
 
-    invoke-static {v1}, Lfef;->D(I)Ljava/lang/String;
+    invoke-direct {v1, p1, v0, v2}, Lek8;-><init>(Luj8;Ljava/lang/Object;I)V
 
-    move-result-object v1
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v0, Lzgg;
 
-    const-string v1, ", incomingCall="
+    invoke-direct {v0, p0, p1}, Lzgg;-><init>(Lahg;Lweg;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lzj8;
 
-    iget v1, p0, Lahg;->p:I
+    invoke-direct {p1, v0}, Lzj8;-><init>(Lqk8;)V
 
-    invoke-static {v1}, Lfef;->D(I)Ljava/lang/String;
+    return-object p1
 
-    move-result-object v1
+    nop
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v1, ", inactiveTtl="
+.method public final e(Ljava/lang/String;)Lwg3;
+    .locals 3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lahg;->a:I
 
-    iget-object v1, p0, Lahg;->q:Lzgg;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    const-string v1, ", groupChatCallNotificationStatus="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Lpd2;
 
-    const/4 v1, 0x1
+    const/16 v2, 0xa
 
-    iget v2, p0, Lahg;->r:I
+    invoke-direct {v1, p1, v2}, Lpd2;-><init>(Ljava/lang/String;I)V
 
-    if-eq v2, v1, :cond_1
+    new-instance p1, Lxg3;
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    if-eq v2, v1, :cond_0
+    invoke-direct {p1, v0, v2, v1}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v1, "null"
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lpd2;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lpd2;-><init>(Ljava/lang/String;I)V
+
+    new-instance p1, Lvlf;
+
+    const/16 v1, 0xd
+
+    invoke-direct {p1, p0, v1, v0}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lzg3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Lzg3;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Ljava/lang/String;)Luj8;
+    .locals 3
+
+    iget v0, p0, Lahg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
+
+    move-result-object v0
+
+    new-instance v1, Lpd2;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, p1, v2}, Lpd2;-><init>(Ljava/lang/String;I)V
+
+    new-instance p1, Ldk8;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v1, v2}, Ldk8;-><init>(Ljava/lang/Object;Laj6;I)V
+
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lak8;->a:Lak8;
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "OFF"
+    new-instance v0, Lvlf;
 
-    goto :goto_0
+    const/16 v1, 0xe
 
-    :cond_1
-    const-string v1, "ON"
+    invoke-direct {v0, p0, v1, p1}, Lvlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lzj8;
+
+    invoke-direct {p1, v0}, Lzj8;-><init>(Lqk8;)V
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ln2g;
 
-    const-string v1, ", suggestStickersStatus="
+    const/16 v1, 0x18
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ln2g;-><init>(I)V
 
-    const/4 v1, 0x1
+    new-instance v1, Lek8;
 
-    iget v2, p0, Lahg;->s:I
+    const/4 v2, 0x1
 
-    if-eq v2, v1, :cond_3
+    invoke-direct {v1, p1, v0, v2}, Lek8;-><init>(Luj8;Ljava/lang/Object;I)V
 
-    const/4 v1, 0x2
+    return-object v1
 
-    if-eq v2, v1, :cond_2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v1, "null"
+.method public final g()Luj8;
+    .locals 6
 
-    goto :goto_1
+    iget v0, p0, Lahg;->a:I
 
-    :cond_2
-    const-string v1, "OFF"
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_1
+    sget-object v0, Logg;->b:Logg;
 
-    :cond_3
-    const-string v1, "ON"
+    invoke-virtual {p0}, Lahg;->h()Lhqe;
 
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", audioTranscriptionEnabled="
+    new-instance v1, Ln2g;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v2, 0x1b
 
-    iget-object v1, p0, Lahg;->t:Ljava/lang/Boolean;
+    invoke-direct {v1, v2}, Ln2g;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v2, Ldk8;
 
-    const-string v1, ", safeMode="
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v0, v1, v3}, Ldk8;-><init>(Ljava/lang/Object;Laj6;I)V
 
-    iget-object v1, p0, Lahg;->u:Ljava/lang/Boolean;
+    new-instance v0, Law9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x5
 
-    const-string v1, ", safeModeNoPin="
+    invoke-direct {v0, v1}, Law9;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v4, Lck8;
 
-    iget-object v1, p0, Lahg;->v:Ljava/lang/Boolean;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v4, v2, v0, v5}, Lck8;-><init>(Ljava/lang/Object;Laj6;I)V
 
-    const-string v1, ", searchByPhone="
+    new-instance v0, Ln2g;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v2, 0x1c
 
-    iget v1, p0, Lahg;->w:I
+    invoke-direct {v0, v2}, Ln2g;-><init>(I)V
 
-    invoke-static {v1}, Lfef;->D(I)Ljava/lang/String;
+    new-instance v2, Lria;
 
-    move-result-object v1
+    invoke-direct {v2, v4, v0, v1}, Lria;-><init>(Lyha;Laj6;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Lyha;->s()Lcia;
 
-    const-string v1, ", unsafeFiles="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ln2g;
 
-    iget-object v1, p0, Lahg;->x:Ljava/lang/Boolean;
+    const/16 v2, 0x1d
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ln2g;-><init>(I)V
 
-    const-string v1, ", contentLevelAccess="
+    new-instance v2, Ldk8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v0, v1, v3}, Ldk8;-><init>(Ljava/lang/Object;Laj6;I)V
 
-    iget-object v1, p0, Lahg;->y:Ljava/lang/Boolean;
+    return-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "}"
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h()Lhqe;
+    .locals 3
+
+    iget-object v0, p0, Lahg;->b:Ljava/lang/Object;
+
+    check-cast v0, Lggd;
+
+    invoke-virtual {v0}, Lggd;->n()Ltka;
+
+    move-result-object v0
+
+    new-instance v1, Ln2g;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v1, v2}, Ln2g;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lwpe;->h(Laj6;)Lhqe;
 
     move-result-object v0
 

@@ -1,9 +1,9 @@
 .class public final Lm9;
-.super Llff;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lzi6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lm9;
 
-    sget-object p2, Lzag;->a:Lzag;
+    sget-object p2, Lccg;->a:Lccg;
 
     invoke-virtual {p1, p2}, Lm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,190 +60,133 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 7
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lm9;->X:Ljava/lang/Object;
 
-    check-cast p1, Lm59;
+    check-cast p1, Lo69;
 
-    instance-of v0, p1, Li59;
+    instance-of v0, p1, Lk69;
 
-    const/4 v1, 0x0
+    sget-object v1, Lccg;->a:Lccg;
 
-    const-string v2, "input_method"
+    iget-object v2, p0, Lm9;->Y:Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
 
-    iget-object v3, p0, Lm9;->Y:Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_1
+    sget-object v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->s0:[Ltr7;
 
-    sget-object v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->t0:[Lwq7;
-
-    invoke-virtual {v3}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Ls5b;
+    invoke-virtual {v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Lu6b;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lkci;->c(Landroid/view/View;)V
 
-    goto :goto_0
+    sget-object v0, Lx9c;->c:Lx9c;
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->C0()J
 
-    move-result-object v4
+    move-result-wide v2
 
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+    check-cast p1, Lk69;
 
-    :try_start_0
-    invoke-virtual {v4, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :goto_0
-    sget-object v0, Lr8c;->c:Lr8c;
-
-    invoke-virtual {v3}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->C0()J
-
-    move-result-wide v1
-
-    check-cast p1, Li59;
-
-    iget-wide v3, p1, Li59;->a:J
+    iget-wide v4, p1, Lk69;->a:J
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v5, ":profile/edit/admin_permission?chat_id="
+    const-string v6, ":profile/edit/admin_permission?chat_id="
 
-    invoke-direct {p1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, "&contact_id="
+    const-string v2, "&contact_id="
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "&permissions_type=setup_new_admin"
+    const-string v2, "&permissions_type=setup_new_admin"
 
-    invoke-static {p1, v3, v4, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v4, v5, v2}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lqci;->q0()Llf4;
+    invoke-virtual {v0}, Lrdi;->q0()Lag4;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {v0, p1, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    goto :goto_2
+    return-object v1
 
-    :cond_1
-    instance-of p1, p1, Lh59;
-
-    if-eqz p1, :cond_5
-
-    sget-object p1, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->t0:[Lwq7;
-
-    invoke-virtual {v3}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Ls5b;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
-
-    :try_start_1
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    :goto_1
-    invoke-virtual {v3}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Ls5b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ls5b;->getSearchView()Ld1b;
-
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lj69;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Ld1b;->b()V
+    sget-object p1, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->s0:[Ltr7;
 
-    :cond_3
-    iget-object p1, v3, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->s0:Lz1b;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lz1b;->a()V
-
-    :cond_4
-    new-instance p1, La2b;
-
-    invoke-direct {p1, v3}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget v0, Lvya;->b2:I
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, La2b;->h(Ljava/lang/CharSequence;)V
-
-    new-instance v0, Lo2b;
-
-    sget v1, Liid;->r1:I
-
-    invoke-direct {v0, v1}, Lo2b;-><init>(I)V
-
-    invoke-virtual {p1, v0}, La2b;->e(Ls2b;)V
-
-    invoke-virtual {p1}, La2b;->i()Lz1b;
+    invoke-virtual {v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Lu6b;
 
     move-result-object p1
 
-    iput-object p1, v3, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->s0:Lz1b;
+    invoke-static {p1}, Lkci;->c(Landroid/view/View;)V
 
-    :cond_5
-    :goto_2
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->D0()Lu6b;
 
-    return-object p1
+    move-result-object p1
+
+    invoke-virtual {p1}, Lu6b;->getSearchView()Lf2b;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lf2b;->b()V
+
+    :cond_1
+    iget-object p1, v2, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->r0:Lb3b;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lb3b;->a()V
+
+    :cond_2
+    new-instance p1, Lc3b;
+
+    invoke-direct {p1, v2}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    sget v0, Lxza;->b2:I
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3, v0}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lc3b;->h(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Lq3b;
+
+    sget v3, Lpjd;->t1:I
+
+    invoke-direct {v0, v3}, Lq3b;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
+
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+
+    move-result-object p1
+
+    iput-object p1, v2, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;->r0:Lb3b;
+
+    :cond_3
+    return-object v1
 .end method

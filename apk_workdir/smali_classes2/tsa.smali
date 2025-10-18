@@ -1,77 +1,133 @@
-.class public abstract synthetic Ltsa;
+.class public abstract Ltsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    const/4 v0, 0x4
+    sget v0, Lonc;->oneme_contactlist_action_audio_call:I
 
-    invoke-static {v0}, Lwx1;->y(I)[I
+    sput v0, Ltsa;->a:I
 
-    move-result-object v1
+    sget v0, Lonc;->oneme_contactlist_action_block:I
 
-    array-length v1, v1
+    sput v0, Ltsa;->b:I
 
-    new-array v1, v1, [I
+    sget v0, Lonc;->oneme_contactlist_action_delete:I
 
-    const/4 v2, 0x1
+    sput v0, Ltsa;->c:I
 
-    const/4 v3, 0x2
+    sget v0, Lonc;->oneme_contactlist_action_open_profile:I
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sput v0, Ltsa;->d:I
 
-    :catch_0
-    sput-object v1, Ltsa;->$EnumSwitchMapping$0:[I
+    sget v0, Lonc;->oneme_contactlist_action_select:I
 
-    invoke-static {v0}, Lwx1;->y(I)[I
+    sput v0, Ltsa;->e:I
 
-    move-result-object v1
+    sget v0, Lonc;->oneme_contactlist_action_share_contact:I
 
-    array-length v1, v1
+    sput v0, Ltsa;->f:I
 
-    new-array v1, v1, [I
+    sget v0, Lonc;->oneme_contactlist_action_suspend_bot:I
 
-    const/4 v4, 0x0
+    sput v0, Ltsa;->g:I
 
-    :try_start_1
-    aput v2, v1, v4
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sget v0, Lonc;->oneme_contactlist_action_video_call:I
 
-    :catch_1
-    :try_start_2
-    aput v3, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    sput v0, Ltsa;->h:I
 
-    :catch_2
-    const/4 v3, 0x3
+    sget v0, Lonc;->oneme_contactlist_action_write:I
 
-    :try_start_3
-    aput v3, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    sput v0, Ltsa;->i:I
 
-    :catch_3
-    :try_start_4
-    aput v0, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    sget v0, Lonc;->oneme_contactlist_confirm_block:I
 
-    :catch_4
-    sput-object v1, Ltsa;->$EnumSwitchMapping$1:[I
+    sput v0, Ltsa;->j:I
+
+    sget v0, Lonc;->oneme_contactlist_confirm_cancel:I
+
+    sput v0, Ltsa;->k:I
+
+    sget v0, Lonc;->oneme_contactlist_confirm_delete:I
+
+    sput v0, Ltsa;->l:I
+
+    sget v0, Lonc;->oneme_contactlist_contact_view_type:I
+
+    sput v0, Ltsa;->m:I
+
+    sget v0, Lonc;->oneme_contactlist_container:I
+
+    sput v0, Ltsa;->n:I
+
+    sget v0, Lonc;->oneme_contactlist_empty_search_result_view_type:I
+
+    sput v0, Ltsa;->o:I
+
+    sget v0, Lonc;->oneme_contactlist_global_contact_view_type:I
+
+    sput v0, Ltsa;->p:I
+
+    sget v0, Lonc;->oneme_contactlist_menu_item_add_contact:I
+
+    sput v0, Ltsa;->q:I
+
+    sget v0, Lonc;->oneme_contactlist_menu_item_create_chat:I
+
+    sput v0, Ltsa;->r:I
+
+    sget v0, Lonc;->oneme_contactlist_phonebook_contact_view_type:I
+
+    sput v0, Ltsa;->s:I
+
+    sget v0, Lonc;->oneme_contactlist_toolbar:I
+
+    sput v0, Ltsa;->t:I
 
     return-void
 .end method

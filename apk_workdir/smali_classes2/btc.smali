@@ -3,526 +3,234 @@
 
 
 # static fields
-.field public static app_host:I = 0x7f130067
+.field public static channel_screen_confirmation_pin_title:I = 0x7f1302dd
 
-.field public static app_host_1:I = 0x7f130068
+.field public static channel_screen_confirmation_replace_pin_title:I = 0x7f1302de
 
-.field public static app_host_2:I = 0x7f130069
+.field public static channel_screen_message_send_error_delete_action:I = 0x7f1302df
 
-.field public static app_host_3:I = 0x7f13006a
+.field public static channel_screen_message_send_error_resend_action_multi:I = 0x7f1302e0
 
-.field public static app_host_prod:I = 0x7f13006b
+.field public static channel_screen_message_send_error_resend_action_solo:I = 0x7f1302e1
 
-.field public static app_host_prod_port:I = 0x7f13006c
+.field public static channel_screen_message_send_error_title:I = 0x7f1302e2
 
-.field public static app_host_redirects:I = 0x7f13006d
+.field public static chat_screen__bot_cleared_history__subtitle:I = 0x7f130357
 
-.field public static app_scheme:I = 0x7f130071
+.field public static chat_screen__bot_cleared_history_state__title:I = 0x7f130358
 
-.field public static attach_description_union:I = 0x7f13007e
+.field public static chat_screen__bot_empty_state__subtitle:I = 0x7f130359
 
-.field public static feedback_subject:I = 0x7f1304f5
+.field public static chat_screen__bot_empty_state__title:I = 0x7f13035a
 
-.field public static feedback_subject_auth:I = 0x7f1304f6
+.field public static chat_screen__bot_official_cleared_history_state__title:I = 0x7f13035b
 
-.field public static feedback_user_info:I = 0x7f1304f8
+.field public static chat_screen__bot_official_empty_state__title:I = 0x7f13035c
 
-.field public static file_downloading_no_progress:I = 0x7f1304fc
+.field public static chat_screen_action_copy:I = 0x7f130366
 
-.field public static file_downloading_progress_media:I = 0x7f1304fd
+.field public static chat_screen_action_copy_photo:I = 0x7f130367
 
-.field public static file_downloading_progress_photo:I = 0x7f1304fe
+.field public static chat_screen_action_copy_photo_failed:I = 0x7f130368
 
-.field public static file_downloading_progress_single_photo:I = 0x7f1304ff
+.field public static chat_screen_action_copy_photo_success:I = 0x7f130369
 
-.field public static file_downloading_progress_single_video:I = 0x7f130500
+.field public static chat_screen_action_delete:I = 0x7f13036a
 
-.field public static file_downloading_progress_video:I = 0x7f130501
+.field public static chat_screen_action_delete_for_all:I = 0x7f13036b
 
-.field public static folder_path:I = 0x7f13053f
+.field public static chat_screen_action_delete_for_me:I = 0x7f13036c
 
-.field public static link_call_join_path:I = 0x7f1305b6
+.field public static chat_screen_action_edit:I = 0x7f13036d
 
-.field public static link_chat_join_path:I = 0x7f1305b7
+.field public static chat_screen_action_forward:I = 0x7f13036e
 
-.field public static link_chat_path:I = 0x7f1305b8
+.field public static chat_screen_action_mark_as_unread:I = 0x7f13036f
 
-.field public static link_context_menu_action_copy_link:I = 0x7f1305b9
+.field public static chat_screen_action_pin:I = 0x7f130370
 
-.field public static link_context_menu_action_copy_mail_link:I = 0x7f1305ba
+.field public static chat_screen_action_reply:I = 0x7f130371
 
-.field public static link_context_menu_action_copy_phone_link:I = 0x7f1305bb
+.field public static chat_screen_action_report:I = 0x7f130372
 
-.field public static link_context_menu_action_open_link:I = 0x7f1305bc
+.field public static chat_screen_action_save_to_gallery:I = 0x7f130373
 
-.field public static link_context_menu_action_open_mail_link:I = 0x7f1305bd
+.field public static chat_screen_action_select:I = 0x7f130374
 
-.field public static link_context_menu_action_open_phone_link:I = 0x7f1305be
+.field public static chat_screen_action_share_externally:I = 0x7f130375
 
-.field public static link_copied:I = 0x7f1305bf
+.field public static chat_screen_action_share_post:I = 0x7f130376
 
-.field public static link_host_api:I = 0x7f1305c0
+.field public static chat_screen_action_share_post_success_copied:I = 0x7f130377
 
-.field public static link_private_channel_path:I = 0x7f1305c7
+.field public static chat_screen_action_unpin:I = 0x7f130378
 
-.field public static link_private_contact_path:I = 0x7f1305c8
+.field public static chat_screen_attach_file_deleted:I = 0x7f130379
 
-.field public static link_startwebapp_path:I = 0x7f1305cb
+.field public static chat_screen_attach_file_downloading_status:I = 0x7f13037a
 
-.field public static link_stickerset_path:I = 0x7f1305cc
+.field public static chat_screen_bot:I = 0x7f13037b
 
-.field public static mail_copied:I = 0x7f1305f2
+.field public static chat_screen_bot_official:I = 0x7f13037c
 
-.field public static noncontact_presence:I = 0x7f13076d
+.field public static chat_screen_confirmation_complain_body:I = 0x7f13037e
 
-.field public static oneme_unsupported_attach_message:I = 0x7f130a8b
+.field public static chat_screen_confirmation_complain_title:I = 0x7f13037f
 
-.field public static oneme_video_message:I = 0x7f130a8d
+.field public static chat_screen_confirmation_delete_for_all:I = 0x7f130380
 
-.field public static phone_copied:I = 0x7f130ae3
+.field public static chat_screen_confirmation_delete_for_me:I = 0x7f130381
 
-.field public static presence_unknown_date:I = 0x7f130b3a
+.field public static chat_screen_confirmation_pin_title:I = 0x7f130382
 
-.field public static reply_quote_content_level_body:I = 0x7f130c7e
+.field public static chat_screen_confirmation_pin_with_notify_button:I = 0x7f130383
 
-.field public static saved_messages:I = 0x7f130c90
+.field public static chat_screen_confirmation_pin_without_notify_button:I = 0x7f130384
 
-.field public static saved_messages_description:I = 0x7f130c91
+.field public static chat_screen_confirmation_replace_pin:I = 0x7f130385
 
-.field public static tt_active_live_location:I = 0x7f130d4c
+.field public static chat_screen_confirmation_replace_pin_title:I = 0x7f130386
 
-.field public static tt_active_live_location_in_chat:I = 0x7f130d4d
+.field public static chat_screen_context_menu_toolbar_title:I = 0x7f130387
 
-.field public static tt_active_live_location_in_chat_dialog:I = 0x7f130d4e
+.field public static chat_screen_empty_dialog_state_subtitle:I = 0x7f130388
 
-.field public static tt_active_live_location_many:I = 0x7f130d4f
+.field public static chat_screen_empty_dialog_state_title:I = 0x7f130389
 
-.field public static tt_admin_list_add:I = 0x7f130d50
+.field public static chat_screen_folder_link_error_caption:I = 0x7f13038c
 
-.field public static tt_admin_list_add_f:I = 0x7f130d51
+.field public static chat_screen_folder_link_error_title:I = 0x7f13038d
 
-.field public static tt_admin_list_add_m:I = 0x7f130d52
+.field public static chat_screen_group_link_call_empty_state_subtitle_1:I = 0x7f13038e
 
-.field public static tt_admin_list_you_added:I = 0x7f130d53
+.field public static chat_screen_group_link_call_empty_state_subtitle_2:I = 0x7f13038f
 
-.field public static tt_and:I = 0x7f130d54
+.field public static chat_screen_group_link_call_empty_state_subtitle_3:I = 0x7f130390
 
-.field public static tt_at:I = 0x7f130d59
+.field public static chat_screen_group_link_call_empty_state_title:I = 0x7f130391
 
-.field public static tt_attach_sent:I = 0x7f130d5a
+.field public static chat_screen_message_audio_sender_self:I = 0x7f130395
 
-.field public static tt_attach_sent_f:I = 0x7f130d5b
+.field public static chat_screen_message_audio_title:I = 0x7f130396
 
-.field public static tt_attach_sent_m:I = 0x7f130d5c
+.field public static chat_screen_message_call_subtitle_audio:I = 0x7f130397
 
-.field public static tt_attach_sent_you:I = 0x7f130d5d
+.field public static chat_screen_message_call_subtitle_video:I = 0x7f130398
 
-.field public static tt_audio:I = 0x7f130d5e
+.field public static chat_screen_message_call_title_incoming:I = 0x7f130399
 
-.field public static tt_audio_message:I = 0x7f130d5f
+.field public static chat_screen_message_call_title_missed:I = 0x7f13039a
 
-.field public static tt_audio_with_duration:I = 0x7f130d60
+.field public static chat_screen_message_call_title_outgoing:I = 0x7f13039b
 
-.field public static tt_blocked_user:I = 0x7f130d61
+.field public static chat_screen_message_call_title_reject:I = 0x7f13039c
 
-.field public static tt_bot_control_welcome_message:I = 0x7f130d62
+.field public static chat_screen_message_contact_subtitle_added:I = 0x7f13039d
 
-.field public static tt_bot_official_control_welcome_message:I = 0x7f130d63
+.field public static chat_screen_message_contact_subtitle_new:I = 0x7f13039e
 
-.field public static tt_call_incoming_audio:I = 0x7f130d64
+.field public static chat_screen_message_contact_subtitle_phone_book:I = 0x7f13039f
 
-.field public static tt_call_incoming_audio_cap:I = 0x7f130d65
+.field public static chat_screen_message_contact_subtitle_you:I = 0x7f1303a0
 
-.field public static tt_call_incoming_video:I = 0x7f130d66
+.field public static chat_screen_message_geo_subtitle:I = 0x7f1303a1
 
-.field public static tt_call_incoming_video_cap:I = 0x7f130d67
+.field public static chat_screen_message_geo_title:I = 0x7f1303a2
 
-.field public static tt_call_missed_audio:I = 0x7f130d68
+.field public static chat_screen_message_group_call:I = 0x7f1303a3
 
-.field public static tt_call_missed_audio_cap:I = 0x7f130d69
+.field public static chat_screen_message_group_call_title:I = 0x7f1303a4
 
-.field public static tt_call_missed_call:I = 0x7f130d6a
+.field public static chat_screen_message_resend_media_permission_error:I = 0x7f1303a5
 
-.field public static tt_call_missed_video:I = 0x7f130d6b
+.field public static chat_screen_message_send_error_delete_action:I = 0x7f1303a6
 
-.field public static tt_call_missed_video_cap:I = 0x7f130d6c
+.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f1303a7
 
-.field public static tt_call_outgoing_audio:I = 0x7f130d6d
+.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f1303a8
 
-.field public static tt_call_outgoing_audio_cap:I = 0x7f130d6e
+.field public static chat_screen_message_send_error_title:I = 0x7f1303a9
 
-.field public static tt_call_outgoing_canceled_audio:I = 0x7f130d6f
+.field public static chat_screen_message_unpinned_snackbar:I = 0x7f1303aa
 
-.field public static tt_call_outgoing_canceled_audio_cap:I = 0x7f130d70
+.field public static chat_screen_new_messages_decor_title:I = 0x7f1303ab
 
-.field public static tt_call_outgoing_canceled_video:I = 0x7f130d71
+.field public static chat_screen_read_participants_not_read_header:I = 0x7f1303ac
 
-.field public static tt_call_outgoing_canceled_video_cap:I = 0x7f130d72
+.field public static chat_screen_read_participants_read_header:I = 0x7f1303ad
 
-.field public static tt_call_outgoing_video:I = 0x7f130d73
+.field public static chat_screen_save_to_gallery_completed_gif_title:I = 0x7f1303af
 
-.field public static tt_call_outgoing_video_cap:I = 0x7f130d74
+.field public static chat_screen_save_to_gallery_completed_photo_title:I = 0x7f1303b0
 
-.field public static tt_chat_admin_group_name_subtitle:I = 0x7f130d75
+.field public static chat_screen_save_to_gallery_completed_video_title:I = 0x7f1303b1
 
-.field public static tt_chat_group_name_subtitle:I = 0x7f130d76
+.field public static chat_screen_save_to_gallery_failed_title:I = 0x7f1303b2
 
-.field public static tt_chat_group_subtitle:I = 0x7f130d77
+.field public static chat_screen_saved_messages_empty_state_subtitle:I = 0x7f1303b3
 
-.field public static tt_chat_participants_empty__subtitle:I = 0x7f130d78
+.field public static chat_screen_saved_messages_empty_state_title:I = 0x7f1303b4
 
-.field public static tt_chat_participants_empty__title:I = 0x7f130d79
+.field public static chat_screen_service_notifications:I = 0x7f1303b6
 
-.field public static tt_contact:I = 0x7f130d7a
+.field public static chat_screen_snackbar_report_success:I = 0x7f1303b7
 
-.field public static tt_contact_account_type:I = 0x7f130d7b
+.field public static chat_screen_toolbar_saved_messages_description:I = 0x7f1303bb
 
-.field public static tt_contact_mimetype:I = 0x7f130d7c
+.field public static message_link_forwarded:I = 0x7f1306b8
 
-.field public static tt_contact_name_unknown:I = 0x7f130d7d
+.field public static message_link_reply_audio:I = 0x7f1306b9
 
-.field public static tt_contact_status_online:I = 0x7f130d7e
+.field public static message_link_reply_audio_call:I = 0x7f1306ba
 
-.field public static tt_contact_with_name:I = 0x7f130d7f
+.field public static message_link_reply_contact:I = 0x7f1306bb
 
-.field public static tt_control_change_icon:I = 0x7f130d80
+.field public static message_link_reply_location:I = 0x7f1306bc
 
-.field public static tt_control_change_icon_admin:I = 0x7f130d81
+.field public static message_link_reply_video_call:I = 0x7f1306bd
 
-.field public static tt_control_change_icon_f:I = 0x7f130d82
+.field public static messages_list_bot_button_request_contact_confirm_action:I = 0x7f1306c4
 
-.field public static tt_control_change_icon_m:I = 0x7f130d83
+.field public static messages_list_bot_button_request_contact_confirm_description:I = 0x7f1306c5
 
-.field public static tt_control_change_icon_you:I = 0x7f130d84
+.field public static messages_list_bot_button_request_contact_confirm_title:I = 0x7f1306c6
 
-.field public static tt_control_change_title:I = 0x7f130d85
+.field public static messages_list_bot_official_button_request_contact_confirm_description:I = 0x7f1306c7
 
-.field public static tt_control_change_title_admin:I = 0x7f130d86
+.field public static messages_list_channel_description_admin_subtitle:I = 0x7f1306c8
 
-.field public static tt_control_change_title_f:I = 0x7f130d87
+.field public static messages_list_channel_description_admin_title:I = 0x7f1306c9
 
-.field public static tt_control_change_title_m:I = 0x7f130d88
+.field public static messages_list_channel_description_private_subscriber_subtitle:I = 0x7f1306ca
 
-.field public static tt_control_change_title_you:I = 0x7f130d89
+.field public static messages_list_channel_description_public_subscriber_subtitle:I = 0x7f1306cb
 
-.field public static tt_control_create_chat:I = 0x7f130d8a
+.field public static messages_list_chat_description_view_owner_subtitle:I = 0x7f1306cc
 
-.field public static tt_control_create_chat_admin:I = 0x7f130d8b
+.field public static messages_list_chat_description_view_owner_title:I = 0x7f1306cd
 
-.field public static tt_control_create_chat_f:I = 0x7f130d8c
+.field public static messages_list_chat_description_view_subtitle:I = 0x7f1306ce
 
-.field public static tt_control_create_chat_m:I = 0x7f130d8d
+.field public static messages_list_contact_removed:I = 0x7f1306cf
 
-.field public static tt_control_create_chat_you:I = 0x7f130d8e
+.field public static messages_list_date_status_edit:I = 0x7f1306d0
 
-.field public static tt_control_join_by_link:I = 0x7f130d8f
+.field public static messages_list_message_content_level_chat_snackbar_text:I = 0x7f1306d2
 
-.field public static tt_control_join_by_link_f:I = 0x7f130d90
+.field public static messages_list_message_content_level_chat_stub_text:I = 0x7f1306d3
 
-.field public static tt_control_join_by_link_m:I = 0x7f130d91
+.field public static messages_list_message_copy_with_sender_name:I = 0x7f1306d4
 
-.field public static tt_control_join_by_link_you:I = 0x7f130d92
+.field public static messages_list_message_error_open_channel_private:I = 0x7f1306d5
 
-.field public static tt_control_leave_chat:I = 0x7f130d93
+.field public static messages_list_message_error_open_channel_removed:I = 0x7f1306d6
 
-.field public static tt_control_leave_chat_f:I = 0x7f130d94
+.field public static messages_list_message_error_open_channel_unavailable:I = 0x7f1306d7
 
-.field public static tt_control_leave_chat_m:I = 0x7f130d95
+.field public static messages_list_message_error_post_not_founded:I = 0x7f1306d8
 
-.field public static tt_control_leave_chat_you:I = 0x7f130d96
+.field public static messages_list_new_geo_external_map:I = 0x7f1306d9
 
-.field public static tt_control_remove_icon:I = 0x7f130d97
+.field public static messages_list_request_storage_permission_subtitle:I = 0x7f1306da
 
-.field public static tt_control_remove_icon_admin:I = 0x7f130d98
-
-.field public static tt_control_remove_icon_f:I = 0x7f130d99
-
-.field public static tt_control_remove_icon_m:I = 0x7f130d9a
-
-.field public static tt_control_remove_icon_you:I = 0x7f130d9b
-
-.field public static tt_control_remove_title:I = 0x7f130d9c
-
-.field public static tt_control_remove_title_admin:I = 0x7f130d9d
-
-.field public static tt_control_remove_title_f:I = 0x7f130d9e
-
-.field public static tt_control_remove_title_m:I = 0x7f130d9f
-
-.field public static tt_control_remove_title_you:I = 0x7f130da0
-
-.field public static tt_control_user_add:I = 0x7f130da1
-
-.field public static tt_control_user_add_f:I = 0x7f130da2
-
-.field public static tt_control_user_add_m:I = 0x7f130da3
-
-.field public static tt_control_user_add_you:I = 0x7f130da4
-
-.field public static tt_control_user_add_you_f:I = 0x7f130da5
-
-.field public static tt_control_user_add_you_m:I = 0x7f130da6
-
-.field public static tt_control_user_remove:I = 0x7f130da7
-
-.field public static tt_control_user_remove_f:I = 0x7f130da8
-
-.field public static tt_control_user_remove_m:I = 0x7f130da9
-
-.field public static tt_control_user_remove_you_f:I = 0x7f130daa
-
-.field public static tt_control_user_remove_you_m:I = 0x7f130dab
-
-.field public static tt_control_you:I = 0x7f130dac
-
-.field public static tt_control_you_add_user:I = 0x7f130dad
-
-.field public static tt_control_you_remove_user:I = 0x7f130dae
-
-.field public static tt_dates_day_before_yesterday:I = 0x7f130daf
-
-.field public static tt_dates_days_last_seen:I = 0x7f130db0
-
-.field public static tt_dates_full_last_seen_f:I = 0x7f130db1
-
-.field public static tt_dates_full_last_seen_m:I = 0x7f130db2
-
-.field public static tt_dates_full_last_seen_u:I = 0x7f130db3
-
-.field public static tt_dates_full_last_update:I = 0x7f130db4
-
-.field public static tt_dates_full_live_location_end:I = 0x7f130db5
-
-.field public static tt_dates_hours_last_seen:I = 0x7f130db6
-
-.field public static tt_dates_minutes_last_seen:I = 0x7f130db7
-
-.field public static tt_dates_months_last_seen:I = 0x7f130db8
-
-.field public static tt_dates_right_now:I = 0x7f130db9
-
-.field public static tt_dates_right_now_last_seen_f:I = 0x7f130dba
-
-.field public static tt_dates_right_now_last_seen_m:I = 0x7f130dbb
-
-.field public static tt_dates_right_now_last_seen_u:I = 0x7f130dbc
-
-.field public static tt_dates_right_now_last_update:I = 0x7f130dbd
-
-.field public static tt_dates_right_now_live_location_end:I = 0x7f130dbe
-
-.field public static tt_dates_today:I = 0x7f130dbf
-
-.field public static tt_dates_today_at:I = 0x7f130dc0
-
-.field public static tt_dates_weeks_last_seen:I = 0x7f130dc1
-
-.field public static tt_dates_yesterday:I = 0x7f130dc2
-
-.field public static tt_dates_yesterday_at:I = 0x7f130dc3
-
-.field public static tt_dates_yesterday_at_last_seen_f:I = 0x7f130dc4
-
-.field public static tt_dates_yesterday_at_last_seen_m:I = 0x7f130dc5
-
-.field public static tt_dates_yesterday_at_last_seen_no_time:I = 0x7f130dc6
-
-.field public static tt_dates_yesterday_at_last_seen_u:I = 0x7f130dc7
-
-.field public static tt_dates_yesterday_format:I = 0x7f130dc8
-
-.field public static tt_dates_yesterday_last_update:I = 0x7f130dc9
-
-.field public static tt_dates_yesterday_live_location_end:I = 0x7f130dca
-
-.field public static tt_direct_reply_message_sent:I = 0x7f130dcb
-
-.field public static tt_email_invite_body:I = 0x7f130dcc
-
-.field public static tt_email_invite_subject:I = 0x7f130dcd
-
-.field public static tt_file:I = 0x7f130dce
-
-.field public static tt_file_size_unit_b:I = 0x7f130dcf
-
-.field public static tt_file_size_unit_gb:I = 0x7f130dd0
-
-.field public static tt_file_size_unit_kb:I = 0x7f130dd1
-
-.field public static tt_file_size_unit_mb:I = 0x7f130dd2
-
-.field public static tt_file_size_unit_tb:I = 0x7f130dd3
-
-.field public static tt_forwarded_message:I = 0x7f130dd4
-
-.field public static tt_forwarded_message_patten:I = 0x7f130dd5
-
-.field public static tt_game:I = 0x7f130dd6
-
-.field public static tt_gif:I = 0x7f130dd7
-
-.field public static tt_in_chat:I = 0x7f130dd8
-
-.field public static tt_keyboard:I = 0x7f130dd9
-
-.field public static tt_less_minute_left:I = 0x7f130dda
-
-.field public static tt_link:I = 0x7f130ddb
-
-.field public static tt_link_acs:I = 0x7f130ddc
-
-.field public static tt_live_location:I = 0x7f130ddd
-
-.field public static tt_live_location_another_device:I = 0x7f130dde
-
-.field public static tt_live_location_restart:I = 0x7f130ddf
-
-.field public static tt_live_location_sharing:I = 0x7f130de0
-
-.field public static tt_live_location_sharing_dialog:I = 0x7f130de1
-
-.field public static tt_live_location_updating:I = 0x7f130de2
-
-.field public static tt_location:I = 0x7f130de3
-
-.field public static tt_location_max_timeout:I = 0x7f130de4
-
-.field public static tt_location_no_permission_notification:I = 0x7f130de5
-
-.field public static tt_mark_as_read:I = 0x7f130de6
-
-.field public static tt_mentioned_message_patten:I = 0x7f130de7
-
-.field public static tt_message_send_error:I = 0x7f130de8
-
-.field public static tt_message_sent_chat:I = 0x7f130de9
-
-.field public static tt_message_sent_chat_f:I = 0x7f130dea
-
-.field public static tt_message_sent_chat_m:I = 0x7f130deb
-
-.field public static tt_message_sent_dialog:I = 0x7f130dec
-
-.field public static tt_message_sent_dialog_f:I = 0x7f130ded
-
-.field public static tt_message_sent_dialog_m:I = 0x7f130dee
-
-.field public static tt_music:I = 0x7f130def
-
-.field public static tt_new_message:I = 0x7f130df0
-
-.field public static tt_no_subscribers:I = 0x7f130df1
-
-.field public static tt_notif_category_active_calls:I = 0x7f130df2
-
-.field public static tt_notif_category_bg_data_restricted_notif:I = 0x7f130df3
-
-.field public static tt_notif_category_chats:I = 0x7f130df4
-
-.field public static tt_notif_category_dialogs:I = 0x7f130df5
-
-.field public static tt_notif_category_drafts:I = 0x7f130df6
-
-.field public static tt_notif_category_events:I = 0x7f130df7
-
-.field public static tt_notif_category_file_loading:I = 0x7f130df8
-
-.field public static tt_notif_category_group_calls:I = 0x7f130df9
-
-.field public static tt_notif_category_group_chats:I = 0x7f130dfa
-
-.field public static tt_notif_category_group_other:I = 0x7f130dfb
-
-.field public static tt_notif_category_inapp:I = 0x7f130dfc
-
-.field public static tt_notif_category_incoming_calls:I = 0x7f130dfd
-
-.field public static tt_notif_category_live_location:I = 0x7f130dfe
-
-.field public static tt_notif_category_media:I = 0x7f130dff
-
-.field public static tt_notif_category_misc:I = 0x7f130e00
-
-.field public static tt_notif_category_silent:I = 0x7f130e01
-
-.field public static tt_notif_category_video:I = 0x7f130e02
-
-.field public static tt_notification_file_downloading_title:I = 0x7f130e03
-
-.field public static tt_notification_file_uploading_title:I = 0x7f130e04
-
-.field public static tt_notification_text_when_bg_data_restricted:I = 0x7f130e05
-
-.field public static tt_of:I = 0x7f130e06
-
-.field public static tt_off:I = 0x7f130e07
-
-.field public static tt_ok_ru_group:I = 0x7f130e08
-
-.field public static tt_photo:I = 0x7f130e09
-
-.field public static tt_photo_and_video:I = 0x7f130e0a
-
-.field public static tt_pin_lock_always:I = 0x7f130e0b
-
-.field public static tt_present:I = 0x7f130e0c
-
-.field public static tt_present_accepted:I = 0x7f130e0d
-
-.field public static tt_privacy_restricted_dialog:I = 0x7f130e0e
-
-.field public static tt_replied_message_patten:I = 0x7f130e0f
-
-.field public static tt_reply:I = 0x7f130e10
-
-.field public static tt_scheduled_message_send_failure:I = 0x7f130e11
-
-.field public static tt_scheduled_message_send_success:I = 0x7f130e12
-
-.field public static tt_smile:I = 0x7f130e13
-
-.field public static tt_smiles:I = 0x7f130e14
-
-.field public static tt_sms_invite_text:I = 0x7f130e15
-
-.field public static tt_sticker:I = 0x7f130e16
-
-.field public static tt_stop_live_location:I = 0x7f130e17
-
-.field public static tt_typing:I = 0x7f130e18
-
-.field public static tt_typing_and:I = 0x7f130e19
-
-.field public static tt_typing_audio:I = 0x7f130e1a
-
-.field public static tt_typing_file:I = 0x7f130e1b
-
-.field public static tt_typing_photo:I = 0x7f130e1c
-
-.field public static tt_typing_sticker:I = 0x7f130e1d
-
-.field public static tt_typing_video:I = 0x7f130e1e
-
-.field public static tt_typing_video_message:I = 0x7f130e1f
-
-.field public static tt_unbind_ok_deleted_user:I = 0x7f130e20
-
-.field public static tt_video:I = 0x7f130e21
-
-.field public static tt_warning_low_storage_space:I = 0x7f130e22
-
-.field public static tt_worker_attach_upload:I = 0x7f130e23
-
-.field public static tt_worker_cancel:I = 0x7f130e24
-
-.field public static tt_worker_draft_sync:I = 0x7f130e25
-
-.field public static tt_worker_gif_upload:I = 0x7f130e26
-
-.field public static tt_you:I = 0x7f130e27
-
-.field public static tt_you_in_subtitle:I = 0x7f130e28
-
-.field public static tt_you_send_message:I = 0x7f130e29
-
-.field public static web_scheme:I = 0x7f130e80
+.field public static messages_list_request_storage_permission_title:I = 0x7f1306db

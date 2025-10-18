@@ -1,83 +1,138 @@
-.class public final Ldni;
+.class public abstract Ldni;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Lfzi;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/Boolean;
-
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Boolean;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
+# static fields
+.field public static a:Lvzh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrmi;)V
-    .locals 1
+.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eq p0, p1, :cond_1
 
-    iget-object v0, p1, Lrmi;->a:Ljava/lang/String;
+    if-eqz p0, :cond_0
 
-    iput-object v0, p0, Ldni;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p1, Lrmi;->b:Ljava/lang/String;
+    move-result p0
 
-    iput-object v0, p0, Ldni;->b:Ljava/lang/String;
+    if-eqz p0, :cond_0
 
-    iget-object v0, p1, Lrmi;->c:Ljava/lang/String;
+    goto :goto_0
 
-    iput-object v0, p0, Ldni;->c:Ljava/lang/String;
+    :cond_0
+    const/4 p0, 0x0
 
-    iget-object v0, p1, Lrmi;->d:Ljava/lang/String;
+    return p0
 
-    iput-object v0, p0, Ldni;->d:Ljava/lang/String;
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    iget-object v0, p1, Lrmi;->k:Ljava/util/AbstractCollection;
+    return p0
+.end method
 
-    check-cast v0, Lfzi;
+.method public static b(Lcom/google/android/gms/maps/model/LatLng;)Li5;
+    .locals 3
 
-    iput-object v0, p0, Ldni;->e:Lfzi;
+    :try_start_0
+    new-instance v0, Li5;
 
-    iget-object v0, p1, Lrmi;->e:Ljava/lang/String;
+    sget-object v1, Ldni;->a:Lvzh;
 
-    iput-object v0, p0, Ldni;->f:Ljava/lang/String;
+    const-string v2, "CameraUpdateFactory is not initialized"
 
-    iget-object v0, p1, Lrmi;->f:Ljava/lang/Boolean;
+    invoke-static {v1, v2}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Ldni;->g:Ljava/lang/Boolean;
+    invoke-virtual {v1}, Lguh;->W()Landroid/os/Parcel;
 
-    iget-object v0, p1, Lrmi;->g:Ljava/lang/Boolean;
+    move-result-object v2
 
-    iput-object v0, p0, Ldni;->h:Ljava/lang/Boolean;
+    invoke-static {v2, p0}, Lz1i;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    iget-object v0, p1, Lrmi;->h:Ljava/lang/Boolean;
+    const/16 p0, 0x8
 
-    iput-object v0, p0, Ldni;->i:Ljava/lang/Boolean;
+    invoke-virtual {v1, v2, p0}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    iget-object v0, p1, Lrmi;->i:Ljava/lang/Integer;
+    move-result-object p0
 
-    iput-object v0, p0, Ldni;->j:Ljava/lang/Integer;
+    invoke-virtual {p0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    iget-object p1, p1, Lrmi;->j:Ljava/lang/Integer;
+    move-result-object v1
 
-    iput-object p1, p0, Ldni;->k:Ljava/lang/Integer;
+    invoke-static {v1}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
 
-    return-void
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-direct {v0, v1}, Li5;-><init>(Lz67;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static c(Lcom/google/android/gms/maps/model/LatLng;F)Li5;
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Li5;
+
+    sget-object v1, Ldni;->a:Lvzh;
+
+    const-string v2, "CameraUpdateFactory is not initialized"
+
+    invoke-static {v1, v2}, Lzui;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lguh;->W()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p0}, Lz1i;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeFloat(F)V
+
+    const/16 p0, 0x9
+
+    invoke-virtual {v1, v2, p0}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-direct {v0, p1}, Li5;-><init>(Lz67;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
 .end method

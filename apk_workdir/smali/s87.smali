@@ -1,133 +1,104 @@
 .class public final Ls87;
-.super Lhy1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Ls87;
+.field public static final a:Lz87;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
-    new-instance v0, Ls87;
+    new-instance v0, Landroid/util/Size;
 
-    new-instance v1, Ljfa;
+    const/16 v1, 0x280
 
-    const/16 v2, 0xa
+    const/16 v2, 0x1e0
 
-    invoke-direct {v1, v2}, Ljfa;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lkx5;->c:Lkx5;
 
-    sput-object v0, Ls87;->b:Ls87;
+    new-instance v2, Lwcd;
 
-    return-void
-.end method
+    sget-object v3, Lcse;->c:Landroid/util/Size;
 
+    invoke-direct {v2, v3}, Lwcd;-><init>(Landroid/util/Size;)V
 
-# virtual methods
-.method public final a(Ligg;Ld40;)V
-    .locals 3
+    new-instance v3, Lvcd;
 
-    invoke-super {p0, p1, p2}, Lhy1;->a(Ligg;Ld40;)V
+    const/4 v4, 0x0
 
-    instance-of v0, p1, Lr87;
+    invoke-direct {v3, v1, v2, v4}, Lvcd;-><init>(Lkx5;Lwcd;Ld46;)V
 
-    if-eqz v0, :cond_4
+    new-instance v1, Lr87;
 
-    check-cast p1, Lr87;
+    const/4 v2, 0x0
 
-    invoke-static {}, La0a;->c()La0a;
+    invoke-direct {v1, v2}, Lr87;-><init>(I)V
 
-    move-result-object v0
+    sget-object v2, Lka7;->D:Lz90;
 
-    sget-object v1, Lr87;->b:Lq90;
+    iget-object v1, v1, Lr87;->b:Lc1a;
 
-    invoke-interface {p1, v1}, Ldzc;->l(Lq90;)Z
+    invoke-virtual {v1, v2, v0}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v0, Lmhg;->j0:Lz90;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v0, Lka7;->y:Lz90;
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v0, Lka7;->G:Lz90;
+
+    invoke-virtual {v1, v0, v3}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v0, Lv45;->d:Lv45;
+
+    invoke-virtual {v0, v0}, Lv45;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_0
 
-    invoke-interface {p1, v1}, Ldzc;->h(Lq90;)Ljava/lang/Object;
+    sget-object v2, Laa7;->x:Lz90;
 
-    move-result-object p1
+    invoke-virtual {v1, v2, v0}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/lang/Integer;
+    new-instance v0, Lz87;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const-class v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    sget-object v2, Lfs4;->a:Lx85;
-
-    invoke-virtual {v2, v1}, Lx85;->C(Ljava/lang/Class;)Lzhc;
+    invoke-static {v1}, Ls9b;->a(Lpk3;)Ls9b;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
+    invoke-direct {v0, v1}, Lz87;-><init>(Ls9b;)V
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lcz1;->U(Landroid/hardware/camera2/CaptureRequest$Key;)Lq90;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, La0a;->k(Lq90;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lcz1;->U(Landroid/hardware/camera2/CaptureRequest$Key;)Lq90;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, La0a;->k(Lq90;Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_0
-    new-instance p1, Lcz1;
-
-    invoke-static {v0}, Lq8b;->a(Lck3;)Lq8b;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Luq6;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p2, p1}, Ld40;->c(Lck3;)V
+    sput-object v0, Ls87;->a:Lz87;
 
     return-void
 
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :cond_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "config is not ImageCaptureConfig"
+    const-string v1, "ImageAnalysis currently only supports SDR"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v0
 .end method

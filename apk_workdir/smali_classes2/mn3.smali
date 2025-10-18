@@ -1,105 +1,81 @@
-.class public final enum Lmn3;
-.super Ljava/lang/Enum;
+.class public final synthetic Lmn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lmn3;
-
-.field public static final enum b:Lmn3;
-
-.field public static final enum c:Lmn3;
-
-.field public static final enum o:Lmn3;
+# interfaces
+.implements Lji6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lmn3;
-
-    const/4 v1, 0x0
-
-    sget v2, Lric;->global_text_positive:I
-
-    const-string v3, "SUCCESS"
-
-    invoke-direct {v0, v3, v1, v2}, Lmn3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lmn3;->b:Lmn3;
-
-    new-instance v1, Lmn3;
-
-    const/4 v2, 0x1
-
-    sget v3, Lric;->global_text_negative:I
-
-    const-string v4, "ERROR"
-
-    invoke-direct {v1, v4, v2, v3}, Lmn3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lmn3;->c:Lmn3;
-
-    new-instance v2, Lmn3;
-
-    const/4 v3, 0x2
-
-    sget v4, Lric;->global_text_primary:I
-
-    const-string v5, "NORMAL"
-
-    invoke-direct {v2, v5, v3, v4}, Lmn3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lmn3;->o:Lmn3;
-
-    filled-new-array {v0, v1, v2}, [Lmn3;
-
-    move-result-object v0
-
-    sput-object v0, Lmn3;->X:[Lmn3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lmn3;->a:I
 
-    iput p3, p0, Lmn3;->a:I
+    iput-object p1, p0, Lmn3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lmn3;
-    .locals 1
 
-    const-class v0, Lmn3;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lmn3;->a:I
 
-    move-result-object p0
+    iget-object v1, p0, Lmn3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    check-cast p0, Lmn3;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
 
-.method public static values()[Lmn3;
-    .locals 1
+    new-instance v0, Ltn3;
 
-    sget-object v0, Lmn3;->X:[Lmn3;
+    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lqs;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
+
+    const/4 v4, 0x0
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ltn3;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltr7;
+
+    invoke-virtual {v1}, Ll24;->getOnBackPressedDispatcher()Lpma;
 
     move-result-object v0
 
-    check-cast v0, [Lmn3;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lpma;->d()V
+
+    :cond_0
+    sget-object v0, Lccg;->a:Lccg;
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

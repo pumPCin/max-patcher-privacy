@@ -1,32 +1,49 @@
 .class public final Lmga;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoDecoderFactory;
+
+# instance fields
+.field public final synthetic X:Luga;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyuc;Ljava/lang/IllegalStateException;)V
-    .locals 2
+.method public constructor <init>(Luga;Ly14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmga;->X:Luga;
 
-    const-string v0, "OKDefaultVideoDecoderFactory"
-
-    const-string v1, "Video decoder factory init failed"
-
-    invoke-interface {p1, v0, v1, p2}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lmga;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lmga;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lmga;->Y:I
+
+    iget-object p1, p0, Lmga;->X:Luga;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Luga;->a(Luga;Ljava/util/List;Ly14;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method

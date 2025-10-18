@@ -1,330 +1,130 @@
 .class public final Lyt9;
-.super Ljava/lang/Object;
+.super Lezh;
 .source "SourceFile"
-
-# interfaces
-.implements Lxp9;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyt9;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final b:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public final X:J
-
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:J
+.field public final a:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Luj8;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    const/16 v1, 0xc
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
-
-    sput-object v0, Lyt9;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lyt9;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-.method public constructor <init>(JJJJJ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 10
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-wide p1, p0, Lyt9;->a:J
+    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
-    .line 3
-    iput-wide p3, p0, Lyt9;->b:J
+    move-result-object v0
 
-    .line 4
-    iput-wide p5, p0, Lyt9;->c:J
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    .line 5
-    iput-wide p7, p0, Lyt9;->o:J
+    move-result-object v1
 
-    .line 6
-    iput-wide p9, p0, Lyt9;->X:J
+    invoke-virtual {v1}, Ljava/lang/Runtime;->availableProcessors()I
 
-    return-void
-.end method
+    move-result v3
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    move-result-wide v0
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-wide v0, p0, Lyt9;->a:J
+    new-instance v9, Lp30;
 
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-direct {v9, v0}, Lp30;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
-    move-result-wide v0
+    const-wide/16 v5, 0x3c
 
-    iput-wide v0, p0, Lyt9;->b:J
+    move v4, v3
 
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    move-result-wide v0
+    iput-object v2, p0, Lyt9;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iput-wide v0, p0, Lyt9;->c:J
+    const/4 v0, 0x1
 
-    .line 11
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lyt9;->o:J
-
-    .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lyt9;->X:J
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    sget-object v0, Lyt9;->b:Ljava/lang/ThreadLocal;
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lyt9;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lyt9;
-
-    iget-wide v2, p0, Lyt9;->a:J
-
-    iget-wide v4, p1, Lyt9;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lyt9;->b:J
-
-    iget-wide v4, p1, Lyt9;->b:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lyt9;->c:J
-
-    iget-wide v4, p1, Lyt9;->c:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lyt9;->o:J
-
-    iget-wide v4, p1, Lyt9;->o:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lyt9;->X:J
-
-    iget-wide v4, p1, Lyt9;->X:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lyt9;->a:J
-
-    invoke-static {v0, v1}, Lrei;->c(J)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lyt9;->b:J
-
-    invoke-static {v1, v2}, Lrei;->c(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lyt9;->c:J
-
-    invoke-static {v2, v3}, Lrei;->c(J)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lyt9;->o:J
-
-    invoke-static {v1, v2}, Lrei;->c(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lyt9;->X:J
-
-    invoke-static {v2, v3}, Lrei;->c(J)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xda
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Motion photo metadata: photoStartPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lyt9;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", photoSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lyt9;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", photoPresentationTimestampUs="
-
-    const-string v2, ", videoStartPosition="
-
-    iget-wide v3, p0, Lyt9;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-wide v1, p0, Lyt9;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lyt9;->X:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ljava/util/Deque;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    if-eqz v0, :cond_2
 
-    iget-wide v0, p0, Lyt9;->a:J
+    invoke-interface {v0}, Ljava/util/Deque;->size()I
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result v1
 
-    iget-wide v0, p0, Lyt9;->b:J
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-gt v1, v2, :cond_2
 
-    iget-wide v0, p0, Lyt9;->c:J
+    invoke-interface {v0, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-interface {v0}, Ljava/util/Deque;->size()I
 
-    iget-wide v0, p0, Lyt9;->o:J
+    move-result v1
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-gt v1, v2, :cond_1
 
-    iget-wide v0, p0, Lyt9;->X:J
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-interface {v0}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
+
+    invoke-interface {v0}, Ljava/util/Deque;->peekFirst()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    if-nez p1, :cond_0
+
+    :cond_1
+    return-void
+
+    :cond_2
+    new-instance v0, Lhld;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p1, v1}, Lhld;-><init>(Ljava/lang/Runnable;I)V
+
+    iget-object p1, p0, Lyt9;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

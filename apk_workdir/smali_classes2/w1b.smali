@@ -1,56 +1,37 @@
-.class public final synthetic Lw1b;
+.class public abstract Lw1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lx1b;
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx1b;I)V
-    .locals 0
-
-    iput p2, p0, Lw1b;->a:I
-
-    iput-object p1, p0, Lw1b;->b:Lx1b;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lw1b;->a:I
+    sget v0, Lrtc;->oneme_stickers_set_add_button:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lw1b;->a:I
 
-    iget-object v0, p0, Lw1b;->b:Lx1b;
+    sget v0, Lrtc;->oneme_stickers_set_remove_button:I
 
-    invoke-virtual {v0}, Lx1b;->b()V
+    sput v0, Lw1b;->b:I
+
+    sget v0, Lrtc;->oneme_stickers_set_snackbar_favorite_added:I
+
+    sput v0, Lw1b;->c:I
+
+    sget v0, Lrtc;->oneme_stickers_set_snackbar_favorite_removed:I
+
+    sput v0, Lw1b;->d:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lw1b;->b:Lx1b;
-
-    invoke-virtual {v0}, Lx1b;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -2,38 +2,69 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
 
-# instance fields
-.field public final a:Ldni;
 
-.field public final b:Lkhi;
-
-.field public final c:Lzgi;
+# static fields
+.field public static final a:Lphi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk68;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lphi;
 
-    iget-object v0, p1, Lk68;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Ldni;
+    sput-object v0, Lphi;->a:Lphi;
 
-    iput-object v0, p0, Lphi;->a:Ldni;
+    new-instance v0, Lr8i;
 
-    iget-object v0, p1, Lk68;->c:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v0, Lkhi;
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    iput-object v0, p0, Lphi;->b:Lkhi;
+    const-class v1, Lm9i;
 
-    iget-object p1, p1, Lk68;->o:Ljava/lang/Object;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    check-cast p1, Lzgi;
+    move-result-object v0
 
-    iput-object p1, p0, Lphi;->c:Lzgi;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

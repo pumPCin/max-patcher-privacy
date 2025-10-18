@@ -1,21 +1,19 @@
 .class public final Lv8c;
-.super Lgd0;
+.super Ly8c;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
-
-    iput-wide p1, p0, Lv8c;->b:J
+    iput p1, p0, Lv8c;->a:I
 
     return-void
 .end method
@@ -23,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -34,51 +32,98 @@
     :cond_0
     instance-of v1, p1, Lv8c;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lv8c;
 
-    iget-wide v3, p0, Lv8c;->b:J
+    iget v1, p0, Lv8c;->a:I
 
-    iget-wide v5, p1, Lv8c;->b:J
+    iget p1, p1, Lv8c;->a:I
 
-    cmp-long p1, v3, v5
+    if-eq v1, p1, :cond_2
 
-    if-eqz p1, :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_2
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x80
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lv8c;->b:J
+    iget v0, p0, Lv8c;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, -0x7fffff80
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const v0, -0x7fffff80
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "ChatAttaches(chatId="
+    const v0, -0x7fffff80
 
-    const-string v1, ")"
+    invoke-static {v0}, Luvi;->c(I)Ljava/lang/String;
 
-    iget-wide v2, p0, Lv8c;->b:J
+    move-result-object v0
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "ParticipantsCount(count="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lv8c;->a:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", itemViewType="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,29 +1,51 @@
-.class public interface abstract Lvo3;
+.class public abstract synthetic Lvo3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Z
-.end method
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.method public abstract b()Lmp3;
-.end method
 
-.method public abstract c(Luo3;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.method public abstract d()Z
-.end method
+    invoke-static {}, Laq3;->values()[Laq3;
 
-.method public abstract e(Luo3;)V
-.end method
+    move-result-object v0
 
-.method public abstract f()Z
-.end method
+    array-length v0, v0
 
-.method public abstract g()Z
-.end method
+    new-array v0, v0, [I
 
-.method public abstract invalidate()V
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lvo3;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

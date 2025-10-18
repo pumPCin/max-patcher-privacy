@@ -1,246 +1,91 @@
-.class public final Lue9;
-.super Ljava/lang/Object;
+.class public final enum Lue9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+
+# static fields
+.field public static final enum b:Lue9;
+
+.field public static final synthetic c:[Lue9;
+
+.field public static final synthetic o:Lzd5;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:J
-
-.field public final synthetic o:J
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ln4h;Ljava/lang/String;JJ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Lue9;
 
-    iput v0, p0, Lue9;->a:I
+    const-string v1, "EMOJI"
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lue9;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, v2}, Lue9;-><init>(Ljava/lang/String;II)V
 
-    iput-object p2, p0, Lue9;->b:Ljava/lang/String;
+    sput-object v0, Lue9;->b:Lue9;
 
-    iput-wide p3, p0, Lue9;->c:J
+    new-instance v1, Lue9;
 
-    iput-wide p5, p0, Lue9;->o:J
+    const-string v2, "STICKER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lue9;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1}, [Lue9;
+
+    move-result-object v0
+
+    sput-object v0, Lue9;->c:[Lue9;
+
+    new-instance v1, Lzd5;
+
+    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lue9;->o:Lzd5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lwe9;JJLjava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput v0, p0, Lue9;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lue9;->X:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lue9;->c:J
-
-    iput-wide p4, p0, Lue9;->o:J
-
-    iput-object p6, p0, Lue9;->b:Ljava/lang/String;
+    iput p3, p0, Lue9;->a:I
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lue9;
+    .locals 1
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+    const-class v0, Lue9;
 
-    iget v0, p0, Lue9;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lue9;->X:Ljava/lang/Object;
+    check-cast p0, Lue9;
 
-    check-cast v0, Ln4h;
+    return-object p0
+.end method
 
-    iget-object v1, v0, Ln4h;->d:Lqed;
+.method public static values()[Lue9;
+    .locals 1
 
-    iget-object v0, v0, Ln4h;->a:Lyed;
+    sget-object v0, Lue9;->c:[Lue9;
 
-    invoke-virtual {v1}, Lf3;->a()Lfg6;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lue9;->b:Ljava/lang/String;
-
-    if-nez v4, :cond_0
-
-    invoke-interface {v2, v3}, Lcef;->S(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v2, v3, v4}, Lcef;->f(ILjava/lang/String;)V
-
-    :goto_0
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Lue9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lcef;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Lue9;->o:J
-
-    invoke-interface {v2, v3, v4, v5}, Lcef;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lyed;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v2}, Lfg6;->n()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lyed;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lyed;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lf3;->u(Lfg6;)V
-
-    return-object v3
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v3
-
-    :try_start_3
-    invoke-virtual {v0}, Lyed;->k()V
-
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    invoke-virtual {v1, v2}, Lf3;->u(Lfg6;)V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lue9;->X:Ljava/lang/Object;
-
-    check-cast v0, Lwe9;
-
-    iget-object v1, v0, Lwe9;->c:Lfi;
-
-    iget-object v0, v0, Lwe9;->a:Lyed;
-
-    invoke-virtual {v1}, Lf3;->a()Lfg6;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Lue9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lcef;->k(IJ)V
-
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Lue9;->o:J
-
-    invoke-interface {v2, v3, v4, v5}, Lcef;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Lue9;->b:Ljava/lang/String;
-
-    if-nez v4, :cond_1
-
-    invoke-interface {v2, v3}, Lcef;->S(I)V
-
-    goto :goto_2
-
-    :cond_1
-    invoke-interface {v2, v3, v4}, Lcef;->f(ILjava/lang/String;)V
-
-    :goto_2
-    :try_start_4
-    invoke-virtual {v0}, Lyed;->c()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :try_start_5
-    invoke-virtual {v2}, Lfg6;->n()I
-
-    invoke-virtual {v0}, Lyed;->q()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :try_start_6
-    invoke-virtual {v0}, Lyed;->k()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    invoke-virtual {v1, v2}, Lf3;->u(Lfg6;)V
-
-    const/4 v0, 0x0
+    check-cast v0, [Lue9;
 
     return-object v0
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_3
-
-    :catchall_3
-    move-exception v3
-
-    :try_start_7
-    invoke-virtual {v0}, Lyed;->k()V
-
-    throw v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :goto_3
-    invoke-virtual {v1, v2}, Lf3;->u(Lfg6;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

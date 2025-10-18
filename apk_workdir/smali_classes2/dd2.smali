@@ -3,186 +3,107 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ler3;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Lsd2;
 
 .field public final synthetic c:J
 
-.field public final synthetic o:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;J)V
-    .locals 1
+.method public synthetic constructor <init>(Lsd2;JI)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    iput p4, p0, Ldd2;->a:I
 
-    iput v0, p0, Ldd2;->a:I
+    iput-object p1, p0, Ldd2;->b:Lsd2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ldd2;->b:J
-
-    iput-object p3, p0, Ldd2;->o:Ljava/lang/Object;
-
-    iput-wide p4, p0, Ldd2;->c:J
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lma9;JJ)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Ldd2;->a:I
+    iput-wide p2, p0, Ldd2;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldd2;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Ldd2;->b:J
-
-    iput-wide p4, p0, Ldd2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 11
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Ldd2;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ldd2;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ldd2;->b:Lsd2;
 
-    check-cast v0, Lma9;
-
-    check-cast p1, Le10;
-
-    iget-object v0, v0, Lma9;->c:Ljwb;
-
-    iget-object v1, p1, Le10;->e:Ld10;
-
-    if-eqz v1, :cond_4
+    iget-object v0, v0, Lsd2;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-wide v1, p0, Ldd2;->c:J
 
-    const-wide/16 v3, 0x0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    cmp-long v5, v1, v3
+    move-result-object v3
 
-    if-nez v5, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    check-cast v0, Llwb;
-
-    iget-object v0, v0, Llwb;->b:Lbub;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->min-duration-save-audio-start-time:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v6, 0x14
-
-    int-to-long v6, v6
-
-    invoke-virtual {v0, v5, v6, v7}, Lpsd;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v5
-
-    long-to-int v0, v5
-
-    int-to-long v5, v0
-
-    cmp-long v0, v1, v5
-
-    if-gez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-wide v5, p0, Ldd2;->b:J
-
-    sub-long v7, v1, v5
-
-    const-wide/16 v9, 0xbb8
-
-    cmp-long v0, v7, v9
-
-    if-gtz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-wide v3, v5
-
-    :goto_0
-    iget-object v0, p1, Le10;->e:Ld10;
-
-    if-nez v0, :cond_3
-
-    sget-object v0, Ld10;->j:Ld10;
-
-    :cond_3
-    invoke-virtual {v0}, Ld10;->a()Lc10;
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-wide v3, v0, Lc10;->g:J
+    check-cast v0, Lla2;
 
-    iput-wide v1, v0, Lc10;->c:J
+    if-eqz v0, :cond_0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    return-object v0
 
-    move-result-wide v1
+    :cond_0
+    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
 
-    iput-wide v1, v0, Lc10;->h:J
+    const-string v3, "chat not found: "
 
-    new-instance v1, Ld10;
+    invoke-static {v1, v2, v3}, Lrv8;->d(JLjava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v1, v0}, Ld10;-><init>(Lc10;)V
+    move-result-object v1
 
-    iput-object v1, p1, Le10;->e:Ld10;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_4
-    :goto_1
-    return-void
+    throw v0
 
     :pswitch_0
-    iget-object v0, p0, Ldd2;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ldd2;->b:Lsd2;
 
-    move-object v4, v0
+    iget-object v0, v0, Lsd2;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    check-cast v4, Ljava/lang/String;
+    iget-wide v1, p0, Ldd2;->c:J
 
-    check-cast p1, Lpd2;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v3
 
-    new-instance v1, Lbe2;
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v2, p0, Ldd2;->c:J
+    move-result-object v0
 
-    iget-wide v5, p0, Ldd2;->b:J
+    check-cast v0, Lla2;
 
-    invoke-direct/range {v1 .. v6}, Lbe2;-><init>(JLjava/lang/String;J)V
+    if-eqz v0, :cond_1
 
-    iput-object v1, p1, Lpd2;->j0:Lbe2;
+    return-object v0
 
-    return-void
+    :cond_1
+    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+
+    const-string v3, "chat not found: "
+
+    invoke-static {v1, v2, v3}, Lrv8;->d(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     nop
 

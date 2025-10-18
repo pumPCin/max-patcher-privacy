@@ -1,5 +1,5 @@
 .class public final Lb4;
-.super Lfci;
+.super Lgdi;
 .source "SourceFile"
 
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final c(Le4;La4;La4;)Z
+.method public final a(Le4;La4;La4;)Z
     .locals 2
 
     :cond_0
@@ -64,7 +64,7 @@
     return p1
 .end method
 
-.method public final d(Le4;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final b(Le4;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
     :cond_0
@@ -92,7 +92,7 @@
     return p1
 .end method
 
-.method public final e(Le4;Ld4;Ld4;)Z
+.method public final c(Le4;Ld4;Ld4;)Z
     .locals 2
 
     :cond_0
@@ -120,7 +120,7 @@
     return p1
 .end method
 
-.method public final f(Ld4;Ld4;)V
+.method public final e(Ld4;Ld4;)V
     .locals 1
 
     iget-object v0, p0, Lb4;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method public final g(Ld4;Ljava/lang/Thread;)V
+.method public final f(Ld4;Ljava/lang/Thread;)V
     .locals 1
 
     iget-object v0, p0, Lb4;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;

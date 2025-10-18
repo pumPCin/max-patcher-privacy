@@ -1,63 +1,156 @@
-.class public abstract Ljmi;
+.class public final Ljmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Ljmi;
+
+.field public static final b:Lbr5;
+
+.field public static final c:Lbr5;
+
+.field public static final d:Lbr5;
+
+.field public static final e:Lbr5;
+
 
 # direct methods
-.method public static a(Liz1;Ljava/util/ArrayList;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    instance-of v0, p0, Ljz1;
+    new-instance v0, Ljmi;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Ljz1;
+    sput-object v0, Ljmi;->a:Ljmi;
 
-    iget-object p0, p0, Ljz1;->a:Ljava/util/ArrayList;
+    new-instance v0, Lr8i;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    const-class v1, Lm9i;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    check-cast v0, Liz1;
+    new-instance v2, Lbr5;
 
-    invoke-static {v0, p1}, Ljmi;->a(Liz1;Ljava/util/ArrayList;)V
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
+    const-string v3, "imageFormat"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljmi;->b:Lbr5;
+
+    new-instance v0, Lr8i;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lr8i;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "originalImageSize"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljmi;->c:Lbr5;
+
+    new-instance v0, Lr8i;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lr8i;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "compressedImageSize"
+
+    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ljmi;->d:Lbr5;
+
+    new-instance v0, Lr8i;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lr8i;-><init>(I)V
+
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lbr5;
+
+    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "isOdmlImage"
+
+    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ljmi;->e:Lbr5;
+
     return-void
+.end method
 
-    :cond_1
-    instance-of v0, p0, Lx32;
 
-    if-eqz v0, :cond_2
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    check-cast p0, Lx32;
+    check-cast p1, Lawi;
 
-    iget-object p0, p0, Lx32;->a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    check-cast p2, Luha;
 
-    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sget-object v0, Ljmi;->b:Lbr5;
 
-    return-void
+    iget-object v1, p1, Lawi;->a:Lzvi;
 
-    :cond_2
-    new-instance v0, Lfy1;
+    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
-    invoke-direct {v0, p0}, Lfy1;-><init>(Liz1;)V
+    sget-object v0, Ljmi;->c:Lbr5;
 
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lawi;->b:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    sget-object p1, Ljmi;->d:Lbr5;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+
+    sget-object p1, Ljmi;->e:Lbr5;
+
+    invoke-interface {p2, p1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
 
     return-void
 .end method

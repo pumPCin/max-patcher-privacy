@@ -1,57 +1,25 @@
 .class public final Lra9;
-.super Lk14;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/List;
-
-.field public Y:Z
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lsa9;
-
-.field public final synthetic r0:Lsa9;
-
-.field public s0:I
+.field public a:Z
 
 
 # direct methods
-.method public constructor <init>(Lsa9;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lra9;->r0:Lsa9;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 2
 
-    iput-object p1, p0, Lra9;->Z:Ljava/lang/Object;
+    const/4 v0, -0x1
 
-    iget p1, p0, Lra9;->s0:I
+    const/4 v1, -0x2
 
-    const/high16 v0, -0x80000000
+    invoke-direct {p0, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lra9;->s0:I
+    iput-boolean v0, p0, Lra9;->a:Z
 
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lra9;->r0:Lsa9;
-
-    invoke-virtual {v1, p0, v0, p1}, Lsa9;->a(Lk14;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

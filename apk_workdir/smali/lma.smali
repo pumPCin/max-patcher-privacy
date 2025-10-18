@@ -1,43 +1,84 @@
-.class public abstract Llma;
+.class public final Llma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/window/OnBackAnimationCallback;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:Lli6;
 
-.field public static final c:I
+.field public final synthetic b:Lli6;
 
-.field public static final d:I
+.field public final synthetic c:Lji6;
 
-.field public static final e:I
+.field public final synthetic d:Lji6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lli6;Lli6;Lji6;Lji6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llma;->a:Lli6;
+
+    iput-object p2, p0, Llma;->b:Lli6;
+
+    iput-object p3, p0, Llma;->c:Lji6;
+
+    iput-object p4, p0, Llma;->d:Lji6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onBackCancelled()V
     .locals 1
 
-    sget v0, Lvlc;->oneme_force_update_app_icon:I
+    iget-object v0, p0, Llma;->d:Lji6;
 
-    sput v0, Llma;->a:I
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    sget v0, Lvlc;->oneme_force_update_subtitle:I
+    return-void
+.end method
 
-    sput v0, Llma;->b:I
+.method public final onBackInvoked()V
+    .locals 1
 
-    sget v0, Lvlc;->oneme_force_update_title:I
+    iget-object v0, p0, Llma;->c:Lji6;
 
-    sput v0, Llma;->c:I
+    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
 
-    sget v0, Lvlc;->oneme_force_update_update_button:I
+    return-void
+.end method
 
-    sput v0, Llma;->d:I
+.method public final onBackProgressed(Landroid/window/BackEvent;)V
+    .locals 1
 
-    sget v0, Lvlc;->oneme_force_update_update_icon:I
+    new-instance v0, Lye0;
 
-    sput v0, Llma;->e:I
+    invoke-direct {v0, p1}, Lye0;-><init>(Landroid/window/BackEvent;)V
+
+    iget-object p1, p0, Llma;->b:Lli6;
+
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final onBackStarted(Landroid/window/BackEvent;)V
+    .locals 1
+
+    new-instance v0, Lye0;
+
+    invoke-direct {v0, p1}, Lye0;-><init>(Landroid/window/BackEvent;)V
+
+    iget-object p1, p0, Llma;->a:Lli6;
+
+    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

@@ -1,39 +1,49 @@
-.class public interface abstract Lkdd;
-.super Ljava/lang/Object;
+.class public final Lkdd;
+.super Lldd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lc22;
+# instance fields
+.field public final synthetic a:Lnu0;
+
+.field public final synthetic b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lnu0;J)V
+    .locals 0
 
-    new-instance v0, Lc22;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lkdd;->a:Lnu0;
 
-    const-wide/16 v2, 0x1770
-
-    invoke-direct {v0, v2, v3, v1}, Lc22;-><init>(JI)V
-
-    sput-object v0, Lkdd;->a:Lc22;
-
-    new-instance v0, Lc22;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v2, v3, v1}, Lc22;-><init>(JI)V
+    iput-wide p2, p0, Lkdd;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()J
+.method public final P()Lsv0;
+    .locals 1
+
+    iget-object v0, p0, Lkdd;->a:Lnu0;
+
+    return-object v0
 .end method
 
-.method public abstract b(La22;)Ljdd;
+.method public final n()J
+    .locals 2
+
+    iget-wide v0, p0, Lkdd;->b:J
+
+    return-wide v0
+.end method
+
+.method public final o()Lq39;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

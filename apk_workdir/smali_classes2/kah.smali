@@ -1,117 +1,92 @@
-.class public final enum Lkah;
-.super Ljava/lang/Enum;
+.class public final Lkah;
+.super Lmah;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lkah;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final Companion:Ljah;
-
-.field public static final synthetic X:[Lkah;
-
-.field public static final a:Ljava/lang/Object;
-
-.field public static final enum b:Lkah;
-
-.field public static final enum c:Lkah;
-
-.field public static final enum o:Lkah;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lkah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "IMPACT_OCCURED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkah;->b:Lkah;
-
-    new-instance v1, Lkah;
-
-    const-string v2, "NOTIFICATION_OCCURED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkah;->c:Lkah;
-
-    new-instance v2, Lkah;
-
-    const-string v3, "SELECTION_CHANGED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lkah;->o:Lkah;
-
-    filled-new-array {v0, v1, v2}, [Lkah;
-
-    move-result-object v0
-
-    sput-object v0, Lkah;->X:[Lkah;
-
-    new-instance v0, Ljah;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkah;->Companion:Ljah;
-
-    new-instance v0, Litg;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Litg;-><init>(I)V
-
-    invoke-static {v4, v0}, Lmbi;->b(ILoh6;)Llt7;
-
-    move-result-object v0
-
-    sput-object v0, Lkah;->a:Ljava/lang/Object;
+    iput-wide p1, p0, Lkah;->a:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkah;
-    .locals 1
 
-    const-class v0, Lkah;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-wide v0, p0, Lkah;->a:J
 
-    move-result-object p0
-
-    check-cast p0, Lkah;
-
-    return-object p0
+    return-wide v0
 .end method
 
-.method public static values()[Lkah;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    sget-object v0, Lkah;->X:[Lkah;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkah;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkah;
+
+    iget-wide v3, p0, Lkah;->a:J
+
+    iget-wide v5, p1, Lkah;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lkah;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Completed(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lkah;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lkah;
 
     return-object v0
 .end method

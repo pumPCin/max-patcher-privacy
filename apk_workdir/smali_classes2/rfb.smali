@@ -1,132 +1,139 @@
-.class public final Lrfb;
+.class public final synthetic Lrfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsfb;
+.implements Ltr3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Legb;
 
-.field public final b:J
+.field public final synthetic b:Lorg/webrtc/Size;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;J)V
+.method public synthetic constructor <init>(Legb;Lorg/webrtc/Size;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrfb;->a:Ljava/lang/String;
+    iput-object p1, p0, Lrfb;->a:Legb;
 
-    iput-wide p2, p0, Lrfb;->b:J
+    iput-object p2, p0, Lrfb;->b:Lorg/webrtc/Size;
+
+    iput p3, p0, Lrfb;->c:I
+
+    iput p4, p0, Lrfb;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 10
 
-    iget-object v0, p0, Lrfb;->a:Ljava/lang/String;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lrfb;->a:Legb;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iget-object v1, v0, Legb;->g0:Lr84;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Legb;->G()V
 
-    if-ne p0, p1, :cond_0
+    iget-object v2, p0, Lrfb;->b:Lorg/webrtc/Size;
 
-    return v0
+    iget v3, v2, Lorg/webrtc/Size;->width:I
+
+    iget v2, v2, Lorg/webrtc/Size;->height:I
+
+    iget v4, v0, Legb;->q:I
+
+    const/4 v5, 0x0
+
+    if-ne v4, v3, :cond_0
+
+    iget v4, v0, Legb;->r:I
+
+    if-eq v4, v2, :cond_1
 
     :cond_0
-    instance-of v1, p1, Lrfb;
+    iput v2, v1, Lr84;->f:I
 
-    const/4 v2, 0x0
+    iput v3, v1, Lr84;->c:I
 
-    if-nez v1, :cond_1
+    iget-object v4, v0, Legb;->B:Lfwc;
 
-    return v2
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "Camera video size changed: "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v7, v0, Legb;->q:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, "x"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v8, v0, Legb;->r:I
+
+    const-string v9, " -> "
+
+    invoke-static {v6, v8, v9, v3, v7}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "PCRTCClient"
+
+    invoke-interface {v4, v7, v6}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput v3, v0, Legb;->q:I
+
+    iput v2, v0, Legb;->r:I
+
+    invoke-virtual {v0, p1, v5}, Legb;->u(Lorg/webrtc/PeerConnection;Z)V
 
     :cond_1
-    check-cast p1, Lrfb;
+    iget v2, v0, Legb;->o:I
 
-    iget-object v1, p0, Lrfb;->a:Ljava/lang/String;
+    iget v3, p0, Lrfb;->c:I
 
-    iget-object v3, p1, Lrfb;->a:Ljava/lang/String;
+    iget v4, p0, Lrfb;->d:I
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v2, v3, :cond_3
 
-    move-result v1
+    iget v2, v0, Legb;->p:I
 
-    if-nez v1, :cond_2
+    if-eq v2, v4, :cond_2
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-wide v3, p0, Lrfb;->b:J
-
-    iget-wide v5, p1, Lrfb;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
+    return-void
 
     :cond_3
-    return v0
-.end method
+    :goto_0
+    iput v3, v1, Lr84;->g:I
 
-.method public final hashCode()I
-    .locals 3
+    iput v4, v1, Lr84;->h:I
 
-    iget-object v0, p0, Lrfb;->a:Ljava/lang/String;
+    iput v3, v0, Legb;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iput v4, v0, Legb;->p:I
 
-    move-result v0
+    invoke-virtual {v0, p1, v5}, Legb;->l(Lorg/webrtc/PeerConnection;Z)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lrfb;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "StartMetric(traceId="
-
-    const-string v1, ", sliceTime="
-
-    iget-wide v2, p0, Lrfb;->b:J
-
-    iget-object v4, p0, Lrfb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lfef;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

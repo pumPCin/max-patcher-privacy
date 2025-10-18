@@ -1,115 +1,157 @@
-.class public abstract Lje6;
-.super Ljava/lang/Object;
+.class public final Lje6;
+.super Landroid/view/animation/AnimationSet;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Lie6;
+
+# instance fields
+.field public X:Z
+
+.field public final a:Landroid/view/ViewGroup;
+
+.field public final b:Landroid/view/View;
+
+.field public c:Z
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
     .locals 1
 
-    sget-object v0, Lie6;->a:Lie6;
+    const/4 v0, 0x0
 
-    sput-object v0, Lje6;->a:Lie6;
+    invoke-direct {p0, v0}, Landroid/view/animation/AnimationSet;-><init>(Z)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lje6;->X:Z
+
+    iput-object p2, p0, Lje6;->a:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, Lje6;->b:Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public static a(Landroidx/fragment/app/a;)Lie6;
-    .locals 1
 
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->O()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->G()Landroidx/fragment/app/c;
-
-    :cond_0
-    iget-object p0, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p0, Lje6;->a:Lie6;
-
-    return-object p0
-.end method
-
-.method public static b(Landroidx/fragment/app/strictmode/Violation;)V
+# virtual methods
+.method public final getTransformation(JLandroid/view/animation/Transformation;)Z
     .locals 2
 
-    const/4 v0, 0x3
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
+    .line 1
+    iput-boolean v0, p0, Lje6;->X:Z
 
-    move-result v0
+    .line 2
+    iget-boolean v1, p0, Lje6;->c:Z
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    iget-boolean p1, p0, Lje6;->o:Z
+
+    xor-int/2addr p1, v0
+
+    return p1
+
+    .line 4
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/animation/AnimationSet;->getTransformation(JLandroid/view/animation/Transformation;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    .line 5
+    iput-boolean v0, p0, Lje6;->c:Z
+
+    .line 6
+    iget-object p1, p0, Lje6;->a:Landroid/view/ViewGroup;
+
+    invoke-static {p1, p0}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final getTransformation(JLandroid/view/animation/Transformation;F)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    .line 7
+    iput-boolean v0, p0, Lje6;->X:Z
+
+    .line 8
+    iget-boolean v1, p0, Lje6;->c:Z
+
+    if-eqz v1, :cond_0
+
+    .line 9
+    iget-boolean p1, p0, Lje6;->o:Z
+
+    xor-int/2addr p1, v0
+
+    return p1
+
+    .line 10
+    :cond_0
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/animation/Animation;->getTransformation(JLandroid/view/animation/Transformation;F)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    .line 11
+    iput-boolean v0, p0, Lje6;->c:Z
+
+    .line 12
+    iget-object p1, p0, Lje6;->a:Landroid/view/ViewGroup;
+
+    invoke-static {p1, p0}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    iget-boolean v0, p0, Lje6;->c:Z
+
+    iget-object v1, p0, Lje6;->a:Landroid/view/ViewGroup;
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lje6;->X:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/fragment/app/strictmode/Violation;->a:Landroidx/fragment/app/a;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-boolean v0, p0, Lje6;->X:Z
 
-    move-result-object v0
+    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "StrictMode violation in "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "FragmentManager"
-
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    return-void
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, p0, Lje6;->b:Landroid/view/View;
 
-.method public static final c(Landroidx/fragment/app/a;Ljava/lang/String;)V
-    .locals 3
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
-    new-instance v0, Landroidx/fragment/app/strictmode/FragmentReuseViolation;
+    const/4 v0, 0x1
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Attempting to reuse fragment "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " with previous ID "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p0, p1}, Landroidx/fragment/app/strictmode/Violation;-><init>(Landroidx/fragment/app/a;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lje6;->b(Landroidx/fragment/app/strictmode/Violation;)V
-
-    invoke-static {p0}, Lje6;->a(Landroidx/fragment/app/a;)Lie6;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-boolean v0, p0, Lje6;->o:Z
 
     return-void
 .end method

@@ -1,59 +1,110 @@
 .class public final Ls5f;
-.super Lqci;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final c:Ls5f;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
+    .locals 0
 
-    new-instance v0, Ls5f;
+    iput-object p2, p0, Ls5f;->Y:Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    const/16 v1, 0xb
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Lqci;-><init>(I)V
-
-    sput-object v0, Ls5f;->c:Ls5f;
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final S0(Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lqci;->q0()Llf4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls5f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls5f;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Ls5f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ls5f;
+
+    iget-object v1, p0, Ls5f;->Y:Lone/me/stickerssettings/stickersscreen/StickersScreen;
+
+    invoke-direct {v0, p2, v1}, Ls5f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
+
+    iput-object p1, v0, Ls5f;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ls5f;->X:Ljava/lang/Object;
+
+    check-cast p1, Lb8f;
+
+    sget-object v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;->t0:[Ltr7;
+
+    iget-object v0, p0, Ls5f;->Y:Lone/me/stickerssettings/stickersscreen/StickersScreen;
+
+    invoke-virtual {v0}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->D0()Lu6b;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lb8f;->a:Ltrf;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, ""
+
+    :cond_0
+    invoke-virtual {v1, v2}, Lu6b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lb8f;->b:Ljava/lang/String;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->D0()Lu6b;
 
     move-result-object v0
 
-    new-instance v1, Lqbb;
+    invoke-virtual {v0, p1}, Lu6b;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    const-string v2, "oneme:share:data"
+    :cond_1
+    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-direct {v1, v2, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance p1, Lqbb;
-
-    const-string v2, "tag"
-
-    invoke-direct {p1, v2, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, p1}, [Lqbb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string p2, ":chats/share"
-
-    invoke-virtual {v0, p2, p1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return-object p1
 .end method

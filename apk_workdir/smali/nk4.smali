@@ -1,185 +1,156 @@
-.class public abstract Lnk4;
+.class public final Lnk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt17;
 
-# static fields
-.field public static final a:Ly87;
 
-.field public static final b:Ly87;
-
-.field public static final c:Ly87;
-
-.field public static final d:Ly87;
-
-.field public static final e:Ly87;
-
-.field public static final f:Ly87;
-
-.field public static final g:Ly87;
-
-.field public static final h:Ly87;
-
-.field public static final i:Ly87;
-
-.field public static final j:Ly87;
-
-.field public static final k:Ly87;
-
-.field public static final l:Ly87;
-
-.field public static final m:Ly87;
-
-.field public static final n:Ly87;
+# instance fields
+.field public final synthetic a:Lrk4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(Lrk4;)V
+    .locals 0
 
-    new-instance v0, Ly87;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "JPEG"
-
-    const-string v2, "jpeg"
-
-    invoke-direct {v0, v1, v2}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v0, Lnk4;->a:Ly87;
-
-    new-instance v1, Ly87;
-
-    const-string v2, "PNG"
-
-    const-string v3, "png"
-
-    invoke-direct {v1, v2, v3}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v1, Lnk4;->b:Ly87;
-
-    new-instance v2, Ly87;
-
-    const-string v3, "GIF"
-
-    const-string v4, "gif"
-
-    invoke-direct {v2, v3, v4}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v2, Lnk4;->c:Ly87;
-
-    new-instance v3, Ly87;
-
-    const-string v4, "BMP"
-
-    const-string v5, "bmp"
-
-    invoke-direct {v3, v4, v5}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v3, Lnk4;->d:Ly87;
-
-    new-instance v4, Ly87;
-
-    const-string v5, "ICO"
-
-    const-string v6, "ico"
-
-    invoke-direct {v4, v5, v6}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v4, Lnk4;->e:Ly87;
-
-    new-instance v5, Ly87;
-
-    const-string v6, "WEBP_SIMPLE"
-
-    const-string v7, "webp"
-
-    invoke-direct {v5, v6, v7}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v5, Lnk4;->f:Ly87;
-
-    new-instance v6, Ly87;
-
-    const-string v8, "WEBP_LOSSLESS"
-
-    invoke-direct {v6, v8, v7}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v6, Lnk4;->g:Ly87;
-
-    move-object v8, v7
-
-    new-instance v7, Ly87;
-
-    const-string v9, "WEBP_EXTENDED"
-
-    invoke-direct {v7, v9, v8}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v7, Lnk4;->h:Ly87;
-
-    move-object v9, v8
-
-    new-instance v8, Ly87;
-
-    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
-
-    invoke-direct {v8, v10, v9}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v8, Lnk4;->i:Ly87;
-
-    move-object v10, v9
-
-    new-instance v9, Ly87;
-
-    const-string v11, "WEBP_ANIMATED"
-
-    invoke-direct {v9, v11, v10}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v9, Lnk4;->j:Ly87;
-
-    new-instance v10, Ly87;
-
-    const-string v11, "HEIF"
-
-    const-string v12, "heif"
-
-    invoke-direct {v10, v11, v12}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v10, Lnk4;->k:Ly87;
-
-    new-instance v11, Ly87;
-
-    const-string v12, "DNG"
-
-    const-string v13, "dng"
-
-    invoke-direct {v11, v12, v13}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v11, Lnk4;->l:Ly87;
-
-    new-instance v11, Ly87;
-
-    const-string v12, "BINARY_XML"
-
-    const-string v13, "xml"
-
-    invoke-direct {v11, v12, v13}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v11, Lnk4;->m:Ly87;
-
-    new-instance v12, Ly87;
-
-    const-string v13, "AVIF"
-
-    const-string v14, "avif"
-
-    invoke-direct {v12, v13, v14}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v12, Lnk4;->n:Ly87;
-
-    filled-new-array/range {v0 .. v12}, [Ly87;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    iput-object p1, p0, Lnk4;->a:Lrk4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    iget-object v0, p0, Lnk4;->a:Lrk4;
+
+    iget-object v0, v0, Lrk4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final e(Landroid/net/Uri;Lh48;Z)Z
+    .locals 9
+
+    iget-object p3, p0, Lnk4;->a:Lrk4;
+
+    iget-object v0, p3, Lrk4;->b:Ljava/util/HashMap;
+
+    iget-object v1, p3, Lrk4;->x0:Ljava/lang/Object;
+
+    check-cast v1, Ld17;
+
+    const/4 v4, 0x0
+
+    if-nez v1, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v1
+
+    iget-object v3, p3, Lrk4;->w0:Ljava/lang/Object;
+
+    check-cast v3, Ll17;
+
+    sget v5, Llig;->a:I
+
+    iget-object v3, v3, Ll17;->e:Ljava/util/List;
+
+    move v5, v4
+
+    move v6, v5
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v7
+
+    if-ge v5, v7, :cond_1
+
+    invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lj17;
+
+    iget-object v7, v7, Lj17;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lpk4;
+
+    if-eqz v7, :cond_0
+
+    iget-wide v7, v7, Lpk4;->q0:J
+
+    cmp-long v7, v1, v7
+
+    if-gez v7, :cond_0
+
+    add-int/lit8 v6, v6, 0x1
+
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lq95;
+
+    iget-object v1, p3, Lrk4;->w0:Ljava/lang/Object;
+
+    check-cast v1, Ll17;
+
+    iget-object v1, v1, Ll17;->e:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    const/4 v7, 0x2
+
+    const/4 v3, 0x1
+
+    invoke-direct/range {v2 .. v7}, Lq95;-><init>(IIIII)V
+
+    iget-object p3, p3, Lrk4;->s0:Ljava/lang/Object;
+
+    check-cast p3, Lk82;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2, p2}, Lk82;->t(Lq95;Lh48;)Lu21;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_2
+
+    iget p3, p2, Lu21;->b:I
+
+    const/4 v1, 0x2
+
+    if-ne p3, v1, :cond_2
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpk4;
+
+    if-eqz p1, :cond_2
+
+    iget-wide p2, p2, Lu21;->c:J
+
+    invoke-static {p1, p2, p3}, Lpk4;->a(Lpk4;J)Z
+
+    :cond_2
+    return v4
 .end method

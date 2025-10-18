@@ -1,54 +1,64 @@
-.class public final synthetic Lsl8;
-.super Lb9;
+.class public final Lsl8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgi6;
+.implements Lwl8;
 
 
 # static fields
-.field public static final r0:Lsl8;
+.field public static final a:Lsl8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
     new-instance v0, Lsl8;
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lqbb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lsl8;->r0:Lsl8;
+    sput-object v0, Lsl8;->a:Lsl8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Ljava/util/List;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of p1, p1, Lsl8;
 
-    sget-object p3, Lam8;->J0:[Lwq7;
+    if-nez p1, :cond_1
 
-    new-instance p3, Lqbb;
+    const/4 p1, 0x0
 
-    invoke-direct {p3, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    return p1
 
-    return-object p3
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x47b51b69
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowFilesModeSnack"
+
+    return-object v0
 .end method

@@ -1,27 +1,43 @@
-.class public abstract Lztd;
-.super Ljava/lang/Object;
+.class public final Lztd;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
+# interfaces
+.implements Lwsf;
 
-# static fields
-.field public static final a:J
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final onThemeChanged(Lv5b;)V
     .locals 2
 
-    sget v0, Lb35;->o:I
+    const/4 v0, 0x0
 
-    const/4 v0, 0x5
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    sget-object v1, Lg35;->o:Lg35;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lsyi;->e(ILg35;)J
+    instance-of v1, v0, Landroid/widget/ProgressBar;
 
-    move-result-wide v0
+    if-eqz v1, :cond_0
 
-    sput-wide v0, Lztd;->a:J
+    check-cast v0, Landroid/widget/ProgressBar;
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Lv5b;->getIcon()Ld77;
+
+    move-result-object p1
+
+    iget p1, p1, Ld77;->i:I
+
+    invoke-static {v0, p1}, Lbdb;->l(Landroid/widget/ProgressBar;I)V
+
+    :cond_1
     return-void
 .end method

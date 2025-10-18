@@ -3,38 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgme;
+.implements Lone;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lh01;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lhi1;
+
+.field public final synthetic d:Ls7e;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lh01;ZLhi1;Ls7e;)V
     .locals 0
-
-    .line 1
-    iput p1, p0, Lsz0;->a:I
-
-    iput-object p2, p0, Lsz0;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lsz0;->a:Lh01;
 
-.method public synthetic constructor <init>(Ljava/lang/Object;Lti6;I)V
-    .locals 0
+    iput-boolean p2, p0, Lsz0;->b:Z
 
-    .line 2
-    iput p3, p0, Lsz0;->a:I
+    iput-object p3, p0, Lsz0;->c:Lhi1;
 
-    iput-object p2, p0, Lsz0;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lsz0;->d:Ls7e;
 
     return-void
 .end method
@@ -42,137 +36,62 @@
 
 # virtual methods
 .method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 4
+    .locals 5
 
-    iget v0, p0, Lsz0;->a:I
+    iget-object v0, p0, Lsz0;->a:Lh01;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lsz0;->b:Ljava/lang/Object;
+    const-string v1, "error"
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;
-
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->a(Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lsz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lng9;
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "get-rooms error "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-virtual {v0, v1}, Lng9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    return-void
+    if-eqz p1, :cond_2
 
-    :pswitch_1
-    iget-object v0, p0, Lsz0;->b:Ljava/lang/Object;
+    iget-boolean p1, p0, Lsz0;->b:Z
 
-    check-cast v0, Lng9;
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "get-participant-list-chunk error "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lng9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lsz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lp40;
-
-    iget-object v0, v0, Lp40;->e:Ljava/lang/Object;
-
-    check-cast v0, Lyuc;
-
-    const-string v1, "MediaSettingsSender"
+    iget-object v1, p0, Lsz0;->c:Lhi1;
 
     if-eqz p1, :cond_0
 
-    const-string v2, "error"
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "command-discarded"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-string p1, "change-media-settings command was merged with ongoing one"
-
-    invoke-interface {v0, v1, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-object v2, v1
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "change-media-settings error"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, v1, p1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x0
 
     :goto_0
+    iget-object v3, p0, Lsz0;->d:Ls7e;
+
+    instance-of v4, v3, Lr7e;
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, v0, Lh01;->U0:Lwo1;
+
+    xor-int/lit8 p1, p1, 0x1
+
+    check-cast v3, Lr7e;
+
+    invoke-virtual {v4, p1, v1, v3}, Lwo1;->b(ZLhi1;Lr7e;)V
+
+    goto :goto_1
+
+    :cond_1
+    iput-object v2, v0, Lh01;->E0:Lhi1;
+
+    :goto_1
+    sget-object p1, Li71;->H0:Li71;
+
+    invoke-virtual {v0, p1, v2}, Lh01;->l(Li71;Ljava/lang/Object;)V
+
+    :cond_2
     return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lsz0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lq2h;
-
-    invoke-virtual {p1}, Lq2h;->run()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

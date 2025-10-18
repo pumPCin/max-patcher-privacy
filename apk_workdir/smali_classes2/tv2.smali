@@ -1,86 +1,85 @@
 .class public final Ltv2;
-.super Lgd0;
+.super Lp0;
 .source "SourceFile"
+
+# interfaces
+.implements Ll54;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(Lh54;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput p2, p0, Ltv2;->a:I
 
-    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
-
-    iput-wide p1, p0, Ltv2;->b:J
+    invoke-direct {p0, p1}, Lp0;-><init>(Lh54;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltv2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ltv2;
-
-    iget-wide v3, p0, Ltv2;->b:J
-
-    iget-wide v5, p1, Ltv2;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final i(Li54;Ljava/lang/Throwable;)V
     .locals 2
 
-    iget-wide v0, p0, Ltv2;->b:J
+    iget v0, p0, Ltv2;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    instance-of p1, p2, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
 
-    return v0
-.end method
+    if-eqz p1, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-object p1, p2
 
-    const-string v0, "OpenChangeChannelTypeAndUpdateBackstack(chatId="
+    check-cast p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
 
-    const-string v1, ")"
+    goto :goto_0
 
-    iget-wide v2, p0, Ltv2;->b:J
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :goto_0
+    if-nez p1, :cond_1
 
-    move-result-object v0
+    new-instance p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
 
-    return-object v0
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    :cond_1
+    sget-object p2, Lfkg;->a:Lfkg;
+
+    invoke-virtual {p2}, Lfkg;->b()Ls64;
+
+    move-result-object p2
+
+    const-string v0, "ONEME-8759"
+
+    invoke-virtual {p2, v0, p1}, Ls64;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "fail in %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v1, "vv2"
+
+    invoke-static {v1, p2, v0, p1}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

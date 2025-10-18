@@ -1,157 +1,160 @@
-.class public abstract Lp3b;
+.class public final Lp3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu3b;
+
 
 # static fields
-.field public static final a:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lp3b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:I
 
-.field public static final c:I
+# instance fields
+.field public final a:I
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvk8;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+
+    sput-object v0, Lp3b;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lp3b;->a:I
+
+    iput p2, p0, Lp3b;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Lhoc;->oneme_stickers_settings_confirm_cancel:I
+    const/4 v0, 0x0
 
-    sput v0, Lp3b;->a:I
+    return v0
+.end method
 
-    sget v0, Lhoc;->oneme_stickers_settings_confirm_delete_set_action:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sput v0, Lp3b;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Lhoc;->oneme_stickers_settings_confirm_delete_stickers_action:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Lp3b;->c:I
+    return v0
 
-    sget v0, Lhoc;->oneme_stickers_settings_confirm_favorite_clear_action:I
+    :cond_0
+    instance-of v1, p1, Lp3b;
 
-    sput v0, Lp3b;->d:I
+    const/4 v2, 0x0
 
-    sget v0, Lhoc;->oneme_stickers_settings_confirm_recent_clear_action:I
+    if-nez v1, :cond_1
 
-    sput v0, Lp3b;->e:I
+    return v2
 
-    sget v0, Lhoc;->oneme_stickers_settings_content_recycler:I
+    :cond_1
+    check-cast p1, Lp3b;
 
-    sput v0, Lp3b;->f:I
+    iget v1, p0, Lp3b;->a:I
 
-    sget v0, Lhoc;->oneme_stickers_settings_emoji_suggest_view_type:I
+    iget v3, p1, Lp3b;->a:I
 
-    sput v0, Lp3b;->g:I
+    if-eq v1, v3, :cond_2
 
-    sget v0, Lhoc;->oneme_stickers_settings_favorite_view_type:I
+    return v2
 
-    sput v0, Lp3b;->h:I
+    :cond_2
+    iget v1, p0, Lp3b;->b:I
 
-    sget v0, Lhoc;->oneme_stickers_settings_menu_copy_link:I
+    iget p1, p1, Lp3b;->b:I
 
-    sput v0, Lp3b;->i:I
+    if-eq v1, p1, :cond_3
 
-    sget v0, Lhoc;->oneme_stickers_settings_menu_delete_set:I
+    return v2
 
-    sput v0, Lp3b;->j:I
+    :cond_3
+    return v0
+.end method
 
-    sget v0, Lhoc;->oneme_stickers_settings_menu_forward:I
+.method public final hashCode()I
+    .locals 2
 
-    sput v0, Lp3b;->k:I
+    iget v0, p0, Lp3b;->a:I
 
-    sget v0, Lhoc;->oneme_stickers_settings_menu_share:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sput v0, Lp3b;->l:I
+    move-result v0
 
-    sget v0, Lhoc;->oneme_stickers_settings_recent_view_type:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    sput v0, Lp3b;->m:I
+    iget v1, p0, Lp3b;->b:I
 
-    sget v0, Lhoc;->oneme_stickers_settings_set_item_drag:I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    sput v0, Lp3b;->n:I
+    move-result v1
 
-    sget v0, Lhoc;->oneme_stickers_settings_set_item_icon:I
+    add-int/2addr v1, v0
 
-    sput v0, Lp3b;->o:I
+    return v1
+.end method
 
-    sget v0, Lhoc;->oneme_stickers_settings_set_item_subtitle:I
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sput v0, Lp3b;->p:I
+    const-string v0, ", tintColor="
 
-    sget v0, Lhoc;->oneme_stickers_settings_set_item_title:I
+    const-string v1, ")"
 
-    sput v0, Lp3b;->q:I
+    const-string v2, "ColoredIcon(iconRes="
 
-    sget v0, Lhoc;->oneme_stickers_settings_set_view_type:I
+    iget v3, p0, Lp3b;->a:I
 
-    sput v0, Lp3b;->r:I
+    iget v4, p0, Lp3b;->b:I
 
-    sget v0, Lhoc;->oneme_stickers_settings_sets_title_view_type:I
+    invoke-static {v2, v3, v0, v4, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    sput v0, Lp3b;->s:I
+    move-result-object v0
 
-    sget v0, Lhoc;->oneme_stickers_settings_stickers_favorite_menu_clear:I
+    return-object v0
+.end method
 
-    sput v0, Lp3b;->t:I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget v0, Lhoc;->oneme_stickers_settings_stickers_menu_change:I
+    iget p2, p0, Lp3b;->a:I
 
-    sput v0, Lp3b;->u:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget v0, Lhoc;->oneme_stickers_settings_stickers_multiselect_delete:I
+    iget p2, p0, Lp3b;->b:I
 
-    sput v0, Lp3b;->v:I
-
-    sget v0, Lhoc;->oneme_stickers_settings_stickers_recent_menu_clear:I
-
-    sput v0, Lp3b;->w:I
-
-    sget v0, Lhoc;->oneme_stickers_settings_toolbar:I
-
-    sput v0, Lp3b;->x:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

@@ -11,11 +11,11 @@
 
 .field public final synthetic b:Ljava/util/concurrent/Executor;
 
-.field public final synthetic c:Lw97;
+.field public final synthetic c:Lta7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lae;Ljava/util/concurrent/Executor;Lw97;)V
+.method public synthetic constructor <init>(Lae;Ljava/util/concurrent/Executor;Lta7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Lyd;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Lyd;->c:Lw97;
+    iput-object p3, p0, Lyd;->c:Lta7;
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     iget-object v0, p0, Lyd;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Lyd;->c:Lw97;
+    iget-object v1, p0, Lyd;->c:Lta7;
 
     iget-object v2, p1, Lae;->o:Ljava/lang/Object;
 

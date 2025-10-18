@@ -1,156 +1,147 @@
-.class public final enum Lkp2;
-.super Ljava/lang/Enum;
+.class public final Lkp2;
+.super Lsgf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkp2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final b:Lyrd;
-
-.field public static final enum c:Lkp2;
-
-.field public static final synthetic o:[Lkp2;
+.implements Lzi6;
 
 
 # instance fields
-.field public final a:Lrhf;
+.field public X:I
+
+.field public final synthetic Y:Llp2;
+
+.field public final synthetic Z:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Llp2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lkp2;
+    iput-object p1, p0, Lkp2;->Y:Llp2;
 
-    sget-object v1, Lpp4;->o:Lco6;
+    iput-object p2, p0, Lkp2;->Z:Ljava/util/List;
 
-    const-string v1, "DEFAULT"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lkp2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkp2;->c:Lkp2;
-
-    new-instance v1, Lkp2;
-
-    const-string v2, "SCHEDULED_SEND"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Lkp2;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1}, [Lkp2;
-
-    move-result-object v0
-
-    sput-object v0, Lkp2;->o:[Lkp2;
-
-    new-instance v0, Lyrd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkp2;->b:Lyrd;
-
-    new-instance v0, Lh8;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, Lkp2;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance p1, Llj1;
-
-    const/16 p2, 0xb
-
-    invoke-direct {p1, p2, p0}, Llj1;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lrhf;
-
-    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
-
-    iput-object p2, p0, Lkp2;->a:Lrhf;
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p1, p2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lkp2;
-    .locals 1
-
-    const-class v0, Lkp2;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lkp2;
-
-    return-object p0
-.end method
-
-.method public static values()[Lkp2;
-    .locals 1
-
-    sget-object v0, Lkp2;->o:[Lkp2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkp2;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    check-cast p1, Lq54;
 
-    move-result-object p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lkp2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
+
+    check-cast p1, Lkp2;
+
+    sget-object p2, Lccg;->a:Lccg;
+
+    invoke-virtual {p1, p2}, Lkp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lkp2;
+
+    iget-object v0, p0, Lkp2;->Y:Llp2;
+
+    iget-object v1, p0, Lkp2;->Z:Ljava/util/List;
+
+    invoke-direct {p1, v0, v1, p2}, Lkp2;-><init>(Llp2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    iget v0, p0, Lkp2;->X:I
+
+    const/4 v1, 0x1
+
+    sget-object v2, Lccg;->a:Lccg;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkp2;->Y:Llp2;
+
+    invoke-virtual {p1}, Llp2;->r()Lla2;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p1, Llp2;->Z:Ljava/lang/Object;
+
+    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Lwq4;
+
+    iget-wide v5, p1, Llp2;->b:J
+
+    iget-object v0, v0, Lla2;->b:Lne2;
+
+    iget-wide v7, v0, Lne2;->a:J
+
+    iget-object p1, p1, Llp2;->t0:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v10
+
+    iput v1, p0, Lkp2;->X:I
+
+    iget-object v9, p0, Lkp2;->Z:Ljava/util/List;
+
+    invoke-virtual/range {v4 .. v10}, Lwq4;->a(JJLjava/util/List;Z)V
+
+    sget-object p1, Lr54;->a:Lr54;
+
+    if-ne v2, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_0
+    return-object v2
 .end method

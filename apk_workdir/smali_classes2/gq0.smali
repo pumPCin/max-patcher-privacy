@@ -4,121 +4,188 @@
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final synthetic a:I
 
-.field public final b:Leie;
+.field public b:J
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Llt7;Llt7;)V
+.method public constructor <init>()V
     .locals 2
+
+    const/4 v0, 0x7
+
+    iput v0, p0, Lgq0;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    .line 4
+    iput-wide v0, p0, Lgq0;->b:J
+
+    .line 5
+    iput-wide v0, p0, Lgq0;->c:J
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lgq0;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgq0;->a:Llt7;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public synthetic constructor <init>(IJJ)V
+    .locals 0
 
-    const/4 v1, 0x7
+    .line 2
+    iput p1, p0, Lgq0;->a:I
 
-    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
+    iput-wide p2, p0, Lgq0;->b:J
 
-    move-result-object v0
+    iput-wide p4, p0, Lgq0;->c:J
 
-    iput-object v0, p0, Lgq0;->b:Leie;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p2
+.method public constructor <init>(JJJ)V
+    .locals 0
 
-    check-cast p2, Lqkf;
+    const/4 p1, 0x3
 
-    check-cast p2, Losa;
+    iput p1, p0, Lgq0;->a:I
 
-    invoke-virtual {p2}, Losa;->a()Lv44;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p2
+    .line 7
+    iput-wide p3, p0, Lgq0;->b:J
 
-    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgw0;
-
-    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
+    .line 8
+    iput-wide p5, p0, Lgq0;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lkj0;)V
-    .locals 3
-    .annotation runtime Lsaf;
-    .end annotation
+.method public a(JJ)D
+    .locals 7
 
-    .line 3
-    new-instance v0, Lfq0;
+    iget-wide v0, p0, Lgq0;->b:J
 
-    const/4 v1, 0x0
+    sub-long v0, p1, v0
 
-    invoke-direct {v0, p0, p1, v1}, Lfq0;-><init>(Lgq0;Lkj0;Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v2, 0x0
 
-    const/4 p1, 0x3
+    cmp-long v4, v0, v2
 
-    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    if-gez v4, :cond_0
 
-    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    move-wide v0, v2
 
-    return-void
+    :cond_0
+    iget-wide v4, p0, Lgq0;->c:J
+
+    cmp-long v2, v4, v2
+
+    if-nez v2, :cond_1
+
+    const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
+
+    goto :goto_0
+
+    :cond_1
+    sub-long v2, p3, v4
+
+    const-wide/16 v4, 0x1
+
+    cmp-long v6, v2, v4
+
+    if-gez v6, :cond_2
+
+    move-wide v2, v4
+
+    :cond_2
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v6, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v4
+
+    mul-long/2addr v4, v0
+
+    long-to-double v0, v4
+
+    long-to-double v2, v2
+
+    div-double/2addr v0, v2
+
+    :goto_0
+    iput-wide p1, p0, Lgq0;->b:J
+
+    iput-wide p3, p0, Lgq0;->c:J
+
+    const/16 p1, 0x8
+
+    int-to-double p1, p1
+
+    mul-double/2addr v0, p1
+
+    return-wide v0
 .end method
 
-.method public final onEvent(Lqz3;)V
+.method public toString()Ljava/lang/String;
     .locals 3
-    .annotation runtime Lsaf;
-    .end annotation
 
-    .line 1
-    new-instance v0, Ldq0;
+    iget v0, p0, Lgq0;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, v1}, Ldq0;-><init>(Lgq0;Lqz3;Lkotlin/coroutines/Continuation;)V
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const/4 p1, 0x3
+    move-result-object v0
 
-    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    return-object v0
 
-    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public final onEvent(Lru3;)V
-    .locals 3
-    .annotation runtime Lsaf;
-    .end annotation
+    iget-wide v1, p0, Lgq0;->b:J
 
-    .line 2
-    new-instance v0, Leq0;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, "/"
 
-    invoke-direct {v0, p0, p1, v1}, Leq0;-><init>(Lgq0;Lru3;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x3
+    iget-wide v1, p0, Lgq0;->c:J
 
-    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
+    .end packed-switch
 .end method

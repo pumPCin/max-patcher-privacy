@@ -1,86 +1,144 @@
 .class public final Lu5e;
-.super Ljava/lang/Object;
+.super Lr5e;
 .source "SourceFile"
-
-# interfaces
-.implements Lhjh;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final s0:Ljava/lang/String;
 
-.field public final synthetic b:Lu47;
+.field public final t0:Le20;
+
+.field public final u0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu47;I)V
-    .locals 0
+.method public constructor <init>(Lt5e;)V
+    .locals 1
 
-    iput p2, p0, Lu5e;->a:I
+    invoke-direct {p0, p1}, Lr5e;-><init>(Lq5e;)V
 
-    iput-object p1, p0, Lu5e;->b:Lu47;
+    iget-object v0, p1, Lt5e;->h:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lu5e;->s0:Ljava/lang/String;
+
+    iget-object v0, p1, Lt5e;->j:Ljava/lang/Object;
+
+    check-cast v0, Le20;
+
+    iput-object v0, p0, Lu5e;->t0:Le20;
+
+    iget-boolean p1, p1, Lt5e;->i:Z
+
+    iput-boolean p1, p0, Lu5e;->u0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/io/OutputStream;
-    .locals 1
+.method public final x()Lob9;
+    .locals 3
 
-    iget v0, p0, Lu5e;->a:I
+    iget-boolean v0, p0, Lu5e;->u0:Z
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lu5e;->t0:Le20;
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Le20;->i()Lf10;
+
+    move-result-object v0
+
+    sget-object v1, Lu10;->b:Lu10;
+
+    iput-object v1, v0, Lf10;->x:Lu10;
+
+    invoke-virtual {v0}, Lf10;->a()Le20;
+
+    move-result-object v1
+
+    :cond_0
+    new-instance v0, Lf20;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lf20;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Lf20;->c()Lh78;
+
+    move-result-object v0
+
+    new-instance v1, Lob9;
+
+    invoke-direct {v1}, Lob9;-><init>()V
+
+    iput-object v0, v1, Lob9;->n:Lh78;
+
+    iget-object v0, p0, Lu5e;->s0:Ljava/lang/String;
+
+    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iput-object v0, v1, Lob9;->g:Ljava/lang/String;
+
+    :cond_1
     const/4 v0, 0x0
 
-    return-object v0
+    iput-object v0, v1, Lob9;->D:Ljava/util/List;
 
-    :pswitch_0
-    iget-object v0, p0, Lu5e;->b:Lu47;
-
-    invoke-interface {v0}, Lu47;->a()Ljava/io/OutputStream;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method
 
-.method public final b()Ljava/io/InputStream;
-    .locals 1
+.method public final y(Lla2;J)J
+    .locals 9
 
-    iget v0, p0, Lu5e;->a:I
+    invoke-super {p0, p1, p2, p3}, Lr5e;->y(Lla2;J)J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide v0
 
-    iget-object v0, p0, Lu5e;->b:Lu47;
+    iget-boolean p1, p0, Lu5e;->u0:Z
 
-    invoke-interface {v0}, Lu47;->b()Ljava/io/InputStream;
+    if-eqz p1, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p0}, Lr4e;->a()Lll;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_0
-    iget-object v0, p0, Lu5e;->b:Lu47;
+    iget-object v2, p0, Lu5e;->t0:Le20;
 
-    invoke-interface {v0}, Lu47;->b()Ljava/io/InputStream;
+    iget-object v2, v2, Le20;->g:Lw10;
 
-    move-result-object v0
+    iget-object v6, v2, Lw10;->b:Ljava/lang/String;
 
-    return-object v0
+    check-cast p1, Lmna;
 
-    nop
+    new-instance v3, Lzx9;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Lmna;->x()Lpxb;
+
+    move-result-object v2
+
+    check-cast v2, Lrxb;
+
+    iget-object v2, v2, Lrxb;->a:Ld78;
+
+    invoke-virtual {v2}, Lntd;->k()J
+
+    move-result-wide v4
+
+    move-wide v7, p2
+
+    invoke-direct/range {v3 .. v8}, Lzx9;-><init>(JLjava/lang/String;J)V
+
+    invoke-static {p1, v3}, Lmna;->v(Lmna;Lym;)J
+
+    :cond_0
+    return-wide v0
 .end method

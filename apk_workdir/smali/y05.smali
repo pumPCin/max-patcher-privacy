@@ -1,13 +1,11 @@
-.class public final Ly05;
+.class public interface abstract Ly05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:F
+# virtual methods
+.method public abstract e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+.end method
 
-.field public b:F
-
-.field public c:I
-
-.field public d:I
+.method public abstract j()Landroid/graphics/drawable/Drawable;
+.end method

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract apply(Ljava/lang/Object;)Lo18;
+.method public abstract apply(Ljava/lang/Object;)Ll28;
 .end method

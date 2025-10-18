@@ -1,96 +1,131 @@
 .class public final Lhd3;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Lpd3;
+.field public final a:[I
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lpd3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
-    iput-object p1, p0, Lhd3;->X:Lpd3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lhd3;->a:[I
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lhd3;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lb54;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lhd3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lhd3;
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lhd3;
 
-    sget-object p2, Lzag;->a:Lzag;
+    iget-object v0, p0, Lhd3;->a:[I
 
-    invoke-virtual {p1, p2}, Lhd3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p1, Lhd3;->a:[I
 
-    return-object p2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lhd3;->b:I
+
+    iget p1, p1, Lhd3;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lhd3;
+    iget-object v0, p0, Lhd3;->a:[I
 
-    iget-object v0, p0, Lhd3;->X:Lpd3;
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    invoke-direct {p1, v0, p2}, Lhd3;-><init>(Lpd3;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lhd3;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lhd3;->a:[I
 
-    iget-object p1, p0, Lhd3;->X:Lpd3;
-
-    iget-object v0, p1, Lpd3;->k:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lnd3;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lnd3;-><init>(Lpd3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x1
-
-    sget-object v4, Le54;->b:Le54;
-
-    invoke-static {v0, v2, v4, v1, v3}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p1, Lpd3;->l:Lpzd;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object v2, Lpd3;->m:[Lwq7;
+    const-string v2, "CommonBackgroundSkeletonStickerPrimaryBaseGradientColors(gradient="
 
-    const/4 v3, 0x0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v2, v2, v3
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+    const-string v0, ", staticBackground="
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget v0, p0, Lhd3;->b:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -36,7 +36,7 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object p2, Ls95;->a:Ls95;
+    sget-object p2, Lka5;->a:Lka5;
 
     iput-object p2, p0, Lru/ok/messages/calls/views/AnimatedCirclesView;->a:Ljava/lang/Object;
 
@@ -44,25 +44,25 @@
 
     invoke-direct {p2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    sget p2, Lnjc;->calls_circle_1:I
+    sget p2, Lukc;->calls_circle_1:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    sget v0, Lnjc;->calls_circle_3:I
+    sget v0, Lukc;->calls_circle_3:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    sget v1, Lnjc;->calls_circle_4:I
+    sget v1, Lukc;->calls_circle_4:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sget v2, Lnjc;->calls_circle_2:I
+    sget v2, Lukc;->calls_circle_2:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -72,7 +72,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p2}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
@@ -80,7 +80,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {p2, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {p2, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v1
 
@@ -123,7 +123,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Ln04;->a(Landroid/content/Context;I)I
+    invoke-static {v3, v1}, Lb14;->a(Landroid/content/Context;I)I
 
     move-result v1
 

@@ -1,169 +1,170 @@
 .class public final Lh26;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.super La1;
 .source "SourceFile"
-
-# interfaces
-.implements Lw26;
-.implements Lzaf;
 
 
 # instance fields
-.field public final a:Lxaf;
+.field public final X:Ljava/lang/Object;
 
-.field public b:Lzaf;
+.field public final synthetic c:I
 
-.field public c:Z
+.field public final o:Laj6;
 
 
 # direct methods
-.method public constructor <init>(Lxaf;)V
+.method public synthetic constructor <init>(Lf26;Lsj6;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    .line 1
+    iput p4, p0, Lh26;->c:I
 
-    iput-object p1, p0, Lh26;->a:Lxaf;
+    invoke-direct {p0, p1}, La1;-><init>(Lf26;)V
+
+    iput-object p2, p0, Lh26;->o:Laj6;
+
+    iput-object p3, p0, Lh26;->X:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lu26;Law9;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lh26;->c:I
+
+    .line 2
+    invoke-direct {p0, p1}, La1;-><init>(Lf26;)V
+
+    .line 3
+    iput-object p2, p0, Lh26;->o:Laj6;
+
+    .line 4
+    sget-object p1, Lrj6;->a:Lrj6;
+
+    iput-object p1, p0, Lh26;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final g(Lq36;)V
+    .locals 5
 
-    iget-boolean v0, p0, Lh26;->c:Z
+    iget v0, p0, Lh26;->c:I
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lh26;->X:Ljava/lang/Object;
 
+    iget-object v2, p0, La1;->b:Lf26;
+
+    iget-object v3, p0, Lh26;->o:Laj6;
+
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    check-cast v3, Lsj6;
+
+    iget-object v0, v3, Lsj6;->a:Ljava/lang/Object;
+
+    const-string v3, "The seed supplied is null"
+
+    invoke-static {v0, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v3, Li36;
+
+    check-cast v1, Lyx6;
+
+    sget v4, Lf26;->a:I
+
+    invoke-direct {v3, p1, v1, v0, v4}, Li36;-><init>(Lecf;Lyx6;Ljava/lang/Object;I)V
+
+    invoke-virtual {v2, v3}, Lf26;->c(Lq36;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
+
+    :goto_0
     return-void
 
-    :cond_0
-    const/4 v0, 0x1
+    :pswitch_0
+    :try_start_1
+    check-cast v1, Lrj6;
 
-    iput-boolean v0, p0, Lh26;->c:Z
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lh26;->a:Lxaf;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-interface {v0}, Lxaf;->b()V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    return-void
-.end method
+    sget-object v1, Luf5;->a:Ltf5;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-.method public final cancel()V
-    .locals 1
+    new-instance v1, Ln26;
 
-    iget-object v0, p0, Lh26;->b:Lzaf;
+    check-cast v3, Law9;
 
-    invoke-interface {v0}, Lzaf;->cancel()V
+    invoke-direct {v1, p1, v3, v0}, Ln26;-><init>(Lecf;Law9;Ljava/util/Collection;)V
 
-    return-void
-.end method
+    invoke-virtual {v2, v1}, Lf26;->c(Lq36;)V
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 4
+    goto :goto_1
 
-    iget-boolean v0, p0, Lh26;->c:Z
+    :catchall_1
+    move-exception v0
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    return-void
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lh26;->a:Lxaf;
-
-    invoke-interface {v0, p1}, Lxaf;->d(Ljava/lang/Object;)V
-
-    const-wide/16 v0, 0x1
-
-    invoke-static {p0, v0, v1}, Leii;->d(Ljava/util/concurrent/atomic/AtomicLong;J)V
-
+    :goto_1
     return-void
 
-    :cond_1
-    iget-object p1, p0, Lh26;->b:Lzaf;
+    :pswitch_1
+    :try_start_2
+    check-cast v3, Lsj6;
 
-    invoke-interface {p1}, Lzaf;->cancel()V
+    iget-object v0, v3, Lsj6;->a:Ljava/lang/Object;
 
-    new-instance p1, Lio/reactivex/rxjava3/exceptions/MissingBackpressureException;
+    const-string v3, "The initial value supplied is null"
 
-    const-string v0, "Could not emit value due to lack of requests"
+    invoke-static {v0, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    new-instance v3, Lg26;
 
-    invoke-virtual {p0, p1}, Lh26;->onError(Ljava/lang/Throwable;)V
+    check-cast v1, Ltm0;
 
-    return-void
-.end method
+    invoke-direct {v3, p1, v0, v1}, Lg26;-><init>(Lecf;Ljava/lang/Object;Ltm0;)V
 
-.method public final f(Lzaf;)V
-    .locals 2
+    invoke-virtual {v2, v3}, Lf26;->c(Lq36;)V
 
-    iget-object v0, p0, Lh26;->b:Lzaf;
+    goto :goto_2
 
-    invoke-static {v0, p1}, Lcbf;->g(Lzaf;Lzaf;)Z
+    :catchall_2
+    move-exception v0
 
-    move-result v0
+    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
 
-    iput-object p1, p0, Lh26;->b:Lzaf;
-
-    iget-object v0, p0, Lh26;->a:Lxaf;
-
-    invoke-interface {v0, p0}, Lxaf;->f(Lzaf;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lzaf;->j(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final j(J)V
-    .locals 1
-
-    invoke-static {p1, p2}, Lcbf;->e(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1, p2}, Leii;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lh26;->c:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
-
+    :goto_2
     return-void
 
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lh26;->c:Z
-
-    iget-object v0, p0, Lh26;->a:Lxaf;
-
-    invoke-interface {v0, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

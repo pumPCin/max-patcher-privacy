@@ -1,69 +1,21 @@
-.class public final Lcrd;
-.super Lx5b;
+.class public abstract Lcrd;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lp4a;
 
 
 # instance fields
-.field public b:Z
+.field public volatile a:B
 
 
-# virtual methods
-.method public final onOverScrolled(IIZZ)V
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    if-gtz p2, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p4, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    iput-boolean v0, p0, Lcrd;->b:Z
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
+    iput-byte v0, p0, Lcrd;->a:B
 
     return-void
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lcrd;->b:Z
-
-    return v0
 .end method

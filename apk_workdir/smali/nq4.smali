@@ -1,266 +1,120 @@
-.class public final Lnq4;
+.class public final synthetic Lnq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Llq7;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Loq4;
+.field public final synthetic b:Ljava/lang/Runnable;
 
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public o:Lxh7;
+.field public final synthetic c:Lyxe;
 
 
 # direct methods
-.method public constructor <init>(Loq4;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lyxe;I)V
+    .locals 0
+
+    iput p3, p0, Lnq4;->a:I
+
+    iput-object p1, p0, Lnq4;->b:Ljava/lang/Runnable;
+
+    iput-object p2, p0, Lnq4;->c:Lyxe;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnq4;->Y:Loq4;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lnq4;->a:I
-
-    iget-object p1, p1, Loq4;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v0, p1}, Ljvi;->c(III)I
-
-    move-result p1
-
-    iput p1, p0, Lnq4;->b:I
-
-    iput p1, p0, Lnq4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 8
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lnq4;->Y:Loq4;
+    iget v0, p0, Lnq4;->a:I
 
-    iget-object v1, v0, Loq4;->a:Ljava/lang/CharSequence;
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Lnq4;->c:I
+    iget-object v0, p0, Lnq4;->b:Ljava/lang/Runnable;
 
-    const/4 v3, 0x0
+    iget-object v1, p0, Lnq4;->c:Lyxe;
 
-    if-gez v2, :cond_0
+    iget-object v1, v1, Lyxe;->b:Ljava/lang/Object;
 
-    iput v3, p0, Lnq4;->a:I
+    check-cast v1, Ltq4;
+
+    :try_start_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lnq4;->o:Lxh7;
-
-    return-void
-
-    :cond_0
-    iget v4, v0, Loq4;->b:I
-
-    const/4 v5, -0x1
-
-    const/4 v6, 0x1
-
-    if-lez v4, :cond_1
-
-    iget v7, p0, Lnq4;->X:I
-
-    add-int/2addr v7, v6
-
-    iput v7, p0, Lnq4;->X:I
-
-    if-ge v7, v4, :cond_2
-
-    :cond_1
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-le v2, v4, :cond_3
-
-    :cond_2
-    new-instance v0, Lxh7;
-
-    iget v2, p0, Lnq4;->b:I
-
-    invoke-static {v1}, Ls9f;->x(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    invoke-direct {v0, v2, v1, v6}, Lvh7;-><init>(III)V
-
-    iput-object v0, p0, Lnq4;->o:Lxh7;
-
-    iput v5, p0, Lnq4;->c:I
+    invoke-virtual {v1, v0}, Le4;->l(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_3
-    iget-object v0, v0, Loq4;->c:Lvs7;
+    :catch_0
+    move-exception v0
 
-    iget v2, p0, Lnq4;->c:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqbb;
-
-    if-nez v0, :cond_4
-
-    new-instance v0, Lxh7;
-
-    iget v2, p0, Lnq4;->b:I
-
-    invoke-static {v1}, Ls9f;->x(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    invoke-direct {v0, v2, v1, v6}, Lvh7;-><init>(III)V
-
-    iput-object v0, p0, Lnq4;->o:Lxh7;
-
-    iput v5, p0, Lnq4;->c:I
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v1, v0, Lqbb;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    iget-object v0, v0, Lqbb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    iget v2, p0, Lnq4;->b:I
-
-    invoke-static {v2, v1}, Ljvi;->i(II)Lxh7;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lnq4;->o:Lxh7;
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lnq4;->b:I
-
-    if-nez v0, :cond_5
-
-    move v3, v6
-
-    :cond_5
-    add-int/2addr v1, v3
-
-    iput v1, p0, Lnq4;->c:I
+    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
 
     :goto_0
-    iput v6, p0, Lnq4;->a:I
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lnq4;->b:Ljava/lang/Runnable;
+
+    :try_start_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    iget-object v1, p0, Lnq4;->c:Lyxe;
+
+    iget-object v1, v1, Lyxe;->b:Ljava/lang/Object;
+
+    check-cast v1, Ltq4;
+
+    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lnq4;->b:Ljava/lang/Runnable;
+
+    :try_start_2
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     return-void
-.end method
 
-.method public final hasNext()Z
-    .locals 2
+    :catch_2
+    move-exception v0
 
-    iget v0, p0, Lnq4;->a:I
+    iget-object v1, p0, Lnq4;->c:Lyxe;
 
-    const/4 v1, -0x1
+    iget-object v1, v1, Lyxe;->b:Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_0
+    check-cast v1, Ltq4;
 
-    invoke-virtual {p0}, Lnq4;->a()V
-
-    :cond_0
-    iget v0, p0, Lnq4;->a:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    return v1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lnq4;->a:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p0}, Lnq4;->a()V
-
-    :cond_0
-    iget v0, p0, Lnq4;->a:I
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lnq4;->o:Lxh7;
-
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lnq4;->o:Lxh7;
-
-    iput v1, p0, Lnq4;->a:I
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-virtual {v1, v0}, Le4;->m(Ljava/lang/Throwable;)Z
 
     throw v0
-.end method
 
-.method public final remove()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

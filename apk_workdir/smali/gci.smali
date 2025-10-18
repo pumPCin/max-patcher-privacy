@@ -3,452 +3,220 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrga;
+.implements Ljava/util/Map$Entry;
+.implements Ljava/lang/Comparable;
 
 
-# static fields
-.field public static final a:Lgci;
+# instance fields
+.field public final a:Ljava/lang/Comparable;
 
-.field public static final b:Liq5;
+.field public b:Ljava/lang/Object;
 
-.field public static final c:Liq5;
-
-.field public static final d:Liq5;
-
-.field public static final e:Liq5;
-
-.field public static final f:Liq5;
-
-.field public static final g:Liq5;
-
-.field public static final h:Liq5;
-
-.field public static final i:Liq5;
-
-.field public static final j:Liq5;
-
-.field public static final k:Liq5;
-
-.field public static final l:Liq5;
-
-.field public static final m:Liq5;
-
-.field public static final n:Liq5;
-
-.field public static final o:Liq5;
+.field public final synthetic c:Ldci;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ldci;Ljava/lang/Comparable;Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lgci;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgci;->c:Ldci;
 
-    sput-object v0, Lgci;->a:Lgci;
+    iput-object p2, p0, Lgci;->a:Ljava/lang/Comparable;
 
-    new-instance v0, Lsvh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
-
-    const-class v1, Llwh;
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "appId"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->b:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "appVersion"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->c:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "firebaseProjectId"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->d:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "mlSdkVersion"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->e:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "tfliteSchemaVersion"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->f:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "gcmSenderId"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->g:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "apiKey"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->h:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "languages"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->i:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "mlSdkInstanceId"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->j:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "isClearcutClient"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->k:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "isStandaloneMlkit"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->l:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "isJsonLogging"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->m:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "buildLevel"
-
-    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lgci;->n:Liq5;
-
-    new-instance v0, Lsvh;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, v2}, Lsvh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Liq5;
-
-    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "optionalModuleVersion"
-
-    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lgci;->o:Liq5;
+    iput-object p3, p0, Lgci;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lgci;
+
+    iget-object p1, p1, Lgci;->a:Ljava/lang/Comparable;
+
+    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
+
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    instance-of v1, p1, Ljava/util/Map$Entry;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lgci;->a:Ljava/lang/Comparable;
+
+    if-nez v3, :cond_3
+
+    if-eqz v1, :cond_2
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    :goto_0
+    if-eqz v1, :cond_6
+
+    iget-object v1, p0, Lgci;->b:Ljava/lang/Object;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez v1, :cond_5
+
+    if-eqz p1, :cond_4
+
+    move p1, v2
+
+    goto :goto_1
+
+    :cond_4
+    move p1, v0
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_1
+    if-eqz p1, :cond_6
+
+    :goto_2
+    return v0
+
+    :cond_6
+    :goto_3
+    return v2
+.end method
+
+.method public final synthetic getKey()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
+
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lgci;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    check-cast p1, Ldni;
+    const/4 v0, 0x0
 
-    check-cast p2, Lsga;
+    iget-object v1, p0, Lgci;->a:Ljava/lang/Comparable;
 
-    sget-object v0, Lgci;->b:Liq5;
+    if-nez v1, :cond_0
 
-    iget-object v1, p1, Ldni;->a:Ljava/lang/String;
+    move v1, v0
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    goto :goto_0
 
-    sget-object v0, Lgci;->c:Liq5;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v1, p1, Ldni;->b:Ljava/lang/String;
+    move-result v1
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    :goto_0
+    iget-object v2, p0, Lgci;->b:Ljava/lang/Object;
 
-    sget-object v0, Lgci;->d:Liq5;
+    if-nez v2, :cond_1
 
-    const/4 v1, 0x0
+    goto :goto_1
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    sget-object v0, Lgci;->e:Liq5;
+    move-result v0
 
-    iget-object v2, p1, Ldni;->c:Ljava/lang/String;
+    :goto_1
+    xor-int/2addr v0, v1
 
-    invoke-interface {p2, v0, v2}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    return v0
+.end method
 
-    sget-object v0, Lgci;->f:Liq5;
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v2, p1, Ldni;->d:Ljava/lang/String;
+    iget-object v0, p0, Lgci;->c:Ldci;
 
-    invoke-interface {p2, v0, v2}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    invoke-virtual {v0}, Ldci;->g()V
 
-    sget-object v0, Lgci;->g:Liq5;
+    iget-object v0, p0, Lgci;->b:Ljava/lang/Object;
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    iput-object p1, p0, Lgci;->b:Ljava/lang/Object;
 
-    sget-object v0, Lgci;->h:Liq5;
+    return-object v0
+.end method
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v0, Lgci;->i:Liq5;
+    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
 
-    iget-object v1, p1, Ldni;->e:Lfzi;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    move-result-object v0
 
-    sget-object v0, Lgci;->j:Liq5;
+    iget-object v1, p0, Lgci;->b:Ljava/lang/Object;
 
-    iget-object v1, p1, Ldni;->f:Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    move-result-object v1
 
-    sget-object v0, Lgci;->k:Liq5;
+    const-string v2, "="
 
-    iget-object v1, p1, Ldni;->g:Ljava/lang/Boolean;
+    invoke-static {v0, v2, v1}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+    move-result-object v0
 
-    sget-object v0, Lgci;->l:Liq5;
-
-    iget-object v1, p1, Ldni;->h:Ljava/lang/Boolean;
-
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object v0, Lgci;->m:Liq5;
-
-    iget-object v1, p1, Ldni;->i:Ljava/lang/Boolean;
-
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object v0, Lgci;->n:Liq5;
-
-    iget-object v1, p1, Ldni;->j:Ljava/lang/Integer;
-
-    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    sget-object v0, Lgci;->o:Liq5;
-
-    iget-object p1, p1, Ldni;->k:Ljava/lang/Integer;
-
-    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
-
-    return-void
+    return-object v0
 .end method

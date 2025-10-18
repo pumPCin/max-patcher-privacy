@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public a:Lj10;
+.field public a:Ljava/lang/String;
 
 .field public b:J
 
-.field public c:Ljava/util/Collection;
+.field public c:Ljava/lang/String;
 
 .field public d:Ljava/lang/String;
 
@@ -18,50 +18,46 @@
 
 .field public g:Ljava/lang/String;
 
-.field public h:Lu10;
-
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/lang/String;
-
-.field public k:Z
-
-.field public l:I
-
-.field public m:J
-
-.field public n:J
-
-.field public o:Ljava/lang/String;
+.field public h:Ljava/lang/String;
 
 
-# virtual methods
-.method public final a()Lk10;
-    .locals 1
+# direct methods
+.method public constructor <init>(Li10;)V
+    .locals 2
 
-    iget-object v0, p0, Li10;->c:Ljava/util/Collection;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    iget-object v0, p1, Li10;->a:Ljava/lang/String;
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object v0, p0, Li10;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iget-wide v0, p1, Li10;->b:J
 
-    iput-object v0, p0, Li10;->c:Ljava/util/Collection;
+    iput-wide v0, p0, Li10;->b:J
 
-    :cond_0
-    iget-object v0, p0, Li10;->a:Lj10;
+    iget-object v0, p1, Li10;->c:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    iput-object v0, p0, Li10;->c:Ljava/lang/String;
 
-    sget-object v0, Lj10;->a:Lj10;
+    iget-object v0, p1, Li10;->f:Ljava/lang/String;
 
-    iput-object v0, p0, Li10;->a:Lj10;
+    iput-object v0, p0, Li10;->f:Ljava/lang/String;
 
-    :cond_1
-    new-instance v0, Lk10;
+    iget-object v0, p1, Li10;->g:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lk10;-><init>(Li10;)V
+    iput-object v0, p0, Li10;->g:Ljava/lang/String;
 
-    return-object v0
+    iget-object v0, p1, Li10;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->h:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Li10;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Li10;->e:Ljava/lang/String;
+
+    iput-object p1, p0, Li10;->e:Ljava/lang/String;
+
+    return-void
 .end method

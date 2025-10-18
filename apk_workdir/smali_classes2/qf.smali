@@ -44,11 +44,11 @@
 
     iget-object v0, p0, Lqf;->c:Ljava/lang/Object;
 
-    check-cast v0, Lahf;
+    check-cast v0, Lgif;
 
     iget-object v1, p0, Lqf;->o:Ljava/lang/Object;
 
-    check-cast v1, Lei6;
+    check-cast v1, Lzi6;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -60,13 +60,13 @@
 
     move-result v2
 
-    invoke-interface {v0}, Lahf;->j()I
+    invoke-interface {v0}, Lgif;->i()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    invoke-interface {v0}, Lahf;->p()Landroid/view/View;
+    invoke-interface {v0}, Lgif;->k()Landroid/view/View;
 
     move-result-object v0
 
@@ -86,22 +86,22 @@
 
     move-result-object v0
 
-    invoke-interface {v1, p1, v0}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1, v0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :pswitch_0
     iget-object v0, p0, Lqf;->c:Ljava/lang/Object;
 
-    check-cast v0, Ldvb;
+    check-cast v0, Liwb;
 
     iget-object v1, p0, Lqf;->o:Ljava/lang/Object;
 
-    check-cast v1, Lei6;
+    check-cast v1, Lzi6;
 
     iget v2, p0, Lqf;->b:F
 
-    invoke-static {v0, v1, v2, p1}, Ldvb;->d(Ldvb;Lei6;FLandroid/animation/ValueAnimator;)V
+    invoke-static {v0, v1, v2, p1}, Liwb;->d(Liwb;Lzi6;FLandroid/animation/ValueAnimator;)V
 
     return-void
 

@@ -3,170 +3,47 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "WorkerFactory"
-
-    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpoh;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lt18;
-.end method
-
-.method public final b(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lt18;
+.method public final a(Landroidx/work/WorkRequest;)V
     .locals 6
 
-    sget-object v0, Lpoh;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, p1, p2, p3}, Lpoh;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lt18;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    invoke-static {p2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v2
-
-    const-class v3, Lt18;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Invalid class: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
 
-    invoke-virtual {v3, v0, v4, v2}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object v1, p0
 
-    const/4 v2, 0x0
+    check-cast v1, Lsoh;
 
-    :goto_0
-    if-eqz v2, :cond_0
-
-    :try_start_1
-    const-class v3, Landroid/content/Context;
-
-    const-class v4, Landroidx/work/WorkerParameters;
-
-    filled-new-array {v3, v4}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    filled-new-array {p1, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt18;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-object v1, p1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {}, Lwxh;->f()Lwxh;
-
-    move-result-object p3
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Could not instantiate "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p3, v0, v2, p1}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    :goto_1
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lt18;->isUsed()Z
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
-    goto :goto_2
+    new-instance v0, Lgoh;
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v3, Loh5;->b:Loh5;
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    invoke-direct/range {v0 .. v5}, Lgoh;-><init>(Lsoh;Ljava/lang/String;Loh5;Ljava/util/List;I)V
 
-    const-string p3, ") returned an instance of a ListenableWorker ("
+    invoke-virtual {v0}, Lgoh;->c()Lj9b;
 
-    const-string v0, ") which has already been invoked. createWorker() must always return a new instance of a ListenableWorker."
+    return-void
 
-    const-string v1, "WorkerFactory ("
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {v1, p1, p3, p2, v0}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v0, "enqueue needs at least one WorkRequest."
 
-    move-result-object p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    new-instance p2, Ljava/lang/IllegalStateException;
+    throw p1
+.end method
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    :goto_2
-    return-object v1
+.method public abstract b(Ljava/lang/String;ILrhb;)Lj9b;
 .end method

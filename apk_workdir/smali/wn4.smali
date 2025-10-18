@@ -1,43 +1,74 @@
-.class public abstract Lwn4;
-.super Ljava/lang/Object;
+.class public final Lwn4;
+.super Lko4;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:I
+.field public final X:I
 
-.field public final b:Lm0g;
-
-.field public final c:I
-
-.field public final o:Lsa6;
+.field public final Y:I
 
 
 # direct methods
-.method public constructor <init>(ILm0g;I)V
+.method public constructor <init>(ILp1g;ILbo4;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lko4;-><init>(ILp1g;I)V
 
-    iput p1, p0, Lwn4;->a:I
+    iget-boolean p1, p4, Lbo4;->t0:Z
 
-    iput-object p2, p0, Lwn4;->b:Lm0g;
+    invoke-static {p5, p1}, Lxk0;->k(IZ)Z
 
-    iput p3, p0, Lwn4;->c:I
+    move-result p1
 
-    iget-object p1, p2, Lm0g;->d:[Lsa6;
+    iput p1, p0, Lwn4;->X:I
 
-    aget-object p1, p1, p3
+    iget-object p1, p0, Lko4;->o:Lmb6;
 
-    iput-object p1, p0, Lwn4;->o:Lsa6;
+    invoke-virtual {p1}, Lmb6;->b()I
+
+    move-result p1
+
+    iput p1, p0, Lwn4;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()I
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lwn4;->X:I
+
+    return v0
 .end method
 
-.method public abstract b(Lwn4;)Z
+.method public final bridge synthetic c(Lko4;)Z
+    .locals 0
+
+    check-cast p1, Lwn4;
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lwn4;
+
+    iget v0, p0, Lwn4;->Y:I
+
+    iget p1, p1, Lwn4;->Y:I
+
+    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
 .end method

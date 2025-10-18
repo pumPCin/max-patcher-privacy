@@ -2,152 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
-
-# static fields
-.field public static final X:Landroid/os/Handler;
-
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public final a:Lem;
 
-.field public final b:Loh6;
-
-.field public c:Landroid/view/ViewTreeObserver;
-
-.field public o:Z
+.field public final b:Lzl;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lvla;->X:Landroid/os/Handler;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/View;Loh6;)V
+.method public constructor <init>(Lem;Lzl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvla;->a:Landroid/view/View;
+    iput-object p1, p0, Lvla;->a:Lem;
 
-    iput-object p2, p0, Lvla;->b:Loh6;
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvla;->c:Landroid/view/ViewTreeObserver;
+    iput-object p2, p0, Lvla;->b:Lzl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-boolean v0, p0, Lvla;->o:Z
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lvla;->b:Loh6;
-
-    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    iput-boolean v1, p0, Lvla;->o:Z
-
-    new-instance v1, Lg86;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v1, v2, p0}, Lg86;-><init>(ILjava/lang/Object;)V
-
-    sget-object v2, Lvla;->X:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move v1, v0
+    return v0
 
     :cond_0
-    if-nez v1, :cond_1
-
-    const-string v0, "skipping frame"
+    instance-of v1, p1, Lvla;
 
     const/4 v2, 0x0
 
-    const-string v3, "OneShotOnPreDrawListener"
+    if-nez v1, :cond_1
 
-    invoke-static {v3, v0, v2}, Lndi;->n(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    return v2
 
     :cond_1
-    return v1
-.end method
+    check-cast p1, Lvla;
 
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
+    iget-object v1, p0, Lvla;->a:Lem;
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget-object v3, p1, Lvla;->a:Lem;
 
-    move-result-object p1
+    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput-object p1, p0, Lvla;->c:Landroid/view/ViewTreeObserver;
+    move-result v1
 
-    return-void
-.end method
+    if-nez v1, :cond_2
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+    return v2
 
-    iget-object p1, p0, Lvla;->c:Landroid/view/ViewTreeObserver;
+    :cond_2
+    iget-object v1, p0, Lvla;->b:Lzl;
 
-    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
+    iget-object p1, p1, Lvla;->b:Lzl;
+
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lvla;->a:Landroid/view/View;
+    if-nez p1, :cond_3
 
-    if-eqz p1, :cond_0
+    return v2
 
-    iget-object p1, p0, Lvla;->c:Landroid/view/ViewTreeObserver;
+    :cond_3
+    return v0
+.end method
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+.method public final hashCode()I
+    .locals 2
 
-    goto :goto_0
+    iget-object v0, p0, Lvla;->a:Lem;
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    :goto_0
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v1, p0, Lvla;->b:Lzl;
 
-    return-void
+    invoke-virtual {v1}, Lzl;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OkApiRequest(request="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvla;->a:Lem;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", config="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvla;->b:Lzl;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

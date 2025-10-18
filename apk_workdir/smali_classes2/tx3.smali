@@ -1,137 +1,47 @@
 .class public final Ltx3;
-.super Ljava/lang/Object;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llt7;
+.field public final synthetic X:Lux3;
 
-.field public final b:Llt7;
+.field public Y:I
 
-.field public final c:Llt7;
-
-.field public final d:Llt7;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;)V
+.method public constructor <init>(Lux3;Ly14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltx3;->X:Lux3;
 
-    iput-object p1, p0, Ltx3;->a:Llt7;
-
-    iput-object p2, p0, Ltx3;->b:Llt7;
-
-    iput-object p3, p0, Ltx3;->c:Llt7;
-
-    iput-object p4, p0, Ltx3;->d:Llt7;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 11
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-class v0, Ltx3;
+    iput-object p1, p0, Ltx3;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget p1, p0, Ltx3;->Y:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    const-string v1, "unblock, id = "
+    or-int/2addr p1, v0
 
-    invoke-static {p1, p2, v1, v0}, Lxx1;->r(JLjava/lang/String;Ljava/lang/String;)V
+    iput p1, p0, Ltx3;->Y:I
 
-    iget-object v0, p0, Ltx3;->a:Llt7;
+    iget-object p1, p0, Ltx3;->X:Lux3;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lms3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lb42;
-
-    const/16 v2, 0x12
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Lb42;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1, p2, v1}, Lms3;->c(JLer3;)Lir3;
-
-    iget-object v0, p0, Ltx3;->c:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lll;
-
-    check-cast v0, Lkma;
-
-    new-instance v1, Lvx3;
-
-    invoke-virtual {v0}, Lkma;->x()Ljwb;
-
-    move-result-object v2
-
-    check-cast v2, Llwb;
-
-    iget-object v2, v2, Llwb;->a:Lg68;
-
-    invoke-virtual {v2}, Lgsd;->k()J
-
-    move-result-wide v3
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-wide v5, p1
-
-    invoke-direct/range {v1 .. v10}, Lvx3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, Lkma;->v(Lkma;Lxm;)J
-
-    iget-object p1, p0, Ltx3;->b:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lux3;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lokf;
-
-    invoke-static {v5, v6}, Lmb3;->e(J)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lokf;->f(Ljava/util/Collection;)V
-
-    iget-object p1, p0, Ltx3;->d:Llt7;
-
-    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgw0;
-
-    new-instance p2, Lqz3;
-
-    invoke-direct {p2, v5, v6}, Lqz3;-><init>(J)V
-
-    invoke-virtual {p1, p2}, Lgw0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method

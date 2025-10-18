@@ -3,300 +3,244 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:[B
-
-.field public static final g:[B
-
-
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public b:Z
+.field public b:I
 
-.field public c:I
+.field public c:F
 
 .field public d:I
 
-.field public e:Ljava/io/Serializable;
+.field public e:Z
 
-
-# direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x3
-
-    new-array v1, v0, [B
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Lqu6;->f:[B
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lqu6;->g:[B
-
-    return-void
-
-    :array_0
-    .array-data 1
-        0x0t
-        0x0t
-        0x1t
-    .end array-data
-
-    :array_1
-    .array-data 1
-        0x0t
-        0x0t
-        0x1t
-    .end array-data
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lqu6;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj12;Landroid/util/Rational;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lqu6;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    invoke-interface {p1}, Lj12;->b()I
-
-    move-result v0
-
-    iput v0, p0, Lqu6;->c:I
-
-    .line 4
-    invoke-interface {p1}, Lj12;->h()I
-
-    move-result p1
-
-    iput p1, p0, Lqu6;->d:I
-
-    .line 5
-    iput-object p2, p0, Lqu6;->e:Ljava/io/Serializable;
-
-    const/4 p1, 0x1
-
-    if-eqz p2, :cond_1
-
-    .line 6
-    invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
-
-    move-result v0
-
-    .line 7
-    invoke-virtual {p2}, Landroid/util/Rational;->getDenominator()I
-
-    move-result p2
-
-    if-lt v0, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :cond_1
-    :goto_0
-    iput-boolean p1, p0, Lqu6;->b:Z
-
-    return-void
-.end method
+.field public f:I
 
 
 # virtual methods
-.method public a(Ln97;)Landroid/util/Size;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p1, v0}, Ln97;->J(I)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    sget-object v3, Ln97;->D:Lq90;
-
-    invoke-interface {p1, v3, v2}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/util/Size;
-
-    iget v2, p0, Lqu6;->d:I
-
-    iget v3, p0, Lqu6;->c:I
-
-    if-eqz p1, :cond_2
-
-    invoke-static {v1}, Lup7;->b(I)I
-
-    move-result v1
-
-    const/4 v4, 0x1
-
-    if-ne v4, v2, :cond_0
-
-    move v0, v4
+    goto :goto_1
 
     :cond_0
-    invoke-static {v1, v3, v0}, Lup7;->a(IIZ)I
+    instance-of v0, p1, Lqu6;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lqu6;
+
+    iget v0, p0, Lqu6;->a:I
+
+    iget v1, p1, Lqu6;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lqu6;->b:I
+
+    iget v1, p1, Lqu6;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lqu6;->c:F
+
+    iget v1, p1, Lqu6;->c:F
+
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v0
 
-    const/16 v1, 0x5a
+    if-eqz v0, :cond_4
 
-    if-eq v0, v1, :cond_1
+    goto :goto_0
 
-    const/16 v1, 0x10e
+    :cond_4
+    iget v0, p0, Lqu6;->d:I
 
-    if-ne v0, v1, :cond_2
+    iget v1, p1, Lqu6;->d:I
 
-    :cond_1
-    new-instance v0, Landroid/util/Size;
+    if-eq v0, v1, :cond_5
 
-    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+    goto :goto_0
 
-    move-result v1
+    :cond_5
+    iget-boolean v0, p0, Lqu6;->e:Z
 
-    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+    iget-boolean v1, p1, Lqu6;->e:Z
 
-    move-result p1
+    if-eq v0, v1, :cond_6
 
-    invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
+    goto :goto_0
 
-    return-object v0
+    :cond_6
+    iget v0, p0, Lqu6;->f:I
 
-    :cond_2
-    return-object p1
+    iget p1, p1, Lqu6;->f:I
+
+    if-eq v0, p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public b(I[BI)V
+.method public final hashCode()I
     .locals 3
 
     iget v0, p0, Lqu6;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-boolean v0, p0, Lqu6;->b:Z
+    move-result v0
 
-    if-nez v0, :cond_0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lqu6;->b:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lqu6;->c:F
+
+    invoke-static {v0, v2, v1}, Lzb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lqu6;->d:I
+
+    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lqu6;->e:Z
+
+    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+
+    move-result v0
+
+    iget v1, p0, Lqu6;->f:I
+
+    invoke-static {v1}, Ldy1;->v(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 9
+
+    iget v0, p0, Lqu6;->a:I
+
+    iget v1, p0, Lqu6;->b:I
+
+    iget v2, p0, Lqu6;->c:F
+
+    iget v3, p0, Lqu6;->d:I
+
+    iget-boolean v4, p0, Lqu6;->e:Z
+
+    iget v5, p0, Lqu6;->f:I
+
+    const-string v6, ", selectedPageIndex="
+
+    const-string v7, ", pageOffsetFraction="
+
+    const-string v8, "PageState(pagesNumber="
+
+    invoke-static {v8, v0, v6, v1, v7}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", selectedBigDotIndex="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", wasShiftedFromZeroToZero="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", dotsAnimationType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    if-eq v5, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v5, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v5, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v5, v1, :cond_0
+
+    const-string v1, "null"
 
     goto :goto_0
 
     :cond_0
-    sub-int/2addr p3, p1
+    const-string v1, "ALL_DOTS_TO_RIGHT"
 
-    iget-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
-
-    check-cast v0, [B
-
-    array-length v1, v0
-
-    iget v2, p0, Lqu6;->c:I
-
-    add-int/2addr v2, p3
-
-    if-ge v1, v2, :cond_1
-
-    mul-int/lit8 v2, v2, 0x2
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
+    const-string v1, "ALL_DOTS_TO_LEFT"
 
-    check-cast v0, [B
-
-    iget v1, p0, Lqu6;->c:I
-
-    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget p1, p0, Lqu6;->c:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lqu6;->c:I
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lqu6;->b:Z
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    sub-int/2addr p3, p1
+    const-string v1, "BIG_DOTS_CHANGE"
 
-    iget-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
+    goto :goto_0
 
-    check-cast v0, [B
+    :cond_3
+    const-string v1, "NONE"
 
-    array-length v1, v0
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lqu6;->c:I
+    const-string v1, ")"
 
-    add-int/2addr v2, p3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ge v1, v2, :cond_3
-
-    mul-int/lit8 v2, v2, 0x2
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
-
-    :cond_3
-    iget-object v0, p0, Lqu6;->e:Ljava/io/Serializable;
-
-    check-cast v0, [B
-
-    iget v1, p0, Lqu6;->c:I
-
-    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget p1, p0, Lqu6;->c:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lqu6;->c:I
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,113 +1,130 @@
 .class public final Lo91;
-.super Llff;
+.super Lrdi;
 .source "SourceFile"
 
-# interfaces
-.implements Lei6;
 
-
-# instance fields
-.field public synthetic X:Z
-
-.field public final synthetic Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+# static fields
+.field public static final c:Lo91;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lo91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    new-instance v0, Lo91;
 
-    const/4 p1, 0x2
+    const/16 v1, 0xb
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+
+    sput-object v0, Lo91;->c:Lo91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final S0(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/CharSequence;)V
+    .locals 3
 
-    check-cast p1, Ljava/lang/Boolean;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, ":call-history-info?is_link_call=true"
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Lo91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v1, Lo91;->c:Lo91;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "&call_link="
+
+    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    if-eqz p3, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v2, "&call_title="
+
+    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "&call_chat_id="
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lo91;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lzag;->a:Lzag;
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lo91;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    return-object p2
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
+
+    move-result-object p2
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p1, p3}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final T0(JJ)V
     .locals 2
 
-    new-instance v0, Lo91;
+    const-string v0, ":chats?id="
 
-    iget-object v1, p0, Lo91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    const-string v1, "&type=local&message_id="
 
-    invoke-direct {v0, v1, p2}, Lo91;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p1, p2, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string p2, "&highlight_message=true"
 
-    move-result p1
+    invoke-static {p1, p3, p4, p2}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    iput-boolean p1, v0, Lo91;->X:Z
+    move-result-object p1
 
-    return-object v0
-.end method
+    invoke-virtual {p0}, Lrdi;->q0()Lag4;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result-object p2
 
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    const/4 p3, 0x0
 
-    iget-boolean p1, p0, Lo91;->X:Z
+    invoke-virtual {p2, p1, p3}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lk8a;
-
-    iget-object v0, p0, Lo91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->E0()Lba1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lba1;->s0:Lsze;
-
-    :cond_0
-    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p1, Lzag;->a:Lzag;
-
-    return-object p1
+    return-void
 .end method

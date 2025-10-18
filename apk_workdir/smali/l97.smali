@@ -1,59 +1,77 @@
 .class public final Ll97;
-.super Ldj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lud4;
-
-.field public c:J
+# static fields
+.field public static final a:Lo97;
 
 
 # direct methods
-.method public constructor <init>(Lud4;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lkx5;->c:Lkx5;
 
-    iput-object p1, p0, Ll97;->b:Lud4;
+    const/4 v1, 0x0
 
-    const-wide/16 v0, -0x1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-wide v0, p0, Ll97;->c:J
+    move-result-object v1
 
-    return-void
-.end method
+    sget-object v2, Lwcd;->c:Lwcd;
 
+    new-instance v3, Lvcd;
 
-# virtual methods
-.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    .locals 2
+    const/4 v4, 0x0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-direct {v3, v0, v2, v4}, Lvcd;-><init>(Lkx5;Lwcd;Ld46;)V
 
-    move-result-wide p1
+    new-instance v0, Lr87;
 
-    iget-wide v0, p0, Ll97;->c:J
+    const/4 v2, 0x1
 
-    sub-long/2addr p1, v0
+    invoke-direct {v0, v2}, Lr87;-><init>(I)V
 
-    iget-object p3, p0, Ll97;->b:Lud4;
+    sget-object v2, Lmhg;->j0:Lz90;
 
-    iput-wide p1, p3, Lud4;->s:J
+    const/4 v4, 0x4
 
-    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-void
-.end method
+    move-result-object v4
 
-.method public final g(Ljava/lang/String;)V
-    .locals 2
+    iget-object v0, v0, Lr87;->b:Lc1a;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0, v2, v4}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
 
-    move-result-wide v0
+    sget-object v2, Lka7;->y:Lz90;
 
-    iput-wide v0, p0, Ll97;->c:J
+    invoke-virtual {v0, v2, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v2, Lka7;->G:Lz90;
+
+    invoke-virtual {v0, v2, v3}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v2, Lo97;->Y:Lz90;
+
+    invoke-virtual {v0, v2, v1}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    sget-object v1, Laa7;->x:Lz90;
+
+    sget-object v2, Lv45;->d:Lv45;
+
+    invoke-virtual {v0, v1, v2}, Lc1a;->k(Lz90;Ljava/lang/Object;)V
+
+    new-instance v1, Lo97;
+
+    invoke-static {v0}, Ls9b;->a(Lpk3;)Ls9b;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Lo97;-><init>(Ls9b;)V
+
+    sput-object v1, Ll97;->a:Lo97;
 
     return-void
 .end method

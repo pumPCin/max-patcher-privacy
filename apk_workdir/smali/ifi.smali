@@ -1,75 +1,127 @@
-.class public abstract Lifi;
-.super Ljava/lang/Object;
+.class public final Lifi;
+.super Lj7i;
 .source "SourceFile"
+
+# interfaces
+.implements Lbai;
 
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
+.field private static final zzb:Lifi;
+
+
+# instance fields
+.field private zzd:I
+
+.field private zze:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Lifi;
 
-    const-string v1, "review"
+    invoke-direct {v0}, Lifi;-><init>()V
 
-    const-string v2, "app_update"
+    sput-object v0, Lifi;->zzb:Lifi;
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    const-class v1, Lifi;
 
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const-string v1, "unity"
-
-    const-string v2, "native"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lifi;->a:Ljava/util/HashMap;
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v0
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    const-string v2, "]  PID: ["
-
-    const-string v3, "] "
-
-    const-string v4, "UID: ["
-
-    invoke-static {v4, v0, v2, v1, v3}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "PlayCoreVersion"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
 
     return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lj7i;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lifi;->zze:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final m(ILj7i;)Ljava/lang/Object;
+    .locals 2
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-eqz p1, :cond_4
+
+    const/4 p2, 0x2
+
+    if-eq p1, p2, :cond_3
+
+    const/4 p2, 0x3
+
+    if-eq p1, p2, :cond_2
+
+    const/4 p2, 0x4
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x5
+
+    if-eq p1, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lifi;->zzb:Lifi;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lali;
+
+    sget-object p2, Lifi;->zzb:Lifi;
+
+    const/16 v0, 0x11
+
+    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lifi;
+
+    invoke-direct {p1}, Lifi;-><init>()V
+
+    return-object p1
+
+    :cond_3
+    const-string p1, "zzd"
+
+    const-string p2, "zze"
+
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lifi;->zzb:Lifi;
+
+    new-instance v0, Lwai;
+
+    const-string v1, "\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1004\u0000"
+
+    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_4
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    return-object p1
 .end method

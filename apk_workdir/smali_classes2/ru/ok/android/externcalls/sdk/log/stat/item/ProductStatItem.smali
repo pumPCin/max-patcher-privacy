@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;JLjava/util/Map;Lvh4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;JLjava/util/Map;Lki4;)V
     .locals 0
 
     .line 1

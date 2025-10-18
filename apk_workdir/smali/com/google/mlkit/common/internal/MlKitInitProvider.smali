@@ -29,7 +29,7 @@
 
     const-string v1, "Incorrect provider authority in manifest. Most likely due to a missing applicationId variable in application\'s build.gradle."
 
-    invoke-static {v1, v0}, Lbi3;->k(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Lzui;->k(Ljava/lang/String;Z)V
 
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
 
@@ -80,14 +80,14 @@
     return v1
 
     :cond_0
-    sget-object v2, Lws9;->b:Ljava/lang/Object;
+    sget-object v2, Lxt9;->b:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_0
-    sget-object v3, Lynf;->a:Lp30;
+    sget-object v3, Lcpf;->a:Lq30;
 
-    invoke-static {v0, v3}, Lws9;->d(Landroid/content/Context;Ljava/util/concurrent/Executor;)Lws9;
+    invoke-static {v0, v3}, Lxt9;->d(Landroid/content/Context;Ljava/util/concurrent/Executor;)Lxt9;
 
     monitor-exit v2
 

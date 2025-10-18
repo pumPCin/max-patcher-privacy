@@ -3,20 +3,44 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     const/4 v0, 0x0
+
+    iput v0, p0, Lfo0;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lfo0;->b:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 1
+
+    const/4 v0, 0x1
 
     iput v0, p0, Lfo0;->a:I
 
@@ -24,76 +48,59 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lfo0;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/biometric/FingerprintDialogFragment;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lfo0;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfo0;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lfo0;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    iget p1, p0, Lfo0;->a:I
+    iget v0, p0, Lfo0;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lfo0;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Landroidx/biometric/FingerprintDialogFragment;
+    iget-object v0, p0, Lfo0;->b:Landroid/os/Handler;
 
-    iget-object p1, p1, Landroidx/biometric/FingerprintDialogFragment;->A1:Landroidx/biometric/BiometricViewModel;
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    const/4 p2, 0x1
+    move-result p1
 
-    invoke-virtual {p1, p2}, Landroidx/biometric/BiometricViewModel;->i(Z)V
+    if-eqz p1, :cond_0
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lfo0;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/biometric/BiometricViewModel;
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroidx/biometric/BiometricViewModel;->i(Z)V
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 
-    nop
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " is shutting down"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lfo0;->b:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

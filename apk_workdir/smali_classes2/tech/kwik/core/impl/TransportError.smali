@@ -149,14 +149,14 @@
     .locals 2
 
     .line 3
-    invoke-static {p1}, Llfb;->o(I)Ljava/lang/String;
+    invoke-static {p1}, Laab;->o(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, ": "
 
     .line 4
-    invoke-static {v0, v1, p2}, Ld15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, p2}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -176,7 +176,7 @@
 
     iget v0, p0, Ltech/kwik/core/impl/TransportError;->a:I
 
-    invoke-static {v0}, Llfb;->o(I)Ljava/lang/String;
+    invoke-static {v0}, Laab;->o(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -184,7 +184,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, v0, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

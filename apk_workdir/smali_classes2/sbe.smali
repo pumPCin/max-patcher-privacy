@@ -1,173 +1,144 @@
 .class public final Lsbe;
-.super Lqci;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:I
 
-.field public final synthetic o:Ltbe;
+.field public final synthetic Y:Lwbe;
 
 
 # direct methods
-.method public constructor <init>(Ltbe;)V
-    .locals 1
+.method public constructor <init>(Lwbe;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lsbe;->Y:Lwbe;
 
-    iput v0, p0, Lsbe;->c:I
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lsbe;->o:Ltbe;
-
-    const/16 p1, 0xc
-
-    .line 2
-    sget-object v0, Lpbe;->a:Lpbe;
-
-    invoke-direct {p0, p1, v0}, Lqci;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwae;Ltbe;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lsbe;->c:I
-
-    iput-object p2, p0, Lsbe;->o:Ltbe;
-
-    const/16 p2, 0xc
-
-    .line 1
-    invoke-direct {p0, p2, p1}, Lqci;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lsbe;->c:I
+    check-cast p1, Lq54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lpbe;
+    invoke-virtual {p0, p1, p2}, Lsbe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lpbe;
+    move-result-object p1
 
-    if-eq p1, p2, :cond_0
+    check-cast p1, Lsbe;
 
-    iget-object p1, p0, Lsbe;->o:Ltbe;
+    sget-object p2, Lccg;->a:Lccg;
 
-    invoke-static {p1}, Ltbe;->A(Ltbe;)Lu4b;
+    invoke-virtual {p1, p2}, Lsbe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Ltbe;->onThemeChanged(Lu4b;)V
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lsbe;
+
+    iget-object v0, p0, Lsbe;->Y:Lwbe;
+
+    invoke-direct {p1, v0, p2}, Lsbe;-><init>(Lwbe;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lsbe;->X:I
+
+    sget-object v1, Lccg;->a:Lccg;
+
+    iget-object v2, p0, Lsbe;->Y:Lwbe;
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v3, :cond_0
+
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_0
-    check-cast p2, Lkbe;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast p1, Lkbe;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    throw p1
 
-    move-result p1
+    :cond_1
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    if-nez p1, :cond_2
+    iput v3, p0, Lsbe;->X:I
 
-    invoke-interface {p2}, Lkbe;->getTitle()Loqf;
+    iget-object p1, v2, Lwbe;->q0:Liu7;
 
-    move-result-object p1
-
-    iget-object v0, p0, Lsbe;->o:Ltbe;
-
-    invoke-virtual {v0, p1}, Ltbe;->setTitle(Loqf;)V
-
-    invoke-interface {p2}, Lkbe;->e()Lvt7;
+    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ltbe;->setStartIcon(Lvt7;)V
+    check-cast p1, Lulf;
 
-    invoke-interface {p2}, Lkbe;->a()Loqf;
+    check-cast p1, Lqta;
 
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltbe;->setDescription(Loqf;)V
-
-    invoke-interface {p2}, Lkbe;->b()Labe;
+    invoke-virtual {p1}, Lqta;->b()Lk54;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ltbe;->setCounter(Labe;)V
+    new-instance v0, Ltbe;
 
-    invoke-interface {p2}, Lkbe;->c()Loqf;
+    const/4 v3, 0x0
 
-    move-result-object p1
+    invoke-direct {v0, v2, v3}, Ltbe;-><init>(Lwbe;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {p1, v0, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
+
+    sget-object v0, Lr54;->a:Lr54;
+
+    if-ne p1, v0, :cond_2
 
     goto :goto_0
 
-    :cond_1
-    const/4 p1, 0x0
+    :cond_2
+    move-object p1, v1
 
     :goto_0
-    invoke-virtual {v0, p1}, Ltbe;->setUpperText(Ljava/lang/CharSequence;)V
+    if-ne p1, v0, :cond_3
 
-    invoke-interface {p2}, Lkbe;->d()Lhbe;
+    return-object v0
 
-    move-result-object p1
+    :cond_3
+    :goto_1
+    sget-object p1, Lwbe;->x0:[Ltr7;
 
-    invoke-virtual {v0, p1}, Ltbe;->setEndView(Lhbe;)V
+    const/4 p1, 0x0
 
-    invoke-interface {p2}, Lb18;->getItemId()J
+    invoke-virtual {v2, p1}, Lwbe;->r(I)V
 
-    invoke-virtual {v0}, Ltbe;->getModelItem()Lkbe;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lkbe;->getType()Ljbe;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltbe;->setType(Ljbe;)V
-
-    invoke-virtual {v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    sget-object p1, Lsz4;->t0:Lc82;
-
-    invoke-virtual {p1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltbe;->onThemeChanged(Lu4b;)V
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

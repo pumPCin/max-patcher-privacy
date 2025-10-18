@@ -1,73 +1,53 @@
 .class public final Lpre;
-.super Ljava/lang/Object;
+.super Lwpe;
 .source "SourceFile"
-
-# interfaces
-.implements Ld1e;
 
 
 # instance fields
-.field public final synthetic a:Llt;
+.field public final a:J
 
-.field public final synthetic b:I
-
-.field public final synthetic c:I
+.field public final b:Lxod;
 
 
 # direct methods
-.method public constructor <init>(Llt;II)V
-    .locals 0
+.method public constructor <init>(JLxod;)V
+    .locals 1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpre;->a:Llt;
+    iput-wide p1, p0, Lpre;->a:J
 
-    iput p2, p0, Lpre;->b:I
-
-    iput p3, p0, Lpre;->c:I
+    iput-object p3, p0, Lpre;->b:Lxod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 5
+.method public final l(Lsqe;)V
+    .locals 4
 
-    iget-object v0, p0, Lpre;->a:Llt;
+    new-instance v0, Lbla;
 
-    iget-object v0, v0, Llt;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v0, Ljava/lang/Iterable;
+    invoke-direct {v0, v1, p1}, Lbla;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1, v0}, Lsqe;->c(Lvv4;)V
 
-    move-result-object v0
+    iget-wide v1, p0, Lpre;->a:J
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result v1
+    iget-object v3, p0, Lpre;->b:Lxod;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v3, v0, v1, v2, p1}, Lxod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
 
-    sget-object v0, Lr95;->a:Lr95;
+    move-result-object p1
 
-    return-object v0
+    invoke-static {v0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
 
-    :cond_0
-    new-instance v1, Lore;
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Lpre;->b:I
-
-    iget v4, p0, Lpre;->c:I
-
-    invoke-direct {v1, v3, v4, v0, v2}, Lore;-><init>(IILjava/util/Iterator;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1}, Lp1e;->a(Lei6;)Li1e;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

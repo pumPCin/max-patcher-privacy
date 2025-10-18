@@ -1,78 +1,177 @@
 .class public final Llgb;
-.super Ljava/lang/Object;
+.super Llxc;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ljava/lang/String;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:J
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Ljava/util/List;
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/util/ArrayList;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
+    sget-object v0, Lnig;->a:Ljava/lang/String;
+
+    const/16 v0, 0x24
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Llgb;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llgb;->a:Ljava/lang/String;
+    const/high16 v0, -0x40800000    # -1.0f
 
-    iput-wide p2, p0, Llgb;->b:J
+    .line 2
+    iput v0, p0, Llgb;->b:F
 
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>(F)V
+    .locals 2
 
-    iput-object p1, p0, Llgb;->c:Ljava/util/List;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    cmpl-float v0, p1, v0
 
-    iput-object p1, p0, Llgb;->d:Ljava/util/List;
+    if-ltz v0, :cond_0
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    cmpg-float v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 4
+    :goto_0
+    const-string v1, "percent must be in the range of [0, 100]"
+
+    invoke-static {v1, v0}, Lsgi;->c(Ljava/lang/Object;Z)V
+
+    .line 5
+    iput p1, p0, Llgb;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 4
+.method public final b()Z
+    .locals 2
 
-    iget-object v0, p0, Llgb;->c:Ljava/util/List;
+    iget v0, p0, Llgb;->b:F
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/high16 v1, -0x40800000    # -1.0f
 
-    move-result v1
+    cmpl-float v0, v0, v1
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    const/4 v0, 0x1
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, La9;
-
-    iget v3, v3, La9;->b:I
-
-    if-ne v3, p1, :cond_0
-
-    return v2
+    return v0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
+.end method
 
-    :cond_1
-    const/4 p1, -0x1
+.method public final c()Landroid/os/Bundle;
+    .locals 3
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    sget-object v1, Llxc;->a:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Llgb;->c:Ljava/lang/String;
+
+    iget v2, p0, Llgb;->b:F
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Llgb;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Llgb;
+
+    iget p1, p1, Llgb;->b:F
+
+    iget v0, p0, Llgb;->b:F
+
+    cmpl-float p1, v0, p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
 
     return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Llgb;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

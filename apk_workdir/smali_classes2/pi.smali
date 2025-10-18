@@ -7,5 +7,5 @@
 .method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract b(Loh6;)V
+.method public abstract b(Lji6;)V
 .end method

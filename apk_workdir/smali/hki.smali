@@ -1,150 +1,185 @@
-.class public final Lhki;
+.class public abstract Lhki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Lhki;
-
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static final a(Lqp0;Landroid/content/Context;I)Landroid/graphics/Bitmap;
     .locals 3
 
-    new-instance v0, Lhki;
+    invoke-static {p1, p2}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    sput-object v0, Lhki;->a:Lhki;
+    if-eqz p1, :cond_0
 
-    new-instance v0, Lq7i;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    const/4 v1, 0x1
+    move-result p2
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    const-class v1, Ll8i;
+    move-result v0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    mul-int/2addr v0, p2
 
-    move-result-object v0
+    mul-int/lit8 v0, v0, 0x4
 
-    const/4 v2, 0x2
+    invoke-interface {p0, v0}, Lovb;->get(I)Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    move-result-object p0
 
-    move-result-object v0
+    check-cast p0, Landroid/graphics/Bitmap;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    move-result-object v0
+    move-result p2
 
-    const/4 v2, 0x3
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    move-result v0
 
-    move-result-object v0
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-virtual {p0, p2, v0, v1}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
 
-    move-result-object v0
+    new-instance p2, Landroid/graphics/Canvas;
 
-    const/4 v2, 0x4
+    invoke-direct {p2, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-virtual {p2}, Landroid/graphics/Canvas;->getWidth()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-virtual {p2}, Landroid/graphics/Canvas;->getHeight()I
 
-    move-result-object v0
+    move-result v1
 
-    const/4 v2, 0x5
+    const/4 v2, 0x0
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    return-object p0
 
-    move-result-object v0
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v2, 0x6
+    const-string p1, "Required value was null."
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    throw p0
+.end method
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+.method public static b(IIIIIILma9;)V
+    .locals 4
 
-    move-result-object v0
+    invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
-    const/4 v2, 0x7
+    move-result p0
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    div-int/lit8 p1, p0, 0x2
 
-    move-result-object v0
+    int-to-float v0, p0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    int-to-float v1, p3
 
-    move-result-object v0
+    int-to-float v2, p2
 
-    const/16 v2, 0x8
+    div-float v3, v1, v2
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    mul-float/2addr v3, v0
 
-    move-result-object v0
+    float-to-int v0, v3
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    if-lt p0, p1, :cond_0
 
-    move-result-object v0
+    if-lt v0, p4, :cond_0
 
-    const/16 v2, 0x9
+    if-gt v0, p5, :cond_0
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-static {p0, v0, p2, p3, p6}, Lhki;->c(IIIILma9;)V
 
-    move-result-object v0
+    return-void
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    :cond_0
+    if-ge v0, p4, :cond_1
 
-    move-result-object v0
+    invoke-static {p0, p4, p2, p3, p6}, Lhki;->c(IIIILma9;)V
 
-    const/16 v2, 0xa
+    return-void
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    :cond_1
+    int-to-float p0, p5
 
-    move-result-object v0
+    div-float/2addr v2, v1
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    mul-float/2addr v2, p0
 
-    move-result-object v0
+    float-to-int p0, v2
 
-    const/16 v2, 0xb
+    if-lt p0, p1, :cond_2
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    if-lt p5, p4, :cond_2
 
-    move-result-object v0
+    invoke-static {p0, p5, p2, p3, p6}, Lhki;->c(IIIILma9;)V
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    return-void
 
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    :cond_2
+    invoke-static {p1, p5, p2, p3, p6}, Lhki;->c(IIIILma9;)V
 
     return-void
 .end method
 
+.method public static c(IIIILma9;)V
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    if-le p2, p3, :cond_0
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    int-to-float v0, p0
 
-    move-result-object p1
+    int-to-float p3, p3
 
-    throw p1
+    int-to-float p2, p2
+
+    div-float/2addr p3, p2
+
+    mul-float/2addr p3, v0
+
+    float-to-int p2, p3
+
+    move p3, p2
+
+    move p2, p0
+
+    goto :goto_0
+
+    :cond_0
+    int-to-float v0, p1
+
+    int-to-float p2, p2
+
+    int-to-float p3, p3
+
+    div-float/2addr p2, p3
+
+    mul-float/2addr p2, v0
+
+    float-to-int p2, p2
+
+    move p3, p1
+
+    :goto_0
+    iput p0, p4, Lma9;->a:I
+
+    iput p1, p4, Lma9;->b:I
+
+    iput p2, p4, Lma9;->c:I
+
+    iput p3, p4, Lma9;->d:I
+
+    return-void
 .end method

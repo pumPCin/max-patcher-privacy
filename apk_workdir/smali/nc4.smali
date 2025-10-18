@@ -1,9 +1,17 @@
-.class public final Lnc4;
+.class public interface abstract Lnc4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# virtual methods
+.method public abstract a(Lr0;)V
+.end method
 
-.field public b:I
+.method public abstract b(Lr0;)V
+.end method
+
+.method public abstract c(Lr0;)V
+.end method
+
+.method public abstract d()V
+.end method

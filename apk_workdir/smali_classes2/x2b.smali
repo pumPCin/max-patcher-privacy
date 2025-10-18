@@ -1,141 +1,67 @@
-.class public final Lx2b;
+.class public abstract Lx2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly2b;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lx2b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:Loqf;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lv2b;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
-
-    sput-object v0, Lx2b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Loqf;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx2b;->a:Loqf;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lytc;->share_bottom_button_copy_link:I
 
-    return v0
-.end method
+    sput v0, Lx2b;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget v0, Lytc;->share_confirm_cancel:I
 
-    const/4 v0, 0x1
+    sput v0, Lx2b;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lytc;->share_confirm_close:I
 
-    return v0
+    sput v0, Lx2b;->c:I
 
-    :cond_0
-    instance-of v1, p1, Lx2b;
+    sget v0, Lytc;->share_confirmation_close_title:I
 
-    const/4 v2, 0x0
+    sput v0, Lx2b;->d:I
 
-    if-nez v1, :cond_1
+    sget v0, Lytc;->share_message_hint:I
 
-    return v2
+    sput v0, Lx2b;->e:I
 
-    :cond_1
-    check-cast p1, Lx2b;
+    sget v0, Lytc;->share_search_hint:I
 
-    iget-object v1, p0, Lx2b;->a:Loqf;
+    sput v0, Lx2b;->f:I
 
-    iget-object p1, p1, Lx2b;->a:Loqf;
+    sget v0, Lytc;->share_toolbar_action_cancel_selection:I
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Lx2b;->g:I
 
-    move-result p1
+    sget v0, Lytc;->share_toolbar_action_select:I
 
-    if-nez p1, :cond_2
+    sput v0, Lx2b;->h:I
 
-    return v2
+    sget v0, Lytc;->share_toolbar_title:I
 
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lx2b;->a:Loqf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TextButton(caption="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lx2b;->a:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lx2b;->a:Loqf;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    sput v0, Lx2b;->i:I
 
     return-void
 .end method

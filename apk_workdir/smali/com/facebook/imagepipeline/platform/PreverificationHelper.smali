@@ -28,7 +28,7 @@
     xi = 0x30
 .end annotation
 
-.annotation build Luv4;
+.annotation build Llw4;
 .end annotation
 
 
@@ -49,7 +49,7 @@
         value = 0x1a
     .end annotation
 
-    .annotation build Luv4;
+    .annotation build Llw4;
     .end annotation
 
     sget-object v0, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;

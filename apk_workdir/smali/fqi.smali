@@ -1,175 +1,161 @@
 .class public final Lfqi;
-.super Lqci;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfqi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final synthetic c:I
+.field public X:Ljava/lang/String;
+
+.field public Y:Ljava/lang/String;
+
+.field public Z:Ljava/lang/String;
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
+
+.field public q0:Ljava/lang/String;
+
+.field public r0:Ljava/lang/String;
+
+.field public s0:Ljava/lang/String;
+
+.field public t0:Ljava/lang/String;
+
+.field public u0:Ljava/lang/String;
+
+.field public v0:Ljava/lang/String;
+
+.field public w0:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lfqi;->c:I
+    new-instance v0, Lgti;
 
-    const/16 p1, 0x8
+    const/16 v1, 0x17
 
-    invoke-direct {p0, p1}, Lqci;-><init>(I)V
+    invoke-direct {v0, v1}, Lgti;-><init>(I)V
+
+    sput-object v0, Lfqi;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e0(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    iget v0, p0, Lfqi;->c:I
+    const/16 p2, 0x4f45
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
 
-    check-cast p1, Lm1j;
+    move-result p2
 
-    new-instance v0, Lq1j;
+    const/4 v0, 0x2
 
-    invoke-static {}, Lws9;->c()Lws9;
+    iget-object v1, p0, Lfqi;->a:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    new-instance v2, Lo1j;
+    const/4 v0, 0x3
 
-    invoke-static {}, Lws9;->c()Lws9;
+    iget-object v1, p0, Lfqi;->b:Ljava/lang/String;
 
-    move-result-object v3
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-virtual {v3}, Lws9;->b()Landroid/content/Context;
+    const/4 v0, 0x4
 
-    move-result-object v3
+    iget-object v1, p0, Lfqi;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v3, p1}, Lo1j;-><init>(Landroid/content/Context;Lm1j;)V
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    iget-object p1, p1, Lm1j;->a:Ljava/lang/String;
+    const/4 v0, 0x5
 
-    invoke-virtual {v1}, Lws9;->b()Landroid/content/Context;
+    iget-object v1, p0, Lfqi;->o:Ljava/lang/String;
 
-    move-result-object v3
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    const-class v4, Lnie;
+    const/4 v0, 0x6
 
-    invoke-virtual {v1, v4}, Lws9;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v1, p0, Lfqi;->X:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    check-cast v1, Lnie;
+    const/4 v0, 0x7
 
-    invoke-direct {v0, v3, v1, v2, p1}, Lq1j;-><init>(Landroid/content/Context;Lnie;Lo1j;Ljava/lang/String;)V
+    iget-object v1, p0, Lfqi;->Y:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    :pswitch_0
-    check-cast p1, Lowi;
+    const/16 v0, 0x8
 
-    new-instance p1, Lfxi;
+    iget-object v1, p0, Lfqi;->Z:Ljava/lang/String;
 
-    invoke-static {}, Lws9;->c()Lws9;
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result-object v0
+    const/16 v0, 0x9
 
-    invoke-static {}, Lws9;->c()Lws9;
+    iget-object v1, p0, Lfqi;->q0:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-virtual {v1}, Lws9;->b()Landroid/content/Context;
+    const/16 v0, 0xa
 
-    move-result-object v1
+    iget-object v1, p0, Lfqi;->r0:Ljava/lang/String;
 
-    new-instance v2, Ljava/util/ArrayList;
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    const/16 v0, 0xb
 
-    new-instance v3, Ln8a;
+    iget-object v1, p0, Lfqi;->s0:Ljava/lang/String;
 
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    sget-object v4, Lnx0;->e:Lnx0;
+    const/16 v0, 0xc
 
-    invoke-static {v1}, Ln3g;->b(Landroid/content/Context;)V
+    iget-object v1, p0, Lfqi;->t0:Ljava/lang/String;
 
-    invoke-static {}, Ln3g;->a()Ln3g;
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result-object v1
+    const/16 v0, 0xd
 
-    invoke-virtual {v1, v4}, Ln3g;->c(Lma5;)Lk3g;
+    iget-object v1, p0, Lfqi;->u0:Ljava/lang/String;
 
-    sget-object v1, Lnx0;->d:Ljava/util/Set;
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    new-instance v4, Lpb5;
+    const/16 v0, 0xe
 
-    const-string v5, "json"
+    iget-object v1, p0, Lfqi;->v0:Ljava/lang/String;
 
-    invoke-direct {v4, v5}, Lpb5;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-interface {v1, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    const/16 v0, 0xf
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lfqi;->w0:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lws9;->b()Landroid/content/Context;
+    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    move-result-object v1
+    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
 
-    const-class v2, Lnie;
-
-    invoke-virtual {v0, v2}, Lws9;->a(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnie;
-
-    invoke-direct {p1, v1, v0}, Lfxi;-><init>(Landroid/content/Context;Lnie;)V
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lhpi;
-
-    new-instance v0, Lupi;
-
-    invoke-static {}, Lws9;->c()Lws9;
-
-    move-result-object v1
-
-    new-instance v2, Lopi;
-
-    invoke-static {}, Lws9;->c()Lws9;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lws9;->b()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3, p1}, Lopi;-><init>(Landroid/content/Context;Lhpi;)V
-
-    invoke-virtual {v1}, Lws9;->b()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-class v3, Lnie;
-
-    invoke-virtual {v1, v3}, Lws9;->a(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lnie;
-
-    invoke-direct {v0, p1, v1, v2}, Lupi;-><init>(Landroid/content/Context;Lnie;Lopi;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

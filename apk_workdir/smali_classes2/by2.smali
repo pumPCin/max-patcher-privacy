@@ -1,172 +1,111 @@
-.class public final Lby2;
+.class public final synthetic Lby2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/ObjLongConsumer;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lx86;
-
-.field public final c:Lsze;
-
-.field public final d:Ln23;
+.field public final synthetic a:Ls9d;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lx86;Lqkf;)V
-    .locals 3
+.method public synthetic constructor <init>(Ls9d;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lby2;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lby2;->b:Lx86;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lby2;->c:Lsze;
-
-    new-instance v1, Ln23;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v0, v2}, Ln23;-><init>(Lzx5;I)V
-
-    iput-object v1, p0, Lby2;->d:Ln23;
-
-    check-cast p3, Losa;
-
-    invoke-virtual {p3}, Losa;->a()Lv44;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lx86;->y()Lzx5;
-
-    move-result-object p2
-
-    new-instance v1, Ldc;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v1, p2, p0, v2}, Ldc;-><init>(Lzx5;Ljava/lang/Object;I)V
-
-    new-instance p2, Lzx2;
-
-    invoke-direct {p2, p0, p1}, Lzx2;-><init>(Lby2;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p1, Lh06;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v1, p2, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    invoke-virtual {p3}, Losa;->a()Lv44;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
-
-    move-result-object p1
-
-    invoke-static {p1, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+    iput-object p1, p0, Lby2;->a:Ls9d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lo36;
-    .locals 5
+.method public final accept(Ljava/lang/Object;J)V
+    .locals 10
 
-    iget-object v0, p0, Lby2;->a:Ljava/lang/String;
+    move-object v4, p1
 
-    const-string v1, "folder "
+    check-cast v4, Landroid/view/View;
 
-    :try_start_0
-    iget-object v2, p0, Lby2;->c:Lsze;
+    iget-object p1, p0, Lby2;->a:Ls9d;
 
-    invoke-virtual {v2}, Lsze;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Ls9d;->b:Ljava/lang/Object;
 
-    move-result-object v2
+    move-object v1, p1
 
-    check-cast v2, Lo36;
+    check-cast v1, Lone/me/chats/list/ChatsListWidget;
 
-    if-nez v2, :cond_1
+    iget-object p1, v1, Lone/me/chats/list/ChatsListWidget;->F0:Lw0e;
 
-    iget-object v2, p0, Lby2;->b:Lx86;
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->J0:[Ltr7;
 
-    invoke-interface {v2, v0}, Lx86;->B(Ljava/lang/String;)Lo36;
+    iget-object v0, v1, Lone/me/chats/list/ChatsListWidget;->c:Lqs;
 
-    move-result-object v2
+    sget-object v6, Lone/me/chats/list/ChatsListWidget;->J0:[Ltr7;
 
-    if-eqz v2, :cond_0
+    const/4 v2, 0x0
 
-    return-object v2
+    aget-object v2, v6, v2
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " not found"
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v2
-
-    :goto_0
-    const-class v2, Lby2;
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "fail to get folderValue for id "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v2, v0, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Ljava/lang/Long;
 
-    throw v1
+    if-nez v0, :cond_1
+
+    const/4 v7, 0x4
+
+    aget-object v0, v6, v7
+
+    invoke-virtual {p1, v1, v0}, Lw0e;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljn7;
+
+    const/4 v8, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljn7;->isActive()Z
+
+    move-result v0
+
+    if-ne v0, v8, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+
+    move-result-object v9
+
+    new-instance v0, Lz23;
+
+    const/4 v5, 0x0
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lz23;-><init>(Lone/me/chats/list/ChatsListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x0
+
+    sget-object p3, Lt54;->b:Lt54;
+
+    invoke-static {v9, p2, p3, v0, v8}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+
+    move-result-object p2
+
+    aget-object p3, v6, v7
+
+    invoke-virtual {p1, v1, p3, p2}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

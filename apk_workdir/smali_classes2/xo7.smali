@@ -1,125 +1,104 @@
 .class public final Lxo7;
-.super Ljava/lang/Object;
+.super Ltw5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final g:Lwoa;
 
-.field public final b:I
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lwoa;ZZZLavf;Lx71;Lfwc;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p5, p6, p7}, Ltw5;-><init>(Lavf;Lx71;Lfwc;)V
 
-    iput-object p1, p0, Lxo7;->a:Ljava/lang/String;
+    iput-object p1, p0, Lxo7;->g:Lwoa;
 
-    iput p2, p0, Lxo7;->b:I
+    iput-boolean p2, p0, Lxo7;->h:Z
+
+    iput-boolean p3, p0, Lxo7;->i:Z
+
+    iput-boolean p4, p0, Lxo7;->j:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Ltw5;->h()V
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxo7;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxo7;
-
-    iget-object v1, p0, Lxo7;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lxo7;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lxo7;->b:I
-
-    iget p1, p1, Lxo7;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final d(La2f;)V
+    .locals 1
 
-    iget-object v0, p0, Lxo7;->a:Ljava/lang/String;
+    iget-object v0, p0, Lxo7;->g:Lwoa;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lwoa;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v0, :cond_1
 
-    iget v1, p0, Lxo7;->b:I
+    iget-boolean v0, p0, Lxo7;->h:Z
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    if-nez v0, :cond_1
 
-    move-result v1
+    iget-boolean v0, p0, Lxo7;->i:Z
 
-    add-int/2addr v1, v0
+    if-eqz v0, :cond_1
 
-    return v1
+    iget-boolean v0, p0, Lxo7;->j:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1}, Ltw5;->d(La2f;)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final e()V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Ltw5;->h()V
 
-    const-string v1, "JsBridgeMethodErrorReason(title="
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final f()I
+    .locals 1
 
-    iget-object v1, p0, Lxo7;->a:Ljava/lang/String;
+    const/4 v0, 0x7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    const-string v1, ", code="
+.method public final g()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxo7;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "JoinP2PFirstDataStat"
 
     return-object v0
 .end method

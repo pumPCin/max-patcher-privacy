@@ -1,129 +1,121 @@
 .class public final Lc49;
-.super Ljava/lang/Object;
+.super Lxzg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final X:Lx0f;
 
-.field public final b:Ljava/util/List;
+.field public final Y:Lxe5;
+
+.field public final Z:Liu7;
+
+.field public final b:La49;
+
+.field public final c:J
+
+.field public final o:Landroid/content/Context;
+
+.field public final q0:Liu7;
+
+.field public final r0:Liu7;
+
+.field public final s0:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(La49;J)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ldt2;->a:Ldt2;
 
-    iput-object p1, p0, Lc49;->a:Ljava/util/List;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iput-object p2, p0, Lc49;->b:Ljava/util/List;
+    move-result-object v1
 
-    return-void
-.end method
+    const-class v2, Landroid/content/Context;
 
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    move-result-object v1
 
-    const/4 v0, 0x1
+    check-cast v1, Landroid/content/Context;
 
-    if-ne p0, p1, :cond_0
+    sget-object v2, Lct2;->a:Liu7;
 
-    return v0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    :cond_0
-    instance-of v1, p1, Lc49;
+    move-result-object v2
 
-    const/4 v2, 0x0
+    const-class v3, Lj4e;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    return v2
+    move-result-object v2
 
-    :cond_1
-    check-cast p1, Lc49;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v1, p0, Lc49;->a:Ljava/util/List;
+    move-result-object v3
 
-    iget-object v3, p1, Lc49;->a:Ljava/util/List;
+    const-class v4, Ld33;
 
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_2
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    return v2
+    move-result-object v4
 
-    :cond_2
-    iget-object v1, p0, Lc49;->b:Ljava/util/List;
+    const-class v5, Lulf;
 
-    iget-object p1, p1, Lc49;->b:Ljava/util/List;
+    invoke-virtual {v4, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
 
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lc49;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lc49;->b:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MemberListActionsWrapper(topActions="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lc49;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottomActions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lc49;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    return-object v0
+    const-class v5, Ldq5;
+
+    invoke-virtual {v0, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lxzg;-><init>()V
+
+    iput-object p1, p0, Lc49;->b:La49;
+
+    iput-wide p2, p0, Lc49;->c:J
+
+    iput-object v1, p0, Lc49;->o:Landroid/content/Context;
+
+    new-instance p1, Lj49;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc49;->X:Lx0f;
+
+    new-instance p1, Lxe5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lxe5;-><init>(I)V
+
+    iput-object p1, p0, Lc49;->Y:Lxe5;
+
+    iput-object v2, p0, Lc49;->Z:Liu7;
+
+    iput-object v3, p0, Lc49;->q0:Liu7;
+
+    iput-object v4, p0, Lc49;->r0:Liu7;
+
+    iput-object v0, p0, Lc49;->s0:Liu7;
+
+    return-void
 .end method

@@ -1,51 +1,157 @@
 .class public final Lw84;
-.super Lvb5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
+.field public a:Ljava/lang/CharSequence;
+
+.field public b:Landroid/graphics/Bitmap;
+
+.field public c:Landroid/text/Layout$Alignment;
+
+.field public d:Landroid/text/Layout$Alignment;
+
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:F
+
+.field public m:F
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub5;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p2, p0, Lw84;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lvb5;-><init>(Lub5;)V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lw84;->a:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lw84;->b:Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lw84;->c:Landroid/text/Layout$Alignment;
+
+    iput-object v0, p0, Lw84;->d:Landroid/text/Layout$Alignment;
+
+    const v0, -0x800001
+
+    iput v0, p0, Lw84;->e:F
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lw84;->f:I
+
+    iput v1, p0, Lw84;->g:I
+
+    iput v0, p0, Lw84;->h:F
+
+    iput v1, p0, Lw84;->i:I
+
+    iput v1, p0, Lw84;->j:I
+
+    iput v0, p0, Lw84;->k:F
+
+    iput v0, p0, Lw84;->l:F
+
+    iput v0, p0, Lw84;->m:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lw84;->n:Z
+
+    const/high16 v0, -0x1000000
+
+    iput v0, p0, Lw84;->o:I
+
+    iput v1, p0, Lw84;->p:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public r()V
-    .locals 2
+.method public final a()Ly84;
+    .locals 20
 
-    iget v0, p0, Lw84;->e:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Ly84;
 
-    return-void
+    iget-object v2, v0, Lw84;->a:Ljava/lang/CharSequence;
 
-    :pswitch_0
-    iget-object v0, p0, Lvb5;->b:Lub5;
+    iget-object v3, v0, Lw84;->c:Landroid/text/Layout$Alignment;
 
-    const/4 v1, 0x0
+    iget-object v4, v0, Lw84;->d:Landroid/text/Layout$Alignment;
 
-    iput-object v1, v0, Lub5;->B0:Landroid/view/View$OnLongClickListener;
+    iget-object v5, v0, Lw84;->b:Landroid/graphics/Bitmap;
 
-    iget-object v0, v0, Lub5;->t0:Lcom/google/android/material/internal/CheckableImageButton;
+    iget v6, v0, Lw84;->e:F
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    iget v7, v0, Lw84;->f:I
 
-    invoke-static {v0, v1}, Lmyh;->j(Lcom/google/android/material/internal/CheckableImageButton;Landroid/view/View$OnLongClickListener;)V
+    iget v8, v0, Lw84;->g:I
 
-    return-void
+    iget v9, v0, Lw84;->h:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget v10, v0, Lw84;->i:I
+
+    iget v11, v0, Lw84;->j:I
+
+    iget v12, v0, Lw84;->k:F
+
+    iget v13, v0, Lw84;->l:F
+
+    iget v14, v0, Lw84;->m:F
+
+    iget-boolean v15, v0, Lw84;->n:Z
+
+    move-object/from16 v16, v1
+
+    iget v1, v0, Lw84;->o:I
+
+    move/from16 v17, v1
+
+    iget v1, v0, Lw84;->p:I
+
+    move/from16 v18, v1
+
+    iget v1, v0, Lw84;->q:F
+
+    move/from16 v19, v18
+
+    move/from16 v18, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v17
+
+    move/from16 v17, v19
+
+    invoke-direct/range {v1 .. v18}, Ly84;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method

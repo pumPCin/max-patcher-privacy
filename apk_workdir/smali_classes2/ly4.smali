@@ -1,25 +1,25 @@
 .class public final Lly4;
-.super Lk14;
+.super Ly14;
 .source "SourceFile"
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+.field public final synthetic Y:Lpy4;
 
 .field public Z:I
 
-.field public o:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+.field public o:Lpy4;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lk14;)V
+.method public constructor <init>(Lpy4;Ly14;)V
     .locals 0
 
-    iput-object p1, p0, Lly4;->Y:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iput-object p1, p0, Lly4;->Y:Lpy4;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,9 +39,11 @@
 
     iput p1, p0, Lly4;->Z:I
 
-    iget-object p1, p0, Lly4;->Y:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iget-object p1, p0, Lly4;->Y:Lpy4;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lpy4;->j(Lrs6;Lnx4;Ly14;)Ljava/lang/Object;
 
     move-result-object p1
 

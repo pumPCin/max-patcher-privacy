@@ -2,57 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Laz8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public a:Landroid/os/ResultReceiver;
+.field public final a:Lhz8;
+
+.field public final b:Lqx8;
+
+.field public c:Lzy8;
+
+.field public d:I
+
+.field public e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lhz8;Lqx8;)V
+    .locals 0
 
-    new-instance v0, Luj8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x5
+    iput-object p1, p0, Laz8;->a:Lhz8;
 
-    invoke-direct {v0, v1}, Luj8;-><init>(I)V
+    iput-object p2, p0, Laz8;->b:Lqx8;
 
-    sput-object v0, Laz8;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object p1, Lzy8;->c:Lzy8;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Laz8;->a:Landroid/os/ResultReceiver;
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
+    iput-object p1, p0, Laz8;->c:Lzy8;
 
     return-void
 .end method

@@ -3,22 +3,34 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loh6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic X:Lwt8;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Le29;
+.field public final synthetic b:Lep4;
+
+.field public final synthetic c:Li29;
+
+.field public final synthetic o:Li48;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le29;I)V
+.method public synthetic constructor <init>(Lep4;Li29;Li48;Lwt8;I)V
     .locals 0
 
-    iput p2, p0, Ld29;->a:I
+    iput p5, p0, Ld29;->a:I
 
-    iput-object p1, p0, Ld29;->b:Le29;
+    iput-object p1, p0, Ld29;->b:Lep4;
+
+    iput-object p2, p0, Ld29;->c:Li29;
+
+    iput-object p3, p0, Ld29;->o:Li48;
+
+    iput-object p4, p0, Ld29;->X:Lwt8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,132 +39,73 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final run()V
+    .locals 5
 
     iget v0, p0, Ld29;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ld29;->b:Le29;
+    iget-object v0, p0, Ld29;->b:Lep4;
 
-    iget-object v0, v0, Le29;->c:Lrhf;
+    iget v1, v0, Lep4;->a:I
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lep4;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Ly19;
 
-    check-cast v0, Lorg/json/JSONObject;
+    iget-object v2, p0, Ld29;->c:Li29;
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Ld29;->o:Li48;
 
-    if-eqz v0, :cond_0
+    iget-object v4, p0, Ld29;->X:Lwt8;
 
-    const-string v2, "hdr_enabled"
+    invoke-interface {v2, v1, v0, v3, v4}, Li29;->b(ILy19;Li48;Lwt8;)V
 
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    :cond_0
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Ld29;->b:Le29;
+    iget-object v0, p0, Ld29;->b:Lep4;
 
-    iget-object v0, v0, Le29;->c:Lrhf;
+    iget v1, v0, Lep4;->a:I
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lep4;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Ly19;
 
-    check-cast v0, Lorg/json/JSONObject;
+    iget-object v2, p0, Ld29;->c:Li29;
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Ld29;->o:Li48;
 
-    if-eqz v0, :cond_1
+    iget-object v4, p0, Ld29;->X:Lwt8;
 
-    const-string v2, "hevc_enabled"
+    invoke-interface {v2, v1, v0, v3, v4}, Li29;->G(ILy19;Li48;Lwt8;)V
 
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :pswitch_1
-    iget-object v0, p0, Ld29;->b:Le29;
+    iget-object v0, p0, Ld29;->b:Lep4;
 
-    iget-object v0, v0, Le29;->c:Lrhf;
+    iget v1, v0, Lep4;->a:I
 
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lep4;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Ly19;
 
-    check-cast v0, Lorg/json/JSONObject;
+    iget-object v2, p0, Ld29;->c:Li29;
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Ld29;->o:Li48;
 
-    if-eqz v0, :cond_2
+    iget-object v4, p0, Ld29;->X:Lwt8;
 
-    const-string v2, "enabled"
+    invoke-interface {v2, v1, v0, v3, v4}, Li29;->H(ILy19;Li48;Lwt8;)V
 
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+    return-void
 
-    move-result v1
-
-    :cond_2
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ld29;->b:Le29;
-
-    iget-object v1, v0, Le29;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
-
-    :try_start_0
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object v2, v3
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    iget-object v0, v0, Le29;->b:Ljava/lang/String;
-
-    const-string v3, "Failed to parse media transform params"
-
-    invoke-static {v0, v3, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_0
-    return-object v2
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -18,44 +18,38 @@
 
 .field public static final g:I
 
-.field public static final h:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lbsc;->oneme_qrscanner_camera_request_description:I
+    sget v0, Lftc;->audio_onboarding_intro:I
 
     sput v0, Lmza;->a:I
 
-    sget v0, Lbsc;->oneme_qrscanner_context_menu_title:I
+    sget v0, Lftc;->pinbars_group_call_bar_button_text:I
 
     sput v0, Lmza;->b:I
 
-    sget v0, Lbsc;->oneme_qrscanner_error_snackbar_description:I
+    sget v0, Lftc;->pinbars_group_call_bar_title:I
 
     sput v0, Lmza;->c:I
 
-    sget v0, Lbsc;->oneme_qrscanner_error_snackbar_title:I
+    sget v0, Lftc;->pinbars_snackbar_unpinned:I
 
     sput v0, Lmza;->d:I
 
-    sget v0, Lbsc;->oneme_qrscanner_hint_with_gallery:I
+    sget v0, Lftc;->unknown_contact_add_to_contact:I
 
     sput v0, Lmza;->e:I
 
-    sget v0, Lbsc;->oneme_qrscanner_hint_without_gallery:I
+    sget v0, Lftc;->unknown_contact_block_contact:I
 
     sput v0, Lmza;->f:I
 
-    sget v0, Lbsc;->oneme_qrscanner_storage_request_description:I
+    sget v0, Lftc;->unknown_contact_snackbar_add_contact:I
 
     sput v0, Lmza;->g:I
-
-    sget v0, Lbsc;->oneme_qrscanner_toolbar_title:I
-
-    sput v0, Lmza;->h:I
 
     return-void
 .end method

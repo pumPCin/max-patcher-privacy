@@ -3,126 +3,96 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lh50;
-
-
 # instance fields
-.field public final a:Z
+.field public a:Z
 
-.field public final b:Z
+.field public b:Z
 
-.field public final c:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lg50;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lg50;->a()Lh50;
-
-    move-result-object v0
-
-    sput-object v0, Lh50;->d:Lh50;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lg50;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-boolean v0, p1, Lg50;->a:Z
-
-    iput-boolean v0, p0, Lh50;->a:Z
-
-    iget-boolean v0, p1, Lg50;->b:Z
-
-    iput-boolean v0, p0, Lh50;->b:Z
-
-    iget-boolean p1, p1, Lg50;->c:Z
-
-    iput-boolean p1, p0, Lh50;->c:Z
-
-    return-void
-.end method
+.field public c:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public a()Li50;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget-boolean v0, p0, Lh50;->a:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lh50;->b:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lh50;->c:Z
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-class v0, Lh50;
+    const-string v1, "Secondary offload attribute fields are true but primary isFormatSupported is false"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_1
+    throw v0
 
     :cond_1
-    check-cast p1, Lh50;
+    :goto_0
+    new-instance v0, Li50;
+
+    invoke-direct {v0, p0}, Li50;-><init>(Lh50;)V
+
+    return-object v0
+.end method
+
+.method public b(Ljava/util/ArrayList;)V
+    .locals 1
 
     iget-boolean v0, p0, Lh50;->a:Z
 
-    iget-boolean v1, p1, Lh50;->a:Z
-
-    if-ne v0, v1, :cond_2
+    if-nez v0, :cond_0
 
     iget-boolean v0, p0, Lh50;->b:Z
 
-    iget-boolean v1, p1, Lh50;->b:Z
-
-    if-ne v0, v1, :cond_2
+    if-nez v0, :cond_0
 
     iget-boolean v0, p0, Lh50;->c:Z
 
-    iget-boolean p1, p1, Lh50;->c:Z
+    if-eqz v0, :cond_2
 
-    if-ne v0, p1, :cond_2
+    :cond_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :goto_0
-    const/4 p1, 0x1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return p1
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnp4;
+
+    invoke-virtual {v0}, Lnp4;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "ForceCloseDeferrableSurface"
+
+    const-string v0, "deferrableSurface closed"
+
+    invoke-static {p1, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lh50;->a:Z
-
-    shl-int/lit8 v0, v0, 0x2
-
-    iget-boolean v1, p0, Lh50;->b:Z
-
-    shl-int/lit8 v1, v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lh50;->c:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method

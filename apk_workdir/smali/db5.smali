@@ -1,141 +1,215 @@
-.class public final synthetic Ldb5;
+.class public final Ldb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcb5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Lju1;
 
-.field public final synthetic b:Lfb5;
+.field public final Y:Lgu1;
 
-.field public final synthetic c:Lyt1;
+.field public final Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final a:Landroid/media/MediaCodec;
+
+.field public final b:Landroid/media/MediaCodec$BufferInfo;
+
+.field public final c:I
+
+.field public final o:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfb5;Lyt1;I)V
-    .locals 0
-
-    iput p3, p0, Ldb5;->a:I
-
-    iput-object p1, p0, Ldb5;->b:Lfb5;
-
-    iput-object p2, p0, Ldb5;->c:Lyt1;
+.method public constructor <init>(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Ldb5;->a:Landroid/media/MediaCodec;
+
+    iput p2, p0, Ldb5;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldb5;->o:Ljava/nio/ByteBuffer;
+
+    iput-object p3, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance p2, Lqu0;
+
+    const/4 p3, 0x2
+
+    invoke-direct {p2, p1, p3}, Lqu0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    invoke-static {p2}, Lomi;->a(Lhu1;)Lju1;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ldb5;->X:Lju1;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgu1;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Ldb5;->Y:Lgu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final A()Landroid/media/MediaCodec$BufferInfo;
+    .locals 1
 
-    iget v0, p0, Ldb5;->a:I
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Ldb5;->b:Lfb5;
+.method public final C()Z
+    .locals 2
 
-    iget-object v1, v0, Lfb5;->o:Lkb5;
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    iget-object v2, v0, Lfb5;->b:Lru0;
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    sget-object v3, Lru0;->a:Lru0;
+    const/4 v1, 0x1
 
-    iget-object v4, p0, Ldb5;->c:Lyt1;
+    and-int/2addr v0, v1
 
-    if-ne v2, v3, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Lkb5;->a()Lo18;
-
-    move-result-object v2
-
-    invoke-static {v2, v4}, Lt9g;->o(Lo18;Lyt1;)V
-
-    new-instance v3, Leb5;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v0, v2, v5}, Leb5;-><init>(Lfb5;Lo18;I)V
-
-    invoke-static {}, Ldmi;->a()Lst4;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v3, v5}, Lyt1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object v3, v0, Lfb5;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v3, Leb5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v0, v2, v4}, Leb5;-><init>(Lfb5;Lo18;I)V
-
-    iget-object v0, v1, Lkb5;->h:Lt1e;
-
-    invoke-interface {v2, v3, v0}, Lo18;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    goto :goto_0
+    return v1
 
     :cond_0
-    sget-object v1, Lru0;->b:Lru0;
+    const/4 v0, 0x0
 
-    if-ne v2, v1, :cond_1
+    return v0
+.end method
 
+.method public final U()J
+    .locals 2
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 4
+
+    iget-object v0, p0, Ldb5;->Y:Lgu1;
+
+    iget-object v1, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v1, p0, Ldb5;->a:Landroid/media/MediaCodec;
+
+    iget v2, p0, Ldb5;->c:I
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lgu1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v0, v1}, Lgu1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+.end method
+
+.method public final r()Ljava/nio/ByteBuffer;
+    .locals 3
+
+    iget-object v0, p0, Ldb5;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    iget-object v2, p0, Ldb5;->o:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    add-int/2addr v1, v0
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    return-object v2
+
+    :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "BufferProvider is not active."
+    const-string v1, "encoded data is closed."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
+    throw v0
+.end method
 
-    goto :goto_0
+.method public final size()J
+    .locals 2
 
-    :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Ldb5;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    const-string v3, "Unknown state: "
+    int-to-long v0, v0
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, v0, Lfb5;->b:Lru0;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Lyt1;->d(Ljava/lang/Throwable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldb5;->c:Lyt1;
-
-    iget-object v1, p0, Ldb5;->b:Lfb5;
-
-    iget-object v1, v1, Lfb5;->b:Lru0;
-
-    invoke-virtual {v0, v1}, Lyt1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

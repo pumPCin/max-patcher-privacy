@@ -1,65 +1,114 @@
 .class public final Lp66;
-.super Luta;
+.super Lsgf;
 .source "SourceFile"
+
+# interfaces
+.implements Lzi6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lp66;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p2
+    invoke-virtual {p0, p1, p2}, Lp66;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/16 v0, 0x8
+    move-result-object p1
 
-    int-to-float v0, v0
+    check-cast p1, Lp66;
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    sget-object p2, Lccg;->a:Lccg;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Lp66;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object p2
+.end method
 
-    move-result-object v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    new-instance v0, Lp66;
 
-    const/4 v2, 0x2
+    iget-object v1, p0, Lp66;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
 
-    invoke-static {v0, v1, v2, p2}, Lxx1;->d(FFII)I
+    invoke-direct {v0, p2, v1}, Lp66;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
 
-    move-result p2
+    iput-object p1, v0, Lp66;->X:Ljava/lang/Object;
 
-    const/16 v0, 0x80
+    return-object v0
+.end method
 
-    int-to-float v0, v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lp66;->X:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast p1, Ljava/util/Set;
 
-    move-result-object v1
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    move-result p1
 
-    mul-float/2addr v0, v1
+    iget-object v0, p0, Lp66;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
 
-    invoke-static {v0}, Lagi;->d(F)I
+    if-nez p1, :cond_0
 
-    move-result v0
+    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->x0:[Ltr7;
 
-    sub-int/2addr p2, v0
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lu6b;
 
-    const/high16 v0, 0x40000000    # 2.0f
+    move-result-object p1
 
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    new-instance v1, Le6b;
 
-    move-result p2
+    new-instance v2, Lv11;
 
-    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
+    const/4 v3, 0x6
 
-    return-void
+    invoke-direct {v2, v3, v0}, Lv11;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v1, v2}, Le6b;-><init>(Lli6;)V
+
+    invoke-virtual {p1, v1}, Lu6b;->setRightActions(Lk6b;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->x0:[Ltr7;
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lu6b;
+
+    move-result-object p1
+
+    sget-object v0, Lf6b;->a:Lf6b;
+
+    invoke-virtual {p1, v0}, Lu6b;->setRightActions(Lk6b;)V
+
+    :goto_0
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

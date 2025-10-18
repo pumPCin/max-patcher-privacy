@@ -1,52 +1,70 @@
-.class public final Lhi5;
+.class public final synthetic Lhi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt28;
+
 
 # instance fields
-.field public final synthetic a:Lri5;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ltsb;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lri5;)V
+.method public synthetic constructor <init>(Ltsb;II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lhi5;->a:I
 
-    iput-object p1, p0, Lhi5;->a:Lri5;
+    iput-object p1, p0, Lhi5;->b:Ltsb;
+
+    iput p2, p0, Lhi5;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lhi5;->a:Lri5;
+    iget v0, p0, Lhi5;->a:I
 
-    iget-boolean v1, v0, Lri5;->N0:Z
+    check-cast p1, Lmtb;
 
-    if-eqz v1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v0, Lri5;->M0:Lgrd;
+    iget-object v0, p0, Lhi5;->b:Ltsb;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v0, v0, Ltsb;->l:Z
 
-    goto :goto_0
+    iget v1, p0, Lhi5;->c:I
 
-    :cond_0
-    iget-boolean v1, v0, Lri5;->c1:Z
+    invoke-interface {p1, v1, v0}, Lmtb;->i(IZ)V
 
-    if-eqz v1, :cond_1
-
-    :goto_0
-    iget-object v0, v0, Lri5;->r0:Lgif;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lgif;->f(I)Z
-
-    :cond_1
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhi5;->b:Ltsb;
+
+    iget-object v0, v0, Ltsb;->a:Lsvf;
+
+    iget v0, p0, Lhi5;->c:I
+
+    invoke-interface {p1, v0}, Lmtb;->y(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

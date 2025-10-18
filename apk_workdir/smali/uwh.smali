@@ -1,139 +1,143 @@
 .class public final Luwh;
-.super Li6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La9i;
+.implements Lzwh;
 
 
 # static fields
-.field private static final zzb:Luwh;
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field private zzd:I
+.field public volatile a:Lzwh;
 
-.field private zze:Ljava/lang/String;
-
-.field private zzf:Ljava/lang/String;
-
-.field private zzg:Ljava/lang/String;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Luwh;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {v0}, Luwh;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Luwh;->zzb:Luwh;
-
-    const-class v1, Luwh;
-
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    sput-object v0, Luwh;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public static a(Lzwh;)Lzwh;
+    .locals 2
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    instance-of v0, p0, Luwh;
 
-    const-string v0, ""
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Luwh;->zze:Ljava/lang/String;
+    return-object p0
 
-    iput-object v0, p0, Luwh;->zzf:Ljava/lang/String;
+    :cond_0
+    new-instance v0, Luwh;
 
-    iput-object v0, p0, Luwh;->zzg:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    sget-object v1, Luwh;->c:Ljava/lang/Object;
+
+    iput-object v1, v0, Luwh;->b:Ljava/lang/Object;
+
+    iput-object p0, v0, Luwh;->a:Lzwh;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 2
+.method public final c()Ljava/lang/Object;
+    .locals 5
 
-    add-int/lit8 p1, p1, -0x1
+    const-string v0, "Scoped provider was invoked recursively returning different results: "
 
-    if-eqz p1, :cond_4
+    iget-object v1, p0, Luwh;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x2
+    sget-object v2, Luwh;->c:Ljava/lang/Object;
 
-    if-eq p1, p2, :cond_3
+    if-ne v1, v2, :cond_3
 
-    const/4 p2, 0x3
+    monitor-enter p0
 
-    if-eq p1, p2, :cond_2
+    :try_start_0
+    iget-object v1, p0, Luwh;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x4
+    if-ne v1, v2, :cond_2
 
-    if-eq p1, p2, :cond_1
+    iget-object v1, p0, Luwh;->a:Lzwh;
 
-    const/4 p2, 0x5
+    invoke-interface {v1}, Lzwh;->c()Ljava/lang/Object;
 
-    if-eq p1, p2, :cond_0
+    move-result-object v1
 
-    const/4 p1, 0x0
+    iget-object v3, p0, Luwh;->b:Ljava/lang/Object;
 
-    return-object p1
+    if-eq v3, v2, :cond_1
+
+    if-ne v3, v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Luwh;->zzb:Luwh;
+    new-instance v2, Ljava/lang/IllegalStateException;
 
-    return-object p1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " & "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_1
-    new-instance p1, Laki;
+    :goto_0
+    iput-object v1, p0, Luwh;->b:Ljava/lang/Object;
 
-    sget-object p2, Luwh;->zzb:Luwh;
+    const/4 v0, 0x0
 
-    const/4 v0, 0x6
-
-    invoke-direct {p1, v0, p2}, Laki;-><init>(ILi6i;)V
-
-    return-object p1
+    iput-object v0, p0, Luwh;->a:Lzwh;
 
     :cond_2
-    new-instance p1, Luwh;
+    monitor-exit p0
 
-    invoke-direct {p1}, Luwh;-><init>()V
+    return-object v1
 
-    return-object p1
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 
     :cond_3
-    const-string p1, "zzf"
-
-    const-string p2, "zzg"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    filled-new-array {v0, v1, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Luwh;->zzb:Luwh;
-
-    new-instance v0, Lv9i;
-
-    const-string v1, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002"
-
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v1
 .end method

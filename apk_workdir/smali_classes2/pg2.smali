@@ -1,128 +1,169 @@
 .class public final Lpg2;
-.super Llj0;
+.super Lpmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Lru3;
 
+.field public c:Ljava/util/List;
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
-
-    iput-wide p3, p0, Lpg2;->b:J
-
-    return-void
-.end method
+.field public o:Lma2;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final d(Lpf9;Ljava/lang/String;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    return v0
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "chats"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_1
+    const/4 v1, 0x2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    move-result-object v1
+    :sswitch_1
+    const-string v0, "user"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
 
     goto :goto_0
 
     :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "chat"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     const/4 v1, 0x0
 
     :goto_0
-    const-class v2, Lpg2;
+    packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Lpf9;->y()V
 
-    move-result v1
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    invoke-static {p1}, Lzz;->b(Lpf9;)Lzz;
 
-    if-nez v1, :cond_2
+    move-result-object p1
 
-    return v2
+    iput-object p1, p0, Lpg2;->c:Ljava/util/List;
 
-    :cond_2
-    check-cast p1, Lpg2;
+    return-void
 
-    iget-wide v3, p0, Lpg2;->b:J
+    :pswitch_1
+    invoke-static {p1}, Lru3;->g(Lpf9;)Lru3;
 
-    iget-wide v5, p1, Lpg2;->b:J
+    move-result-object p1
 
-    cmp-long v1, v3, v5
+    iput-object p1, p0, Lpg2;->X:Lru3;
 
-    if-nez v1, :cond_3
+    return-void
 
-    iget-wide v3, p0, Llj0;->a:J
+    :pswitch_2
+    invoke-static {p1}, Lma2;->a(Lpf9;)Lma2;
 
-    iget-wide v5, p1, Llj0;->a:J
+    move-result-object p1
 
-    cmp-long p1, v3, v5
+    iput-object p1, p0, Lpg2;->o:Lma2;
 
-    if-nez p1, :cond_3
+    return-void
 
-    return v0
+    :sswitch_data_0
+    .sparse-switch
+        0x2e9358 -> :sswitch_2
+        0x36ebcb -> :sswitch_1
+        0x5a3d81b -> :sswitch_0
+    .end sparse-switch
 
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lpg2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Llj0;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "ChatLeaveEvent(requestId="
+    iget-object v0, p0, Lpg2;->c:Ljava/util/List;
 
-    const-string v1, ", chatId="
+    invoke-static {v0}, Lhuh;->c(Ljava/util/Collection;)I
 
-    iget-wide v2, p0, Llj0;->a:J
+    move-result v0
 
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string v1, ")"
+    iget-object v1, p0, Lpg2;->o:Lma2;
 
-    iget-wide v2, p0, Lpg2;->b:J
+    iget-object v2, p0, Lpg2;->X:Lru3;
 
-    invoke-static {v0, v2, v3, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "{chats="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", chat="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", contact="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

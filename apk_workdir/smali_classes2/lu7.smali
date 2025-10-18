@@ -1,120 +1,221 @@
-.class public final synthetic Llu7;
+.class public final Llu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqf4;
+.implements Landroid/content/SharedPreferences;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:I
+.field public final a:Lwif;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJ)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Let5;Lft5;Lcqe;I)V
+    .locals 6
 
-    .line 1
-    const/4 v0, 0x0
+    and-int/lit8 p5, p5, 0x10
 
-    iput v0, p0, Llu7;->a:I
+    if-eqz p5, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p4, 0x0
 
-    iput p1, p0, Llu7;->c:I
+    :cond_0
+    move-object v4, p4
 
-    iput-wide p2, p0, Llu7;->b:J
+    const-string p4, "file_prefs"
 
-    return-void
-.end method
+    const/4 p5, 0x0
 
-.method public synthetic constructor <init>(JI)V
-    .locals 1
+    invoke-virtual {p1, p4, p5}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
 
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Llu7;->a:I
+    move-result-object v1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Llu7;->b:J
+    new-instance v0, Llq;
 
-    iput p3, p0, Llu7;->c:I
+    const/4 v5, 0x3
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v5}, Llq;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance p1, Lwif;
+
+    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
+
+    iput-object p1, p0, Llu7;->a:Lwif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final a()Ldt5;
+    .locals 1
 
-    iget v0, p0, Llu7;->a:I
+    iget-object v0, p0, Llu7;->a:Lwif;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Lone/me/location/map/pick/PickLocationScreen;
+    move-result-object v0
 
-    iget-wide v1, p0, Llu7;->b:J
-
-    iget v3, p0, Llu7;->c:I
-
-    invoke-direct {v0, v1, v2, v3}, Lone/me/location/map/pick/PickLocationScreen;-><init>(JI)V
+    check-cast v0, Ldt5;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+.method public final contains(Ljava/lang/String;)Z
+    .locals 1
 
-    iget v1, p0, Llu7;->c:I
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v1
+    iget-object v0, v0, Ldt5;->c:Lg1a;
 
-    new-instance v2, Lqbb;
+    invoke-virtual {v0, p1}, Lg1a;->b(Ljava/lang/Object;)Z
 
-    const-string v3, "ru.ok.tamtam.extra.REQUEST_CODE"
+    move-result p1
 
-    invoke-direct {v2, v3, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    return p1
+.end method
 
-    iget-wide v3, p0, Llu7;->b:J
+.method public final edit()Landroid/content/SharedPreferences$Editor;
+    .locals 1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
 
-    move-result-object v1
+    move-result-object v0
 
-    new-instance v3, Lqbb;
+    invoke-virtual {v0}, Ldt5;->edit()Landroid/content/SharedPreferences$Editor;
 
-    const-string v4, "ru.ok.tamtam.extra.CHAT_ID"
-
-    invoke-direct {v3, v4, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2, v3}, [Lqbb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const v2, 0x7a3a1dca
-
-    const-class v3, Lru/ok/messages/location/FrgLocationMap;
-
-    const-string v4, "ru.ok.messages.location.FrgLocationMap"
-
-    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final getAll()Ljava/util/Map;
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ldt5;->getAll()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getBoolean(Ljava/lang/String;Z)Z
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ldt5;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getFloat(Ljava/lang/String;F)F
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ldt5;->getFloat(Ljava/lang/String;F)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getInt(Ljava/lang/String;I)I
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ldt5;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getLong(Ljava/lang/String;J)J
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2, p3}, Ldt5;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ldt5;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ldt5;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ldt5;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    return-void
+.end method
+
+.method public final unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Llu7;->a()Ldt5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ldt5;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    return-void
 .end method

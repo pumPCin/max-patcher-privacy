@@ -3,61 +3,95 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final l:Lce2;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
 
-.field public final b:Ljava/lang/String;
+.field public final b:Z
 
-.field public final c:Ljava/util/List;
+.field public final c:Z
 
-.field public final d:J
+.field public final d:Z
 
 .field public final e:Z
 
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
 
 # direct methods
-.method public constructor <init>(Lw7;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 12
+
+    new-instance v0, Lce2;
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v11}, Lce2;-><init>(ZZZZZZZZZZZ)V
+
+    sput-object v0, Lce2;->l:Lce2;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZZZZZZZZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lw7;->c:Ljava/lang/Object;
+    iput-boolean p1, p0, Lce2;->a:Z
 
-    check-cast v0, Ljava/lang/String;
+    iput-boolean p2, p0, Lce2;->b:Z
 
-    iput-object v0, p0, Lce2;->a:Ljava/lang/String;
+    iput-boolean p3, p0, Lce2;->c:Z
 
-    iget-object v0, p1, Lw7;->d:Ljava/io/Serializable;
+    iput-boolean p4, p0, Lce2;->d:Z
 
-    check-cast v0, Ljava/lang/String;
+    iput-boolean p5, p0, Lce2;->e:Z
 
-    iput-object v0, p0, Lce2;->b:Ljava/lang/String;
+    iput-boolean p6, p0, Lce2;->f:Z
 
-    iget-object v0, p1, Lw7;->e:Ljava/lang/Object;
+    iput-boolean p7, p0, Lce2;->g:Z
 
-    check-cast v0, Ljava/util/ArrayList;
+    iput-boolean p8, p0, Lce2;->h:Z
 
-    if-eqz v0, :cond_0
+    iput-boolean p9, p0, Lce2;->i:Z
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    iput-boolean p10, p0, Lce2;->j:Z
 
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lce2;->c:Ljava/util/List;
-
-    iget-wide v0, p1, Lw7;->a:J
-
-    iput-wide v0, p0, Lce2;->d:J
-
-    iget-boolean p1, p1, Lw7;->b:Z
-
-    iput-boolean p1, p0, Lce2;->e:Z
+    iput-boolean p11, p0, Lce2;->k:Z
 
     return-void
 .end method

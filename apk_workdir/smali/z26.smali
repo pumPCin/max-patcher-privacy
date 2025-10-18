@@ -1,94 +1,78 @@
-.class public final Lz26;
-.super Lgp4;
+.class public final enum Lz26;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lw26;
+.implements Lsr3;
 
 
-# instance fields
-.field public c:Lzaf;
+# static fields
+.field public static final enum a:Lz26;
+
+.field public static final synthetic b:[Lz26;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lz26;
+
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lz26;->a:Lz26;
+
+    filled-new-array {v0}, [Lz26;
+
+    move-result-object v0
+
+    sput-object v0, Lz26;->b:[Lz26;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lz26;
+    .locals 1
+
+    const-class v0, Lz26;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lz26;
+
+    return-object p0
+.end method
+
+.method public static values()[Lz26;
+    .locals 1
+
+    sget-object v0, Lz26;->b:[Lz26;
+
+    invoke-virtual {v0}, [Lz26;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lz26;
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lgp4;->b:Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lgp4;->g(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgp4;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lz26;->c:Lzaf;
-
-    invoke-interface {v0}, Lzaf;->cancel()V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lgp4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Collection;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Lzaf;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lz26;->c:Lzaf;
-
-    invoke-static {v0, p1}, Lcbf;->g(Lzaf;Lzaf;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lz26;->c:Lzaf;
-
-    iget-object v0, p0, Lgp4;->a:Lxaf;
-
-    invoke-interface {v0, p0}, Lxaf;->f(Lzaf;)V
+    check-cast p1, Lgcf;
 
     const-wide v0, 0x7fffffffffffffffL
 
-    invoke-interface {p1, v0, v1}, Lzaf;->j(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgp4;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lgp4;->a:Lxaf;
-
-    invoke-interface {v0, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0, v1}, Lgcf;->i(J)V
 
     return-void
 .end method

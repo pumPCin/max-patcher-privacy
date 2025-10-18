@@ -8,18 +8,18 @@
 
 .field public final synthetic b:Landroid/animation/AnimatorSet;
 
-.field public final synthetic c:Loh6;
+.field public final synthetic c:Lji6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Loh6;I)V
+.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Lji6;I)V
     .locals 0
 
     iput p3, p0, Lph;->a:I
 
     iput-object p1, p0, Lph;->b:Landroid/animation/AnimatorSet;
 
-    iput-object p2, p0, Lph;->c:Loh6;
+    iput-object p2, p0, Lph;->c:Lji6;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -44,9 +44,9 @@
 
     invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p1, p0, Lph;->c:Loh6;
+    iget-object p1, p0, Lph;->c:Lji6;
 
-    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -72,9 +72,9 @@
 
     invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p1, p0, Lph;->c:Loh6;
+    iget-object p1, p0, Lph;->c:Lji6;
 
-    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
 
     return-void
 

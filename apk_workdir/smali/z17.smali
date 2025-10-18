@@ -1,228 +1,407 @@
 .class public final Lz17;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei6;
+.implements Lv1g;
+
+
+# static fields
+.field public static final f:Lkb6;
+
+.field public static final g:Lkb6;
 
 
 # instance fields
-.field public final synthetic X:Ld27;
+.field public final a:Lv1g;
+
+.field public final b:Lkb6;
+
+.field public c:Lkb6;
+
+.field public d:[B
+
+.field public e:I
 
 
 # direct methods
-.method public constructor <init>(Ld27;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lz17;->X:Ld27;
+    new-instance v0, Lib6;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Lib6;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v1, "application/id3"
+
+    iput-object v1, v0, Lib6;->k:Ljava/lang/String;
+
+    new-instance v1, Lkb6;
+
+    invoke-direct {v1, v0}, Lkb6;-><init>(Lib6;)V
+
+    sput-object v1, Lz17;->f:Lkb6;
+
+    new-instance v0, Lib6;
+
+    invoke-direct {v0}, Lib6;-><init>()V
+
+    const-string v1, "application/x-emsg"
+
+    iput-object v1, v0, Lib6;->k:Ljava/lang/String;
+
+    new-instance v1, Lkb6;
+
+    invoke-direct {v1, v0}, Lkb6;-><init>(Lib6;)V
+
+    sput-object v1, Lz17;->g:Lkb6;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lv1g;I)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz17;->a:Lv1g;
+
+    const/4 p1, 0x1
+
+    if-eq p2, p1, :cond_1
+
+    const/4 p1, 0x3
+
+    if-ne p2, p1, :cond_0
+
+    sget-object p1, Lz17;->g:Lkb6;
+
+    iput-object p1, p0, Lz17;->b:Lkb6;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x21
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Unknown metadataType: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    sget-object p1, Lz17;->f:Lkb6;
+
+    iput-object p1, p0, Lz17;->b:Lkb6;
+
+    :goto_0
+    const/4 p1, 0x0
+
+    new-array p2, p1, [B
+
+    iput-object p2, p0, Lz17;->d:[B
+
+    iput p1, p0, Lz17;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lxb4;IZ)I
+    .locals 3
 
-    check-cast p1, Lb54;
+    iget v0, p0, Lz17;->e:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    add-int/2addr v0, p2
 
-    invoke-virtual {p0, p1, p2}, Lz17;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lz17;->d:[B
 
-    move-result-object p1
+    array-length v2, v1
 
-    check-cast p1, Lz17;
+    if-ge v2, v0, :cond_0
 
-    sget-object p2, Lzag;->a:Lzag;
+    div-int/lit8 v2, v0, 0x2
 
-    invoke-virtual {p1, p2}, Lz17;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    add-int/2addr v2, v0
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lz17;
-
-    iget-object v0, p0, Lz17;->X:Ld27;
-
-    invoke-direct {p1, v0, p2}, Lz17;-><init>(Ld27;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lz17;->X:Ld27;
-
-    const-string v5, "https://api.ipify.org"
-
-    const-string v6, "https://checkip.amazonaws.com"
-
-    const-string v0, "https://vk.ru/upload.php?act=myip"
-
-    const-string v1, "https://vk.com/upload.php?act=myip"
-
-    const-string v2, "https://ipv4-internet.yandex.net/api/v0/ip"
-
-    const-string v3, "https://ipv6-internet.yandex.net/api/v0/ip"
-
-    const-string v4, "https://ifconfig.me/ip"
-
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    iput-object v0, p0, Lz17;->d:[B
 
     :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lz17;->d:[B
 
-    move-result v0
+    iget v1, p0, Lz17;->e:I
+
+    invoke-interface {p1, v0, v1, p2}, Lxb4;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_2
+
+    if-eqz p3, :cond_1
+
+    return p2
+
+    :cond_1
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    iget p2, p0, Lz17;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lz17;->e:I
+
+    return p1
+.end method
+
+.method public final b(JIIILt1g;)V
+    .locals 9
+
+    iget-object v0, p0, Lz17;->c:Lkb6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lz17;->e:I
+
+    sub-int/2addr v0, p5
+
+    sub-int p4, v0, p4
+
+    iget-object v1, p0, Lz17;->d:[B
+
+    invoke-static {v1, p4, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object p4
+
+    new-instance v1, Ldjg;
+
+    invoke-direct {v1, p4}, Ldjg;-><init>([B)V
+
+    iget-object p4, p0, Lz17;->d:[B
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_4
+    invoke-static {p4, v0, p4, v2, p5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput p5, p0, Lz17;->e:I
 
-    move-result-object v0
+    iget-object p4, p0, Lz17;->c:Lkb6;
 
-    check-cast v0, Ljava/lang/String;
+    iget-object p4, p4, Lkb6;->u0:Ljava/lang/String;
 
-    :try_start_0
-    new-instance v3, Ljava/net/URL;
+    iget-object v0, p0, Lz17;->b:Lkb6;
 
-    invoke-direct {v3, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    iget-object v2, v0, Lkb6;->u0:Ljava/lang/String;
 
-    sget-object v0, Lz92;->a:Ljava/nio/charset/Charset;
+    iget-object v0, v0, Lkb6;->u0:Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
+    invoke-static {p4, v2}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result p4
 
-    :try_start_1
-    invoke-static {v3}, Lwki;->d(Ljava/io/InputStream;)[B
-
-    move-result-object v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-interface {v3}, Ljava/io/Closeable;->close()V
-
-    new-instance v3, Ljava/lang/String;
-
-    invoke-direct {v3, v4, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    iget-object v0, p1, Ld27;->s0:Lrhf;
-
-    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lv6d;
-
-    iget-object v0, v0, Lv6d;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->find(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move-object v3, v2
+    if-eqz p4, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v3, Lar8;
+    :cond_0
+    iget-object p4, p0, Lz17;->c:Lkb6;
 
-    const/16 v4, 0x13
+    iget-object p4, p4, Lkb6;->u0:Ljava/lang/String;
 
-    invoke-direct {v3, v4, v0}, Lar8;-><init>(ILjava/lang/Object;)V
+    const-string v2, "application/x-emsg"
+
+    invoke-virtual {v2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    const-string v2, "HlsSampleStreamWrapper"
+
+    if-eqz p4, :cond_2
+
+    invoke-static {v1}, Lgq;->i(Ldjg;)Lhf5;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Lhf5;->l()Lkb6;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lkb6;->u0:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Llig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ldjg;
+
+    invoke-virtual {p4}, Lhf5;->o()[B
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v1, p4}, Ldjg;-><init>([B)V
 
     :goto_0
-    if-eqz v3, :cond_2
+    invoke-virtual {v1}, Ldjg;->c()I
 
-    iget-object v0, v3, Lar8;->c:Ljava/lang/Object;
+    move-result v6
 
-    check-cast v0, Ljava/util/regex/Matcher;
+    iget-object v2, p0, Lz17;->a:Lv1g;
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+    invoke-interface {v2, v6, v1}, Lv1g;->c(ILdjg;)V
 
-    move-result-object v0
+    move-wide v3, p1
+
+    move v5, p3
+
+    move v7, p5
+
+    move-object v8, p6
+
+    invoke-interface/range {v2 .. v8}, Lv1g;->b(JIIILt1g;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p4}, Lhf5;->l()Lkb6;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Ignoring EMSG. Expected it to contain wrapped "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, " but actual wrapped format: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_2
+    iget-object p1, p0, Lz17;->c:Lkb6;
+
+    iget-object p1, p1, Lkb6;->u0:Ljava/lang/String;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    const-string p3, "Ignoring sample for unsupported format: "
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p3, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
 
     goto :goto_1
 
-    :cond_2
-    move-object v0, v2
+    :cond_3
+    new-instance p1, Ljava/lang/String;
+
+    invoke-direct {p1, p3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     :goto_1
-    if-eqz v0, :cond_3
+    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    return-void
+.end method
 
-    move-result v3
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+.method public final c(ILdjg;)V
+    .locals 3
 
-    if-lez v3, :cond_3
+    iget v0, p0, Lz17;->e:I
 
-    move-object v2, v0
+    add-int/2addr v0, p1
 
-    goto :goto_2
+    iget-object v1, p0, Lz17;->d:[B
 
-    :catchall_0
-    move-exception v0
+    array-length v2, v1
 
-    move-object v4, v0
+    if-ge v2, v0, :cond_0
 
-    :try_start_3
-    throw v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    div-int/lit8 v2, v0, 0x2
 
-    :catchall_1
-    move-exception v0
+    add-int/2addr v2, v0
 
-    :try_start_4
-    invoke-static {v3, v4}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    throw v0
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    move-result-object v0
 
-    :catch_0
-    :cond_3
-    :goto_2
-    if-eqz v2, :cond_0
+    iput-object v0, p0, Lz17;->d:[B
 
-    :cond_4
-    return-object v2
+    :cond_0
+    iget-object v0, p0, Lz17;->d:[B
+
+    iget v1, p0, Lz17;->e:I
+
+    invoke-virtual {p2, v1, v0, p1}, Ldjg;->e(I[BI)V
+
+    iget p2, p0, Lz17;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lz17;->e:I
+
+    return-void
+.end method
+
+.method public final d(Lkb6;)V
+    .locals 1
+
+    iput-object p1, p0, Lz17;->c:Lkb6;
+
+    iget-object p1, p0, Lz17;->a:Lv1g;
+
+    iget-object v0, p0, Lz17;->b:Lkb6;
+
+    invoke-interface {p1, v0}, Lv1g;->d(Lkb6;)V
+
+    return-void
 .end method

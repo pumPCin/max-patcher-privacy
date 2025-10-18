@@ -1,39 +1,27 @@
-.class public final Lw92;
+.class public abstract Lw92;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lw92;
-
-.field public final c:I
+# interfaces
+.implements Ldxb;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lw92;)V
+# virtual methods
+.method public abstract a(C)Z
+.end method
+
+.method public final apply(Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Character;
 
-    iput-object p1, p0, Lw92;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
 
-    iput-object p2, p0, Lw92;->b:Lw92;
+    move-result p1
 
-    const/4 p1, 0x1
+    invoke-virtual {p0, p1}, Lw92;->a(C)Z
 
-    if-nez p2, :cond_0
+    move-result p1
 
-    goto :goto_0
-
-    :cond_0
-    iget p2, p2, Lw92;->c:I
-
-    add-int/2addr p1, p2
-
-    :goto_0
-    iput p1, p0, Lw92;->c:I
-
-    return-void
+    return p1
 .end method

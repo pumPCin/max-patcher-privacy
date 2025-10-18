@@ -1,91 +1,54 @@
-.class public final Lttf;
+.class public abstract Lttf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqkd;
 
-
-# instance fields
-.field public final a:Lqkd;
-
-.field public final b:J
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(Lqkd;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lttf;->a:Lqkd;
-
-    iput-wide p2, p0, Lttf;->b:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lttf;->a:Lqkd;
-
-    invoke-interface {v0}, Lqkd;->b()V
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lttf;->a:Lqkd;
-
-    invoke-interface {v0}, Lqkd;->e()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final h(J)I
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-wide v0, p0, Lttf;->b:J
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    sub-long/2addr p1, v0
+    const-string v1, "ThreadLocalEventLoop"
 
-    iget-object v0, p0, Lttf;->a:Lqkd;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, p2}, Lqkd;->h(J)I
+    invoke-static {v0}, Lkotlinx/coroutines/internal/ThreadLocalKt;->commonThreadLocal(Lkotlinx/coroutines/internal/Symbol;)Ljava/lang/ThreadLocal;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    sput-object v0, Lttf;->a:Ljava/lang/ThreadLocal;
+
+    return-void
 .end method
 
-.method public final p(Lsfd;Lse4;I)I
-    .locals 4
+.method public static a()Lff5;
+    .locals 3
 
-    iget-object v0, p0, Lttf;->a:Lqkd;
+    sget-object v0, Lttf;->a:Ljava/lang/ThreadLocal;
 
-    invoke-interface {v0, p1, p2, p3}, Lqkd;->p(Lsfd;Lse4;I)I
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v1
 
-    const/4 p3, -0x4
+    check-cast v1, Lff5;
 
-    if-ne p1, p3, :cond_0
+    if-nez v1, :cond_0
 
-    iget-wide v0, p2, Lse4;->Z:J
+    new-instance v1, Lvq0;
 
-    iget-wide v2, p0, Lttf;->b:J
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    add-long/2addr v0, v2
+    move-result-object v2
 
-    iput-wide v0, p2, Lse4;->Z:J
+    invoke-direct {v1, v2}, Lvq0;-><init>(Ljava/lang/Thread;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     :cond_0
-    return p1
+    return-object v1
 .end method

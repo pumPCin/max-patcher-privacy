@@ -3,123 +3,105 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final p:Ly10;
-
-
 # instance fields
-.field public final a:J
+.field public a:J
 
-.field public final b:Ljava/lang/String;
+.field public b:I
 
-.field public final c:I
+.field public c:I
 
-.field public final d:I
+.field public d:Ljava/lang/String;
 
-.field public final e:Ljava/lang/String;
+.field public e:J
 
-.field public final f:Ljava/lang/String;
+.field public f:Ljava/lang/String;
 
-.field public final g:Ljava/util/List;
+.field public g:Ljava/lang/String;
 
-.field public final h:Ljava/lang/String;
+.field public h:Ljava/lang/String;
 
-.field public final i:J
+.field public i:Ljava/util/List;
 
-.field public final j:I
+.field public j:I
 
-.field public final k:J
+.field public k:J
 
-.field public final l:Ljava/lang/String;
+.field public l:Ljava/lang/String;
 
-.field public final m:Z
+.field public m:Z
 
-.field public final n:I
+.field public n:I
 
-.field public final o:Ljava/lang/String;
+.field public o:Ljava/lang/String;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lx10;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lx10;->a()Ly10;
-
-    move-result-object v0
-
-    sput-object v0, Ly10;->p:Ly10;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lx10;)V
+# virtual methods
+.method public a()Lz10;
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Ly10;->i:Ljava/util/List;
 
-    iget-wide v0, p1, Lx10;->a:J
+    if-nez v0, :cond_0
 
-    iput-wide v0, p0, Ly10;->a:J
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iget-object v0, p1, Lx10;->d:Ljava/lang/String;
+    iput-object v0, p0, Ly10;->i:Ljava/util/List;
 
-    iput-object v0, p0, Ly10;->b:Ljava/lang/String;
+    :cond_0
+    iget v0, p0, Ly10;->j:I
 
-    iget v0, p1, Lx10;->b:I
+    const/4 v1, 0x1
 
-    iput v0, p0, Ly10;->c:I
+    if-nez v0, :cond_1
 
-    iget v0, p1, Lx10;->c:I
+    iput v1, p0, Ly10;->j:I
 
-    iput v0, p0, Ly10;->d:I
+    :cond_1
+    iget v0, p0, Ly10;->n:I
 
-    iget-object v0, p1, Lx10;->f:Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    iput-object v0, p0, Ly10;->e:Ljava/lang/String;
+    iput v1, p0, Ly10;->n:I
 
-    iget-object v0, p1, Lx10;->g:Ljava/lang/String;
+    :cond_2
+    new-instance v0, Lz10;
 
-    iput-object v0, p0, Ly10;->f:Ljava/lang/String;
+    invoke-direct {v0, p0}, Lz10;-><init>(Ly10;)V
 
-    iget-object v0, p1, Lx10;->i:Ljava/util/List;
+    return-object v0
+.end method
 
-    iput-object v0, p0, Ly10;->g:Ljava/util/List;
+.method public b()Lo2f;
+    .locals 2
 
-    iget-object v0, p1, Lx10;->h:Ljava/lang/String;
+    iget-object v0, p0, Ly10;->i:Ljava/util/List;
 
-    iput-object v0, p0, Ly10;->h:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iget-wide v0, p1, Lx10;->e:J
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput-wide v0, p0, Ly10;->i:J
+    iput-object v0, p0, Ly10;->i:Ljava/util/List;
 
-    iget v0, p1, Lx10;->j:I
+    :cond_0
+    iget v0, p0, Ly10;->j:I
 
-    iput v0, p0, Ly10;->j:I
+    const/4 v1, 0x1
 
-    iget-wide v0, p1, Lx10;->k:J
+    if-nez v0, :cond_1
 
-    iput-wide v0, p0, Ly10;->k:J
+    iput v1, p0, Ly10;->j:I
 
-    iget-object v0, p1, Lx10;->l:Ljava/lang/String;
+    :cond_1
+    iget v0, p0, Ly10;->n:I
 
-    iput-object v0, p0, Ly10;->l:Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    iget-boolean v0, p1, Lx10;->m:Z
+    iput v1, p0, Ly10;->n:I
 
-    iput-boolean v0, p0, Ly10;->m:Z
+    :cond_2
+    new-instance v0, Lo2f;
 
-    iget v0, p1, Lx10;->n:I
+    invoke-direct {v0, p0}, Lo2f;-><init>(Ly10;)V
 
-    iput v0, p0, Ly10;->n:I
-
-    iget-object p1, p1, Lx10;->o:Ljava/lang/String;
-
-    iput-object p1, p0, Ly10;->o:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

@@ -1,60 +1,97 @@
-.class public final synthetic Ley9;
+.class public final Ley9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Leq6;
+.implements Lzjb;
+
+
+# static fields
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final synthetic a:Liy9;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liy9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ley9;->a:Liy9;
+    const-string v0, "^[\\p{L}\\p{N}]+$"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ley9;->b:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "_"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ley9;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lfq6;Ldq6;J)V
-    .locals 3
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Ley9;->a:Liy9;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-boolean v1, v0, Liy9;->r:Z
+    move-result-object v0
 
-    xor-int/lit8 v1, v1, 0x1
+    sget-object v1, Ley9;->b:Ljava/util/regex/Pattern;
 
-    invoke-static {v1}, Lgfi;->g(Z)V
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    invoke-static {}, Lee4;->a()V
+    move-result-object v1
 
-    iget-object v1, v0, Liy9;->j:Ljava/util/ArrayDeque;
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
-    new-instance v2, Leuf;
+    move-result v1
 
-    invoke-direct {v2, p2, p3, p4}, Leuf;-><init>(Ldq6;J)V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Liy9;->k:Landroid/util/SparseArray;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget p2, p2, Ldq6;->a:I
+    iget-object v1, p0, Ley9;->a:Ljava/lang/String;
 
-    new-instance v2, Lgy9;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, p1, p3, p4}, Lgy9;-><init>(Lfq6;J)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Liy9;->b()V
+    move-result-object p1
 
-    return-void
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Invalid key: "
+
+    invoke-static {v1, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

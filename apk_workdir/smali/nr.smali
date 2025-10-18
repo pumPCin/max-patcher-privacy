@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqh6;
+.implements Lli6;
 
 
 # instance fields
@@ -42,39 +42,31 @@
 
     move-result p1
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Lo66;
+    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Li76;
 
-    invoke-virtual {v0}, Lo66;->j()I
+    invoke-virtual {v0}, Li76;->j()I
 
     move-result v1
 
     if-gtz v1, :cond_0
 
+    const/4 p1, 0x0
+
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Lu08;->C(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lr18;->C(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lb18;
+    check-cast p1, Ly18;
 
-    check-cast p1, Ldsf;
+    check-cast p1, Lhtf;
 
-    iget-boolean p1, p1, Ldsf;->a:Z
+    iget-boolean p1, p1, Lhtf;->a:Z
 
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -83,19 +75,19 @@
     :pswitch_0
     check-cast p1, Landroid/view/View;
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->r0:[Lwq7;
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->q0:[Ltr7;
 
     invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->C0()Lgs;
 
     move-result-object p1
 
-    iget-object p1, p1, Lgs;->G0:Lde5;
+    iget-object p1, p1, Lgs;->E0:Lxe5;
 
-    sget-object v0, Lf93;->b:Lf93;
+    sget-object v0, Ls93;->b:Ls93;
 
-    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    sget-object p1, Lzag;->a:Lzag;
+    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 

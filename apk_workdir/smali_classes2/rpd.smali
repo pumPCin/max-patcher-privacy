@@ -1,75 +1,93 @@
-.class public abstract synthetic Lrpd;
+.class public final Lrpd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final synthetic a:Lrpd;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final b:Ljava/lang/String;
+
+.field public static final c:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 7
 
-    const/4 v0, 0x3
+    new-instance v0, Lrpd;
 
-    invoke-static {v0}, Lwx1;->y(I)[I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Lrpd;->a:Lrpd;
 
-    array-length v1, v1
+    const-class v0, Lspd;
 
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v4, 0x2
-
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Lrpd;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v4}, Lwx1;->y(I)[I
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    sput-object v0, Lrpd;->b:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    :try_start_3
-    aput v2, v0, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
 
-    :catch_3
-    :try_start_4
-    aput v4, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const-string v2, "android.permission.READ_EXTERNAL_STORAGE"
 
-    :catch_4
-    sput-object v0, Lrpd;->$EnumSwitchMapping$1:[I
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x1d
+
+    if-lt v0, v6, :cond_2
+
+    if-ne v0, v6, :cond_0
+
+    new-array v0, v3, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    aput-object v1, v0, v4
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_1
+
+    new-array v0, v3, [Ljava/lang/String;
+
+    const-string v1, "android.permission.READ_MEDIA_IMAGES"
+
+    aput-object v1, v0, v5
+
+    const-string v1, "android.permission.READ_MEDIA_VIDEO"
+
+    aput-object v1, v0, v4
+
+    goto :goto_0
+
+    :cond_1
+    new-array v0, v4, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    goto :goto_0
+
+    :cond_2
+    new-array v0, v3, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    aput-object v1, v0, v4
+
+    :goto_0
+    sput-object v0, Lrpd;->c:[Ljava/lang/String;
 
     return-void
 .end method

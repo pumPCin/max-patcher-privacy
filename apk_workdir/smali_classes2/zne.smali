@@ -1,177 +1,64 @@
 .class public final Lzne;
-.super Landroid/widget/PopupWindow;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lboe;
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
 
-.field public final b:Lmr7;
+# static fields
+.field public static final a:Lzne;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZLjava/util/ArrayList;Lmr7;)V
-    .locals 11
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/widget/PopupWindow;-><init>()V
+    new-instance v0, Lzne;
 
-    iput-object p3, p0, Lzne;->a:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lzne;->b:Lmr7;
+    sput-object v0, Lzne;->a:Lzne;
 
-    const/4 p4, -0x2
+    return-void
+.end method
 
-    invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    const/16 v0, 0xfa
-
-    int-to-float v0, v0
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lagi;->d(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
-
-    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x41400000    # 12.0f
-
-    mul-float/2addr v0, v1
-
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setElevation(F)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
-
-    new-instance v1, Lfvb;
-
-    invoke-direct {v1, p1, p2}, Lfvb;-><init>(Landroid/content/Context;Z)V
-
-    invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_1
+    return v0
 
     :cond_0
-    move v9, v3
+    instance-of p1, p1, Lzne;
 
-    goto :goto_0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return v0
+.end method
 
-    move-result-object p3
+.method public final hashCode()I
+    .locals 1
 
-    :cond_2
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+    const v0, 0x79e8661
 
-    move-result v2
+    return v0
+.end method
 
-    if-eqz v2, :cond_0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v0, "Reject"
 
-    move-result-object v2
-
-    check-cast v2, Lyne;
-
-    iget-object v2, v2, Lyne;->d:Ljava/lang/Integer;
-
-    if-eqz v2, :cond_2
-
-    move v9, v0
-
-    :goto_0
-    iget-object p3, p0, Lzne;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p3
-
-    :goto_1
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyne;
-
-    new-instance v4, Levb;
-
-    invoke-direct {v4, p1, p2}, Levb;-><init>(Landroid/content/Context;Z)V
-
-    iget-object v6, v2, Lyne;->b:Loqf;
-
-    iget-object v10, v2, Lyne;->d:Ljava/lang/Integer;
-
-    iget-object v7, v2, Lyne;->c:Ljava/lang/Integer;
-
-    if-eqz v10, :cond_3
-
-    move v8, v0
-
-    goto :goto_2
-
-    :cond_3
-    move v8, v3
-
-    :goto_2
-    move-object v5, v4
-
-    invoke-virtual/range {v4 .. v9}, Levb;->c(Levb;Loqf;Ljava/lang/Integer;ZZ)V
-
-    iget-object v5, v2, Lyne;->e:Ljava/lang/Integer;
-
-    invoke-virtual {v4, v10, v5}, Levb;->b(Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    new-instance v5, Lfae;
-
-    const/16 v6, 0x8
-
-    invoke-direct {v5, p0, v6, v2}, Lfae;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v4, v5}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1, v4, v2, p4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {p0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
-
-    return-void
+    return-object v0
 .end method

@@ -1,229 +1,181 @@
 .class public final Lmvh;
-.super Li6i;
+.super Lruh;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
-
-
-# static fields
-.field private static final zzb:Lmvh;
 
 
 # instance fields
-.field private zzd:I
+.field public final b:Lub7;
 
-.field private zze:Ljava/lang/String;
+.field public final c:Lvof;
 
-.field private zzf:La4i;
-
-.field private zzg:Ljava/lang/String;
-
-.field private zzh:La4i;
-
-.field private zzi:F
-
-.field private zzj:F
-
-.field private zzk:F
-
-.field private zzl:F
-
-.field private zzm:I
+.field public final d:Lgbi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILub7;Lvof;Lgbi;)V
+    .locals 0
 
-    new-instance v0, Lmvh;
+    invoke-direct {p0, p1}, Lsvh;-><init>(I)V
 
-    invoke-direct {v0}, Lmvh;-><init>()V
+    iput-object p3, p0, Lmvh;->c:Lvof;
 
-    sput-object v0, Lmvh;->zzb:Lmvh;
+    iput-object p2, p0, Lmvh;->b:Lub7;
 
-    const-class v1, Lmvh;
+    iput-object p4, p0, Lmvh;->d:Lgbi;
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    const/4 p3, 0x2
 
-    return-void
-.end method
+    if-ne p1, p3, :cond_1
 
-.method public constructor <init>()V
-    .locals 2
+    iget-boolean p1, p2, Lub7;->a:Z
 
-    invoke-direct {p0}, Li6i;-><init>()V
+    if-nez p1, :cond_0
 
-    const-string v0, ""
+    goto :goto_0
 
-    iput-object v0, p0, Lmvh;->zze:Ljava/lang/String;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    sget-object v1, La4i;->b:Lw3i;
+    const-string p2, "Best-effort write calls cannot pass methods that should auto-resolve missing features."
 
-    iput-object v1, p0, Lmvh;->zzf:La4i;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lmvh;->zzg:Ljava/lang/String;
+    throw p1
 
-    iput-object v1, p0, Lmvh;->zzh:La4i;
-
-    const/high16 v0, 0x3e800000    # 0.25f
-
-    iput v0, p0, Lmvh;->zzi:F
-
-    iput v0, p0, Lmvh;->zzj:F
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    iput v0, p0, Lmvh;->zzk:F
-
-    const v0, 0x3f59999a    # 0.85f
-
-    iput v0, p0, Lmvh;->zzl:F
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lmvh;->zzm:I
-
-    return-void
-.end method
-
-.method public static n()Llvh;
-    .locals 1
-
-    sget-object v0, Lmvh;->zzb:Lmvh;
-
-    invoke-virtual {v0}, Li6i;->d()Lx5i;
-
-    move-result-object v0
-
-    check-cast v0, Llvh;
-
-    return-object v0
-.end method
-
-.method public static synthetic o(Lmvh;La4i;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lmvh;->zzd:I
-
-    or-int/lit8 v0, v0, 0x2
-
-    iput v0, p0, Lmvh;->zzd:I
-
-    iput-object p1, p0, Lmvh;->zzf:La4i;
-
-    return-void
-.end method
-
-.method public static synthetic p(Lmvh;La4i;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lmvh;->zzd:I
-
-    or-int/lit8 v0, v0, 0x8
-
-    iput v0, p0, Lmvh;->zzd:I
-
-    iput-object p1, p0, Lmvh;->zzh:La4i;
-
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 10
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    add-int/lit8 p1, p1, -0x1
+    iget-object v0, p0, Lmvh;->d:Lgbi;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lmvh;->zzb:Lmvh;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Llvh;
-
-    sget-object p2, Lmvh;->zzb:Lmvh;
-
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lmvh;
-
-    invoke-direct {p1}, Lmvh;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string v8, "zzl"
-
-    const-string v9, "zzm"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v2, "zzf"
-
-    const-string v3, "zzg"
-
-    const-string v4, "zzh"
-
-    const-string v5, "zzi"
-
-    const-string v6, "zzj"
-
-    const-string v7, "zzk"
-
-    filled-new-array/range {v0 .. v9}, [Ljava/lang/Object;
+    invoke-static {p1}, Lgfi;->d(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
     move-result-object p1
 
-    sget-object p2, Lmvh;->zzb:Lmvh;
+    iget-object v0, p0, Lmvh;->c:Lvof;
 
-    new-instance v0, Lv9i;
+    invoke-virtual {v0, p1}, Lvof;->c(Ljava/lang/Exception;)Z
 
-    const-string v1, "\u0004\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u100a\u0001\u0003\u1008\u0002\u0004\u100a\u0003\u0005\u1001\u0004\u0006\u1001\u0005\u0007\u1001\u0006\u0008\u1001\u0007\t\u1004\u0008"
+    return-void
+.end method
 
-    invoke-direct {v0, p2, v1, p1}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
 
-    return-object v0
+    iget-object v0, p0, Lmvh;->c:Lvof;
 
-    :cond_4
-    const/4 p1, 0x1
+    invoke-virtual {v0, p1}, Lvof;->c(Ljava/lang/Exception;)Z
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    return-void
+.end method
+
+.method public final c(Louh;)V
+    .locals 2
+
+    iget-object v0, p0, Lmvh;->c:Lvof;
+
+    :try_start_0
+    iget-object v1, p0, Lmvh;->b:Lub7;
+
+    iget-object p1, p1, Louh;->d:Lkl;
+
+    invoke-virtual {v1, p1, v0}, Lub7;->f(Lkl;Lvof;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :goto_0
+    invoke-virtual {v0, p1}, Lvof;->c(Ljava/lang/Exception;)Z
+
+    return-void
+
+    :goto_1
+    invoke-static {p1}, Lsvh;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
 
     move-result-object p1
+
+    invoke-virtual {p0, p1}, Lmvh;->a(Lcom/google/android/gms/common/api/Status;)V
+
+    return-void
+
+    :goto_2
+    throw p1
+.end method
+
+.method public final d(Liqe;Z)V
+    .locals 4
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    iget-object v0, p1, Liqe;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Map;
+
+    iget-object v1, p0, Lmvh;->c:Lvof;
+
+    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p2, v1, Lvof;->a:Le2j;
+
+    new-instance v0, Lfqe;
+
+    const/16 v2, 0x8
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p1, v1, v3, v2}, Lfqe;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {p2, v0}, Le2j;->i(Lrma;)Le2j;
+
+    return-void
+.end method
+
+.method public final f(Louh;)Z
+    .locals 0
+
+    iget-object p1, p0, Lmvh;->b:Lub7;
+
+    iget-boolean p1, p1, Lub7;->a:Z
+
+    return p1
+.end method
+
+.method public final g(Louh;)[Lcq5;
+    .locals 0
+
+    iget-object p1, p0, Lmvh;->b:Lub7;
+
+    iget-object p1, p1, Lub7;->c:[Ljava/lang/Object;
+
+    check-cast p1, [Lcq5;
 
     return-object p1
 .end method

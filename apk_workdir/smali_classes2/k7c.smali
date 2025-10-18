@@ -1,139 +1,94 @@
-.class public abstract Lk7c;
-.super Ls7c;
+.class public final Lk7c;
+.super Lm7c;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final h(Lb18;)Z
-    .locals 4
+# instance fields
+.field public final a:Ljava/util/List;
 
-    sget-object v0, Lh7c;->a:Lh7c;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    move-result v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lk7c;->a:Ljava/util/List;
 
-    instance-of p1, p1, Lh7c;
-
-    return p1
-
-    :cond_0
-    instance-of v0, p0, Li7c;
-
-    if-eqz v0, :cond_1
-
-    instance-of p1, p1, Li7c;
-
-    return p1
-
-    :cond_1
-    instance-of v0, p0, Lj7c;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p1, Lj7c;
-
-    if-eqz v0, :cond_2
-
-    move-object v0, p0
-
-    check-cast v0, Lj7c;
-
-    iget-object v0, v0, Lj7c;->a:Ll1c;
-
-    iget-wide v0, v0, Ll1c;->a:J
-
-    check-cast p1, Lj7c;
-
-    iget-object p1, p1, Lj7c;->a:Ll1c;
-
-    iget-wide v2, p1, Ll1c;->a:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method
 
-.method public final q(Lb18;)Z
-    .locals 1
 
-    sget-object v0, Lh7c;->a:Lh7c;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    move-result v0
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    instance-of p1, p1, Lh7c;
-
-    return p1
+    return v0
 
     :cond_0
-    instance-of v0, p0, Li7c;
+    instance-of v1, p1, Lk7c;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    instance-of p1, p1, Li7c;
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
-    instance-of v0, p0, Lj7c;
+    check-cast p1, Lk7c;
 
-    if-eqz v0, :cond_3
+    iget-object v1, p0, Lk7c;->a:Ljava/util/List;
 
-    instance-of v0, p1, Lj7c;
+    iget-object p1, p1, Lk7c;->a:Ljava/util/List;
 
-    if-eqz v0, :cond_2
-
-    move-object v0, p0
-
-    check-cast v0, Lj7c;
-
-    check-cast p1, Lj7c;
-
-    iget-object p1, p1, Lj7c;->a:Ll1c;
-
-    iget-object v0, v0, Lj7c;->a:Ll1c;
-
-    invoke-virtual {v0, p1}, Ll1c;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_2
 
-    const/4 p1, 0x1
-
-    return p1
+    return v2
 
     :cond_2
-    const/4 p1, 0x0
+    return v0
+.end method
 
-    return p1
+.method public final hashCode()I
+    .locals 1
 
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-object v0, p0, Lk7c;->a:Ljava/util/List;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    throw p1
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowMoreActions(actions="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk7c;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

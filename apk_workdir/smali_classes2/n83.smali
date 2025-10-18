@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lp83;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp83;I)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
     iput p2, p0, Ln83;->a:I
 
-    iput-object p1, p0, Ln83;->b:Lp83;
+    iput p1, p0, Ln83;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,87 +27,164 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
     iget v0, p0, Ln83;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ln83;->b:Lp83;
+    check-cast p1, Loxf;
 
-    check-cast p1, Lu47;
+    iget-byte p1, p1, Loxf;->a:B
 
-    :try_start_0
-    invoke-interface {p1}, Lu47;->b()Ljava/io/InputStream;
+    iget v0, p0, Ln83;->b:I
 
-    move-result-object v1
+    if-ne p1, v0, :cond_0
 
-    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x41
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_0
-
-    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2, p1}, Lp83;->a(JLu47;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ltech/kwik/flupke/webtransport/impl/BufferedStreamsLimitExceededException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 p1, 0x1
 
     goto :goto_0
 
-    :catch_0
-    const-wide/32 v0, 0x3994bd84
-
-    invoke-interface {p1, v0, v1}, Lu47;->d(J)V
-
-    invoke-interface {p1, v0, v1}, Lu47;->e(J)V
-
-    :catch_1
     :cond_0
+    const/4 p1, 0x0
+
     :goto_0
-    return-void
+    return p1
 
     :pswitch_0
-    iget-object v0, p0, Ln83;->b:Lp83;
+    check-cast p1, Lnxf;
 
-    check-cast p1, Lu47;
+    iget-short p1, p1, Lnxf;->a:S
 
-    :try_start_1
-    invoke-interface {p1}, Lu47;->b()Ljava/io/InputStream;
+    iget v0, p0, Ln83;->b:I
 
-    move-result-object v1
+    if-ne p1, v0, :cond_1
 
-    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2, p1}, Lp83;->a(JLu47;)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ltech/kwik/flupke/webtransport/impl/BufferedStreamsLimitExceededException; {:try_start_1 .. :try_end_1} :catch_2
+    const/4 p1, 0x1
 
     goto :goto_1
 
-    :catch_2
-    const-wide/32 v0, 0x3994bd84
+    :cond_1
+    const/4 p1, 0x0
 
-    invoke-interface {p1, v0, v1}, Lu47;->d(J)V
-
-    :catch_3
     :goto_1
-    return-void
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lpxf;
+
+    iget-short p1, p1, Lpxf;->a:S
+
+    iget v0, p0, Ln83;->b:I
+
+    if-ne p1, v0, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    return p1
+
+    :pswitch_2
+    check-cast p1, Lgaf;
+
+    iget p1, p1, Lgaf;->a:I
+
+    iget v0, p0, Ln83;->b:I
+
+    and-int/lit8 v0, v0, 0x3
+
+    if-ne p1, v0, :cond_3
+
+    const/4 p1, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_3
+    return p1
+
+    :pswitch_3
+    check-cast p1, Lkxf;
+
+    iget-short p1, p1, Lkxf;->a:S
+
+    iget v0, p0, Ln83;->b:I
+
+    if-ne p1, v0, :cond_4
+
+    const/4 p1, 0x1
+
+    goto :goto_4
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_4
+    return p1
+
+    :pswitch_4
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget v0, p0, Ln83;->b:I
+
+    if-ge p1, v0, :cond_5
+
+    const/4 p1, 0x1
+
+    goto :goto_5
+
+    :cond_5
+    const/4 p1, 0x0
+
+    :goto_5
+    return p1
+
+    :pswitch_5
+    check-cast p1, Lkxf;
+
+    iget-short p1, p1, Lkxf;->a:S
+
+    iget v0, p0, Ln83;->b:I
+
+    if-ne p1, v0, :cond_6
+
+    const/4 p1, 0x1
+
+    goto :goto_6
+
+    :cond_6
+    const/4 p1, 0x0
+
+    :goto_6
+    return p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

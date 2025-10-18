@@ -1,323 +1,136 @@
 .class public final Lu98;
-.super Lxfb;
+.super Lmmf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final i:Lu98;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Llt7;
-
-.field public static volatile l:Z
-
-.field public static volatile m:Z
-
-.field public static final n:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
+    .locals 17
 
-    new-instance v0, Lu98;
+    move-object/from16 v0, p0
 
-    invoke-direct {v0}, Lxfb;-><init>()V
+    move-wide/from16 v1, p3
 
-    sput-object v0, Lu98;->i:Lu98;
+    move-wide/from16 v3, p5
 
-    const-class v0, Lu98;
+    move-wide/from16 v5, p7
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-object/from16 v7, p9
 
-    move-result-object v0
+    move-wide/from16 v8, p10
 
-    sput-object v0, Lu98;->j:Ljava/lang/String;
+    move-wide/from16 v10, p12
 
-    sget-object v0, Lcgb;->a:Lcgb;
+    move-wide/from16 v12, p14
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    sget-object v14, Lm8b;->v0:Lm8b;
 
-    move-result-object v0
+    invoke-direct {v0, v14}, Lmmf;-><init>(Lm8b;)V
 
-    const-class v1, Legb;
+    const-string v14, "token"
 
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+    move-object/from16 v15, p1
 
-    move-result-object v0
+    invoke-virtual {v0, v14, v15}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lu98;->k:Llt7;
+    const-string v14, "interactive"
 
-    const/4 v0, 0x1
+    move/from16 v15, p2
 
-    sput-boolean v0, Lu98;->l:Z
+    invoke-virtual {v0, v14, v15}, Lmmf;->h(Ljava/lang/String;Z)V
 
-    sput-boolean v0, Lu98;->m:Z
+    const-wide/16 v14, 0x0
 
-    const-string v0, "login"
+    cmp-long v16, v1, v14
 
-    sput-object v0, Lu98;->n:Ljava/lang/String;
+    move-wide/from16 p1, v14
 
-    return-void
-.end method
+    if-lez v16, :cond_0
 
-.method public static d(Lt98;)V
-    .locals 4
+    const-string v14, "chatsSync"
 
-    invoke-static {}, Lu98;->e()Legb;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Legb;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
+    invoke-virtual {v0, v1, v2, v14}, Lmmf;->u(JLjava/lang/String;)V
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    cmp-long v1, v3, p1
+
+    if-lez v1, :cond_1
+
+    const-string v1, "contactsSync"
+
+    invoke-virtual {v0, v3, v4, v1}, Lmmf;->u(JLjava/lang/String;)V
+
+    :cond_1
+    cmp-long v1, v5, p1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "presenceSync"
+
+    invoke-virtual {v0, v5, v6, v1}, Lmmf;->u(JLjava/lang/String;)V
+
+    :cond_2
+    if-eqz v7, :cond_4
+
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    sget-object p0, Lu98;->j:Ljava/lang/String;
-
-    sget-object v0, Lndi;->a:Lkwa;
-
-    if-nez v0, :cond_1
-
     goto :goto_0
 
-    :cond_1
-    sget-object v1, Lf88;->Y:Lf88;
-
-    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const-string v2, "Invoked \'failMetric\', but traceId is null or empty!"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p0, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
     :cond_3
-    sget-object v1, Lu98;->i:Lu98;
+    const-string v1, "configHash"
 
-    iget-object v1, v1, Lxfb;->g:Leie;
+    invoke-virtual {v0, v1, v7}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lpfb;
+    :cond_4
+    :goto_0
+    cmp-long v1, v8, p1
 
-    invoke-direct {v2, v0, p0}, Lpfb;-><init>(Ljava/lang/String;Lofb;)V
+    if-lez v1, :cond_5
 
-    invoke-virtual {v1, v2}, Leie;->h(Ljava/lang/Object;)Z
+    const-string v1, "callsSync"
 
+    invoke-virtual {v0, v8, v9, v1}, Lmmf;->u(JLjava/lang/String;)V
+
+    :cond_5
+    cmp-long v1, v10, p1
+
+    if-lez v1, :cond_6
+
+    const-string v1, "lastLogin"
+
+    invoke-virtual {v0, v10, v11, v1}, Lmmf;->u(JLjava/lang/String;)V
+
+    :cond_6
+    cmp-long v1, v12, p1
+
+    if-lez v1, :cond_7
+
+    const-string v1, "draftsSync"
+
+    invoke-virtual {v0, v12, v13, v1}, Lmmf;->u(JLjava/lang/String;)V
+
+    :cond_7
     return-void
 .end method
 
-.method public static e()Legb;
+
+# virtual methods
+.method public final R()Lnmf;
     .locals 1
 
-    sget-object v0, Lu98;->k:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Legb;
+    sget-object v0, Lr55;->s0:Lr55;
 
     return-object v0
 .end method
 
-.method public static f()V
-    .locals 9
+.method public final X()Z
+    .locals 1
 
-    invoke-static {}, Lu98;->e()Legb;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Legb;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    move-object v5, v0
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    sget-object v0, Lu98;->j:Ljava/lang/String;
-
-    sget-object v1, Lndi;->a:Lkwa;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Lf88;->Y:Lf88;
-
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "Invoked \'onLoginHandled\', but traceId is null or empty!"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :cond_3
-    sget-object v0, Lu98;->i:Lu98;
-
-    iget-object v8, v0, Lxfb;->g:Leie;
-
-    iget-object v0, v0, Lxfb;->b:Llt7;
-
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Legb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v3
-
-    new-instance v1, Lqfb;
-
-    const/4 v2, 0x4
-
-    const-string v6, "login_receive_to_handle"
-
-    const/4 v7, 0x1
-
-    invoke-direct/range {v1 .. v7}, Lqfb;-><init>(IJLjava/lang/String;Ljava/lang/String;Z)V
-
-    invoke-virtual {v8, v1}, Leie;->h(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public static g()V
-    .locals 5
-
-    invoke-static {}, Lu98;->e()Legb;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Legb;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    sget-object v0, Lu98;->j:Ljava/lang/String;
-
-    sget-object v1, Lndi;->a:Lkwa;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Lf88;->Y:Lf88;
-
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "Invoked \'onLoginReceived\', but traceId is null or empty!"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :cond_3
-    sget-object v1, Lu98;->i:Lu98;
-
-    const-string v2, "login_send_to_receive"
-
-    const/4 v3, 0x3
-
-    invoke-static {v1, v2, v3, v0}, Lxfb;->a(Lxfb;Ljava/lang/String;ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static h(Z)V
-    .locals 5
-
-    sget-object v0, Lu98;->j:Ljava/lang/String;
-
-    sget-object v1, Lndi;->a:Lkwa;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Lf88;->o:Lf88;
-
-    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "Setting isFirstLogin="
-
-    invoke-static {v3, p0}, Lyy8;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    sput-boolean p0, Lu98;->m:Z
-
-    return-void
+    return v0
 .end method

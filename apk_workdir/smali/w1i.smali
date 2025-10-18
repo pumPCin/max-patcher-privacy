@@ -1,80 +1,73 @@
 .class public final Lw1i;
-.super Ljava/lang/Object;
+.super Lkf3;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
 
+# instance fields
+.field public final synthetic Y:I
 
-# static fields
-.field public static final a:Lw1i;
+.field public final synthetic Z:Lmf3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lmf3;I)V
+    .locals 0
 
-    new-instance v0, Lw1i;
+    iput p2, p0, Lw1i;->Y:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw1i;->Z:Lmf3;
 
-    sput-object v0, Lw1i;->a:Lw1i;
+    const/4 p2, 0x0
 
-    new-instance v0, Lsvh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lsvh;-><init>(I)V
-
-    const-class v1, Llwh;
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lhug;->l(Ljava/util/HashMap;I)Lsvh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->i(Ljava/lang/Class;Lsvh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2}, Lkf3;-><init>(Lmf3;B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final b(I)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lw1i;->Y:I
 
-    move-result-object p1
+    iget-object v1, p0, Lw1i;->Z:Lmf3;
 
-    throw p1
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lmf3;->u0:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lmf3;->n()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lz2i;
+
+    invoke-direct {v0, v1, p1}, Lz2i;-><init>(Lmf3;I)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lmf3;->u0:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lmf3;->m()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

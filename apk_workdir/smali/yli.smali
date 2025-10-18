@@ -1,70 +1,173 @@
-.class public final Lyli;
+.class public abstract Lyli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrga;
-
-
-# static fields
-.field public static final a:Lyli;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .locals 6
 
-    new-instance v0, Lyli;
+    const/16 v0, 0x2000
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [B
 
-    sput-object v0, Lyli;->a:Lyli;
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
-    new-instance v0, Lq7i;
+    move-result v1
 
-    const/4 v1, 0x1
+    const-wide/16 v2, 0x0
 
-    invoke-direct {v0, v1}, Lq7i;-><init>(I)V
+    :goto_0
+    if-ltz v1, :cond_0
 
-    const-class v1, Ll8i;
+    const/4 v4, 0x0
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    invoke-virtual {p1, v0, v4, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    move-result-object v0
+    int-to-long v4, v1
 
-    const/4 v2, 0x2
+    add-long/2addr v2, v4
 
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
+    goto :goto_0
 
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lhug;->m(Ljava/util/HashMap;I)Lq7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lhug;->j(Ljava/lang/Class;Lq7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhug;->q(Ljava/util/HashMap;)V
-
-    return-void
+    :cond_0
+    return-wide v2
 .end method
 
+.method public static final b(I)Ljava/util/ArrayList;
+    .locals 3
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    new-instance v0, Lti7;
 
-    invoke-static {p1}, Lwx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/16 v1, 0x17
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    throw p1
+    invoke-direct {v0, p0, v1, v2}, Lri7;-><init>(III)V
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Lri7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    move-object v1, v0
+
+    check-cast v1, Lsi7;
+
+    iget-boolean v1, v1, Lsi7;->c:Z
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lsi7;
+
+    invoke-virtual {v1}, Lsi7;->nextInt()I
+
+    move-result v1
+
+    new-instance v2, Lvuf;
+
+    invoke-direct {v2, v1}, Lvuf;-><init>(I)V
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object p0
+.end method
+
+.method public static final c(I)Ljava/util/ArrayList;
+    .locals 3
+
+    new-instance v0, Lti7;
+
+    const/16 v1, 0x3b
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p0, v1, v2}, Lri7;-><init>(III)V
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Lri7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    move-object v1, v0
+
+    check-cast v1, Lsi7;
+
+    iget-boolean v1, v1, Lsi7;->c:Z
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lsi7;
+
+    invoke-virtual {v1}, Lsi7;->nextInt()I
+
+    move-result v1
+
+    new-instance v2, Lvuf;
+
+    invoke-direct {v2, v1}, Lvuf;-><init>(I)V
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object p0
+.end method
+
+.method public static final d(Ljava/io/InputStream;)[B
+    .locals 3
+
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    const/16 v1, 0x2000
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->available()I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+
+    invoke-static {p0, v0}, Lyli;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p0
+
+    return-object p0
 .end method

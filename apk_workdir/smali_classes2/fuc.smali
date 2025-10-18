@@ -3,90 +3,56 @@
 
 
 # static fields
-.field public static AsyncViewStub:[I = null
+.field public static web_app_root_biometry_open_settings_dialog_accept:I = 0x7f130e67
 
-.field public static AsyncViewStub_layout:I = 0x0
+.field public static web_app_root_biometry_open_settings_dialog_title:I = 0x7f130e68
 
-.field public static LongRoundedTitleSubtitleButton:[I = null
+.field public static web_app_root_biometry_request_dialog_accept:I = 0x7f130e69
 
-.field public static LongRoundedTitleSubtitleButton_lrts_subtitle:I = 0x0
+.field public static web_app_root_biometry_request_dialog_decline:I = 0x7f130e6a
 
-.field public static LongRoundedTitleSubtitleButton_lrts_title:I = 0x1
+.field public static web_app_root_biometry_request_dialog_default_reason:I = 0x7f130e6b
 
-.field public static PopupLayout:[I = null
+.field public static web_app_root_biometry_request_dialog_title:I = 0x7f130e6c
 
-.field public static PopupLayout_sensitivity:I = 0x0
+.field public static web_app_root_biometry_setting:I = 0x7f130e6d
 
-.field public static RoundedRectConstraintLayout:[I = null
+.field public static web_app_root_biometry_setting_description:I = 0x7f130e6e
 
-.field public static RoundedRectConstraintLayout_roundRadius:I = 0x0
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f130e6f
 
-.field public static RoundedRectFrameLayout:[I = null
+.field public static web_app_root_choose_media_bottomsheet_title:I = 0x7f130e70
 
-.field public static RoundedRectFrameLayout_cornersRadius:I = 0x0
+.field public static web_app_root_close_dialog_accept:I = 0x7f130e71
 
-.field public static TamLoadingView:[I = null
+.field public static web_app_root_close_dialog_subtitle:I = 0x7f130e72
 
-.field public static TamLoadingView_tlv_auto_repeat:I = 0x0
+.field public static web_app_root_close_dialog_title:I = 0x7f130e73
 
-.field public static TamLoadingView_tlv_network_fetch:I = 0x1
+.field public static web_app_root_dots_menu_refresh:I = 0x7f130e74
 
+.field public static web_app_root_download_file_bottomsheet_accept:I = 0x7f130e75
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.field public static web_app_root_download_file_bottomsheet_subtitle:I = 0x7f130e76
 
-    const v0, 0x7f040594
+.field public static web_app_root_download_file_bottomsheet_title:I = 0x7f130e77
 
-    filled-new-array {v0}, [I
+.field public static web_app_root_error_retry_button:I = 0x7f130e78
 
-    move-result-object v0
+.field public static web_app_root_error_subtitle:I = 0x7f130e79
 
-    sput-object v0, Lfuc;->AsyncViewStub:[I
+.field public static web_app_root_error_title:I = 0x7f130e7a
 
-    const v0, 0x7f040609
+.field public static web_app_root_max_share_quote_title:I = 0x7f130e7b
 
-    const v1, 0x7f04060a
+.field public static web_app_root_phone_request_dialog_decline:I = 0x7f130e7c
 
-    filled-new-array {v0, v1}, [I
+.field public static web_app_root_phone_request_dialog_title:I = 0x7f130e7d
 
-    move-result-object v0
+.field public static web_app_root_setting_open_webapp:I = 0x7f130e7e
 
-    sput-object v0, Lfuc;->LongRoundedTitleSubtitleButton:[I
+.field public static web_app_root_settings_header_subtitle:I = 0x7f130e7f
 
-    const v0, 0x7f04074f
+.field public static web_app_root_settings_header_title:I = 0x7f130e80
 
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lfuc;->PopupLayout:[I
-
-    const v0, 0x7f040728
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lfuc;->RoundedRectConstraintLayout:[I
-
-    const v0, 0x7f04031a
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lfuc;->RoundedRectFrameLayout:[I
-
-    const v0, 0x7f040898
-
-    const v1, 0x7f040899
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lfuc;->TamLoadingView:[I
-
-    return-void
-.end method
+.field public static web_app_root_settings_webapps:I = 0x7f130e81

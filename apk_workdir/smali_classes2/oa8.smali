@@ -1,96 +1,132 @@
-.class public final Loa8;
+.class public final synthetic Loa8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lby5;
+.implements Lli6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final synthetic b:Ldb8;
+.field public final synthetic Y:I
+
+.field public final synthetic Z:I
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldb8;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
     .locals 0
 
-    iput p2, p0, Loa8;->a:I
-
-    iput-object p1, p0, Loa8;->b:Ldb8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loa8;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Loa8;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Loa8;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Loa8;->o:Ljava/lang/String;
+
+    iput p5, p0, Loa8;->X:I
+
+    iput p6, p0, Loa8;->Y:I
+
+    iput p7, p0, Loa8;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Loa8;->a:I
+    check-cast p1, Lzf4;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, ":twofa/auth/password/check"
 
-    check-cast p1, Ljava/util/List;
+    iput-object v0, p1, Lzf4;->a:Ljava/lang/String;
 
-    new-instance v0, Lna8;
+    const-string v0, "track_id"
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Loa8;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Loa8;->b:Ldb8;
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v2, p1, v1}, Lna8;-><init>(Ldb8;Ljava/util/List;I)V
+    iget-object v0, p1, Lzf4;->b:Ljava/util/ArrayList;
 
-    invoke-static {v0, p2}, Lzzh;->c(Loh6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Loa8;->b:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object p2, Lc54;->a:Lc54;
+    move-result-object v1
 
-    if-ne p1, p2, :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v3, "hint="
 
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v0, "email"
+
+    iget-object v1, p0, Loa8;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "phone"
+
+    iget-object v1, p0, Loa8;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p_mn_l"
+
+    iget v1, p0, Loa8;->X:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p_mx_l"
+
+    iget v1, p0, Loa8;->Y:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "h_mx_l"
+
+    iget v1, p0, Loa8;->Z:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
     return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/List;
-
-    new-instance v0, Lna8;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Loa8;->b:Ldb8;
-
-    invoke-direct {v0, v2, p1, v1}, Lna8;-><init>(Ldb8;Ljava/util/List;I)V
-
-    invoke-static {v0, p2}, Lzzh;->c(Loh6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lc54;->a:Lc54;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lzag;->a:Lzag;
-
-    :goto_1
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

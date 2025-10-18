@@ -1,49 +1,75 @@
 .class public final Lyk6;
-.super Lsyg;
+.super Lal6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lsze;
+# static fields
+.field public static final a:Lyk6;
 
-.field public final b:Loh6;
+.field public static final b:Ljava/util/List;
 
-.field public final c:Lde5;
-
-.field public final o:Lde5;
+.field public static final c:Lqk6;
 
 
 # direct methods
-.method public constructor <init>(Loh6;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    new-instance v0, Lyk6;
 
-    iput-object p1, p0, Lyk6;->b:Loh6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lde5;
+    sput-object v0, Lyk6;->a:Lyk6;
 
-    const/4 v0, 0x0
+    sget-object v0, Lsk6;->e:Lsk6;
 
-    invoke-direct {p1, v0}, Lde5;-><init>(I)V
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    iput-object p1, p0, Lyk6;->c:Lde5;
+    move-result-object v0
 
-    new-instance p1, Lde5;
+    sput-object v0, Lyk6;->b:Ljava/util/List;
 
-    invoke-direct {p1, v0}, Lde5;-><init>(I)V
+    new-instance v0, Lqk6;
 
-    iput-object p1, p0, Lyk6;->o:Lde5;
+    sget v1, Lk1b;->c:I
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1}, Lqk6;-><init>(I)V
 
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyk6;->X:Lsze;
+    sput-object v0, Lyk6;->c:Lqk6;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
+
+    return-object v0
+.end method
+
+.method public final c()Lf4;
+    .locals 1
+
+    sget-object v0, Lyk6;->c:Lqk6;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lyk6;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final f()Lqk6;
+    .locals 1
+
+    sget-object v0, Lyk6;->c:Lqk6;
+
+    return-object v0
 .end method

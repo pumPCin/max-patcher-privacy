@@ -1,234 +1,103 @@
-.class public final Ltd1;
+.class public final synthetic Ltd1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwd1;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final X:Ljqf;
+.field public final synthetic a:I
 
-.field public final a:Loqf;
-
-.field public final b:Labe;
-
-.field public final c:Ltt7;
-
-.field public final o:J
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Loqf;Lzae;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+    .locals 0
+
+    iput p2, p0, Ltd1;->a:I
+
+    iput-object p1, p0, Ltd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltd1;->a:Loqf;
-
-    iput-object p2, p0, Ltd1;->b:Labe;
-
-    new-instance p1, Ltt7;
-
-    sget p2, Lvpa;->h:I
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x6
-
-    invoke-direct {p1, p2, v0, v1}, Ltt7;-><init>(III)V
-
-    iput-object p1, p0, Ltd1;->c:Ltt7;
-
-    sget-wide p1, Lxpa;->b:J
-
-    iput-wide p1, p0, Ltd1;->o:J
-
-    sget p1, Lzpa;->i:I
-
-    new-instance p2, Ljqf;
-
-    invoke-direct {p2, p1}, Ljqf;-><init>(I)V
-
-    iput-object p2, p0, Ltd1;->X:Ljqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loqf;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 8
 
-    iget-object v0, p0, Ltd1;->a:Loqf;
+    iget p1, p0, Ltd1;->a:I
 
-    return-object v0
-.end method
+    iget-object v0, p0, Ltd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-.method public final b()Labe;
-    .locals 1
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Ltd1;->b:Labe;
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
 
-.method public final d()Lhbe;
-    .locals 1
+    move-result-object p1
 
-    sget-object v0, Lbbe;->a:Lbbe;
+    iget-object v0, p1, Lqd1;->v0:Lx0f;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
 
-.method public final e()Lvt7;
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Ltd1;->c:Ltt7;
+    check-cast v0, Ljd1;
 
-    return-object v0
-.end method
+    iget-object v1, p1, Lqd1;->y0:Lxe5;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    new-instance v2, Lzb1;
 
-    const/4 v0, 0x1
+    iget-object p1, p1, Lqd1;->b:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    iget-object v3, v0, Ljd1;->c:Lzk8;
 
-    return v0
+    const/4 v4, 0x0
 
-    :cond_0
-    instance-of v1, p1, Ltd1;
+    const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    sget-object v6, Lzk8;->b:Lzk8;
 
-    if-nez v1, :cond_1
+    if-ne v3, v6, :cond_0
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ltd1;
-
-    iget-object v1, p0, Ltd1;->a:Loqf;
-
-    iget-object v3, p1, Ltd1;->a:Loqf;
-
-    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ltd1;->b:Labe;
-
-    iget-object p1, p1, Ltd1;->b:Labe;
-
-    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Ltd1;->o:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Loqf;
-    .locals 1
-
-    iget-object v0, p0, Ltd1;->X:Ljqf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ltd1;->a:Loqf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ltd1;->b:Labe;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    move v3, v5
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    move v3, v4
 
     :goto_0
-    add-int/2addr v0, v1
+    iget-object v7, v0, Ljd1;->b:Lzk8;
 
-    return v0
-.end method
+    if-ne v7, v6, :cond_1
 
-.method public final m()I
-    .locals 1
+    move v4, v5
 
-    sget v0, Lwpa;->m:I
+    :cond_1
+    iget-boolean v0, v0, Ljd1;->d:Z
 
-    return v0
-.end method
+    invoke-direct {v2, p1, v3, v4, v0}, Lzb1;-><init>(Ljava/lang/String;ZZZ)V
 
-.method public final t()I
-    .locals 1
+    invoke-static {v1, v2}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    return-void
 
-    return v0
-.end method
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "OpenCallChat(descriptionRes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltd1;->a:Loqf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", counterType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltd1;->b:Labe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -83,7 +83,7 @@
 
     iget v1, p0, Law;->b:I
 
-    invoke-static {v1}, Lwx1;->v(I)I
+    invoke-static {v1}, Ldy1;->v(I)I
 
     move-result v1
 
@@ -101,7 +101,7 @@
 
     iget-wide v2, p0, Law;->a:J
 
-    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

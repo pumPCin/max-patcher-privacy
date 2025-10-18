@@ -1,51 +1,61 @@
 .class public final Lkt4;
-.super Lr5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
+# static fields
+.field public static final a:Lkt4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liod;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lkt4;->b:I
+    new-instance v0, Lkt4;
 
-    invoke-direct {p0, p1}, Lr5;-><init>(Liod;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkt4;->a:Lkt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Class;)Ljava/util/ArrayList;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lkt4;->b:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-super {p0, p1}, Lr5;->a(Ljava/lang/Class;)Ljava/util/ArrayList;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lkt4;
 
-    return-object p1
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Lr5;->a:Liod;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Liod;->b(Ljava/lang/Class;)Ljava/util/ArrayList;
+    return p1
 
-    move-result-object p1
+    :cond_1
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
 
-    nop
+    const v0, 0x5a78aebb
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ChatUpdated"
+
+    return-object v0
 .end method

@@ -1,63 +1,27 @@
 .class public final Lcfb;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/Integer;
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Ljava/lang/String;
+# static fields
+.field public static final o:Lcfb;
 
 
 # direct methods
-.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZZZLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcfb;
 
-    iput-boolean p1, p0, Lcfb;->a:Z
+    sget-object v1, Landroid/graphics/Paint$Join;->MITER:Landroid/graphics/Paint$Join;
 
-    iput-boolean p2, p0, Lcfb;->b:Z
+    const/16 v2, 0xa
 
-    iput-object p3, p0, Lcfb;->c:Ljava/lang/String;
+    const-string v3, "strokeLineJoin"
 
-    iput-object p4, p0, Lcfb;->d:Ljava/lang/String;
+    invoke-direct {v0, v3, v2, v1}, Lmmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object p5, p0, Lcfb;->e:Ljava/lang/Integer;
-
-    iput-boolean p6, p0, Lcfb;->f:Z
-
-    iput-boolean p7, p0, Lcfb;->g:Z
-
-    iput-boolean p8, p0, Lcfb;->h:Z
-
-    iput-boolean p9, p0, Lcfb;->i:Z
-
-    iput-boolean p10, p0, Lcfb;->j:Z
-
-    iput-boolean p11, p0, Lcfb;->k:Z
-
-    iput-object p12, p0, Lcfb;->l:Ljava/lang/String;
+    sput-object v0, Lcfb;->o:Lcfb;
 
     return-void
 .end method

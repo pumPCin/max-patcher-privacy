@@ -1,80 +1,95 @@
-.class public final synthetic Lifc;
-.super Ljava/lang/Object;
+.class public final Lifc;
+.super Lhj0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljfc;
+.field public final j:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljfc;I)V
+.method public constructor <init>(Lm75;Lbp3;Lexe;Lcq3;I)V
     .locals 0
 
-    iput p2, p0, Lifc;->a:I
+    invoke-direct {p0, p1, p2, p3, p4}, Lhj0;-><init>(Lm75;Lbp3;Lexe;Lcq3;)V
 
-    iput-object p1, p0, Lifc;->b:Ljfc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p5, p0, Lifc;->j:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget-object v0, p0, Lhj0;->f:Lbp3;
+
+    iget-object v0, v0, Lbp3;->d:Lwif;
+
+    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lhj0;->f:Lbp3;
+
+    iget-object v0, v0, Lbp3;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget v0, p0, Lifc;->j:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lifc;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "ProxyClient{connectionHost="
 
-    iget-object v0, p0, Lifc;->b:Ljfc;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Ljfc;->a:Landroid/graphics/Paint;
+    iget-object v1, p0, Lhj0;->f:Lbp3;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "}"
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lifc;->b:Ljfc;
-
-    iput p1, v0, Ljfc;->b:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,62 +1,25 @@
 .class public final Ls40;
-.super Ljava/lang/Object;
+.super Llpe;
 .source "SourceFile"
 
-# interfaces
-.implements Ll1d;
+
+# instance fields
+.field public final c:J
+
+.field public final o:[B
 
 
-# virtual methods
-.method public final a()V
-    .locals 0
+# direct methods
+.method public constructor <init>(Ljava/lang/String;J[B)V
+    .locals 1
 
-    return-void
-.end method
+    const/4 v0, 0x2
 
-.method public final b()V
-    .locals 0
+    invoke-direct {p0, v0, p1}, Llpe;-><init>(ILjava/lang/String;)V
 
-    return-void
-.end method
+    iput-wide p2, p0, Ls40;->c:J
 
-.method public final c(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final g(Ljava/lang/Long;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lp1d;)V
-    .locals 0
+    iput-object p4, p0, Ls40;->o:[B
 
     return-void
 .end method

@@ -1,126 +1,110 @@
-.class public final Lne4;
+.class public abstract Lne4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltyb;
 
+# static fields
+.field public static final a:Z
 
-# instance fields
-.field public final a:Lpm6;
+.field public static final b:Lkk3;
 
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lv87;
-
-.field public final d:Lj7;
-
-.field public final e:Ldz4;
-
-.field public final f:Z
-
-.field public final g:Ltyb;
-
-.field public final h:I
-
-.field public final i:Lx85;
+.field public static final synthetic c:Lme4;
 
 
 # direct methods
-.method public constructor <init>(Lpm6;Ljava/util/concurrent/Executor;Lv87;Lj7;Ldz4;ZLtyb;ILx85;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Exception;
 
-    iput-object p1, p0, Lne4;->a:Lpm6;
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
 
-    iput-object p2, p0, Lne4;->b:Ljava/util/concurrent/Executor;
+    const-class v1, Lvrh;
 
-    iput-object p3, p0, Lne4;->c:Lv87;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iput-object p4, p0, Lne4;->d:Lj7;
+    move-result-object v1
 
-    iput-object p5, p0, Lne4;->e:Ldz4;
+    invoke-static {v0, v1}, Lmwi;->a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
 
-    iput-boolean p6, p0, Lne4;->f:Z
+    new-instance v0, Ljava/text/SimpleDateFormat;
 
-    iput-object p7, p0, Lne4;->g:Ltyb;
+    const-string v1, "yyyy/MM/dd HH:mm:ss"
 
-    iput p8, p0, Lne4;->h:I
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    iput-object p9, p0, Lne4;->i:Lx85;
+    new-instance v0, Lkk3;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    invoke-direct {v0, v1}, Lkk3;-><init>(Z)V
 
-# virtual methods
-.method public final a(Laj0;Luyb;)V
-    .locals 9
+    const/4 v0, 0x1
 
-    invoke-static {}, Ltg6;->p()Lsg6;
+    sput-boolean v0, Lne4;->a:Z
 
-    move-object v0, p2
+    const/4 v2, 0x0
 
-    check-cast v0, Lhk0;
+    :try_start_0
+    const-string v3, "kotlinx.coroutines.debug.internal.ByteBuddyDynamicAttach"
 
-    iget-object v0, v0, Lhk0;->a:Lda7;
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    iget-object v1, v0, Lda7;->b:Landroid/net/Uri;
+    move-result-object v3
 
-    invoke-static {v1}, Lxfg;->d(Landroid/net/Uri;)Z
+    invoke-virtual {v3}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_0
+    aget-object v1, v3, v1
 
-    iget-object v0, v0, Lda7;->b:Landroid/net/Uri;
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0}, Lea7;->c(Landroid/net/Uri;)Z
+    move-result-object v1
 
-    move-result v0
+    invoke-static {v0, v1}, Lwag;->f(ILjava/lang/Object;)V
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lje4;
-
-    iget v1, p0, Lne4;->h:I
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lme4;-><init>(Lne4;Laj0;Luyb;I)V
-
-    move-object v3, p0
-
-    move-object v5, p2
+    check-cast v1, Lli6;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance v6, Lzbc;
+    :catchall_0
+    move-exception v1
 
-    iget-object v0, p0, Lne4;->a:Lpm6;
+    new-instance v3, Lbed;
 
-    invoke-direct {v6, v0}, Lzbc;-><init>(Lpm6;)V
+    invoke-direct {v3, v1}, Lbed;-><init>(Ljava/lang/Throwable;)V
 
-    new-instance v2, Lke4;
-
-    iget-object v7, p0, Lne4;->d:Lj7;
-
-    iget v8, p0, Lne4;->h:I
-
-    move-object v3, p0
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    invoke-direct/range {v2 .. v8}, Lke4;-><init>(Lne4;Laj0;Luyb;Lzbc;Lj7;I)V
-
-    move-object v0, v2
+    move-object v1, v3
 
     :goto_0
-    iget-object p1, v3, Lne4;->g:Ltyb;
+    nop
 
-    invoke-interface {p1, v0, v5}, Ltyb;->a(Laj0;Luyb;)V
+    instance-of v3, v1, Lbed;
+
+    if-eqz v3, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_1
+    check-cast v2, Lli6;
+
+    new-instance v1, Lkk3;
+
+    invoke-direct {v1, v0}, Lkk3;-><init>(Z)V
+
+    sput-object v1, Lne4;->b:Lkk3;
+
+    new-instance v0, Lme4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lne4;->c:Lme4;
 
     return-void
 .end method

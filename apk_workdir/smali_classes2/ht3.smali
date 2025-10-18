@@ -1,48 +1,73 @@
-.class public final Lht3;
-.super Lk14;
+.class public final enum Lht3;
+.super Ljava/lang/Enum;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final enum a:Lht3;
 
-.field public final synthetic Y:Ls3;
+.field public static final enum b:Lht3;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic c:[Lht3;
 
 
 # direct methods
-.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lht3;->Y:Ls3;
+    new-instance v0, Lht3;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "BLOCKED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lht3;->a:Lht3;
+
+    new-instance v1, Lht3;
+
+    const-string v2, "REMOVED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lht3;->b:Lht3;
+
+    filled-new-array {v0, v1}, [Lht3;
+
+    move-result-object v0
+
+    sput-object v0, Lht3;->c:[Lht3;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lht3;
     .locals 1
 
-    iput-object p1, p0, Lht3;->o:Ljava/lang/Object;
+    const-class v0, Lht3;
 
-    iget p1, p0, Lht3;->X:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lht3;
 
-    iput p1, p0, Lht3;->X:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lht3;->Y:Ls3;
+.method public static values()[Lht3;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lht3;->c:[Lht3;
 
-    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, [Lht3;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lht3;
+
+    return-object v0
 .end method

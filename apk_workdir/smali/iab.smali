@@ -1,49 +1,73 @@
-.class public final Liab;
-.super Lvs7;
+.class public final enum Liab;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lgi6;
 
+# static fields
+.field public static final enum a:Liab;
 
-# instance fields
-.field public final synthetic a:Ljab;
+.field public static final enum b:Liab;
+
+.field public static final synthetic c:[Liab;
 
 
 # direct methods
-.method public constructor <init>(Ljab;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Liab;->a:Ljab;
+    new-instance v0, Liab;
 
-    const/4 p1, 0x3
+    const-string v1, "RUN_AS_NON_EXPEDITED_WORK_REQUEST"
 
-    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Liab;->a:Liab;
+
+    new-instance v1, Liab;
+
+    const-string v2, "DROP_WORK_REQUEST"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Liab;->b:Liab;
+
+    filled-new-array {v0, v1}, [Liab;
+
+    move-result-object v0
+
+    sput-object v0, Liab;->c:[Liab;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Liab;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-class v0, Liab;
 
-    check-cast p1, Lx14;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lc24;
+    move-result-object p0
 
-    check-cast p3, Ld24;
+    check-cast p0, Liab;
 
-    iget-object v0, p0, Liab;->a:Ljab;
+    return-object p0
+.end method
 
-    iget-object v1, v0, Ljab;->a:Lkw7;
+.method public static values()[Liab;
+    .locals 1
 
-    if-eqz v1, :cond_0
+    sget-object v0, Liab;->c:[Liab;
 
-    invoke-static {v0, p1, p1, p2, p3}, Ljab;->a(Ljab;Lx14;Lx14;Lc24;Ld24;)V
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Lzag;->a:Lzag;
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Liab;
+
+    return-object v0
 .end method

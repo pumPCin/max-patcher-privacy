@@ -1,38 +1,33 @@
-.class public final Lgf5;
+.class public abstract Lgf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ler3;
 
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lgf5;->a:Ljava/lang/String;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "REMOVED_TASK"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
+    sput-object v0, Lgf5;->a:Lkotlinx/coroutines/internal/Symbol;
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    check-cast p1, Ljava/lang/Integer;
+    const-string v1, "CLOSED_EMPTY"
 
-    iget-object p1, p0, Lgf5;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "Connection restored"
-
-    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+    sput-object v0, Lgf5;->b:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method

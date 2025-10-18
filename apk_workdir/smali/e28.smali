@@ -1,63 +1,101 @@
 .class public final Le28;
-.super Lg2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/ListIterator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
 
-.field public final synthetic c:Ljava/util/AbstractList;
+.field public final synthetic b:Lg28;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
+.method public synthetic constructor <init>(Lg28;I)V
     .locals 0
 
-    iput p3, p0, Le28;->b:I
+    iput p2, p0, Le28;->a:I
 
-    iput-object p1, p0, Le28;->c:Ljava/util/AbstractList;
+    iput-object p1, p0, Le28;->b:Lg28;
 
-    invoke-direct {p0, p2}, Lg2g;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget v0, p0, Le28;->b:I
+    iget v0, p0, Le28;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Le28;->c:Ljava/util/AbstractList;
+    iget-object v0, p0, Le28;->b:Lg28;
 
-    check-cast v0, Lg28;
+    iget-object v1, v0, Lg28;->c:Ls25;
 
-    iget-object v0, v0, Lg28;->b:Lai6;
+    if-eqz v1, :cond_0
 
-    invoke-interface {v0, p1}, Lai6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result-object p1
+    move-result v1
 
-    return-object p1
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lg28;->c:Ls25;
+
+    invoke-virtual {v1}, Landroid/widget/AdapterView;->getCount()I
+
+    move-result v1
+
+    iget-object v2, v0, Lg28;->c:Ls25;
+
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-le v1, v2, :cond_0
+
+    iget-object v1, v0, Lg28;->c:Ls25;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    iget v2, v0, Lg28;->v0:I
+
+    if-gt v1, v2, :cond_0
+
+    iget-object v1, v0, Lg28;->I0:Luo;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
+
+    invoke-virtual {v0}, Lg28;->f()V
+
+    :cond_0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Le28;->c:Ljava/util/AbstractList;
+    iget-object v0, p0, Le28;->b:Lg28;
 
-    check-cast v0, Lf28;
+    iget-object v0, v0, Lg28;->c:Ls25;
 
-    iget-object v0, v0, Lf28;->b:Lai6;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lai6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ls25;->setListSelectionHidden(Z)V
 
-    return-object p1
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    :cond_1
+    return-void
 
     nop
 
@@ -65,84 +103,4 @@
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final hasPrevious()Z
-    .locals 1
-
-    iget-object v0, p0, Lg2g;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget-object v0, p0, Lg2g;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lg2g;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lg2g;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget-object v0, p0, Lg2g;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

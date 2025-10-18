@@ -1,48 +1,41 @@
-.class public final Lg96;
-.super Lk14;
+.class public final synthetic Lg96;
+.super Leec;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ll23;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lg96;
 
 
 # direct methods
-.method public constructor <init>(Ll23;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lg96;->Y:Ll23;
+    new-instance v0, Lg96;
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "getId()Ljava/lang/String;"
+
+    const/4 v2, 0x0
+
+    const-class v3, Li46;
+
+    const-string v4, "id"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lg96;->a:Lg96;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lg96;->o:Ljava/lang/Object;
+    check-cast p1, Li46;
 
-    iget p1, p0, Lg96;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lg96;->X:I
-
-    iget-object p1, p0, Lg96;->Y:Ll23;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ll23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
+    iget-object p1, p1, Li46;->a:Ljava/lang/String;
 
     return-object p1
 .end method

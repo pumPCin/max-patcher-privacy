@@ -23,32 +23,32 @@
 
 
 # virtual methods
-.method public final c(Lei1;Z)V
+.method public final h(Lmi1;Z)V
     .locals 1
 
-    sget-object v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->r0:[Lwq7;
+    sget-object v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->q0:[Ltr7;
 
     iget-object v0, p0, Lra;->a:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    iget-object v0, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Llt7;
+    iget-object v0, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lva;
 
-    iget-object v0, v0, Lva;->c:Llt7;
+    iget-object v0, v0, Lva;->c:Liu7;
 
-    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ln01;
+    check-cast v0, Lw01;
 
-    check-cast v0, Li11;
+    check-cast v0, Lr11;
 
-    invoke-virtual {v0, p1, p2}, Li11;->c(Lei1;Z)V
+    invoke-virtual {v0, p1, p2}, Lr11;->c(Lmi1;Z)V
 
     return-void
 .end method

@@ -1,61 +1,94 @@
-.class public final Lwof;
-.super Lbj7;
+.class public Lwof;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Landroid/text/TextPaint;
-
-.field public final synthetic d:Lbj7;
-
-.field public final synthetic e:Lxof;
+.field public final a:Lbolts/Task;
 
 
 # direct methods
-.method public constructor <init>(Lxof;Landroid/content/Context;Landroid/text/TextPaint;Lbj7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwof;->e:Lxof;
+    new-instance v0, Lbolts/Task;
 
-    iput-object p2, p0, Lwof;->b:Landroid/content/Context;
+    invoke-direct {v0}, Lbolts/Task;-><init>()V
 
-    iput-object p3, p0, Lwof;->c:Landroid/text/TextPaint;
-
-    iput-object p4, p0, Lwof;->d:Lbj7;
+    iput-object v0, p0, Lwof;->a:Lbolts/Task;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Lwof;->d:Lbj7;
+    iget-object v0, p0, Lwof;->a:Lbolts/Task;
 
-    invoke-virtual {v0, p1}, Lbj7;->a(I)V
+    invoke-virtual {v0}, Lbolts/Task;->trySetCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Cannot cancel a completed task."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final b(Landroid/graphics/Typeface;Z)V
-    .locals 3
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
 
-    iget-object v0, p0, Lwof;->b:Landroid/content/Context;
+    iget-object v0, p0, Lwof;->a:Lbolts/Task;
 
-    iget-object v1, p0, Lwof;->c:Landroid/text/TextPaint;
+    invoke-virtual {v0, p1}, Lbolts/Task;->trySetError(Ljava/lang/Exception;)Z
 
-    iget-object v2, p0, Lwof;->e:Lxof;
+    move-result p1
 
-    invoke-virtual {v2, v0, v1, p1}, Lxof;->g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
-
-    iget-object v0, p0, Lwof;->d:Lbj7;
-
-    invoke-virtual {v0, p1, p2}, Lbj7;->b(Landroid/graphics/Typeface;Z)V
+    if-eqz p1, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot set the error on a completed task."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final c(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lwof;->a:Lbolts/Task;
+
+    invoke-virtual {v0, p1}, Lbolts/Task;->trySetResult(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot set the result of a completed task."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

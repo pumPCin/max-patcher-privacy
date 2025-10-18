@@ -1,63 +1,128 @@
 .class public final Ln9e;
-.super Lgd0;
+.super Lsgf;
 .source "SourceFile"
 
+# interfaces
+.implements Lzi6;
 
-# static fields
-.field public static final b:Ln9e;
+
+# instance fields
+.field public final synthetic X:Landroid/graphics/RectF;
+
+.field public final synthetic Y:Lv9e;
+
+.field public final synthetic Z:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/graphics/RectF;Lv9e;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ln9e;
+    iput-object p1, p0, Ln9e;->X:Landroid/graphics/RectF;
 
-    const/16 v1, 0x10
+    iput-object p2, p0, Ln9e;->Y:Lv9e;
 
-    invoke-direct {v0, v1}, Lgd0;-><init>(I)V
+    iput-object p3, p0, Ln9e;->Z:Ljava/lang/String;
 
-    sput-object v0, Ln9e;->b:Ln9e;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lq54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ln9e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Ln9e;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Ln9e;
 
-    const/4 p1, 0x0
+    sget-object p2, Lccg;->a:Lccg;
 
-    return p1
+    invoke-virtual {p1, p2}, Ln9e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const v0, -0x5de09f7
+    new-instance p1, Ln9e;
 
-    return v0
+    iget-object v0, p0, Ln9e;->Y:Lv9e;
+
+    iget-object v1, p0, Ln9e;->Z:Ljava/lang/String;
+
+    iget-object v2, p0, Ln9e;->X:Landroid/graphics/RectF;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Ln9e;-><init>(Landroid/graphics/RectF;Lv9e;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const-string v0, "EnterPinCode"
+    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Ln9e;->X:Landroid/graphics/RectF;
+
+    invoke-static {p1}, Lm0i;->a(Landroid/graphics/RectF;)Lv10;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ln9e;->Y:Lv9e;
+
+    iget-object v1, v0, Lv9e;->G0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    iget-object v2, v0, Lv9e;->s0:Liu7;
+
+    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lll;
+
+    iget-object v3, p0, Ln9e;->Z:Ljava/lang/String;
+
+    check-cast v2, Lmna;
+
+    invoke-virtual {v2, v3, p1}, Lmna;->E(Ljava/lang/String;Lv10;)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    iget-object p1, v0, Lv9e;->z0:Lxe5;
+
+    new-instance v0, Lkee;
+
+    sget v1, Lp2b;->q:I
+
+    new-instance v2, Lorf;
+
+    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+
+    sget v1, Lpjd;->n:I
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lkee;-><init>(Ltrf;Ljava/lang/Integer;)V
+
+    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+
+    sget-object p1, Lccg;->a:Lccg;
+
+    return-object p1
 .end method

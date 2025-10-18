@@ -1,99 +1,150 @@
 .class public final Lfyi;
-.super Li6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements La9i;
 
 
 # static fields
-.field private static final zzb:Lfyi;
+.field public static final b:Lpyh;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lfyi;
+    const-string v0, "com.google.android.gms.vision.barcode"
 
-    invoke-direct {v0}, Li6i;-><init>()V
+    const-string v1, "optional-module-barcode"
 
-    sput-object v0, Lfyi;->zzb:Lfyi;
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
 
-    const-class v1, Lfyi;
+    move-result-object v0
 
-    invoke-static {v1, v0}, Li6i;->h(Ljava/lang/Class;Li6i;)V
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, v0, v1}, Lpyh;->a(I[Ljava/lang/Object;Lpg6;)Lpyh;
+
+    move-result-object v0
+
+    sput-object v0, Lfyi;->b:Lpyh;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Lwje;)V
+    .locals 5
 
-# virtual methods
-.method public final m(ILi6i;)Ljava/lang/Object;
-    .locals 2
+    const-string v0, "common"
 
-    add-int/lit8 p1, p1, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_4
+    new-instance v1, Ljava/util/HashMap;
 
-    const/4 p2, 0x2
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    invoke-static {p1}, Lhf3;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    const-class v1, Lwyi;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v2, Lwyi;->b:Lwyi;
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Lwyi;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v4}, Lwyi;-><init>(IB)V
+
+    sput-object v2, Lwyi;->b:Lwyi;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    iput-object v0, p0, Lfyi;->a:Ljava/lang/String;
+
+    invoke-static {}, Lrs6;->t()Lrs6;
+
+    move-result-object v1
+
+    new-instance v2, Lsj4;
+
+    const/16 v3, 0x12
+
+    invoke-direct {v2, v3, p0}, Lsj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lrs6;->J(Ljava/util/concurrent/Callable;)Le2j;
+
+    invoke-static {}, Lrs6;->t()Lrs6;
+
+    move-result-object v1
+
+    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Lsqi;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p2, v3}, Lsqi;-><init>(Lwje;I)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lrs6;->J(Ljava/util/concurrent/Callable;)Le2j;
+
+    sget-object p2, Lfyi;->b:Lpyh;
+
+    invoke-virtual {p2, v0}, Lpyh;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p2, v0}, Lpyh;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    return-object v0
-
-    :cond_0
-    sget-object p1, Lfyi;->zzb:Lfyi;
-
-    return-object p1
+    invoke-static {p1, p2, v0}, Le55;->d(Landroid/content/Context;Ljava/lang/String;Z)I
 
     :cond_1
-    new-instance p1, Ldii;
+    return-void
 
-    sget-object p2, Lfyi;->zzb:Lfyi;
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct {p1, p2}, Lx5i;-><init>(Li6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lfyi;
-
-    invoke-direct {p1}, Li6i;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    sget-object p1, Lfyi;->zzb:Lfyi;
-
-    new-instance p2, Lv9i;
-
-    const-string v1, "\u0001\u0000"
-
-    invoke-direct {p2, p1, v1, v0}, Lv9i;-><init>(Ln2i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object p2
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method

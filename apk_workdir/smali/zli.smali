@@ -1,121 +1,70 @@
-.class public abstract Lzli;
+.class public final Lzli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltha;
+
+
+# static fields
+.field public static final a:Lzli;
+
 
 # direct methods
-.method public static a(Lr12;Ljava/lang/Integer;Ljava/util/List;)Ljava/lang/String;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lzli;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    sput-object v0, Lzli;->a:Lzli;
 
-    :cond_0
-    const-string v1, "0"
+    new-instance v0, Lr8i;
 
-    invoke-interface {p2, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    move-result v2
+    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
 
-    if-eqz v2, :cond_3
+    const-class v1, Lm9i;
 
-    const-string v2, "1"
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    invoke-interface {p2, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p2
+    const/4 v2, 0x2
 
-    if-nez p2, :cond_1
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    move-result p2
+    move-result-object v0
 
-    const/4 v3, 0x1
+    const/4 v2, 0x3
 
-    if-ne p2, v3, :cond_2
+    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
 
-    invoke-virtual {p0, v1}, Lr12;->b(Ljava/lang/String;)Lg02;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
 
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lg02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    if-ne p0, v3, :cond_3
-
-    return-object v2
-
-    :cond_2
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    invoke-virtual {p0, v2}, Lr12;->b(Ljava/lang/String;)Lg02;
-
-    move-result-object p0
-
-    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {p0, p1}, Lg02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return-object v1
-
-    :cond_3
-    :goto_0
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    if-eq p0, p1, :cond_1
+    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    throw p1
 .end method

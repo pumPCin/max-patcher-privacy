@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfi6;
+.implements Laj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->getConfig()Lqoe;
+    value = Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->getConfig()Lwpe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lfi6;"
+        "Laj6;"
     }
 .end annotation
 
@@ -140,7 +140,7 @@
     .line 5
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider$getConfig$1;->this$0:Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;
 
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->access$getLog$p(Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;)Lyuc;
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;->access$getLog$p(Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;)Lfwc;
 
     move-result-object v1
 
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    invoke-interface {v1, v2, p1, v0}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, p1, v0}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 6
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider$getConfig$1;->this$0:Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;

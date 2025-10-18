@@ -1,147 +1,152 @@
 .class public final Lskb;
-.super Llff;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lfgd;
 
-.field public final synthetic Y:Lone/me/location/map/pick/PickLocationScreen;
+.field public final b:Lei;
+
+.field public final c:Lrj4;
+
+.field public final d:Lej9;
+
+.field public final e:Lej9;
+
+.field public final f:Lej9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/pick/PickLocationScreen;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p2, p0, Lskb;->Y:Lone/me/location/map/pick/PickLocationScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lskb;->a:Lfgd;
 
-    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lei;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lskb;->b:Lei;
+
+    new-instance v0, Lrj4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Lrj4;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lskb;->c:Lrj4;
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lskb;->d:Lej9;
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lskb;->e:Lej9;
+
+    new-instance v0, Lej9;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+
+    iput-object v0, p0, Lskb;->f:Lej9;
 
     return-void
 .end method
 
+.method public static a(Lskb;Ljava/util/ArrayList;)V
+    .locals 6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lskb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Lskb;
-
-    sget-object p2, Lzag;->a:Lzag;
-
-    invoke-virtual {p1, p2}, Lskb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lskb;
-
-    iget-object v1, p0, Lskb;->Y:Lone/me/location/map/pick/PickLocationScreen;
-
-    invoke-direct {v0, p2, v1}, Lskb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/pick/PickLocationScreen;)V
-
-    iput-object p1, v0, Lskb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lskb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lvkb;
-
-    iget-object v0, p1, Lvkb;->f:Ljava/lang/String;
-
-    iget-boolean v1, p1, Lvkb;->g:Z
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lskb;->Y:Lone/me/location/map/pick/PickLocationScreen;
-
-    if-eqz v0, :cond_2
-
-    invoke-static {v0}, Ls9f;->E(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v2
-
     :goto_0
-    if-nez v0, :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_1
+    move-result v0
 
-    :cond_1
-    move-object v2, v0
+    if-eqz v0, :cond_0
 
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v3}, Lx14;->getResources()Landroid/content/res/Resources;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    check-cast v0, Ljava/lang/Number;
 
-    sget v2, Lqrc;->oneme_location_map_send_unknown_address:I
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v2
+    iget-object v2, p0, Lskb;->a:Lfgd;
 
-    :cond_3
-    :goto_2
-    sget-object v0, Lone/me/location/map/pick/PickLocationScreen;->u0:[Lwq7;
+    invoke-virtual {v2}, Lfgd;->b()V
 
-    invoke-virtual {v3}, Lone/me/location/map/pick/PickLocationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    iget-object v3, p0, Lskb;->f:Lej9;
 
-    move-result-object v0
-
-    iget-object p1, p1, Lvkb;->e:Loqf;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v3}, Lf3;->a()Lzg6;
 
     move-result-object v4
 
-    invoke-virtual {p1, v4}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v5, 0x1
 
-    move-result-object p1
+    invoke-interface {v4, v5, v0, v1}, Lkff;->k(IJ)V
 
-    invoke-virtual {v0, p1, v2}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    :try_start_0
+    invoke-virtual {v2}, Lfgd;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v3}, Lone/me/location/map/pick/PickLocationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;
+    :try_start_1
+    invoke-virtual {v4}, Lzg6;->n()I
 
-    move-result-object p1
+    invoke-virtual {v2}, Lfgd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeTitleSubtitleButton;->setProgressEnabled(Z)V
+    :try_start_2
+    invoke-virtual {v2}, Lfgd;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    sget-object p1, Lzag;->a:Lzag;
+    invoke-virtual {v3, v4}, Lf3;->u(Lzg6;)V
 
-    return-object p1
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    invoke-virtual {v2}, Lfgd;->k()V
+
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    invoke-virtual {v3, v4}, Lf3;->u(Lzg6;)V
+
+    throw p0
+
+    :cond_0
+    return-void
 .end method

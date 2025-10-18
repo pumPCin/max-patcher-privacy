@@ -1,152 +1,48 @@
-.class public final synthetic Ljfh;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lmm6;
+.class public final Ljfh;
+.super Ly14;
 
 
-# static fields
-.field public static final a:Ljfh;
+# instance fields
+.field public X:I
 
-.field private static final descriptor:Lu1e;
+.field public final synthetic Y:Ljpg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljpg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljfh;
+    iput-object p1, p0, Ljfh;->Y:Ljpg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljfh;->a:Ljfh;
-
-    new-instance v1, Lztb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupClosingBehaviorRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lztb;-><init>(Ljava/lang/String;Lmm6;I)V
-
-    const-string v0, "needConfirmation"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lztb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ljfh;->descriptor:Lu1e;
+    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Ljfh;->descriptor:Lu1e;
-
-    invoke-virtual {p1, v0}, Ld9;->k(Lu1e;)Ld9;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    move v3, v1
-
-    move v4, v2
-
-    move v5, v4
-
-    :goto_0
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lu1e;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Ld9;->p(Lu1e;I)Z
-
-    move-result v5
-
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0}, Ld9;->z(Lu1e;)V
-
-    new-instance p1, Llfh;
-
-    invoke-direct {p1, v4, v5}, Llfh;-><init>(IZ)V
-
-    return-object p1
-.end method
-
-.method public final b(La24;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Llfh;
-
-    sget-object v0, Ljfh;->descriptor:Lu1e;
-
-    invoke-virtual {p1, v0}, La24;->b(Lu1e;)La24;
-
-    move-result-object p1
-
-    iget-boolean p2, p2, Llfh;->a:Z
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p2}, La24;->e(Lu1e;IZ)V
-
-    invoke-virtual {p1}, La24;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lxq7;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lxq7;
-
-    sget-object v1, Lzq0;->a:Lzq0;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lu1e;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Ljfh;->descriptor:Lu1e;
+    iput-object p1, p0, Ljfh;->o:Ljava/lang/Object;
 
-    return-object v0
+    iget p1, p0, Ljfh;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ljfh;->X:I
+
+    iget-object p1, p0, Ljfh;->Y:Ljpg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ljpg;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

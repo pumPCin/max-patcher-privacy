@@ -2,78 +2,59 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbc4;
+
 
 # instance fields
-.field public a:Lj6d;
+.field public final a:Lkxb;
 
-.field public b:Lj6d;
+.field public b:Ljava/lang/String;
 
-.field public c:I
+.field public final c:I
 
-.field public d:I
+.field public final d:I
 
-.field public e:I
 
-.field public f:I
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lkxb;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lkxb;-><init>(I)V
+
+    iput-object v0, p0, Ltk4;->a:Lkxb;
+
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Ltk4;->c:I
+
+    iput v0, p0, Ltk4;->d:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a()Ldc4;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lxk4;
 
-    const-string v1, "ChangeInfo{oldHolder="
+    iget-object v1, p0, Ltk4;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Ltk4;->d:I
 
-    iget-object v1, p0, Ltk4;->a:Lj6d;
+    iget-object v3, p0, Ltk4;->a:Lkxb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Ltk4;->c:I
 
-    const-string v1, ", newHolder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltk4;->b:Lj6d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromX="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltk4;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltk4;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", toX="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltk4;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", toY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltk4;->f:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1, v4, v2, v3}, Lxk4;-><init>(Ljava/lang/String;IILkxb;)V
 
     return-object v0
 .end method

@@ -1,114 +1,81 @@
-.class public final Lzf1;
-.super Lsyg;
+.class public final enum Lzf1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Llt7;
+# static fields
+.field public static final enum a:Lzf1;
 
-.field public final Y:Llt7;
+.field public static final enum b:Lzf1;
 
-.field public final Z:Llt7;
-
-.field public final b:Lrf1;
-
-.field public final c:Lao1;
-
-.field public final o:Llt7;
-
-.field public final r0:Llt7;
-
-.field public final s0:Llt7;
-
-.field public final t0:Ldc;
-
-.field public final u0:Lde5;
+.field public static final synthetic c:[Lzf1;
 
 
 # direct methods
-.method public constructor <init>(Lrf1;Lao1;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Lsyg;-><init>()V
+    new-instance v0, Lzf1;
 
-    iput-object p1, p0, Lzf1;->b:Lrf1;
+    const-string v1, "UNDEFINE"
 
-    iput-object p2, p0, Lzf1;->c:Lao1;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lzf1;->o:Llt7;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p5, p0, Lzf1;->X:Llt7;
+    new-instance v1, Lzf1;
 
-    iput-object p6, p0, Lzf1;->Y:Llt7;
+    const-string v2, "MENU"
 
-    iput-object p4, p0, Lzf1;->Z:Llt7;
+    const/4 v3, 0x1
 
-    iput-object p7, p0, Lzf1;->r0:Llt7;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p8, p0, Lzf1;->s0:Llt7;
+    sput-object v1, Lzf1;->a:Lzf1;
 
-    invoke-interface {p4}, Llt7;->getValue()Ljava/lang/Object;
+    new-instance v2, Lzf1;
 
-    move-result-object p2
+    const-string v3, "RECORD"
 
-    check-cast p2, Ldpd;
+    const/4 v4, 0x2
 
-    check-cast p2, Lmpd;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object p2, p2, Lmpd;->z0:Lsze;
+    sput-object v2, Lzf1;->b:Lzf1;
 
-    new-instance p3, Ldc;
+    filled-new-array {v0, v1, v2}, [Lzf1;
 
-    const/16 p5, 0x8
+    move-result-object v0
 
-    invoke-direct {p3, p2, p0, p5}, Ldc;-><init>(Lzx5;Ljava/lang/Object;I)V
+    sput-object v0, Lzf1;->c:[Lzf1;
 
-    iput-object p3, p0, Lzf1;->t0:Ldc;
-
-    new-instance p2, Lde5;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p3}, Lde5;-><init>(I)V
-
-    iput-object p2, p0, Lzf1;->u0:Lde5;
-
-    sget-object p2, Lrf1;->b:Lrf1;
-
-    if-ne p1, p2, :cond_0
-
-    invoke-interface {p4}, Llt7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldpd;
-
-    check-cast p1, Lmpd;
-
-    iget-object p1, p1, Lmpd;->t0:Lsze;
-
-    new-instance p2, Lgh0;
-
-    const/16 p3, 0xc
-
-    invoke-direct {p2, p1, p3}, Lgh0;-><init>(Lzx5;I)V
-
-    new-instance p1, Lwf1;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p0, p3}, Lwf1;-><init>(Lzf1;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lh06;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p2, p1, p4}, Lh06;-><init>(Lzx5;Lei6;I)V
-
-    iget-object p1, p0, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
-
-    :cond_0
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lzf1;
+    .locals 1
+
+    const-class v0, Lzf1;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lzf1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lzf1;
+    .locals 1
+
+    sget-object v0, Lzf1;->c:[Lzf1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lzf1;
+
+    return-object v0
 .end method

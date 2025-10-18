@@ -1,55 +1,109 @@
-.class public final Lawa;
-.super Lk14;
+.class public abstract Lawa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
-.field public Y:Ll0a;
+.field public static final b:I
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public static final c:I
 
-.field public o:Lhe4;
+.field public static final d:I
 
-.field public final synthetic r0:Lhe4;
+.field public static final e:I
 
-.field public s0:I
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Lhe4;Lk14;)V
-    .locals 0
-
-    iput-object p1, p0, Lawa;->r0:Lhe4;
-
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lawa;->Z:Ljava/lang/Object;
+    sget v0, Lwnc;->oneme_folders_chats_picker_toolbar:I
 
-    iget p1, p0, Lawa;->s0:I
+    sput v0, Lawa;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lwnc;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
 
-    or-int/2addr p1, v0
+    sput v0, Lawa;->b:I
 
-    iput p1, p0, Lawa;->s0:I
+    sget v0, Lwnc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    iget-object p1, p0, Lawa;->r0:Lhe4;
+    sput v0, Lawa;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lwnc;->oneme_folders_edit_create_button:I
 
-    invoke-virtual {p1, v0, p0}, Lhe4;->d(Lqh6;Lk14;)Ljava/lang/Object;
+    sput v0, Lawa;->d:I
 
-    move-result-object p1
+    sget v0, Lwnc;->oneme_folders_edit_members_list:I
 
-    return-object p1
+    sput v0, Lawa;->e:I
+
+    sget v0, Lwnc;->oneme_folders_edit_screen:I
+
+    sput v0, Lawa;->f:I
+
+    sget v0, Lwnc;->oneme_folders_edit_toolbar:I
+
+    sput v0, Lawa;->g:I
+
+    sget v0, Lwnc;->oneme_folders_list_all_folder_view_type:I
+
+    sput v0, Lawa;->h:I
+
+    sget v0, Lwnc;->oneme_folders_list_create_folder_view_type:I
+
+    sput v0, Lawa;->i:I
+
+    sget v0, Lwnc;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Lawa;->j:I
+
+    sget v0, Lwnc;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Lawa;->k:I
+
+    sget v0, Lwnc;->oneme_folders_list_recommended_folder_view_type:I
+
+    sput v0, Lawa;->l:I
+
+    sget v0, Lwnc;->oneme_folders_list_recycler_view:I
+
+    sput v0, Lawa;->m:I
+
+    sget v0, Lwnc;->oneme_folders_list_screen:I
+
+    sput v0, Lawa;->n:I
+
+    sget v0, Lwnc;->oneme_folders_list_toolbar:I
+
+    sput v0, Lawa;->o:I
+
+    sget v0, Lwnc;->oneme_folders_list_user_folder_view_type:I
+
+    sput v0, Lawa;->p:I
+
+    return-void
 .end method

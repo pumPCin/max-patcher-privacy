@@ -1,77 +1,39 @@
 .class public final Lhge;
-.super Ldz;
+.super Ldg4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/lang/String;
+# static fields
+.field public static final b:Lhge;
 
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
-
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Lqjb;
-
-.field public final t0:Ldz;
-
-.field public final u0:Z
+.field public static final c:Lyf4;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqjb;Ldz;ZZZ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    sget-object v0, Lz00;->r0:Lz00;
+    new-instance v0, Lhge;
 
-    invoke-direct {p0, v0, p9, p10}, Ldz;-><init>(Lz00;ZZ)V
+    invoke-direct {v0}, Ldg4;-><init>()V
 
-    iput-wide p1, p0, Lhge;->o:J
+    sput-object v0, Lhge;->b:Lhge;
 
-    iput-object p3, p0, Lhge;->X:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-object p4, p0, Lhge;->Y:Ljava/lang/String;
+    new-array v1, v1, [Ljava/lang/String;
 
-    iput-object p5, p0, Lhge;->Z:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object p6, p0, Lhge;->r0:Ljava/lang/String;
+    const/16 v3, 0xe
 
-    iput-object p7, p0, Lhge;->s0:Lqjb;
+    const-string v4, ":settings/caching"
 
-    iput-object p8, p0, Lhge;->t0:Ldz;
-
-    iput-boolean p11, p0, Lhge;->u0:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
-
-    invoke-super {p0}, Ldz;->a()Ljava/util/HashMap;
+    invoke-static {v0, v4, v1, v2, v3}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lhge;->o:J
+    sput-object v0, Lhge;->c:Lyf4;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "shareId"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "url"
-
-    iget-object v2, p0, Lhge;->X:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method

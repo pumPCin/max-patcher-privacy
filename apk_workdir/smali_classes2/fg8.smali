@@ -1,241 +1,365 @@
-.class public final enum Lfg8;
-.super Ljava/lang/Enum;
+.class public final synthetic Lfg8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final X:Ljava/util/LinkedHashSet;
-
-.field public static final enum Y:Lfg8;
-
-.field public static final synthetic Z:[Lfg8;
-
-.field public static final c:Lh8a;
-
-.field public static final o:Ljava/util/LinkedHashSet;
+# interfaces
+.implements Lxja;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Landroid/content/Context;
 
-.field public final b:I
+.field public final synthetic a:J
+
+.field public final synthetic b:Luh8;
+
+.field public final synthetic c:Z
+
+.field public final synthetic o:Ljg8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
-
-    new-instance v0, Lfg8;
-
-    sget v1, Lqoc;->markdown_original:I
-
-    sget v2, Lwid;->A0:I
-
-    const/4 v3, 0x0
-
-    const-string v4, "ORIGINAL"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v1, Lfg8;
-
-    sget v2, Lqoc;->markdown_heading:I
-
-    sget v3, Lwid;->x0:I
-
-    const/4 v4, 0x1
-
-    const-string v5, "HEADING"
-
-    invoke-direct {v1, v4, v5, v2, v3}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v2, Lfg8;
-
-    sget v3, Lqoc;->markdown_bold:I
-
-    sget v4, Lwid;->w0:I
-
-    const/4 v5, 0x2
-
-    const-string v6, "BOLD"
-
-    invoke-direct {v2, v5, v6, v3, v4}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v3, Lfg8;
-
-    sget v4, Lqoc;->markdown_italic:I
-
-    sget v5, Lwid;->y0:I
-
-    const/4 v6, 0x3
-
-    const-string v7, "ITALIC"
-
-    invoke-direct {v3, v6, v7, v4, v5}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v4, Lfg8;
-
-    sget v5, Lqoc;->markdown_underline:I
-
-    sget v6, Lwid;->E0:I
-
-    const/4 v7, 0x4
-
-    const-string v8, "UNDERLINE"
-
-    invoke-direct {v4, v7, v8, v5, v6}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v5, Lfg8;
-
-    sget v6, Lqoc;->markdown_mono:I
-
-    sget v7, Lwid;->z0:I
-
-    const/4 v8, 0x5
-
-    const-string v9, "MONO"
-
-    invoke-direct {v5, v8, v9, v6, v7}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v6, Lfg8;
-
-    sget v7, Lqoc;->markdown_strikethrough:I
-
-    sget v8, Lwid;->D0:I
-
-    const/4 v9, 0x6
-
-    const-string v10, "STRIKETHROUGH"
-
-    invoke-direct {v6, v9, v10, v7, v8}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v7, Lfg8;
-
-    sget v8, Lqoc;->markdown_link:I
-
-    sget v9, Lwid;->v0:I
-
-    const/4 v10, 0x7
-
-    const-string v11, "LINK"
-
-    invoke-direct {v7, v10, v11, v8, v9}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    new-instance v8, Lfg8;
-
-    sget v9, Lqoc;->markdown_quote:I
-
-    sget v10, Lwid;->B0:I
-
-    const/16 v11, 0x8
-
-    const-string v12, "QUOTE"
-
-    invoke-direct {v8, v11, v12, v9, v10}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    sput-object v8, Lfg8;->Y:Lfg8;
-
-    new-instance v9, Lfg8;
-
-    sget v10, Lqoc;->markdown_regular:I
-
-    sget v11, Lwid;->C0:I
-
-    const/16 v12, 0x9
-
-    const-string v13, "REGULAR"
-
-    invoke-direct {v9, v12, v13, v10, v11}, Lfg8;-><init>(ILjava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Lfg8;
-
-    move-result-object v10
-
-    sput-object v10, Lfg8;->Z:[Lfg8;
-
-    new-instance v10, Lh8a;
-
-    invoke-direct {v10}, Ljava/lang/Object;-><init>()V
-
-    sput-object v10, Lfg8;->c:Lh8a;
-
-    filled-new-array {v0, v1, v2, v8}, [Lfg8;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ln7e;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    sput-object v0, Lfg8;->o:Ljava/util/LinkedHashSet;
-
-    move-object v10, v6
-
-    move-object v11, v7
-
-    move-object v12, v8
-
-    move-object v13, v9
-
-    move-object v6, v2
-
-    move-object v7, v3
-
-    move-object v8, v4
-
-    move-object v9, v5
-
-    move-object v5, v1
-
-    filled-new-array/range {v5 .. v13}, [Lfg8;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ln7e;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    sput-object v0, Lfg8;->X:Ljava/util/LinkedHashSet;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/lang/String;II)V
+.method public synthetic constructor <init>(JLuh8;ZLjg8;Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lfg8;->a:I
+    iput-wide p1, p0, Lfg8;->a:J
 
-    iput p4, p0, Lfg8;->b:I
+    iput-object p3, p0, Lfg8;->b:Luh8;
+
+    iput-boolean p4, p0, Lfg8;->c:Z
+
+    iput-object p5, p0, Lfg8;->o:Ljg8;
+
+    iput-object p6, p0, Lfg8;->X:Landroid/content/Context;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfg8;
-    .locals 1
 
-    const-class v0, Lfg8;
+# virtual methods
+.method public final e(Llia;)V
+    .locals 22
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-object/from16 v0, p0
 
-    move-result-object p0
+    move-object/from16 v1, p1
 
-    check-cast p0, Lfg8;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    return-object p0
-.end method
+    move-result-object v2
 
-.method public static values()[Lfg8;
-    .locals 1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    sget-object v0, Lfg8;->Z:[Lfg8;
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, [Lfg8;
+    const-string v4, "This thread is main!"
 
-    return-object v0
+    if-eq v2, v3, :cond_6
+
+    new-instance v2, Lhg8;
+
+    iget-wide v5, v0, Lfg8;->a:J
+
+    iget-object v3, v0, Lfg8;->b:Luh8;
+
+    iget-boolean v7, v0, Lfg8;->c:Z
+
+    invoke-direct {v2, v5, v6, v3, v7}, Lhg8;-><init>(JLuh8;Z)V
+
+    iget-object v8, v0, Lfg8;->o:Ljg8;
+
+    iget-object v9, v8, Ljg8;->e:Ljava/util/Map;
+
+    invoke-interface {v9, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgg8;
+
+    invoke-virtual {v1}, Llia;->h()Z
+
+    move-result v10
+
+    if-nez v10, :cond_5
+
+    if-nez v2, :cond_4
+
+    iget-object v2, v0, Lfg8;->X:Landroid/content/Context;
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v8, v2, v3, v10, v7}, Ljg8;->a(Landroid/content/Context;Luh8;ZZ)Lgg8;
+
+    move-result-object v11
+
+    iget-object v11, v11, Lgg8;->b:Lbp0;
+
+    invoke-virtual {v1, v11}, Llia;->d(Ljava/lang/Object;)V
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v11
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v12
+
+    if-eq v11, v12, :cond_3
+
+    new-instance v4, Lhg8;
+
+    invoke-direct {v4, v5, v6, v3, v7}, Lhg8;-><init>(JLuh8;Z)V
+
+    invoke-interface {v9, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lgg8;
+
+    if-nez v11, :cond_2
+
+    invoke-virtual {v8, v2, v3, v10, v7}, Ljg8;->a(Landroid/content/Context;Luh8;ZZ)Lgg8;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lgg8;->a:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v7
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v11
+
+    iget-object v8, v8, Ljg8;->a:Lhmf;
+
+    iget-object v12, v8, Lhmf;->e:Liu7;
+
+    invoke-interface {v12}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lat3;
+
+    const/4 v13, 0x0
+
+    invoke-virtual {v12, v5, v6, v13}, Lat3;->i(JZ)Lwr3;
+
+    move-result-object v18
+
+    iget-object v14, v8, Lhmf;->a:Landroid/content/Context;
+
+    iget-object v5, v8, Lhmf;->c:Liu7;
+
+    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v15, v5
+
+    check-cast v15, Lgya;
+
+    iget-object v5, v8, Lhmf;->d:Liu7;
+
+    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object/from16 v16, v5
+
+    check-cast v16, Lsd2;
+
+    iget-object v5, v8, Lhmf;->b:Liu7;
+
+    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object/from16 v17, v5
+
+    check-cast v17, Lfe0;
+
+    iget-object v5, v8, Lhmf;->f:Liu7;
+
+    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ly83;
+
+    check-cast v5, Lntd;
+
+    invoke-virtual {v5}, Lntd;->n()Ljava/lang/String;
+
+    move-result-object v20
+
+    iget-object v5, v8, Lhmf;->g:Lwif;
+
+    invoke-virtual {v5}, Lwif;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object/from16 v21, v5
+
+    check-cast v21, Lxod;
+
+    const/16 v19, 0x0
+
+    invoke-static/range {v14 .. v21}, Lld0;->a(Landroid/content/Context;Lgya;Lsd2;Lfe0;Lwr3;Ljava/lang/String;Ljava/lang/String;Lxod;)Landroid/graphics/Bitmap;
+
+    move-result-object v5
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    if-ne v3, v10, :cond_0
+
+    const v3, 0x3f3851ec    # 0.72f
+
+    const v6, 0x4025c28f    # 2.59f
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Wrong marker weight"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const v3, 0x3f266666    # 0.65f
+
+    const v6, 0x402851ec    # 2.63f
+
+    :goto_0
+    int-to-float v8, v7
+
+    mul-float/2addr v3, v8
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    div-float v10, v3, v10
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v12
+
+    int-to-float v12, v12
+
+    mul-float/2addr v10, v12
+
+    float-to-int v10, v10
+
+    float-to-int v12, v3
+
+    invoke-static {v12, v10, v5}, Ln0i;->o(IILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v12
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
+
+    move-result-object v13
+
+    invoke-static {v7, v11, v13}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v7
+
+    new-instance v13, Landroid/graphics/Canvas;
+
+    invoke-direct {v13, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v13, v2, v14, v14, v15}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v8, v2
+
+    div-float/2addr v3, v2
+
+    sub-float/2addr v8, v3
+
+    int-to-float v3, v11
+
+    div-float/2addr v3, v6
+
+    int-to-float v6, v10
+
+    div-float/2addr v6, v2
+
+    sub-float/2addr v3, v6
+
+    invoke-virtual {v13, v12, v8, v3, v15}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    invoke-virtual {v12}, Landroid/graphics/Bitmap;->recycle()V
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    invoke-static {v7}, Ldki;->d(Landroid/graphics/Bitmap;)Lbp0;
+
+    move-result-object v2
+
+    new-instance v11, Lgg8;
+
+    invoke-direct {v11, v7, v2}, Lgg8;-><init>(Landroid/graphics/Bitmap;Lbp0;)V
+
+    invoke-interface {v9, v4, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    iget-object v2, v11, Lgg8;->b:Lbp0;
+
+    invoke-virtual {v1, v2}, Llia;->d(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_4
+    iget-object v2, v2, Lgg8;->b:Lbp0;
+
+    invoke-virtual {v1, v2}, Llia;->d(Ljava/lang/Object;)V
+
+    :cond_5
+    :goto_1
+    invoke-virtual {v1}, Llia;->b()V
+
+    return-void
+
+    :cond_6
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method

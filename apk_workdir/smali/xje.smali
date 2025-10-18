@@ -1,53 +1,44 @@
-.class public final Lxje;
-.super Lk14;
+.class public final synthetic Lxje;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lft5;
 
 
 # instance fields
-.field public X:Lda2;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lzje;
-
-.field public o:Lzje;
-
-.field public r0:I
+.field public final synthetic a:Liu7;
 
 
 # direct methods
-.method public constructor <init>(Lzje;Lk14;)V
+.method public synthetic constructor <init>(Liu7;)V
     .locals 0
 
-    iput-object p1, p0, Lxje;->Z:Lzje;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxje;->a:Liu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lk54;
     .locals 1
 
-    iput-object p1, p0, Lxje;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lxje;->a:Liu7;
 
-    iget p1, p0, Lxje;->r0:I
+    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    check-cast v0, Lulf;
 
-    iput p1, p0, Lxje;->r0:I
+    check-cast v0, Lqta;
 
-    iget-object p1, p0, Lxje;->Z:Lzje;
+    invoke-virtual {v0}, Lqta;->b()Lk54;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-static {p1, v0, p0}, Lzje;->w(Lzje;Lda2;Lk14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
